@@ -1032,10 +1032,13 @@ a.previous-wrapper {
       .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper {
         border-right: 1px solid #44484c;
         margin-right: -1px;
-        padding: 0; }
+        padding: 10px 0; }
         .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper .error-msg {
           text-align: center;
           margin: 1em 0; }
+        @media screen and (max-width: 768px) {
+          .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper {
+            border-right: none; } }
       .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_table, .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_audit {
         padding: 0;
         border-left: 1px solid #44484c; }
@@ -1108,8 +1111,15 @@ a.previous-wrapper {
           padding: 40px; }
           .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_table .explanation-section p, .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_audit .explanation-section p {
             line-height: 25px; }
+        @media screen and (max-width: 768px) {
+          .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_table, .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_audit {
+            border-left: none; } }
       .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_audit {
         border-left: none; }
+      @media only screen and (min-width: 767px) and (max-width: 768px) {
+        .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper {
+          /* ipad */
+          max-height: 450px; } }
 
 @-webkit-keyframes fade {
   from {
@@ -1488,9 +1498,21 @@ a.previous-wrapper {
       color: #fff;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      display: block;
       background-color: #e98024;
-      width: 100%; }
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* fix for iOS */
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #trading_socket_container #contract_prices_container #contract_purchase_balance p {
+        margin: 0;
+        padding-left: 3px; }
     #trading_socket_container #contract_prices_container #confirmation_message {
       padding-bottom: 34px; }
     #trading_socket_container #contract_prices_container #contract_purchase_descr {
@@ -1524,8 +1546,12 @@ a.previous-wrapper {
           margin: auto 0 5px;
           padding-top: 10px; }
     #trading_socket_container #contract_prices_container #contract_purchase_spots {
-      height: 110px;
-      overflow: hidden; }
+      overflow: hidden;
+      padding-top: 10px;
+      padding-bottom: 5px; }
+      #trading_socket_container #contract_prices_container #contract_purchase_spots .col {
+        margin-bottom: 0;
+        line-height: 1.5; }
       #trading_socket_container #contract_prices_container #contract_purchase_spots.won {
         background-color: rgba(46, 136, 54, 0.2); }
       #trading_socket_container #contract_prices_container #contract_purchase_spots.lost {

@@ -855,6 +855,67 @@ div.kineticjs-content {
   .box-inlay-borders .border-bottom, .box-inlay-borders .border-right-top, .box-inlay-borders .border-right-bottom {
     border: none; } }
 
+.box-overlay-image {
+  margin-bottom: 2rem; }
+  .box-overlay-image .box-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .box-overlay-image .box-wrapper.right {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+      .box-overlay-image .box-wrapper.right .box-content {
+        left: 25%; }
+    .box-overlay-image .box-wrapper .box-img {
+      width: 60%; }
+    .box-overlay-image .box-wrapper .box-content {
+      padding: 1rem 0;
+      border: 1px solid #dedede;
+      width: 300px;
+      background: #fff;
+      left: 45%;
+      position: absolute; }
+      .box-overlay-image .box-wrapper .box-content h4 {
+        text-align: left;
+        margin: 0 1rem; }
+      .box-overlay-image .box-wrapper .box-content .box-headerline {
+        border-color: #e98024;
+        border-bottom-width: 2px;
+        margin: 10px 1rem 0;
+        width: 75px; }
+      .box-overlay-image .box-wrapper .box-content .box-text {
+        text-align: left;
+        margin: 0.5rem 1rem; }
+    @media screen and (max-width: 768px) {
+      .box-overlay-image .box-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .box-overlay-image .box-wrapper.right {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          .box-overlay-image .box-wrapper.right .box-content {
+            left: unset; }
+        .box-overlay-image .box-wrapper .box-img {
+          width: 100%; }
+        .box-overlay-image .box-wrapper .box-content {
+          position: relative;
+          width: 100%;
+          left: unset; } }
+
 .why-us-jp-content ol.split li {
   text-indent: -1.1em;
   list-style-type: none; }
@@ -971,6 +1032,33 @@ div.kineticjs-content {
     height: 38px;
     width: 38px; }
 
+#content.cyberjaya-content, #content.malta-content, #content.labuan-content {
+  margin-top: 0; }
+
+.location-cyberjaya .introduction h1, .location-labuan .introduction h1, .location-malta .introduction h1 {
+  color: #e98024;
+  font-size: 2.25rem; }
+
+.location-cyberjaya .introduction h2, .location-labuan .introduction h2, .location-malta .introduction h2 {
+  color: #e98024;
+  font-size: 1.75rem; }
+
+.location-cyberjaya .introduction h4.subheader, .location-labuan .introduction h4.subheader, .location-malta .introduction h4.subheader {
+  font-style: italic;
+  font-size: 1.15rem; }
+
+.location-cyberjaya .introduction p.no-margin-top, .location-labuan .introduction p.no-margin-top, .location-malta .introduction p.no-margin-top {
+  margin-top: 0; }
+
+@media (max-width: 768px) {
+  .location-cyberjaya .introduction p, .location-labuan .introduction p, .location-malta .introduction p {
+    text-align: center; }
+    .location-cyberjaya .introduction p.no-margin-top, .location-labuan .introduction p.no-margin-top, .location-malta .introduction p.no-margin-top {
+      margin-top: 1rem; } }
+
+.location-cyberjaya .living h2, .location-cyberjaya .misc h2, .location-labuan .living h2, .location-labuan .misc h2, .location-malta .living h2, .location-malta .misc h2 {
+  margin-bottom: 10px; }
+
 .regulation-content .gray-line {
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2;
@@ -1024,6 +1112,49 @@ body #not_authenticated_financial ul.checked > li {
 
 .liquidity-solutions-content .white-bg {
   background-color: #fff; }
+
+.about-us-content .about-us .values-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 8px; }
+  .about-us-content .about-us .values-box .icon-wrapper {
+    margin-right: 1.5rem; }
+    .about-us-content .about-us .values-box .icon-wrapper.ic-intergrity:before {
+      content: url("../images/pages/careers/ic-intergrity.svg");
+      width: 60px;
+      height: 60px; }
+    .about-us-content .about-us .values-box .icon-wrapper.ic-competence:before {
+      content: url("../images/pages/careers/ic-competence.svg");
+      width: 60px;
+      height: 60px; }
+    .about-us-content .about-us .values-box .icon-wrapper.ic-customer-focus:before {
+      content: url("../images/pages/careers/ic-customer-focus.svg");
+      width: 60px;
+      height: 60px; }
+    .about-us-content .about-us .values-box .icon-wrapper.ic-teamwork:before {
+      content: url("../images/pages/careers/ic-teamwork.svg");
+      width: 60px;
+      height: 60px; }
+  .about-us-content .about-us .values-box-subheader {
+    font-size: 1.15rem;
+    font-weight: normal;
+    text-transform: capitalize; }
+  .about-us-content .about-us .values-box .header-line {
+    border: 2px solid #e98024;
+    width: 50px; }
+
+.about-us-content .fill-text {
+  padding: 1em 0; }
+
+.about-us-content .center-element {
+  margin: 0 auto; }
+
+.about-us-content .btn-margin-top {
+  margin-top: 1.5em; }
 
 .accounts-content .table-container table {
   border: 1px solid #f2f2f2; }
@@ -1211,6 +1342,8 @@ body #not_authenticated_financial ul.checked > li {
         margin: 1em auto;
         max-width: 80%;
         font-weight: 300; }
+  #content.careers-content .career .center-element {
+    margin: 0 auto; }
   #content.careers-content .career .margin-top-100 {
     margin-top: 100px; }
   #content.careers-content .career .btn-margin-top {
@@ -1223,6 +1356,21 @@ body #not_authenticated_financial ul.checked > li {
     width: 25%; }
   #content.careers-content .career .fill-text {
     padding: 1em 0; }
+  #content.careers-content .career .values-box {
+    border: 2px solid #e98024;
+    margin: 0 4px; }
+    #content.careers-content .career .values-box-icon {
+      max-width: 60px;
+      padding: 8px 36px 0px;
+      margin-top: -36px;
+      background: #fff; }
+    #content.careers-content .career .values-box-subheader {
+      font-size: 1.15rem;
+      font-weight: normal;
+      text-transform: capitalize; }
+    @media (max-width: 768px) {
+      #content.careers-content .career .values-box {
+        margin-bottom: 2.5rem; } }
   #content.careers-content .career .box-container.padding {
     padding: 5px 15px; }
   #content.careers-content .career .box-container > [class*='gr-padding'] {
@@ -1301,6 +1449,17 @@ body #not_authenticated_financial ul.checked > li {
       color: #fff;
       padding: 20px 0;
       text-align: center; }
+  #content.careers-content .career .location-section {
+    padding-bottom: 10px; }
+    @media (max-width: 480px) {
+      #content.careers-content .career .location-section {
+        padding-bottom: 0; }
+        #content.careers-content .career .location-section .fill-text {
+          margin-bottom: 30px; } }
+  #content.careers-content .career .values-group {
+    margin-bottom: 20px; }
+    #content.careers-content .career .values-group h1 {
+      margin-bottom: 30px; }
 
 .welcome-content .box-grid .box {
   display: -webkit-box;
