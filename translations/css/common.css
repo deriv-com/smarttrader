@@ -755,6 +755,9 @@ label + input {
 #reality_check_content [data-balloon] {
   border-bottom: none; }
 
+#footer .container {
+  max-width: 1200px; }
+
 #footer #footer-menu h4 {
   font-size: 0.8695652174rem; }
 
@@ -768,36 +771,68 @@ label + input {
 #footer .content-inverse-color a {
   text-decoration: underline; }
 
-#footer #footer-regulatory #regulatory-text {
-  text-align: justify;
-  font-size: 0.6575162324rem; }
-
-#footer #footer-regulatory #iom_icon_footer {
-  max-width: 90px; }
-
-#footer #footer-regulatory #lga_icon_footer {
-  max-width: 70px; }
-
-#footer #footer-regulatory #gamstop_icon_footer {
-  max-width: 120px; }
-
-@media screen and (max-width: 480px) {
+#footer #footer-regulatory {
+  padding-bottom: 30px;
+  color: #a8a8a8; }
+  #footer #footer-regulatory a {
+    font-size: 13px !important; }
+  #footer #footer-regulatory p {
+    font-size: 13px;
+    font-weight: 100;
+    text-align: justify;
+    margin: 0 0 10px; }
+  #footer #footer-regulatory .about-binary {
+    border-top: 1px solid #44484c;
+    border-bottom: 1px solid #44484c;
+    padding: 10px 0;
+    margin-bottom: 10px; }
+    #footer #footer-regulatory .about-binary p {
+      margin: 0; }
+  #footer #footer-regulatory .risk-warning p {
+    font-size: 16px; }
   #footer #footer-regulatory #iom_icon_footer {
-    max-width: 110px; }
+    max-width: 90px; }
   #footer #footer-regulatory #lga_icon_footer {
-    max-width: 80px; }
+    max-width: 70px; }
   #footer #footer-regulatory #gamstop_icon_footer {
-    max-width: 130px; } }
+    max-width: 120px; }
+  @media screen and (max-width: 480px) {
+    #footer #footer-regulatory .icon-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      #footer #footer-regulatory .icon-row > * {
+        margin-right: 0;
+        margin-bottom: 20px; }
+    #footer #footer-regulatory .social-icons {
+      margin-left: 0; }
+    #footer #footer-regulatory #iom_icon_footer {
+      max-width: 110px; }
+    #footer #footer-regulatory #lga_icon_footer {
+      max-width: 80px; }
+    #footer #footer-regulatory #gamstop_icon_footer {
+      max-width: 130px; } }
+  #footer #footer-regulatory #ratelimit-error-message, #footer #footer-regulatory #site-status-message {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fef1cf;
+    z-index: 999; }
+  #footer #footer-regulatory #site-status-message {
+    z-index: 9999; }
 
-#footer #footer-regulatory #ratelimit-error-message, #footer #footer-regulatory #site-status-message {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fef1cf;
-  z-index: 999; }
-
-#footer #footer-regulatory #site-status-message {
-  z-index: 9999; }
+#footer .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 #footer .lga-gamstop-icon-container {
   height: 100%;
@@ -816,20 +851,20 @@ label + input {
   #footer .lga-gamstop-icon-container div, #footer .lga-gamstop-icon-container a {
     width: 100%; }
 
-#footer #social-icons {
-  padding-right: 10px !important; }
-  #footer #social-icons img {
-    max-height: 35px; }
+#footer .social-icons {
+  margin-left: auto; }
+  #footer .social-icons > *:not(:first-child) {
+    margin-left: 10px; }
+  #footer .social-icons img {
+    height: 35px;
+    width: 35px; }
 
-#footer #footer-last .gambling, #footer #footer-last .gambling a {
-  text-align: justify;
-  font-size: 0.7561436673rem;
-  font-weight: 400;
-  line-height: 110%; }
+#footer .icon-row {
+  padding-top: 10px;
+  padding-bottom: 14px; }
 
-#footer #footer-last .gambling.font-n, #footer #footer-last .gambling.font-n * {
-  font-size: 1rem;
-  line-height: 1.25; }
+#footer .regulation-logos > * {
+  margin-right: 20px; }
 
 #footer #end-note {
   line-height: 25px;
