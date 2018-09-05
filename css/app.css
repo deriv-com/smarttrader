@@ -285,59 +285,6 @@ a.previous-wrapper {
         #mb-trading-wrapper #mb_trading #panel #period .current div.head {
           font-weight: bold;
           margin-bottom: 5px; }
-    #mb-trading-wrapper #mb_trading #ja-panel #currency_wrapper, #mb-trading-wrapper #mb_trading #ja-panel #payout {
-      height: 103px; }
-    #mb-trading-wrapper #mb_trading #ja-panel #currency_wrapper .hint {
-      font-weight: normal;
-      font-size: 0.6575162324rem;
-      width: 100%;
-      background-color: transparent; }
-    #mb-trading-wrapper #mb_trading #ja-panel #payout .current {
-      font-size: 1.520875rem;
-      font-weight: bold;
-      height: 62px;
-      display: block;
-      line-height: 32px;
-      padding-top: 35px !important; }
-    #mb-trading-wrapper #mb_trading #ja-panel #payout_list {
-      height: 103px;
-      background: #fff; }
-      #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list {
-        background: #fff; }
-        #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div {
-          padding: 19px 10px !important;
-          height: 49px;
-          border-right: 2px solid #fff;
-          margin-bottom: 5px; }
-          #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div:nth-child(4n) {
-            border-right: none; }
-          #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div.plus {
-            color: #fff;
-            background: #c03; }
-          #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div.minus {
-            color: #fff;
-            background: #29abe2; }
-          #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div.green {
-            color: #fff;
-            background: #2e8836; }
-          #mb-trading-wrapper #mb_trading #ja-panel #payout_list .list > div .hint {
-            font-size: 75%; }
-    #mb-trading-wrapper #mb_trading #ja-panel #currency {
-      position: absolute;
-      width: 100%;
-      height: initial; }
-      #mb-trading-wrapper #mb_trading #ja-panel #currency .current {
-        height: 15px;
-        line-height: 15px;
-        padding-top: 35px; }
-      #mb-trading-wrapper #mb_trading #ja-panel #currency #currency .list > div {
-        height: 15px; }
-        #mb-trading-wrapper #mb_trading #ja-panel #currency #currency .list > div:hover {
-          height: 15px; }
-    #mb-trading-wrapper #mb_trading #ja-panel .gr-row .gr-no-gutter-left {
-      padding-right: 0; }
-      #mb-trading-wrapper #mb_trading #ja-panel .gr-row .gr-no-gutter-left:first-child {
-        padding-right: 5px; }
     #mb-trading-wrapper #mb_trading .trade_form:not(.no-margin) {
       margin-top: 5px; }
     #mb-trading-wrapper #mb_trading .trade_form > div {
@@ -410,17 +357,28 @@ a.previous-wrapper {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-    #mb-trading-wrapper #mb_trading .ja-hide + .price-table {
+    #mb-trading-wrapper #mb_trading .price-table {
+      position: relative;
+      font-size: 1rem;
       margin-top: 10px;
       margin-left: 0; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .heading {
+      #mb-trading-wrapper #mb_trading .price-table #disable-overlay {
+        position: absolute;
+        top: 81px;
+        z-index: 1;
+        width: 100%;
+        height: calc(100% - 81px);
+        background-color: rgba(242, 242, 242, 0.5); }
+      #mb-trading-wrapper #mb_trading .price-table #loading-overlay {
+        width: 100%; }
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .heading {
         font-weight: bold; }
-        #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .heading .hint {
+        #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .heading .hint {
           font-weight: normal; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .heading, #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .price-row {
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .heading, #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-row {
         border: 1px solid #dedede;
         border-bottom: none; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .contract-type {
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .contract-type {
         padding-left: 0;
         background-repeat: no-repeat;
         background-position: center;
@@ -428,29 +386,12 @@ a.previous-wrapper {
         height: 36px;
         width: 100%;
         margin-bottom: 5px; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .price-row:last-child {
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-row:last-child {
         border-bottom: 1px solid #dedede; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .price-row:nth-child(odd) {
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-row:nth-child(odd) {
         background-color: #fff; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .sell-price {
-        display: none; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table .prices-wrapper .buy-price {
+      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .buy-price {
         margin-top: 5px; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table #disable-overlay {
-        top: 81px;
-        height: calc(100% - 81px); }
-    #mb-trading-wrapper #mb_trading .price-table {
-      position: relative;
-      font-size: 1rem; }
-      #mb-trading-wrapper #mb_trading .price-table #disable-overlay {
-        position: absolute;
-        top: 53px;
-        z-index: 1;
-        width: 100%;
-        height: calc(100% - 43px);
-        background-color: rgba(242, 242, 242, 0.5); }
-      #mb-trading-wrapper #mb_trading .price-table #loading-overlay {
-        width: 100%; }
       #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .heading > div {
         line-height: 20px;
         text-align: center;
@@ -466,17 +407,8 @@ a.previous-wrapper {
         display: flex;
         -ms-flex-item-align: center;
             align-self: center; }
-      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .sell-price {
-        font-size: 0.7561436673rem;
-        line-height: 10px; }
-        #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .sell-price.hint {
-          font-size: 0.6575162324rem; }
-      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-rows .sell-price {
-        height: 10px; }
       #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-row div:last-child .buy-price .price-button {
         background: #c03; }
-      #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-row:nth-child(odd) {
-        background: #f2f2f2; }
       #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .base-value {
         font-size: 0.6575162324rem;
         display: inline-block;
@@ -530,36 +462,6 @@ a.previous-wrapper {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 14' width='10' height='14'%3E%3Cg%3E%3Cpolygon fill='white' points='7 8 7 0 3 0 3 8 0 8 5 13 10 8 7 8'/%3E%3C/g%3E%3C/svg%3E"); }
         #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .price-button:hover {
           opacity: 0.8; }
-    #mb-trading-wrapper #mb_trading #trading_status {
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      #mb-trading-wrapper #mb_trading #trading_status div > div:first-child {
-        padding-right: 2px; }
-      #mb-trading-wrapper #mb_trading #trading_status div > div:nth-child(2) {
-        padding-left: 2px; }
-      #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status {
-        height: 40px;
-        display: block; }
-        #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span {
-          padding: 9px 0;
-          width: 100%;
-          background-repeat: no-repeat;
-          background-position: center;
-          height: 31px;
-          line-height: 31px; }
-          #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span#allow {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 28' width='21px' height='28px'%3E%3Cg id='ICON' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' fill='black'%3E%3Cg id='LOCK---Open'%3E%3Cpath d='M2,10 L19,10 C20.1045695,10 21,10.8954305 21,12 L21,26 C21,27.1045695 20.1045695,28 19,28 L2,28 C0.8954305,28 1.3527075e-16,27.1045695 0,26 L0,12 L0,12 C-1.3527075e-16,10.8954305 0.8954305,10 2,10 L2,10 Z M2,12 L2,26 L19,26 L19,12 L2,12 Z' id='Combined-Shape'%3E%3C/path%3E%3Ccircle id='Oval' cx='10.5' cy='19.5' r='2.5'%3E%3C/circle%3E%3Cpath d='M6.78804397,12 L17,12 L17,6.5 C17,2.91014913 14.0898509,-6.59444907e-16 10.5,0 L10.5,0 L10.5,0 C8.18204244,4.25801896e-16 6.14746967,1.2133145 4.99673493,3.03949026 C5.34846188,3.37895719 5.84339326,3.85663692 6.4815291,4.47252949 C7.22305541,3.00571037 8.74407958,2 10.5,2 L10.5,2 L10.5,2 C12.9852814,2 15,4.01471863 15,6.5 L15,12 L6.78804397,12 L6.78804397,12 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-            #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span#allow.selected {
-              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 28' width='21px' height='28px'%3E%3Cg id='ICON' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' fill='white'%3E%3Cg id='LOCK---Open'%3E%3Cpath d='M2,10 L19,10 C20.1045695,10 21,10.8954305 21,12 L21,26 C21,27.1045695 20.1045695,28 19,28 L2,28 C0.8954305,28 1.3527075e-16,27.1045695 0,26 L0,12 L0,12 C-1.3527075e-16,10.8954305 0.8954305,10 2,10 L2,10 Z M2,12 L2,26 L19,26 L19,12 L2,12 Z' id='Combined-Shape'%3E%3C/path%3E%3Ccircle id='Oval' cx='10.5' cy='19.5' r='2.5'%3E%3C/circle%3E%3Cpath d='M6.78804397,12 L17,12 L17,6.5 C17,2.91014913 14.0898509,-6.59444907e-16 10.5,0 L10.5,0 L10.5,0 C8.18204244,4.25801896e-16 6.14746967,1.2133145 4.99673493,3.03949026 C5.34846188,3.37895719 5.84339326,3.85663692 6.4815291,4.47252949 C7.22305541,3.00571037 8.74407958,2 10.5,2 L10.5,2 L10.5,2 C12.9852814,2 15,4.01471863 15,6.5 L15,12 L6.78804397,12 L6.78804397,12 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-          #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span#disallow {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 28' width='21px' height='28px'%3E%3Cg id='ICON' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-36.000000, 0.000000)' fill='black'%3E%3Cg id='LOCK---Close' transform='translate(36.000000, 0.000000)'%3E%3Cpath d='M2,10 L19,10 C20.1045695,10 21,10.8954305 21,12 L21,26 C21,27.1045695 20.1045695,28 19,28 L2,28 C0.8954305,28 1.3527075e-16,27.1045695 0,26 L0,12 L0,12 C-1.3527075e-16,10.8954305 0.8954305,10 2,10 L2,10 Z M2,12 L2,26 L19,26 L19,12 L2,12 Z' id='Combined-Shape'%3E%3C/path%3E%3Ccircle id='Oval' cx='10.5' cy='19.5' r='2.5'%3E%3C/circle%3E%3Cpath d='M10.5,0 L10.5,0 C14.0898509,-6.59444907e-16 17,2.91014913 17,6.5 L17,12 L4,12 L4,6.5 L4,6.5 C4,2.91014913 6.91014913,6.59444907e-16 10.5,0 L10.5,0 Z M10.5,2 L10.5,2 C8.01471863,2 6,4.01471863 6,6.5 L6,6.5 L6,12 L15,12 L15,6.5 C15,4.01471863 12.9852814,2 10.5,2 L10.5,2 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-            #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span#disallow.selected {
-              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 28' width='21px' height='28px'%3E%3Cg id='ICON' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-36.000000, 0.000000)' fill='white'%3E%3Cg id='LOCK---Close' transform='translate(36.000000, 0.000000)'%3E%3Cpath d='M2,10 L19,10 C20.1045695,10 21,10.8954305 21,12 L21,26 C21,27.1045695 20.1045695,28 19,28 L2,28 C0.8954305,28 1.3527075e-16,27.1045695 0,26 L0,12 L0,12 C-1.3527075e-16,10.8954305 0.8954305,10 2,10 L2,10 Z M2,12 L2,26 L19,26 L19,12 L2,12 Z' id='Combined-Shape'%3E%3C/path%3E%3Ccircle id='Oval' cx='10.5' cy='19.5' r='2.5'%3E%3C/circle%3E%3Cpath d='M10.5,0 L10.5,0 C14.0898509,-6.59444907e-16 17,2.91014913 17,6.5 L17,12 L4,12 L4,6.5 L4,6.5 C4,2.91014913 6.91014913,6.59444907e-16 10.5,0 L10.5,0 Z M10.5,2 L10.5,2 C8.01471863,2 6,4.01471863 6,6.5 L6,6.5 L6,12 L15,12 L15,6.5 C15,4.01471863 12.9852814,2 10.5,2 L10.5,2 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-          #mb-trading-wrapper #mb_trading #trading_status div > div .trading-status span.selected {
-            color: #fff;
-            background-color: #2a3052; }
     #mb-trading-wrapper #mb_trading .remaining-time {
       color: #000;
       line-height: 20px; }
@@ -576,19 +478,17 @@ a.previous-wrapper {
         padding-bottom: 10px; }
       #mb-trading-wrapper #mb_trading #panel {
         margin-left: 0; }
-      #mb-trading-wrapper #mb_trading .ja-hide + .price-table {
+      #mb-trading-wrapper #mb_trading .price-table {
         margin-left: -10px; } }
     @media screen and (max-width: 480px) {
       #mb-trading-wrapper #mb_trading .price-table #disable-overlay {
         top: 43px; }
       #mb-trading-wrapper #mb_trading .price-table .price-row .price-button {
         font-size: 1rem; }
-      #mb-trading-wrapper #mb_trading .sell-price {
-        font-size: 0.6575162324rem; }
-      #mb-trading-wrapper #mb_trading .heading, #mb-trading-wrapper #mb_trading #category {
-        font-size: 0.8695652174rem; }
       #mb-trading-wrapper #mb_trading .price-table .prices-wrapper .heading > div {
         padding: 5px 0; }
+      #mb-trading-wrapper #mb_trading .heading, #mb-trading-wrapper #mb_trading #category {
+        font-size: 0.8695652174rem; }
       #mb-trading-wrapper #mb_trading #payout .hint {
         line-height: 15px; } }
   #mb-trading-wrapper #trading_bottom_content #tab_portfolio-content {
@@ -1964,16 +1864,6 @@ a.previous-wrapper {
 @media screen and (max-width: 480px) {
   #frm_account_transfer div.select {
     width: calc(100% - 1rem); } }
-
-#knowledge-test-container #knowledge-test-msg {
-  white-space: pre-line; }
-
-#knowledge-test-container .kv-pairs {
-  width: auto;
-  margin-left: 15px;
-  margin-bottom: 10px; }
-  #knowledge-test-container .kv-pairs td {
-    border: none; }
 
 #profit-table-container th {
   padding-right: 8px; }

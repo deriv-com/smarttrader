@@ -1237,39 +1237,6 @@ body .app-store-badge, body .google-play-badge {
 body.EN .calls_recording {
   display: block !important; }
 
-body.JA .ja-hide {
-  display: none !important; }
-
-body.JA .regulatory-logo {
-  display: none !important; }
-
-body.JA #header #menu-top li {
-  white-space: nowrap; }
-
-body.JA #profit-table .buy-price, body.JA #profit-table .sell-price, body.JA #profit-table .payout, body.JA #profit-table .pl.loss, body.JA #profit-table .act, body.JA #statement-table .buy-price, body.JA #statement-table .sell-price, body.JA #statement-table .payout, body.JA #statement-table .pl.loss, body.JA #statement-table .act {
-  white-space: nowrap; }
-
-body.JA #email_consent_label {
-  font-size: 0.7561436673rem; }
-
-body.JA #footer #footer-regulatory #regulatory-text {
-  font-size: 0.8695652174rem; }
-
-body.JA #footer #footer-regulatory .gr-9, body.JA #footer #footer-regulatory .gr-7-p {
-  width: 100% !important; }
-
-body.JA #mb_trading .payout-input .hint, body.JA #mb_trading .payout-input label {
-  font-size: 0.6575162324rem; }
-
-body.JA #mb_trading #currency {
-  font-size: 0.6575162324rem; }
-
-@media screen and (max-width: 480px) {
-  body.JA #mb_trading .trade_form {
-    font-size: 1rem; }
-    body.JA #mb_trading .trade_form #spot, body.JA #mb_trading .trade_form .current .name {
-      font-size: 1.15rem; } }
-
 /*Vietnamese Language */
 body.VI {
   -webkit-font-kerning: none;
@@ -1411,12 +1378,6 @@ body.IT .app-store-badge {
 body.IT .google-play-badge {
   background-image: url("../images/pages/applications/googleplay_it.svg"); }
 
-body.JA .app-store-badge {
-  background-image: url("../images/pages/applications/appstore_ja.svg"); }
-
-body.JA .google-play-badge {
-  background-image: url("../images/pages/applications/googleplay_ja.svg"); }
-
 body.PL .app-store-badge {
   background-image: url("../images/pages/applications/appstore_pl.svg"); }
 
@@ -1468,10 +1429,6 @@ body.ZH_TW .google-play-badge {
   #header ul#menu-top.smaller-font a {
     font-size: 0.7561436673rem; } }
 
-@media screen and (max-width: 959px) {
-  .home-jp-content #banner {
-    background-position-x: 0; } }
-
 @media screen and (min-width: 767) and (max-width: 768px) {
   .center-text-p {
     text-align: center; }
@@ -1504,8 +1461,6 @@ body.ZH_TW .google-play-badge {
     padding: 0; }
   #end-note {
     display: none; }
-  .home-jp-content #banner {
-    background-position-x: 15%; }
   #content .content-tab-container.light .tab-menu-wrap ul.tm-ul li.tm-li a {
     font-size: 0.8695652174rem; }
   #content .light .tab-menu-wrap ul.tm-ul li.tm-li.tab-selector {
