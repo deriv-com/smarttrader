@@ -790,29 +790,6 @@ label + input {
       margin: 0; }
   #footer #footer-regulatory .risk-warning p {
     font-size: 16px; }
-  #footer #footer-regulatory #iom_icon_footer {
-    max-width: 90px; }
-  #footer #footer-regulatory #lga_icon_footer {
-    max-width: 70px; }
-  #footer #footer-regulatory #gamstop_icon_footer {
-    max-width: 120px; }
-  @media screen and (max-width: 480px) {
-    #footer #footer-regulatory .icon-row {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      #footer #footer-regulatory .icon-row > * {
-        margin-right: 0;
-        margin-bottom: 20px; }
-    #footer #footer-regulatory .social-icons {
-      margin-left: 0; }
-    #footer #footer-regulatory #iom_icon_footer {
-      max-width: 110px; }
-    #footer #footer-regulatory #lga_icon_footer {
-      max-width: 80px; }
-    #footer #footer-regulatory #gamstop_icon_footer {
-      max-width: 130px; } }
   #footer #footer-regulatory #ratelimit-error-message, #footer #footer-regulatory #site-status-message {
     position: fixed;
     top: 0;
@@ -821,6 +798,20 @@ label + input {
     z-index: 999; }
   #footer #footer-regulatory #site-status-message {
     z-index: 9999; }
+
+#footer .iom-icon {
+  width: 90px; }
+
+#footer .lga-icon {
+  width: 100px; }
+
+#footer .gamstop-icon {
+  width: 109px; }
+
+#footer .gamstop-icon.data-show-visible + .lga-icon {
+  width: 70px;
+  margin-bottom: 3px;
+  margin-left: -10px; }
 
 #footer .flex-row {
   display: -webkit-box;
@@ -835,21 +826,16 @@ label + input {
           align-items: center; }
 
 #footer .lga-gamstop-icon-container {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  #footer .lga-gamstop-icon-container div, #footer .lga-gamstop-icon-container a {
-    width: 100%; }
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
 
 #footer .social-icons {
   margin-left: auto; }
@@ -900,6 +886,18 @@ label + input {
     padding-left: 7px; }
     #footer #status_notification_close:hover {
       cursor: pointer; }
+
+@media screen and (max-width: 590px) {
+  #footer .icon-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #footer .icon-row > * {
+      margin-right: 0;
+      margin-bottom: 20px; }
+  #footer .social-icons {
+    margin-left: 0; } }
 
 body #topbar {
   text-align: right; }
