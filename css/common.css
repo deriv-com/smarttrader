@@ -234,6 +234,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 label {
   line-height: 25px;
   pointer-events: none; }
+  label * {
+    pointer-events: auto;
+    cursor: pointer; }
 
 /* used for form label in grid structure */
 .form_label {
@@ -1126,42 +1129,51 @@ table {
   border-bottom: 3px solid #f2f2f2; }
 
 /* Flex table styling */
-.table-container {
-  overflow-x: auto; }
-  .table-container th {
-    text-align: left;
-    border-bottom: none;
-    overflow: hidden; }
+.table-container th {
+  text-align: left;
+  border-bottom: none;
+  overflow: hidden; }
+
+.table-container td {
+  text-align: left;
+  padding-left: 10px; }
+  .table-container td[data-balloon] {
+    border-bottom: 3px solid #f2f2f2; }
+
+.table-container .w-80 {
+  width: 80px; }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .table-container {
+    overflow-x: auto; } }
+
+@media (max-width: 600px) {
   .table-container td {
-    text-align: left;
-    padding-left: 10px; }
-    .table-container td[data-balloon] {
-      border-bottom: 3px solid #f2f2f2; }
-  .table-container .w-80 {
-    width: 80px; }
-  @media (max-width: 600px) {
-    .table-container td {
-      padding-left: 5px !important;
-      padding-right: 5px !important; }
-    .table-container th {
-      padding-left: 5px !important;
-      padding-right: 5px !important; } }
+    padding-left: 5px !important;
+    padding-right: 5px !important; }
+  .table-container th {
+    padding-left: 5px !important;
+    padding-right: 5px !important; } }
+
+.table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+  display: none !important; }
+
+.table-container #statement-table tr td, .table-container #profit-table tr td {
+  overflow: initial; }
+
+@media (max-width: 600px) {
   .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+    display: table-cell !important; }
+    .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button {
+      padding: 8px 15px; }
+  .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #profit-table tr th, .table-container #profit-table tr td {
+    font-size: 0.7561436673rem; } }
+
+@media (max-width: 600px) {
+  .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract {
     display: none !important; }
-  .table-container #statement-table tr td, .table-container #profit-table tr td {
-    overflow: initial; }
-  @media (max-width: 600px) {
-    .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
-      display: table-cell !important; }
-      .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button {
-        padding: 8px 15px; }
-    .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #profit-table tr th, .table-container #profit-table tr td {
-      font-size: 0.7561436673rem; } }
-  @media (max-width: 600px) {
-    .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract {
-      display: none !important; }
-    .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc {
-      display: none !important; } }
+  .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc {
+    display: none !important; } }
 
 /**
  * Image lightbox.
