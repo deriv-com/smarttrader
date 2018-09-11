@@ -358,10 +358,13 @@ _:-ms-fullscreen, :root #content-holder {
   vertical-align: middle; }
 
 input[type=checkbox] {
-  margin-top: -5px;
-  margin-right: 5px; }
-  input[type=checkbox]#email_consent {
-    margin-top: 5px; }
+  margin: 5px 5px 5px 0;
+  padding: 7px;
+  cursor: pointer; }
+  input[type=checkbox] ~ label {
+    pointer-events: auto; }
+  input[type=checkbox]#email_consent, input[type=checkbox]#chk_accept {
+    margin-left: 5px; }
 
 .no-scroll, .no-scroll body {
   overflow: hidden; }
