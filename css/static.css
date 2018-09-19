@@ -223,6 +223,15 @@
   text-align: center;
   margin: 0 auto; }
 
+.get-started #step-2 {
+  background-image: url("../images/pages//get-started/mt5/how-to-trade-binary/step-2-bg.png");
+  height: 311px; }
+  .get-started #step-2 > div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
 .formula span {
   display: inline-block;
   padding: 10px 20px;
@@ -830,23 +839,98 @@ div.kineticjs-content {
 .browser-support-content #chrome {
   background-image: url("../images/pages/browser_support/chromelogo.png"); }
 
-#payment_methods h3:not(.no-margin) {
-  margin: 35px 0 0; }
-
-#payment_methods table thead {
-  border-bottom: 1px solid #44484c; }
-
-#payment_methods table td {
-  vertical-align: middle; }
-
-#payment_methods table th:nth-child(2), #payment_methods table td:nth-child(2) {
-  min-width: 150px; }
-
-#payment_methods table th:nth-child(3), #payment_methods table th:nth-child(4), #payment_methods table td:nth-child(3), #payment_methods table td:nth-child(4) {
-  min-width: 100px; }
-
-#payment_methods table th:nth-child(5), #payment_methods table td:nth-child(5) {
-  min-width: 200px; }
+#payment_methods {
+  overflow-y: hidden; }
+  #payment_methods h3:not(.no-margin) {
+    margin: 35px 0 0; }
+  #payment_methods table thead {
+    border-bottom: 1px solid #44484c; }
+  #payment_methods table tr {
+    position: relative; }
+    #payment_methods table tr .data-anchor-link {
+      display: none; }
+    #payment_methods table tr .th-list, #payment_methods table tr .td-list {
+      display: grid;
+      grid-template-columns: 2fr 1.3fr 1.3fr 3fr 0.8fr;
+      grid-column-gap: 10px; }
+      #payment_methods table tr .th-list .th, #payment_methods table tr .th-list .td, #payment_methods table tr .td-list .th, #payment_methods table tr .td-list .td {
+        -ms-flex-item-align: center;
+            align-self: center; }
+      #payment_methods table tr .th-list > *:nth-child(1), #payment_methods table tr .td-list > *:nth-child(1) {
+        min-width: 180px; }
+      #payment_methods table tr .th-list > *:nth-child(2), #payment_methods table tr .th-list > *:nth-child(3), #payment_methods table tr .td-list > *:nth-child(2), #payment_methods table tr .td-list > *:nth-child(3) {
+        min-width: 110px; }
+      #payment_methods table tr .th-list > *:nth-child(4), #payment_methods table tr .td-list > *:nth-child(4) {
+        min-width: 190px; }
+    #payment_methods table tr .td-description {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  #payment_methods table thead tr th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #payment_methods table thead tr th:nth-child(1) {
+      min-width: 100px; }
+  #payment_methods table tbody tr td {
+    position: relative;
+    padding: 10px; }
+    #payment_methods table tbody tr td div.td-list, #payment_methods table tbody tr td div.td-description {
+      overflow: hidden;
+      position: absolute;
+      top: 0; }
+      #payment_methods table tbody tr td div.td-list.td-list, #payment_methods table tbody tr td div.td-description.td-list {
+        height: 0;
+        opacity: 0; }
+        #payment_methods table tbody tr td div.td-list.td-list.active, #payment_methods table tbody tr td div.td-description.td-list.active {
+          -webkit-transition: all 0.2s 0.2s;
+          transition: all 0.2s 0.2s;
+          height: 100%;
+          opacity: 1; }
+      #payment_methods table tbody tr td div.td-list.td-description, #payment_methods table tbody tr td div.td-description.td-description {
+        height: 100%;
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px);
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        -webkit-text-size-adjust: 100%;
+           -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%; }
+        #payment_methods table tbody tr td div.td-list.td-description.active, #payment_methods table tbody tr td div.td-description.td-description.active {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          opacity: 1; }
+    #payment_methods table tbody tr td.toggler:after {
+      position: absolute;
+      top: 80%;
+      left: calc(50% - 100px);
+      content: '\002303';
+      color: #2a3052;
+      -webkit-transform-origin: center 35%;
+              transform-origin: center 35%;
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+      transition: -webkit-transform 0.2s ease-in;
+      transition: transform 0.2s ease-in;
+      transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+      font-size: 24px; }
+    #payment_methods table tbody tr td.toggler:hover {
+      cursor: pointer; }
+    #payment_methods table tbody tr td.toggler.open:after {
+      -webkit-transform: rotate(0);
+              transform: rotate(0); }
+    #payment_methods table tbody tr td .td {
+      padding: 0 !important; }
 
 .charity .gallery {
   position: relative;

@@ -85,7 +85,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead, tr, th, td, .table-container tr div .td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -138,13 +138,13 @@ sup, .sup, .sup:visited {
   font-weight: normal;
   margin-left: 2px; }
 
-table.middle td {
+table.middle td, table.middle .table-container tr div .td, .table-container tr div table.middle .td {
   vertical-align: middle; }
 
-table.thin-border td {
+table.thin-border td, table.thin-border .table-container tr div .td, .table-container tr div table.thin-border .td {
   border-bottom: 1px solid #dedede; }
 
-table td.no-border {
+table td.no-border, table .table-container tr div .no-border.td, .table-container tr div table .no-border.td {
   border: 0; }
 
 select, input, button, textarea {
@@ -756,7 +756,7 @@ label + input {
     .image-slider #go_next {
       right: 15px; } }
 
-#reality_check_content td {
+#reality_check_content td, #reality_check_content .table-container tr div .td, .table-container tr div #reality_check_content .td {
   width: 12.5%; }
 
 #reality_check_content [data-balloon] {
@@ -1103,7 +1103,7 @@ table {
     background: #f2f2f2;
     border-bottom: 1px solid #44484c;
     vertical-align: middle; }
-  table td {
+  table td, table .table-container tr div .td, .table-container tr div table .td {
     vertical-align: top;
     border-width: 0 1px;
     padding: 4px;
@@ -1134,45 +1134,48 @@ table {
   border-bottom: none;
   overflow: hidden; }
 
-.table-container td {
+.table-container td, .table-container tr div .td {
   text-align: left;
   padding-left: 10px; }
-  .table-container td[data-balloon] {
+  .table-container td[data-balloon], .table-container tr div .td[data-balloon] {
     border-bottom: 3px solid #f2f2f2; }
 
 .table-container .w-80 {
   width: 80px; }
+
+.table-container tr div .td {
+  display: table-cell; }
 
 @media (max-width: 767px) and (orientation: portrait) {
   .table-container {
     overflow-x: auto; } }
 
 @media (max-width: 600px) {
-  .table-container td {
+  .table-container td, .table-container tr div .td {
     padding-left: 5px !important;
     padding-right: 5px !important; }
   .table-container th {
     padding-left: 5px !important;
     padding-right: 5px !important; } }
 
-.table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+.table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
   display: none !important; }
 
-.table-container #statement-table tr td, .table-container #profit-table tr td {
+.table-container #statement-table tr td, .table-container #statement-table tr div .td, .table-container #profit-table tr td, .table-container #profit-table tr div .td {
   overflow: initial; }
 
 @media (max-width: 600px) {
-  .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+  .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
     display: table-cell !important; }
-    .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button {
+    .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #statement-table tr div tr > .details.td .button, .table-container tr div #statement-table tr > .details.td .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button, .table-container #profit-table tr div tr > .details.td .button, .table-container tr div #profit-table tr > .details.td .button {
       padding: 8px 15px; }
-  .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #profit-table tr th, .table-container #profit-table tr td {
+  .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #statement-table tr div .td, .table-container #profit-table tr th, .table-container #profit-table tr td, .table-container #profit-table tr div .td {
     font-size: 0.7561436673rem; } }
 
 @media (max-width: 600px) {
-  .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract {
+  .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract, .table-container #profit-table tr div tr > .contract.td, .table-container tr div #profit-table tr > .contract.td {
     display: none !important; }
-  .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc {
+  .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc, .table-container #statement-table tr div tr > .desc.td, .table-container tr div #statement-table tr > .desc.td {
     display: none !important; } }
 
 /**
