@@ -85,7 +85,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead, tr, th, td, .table-container tr div .td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -138,13 +138,13 @@ sup, .sup, .sup:visited {
   font-weight: normal;
   margin-left: 2px; }
 
-table.middle td {
+table.middle td, table.middle .table-container tr div .td, .table-container tr div table.middle .td {
   vertical-align: middle; }
 
-table.thin-border td {
+table.thin-border td, table.thin-border .table-container tr div .td, .table-container tr div table.thin-border .td {
   border-bottom: 1px solid #dedede; }
 
-table td.no-border {
+table td.no-border, table .table-container tr div .no-border.td, .table-container tr div table .no-border.td {
   border: 0; }
 
 select, input, button, textarea {
@@ -232,7 +232,11 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 /* form styles */
 label {
-  line-height: 25px; }
+  line-height: 25px;
+  pointer-events: none; }
+  label * {
+    pointer-events: auto;
+    cursor: pointer; }
 
 /* used for form label in grid structure */
 .form_label {
@@ -357,10 +361,13 @@ _:-ms-fullscreen, :root #content-holder {
   vertical-align: middle; }
 
 input[type=checkbox] {
-  margin-top: -5px;
-  margin-right: 5px; }
-  input[type=checkbox]#email_consent {
-    margin-top: 5px; }
+  margin: 5px 5px 5px 0;
+  padding: 7px;
+  cursor: pointer; }
+  input[type=checkbox] ~ label {
+    pointer-events: auto; }
+  input[type=checkbox]#email_consent, input[type=checkbox]#chk_accept {
+    margin-left: 5px; }
 
 .no-scroll, .no-scroll body {
   overflow: hidden; }
@@ -749,7 +756,7 @@ label + input {
     .image-slider #go_next {
       right: 15px; } }
 
-#reality_check_content td {
+#reality_check_content td, #reality_check_content .table-container tr div .td, .table-container tr div #reality_check_content .td {
   width: 12.5%; }
 
 #reality_check_content [data-balloon] {
@@ -772,13 +779,14 @@ label + input {
   text-decoration: underline; }
 
 #footer #footer-regulatory {
-  padding-bottom: 30px;
-  color: #a8a8a8; }
+  padding-bottom: 30px; }
+  #footer #footer-regulatory a, #footer #footer-regulatory p {
+    font-size: 13px !important;
+    font-weight: 100; }
   #footer #footer-regulatory a {
-    font-size: 13px !important; }
+    color: #dedede; }
   #footer #footer-regulatory p {
-    font-size: 13px;
-    font-weight: 100;
+    color: #a8a8a8;
     text-align: justify;
     margin: 0 0 10px; }
   #footer #footer-regulatory .about-binary {
@@ -790,29 +798,6 @@ label + input {
       margin: 0; }
   #footer #footer-regulatory .risk-warning p {
     font-size: 16px; }
-  #footer #footer-regulatory #iom_icon_footer {
-    max-width: 90px; }
-  #footer #footer-regulatory #lga_icon_footer {
-    max-width: 70px; }
-  #footer #footer-regulatory #gamstop_icon_footer {
-    max-width: 120px; }
-  @media screen and (max-width: 480px) {
-    #footer #footer-regulatory .icon-row {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      #footer #footer-regulatory .icon-row > * {
-        margin-right: 0;
-        margin-bottom: 20px; }
-    #footer #footer-regulatory .social-icons {
-      margin-left: 0; }
-    #footer #footer-regulatory #iom_icon_footer {
-      max-width: 110px; }
-    #footer #footer-regulatory #lga_icon_footer {
-      max-width: 80px; }
-    #footer #footer-regulatory #gamstop_icon_footer {
-      max-width: 130px; } }
   #footer #footer-regulatory #ratelimit-error-message, #footer #footer-regulatory #site-status-message {
     position: fixed;
     top: 0;
@@ -821,6 +806,20 @@ label + input {
     z-index: 999; }
   #footer #footer-regulatory #site-status-message {
     z-index: 9999; }
+
+#footer .iom-icon {
+  width: 90px; }
+
+#footer .lga-icon {
+  width: 100px; }
+
+#footer .gamstop-icon {
+  width: 109px; }
+
+#footer .gamstop-icon.data-show-visible + .lga-icon {
+  width: 70px;
+  margin-bottom: 3px;
+  margin-left: -10px; }
 
 #footer .flex-row {
   display: -webkit-box;
@@ -835,21 +834,16 @@ label + input {
           align-items: center; }
 
 #footer .lga-gamstop-icon-container {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  #footer .lga-gamstop-icon-container div, #footer .lga-gamstop-icon-container a {
-    width: 100%; }
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
 
 #footer .social-icons {
   margin-left: auto; }
@@ -900,6 +894,18 @@ label + input {
     padding-left: 7px; }
     #footer #status_notification_close:hover {
       cursor: pointer; }
+
+@media screen and (max-width: 590px) {
+  #footer .icon-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #footer .icon-row > * {
+      margin-right: 0;
+      margin-bottom: 20px; }
+  #footer .social-icons {
+    margin-left: 0; } }
 
 body #topbar {
   text-align: right; }
@@ -1098,7 +1104,7 @@ table {
     background: #f2f2f2;
     border-bottom: 1px solid #44484c;
     vertical-align: middle; }
-  table td {
+  table td, table .table-container tr div .td, .table-container tr div table .td {
     vertical-align: top;
     border-width: 0 1px;
     padding: 4px;
@@ -1129,41 +1135,48 @@ table {
   border-bottom: none;
   overflow: hidden; }
 
-.table-container td {
+.table-container td, .table-container tr div .td {
   text-align: left;
   padding-left: 10px; }
-  .table-container td[data-balloon] {
+  .table-container td[data-balloon], .table-container tr div .td[data-balloon] {
     border-bottom: 3px solid #f2f2f2; }
 
 .table-container .w-80 {
   width: 80px; }
 
+.table-container tr div .td {
+  display: table-cell; }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .table-container {
+    overflow-x: auto; } }
+
 @media (max-width: 600px) {
-  .table-container td {
+  .table-container td, .table-container tr div .td {
     padding-left: 5px !important;
     padding-right: 5px !important; }
   .table-container th {
     padding-left: 5px !important;
     padding-right: 5px !important; } }
 
-.table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+.table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
   display: none !important; }
 
-.table-container #statement-table tr td, .table-container #profit-table tr td {
+.table-container #statement-table tr td, .table-container #statement-table tr div .td, .table-container #profit-table tr td, .table-container #profit-table tr div .td {
   overflow: initial; }
 
 @media (max-width: 600px) {
-  .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details {
+  .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
     display: table-cell !important; }
-    .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button {
+    .table-container #statement-table tr > th.details .button, .table-container #statement-table tr > td.details .button, .table-container #statement-table tr div tr > .details.td .button, .table-container tr div #statement-table tr > .details.td .button, .table-container #profit-table tr > th.details .button, .table-container #profit-table tr > td.details .button, .table-container #profit-table tr div tr > .details.td .button, .table-container tr div #profit-table tr > .details.td .button {
       padding: 8px 15px; }
-  .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #profit-table tr th, .table-container #profit-table tr td {
+  .table-container #statement-table tr th, .table-container #statement-table tr td, .table-container #statement-table tr div .td, .table-container #profit-table tr th, .table-container #profit-table tr td, .table-container #profit-table tr div .td {
     font-size: 0.7561436673rem; } }
 
 @media (max-width: 600px) {
-  .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract {
+  .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract, .table-container #profit-table tr div tr > .contract.td, .table-container tr div #profit-table tr > .contract.td {
     display: none !important; }
-  .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc {
+  .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc, .table-container #statement-table tr div tr > .desc.td, .table-container tr div #statement-table tr > .desc.td {
     display: none !important; } }
 
 /**
@@ -1440,8 +1453,6 @@ body.ZH_TW .google-play-badge {
     overflow: scroll;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    overflow-x: auto; }
-  .table-container {
     overflow-x: auto; }
   .welcome-content .box-grid:first-child div {
     margin-bottom: 0.5rem; }
