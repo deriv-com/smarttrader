@@ -779,13 +779,14 @@ label + input {
   text-decoration: underline; }
 
 #footer #footer-regulatory {
-  padding-bottom: 30px;
-  color: #a8a8a8; }
+  padding-bottom: 30px; }
+  #footer #footer-regulatory a, #footer #footer-regulatory p {
+    font-size: 13px !important;
+    font-weight: 100; }
   #footer #footer-regulatory a {
-    font-size: 13px !important; }
+    color: #dedede; }
   #footer #footer-regulatory p {
-    font-size: 13px;
-    font-weight: 100;
+    color: #a8a8a8;
     text-align: justify;
     margin: 0 0 10px; }
   #footer #footer-regulatory .about-binary {
