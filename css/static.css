@@ -1394,8 +1394,6 @@ body #not_authenticated_financial ul.checked > li {
       #content.careers-content .career ul.role-section li.role:focus {
         border: 0;
         outline: 0; }
-  #content.careers-content .career .america-careers-link a {
-    text-transform: capitalize; }
   #content.careers-content .career .footer-email {
     margin-bottom: -20px; }
     #content.careers-content .career .footer-email p {
