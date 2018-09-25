@@ -650,7 +650,7 @@ li strong.margin-right {
 .section-divider .circle {
   padding: 7px 5px !important; }
 
-.no-capitalize > a {
+.no-capitalize, .no-capitalize > a {
   text-transform: none !important; }
 
 label + input {
