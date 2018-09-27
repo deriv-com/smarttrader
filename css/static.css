@@ -814,31 +814,6 @@ div.kineticjs-content {
   font-weight: 100;
   margin-bottom: 0; }
 
-.browser-support-content .li-boxes-content-icon {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  height: 10em; }
-
-.browser-support-content #internet_explorer {
-  background-image: url("../images/pages/browser_support/ielogo.png"); }
-
-.browser-support-content #microsoft_edge {
-  background-image: url("../images/pages/browser_support/edgelogo.png");
-  background-size: 50%; }
-
-.browser-support-content #firefox {
-  background-image: url("../images/pages/browser_support/firefoxlogo.png"); }
-
-.browser-support-content #safari {
-  background-image: url("../images/pages/browser_support/safarilogo.png"); }
-
-.browser-support-content #opera {
-  background-image: url("../images/pages/browser_support/operalogo.png"); }
-
-.browser-support-content #chrome {
-  background-image: url("../images/pages/browser_support/chromelogo.png"); }
-
 #payment_methods {
   overflow-y: hidden; }
   #payment_methods h3:not(.no-margin) {
