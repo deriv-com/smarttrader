@@ -1291,6 +1291,10 @@ body.ID #regulatory-text {
 body.ID .id-hide {
   display: none !important; }
 
+body.ID .id-show {
+  display: block !important;
+  visibility: visible; }
+
 body.IT #legal-tab li.tm-li-2, body.DE #legal-tab li.tm-li-2 {
   margin-right: 0 !important;
   padding: 0 8px !important; }

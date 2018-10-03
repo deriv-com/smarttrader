@@ -1114,12 +1114,27 @@ body #not_authenticated_financial ul.checked > li {
 .set-currency-content .list-style-inside {
   list-style-position: inside; }
 
-.platforms-content img.responsive {
+.platforms-content h2 {
+  line-height: 36px; }
+
+.platforms-content #new_badge {
+  position: relative;
+  top: -15px; }
+
+.platforms-content .download-app {
+  padding-bottom: 30px; }
+
+.platforms-content img.platform {
   max-height: 150px;
   width: auto; }
   @media (max-width: 350px) {
-    .platforms-content img.responsive {
+    .platforms-content img.platform {
       max-width: 290px; } }
+
+@media screen and (max-width: 768px) {
+  .platforms-content .no-center-text-p-m {
+    text-align: inherit;
+    padding-bottom: 30px; } }
 
 #mt5_types_of_accounts .box {
   border: 1px solid #dedede;
