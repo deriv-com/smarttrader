@@ -1509,6 +1509,9 @@ body #not_authenticated_financial ul.checked > li {
   height: 3rem;
   margin: 5px 0; }
 
+#signup_form #google-signup {
+  font-size: 0.8695652174rem; }
+
 #contract-specification table td {
   white-space: nowrap; }
 
