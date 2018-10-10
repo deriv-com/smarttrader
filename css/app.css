@@ -515,6 +515,30 @@ a.previous-wrapper {
     #mb-trading-wrapper #trading_bottom_content .tab-menu-wrap {
       display: none; } }
 
+.mt-mobile-phone {
+  height: 397px;
+  width: auto; }
+
+.mt-desktop-screen-app {
+  max-width: 600px;
+  height: auto; }
+  @media screen and (max-width: 480px) {
+    .mt-desktop-screen-app {
+      max-width: 100%; } }
+
+.mt-browser-icon {
+  max-width: 80px; }
+
+.alternative-download-description {
+  margin: 0; }
+
+.android-description, .ios-description {
+  padding: 0 30px; }
+
+#mt_download .app-store-badge, #mt_download .google-play-badge {
+  height: 56px;
+  width: 172px; }
+
 #mt_account_management {
   margin: 0; }
   #mt_account_management > div {
@@ -812,6 +836,23 @@ a.previous-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+.mt-sidebar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .mt-sidebar-button .small-icon img {
+    width: 76px; }
 
 #portfolio td {
   padding: 10px;
