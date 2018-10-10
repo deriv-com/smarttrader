@@ -548,6 +548,20 @@ a.previous-wrapper {
       display: inline-block;
       vertical-align: middle;
       margin-right: 10px; }
+  #mt_account_management .password-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 8px; }
+    #mt_account_management .password-type > *:not(:last-child) {
+      margin-right: 20px; }
   #mt_account_management #account_selector {
     position: relative;
     cursor: pointer;
