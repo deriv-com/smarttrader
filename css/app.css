@@ -785,9 +785,7 @@ a.previous-wrapper {
                 flex: 1; }
       #mt_account_management .fst-container #fst_action .type-group .mt5_type_box img {
         height: 65px;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1; }
+        margin: auto; }
       #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled, #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.existed {
         cursor: default; }
         #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled:hover, #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.existed:hover {
