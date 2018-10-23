@@ -180,14 +180,64 @@
           content: counter(item1) "." counter(item2) "." counter(item3) "." counter(item4) ".";
           counter-increment: item4; }
 
-#mt_download .browsers img {
-  max-height: 100px; }
+.mt-sidebar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 110px; }
+  .mt-sidebar-button img {
+    max-width: 100%;
+    width: 72px; }
 
 #new_account_icon {
   background-image: url("../images/pages/metatrader/icons/new_account.svg");
   background-repeat: no-repeat;
   background-position: 18px 6px;
   padding-left: 48px; }
+
+#mt_download a[data-type=alt-link] {
+  cursor: pointer; }
+
+#mt_download p.no-margin {
+  margin: 0; }
+
+#mt_download .browsers {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  #mt_download .browsers img {
+    max-width: 100px; }
+    @media screen and (max-width: 480px) {
+      #mt_download .browsers img {
+        width: 40px; } }
+
+#mt_download .app-store-badge, #mt_download .google-play-badge {
+  height: 56px;
+  width: 172px; }
+
+#mt_download .mt-mobile-phone {
+  height: 397px;
+  width: auto; }
+
+#mt_download .mt-desktop-screen-app {
+  max-width: 600px;
+  height: auto; }
+  @media screen and (max-width: 480px) {
+    #mt_download .mt-desktop-screen-app {
+      max-width: 100%; } }
+
+#mt_download .alternative-download-description {
+  margin: 0; }
 
 /* GET-STARTED PAGES RULES */
 .get-started a:hover {
@@ -1114,12 +1164,27 @@ body #not_authenticated_financial ul.checked > li {
 .set-currency-content .list-style-inside {
   list-style-position: inside; }
 
-.platforms-content img.responsive {
+.platforms-content h2 {
+  line-height: 36px; }
+
+.platforms-content #new_badge {
+  position: relative;
+  top: -15px; }
+
+.platforms-content .download-app {
+  padding-bottom: 30px; }
+
+.platforms-content img.platform {
   max-height: 150px;
   width: auto; }
   @media (max-width: 350px) {
-    .platforms-content img.responsive {
+    .platforms-content img.platform {
       max-width: 290px; } }
+
+@media screen and (max-width: 768px) {
+  .platforms-content .no-center-text-p-m {
+    text-align: inherit;
+    padding-bottom: 30px; } }
 
 #mt5_types_of_accounts .box {
   border: 1px solid #dedede;
@@ -1494,8 +1559,30 @@ body #not_authenticated_financial ul.checked > li {
   height: 3rem;
   margin: 5px 0; }
 
+#signup_form #google-signup {
+  font-size: 0.8695652174rem; }
+
 #contract-specification table td {
   white-space: nowrap; }
+
+.select-options::-webkit-scrollbar {
+  -webkit-appearance: none; }
+
+.select-options::-webkit-scrollbar:vertical {
+  width: 11px; }
+
+.select-options::-webkit-scrollbar:horizontal {
+  height: 11px; }
+
+.select-options::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #fff;
+  /* should match background, can't be transparent */
+  background-color: #f2f2f2; }
+
+.select-options::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 8px; }
 
 .timeline {
   margin: 0 auto;

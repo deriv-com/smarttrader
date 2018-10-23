@@ -515,6 +515,30 @@ a.previous-wrapper {
     #mb-trading-wrapper #trading_bottom_content .tab-menu-wrap {
       display: none; } }
 
+.mt-mobile-phone {
+  height: 397px;
+  width: auto; }
+
+.mt-desktop-screen-app {
+  max-width: 600px;
+  height: auto; }
+  @media screen and (max-width: 480px) {
+    .mt-desktop-screen-app {
+      max-width: 100%; } }
+
+.mt-browser-icon {
+  max-width: 80px; }
+
+.alternative-download-description {
+  margin: 0; }
+
+.android-description, .ios-description {
+  padding: 0 30px; }
+
+#mt_download .app-store-badge, #mt_download .google-play-badge {
+  height: 56px;
+  width: 172px; }
+
 #mt_account_management {
   margin: 0; }
   #mt_account_management > div {
@@ -548,6 +572,20 @@ a.previous-wrapper {
       display: inline-block;
       vertical-align: middle;
       margin-right: 10px; }
+  #mt_account_management .password-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 8px; }
+    #mt_account_management .password-type > *:not(:last-child) {
+      margin-right: 20px; }
   #mt_account_management #account_selector {
     position: relative;
     cursor: pointer;
@@ -747,9 +785,7 @@ a.previous-wrapper {
                 flex: 1; }
       #mt_account_management .fst-container #fst_action .type-group .mt5_type_box img {
         height: 65px;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1; }
+        margin: auto; }
       #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled, #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.existed {
         cursor: default; }
         #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled:hover, #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.existed:hover {
@@ -798,6 +834,24 @@ a.previous-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+.mt-sidebar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center; }
+  .mt-sidebar-button .small-icon img {
+    width: 76px; }
 
 #portfolio td {
   padding: 10px;
@@ -1365,8 +1419,7 @@ a.previous-wrapper {
         #trading_socket_container #contract_prices_container .price_container .contract_purchase.button-disabled .purchase_button {
           cursor: auto; }
     #trading_socket_container #contract_prices_container #contract_purchase_reference {
-      margin-bottom: 10px;
-      padding: 7px; }
+      padding-top: 7px; }
     #trading_socket_container #contract_prices_container #confirmation_error {
       padding: 20px;
       font-style: italic;
@@ -1415,6 +1468,18 @@ a.previous-wrapper {
         padding-left: 3px; }
     #trading_socket_container #contract_prices_container #confirmation_message {
       padding-bottom: 34px; }
+      #trading_socket_container #contract_prices_container #confirmation_message #contract_highlowtick {
+        margin-top: 10px; }
+      #trading_socket_container #contract_prices_container #confirmation_message div.button {
+        padding-top: 7px; }
+      #trading_socket_container #contract_prices_container #confirmation_message #trade_tick_chart .highcharts-tooltip span {
+        top: 1px !important;
+        left: 2px !important; }
+        #trading_socket_container #contract_prices_container #confirmation_message #trade_tick_chart .highcharts-tooltip span .tooltip-body {
+          background-color: #fff;
+          padding: 6px;
+          margin-bottom: -14px;
+          margin-right: -14px; }
     #trading_socket_container #contract_prices_container #contract_purchase_descr {
       background-color: #fff;
       border: 2px solid #dedede;
@@ -1422,6 +1487,8 @@ a.previous-wrapper {
       padding: 10px;
       text-align: justify;
       line-height: 1.4em; }
+    #trading_socket_container #contract_prices_container #contract_purchase_button {
+      margin-top: 10px; }
     #trading_socket_container #contract_prices_container #contract_purchase_profit_list, #trading_socket_container #contract_prices_container #contract_purchase_spots .row {
       padding: 3px 0;
       -webkit-box-orient: horizontal !important;
