@@ -675,6 +675,17 @@ label + input {
   width: 16px;
   height: 16px; }
 
+.notice-circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #394171;
+  border-radius: 50%;
+  color: #394171;
+  line-height: 16px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto; }
+
 @media (max-width: 768px) {
   .show_mobile[data-balloon]:before, .show_mobile[data-balloon]:after {
     display: block !important;

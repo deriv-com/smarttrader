@@ -1979,6 +1979,12 @@ a.previous-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+#settings_container .round-box {
+  border-radius: 4px; }
+
+#settings_container .notice-circle {
+  margin: auto 15px; }
+
 @media screen and (max-width: 480px) {
   .api_token table td, .api_token table th, #applications-container table td, #applications-container table th {
     font-size: 0.7561436673rem; }
