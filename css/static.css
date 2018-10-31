@@ -1001,6 +1001,113 @@ div.kineticjs-content {
     height: 38px;
     width: 38px; }
 
+#content.contact-2-content {
+  margin-top: 0; }
+  #content.contact-2-content #top_banner, #content.contact-2-content #elevio_menu_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  #content.contact-2-content #top_banner {
+    background: url("../images/pages/contact_2/banner-bg.svg");
+    min-height: 300px; }
+    #content.contact-2-content #top_banner .search {
+      width: 600px;
+      max-width: 95%; }
+      #content.contact-2-content #top_banner .search div#_elev_io_placebo {
+        border: 1px solid #dadada;
+        border-radius: 4px;
+        background-color: #fff; }
+        #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r {
+          background: url("../images/pages/contact_2/search-icon.svg") center no-repeat;
+          width: 30px; }
+          #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r svg {
+            display: none; }
+        #content.contact-2-content #top_banner .search div#_elev_io_placebo input {
+          background: transparent !important; }
+  #content.contact-2-content #elevio_menu_container {
+    background: #f2f2f2;
+    padding: 20px; }
+    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._cnzpc {
+      padding: 0; }
+    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon {
+      background-color: #fff;
+      padding: 40px;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      max-width: unset;
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto;
+      margin: 20px; }
+      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd {
+        width: 32px;
+        height: 32px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        background-color: transparent !important;
+        background-size: contain;
+        margin-bottom: 20px; }
+        #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd svg {
+          display: none; }
+      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._1bt1k {
+        font-size: 1.15rem; }
+      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon:hover ._1bt1k {
+        color: #394171 !important; }
+    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_1 ._d9ggd {
+      background: url("../images/pages/contact_2/content-icon.svg") no-repeat center; }
+    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_6 ._d9ggd {
+      background: url("../images/pages/contact_2/ticket-icon.svg") no-repeat center; }
+    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
+      display: none; }
+  #content.contact-2-content .phone-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #content.contact-2-content .phone-container label {
+      margin-bottom: 5px; }
+    #content.contact-2-content .phone-container .number-container {
+      margin-left: 30px; }
+      #content.contact-2-content .phone-container .number-container #cs_telephone_number {
+        width: 100%;
+        min-width: 160px; }
+      #content.contact-2-content .phone-container .number-container #display_cs_telephone {
+        line-height: 1.5rem;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        padding-top: 10px; }
+
+._elevio_launcher {
+  display: none; }
+
+body #_elev_io * {
+  font-family: roboto, sans-serif; }
+
+body #_elev_io ._nr4k9 {
+  display: block;
+  margin-bottom: 20px;
+  color: #2a3052;
+  font-size: 22px;
+  font-weight: 300; }
+
+body #_elev_io ._1b4vy:hover {
+  color: #2a3052; }
+
+body #_elev_io ._elevio_articlelink > div {
+  color: #2a3052;
+  text-decoration: none;
+  font-weight: 700; }
+  body #_elev_io ._elevio_articlelink > div > div {
+    background: none; }
+  body #_elev_io ._elevio_articlelink > div:hover {
+    text-decoration: underline; }
+
 #content.cyberjaya-content, #content.malta-content, #content.labuan-content {
   margin-top: 0; }
 
