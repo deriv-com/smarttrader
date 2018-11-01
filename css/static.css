@@ -1695,6 +1695,67 @@ body #not_authenticated_financial ul.checked > li {
     .keep-safe-container .box.bordered > div img {
       padding-right: 20px; }
 
+.vpn-app .steps.steps-vertical {
+  max-width: 603px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 15px; }
+  @media (max-width: 480px) {
+    .vpn-app .steps.steps-vertical {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .vpn-app .steps.steps-vertical .step:not(:first-child) {
+        margin-top: 2rem; } }
+  .vpn-app .steps.steps-vertical .step {
+    position: relative;
+    min-height: 135px; }
+    .vpn-app .steps.steps-vertical .step:not(:last-child) {
+      border-left: 1px solid #f2f2f2; }
+    .vpn-app .steps.steps-vertical .step .circle {
+      margin: 0;
+      position: absolute;
+      left: -20px; }
+    .vpn-app .steps.steps-vertical .step .content {
+      padding: 8px 0 0 30px;
+      margin-left: 37px; }
+      .vpn-app .steps.steps-vertical .step .content p {
+        margin: 0;
+        max-width: 270px;
+        text-align: left; }
+        .vpn-app .steps.steps-vertical .step .content p:last-child, .vpn-app .steps.steps-vertical .step .content p:nth-child(2) {
+          padding-bottom: 15px; }
+
+.vpn-app-icon {
+  width: 83px;
+  margin-bottom: 23px; }
+  @media screen and (max-width: 480px) {
+    .vpn-app-icon {
+      margin-top: 10px;
+      -webkit-transform: scale(0.85);
+              transform: scale(0.85); } }
+
+@media screen and (max-width: 480px) {
+  .vpn-app .column {
+    padding: 0; } }
+
+.vpn-app .vertical-divider {
+  width: 1px;
+  background-color: #f2f2f2; }
+  @media screen and (max-width: 480px) {
+    .vpn-app .vertical-divider {
+      display: none; } }
+
+.vpn-app .cta-download-heading {
+  margin-top: 50px; }
+  .vpn-app .cta-download-heading h2 {
+    margin-bottom: 45px; }
+
 .timeline {
   margin: 0 auto;
   overflow: hidden;
