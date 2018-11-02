@@ -1974,6 +1974,27 @@ a.previous-wrapper {
       -ms-flex: 0.8 1 35px;
           flex: 0.8 1 35px; }
 
+#statement-container #account_statistics {
+  margin: 30px 0;
+  border: 1px solid #f2f2f2; }
+  #statement-container #account_statistics div {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 20px; }
+    @media (max-width: 480px) {
+      #statement-container #account_statistics div {
+        padding: 10px 20px; } }
+    @media (max-width: 576px) {
+      #statement-container #account_statistics div {
+        padding: 10px; } }
+  #statement-container #account_statistics p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.5; }
+    #statement-container #account_statistics p:not(.title) {
+      margin-top: 5px; }
+
 #profit-table-container #date_to, #statement-container #date_to {
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -2168,7 +2189,7 @@ a.previous-wrapper {
               transition: background 0.2s 0.1s;
               cursor: pointer;
               padding: 0 5px 5px;
-              -webkit-tap-highlight-color: transparent;
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
               -webkit-tap-highlight-color: transparent; }
               .markets .markets_dropdown .markets_view .markets_column .mobile ul li.active {
                 border-bottom: 2px solid #2a3052; }

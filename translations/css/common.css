@@ -263,6 +263,9 @@ label {
 .no-margin {
   margin: 0 !important; }
 
+.full-height {
+  height: 100%; }
+
 .errorfield {
   margin-top: 8px;
   color: #c03; }
@@ -693,6 +696,114 @@ label + input {
             transform: translate(-15%, 0) !important; }
   .show_mobile[data-balloon-length=medium]:before {
     width: 120px; } }
+
+/* TODO: remove when UX research is finished */
+#interview_popup_container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.5); }
+  #interview_popup_container .popup {
+    width: calc(100vw - 20px);
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #fff;
+    -webkit-box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.82);
+            box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.82);
+    border-radius: 10px;
+    overflow: hidden; }
+    #interview_popup_container .popup__head {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 20px 25px;
+      background-image: url("../images/interview_popup/bg-shape.svg");
+      background-size: 100%;
+      background-position: bottom;
+      background-repeat: no-repeat; }
+      #interview_popup_container .popup__head h1 {
+        color: #fff;
+        margin: 0; }
+    #interview_popup_container .popup__present_img {
+      margin: 0 auto 20px;
+      height: 130px;
+      display: block;
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px); }
+    #interview_popup_container .popup__body {
+      padding: 20px 35px 30px; }
+    #interview_popup_container .popup__options {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      #interview_popup_container .popup__options * {
+        margin: 0; }
+      #interview_popup_container .popup__options #interview_no_thanks {
+        color: #a1aab3; }
+    #interview_popup_container .popup__secondary_options {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      line-height: 20px; }
+    #interview_popup_container .popup__separator {
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 2px;
+      height: 20px;
+      margin: 0 15px;
+      background: #a1aab3; }
+  #interview_popup_container h1, #interview_popup_container h2 {
+    text-align: center;
+    line-height: 1.15; }
+  @media screen and (max-width: 768px) {
+    #interview_popup_container h1 {
+      font-size: 24px; }
+    #interview_popup_container h2 {
+      font-size: 18px; }
+    #interview_popup_container .popup {
+      max-width: 340px; }
+      #interview_popup_container .popup__present_img {
+        height: 100px; }
+      #interview_popup_container .popup__head {
+        padding: 20px 15px; }
+      #interview_popup_container .popup__body {
+        padding: 20px 15px 7px; }
+      #interview_popup_container .popup__options {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        font-size: 16px; }
+      #interview_popup_container .popup__secondary_options {
+        font-size: 12px; }
+      #interview_popup_container .popup #interview_interested {
+        font-size: 20px;
+        margin: 5px 0 30px; }
+    #interview_popup_container p {
+      font-size: 14px; } }
+  @media screen and (max-width: 360px) {
+    #interview_popup_container .popup__head {
+      background-size: 120%; } }
 
 /* main style */
 #androidApp, #appstore {
@@ -3228,8 +3339,8 @@ body.ZH_TW .google-play-badge {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -3932,8 +4043,8 @@ body.ZH_TW .google-play-badge {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -4636,8 +4747,8 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -5197,8 +5308,8 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -5900,8 +6011,8 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -6461,8 +6572,8 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -7164,8 +7275,8 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -7725,8 +7836,8 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -8428,8 +8539,8 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -8989,8 +9100,8 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(0, 0, 0, 0.02)));
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.02)));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -9106,7 +9217,7 @@ html.mm-opened #mm-blocker {
   left: 0;
   top: 0;
   margin: 0;
-  border: 0 solid transparent; }
+  border: 0 solid rgba(0, 0, 0, 0); }
 
 html.mm-opening .mm-page,
 html.mm-opening #mm-blocker {
