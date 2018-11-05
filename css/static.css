@@ -1552,6 +1552,62 @@ body #not_authenticated_financial ul.checked > li {
     #content.careers-content .career .values-group h1 {
       margin-bottom: 30px; }
 
+#content.economic_calendar-content .calendar-container {
+  position: relative; }
+  #content.economic_calendar-content .calendar-container .calendar-footer {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 2px);
+    border: 1px solid #dedede;
+    border-top-width: 0;
+    height: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0; }
+    #content.economic_calendar-content .calendar-container .calendar-footer span.desc {
+      outline: 0;
+      display: block;
+      padding: 1px 70px 6px 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #content.economic_calendar-content .calendar-container .calendar-footer a {
+      font-size: 0.8695652174rem;
+      color: #4a76b8;
+      text-decoration: underline;
+      font-weight: 400; }
+      #content.economic_calendar-content .calendar-container .calendar-footer a.logo {
+        text-indent: -9999px;
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        height: 24px;
+        width: 24px;
+        background: url("https://c.mql5.com/i/calendar/mt_logo1_x1.png") no-repeat top left; }
+      #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: top;
+        background: url("https://c.mql5.com/i/calendar/widget-icons-social-sharing.png"); }
+        #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i.fb {
+          background-position: -21px 0; }
+        #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i.twitter {
+          background-position: 0 0; }
+    #content.economic_calendar-content .calendar-container .calendar-footer .left {
+      margin-left: 8px; }
+    #content.economic_calendar-content .calendar-container .calendar-footer .right {
+      margin-right: 8px; }
+      #content.economic_calendar-content .calendar-container .calendar-footer .right a {
+        padding: 0 2px; }
+
 .welcome-content .box-grid .box {
   display: -webkit-box;
   display: -ms-flexbox;
