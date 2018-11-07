@@ -1001,38 +1001,38 @@ div.kineticjs-content {
     height: 38px;
     width: 38px; }
 
-#content.contact-2-content {
+#content.contact-content {
   margin-top: 0; }
-  #content.contact-2-content #top_banner, #content.contact-2-content #elevio_menu_container {
+  #content.contact-content #top_banner, #content.contact-content #elevio_menu_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  #content.contact-2-content #top_banner {
-    background: url("../images/pages/contact_2/banner-bg.svg");
+  #content.contact-content #top_banner {
+    background: url("../images/pages/contact/banner-bg.svg");
     min-height: 300px; }
-    #content.contact-2-content #top_banner .search {
+    #content.contact-content #top_banner .search {
       width: 600px;
       max-width: 95%; }
-      #content.contact-2-content #top_banner .search div#_elev_io_placebo {
+      #content.contact-content #top_banner .search div#_elev_io_placebo {
         border: 1px solid #dadada;
         border-radius: 4px;
         background-color: #fff; }
-        #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r {
-          background: url("../images/pages/contact_2/search-icon.svg") center no-repeat;
+        #content.contact-content #top_banner .search div#_elev_io_placebo > span._10b1r {
+          background: url("../images/pages/contact/search-icon.svg") center no-repeat;
           width: 30px; }
-          #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r svg {
+          #content.contact-content #top_banner .search div#_elev_io_placebo > span._10b1r svg {
             display: none; }
-        #content.contact-2-content #top_banner .search div#_elev_io_placebo input {
+        #content.contact-content #top_banner .search div#_elev_io_placebo input {
           background: transparent !important; }
-  #content.contact-2-content #elevio_menu_container {
+  #content.contact-content #elevio_menu_container {
     background: #f2f2f2;
     padding: 20px; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._cnzpc {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._cnzpc {
       padding: 0; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon {
       background-color: #fff;
       padding: 40px;
       -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -1043,7 +1043,7 @@ div.kineticjs-content {
           -ms-flex: auto;
               flex: auto;
       margin: 20px; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd {
         width: 32px;
         height: 32px;
         -webkit-box-shadow: none;
@@ -1051,33 +1051,33 @@ div.kineticjs-content {
         background-color: transparent !important;
         background-size: contain;
         margin-bottom: 20px; }
-        #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd svg {
+        #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd svg {
           display: none; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._1bt1k {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._1bt1k {
         font-size: 1.15rem; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon:hover ._1bt1k {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon:hover ._1bt1k {
         color: #394171 !important; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_1 ._d9ggd {
-      background: url("../images/pages/contact_2/content-icon.svg") no-repeat center; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_6 ._d9ggd {
-      background: url("../images/pages/contact_2/ticket-icon.svg") no-repeat center; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_1 ._d9ggd {
+      background: url("../images/pages/contact/content-icon.svg") no-repeat center; }
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_6 ._d9ggd {
+      background: url("../images/pages/contact/ticket-icon.svg") no-repeat center; }
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
       display: none; }
-  #content.contact-2-content .phone-container {
+  #content.contact-content .phone-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    #content.contact-2-content .phone-container label {
+    #content.contact-content .phone-container label {
       margin-bottom: 5px; }
-    #content.contact-2-content .phone-container .number-container {
+    #content.contact-content .phone-container .number-container {
       margin-left: 30px; }
-      #content.contact-2-content .phone-container .number-container #cs_telephone_number {
+      #content.contact-content .phone-container .number-container #cs_telephone_number {
         width: 100%;
         min-width: 160px; }
-      #content.contact-2-content .phone-container .number-container #display_cs_telephone {
+      #content.contact-content .phone-container .number-container #display_cs_telephone {
         line-height: 1.5rem;
         -ms-flex-item-align: end;
             align-self: flex-end;
