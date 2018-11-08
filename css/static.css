@@ -1085,6 +1085,9 @@ div.kineticjs-content {
 
 ._elevio_launcher {
   display: none; }
+  ._elevio_launcher ._6byvm._zvdyj {
+    bottom: 8px !important;
+    right: 8px !important; }
 
 body #_elev_io * {
   font-family: roboto, sans-serif; }
