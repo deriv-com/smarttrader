@@ -1001,38 +1001,38 @@ div.kineticjs-content {
     height: 38px;
     width: 38px; }
 
-#content.contact-2-content {
+#content.contact-content {
   margin-top: 0; }
-  #content.contact-2-content #top_banner, #content.contact-2-content #elevio_menu_container {
+  #content.contact-content #top_banner, #content.contact-content #elevio_menu_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  #content.contact-2-content #top_banner {
-    background: url("../images/pages/contact_2/banner-bg.svg");
+  #content.contact-content #top_banner {
+    background: url("../images/pages/contact/banner-bg.svg");
     min-height: 300px; }
-    #content.contact-2-content #top_banner .search {
+    #content.contact-content #top_banner .search {
       width: 600px;
       max-width: 95%; }
-      #content.contact-2-content #top_banner .search div#_elev_io_placebo {
+      #content.contact-content #top_banner .search div#_elev_io_placebo {
         border: 1px solid #dadada;
         border-radius: 4px;
         background-color: #fff; }
-        #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r {
-          background: url("../images/pages/contact_2/search-icon.svg") center no-repeat;
+        #content.contact-content #top_banner .search div#_elev_io_placebo > span._10b1r {
+          background: url("../images/pages/contact/search-icon.svg") center no-repeat;
           width: 30px; }
-          #content.contact-2-content #top_banner .search div#_elev_io_placebo > span._10b1r svg {
+          #content.contact-content #top_banner .search div#_elev_io_placebo > span._10b1r svg {
             display: none; }
-        #content.contact-2-content #top_banner .search div#_elev_io_placebo input {
+        #content.contact-content #top_banner .search div#_elev_io_placebo input {
           background: transparent !important; }
-  #content.contact-2-content #elevio_menu_container {
+  #content.contact-content #elevio_menu_container {
     background: #f2f2f2;
     padding: 20px; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._cnzpc {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._cnzpc {
       padding: 0; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon {
       background-color: #fff;
       padding: 40px;
       -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -1043,7 +1043,7 @@ div.kineticjs-content {
           -ms-flex: auto;
               flex: auto;
       margin: 20px; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd {
         width: 32px;
         height: 32px;
         -webkit-box-shadow: none;
@@ -1051,33 +1051,33 @@ div.kineticjs-content {
         background-color: transparent !important;
         background-size: contain;
         margin-bottom: 20px; }
-        #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd svg {
+        #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._d9ggd svg {
           display: none; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._1bt1k {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon ._1bt1k {
         font-size: 1.15rem; }
-      #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon:hover ._1bt1k {
+      #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon:hover ._1bt1k {
         color: #394171 !important; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_1 ._d9ggd {
-      background: url("../images/pages/contact_2/content-icon.svg") no-repeat center; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_6 ._d9ggd {
-      background: url("../images/pages/contact_2/ticket-icon.svg") no-repeat center; }
-    #content.contact-2-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_1 ._d9ggd {
+      background: url("../images/pages/contact/content-icon.svg") no-repeat center; }
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_6 ._d9ggd {
+      background: url("../images/pages/contact/ticket-icon.svg") no-repeat center; }
+    #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
       display: none; }
-  #content.contact-2-content .phone-container {
+  #content.contact-content .phone-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    #content.contact-2-content .phone-container label {
+    #content.contact-content .phone-container label {
       margin-bottom: 5px; }
-    #content.contact-2-content .phone-container .number-container {
+    #content.contact-content .phone-container .number-container {
       margin-left: 30px; }
-      #content.contact-2-content .phone-container .number-container #cs_telephone_number {
+      #content.contact-content .phone-container .number-container #cs_telephone_number {
         width: 100%;
         min-width: 160px; }
-      #content.contact-2-content .phone-container .number-container #display_cs_telephone {
+      #content.contact-content .phone-container .number-container #display_cs_telephone {
         line-height: 1.5rem;
         -ms-flex-item-align: end;
             align-self: flex-end;
@@ -1551,6 +1551,62 @@ body #not_authenticated_financial ul.checked > li {
     margin-bottom: 20px; }
     #content.careers-content .career .values-group h1 {
       margin-bottom: 30px; }
+
+#content.economic_calendar-content .calendar-container {
+  position: relative; }
+  #content.economic_calendar-content .calendar-container .calendar-footer {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 2px);
+    border: 1px solid #dedede;
+    border-top-width: 0;
+    height: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0; }
+    #content.economic_calendar-content .calendar-container .calendar-footer span.desc {
+      outline: 0;
+      display: block;
+      padding: 1px 70px 6px 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #content.economic_calendar-content .calendar-container .calendar-footer a {
+      font-size: 0.8695652174rem;
+      color: #4a76b8;
+      text-decoration: underline;
+      font-weight: 400; }
+      #content.economic_calendar-content .calendar-container .calendar-footer a.logo {
+        text-indent: -9999px;
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        height: 24px;
+        width: 24px;
+        background: url("https://c.mql5.com/i/calendar/mt_logo1_x1.png") no-repeat top left; }
+      #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: top;
+        background: url("https://c.mql5.com/i/calendar/widget-icons-social-sharing.png"); }
+        #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i.fb {
+          background-position: -21px 0; }
+        #content.economic_calendar-content .calendar-container .calendar-footer a.social-links i.twitter {
+          background-position: 0 0; }
+    #content.economic_calendar-content .calendar-container .calendar-footer .left {
+      margin-left: 8px; }
+    #content.economic_calendar-content .calendar-container .calendar-footer .right {
+      margin-right: 8px; }
+      #content.economic_calendar-content .calendar-container .calendar-footer .right a {
+        padding: 0 2px; }
 
 .welcome-content .box-grid .box {
   display: -webkit-box;

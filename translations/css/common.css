@@ -1421,6 +1421,12 @@ body.FR #trading_socket_container #contract_form_name_nav {
   body.FR #trading_socket_container #contract_form_name_nav > li a.tm-a {
     font-size: 0.6575162324rem; }
 
+body.FR #trading_socket_container #contract_prices_container .price_container .contract_heading {
+  font-size: 0.8695652174rem;
+  background-size: 36px;
+  padding-top: 46px;
+  width: 110px; }
+
 body.FR #header .account-type {
   font-size: 0.8695652174rem; }
 
@@ -1449,9 +1455,11 @@ body.RU #trading_socket_container #contract_form_name_nav {
   body.RU #trading_socket_container #contract_form_name_nav > li a.tm-a {
     font-size: 0.6575162324rem; }
 
-body.RU #trading_socket_container .contract_heading {
-  font-size: 1rem;
-  padding-top: 2.7em; }
+body.RU #trading_socket_container .price_container .price_wrapper .contract_heading {
+  font-size: 0.8695652174rem;
+  background-size: 36px;
+  padding-top: 46px;
+  width: 110px !important; }
 
 body.RU #trading_socket_container #expiry_type {
   max-width: 185px; }
@@ -1472,6 +1480,12 @@ body.DE #trading_socket_container #contract_form_name_nav {
   font-size: 1rem; }
   body.DE #trading_socket_container #contract_form_name_nav > li a.tm-a {
     font-size: 0.7561436673rem; }
+
+body.DE #trading_socket_container .contract_heading {
+  font-size: 0.8695652174rem;
+  background-size: 36px;
+  padding-top: 46px;
+  width: 110px; }
 
 body.ZH_TW #trading_socket_container #contract_form_name_nav, body.ZH_TW #trading_socket_container #contract_form_name_nav > li a.tm-a {
   font-size: 1rem; }
