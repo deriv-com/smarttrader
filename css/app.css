@@ -928,6 +928,8 @@ a.previous-wrapper {
   max-width: 1200px; }
   #asset_index_wrapper #asset-index.has-tabs.ui-tabs .ui-tabs-panel {
     padding: 0; }
+  #asset_index_wrapper #asset-index .table-container {
+    overflow-x: auto; }
   #asset_index_wrapper #asset-index th {
     width: calc(100% / 7); }
     #asset_index_wrapper #asset-index th:nth-child(2):nth-last-child(1) {
