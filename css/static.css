@@ -1069,7 +1069,12 @@ div.kineticjs-content {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    margin: 0 10px; }
+    #content.contact-content .phone-container div.gr-col:first-child {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
     #content.contact-content .phone-container label {
       margin-bottom: 5px; }
     #content.contact-content .phone-container .number-container {

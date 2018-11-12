@@ -1141,7 +1141,7 @@ body #topbar .upgrademessage a, .landing_page-content .upgrademessage a {
   #header #menu-top.top-nav-menu > li {
     float: none; }
     #header #menu-top.top-nav-menu > li ul {
-      z-index: 2; }
+      z-index: 99; }
       #header #menu-top.top-nav-menu > li ul li {
         display: block; }
         #header #menu-top.top-nav-menu > li ul li a {
