@@ -1063,30 +1063,21 @@ div.kineticjs-content {
       background: url("../images/pages/contact/ticket-icon.svg") no-repeat center; }
     #content.contact-content #elevio_menu_container #elevio_element_menu ._elevio_module_icon_10 {
       display: none; }
-  #content.contact-content .phone-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 10px; }
-    #content.contact-content .phone-container div.gr-col:first-child {
-      -webkit-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
-    #content.contact-content .phone-container label {
-      margin-bottom: 5px; }
-    #content.contact-content .phone-container .number-container {
-      margin-left: 30px; }
-      #content.contact-content .phone-container .number-container #cs_telephone_number {
-        width: 100%;
-        min-width: 160px; }
-      #content.contact-content .phone-container .number-container #display_cs_telephone {
-        line-height: 1.5rem;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-        padding-top: 10px; }
+  #content.contact-content .phone-container img {
+    width: 70px;
+    height: 70px; }
+  #content.contact-content .phone-container label, #content.contact-content .phone-container select {
+    margin-bottom: 5px; }
+  #content.contact-content .phone-container .number-container #cs_telephone_number {
+    width: 100%;
+    min-width: 160px; }
+  #content.contact-content .phone-container .number-container #display_cs_telephone {
+    line-height: 1.5rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 5px; }
+    #content.contact-content .phone-container .number-container #display_cs_telephone * ~ span {
+      margin-top: 5px; }
 
 ._elevio_launcher {
   display: none; }
