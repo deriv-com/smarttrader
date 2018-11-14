@@ -1465,6 +1465,10 @@ body #not_authenticated_financial ul.checked > li {
         margin-bottom: 2.5rem; } }
   #content.careers-content .career .box-container.padding {
     padding: 5px 15px; }
+    @media (max-width: 768px) {
+      #content.careers-content .career .box-container.padding-20-m {
+        padding-top: 20px;
+        padding-bottom: 20px; } }
   #content.careers-content .career .box-container > [class*='gr-padding'] {
     padding-bottom: 0; }
     @media (max-width: 768px) {
