@@ -1110,6 +1110,45 @@ body #_elev_io ._elevio_articlelink > div {
 #content.cyberjaya-content, #content.malta-content, #content.labuan-content {
   margin-top: 0; }
 
+#content.cyberjaya-content .box-container.padding, #content.careers-content .box-container.padding {
+  padding: 5px 15px; }
+
+#content.cyberjaya-content .box-container > [class*='gr-padding'], #content.careers-content .box-container > [class*='gr-padding'] {
+  padding-bottom: 0; }
+  @media (max-width: 768px) {
+    #content.cyberjaya-content .box-container > [class*='gr-padding'], #content.careers-content .box-container > [class*='gr-padding'] {
+      padding-bottom: unset; } }
+
+#content.cyberjaya-content .box-container .box, #content.careers-content .box-container .box {
+  background: #fff; }
+  #content.cyberjaya-content .box-container .box.bordered, #content.careers-content .box-container .box.bordered {
+    border: 1px solid #dedede;
+    height: 100%; }
+  #content.cyberjaya-content .box-container .box .items, #content.careers-content .box-container .box .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #content.cyberjaya-content .box-container .box .items img, #content.careers-content .box-container .box .items img {
+      padding-top: 20px;
+      width: 50px; }
+    #content.cyberjaya-content .box-container .box .items p, #content.careers-content .box-container .box .items p {
+      font-weight: 600;
+      color: #2a3052; }
+    #content.cyberjaya-content .box-container .box .items > .box-item-end, #content.careers-content .box-container .box .items > .box-item-end {
+      padding: 0 30px; }
+    @media (max-width: 768px) {
+      #content.cyberjaya-content .box-container .box .items, #content.careers-content .box-container .box .items {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+
 .location-cyberjaya .introduction h1, .location-labuan .introduction h1, .location-malta .introduction h1 {
   color: #e98024;
   font-size: 2.25rem; }
@@ -1463,44 +1502,6 @@ body #not_authenticated_financial ul.checked > li {
     @media (max-width: 768px) {
       #content.careers-content .career .values-box {
         margin-bottom: 2.5rem; } }
-  #content.careers-content .career .box-container.padding {
-    padding: 5px 15px; }
-    @media (max-width: 768px) {
-      #content.careers-content .career .box-container.padding-20-m {
-        padding-top: 20px;
-        padding-bottom: 20px; } }
-  #content.careers-content .career .box-container > [class*='gr-padding'] {
-    padding-bottom: 0; }
-    @media (max-width: 768px) {
-      #content.careers-content .career .box-container > [class*='gr-padding'] {
-        padding-bottom: unset; } }
-  #content.careers-content .career .box-container .box.bordered {
-    border: 1px solid #dedede;
-    height: 100%; }
-  #content.careers-content .career .box-container .box .items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    #content.careers-content .career .box-container .box .items img {
-      padding-top: 20px;
-      width: 50px; }
-    #content.careers-content .career .box-container .box .items p {
-      font-weight: 600;
-      color: #2a3052; }
-    #content.careers-content .career .box-container .box .items > .box-item-end {
-      padding: 0 30px; }
-    @media (max-width: 768px) {
-      #content.careers-content .career .box-container .box .items {
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
   #content.careers-content .career h4 {
     color: #2a3052; }
   #content.careers-content .career ul.role-section {
