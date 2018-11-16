@@ -179,6 +179,13 @@ a.previous-wrapper {
     font-size: 0.8695652174rem; }
     #mb-trading-wrapper #mb_trading #notifications_wrapper {
       margin-left: 0; }
+    #mb-trading-wrapper #mb_trading #login_error_container {
+      width: 100%;
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #dedede; }
+      #mb-trading-wrapper #mb_trading #login_error_container .login_error {
+        width: 100%; }
     #mb-trading-wrapper #mb_trading #panel {
       margin-left: 10px; }
       #mb-trading-wrapper #mb_trading #panel .selection_wrapper.less-margin-top .trade_form > div {
