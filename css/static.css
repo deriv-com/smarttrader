@@ -1802,7 +1802,9 @@ body #not_authenticated_financial ul.checked > li {
 
 @media screen and (max-width: 480px) {
   .vpn-app .column {
-    padding: 0; } }
+    padding: 0;
+    width: 100%;
+    text-align: center; } }
 
 .vpn-app .vertical-divider {
   width: 1px;
