@@ -2082,7 +2082,7 @@ table {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -2869,7 +2869,7 @@ table {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -3656,7 +3656,7 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -4300,7 +4300,7 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -5086,7 +5086,7 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -5730,7 +5730,7 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -6516,7 +6516,7 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -7160,7 +7160,7 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {
@@ -7946,7 +7946,7 @@ body {
     left: 0;
     width: 100%;
     height: 99999px;
-    background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 16.6666666667% 100%;
     z-index: 99999; }
 
@@ -8590,7 +8590,7 @@ body {
       left: 0;
       width: 100%;
       height: 99999px;
-      background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
       background-size: 16.6666666667% 100%;
       z-index: 99999; }
   body {

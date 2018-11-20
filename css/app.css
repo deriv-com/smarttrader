@@ -115,6 +115,11 @@ a.previous-wrapper {
 .loss {
   color: #c03; }
 
+.pending {
+  color: #000;
+  font-weight: 400;
+  font-style: italic; }
+
 #notifications_wrapper .notice-msg {
   margin-bottom: 5px;
   padding: 10px 26px;
@@ -2198,7 +2203,7 @@ a.previous-wrapper {
               transition: background 0.2s 0.1s;
               cursor: pointer;
               padding: 0 5px 5px;
-              -webkit-tap-highlight-color: transparent;
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
               -webkit-tap-highlight-color: transparent; }
               .markets .markets_dropdown .markets_view .markets_column .mobile ul li.active {
                 border-bottom: 2px solid #2a3052; }
