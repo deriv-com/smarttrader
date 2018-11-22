@@ -995,14 +995,10 @@ label + input {
   margin-right: 20px; }
 
 #footer .regulation-logos .vanuatu-icon {
-  width: 160px;
-  margin-left: -30px;
-  margin-right: 0; }
+  width: 100px; }
 
 #footer .regulation-logos .bvi-icon {
-  width: 115px;
-  margin-left: -30px;
-  margin-right: 0; }
+  width: 75px; }
 
 #footer .regulation-logos .labuan-icon {
   width: 120px; }
@@ -1052,7 +1048,14 @@ label + input {
       margin-right: 0;
       margin-bottom: 20px; }
   #footer .social-icons {
-    margin-left: 0; } }
+    margin-left: 0; }
+  #footer .regulation-logos .vanuatu-icon {
+    width: 85px; }
+  #footer .regulation-logos .bvi-icon {
+    width: 60px; }
+  #footer .regulation-logos .labuan-icon {
+    width: 105px;
+    margin-right: 0; } }
 
 body #topbar {
   text-align: right; }
