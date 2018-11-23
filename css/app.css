@@ -1439,6 +1439,18 @@ a.previous-wrapper {
       font-style: italic;
       vertical-align: middle;
       line-height: 1.3225rem; }
+    #trading_socket_container #contract_prices_container #authorization_error_container {
+      vertical-align: middle;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0 auto; }
+      #trading_socket_container #contract_prices_container #authorization_error_container .authorization_error {
+        width: 100%; }
     #trading_socket_container #contract_prices_container .price_container#price_container_top {
       margin-bottom: 1rem; }
     #trading_socket_container #contract_prices_container .price_container#price_container_middle .price_wrapper {
@@ -1594,7 +1606,9 @@ a.previous-wrapper {
       background-color: #2a3052;
       border-radius: 0 0 0 4px; }
     #trading_socket_container #contract_confirmation_container #confirmation_message_container {
-      padding-top: 15px; }
+      padding: 15px 0;
+      height: 90%;
+      height: calc(100% - 30px); }
   #trading_socket_container #contract_prices_container .price_container .price_wrapper {
     text-align: center;
     -webkit-box-align: center;
@@ -1989,12 +2003,19 @@ a.previous-wrapper {
           flex: 0.8 1 35px; }
 
 #statement-container #account_statistics {
-  margin: 30px 0;
-  border: 1px solid #f2f2f2; }
+  border: 1px solid #f2f2f2;
+  margin: 30px 0; }
+  @media (max-width: 480px) {
+    #statement-container #account_statistics {
+      margin-bottom: 20px; } }
   #statement-container #account_statistics div {
-    -ms-flex-item-align: center;
-        align-self: center;
-    padding: 20px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 20px; }
     @media (max-width: 480px) {
       #statement-container #account_statistics div {
         padding: 10px 20px; } }
@@ -2009,8 +2030,27 @@ a.previous-wrapper {
     #statement-container #account_statistics p:not(.title) {
       margin-top: 5px; }
 
+#statement-container #download_statement_btn {
+  margin-bottom: 0;
+  margin-left: auto; }
+  @media (max-width: 480px) {
+    #statement-container #download_statement_btn {
+      margin: 20px 0; } }
+
+#download-statement-container {
+  min-height: 400px; }
+  #download-statement-container #download_to, #download-statement-container #download_from {
+    display: inline;
+    max-width: 220px; }
+    @media (max-width: 480px) {
+      #download-statement-container #download_to, #download-statement-container #download_from {
+        display: block;
+        margin-left: 0;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; } }
+
 #profit-table-container #date_to, #statement-container #date_to {
-  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
