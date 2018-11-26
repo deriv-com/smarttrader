@@ -1489,6 +1489,10 @@ a.previous-wrapper {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      @supports (-ms-ime-align: auto) {
+        #trading_socket_container #contract_prices_container #contract_purchase_balance {
+          z-index: 9;
+          /* fix for MSEdge */ } }
       #trading_socket_container #contract_prices_container #contract_purchase_balance p {
         margin: 0;
         padding-left: 3px; }

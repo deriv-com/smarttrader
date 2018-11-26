@@ -688,6 +688,11 @@ label + input {
   font-size: 14px;
   text-align: center;
   margin: 0 auto; }
+  .notice-circle.faded {
+    border-color: #c2c2c2;
+    font-weight: 400; }
+  .notice-circle.margin-top-3 {
+    margin-top: 3px; }
 
 @media (max-width: 768px) {
   .show_mobile[data-balloon]:before, .show_mobile[data-balloon]:after {
