@@ -702,6 +702,18 @@ label + input {
   .show_mobile[data-balloon-length=medium]:before {
     width: 120px; } }
 
+@media screen and (max-width: 500px) {
+  .responsive thead {
+    display: none !important; }
+  .responsive td, .responsive .table-container tr div .td, .table-container tr div .responsive .td {
+    display: block; }
+    .responsive td:before, .responsive .table-container tr div .td:before, .table-container tr div .responsive .td:before {
+      content: attr(datath);
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+      text-align: left !important; } }
+
 /* TODO: remove when UX research is finished */
 #interview_popup_container {
   height: 100vh;
