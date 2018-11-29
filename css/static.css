@@ -746,7 +746,8 @@ div.kineticjs-content {
 
 .open-positions .eq {
   padding: 10px;
-  width: 30%; }
+  width: 45%;
+  width: calc(50% - 21px); }
 
 .open-positions .eqWrap {
   display: -webkit-box;
