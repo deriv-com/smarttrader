@@ -960,13 +960,15 @@ div.kineticjs-content {
         -webkit-text-size-adjust: 100%;
            -moz-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
-                text-size-adjust: 100%; }
+                text-size-adjust: 100%;
+        pointer-events: none; }
         #payment_methods table tbody tr td div.td-list.td-description.active, #payment_methods table tbody tr td div.td-description.td-description.active {
           -webkit-transform: translateY(0);
                   transform: translateY(0);
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
-          opacity: 1; }
+          opacity: 1;
+          pointer-events: auto; }
     #payment_methods table tbody tr td.toggler:after {
       position: absolute;
       top: 80%;
