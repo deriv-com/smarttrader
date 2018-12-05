@@ -490,7 +490,6 @@ button .barspinner.white {
     text-align: center;
     background: #2e8836;
     border-radius: 4px;
-    text-transform: capitalize;
     padding: 10px 25px;
     display: inline-block;
     letter-spacing: 0.75px;
@@ -615,7 +614,6 @@ li strong.margin-right {
     text-align: center;
     background: #2e8836;
     border-radius: 4px;
-    text-transform: capitalize;
     padding: 10px 25px;
     display: inline-block;
     letter-spacing: 0.75px;
@@ -1116,7 +1114,6 @@ body #topbar .upgrademessage a, .landing_page-content .upgrademessage a {
   text-align: center;
   background: #2e8836;
   border-radius: 4px;
-  text-transform: capitalize;
   padding: 10px 25px;
   display: inline-block;
   letter-spacing: 0.75px;
