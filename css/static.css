@@ -1315,6 +1315,9 @@ body #not_authenticated_financial ul.checked > li {
 .about-us-content .btn-margin-top {
   margin-top: 1.5em; }
 
+.accounts-content .table-container {
+  overflow-x: visible; }
+
 .accounts-content .table-container table {
   border: 1px solid #f2f2f2; }
   .accounts-content .table-container table th {
@@ -1324,10 +1327,35 @@ body #not_authenticated_financial ul.checked > li {
     padding: 20px;
     border-bottom: 1px solid #f2f2f2; }
   @media screen and (max-width: 500px) {
-    .accounts-content .table-container table.responsive th, .accounts-content .table-container table.responsive td {
+    .accounts-content .table-container table.responsive#new_accounts_table th, .accounts-content .table-container table.responsive#new_accounts_table td {
       text-align: left !important; }
-      .accounts-content .table-container table.responsive th:last-child, .accounts-content .table-container table.responsive td:last-child {
+      .accounts-content .table-container table.responsive#new_accounts_table th:last-child, .accounts-content .table-container table.responsive#new_accounts_table td:last-child {
         padding-top: 0; } }
+  @media screen and (max-width: 500px) {
+    .accounts-content .table-container table.responsive#existing_accounts {
+      display: block;
+      width: 100%; } }
+  @media screen and (max-width: 500px) {
+    .accounts-content .table-container table.responsive#existing_accounts tbody {
+      display: block; } }
+  @media screen and (max-width: 500px) {
+    .accounts-content .table-container table.responsive#existing_accounts tr {
+      display: block;
+      margin: 10px !important;
+      border-bottom: 1px solid #f2f2f2; }
+      .accounts-content .table-container table.responsive#existing_accounts tr:last-child {
+        border: none; } }
+  .accounts-content .table-container table.responsive#existing_accounts th, .accounts-content .table-container table.responsive#existing_accounts td {
+    text-align: left !important;
+    border: none; }
+    @media screen and (max-width: 500px) {
+      .accounts-content .table-container table.responsive#existing_accounts th, .accounts-content .table-container table.responsive#existing_accounts td {
+        display: inline-block;
+        padding: 10px;
+        width: 40%;
+        width: calc(50% - 20px); }
+        .accounts-content .table-container table.responsive#existing_accounts th:nth-child(2n), .accounts-content .table-container table.responsive#existing_accounts td:nth-child(2n) {
+          float: right; } }
 
 .accounts-content #note .hint {
   margin-bottom: 3px; }
