@@ -730,46 +730,21 @@ div.kineticjs-content {
   #content.home-content .padding-top-20 {
     padding-top: 20px; } }
 
-.open-positions .eq:not(:first-child) {
-  border: 1px dashed #dedede;
-  border-width: 0 0 0 1px; }
-
-.open-positions .eq:nth-child(3n+1) {
-  border-width: 0; }
-
 .open-positions .one-line {
-  margin-bottom: 35px; }
+  margin-bottom: 42px; }
 
 .open-positions img.responsive {
   margin-top: 1.1em;
   width: 50%; }
 
-.open-positions .eq {
-  padding: 10px;
-  width: 45%;
-  width: calc(50% - 21px); }
-
-.open-positions .eqWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
 .job-details .dept-image {
   width: 80%; }
 
-@media screen and (max-width: 800px) {
-  .open-positions .eq {
-    width: 45%; }
-  .open-positions .eq:nth-child(3n+1) {
-    border-width: 0 0 0 1px; }
-  .open-positions .eq:nth-child(2n+1) {
-    border-width: 0; } }
+@media screen and (max-width: 680px) {
+  .open-positions img.responsive {
+    width: 30%; } }
 
-@media screen and (max-width: 460px) {
-  .open-positions .eq {
-    width: 100%; }
+@media screen and (max-width: 481px) {
   .open-positions h1 {
     text-align: center; }
   .open-positions img.responsive {
@@ -1935,6 +1910,13 @@ body #not_authenticated_financial ul.checked > li {
     @media screen and (max-width: 931px) {
       .why-us-content .awards-section .horizontal-margin {
         margin: 15px 15px 20px; } }
+
+.cashier_note .notice-circle {
+  color: #e98024;
+  border-color: #e98024; }
+
+.cashier_note p {
+  color: #2a3052; }
 
 .timeline {
   margin: 0 auto;
