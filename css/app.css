@@ -830,6 +830,9 @@ a.previous-wrapper {
   #mt_account_management ul.checked.small > li {
     background-size: 16px;
     padding-left: 24px; }
+  #mt_account_management #account_desc .button span {
+    padding: 10px 5px;
+    line-height: 18px; }
 
 @media (max-width: 1199px) {
   #mt_account_management #accounts_list {
