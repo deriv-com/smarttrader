@@ -1328,11 +1328,18 @@ table {
     padding-left: 5px !important;
     padding-right: 5px !important; } }
 
+.table-container #statement-table td.date, .table-container #statement-table tr div .date.td, .table-container tr div #statement-table .date.td {
+  min-width: 101px; }
+
 .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
   display: none !important; }
 
 .table-container #statement-table tr td, .table-container #statement-table tr div .td, .table-container #profit-table tr td, .table-container #profit-table tr div .td {
   overflow: initial; }
+
+.table-container #statement-table tr td.desc, .table-container #statement-table tr div .desc.td, .table-container #profit-table tr td.desc, .table-container #profit-table tr div .desc.td {
+  max-width: 30em;
+  overflow-wrap: break-word; }
 
 @media (max-width: 600px) {
   .table-container #statement-table tr > th.details, .table-container #statement-table tr > td.details, .table-container #statement-table tr div tr > .details.td, .table-container tr div #statement-table tr > .details.td, .table-container #profit-table tr > th.details, .table-container #profit-table tr > td.details, .table-container #profit-table tr div tr > .details.td, .table-container tr div #profit-table tr > .details.td {
@@ -1345,6 +1352,8 @@ table {
 @media (max-width: 600px) {
   .table-container #profit-table tr > th.contract, .table-container #profit-table tr > td.contract, .table-container #profit-table tr div tr > .contract.td, .table-container tr div #profit-table tr > .contract.td {
     display: none !important; }
+  .table-container #statement-table {
+    table-layout: auto; }
   .table-container #statement-table tr > th.desc, .table-container #statement-table tr > td.desc, .table-container #statement-table tr div tr > .desc.td, .table-container tr div #statement-table tr > .desc.td {
     display: none !important; } }
 

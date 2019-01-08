@@ -1917,6 +1917,10 @@ body #not_authenticated_financial ul.checked > li {
       .why-us-content .awards-section .horizontal-margin {
         margin: 15px 15px 20px; } }
 
+.paymentagent_description {
+  height: 4em;
+  width: 206px; }
+
 .cashier_note .notice-circle {
   color: #e98024;
   border-color: #e98024; }
