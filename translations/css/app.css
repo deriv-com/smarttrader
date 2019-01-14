@@ -2067,6 +2067,28 @@ a.previous-wrapper {
 #settings_container .notice-circle {
   margin: auto 15px; }
 
+.lightbox#top_up_virtual_pop_up > div, .lightbox#top_up_error > div, .lightbox#top_up_success > div {
+  max-width: 25em;
+  padding: 32px; }
+  .lightbox#top_up_virtual_pop_up > div #btn_cancel span, .lightbox#top_up_error > div #btn_cancel span, .lightbox#top_up_success > div #btn_cancel span {
+    width: calc(100% - 50px); }
+  .lightbox#top_up_virtual_pop_up > div #btn_ok, .lightbox#top_up_error > div #btn_ok, .lightbox#top_up_success > div #btn_ok {
+    width: calc(100% - 25px); }
+  .lightbox#top_up_virtual_pop_up > div#dialog_content, .lightbox#top_up_error > div#dialog_content, .lightbox#top_up_success > div#dialog_content {
+    padding: 22px 12px; }
+
+.lightbox#top_up_error > div #frm_confirm {
+  width: 100%;
+  text-align: center; }
+  .lightbox#top_up_error > div #frm_confirm .button span {
+    width: 40%; }
+
+.lightbox#top_up_success > div #frm_confirm {
+  width: 100%;
+  text-align: center; }
+  .lightbox#top_up_success > div #frm_confirm .button span {
+    width: calc(50% - 55px); }
+
 @media screen and (max-width: 480px) {
   .api_token table td, .api_token table th, #applications-container table td, #applications-container table th {
     font-size: 0.7561436673rem; }
