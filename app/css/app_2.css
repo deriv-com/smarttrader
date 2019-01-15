@@ -114,6 +114,9 @@ fieldset {
   -webkit-transition: none !important;
   transition: none !important; }
 
+.center-text {
+  text-align: center; }
+
 @font-face {
   font-family: 'BinarySymbols';
   font-style: normal;
@@ -5260,6 +5263,9 @@ a {
         right: 5px;
         font-size: 0.5625rem;
         /* stylelint-disable-line number-max-precision */ }
+      .binary-app fieldset .clock-header span.field-info.center, .binary-app fieldset .fieldset-header span.field-info.center, .binary-app fieldset .stake-wrapper span.field-info.center {
+        position: relative;
+        top: 5px; }
     .binary-app fieldset .clock-header, .binary-app fieldset .fieldset-header {
       height: 1.5rem;
       position: relative; }
@@ -5300,6 +5306,30 @@ a {
       border: 0;
       padding: 0;
       background: transparent; }
+    .binary-app fieldset .number-selector {
+      margin-top: 15px;
+      text-align: center; }
+      .binary-app fieldset .number-selector__selection {
+        width: calc(20% - 5px);
+        height: 24px;
+        border-radius: 4px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-color: #2a3052;
+        margin: 0 5px 5px 0; }
+        .binary-app fieldset .number-selector__selection.selected {
+          background-color: #4a4f6c; }
+        .binary-app fieldset .number-selector__selection:hover {
+          cursor: pointer; }
+        .binary-app fieldset .number-selector__selection:last-child {
+          margin-right: 0; }
     @media screen and (max-height: 800px) {
       .binary-app fieldset .fieldset-header {
         margin-bottom: -8px; }
@@ -5646,7 +5676,7 @@ body.dark, .theme-wrapper.dark {
       background: #353b5b;
       color: #fff;
       border-color: #4a4f6c; }
-      body.dark .app-contents fieldset div.fieldset-header span.field-info.left, .theme-wrapper.dark .app-contents fieldset div.fieldset-header span.field-info.left {
+      body.dark .app-contents fieldset div.fieldset-header span.field-info.left, body.dark .app-contents fieldset div.fieldset-header span.field-info.center, .theme-wrapper.dark .app-contents fieldset div.fieldset-header span.field-info.left, .theme-wrapper.dark .app-contents fieldset div.fieldset-header span.field-info.center {
         color: #aaacba; }
       body.dark .app-contents fieldset input, body.dark .app-contents fieldset select, .theme-wrapper.dark .app-contents fieldset input, .theme-wrapper.dark .app-contents fieldset select {
         background: #2a3052;
