@@ -982,6 +982,18 @@ label + input {
     border-radius: 4px;
     overflow: auto;
     text-align: left; }
+  .lightbox#set_currency_popup_container #dialog_content {
+    max-width: 24em;
+    padding: 25px 15px; }
+  .lightbox#set_currency_popup_container #frm_confirm {
+    width: 100%; }
+  .lightbox#set_currency_popup_container a#btn_cancel, .lightbox#set_currency_popup_container a#btn_ok {
+    width: 45%;
+    width: calc(50% - 5px);
+    display: inline-block; }
+    .lightbox#set_currency_popup_container a#btn_cancel span, .lightbox#set_currency_popup_container a#btn_ok span {
+      width: 45%;
+      width: calc(100% - 50px); }
 
 .image-slider {
   position: relative; }
