@@ -1164,6 +1164,36 @@ label + input {
     #footer #status_notification_close:hover {
       cursor: pointer; }
 
+#footer #dialog_notification {
+  display: none;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 7px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-animation: moveInBottom 0.2s ease-in;
+          animation: moveInBottom 0.2s ease-in;
+  border-bottom: 3px solid #e98024; }
+  #footer #dialog_notification_text {
+    color: #fff;
+    font-size: 0.8695652174rem;
+    text-align: center; }
+    #footer #dialog_notification_text a {
+      font-size: 0.8695652174rem;
+      text-decoration: underline; }
+  #footer #dialog_notification_accept {
+    font-size: 0.8695652174rem;
+    margin-bottom: 0; }
+
 @media screen and (max-width: 590px) {
   #footer .icon-row {
     -webkit-box-orient: vertical;
