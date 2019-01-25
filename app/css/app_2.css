@@ -114,6 +114,18 @@ fieldset {
   -webkit-transition: none !important;
   transition: none !important; }
 
+.absolute-center, .absolute-center-v, .input-field ~ [class*='__icon'], .calendar__icon, .absolute-center-h {
+  position: absolute;
+  margin: auto; }
+
+.absolute-center-v, .input-field ~ [class*='__icon'], .calendar__icon {
+  top: 0;
+  bottom: 0; }
+
+.absolute-center-h {
+  left: 0;
+  right: 0; }
+
 .center-text {
   text-align: center; }
 
@@ -544,14 +556,7 @@ span.tooltip {
             display: grid;
             grid-template-columns: 1fr;
             grid-auto-columns: auto; }
-          .trade-container .sidebar-container fieldset div.endtime-container {
-            display: grid;
-            grid-gap: 8px;
-            grid-template-columns: 1fr;
-            grid-auto-columns: auto; }
-            .trade-container .sidebar-container fieldset div.endtime-container.has-time {
-              grid-template-columns: 1.5fr 1fr; }
-          .trade-container .sidebar-container fieldset .time-picker, .trade-container .sidebar-container fieldset .datepicker-container {
+          .trade-container .sidebar-container fieldset .time-picker {
             margin-top: 8px; } }
       @media (min-width: 769px) and (min-width: 979px) {
         .trade-container .sidebar-container fieldset div.duration-container {
@@ -1491,9 +1496,10 @@ hr {
 .input-field {
   margin: 8px 0 0;
   font-weight: 300; }
+  .input-field ~ [class*='__icon'] {
+    top: 8px;
+    right: 5%; }
   .input-field:has(input[type=checkbox]) {
-    display: inline-block; }
-  .input-field span.tooltip {
     display: inline-block; }
   .input-field i {
     position: relative; }
@@ -1623,9 +1629,6 @@ hr {
     /* stylelint-disable-line color-no-hex */ }
 
 .theme-wrapper.dark .input-field:has(input[type=checkbox]) {
-  display: inline-block; }
-
-.theme-wrapper.dark .input-field .tooltip {
   display: inline-block; }
 
 .theme-wrapper.dark .input-field input {
@@ -1965,324 +1968,11 @@ a.btn {
           justify-content: center;
   text-decoration: none; }
 
-.calendar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  outline: 0;
-  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
-          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
-  z-index: 999;
-  font-size: 14px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 280px; }
-  @media (max-width: 1024px) {
-    .calendar {
-      left: unset;
-      right: 0; } }
-  .calendar .calendar-input {
-    margin: 0;
-    border: none;
-    outline: none;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 300;
-    height: 34px;
-    padding: 6px 10px;
-    color: rgba(0, 0, 0, 0.65); }
-    .calendar .calendar-input[readonly] {
-      cursor: default; }
-  .calendar .calendar-footer {
-    font-size: 14px;
-    border-top: 1px solid #7f8397;
-    display: grid;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    line-height: 38px;
-    padding: 0 8px;
-    color: #333;
-    font-weight: 500; }
-    .calendar .calendar-footer .calendar-footer-extra + .calendar-footer-btn {
-      border-top: 1px solid #7f8397;
-      margin: 0 -12px; }
-    .calendar .calendar-footer .calendar-footer-btn {
-      cursor: pointer;
-      color: #2a3052;
-      text-align: center; }
-  .calendar .calendar-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 32px;
-    line-height: 32px;
-    border-top: 1px solid #7f8397;
-    border-bottom: 1px solid #7f8397;
-    font-weight: 500; }
-    .calendar .calendar-header .calendar-select-month-btn, .calendar .calendar-header .calendar-select-year-btn, .calendar .calendar-header .calendar-select-decade-btn, .calendar .calendar-header .calendar-select-century-btn {
-      padding: 0 4px;
-      cursor: pointer; }
-      .calendar .calendar-header .calendar-select-month-btn:hover, .calendar .calendar-header .calendar-select-year-btn:hover, .calendar .calendar-header .calendar-select-decade-btn:hover, .calendar .calendar-header .calendar-select-century-btn:hover {
-        color: #2a3052; }
-      .calendar .calendar-header .calendar-select-month-btn.calendar-select-century-btn, .calendar .calendar-header .calendar-select-year-btn.calendar-select-century-btn, .calendar .calendar-header .calendar-select-decade-btn.calendar-select-century-btn, .calendar .calendar-header .calendar-select-century-btn.calendar-select-century-btn {
-        cursor: default; }
-    .calendar .calendar-header .calendar-prev-year-btn, .calendar .calendar-header .calendar-next-year-btn, .calendar .calendar-header .calendar-prev-month-btn, .calendar .calendar-header .calendar-next-month-btn {
-      position: absolute;
-      color: rgba(0, 0, 0, 0.45);
-      padding: 0 5px;
-      display: inline-block;
-      line-height: 32px;
-      cursor: pointer; }
-      .calendar .calendar-header .calendar-prev-year-btn:hover, .calendar .calendar-header .calendar-next-year-btn:hover, .calendar .calendar-header .calendar-prev-month-btn:hover, .calendar .calendar-header .calendar-next-month-btn:hover {
-        color: #2a3052; }
-      .calendar .calendar-header .calendar-prev-year-btn.calendar-prev-year-btn, .calendar .calendar-header .calendar-next-year-btn.calendar-prev-year-btn, .calendar .calendar-header .calendar-prev-month-btn.calendar-prev-year-btn, .calendar .calendar-header .calendar-next-month-btn.calendar-prev-year-btn {
-        left: 7%; }
-        .calendar .calendar-header .calendar-prev-year-btn.calendar-prev-year-btn:after, .calendar .calendar-header .calendar-next-year-btn.calendar-prev-year-btn:after, .calendar .calendar-header .calendar-prev-month-btn.calendar-prev-year-btn:after, .calendar .calendar-header .calendar-next-month-btn.calendar-prev-year-btn:after {
-          content: '\AB'; }
-      .calendar .calendar-header .calendar-prev-year-btn.calendar-next-year-btn, .calendar .calendar-header .calendar-next-year-btn.calendar-next-year-btn, .calendar .calendar-header .calendar-prev-month-btn.calendar-next-year-btn, .calendar .calendar-header .calendar-next-month-btn.calendar-next-year-btn {
-        right: 7%; }
-        .calendar .calendar-header .calendar-prev-year-btn.calendar-next-year-btn:after, .calendar .calendar-header .calendar-next-year-btn.calendar-next-year-btn:after, .calendar .calendar-header .calendar-prev-month-btn.calendar-next-year-btn:after, .calendar .calendar-header .calendar-next-month-btn.calendar-next-year-btn:after {
-          content: '\BB'; }
-      .calendar .calendar-header .calendar-prev-year-btn.calendar-prev-month-btn, .calendar .calendar-header .calendar-next-year-btn.calendar-prev-month-btn, .calendar .calendar-header .calendar-prev-month-btn.calendar-prev-month-btn, .calendar .calendar-header .calendar-next-month-btn.calendar-prev-month-btn {
-        left: 14%; }
-        .calendar .calendar-header .calendar-prev-year-btn.calendar-prev-month-btn:after, .calendar .calendar-header .calendar-next-year-btn.calendar-prev-month-btn:after, .calendar .calendar-header .calendar-prev-month-btn.calendar-prev-month-btn:after, .calendar .calendar-header .calendar-next-month-btn.calendar-prev-month-btn:after {
-          content: '\2039'; }
-      .calendar .calendar-header .calendar-prev-year-btn.calendar-next-month-btn, .calendar .calendar-header .calendar-next-year-btn.calendar-next-month-btn, .calendar .calendar-header .calendar-prev-month-btn.calendar-next-month-btn, .calendar .calendar-header .calendar-next-month-btn.calendar-next-month-btn {
-        right: 14%; }
-        .calendar .calendar-header .calendar-prev-year-btn.calendar-next-month-btn:after, .calendar .calendar-header .calendar-next-year-btn.calendar-next-month-btn:after, .calendar .calendar-header .calendar-prev-month-btn.calendar-next-month-btn:after, .calendar .calendar-header .calendar-next-month-btn.calendar-next-month-btn:after {
-          content: '\203A'; }
-  .calendar .calendar-date-panel, .calendar .calendar-month-panel, .calendar .calendar-year-panel, .calendar .calendar-decade-panel, .calendar .calendar-century-panel {
-    display: grid;
-    grid-gap: 2px;
-    padding: 8px 12px;
-    height: 226px; }
-    .calendar .calendar-date-panel.calendar-date-panel, .calendar .calendar-month-panel.calendar-date-panel, .calendar .calendar-year-panel.calendar-date-panel, .calendar .calendar-decade-panel.calendar-date-panel, .calendar .calendar-century-panel.calendar-date-panel {
-      grid-template-columns: repeat(7, 1fr); }
-    .calendar .calendar-date-panel.calendar-month-panel, .calendar .calendar-date-panel.calendar-year-panel, .calendar .calendar-date-panel.calendar-decade-panel, .calendar .calendar-date-panel.calendar-century-panel, .calendar .calendar-month-panel.calendar-month-panel, .calendar .calendar-month-panel.calendar-year-panel, .calendar .calendar-month-panel.calendar-decade-panel, .calendar .calendar-month-panel.calendar-century-panel, .calendar .calendar-year-panel.calendar-month-panel, .calendar .calendar-year-panel.calendar-year-panel, .calendar .calendar-year-panel.calendar-decade-panel, .calendar .calendar-year-panel.calendar-century-panel, .calendar .calendar-decade-panel.calendar-month-panel, .calendar .calendar-decade-panel.calendar-year-panel, .calendar .calendar-decade-panel.calendar-decade-panel, .calendar .calendar-decade-panel.calendar-century-panel, .calendar .calendar-century-panel.calendar-month-panel, .calendar .calendar-century-panel.calendar-year-panel, .calendar .calendar-century-panel.calendar-decade-panel, .calendar .calendar-century-panel.calendar-century-panel {
-      grid-template-columns: repeat(3, 1fr); }
-    .calendar .calendar-date-panel .calendar-date, .calendar .calendar-date-panel .calendar-month, .calendar .calendar-date-panel .calendar-year, .calendar .calendar-date-panel .calendar-decade, .calendar .calendar-month-panel .calendar-date, .calendar .calendar-month-panel .calendar-month, .calendar .calendar-month-panel .calendar-year, .calendar .calendar-month-panel .calendar-decade, .calendar .calendar-year-panel .calendar-date, .calendar .calendar-year-panel .calendar-month, .calendar .calendar-year-panel .calendar-year, .calendar .calendar-year-panel .calendar-decade, .calendar .calendar-decade-panel .calendar-date, .calendar .calendar-decade-panel .calendar-month, .calendar .calendar-decade-panel .calendar-year, .calendar .calendar-decade-panel .calendar-decade, .calendar .calendar-century-panel .calendar-date, .calendar .calendar-century-panel .calendar-month, .calendar .calendar-century-panel .calendar-year, .calendar .calendar-century-panel .calendar-decade {
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-      cursor: pointer;
-      margin: 0 auto;
-      border: 1px solid transparent;
-      border-radius: 4px;
-      padding: 0;
-      color: #333;
-      text-align: center;
-      background: transparent;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      font-size: 14px;
-      line-height: 24px; }
-      .calendar .calendar-date-panel .calendar-date.calendar-date, .calendar .calendar-date-panel .calendar-month.calendar-date, .calendar .calendar-date-panel .calendar-year.calendar-date, .calendar .calendar-date-panel .calendar-decade.calendar-date, .calendar .calendar-month-panel .calendar-date.calendar-date, .calendar .calendar-month-panel .calendar-month.calendar-date, .calendar .calendar-month-panel .calendar-year.calendar-date, .calendar .calendar-month-panel .calendar-decade.calendar-date, .calendar .calendar-year-panel .calendar-date.calendar-date, .calendar .calendar-year-panel .calendar-month.calendar-date, .calendar .calendar-year-panel .calendar-year.calendar-date, .calendar .calendar-year-panel .calendar-decade.calendar-date, .calendar .calendar-decade-panel .calendar-date.calendar-date, .calendar .calendar-decade-panel .calendar-month.calendar-date, .calendar .calendar-decade-panel .calendar-year.calendar-date, .calendar .calendar-decade-panel .calendar-decade.calendar-date, .calendar .calendar-century-panel .calendar-date.calendar-date, .calendar .calendar-century-panel .calendar-month.calendar-date, .calendar .calendar-century-panel .calendar-year.calendar-date, .calendar .calendar-century-panel .calendar-decade.calendar-date {
-        width: 24px;
-        color: #2a3052; }
-      .calendar .calendar-date-panel .calendar-date.calendar-month, .calendar .calendar-date-panel .calendar-date.calendar-year, .calendar .calendar-date-panel .calendar-month.calendar-month, .calendar .calendar-date-panel .calendar-month.calendar-year, .calendar .calendar-date-panel .calendar-year.calendar-month, .calendar .calendar-date-panel .calendar-year.calendar-year, .calendar .calendar-date-panel .calendar-decade.calendar-month, .calendar .calendar-date-panel .calendar-decade.calendar-year, .calendar .calendar-month-panel .calendar-date.calendar-month, .calendar .calendar-month-panel .calendar-date.calendar-year, .calendar .calendar-month-panel .calendar-month.calendar-month, .calendar .calendar-month-panel .calendar-month.calendar-year, .calendar .calendar-month-panel .calendar-year.calendar-month, .calendar .calendar-month-panel .calendar-year.calendar-year, .calendar .calendar-month-panel .calendar-decade.calendar-month, .calendar .calendar-month-panel .calendar-decade.calendar-year, .calendar .calendar-year-panel .calendar-date.calendar-month, .calendar .calendar-year-panel .calendar-date.calendar-year, .calendar .calendar-year-panel .calendar-month.calendar-month, .calendar .calendar-year-panel .calendar-month.calendar-year, .calendar .calendar-year-panel .calendar-year.calendar-month, .calendar .calendar-year-panel .calendar-year.calendar-year, .calendar .calendar-year-panel .calendar-decade.calendar-month, .calendar .calendar-year-panel .calendar-decade.calendar-year, .calendar .calendar-decade-panel .calendar-date.calendar-month, .calendar .calendar-decade-panel .calendar-date.calendar-year, .calendar .calendar-decade-panel .calendar-month.calendar-month, .calendar .calendar-decade-panel .calendar-month.calendar-year, .calendar .calendar-decade-panel .calendar-year.calendar-month, .calendar .calendar-decade-panel .calendar-year.calendar-year, .calendar .calendar-decade-panel .calendar-decade.calendar-month, .calendar .calendar-decade-panel .calendar-decade.calendar-year, .calendar .calendar-century-panel .calendar-date.calendar-month, .calendar .calendar-century-panel .calendar-date.calendar-year, .calendar .calendar-century-panel .calendar-month.calendar-month, .calendar .calendar-century-panel .calendar-month.calendar-year, .calendar .calendar-century-panel .calendar-year.calendar-month, .calendar .calendar-century-panel .calendar-year.calendar-year, .calendar .calendar-century-panel .calendar-decade.calendar-month, .calendar .calendar-century-panel .calendar-decade.calendar-year {
-        padding: 0 8px; }
-      .calendar .calendar-date-panel .calendar-date.calendar-decade, .calendar .calendar-date-panel .calendar-month.calendar-decade, .calendar .calendar-date-panel .calendar-year.calendar-decade, .calendar .calendar-date-panel .calendar-decade.calendar-decade, .calendar .calendar-month-panel .calendar-date.calendar-decade, .calendar .calendar-month-panel .calendar-month.calendar-decade, .calendar .calendar-month-panel .calendar-year.calendar-decade, .calendar .calendar-month-panel .calendar-decade.calendar-decade, .calendar .calendar-year-panel .calendar-date.calendar-decade, .calendar .calendar-year-panel .calendar-month.calendar-decade, .calendar .calendar-year-panel .calendar-year.calendar-decade, .calendar .calendar-year-panel .calendar-decade.calendar-decade, .calendar .calendar-decade-panel .calendar-date.calendar-decade, .calendar .calendar-decade-panel .calendar-month.calendar-decade, .calendar .calendar-decade-panel .calendar-year.calendar-decade, .calendar .calendar-decade-panel .calendar-decade.calendar-decade, .calendar .calendar-century-panel .calendar-date.calendar-decade, .calendar .calendar-century-panel .calendar-month.calendar-decade, .calendar .calendar-century-panel .calendar-year.calendar-decade, .calendar .calendar-century-panel .calendar-decade.calendar-decade {
-        padding: 6px 4px;
-        font-size: 14px; }
-      .calendar .calendar-date-panel .calendar-date-header, .calendar .calendar-date-panel .calendar-month-header, .calendar .calendar-date-panel .calendar-year-header, .calendar .calendar-date-panel .calendar-decade-header, .calendar .calendar-month-panel .calendar-date-header, .calendar .calendar-month-panel .calendar-month-header, .calendar .calendar-month-panel .calendar-year-header, .calendar .calendar-month-panel .calendar-decade-header, .calendar .calendar-year-panel .calendar-date-header, .calendar .calendar-year-panel .calendar-month-header, .calendar .calendar-year-panel .calendar-year-header, .calendar .calendar-year-panel .calendar-decade-header, .calendar .calendar-decade-panel .calendar-date-header, .calendar .calendar-decade-panel .calendar-month-header, .calendar .calendar-decade-panel .calendar-year-header, .calendar .calendar-decade-panel .calendar-decade-header, .calendar .calendar-century-panel .calendar-date-header, .calendar .calendar-century-panel .calendar-month-header, .calendar .calendar-century-panel .calendar-year-header, .calendar .calendar-century-panel .calendar-decade-header {
-        line-height: 18px;
-        width: 33px;
-        padding: 6px 0;
-        text-align: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-        font-weight: 500;
-        color: #333; }
-      .calendar .calendar-date-panel .calendar-date.today, .calendar .calendar-date-panel .calendar-month.today, .calendar .calendar-date-panel .calendar-year.today, .calendar .calendar-date-panel .calendar-decade.today, .calendar .calendar-month-panel .calendar-date.today, .calendar .calendar-month-panel .calendar-month.today, .calendar .calendar-month-panel .calendar-year.today, .calendar .calendar-month-panel .calendar-decade.today, .calendar .calendar-year-panel .calendar-date.today, .calendar .calendar-year-panel .calendar-month.today, .calendar .calendar-year-panel .calendar-year.today, .calendar .calendar-year-panel .calendar-decade.today, .calendar .calendar-decade-panel .calendar-date.today, .calendar .calendar-decade-panel .calendar-month.today, .calendar .calendar-decade-panel .calendar-year.today, .calendar .calendar-decade-panel .calendar-decade.today, .calendar .calendar-century-panel .calendar-date.today, .calendar .calendar-century-panel .calendar-month.today, .calendar .calendar-century-panel .calendar-year.today, .calendar .calendar-century-panel .calendar-decade.today {
-        font-weight: 400;
-        border: 1px solid #2a3052; }
-        .calendar .calendar-date-panel .calendar-date.today.disabled, .calendar .calendar-date-panel .calendar-month.today.disabled, .calendar .calendar-date-panel .calendar-year.today.disabled, .calendar .calendar-date-panel .calendar-decade.today.disabled, .calendar .calendar-month-panel .calendar-date.today.disabled, .calendar .calendar-month-panel .calendar-month.today.disabled, .calendar .calendar-month-panel .calendar-year.today.disabled, .calendar .calendar-month-panel .calendar-decade.today.disabled, .calendar .calendar-year-panel .calendar-date.today.disabled, .calendar .calendar-year-panel .calendar-month.today.disabled, .calendar .calendar-year-panel .calendar-year.today.disabled, .calendar .calendar-year-panel .calendar-decade.today.disabled, .calendar .calendar-decade-panel .calendar-date.today.disabled, .calendar .calendar-decade-panel .calendar-month.today.disabled, .calendar .calendar-decade-panel .calendar-year.today.disabled, .calendar .calendar-decade-panel .calendar-decade.today.disabled, .calendar .calendar-century-panel .calendar-date.today.disabled, .calendar .calendar-century-panel .calendar-month.today.disabled, .calendar .calendar-century-panel .calendar-year.today.disabled, .calendar .calendar-century-panel .calendar-decade.today.disabled {
-          color: #7f8397;
-          border: 1px solid #7f8397; }
-      .calendar .calendar-date-panel .calendar-date.active, .calendar .calendar-date-panel .calendar-month.active, .calendar .calendar-date-panel .calendar-year.active, .calendar .calendar-date-panel .calendar-decade.active, .calendar .calendar-month-panel .calendar-date.active, .calendar .calendar-month-panel .calendar-month.active, .calendar .calendar-month-panel .calendar-year.active, .calendar .calendar-month-panel .calendar-decade.active, .calendar .calendar-year-panel .calendar-date.active, .calendar .calendar-year-panel .calendar-month.active, .calendar .calendar-year-panel .calendar-year.active, .calendar .calendar-year-panel .calendar-decade.active, .calendar .calendar-decade-panel .calendar-date.active, .calendar .calendar-decade-panel .calendar-month.active, .calendar .calendar-decade-panel .calendar-year.active, .calendar .calendar-decade-panel .calendar-decade.active, .calendar .calendar-century-panel .calendar-date.active, .calendar .calendar-century-panel .calendar-month.active, .calendar .calendar-century-panel .calendar-year.active, .calendar .calendar-century-panel .calendar-decade.active {
-        background: #2a3052;
-        color: #fff;
-        font-weight: 300; }
-        .calendar .calendar-date-panel .calendar-date.active.disabled, .calendar .calendar-date-panel .calendar-month.active.disabled, .calendar .calendar-date-panel .calendar-year.active.disabled, .calendar .calendar-date-panel .calendar-decade.active.disabled, .calendar .calendar-month-panel .calendar-date.active.disabled, .calendar .calendar-month-panel .calendar-month.active.disabled, .calendar .calendar-month-panel .calendar-year.active.disabled, .calendar .calendar-month-panel .calendar-decade.active.disabled, .calendar .calendar-year-panel .calendar-date.active.disabled, .calendar .calendar-year-panel .calendar-month.active.disabled, .calendar .calendar-year-panel .calendar-year.active.disabled, .calendar .calendar-year-panel .calendar-decade.active.disabled, .calendar .calendar-decade-panel .calendar-date.active.disabled, .calendar .calendar-decade-panel .calendar-month.active.disabled, .calendar .calendar-decade-panel .calendar-year.active.disabled, .calendar .calendar-decade-panel .calendar-decade.active.disabled, .calendar .calendar-century-panel .calendar-date.active.disabled, .calendar .calendar-century-panel .calendar-month.active.disabled, .calendar .calendar-century-panel .calendar-year.active.disabled, .calendar .calendar-century-panel .calendar-decade.active.disabled {
-          color: #7f8397;
-          border: 1px solid #7f8397; }
-      .calendar .calendar-date-panel .calendar-date.disabled, .calendar .calendar-date-panel .calendar-month.disabled, .calendar .calendar-date-panel .calendar-year.disabled, .calendar .calendar-date-panel .calendar-decade.disabled, .calendar .calendar-month-panel .calendar-date.disabled, .calendar .calendar-month-panel .calendar-month.disabled, .calendar .calendar-month-panel .calendar-year.disabled, .calendar .calendar-month-panel .calendar-decade.disabled, .calendar .calendar-year-panel .calendar-date.disabled, .calendar .calendar-year-panel .calendar-month.disabled, .calendar .calendar-year-panel .calendar-year.disabled, .calendar .calendar-year-panel .calendar-decade.disabled, .calendar .calendar-decade-panel .calendar-date.disabled, .calendar .calendar-decade-panel .calendar-month.disabled, .calendar .calendar-decade-panel .calendar-year.disabled, .calendar .calendar-decade-panel .calendar-decade.disabled, .calendar .calendar-century-panel .calendar-date.disabled, .calendar .calendar-century-panel .calendar-month.disabled, .calendar .calendar-century-panel .calendar-year.disabled, .calendar .calendar-century-panel .calendar-decade.disabled {
-        color: #7f8397;
-        cursor: default; }
-      .calendar .calendar-date-panel .calendar-date:hover:not(.disabled), .calendar .calendar-date-panel .calendar-month:hover:not(.disabled), .calendar .calendar-date-panel .calendar-year:hover:not(.disabled), .calendar .calendar-date-panel .calendar-decade:hover:not(.disabled), .calendar .calendar-month-panel .calendar-date:hover:not(.disabled), .calendar .calendar-month-panel .calendar-month:hover:not(.disabled), .calendar .calendar-month-panel .calendar-year:hover:not(.disabled), .calendar .calendar-month-panel .calendar-decade:hover:not(.disabled), .calendar .calendar-year-panel .calendar-date:hover:not(.disabled), .calendar .calendar-year-panel .calendar-month:hover:not(.disabled), .calendar .calendar-year-panel .calendar-year:hover:not(.disabled), .calendar .calendar-year-panel .calendar-decade:hover:not(.disabled), .calendar .calendar-decade-panel .calendar-date:hover:not(.disabled), .calendar .calendar-decade-panel .calendar-month:hover:not(.disabled), .calendar .calendar-decade-panel .calendar-year:hover:not(.disabled), .calendar .calendar-decade-panel .calendar-decade:hover:not(.disabled), .calendar .calendar-century-panel .calendar-date:hover:not(.disabled), .calendar .calendar-century-panel .calendar-month:hover:not(.disabled), .calendar .calendar-century-panel .calendar-year:hover:not(.disabled), .calendar .calendar-century-panel .calendar-decade:hover:not(.disabled) {
-        cursor: pointer;
-        background: #7f8397; }
-
-div.datepicker-container {
-  position: relative; }
-  div.datepicker-container:hover .datepicker-display, div.datepicker-container .datepicker-display:focus {
-    border-color: #2a3052; }
-  div.datepicker-container .datepicker-display:focus + .datepicker-native-overlay .datepicker-native-overlay__arrowhead .arrow-path {
-    fill: #2a3052; }
-  div.datepicker-container .datepicker-display, div.datepicker-container .datepicker-native-overlay {
-    background: #fff;
-    height: 32px;
-    cursor: pointer;
-    border: 1px solid #7f8397;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 100%;
-    vertical-align: middle;
-    padding: 4px 11px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-weight: 300;
-    -webkit-transition: border 0.25s;
-    transition: border 0.25s; }
-  div.datepicker-container .datepicker-native-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-color: transparent;
-    background-clip: padding-box;
-    text-align: left; }
-    div.datepicker-container .datepicker-native-overlay__arrowhead {
-      display: block;
-      position: absolute;
-      top: 8px;
-      right: 6px; }
-      div.datepicker-container .datepicker-native-overlay__arrowhead .arrow-path {
-        fill: #7f8397; }
-  div.datepicker-container input[type=date] {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none; }
-    div.datepicker-container input[type=date]:hover:not(:focus) {
-      border-color: #7f8397; }
-    div.datepicker-container input[type=date]::-webkit-date-and-time-value {
-      margin: 0; }
-  div.datepicker-container .picker-calendar-icon, div.datepicker-container .close-circle-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    opacity: 0;
-    pointer-events: none;
-    cursor: pointer; }
-    div.datepicker-container .picker-calendar-icon:before, div.datepicker-container .close-circle-icon:before {
-      content: '';
-      display: block;
-      width: 14px;
-      height: 14px;
-      background-size: 14px 14px; }
-    div.datepicker-container .picker-calendar-icon.show, div.datepicker-container .close-circle-icon.show {
-      opacity: 1;
-      pointer-events: auto; }
-    div.datepicker-container .picker-calendar-icon.picker-calendar-icon:before, div.datepicker-container .close-circle-icon.picker-calendar-icon:before {
-      background-image: url("../images/common/calendar.svg");
-      background-repeat: no-repeat; }
-    div.datepicker-container .picker-calendar-icon.close-circle-icon:before, div.datepicker-container .close-circle-icon.close-circle-icon:before {
-      background-image: url("../images/common/close_circle.svg");
-      background-repeat: no-repeat; }
-  div.datepicker-container .datepicker-calendar .calendar {
-    opacity: 0;
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transition: all 0.25s;
-    transition: all 0.25s; }
-    div.datepicker-container .datepicker-calendar .calendar span {
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
-  div.datepicker-container .datepicker-calendar.show > div.calendar {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-
-.theme-wrapper.dark input.datepicker-display {
-  background: #2a3052;
-  border-color: #4a4f6c;
-  color: #fff; }
-  .theme-wrapper.dark input.datepicker-display:hover, .theme-wrapper.dark input.datepicker-display:focus, .theme-wrapper.dark input.datepicker-display:active {
-    border-color: #fff; }
-
-.theme-wrapper.dark .calendar {
-  background: #353b5b;
-  border: 1px solid #4a4f6c; }
-  .theme-wrapper.dark .calendar input.calendar-input {
-    border-radius: 0;
-    background: #353b5b;
-    border-color: #4a4f6c;
-    color: #fff; }
-    .theme-wrapper.dark .calendar input.calendar-input:hover, .theme-wrapper.dark .calendar input.calendar-input:focus, .theme-wrapper.dark .calendar input.calendar-input:active {
-      border-color: #fff; }
-  .theme-wrapper.dark .calendar .calendar-header, .theme-wrapper.dark .calendar .calendar-footer {
-    border-color: #4a4f6c;
-    color: #fff; }
-    .theme-wrapper.dark .calendar .calendar-header .calendar-prev-year-btn, .theme-wrapper.dark .calendar .calendar-header .calendar-prev-month-btn, .theme-wrapper.dark .calendar .calendar-header .calendar-next-month-btn, .theme-wrapper.dark .calendar .calendar-header .calendar-next-year-btn, .theme-wrapper.dark .calendar .calendar-footer .calendar-prev-year-btn, .theme-wrapper.dark .calendar .calendar-footer .calendar-prev-month-btn, .theme-wrapper.dark .calendar .calendar-footer .calendar-next-month-btn, .theme-wrapper.dark .calendar .calendar-footer .calendar-next-year-btn {
-      color: #aaacba; }
-      .theme-wrapper.dark .calendar .calendar-header .calendar-prev-year-btn:hover, .theme-wrapper.dark .calendar .calendar-header .calendar-prev-month-btn:hover, .theme-wrapper.dark .calendar .calendar-header .calendar-next-month-btn:hover, .theme-wrapper.dark .calendar .calendar-header .calendar-next-year-btn:hover, .theme-wrapper.dark .calendar .calendar-footer .calendar-prev-year-btn:hover, .theme-wrapper.dark .calendar .calendar-footer .calendar-prev-month-btn:hover, .theme-wrapper.dark .calendar .calendar-footer .calendar-next-month-btn:hover, .theme-wrapper.dark .calendar .calendar-footer .calendar-next-year-btn:hover {
-        color: #fff; }
-    .theme-wrapper.dark .calendar .calendar-header span a, .theme-wrapper.dark .calendar .calendar-footer span a {
-      color: #fff; }
-  .theme-wrapper.dark .calendar .calendar-header {
-    background: #2a3052; }
-    .theme-wrapper.dark .calendar .calendar-header span:hover {
-      color: #aaacba; }
-  .theme-wrapper.dark .calendar span.calendar-date-header {
-    color: #fff; }
-  .theme-wrapper.dark .calendar span.calendar-date, .theme-wrapper.dark .calendar span.calendar-month, .theme-wrapper.dark .calendar span.calendar-year {
-    color: #aaacba;
-    background: #353b5b; }
-    .theme-wrapper.dark .calendar span.calendar-date.active, .theme-wrapper.dark .calendar span.calendar-month.active, .theme-wrapper.dark .calendar span.calendar-year.active {
-      font-weight: 600;
-      color: #2a3052;
-      background: #fff; }
-    .theme-wrapper.dark .calendar span.calendar-date:hover:not(.active), .theme-wrapper.dark .calendar span.calendar-month:hover:not(.active), .theme-wrapper.dark .calendar span.calendar-year:hover:not(.active) {
-      background: #4a4f6c; }
-    .theme-wrapper.dark .calendar span.calendar-date.disabled, .theme-wrapper.dark .calendar span.calendar-month.disabled, .theme-wrapper.dark .calendar span.calendar-year.disabled {
-      color: #60647e;
-      pointer-events: none; }
-    .theme-wrapper.dark .calendar span.calendar-date.today, .theme-wrapper.dark .calendar span.calendar-month.today, .theme-wrapper.dark .calendar span.calendar-year.today {
-      border: 1px solid #fff;
-      color: #fff; }
-      .theme-wrapper.dark .calendar span.calendar-date.today.disabled, .theme-wrapper.dark .calendar span.calendar-month.today.disabled, .theme-wrapper.dark .calendar span.calendar-year.today.disabled {
-        background: #2a3052;
-        border: 1px solid #60647e;
-        color: #60647e; }
-      .theme-wrapper.dark .calendar span.calendar-date.today.active, .theme-wrapper.dark .calendar span.calendar-month.today.active, .theme-wrapper.dark .calendar span.calendar-year.today.active {
-        color: #2a3052; }
-  .theme-wrapper.dark .calendar div.calendar-footer span.calendar-footer-btn {
-    color: #aaacba; }
-
-.theme-wrapper.dark .datepicker-container .datepicker-native-overlay {
-  background: #2a3052;
-  border-color: #4a4f6c; }
-  .theme-wrapper.dark .datepicker-container .datepicker-native-overlay:hover, .theme-wrapper.dark .datepicker-container .datepicker-native-overlay:focus, .theme-wrapper.dark .datepicker-container .datepicker-native-overlay:active {
-    border-color: #fff; }
-
 .time-picker {
   position: relative; }
   .time-picker.padding {
     padding: 16px; }
-  .time-picker #time-picker-input.time-picker-input {
+  .time-picker .time-picker-input {
     height: 32px;
     padding: 0 8px;
     border-radius: 4px;
@@ -2292,15 +1982,15 @@ div.datepicker-container {
     font-weight: 300;
     margin: 0;
     cursor: pointer; }
-    .time-picker #time-picker-input.time-picker-input::-webkit-input-placeholder {
+    .time-picker .time-picker-input::-webkit-input-placeholder {
       color: #7f8397; }
-    .time-picker #time-picker-input.time-picker-input::-ms-input-placeholder {
+    .time-picker .time-picker-input::-ms-input-placeholder {
       color: #7f8397; }
-    .time-picker #time-picker-input.time-picker-input::placeholder {
+    .time-picker .time-picker-input::placeholder {
       color: #7f8397; }
-    .time-picker #time-picker-input.time-picker-input:hover {
+    .time-picker .time-picker-input:hover {
       border-color: #7f8397; }
-    .time-picker #time-picker-input.time-picker-input.active {
+    .time-picker .time-picker-input.active {
       border-color: #2a3052; }
   .time-picker .time-picker-dropdown {
     font-size: 16px;
@@ -2659,6 +2349,181 @@ div.datepicker-container {
 .theme-wrapper.dark .acc-switcher-header {
   color: #aaacba; }
 
+.calendar {
+  position: absolute;
+  top: 0;
+  background: #fff;
+  outline: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.2);
+          box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.2);
+  z-index: 999;
+  font-size: 14px; }
+  .calendar, .calendar * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .calendar button {
+    border: none;
+    outline: none;
+    background: none; }
+  .calendar__header, .calendar__footer {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+    padding: 8px; }
+  .calendar__header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .calendar__body {
+    border-top: 1px solid #7f8397;
+    border-bottom: 1px solid #7f8397; }
+    .calendar__body--date, .calendar__body--month, .calendar__body--year, .calendar__body--decade {
+      display: grid;
+      grid-gap: 12px;
+      padding: 8px 20px; }
+      .calendar__body--date span, .calendar__body--month span, .calendar__body--year span, .calendar__body--decade span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 5px; }
+    .calendar__body--date {
+      grid-template-columns: repeat(7, 24px);
+      grid-template-rows: repeat(6, 24px); }
+      .calendar__body--date span {
+        width: 100%;
+        height: 100%; }
+    .calendar__body--month, .calendar__body--year, .calendar__body--decade {
+      grid-template-columns: repeat(3, minmax(72px, 1fr));
+      grid-auto-rows: minmax(42px, auto); }
+      .calendar__body--month span, .calendar__body--year span, .calendar__body--decade span {
+        width: 56px;
+        height: 32px; }
+    .calendar__body--decade span {
+      width: 100%; }
+  .calendar__icon {
+    right: 5%; }
+    .calendar__icon--today:hover {
+      cursor: pointer; }
+  .calendar__nav {
+    position: absolute;
+    padding: 0 5px; }
+    .calendar__nav:hover:not(.calendar__nav--disabled) {
+      cursor: pointer; }
+    .calendar__nav--prev-year {
+      left: 7%; }
+    .calendar__nav--next-year {
+      right: 7%; }
+    .calendar__nav--prev-month {
+      left: 14%; }
+    .calendar__nav--next-month {
+      right: 14%; }
+    .calendar__nav--disabled path {
+      fill: #7f8397; }
+  .calendar__btn {
+    text-align: center;
+    padding: 8px 2px;
+    font-weight: bold;
+    cursor: pointer; }
+    .calendar__btn--disabled {
+      cursor: default;
+      color: #7f8397;
+      -webkit-transition: none;
+      transition: none; }
+    .calendar__btn a {
+      cursor: inherit;
+      color: inherit;
+      font-size: 12px; }
+  .calendar__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333; }
+    .calendar__text--bold {
+      font-weight: bold; }
+    .calendar__text + .calendar__text__btn {
+      border-top: 1px solid #7f8397;
+      margin: 0 -12px; }
+  .calendar__cell {
+    font-size: 12px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    justify-self: center;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s; }
+    .calendar__cell:hover {
+      cursor: pointer; }
+    .calendar__cell:hover:not(.calendar__cell--active) {
+      background: #fafafb; }
+    .calendar__cell--bold {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333; }
+    .calendar__cell--disabled, .calendar__cell--other {
+      color: #7f8397;
+      -webkit-transition: none;
+      transition: none; }
+    .calendar__cell--disabled:hover {
+      cursor: default; }
+    .calendar__cell--today {
+      font-weight: 400;
+      border: 1px solid #2a3052;
+      border-radius: 5px; }
+    .calendar__cell--active {
+      color: #fff;
+      background: #2a3052;
+      font-weight: bold;
+      -webkit-box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.14);
+              box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.14); }
+
+.theme-wrapper.dark .calendar {
+  background: #353b5b;
+  border: 1px solid #4a4f6c; }
+  .theme-wrapper.dark .calendar__header, .theme-wrapper.dark .calendar__footer {
+    border-color: #4a4f6c;
+    color: #fff; }
+    .theme-wrapper.dark .calendar__header span a, .theme-wrapper.dark .calendar__footer span a {
+      color: #fff; }
+  .theme-wrapper.dark .calendar__nav path {
+    fill: #aaacba; }
+  .theme-wrapper.dark .calendar__nav--disabled path {
+    fill: #60647e; }
+  .theme-wrapper.dark .calendar__text {
+    color: #fff; }
+  .theme-wrapper.dark .calendar__header {
+    background: #2a3052; }
+  .theme-wrapper.dark .calendar__btn {
+    color: #aaacba; }
+    .theme-wrapper.dark .calendar__btn--select {
+      color: #fff; }
+  .theme-wrapper.dark .calendar__icon path {
+    fill: #fff; }
+  .theme-wrapper.dark .calendar__body {
+    background: #353b5b;
+    border-color: #4a4f6c; }
+  .theme-wrapper.dark .calendar__cell {
+    color: #aaacba; }
+    .theme-wrapper.dark .calendar__cell:hover {
+      background: #4a4f6c; }
+    .theme-wrapper.dark .calendar__cell--disabled, .theme-wrapper.dark .calendar__cell--other {
+      color: #60647e; }
+    .theme-wrapper.dark .calendar__cell--today {
+      border: 1px solid #fff;
+      color: #fff; }
+    .theme-wrapper.dark .calendar__cell--active {
+      color: #2a3052;
+      background: #fff !important; }
+
 .card-list {
   overflow: auto; }
   .card-list .card-list__card {
@@ -3006,6 +2871,102 @@ div.contracts-popup-container {
   .table__foot .table__row {
     border-top: 1px solid #7f8397;
     border-bottom: none; }
+
+.datepicker {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px; }
+  .datepicker__input input {
+    text-align: center;
+    pointer-events: auto; }
+    .datepicker__input input:focus, .datepicker__input input:hover {
+      outline: none;
+      border-color: #2a3052; }
+  .datepicker__icon {
+    opacity: 1;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s; }
+    .datepicker__icon:hover {
+      cursor: pointer; }
+    .datepicker__icon--is-hidden {
+      opacity: 0; }
+  .datepicker__native-overlay {
+    background: #fff;
+    height: 32px;
+    cursor: pointer;
+    border: 1px solid #7f8397;
+    border-radius: 4px;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-weight: 300;
+    -webkit-transition: border 0.25s;
+    transition: border 0.25s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: transparent;
+    background-clip: padding-box;
+    text-align: left; }
+    .datepicker__native-overlay__arrowhead {
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 6px; }
+      .datepicker__native-overlay__arrowhead .arrow-path {
+        fill: #7f8397; }
+  .datepicker input[type=date] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+    .datepicker input[type=date]:hover:not(:focus) {
+      border-color: #7f8397; }
+    .datepicker input[type=date]::-webkit-date-and-time-value {
+      margin: 0; }
+  .datepicker__picker .calendar {
+    top: 8px;
+    opacity: 0;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+    .datepicker__picker .calendar span {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+  .datepicker__picker--align-left > .calendar {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+    left: -295px; }
+  .datepicker__picker--show > .calendar {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+
+.theme-wrapper.dark .datepicker__input {
+  background: #2a3052;
+  border-color: #4a4f6c;
+  color: #fff; }
+  .theme-wrapper.dark .datepicker__input:hover, .theme-wrapper.dark .datepicker__input:focus, .theme-wrapper.dark .datepicker__input:active {
+    border-color: #fff; }
+
+.theme-wrapper.dark .datepicker__icon path {
+  fill: #fff; }
+
+.theme-wrapper.dark .datepicker__native-overlay {
+  background: #2a3052;
+  border-color: #4a4f6c; }
+  .theme-wrapper.dark .datepicker__native-overlay:hover, .theme-wrapper.dark .datepicker__native-overlay:focus, .theme-wrapper.dark .datepicker__native-overlay:active {
+    border-color: #fff; }
 
 .error-box {
   display: -webkit-box;
@@ -5253,7 +5214,7 @@ a {
           -ms-flex-align: center;
               align-items: center;
       padding-left: 16px; }
-      .statement-filter__content .datepicker-container .datepicker-native-overlay {
+      .statement-filter__content .datepicker .datepicker__native-overlay {
         line-height: 30px; }
     .statement-filter__label {
       margin-right: 0.6rem; }
@@ -5291,7 +5252,7 @@ a {
         display: grid;
         grid-template-columns: 1fr 30px 1fr;
         text-align: center; }
-        .statement--card-view .statement-filter__content .datepicker-display {
+        .statement--card-view .statement-filter__content .datepicker__input {
           width: 100%; }
       .statement--card-view .statement-filter__label {
         display: none; }
@@ -5918,23 +5879,6 @@ a {
           margin: 1rem 1rem 0;
           border-radius: 4px;
           font-size: 10px; }
-  .binary-app .calendar {
-    width: 192px; }
-    .binary-app .calendar .calendar-input, .binary-app .calendar .calendar-footer {
-      font-size: 12px; }
-    .binary-app .calendar .calendar-date-panel, .binary-app .calendar .calendar-month-panel, .binary-app .calendar .calendar-year-panel, .binary-app .calendar .calendar-decade-panel, .binary-app .calendar .calendar-century-panel {
-      display: grid;
-      grid-gap: 2px;
-      padding: 8px 12px;
-      height: 226px; }
-      .binary-app .calendar .calendar-date-panel .calendar-date, .binary-app .calendar .calendar-date-panel .calendar-month, .binary-app .calendar .calendar-date-panel .calendar-year, .binary-app .calendar .calendar-date-panel .calendar-decade, .binary-app .calendar .calendar-month-panel .calendar-date, .binary-app .calendar .calendar-month-panel .calendar-month, .binary-app .calendar .calendar-month-panel .calendar-year, .binary-app .calendar .calendar-month-panel .calendar-decade, .binary-app .calendar .calendar-year-panel .calendar-date, .binary-app .calendar .calendar-year-panel .calendar-month, .binary-app .calendar .calendar-year-panel .calendar-year, .binary-app .calendar .calendar-year-panel .calendar-decade, .binary-app .calendar .calendar-decade-panel .calendar-date, .binary-app .calendar .calendar-decade-panel .calendar-month, .binary-app .calendar .calendar-decade-panel .calendar-year, .binary-app .calendar .calendar-decade-panel .calendar-decade, .binary-app .calendar .calendar-century-panel .calendar-date, .binary-app .calendar .calendar-century-panel .calendar-month, .binary-app .calendar .calendar-century-panel .calendar-year, .binary-app .calendar .calendar-century-panel .calendar-decade {
-        font-size: 10px; }
-        .binary-app .calendar .calendar-date-panel .calendar-date.calendar-date, .binary-app .calendar .calendar-date-panel .calendar-month.calendar-date, .binary-app .calendar .calendar-date-panel .calendar-year.calendar-date, .binary-app .calendar .calendar-date-panel .calendar-decade.calendar-date, .binary-app .calendar .calendar-month-panel .calendar-date.calendar-date, .binary-app .calendar .calendar-month-panel .calendar-month.calendar-date, .binary-app .calendar .calendar-month-panel .calendar-year.calendar-date, .binary-app .calendar .calendar-month-panel .calendar-decade.calendar-date, .binary-app .calendar .calendar-year-panel .calendar-date.calendar-date, .binary-app .calendar .calendar-year-panel .calendar-month.calendar-date, .binary-app .calendar .calendar-year-panel .calendar-year.calendar-date, .binary-app .calendar .calendar-year-panel .calendar-decade.calendar-date, .binary-app .calendar .calendar-decade-panel .calendar-date.calendar-date, .binary-app .calendar .calendar-decade-panel .calendar-month.calendar-date, .binary-app .calendar .calendar-decade-panel .calendar-year.calendar-date, .binary-app .calendar .calendar-decade-panel .calendar-decade.calendar-date, .binary-app .calendar .calendar-century-panel .calendar-date.calendar-date, .binary-app .calendar .calendar-century-panel .calendar-month.calendar-date, .binary-app .calendar .calendar-century-panel .calendar-year.calendar-date, .binary-app .calendar .calendar-century-panel .calendar-decade.calendar-date {
-          width: 20px; }
-        .binary-app .calendar .calendar-date-panel .calendar-date-header, .binary-app .calendar .calendar-date-panel .calendar-month-header, .binary-app .calendar .calendar-date-panel .calendar-year-header, .binary-app .calendar .calendar-date-panel .calendar-decade-header, .binary-app .calendar .calendar-month-panel .calendar-date-header, .binary-app .calendar .calendar-month-panel .calendar-month-header, .binary-app .calendar .calendar-month-panel .calendar-year-header, .binary-app .calendar .calendar-month-panel .calendar-decade-header, .binary-app .calendar .calendar-year-panel .calendar-date-header, .binary-app .calendar .calendar-year-panel .calendar-month-header, .binary-app .calendar .calendar-year-panel .calendar-year-header, .binary-app .calendar .calendar-year-panel .calendar-decade-header, .binary-app .calendar .calendar-decade-panel .calendar-date-header, .binary-app .calendar .calendar-decade-panel .calendar-month-header, .binary-app .calendar .calendar-decade-panel .calendar-year-header, .binary-app .calendar .calendar-decade-panel .calendar-decade-header, .binary-app .calendar .calendar-century-panel .calendar-date-header, .binary-app .calendar .calendar-century-panel .calendar-month-header, .binary-app .calendar .calendar-century-panel .calendar-year-header, .binary-app .calendar .calendar-century-panel .calendar-decade-header {
-          width: 20px; }
-  .binary-app div.datepicker-container .datepicker-display, .binary-app div.datepicker-container .datepicker-native-overlay {
-    font-size: 12px; }
   .binary-app .time-picker #time-picker-input.time-picker-input {
     font-size: 12px; }
   .binary-app .fullscreen-dialog__content .contracts-modal-list {
