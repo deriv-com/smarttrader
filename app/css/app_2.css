@@ -5582,7 +5582,8 @@ a {
         text-align: center; }
     .binary-app div.purchase-wrapper fieldset.purchase-option {
       padding-top: 8px;
-      padding-bottom: 8px; }
+      padding-bottom: 8px;
+      position: relative; }
       .binary-app div.purchase-wrapper fieldset.purchase-option div.submit-section .btn-purchase {
         position: relative;
         background-color: #34a39a;
