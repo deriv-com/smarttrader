@@ -165,7 +165,7 @@ button:focus, input[type='submit']:focus {
 button::-moz-focus-inner, input[type='submit']::-moz-focus-inner {
   border: 0; }
 
-a.button:hover, a.button-white:hover {
+a.button:hover, a.button-social:hover {
   text-decoration: none; }
 
 button.full-width, button.full-width span, .button.full-width, .button.full-width span {
@@ -662,45 +662,48 @@ li strong.margin-right {
 [data-anchor]:hover .data-anchor-link {
   visibility: visible; }
 
-.button-white {
+.button-social {
   cursor: pointer;
-  margin-bottom: 0.5em; }
-  .button-white span {
-    color: #fff;
-    text-align: center;
-    background: #2e8836;
-    border-radius: 4px;
-    padding: 10px 25px;
-    display: inline-block;
-    letter-spacing: 0.75px;
-    overflow: visible;
-    border: 1px solid #dedede;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 3px;
+  height: 40px;
+  width: 200px;
+  border: 1px solid #dedede;
+  background-position-x: 7px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  text-transform: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .button-social#button_google {
+    background-image: url("../images/social/google.svg"); }
+  .button-social#button_facebook {
+    background-image: url("../images/social/facebook.svg"); }
+  .button-social + .button-social {
+    margin-left: 10px; }
+  .button-social:hover {
+    background-color: #dedede; }
+  .button-social .name {
+    text-transform: capitalize;
     color: #000;
-    background: #fff;
     font-weight: 400;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    letter-spacing: 0; }
-    .button-white span:visited {
-      color: #fff; }
-    .button-white span:hover, .button-white span:active {
-      text-decoration: none;
-      background-color: #14602b; }
-    .button-white span:hover {
-      text-decoration: none;
-      background: #dedede; }
-    .button-white span.icon-google:before {
-      margin-right: 10px; }
-
-.icon-google:before {
-  content: url("../images/pages/applications/icon-google.svg"); }
+    padding-left: 1rem; }
+  @media screen and (max-width: 480px) {
+    .button-social {
+      width: 30%;
+      background-position-x: center; }
+      .button-social .name {
+        padding-left: 0;
+        opacity: 0; } }
 
 .section-divider .circle {
   padding: 7px 5px !important; }
