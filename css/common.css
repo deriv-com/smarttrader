@@ -708,6 +708,10 @@ li strong.margin-right {
 .section-divider .circle {
   padding: 7px 5px !important; }
 
+.section-divider.full-width {
+  max-width: unset;
+  width: 100%; }
+
 .no-capitalize, .no-capitalize > a {
   text-transform: none !important; }
 
