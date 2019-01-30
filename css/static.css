@@ -1734,13 +1734,13 @@ body #not_authenticated_financial ul.checked > li {
       padding: 8px 0 0 30px; }
       .two_factor_auth .steps.steps-vertical .step .content p {
         margin: 0; }
-        .two_factor_auth .steps.steps-vertical .step .content p:last-child, .two_factor_auth .steps.steps-vertical .step .content p:nth-child(2) {
+        .two_factor_auth .steps.steps-vertical .step .content p:last-child, .two_factor_auth .steps.steps-vertical .step .content p:nth-child(3) {
           padding-bottom: 15px; }
       .two_factor_auth .steps.steps-vertical .step .content #qrcode {
-        padding-bottom: 60px; }
+        padding: 15px 0; }
         @media (max-width: 480px) {
           .two_factor_auth .steps.steps-vertical .step .content #qrcode {
-            padding-bottom: 10px; } }
+            padding: 10px 0; } }
 
 .two_factor_auth .two-fa-status {
   display: -webkit-box;
@@ -1920,13 +1920,6 @@ body #not_authenticated_financial ul.checked > li {
 .paymentagent_description {
   height: 4em;
   width: 206px; }
-
-.cashier_note .notice-circle {
-  color: #e98024;
-  border-color: #e98024; }
-
-.cashier_note p {
-  color: #2a3052; }
 
 .timeline {
   margin: 0 auto;
