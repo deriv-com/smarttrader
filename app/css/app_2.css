@@ -2778,7 +2778,7 @@ div.contracts-popup-container {
       font-size: 0.875rem;
       /* stylelint-disable-line number-max-precision */ }
     div.contracts-popup-container .list-item .trade-type-info-icon {
-      display: block;
+      display: none;
       float: right;
       height: 16px;
       width: 16px;
@@ -2975,7 +2975,6 @@ div.contracts-popup-container {
             transform-origin: 45% 45;
     color: #e9e9ed; }
   div.contracts-popup-container .categories-container {
-    margin-bottom: 6px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -3004,7 +3003,9 @@ div.contracts-popup-container {
             box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3); }
   .theme-wrapper.dark div.contracts-popup-container .list-container {
     border-color: #4a4f6c;
-    background: #353b5b; }
+    background: #353b5b;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16); }
     .theme-wrapper.dark div.contracts-popup-container .list-container .list-group .list-items .list-item {
       background: #2a3052;
       border-color: #4a4f6c;
@@ -5786,6 +5787,9 @@ a {
       display: inline-block; }
       .binary-app fieldset .allow-equals .input-field {
         display: inline-block; }
+        .binary-app fieldset .allow-equals .input-field input:active, .binary-app fieldset .allow-equals .input-field input:focus {
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
       .binary-app fieldset .allow-equals label {
         vertical-align: middle;
         padding-left: 8px;
