@@ -1432,6 +1432,7 @@ hr {
   background: #4bbfab;
   font-size: 0.875rem;
   /* stylelint-disable-line number-max-precision */
+  text-transform: uppercase;
   /* Ant Effect */ }
   .btn.is-link {
     max-width: 220px;
@@ -2880,10 +2881,9 @@ div.contracts-popup-container {
     div.contracts-popup-container .trade-type-info-popup .trade-type-info {
       position: absolute;
       width: 290px;
+      height: 544px;
       right: calc(100% + 10px);
       top: -54px;
-      display: grid;
-      grid-auto-columns: 1fr;
       z-index: 2;
       background: #f4f4f6;
       border-radius: 4px;
@@ -2894,7 +2894,8 @@ div.contracts-popup-container {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding: 8px; }
+        padding: 8px;
+        height: 40px; }
         div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-header .title {
           margin-left: 15px;
           font-size: 14px;
@@ -2911,18 +2912,24 @@ div.contracts-popup-container {
         margin: 0 auto; }
       div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-content {
         padding: 8px;
+        height: 215px;
+        overflow-y: auto;
         margin: 0 auto;
         font-size: 14px;
         line-height: 20px;
         color: #333; }
-      div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-choose {
+      div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-choose button {
         background: #ffc107;
         color: #fff;
-        font-weight: bold; }
+        font-weight: bold;
+        margin: 16px 0;
+        width: 100%; }
       div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-navigation {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; }
+        display: flex;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
         div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-navigation__list {
           display: inline-block;
           text-align: center;
@@ -3037,7 +3044,7 @@ div.contracts-popup-container {
   .theme-wrapper.dark .trade-type-info-popup .trade-type-info .info-gif {
     background-color: #60647e; }
   .theme-wrapper.dark .trade-type-info-popup .trade-type-info .info-content {
-    color: #e9e9ed; }
+    color: rgba(255, 255, 255, 0.8); }
   .theme-wrapper.dark .trade-type-info-popup .trade-type-info .info-navigation___list .circle-button {
     background-color: #fff; }
     .theme-wrapper.dark .trade-type-info-popup .trade-type-info .info-navigation___list .circle-button.active {
@@ -4681,16 +4688,18 @@ a {
       font-size: 14px;
       line-height: 20px;
       color: #333; }
-    .fullscreen-dialog .trade-type-info-modal .info-choose {
+    .fullscreen-dialog .trade-type-info-modal .info-choose button {
       background: #ffc107;
       color: #fff;
       font-weight: bold;
-      margin: 0 auto;
-      display: block; }
+      margin: 16px 0;
+      width: 100%; }
     .fullscreen-dialog .trade-type-info-modal .info-navigation {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
       margin-top: 16px; }
       .fullscreen-dialog .trade-type-info-modal .info-navigation__list {
         display: inline-block;
@@ -4721,7 +4730,7 @@ a {
   .theme-wrapper.dark .fullscreen-dialog .trade-type-info-modal .info-gif {
     background-color: #60647e; }
   .theme-wrapper.dark .fullscreen-dialog .trade-type-info-modal .info-content {
-    color: #e9e9ed; }
+    color: rgba(255, 255, 255, 0.8); }
   .theme-wrapper.dark .fullscreen-dialog .trade-type-info-modal .info-navigation__list .circle-button {
     background-color: #fff; }
     .theme-wrapper.dark .fullscreen-dialog .trade-type-info-modal .info-navigation__list .circle-button.active {
