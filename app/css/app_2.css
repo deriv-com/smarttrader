@@ -210,6 +210,8 @@ span.tooltip {
         -ms-flex-align: center;
             align-items: center;
     vertical-align: middle; }
+  span.tooltip i.dot:after {
+    content: url("../images/common/tooltip/ic_dot_red.svg "); }
   span.tooltip[data-tooltip] {
     position: relative;
     cursor: help;
@@ -1924,6 +1926,14 @@ a.btn {
     .input-field input.error {
       color: #e31c4b;
       border: 1px solid #e31c4b !important; }
+    .input-field input[readonly] {
+      cursor: pointer; }
+    .input-field input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.8); }
+    .input-field input::-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.8); }
+    .input-field input::placeholder {
+      color: rgba(0, 0, 0, 0.8); }
   .input-field label.input-label {
     margin-bottom: 2px;
     margin-left: 4px;
@@ -1982,6 +1992,12 @@ a.btn {
     border-color: #7f8397;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3);
             box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3); }
+  .theme-wrapper.dark .input-field input::-webkit-input-placeholder {
+    color: #7f8397; }
+  .theme-wrapper.dark .input-field input::-ms-input-placeholder {
+    color: #7f8397; }
+  .theme-wrapper.dark .input-field input::placeholder {
+    color: #7f8397; }
 
 .theme-wrapper.dark .input-wrapper:hover input {
   border-color: #7f8397; }
@@ -2529,7 +2545,7 @@ a.btn {
         border-radius: 5px; }
     .calendar__body--date, .sidebar-container .calendar__body--date {
       grid-template-columns: repeat(7, 24px);
-      grid-template-rows: repeat(6, 24px); }
+      grid-auto-rows: 24px; }
       .calendar__body--date span, .sidebar-container .calendar__body--date span {
         width: 100%;
         height: 100%; }
@@ -2548,7 +2564,7 @@ a.btn {
   .calendar__nav, .sidebar-container .calendar__nav {
     position: absolute;
     padding: 0 5px; }
-    .calendar__nav:hover , .sidebar-container .calendar__nav:hover {
+    .calendar__nav:hover:not(.calendar__nav--disabled), .sidebar-container .calendar__nav:hover:not(.calendar__nav--disabled) {
       cursor: pointer; }
     .calendar__nav--prev-year, .sidebar-container .calendar__nav--prev-year {
       left: 7%; }
@@ -2567,7 +2583,6 @@ a.btn {
     cursor: pointer; }
     .calendar__btn--disabled, .sidebar-container .calendar__btn--disabled {
       cursor: default;
-      color: rgba(0, 0, 0, 0.16);
       -webkit-transition: none;
       transition: none; }
     .calendar__btn a, .sidebar-container .calendar__btn a {
@@ -2589,7 +2604,8 @@ a.btn {
         align-self: center;
     justify-self: center;
     -webkit-transition: background 0.2s;
-    transition: background 0.2s; }
+    transition: background 0.2s;
+    position: relative; }
     .calendar__cell:hover, .sidebar-container .calendar__cell:hover {
       cursor: pointer;
       background: rgba(0, 0, 0, 0.04); }
@@ -2614,6 +2630,14 @@ a.btn {
       font-weight: bold; }
       .calendar__cell--active:hover, .sidebar-container .calendar__cell--active:hover {
         background: #999cac; }
+    .calendar__cell span.tooltip[data-tooltip], .sidebar-container .calendar__cell span.tooltip[data-tooltip] {
+      position: absolute;
+      display: inline-grid;
+      cursor: default;
+      height: 0;
+      top: 0; }
+      .calendar__cell span.tooltip[data-tooltip] i, .sidebar-container .calendar__cell span.tooltip[data-tooltip] i {
+        margin-top: -7px; }
 
 .theme-wrapper.dark .calendar {
   background: #191c31;
@@ -2637,21 +2661,19 @@ a.btn {
       color: #ffffff;
       font-size: 0.8rem;
       line-height: 20px; }
-    .theme-wrapper.dark .calendar__btn--disabled {
-      color: rgba(127, 131, 151, 0.3); }
   .theme-wrapper.dark .calendar__icon path {
     fill: #7f8397; }
   .theme-wrapper.dark .calendar__cell {
     color: #7f8397; }
     .theme-wrapper.dark .calendar__cell:hover {
       background: #2a3052; }
+    .theme-wrapper.dark .calendar__cell--today {
+      border: 1px solid #7f8397;
+      color: #ffffff; }
     .theme-wrapper.dark .calendar__cell--disabled, .theme-wrapper.dark .calendar__cell--other {
       color: rgba(127, 131, 151, 0.3); }
     .theme-wrapper.dark .calendar__cell--disabled:hover {
       background: #191c31; }
-    .theme-wrapper.dark .calendar__cell--today {
-      border: 1px solid #7f8397;
-      color: #ffffff; }
     .theme-wrapper.dark .calendar__cell--active {
       color: #ffffff;
       background: #2a3052 !important; }
@@ -3175,30 +3197,26 @@ div.contracts-popup-container {
       border-color: rgba(0, 0, 0, 0.04); }
     .datepicker input[type=date]::-webkit-date-and-time-value {
       margin: 0; }
-  .datepicker__picker .calendar {
-    top: 8px;
-    opacity: 0;
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s; }
-    .datepicker__picker .calendar span {
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
-  .datepicker__picker--align-left > .calendar {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-    -webkit-transform-origin: top right;
-            transform-origin: top right;
-    left: -295px; }
-  .datepicker__picker--show > .calendar {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
+  .datepicker__picker {
+    position: absolute;
+    top: 7px;
+    z-index: 999;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scale(1, 0) translate3d(20px, 0, 0);
+            transform: scale(1, 0) translate3d(20px, 0, 0);
+    -webkit-transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
+    transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease, opacity 0.25s linear;
+    transition: transform 0.25s ease, opacity 0.25s linear, -webkit-transform 0.25s ease; }
+    .datepicker__picker--left.datepicker__picker--enter, .datepicker__picker--left.datepicker__picker--exit {
+      -webkit-transform: scale(1, 1) translate3d(-275px, 0, 0);
+              transform: scale(1, 1) translate3d(-275px, 0, 0);
+      opacity: 0; }
+    .datepicker__picker--left.datepicker__picker--enter-done {
+      -webkit-transform: translate3d(-295px, 0, 0);
+              transform: translate3d(-295px, 0, 0);
+      opacity: 1; }
 
 .theme-wrapper.dark .datepicker__input {
   background: #2a3052;
