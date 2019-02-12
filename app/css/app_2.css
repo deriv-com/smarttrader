@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic");
 /* stylelint-disable color-no-hex */
 /* stylelint-enable color-no-hex */
+html {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important; }
+
 /* Single property */
 body, input {
   font-size: 14px; }
@@ -374,18 +380,31 @@ span.tooltip {
 .app-contents {
   margin: 48px 0 35px;
   height: calc(100vh - 48px - 35px);
-  overflow-y: auto;
-  overflow-x: hidden; }
-  .app-contents--show-positions-drawer .chart-container {
-    width: calc(100% - (240px + 16px)) !important;
-    margin-left: calc(240px + 16px);
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease; }
+  overflow: hidden; }
+  .app-contents--contract-mode .trade-container .chart-container {
+    max-width: calc(100% - 240px - 16px); }
+  .app-contents--show-positions-drawer .trade-container .chart-container {
+    width: calc(100% - 480px - 18px);
+    margin-left: 258px; }
+    .app-contents--show-positions-drawer .trade-container .chart-container .cq-top-ui-widgets {
+      -webkit-transform: translate3d(1px, 0, 0);
+              transform: translate3d(1px, 0, 0); }
+      .app-contents--show-positions-drawer .trade-container .chart-container .cq-top-ui-widgets .info-box {
+        -webkit-transform: translate3d(1px, 0, 0);
+                transform: translate3d(1px, 0, 0); }
+    .app-contents--show-positions-drawer .trade-container .chart-container .cq-chart-control-left .cq-chart-controls {
+      -webkit-transform: translate3d(1px, 0, 0) !important;
+              transform: translate3d(1px, 0, 0) !important;
+      background: #191c31; }
+  .app-contents--show-positions-drawer + .app-contents--show-positions-drawer.app-contents--contract-mode {
+    max-width: unset; }
   .app-contents .chart-container {
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: width 0.15s ease-out, margin 0.15s ease-out;
+    transition: width 0.15s ease-out, margin 0.15s ease-out; }
     .app-contents .chart-container .cq-chart-control-left .cq-chart-controls {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
       -webkit-transition: -webkit-transform 0.25s ease;
       transition: -webkit-transform 0.25s ease;
       transition: transform 0.25s ease;
@@ -393,8 +412,8 @@ span.tooltip {
     .app-contents .chart-container .cq-chart-control-left .cq-top-ui-widgets {
       left: 90px; }
       .app-contents .chart-container .cq-chart-control-left .cq-top-ui-widgets .info-box {
-        -webkit-transform: translateX(0);
-                transform: translateX(0); }
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); }
     .app-contents .chart-container .ciq-chart .cq-top-ui-widgets, .app-contents .chart-container .ciq-chart .info-box {
       -webkit-transition: -webkit-transform 0.25s ease;
       transition: -webkit-transform 0.25s ease;
@@ -413,10 +432,11 @@ span.tooltip {
       height: calc(100vh - 48px); } }
   .app-contents .sidebar-container {
     position: relative;
-    margin-left: 16px; }
+    margin-left: 16px;
+    width: 240px;
+    overflow: hidden; }
     .app-contents .sidebar-container .sidebar-items {
       opacity: 1;
-      width: 240px;
       -webkit-transform: none;
               transform: none;
       -webkit-transition: opacity 0.2s linear, -webkit-transform 0.4s ease;
@@ -424,17 +444,17 @@ span.tooltip {
       transition: transform 0.4s ease, opacity 0.2s linear;
       transition: transform 0.4s ease, opacity 0.2s linear, -webkit-transform 0.4s ease; }
       .app-contents .sidebar-container .sidebar-items__slideout {
-        -webkit-transform: translateX(calc(100% + 20px));
-                transform: translateX(calc(100% + 20px));
+        -webkit-transform: translate3d(calc(100% + 20px), 0, 0);
+                transform: translate3d(calc(100% + 20px), 0, 0);
         pointer-events: none;
         opacity: 0; }
     .app-contents .sidebar-container .contract-wrapper {
       position: absolute;
-      width: 100%;
+      width: 240px;
       height: 100%;
       z-index: 2;
       top: 0;
-      left: 0;
+      right: 0;
       -webkit-transition: opacity 0.2s linear, -webkit-transform 0.4s ease;
       transition: opacity 0.2s linear, -webkit-transform 0.4s ease;
       transition: transform 0.4s ease, opacity 0.2s linear;
@@ -443,12 +463,12 @@ span.tooltip {
       -webkit-transform: none;
               transform: none; }
       .app-contents .sidebar-container .contract-wrapper-enter {
-        -webkit-transform: translateX(calc(100% + 20px));
-                transform: translateX(calc(100% + 20px));
+        -webkit-transform: translate3d(calc(100% + 16px), 0, 0);
+                transform: translate3d(calc(100% + 16px), 0, 0);
         opacity: 0; }
       .app-contents .sidebar-container .contract-wrapper-exit {
-        -webkit-transform: translateX(calc(100% + 20px));
-                transform: translateX(calc(100% + 20px));
+        -webkit-transform: translate3d(calc(100% + 16px), 0, 0);
+                transform: translate3d(calc(100% + 16px), 0, 0);
         opacity: 0;
         pointer-events: none; }
     .app-contents .sidebar-container fieldset {
@@ -459,11 +479,11 @@ span.tooltip {
 /* trade-app layout */
 .trade-container {
   position: relative;
-  padding: 8px 12px 0;
+  padding: 16px 12px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: calc(100vh - 91px);
+  min-height: calc(100vh - 99px);
   -webkit-transition: -webkit-transform 0.25s ease;
   transition: -webkit-transform 0.25s ease;
   transition: transform 0.25s ease;
@@ -472,6 +492,17 @@ span.tooltip {
   .trade-container .chart-container {
     position: relative;
     width: 100%; }
+    .trade-container .chart-container:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 20px;
+      top: 0;
+      left: -2px;
+      background-image: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+      pointer-events: none;
+      z-index: 2; }
     .trade-container .chart-container .cq-context {
       top: 0;
       left: 0;
@@ -488,16 +519,13 @@ span.tooltip {
                   box-shadow: none; }
         .trade-container .chart-container .cq-context div.ciq-chart div.ciq-asset-information {
           z-index: 0; }
-      .trade-container .chart-container .cq-context div.cq-chart-controls {
-        border-right: 1px solid rgba(0, 0, 0, 0.04); }
-      .trade-container .chart-container .cq-context div.cq-chart-control-left .cq-chart-controls {
-        border-top: 1px solid rgba(0, 0, 0, 0.04); }
       .trade-container .chart-container .cq-context div.cq-chart-control-left .cq-top-ui-widgets {
         width: calc(100% - 90px); }
     .trade-container .chart-container div.debug-text {
       display: none; }
   .trade-container .sidebar-items, .trade-container .contract-wrapper {
-    min-height: 500px; }
+    min-height: 460px;
+    width: 240px; }
   .trade-container .sidebar-items {
     position: relative; }
   @media (max-width: 768px) {
@@ -618,7 +646,7 @@ span.tooltip {
   width: 100%;
   height: 48px;
   top: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #f4f4f6;
   background-color: #f4f4f6; }
   .header .menu-items {
     display: -webkit-box;
@@ -1226,12 +1254,12 @@ hr {
 
 .positions-drawer {
   width: 240px;
-  height: calc(100vh - 48px - 35px - 2px - (2 * 16px));
+  height: calc(100vh - 48px - 35px - 2px - (8px * 3));
   margin-top: 16px;
   position: fixed;
   z-index: 2;
   top: 48px;
-  left: 0;
+  left: 4px;
   border: 1px solid #f4f4f6;
   background-color: #f4f4f6;
   -webkit-box-sizing: border-box;
@@ -1241,10 +1269,10 @@ hr {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   will-change: transform, opacity;
-  -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
-  transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  transition: opacity 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
   border-radius: 4px;
   /*
        POSITIONS DRAWER CARD STARTS
@@ -1253,8 +1281,8 @@ hr {
         POSITIONS DRAWER CARD ENDS
     */ }
   .positions-drawer--open {
-    -webkit-transform: translateX(16px);
-            transform: translateX(16px);
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
     opacity: 1; }
   .positions-drawer__header {
     height: 40px;
@@ -1274,7 +1302,7 @@ hr {
     padding: 8px 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    overflow-y: auto; }
+    overflow: hidden; }
   .positions-drawer__title {
     font-size: 14px;
     font-weight: bold; }
@@ -2830,7 +2858,7 @@ div.contracts-popup-container {
       position: absolute;
       width: 290px;
       right: calc(100% + 10px);
-      top: -54px;
+      top: -66px;
       display: grid;
       grid-auto-columns: 1fr;
       z-index: 2;
@@ -3149,12 +3177,14 @@ div.contracts-popup-container {
   display: inline-block;
   width: 100%;
   max-width: 280px; }
-  .datepicker__input input {
-    text-align: center;
-    pointer-events: auto; }
-    .datepicker__input input:focus, .datepicker__input input:hover {
-      outline: none;
-      border-color: #2a3052; }
+  .datepicker__input {
+    border-radius: 4px; }
+    .datepicker__input input {
+      text-align: center;
+      pointer-events: auto; }
+      .datepicker__input input:focus, .datepicker__input input:hover {
+        outline: none;
+        border-color: #2a3052; }
   .datepicker__icon {
     opacity: 1;
     -webkit-transition: opacity 0.1s;
@@ -3639,7 +3669,18 @@ a {
           box-sizing: border-box;
   /* overriding firefox shadow pseudo element */ }
   .range-slider label[for=range] {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 4px; }
   .range-slider input[type=range]::-moz-focus-outer {
     border: 0; }
   .range-slider.error input[type=range]::-webkit-slider-thumb {
@@ -3730,12 +3771,9 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    top: 9px;
+    left: 0;
+    top: -2px;
     height: 0; }
-    @media not all and (min-resolution: 0.001dpcm) {
-      @supports (-webkit-appearance: none) {
-        .range-slider .ticks {
-          margin: 0 4px; } } }
     .range-slider .ticks__step {
       height: 2px;
       width: 2px;
@@ -3767,7 +3805,7 @@ a {
         margin-right: 0; }
   .range-slider__line {
     position: absolute;
-    top: 11px;
+    top: 0;
     left: 0;
     height: 2px;
     background: #999cac;
@@ -3820,9 +3858,9 @@ a {
   position: absolute;
   width: 320px;
   right: 12px;
-  top: -250px;
+  top: -245px;
   background: #ffffff;
-  height: 280px;
+  height: auto;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
           box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
@@ -4006,33 +4044,36 @@ a {
     .settings-dialog i.flag.ic-flag-th:before {
       content: url("../images/common/language/ic_flag_th.svg"); }
 
-.theme-wrapper.dark .settings-dialog .settings-dialog-container {
+.theme-wrapper.dark .settings-dialog {
   background: #191c31; }
-  .theme-wrapper.dark .settings-dialog .settings-dialog-container .tab-content {
+  .theme-wrapper.dark .settings-dialog .settings-dialog-container {
     background: #191c31; }
-  .theme-wrapper.dark .settings-dialog .settings-dialog-container .general-setting-container, .theme-wrapper.dark .settings-dialog .settings-dialog-container .chart-setting-container {
-    background: #2a3052; }
-  .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-header {
-    color: #7f8397; }
-  .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row {
-    background-color: #101320; }
-    .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row span {
+    .theme-wrapper.dark .settings-dialog .settings-dialog-container .tab-content {
+      background: #191c31; }
+    .theme-wrapper.dark .settings-dialog .settings-dialog-container .general-setting-container, .theme-wrapper.dark .settings-dialog .settings-dialog-container .chart-setting-container {
+      background: #2a3052; }
+    .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-header {
       color: #7f8397; }
-    .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row:hover {
-      background-color: #202641; }
-
-.theme-wrapper.dark .settings-dialog .language-dialog-container {
-  background: #191c31; }
-  .theme-wrapper.dark .settings-dialog .language-dialog-container .language-header {
-    background: #191c31;
-    color: #7f8397; }
-  .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row {
-    background: #101320;
-    color: #7f8397; }
-    .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row a span {
+    .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row {
+      background-color: #101320; }
+      .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row span {
+        color: #7f8397; }
+      .theme-wrapper.dark .settings-dialog .settings-dialog-container .settings-row:hover {
+        background-color: #202641; }
+  .theme-wrapper.dark .settings-dialog .language-dialog-container {
+    background: #191c31; }
+    .theme-wrapper.dark .settings-dialog .language-dialog-container .language-header {
+      background: #191c31;
       color: #7f8397; }
-    .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row:hover a {
-      background: #202641; }
+      .theme-wrapper.dark .settings-dialog .language-dialog-container .language-header .arrow-back path {
+        fill: #7f8397; }
+    .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row {
+      background: #101320;
+      color: #7f8397; }
+      .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row a span {
+        color: #7f8397; }
+      .theme-wrapper.dark .settings-dialog .language-dialog-container .language-row:hover a {
+        background: #202641; }
 
 .tab-container {
   overflow-x: auto;
@@ -4782,9 +4823,7 @@ a {
   .contract-container .contract-header {
     max-height: 2rem;
     overflow: hidden;
-    border-radius: 4px 4px 0 0;
-    -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.16);
-            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.16); }
+    border-radius: 4px 4px 0 0; }
     .contract-container .contract-header .header-wrapper {
       -webkit-transition: -webkit-transform 0.4s ease;
       transition: -webkit-transform 0.4s ease;
@@ -4828,11 +4867,10 @@ a {
         opacity: 0; }
   .contract-container .contract-contents {
     padding: 10px;
+    background: #f4f4f6;
     font-size: 0.75rem;
     border-top-width: 0;
-    border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.16);
-            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.16); }
+    border-radius: 0 0 4px 4px; }
     .contract-container .contract-contents .longcode {
       font-weight: 300;
       text-align: center;
@@ -5035,12 +5073,14 @@ a {
   color: #7f8397; }
   .theme-wrapper.dark .contract-container .contract-header.purchased .header-wrapper .header-purchased {
     background-color: #101320; }
-  .theme-wrapper.dark .contract-container .contract-contents .ref-number, .theme-wrapper.dark .contract-container .contract-contents .info-header {
-    background-color: #191c31; }
-  .theme-wrapper.dark .contract-container .contract-contents .info-item > div:first-child {
-    color: #7f8397; }
-  .theme-wrapper.dark .contract-container .contract-contents .info-item > div:last-child {
-    color: #ffffff; }
+  .theme-wrapper.dark .contract-container .contract-contents {
+    background: #191c31; }
+    .theme-wrapper.dark .contract-container .contract-contents .ref-number, .theme-wrapper.dark .contract-container .contract-contents .info-header {
+      background: #101320; }
+    .theme-wrapper.dark .contract-container .contract-contents .info-item > div:first-child {
+      color: #7f8397; }
+    .theme-wrapper.dark .contract-container .contract-contents .info-item > div:last-child {
+      color: #ffffff; }
 
 .theme-wrapper.dark .info-box-container .info-box {
   background: rgba(16, 19, 32, 0.6); }
@@ -5521,7 +5561,7 @@ a {
       white-space: nowrap; }
 
 .statement {
-  height: 100%;
+  height: calc(100vh - 83px);
   /*
         TABLE STYLES START
     */
@@ -5714,6 +5754,8 @@ a {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       background: #ffffff; }
+    .binary-app fieldset .button-menu {
+      margin-top: 4px; }
     .binary-app fieldset .select-wrapper {
       position: relative; }
       .binary-app fieldset .select-wrapper:after {
@@ -6322,6 +6364,7 @@ body.dark, .theme-wrapper.dark {
     body.dark header .inkbar, .theme-wrapper.dark header .inkbar {
       background-color: #ffffff; }
   body.dark .app-contents, .theme-wrapper.dark .app-contents {
+    background: #101320;
     color: #ffffff; }
     body.dark .app-contents fieldset, .theme-wrapper.dark .app-contents fieldset {
       background: #191c31;
@@ -6421,15 +6464,16 @@ body.dark, .theme-wrapper.dark {
       color: #7f8397; }
       body.dark .app-contents .login-message-wrapper .message a:hover, .theme-wrapper.dark .app-contents .login-message-wrapper .message a:hover {
         color: #ffffff; }
-    body.dark .app-contents .chart-container .cq-context div.cq-chart-controls, .theme-wrapper.dark .app-contents .chart-container .cq-context div.cq-chart-controls {
-      border: none;
-      border-right: 1px solid #2a3052;
-      border-top: 1px solid #2a3052; }
-      @media (max-width: 768px) {
-        body.dark .app-contents .chart-container .cq-context div.cq-chart-controls, .theme-wrapper.dark .app-contents .chart-container .cq-context div.cq-chart-controls {
-          border: 1px solid #2a3052; } }
+    @media (max-width: 768px) {
+      body.dark .app-contents .chart-container .cq-context div.cq-chart-controls, .theme-wrapper.dark .app-contents .chart-container .cq-context div.cq-chart-controls {
+        border: 1px solid #2a3052; } }
+    body.dark .app-contents .chart-container .cq-context .cq-chart-control-left .cq-chart-controls, .theme-wrapper.dark .app-contents .chart-container .cq-context .cq-chart-control-left .cq-chart-controls {
+      background: #191c31; }
     body.dark .app-contents .chart-container .cq-modal-dropdown .cq-categorical-display .ic-icon.icon-close-menu svg g path, .theme-wrapper.dark .app-contents .chart-container .cq-modal-dropdown .cq-categorical-display .ic-icon.icon-close-menu svg g path {
       fill: #7f8397; }
+    body.dark .app-contents .chart-container:before, .theme-wrapper.dark .app-contents .chart-container:before {
+      background-image: -webkit-gradient(linear, left top, right top, from(#101320), to(rgba(16, 19, 32, 0)));
+      background-image: linear-gradient(to right, #101320, rgba(16, 19, 32, 0)); }
     body.dark .app-contents .mobile-widget, .theme-wrapper.dark .app-contents .mobile-widget {
       border-color: #2a3052; }
       body.dark .app-contents .mobile-widget .fieldset-minimized, .theme-wrapper.dark .app-contents .mobile-widget .fieldset-minimized {
