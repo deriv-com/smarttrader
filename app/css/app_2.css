@@ -433,8 +433,7 @@ span.tooltip {
   .app-contents .sidebar-container {
     position: relative;
     margin-left: 16px;
-    width: 240px;
-    overflow: hidden; }
+    width: 240px; }
     .app-contents .sidebar-container .sidebar-items {
       opacity: 1;
       -webkit-transform: none;
@@ -488,7 +487,8 @@ span.tooltip {
   transition: -webkit-transform 0.25s ease;
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-  will-change: transform; }
+  will-change: transform;
+  overflow: hidden; }
   .trade-container .chart-container {
     position: relative;
     width: 100%; }
