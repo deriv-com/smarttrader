@@ -2000,26 +2000,21 @@ a.btn {
   background-color: #202641; }
 
 .time-picker {
+  font-size: 16px;
   position: relative; }
   .time-picker.padding {
     padding: 16px; }
   .time-picker .time-picker-icon {
+    left: 5%;
     margin: auto;
     position: absolute;
     top: 8px;
-    left: 5%; }
+    z-index: 1; }
   .time-picker .time-picker-input {
-    height: 32px;
-    padding: 0;
     border-radius: 4px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 12px;
+    cursor: pointer;
     font-weight: 300;
-    margin: 0;
-    cursor: pointer; }
-    .time-picker .time-picker-input input {
-      text-align: center; }
+    height: 32px; }
     .time-picker .time-picker-input::-webkit-input-placeholder {
       color: rgba(0, 0, 0, 0.04); }
     .time-picker .time-picker-input::-ms-input-placeholder {
@@ -2028,131 +2023,97 @@ a.btn {
       color: rgba(0, 0, 0, 0.04); }
     .time-picker .time-picker-input:hover {
       border-color: rgba(0, 0, 0, 0.04); }
-    .time-picker .time-picker-input.active {
-      border-color: #2a3052; }
-  .time-picker .time-picker-dropdown {
-    font-size: 16px;
+    .time-picker .time-picker-input input {
+      text-align: center; }
+  .time-picker .time-picker-dialog {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 228px;
+    padding-top: 10px;
     position: absolute;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 0;
-    opacity: 0;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: -1;
-    -webkit-transition: all 0.3s ease 0.15s;
-    transition: all 0.3s ease 0.15s; }
-    .time-picker .time-picker-dropdown.active {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scale(1, 0) translate3d(0, 0, 0);
+            transform: scale(1, 0) translate3d(0, 0, 0);
+    -webkit-transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
+    transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease, opacity 0.25s linear;
+    transition: transform 0.25s ease, opacity 0.25s linear, -webkit-transform 0.25s ease;
+    width: 231px;
+    z-index: 1; }
+    .time-picker .time-picker-dialog-enter, .time-picker .time-picker-dialog-exit {
+      opacity: 0;
+      -webkit-transform: scale(1, 1) translate3d(-225px, 0, 0);
+              transform: scale(1, 1) translate3d(-225px, 0, 0); }
+    .time-picker .time-picker-dialog-enter-done {
       opacity: 1;
-      height: 261px;
-      z-index: 10; }
-      .time-picker .time-picker-dropdown.active .time-picker-panel {
-        height: 30px; }
-        .time-picker .time-picker-dropdown.active .time-picker-panel .time-picker-clear {
-          display: inline-block; }
-    .time-picker .time-picker-dropdown.from-right {
-      right: 0; }
-    .time-picker .time-picker-dropdown .time-picker-panel {
-      height: 0;
-      background: #ffffff;
-      border-radius: 4px 4px 0 0;
-      padding: 2px 8px 0 9px;
-      line-height: 30px;
-      font-weight: 300;
-      -webkit-transition: height 0.3s ease 0.15s;
-      transition: height 0.3s ease 0.15s; }
-      .time-picker .time-picker-dropdown .time-picker-panel .time-picker-clear {
-        background: url("../images/common/close_circle.svg") no-repeat;
-        position: relative;
-        float: right;
-        display: none;
-        top: 8px;
-        width: 12px;
-        height: 12px;
-        cursor: pointer; }
-      .time-picker .time-picker-dropdown .time-picker-panel .placeholder {
-        color: rgba(0, 0, 0, 0.04); }
-    .time-picker .time-picker-dropdown .time-picker-selector {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      background-color: #ffffff; }
-      .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours {
+      -webkit-transform: translate3d(-245px, 0, 0);
+              transform: translate3d(-245px, 0, 0); }
+    .time-picker .time-picker-dialog .time-picker-clear {
+      background: url("../images/common/close_circle.svg") no-repeat;
+      cursor: pointer;
+      display: none;
+      float: right;
+      height: 12px;
+      position: relative;
+      top: 8px;
+      width: 12px; }
+    .time-picker .time-picker-dialog .time-picker-selector {
+      height: inherit; }
+      .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours {
         border-right: 1px solid rgba(0, 0, 0, 0.04);
         border-radius: 0 0 0 4px;
         width: 150px; }
-      .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes {
+      .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes {
         width: 80px;
-        border-radius: 0 0 4px; }
-      .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes {
+        border-radius: 0 5px 5px 0; }
+      .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours, .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes {
         display: inline-block;
         height: 228px;
         overflow: hidden;
         text-align: center; }
-        .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-title, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-title {
-          margin-top: 10px;
+        .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours .list-title, .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes .list-title {
           color: rgba(0, 0, 0, 0.8);
-          line-height: 20px;
-          font-size: 0.8rem; }
-        .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-container .list-item, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-container .list-item {
-          display: inline-block;
-          margin: 3px;
-          padding: 7px;
-          -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-          cursor: pointer;
+          font-size: 0.8rem;
+          line-height: 20px; }
+        .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours .list-container .list-item, .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes .list-container .list-item {
           border-radius: 4px;
-          font-size: 0.75rem; }
-          .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-container .list-item:hover:not(.disabled), .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-container .list-item:hover:not(.disabled) {
+          cursor: pointer;
+          display: inline-block;
+          font-size: 0.75rem;
+          margin: 3px;
+          padding: 7px; }
+          .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours .list-container .list-item:hover:not(.disabled), .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes .list-container .list-item:hover:not(.disabled) {
             background: rgba(0, 0, 0, 0.04);
             color: rgba(0, 0, 0, 0.8); }
-            .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-container .list-item:hover:not(.disabled).selected, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-container .list-item:hover:not(.disabled).selected {
+            .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours .list-container .list-item:hover:not(.disabled).selected, .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes .list-container .list-item:hover:not(.disabled).selected {
               background: #999cac;
               color: #ffffff; }
-          .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-container .list-item.selected, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-container .list-item.selected {
-            background: #999cac;
-            color: #ffffff; }
-          .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-container .list-item.disabled, .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-container .list-item.disabled {
+          .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours .list-container .list-item.disabled, .time-picker .time-picker-dialog .time-picker-selector .time-picker-minutes .list-container .list-item.disabled {
             color: rgba(0, 0, 0, 0.16);
             cursor: default; }
 
 .theme--dark .time-picker .time-picker-icon g {
   stroke: #7f8397; }
 
-.theme--dark .time-picker .time-picker-dropdown .time-picker-panel {
-  background: #101320;
-  color: #7f8397; }
-
-.theme--dark .time-picker .time-picker-dropdown .time-picker-selector {
-  background: #191c31; }
-
-.theme--dark .time-picker .time-picker-dropdown .time-picker-panel, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector {
+.theme--dark .time-picker .time-picker-dialog {
+  background: #191c31;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
-  .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours, .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes {
-    color: #7f8397;
-    border-color: #101320; }
-    .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours .list-title, .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes .list-title, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-title, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-title {
+  .theme--dark .time-picker .time-picker-dialog .time-picker-hours, .theme--dark .time-picker .time-picker-dialog .time-picker-minutes {
+    border-color: #101320;
+    color: #7f8397; }
+    .theme--dark .time-picker .time-picker-dialog .time-picker-hours .list-title, .theme--dark .time-picker .time-picker-dialog .time-picker-minutes .list-title {
       color: #ffffff; }
-    .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours .list-item, .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes .list-item, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-item, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-item {
+    .theme--dark .time-picker .time-picker-dialog .time-picker-hours .list-item, .theme--dark .time-picker .time-picker-dialog .time-picker-minutes .list-item {
       color: #7f8397; }
-      .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours .list-item.disabled, .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes .list-item.disabled, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-item.disabled, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-item.disabled {
+      .theme--dark .time-picker .time-picker-dialog .time-picker-hours .list-item.disabled, .theme--dark .time-picker .time-picker-dialog .time-picker-minutes .list-item.disabled {
         color: rgba(127, 131, 151, 0.3);
         pointer-events: none; }
-      .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours .list-item.selected, .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes .list-item.selected, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-item.selected, .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-item.selected {
+      .theme--dark .time-picker .time-picker-dialog .time-picker-hours .list-item.selected, .theme--dark .time-picker .time-picker-dialog .time-picker-minutes .list-item.selected {
         background: #2a3052; }
-      .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-hours .list-item:hover:not(.selected):not(.disabled), .theme--dark .time-picker .time-picker-dropdown .time-picker-panel .time-picker-minutes .list-item:hover:not(.selected):not(.disabled), .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-hours .list-item:hover:not(.selected):not(.disabled), .theme--dark .time-picker .time-picker-dropdown .time-picker-selector .time-picker-minutes .list-item:hover:not(.selected):not(.disabled) {
+      .theme--dark .time-picker .time-picker-dialog .time-picker-hours .list-item:hover:not(.selected):not(.disabled), .theme--dark .time-picker .time-picker-dialog .time-picker-minutes .list-item:hover:not(.selected):not(.disabled) {
         background: #202641; }
 
 .acc-balance-container {
