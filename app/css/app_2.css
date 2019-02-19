@@ -2084,14 +2084,20 @@ a.btn {
     .input-field input::placeholder {
       color: rgba(0, 0, 0, 0.8); }
   .input-field label.input-label {
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: capitalize;
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    margin-bottom: 0.2em;
-    display: inline-block; }
+    margin-bottom: 0.8em;
+    display: inline-block;
+    color: #7f8397;
+    text-align: center;
+    width: 100%; }
   .input-field span.input-helper {
     font-size: 1.2em;
     color: rgba(0, 0, 0, 0.4);
@@ -2126,8 +2132,9 @@ a.btn {
     border-color: #7f8397; }
   .theme--dark .input-field input:focus, .theme--dark .input-field input:active {
     border-color: #7f8397;
-    -webkit-box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3);
-            box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3);
+            box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3);
+    color: #ffffff; }
   .theme--dark .input-field input::-webkit-input-placeholder {
     color: #7f8397; }
   .theme--dark .input-field input::-ms-input-placeholder {
@@ -3342,6 +3349,18 @@ div.contracts-popup-container {
   display: inline-block;
   width: 100%;
   max-width: 280px; }
+  .datepicker__input {
+    border-radius: 4px; }
+    .datepicker__input .with-label:before, .datepicker__input .with-label:after {
+      top: 70% !important; }
+    .datepicker__input input {
+      text-align: center;
+      pointer-events: auto; }
+      .datepicker__input input:focus, .datepicker__input input:hover {
+        outline: none;
+        border-color: #2a3052; }
+      .datepicker__input input::-ms-clear {
+        display: none; }
   .datepicker__icon {
     opacity: 1;
     -webkit-transition: opacity 0.1s;
@@ -3350,10 +3369,12 @@ div.contracts-popup-container {
       cursor: pointer; }
     .datepicker__icon--is-hidden {
       opacity: 0; }
+    .datepicker__icon--with-label {
+      top: 32px !important; }
   .datepicker__picker {
     position: absolute;
     top: 7px;
-    z-index: 999;
+    z-index: 1;
     -webkit-transform-origin: left;
             transform-origin: left;
     -webkit-transform: scale(1, 0) translate3d(20px, 0, 0);
@@ -3372,7 +3393,7 @@ div.contracts-popup-container {
       opacity: 1; }
 
 .theme--dark .datepicker__input {
-  background: #2a3052;
+  background: #191c31;
   color: #ffffff; }
   .theme--dark .datepicker__input:hover, .theme--dark .datepicker__input:focus, .theme--dark .datepicker__input:active {
     border-color: #ffffff; }
