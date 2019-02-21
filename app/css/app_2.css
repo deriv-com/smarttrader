@@ -262,39 +262,18 @@ html {
           text-decoration-style: dotted;
   color: #2a3052;
   font-size: inherit; }
-  .tooltip i.question:after, .tooltip i.info:after {
-    margin-left: 0.5em;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle; }
-  .tooltip i.question:after {
-    content: url("../images/common/tooltip/ic_tooltip_question_light.svg "); }
-  .tooltip i.info:after {
-    content: url("../images/common/tooltip/ic_tooltip_info_light.svg "); }
-  .tooltip i.info:before {
-    content: url("../images/common/tooltip/ic_tooltip_info_dark.svg ");
+  .tooltip-balloon-icon {
     position: absolute;
-    z-index: 10;
+    top: 0;
+    left: -525px;
+    z-index: 999;
     opacity: 0;
-    -webkit-transition: all 0.18s ease-out 0.17s;
-    transition: all 0.18s ease-out 0.17s;
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-    top: 0.1em;
-    left: -40.6em; }
-  .tooltip i.info:hover:before {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  .tooltip i.dot:after {
-    content: url("../images/common/tooltip/ic_dot_red.svg "); }
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    .tooltip-balloon-icon--show {
+      -webkit-transition: opacity 0.3s 0.2s;
+      transition: opacity 0.3s 0.2s;
+      opacity: 1; }
   .tooltip[data-tooltip] {
     position: relative;
     cursor: help;
@@ -399,8 +378,6 @@ html {
     border-left-color: #2a3052; }
   .theme--dark .tooltip[data-tooltip-pos=bottom]:after {
     border-bottom-color: #2a3052; }
-  .theme--dark .tooltip i.question:after {
-    content: url("../images/common/tooltip/ic_tooltip_question_dark.svg "); }
 
 .barspinner {
   margin: 5em auto;
@@ -645,9 +622,6 @@ html {
     .trade-container .advanced-simple-toggle:focus {
       outline: none; }
 
-.inline-icon {
-  pointer-events: none; }
-
 .category-wrapper, .type-wrapper {
   width: 2.4em;
   height: 2.4em;
@@ -815,7 +789,7 @@ html {
             background-color: rgba(0, 0, 0, 0.04); }
           .header .menu-items .menu-left .menu-links a.active > span[title] {
             font-weight: 500; }
-          .header .menu-items .menu-left .menu-links a .inline-icon {
+          .header .menu-items .menu-left .menu-links a .inline-icon, .header .menu-items .menu-left .menu-links a .calendar__icon {
             margin-right: 0.8em; }
         @media (max-width: 980px) {
           .header .menu-items .menu-left .menu-links {
@@ -909,7 +883,7 @@ footer {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      footer .footer-links a .inline-icon {
+      footer .footer-links a .inline-icon, footer .footer-links a .calendar__icon {
         width: 1.6em;
         height: 1.6em; }
       footer .footer-links a span {
@@ -1043,7 +1017,7 @@ hr {
               height: 2.4em;
               -ms-flex-item-align: center;
                   align-self: center; }
-              .drawer-container .drawer-bg .drawer.left .drawer-header .icons.btn-close .inline-icon {
+              .drawer-container .drawer-bg .drawer.left .drawer-header .icons.btn-close .inline-icon, .drawer-container .drawer-bg .drawer.left .drawer-header .icons.btn-close .calendar__icon {
                 width: 2.4em;
                 height: 2.4em; }
             .drawer-container .drawer-bg .drawer.left .drawer-header .icons.brand-logo {
@@ -1106,7 +1080,7 @@ hr {
               border-left: 1px solid rgba(0, 0, 0, 0.04);
               width: 2.4em;
               height: 2.4em; }
-              .drawer-container .drawer-bg .drawer.right .drawer-header .icons.btn-close .inline-icon {
+              .drawer-container .drawer-bg .drawer.right .drawer-header .icons.btn-close .inline-icon, .drawer-container .drawer-bg .drawer.right .drawer-header .icons.btn-close .calendar__icon {
                 position: absolute;
                 top: 1.4em;
                 right: 1em;
@@ -1149,7 +1123,7 @@ hr {
             height: 80%; }
             .drawer-container .drawer-bg .drawer.right .no-notifications-container .notification-message .bell-icon {
               height: 7em; }
-              .drawer-container .drawer-bg .drawer.right .no-notifications-container .notification-message .bell-icon svg.inline-icon {
+              .drawer-container .drawer-bg .drawer.right .no-notifications-container .notification-message .bell-icon svg.inline-icon, .drawer-container .drawer-bg .drawer.right .no-notifications-container .notification-message .bell-icon svg.calendar__icon {
                 width: 1.6em;
                 height: 1.6em;
                 -webkit-transform: scale(6, 6);
@@ -1923,6 +1897,8 @@ a.btn {
 
 .theme--dark .dropdown-container .list {
   background: #191c31; }
+  .theme--dark .dropdown-container .list .list__label span {
+    color: #ffffff; }
   .theme--dark .dropdown-container .list .list__item span {
     color: #7f8397; }
   .theme--dark .dropdown-container .list .list__item--selected span {
@@ -1931,9 +1907,6 @@ a.btn {
     background: #2a3052; }
   .theme--dark .dropdown-container .list .list__item:hover, .theme--dark .dropdown-container .list .list__item--highlighted {
     background: #202641; }
-
-.theme--dark .dropdown-container .select-arrow .arrow-path {
-  fill: #7f8397; }
 
 /* Ant style */
 .input-field {
@@ -2002,10 +1975,6 @@ a.btn {
       .input-field .input-wrapper__button:disabled:hover {
         cursor: not-allowed;
         background: transparent; }
-    .input-field .input-wrapper__icon path {
-      fill: rgba(0, 0, 0, 0.8); }
-    .input-field .input-wrapper__icon--plus.disabled path, .input-field .input-wrapper__icon--minus.disabled path {
-      fill: rgba(0, 0, 0, 0.16); }
   .input-field input {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
@@ -2061,7 +2030,7 @@ a.btn {
         -webkit-transform: scaleX(-1) rotate(-40deg);
                 transform: scaleX(-1) rotate(-40deg);
         position: absolute;
-        top: -5%;
+        top: -20%;
         left: 30%;
         display: none; }
     .input-field input:hover {
@@ -2087,9 +2056,6 @@ a.btn {
     .input-field input::placeholder {
       color: rgba(0, 0, 0, 0.8); }
   .input-field label.input-label {
-    font-size: 0.85rem;
-    font-weight: 400;
-    text-transform: capitalize;
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
@@ -2098,7 +2064,6 @@ a.btn {
     line-height: 1.5;
     margin-bottom: 0.8em;
     display: inline-block;
-    color: #7f8397;
     text-align: center;
     width: 100%; }
   .input-field span.input-helper {
@@ -2152,12 +2117,6 @@ a.btn {
   -webkit-box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3);
           box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3); }
 
-.theme--dark .input-wrapper__icon path {
-  fill: #7f8397; }
-
-.theme--dark .input-wrapper__icon--plus.disabled path, .theme--dark .input-wrapper__icon--minus.disabled path {
-  fill: rgba(116, 120, 142, 0.25); }
-
 .theme--dark .input-wrapper__button:not(:disabled):hover {
   background-color: #202641; }
 
@@ -2197,15 +2156,6 @@ a.btn {
       opacity: 1;
       -webkit-transform: translate3d(-245px, 0, 0);
               transform: translate3d(-245px, 0, 0); }
-    .time-picker .time-picker-dialog .time-picker-clear {
-      background: url("../images/common/close_circle.svg") no-repeat;
-      cursor: pointer;
-      display: none;
-      float: right;
-      height: 12px;
-      position: relative;
-      top: 8px;
-      width: 12px; }
     .time-picker .time-picker-dialog .time-picker-selector {
       height: inherit; }
       .time-picker .time-picker-dialog .time-picker-selector .time-picker-hours {
@@ -2432,7 +2382,7 @@ a.btn {
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    padding: 5px 10px;
+    padding: 8px 16px;
     display: block; }
   .acc-switcher__list--virtual {
     padding-top: 0.8em;
@@ -2471,36 +2421,13 @@ a.btn {
       text-transform: uppercase;
       text-align: left;
       line-height: unset;
-      padding: 3.3333333333px 6.6666666667px;
+      padding: 1.6666666667px 3.3333333333px;
       margin-right: 13.3333333333px;
       content: 'demo';
       border: 1px solid #ff9933;
       border-radius: 16px; }
-    .acc-switcher__account .acc-switcher__id-icon:before {
-      width: 100%;
-      height: 100%;
-      margin-right: 1.6em;
-      line-height: normal;
-      display: inline-block;
-      vertical-align: middle; }
-    .acc-switcher__account .acc-switcher__id-icon--usd:before {
-      content: url("../images/header/accounts/usd.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--ust:before {
-      content: url("../images/header/accounts/ust.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--aud:before {
-      content: url("../images/header/accounts/aud.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--bch:before {
-      content: url("../images/header/accounts/bch.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--eth:before {
-      content: url("../images/header/accounts/eth.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--gbp:before {
-      content: url("../images/header/accounts/gbp.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--btc:before {
-      content: url("../images/header/accounts/btc.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--eur:before {
-      content: url("../images/header/accounts/eur.svg"); }
-    .acc-switcher__account .acc-switcher__id-icon--ltc:before {
-      content: url("../images/header/accounts/ltc.svg"); }
+    .acc-switcher__account .acc-switcher__id-icon {
+      margin-right: 1.6em; }
   .acc-switcher__account .acc-switcher__radio {
     height: 1.6em;
     width: 1.6em;
@@ -2555,19 +2482,20 @@ a.btn {
     text-transform: none;
     text-align: left;
     line-height: 1.25;
-    padding-left: 6.6666666667px;
+    padding: 0 6.6666666667px;
     cursor: pointer; }
   .allow-equals .allow-equals__tooltip[data-tooltip] {
     margin-top: 1.1em; }
     .allow-equals .allow-equals__tooltip[data-tooltip]:before {
-      padding-left: 3em; }
+      padding-left: 3.25em; }
     .allow-equals .allow-equals__tooltip[data-tooltip]:before, .allow-equals .allow-equals__tooltip[data-tooltip]:after {
       right: 112px; }
-    .allow-equals .allow-equals__tooltip[data-tooltip] .allow-equals__tooltip-info:before {
-      left: -39.6em; }
-    .allow-equals .allow-equals__tooltip[data-tooltip] .allow-equals__tooltip-info:after {
-      -webkit-transform: scale(0.75);
-              transform: scale(0.75); }
+  .allow-equals .allow-equals__tooltip-info {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+  .allow-equals .allow-equals__tooltip-info-balloon-icon {
+    top: 1px;
+    left: -405px; }
 
 /** @define calendar */
 .calendar {
@@ -2649,8 +2577,6 @@ a.btn {
       left: 14%; }
     .calendar__nav--next-month {
       right: 14%; }
-    .calendar__nav--disabled .calendar__nav-icon {
-      fill: rgba(0, 0, 0, 0.16); }
   .calendar__btn {
     text-align: center;
     padding: 0em 0.2em;
@@ -2729,7 +2655,7 @@ a.btn {
           -ms-flex-pack: center;
               justify-content: center; }
     .calendar__cell-tooltip-icon {
-      margin-top: -0.5em; }
+      margin-top: 0.1em; }
 
 /** @define card-list */
 .card-list {
@@ -3074,8 +3000,7 @@ div.contracts-popup-container {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     -webkit-transform-origin: 45% 45;
-            transform-origin: 45% 45;
-    color: rgba(0, 0, 0, 0.04); }
+            transform-origin: 45% 45; }
   div.contracts-popup-container .categories-container {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -3123,22 +3048,10 @@ div.contracts-popup-container {
           color: #ffffff; }
       .theme--dark div.contracts-popup-container .list-container .list-group .list-items .list-item:hover:not(.selected) {
         background: #202641; }
-      .theme--dark div.contracts-popup-container .list-container .list-group .list-items .list-item .trade-type-info-icon svg path {
-        fill: #7f8397; }
   .theme--dark div.contracts-popup-container .category-wrapper {
     background: #2a3052; }
-    .theme--dark div.contracts-popup-container .category-wrapper .category-type path:not(.important), .theme--dark div.contracts-popup-container .category-wrapper .category-type rect:not(.important) {
-      fill: #ffffff; }
-    .theme--dark div.contracts-popup-container .category-wrapper .category-type path.transparent, .theme--dark div.contracts-popup-container .category-wrapper .category-type rect.transparent {
-      fill: #2a3052; }
-    .theme--dark div.contracts-popup-container .category-wrapper .category-type .stroke-active {
-      stroke: #ffffff; }
-  .theme--dark div.contracts-popup-container .select-arrow .arrow-path {
-    fill: #7f8397; }
   .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info {
     background: #191c31; }
-    .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-header svg path {
-      fill: #7f8397; }
     .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-header .title {
       color: #7f8397; }
     .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-header span {
@@ -3152,8 +3065,6 @@ div.contracts-popup-container {
       background-color: rgba(127, 131, 151, 0.3); }
       .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-navigation__list .circle-button.active {
         background-color: #7f8397; }
-    .theme--dark div.contracts-popup-container .trade-type-info-popup .trade-type-info .info-navigation__icon svg path {
-      fill: #7f8397; }
 
 /** @define table */
 .table {
@@ -3246,7 +3157,7 @@ div.contracts-popup-container {
     .datepicker__icon--is-hidden {
       opacity: 0; }
     .datepicker__icon--with-label {
-      top: 32px !important; }
+      top: 40px !important; }
   .datepicker__picker {
     position: absolute;
     top: 7px;
@@ -3316,7 +3227,7 @@ div.contracts-popup-container {
   margin-top: 0.8em;
   text-align: center; }
   .number-selector__row:first-child {
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.8em; }
   .number-selector__selection {
     width: calc(20% - 4px);
     height: 24px;
@@ -3871,32 +3782,6 @@ div.contracts-popup-container {
     font-size: 1.2em; }
   .settings-dialog__language-flag {
     padding-right: 0.6em; }
-    .settings-dialog__language-flag--en:before {
-      content: url("../images/common/language/ic_flag_en.svg"); }
-    .settings-dialog__language-flag--de:before {
-      content: url("../images/common/language/ic_flag_de.svg"); }
-    .settings-dialog__language-flag--pt:before {
-      content: url("../images/common/language/ic_flag_pt.svg"); }
-    .settings-dialog__language-flag--it:before {
-      content: url("../images/common/language/ic_flag_it.svg"); }
-    .settings-dialog__language-flag--vi:before {
-      content: url("../images/common/language/ic_flag_vi.svg"); }
-    .settings-dialog__language-flag--ru:before {
-      content: url("../images/common/language/ic_flag_ru.svg"); }
-    .settings-dialog__language-flag--pl:before {
-      content: url("../images/common/language/ic_flag_pl.svg"); }
-    .settings-dialog__language-flag--es:before {
-      content: url("../images/common/language/ic_flag_es.svg"); }
-    .settings-dialog__language-flag--zh-cn:before {
-      content: url("../images/common/language/ic_flag_zh_cn.svg"); }
-    .settings-dialog__language-flag--zh-tw:before {
-      content: url("../images/common/language/ic_flag_zh_tw.svg"); }
-    .settings-dialog__language-flag--id:before {
-      content: url("../images/common/language/ic_flag_id.svg"); }
-    .settings-dialog__language-flag--fr:before {
-      content: url("../images/common/language/ic_flag_fr.svg"); }
-    .settings-dialog__language-flag--th:before {
-      content: url("../images/common/language/ic_flag_th.svg"); }
 
 /** @define tab-container */
 .tab-container {
@@ -3974,7 +3859,6 @@ div.contracts-popup-container {
   text-align: left;
   line-height: 1.5; }
 
-/** @define toast */
 .toast {
   z-index: 9999;
   position: absolute;
@@ -4019,8 +3903,6 @@ div.contracts-popup-container {
     cursor: pointer;
     opacity: 0.7;
     color: #5c5c5c; }
-    .toast__close-button:before {
-      content: url("../images/common/toast/ic_close_normal.svg"); }
     .toast__close-button:hover, .toast__close-button:focus {
       opacity: 1; }
   .toast__icon {
@@ -4029,14 +3911,6 @@ div.contracts-popup-container {
     .toast__icon-type {
       margin-right: 0.8em;
       padding-top: 0.5em; }
-    .toast__icon--error:before {
-      content: url("../images/common/toast/ic_error.svg"); }
-    .toast__icon--info:before {
-      content: url("../images/common/toast/ic_info.svg"); }
-    .toast__icon--success:before {
-      content: url("../images/common/toast/ic_success.svg"); }
-    .toast__icon--warning:before {
-      content: url("../images/common/toast/ic_warning.svg"); }
   .toast--top-right {
     top: 1em;
     right: 1em; }
@@ -4377,20 +4251,20 @@ div.contracts-popup-container {
             @extend .inline-icon.active;
         }
 */
-.inline-icon {
+.inline-icon, .calendar__icon {
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
-  .inline-icon .color1-fill {
-    fill: #2a3052; }
-  .inline-icon .color1-stroke {
-    stroke: #2a3052; }
-  .inline-icon .color2-fill {
+  .inline-icon .color1-fill, .calendar__icon .color1-fill {
+    fill: rgba(0, 0, 0, 0.8); }
+  .inline-icon .color1-stroke, .calendar__icon .color1-stroke {
+    stroke: rgba(0, 0, 0, 0.8); }
+  .inline-icon .color2-fill, .calendar__icon .color2-fill {
     fill: none; }
-  .inline-icon .color2-stroke {
+  .inline-icon .color2-stroke, .calendar__icon .color2-stroke {
     stroke: none; }
-  .inline-icon.active, .header .menu-items .menu-left .menu-links a.active .inline-icon, footer .footer-links a:hover .inline-icon, .ic-settings.active .inline-icon {
+  .inline-icon.active, .header .menu-items .menu-left .menu-links a.active .inline-icon, .header .menu-items .menu-left .menu-links a.active .calendar__icon, footer .footer-links a:hover .inline-icon, footer .footer-links a:hover .calendar__icon, .ic-settings.active .inline-icon, .ic-settings.active .calendar__icon, .active.calendar__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
@@ -4399,35 +4273,42 @@ div.contracts-popup-container {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .inline-icon.active .color1-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-fill, footer .footer-links a:hover .inline-icon .color1-fill, .ic-settings.active .inline-icon .color1-fill {
+    .inline-icon.active .color1-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-fill, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color1-fill, footer .footer-links a:hover .inline-icon .color1-fill, footer .footer-links a:hover .calendar__icon .color1-fill, .ic-settings.active .inline-icon .color1-fill, .ic-settings.active .calendar__icon .color1-fill, .active.calendar__icon .color1-fill {
       fill: #ffffff; }
-    .inline-icon.active .color1-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-stroke, footer .footer-links a:hover .inline-icon .color1-stroke, .ic-settings.active .inline-icon .color1-stroke {
+    .inline-icon.active .color1-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-stroke, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color1-stroke, footer .footer-links a:hover .inline-icon .color1-stroke, footer .footer-links a:hover .calendar__icon .color1-stroke, .ic-settings.active .inline-icon .color1-stroke, .ic-settings.active .calendar__icon .color1-stroke, .active.calendar__icon .color1-stroke {
       stroke: #ffffff; }
-    .inline-icon.active .color2-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-fill, footer .footer-links a:hover .inline-icon .color2-fill, .ic-settings.active .inline-icon .color2-fill {
-      fill: #2a3052; }
-    .inline-icon.active .color2-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-stroke, footer .footer-links a:hover .inline-icon .color2-stroke, .ic-settings.active .inline-icon .color2-stroke {
-      stroke: #2a3052; }
-    .inline-icon.active .color3-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-fill, footer .footer-links a:hover .inline-icon .color3-fill, .ic-settings.active .inline-icon .color3-fill {
-      fill: #2a3052; }
-    .inline-icon.active .color3-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-stroke, footer .footer-links a:hover .inline-icon .color3-stroke, .ic-settings.active .inline-icon .color3-stroke {
-      stroke: #2a3052; }
-    .inline-icon.active .color4-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color4-fill, footer .footer-links a:hover .inline-icon .color4-fill, .ic-settings.active .inline-icon .color4-fill {
+    .inline-icon.active .color2-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-fill, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color2-fill, footer .footer-links a:hover .inline-icon .color2-fill, footer .footer-links a:hover .calendar__icon .color2-fill, .ic-settings.active .inline-icon .color2-fill, .ic-settings.active .calendar__icon .color2-fill, .active.calendar__icon .color2-fill {
+      fill: rgba(0, 0, 0, 0.8); }
+    .inline-icon.active .color2-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-stroke, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color2-stroke, footer .footer-links a:hover .inline-icon .color2-stroke, footer .footer-links a:hover .calendar__icon .color2-stroke, .ic-settings.active .inline-icon .color2-stroke, .ic-settings.active .calendar__icon .color2-stroke, .active.calendar__icon .color2-stroke {
+      stroke: rgba(0, 0, 0, 0.8); }
+    .inline-icon.active .color3-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-fill, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color3-fill, footer .footer-links a:hover .inline-icon .color3-fill, footer .footer-links a:hover .calendar__icon .color3-fill, .ic-settings.active .inline-icon .color3-fill, .ic-settings.active .calendar__icon .color3-fill, .active.calendar__icon .color3-fill {
+      fill: rgba(0, 0, 0, 0.8); }
+    .inline-icon.active .color3-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-stroke, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color3-stroke, footer .footer-links a:hover .inline-icon .color3-stroke, footer .footer-links a:hover .calendar__icon .color3-stroke, .ic-settings.active .inline-icon .color3-stroke, .ic-settings.active .calendar__icon .color3-stroke, .active.calendar__icon .color3-stroke {
+      stroke: rgba(0, 0, 0, 0.8); }
+    .inline-icon.active .color4-fill, .header .menu-items .menu-left .menu-links a.active .inline-icon .color4-fill, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color4-fill, footer .footer-links a:hover .inline-icon .color4-fill, footer .footer-links a:hover .calendar__icon .color4-fill, .ic-settings.active .inline-icon .color4-fill, .ic-settings.active .calendar__icon .color4-fill, .active.calendar__icon .color4-fill {
       fill: none; }
-    .inline-icon.active .color4-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color4-stroke, footer .footer-links a:hover .inline-icon .color4-stroke, .ic-settings.active .inline-icon .color4-stroke {
+    .inline-icon.active .color4-stroke, .header .menu-items .menu-left .menu-links a.active .inline-icon .color4-stroke, .header .menu-items .menu-left .menu-links a.active .calendar__icon .color4-stroke, footer .footer-links a:hover .inline-icon .color4-stroke, footer .footer-links a:hover .calendar__icon .color4-stroke, .ic-settings.active .inline-icon .color4-stroke, .ic-settings.active .calendar__icon .color4-stroke, .active.calendar__icon .color4-stroke {
       stroke: none; }
-  .inline-icon.disabled {
+  .inline-icon.disabled, .disabled.calendar__icon, .calendar__nav--disabled .calendar__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .inline-icon.disabled .color1-fill {
-      fill: rgba(0, 0, 0, 0.04); }
-    .inline-icon.disabled .color1-stroke {
-      stroke: rgba(0, 0, 0, 0.04); }
-    .inline-icon.disabled .color2-fill {
+    .inline-icon.disabled .color1-fill, .disabled.calendar__icon .color1-fill, .calendar__nav--disabled .calendar__icon .color1-fill {
+      fill: rgba(0, 0, 0, 0.16); }
+    .inline-icon.disabled .color1-stroke, .disabled.calendar__icon .color1-stroke, .calendar__nav--disabled .calendar__icon .color1-stroke {
+      stroke: rgba(0, 0, 0, 0.16); }
+    .inline-icon.disabled .color2-fill, .disabled.calendar__icon .color2-fill, .calendar__nav--disabled .calendar__icon .color2-fill {
       fill: none; }
-    .inline-icon.disabled .color2-stroke {
+    .inline-icon.disabled .color2-stroke, .disabled.calendar__icon .color2-stroke, .calendar__nav--disabled .calendar__icon .color2-stroke {
       stroke: none; }
+  .inline-icon.white, .white.calendar__icon, .theme--dark div.contracts-popup-container .category-wrapper .category-type, .btn-purchase__trade-type-icon, .theme--dark .trade-container__barriers--up, .theme--dark .trade-container__barriers--down, .theme--dark .purchase-container__lock-icon, .theme--dark .statement-card__icon {
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */ }
+    .inline-icon.white .color1-fill, .white.calendar__icon .color1-fill, .theme--dark div.contracts-popup-container .category-wrapper .category-type .color1-fill, .btn-purchase__trade-type-icon .color1-fill, .theme--dark .trade-container__barriers--up .color1-fill, .theme--dark .trade-container__barriers--down .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .statement-card__icon .color1-fill {
+      fill: #ffffff; }
+    .inline-icon.white .color1-stroke, .white.calendar__icon .color1-stroke, .theme--dark div.contracts-popup-container .category-wrapper .category-type .color1-stroke, .btn-purchase__trade-type-icon .color1-stroke, .theme--dark .trade-container__barriers--up .color1-stroke, .theme--dark .trade-container__barriers--down .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .statement-card__icon .color1-stroke {
+      stroke: #ffffff; }
 
 .fullscreen-dialog {
   -webkit-box-sizing: border-box;
@@ -5079,8 +4960,6 @@ div.contracts-popup-container {
     margin-right: 0.5em; }
   .portfolio-card__purchase:before {
     background-image: url("../images/portfolio/ic_purchase_light.svg"); }
-  .portfolio-card__payout:before {
-    background-image: url("../images/statement/ic_payout_light.svg"); }
   .portfolio-card__indicative--price-moved-up {
     color: #4bbfab; }
     .portfolio-card__indicative--price-moved-up:before {
@@ -5266,8 +5145,7 @@ div.contracts-popup-container {
     opacity: 1; }
   .mobile-dropdown--open .select-arrow.select-arrow {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    color: #2a3052; }
+            transform: rotate(0deg); }
   .mobile-dropdown .menu-item--active {
     display: none; }
   .mobile-dropdown .menu-item__img_container {
@@ -5298,8 +5176,7 @@ div.contracts-popup-container {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: 45% 30%;
-            transform-origin: 45% 30%;
-    color: rgba(0, 0, 0, 0.04); }
+            transform-origin: 45% 30%; }
     .mobile-dropdown .select-arrow:before {
       content: '\002303';
       font-size: 1.76em; }
@@ -5492,30 +5369,17 @@ div.contracts-popup-container {
     font-weight: bold; }
   .statement-card__cell-text {
     vertical-align: middle; }
-  .statement-card__cell:before {
-    content: '';
+  .statement-card__amount--sell, .statement-card__amount--deposit {
+    color: #4bbfab; }
+  .statement-card__amount--buy, .statement-card__amount--withdrawal {
+    color: #e31c4b; }
+  .statement-card__icon {
     display: inline-block;
     height: 1.6em;
     width: 1.6em;
     background-size: 1.6em 1.6em;
     vertical-align: middle;
     margin-right: 0.5em; }
-  .statement-card__amount--sell, .statement-card__amount--deposit {
-    color: #4bbfab; }
-  .statement-card__amount--buy, .statement-card__amount--withdrawal {
-    color: #e31c4b; }
-  .statement-card__amount--sell:before {
-    background-image: url("../images/statement/ic_sell.svg"); }
-  .statement-card__amount--buy:before {
-    background-image: url("../images/statement/ic_buy.svg"); }
-  .statement-card__amount--deposit:before {
-    background-image: url("../images/statement/ic_deposit.svg"); }
-  .statement-card__amount--withdrawal:before {
-    background-image: url("../images/statement/ic_withdrawal.svg"); }
-  .statement-card__payout:before {
-    background-image: url("../images/statement/ic_payout_light.svg"); }
-  .statement-card__balance:before {
-    background-image: url("../images/statement/ic_wallet_light.svg"); }
   .statement-empty {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -5638,13 +5502,11 @@ div.contracts-popup-container {
       bottom: 1px;
       position: relative; }
   .trade-container__price-tooltip[data-tooltip]:before, .trade-container__price-tooltip[data-tooltip]:after {
-    right: 227px !important; }
+    right: 230px !important; }
   .trade-container__price-tooltip[data-tooltip]:before {
     padding-left: 3em;
     white-space: normal;
-    width: 260px; }
-  .trade-container__price-tooltip-i:before {
-    left: -51.2em !important; }
+    width: 265px; }
 
 .trade-container__barriers {
   display: -webkit-box;
@@ -5664,7 +5526,6 @@ div.contracts-popup-container {
     padding-right: 8px; }
   .trade-container__barriers--up, .trade-container__barriers--down {
     position: absolute;
-    fill: rgba(0, 0, 0, 0.8);
     margin-top: 15px; }
   .trade-container__barriers--up {
     right: 86.5%; }
@@ -5994,6 +5855,58 @@ div.contracts-popup-container {
 .theme--dark {
   background: #0b0e18;
   color: #ffffff; }
+  .theme--dark .inline-icon, .theme--dark .calendar__icon {
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */ }
+    .theme--dark .inline-icon .color1-fill, .theme--dark .calendar__icon .color1-fill {
+      fill: #7f8397; }
+    .theme--dark .inline-icon .color1-stroke, .theme--dark .calendar__icon .color1-stroke {
+      stroke: #7f8397; }
+    .theme--dark .inline-icon .color2-fill, .theme--dark .calendar__icon .color2-fill {
+      fill: none; }
+    .theme--dark .inline-icon .color2-stroke, .theme--dark .calendar__icon .color2-stroke {
+      stroke: none; }
+    .theme--dark .inline-icon.active, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon, .theme--dark footer .footer-links a:hover .inline-icon, footer .footer-links a:hover .theme--dark .inline-icon, .theme--dark footer .footer-links a:hover .calendar__icon, footer .footer-links a:hover .theme--dark .calendar__icon, .theme--dark .ic-settings.active .inline-icon, .ic-settings.active .theme--dark .inline-icon, .theme--dark .ic-settings.active .calendar__icon, .ic-settings.active .theme--dark .calendar__icon, .theme--dark .active.calendar__icon {
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */ }
+      .theme--dark .inline-icon.active .color1-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color1-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color1-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color1-fill, .theme--dark footer .footer-links a:hover .inline-icon .color1-fill, footer .footer-links a:hover .theme--dark .inline-icon .color1-fill, .theme--dark footer .footer-links a:hover .calendar__icon .color1-fill, footer .footer-links a:hover .theme--dark .calendar__icon .color1-fill, .theme--dark .ic-settings.active .inline-icon .color1-fill, .ic-settings.active .theme--dark .inline-icon .color1-fill, .theme--dark .ic-settings.active .calendar__icon .color1-fill, .ic-settings.active .theme--dark .calendar__icon .color1-fill, .theme--dark .active.calendar__icon .color1-fill {
+        fill: #2a3052; }
+      .theme--dark .inline-icon.active .color1-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color1-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color1-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color1-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color1-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color1-stroke, .theme--dark footer .footer-links a:hover .calendar__icon .color1-stroke, footer .footer-links a:hover .theme--dark .calendar__icon .color1-stroke, .theme--dark .ic-settings.active .inline-icon .color1-stroke, .ic-settings.active .theme--dark .inline-icon .color1-stroke, .theme--dark .ic-settings.active .calendar__icon .color1-stroke, .ic-settings.active .theme--dark .calendar__icon .color1-stroke, .theme--dark .active.calendar__icon .color1-stroke {
+        stroke: #2a3052; }
+      .theme--dark .inline-icon.active .color2-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color2-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color2-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color2-fill, .theme--dark footer .footer-links a:hover .inline-icon .color2-fill, footer .footer-links a:hover .theme--dark .inline-icon .color2-fill, .theme--dark footer .footer-links a:hover .calendar__icon .color2-fill, footer .footer-links a:hover .theme--dark .calendar__icon .color2-fill, .theme--dark .ic-settings.active .inline-icon .color2-fill, .ic-settings.active .theme--dark .inline-icon .color2-fill, .theme--dark .ic-settings.active .calendar__icon .color2-fill, .ic-settings.active .theme--dark .calendar__icon .color2-fill, .theme--dark .active.calendar__icon .color2-fill {
+        fill: #ffffff; }
+      .theme--dark .inline-icon.active .color2-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color2-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color2-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color2-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color2-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color2-stroke, .theme--dark footer .footer-links a:hover .calendar__icon .color2-stroke, footer .footer-links a:hover .theme--dark .calendar__icon .color2-stroke, .theme--dark .ic-settings.active .inline-icon .color2-stroke, .ic-settings.active .theme--dark .inline-icon .color2-stroke, .theme--dark .ic-settings.active .calendar__icon .color2-stroke, .ic-settings.active .theme--dark .calendar__icon .color2-stroke, .theme--dark .active.calendar__icon .color2-stroke {
+        stroke: #ffffff; }
+      .theme--dark .inline-icon.active .color3-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color3-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color3-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color3-fill, .theme--dark footer .footer-links a:hover .inline-icon .color3-fill, footer .footer-links a:hover .theme--dark .inline-icon .color3-fill, .theme--dark footer .footer-links a:hover .calendar__icon .color3-fill, footer .footer-links a:hover .theme--dark .calendar__icon .color3-fill, .theme--dark .ic-settings.active .inline-icon .color3-fill, .ic-settings.active .theme--dark .inline-icon .color3-fill, .theme--dark .ic-settings.active .calendar__icon .color3-fill, .ic-settings.active .theme--dark .calendar__icon .color3-fill, .theme--dark .active.calendar__icon .color3-fill {
+        fill: #ffffff; }
+      .theme--dark .inline-icon.active .color3-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color3-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .calendar__icon .color3-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .calendar__icon .color3-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color3-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color3-stroke, .theme--dark footer .footer-links a:hover .calendar__icon .color3-stroke, footer .footer-links a:hover .theme--dark .calendar__icon .color3-stroke, .theme--dark .ic-settings.active .inline-icon .color3-stroke, .ic-settings.active .theme--dark .inline-icon .color3-stroke, .theme--dark .ic-settings.active .calendar__icon .color3-stroke, .ic-settings.active .theme--dark .calendar__icon .color3-stroke, .theme--dark .active.calendar__icon .color3-stroke {
+        stroke: #ffffff; }
+    .theme--dark .inline-icon.disabled, .theme--dark .disabled.calendar__icon, .theme--dark .calendar__nav--disabled .calendar__icon, .calendar__nav--disabled .theme--dark .calendar__icon {
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */ }
+      .theme--dark .inline-icon.disabled .color1-fill, .theme--dark .disabled.calendar__icon .color1-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color1-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color1-fill {
+        fill: rgba(127, 131, 151, 0.3); }
+      .theme--dark .inline-icon.disabled .color1-stroke, .theme--dark .disabled.calendar__icon .color1-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color1-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color1-stroke {
+        stroke: rgba(127, 131, 151, 0.3); }
+      .theme--dark .inline-icon.disabled .color2-fill, .theme--dark .disabled.calendar__icon .color2-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color2-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color2-fill {
+        fill: none; }
+      .theme--dark .inline-icon.disabled .color2-stroke, .theme--dark .disabled.calendar__icon .color2-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color2-stroke {
+        stroke: none; }
+    .theme--dark .inline-icon.white, .theme--dark .white.calendar__icon, .theme--dark div.contracts-popup-container .category-wrapper .category-type, .theme--dark .btn-purchase__trade-type-icon, .theme--dark .trade-container__barriers--up, .theme--dark .trade-container__barriers--down, .theme--dark .purchase-container__lock-icon, .theme--dark .statement-card__icon {
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */ }
+      .theme--dark .inline-icon.white .color1-fill, .theme--dark .white.calendar__icon .color1-fill, .theme--dark div.contracts-popup-container .category-wrapper .category-type .color1-fill, .theme--dark .btn-purchase__trade-type-icon .color1-fill, .theme--dark .trade-container__barriers--up .color1-fill, .theme--dark .trade-container__barriers--down .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .statement-card__icon .color1-fill {
+        fill: #ffffff; }
+      .theme--dark .inline-icon.white .color1-stroke, .theme--dark .white.calendar__icon .color1-stroke, .theme--dark div.contracts-popup-container .category-wrapper .category-type .color1-stroke, .theme--dark .btn-purchase__trade-type-icon .color1-stroke, .theme--dark .trade-container__barriers--up .color1-stroke, .theme--dark .trade-container__barriers--down .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .statement-card__icon .color1-stroke {
+        stroke: #ffffff; }
   .theme--dark .trade-container__price {
     color: #ffffff; }
     .theme--dark .trade-container__price-info-basis {
@@ -6008,12 +5921,12 @@ div.contracts-popup-container {
     background: #101320;
     color: #7f8397;
     border-color: #101320; }
-  .theme--dark .trade-container__barriers--up, .theme--dark .trade-container__barriers--down {
-    fill: #ffffff; }
   .theme--dark .trade-container__currency {
     color: #7f8397; }
   .theme--dark .trade-container__error-info {
     color: #ffffff; }
+  .theme--dark .trade-container__allow-equals-label {
+    color: #7f8397; }
   .theme--dark .purchase-container__error {
     background: #191c31;
     color: #7f8397; }
@@ -6030,18 +5943,8 @@ div.contracts-popup-container {
       color: #ffffff; }
   .theme--dark .purchase-container__option div.box .left-column .type-wrapper {
     background: #555975; }
-    .theme--dark .purchase-container__option div.box .left-column .type-wrapper .type path:not(.important), .theme--dark .purchase-container__option div.box .left-column .type-wrapper .type rect:not(.important) {
-      fill: #ffffff; }
-    .theme--dark .purchase-container__option div.box .left-column .type-wrapper .type path.transparent, .theme--dark .purchase-container__option div.box .left-column .type-wrapper .type rect.transparent {
-      fill: #555975; }
-    .theme--dark .purchase-container__option div.box .left-column .type-wrapper .type .stroke-active {
-      stroke: #ffffff; }
   .theme--dark .purchase-container__lock {
     background: #191c31; }
-    .theme--dark .purchase-container__lock-icon rect, .theme--dark .purchase-container__lock-icon path {
-      stroke: #ffffff; }
-    .theme--dark .purchase-container__lock-icon circle {
-      fill: #ffffff; }
     .theme--dark .purchase-container__lock-button {
       background: transparent; }
     .theme--dark .purchase-container__lock-header {
@@ -6054,8 +5957,6 @@ div.contracts-popup-container {
             box-shadow: 0 2px 2px 0 #7f8397;
     background: #555975;
     color: rgba(127, 131, 151, 0.3); }
-  .theme--dark .advanced-simple-toggle__icon-path {
-    fill: #7f8397; }
   .theme--dark .card-list__card {
     background: #2a3052;
     border-color: #2a3052; }
@@ -6073,51 +5974,6 @@ div.contracts-popup-container {
       color: #ffffff; }
     .theme--dark .number-selector__selection:hover {
       background-color: #202641; }
-  .theme--dark .inline-icon {
-    /* postcss-bem-linter: ignore */
-    /* postcss-bem-linter: ignore */
-    /* postcss-bem-linter: ignore */
-    /* postcss-bem-linter: ignore */ }
-    .theme--dark .inline-icon .color1-fill {
-      fill: #7f8397; }
-    .theme--dark .inline-icon .color1-stroke {
-      stroke: #7f8397; }
-    .theme--dark .inline-icon .color2-fill {
-      fill: none; }
-    .theme--dark .inline-icon .color2-stroke {
-      stroke: none; }
-    .theme--dark .inline-icon.active, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon, .theme--dark footer .footer-links a:hover .inline-icon, footer .footer-links a:hover .theme--dark .inline-icon, .theme--dark .ic-settings.active .inline-icon, .ic-settings.active .theme--dark .inline-icon {
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */ }
-      .theme--dark .inline-icon.active .color1-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color1-fill, .theme--dark footer .footer-links a:hover .inline-icon .color1-fill, footer .footer-links a:hover .theme--dark .inline-icon .color1-fill, .theme--dark .ic-settings.active .inline-icon .color1-fill, .ic-settings.active .theme--dark .inline-icon .color1-fill {
-        fill: #2a3052; }
-      .theme--dark .inline-icon.active .color1-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color1-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color1-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color1-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color1-stroke, .theme--dark .ic-settings.active .inline-icon .color1-stroke, .ic-settings.active .theme--dark .inline-icon .color1-stroke {
-        stroke: #2a3052; }
-      .theme--dark .inline-icon.active .color2-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color2-fill, .theme--dark footer .footer-links a:hover .inline-icon .color2-fill, footer .footer-links a:hover .theme--dark .inline-icon .color2-fill, .theme--dark .ic-settings.active .inline-icon .color2-fill, .ic-settings.active .theme--dark .inline-icon .color2-fill {
-        fill: #ffffff; }
-      .theme--dark .inline-icon.active .color2-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color2-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color2-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color2-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color2-stroke, .theme--dark .ic-settings.active .inline-icon .color2-stroke, .ic-settings.active .theme--dark .inline-icon .color2-stroke {
-        stroke: #ffffff; }
-      .theme--dark .inline-icon.active .color3-fill, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-fill, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color3-fill, .theme--dark footer .footer-links a:hover .inline-icon .color3-fill, footer .footer-links a:hover .theme--dark .inline-icon .color3-fill, .theme--dark .ic-settings.active .inline-icon .color3-fill, .ic-settings.active .theme--dark .inline-icon .color3-fill {
-        fill: #ffffff; }
-      .theme--dark .inline-icon.active .color3-stroke, .theme--dark .header .menu-items .menu-left .menu-links a.active .inline-icon .color3-stroke, .header .menu-items .menu-left .menu-links a.active .theme--dark .inline-icon .color3-stroke, .theme--dark footer .footer-links a:hover .inline-icon .color3-stroke, footer .footer-links a:hover .theme--dark .inline-icon .color3-stroke, .theme--dark .ic-settings.active .inline-icon .color3-stroke, .ic-settings.active .theme--dark .inline-icon .color3-stroke {
-        stroke: #ffffff; }
-    .theme--dark .inline-icon.disabled {
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */ }
-      .theme--dark .inline-icon.disabled .color1-fill {
-        fill: #555975; }
-      .theme--dark .inline-icon.disabled .color1-stroke {
-        stroke: #555975; }
-      .theme--dark .inline-icon.disabled .color2-fill {
-        fill: none; }
-      .theme--dark .inline-icon.disabled .color2-stroke {
-        stroke: none; }
   .theme--dark header {
     background: #0b0e18;
     border-color: #0b0e18; }
@@ -6150,12 +6006,6 @@ div.contracts-popup-container {
       background-color: #7f8397; }
   .theme--dark .type-wrapper {
     background: #555975; }
-    .theme--dark .type-wrapper .type path:not(.important), .theme--dark .type-wrapper .type rect:not(.important) {
-      fill: #ffffff; }
-    .theme--dark .type-wrapper .type path.transparent, .theme--dark .type-wrapper .type rect.transparent {
-      fill: #555975; }
-    .theme--dark .type-wrapper .type .stroke-active {
-      stroke: #ffffff; }
   .theme--dark .portfolio.container {
     background: #2a3052; }
   .theme--dark .portfolio-empty span, .theme--dark .statement-empty span {
@@ -6184,14 +6034,8 @@ div.contracts-popup-container {
     border-color: #2a3052; }
   .theme--dark .portfolio-card__purchase:before {
     background-image: url("../images/portfolio/ic_purchase_dark.svg"); }
-  .theme--dark .portfolio-card__payout:before {
-    background-image: url("../images/statement/ic_payout_dark.svg"); }
   .theme--dark .portfolio-card__indicative--price-stable:before {
     background-image: url("../images/portfolio/ic_price_stable_dark.svg"); }
-  .theme--dark .statement-card__payout:before {
-    background-image: url("../images/statement/ic_payout_dark.svg"); }
-  .theme--dark .statement-card__balance:before {
-    background-image: url("../images/statement/ic_wallet_dark.svg"); }
   .theme--dark .login-message-wrapper .message a {
     color: #7f8397; }
     .theme--dark .login-message-wrapper .message a:hover {
@@ -6270,8 +6114,6 @@ div.contracts-popup-container {
     color: #ffffff; }
     .theme--dark .datepicker__input:hover, .theme--dark .datepicker__input:focus, .theme--dark .datepicker__input:active {
       border-color: #ffffff; }
-  .theme--dark .datepicker__icon path {
-    fill: #7f8397; }
   .theme--dark .datepicker__native-overlay {
     background: #2a3052; }
     .theme--dark .datepicker__native-overlay:hover, .theme--dark .datepicker__native-overlay:focus, .theme--dark .datepicker__native-overlay:active {
@@ -6318,8 +6160,6 @@ div.contracts-popup-container {
         color: #7f8397; }
       .theme--dark .settings-dialog__row:hover {
         background-color: #202641; }
-    .theme--dark .settings-dialog__arrow-back path {
-      fill: #7f8397; }
     .theme--dark .settings-dialog__language-dialog-container {
       background: #191c31; }
     .theme--dark .settings-dialog__language-header {
@@ -6340,8 +6180,6 @@ div.contracts-popup-container {
       background: #202641; }
   .theme--dark .acc-info__balance .symbols {
     background: #101320; }
-  .theme--dark .acc-info__select-arrow .arrow-path {
-    fill: #7f8397; }
   .theme--dark .acc-info--show:after {
     background: #ffffff; }
   .theme--dark .acc-info--is-virtual .acc-balance-amount, .theme--dark .acc-info--is-virtual .symbols {
@@ -6400,18 +6238,12 @@ div.contracts-popup-container {
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8), 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
     .theme--dark .calendar__body {
       border-color: #101320; }
-    .theme--dark .calendar__nav .calendar__nav-icon {
-      fill: #7f8397; }
-    .theme--dark .calendar__nav--disabled .calendar__nav-icon {
-      fill: #555975; }
     .theme--dark .calendar__text {
       color: #ffffff; }
     .theme--dark .calendar__btn {
       color: #7f8397; }
       .theme--dark .calendar__btn--select {
         color: #ffffff; }
-    .theme--dark .calendar__icon-path {
-      fill: #7f8397; }
     .theme--dark .calendar__cell {
       color: #7f8397; }
       .theme--dark .calendar__cell:hover {
