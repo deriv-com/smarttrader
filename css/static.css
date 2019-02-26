@@ -1373,7 +1373,10 @@ body #not_authenticated_financial ul.checked > li {
 
 .platforms-content img.platform {
   max-height: 150px;
-  width: auto; }
+  width: 100%; }
+  @media (max-width: 768px) {
+    .platforms-content img.platform {
+      width: auto; } }
   @media (max-width: 350px) {
     .platforms-content img.platform {
       max-width: 290px; } }
