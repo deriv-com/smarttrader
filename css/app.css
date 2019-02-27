@@ -2264,6 +2264,9 @@ a.previous-wrapper {
 .epg_forwardws-content iframe {
   height: 800px; }
 
+.detailsws-content div.select-dropdown {
+  width: 100%; }
+
 .detailsws-content #address_form select.select-hidden {
   min-width: 205px; }
 
@@ -2272,6 +2275,10 @@ a.previous-wrapper {
     width: 85%; }
     .detailsws-content #address_form div.select select.select-hidden {
       min-width: unset; } }
+
+@media all and (max-width: 480px) {
+  .detailsws-content #frmPersonalDetails div.select {
+    width: 280px !important; } }
 
 #limits-container thead {
   text-align: left; }
@@ -2449,6 +2456,13 @@ a.previous-wrapper {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+
+.realws-content div.select-dropdown {
+  width: 100%; }
+
+@media screen and (max-width: 480px) {
+  .realws-content {
+    width: 280px !important; } }
 
 .markets {
   min-width: 120px;
