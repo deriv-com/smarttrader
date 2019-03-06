@@ -1013,7 +1013,7 @@ html {
     .header__menu-link-text {
       font-size: 1.6em;
       color: rgba(0, 0, 0, 0.8);
-      font-weight: 300;
+      font-weight: 400;
       text-transform: capitalize;
       text-align: left;
       line-height: 1.75;
@@ -1033,7 +1033,7 @@ html {
     .header__menu-link:hover:not(.header__menu-link--active) {
       background-color: rgba(0, 0, 0, 0.04); }
     .header__menu-link--active > .header__menu-link-text[title] {
-      font-weight: 500; }
+      font-weight: bold; }
   .header__icon {
     margin-right: 0.8em; }
 
@@ -2007,7 +2007,7 @@ html {
       touch-action: manipulation;
   cursor: pointer;
   white-space: nowrap;
-  padding: 0 1em;
+  padding: 0 1.6em;
   margin: 1.6em;
   border: 0;
   border-radius: 4px;
@@ -2022,7 +2022,7 @@ html {
   .btn__text {
     font-size: 1.6em;
     color: rgba(0, 0, 0, 0.8);
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.75; }
@@ -2426,10 +2426,10 @@ html {
   .input-wrapper__button {
     position: absolute;
     z-index: 1;
-    top: 2px;
-    height: calc(100% - 5px);
+    top: 1px;
+    height: calc(100% - 2px);
     margin: initial;
-    min-width: 3em;
+    min-width: 3.2em;
     border-radius: 3px;
     padding: initial;
     background-color: initial;
@@ -2443,9 +2443,9 @@ html {
         -ms-flex-align: center;
             align-items: center; }
     .input-wrapper__button--increment {
-      right: 2px; }
+      right: 1px; }
     .input-wrapper__button--decrement {
-      left: 2px; }
+      left: 1px; }
     .input-wrapper__button:hover {
       cursor: pointer;
       background: rgba(0, 0, 0, 0.04); }
@@ -2484,7 +2484,7 @@ html {
     border-radius: 1px;
     border-width: 0.5px;
     padding: 0; }
-    .input[type=checkbox]:hover, .input[type=checkbox]:focus, .input[type=checkbox]:active {
+    .input[type=checkbox]:hover, .input-wrapper__button:hover ~ .input-wrapper__input[type=checkbox], .input[type=checkbox]:focus, .input[type=checkbox]:active {
       border-color: #ff9933;
       border-radius: 1px;
       -webkit-box-shadow: none;
@@ -2526,7 +2526,7 @@ html {
     color: rgba(0, 0, 0, 0.8); }
   .input::placeholder {
     color: rgba(0, 0, 0, 0.8); }
-  .input:hover {
+  .input:hover, .input-wrapper__button:hover ~ .input-wrapper__input {
     border-color: #999cac; }
   .input:active, .input:focus {
     outline: 0;
@@ -2780,8 +2780,10 @@ html {
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    padding: 8px 0;
+    padding-bottom: 0.8em;
     display: block; }
+  .acc-switcher__list-group {
+    padding-bottom: 16px; }
 
 .acc-switcher__accounts .acc-switcher__account:first-child {
   border-top-left-radius: 4px;
@@ -2818,7 +2820,7 @@ html {
   .acc-switcher__account .acc-switcher__id {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
@@ -2841,14 +2843,18 @@ html {
       border: 1px solid #ff9933;
       border-radius: 16px; }
     .acc-switcher__account .acc-switcher__id-icon {
-      margin-right: 1.6em; }
+      margin-right: 16px; }
   .acc-switcher__account:hover:not(.acc-switcher__account--selected) {
     background: rgba(0, 0, 0, 0.04); }
   .acc-switcher__account--selected {
     background: #999cac; }
     .acc-switcher__account--selected .acc-switcher__id {
+      font-size: 1.4em;
       color: #ffffff;
-      font-weight: 700; }
+      font-weight: 700;
+      text-transform: capitalize;
+      text-align: left;
+      line-height: 1.5; }
       .acc-switcher__account--selected .acc-switcher__id--virtual:before {
         color: #ffffff;
         border: 1px solid #ffffff; }
@@ -3208,7 +3214,7 @@ html {
     .contract-type-widget__display span[name=contract_type] {
       font-size: 1.2em;
       color: rgba(0, 0, 0, 0.8);
-      font-weight: 300;
+      font-weight: 400;
       text-transform: capitalize;
       text-align: left;
       line-height: 1.25;
@@ -3265,13 +3271,14 @@ html {
 /** @define contract-type-list; */
 .contract-type-list {
   padding: 1.6em 1.6em 0em; }
-  .contract-type-list__label span {
+  .contract-type-list__label {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 700;
     text-transform: capitalize;
     text-align: left;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin-bottom: 0.8em; }
   .contract-type-list:last-child {
     padding-bottom: 1.6em; }
   .contract-type-list__contracts-wrapper:first-child {
@@ -3310,18 +3317,17 @@ html {
   transition: transform 0.3s opacity 0.3s;
   transition: transform 0.3s opacity 0.3s, -webkit-transform 0.3s opacity 0.3s;
   background-color: #ffffff; }
-  .contract-type-item:hover {
-    background-color: #f2f3f8;
-    /* stylelint-disable-line color-no-hex */ }
-    .contract-type-item:hover .contract-type-item__icon {
+  .contract-type-item:hover:not(.contract-type-item--selected) {
+    background-color: rgba(0, 0, 0, 0.04); }
+    .contract-type-item:hover:not(.contract-type-item--selected) .contract-type-item__icon {
       display: block; }
   .contract-type-item__title {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: rgba(0, 0, 0, 0.8);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: capitalize;
     text-align: left;
-    line-height: 1.5; }
+    line-height: 1.25; }
   .contract-type-item__icon {
     display: none;
     height: 16px;
@@ -3346,7 +3352,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 0.2em;
+    margin-right: 0.7em;
     /* postcss-bem-linter: ignore */ }
     .contract-type-item__icon-wrapper .category-wrapper {
       margin: 0 0.2em; }
@@ -3374,7 +3380,7 @@ html {
     position: absolute;
     width: 290px;
     height: 544px;
-    right: calc(100% + 1px);
+    right: calc(100% + 1em);
     top: -5.4em;
     z-index: 2;
     background: #f4f4f6;
@@ -3431,7 +3437,7 @@ html {
     .trade-type-info-dialog__header .title {
       font-size: 1.4em;
       color: rgba(0, 0, 0, 0.8);
-      font-weight: 400;
+      font-weight: 700;
       text-transform: capitalize;
       text-align: left;
       line-height: 1.5;
@@ -4571,15 +4577,17 @@ html {
           flex-direction: column;
   z-index: 999;
   position: absolute;
-  top: 0;
+  top: -48px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.56);
+  /* postcss-bem-linter: ignore */
+  /* postcss-bem-linter: ignore */ }
   .full-page-modal__dialog {
-    width: 560px;
-    height: 160px;
-    padding: 2.4em 0.8em 0.8em;
+    max-width: 560px;
+    max-height: 320px;
+    padding: 1.6em;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -4596,20 +4604,25 @@ html {
         -ms-flex-align: start;
             align-items: flex-start;
     background-color: #ffffff;
-    -webkit-box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.16);
-            box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.16); }
-  .full-page-modal__content, .full-page-modal__header {
-    text-align: left;
-    padding: 0 1.6em;
-    color: #5c5c5c; }
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16); }
   .full-page-modal__header {
     font-size: 1.6em;
-    margin: 0.4em 0; }
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: left;
+    line-height: 1.75;
+    margin-bottom: 10px; }
   .full-page-modal__content {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-    font-size: 1.2em; }
+    max-width: 448px;
+    font-size: 1.4em;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    text-transform: unset;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 22.8571428571px; }
   .full-page-modal__footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4622,27 +4635,16 @@ html {
             align-items: center;
     width: 100%; }
   .full-page-modal__button {
-    margin: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end; }
-    .full-page-modal__button:hover {
-      background-color: rgba(0, 0, 0, 0.04); }
-    .full-page-modal__button-text {
-      font-weight: bold;
-      color: #191c31;
-      font-size: 1.2em; }
+    margin: 0; }
+  .full-page-modal .btn--secondary--orange {
+    border: none;
+    margin-right: 0.8em;
+    /* postcss-bem-linter: ignore */ }
+    .full-page-modal .btn--secondary--orange:hover:not([disabled]) {
+      background: none;
+      border: none; }
+  .full-page-modal .btn__text {
+    font-size: 1.4em; }
 
 @media screen and (max-width: 560px) {
   .full-page-modal__dialog {
@@ -5824,12 +5826,23 @@ html {
     justify-self: left;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    font-size: 12px; }
+            align-items: center; }
+    .trade-container__price-info-value {
+      font-size: 1.2em;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 700;
+      text-transform: capitalize;
+      text-align: left;
+      line-height: 1.25; }
     .trade-container__price-info-basis {
+      font-size: 1.2em;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 400;
+      text-transform: capitalize;
+      text-align: left;
+      line-height: 1.25;
       margin-left: 0;
-      color: rgba(0, 0, 0, 0.4);
-      font-weight: normal; }
+      color: rgba(0, 0, 0, 0.4); }
     .trade-container__price-info-currency {
       margin-left: 4px;
       display: inline-block;
@@ -6257,6 +6270,8 @@ html {
       color: #ffffff; }
       .theme--dark .trade-container__price-info-basis {
         color: #7f8397; }
+      .theme--dark .trade-container__price-info-value {
+        color: #ffffff; }
     .theme--dark .trade-container__fieldset {
       background: #191c31;
       color: #7f8397;
@@ -6715,14 +6730,14 @@ html {
     color: #7f8397; }
     .theme--dark .input[type=checkbox] {
       border-color: #7f8397; }
-      .theme--dark .input[type=checkbox]:hover {
+      .theme--dark .input[type=checkbox]:hover, .theme--dark .input-wrapper__button:hover ~ .input-wrapper__input[type=checkbox] {
         border-color: #ff9933; }
       .theme--dark .input[type=checkbox]:checked {
         background: #ff9933;
         border-color: #ff9933; }
       .theme--dark .input[type=checkbox]:not(:checked):focus, .theme--dark .input[type=checkbox]:not(:checked):active {
         border-color: #7f8397; }
-    .theme--dark .input:hover {
+    .theme--dark .input:hover, .theme--dark .input-wrapper__button:hover ~ .input-wrapper__input {
       border-color: #7f8397; }
     .theme--dark .input:focus, .theme--dark .input:active {
       border-color: #7f8397;
