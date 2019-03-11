@@ -1961,10 +1961,23 @@ html {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     cursor: pointer; }
+    .positions-drawer .result-details__toggle .result-details__select-arrow {
+      pointer-events: none;
+      -webkit-transition: -webkit-transform 0.25s ease;
+      transition: -webkit-transform 0.25s ease;
+      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 45%;
+              transform-origin: 50% 45%; }
     .theme--light .positions-drawer .result-details__toggle--is-open {
       border-top: 1px solid #f4f4f6; }
     .theme--dark .positions-drawer .result-details__toggle--is-open {
       border-top: 1px solid #191c31; }
+    .positions-drawer .result-details__toggle--is-open .result-details__select-arrow {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
   .positions-drawer .result__caption {
     text-transform: capitalize;
     font-size: 1.6em;
@@ -2737,12 +2750,12 @@ html {
       display: inline-block;
       margin: 3px;
       padding: 7px; }
-      .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled) {
+      .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled):not(.time-picker__selector-list-item--selected) {
         background: rgba(0, 0, 0, 0.04);
         color: rgba(0, 0, 0, 0.8); }
-        .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled)--selected {
-          background: #999cac;
-          color: #ffffff; }
+      .time-picker__selector-list-item--selected {
+        background: #999cac;
+        color: #ffffff; }
       .time-picker__selector-list-item--disabled {
         color: rgba(0, 0, 0, 0.16);
         cursor: default; }
