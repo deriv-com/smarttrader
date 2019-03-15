@@ -3534,7 +3534,6 @@ html {
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  padding: 1em;
   color: rgba(0, 0, 0, 0.8); }
   .contract-type-widget__display {
     cursor: pointer;
@@ -3551,6 +3550,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 1em;
     /* postcss-bem-linter: ignore */ }
     .contract-type-widget__display span[name=contract_type] {
       font-size: 1.2em;
