@@ -114,6 +114,12 @@ table {
  * Example:
    @include themify($themes) { border-color: 1px solid themed('background_color') }
  */
+/*
+ * Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
 /*------------------------------------*
  *  # Typography
  *  - Indrek Pass also has a fantastic mixin here: http://sassmeister.com/gist/7f22e44ace49b5124eec
@@ -498,6 +504,19 @@ html {
     position: relative;
     cursor: help;
     display: block; }
+    .tooltip[data-tooltip]:before {
+      background: rgba(0, 0, 0, 0.8); }
+    .tooltip[data-tooltip]:after, .tooltip[data-tooltip][data-tooltip-pos=top]:after {
+      border-top-color: rgba(0, 0, 0, 0.8); }
+    .tooltip[data-tooltip][data-tooltip-pos=right]:after {
+      border-top-color: transparent;
+      border-right-color: rgba(0, 0, 0, 0.8); }
+    .tooltip[data-tooltip][data-tooltip-pos=left]:after {
+      border-top-color: transparent;
+      border-left-color: rgba(0, 0, 0, 0.8); }
+    .tooltip[data-tooltip][data-tooltip-pos=bottom]:after {
+      border-top-color: transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.8); }
     .tooltip[data-tooltip]:hover:after, .tooltip[data-tooltip]:hover:before {
       opacity: 0.96;
       pointer-events: auto;
@@ -525,7 +544,6 @@ html {
       line-height: 1.25;
       text-decoration: none;
       letter-spacing: normal;
-      background: rgba(0, 0, 0, 0.8);
       border-radius: 4px;
       content: attr(data-tooltip);
       padding: 0.8em;
@@ -538,7 +556,6 @@ html {
       width: 0;
       position: absolute;
       pointer-events: none;
-      border-top-color: rgba(0, 0, 0, 0.8);
       border-width: 6px;
       margin-bottom: -2px; }
     .tooltip[data-tooltip][data-tooltip-pos=right]:before, .tooltip[data-tooltip][data-tooltip-pos=right]:after {
@@ -552,9 +569,6 @@ html {
     .tooltip[data-tooltip][data-tooltip-pos=right]:hover:after, .tooltip[data-tooltip][data-tooltip-pos=right]:hover:before {
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%); }
-    .tooltip[data-tooltip][data-tooltip-pos=right]:after {
-      border-top-color: transparent;
-      border-right-color: rgba(0, 0, 0, 0.8); }
     .tooltip[data-tooltip][data-tooltip-pos=left]:before, .tooltip[data-tooltip][data-tooltip-pos=left]:after {
       bottom: auto;
       left: auto;
@@ -567,9 +581,6 @@ html {
     .tooltip[data-tooltip][data-tooltip-pos=left]:hover:after, .tooltip[data-tooltip][data-tooltip-pos=left]:hover:before {
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%); }
-    .tooltip[data-tooltip][data-tooltip-pos=left]:after {
-      border-top-color: transparent;
-      border-left-color: rgba(0, 0, 0, 0.8); }
     .tooltip[data-tooltip][data-tooltip-pos=bottom]:before, .tooltip[data-tooltip][data-tooltip-pos=bottom]:after {
       bottom: auto;
       left: 50%;
@@ -581,9 +592,19 @@ html {
     .tooltip[data-tooltip][data-tooltip-pos=bottom]:hover:after, .tooltip[data-tooltip][data-tooltip-pos=bottom]:hover:before {
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0); }
-    .tooltip[data-tooltip][data-tooltip-pos=bottom]:after {
-      border-top-color: transparent;
-      border-bottom-color: rgba(0, 0, 0, 0.8); }
+  .tooltip--error[data-tooltip]:before {
+    background: #e31c4b; }
+  .tooltip--error[data-tooltip]:after, .tooltip--error[data-tooltip][data-tooltip-pos=top]:after {
+    border-top-color: #e31c4b; }
+  .tooltip--error[data-tooltip][data-tooltip-pos=right]:after {
+    border-top-color: transparent;
+    border-right-color: #e31c4b; }
+  .tooltip--error[data-tooltip][data-tooltip-pos=left]:after {
+    border-top-color: transparent;
+    border-left-color: #e31c4b; }
+  .tooltip--error[data-tooltip][data-tooltip-pos=bottom]:after {
+    border-top-color: transparent;
+    border-bottom-color: #e31c4b; }
 
 /** @define barspinner */
 .barspinner {
@@ -2828,9 +2849,6 @@ html {
   .input:not([type=range]) {
     -ms-touch-action: manipulation;
         touch-action: manipulation; }
-  .input--error {
-    color: #e31c4b;
-    border: 1px solid #e31c4b !important; }
   .input[readonly] {
     cursor: pointer; }
   .input::-webkit-input-placeholder {
@@ -2850,6 +2868,12 @@ html {
   .input--has-inline-prefix {
     padding-left: 50px !important;
     border-radius: 4px !important; }
+  .input--error {
+    color: #e31c4b;
+    border: 1px solid #e31c4b !important; }
+    .input--error:active, .input--error:focus {
+      -webkit-box-shadow: 0 0 0 2px rgba(226, 28, 76, 0.3) !important;
+              box-shadow: 0 0 0 2px rgba(226, 28, 76, 0.3) !important; }
 
 /** @define time-picker */
 .time-picker {
@@ -6824,7 +6848,8 @@ html {
      -moz-appearance: none;
           appearance: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  border-radius: 4px; }
   .theme--light .trade-container__input {
     background: #ffffff;
     border-color: #ffffff;
@@ -6999,26 +7024,21 @@ html {
   color: #7f8397; }
 
 .trade-container__currency-options {
-  border-radius: 4px 0 0 4px;
-  margin-right: 1px;
-  width: calc(25% - 1px);
-  display: inline-block; }
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0.2em; }
+  .trade-container__currency-options-dropdown {
+    margin-top: 0.8em; }
   .trade-container__currency-options--display {
-    font-size: 1.4em;
-    line-height: 1.5;
-    height: 32px;
-    border-radius: 4px 0 0 4px !important;
-    margin-top: 0; }
+    margin-top: 0;
+    border-radius: 4px 0 0 4px;
+    /* postcss-bem-linter: ignore */ }
+    .trade-container__currency-options--display .symbols {
+      font-size: 1.4em; }
 
-.trade-container__amount {
-  margin-left: 1px;
-  display: inline-block;
-  width: 100%; }
-  .trade-container__amount .trade-container__input {
-    padding: 0 30px; }
-  .trade-container__amount--has-currency-options {
-    width: calc(75% - 1px);
-    border-radius: 0 4px 4px 0; }
+.trade-container__amount .trade-container__input {
+  padding: 0 30px;
+  border-radius: 0 4px 4px 0; }
 
 /** @define purchase-container */
 .purchase-container {
@@ -7605,8 +7625,8 @@ html {
       border-color: #7f8397; }
     .theme--dark .input:focus, .theme--dark .input:active {
       border-color: #7f8397;
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3);
-              box-shadow: 0 0 0 0.2rem rgba(127, 131, 151, 0.3);
+      -webkit-box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3);
+              box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3);
       color: #ffffff; }
     .theme--dark .input::-webkit-input-placeholder {
       color: #7f8397; }
@@ -7645,16 +7665,31 @@ html {
   .theme--dark .tooltip {
     color: #ffffff; }
     .theme--dark .tooltip:before {
-      background: #2a3052;
-      color: #ffffff; }
-    .theme--dark .tooltip[data-tooltip-pos=top]:after {
+      background: #2a3052; }
+    .theme--dark .tooltip:after, .theme--dark .tooltip[data-tooltip-pos=top]:after {
       border-top-color: #2a3052; }
     .theme--dark .tooltip[data-tooltip-pos=right]:after {
+      border-top-color: transparent;
       border-right-color: #2a3052; }
     .theme--dark .tooltip[data-tooltip-pos=left]:after {
+      border-top-color: transparent;
       border-left-color: #2a3052; }
     .theme--dark .tooltip[data-tooltip-pos=bottom]:after {
+      border-top-color: transparent;
       border-bottom-color: #2a3052; }
+    .theme--dark .tooltip--error[data-tooltip]:before {
+      background: #e31c4b; }
+    .theme--dark .tooltip--error[data-tooltip]:after, .theme--dark .tooltip--error[data-tooltip][data-tooltip-pos=top]:after {
+      border-top-color: #e31c4b; }
+    .theme--dark .tooltip--error[data-tooltip][data-tooltip-pos=right]:after {
+      border-top-color: transparent;
+      border-right-color: #e31c4b; }
+    .theme--dark .tooltip--error[data-tooltip][data-tooltip-pos=left]:after {
+      border-top-color: transparent;
+      border-left-color: #e31c4b; }
+    .theme--dark .tooltip--error[data-tooltip][data-tooltip-pos=bottom]:after {
+      border-top-color: transparent;
+      border-bottom-color: #e31c4b; }
   .theme--dark .fullscreen-dialog {
     background: #2a3052; }
     .theme--dark .fullscreen-dialog__header, .theme--dark .fullscreen-dialog__header-shadow-cover, .theme--dark .fullscreen-dialog__content {
