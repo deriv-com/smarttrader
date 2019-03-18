@@ -3412,8 +3412,9 @@ html {
       font-weight: 400; }
       .calendar__cell--today-duration {
         background: #999cac; }
-      .calendar__cell--today:hover {
-        background: #999cac; }
+      .calendar__cell--today:hover:not(.calendar__cell--disabled):not(.calendar__cell--active) {
+        background: #f4f4f6;
+        border: 1px solid #999cac; }
     .calendar__cell--active {
       color: #ffffff;
       background: #999cac;
@@ -7497,8 +7498,9 @@ html {
         color: #ffffff; }
         .theme--dark .calendar__cell--today-duration {
           background: #2a3052; }
-        .theme--dark .calendar__cell--today:hover {
-          background: #2a3052 !important; }
+        .theme--dark .calendar__cell--today:hover:not(.calendar__cell--disabled):not(.calendar__cell--active) {
+          background: #2a3052;
+          border: 1px solid #7f8397; }
       .theme--dark .calendar__cell--disabled, .theme--dark .calendar__cell--other {
         color: rgba(127, 131, 151, 0.3); }
       .theme--dark .calendar__cell--disabled:hover {
