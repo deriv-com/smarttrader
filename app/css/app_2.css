@@ -6046,7 +6046,22 @@ html {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin: 0 2.5em 0 1em; }
+  margin: 0 2.5em 0 1em;
+  -webkit-transform: translate3d(0, calc(100% + 2em), 0);
+          transform: translate3d(0, calc(100% + 2em), 0);
+  -webkit-transition: opacity 0.4s linear, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s linear, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s linear;
+  transition: transform 0.4s ease, opacity 0.4s linear, -webkit-transform 0.4s ease;
+  opacity: 0; }
+  .digits--enter-done {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  .digits--enter, .digits--exit {
+    -webkit-transform: translate3d(0, calc(100% + 2em), 0);
+            transform: translate3d(0, calc(100% + 2em), 0);
+    opacity: 0; }
   .digits__digit {
     margin: 0 0.4em;
     text-align: center;
@@ -6099,6 +6114,7 @@ html {
                 animation-timing-function: step-end; }
       .digits__digit-value--loss {
         background-color: #e31c4b;
+        border: none;
         color: #ffffff; }
     .digits__digit-spot {
       position: absolute;

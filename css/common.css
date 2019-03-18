@@ -822,7 +822,7 @@ label + input {
   background: rgba(0, 0, 0, 0.5); }
   #interview_popup_container .popup {
     width: calc(100vw - 20px);
-    max-width: 500px;
+    max-width: 495px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -831,12 +831,11 @@ label + input {
     background: #fff;
     -webkit-box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.82);
             box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.82);
-    border-radius: 10px;
     overflow: hidden; }
     #interview_popup_container .popup__head {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      padding: 20px 25px;
+      padding: 57px 115px;
       background-image: url("../images/interview_popup/bg-shape.svg");
       background-size: 100%;
       background-position: bottom;
@@ -851,7 +850,12 @@ label + input {
       -webkit-transform: translateX(-10px);
               transform: translateX(-10px); }
     #interview_popup_container .popup__body {
-      padding: 20px 35px 30px; }
+      padding: 27px 35px 30px; }
+      #interview_popup_container .popup__body p {
+        text-align: justify;
+        padding: 0 10px;
+        margin-top: 13px;
+        margin-bottom: 5px; }
     #interview_popup_container .popup__options {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -865,11 +869,15 @@ label + input {
               align-items: center;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
+              justify-content: space-between;
+      padding: 10px; }
       #interview_popup_container .popup__options * {
         margin: 0; }
       #interview_popup_container .popup__options #interview_no_thanks {
-        color: #a1aab3; }
+        color: #a1aab3;
+        cursor: pointer; }
+      #interview_popup_container .popup__options #interview_ask_later {
+        cursor: pointer; }
     #interview_popup_container .popup__secondary_options {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -895,7 +903,8 @@ label + input {
     font-weight: 300; }
   #interview_popup_container .header-1, #interview_popup_container .header-2 {
     text-align: center;
-    line-height: 1.15; }
+    line-height: 1.15;
+    font-weight: normal; }
   @media screen and (max-width: 768px) {
     #interview_popup_container .header-1 {
       font-size: 24px; }
@@ -906,7 +915,7 @@ label + input {
       #interview_popup_container .popup__present_img {
         height: 100px; }
       #interview_popup_container .popup__head {
-        padding: 20px 15px; }
+        padding: 30px 80px; }
       #interview_popup_container .popup__body {
         padding: 20px 15px 7px; }
       #interview_popup_container .popup__options {
@@ -918,7 +927,7 @@ label + input {
       #interview_popup_container .popup__secondary_options {
         font-size: 12px; }
       #interview_popup_container .popup #interview_interested {
-        font-size: 20px;
+        font-size: 14px;
         margin: 5px 0 30px; }
     #interview_popup_container p {
       font-size: 14px; } }
