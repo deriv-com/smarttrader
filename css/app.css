@@ -2958,3 +2958,87 @@ a.previous-wrapper {
                 padding: 5px;
                 margin: 0 0 10px;
                 font-weight: normal; } }
+
+.transfer_form {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+  .transfer_form p {
+    margin: 0 0 6px; }
+  .transfer_form #transfer_to_select.form-row {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .transfer_form > div {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .transfer_form__left_pane {
+    padding: 30px;
+    width: 50%;
+    min-height: 266px;
+    background-color: #f2f2f2;
+    color: #000; }
+  .transfer_form__right_pane {
+    padding: 30px;
+    width: 50%;
+    min-height: 266px;
+    border: 1px solid #f2f2f2;
+    border-left: 0; }
+    .transfer_form__right_pane__input_group {
+      width: 100%; }
+      .transfer_form__right_pane__input_group__prefix {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        max-width: 280px; }
+        .transfer_form__right_pane__input_group__prefix .input-add-on {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          height: 28px;
+          width: 46px;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+        .transfer_form__right_pane__input_group__prefix input {
+          margin: 0;
+          padding: 0 0 0 5px;
+          height: 28px;
+          max-width: 100%;
+          width: 232px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box; }
+      .transfer_form__right_pane__input_group .select {
+        width: 100%; }
+    .transfer_form__right_pane .select {
+      width: 280px !important;
+      display: block;
+      margin-bottom: 2px; }
+
+@media screen and (max-width: 480px) {
+  .transfer_form__right_pane, .transfer_form__left_pane {
+    width: 100%; } }
+
+.account_transfer {
+  width: 250px; }
+  .account_transfer__header {
+    padding: 5px !important;
+    font-size: smaller !important; }
+
+.account_transfer-content .hint {
+  font-size: 15px; }
+
+.account_transfer-content .italic {
+  font-style: italic; }
