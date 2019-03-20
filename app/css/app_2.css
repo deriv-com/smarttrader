@@ -106,7 +106,7 @@ table {
  * generate sets of themes keys object property (dark / light)
  * @param $themes - themes property
  * Usage example:
-   @include themify($themes) { color: $COLOR_WHITE }
+   @include themify($themes) { color: themed('background_color') }
  */
 /*
  * Generate typefaces key-value pair of themefy object
@@ -150,10 +150,6 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; }
-  .theme--light .body {
-    background: #f4f4f6; }
-  .theme--dark .body {
-    background: #0b0e18; }
 
 /* postcss-bem-linter: ignore */
 *, html, .body {
@@ -181,6 +177,10 @@ html {
   font-family: inherit;
   font-style: inherit;
   padding: 2px 3px; }
+  .theme--light .input {
+    color: #000000; }
+  .theme--dark .input {
+    color: #ffffff; }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -199,6 +199,13 @@ html {
   color: rgba(0, 0, 0, 0.16); }
 
 /* Multiple properties with same values */
+/** @define theme */
+.theme--light {
+  background: #f4f4f6; }
+
+.theme--dark {
+  background: #0b0e18; }
+
 /** @define container */
 .container {
   width: 100%;
@@ -252,7 +259,8 @@ html {
 .symbols:before {
   font-family: 'BinarySymbols';
   font-style: normal;
-  pointer-events: none; }
+  pointer-events: none;
+  padding-right: 0.25em; }
 
 .symbols, .symbols:before {
   -webkit-transition: none;
@@ -864,10 +872,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 3.2em;
   width: 100%;
   margin-top: 0.8em;
-  margin-bottom: -0.8em;
   border: 0;
   background: none; }
   .advanced-simple-toggle__icon {
@@ -1220,7 +1226,7 @@ html {
   margin: 0.2em 1.6em;
   border-radius: 50%; }
   .network-status__circle--online {
-    background: #4bbfab; }
+    background: #39b19d; }
   .network-status__circle--offline {
     background: #e31c4b; }
   .theme--light .network-status__circle--blinker {
@@ -1250,8 +1256,11 @@ html {
 
 /** @define ic-settings */
 .ic-settings--active {
-  position: relative;
-  background: rgba(0, 0, 0, 0.04); }
+  position: relative; }
+  .theme--light .ic-settings--active {
+    background: rgba(0, 0, 0, 0.04); }
+  .theme--dark .ic-settings--active {
+    background: #191c31; }
   .ic-settings--active:after {
     content: '';
     height: 0.2em;
@@ -1729,7 +1738,6 @@ html {
     width: 100%;
     height: 100%;
     max-height: 130px;
-    opacity: 0.8;
     border-radius: 4px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -1757,7 +1765,7 @@ html {
       border-radius: 4px;
       z-index: 2; }
     .theme--light .positions-drawer-card__result {
-      background-color: #ffffff; }
+      background-color: rgba(255, 255, 255, 0.8); }
       .theme--light .positions-drawer-card__result--won, .theme--light .positions-drawer-card__result--won:after {
         background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(rgba(0, 148, 117, 0.16)));
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 148, 117, 0.16)); }
@@ -1765,7 +1773,7 @@ html {
         background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(rgba(227, 28, 75, 0.16)));
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(227, 28, 75, 0.16)); }
     .theme--dark .positions-drawer-card__result {
-      background-color: #101320; }
+      background-color: rgba(16, 19, 32, 0.8); }
       .theme--dark .positions-drawer-card__result--won, .theme--dark .positions-drawer-card__result--won:after {
         background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(16, 19, 32, 0)), to(rgba(0, 148, 117, 0.16)));
         background-image: linear-gradient(to top, rgba(16, 19, 32, 0), rgba(0, 148, 117, 0.16)); }
@@ -1900,7 +1908,7 @@ html {
       font-weight: normal;
       margin-bottom: 0.5em; }
     .positions-drawer-card__indicative--price-moved-up {
-      color: #4bbfab; }
+      color: #39b19d; }
     .positions-drawer-card__indicative--price-moved-down {
       color: #e31c4b; }
   .positions-drawer-card__remaining-time {
@@ -1936,7 +1944,7 @@ html {
         content: '-';
         color: inherit; }
     .positions-drawer-card__profit-loss--positive {
-      color: #34a39a; }
+      color: #2d9f93; }
       .positions-drawer-card__profit-loss--positive:before {
         content: '+';
         color: inherit; }
@@ -2124,7 +2132,7 @@ html {
   margin-top: 2rem;
   height: calc(100% - 36px); }
   .result__caption--won {
-    color: #4bbfab; }
+    color: #39b19d; }
   .result__caption--lost {
     color: #e31c4b; }
 
@@ -2136,7 +2144,11 @@ html {
   .result__close-btn:after {
     content: '\0000D7';
     font-size: 24px;
-    color: #999cac; }
+    font-weight: 300; }
+    .theme--light .result__close-btn:after {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .result__close-btn:after {
+      color: #7f8397; }
 
 .result__icon {
   margin-left: 10px; }
@@ -2211,7 +2223,7 @@ html {
     .progress-slider__line--ticks {
       height: 2px; }
     .progress-slider__line--green {
-      background: #4bbfab !important; }
+      background: #39b19d !important; }
     .progress-slider__line--orange {
       background: #ff9933 !important; }
     .progress-slider__line--red {
@@ -2229,7 +2241,7 @@ html {
     margin: 0.5rem 0 1rem;
     overflow: hidden; }
     .progress-slider__infinite-loader--indeterminate {
-      background-color: #4bbfab; }
+      background-color: #39b19d; }
       .progress-slider__infinite-loader--indeterminate:before, .progress-slider__infinite-loader--indeterminate:after {
         content: '';
         position: absolute;
@@ -2309,15 +2321,15 @@ html {
   transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
   outline: 0;
   position: relative;
-  background: #4bbfab;
+  background: #39b19d;
   /* postcss-bem-linter: ignore */ }
   .btn__text {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.75; }
+    line-height: 1.5; }
   .btn--link {
     max-width: 220px;
     margin: 1em auto;
@@ -2345,14 +2357,14 @@ html {
     .btn--primary--orange.effect:focus:not(:active):after {
       border: 0 solid #ff9933; }
   .btn--primary--green {
-    background: #4bbfab;
+    background: #39b19d;
     /* postcss-bem-linter: ignore */ }
     .btn--primary--green:hover:not([disabled]) {
-      background: #34a39a; }
+      background: #2d9f93; }
     .btn--primary--green:active:not([disabled]) {
-      background: #4bbfab; }
+      background: #39b19d; }
     .btn--primary--green.effect:focus:not(:active):after {
-      border: 0 solid #4bbfab; }
+      border: 0 solid #39b19d; }
   .btn--primary:disabled, .btn--primary[disabled] {
     background: rgba(0, 0, 0, 0.04);
     cursor: not-allowed; }
@@ -2375,19 +2387,19 @@ html {
       .btn--secondary--orange.effect:focus:not(:active):after {
         border: 0 solid #ff9933; }
     .btn--secondary--green {
-      border: 1px solid #4bbfab;
+      border: 1px solid #39b19d;
       /* postcss-bem-linter: ignore */ }
       .btn--secondary--green .btn__text {
-        color: #4bbfab; }
+        color: #39b19d; }
       .btn--secondary--green:hover:not([disabled]) {
-        border: 1px solid #34a39a;
-        color: #34a39a;
+        border: 1px solid #2d9f93;
+        color: #2d9f93;
         background: rgba(76, 175, 80, 0.1); }
       .btn--secondary--green:active:not([disabled]) {
-        border: 1px solid #4bbfab;
-        color: #4bbfab; }
+        border: 1px solid #39b19d;
+        color: #39b19d; }
       .btn--secondary--green.effect:focus:not(:active):after {
-        border: 0 solid #4bbfab; }
+        border: 0 solid #39b19d; }
     .btn--secondary:disabled, .btn--secondary[disabled] {
       background: rgba(0, 0, 0, 0.04);
       border: 0 !important;
@@ -2476,9 +2488,16 @@ html {
     border-bottom-right-radius: 4px; }
   .button-menu__button {
     margin: 0;
-    background-color: #ffffff;
     border-radius: 0px;
     width: 50%; }
+    .theme--light .button-menu__button {
+      background-color: #ffffff; }
+      .theme--light .button-menu__button:hover {
+        background-color: rgba(153, 156, 172, 0.32); }
+    .theme--dark .button-menu__button {
+      background-color: #101320; }
+      .theme--dark .button-menu__button:hover {
+        background-color: #202641; }
     .button-menu__button span {
       font-size: 1.4em;
       color: rgba(0, 0, 0, 0.8);
@@ -2486,17 +2505,25 @@ html {
       text-transform: capitalize;
       text-align: left;
       line-height: 1.5; }
-    .button-menu__button:hover:not(.button-menu__button--active) {
-      background-color: rgba(0, 0, 0, 0.04); }
-    .button-menu__button--active {
+      .theme--light .button-menu__button span {
+        color: rgba(0, 0, 0, 0.8); }
+      .theme--dark .button-menu__button span {
+        color: #7f8397; }
+    .theme--light .button-menu__button--active {
       background-color: #999cac; }
-      .button-menu__button--active span {
-        font-size: 1.4em;
-        color: #ffffff;
-        font-weight: 700;
-        text-transform: capitalize;
-        text-align: left;
-        line-height: 1.5; }
+    .theme--dark .button-menu__button--active {
+      background-color: #2a3052; }
+    .button-menu__button--active span {
+      font-size: 1.4em;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: capitalize;
+      text-align: left;
+      line-height: 1.5; }
+      .theme--light .button-menu__button--active span {
+        color: #ffffff; }
+      .theme--dark .button-menu__button--active span {
+        color: #ffffff; }
 
 /** @define dropdown */
 .dropdown {
@@ -2525,6 +2552,10 @@ html {
       text-align: center;
       line-height: 1.5;
       padding-left: 1.6em; }
+      .theme--light .dropdown__display-text {
+        color: #000000; }
+      .theme--dark .dropdown__display-text {
+        color: #ffffff; }
     .dropdown__display:active, .dropdown__display:focus {
       outline: none; }
     .dropdown__display:hover {
@@ -2740,7 +2771,7 @@ html {
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.2em;
     display: inline-block;
     text-align: center;
     width: 100%; }
@@ -2943,12 +2974,18 @@ html {
       display: inline-block;
       margin: 3px;
       padding: 7px; }
-      .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled):not(.time-picker__selector-list-item--selected) {
-        background: rgba(0, 0, 0, 0.04);
+      .theme--light .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled):not(.time-picker__selector-list-item--selected) {
+        background: rgba(153, 156, 172, 0.32);
         color: rgba(0, 0, 0, 0.8); }
-      .time-picker__selector-list-item--selected {
+      .theme--dark .time-picker__selector-list-item:hover:not(.time-picker__selector-list-item--disabled):not(.time-picker__selector-list-item--selected) {
+        background: #202641;
+        color: #7f8397; }
+      .theme--light .time-picker__selector-list-item--selected {
         background: #999cac;
-        color: #ffffff; }
+        color: #ffffff !important; }
+      .theme--dark .time-picker__selector-list-item--selected {
+        background: #2a3052;
+        color: #ffffff !important; }
       .time-picker__selector-list-item--disabled {
         color: rgba(0, 0, 0, 0.16);
         cursor: default; }
@@ -3002,6 +3039,10 @@ html {
     text-align: center;
     line-height: 1.75;
     pointer-events: none; }
+    .theme--light .acc-info__id {
+      color: #000000; }
+    .theme--dark .acc-info__id {
+      color: #ffffff; }
     .acc-info__id:after {
       display: block;
       content: attr(title);
@@ -3011,7 +3052,7 @@ html {
       visibility: hidden; }
   .acc-info__balance {
     font-size: 1.6em;
-    color: #4bbfab;
+    color: #39b19d;
     font-weight: 700;
     text-transform: default;
     text-align: center;
@@ -3028,8 +3069,14 @@ html {
             transform: rotate(0deg);
     -webkit-transform-origin: 50% 45%;
             transform-origin: 50% 45%; }
-  .acc-info:hover:not(.show) {
+  .theme--light .acc-info:hover:not(.show) {
     background: rgba(0, 0, 0, 0.04); }
+    .theme--light .acc-info:hover:not(.show) .symbols {
+      background: rgba(0, 0, 0, 0.04); }
+  .theme--dark .acc-info:hover:not(.show) {
+    background: #191c31; }
+    .theme--dark .acc-info:hover:not(.show) .symbols {
+      background: #191c31; }
   .acc-info--is-virtual .acc-info__balance {
     color: #ff9933; }
   .acc-info--is-virtual:before {
@@ -3049,12 +3096,13 @@ html {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
   .acc-info__button {
-    margin: 0 1.6em; }
+    margin: 0 1.4em 0 0; }
+    .acc-info__button:not(:last-child) {
+      margin-right: 1em; }
 
 /** @define acc-switcher */
 .acc-switcher__wrapper {
   position: absolute;
-  background: #ffffff;
   -webkit-transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
   transition: opacity 0.25s linear, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear;
@@ -3065,6 +3113,10 @@ html {
   top: calc(100% + 4px);
   width: 240px;
   border-radius: 4px; }
+  .theme--light .acc-switcher__wrapper {
+    background: #f4f4f6; }
+  .theme--dark .acc-switcher__wrapper {
+    background: #191c31; }
   .acc-switcher__wrapper--enter-done {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -3090,21 +3142,31 @@ html {
     text-align: center;
     line-height: 1.25;
     padding: 6.6666666667px 13.3333333333px;
-    border: 1px dashed rgba(0, 0, 0, 0.4);
     width: 100%;
     border-radius: 4px;
     cursor: pointer; }
-    .acc-switcher__new-account-title:before {
-      content: '\002B';
+    .theme--light .acc-switcher__new-account-title {
       color: rgba(0, 0, 0, 0.4);
-      float: left; }
-    .acc-switcher__new-account-title:hover {
-      background: rgba(0, 0, 0, 0.04); }
+      border: 1px dashed rgba(0, 0, 0, 0.4); }
+      .theme--light .acc-switcher__new-account-title:before {
+        content: '\002B';
+        color: rgba(0, 0, 0, 0.4);
+        float: left; }
+      .theme--light .acc-switcher__new-account-title:hover {
+        background: rgba(153, 156, 172, 0.32); }
+    .theme--dark .acc-switcher__new-account-title {
+      color: #7f8397;
+      border: 1px dashed #7f8397; }
+      .theme--dark .acc-switcher__new-account-title:before {
+        content: '\002B';
+        color: #7f8397;
+        float: left; }
+      .theme--dark .acc-switcher__new-account-title:hover {
+        background: #202641; }
 
 .acc-switcher__list {
   height: 100%;
   border-radius: 4px;
-  background-color: #f4f4f6;
   padding: 1.6em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3113,6 +3175,10 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap; }
+  .theme--light .acc-switcher__list {
+    background: #f4f4f6; }
+  .theme--dark .acc-switcher__list {
+    background: #191c31; }
   .acc-switcher__list-title {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
@@ -3122,26 +3188,64 @@ html {
     line-height: 1.5;
     padding-bottom: 0.8em;
     display: block; }
+    .theme--light .acc-switcher__list-title {
+      color: #000000; }
+    .theme--dark .acc-switcher__list-title {
+      color: #ffffff; }
   .acc-switcher__list-group {
     padding-bottom: 16px; }
 
-.acc-switcher__accounts .acc-switcher__account:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom: none; }
-
-.acc-switcher__accounts .acc-switcher__account:last-child {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top: none; }
-
-.acc-switcher__accounts .acc-switcher__account:only-child {
+.acc-switcher__accounts {
   border-radius: 4px; }
-
-.acc-switcher__accounts .acc-switcher__account:not(:last-child):not(:only-child) {
-  border-bottom: 1px solid #f4f4f6;
-  border-right: none;
-  border-left: none; }
+  .theme--light .acc-switcher__accounts {
+    background: #ffffff; }
+  .theme--dark .acc-switcher__accounts {
+    background: #101320; }
+  .theme--light .acc-switcher__accounts .acc-switcher__account {
+    background: #ffffff; }
+    .theme--light .acc-switcher__accounts .acc-switcher__account:hover:not(.acc-switcher__account--selected) {
+      background-color: rgba(153, 156, 172, 0.32); }
+    .theme--light .acc-switcher__accounts .acc-switcher__account .acc-switcher__id {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--light .acc-switcher__accounts .acc-switcher__account--selected {
+      background: #999cac; }
+      .theme--light .acc-switcher__accounts .acc-switcher__account--selected .acc-switcher__id {
+        color: #ffffff;
+        font-weight: 700; }
+        .theme--light .acc-switcher__accounts .acc-switcher__account--selected .acc-switcher__id--virtual:before {
+          color: #ffffff;
+          border: 1px solid #ffffff; }
+  .theme--dark .acc-switcher__accounts .acc-switcher__account {
+    background: #101320; }
+    .theme--dark .acc-switcher__accounts .acc-switcher__account:hover:not(.acc-switcher__account--selected) {
+      background-color: #202641; }
+    .theme--dark .acc-switcher__accounts .acc-switcher__account .acc-switcher__id {
+      color: #7f8397; }
+    .theme--dark .acc-switcher__accounts .acc-switcher__account--selected {
+      background: #2a3052; }
+      .theme--dark .acc-switcher__accounts .acc-switcher__account--selected .acc-switcher__id {
+        color: #ffffff;
+        font-weight: 700; }
+        .theme--dark .acc-switcher__accounts .acc-switcher__account--selected .acc-switcher__id--virtual:before {
+          color: #ffffff;
+          border: 1px solid #ffffff; }
+  .acc-switcher__accounts .acc-switcher__account:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: none; }
+  .acc-switcher__accounts .acc-switcher__account:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: none; }
+  .acc-switcher__accounts .acc-switcher__account:only-child {
+    border-radius: 4px; }
+  .acc-switcher__accounts .acc-switcher__account:not(:last-child):not(:only-child) {
+    border-right: none;
+    border-left: none; }
+    .theme--light .acc-switcher__accounts .acc-switcher__account:not(:last-child):not(:only-child) {
+      border-bottom: 1px solid #f4f4f6; }
+    .theme--dark .acc-switcher__accounts .acc-switcher__account:not(:last-child):not(:only-child) {
+      border-bottom: 1px solid #191c31; }
 
 .acc-switcher__account {
   cursor: pointer;
@@ -3223,6 +3327,10 @@ html {
     text-transform: none;
     text-align: left;
     line-height: 1.5; }
+    .theme--light .acc-switcher__logout-text {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .acc-switcher__logout-text {
+      color: #7f8397; }
   .acc-switcher__logout-icon {
     width: 1.6em;
     height: auto;
@@ -3246,8 +3354,14 @@ html {
     line-height: 1.25;
     padding: 0 6.6666666667px;
     cursor: pointer; }
+    .theme--light .allow-equals__label {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .allow-equals__label {
+      color: #7f8397; }
   .allow-equals .allow-equals__tooltip[data-tooltip] {
-    margin-top: 1.1em; }
+    width: 12px;
+    height: 12px;
+    margin-top: 0.3em; }
     .allow-equals .allow-equals__tooltip[data-tooltip]:before {
       padding-left: 3.25em; }
     .allow-equals .allow-equals__tooltip[data-tooltip]:before, .allow-equals .allow-equals__tooltip[data-tooltip]:after {
@@ -3256,8 +3370,8 @@ html {
     -webkit-transform: scale(0.75);
             transform: scale(0.75); }
   .allow-equals .allow-equals__tooltip-info-balloon-icon {
-    top: 1px;
-    left: -405px; }
+    left: -408px;
+    top: -3px; }
 
 /** @define calendar */
 .calendar {
@@ -3410,8 +3524,10 @@ html {
       transition: none; }
     .calendar__cell--today {
       font-weight: 400; }
-      .calendar__cell--today-duration {
-        background: #999cac; }
+      .theme--light .calendar__cell--today-duration {
+        background: #999cac !important; }
+      .theme--dark .calendar__cell--today-duration {
+        background: #2a3052 !important; }
       .calendar__cell--today:hover:not(.calendar__cell--disabled):not(.calendar__cell--active) {
         background: #f4f4f6;
         border: 1px solid #999cac; }
@@ -3427,6 +3543,7 @@ html {
           position: absolute;
           content: '';
           width: 100%;
+          top: 0;
           right: 50%;
           z-index: -1;
           height: 100%;
@@ -3505,6 +3622,19 @@ html {
     .checkbox__box--active {
       border: none;
       background-color: #ff9933; }
+      .checkbox__box--active:after {
+        font-size: 1em;
+        color: #ffffff;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-align: left;
+        line-height: unset;
+        content: 'L';
+        -webkit-transform: scaleX(-1) rotate(-40deg);
+                transform: scaleX(-1) rotate(-40deg);
+        position: absolute;
+        margin-left: 0.25em;
+        margin-top: -0.2em; }
 
 /** @define contracts-type-dialog; */
 .contracts-type-dialog {
@@ -3527,7 +3657,7 @@ html {
     position: absolute;
     width: 290px;
     right: calc(100% + 10px);
-    top: -55px;
+    top: -70px;
     display: grid;
     grid-auto-columns: 1fr;
     z-index: 2;
@@ -3559,6 +3689,8 @@ html {
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  padding: 0.8em;
+  padding-bottom: 0.6em;
   color: rgba(0, 0, 0, 0.8); }
   .contract-type-widget__display {
     cursor: pointer;
@@ -3575,21 +3707,27 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1em;
     /* postcss-bem-linter: ignore */ }
     .contract-type-widget__display span[name=contract_type] {
-      font-size: 1.2em;
+      font-size: 1.4em;
       color: rgba(0, 0, 0, 0.8);
       font-weight: 400;
       text-transform: capitalize;
       text-align: left;
-      line-height: 1.25;
+      line-height: 1.5;
       vertical-align: middle; }
+      .theme--light .contract-type-widget__display span[name=contract_type] {
+        color: #000000 !important; }
+      .theme--dark .contract-type-widget__display span[name=contract_type] {
+        color: #ffffff !important; }
     .contract-type-widget__display:hover, .contract-type-widget__display:focus {
       border-color: #2a3052;
       outline: none; }
     .contract-type-widget__display--clicked {
       border-color: #2a3052; }
+      .contract-type-widget__display--clicked .contract-type-widget__select-arrow {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg); }
   .contract-type-widget__select-arrow {
     display: inline-block;
     font-style: normal;
@@ -3599,15 +3737,15 @@ html {
     text-rendering: optimizeLegibility;
     position: absolute;
     pointer-events: none;
-    top: 35%;
-    right: 0.8em;
+    top: 40%;
+    left: 0.6em;
     line-height: 1;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
     -webkit-transform-origin: 45% 45;
             transform-origin: 45% 45;
     color: rgba(0, 0, 0, 0.04); }
@@ -3644,7 +3782,11 @@ html {
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    margin-bottom: 0.8em; }
+    margin-bottom: 0.6em; }
+    .theme--light .contract-type-list__label {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .contract-type-list__label {
+      color: #7f8397; }
   .contract-type-list:last-child {
     padding-bottom: 1.6em; }
   .contract-type-list__contracts-wrapper:first-child {
@@ -3683,9 +3825,9 @@ html {
   transition: transform 0.3s opacity 0.3s;
   transition: transform 0.3s opacity 0.3s, -webkit-transform 0.3s opacity 0.3s;
   background-color: #ffffff; }
-  .contract-type-item:hover:not(.contract-type-item--selected) {
+  .contract-type-item:hover {
     background-color: rgba(0, 0, 0, 0.04); }
-    .contract-type-item:hover:not(.contract-type-item--selected) .contract-type-item__icon {
+    .contract-type-item:hover .contract-type-item__icon {
       display: block; }
   .contract-type-item__title {
     font-size: 1.4em;
@@ -3703,12 +3845,29 @@ html {
     /* postcss-bem-linter: ignore */ }
     .contract-type-item__icon svg {
       pointer-events: none; }
+      .theme--light .contract-type-item__icon svg .color1-fill {
+        fill: rgba(0, 0, 0, 0.8) !important; }
+      .theme--dark .contract-type-item__icon svg .color1-fill {
+        fill: #7f8397 !important; }
   .contract-type-item--selected {
-    background: #999cac;
     /* postcss-bem-linter: ignore */ }
+    .theme--light .contract-type-item--selected {
+      color: #ffffff;
+      background: #999cac; }
+    .theme--dark .contract-type-item--selected {
+      color: #ffffff;
+      background: #2a3052; }
     .contract-type-item--selected span {
       font-weight: bold;
       color: #ffffff; }
+    .contract-type-item--selected .contract-type-item__icon {
+      /* postcss-bem-linter: ignore */ }
+      .contract-type-item--selected .contract-type-item__icon svg {
+        pointer-events: none; }
+        .theme--light .contract-type-item--selected .contract-type-item__icon svg .color1-fill {
+          fill: #ffffff !important; }
+        .theme--dark .contract-type-item--selected .contract-type-item__icon svg .color1-fill {
+          fill: #ffffff !important; }
   .contract-type-item__icon-wrapper {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -3800,6 +3959,7 @@ html {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0.8em;
+    /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
     .trade-type-info-dialog__header .title {
       font-size: 1.4em;
@@ -3928,7 +4088,18 @@ html {
   width: 100%;
   max-width: 280px; }
   .datepicker__input-field {
-    border-radius: 4px; }
+    border-radius: 4px;
+    margin-top: 0.8em; }
+  .theme--light .datepicker__input {
+    background: #f4f4f6;
+    color: #000000; }
+    .theme--light .datepicker__input:hover, .theme--light .datepicker__input:focus, .theme--light .datepicker__input:active {
+      border-color: #000000; }
+  .theme--dark .datepicker__input {
+    background: #191c31;
+    color: #ffffff; }
+    .theme--dark .datepicker__input:hover, .theme--dark .datepicker__input:focus, .theme--dark .datepicker__input:active {
+      border-color: #ffffff; }
   .datepicker__input::-ms-clear {
     display: none; }
   .datepicker__icon {
@@ -3940,7 +4111,7 @@ html {
     .datepicker__icon--is-hidden {
       opacity: 0; }
     .datepicker__icon--with-label {
-      top: 40px !important; }
+      top: 35px !important; }
   .datepicker__picker {
     position: absolute;
     top: 7px;
@@ -4238,9 +4409,9 @@ html {
     .number-selector__selection:hover:not(.number-selector__selection--selected) {
       cursor: pointer; }
       .theme--light .number-selector__selection:hover:not(.number-selector__selection--selected) {
-        background-color: rgba(0, 0, 0, 0.04); }
+        background-color: rgba(153, 156, 172, 0.32); }
       .theme--dark .number-selector__selection:hover:not(.number-selector__selection--selected) {
-        background-color: #191c31; }
+        background-color: #202641; }
     .number-selector__selection:last-child {
       margin-right: 0; }
 
@@ -4490,6 +4661,8 @@ html {
     background: #e31c4b; }
   .range-slider__error .range-slider__track[type=range]::-moz-range-thumb {
     background: #e31c4b; }
+  .range-slider__error .range-slider__track[type=range]::-ms-thumb {
+    background: #e31c4b; }
   .range-slider__error .range-slider__line {
     background: #e31c4b !important; }
   .range-slider__error .range-slider__ticks-step--marked {
@@ -4503,12 +4676,15 @@ html {
     width: 100% !important;
     height: 2px !important;
     border-radius: 5px;
-    background: #ffffff !important;
     outline: none;
     border: 0;
     padding: 0;
     margin: 0;
     cursor: pointer; }
+    .theme--light .range-slider__track {
+      background: #ffffff !important; }
+    .theme--dark .range-slider__track {
+      background: #101320 !important; }
     .range-slider__track::-webkit-slider-thumb {
       -webkit-appearance: none;
               appearance: none;
@@ -4522,8 +4698,11 @@ html {
       transition: box-shadow 0.5s;
       transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
       -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-      background: #999cac; }
+              box-shadow: 0 0 0 0px rgba(0, 0, 0, 0); }
+      .theme--light .range-slider__track::-webkit-slider-thumb {
+        background: #999cac !important; }
+      .theme--dark .range-slider__track::-webkit-slider-thumb {
+        background: #4f60ae !important; }
     .range-slider__track::-moz-range-thumb {
       -moz-appearance: none;
            appearance: none;
@@ -4536,8 +4715,11 @@ html {
       transition: -webkit-box-shadow 0.5s;
       transition: box-shadow 0.5s;
       transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-      background: #999cac; }
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0); }
+      .theme--light .range-slider__track::-moz-range-thumb {
+        background: #999cac !important; }
+      .theme--dark .range-slider__track::-moz-range-thumb {
+        background: #4f60ae !important; }
     .range-slider__track::-ms-thumb {
       appearance: none;
       width: 1em;
@@ -4549,18 +4731,25 @@ html {
       transition: -webkit-box-shadow 0.5s;
       transition: box-shadow 0.5s;
       transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-      background: #999cac; }
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0); }
+      .theme--light .range-slider__track::-ms-thumb {
+        background: #999cac !important; }
+      .theme--dark .range-slider__track::-ms-thumb {
+        background: #4f60ae !important; }
     .range-slider__track:hover, .range-slider__track:focus, .range-slider__track:active {
       border: 0;
       outline: none; }
     .range-slider__track:active, .range-slider__track:focus {
-      -webkit-box-shadow: none;
-              box-shadow: none; }
-    .range-slider__track::-moz-range-track {
-      background: #ffffff; }
-    .range-slider__track::-ms-track {
-      background: #ffffff; }
+      -webkit-box-shadow: none !important;
+              box-shadow: none !important; }
+    .theme--light .range-slider__track::-moz-range-track {
+      background: #ffffff !important; }
+    .theme--dark .range-slider__track::-moz-range-track {
+      background: #101320 !important; }
+    .theme--light .range-slider__track::-ms-track {
+      background: #ffffff !important; }
+    .theme--dark .range-slider__track::-ms-track {
+      background: #101320 !important; }
   .range-slider__ticks {
     width: 100%;
     position: absolute;
@@ -4576,28 +4765,52 @@ html {
     .range-slider__ticks-step {
       height: 2px;
       width: 2px;
-      border: 3px solid #ffffff;
-      background: #ffffff;
       border-radius: 50%;
       margin: 0 3px;
-      -webkit-transition: background 0.5s, border-color 0.5s, -webkit-box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, -webkit-box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+      -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.3s;
+      transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.3s;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
       -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
               box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
       cursor: pointer; }
-      .range-slider__ticks-step--active, .range-slider__ticks-step--marked {
+      .theme--light .range-slider__ticks-step {
+        border: 3px solid #ffffff;
+        background: #ffffff; }
+      .theme--dark .range-slider__ticks-step {
+        border: 3px solid #101320;
+        background: #101320; }
+      .theme--light .range-slider__ticks-step--active, .theme--light .range-slider__ticks-step--marked {
         background: #999cac;
         border-color: #999cac; }
+      .theme--dark .range-slider__ticks-step--active, .theme--dark .range-slider__ticks-step--marked {
+        background: #4f60ae;
+        border-color: #4f60ae; }
       .range-slider__ticks-step--active {
         visibility: hidden;
         pointer-events: none; }
-      .range-slider__ticks-step:hover:not(.range-slider__ticks-step--active) {
+        .range-slider__ticks-step--active:after {
+          content: '';
+          width: 1em;
+          height: 1em;
+          position: absolute;
+          display: block;
+          top: 0;
+          border-radius: 50%; }
+          .theme--light .range-slider__ticks-step--active:after {
+            background: #999cac; }
+          .theme--dark .range-slider__ticks-step--active:after {
+            background: #4f60ae; }
+      .theme--light .range-slider__ticks-step:hover:not(.range-slider__ticks-step--active) {
         background: #999cac;
         border-color: #999cac;
-        -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
-                box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3); }
+        -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.16);
+                box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.16); }
+      .theme--dark .range-slider__ticks-step:hover:not(.range-slider__ticks-step--active) {
+        background: #4f60ae;
+        border-color: #4f60ae;
+        -webkit-box-shadow: 0 0 0 4px rgba(127, 131, 151, 0.3);
+                box-shadow: 0 0 0 4px rgba(127, 131, 151, 0.3); }
       .range-slider__ticks-step:first-child {
         margin-left: 0; }
       .range-slider__ticks-step:last-child {
@@ -4607,20 +4820,37 @@ html {
     top: 0;
     left: 0;
     height: 2px;
-    background: #999cac;
     pointer-events: none;
     -webkit-transition: width 0.5s;
     transition: width 0.5s; }
+    .theme--light .range-slider__line {
+      background: #999cac; }
+    .theme--dark .range-slider__line {
+      background: #4f60ae; }
   .range-slider__caption {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 4px 0;
+    padding: 8px 0 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     line-height: 1.5;
-    font-size: 1.2em; }
+    font-size: 1.4em;
+    /* postcss-bem-linter: ignore */
+    /* postcss-bem-linter: ignore */ }
+    .range-slider__caption--first, .range-slider__caption--last {
+      font-weight: normal !important; }
+      .theme--light .range-slider__caption--first, .theme--light .range-slider__caption--last {
+        color: rgba(0, 0, 0, 0.8) !important; }
+      .theme--dark .range-slider__caption--first, .theme--dark .range-slider__caption--last {
+        color: #7f8397 !important; }
+    .range-slider__caption span {
+      font-weight: bold; }
+      .theme--light .range-slider__caption span {
+        color: #000000; }
+      .theme--dark .range-slider__caption span {
+        color: #ffffff; }
 
 /** @define settings-dialog */
 .settings-dialog {
@@ -4989,7 +5219,7 @@ html {
   position: relative;
   cursor: pointer; }
   .switch-button--toggled {
-    background: #4bbfab; }
+    background: #39b19d; }
     .switch-button--toggled:after {
       left: 17px !important; }
   .switch-button:after {
@@ -5164,7 +5394,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.56);
+  background-color: rgba(11, 14, 24, 0.3);
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
   .full-page-modal__dialog {
@@ -5186,9 +5416,12 @@ html {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: #ffffff;
     -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16); }
+    .theme--light .full-page-modal__dialog {
+      background-color: #ffffff; }
+    .theme--dark .full-page-modal__dialog {
+      background-color: #191c31; }
   .full-page-modal__header {
     font-size: 1.6em;
     color: rgba(0, 0, 0, 0.8);
@@ -5197,15 +5430,23 @@ html {
     text-align: left;
     line-height: 1.75;
     margin-bottom: 10px; }
+    .theme--light .full-page-modal__header {
+      color: #000000; }
+    .theme--dark .full-page-modal__header {
+      color: #ffffff; }
   .full-page-modal__content {
-    max-width: 448px;
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
     text-transform: unset;
     text-align: left;
     line-height: 1.5;
-    margin-bottom: 22.8571428571px; }
+    margin-bottom: 22.8571428571px;
+    max-width: 448px; }
+    .theme--light .full-page-modal__content {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .full-page-modal__content {
+      color: #7f8397; }
   .full-page-modal__footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5436,20 +5677,20 @@ html {
             @extend %inline-icon.active;
         }
 */
-.theme--light .calendar__icon {
+.theme--light .advanced-simple-toggle__icon, .theme--light .footer__icon, .theme--light .positions-drawer__icon-close svg, .positions-drawer__icon-close .theme--light svg, .theme--light .result-details__toggle .result-details__select-arrow, .result-details__toggle .theme--light .result-details__select-arrow, .theme--light .dropdown__select-arrow, .theme--light .input-wrapper__icon, .theme--light .time-picker__icon, .theme--light .acc-info__select-arrow, .theme--light .acc-switcher__logout-icon, .theme--light .calendar__icon, .theme--light .contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg, .trade-type-info-dialog__header .theme--light svg, .theme--light .trade-type-info-navigation__icon, .theme--light .datepicker__icon, .theme--light .portfolio-empty__icon {
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
-  .theme--light .calendar__icon .color1-fill {
+  .theme--light .advanced-simple-toggle__icon .color1-fill, .theme--light .footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg .color1-fill, .positions-drawer__icon-close .theme--light svg .color1-fill, .theme--light .result-details__toggle .result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .result-details__select-arrow .color1-fill, .theme--light .dropdown__select-arrow .color1-fill, .theme--light .input-wrapper__icon .color1-fill, .theme--light .time-picker__icon .color1-fill, .theme--light .acc-info__select-arrow .color1-fill, .theme--light .acc-switcher__logout-icon .color1-fill, .theme--light .calendar__icon .color1-fill, .theme--light .contract-type-widget__select-arrow .color1-fill, .theme--light .trade-type-info-dialog__header svg .color1-fill, .trade-type-info-dialog__header .theme--light svg .color1-fill, .theme--light .trade-type-info-navigation__icon .color1-fill, .theme--light .datepicker__icon .color1-fill, .theme--light .portfolio-empty__icon .color1-fill {
     fill: rgba(0, 0, 0, 0.8); }
-  .theme--light .calendar__icon .color1-stroke {
+  .theme--light .advanced-simple-toggle__icon .color1-stroke, .theme--light .footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg .color1-stroke, .positions-drawer__icon-close .theme--light svg .color1-stroke, .theme--light .result-details__toggle .result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .result-details__select-arrow .color1-stroke, .theme--light .dropdown__select-arrow .color1-stroke, .theme--light .input-wrapper__icon .color1-stroke, .theme--light .time-picker__icon .color1-stroke, .theme--light .acc-info__select-arrow .color1-stroke, .theme--light .acc-switcher__logout-icon .color1-stroke, .theme--light .calendar__icon .color1-stroke, .theme--light .contract-type-widget__select-arrow .color1-stroke, .theme--light .trade-type-info-dialog__header svg .color1-stroke, .trade-type-info-dialog__header .theme--light svg .color1-stroke, .theme--light .trade-type-info-navigation__icon .color1-stroke, .theme--light .datepicker__icon .color1-stroke, .theme--light .portfolio-empty__icon .color1-stroke {
     stroke: rgba(0, 0, 0, 0.8); }
-  .theme--light .calendar__icon .color2-fill {
+  .theme--light .advanced-simple-toggle__icon .color2-fill, .theme--light .footer__icon .color2-fill, .theme--light .positions-drawer__icon-close svg .color2-fill, .positions-drawer__icon-close .theme--light svg .color2-fill, .theme--light .result-details__toggle .result-details__select-arrow .color2-fill, .result-details__toggle .theme--light .result-details__select-arrow .color2-fill, .theme--light .dropdown__select-arrow .color2-fill, .theme--light .input-wrapper__icon .color2-fill, .theme--light .time-picker__icon .color2-fill, .theme--light .acc-info__select-arrow .color2-fill, .theme--light .acc-switcher__logout-icon .color2-fill, .theme--light .calendar__icon .color2-fill, .theme--light .contract-type-widget__select-arrow .color2-fill, .theme--light .trade-type-info-dialog__header svg .color2-fill, .trade-type-info-dialog__header .theme--light svg .color2-fill, .theme--light .trade-type-info-navigation__icon .color2-fill, .theme--light .datepicker__icon .color2-fill, .theme--light .portfolio-empty__icon .color2-fill {
     fill: none; }
-  .theme--light .calendar__icon .color2-stroke {
+  .theme--light .advanced-simple-toggle__icon .color2-stroke, .theme--light .footer__icon .color2-stroke, .theme--light .positions-drawer__icon-close svg .color2-stroke, .positions-drawer__icon-close .theme--light svg .color2-stroke, .theme--light .result-details__toggle .result-details__select-arrow .color2-stroke, .result-details__toggle .theme--light .result-details__select-arrow .color2-stroke, .theme--light .dropdown__select-arrow .color2-stroke, .theme--light .input-wrapper__icon .color2-stroke, .theme--light .time-picker__icon .color2-stroke, .theme--light .acc-info__select-arrow .color2-stroke, .theme--light .acc-switcher__logout-icon .color2-stroke, .theme--light .calendar__icon .color2-stroke, .theme--light .contract-type-widget__select-arrow .color2-stroke, .theme--light .trade-type-info-dialog__header svg .color2-stroke, .trade-type-info-dialog__header .theme--light svg .color2-stroke, .theme--light .trade-type-info-navigation__icon .color2-stroke, .theme--light .datepicker__icon .color2-stroke, .theme--light .portfolio-empty__icon .color2-stroke {
     stroke: none; }
-  .theme--light .header__menu-link--active .header__icon, .header__menu-link--active .theme--light .header__icon, .theme--light .footer__link:hover .footer__icon, .footer__link:hover .theme--light .footer__icon, .theme--light .ic-settings--active .ic-settings__icon, .ic-settings--active .theme--light .ic-settings__icon, .theme--light .active.calendar__icon {
+  .theme--light .active.advanced-simple-toggle__icon, .theme--light .header__menu-link--active .header__icon, .header__menu-link--active .theme--light .header__icon, .theme--light .footer__link:hover .footer__icon, .footer__link:hover .theme--light .footer__icon, .theme--light .active.footer__icon, .theme--light .ic-settings--active .ic-settings__icon, .ic-settings--active .theme--light .ic-settings__icon, .theme--light .positions-drawer__icon-close svg.active, .positions-drawer__icon-close .theme--light svg.active, .theme--light .result-details__toggle .active.result-details__select-arrow, .result-details__toggle .theme--light .active.result-details__select-arrow, .theme--light .active.dropdown__select-arrow, .theme--light .active.input-wrapper__icon, .theme--light .active.time-picker__icon, .theme--light .active.acc-info__select-arrow, .theme--light .active.acc-switcher__logout-icon, .theme--light .active.calendar__icon, .theme--light .active.contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg.active, .trade-type-info-dialog__header .theme--light svg.active, .theme--light .active.trade-type-info-navigation__icon, .theme--light .active.datepicker__icon, .theme--light .active.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
@@ -5458,64 +5699,64 @@ html {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--light .header__menu-link--active .header__icon .color1-fill, .header__menu-link--active .theme--light .header__icon .color1-fill, .theme--light .footer__link:hover .footer__icon .color1-fill, .footer__link:hover .theme--light .footer__icon .color1-fill, .theme--light .ic-settings--active .ic-settings__icon .color1-fill, .ic-settings--active .theme--light .ic-settings__icon .color1-fill, .theme--light .active.calendar__icon .color1-fill {
+    .theme--light .active.advanced-simple-toggle__icon .color1-fill, .theme--light .header__menu-link--active .header__icon .color1-fill, .header__menu-link--active .theme--light .header__icon .color1-fill, .theme--light .footer__link:hover .footer__icon .color1-fill, .footer__link:hover .theme--light .footer__icon .color1-fill, .theme--light .active.footer__icon .color1-fill, .theme--light .ic-settings--active .ic-settings__icon .color1-fill, .ic-settings--active .theme--light .ic-settings__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.active .color1-fill, .positions-drawer__icon-close .theme--light svg.active .color1-fill, .theme--light .result-details__toggle .active.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .active.result-details__select-arrow .color1-fill, .theme--light .active.dropdown__select-arrow .color1-fill, .theme--light .active.input-wrapper__icon .color1-fill, .theme--light .active.time-picker__icon .color1-fill, .theme--light .active.acc-info__select-arrow .color1-fill, .theme--light .active.acc-switcher__logout-icon .color1-fill, .theme--light .active.calendar__icon .color1-fill, .theme--light .active.contract-type-widget__select-arrow .color1-fill, .theme--light .trade-type-info-dialog__header svg.active .color1-fill, .trade-type-info-dialog__header .theme--light svg.active .color1-fill, .theme--light .active.trade-type-info-navigation__icon .color1-fill, .theme--light .active.datepicker__icon .color1-fill, .theme--light .active.portfolio-empty__icon .color1-fill {
       fill: #ffffff; }
-    .theme--light .header__menu-link--active .header__icon .color1-stroke, .header__menu-link--active .theme--light .header__icon .color1-stroke, .theme--light .footer__link:hover .footer__icon .color1-stroke, .footer__link:hover .theme--light .footer__icon .color1-stroke, .theme--light .ic-settings--active .ic-settings__icon .color1-stroke, .ic-settings--active .theme--light .ic-settings__icon .color1-stroke, .theme--light .active.calendar__icon .color1-stroke {
+    .theme--light .active.advanced-simple-toggle__icon .color1-stroke, .theme--light .header__menu-link--active .header__icon .color1-stroke, .header__menu-link--active .theme--light .header__icon .color1-stroke, .theme--light .footer__link:hover .footer__icon .color1-stroke, .footer__link:hover .theme--light .footer__icon .color1-stroke, .theme--light .active.footer__icon .color1-stroke, .theme--light .ic-settings--active .ic-settings__icon .color1-stroke, .ic-settings--active .theme--light .ic-settings__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.active .color1-stroke, .positions-drawer__icon-close .theme--light svg.active .color1-stroke, .theme--light .result-details__toggle .active.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .active.result-details__select-arrow .color1-stroke, .theme--light .active.dropdown__select-arrow .color1-stroke, .theme--light .active.input-wrapper__icon .color1-stroke, .theme--light .active.time-picker__icon .color1-stroke, .theme--light .active.acc-info__select-arrow .color1-stroke, .theme--light .active.acc-switcher__logout-icon .color1-stroke, .theme--light .active.calendar__icon .color1-stroke, .theme--light .active.contract-type-widget__select-arrow .color1-stroke, .theme--light .trade-type-info-dialog__header svg.active .color1-stroke, .trade-type-info-dialog__header .theme--light svg.active .color1-stroke, .theme--light .active.trade-type-info-navigation__icon .color1-stroke, .theme--light .active.datepicker__icon .color1-stroke, .theme--light .active.portfolio-empty__icon .color1-stroke {
       stroke: #ffffff; }
-    .theme--light .header__menu-link--active .header__icon .color2-fill, .header__menu-link--active .theme--light .header__icon .color2-fill, .theme--light .footer__link:hover .footer__icon .color2-fill, .footer__link:hover .theme--light .footer__icon .color2-fill, .theme--light .ic-settings--active .ic-settings__icon .color2-fill, .ic-settings--active .theme--light .ic-settings__icon .color2-fill, .theme--light .active.calendar__icon .color2-fill {
+    .theme--light .active.advanced-simple-toggle__icon .color2-fill, .theme--light .header__menu-link--active .header__icon .color2-fill, .header__menu-link--active .theme--light .header__icon .color2-fill, .theme--light .footer__link:hover .footer__icon .color2-fill, .footer__link:hover .theme--light .footer__icon .color2-fill, .theme--light .active.footer__icon .color2-fill, .theme--light .ic-settings--active .ic-settings__icon .color2-fill, .ic-settings--active .theme--light .ic-settings__icon .color2-fill, .theme--light .positions-drawer__icon-close svg.active .color2-fill, .positions-drawer__icon-close .theme--light svg.active .color2-fill, .theme--light .result-details__toggle .active.result-details__select-arrow .color2-fill, .result-details__toggle .theme--light .active.result-details__select-arrow .color2-fill, .theme--light .active.dropdown__select-arrow .color2-fill, .theme--light .active.input-wrapper__icon .color2-fill, .theme--light .active.time-picker__icon .color2-fill, .theme--light .active.acc-info__select-arrow .color2-fill, .theme--light .active.acc-switcher__logout-icon .color2-fill, .theme--light .active.calendar__icon .color2-fill, .theme--light .active.contract-type-widget__select-arrow .color2-fill, .theme--light .trade-type-info-dialog__header svg.active .color2-fill, .trade-type-info-dialog__header .theme--light svg.active .color2-fill, .theme--light .active.trade-type-info-navigation__icon .color2-fill, .theme--light .active.datepicker__icon .color2-fill, .theme--light .active.portfolio-empty__icon .color2-fill {
       fill: rgba(0, 0, 0, 0.8); }
-    .theme--light .header__menu-link--active .header__icon .color2-stroke, .header__menu-link--active .theme--light .header__icon .color2-stroke, .theme--light .footer__link:hover .footer__icon .color2-stroke, .footer__link:hover .theme--light .footer__icon .color2-stroke, .theme--light .ic-settings--active .ic-settings__icon .color2-stroke, .ic-settings--active .theme--light .ic-settings__icon .color2-stroke, .theme--light .active.calendar__icon .color2-stroke {
+    .theme--light .active.advanced-simple-toggle__icon .color2-stroke, .theme--light .header__menu-link--active .header__icon .color2-stroke, .header__menu-link--active .theme--light .header__icon .color2-stroke, .theme--light .footer__link:hover .footer__icon .color2-stroke, .footer__link:hover .theme--light .footer__icon .color2-stroke, .theme--light .active.footer__icon .color2-stroke, .theme--light .ic-settings--active .ic-settings__icon .color2-stroke, .ic-settings--active .theme--light .ic-settings__icon .color2-stroke, .theme--light .positions-drawer__icon-close svg.active .color2-stroke, .positions-drawer__icon-close .theme--light svg.active .color2-stroke, .theme--light .result-details__toggle .active.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--light .active.result-details__select-arrow .color2-stroke, .theme--light .active.dropdown__select-arrow .color2-stroke, .theme--light .active.input-wrapper__icon .color2-stroke, .theme--light .active.time-picker__icon .color2-stroke, .theme--light .active.acc-info__select-arrow .color2-stroke, .theme--light .active.acc-switcher__logout-icon .color2-stroke, .theme--light .active.calendar__icon .color2-stroke, .theme--light .active.contract-type-widget__select-arrow .color2-stroke, .theme--light .trade-type-info-dialog__header svg.active .color2-stroke, .trade-type-info-dialog__header .theme--light svg.active .color2-stroke, .theme--light .active.trade-type-info-navigation__icon .color2-stroke, .theme--light .active.datepicker__icon .color2-stroke, .theme--light .active.portfolio-empty__icon .color2-stroke {
       stroke: rgba(0, 0, 0, 0.8); }
-    .theme--light .header__menu-link--active .header__icon .color3-fill, .header__menu-link--active .theme--light .header__icon .color3-fill, .theme--light .footer__link:hover .footer__icon .color3-fill, .footer__link:hover .theme--light .footer__icon .color3-fill, .theme--light .ic-settings--active .ic-settings__icon .color3-fill, .ic-settings--active .theme--light .ic-settings__icon .color3-fill, .theme--light .active.calendar__icon .color3-fill {
+    .theme--light .active.advanced-simple-toggle__icon .color3-fill, .theme--light .header__menu-link--active .header__icon .color3-fill, .header__menu-link--active .theme--light .header__icon .color3-fill, .theme--light .footer__link:hover .footer__icon .color3-fill, .footer__link:hover .theme--light .footer__icon .color3-fill, .theme--light .active.footer__icon .color3-fill, .theme--light .ic-settings--active .ic-settings__icon .color3-fill, .ic-settings--active .theme--light .ic-settings__icon .color3-fill, .theme--light .positions-drawer__icon-close svg.active .color3-fill, .positions-drawer__icon-close .theme--light svg.active .color3-fill, .theme--light .result-details__toggle .active.result-details__select-arrow .color3-fill, .result-details__toggle .theme--light .active.result-details__select-arrow .color3-fill, .theme--light .active.dropdown__select-arrow .color3-fill, .theme--light .active.input-wrapper__icon .color3-fill, .theme--light .active.time-picker__icon .color3-fill, .theme--light .active.acc-info__select-arrow .color3-fill, .theme--light .active.acc-switcher__logout-icon .color3-fill, .theme--light .active.calendar__icon .color3-fill, .theme--light .active.contract-type-widget__select-arrow .color3-fill, .theme--light .trade-type-info-dialog__header svg.active .color3-fill, .trade-type-info-dialog__header .theme--light svg.active .color3-fill, .theme--light .active.trade-type-info-navigation__icon .color3-fill, .theme--light .active.datepicker__icon .color3-fill, .theme--light .active.portfolio-empty__icon .color3-fill {
       fill: rgba(0, 0, 0, 0.8); }
-    .theme--light .header__menu-link--active .header__icon .color3-stroke, .header__menu-link--active .theme--light .header__icon .color3-stroke, .theme--light .footer__link:hover .footer__icon .color3-stroke, .footer__link:hover .theme--light .footer__icon .color3-stroke, .theme--light .ic-settings--active .ic-settings__icon .color3-stroke, .ic-settings--active .theme--light .ic-settings__icon .color3-stroke, .theme--light .active.calendar__icon .color3-stroke {
+    .theme--light .active.advanced-simple-toggle__icon .color3-stroke, .theme--light .header__menu-link--active .header__icon .color3-stroke, .header__menu-link--active .theme--light .header__icon .color3-stroke, .theme--light .footer__link:hover .footer__icon .color3-stroke, .footer__link:hover .theme--light .footer__icon .color3-stroke, .theme--light .active.footer__icon .color3-stroke, .theme--light .ic-settings--active .ic-settings__icon .color3-stroke, .ic-settings--active .theme--light .ic-settings__icon .color3-stroke, .theme--light .positions-drawer__icon-close svg.active .color3-stroke, .positions-drawer__icon-close .theme--light svg.active .color3-stroke, .theme--light .result-details__toggle .active.result-details__select-arrow .color3-stroke, .result-details__toggle .theme--light .active.result-details__select-arrow .color3-stroke, .theme--light .active.dropdown__select-arrow .color3-stroke, .theme--light .active.input-wrapper__icon .color3-stroke, .theme--light .active.time-picker__icon .color3-stroke, .theme--light .active.acc-info__select-arrow .color3-stroke, .theme--light .active.acc-switcher__logout-icon .color3-stroke, .theme--light .active.calendar__icon .color3-stroke, .theme--light .active.contract-type-widget__select-arrow .color3-stroke, .theme--light .trade-type-info-dialog__header svg.active .color3-stroke, .trade-type-info-dialog__header .theme--light svg.active .color3-stroke, .theme--light .active.trade-type-info-navigation__icon .color3-stroke, .theme--light .active.datepicker__icon .color3-stroke, .theme--light .active.portfolio-empty__icon .color3-stroke {
       stroke: rgba(0, 0, 0, 0.8); }
-    .theme--light .header__menu-link--active .header__icon .color4-fill, .header__menu-link--active .theme--light .header__icon .color4-fill, .theme--light .footer__link:hover .footer__icon .color4-fill, .footer__link:hover .theme--light .footer__icon .color4-fill, .theme--light .ic-settings--active .ic-settings__icon .color4-fill, .ic-settings--active .theme--light .ic-settings__icon .color4-fill, .theme--light .active.calendar__icon .color4-fill {
+    .theme--light .active.advanced-simple-toggle__icon .color4-fill, .theme--light .header__menu-link--active .header__icon .color4-fill, .header__menu-link--active .theme--light .header__icon .color4-fill, .theme--light .footer__link:hover .footer__icon .color4-fill, .footer__link:hover .theme--light .footer__icon .color4-fill, .theme--light .active.footer__icon .color4-fill, .theme--light .ic-settings--active .ic-settings__icon .color4-fill, .ic-settings--active .theme--light .ic-settings__icon .color4-fill, .theme--light .positions-drawer__icon-close svg.active .color4-fill, .positions-drawer__icon-close .theme--light svg.active .color4-fill, .theme--light .result-details__toggle .active.result-details__select-arrow .color4-fill, .result-details__toggle .theme--light .active.result-details__select-arrow .color4-fill, .theme--light .active.dropdown__select-arrow .color4-fill, .theme--light .active.input-wrapper__icon .color4-fill, .theme--light .active.time-picker__icon .color4-fill, .theme--light .active.acc-info__select-arrow .color4-fill, .theme--light .active.acc-switcher__logout-icon .color4-fill, .theme--light .active.calendar__icon .color4-fill, .theme--light .active.contract-type-widget__select-arrow .color4-fill, .theme--light .trade-type-info-dialog__header svg.active .color4-fill, .trade-type-info-dialog__header .theme--light svg.active .color4-fill, .theme--light .active.trade-type-info-navigation__icon .color4-fill, .theme--light .active.datepicker__icon .color4-fill, .theme--light .active.portfolio-empty__icon .color4-fill {
       fill: none; }
-    .theme--light .header__menu-link--active .header__icon .color4-stroke, .header__menu-link--active .theme--light .header__icon .color4-stroke, .theme--light .footer__link:hover .footer__icon .color4-stroke, .footer__link:hover .theme--light .footer__icon .color4-stroke, .theme--light .ic-settings--active .ic-settings__icon .color4-stroke, .ic-settings--active .theme--light .ic-settings__icon .color4-stroke, .theme--light .active.calendar__icon .color4-stroke {
+    .theme--light .active.advanced-simple-toggle__icon .color4-stroke, .theme--light .header__menu-link--active .header__icon .color4-stroke, .header__menu-link--active .theme--light .header__icon .color4-stroke, .theme--light .footer__link:hover .footer__icon .color4-stroke, .footer__link:hover .theme--light .footer__icon .color4-stroke, .theme--light .active.footer__icon .color4-stroke, .theme--light .ic-settings--active .ic-settings__icon .color4-stroke, .ic-settings--active .theme--light .ic-settings__icon .color4-stroke, .theme--light .positions-drawer__icon-close svg.active .color4-stroke, .positions-drawer__icon-close .theme--light svg.active .color4-stroke, .theme--light .result-details__toggle .active.result-details__select-arrow .color4-stroke, .result-details__toggle .theme--light .active.result-details__select-arrow .color4-stroke, .theme--light .active.dropdown__select-arrow .color4-stroke, .theme--light .active.input-wrapper__icon .color4-stroke, .theme--light .active.time-picker__icon .color4-stroke, .theme--light .active.acc-info__select-arrow .color4-stroke, .theme--light .active.acc-switcher__logout-icon .color4-stroke, .theme--light .active.calendar__icon .color4-stroke, .theme--light .active.contract-type-widget__select-arrow .color4-stroke, .theme--light .trade-type-info-dialog__header svg.active .color4-stroke, .trade-type-info-dialog__header .theme--light svg.active .color4-stroke, .theme--light .active.trade-type-info-navigation__icon .color4-stroke, .theme--light .active.datepicker__icon .color4-stroke, .theme--light .active.portfolio-empty__icon .color4-stroke {
       stroke: none; }
-  .theme--light .disabled.calendar__icon, .theme--light .calendar__nav--disabled .calendar__icon, .calendar__nav--disabled .theme--light .calendar__icon {
+  .theme--light .disabled.advanced-simple-toggle__icon, .theme--light .disabled.footer__icon, .theme--light .positions-drawer__icon-close svg.disabled, .positions-drawer__icon-close .theme--light svg.disabled, .theme--light .result-details__toggle .disabled.result-details__select-arrow, .result-details__toggle .theme--light .disabled.result-details__select-arrow, .theme--light .disabled.dropdown__select-arrow, .theme--light .disabled.input-wrapper__icon, .theme--light .disabled.time-picker__icon, .theme--light .disabled.acc-info__select-arrow, .theme--light .disabled.acc-switcher__logout-icon, .theme--light .allow-equals .allow-equals__tooltip-info, .allow-equals .theme--light .allow-equals__tooltip-info, .theme--light .disabled.calendar__icon, .theme--light .calendar__nav--disabled .calendar__icon, .calendar__nav--disabled .theme--light .calendar__icon, .theme--light .disabled.contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg.disabled, .trade-type-info-dialog__header .theme--light svg.disabled, .theme--light .disabled.trade-type-info-navigation__icon, .theme--light .disabled.datepicker__icon, .theme--light .disabled.portfolio-empty__icon, .theme--light .trade-container__price-tooltip-i {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--light .disabled.calendar__icon .color1-fill, .theme--light .calendar__nav--disabled .calendar__icon .color1-fill, .calendar__nav--disabled .theme--light .calendar__icon .color1-fill {
+    .theme--light .disabled.advanced-simple-toggle__icon .color1-fill, .theme--light .disabled.footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.disabled .color1-fill, .positions-drawer__icon-close .theme--light svg.disabled .color1-fill, .theme--light .result-details__toggle .disabled.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .disabled.result-details__select-arrow .color1-fill, .theme--light .disabled.dropdown__select-arrow .color1-fill, .theme--light .disabled.input-wrapper__icon .color1-fill, .theme--light .disabled.time-picker__icon .color1-fill, .theme--light .disabled.acc-info__select-arrow .color1-fill, .theme--light .disabled.acc-switcher__logout-icon .color1-fill, .theme--light .allow-equals .allow-equals__tooltip-info .color1-fill, .allow-equals .theme--light .allow-equals__tooltip-info .color1-fill, .theme--light .disabled.calendar__icon .color1-fill, .theme--light .calendar__nav--disabled .calendar__icon .color1-fill, .calendar__nav--disabled .theme--light .calendar__icon .color1-fill, .theme--light .disabled.contract-type-widget__select-arrow .color1-fill, .theme--light .trade-type-info-dialog__header svg.disabled .color1-fill, .trade-type-info-dialog__header .theme--light svg.disabled .color1-fill, .theme--light .disabled.trade-type-info-navigation__icon .color1-fill, .theme--light .disabled.datepicker__icon .color1-fill, .theme--light .disabled.portfolio-empty__icon .color1-fill, .theme--light .trade-container__price-tooltip-i .color1-fill {
       fill: rgba(0, 0, 0, 0.16); }
-    .theme--light .disabled.calendar__icon .color1-stroke, .theme--light .calendar__nav--disabled .calendar__icon .color1-stroke, .calendar__nav--disabled .theme--light .calendar__icon .color1-stroke {
+    .theme--light .disabled.advanced-simple-toggle__icon .color1-stroke, .theme--light .disabled.footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.disabled .color1-stroke, .positions-drawer__icon-close .theme--light svg.disabled .color1-stroke, .theme--light .result-details__toggle .disabled.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .disabled.result-details__select-arrow .color1-stroke, .theme--light .disabled.dropdown__select-arrow .color1-stroke, .theme--light .disabled.input-wrapper__icon .color1-stroke, .theme--light .disabled.time-picker__icon .color1-stroke, .theme--light .disabled.acc-info__select-arrow .color1-stroke, .theme--light .disabled.acc-switcher__logout-icon .color1-stroke, .theme--light .allow-equals .allow-equals__tooltip-info .color1-stroke, .allow-equals .theme--light .allow-equals__tooltip-info .color1-stroke, .theme--light .disabled.calendar__icon .color1-stroke, .theme--light .calendar__nav--disabled .calendar__icon .color1-stroke, .calendar__nav--disabled .theme--light .calendar__icon .color1-stroke, .theme--light .disabled.contract-type-widget__select-arrow .color1-stroke, .theme--light .trade-type-info-dialog__header svg.disabled .color1-stroke, .trade-type-info-dialog__header .theme--light svg.disabled .color1-stroke, .theme--light .disabled.trade-type-info-navigation__icon .color1-stroke, .theme--light .disabled.datepicker__icon .color1-stroke, .theme--light .disabled.portfolio-empty__icon .color1-stroke, .theme--light .trade-container__price-tooltip-i .color1-stroke {
       stroke: rgba(0, 0, 0, 0.16); }
-    .theme--light .disabled.calendar__icon .color2-fill, .theme--light .calendar__nav--disabled .calendar__icon .color2-fill, .calendar__nav--disabled .theme--light .calendar__icon .color2-fill {
+    .theme--light .disabled.advanced-simple-toggle__icon .color2-fill, .theme--light .disabled.footer__icon .color2-fill, .theme--light .positions-drawer__icon-close svg.disabled .color2-fill, .positions-drawer__icon-close .theme--light svg.disabled .color2-fill, .theme--light .result-details__toggle .disabled.result-details__select-arrow .color2-fill, .result-details__toggle .theme--light .disabled.result-details__select-arrow .color2-fill, .theme--light .disabled.dropdown__select-arrow .color2-fill, .theme--light .disabled.input-wrapper__icon .color2-fill, .theme--light .disabled.time-picker__icon .color2-fill, .theme--light .disabled.acc-info__select-arrow .color2-fill, .theme--light .disabled.acc-switcher__logout-icon .color2-fill, .theme--light .allow-equals .allow-equals__tooltip-info .color2-fill, .allow-equals .theme--light .allow-equals__tooltip-info .color2-fill, .theme--light .disabled.calendar__icon .color2-fill, .theme--light .calendar__nav--disabled .calendar__icon .color2-fill, .calendar__nav--disabled .theme--light .calendar__icon .color2-fill, .theme--light .disabled.contract-type-widget__select-arrow .color2-fill, .theme--light .trade-type-info-dialog__header svg.disabled .color2-fill, .trade-type-info-dialog__header .theme--light svg.disabled .color2-fill, .theme--light .disabled.trade-type-info-navigation__icon .color2-fill, .theme--light .disabled.datepicker__icon .color2-fill, .theme--light .disabled.portfolio-empty__icon .color2-fill, .theme--light .trade-container__price-tooltip-i .color2-fill {
       fill: none; }
-    .theme--light .disabled.calendar__icon .color2-stroke, .theme--light .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--light .calendar__icon .color2-stroke {
+    .theme--light .disabled.advanced-simple-toggle__icon .color2-stroke, .theme--light .disabled.footer__icon .color2-stroke, .theme--light .positions-drawer__icon-close svg.disabled .color2-stroke, .positions-drawer__icon-close .theme--light svg.disabled .color2-stroke, .theme--light .result-details__toggle .disabled.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--light .disabled.result-details__select-arrow .color2-stroke, .theme--light .disabled.dropdown__select-arrow .color2-stroke, .theme--light .disabled.input-wrapper__icon .color2-stroke, .theme--light .disabled.time-picker__icon .color2-stroke, .theme--light .disabled.acc-info__select-arrow .color2-stroke, .theme--light .disabled.acc-switcher__logout-icon .color2-stroke, .theme--light .allow-equals .allow-equals__tooltip-info .color2-stroke, .allow-equals .theme--light .allow-equals__tooltip-info .color2-stroke, .theme--light .disabled.calendar__icon .color2-stroke, .theme--light .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--light .calendar__icon .color2-stroke, .theme--light .disabled.contract-type-widget__select-arrow .color2-stroke, .theme--light .trade-type-info-dialog__header svg.disabled .color2-stroke, .trade-type-info-dialog__header .theme--light svg.disabled .color2-stroke, .theme--light .disabled.trade-type-info-navigation__icon .color2-stroke, .theme--light .disabled.datepicker__icon .color2-stroke, .theme--light .disabled.portfolio-empty__icon .color2-stroke, .theme--light .trade-container__price-tooltip-i .color2-stroke {
       stroke: none; }
-  .theme--light .white.calendar__icon, .theme--light .purchase-container__lock-icon, .theme--light .btn-purchase__trade-type-icon, .theme--light .theme--dark .statement-card__icon, .theme--dark .theme--light .statement-card__icon {
+  .theme--light .white.advanced-simple-toggle__icon, .theme--light .white.footer__icon, .theme--light .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--light svg.white, .theme--light .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--light .white.result-details__select-arrow, .theme--light .white.dropdown__select-arrow, .theme--light .white.input-wrapper__icon, .theme--light .white.time-picker__icon, .theme--light .white.acc-info__select-arrow, .theme--light .white.acc-switcher__logout-icon, .theme--light .white.calendar__icon, .theme--light .white.contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--light svg.white, .theme--light .white.trade-type-info-navigation__icon, .theme--light .white.datepicker__icon, .theme--light .white.portfolio-empty__icon, .theme--light .purchase-container__lock-icon, .theme--light .btn-purchase__trade-type-icon, .theme--light .theme--dark .statement-card__icon, .theme--dark .theme--light .statement-card__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--light .white.calendar__icon .color1-fill, .theme--light .purchase-container__lock-icon .color1-fill, .theme--light .btn-purchase__trade-type-icon .color1-fill, .theme--light .theme--dark .statement-card__icon .color1-fill, .theme--dark .theme--light .statement-card__icon .color1-fill {
+    .theme--light .white.advanced-simple-toggle__icon .color1-fill, .theme--light .white.footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--light svg.white .color1-fill, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-fill, .theme--light .white.dropdown__select-arrow .color1-fill, .theme--light .white.input-wrapper__icon .color1-fill, .theme--light .white.time-picker__icon .color1-fill, .theme--light .white.acc-info__select-arrow .color1-fill, .theme--light .white.acc-switcher__logout-icon .color1-fill, .theme--light .white.calendar__icon .color1-fill, .theme--light .white.contract-type-widget__select-arrow .color1-fill, .theme--light .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--light svg.white .color1-fill, .theme--light .white.trade-type-info-navigation__icon .color1-fill, .theme--light .white.datepicker__icon .color1-fill, .theme--light .white.portfolio-empty__icon .color1-fill, .theme--light .purchase-container__lock-icon .color1-fill, .theme--light .btn-purchase__trade-type-icon .color1-fill, .theme--light .theme--dark .statement-card__icon .color1-fill, .theme--dark .theme--light .statement-card__icon .color1-fill {
       fill: #000000; }
-    .theme--light .white.calendar__icon .color1-stroke, .theme--light .purchase-container__lock-icon .color1-stroke, .theme--light .btn-purchase__trade-type-icon .color1-stroke, .theme--light .theme--dark .statement-card__icon .color1-stroke, .theme--dark .theme--light .statement-card__icon .color1-stroke {
+    .theme--light .white.advanced-simple-toggle__icon .color1-stroke, .theme--light .white.footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--light svg.white .color1-stroke, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-stroke, .theme--light .white.dropdown__select-arrow .color1-stroke, .theme--light .white.input-wrapper__icon .color1-stroke, .theme--light .white.time-picker__icon .color1-stroke, .theme--light .white.acc-info__select-arrow .color1-stroke, .theme--light .white.acc-switcher__logout-icon .color1-stroke, .theme--light .white.calendar__icon .color1-stroke, .theme--light .white.contract-type-widget__select-arrow .color1-stroke, .theme--light .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--light svg.white .color1-stroke, .theme--light .white.trade-type-info-navigation__icon .color1-stroke, .theme--light .white.datepicker__icon .color1-stroke, .theme--light .white.portfolio-empty__icon .color1-stroke, .theme--light .purchase-container__lock-icon .color1-stroke, .theme--light .btn-purchase__trade-type-icon .color1-stroke, .theme--light .theme--dark .statement-card__icon .color1-stroke, .theme--dark .theme--light .statement-card__icon .color1-stroke {
       stroke: #000000; }
-  .theme--light .border_hover_color.calendar__icon, .theme--light .dialog-header__close {
+  .theme--light .border_hover_color.advanced-simple-toggle__icon, .theme--light .border_hover_color.footer__icon, .theme--light .positions-drawer__icon-close svg.border_hover_color, .positions-drawer__icon-close .theme--light svg.border_hover_color, .theme--light .result-details__toggle .border_hover_color.result-details__select-arrow, .result-details__toggle .theme--light .border_hover_color.result-details__select-arrow, .theme--light .border_hover_color.dropdown__select-arrow, .theme--light .border_hover_color.input-wrapper__icon, .theme--light .border_hover_color.time-picker__icon, .theme--light .border_hover_color.acc-info__select-arrow, .theme--light .border_hover_color.acc-switcher__logout-icon, .theme--light .border_hover_color.calendar__icon, .theme--light .border_hover_color.contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg.border_hover_color, .trade-type-info-dialog__header .theme--light svg.border_hover_color, .theme--light .border_hover_color.trade-type-info-navigation__icon, .theme--light .border_hover_color.datepicker__icon, .theme--light .dialog-header__close, .theme--light .border_hover_color.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--light .border_hover_color.calendar__icon .color1-fill, .theme--light .dialog-header__close .color1-fill {
+    .theme--light .border_hover_color.advanced-simple-toggle__icon .color1-fill, .theme--light .border_hover_color.footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.border_hover_color .color1-fill, .positions-drawer__icon-close .theme--light svg.border_hover_color .color1-fill, .theme--light .result-details__toggle .border_hover_color.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .border_hover_color.result-details__select-arrow .color1-fill, .theme--light .border_hover_color.dropdown__select-arrow .color1-fill, .theme--light .border_hover_color.input-wrapper__icon .color1-fill, .theme--light .border_hover_color.time-picker__icon .color1-fill, .theme--light .border_hover_color.acc-info__select-arrow .color1-fill, .theme--light .border_hover_color.acc-switcher__logout-icon .color1-fill, .theme--light .border_hover_color.calendar__icon .color1-fill, .theme--light .border_hover_color.contract-type-widget__select-arrow .color1-fill, .theme--light .trade-type-info-dialog__header svg.border_hover_color .color1-fill, .trade-type-info-dialog__header .theme--light svg.border_hover_color .color1-fill, .theme--light .border_hover_color.trade-type-info-navigation__icon .color1-fill, .theme--light .border_hover_color.datepicker__icon .color1-fill, .theme--light .dialog-header__close .color1-fill, .theme--light .border_hover_color.portfolio-empty__icon .color1-fill {
       fill: #999cac; }
-    .theme--light .border_hover_color.calendar__icon .color1-stroke, .theme--light .dialog-header__close .color1-stroke {
+    .theme--light .border_hover_color.advanced-simple-toggle__icon .color1-stroke, .theme--light .border_hover_color.footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.border_hover_color .color1-stroke, .positions-drawer__icon-close .theme--light svg.border_hover_color .color1-stroke, .theme--light .result-details__toggle .border_hover_color.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .border_hover_color.result-details__select-arrow .color1-stroke, .theme--light .border_hover_color.dropdown__select-arrow .color1-stroke, .theme--light .border_hover_color.input-wrapper__icon .color1-stroke, .theme--light .border_hover_color.time-picker__icon .color1-stroke, .theme--light .border_hover_color.acc-info__select-arrow .color1-stroke, .theme--light .border_hover_color.acc-switcher__logout-icon .color1-stroke, .theme--light .border_hover_color.calendar__icon .color1-stroke, .theme--light .border_hover_color.contract-type-widget__select-arrow .color1-stroke, .theme--light .trade-type-info-dialog__header svg.border_hover_color .color1-stroke, .trade-type-info-dialog__header .theme--light svg.border_hover_color .color1-stroke, .theme--light .border_hover_color.trade-type-info-navigation__icon .color1-stroke, .theme--light .border_hover_color.datepicker__icon .color1-stroke, .theme--light .dialog-header__close .color1-stroke, .theme--light .border_hover_color.portfolio-empty__icon .color1-stroke {
       stroke: #999cac; }
 
-.theme--dark .calendar__icon {
+.theme--dark .advanced-simple-toggle__icon, .theme--dark .footer__icon, .theme--dark .positions-drawer__icon-close svg, .positions-drawer__icon-close .theme--dark svg, .theme--dark .result-details__toggle .result-details__select-arrow, .result-details__toggle .theme--dark .result-details__select-arrow, .theme--dark .dropdown__select-arrow, .theme--dark .input-wrapper__icon, .theme--dark .time-picker__icon, .theme--dark .acc-info__select-arrow, .theme--dark .acc-switcher__logout-icon, .theme--dark .calendar__icon, .theme--dark .contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg, .trade-type-info-dialog__header .theme--dark svg, .theme--dark .trade-type-info-navigation__icon, .theme--dark .datepicker__icon, .theme--dark .portfolio-empty__icon {
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
-  .theme--dark .calendar__icon .color1-fill {
+  .theme--dark .advanced-simple-toggle__icon .color1-fill, .theme--dark .footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg .color1-fill, .positions-drawer__icon-close .theme--dark svg .color1-fill, .theme--dark .result-details__toggle .result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .result-details__select-arrow .color1-fill, .theme--dark .dropdown__select-arrow .color1-fill, .theme--dark .input-wrapper__icon .color1-fill, .theme--dark .time-picker__icon .color1-fill, .theme--dark .acc-info__select-arrow .color1-fill, .theme--dark .acc-switcher__logout-icon .color1-fill, .theme--dark .calendar__icon .color1-fill, .theme--dark .contract-type-widget__select-arrow .color1-fill, .theme--dark .trade-type-info-dialog__header svg .color1-fill, .trade-type-info-dialog__header .theme--dark svg .color1-fill, .theme--dark .trade-type-info-navigation__icon .color1-fill, .theme--dark .datepicker__icon .color1-fill, .theme--dark .portfolio-empty__icon .color1-fill {
     fill: #7f8397; }
-  .theme--dark .calendar__icon .color1-stroke {
+  .theme--dark .advanced-simple-toggle__icon .color1-stroke, .theme--dark .footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg .color1-stroke, .positions-drawer__icon-close .theme--dark svg .color1-stroke, .theme--dark .result-details__toggle .result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .result-details__select-arrow .color1-stroke, .theme--dark .dropdown__select-arrow .color1-stroke, .theme--dark .input-wrapper__icon .color1-stroke, .theme--dark .time-picker__icon .color1-stroke, .theme--dark .acc-info__select-arrow .color1-stroke, .theme--dark .acc-switcher__logout-icon .color1-stroke, .theme--dark .calendar__icon .color1-stroke, .theme--dark .contract-type-widget__select-arrow .color1-stroke, .theme--dark .trade-type-info-dialog__header svg .color1-stroke, .trade-type-info-dialog__header .theme--dark svg .color1-stroke, .theme--dark .trade-type-info-navigation__icon .color1-stroke, .theme--dark .datepicker__icon .color1-stroke, .theme--dark .portfolio-empty__icon .color1-stroke {
     stroke: #7f8397; }
-  .theme--dark .calendar__icon .color2-fill {
+  .theme--dark .advanced-simple-toggle__icon .color2-fill, .theme--dark .footer__icon .color2-fill, .theme--dark .positions-drawer__icon-close svg .color2-fill, .positions-drawer__icon-close .theme--dark svg .color2-fill, .theme--dark .result-details__toggle .result-details__select-arrow .color2-fill, .result-details__toggle .theme--dark .result-details__select-arrow .color2-fill, .theme--dark .dropdown__select-arrow .color2-fill, .theme--dark .input-wrapper__icon .color2-fill, .theme--dark .time-picker__icon .color2-fill, .theme--dark .acc-info__select-arrow .color2-fill, .theme--dark .acc-switcher__logout-icon .color2-fill, .theme--dark .calendar__icon .color2-fill, .theme--dark .contract-type-widget__select-arrow .color2-fill, .theme--dark .trade-type-info-dialog__header svg .color2-fill, .trade-type-info-dialog__header .theme--dark svg .color2-fill, .theme--dark .trade-type-info-navigation__icon .color2-fill, .theme--dark .datepicker__icon .color2-fill, .theme--dark .portfolio-empty__icon .color2-fill {
     fill: none; }
-  .theme--dark .calendar__icon .color2-stroke {
+  .theme--dark .advanced-simple-toggle__icon .color2-stroke, .theme--dark .footer__icon .color2-stroke, .theme--dark .positions-drawer__icon-close svg .color2-stroke, .positions-drawer__icon-close .theme--dark svg .color2-stroke, .theme--dark .result-details__toggle .result-details__select-arrow .color2-stroke, .result-details__toggle .theme--dark .result-details__select-arrow .color2-stroke, .theme--dark .dropdown__select-arrow .color2-stroke, .theme--dark .input-wrapper__icon .color2-stroke, .theme--dark .time-picker__icon .color2-stroke, .theme--dark .acc-info__select-arrow .color2-stroke, .theme--dark .acc-switcher__logout-icon .color2-stroke, .theme--dark .calendar__icon .color2-stroke, .theme--dark .contract-type-widget__select-arrow .color2-stroke, .theme--dark .trade-type-info-dialog__header svg .color2-stroke, .trade-type-info-dialog__header .theme--dark svg .color2-stroke, .theme--dark .trade-type-info-navigation__icon .color2-stroke, .theme--dark .datepicker__icon .color2-stroke, .theme--dark .portfolio-empty__icon .color2-stroke {
     stroke: none; }
-  .theme--dark .header__menu-link--active .header__icon, .header__menu-link--active .theme--dark .header__icon, .theme--dark .footer__link:hover .footer__icon, .footer__link:hover .theme--dark .footer__icon, .theme--dark .ic-settings--active .ic-settings__icon, .ic-settings--active .theme--dark .ic-settings__icon, .theme--dark .active.calendar__icon {
+  .theme--dark .active.advanced-simple-toggle__icon, .theme--dark .header__menu-link--active .header__icon, .header__menu-link--active .theme--dark .header__icon, .theme--dark .footer__link:hover .footer__icon, .footer__link:hover .theme--dark .footer__icon, .theme--dark .active.footer__icon, .theme--dark .ic-settings--active .ic-settings__icon, .ic-settings--active .theme--dark .ic-settings__icon, .theme--dark .positions-drawer__icon-close svg.active, .positions-drawer__icon-close .theme--dark svg.active, .theme--dark .result-details__toggle .active.result-details__select-arrow, .result-details__toggle .theme--dark .active.result-details__select-arrow, .theme--dark .active.dropdown__select-arrow, .theme--dark .active.input-wrapper__icon, .theme--dark .active.time-picker__icon, .theme--dark .active.acc-info__select-arrow, .theme--dark .active.acc-switcher__logout-icon, .theme--dark .active.calendar__icon, .theme--dark .active.contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg.active, .trade-type-info-dialog__header .theme--dark svg.active, .theme--dark .active.trade-type-info-navigation__icon, .theme--dark .active.datepicker__icon, .theme--dark .active.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
@@ -5524,48 +5765,48 @@ html {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--dark .header__menu-link--active .header__icon .color1-fill, .header__menu-link--active .theme--dark .header__icon .color1-fill, .theme--dark .footer__link:hover .footer__icon .color1-fill, .footer__link:hover .theme--dark .footer__icon .color1-fill, .theme--dark .ic-settings--active .ic-settings__icon .color1-fill, .ic-settings--active .theme--dark .ic-settings__icon .color1-fill, .theme--dark .active.calendar__icon .color1-fill {
+    .theme--dark .active.advanced-simple-toggle__icon .color1-fill, .theme--dark .header__menu-link--active .header__icon .color1-fill, .header__menu-link--active .theme--dark .header__icon .color1-fill, .theme--dark .footer__link:hover .footer__icon .color1-fill, .footer__link:hover .theme--dark .footer__icon .color1-fill, .theme--dark .active.footer__icon .color1-fill, .theme--dark .ic-settings--active .ic-settings__icon .color1-fill, .ic-settings--active .theme--dark .ic-settings__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.active .color1-fill, .positions-drawer__icon-close .theme--dark svg.active .color1-fill, .theme--dark .result-details__toggle .active.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .active.result-details__select-arrow .color1-fill, .theme--dark .active.dropdown__select-arrow .color1-fill, .theme--dark .active.input-wrapper__icon .color1-fill, .theme--dark .active.time-picker__icon .color1-fill, .theme--dark .active.acc-info__select-arrow .color1-fill, .theme--dark .active.acc-switcher__logout-icon .color1-fill, .theme--dark .active.calendar__icon .color1-fill, .theme--dark .active.contract-type-widget__select-arrow .color1-fill, .theme--dark .trade-type-info-dialog__header svg.active .color1-fill, .trade-type-info-dialog__header .theme--dark svg.active .color1-fill, .theme--dark .active.trade-type-info-navigation__icon .color1-fill, .theme--dark .active.datepicker__icon .color1-fill, .theme--dark .active.portfolio-empty__icon .color1-fill {
       fill: #2a3052; }
-    .theme--dark .header__menu-link--active .header__icon .color1-stroke, .header__menu-link--active .theme--dark .header__icon .color1-stroke, .theme--dark .footer__link:hover .footer__icon .color1-stroke, .footer__link:hover .theme--dark .footer__icon .color1-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color1-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color1-stroke, .theme--dark .active.calendar__icon .color1-stroke {
+    .theme--dark .active.advanced-simple-toggle__icon .color1-stroke, .theme--dark .header__menu-link--active .header__icon .color1-stroke, .header__menu-link--active .theme--dark .header__icon .color1-stroke, .theme--dark .footer__link:hover .footer__icon .color1-stroke, .footer__link:hover .theme--dark .footer__icon .color1-stroke, .theme--dark .active.footer__icon .color1-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color1-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.active .color1-stroke, .positions-drawer__icon-close .theme--dark svg.active .color1-stroke, .theme--dark .result-details__toggle .active.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .active.result-details__select-arrow .color1-stroke, .theme--dark .active.dropdown__select-arrow .color1-stroke, .theme--dark .active.input-wrapper__icon .color1-stroke, .theme--dark .active.time-picker__icon .color1-stroke, .theme--dark .active.acc-info__select-arrow .color1-stroke, .theme--dark .active.acc-switcher__logout-icon .color1-stroke, .theme--dark .active.calendar__icon .color1-stroke, .theme--dark .active.contract-type-widget__select-arrow .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.active .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.active .color1-stroke, .theme--dark .active.trade-type-info-navigation__icon .color1-stroke, .theme--dark .active.datepicker__icon .color1-stroke, .theme--dark .active.portfolio-empty__icon .color1-stroke {
       stroke: #2a3052; }
-    .theme--dark .header__menu-link--active .header__icon .color2-fill, .header__menu-link--active .theme--dark .header__icon .color2-fill, .theme--dark .footer__link:hover .footer__icon .color2-fill, .footer__link:hover .theme--dark .footer__icon .color2-fill, .theme--dark .ic-settings--active .ic-settings__icon .color2-fill, .ic-settings--active .theme--dark .ic-settings__icon .color2-fill, .theme--dark .active.calendar__icon .color2-fill {
+    .theme--dark .active.advanced-simple-toggle__icon .color2-fill, .theme--dark .header__menu-link--active .header__icon .color2-fill, .header__menu-link--active .theme--dark .header__icon .color2-fill, .theme--dark .footer__link:hover .footer__icon .color2-fill, .footer__link:hover .theme--dark .footer__icon .color2-fill, .theme--dark .active.footer__icon .color2-fill, .theme--dark .ic-settings--active .ic-settings__icon .color2-fill, .ic-settings--active .theme--dark .ic-settings__icon .color2-fill, .theme--dark .positions-drawer__icon-close svg.active .color2-fill, .positions-drawer__icon-close .theme--dark svg.active .color2-fill, .theme--dark .result-details__toggle .active.result-details__select-arrow .color2-fill, .result-details__toggle .theme--dark .active.result-details__select-arrow .color2-fill, .theme--dark .active.dropdown__select-arrow .color2-fill, .theme--dark .active.input-wrapper__icon .color2-fill, .theme--dark .active.time-picker__icon .color2-fill, .theme--dark .active.acc-info__select-arrow .color2-fill, .theme--dark .active.acc-switcher__logout-icon .color2-fill, .theme--dark .active.calendar__icon .color2-fill, .theme--dark .active.contract-type-widget__select-arrow .color2-fill, .theme--dark .trade-type-info-dialog__header svg.active .color2-fill, .trade-type-info-dialog__header .theme--dark svg.active .color2-fill, .theme--dark .active.trade-type-info-navigation__icon .color2-fill, .theme--dark .active.datepicker__icon .color2-fill, .theme--dark .active.portfolio-empty__icon .color2-fill {
       fill: #ffffff; }
-    .theme--dark .header__menu-link--active .header__icon .color2-stroke, .header__menu-link--active .theme--dark .header__icon .color2-stroke, .theme--dark .footer__link:hover .footer__icon .color2-stroke, .footer__link:hover .theme--dark .footer__icon .color2-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color2-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color2-stroke, .theme--dark .active.calendar__icon .color2-stroke {
+    .theme--dark .active.advanced-simple-toggle__icon .color2-stroke, .theme--dark .header__menu-link--active .header__icon .color2-stroke, .header__menu-link--active .theme--dark .header__icon .color2-stroke, .theme--dark .footer__link:hover .footer__icon .color2-stroke, .footer__link:hover .theme--dark .footer__icon .color2-stroke, .theme--dark .active.footer__icon .color2-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color2-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color2-stroke, .theme--dark .positions-drawer__icon-close svg.active .color2-stroke, .positions-drawer__icon-close .theme--dark svg.active .color2-stroke, .theme--dark .result-details__toggle .active.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--dark .active.result-details__select-arrow .color2-stroke, .theme--dark .active.dropdown__select-arrow .color2-stroke, .theme--dark .active.input-wrapper__icon .color2-stroke, .theme--dark .active.time-picker__icon .color2-stroke, .theme--dark .active.acc-info__select-arrow .color2-stroke, .theme--dark .active.acc-switcher__logout-icon .color2-stroke, .theme--dark .active.calendar__icon .color2-stroke, .theme--dark .active.contract-type-widget__select-arrow .color2-stroke, .theme--dark .trade-type-info-dialog__header svg.active .color2-stroke, .trade-type-info-dialog__header .theme--dark svg.active .color2-stroke, .theme--dark .active.trade-type-info-navigation__icon .color2-stroke, .theme--dark .active.datepicker__icon .color2-stroke, .theme--dark .active.portfolio-empty__icon .color2-stroke {
       stroke: #ffffff; }
-    .theme--dark .header__menu-link--active .header__icon .color3-fill, .header__menu-link--active .theme--dark .header__icon .color3-fill, .theme--dark .footer__link:hover .footer__icon .color3-fill, .footer__link:hover .theme--dark .footer__icon .color3-fill, .theme--dark .ic-settings--active .ic-settings__icon .color3-fill, .ic-settings--active .theme--dark .ic-settings__icon .color3-fill, .theme--dark .active.calendar__icon .color3-fill {
+    .theme--dark .active.advanced-simple-toggle__icon .color3-fill, .theme--dark .header__menu-link--active .header__icon .color3-fill, .header__menu-link--active .theme--dark .header__icon .color3-fill, .theme--dark .footer__link:hover .footer__icon .color3-fill, .footer__link:hover .theme--dark .footer__icon .color3-fill, .theme--dark .active.footer__icon .color3-fill, .theme--dark .ic-settings--active .ic-settings__icon .color3-fill, .ic-settings--active .theme--dark .ic-settings__icon .color3-fill, .theme--dark .positions-drawer__icon-close svg.active .color3-fill, .positions-drawer__icon-close .theme--dark svg.active .color3-fill, .theme--dark .result-details__toggle .active.result-details__select-arrow .color3-fill, .result-details__toggle .theme--dark .active.result-details__select-arrow .color3-fill, .theme--dark .active.dropdown__select-arrow .color3-fill, .theme--dark .active.input-wrapper__icon .color3-fill, .theme--dark .active.time-picker__icon .color3-fill, .theme--dark .active.acc-info__select-arrow .color3-fill, .theme--dark .active.acc-switcher__logout-icon .color3-fill, .theme--dark .active.calendar__icon .color3-fill, .theme--dark .active.contract-type-widget__select-arrow .color3-fill, .theme--dark .trade-type-info-dialog__header svg.active .color3-fill, .trade-type-info-dialog__header .theme--dark svg.active .color3-fill, .theme--dark .active.trade-type-info-navigation__icon .color3-fill, .theme--dark .active.datepicker__icon .color3-fill, .theme--dark .active.portfolio-empty__icon .color3-fill {
       fill: #ffffff; }
-    .theme--dark .header__menu-link--active .header__icon .color3-stroke, .header__menu-link--active .theme--dark .header__icon .color3-stroke, .theme--dark .footer__link:hover .footer__icon .color3-stroke, .footer__link:hover .theme--dark .footer__icon .color3-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color3-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color3-stroke, .theme--dark .active.calendar__icon .color3-stroke {
+    .theme--dark .active.advanced-simple-toggle__icon .color3-stroke, .theme--dark .header__menu-link--active .header__icon .color3-stroke, .header__menu-link--active .theme--dark .header__icon .color3-stroke, .theme--dark .footer__link:hover .footer__icon .color3-stroke, .footer__link:hover .theme--dark .footer__icon .color3-stroke, .theme--dark .active.footer__icon .color3-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color3-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color3-stroke, .theme--dark .positions-drawer__icon-close svg.active .color3-stroke, .positions-drawer__icon-close .theme--dark svg.active .color3-stroke, .theme--dark .result-details__toggle .active.result-details__select-arrow .color3-stroke, .result-details__toggle .theme--dark .active.result-details__select-arrow .color3-stroke, .theme--dark .active.dropdown__select-arrow .color3-stroke, .theme--dark .active.input-wrapper__icon .color3-stroke, .theme--dark .active.time-picker__icon .color3-stroke, .theme--dark .active.acc-info__select-arrow .color3-stroke, .theme--dark .active.acc-switcher__logout-icon .color3-stroke, .theme--dark .active.calendar__icon .color3-stroke, .theme--dark .active.contract-type-widget__select-arrow .color3-stroke, .theme--dark .trade-type-info-dialog__header svg.active .color3-stroke, .trade-type-info-dialog__header .theme--dark svg.active .color3-stroke, .theme--dark .active.trade-type-info-navigation__icon .color3-stroke, .theme--dark .active.datepicker__icon .color3-stroke, .theme--dark .active.portfolio-empty__icon .color3-stroke {
       stroke: #ffffff; }
-    .theme--dark .header__menu-link--active .header__icon .color4-fill, .header__menu-link--active .theme--dark .header__icon .color4-fill, .theme--dark .footer__link:hover .footer__icon .color4-fill, .footer__link:hover .theme--dark .footer__icon .color4-fill, .theme--dark .ic-settings--active .ic-settings__icon .color4-fill, .ic-settings--active .theme--dark .ic-settings__icon .color4-fill, .theme--dark .active.calendar__icon .color4-fill {
+    .theme--dark .active.advanced-simple-toggle__icon .color4-fill, .theme--dark .header__menu-link--active .header__icon .color4-fill, .header__menu-link--active .theme--dark .header__icon .color4-fill, .theme--dark .footer__link:hover .footer__icon .color4-fill, .footer__link:hover .theme--dark .footer__icon .color4-fill, .theme--dark .active.footer__icon .color4-fill, .theme--dark .ic-settings--active .ic-settings__icon .color4-fill, .ic-settings--active .theme--dark .ic-settings__icon .color4-fill, .theme--dark .positions-drawer__icon-close svg.active .color4-fill, .positions-drawer__icon-close .theme--dark svg.active .color4-fill, .theme--dark .result-details__toggle .active.result-details__select-arrow .color4-fill, .result-details__toggle .theme--dark .active.result-details__select-arrow .color4-fill, .theme--dark .active.dropdown__select-arrow .color4-fill, .theme--dark .active.input-wrapper__icon .color4-fill, .theme--dark .active.time-picker__icon .color4-fill, .theme--dark .active.acc-info__select-arrow .color4-fill, .theme--dark .active.acc-switcher__logout-icon .color4-fill, .theme--dark .active.calendar__icon .color4-fill, .theme--dark .active.contract-type-widget__select-arrow .color4-fill, .theme--dark .trade-type-info-dialog__header svg.active .color4-fill, .trade-type-info-dialog__header .theme--dark svg.active .color4-fill, .theme--dark .active.trade-type-info-navigation__icon .color4-fill, .theme--dark .active.datepicker__icon .color4-fill, .theme--dark .active.portfolio-empty__icon .color4-fill {
       fill: none; }
-    .theme--dark .header__menu-link--active .header__icon .color4-stroke, .header__menu-link--active .theme--dark .header__icon .color4-stroke, .theme--dark .footer__link:hover .footer__icon .color4-stroke, .footer__link:hover .theme--dark .footer__icon .color4-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color4-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color4-stroke, .theme--dark .active.calendar__icon .color4-stroke {
+    .theme--dark .active.advanced-simple-toggle__icon .color4-stroke, .theme--dark .header__menu-link--active .header__icon .color4-stroke, .header__menu-link--active .theme--dark .header__icon .color4-stroke, .theme--dark .footer__link:hover .footer__icon .color4-stroke, .footer__link:hover .theme--dark .footer__icon .color4-stroke, .theme--dark .active.footer__icon .color4-stroke, .theme--dark .ic-settings--active .ic-settings__icon .color4-stroke, .ic-settings--active .theme--dark .ic-settings__icon .color4-stroke, .theme--dark .positions-drawer__icon-close svg.active .color4-stroke, .positions-drawer__icon-close .theme--dark svg.active .color4-stroke, .theme--dark .result-details__toggle .active.result-details__select-arrow .color4-stroke, .result-details__toggle .theme--dark .active.result-details__select-arrow .color4-stroke, .theme--dark .active.dropdown__select-arrow .color4-stroke, .theme--dark .active.input-wrapper__icon .color4-stroke, .theme--dark .active.time-picker__icon .color4-stroke, .theme--dark .active.acc-info__select-arrow .color4-stroke, .theme--dark .active.acc-switcher__logout-icon .color4-stroke, .theme--dark .active.calendar__icon .color4-stroke, .theme--dark .active.contract-type-widget__select-arrow .color4-stroke, .theme--dark .trade-type-info-dialog__header svg.active .color4-stroke, .trade-type-info-dialog__header .theme--dark svg.active .color4-stroke, .theme--dark .active.trade-type-info-navigation__icon .color4-stroke, .theme--dark .active.datepicker__icon .color4-stroke, .theme--dark .active.portfolio-empty__icon .color4-stroke {
       stroke: none; }
-  .theme--dark .disabled.calendar__icon, .theme--dark .calendar__nav--disabled .calendar__icon, .calendar__nav--disabled .theme--dark .calendar__icon {
+  .theme--dark .disabled.advanced-simple-toggle__icon, .theme--dark .disabled.footer__icon, .theme--dark .positions-drawer__icon-close svg.disabled, .positions-drawer__icon-close .theme--dark svg.disabled, .theme--dark .result-details__toggle .disabled.result-details__select-arrow, .result-details__toggle .theme--dark .disabled.result-details__select-arrow, .theme--dark .disabled.dropdown__select-arrow, .theme--dark .disabled.input-wrapper__icon, .theme--dark .disabled.time-picker__icon, .theme--dark .disabled.acc-info__select-arrow, .theme--dark .disabled.acc-switcher__logout-icon, .theme--dark .allow-equals .allow-equals__tooltip-info, .allow-equals .theme--dark .allow-equals__tooltip-info, .theme--dark .disabled.calendar__icon, .theme--dark .calendar__nav--disabled .calendar__icon, .calendar__nav--disabled .theme--dark .calendar__icon, .theme--dark .disabled.contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg.disabled, .trade-type-info-dialog__header .theme--dark svg.disabled, .theme--dark .disabled.trade-type-info-navigation__icon, .theme--dark .disabled.datepicker__icon, .theme--dark .disabled.portfolio-empty__icon, .theme--dark .trade-container__price-tooltip-i {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--dark .disabled.calendar__icon .color1-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color1-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color1-fill {
+    .theme--dark .disabled.advanced-simple-toggle__icon .color1-fill, .theme--dark .disabled.footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.disabled .color1-fill, .positions-drawer__icon-close .theme--dark svg.disabled .color1-fill, .theme--dark .result-details__toggle .disabled.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .disabled.result-details__select-arrow .color1-fill, .theme--dark .disabled.dropdown__select-arrow .color1-fill, .theme--dark .disabled.input-wrapper__icon .color1-fill, .theme--dark .disabled.time-picker__icon .color1-fill, .theme--dark .disabled.acc-info__select-arrow .color1-fill, .theme--dark .disabled.acc-switcher__logout-icon .color1-fill, .theme--dark .allow-equals .allow-equals__tooltip-info .color1-fill, .allow-equals .theme--dark .allow-equals__tooltip-info .color1-fill, .theme--dark .disabled.calendar__icon .color1-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color1-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color1-fill, .theme--dark .disabled.contract-type-widget__select-arrow .color1-fill, .theme--dark .trade-type-info-dialog__header svg.disabled .color1-fill, .trade-type-info-dialog__header .theme--dark svg.disabled .color1-fill, .theme--dark .disabled.trade-type-info-navigation__icon .color1-fill, .theme--dark .disabled.datepicker__icon .color1-fill, .theme--dark .disabled.portfolio-empty__icon .color1-fill, .theme--dark .trade-container__price-tooltip-i .color1-fill {
       fill: rgba(127, 131, 151, 0.3); }
-    .theme--dark .disabled.calendar__icon .color1-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color1-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color1-stroke {
+    .theme--dark .disabled.advanced-simple-toggle__icon .color1-stroke, .theme--dark .disabled.footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.disabled .color1-stroke, .positions-drawer__icon-close .theme--dark svg.disabled .color1-stroke, .theme--dark .result-details__toggle .disabled.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .disabled.result-details__select-arrow .color1-stroke, .theme--dark .disabled.dropdown__select-arrow .color1-stroke, .theme--dark .disabled.input-wrapper__icon .color1-stroke, .theme--dark .disabled.time-picker__icon .color1-stroke, .theme--dark .disabled.acc-info__select-arrow .color1-stroke, .theme--dark .disabled.acc-switcher__logout-icon .color1-stroke, .theme--dark .allow-equals .allow-equals__tooltip-info .color1-stroke, .allow-equals .theme--dark .allow-equals__tooltip-info .color1-stroke, .theme--dark .disabled.calendar__icon .color1-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color1-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color1-stroke, .theme--dark .disabled.contract-type-widget__select-arrow .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.disabled .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.disabled .color1-stroke, .theme--dark .disabled.trade-type-info-navigation__icon .color1-stroke, .theme--dark .disabled.datepicker__icon .color1-stroke, .theme--dark .disabled.portfolio-empty__icon .color1-stroke, .theme--dark .trade-container__price-tooltip-i .color1-stroke {
       stroke: rgba(127, 131, 151, 0.3); }
-    .theme--dark .disabled.calendar__icon .color2-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color2-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color2-fill {
+    .theme--dark .disabled.advanced-simple-toggle__icon .color2-fill, .theme--dark .disabled.footer__icon .color2-fill, .theme--dark .positions-drawer__icon-close svg.disabled .color2-fill, .positions-drawer__icon-close .theme--dark svg.disabled .color2-fill, .theme--dark .result-details__toggle .disabled.result-details__select-arrow .color2-fill, .result-details__toggle .theme--dark .disabled.result-details__select-arrow .color2-fill, .theme--dark .disabled.dropdown__select-arrow .color2-fill, .theme--dark .disabled.input-wrapper__icon .color2-fill, .theme--dark .disabled.time-picker__icon .color2-fill, .theme--dark .disabled.acc-info__select-arrow .color2-fill, .theme--dark .disabled.acc-switcher__logout-icon .color2-fill, .theme--dark .allow-equals .allow-equals__tooltip-info .color2-fill, .allow-equals .theme--dark .allow-equals__tooltip-info .color2-fill, .theme--dark .disabled.calendar__icon .color2-fill, .theme--dark .calendar__nav--disabled .calendar__icon .color2-fill, .calendar__nav--disabled .theme--dark .calendar__icon .color2-fill, .theme--dark .disabled.contract-type-widget__select-arrow .color2-fill, .theme--dark .trade-type-info-dialog__header svg.disabled .color2-fill, .trade-type-info-dialog__header .theme--dark svg.disabled .color2-fill, .theme--dark .disabled.trade-type-info-navigation__icon .color2-fill, .theme--dark .disabled.datepicker__icon .color2-fill, .theme--dark .disabled.portfolio-empty__icon .color2-fill, .theme--dark .trade-container__price-tooltip-i .color2-fill {
       fill: none; }
-    .theme--dark .disabled.calendar__icon .color2-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color2-stroke {
+    .theme--dark .disabled.advanced-simple-toggle__icon .color2-stroke, .theme--dark .disabled.footer__icon .color2-stroke, .theme--dark .positions-drawer__icon-close svg.disabled .color2-stroke, .positions-drawer__icon-close .theme--dark svg.disabled .color2-stroke, .theme--dark .result-details__toggle .disabled.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--dark .disabled.result-details__select-arrow .color2-stroke, .theme--dark .disabled.dropdown__select-arrow .color2-stroke, .theme--dark .disabled.input-wrapper__icon .color2-stroke, .theme--dark .disabled.time-picker__icon .color2-stroke, .theme--dark .disabled.acc-info__select-arrow .color2-stroke, .theme--dark .disabled.acc-switcher__logout-icon .color2-stroke, .theme--dark .allow-equals .allow-equals__tooltip-info .color2-stroke, .allow-equals .theme--dark .allow-equals__tooltip-info .color2-stroke, .theme--dark .disabled.calendar__icon .color2-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color2-stroke, .theme--dark .disabled.contract-type-widget__select-arrow .color2-stroke, .theme--dark .trade-type-info-dialog__header svg.disabled .color2-stroke, .trade-type-info-dialog__header .theme--dark svg.disabled .color2-stroke, .theme--dark .disabled.trade-type-info-navigation__icon .color2-stroke, .theme--dark .disabled.datepicker__icon .color2-stroke, .theme--dark .disabled.portfolio-empty__icon .color2-stroke, .theme--dark .trade-container__price-tooltip-i .color2-stroke {
       stroke: none; }
-  .theme--dark .white.calendar__icon, .theme--dark .purchase-container__lock-icon, .theme--dark .btn-purchase__trade-type-icon, .theme--dark .statement-card__icon {
+  .theme--dark .white.advanced-simple-toggle__icon, .theme--dark .white.footer__icon, .theme--dark .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--dark svg.white, .theme--dark .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--dark .white.result-details__select-arrow, .theme--dark .white.dropdown__select-arrow, .theme--dark .white.input-wrapper__icon, .theme--dark .white.time-picker__icon, .theme--dark .white.acc-info__select-arrow, .theme--dark .white.acc-switcher__logout-icon, .theme--dark .white.calendar__icon, .theme--dark .white.contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--dark svg.white, .theme--dark .white.trade-type-info-navigation__icon, .theme--dark .white.datepicker__icon, .theme--dark .white.portfolio-empty__icon, .theme--dark .purchase-container__lock-icon, .theme--dark .btn-purchase__trade-type-icon, .theme--dark .statement-card__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--dark .white.calendar__icon .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .btn-purchase__trade-type-icon .color1-fill, .theme--dark .statement-card__icon .color1-fill {
+    .theme--dark .white.advanced-simple-toggle__icon .color1-fill, .theme--dark .white.footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--dark svg.white .color1-fill, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-fill, .theme--dark .white.dropdown__select-arrow .color1-fill, .theme--dark .white.input-wrapper__icon .color1-fill, .theme--dark .white.time-picker__icon .color1-fill, .theme--dark .white.acc-info__select-arrow .color1-fill, .theme--dark .white.acc-switcher__logout-icon .color1-fill, .theme--dark .white.calendar__icon .color1-fill, .theme--dark .white.contract-type-widget__select-arrow .color1-fill, .theme--dark .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--dark svg.white .color1-fill, .theme--dark .white.trade-type-info-navigation__icon .color1-fill, .theme--dark .white.datepicker__icon .color1-fill, .theme--dark .white.portfolio-empty__icon .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .btn-purchase__trade-type-icon .color1-fill, .theme--dark .statement-card__icon .color1-fill {
       fill: #ffffff; }
-    .theme--dark .white.calendar__icon .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .btn-purchase__trade-type-icon .color1-stroke, .theme--dark .statement-card__icon .color1-stroke {
+    .theme--dark .white.advanced-simple-toggle__icon .color1-stroke, .theme--dark .white.footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--dark svg.white .color1-stroke, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-stroke, .theme--dark .white.dropdown__select-arrow .color1-stroke, .theme--dark .white.input-wrapper__icon .color1-stroke, .theme--dark .white.time-picker__icon .color1-stroke, .theme--dark .white.acc-info__select-arrow .color1-stroke, .theme--dark .white.acc-switcher__logout-icon .color1-stroke, .theme--dark .white.calendar__icon .color1-stroke, .theme--dark .white.contract-type-widget__select-arrow .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.white .color1-stroke, .theme--dark .white.trade-type-info-navigation__icon .color1-stroke, .theme--dark .white.datepicker__icon .color1-stroke, .theme--dark .white.portfolio-empty__icon .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .btn-purchase__trade-type-icon .color1-stroke, .theme--dark .statement-card__icon .color1-stroke {
       stroke: #ffffff; }
-  .theme--dark .border_hover_color.calendar__icon, .theme--dark .dialog-header__close {
+  .theme--dark .border_hover_color.advanced-simple-toggle__icon, .theme--dark .border_hover_color.footer__icon, .theme--dark .positions-drawer__icon-close svg.border_hover_color, .positions-drawer__icon-close .theme--dark svg.border_hover_color, .theme--dark .result-details__toggle .border_hover_color.result-details__select-arrow, .result-details__toggle .theme--dark .border_hover_color.result-details__select-arrow, .theme--dark .border_hover_color.dropdown__select-arrow, .theme--dark .border_hover_color.input-wrapper__icon, .theme--dark .border_hover_color.time-picker__icon, .theme--dark .border_hover_color.acc-info__select-arrow, .theme--dark .border_hover_color.acc-switcher__logout-icon, .theme--dark .border_hover_color.calendar__icon, .theme--dark .border_hover_color.contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg.border_hover_color, .trade-type-info-dialog__header .theme--dark svg.border_hover_color, .theme--dark .border_hover_color.trade-type-info-navigation__icon, .theme--dark .border_hover_color.datepicker__icon, .theme--dark .dialog-header__close, .theme--dark .border_hover_color.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--dark .border_hover_color.calendar__icon .color1-fill, .theme--dark .dialog-header__close .color1-fill {
+    .theme--dark .border_hover_color.advanced-simple-toggle__icon .color1-fill, .theme--dark .border_hover_color.footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.border_hover_color .color1-fill, .positions-drawer__icon-close .theme--dark svg.border_hover_color .color1-fill, .theme--dark .result-details__toggle .border_hover_color.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .border_hover_color.result-details__select-arrow .color1-fill, .theme--dark .border_hover_color.dropdown__select-arrow .color1-fill, .theme--dark .border_hover_color.input-wrapper__icon .color1-fill, .theme--dark .border_hover_color.time-picker__icon .color1-fill, .theme--dark .border_hover_color.acc-info__select-arrow .color1-fill, .theme--dark .border_hover_color.acc-switcher__logout-icon .color1-fill, .theme--dark .border_hover_color.calendar__icon .color1-fill, .theme--dark .border_hover_color.contract-type-widget__select-arrow .color1-fill, .theme--dark .trade-type-info-dialog__header svg.border_hover_color .color1-fill, .trade-type-info-dialog__header .theme--dark svg.border_hover_color .color1-fill, .theme--dark .border_hover_color.trade-type-info-navigation__icon .color1-fill, .theme--dark .border_hover_color.datepicker__icon .color1-fill, .theme--dark .dialog-header__close .color1-fill, .theme--dark .border_hover_color.portfolio-empty__icon .color1-fill {
       fill: #7f8397; }
-    .theme--dark .border_hover_color.calendar__icon .color1-stroke, .theme--dark .dialog-header__close .color1-stroke {
+    .theme--dark .border_hover_color.advanced-simple-toggle__icon .color1-stroke, .theme--dark .border_hover_color.footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.border_hover_color .color1-stroke, .positions-drawer__icon-close .theme--dark svg.border_hover_color .color1-stroke, .theme--dark .result-details__toggle .border_hover_color.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .border_hover_color.result-details__select-arrow .color1-stroke, .theme--dark .border_hover_color.dropdown__select-arrow .color1-stroke, .theme--dark .border_hover_color.input-wrapper__icon .color1-stroke, .theme--dark .border_hover_color.time-picker__icon .color1-stroke, .theme--dark .border_hover_color.acc-info__select-arrow .color1-stroke, .theme--dark .border_hover_color.acc-switcher__logout-icon .color1-stroke, .theme--dark .border_hover_color.calendar__icon .color1-stroke, .theme--dark .border_hover_color.contract-type-widget__select-arrow .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.border_hover_color .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.border_hover_color .color1-stroke, .theme--dark .border_hover_color.trade-type-info-navigation__icon .color1-stroke, .theme--dark .border_hover_color.datepicker__icon .color1-stroke, .theme--dark .dialog-header__close .color1-stroke, .theme--dark .border_hover_color.portfolio-empty__icon .color1-stroke {
       stroke: #7f8397; }
 
 /** @define fullscreen-dialog; weak */
@@ -5792,7 +6033,7 @@ html {
           display: inline-block;
           margin-right: 0.7em; }
     .contract-container .contract-header.purchased .header-wrapper .header-purchased {
-      color: #4bbfab;
+      color: #39b19d;
       background-color: #f4f4f6;
       opacity: 1;
       -webkit-transition: opacity 0.4s linear;
@@ -5801,7 +6042,7 @@ html {
       -webkit-transform: none;
               transform: none; }
       .contract-container .contract-header.won .header-wrapper .header-result {
-        background-color: #4bbfab; }
+        background-color: #39b19d; }
       .contract-container .contract-header.won .header-wrapper .header-purchased {
         opacity: 0; }
     .contract-container .contract-header.lost .header-wrapper {
@@ -5916,9 +6157,9 @@ html {
         height: 2.4em;
         margin-right: 1em; }
         .info-box-container .info-box .expired svg .color1-fill {
-          fill: #4bbfab; }
+          fill: #39b19d; }
       .info-box-container .info-box .expired .pl-value {
-        color: #4bbfab;
+        color: #39b19d;
         font-weight: bold;
         font-size: 1.6em;
         line-height: 1.5em; }
@@ -5947,7 +6188,7 @@ html {
         text-align: right;
         font-weight: bold; }
         .info-box-container .info-box .general .values .profit {
-          color: #4bbfab; }
+          color: #39b19d; }
         .info-box-container .info-box .general .values .loss {
           color: #e31c4b; }
       .info-box-container .info-box .general .sell {
@@ -6091,7 +6332,7 @@ html {
       transition: background-color 0.2s ease-in; }
       .digits__digit-value--selected {
         background-color: #ffffff;
-        border: 2px solid #4bbfab; }
+        border: 2px solid #39b19d; }
       .digits__digit-value--latest {
         -webkit-transform: translateY(-8px);
                 transform: translateY(-8px);
@@ -6100,10 +6341,10 @@ html {
         transition: transform 0.2s ease-out;
         transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
       .digits__digit-value--win {
-        background-color: #4bbfab;
+        background-color: #39b19d;
         color: #ffffff; }
       .digits__digit-value--blink {
-        background-color: #4bbfab;
+        background-color: #39b19d;
         -webkit-animation-name: blinking-white;
                 animation-name: blinking-white;
         -webkit-animation-duration: 500ms;
@@ -6146,7 +6387,7 @@ html {
         line-height: 1.5;
         color: rgba(0, 0, 0, 0.8); }
         .digits__digit-spot-last--win {
-          color: #4bbfab; }
+          color: #39b19d; }
         .digits__digit-spot-last--loss {
           color: #e31c4b; }
     .digits__digit--loss {
@@ -6170,7 +6411,7 @@ html {
             transform: rotate(45deg);
     opacity: 0; }
     .digits__particles-particle {
-      background: #4bbfab;
+      background: #39b19d;
       opacity: 0.7;
       border-radius: 50%;
       display: block;
@@ -6212,7 +6453,7 @@ html {
   .digits__icon-color {
     fill: #ff9933; }
   .digits__icon--win .digits__icon-color {
-    fill: #4bbfab; }
+    fill: #39b19d; }
   .digits__icon--loss .digits__icon-color {
     fill: #e31c4b; }
 
@@ -6357,7 +6598,7 @@ html {
   .portfolio .indicative {
     text-align: right; }
     .portfolio .indicative--price-moved-up {
-      color: #4bbfab; }
+      color: #39b19d; }
     .portfolio .indicative--price-moved-down {
       color: #e31c4b; }
     .portfolio .indicative--no-resale {
@@ -6393,6 +6634,14 @@ html {
     height: 4.8em;
     width: 4.8em;
     margin-bottom: 1.6em; }
+    .theme--light .portfolio-empty__icon {
+      /* postcss-bem-linter: ignore */ }
+      .theme--light .portfolio-empty__icon path {
+        fill: rgba(0, 0, 0, 0.16) !important; }
+    .theme--dark .portfolio-empty__icon {
+      /* postcss-bem-linter: ignore */ }
+      .theme--dark .portfolio-empty__icon path {
+        fill: rgba(127, 131, 151, 0.3) !important; }
   .portfolio-empty__text {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.16); }
@@ -6435,7 +6684,7 @@ html {
   .portfolio-card__purchase:before {
     background-image: url("../images/portfolio/ic_purchase_light.svg"); }
   .portfolio-card__indicative--price-moved-up {
-    color: #4bbfab; }
+    color: #39b19d; }
     .portfolio-card__indicative--price-moved-up:before {
       background-image: url("../images/portfolio/ic_price_up.svg"); }
   .portfolio-card__indicative--price-moved-down {
@@ -6592,8 +6841,8 @@ html {
       border-color: #e31c4b;
       background: #e31c4b; }
     .chart-spot__spot--won {
-      background-color: #4bbfab;
-      border: 2px solid #4bbfab; }
+      background-color: #39b19d;
+      border: 2px solid #39b19d; }
     .chart-spot__spot--won, .chart-spot__spot--lost {
       color: #ffffff; }
   .chart-spot__entry {
@@ -6731,7 +6980,7 @@ html {
   .statement .amount {
     font-weight: bold; }
     .statement .amount--profit {
-      color: #4bbfab; }
+      color: #39b19d; }
     .statement .amount--loss {
       color: #e31c4b; }
   .statement--card-view {
@@ -6786,7 +7035,7 @@ html {
   .statement-card__cell-text {
     vertical-align: middle; }
   .statement-card__amount--sell, .statement-card__amount--deposit {
-    color: #4bbfab; }
+    color: #39b19d; }
   .statement-card__amount--buy, .statement-card__amount--withdrawal {
     color: #e31c4b; }
   .statement-card__icon {
@@ -6852,7 +7101,7 @@ html {
     text-align: left;
     line-height: 1.5; }
     .theme--light .trade-container__fieldset-info {
-      color: #999cac; }
+      color: rgba(0, 0, 0, 0.8); }
     .theme--dark .trade-container__fieldset-info {
       color: #7f8397; }
     .trade-container__fieldset-info--left {
@@ -6870,11 +7119,11 @@ html {
   .theme--light .trade-container__input {
     background: #ffffff;
     border-color: #ffffff;
-    color: rgba(0, 0, 0, 0.8); }
+    color: #000000; }
   .theme--dark .trade-container__input {
     background: #101320;
     border-color: #101320;
-    color: #7f8397; }
+    color: #ffffff; }
 
 .trade-container__error {
   -webkit-box-pack: center;
@@ -7144,7 +7393,7 @@ html {
 /** @define btn-purchase */
 .btn-purchase {
   position: relative;
-  background-color: #34a39a;
+  background-color: #2d9f93;
   overflow: hidden;
   height: 5.6em;
   width: 100%;
@@ -7243,11 +7492,17 @@ html {
     .btn-purchase__trade-type-text {
       margin-left: 26px;
       position: absolute; }
+    .btn-purchase__trade-type-icon {
+      /* postcss-bem-linter: ignore */ }
+      .theme--light .btn-purchase__trade-type-icon .color1-fill {
+        fill: #ffffff; }
+      .theme--dark .btn-purchase__trade-type-icon .color1-fill {
+        fill: #ffffff; }
   .btn-purchase__effect-main {
     width: 60%;
     height: 56px;
     position: absolute;
-    background-color: #4bbfab;
+    background-color: #39b19d;
     color: #ffffff;
     left: 0;
     top: 0;
@@ -7260,7 +7515,7 @@ html {
     height: 0;
     border-style: solid;
     border-width: 28px 0 28px 14px;
-    border-color: transparent transparent transparent #4bbfab;
+    border-color: transparent transparent transparent #39b19d;
     left: 60%;
     position: absolute;
     top: 0;
@@ -7322,8 +7577,6 @@ html {
     color: #7f8397; }
   .theme--dark .portfolio-empty button.btn span, .theme--dark .statement-empty button.btn span {
     color: unset; }
-  .theme--dark .portfolio-empty__icon path {
-    fill: #2a3052; }
   .theme--dark .portfolio-empty__text {
     color: rgba(127, 131, 151, 0.3) !important; }
   .theme--dark .statement.container .statement__filter {
@@ -7375,20 +7628,6 @@ html {
     .theme--dark .block-ui__loading-spinner-path {
       -webkit-animation: dash 1.5s ease-in-out infinite, colorOrange 6s ease-in-out infinite;
               animation: dash 1.5s ease-in-out infinite, colorOrange 6s ease-in-out infinite; }
-  .theme--dark .full-page-modal {
-    background-color: rgba(31, 36, 61, 0.8); }
-    .theme--dark .full-page-modal__dialog {
-      background-color: #191c31;
-      -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
-              box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16); }
-    .theme--dark .full-page-modal__content, .theme--dark .full-page-modal__header {
-      color: #7f8397; }
-    .theme--dark .full-page-modal__btn {
-      background-color: #191c31; }
-      .theme--dark .full-page-modal__btn:hover {
-        background-color: #7f8397; }
-      .theme--dark .full-page-modal__btn-text {
-        color: #ffffff; }
   .theme--dark .toast__body {
     background-color: #dbeefd;
     color: white; }
@@ -7402,86 +7641,6 @@ html {
       background-color: #4c4745 !important; }
   .theme--dark .toast__close-button {
     color: #aaacba; }
-  .theme--dark .datepicker__input {
-    background: #191c31;
-    color: #ffffff; }
-    .theme--dark .datepicker__input:hover, .theme--dark .datepicker__input:focus, .theme--dark .datepicker__input:active {
-      border-color: #ffffff; }
-  .theme--dark .datepicker__native-overlay {
-    background: #2a3052; }
-    .theme--dark .datepicker__native-overlay:hover, .theme--dark .datepicker__native-overlay:focus, .theme--dark .datepicker__native-overlay:active {
-      border-color: #ffffff; }
-  .theme--dark .range-slider__track {
-    background: #101320 !important; }
-    .theme--dark .range-slider__track.input:active, .theme--dark .range-slider__track.input:focus {
-      -webkit-box-shadow: none;
-              box-shadow: none; }
-    .theme--dark .range-slider__track::-webkit-slider-thumb {
-      background: #4f60ae; }
-    .theme--dark .range-slider__track::-moz-range-thumb {
-      background: #4f60ae; }
-    .theme--dark .range-slider__track::-moz-range-track {
-      background: #101320; }
-  .theme--dark .range-slider__ticks-step {
-    border-color: #101320;
-    background: #101320; }
-    .theme--dark .range-slider__ticks-step--active, .theme--dark .range-slider__ticks-step--marked {
-      background: #4f60ae;
-      border-color: #4f60ae; }
-    .theme--dark .range-slider__ticks-step:hover {
-      background: #4f60ae;
-      border-color: #4f60ae;
-      -webkit-box-shadow: 0 0 0 6px rgba(79, 96, 174, 0.32);
-              box-shadow: 0 0 0 6px rgba(79, 96, 174, 0.32); }
-  .theme--dark .range-slider__line {
-    background: #4f60ae; }
-  .theme--dark .acc-info__id {
-    color: #ffffff; }
-  .theme--dark .acc-info:hover:not(.show) {
-    background-color: #202641; }
-    .theme--dark .acc-info:hover:not(.show) .symbols {
-      background: #202641; }
-  .theme--dark .acc-info__balance .symbols {
-    background: #101320; }
-  .theme--dark .acc-info--show:after {
-    background: #ffffff; }
-  .theme--dark .acc-info--is-virtual .acc-balance-amount, .theme--dark .acc-info--is-virtual .symbols {
-    color: #ff9933; }
-  .theme--dark .acc-switcher__wrapper {
-    background: #191c31; }
-  .theme--dark .acc-switcher__accounts .acc-switcher__account:not(:last-child):not(:only-child) {
-    border-bottom: 1px solid #191c31; }
-  .theme--dark .acc-switcher__list {
-    background-color: #191c31; }
-    .theme--dark .acc-switcher__list-group {
-      border-color: #101320; }
-    .theme--dark .acc-switcher__list-title {
-      color: #7f8397; }
-    .theme--dark .acc-switcher__list .acc-switcher__account {
-      background-color: #101320; }
-      .theme--dark .acc-switcher__list .acc-switcher__account:hover:not(.acc-switcher__account--selected) {
-        background-color: #202641; }
-      .theme--dark .acc-switcher__list .acc-switcher__account .acc-switcher__id {
-        color: #7f8397; }
-      .theme--dark .acc-switcher__list .acc-switcher__account--selected {
-        background: #2a3052; }
-        .theme--dark .acc-switcher__list .acc-switcher__account--selected .acc-switcher__id {
-          color: #ffffff;
-          font-weight: 700; }
-          .theme--dark .acc-switcher__list .acc-switcher__account--selected .acc-switcher__id--virtual:before {
-            color: #ff9933;
-            border: 1px solid #ff9933; }
-  .theme--dark .acc-switcher__logout span {
-    color: #7f8397; }
-  .theme--dark .acc-switcher__new-account-title {
-    color: #7f8397;
-    border-color: #7f8397; }
-    .theme--dark .acc-switcher__new-account-title:before {
-      color: #7f8397; }
-    .theme--dark .acc-switcher__new-account-title:hover {
-      background: #202641; }
-  .theme--dark .allow-equals__label {
-    color: #7f8397; }
   .theme--dark .popconfirm {
     background: #191c31; }
     .theme--dark .popconfirm__header {
@@ -7543,11 +7702,6 @@ html {
     background: #191c31;
     -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5); }
-  .theme--dark .contract-type-list__label span {
-    color: #7f8397; }
-  .theme--dark .contract-type-list__contract-wrapper {
-    background: #101320;
-    color: #7f8397; }
   .theme--dark .contract-type-item {
     background: #101320;
     color: #7f8397; }
@@ -7593,15 +7747,6 @@ html {
         fill: #2a3052; }
       .theme--dark .contract-type-widget .category-wrapper .category-type .stroke-active {
         stroke: #ffffff; }
-  .theme--dark .button-menu__button {
-    background-color: #101320; }
-    .theme--dark .button-menu__button span {
-      color: #7f8397; }
-    .theme--dark .button-menu__button:hover {
-      background-color: #202641; }
-    .theme--dark .button-menu__button--active {
-      color: #ffffff;
-      background-color: #2a3052; }
   .theme--dark .time-picker__icon g {
     stroke: #7f8397; }
   .theme--dark .time-picker__dialog {
@@ -7616,10 +7761,6 @@ html {
     .theme--dark .time-picker__selector-list-item--disabled {
       color: rgba(127, 131, 151, 0.3);
       pointer-events: none; }
-    .theme--dark .time-picker__selector-list-item--selected {
-      background: #2a3052; }
-    .theme--dark .time-picker__selector-list-item:hover  {
-      background: #202641; }
   .theme--dark .input-field__label {
     color: #7f8397; }
   .theme--dark .input-field:has(input[type=checkbox]) {
@@ -7628,8 +7769,7 @@ html {
     background-color: #202641; }
   .theme--dark .input {
     background: #101320;
-    border-color: #101320;
-    color: #7f8397; }
+    border-color: #101320; }
     .theme--dark .input[type=checkbox] {
       border-color: #7f8397; }
       .theme--dark .input[type=checkbox]:hover, .theme--dark .input-wrapper__button:hover ~ .input-wrapper__input[type=checkbox] {
@@ -7655,8 +7795,6 @@ html {
   .theme--dark .dropdown__display {
     background: #101320;
     border-color: #101320; }
-    .theme--dark .dropdown__display-text {
-      color: #7f8397; }
     .theme--dark .dropdown__display:hover, .theme--dark .dropdown__display:focus, .theme--dark .dropdown__display:active {
       border-color: #7f8397; }
     .theme--dark .dropdown__display:focus, .theme--dark .dropdown__display:active {
@@ -7736,7 +7874,7 @@ html {
     .theme--dark .digits__digit-value--selected {
       background-color: #101320; }
     .theme--dark .digits__digit-value--win {
-      background-color: #4bbfab; }
+      background-color: #39b19d; }
     .theme--dark .digits__digit-value--loss {
       background-color: #e31c4b; }
   .theme--dark .digits__digit-spot-value {
@@ -7744,7 +7882,7 @@ html {
   .theme--dark .digits__digit-spot-last {
     color: #ffffff; }
     .theme--dark .digits__digit-spot-last--win {
-      color: #4bbfab; }
+      color: #39b19d; }
     .theme--dark .digits__digit-spot-last--loss {
       color: #e31c4b; }
   .theme--dark .page-error__box {
@@ -7786,16 +7924,8 @@ html {
       background: #191c31; }
     .theme--dark .positions-drawer-card {
       color: #ffffff; }
-      .theme--dark .positions-drawer-card__result {
-        background-color: #101320; }
-        .theme--dark .positions-drawer-card__result:hover {
-          background: 0; }
-        .theme--dark .positions-drawer-card__result--won {
-          background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(16, 19, 32, 0)), to(rgba(0, 148, 117, 0.16)));
-          background-image: linear-gradient(to top, rgba(16, 19, 32, 0), rgba(0, 148, 117, 0.16)); }
-        .theme--dark .positions-drawer-card__result--lost {
-          background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(16, 19, 32, 0)), to(rgba(227, 28, 75, 0.16)));
-          background-image: linear-gradient(to top, rgba(16, 19, 32, 0), rgba(227, 28, 75, 0.16)); }
+      .theme--dark .positions-drawer-card__result:hover {
+        background: 0; }
       .theme--dark .positions-drawer-card__wrapper {
         background: #101320; }
         .theme--dark .positions-drawer-card__wrapper--active:before {
@@ -7850,7 +7980,7 @@ html {
     background-color: #101320;
     color: #ffffff; }
     .theme--dark .chart-spot__spot--won {
-      background-color: #4bbfab; }
+      background-color: #39b19d; }
     .theme--dark .chart-spot__spot--lost {
       background-color: #e31c4b; }
   .theme--dark .chart-spot__entry {
