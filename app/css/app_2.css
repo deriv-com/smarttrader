@@ -503,7 +503,8 @@ html {
     z-index: 999;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
+    transition: opacity 0.3s;
+    pointer-events: none; }
     .tooltip__balloon-icon--show {
       -webkit-transition: opacity 0.3s 0.2s;
       transition: opacity 0.3s 0.2s;
@@ -5396,6 +5397,7 @@ html {
   bottom: 0;
   background-color: rgba(11, 14, 24, 0.3);
   /* postcss-bem-linter: ignore */
+  /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
   .full-page-modal__dialog {
     max-width: 560px;
@@ -5426,7 +5428,7 @@ html {
     font-size: 1.6em;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     text-align: left;
     line-height: 1.75;
     margin-bottom: 10px; }
@@ -5460,12 +5462,16 @@ html {
     width: 100%; }
   .full-page-modal__button {
     margin: 0; }
+  .full-page-modal .btn--primary--orange {
+    /* postcss-bem-linter: ignore */ }
+    .full-page-modal .btn--primary--orange:hover:not([disabled]) {
+      background: #ff8802; }
   .full-page-modal .btn--secondary--orange {
     border: none;
     margin-right: 0.8em;
     /* postcss-bem-linter: ignore */ }
     .full-page-modal .btn--secondary--orange:hover:not([disabled]) {
-      background: none;
+      background: #f4f4f6;
       border: none; }
   .full-page-modal .btn__text {
     font-size: 1.4em; }
@@ -7628,6 +7634,24 @@ html {
     .theme--dark .block-ui__loading-spinner-path {
       -webkit-animation: dash 1.5s ease-in-out infinite, colorOrange 6s ease-in-out infinite;
               animation: dash 1.5s ease-in-out infinite, colorOrange 6s ease-in-out infinite; }
+  .theme--dark .full-page-modal {
+    background-color: rgba(31, 36, 61, 0.8);
+    /* postcss-bem-linter: ignore */ }
+    .theme--dark .full-page-modal__dialog {
+      background-color: #191c31;
+      -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+              box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16); }
+    .theme--dark .full-page-modal__content, .theme--dark .full-page-modal__header {
+      color: #7f8397; }
+    .theme--dark .full-page-modal .btn--secondary--orange {
+      background-color: #191c31;
+      /* postcss-bem-linter: ignore */
+      /* postcss-bem-linter: ignore */ }
+      .theme--dark .full-page-modal .btn--secondary--orange:hover:not([disabled]) {
+        background: #202641;
+        border: none; }
+      .theme--dark .full-page-modal .btn--secondary--orange .btn__text {
+        color: #ffffff; }
   .theme--dark .toast__body {
     background-color: #dbeefd;
     color: white; }
