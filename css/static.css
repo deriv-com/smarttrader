@@ -1094,6 +1094,8 @@ div.kineticjs-content {
   #content.contact-content .phone-container .number-container #cs_telephone_number {
     width: 100%;
     min-width: 160px; }
+    #content.contact-content .phone-container .number-container #cs_telephone_number ~ ul.select-options {
+      max-height: 130px; }
   #content.contact-content .phone-container .number-container #display_cs_telephone {
     line-height: 1.5rem;
     -ms-flex-item-align: end;
