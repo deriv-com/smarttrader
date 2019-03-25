@@ -1801,8 +1801,8 @@ html {
       left: 0;
       top: 0;
       position: absolute;
-      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+      -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+              box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24);
       border-radius: 4px;
       pointer-events: none; }
     .positions-drawer-card__wrapper:first-child {
@@ -1868,7 +1868,7 @@ html {
   .positions-drawer-card__purchase-label {
     text-transform: capitalize;
     margin-right: 0.5em;
-    font-size: 10px;
+    font-size: 1em;
     font-weight: normal; }
     .theme--light .positions-drawer-card__purchase-label {
       color: rgba(0, 0, 0, 0.8); }
@@ -2032,13 +2032,6 @@ html {
   display: inline; }
 
 /** @define result-details; */
-.result-details__separator {
-  margin: 4px -9px 4px; }
-  .theme--light .result-details__separator {
-    border-top: 1px solid #f4f4f6; }
-  .theme--dark .result-details__separator {
-    border-top: 1px solid #191c31; }
-
 .result-details__wrapper {
   margin: -2px -9px 0;
   -webkit-transition: max-height 0.2s ease, opacity 0.2s linear;
@@ -2051,12 +2044,16 @@ html {
   overflow: hidden; }
   .result-details__wrapper--is-open {
     opacity: 1;
-    max-height: 166px; }
+    max-height: 220px; }
 
 .result-details__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 4px 8px; }
+  padding: 8px; }
+  .theme--light .result-details__grid {
+    border-top: 1px solid #f4f4f6; }
+  .theme--dark .result-details__grid {
+    border-top: 1px solid #191c31; }
 
 .result-details__item {
   display: -webkit-box;
@@ -2066,7 +2063,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 4px;
+  margin: 0 4px;
   max-width: 80px; }
 
 .result-details__label {
@@ -2077,7 +2074,7 @@ html {
     color: #7f8397; }
 
 .result-details__value {
-  padding-top: 4px;
+  padding-top: 2px;
   line-height: 1.5;
   font-size: 1.2em; }
 
@@ -2104,13 +2101,11 @@ html {
             transform: rotate(0deg);
     -webkit-transform-origin: 50% 45%;
             transform-origin: 50% 45%; }
-  .theme--light .result-details__toggle--is-open {
-    border-top: 1px solid #f4f4f6; }
-  .theme--dark .result-details__toggle--is-open {
-    border-top: 1px solid #191c31; }
-  .result-details__toggle--is-open .result-details__select-arrow {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+  .result-details__toggle--is-open {
+    border-top: none; }
+    .result-details__toggle--is-open .result-details__select-arrow {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
 
 /** @define result */
 .result__caption {
