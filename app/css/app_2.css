@@ -5458,16 +5458,27 @@ html {
   .full-page-modal__button {
     margin: 0; }
   .full-page-modal .btn--primary--orange {
+    -webkit-transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
     /* postcss-bem-linter: ignore */ }
-    .full-page-modal .btn--primary--orange:hover:not([disabled]) {
-      background: #ff8802; }
+    .full-page-modal .btn--primary--orange:hover:not([disabled]):before {
+      background: rgba(0, 0, 0, 0.04);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.4;
+      display: block;
+      border-radius: 4px; }
   .full-page-modal .btn--secondary--orange {
     border: none;
     margin-right: 0.8em;
     /* postcss-bem-linter: ignore */ }
     .full-page-modal .btn--secondary--orange:hover:not([disabled]) {
-      background: #f4f4f6;
-      border: none; }
+      border: none;
+      background: rgba(0, 0, 0, 0.04); }
   .full-page-modal .btn__text {
     font-size: 1.4em; }
 
