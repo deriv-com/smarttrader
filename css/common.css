@@ -804,10 +804,7 @@ label + input {
     #token_form .scope-list .scope-types {
       -ms-flex-preferred-size: unset;
           flex-basis: unset;
-      max-width: unset;
-      -webkit-box-flex: unset;
-          -ms-flex: unset;
-              flex: unset; }
+      max-width: unset; }
       #token_form .scope-list .scope-types:last-child {
         margin-bottom: 16px; } }
 
