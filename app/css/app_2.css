@@ -1899,19 +1899,23 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .theme--light .positions-drawer-card__indicative--price-stable {
+    .theme--light .positions-drawer-card__indicative {
       color: rgba(0, 0, 0, 0.8); }
-    .theme--dark .positions-drawer-card__indicative--price-stable {
+    .theme--dark .positions-drawer-card__indicative {
       color: #ffffff; }
     .positions-drawer-card__indicative-label {
       color: rgba(0, 0, 0, 0.8);
       font-size: 1em;
       font-weight: normal;
       margin-bottom: 0.5em; }
-    .positions-drawer-card__indicative--price-moved-up {
-      color: #39b19d; }
-    .positions-drawer-card__indicative--price-moved-down {
-      color: #e31c4b; }
+    .positions-drawer-card__indicative--movement {
+      width: 16px;
+      height: 16px; }
+      .positions-drawer-card__indicative--movement-complete, .positions-drawer-card__indicative--movement-complete:after {
+        display: none; }
+      .positions-drawer-card__indicative--movement:after {
+        content: '';
+        width: 16px; }
   .positions-drawer-card__remaining-time {
     font-size: 1em; }
     .theme--light .positions-drawer-card__remaining-time {
@@ -2166,37 +2170,63 @@ html {
     background: rgba(0, 0, 0, 0.04);
     border-radius: 8px; }
   .progress-slider__ticks {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    left: 0;
-    top: -2px;
-    height: 0; }
+    position: relative; }
+    .progress-slider__ticks-wrapper {
+      position: relative;
+      margin: 2px 0 8px;
+      height: 6px;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; }
     .progress-slider__ticks-step {
-      height: 2px;
-      width: 2px;
-      border: 2px solid #ffffff;
-      background: #ffffff;
-      border-radius: 50%;
-      margin: 0 3px;
-      -webkit-transition: background 0.5s, border-color 0.5s, -webkit-box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, -webkit-box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s;
-      transition: background 0.5s, border-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
-      -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-      cursor: pointer; }
-      .progress-slider__ticks-step--active, .progress-slider__ticks-step--marked {
-        background: #999cac;
-        border-color: #999cac; }
+      height: 6px;
+      width: 100%;
+      margin: 0 2px;
+      position: relative; }
+      .theme--light .progress-slider__ticks-step {
+        background: rgba(0, 0, 0, 0.04); }
+      .theme--dark .progress-slider__ticks-step {
+        background: #191c31; }
+      .progress-slider__ticks-step:before {
+        position: absolute;
+        content: '';
+        -webkit-transition: -webkit-transform 0.25s ease-in;
+        transition: -webkit-transform 0.25s ease-in;
+        transition: transform 0.25s ease-in;
+        transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
+        -webkit-transform: scale3d(0, 1, 1);
+                transform: scale3d(0, 1, 1);
+        -webkit-transform-origin: left;
+                transform-origin: left;
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 100%; }
+        .theme--light .progress-slider__ticks-step:before {
+          background: #999cac; }
+        .theme--dark .progress-slider__ticks-step:before {
+          background: #ffffff; }
+      .progress-slider__ticks-step--marked:before {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1); }
       .progress-slider__ticks-step:first-child {
         margin-left: 0; }
       .progress-slider__ticks-step:last-child {
         margin-right: 0; }
+      .progress-slider__ticks-step:first-child, .progress-slider__ticks-step:first-child:before {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px; }
+      .progress-slider__ticks-step:last-child, .progress-slider__ticks-step:last-child:before {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px; }
     .progress-slider__ticks-caption {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2236,24 +2266,26 @@ html {
     background-clip: padding-box;
     margin: 0.5rem 0 1rem;
     overflow: hidden; }
-    .progress-slider__infinite-loader--indeterminate {
-      background-color: #39b19d; }
-      .progress-slider__infinite-loader--indeterminate:before, .progress-slider__infinite-loader--indeterminate:after {
-        content: '';
-        position: absolute;
-        background-color: inherit;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        will-change: left, right; }
-      .progress-slider__infinite-loader--indeterminate:before {
-        -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-                animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
-      .progress-slider__infinite-loader--indeterminate:after {
-        -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-                animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-        -webkit-animation-delay: 1.15s;
-                animation-delay: 1.15s; }
+    .theme--light .progress-slider__infinite-loader--indeterminate {
+      background-color: #999cac; }
+    .theme--dark .progress-slider__infinite-loader--indeterminate {
+      background-color: #ffffff; }
+    .progress-slider__infinite-loader--indeterminate:before, .progress-slider__infinite-loader--indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right; }
+    .progress-slider__infinite-loader--indeterminate:before {
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    .progress-slider__infinite-loader--indeterminate:after {
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+              animation-delay: 1.15s; }
 
 @-webkit-keyframes indeterminate {
   0% {
