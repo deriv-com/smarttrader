@@ -3470,7 +3470,8 @@ html {
     outline: none;
     background: none;
     position: absolute;
-    padding: 0 0.5em; }
+    padding: 0 0.5em;
+    height: 1.4em; }
     .calendar__nav:hover:not(.calendar__nav--disabled) {
       cursor: pointer; }
     .calendar__nav--prev-year {
