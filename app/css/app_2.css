@@ -249,6 +249,10 @@ html {
   margin: 0.5em 0;
   padding: 0; }
 
+/** @define binary-app */
+.binary-app {
+  overflow: hidden; }
+
 @font-face {
   font-family: 'BinarySymbols';
   font-style: normal;
@@ -3645,8 +3649,10 @@ html {
     transition: 0.3s ease-in-out;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-right: 8px;
+    margin: 2px 8px 0 0;
     border-radius: 2px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     border: 2px solid #7f8397; }
     .checkbox__box--active {
       border: none;
@@ -4335,7 +4341,7 @@ html {
     text-align: center; }
 
 .media {
-  margin: 0 0 16px; }
+  margin: 0 0 24px; }
   .media__heading {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8);
@@ -4343,17 +4349,19 @@ html {
     text-transform: capitalize;
     text-align: left;
     line-height: 1.5;
-    margin: 0 0 16px; }
+    margin: 0 0 16px;
+    text-transform: none; }
     .theme--light .media__heading {
       color: rgba(0, 0, 0, 0.8); }
     .theme--dark .media__heading {
       color: #7f8397; }
   .media__icon {
-    min-width: 160px;
-    max-width: 160px;
-    height: 8em;
+    height: 120px;
     margin-right: 1.6em;
-    background-color: rgba(0, 0, 0, 0.16); }
+    border-radius: 4px;
+    min-width: 160px; }
+    .media__icon:empty {
+      background-color: rgba(0, 0, 0, 0.16); }
   .media__description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4387,7 +4395,8 @@ html {
             justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    text-transform: initial; }
 
 /** @define number-selector */
 .number-selector {
@@ -4964,7 +4973,7 @@ html {
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
     border-radius: 4px; }
     .theme--light .settings-dialog__container {
-      background-color: #f4f4f6; }
+      background-color: #ffffff; }
     .theme--dark .settings-dialog__container {
       background-color: #191c31; }
     .settings-dialog__container--hide {
@@ -5572,7 +5581,7 @@ html {
     .theme--light .vertical-tab__header:hover:not(.vertical-tab__header--active) {
       background-color: rgba(153, 156, 172, 0.32); }
     .theme--dark .vertical-tab__header:hover:not(.vertical-tab__header--active) {
-      background-color: rgba(127, 131, 151, 0.3); }
+      background-color: #202641; }
     .vertical-tab__header--active {
       font-size: 1.4em;
       color: #ffffff;
