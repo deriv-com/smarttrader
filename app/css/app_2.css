@@ -3627,10 +3627,10 @@ html {
     .allow-equals .allow-equals__tooltip[data-tooltip]:before {
       padding-left: 3.25em; }
     .allow-equals .allow-equals__tooltip[data-tooltip]:before, .allow-equals .allow-equals__tooltip[data-tooltip]:after {
-      right: 130px; }
+      top: 60%; }
   .allow-equals .allow-equals__tooltip-info-balloon-icon {
-    left: -428px;
-    top: -3px; }
+    left: -310px;
+    top: 328px; }
 
 /** @define calendar */
 .calendar {

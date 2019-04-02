@@ -605,7 +605,7 @@ a.previous-wrapper {
     #mt_account_management #account_selector #mt5_account, #mt_account_management #account_selector #accounts_list {
       border: 1px solid #394171; }
     #mt_account_management #account_selector #mt5_account {
-      height: 38px;
+      min-height: 38px;
       line-height: 38px;
       padding: 0 10px;
       -webkit-box-sizing: border-box;
@@ -622,6 +622,7 @@ a.previous-wrapper {
         display: block;
         float: right;
         margin-top: 17px;
+        margin-bottom: 17px;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #fff; }
