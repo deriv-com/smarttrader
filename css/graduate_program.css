@@ -85,7 +85,8 @@ body {
   width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  line-height: 1.2; }
 
 footer {
   padding: 5px;
@@ -144,7 +145,8 @@ a.link {
           margin: 20px; } }
   .icon-sm.icon-lg, .boxed-steps .icon-sm.icon, .boxed-steps .tab-with-buttons .icon.twb-button, .tab-with-buttons .boxed-steps .icon.twb-button, .tab-with-buttons .icon-lg.twb-button, .icon-md.icon-lg, .boxed-steps .icon-md.icon, .icon-lg.icon-lg, .boxed-steps .icon {
     height: 64px;
-    width: 64px; }
+    width: 54px;
+    min-width: 54px; }
     .icon-sm.icon-lg.margin-left-0, .boxed-steps .icon-sm.margin-left-0.icon, .boxed-steps .tab-with-buttons .margin-left-0.icon.twb-button, .tab-with-buttons .boxed-steps .margin-left-0.icon.twb-button, .tab-with-buttons .icon-lg.margin-left-0.twb-button, .icon-md.icon-lg.margin-left-0, .boxed-steps .icon-md.margin-left-0.icon, .icon-lg.icon-lg.margin-left-0, .boxed-steps .margin-left-0.icon {
       margin: 30px 40px 30px 0; }
       @media (max-width: 575px) {
