@@ -780,6 +780,10 @@ html {
   margin: 48px 0 35px;
   height: calc(100vh - 48px - 35px);
   overflow: hidden; }
+  .theme--light .app-contents {
+    background-color: #ffffff; }
+  .theme--dark .app-contents {
+    background-color: #101320; }
   .app-contents--contract-mode .trade-container .chart-container {
     max-width: calc(100% - 240px - 16px); }
   .app-contents--is-blurred {
@@ -6089,12 +6093,12 @@ html {
       fill: none; }
     .theme--light .disabled.advanced-simple-toggle__icon .color2-stroke, .theme--light .disabled.footer__icon .color2-stroke, .theme--light .positions-drawer__icon-close svg.disabled .color2-stroke, .positions-drawer__icon-close .theme--light svg.disabled .color2-stroke, .theme--light .result-details__toggle .disabled.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--light .disabled.result-details__select-arrow .color2-stroke, .theme--light .disabled.dropdown__select-arrow .color2-stroke, .theme--light .disabled.input-wrapper__icon .color2-stroke, .theme--light .disabled.time-picker__icon .color2-stroke, .theme--light .disabled.acc-info__select-arrow .color2-stroke, .theme--light .disabled.acc-switcher__logout-icon .color2-stroke, .theme--light .disabled.calendar__icon .color2-stroke, .theme--light .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--light .calendar__icon .color2-stroke, .theme--light .disabled.contract-type-widget__select-arrow .color2-stroke, .theme--light .trade-type-info-dialog__header svg.disabled .color2-stroke, .trade-type-info-dialog__header .theme--light svg.disabled .color2-stroke, .theme--light .disabled.trade-type-info-navigation__icon .color2-stroke, .theme--light .disabled.datepicker__icon .color2-stroke, .theme--light .disabled.portfolio-empty__icon .color2-stroke {
       stroke: none; }
-  .theme--light .white.advanced-simple-toggle__icon, .theme--light .white.footer__icon, .theme--light .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--light svg.white, .theme--light .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--light .white.result-details__select-arrow, .theme--light .white.dropdown__select-arrow, .theme--light .white.input-wrapper__icon, .theme--light .white.time-picker__icon, .theme--light .white.acc-info__select-arrow, .theme--light .white.acc-switcher__logout-icon, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info, .theme--light .white.calendar__icon, .theme--light .white.contract-type-widget__select-arrow, .theme--light .contract-type-item__icon:hover svg, .contract-type-item__icon:hover .theme--light svg, .theme--light .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--light svg.white, .theme--light .white.trade-type-info-navigation__icon, .theme--light .white.datepicker__icon, .theme--light .white.portfolio-empty__icon, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i, .theme--light .purchase-container__lock-icon, .theme--light .btn-purchase__trade-type .btn-purchase__icon_wrapper, .btn-purchase__trade-type .theme--light .btn-purchase__icon_wrapper {
+  .theme--light .white.advanced-simple-toggle__icon, .theme--light .white.footer__icon, .theme--light .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--light svg.white, .theme--light .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--light .white.result-details__select-arrow, .theme--light .white.dropdown__select-arrow, .theme--light .white.input-wrapper__icon, .theme--light .white.time-picker__icon, .theme--light .white.acc-info__select-arrow, .theme--light .white.acc-switcher__logout-icon, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info, .theme--light .white.calendar__icon, .theme--light .white.contract-type-widget__select-arrow, .theme--light .contract-type-item__icon:hover svg, .contract-type-item__icon:hover .theme--light svg, .theme--light .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--light svg.white, .theme--light .white.trade-type-info-navigation__icon, .theme--light .white.datepicker__icon, .theme--light .white.portfolio-empty__icon, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i, .theme--light .purchase-container__lock-icon, .theme--light .btn-purchase__info--left .btn-purchase__icon_wrapper, .btn-purchase__info--left .theme--light .btn-purchase__icon_wrapper {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--light .white.advanced-simple-toggle__icon .color1-fill, .theme--light .white.footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--light svg.white .color1-fill, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-fill, .theme--light .white.dropdown__select-arrow .color1-fill, .theme--light .white.input-wrapper__icon .color1-fill, .theme--light .white.time-picker__icon .color1-fill, .theme--light .white.acc-info__select-arrow .color1-fill, .theme--light .white.acc-switcher__logout-icon .color1-fill, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-fill, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info .color1-fill, .theme--light .white.calendar__icon .color1-fill, .theme--light .white.contract-type-widget__select-arrow .color1-fill, .theme--light .contract-type-item__icon:hover svg .color1-fill, .contract-type-item__icon:hover .theme--light svg .color1-fill, .theme--light .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--light svg.white .color1-fill, .theme--light .white.trade-type-info-navigation__icon .color1-fill, .theme--light .white.datepicker__icon .color1-fill, .theme--light .white.portfolio-empty__icon .color1-fill, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-fill, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i .color1-fill, .theme--light .purchase-container__lock-icon .color1-fill, .theme--light .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-fill, .btn-purchase__trade-type .theme--light .btn-purchase__icon_wrapper .color1-fill {
+    .theme--light .white.advanced-simple-toggle__icon .color1-fill, .theme--light .white.footer__icon .color1-fill, .theme--light .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--light svg.white .color1-fill, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-fill, .theme--light .white.dropdown__select-arrow .color1-fill, .theme--light .white.input-wrapper__icon .color1-fill, .theme--light .white.time-picker__icon .color1-fill, .theme--light .white.acc-info__select-arrow .color1-fill, .theme--light .white.acc-switcher__logout-icon .color1-fill, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-fill, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info .color1-fill, .theme--light .white.calendar__icon .color1-fill, .theme--light .white.contract-type-widget__select-arrow .color1-fill, .theme--light .contract-type-item__icon:hover svg .color1-fill, .contract-type-item__icon:hover .theme--light svg .color1-fill, .theme--light .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--light svg.white .color1-fill, .theme--light .white.trade-type-info-navigation__icon .color1-fill, .theme--light .white.datepicker__icon .color1-fill, .theme--light .white.portfolio-empty__icon .color1-fill, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-fill, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i .color1-fill, .theme--light .purchase-container__lock-icon .color1-fill, .theme--light .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill, .btn-purchase__info--left .theme--light .btn-purchase__icon_wrapper .color1-fill {
       fill: rgba(0, 0, 0, 0.8); }
-    .theme--light .white.advanced-simple-toggle__icon .color1-stroke, .theme--light .white.footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--light svg.white .color1-stroke, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-stroke, .theme--light .white.dropdown__select-arrow .color1-stroke, .theme--light .white.input-wrapper__icon .color1-stroke, .theme--light .white.time-picker__icon .color1-stroke, .theme--light .white.acc-info__select-arrow .color1-stroke, .theme--light .white.acc-switcher__logout-icon .color1-stroke, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-stroke, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info .color1-stroke, .theme--light .white.calendar__icon .color1-stroke, .theme--light .white.contract-type-widget__select-arrow .color1-stroke, .theme--light .contract-type-item__icon:hover svg .color1-stroke, .contract-type-item__icon:hover .theme--light svg .color1-stroke, .theme--light .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--light svg.white .color1-stroke, .theme--light .white.trade-type-info-navigation__icon .color1-stroke, .theme--light .white.datepicker__icon .color1-stroke, .theme--light .white.portfolio-empty__icon .color1-stroke, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-stroke, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i .color1-stroke, .theme--light .purchase-container__lock-icon .color1-stroke, .theme--light .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-stroke, .btn-purchase__trade-type .theme--light .btn-purchase__icon_wrapper .color1-stroke {
+    .theme--light .white.advanced-simple-toggle__icon .color1-stroke, .theme--light .white.footer__icon .color1-stroke, .theme--light .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--light svg.white .color1-stroke, .theme--light .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--light .white.result-details__select-arrow .color1-stroke, .theme--light .white.dropdown__select-arrow .color1-stroke, .theme--light .white.input-wrapper__icon .color1-stroke, .theme--light .white.time-picker__icon .color1-stroke, .theme--light .white.acc-info__select-arrow .color1-stroke, .theme--light .white.acc-switcher__logout-icon .color1-stroke, .theme--light .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-stroke, .allow-equals .allow-equals__tooltip:hover .theme--light .allow-equals__tooltip-info .color1-stroke, .theme--light .white.calendar__icon .color1-stroke, .theme--light .white.contract-type-widget__select-arrow .color1-stroke, .theme--light .contract-type-item__icon:hover svg .color1-stroke, .contract-type-item__icon:hover .theme--light svg .color1-stroke, .theme--light .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--light svg.white .color1-stroke, .theme--light .white.trade-type-info-navigation__icon .color1-stroke, .theme--light .white.datepicker__icon .color1-stroke, .theme--light .white.portfolio-empty__icon .color1-stroke, .theme--light .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-stroke, .trade-container__price-tooltip:hover .theme--light .trade-container__price-tooltip-i .color1-stroke, .theme--light .purchase-container__lock-icon .color1-stroke, .theme--light .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-stroke, .btn-purchase__info--left .theme--light .btn-purchase__icon_wrapper .color1-stroke {
       stroke: rgba(0, 0, 0, 0.8); }
   .theme--light .border_hover_color.advanced-simple-toggle__icon, .theme--light .border_hover_color.footer__icon, .theme--light .positions-drawer__icon-close svg.border_hover_color, .positions-drawer__icon-close .theme--light svg.border_hover_color, .theme--light .result-details__toggle .border_hover_color.result-details__select-arrow, .result-details__toggle .theme--light .border_hover_color.result-details__select-arrow, .theme--light .border_hover_color.dropdown__select-arrow, .theme--light .border_hover_color.input-wrapper__icon, .theme--light .border_hover_color.time-picker__icon, .theme--light .border_hover_color.acc-info__select-arrow, .theme--light .border_hover_color.acc-switcher__logout-icon, .theme--light .border_hover_color.calendar__icon, .theme--light .border_hover_color.contract-type-widget__select-arrow, .theme--light .trade-type-info-dialog__header svg.border_hover_color, .trade-type-info-dialog__header .theme--light svg.border_hover_color, .theme--light .border_hover_color.trade-type-info-navigation__icon, .theme--light .border_hover_color.datepicker__icon, .theme--light .dialog-header__close, .theme--light .border_hover_color.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
@@ -6162,12 +6166,12 @@ html {
       fill: none; }
     .theme--dark .disabled.advanced-simple-toggle__icon .color2-stroke, .theme--dark .disabled.footer__icon .color2-stroke, .theme--dark .positions-drawer__icon-close svg.disabled .color2-stroke, .positions-drawer__icon-close .theme--dark svg.disabled .color2-stroke, .theme--dark .result-details__toggle .disabled.result-details__select-arrow .color2-stroke, .result-details__toggle .theme--dark .disabled.result-details__select-arrow .color2-stroke, .theme--dark .disabled.dropdown__select-arrow .color2-stroke, .theme--dark .disabled.input-wrapper__icon .color2-stroke, .theme--dark .disabled.time-picker__icon .color2-stroke, .theme--dark .disabled.acc-info__select-arrow .color2-stroke, .theme--dark .disabled.acc-switcher__logout-icon .color2-stroke, .theme--dark .disabled.calendar__icon .color2-stroke, .theme--dark .calendar__nav--disabled .calendar__icon .color2-stroke, .calendar__nav--disabled .theme--dark .calendar__icon .color2-stroke, .theme--dark .disabled.contract-type-widget__select-arrow .color2-stroke, .theme--dark .trade-type-info-dialog__header svg.disabled .color2-stroke, .trade-type-info-dialog__header .theme--dark svg.disabled .color2-stroke, .theme--dark .disabled.trade-type-info-navigation__icon .color2-stroke, .theme--dark .disabled.datepicker__icon .color2-stroke, .theme--dark .disabled.portfolio-empty__icon .color2-stroke {
       stroke: none; }
-  .theme--dark .white.advanced-simple-toggle__icon, .theme--dark .white.footer__icon, .theme--dark .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--dark svg.white, .theme--dark .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--dark .white.result-details__select-arrow, .theme--dark .white.dropdown__select-arrow, .theme--dark .white.input-wrapper__icon, .theme--dark .white.time-picker__icon, .theme--dark .white.acc-info__select-arrow, .theme--dark .white.acc-switcher__logout-icon, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info, .theme--dark .white.calendar__icon, .theme--dark .white.contract-type-widget__select-arrow, .theme--dark .contract-type-item__icon:hover svg, .contract-type-item__icon:hover .theme--dark svg, .theme--dark .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--dark svg.white, .theme--dark .white.trade-type-info-navigation__icon, .theme--dark .white.datepicker__icon, .theme--dark .white.portfolio-empty__icon, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i, .theme--dark .purchase-container__lock-icon, .theme--dark .btn-purchase__trade-type .btn-purchase__icon_wrapper, .btn-purchase__trade-type .theme--dark .btn-purchase__icon_wrapper {
+  .theme--dark .white.advanced-simple-toggle__icon, .theme--dark .white.footer__icon, .theme--dark .positions-drawer__icon-close svg.white, .positions-drawer__icon-close .theme--dark svg.white, .theme--dark .result-details__toggle .white.result-details__select-arrow, .result-details__toggle .theme--dark .white.result-details__select-arrow, .theme--dark .white.dropdown__select-arrow, .theme--dark .white.input-wrapper__icon, .theme--dark .white.time-picker__icon, .theme--dark .white.acc-info__select-arrow, .theme--dark .white.acc-switcher__logout-icon, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info, .theme--dark .white.calendar__icon, .theme--dark .white.contract-type-widget__select-arrow, .theme--dark .contract-type-item__icon:hover svg, .contract-type-item__icon:hover .theme--dark svg, .theme--dark .trade-type-info-dialog__header svg.white, .trade-type-info-dialog__header .theme--dark svg.white, .theme--dark .white.trade-type-info-navigation__icon, .theme--dark .white.datepicker__icon, .theme--dark .white.portfolio-empty__icon, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i, .theme--dark .purchase-container__lock-icon, .theme--dark .btn-purchase__info--left .btn-purchase__icon_wrapper, .btn-purchase__info--left .theme--dark .btn-purchase__icon_wrapper {
     /* postcss-bem-linter: ignore */
     /* postcss-bem-linter: ignore */ }
-    .theme--dark .white.advanced-simple-toggle__icon .color1-fill, .theme--dark .white.footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--dark svg.white .color1-fill, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-fill, .theme--dark .white.dropdown__select-arrow .color1-fill, .theme--dark .white.input-wrapper__icon .color1-fill, .theme--dark .white.time-picker__icon .color1-fill, .theme--dark .white.acc-info__select-arrow .color1-fill, .theme--dark .white.acc-switcher__logout-icon .color1-fill, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-fill, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info .color1-fill, .theme--dark .white.calendar__icon .color1-fill, .theme--dark .white.contract-type-widget__select-arrow .color1-fill, .theme--dark .contract-type-item__icon:hover svg .color1-fill, .contract-type-item__icon:hover .theme--dark svg .color1-fill, .theme--dark .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--dark svg.white .color1-fill, .theme--dark .white.trade-type-info-navigation__icon .color1-fill, .theme--dark .white.datepicker__icon .color1-fill, .theme--dark .white.portfolio-empty__icon .color1-fill, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-fill, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-fill, .btn-purchase__trade-type .theme--dark .btn-purchase__icon_wrapper .color1-fill {
+    .theme--dark .white.advanced-simple-toggle__icon .color1-fill, .theme--dark .white.footer__icon .color1-fill, .theme--dark .positions-drawer__icon-close svg.white .color1-fill, .positions-drawer__icon-close .theme--dark svg.white .color1-fill, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-fill, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-fill, .theme--dark .white.dropdown__select-arrow .color1-fill, .theme--dark .white.input-wrapper__icon .color1-fill, .theme--dark .white.time-picker__icon .color1-fill, .theme--dark .white.acc-info__select-arrow .color1-fill, .theme--dark .white.acc-switcher__logout-icon .color1-fill, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-fill, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info .color1-fill, .theme--dark .white.calendar__icon .color1-fill, .theme--dark .white.contract-type-widget__select-arrow .color1-fill, .theme--dark .contract-type-item__icon:hover svg .color1-fill, .contract-type-item__icon:hover .theme--dark svg .color1-fill, .theme--dark .trade-type-info-dialog__header svg.white .color1-fill, .trade-type-info-dialog__header .theme--dark svg.white .color1-fill, .theme--dark .white.trade-type-info-navigation__icon .color1-fill, .theme--dark .white.datepicker__icon .color1-fill, .theme--dark .white.portfolio-empty__icon .color1-fill, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-fill, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i .color1-fill, .theme--dark .purchase-container__lock-icon .color1-fill, .theme--dark .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill, .btn-purchase__info--left .theme--dark .btn-purchase__icon_wrapper .color1-fill {
       fill: #ffffff; }
-    .theme--dark .white.advanced-simple-toggle__icon .color1-stroke, .theme--dark .white.footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--dark svg.white .color1-stroke, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-stroke, .theme--dark .white.dropdown__select-arrow .color1-stroke, .theme--dark .white.input-wrapper__icon .color1-stroke, .theme--dark .white.time-picker__icon .color1-stroke, .theme--dark .white.acc-info__select-arrow .color1-stroke, .theme--dark .white.acc-switcher__logout-icon .color1-stroke, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-stroke, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info .color1-stroke, .theme--dark .white.calendar__icon .color1-stroke, .theme--dark .white.contract-type-widget__select-arrow .color1-stroke, .theme--dark .contract-type-item__icon:hover svg .color1-stroke, .contract-type-item__icon:hover .theme--dark svg .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.white .color1-stroke, .theme--dark .white.trade-type-info-navigation__icon .color1-stroke, .theme--dark .white.datepicker__icon .color1-stroke, .theme--dark .white.portfolio-empty__icon .color1-stroke, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-stroke, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-stroke, .btn-purchase__trade-type .theme--dark .btn-purchase__icon_wrapper .color1-stroke {
+    .theme--dark .white.advanced-simple-toggle__icon .color1-stroke, .theme--dark .white.footer__icon .color1-stroke, .theme--dark .positions-drawer__icon-close svg.white .color1-stroke, .positions-drawer__icon-close .theme--dark svg.white .color1-stroke, .theme--dark .result-details__toggle .white.result-details__select-arrow .color1-stroke, .result-details__toggle .theme--dark .white.result-details__select-arrow .color1-stroke, .theme--dark .white.dropdown__select-arrow .color1-stroke, .theme--dark .white.input-wrapper__icon .color1-stroke, .theme--dark .white.time-picker__icon .color1-stroke, .theme--dark .white.acc-info__select-arrow .color1-stroke, .theme--dark .white.acc-switcher__logout-icon .color1-stroke, .theme--dark .allow-equals .allow-equals__tooltip:hover .allow-equals__tooltip-info .color1-stroke, .allow-equals .allow-equals__tooltip:hover .theme--dark .allow-equals__tooltip-info .color1-stroke, .theme--dark .white.calendar__icon .color1-stroke, .theme--dark .white.contract-type-widget__select-arrow .color1-stroke, .theme--dark .contract-type-item__icon:hover svg .color1-stroke, .contract-type-item__icon:hover .theme--dark svg .color1-stroke, .theme--dark .trade-type-info-dialog__header svg.white .color1-stroke, .trade-type-info-dialog__header .theme--dark svg.white .color1-stroke, .theme--dark .white.trade-type-info-navigation__icon .color1-stroke, .theme--dark .white.datepicker__icon .color1-stroke, .theme--dark .white.portfolio-empty__icon .color1-stroke, .theme--dark .trade-container__price-tooltip:hover .trade-container__price-tooltip-i .color1-stroke, .trade-container__price-tooltip:hover .theme--dark .trade-container__price-tooltip-i .color1-stroke, .theme--dark .purchase-container__lock-icon .color1-stroke, .theme--dark .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-stroke, .btn-purchase__info--left .theme--dark .btn-purchase__icon_wrapper .color1-stroke {
       stroke: #ffffff; }
   .theme--dark .border_hover_color.advanced-simple-toggle__icon, .theme--dark .border_hover_color.footer__icon, .theme--dark .positions-drawer__icon-close svg.border_hover_color, .positions-drawer__icon-close .theme--dark svg.border_hover_color, .theme--dark .result-details__toggle .border_hover_color.result-details__select-arrow, .result-details__toggle .theme--dark .border_hover_color.result-details__select-arrow, .theme--dark .border_hover_color.dropdown__select-arrow, .theme--dark .border_hover_color.input-wrapper__icon, .theme--dark .border_hover_color.time-picker__icon, .theme--dark .border_hover_color.acc-info__select-arrow, .theme--dark .border_hover_color.acc-switcher__logout-icon, .theme--dark .border_hover_color.calendar__icon, .theme--dark .border_hover_color.contract-type-widget__select-arrow, .theme--dark .trade-type-info-dialog__header svg.border_hover_color, .trade-type-info-dialog__header .theme--dark svg.border_hover_color, .theme--dark .border_hover_color.trade-type-info-navigation__icon, .theme--dark .border_hover_color.datepicker__icon, .theme--dark .dialog-header__close, .theme--dark .border_hover_color.portfolio-empty__icon {
     /* postcss-bem-linter: ignore */
@@ -6910,39 +6914,80 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 4em; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 83px); }
 
 .page-error__box {
   padding: 5em;
   text-align: center;
-  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* postcss-bem-linter: ignore */ }
   .theme--light .page-error__box {
-    background: #f4f4f6;
-    border: 1px solid #f4f4f6; }
+    background: #ffffff;
+    border: 1px solid #ffffff; }
   .theme--dark .page-error__box {
-    background: #191c31;
-    border: 1px solid #191c31; }
+    background: #101320;
+    border: 1px solid #101320; }
+  @media screen and (min-width: 1008px) {
+    .page-error__box {
+      max-width: calc(100vw - 45%); } }
   .page-error__box .inline-icon {
     margin: 0 auto; }
 
 .page-error__header {
-  font-weight: 400;
-  margin-bottom: 0.5em; }
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  text-transform: none;
+  text-align: center;
+  line-height: unset;
+  line-height: 44px; }
   .theme--light .page-error__header {
     color: rgba(0, 0, 0, 0.8); }
   .theme--dark .page-error__header {
     color: #ffffff; }
 
 .page-error__message {
-  opacity: 0.75;
-  font-size: 1.6em;
-  margin-top: 0.5em;
-  margin-bottom: 2em; }
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.5;
+  margin: 1.1428571429em 0em;
+  line-height: 1.45;
+  max-width: 400px; }
   .theme--light .page-error__message {
     color: rgba(0, 0, 0, 0.8); }
   .theme--dark .page-error__message {
-    color: #7f8397; }
+    color: #ffffff; }
+  .page-error__message-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.page-error__code {
+  font-weight: bold; }
+
+.page-error__btn-text {
+  text-transform: uppercase; }
 
 /** @define portfolio; weak */
 .portfolio {
@@ -7640,41 +7685,6 @@ html {
     .theme--dark .trade-container__error-info {
       color: #ffffff; }
 
-.trade-container__currency {
-  position: absolute;
-  float: left;
-  font-size: 10px;
-  height: 32px;
-  left: 32px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: transparent;
-  border-color: transparent;
-  z-index: 2; }
-  .theme--light .trade-container__currency {
-    color: rgba(0, 0, 0, 0.8); }
-  .theme--dark .trade-container__currency {
-    color: #7f8397; }
-  .trade-container__currency--symbol {
-    font-size: 1.4em;
-    line-height: 1.5; }
-  .trade-container__currency:before {
-    font-size: 1.4em;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 400;
-    text-transform: capitalize;
-    text-align: center;
-    line-height: 1.5;
-    color: inherit; }
-
 .trade-container__price {
   line-height: 0.9rem;
   border: 0;
@@ -7898,63 +7908,15 @@ html {
   .btn-purchase:not(.btn-purchase--disabled) {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24); }
-  .btn-purchase__info {
-    width: 40%;
-    padding-left: 10%;
-    float: right;
-    text-align: right;
-    height: 56px;
-    padding-right: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .btn-purchase__return {
+  .btn-purchase__text {
     font-size: 1.4em;
     color: #ffffff;
     font-weight: 700;
     text-transform: capitalize;
     text-align: left;
-    line-height: 1.5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-  .btn-purchase__profit {
-    font-size: 1em;
+    line-height: 1.5; }
+  .btn-purchase__info {
     color: #ffffff;
-    font-weight: 700;
-    text-transform: capitalize;
-    text-align: left;
-    line-height: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    line-height: unset; }
-  .btn-purchase__trade-type {
-    background-color: #39b19d;
-    color: #ffffff;
-    float: left;
     text-align: left;
     position: relative;
     display: -webkit-box;
@@ -7967,24 +7929,29 @@ html {
         -ms-flex-align: center;
             align-items: center;
     padding-left: 10px;
-    height: 56px;
-    width: 60%; }
-    .btn-purchase__trade-type .btn-purchase__text_wrapper {
+    height: 56px; }
+  .btn-purchase__info--left {
+    background-color: #39b19d;
+    width: 60%;
+    float: left; }
+    .btn-purchase__info--left .btn-purchase__text_wrapper {
       margin-left: 24px;
       position: absolute; }
-      .btn-purchase__trade-type .btn-purchase__text_wrapper .btn-purchase__text {
-        font-size: 1.4em;
-        color: #ffffff;
-        font-weight: 700;
-        text-transform: capitalize;
-        text-align: left;
-        line-height: 1.5; }
-    .btn-purchase__trade-type .btn-purchase__icon_wrapper {
+    .btn-purchase__info--left .btn-purchase__icon_wrapper {
       /* postcss-bem-linter: ignore */ }
-      .theme--light .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-fill {
+      .theme--light .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill {
         fill: #ffffff; }
-      .theme--dark .btn-purchase__trade-type .btn-purchase__icon_wrapper .color1-fill {
+      .theme--dark .btn-purchase__info--left .btn-purchase__icon_wrapper .color1-fill {
         fill: #ffffff; }
+  .btn-purchase__info--right {
+    width: 40%;
+    padding-left: 10%;
+    padding-right: 10px;
+    float: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    background-color: transparent; }
   .btn-purchase__effect-detail {
     width: 0;
     height: 0;
@@ -8023,59 +7990,47 @@ html {
     .theme--light .btn-purchase--disabled {
       background-color: #b3b3b3;
       color: rgba(0, 0, 0, 0.16); }
+      .theme--light .btn-purchase--disabled .btn-purchase__info--left {
+        background-color: #d6d6d6; }
+        .theme--light .btn-purchase--disabled .btn-purchase__info--left svg {
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */ }
+          .theme--light .btn-purchase--disabled .btn-purchase__info--left svg .color1-fill {
+            fill: rgba(0, 0, 0, 0.16); }
+          .theme--light .btn-purchase--disabled .btn-purchase__info--left svg .color1-stroke {
+            stroke: rgba(0, 0, 0, 0.16); }
+          .theme--light .btn-purchase--disabled .btn-purchase__info--left svg .color2-fill {
+            fill: rgba(0, 0, 0, 0.16); }
+          .theme--light .btn-purchase--disabled .btn-purchase__info--left svg .color2-stroke {
+            stroke: rgba(0, 0, 0, 0.16); }
+        .theme--light .btn-purchase--disabled .btn-purchase__info--left .btn-purchase__text {
+          color: rgba(0, 0, 0, 0.16); }
+      .theme--light .btn-purchase--disabled .btn-purchase__effect-detail {
+        border-color: transparent transparent transparent #d6d6d6; }
     .theme--dark .btn-purchase--disabled {
       background-color: #282a37;
       color: rgba(127, 131, 151, 0.3); }
-    .theme--light .btn-purchase--disabled .btn-purchase__trade-type {
-      background-color: #d6d6d6; }
-    .theme--dark .btn-purchase--disabled .btn-purchase__trade-type {
-      background-color: #303342; }
-    .theme--light .btn-purchase--disabled .btn-purchase__trade-type svg {
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */ }
-      .theme--light .btn-purchase--disabled .btn-purchase__trade-type svg .color1-fill {
-        fill: rgba(0, 0, 0, 0.16); }
-      .theme--light .btn-purchase--disabled .btn-purchase__trade-type svg .color1-stroke {
-        stroke: rgba(0, 0, 0, 0.16); }
-      .theme--light .btn-purchase--disabled .btn-purchase__trade-type svg .color2-fill {
-        fill: rgba(0, 0, 0, 0.16); }
-      .theme--light .btn-purchase--disabled .btn-purchase__trade-type svg .color2-stroke {
-        stroke: rgba(0, 0, 0, 0.16); }
-    .theme--dark .btn-purchase--disabled .btn-purchase__trade-type svg {
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */
-      /* postcss-bem-linter: ignore */ }
-      .theme--dark .btn-purchase--disabled .btn-purchase__trade-type svg .color1-fill {
-        fill: rgba(127, 131, 151, 0.3); }
-      .theme--dark .btn-purchase--disabled .btn-purchase__trade-type svg .color1-stroke {
-        stroke: rgba(127, 131, 151, 0.3); }
-      .theme--dark .btn-purchase--disabled .btn-purchase__trade-type svg .color2-fill {
-        fill: rgba(127, 131, 151, 0.3); }
-      .theme--dark .btn-purchase--disabled .btn-purchase__trade-type svg .color2-stroke {
-        stroke: rgba(127, 131, 151, 0.3); }
-    .theme--light .btn-purchase--disabled .btn-purchase__trade-type .btn-purchase__text {
-      color: rgba(0, 0, 0, 0.16); }
-    .theme--dark .btn-purchase--disabled .btn-purchase__trade-type .btn-purchase__text {
-      color: rgba(127, 131, 151, 0.3); }
-    .theme--light .btn-purchase--disabled .btn-purchase__return, .theme--light .btn-purchase--disabled .btn-purchase__profit {
-      color: rgba(0, 0, 0, 0.16); }
-    .theme--dark .btn-purchase--disabled .btn-purchase__return, .theme--dark .btn-purchase--disabled .btn-purchase__profit {
-      color: rgba(127, 131, 151, 0.3); }
-    .theme--light .btn-purchase--disabled .btn-purchase__effect-main {
-      background-color: #d6d6d6;
-      color: rgba(0, 0, 0, 0.16); }
-    .theme--dark .btn-purchase--disabled .btn-purchase__effect-main {
-      background-color: #303342;
-      color: rgba(127, 131, 151, 0.3); }
-    .theme--light .btn-purchase--disabled .btn-purchase__effect-detail {
-      border-color: transparent transparent transparent #d6d6d6; }
-    .theme--dark .btn-purchase--disabled .btn-purchase__effect-detail {
-      border-color: transparent transparent transparent #303342; }
-    .btn-purchase--disabled .btn-purchase__currency {
-      color: rgba(127, 131, 151, 0.3); }
+      .theme--dark .btn-purchase--disabled .btn-purchase__info--left {
+        background-color: #303342; }
+        .theme--dark .btn-purchase--disabled .btn-purchase__info--left svg {
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */
+          /* postcss-bem-linter: ignore */ }
+          .theme--dark .btn-purchase--disabled .btn-purchase__info--left svg .color1-fill {
+            fill: rgba(127, 131, 151, 0.3); }
+          .theme--dark .btn-purchase--disabled .btn-purchase__info--left svg .color1-stroke {
+            stroke: rgba(127, 131, 151, 0.3); }
+          .theme--dark .btn-purchase--disabled .btn-purchase__info--left svg .color2-fill {
+            fill: rgba(127, 131, 151, 0.3); }
+          .theme--dark .btn-purchase--disabled .btn-purchase__info--left svg .color2-stroke {
+            stroke: rgba(127, 131, 151, 0.3); }
+        .theme--dark .btn-purchase--disabled .btn-purchase__info--left .btn-purchase__text {
+          color: rgba(127, 131, 151, 0.3); }
+      .theme--dark .btn-purchase--disabled .btn-purchase__effect-detail {
+        border-color: transparent transparent transparent #303342; }
   .btn-purchase--animated .btn-purchase__icon_wrapper {
     width: 16px;
     height: 16px; }
@@ -8084,8 +8039,6 @@ html {
     height: 8px; }
     .btn-purchase--animated .btn-purchase__text_wrapper .btn-purchase__text {
       display: block; }
-  .btn-purchase--animated .btn-purchase__info .btn-purchase__text_wrapper {
-    margin: 4px 0; }
   .btn-purchase__shadow-wrapper:hover:after {
     opacity: 0; }
 
