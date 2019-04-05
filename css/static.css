@@ -872,6 +872,30 @@ div.kineticjs-content {
   font-weight: 100;
   margin-bottom: 0; }
 
+#account_currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 4px; }
+  #account_currency_img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px; }
+    @media screen and (max-width: 500px) {
+      #account_currency_img {
+        display: none; } }
+  #account_currency_current {
+    color: #2a3052;
+    font-weight: 300; }
+  #account_currency_hint {
+    font-size: 1rem;
+    margin: 10px 0 0; }
+
 #payment_methods {
   overflow-y: hidden; }
   #payment_methods h3:not(.no-margin) {
@@ -1329,14 +1353,15 @@ body #not_authenticated_financial ul.checked > li {
       .accounts-content .table-container table.responsive#existing_accounts tr:last-child {
         border: none; } }
   .accounts-content .table-container table.responsive#existing_accounts th, .accounts-content .table-container table.responsive#existing_accounts td {
-    text-align: left !important;
+    text-align: center !important;
     border: none; }
     @media screen and (max-width: 500px) {
       .accounts-content .table-container table.responsive#existing_accounts th, .accounts-content .table-container table.responsive#existing_accounts td {
         display: inline-block;
         padding: 10px;
         width: 40%;
-        width: calc(50% - 20px); }
+        width: calc(50% - 20px);
+        text-align: left !important; }
         .accounts-content .table-container table.responsive#existing_accounts th:nth-child(2n), .accounts-content .table-container table.responsive#existing_accounts td:nth-child(2n) {
           float: right; } }
 
@@ -1345,6 +1370,9 @@ body #not_authenticated_financial ul.checked > li {
 
 .accounts-content #accounts_wrapper #no_new_accounts_wrapper {
   color: #c2c2c2; }
+
+#set_currency #frm_set_currency .section-divider {
+  max-width: 500px; }
 
 .set-currency-content .currency_list > div {
   padding: 15px;

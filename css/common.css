@@ -998,16 +998,19 @@ label + input {
     border-radius: 4px;
     overflow: auto;
     text-align: left; }
-  .lightbox#set_currency_popup_container #dialog_content {
+  .lightbox#set_currency_popup_container #dialog_content, .lightbox#deposit_currency_change_popup_container #dialog_content, .lightbox#create_mt5_popup_container #dialog_content {
     max-width: 24em;
     padding: 25px 15px; }
-  .lightbox#set_currency_popup_container #frm_confirm {
+    .lightbox#set_currency_popup_container #dialog_content #dialog_title, .lightbox#set_currency_popup_container #dialog_content #dialog_footnote, .lightbox#deposit_currency_change_popup_container #dialog_content #dialog_title, .lightbox#deposit_currency_change_popup_container #dialog_content #dialog_footnote, .lightbox#create_mt5_popup_container #dialog_content #dialog_title, .lightbox#create_mt5_popup_container #dialog_content #dialog_footnote {
+      padding: 0;
+      margin: 5px 0; }
+  .lightbox#set_currency_popup_container #frm_confirm, .lightbox#deposit_currency_change_popup_container #frm_confirm, .lightbox#create_mt5_popup_container #frm_confirm {
     width: 100%; }
-  .lightbox#set_currency_popup_container a#btn_cancel, .lightbox#set_currency_popup_container a#btn_ok {
+  .lightbox#set_currency_popup_container a#btn_cancel, .lightbox#set_currency_popup_container a#btn_ok, .lightbox#deposit_currency_change_popup_container a#btn_cancel, .lightbox#deposit_currency_change_popup_container a#btn_ok, .lightbox#create_mt5_popup_container a#btn_cancel, .lightbox#create_mt5_popup_container a#btn_ok {
     width: 45%;
     width: calc(50% - 5px);
     display: inline-block; }
-    .lightbox#set_currency_popup_container a#btn_cancel span, .lightbox#set_currency_popup_container a#btn_ok span {
+    .lightbox#set_currency_popup_container a#btn_cancel span, .lightbox#set_currency_popup_container a#btn_ok span, .lightbox#deposit_currency_change_popup_container a#btn_cancel span, .lightbox#deposit_currency_change_popup_container a#btn_ok span, .lightbox#create_mt5_popup_container a#btn_cancel span, .lightbox#create_mt5_popup_container a#btn_ok span {
       width: 45%;
       width: calc(100% - 50px); }
 
