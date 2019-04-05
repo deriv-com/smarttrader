@@ -1061,7 +1061,7 @@ label + input {
     color: #a8a8a8;
     text-align: justify;
     margin: 0 0 10px; }
-  #footer #footer-regulatory .age-restriction {
+  #footer #footer-regulatory .age-restriction-sign {
     width: 45px; }
   #footer #footer-regulatory .fld-risk-warning {
     border-color: #44484c; }
@@ -1229,7 +1229,7 @@ label + input {
     width: 60px; }
   #footer .regulation-logos .labuan-icon {
     width: 105px; }
-  #footer .age-restriction {
+  #footer .age-restriction-sign {
     margin-right: 0; } }
 
 body #topbar {
