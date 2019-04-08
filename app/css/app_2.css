@@ -30,8 +30,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+html {
+  height: 100%; }
+
 body {
-  line-height: 1; }
+  line-height: 1;
+  height: 100%; }
 
 ol, ul {
   list-style: none; }
@@ -260,6 +264,7 @@ html {
 
 /** @define binary-app */
 .binary-app {
+  height: 100%;
   overflow: hidden; }
 
 @font-face {
@@ -3399,7 +3404,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0.8em 0 1.6em; }
-  .acc-switcher__new-account-title {
+  .acc-switcher__new-account-link {
     font-size: 1.2em;
     color: rgba(0, 0, 0, 0.4);
     font-weight: 400;
@@ -3409,25 +3414,30 @@ html {
     padding: 6.6666666667px 13.3333333333px;
     width: 100%;
     border-radius: 4px;
-    cursor: pointer; }
-    .theme--light .acc-switcher__new-account-title {
+    cursor: pointer;
+    text-decoration: none; }
+    .theme--light .acc-switcher__new-account-link {
       color: rgba(0, 0, 0, 0.4);
       border: 1px dashed rgba(0, 0, 0, 0.4); }
-      .theme--light .acc-switcher__new-account-title:before {
+      .theme--light .acc-switcher__new-account-link:before {
         content: '\002B';
         color: rgba(0, 0, 0, 0.4);
         float: left; }
-      .theme--light .acc-switcher__new-account-title:hover {
+      .theme--light .acc-switcher__new-account-link:hover {
         background: rgba(0, 0, 0, 0.04); }
-    .theme--dark .acc-switcher__new-account-title {
+      .theme--light .acc-switcher__new-account-link:visited, .theme--light .acc-switcher__new-account-link:active {
+        color: rgba(0, 0, 0, 0.4); }
+    .theme--dark .acc-switcher__new-account-link {
       color: #7f8397;
       border: 1px dashed #7f8397; }
-      .theme--dark .acc-switcher__new-account-title:before {
+      .theme--dark .acc-switcher__new-account-link:before {
         content: '\002B';
         color: #7f8397;
         float: left; }
-      .theme--dark .acc-switcher__new-account-title:hover {
+      .theme--dark .acc-switcher__new-account-link:hover {
         background: #202641; }
+      .theme--dark .acc-switcher__new-account-link:visited, .theme--dark .acc-switcher__new-account-link:active {
+        color: #7f8397; }
 
 .acc-switcher__list {
   height: 100%;
@@ -6032,6 +6042,77 @@ html {
     .theme--dark .theme-select-settings__option__icon--active, .theme--dark .theme-select-settings__option__icon:hover {
       -webkit-box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3);
               box-shadow: 0 0 0 2px rgba(127, 131, 151, 0.3); }
+
+/** @define work-in-progress */
+.work-in-progress {
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .theme--light .work-in-progress {
+    background: #ffffff; }
+  .theme--dark .work-in-progress {
+    background: #191c31; }
+  .work-in-progress__content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 1.6em; }
+  .work-in-progress__header {
+    font-size: 2.8em;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    text-transform: none;
+    text-align: center;
+    line-height: unset;
+    margin: 0.8em 0 0.4em; }
+    .theme--light .work-in-progress__header {
+      color: #2a3052; }
+    .theme--dark .work-in-progress__header {
+      color: #ffffff; }
+  .work-in-progress__text {
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    line-height: 1.75;
+    margin: 0 1.6em 2.4em;
+    line-height: 1.3;
+    width: 200px; }
+    .theme--light .work-in-progress__text {
+      color: #2a3052; }
+    .theme--dark .work-in-progress__text {
+      color: #ffffff; }
+  .work-in-progress__btn {
+    height: 42px;
+    cursor: pointer; }
+    .theme--light .work-in-progress__btn {
+      background: #2a3052; }
+    .theme--dark .work-in-progress__btn {
+      background: #ffffff; }
+    .work-in-progress__btn--span {
+      font-weight: normal;
+      font-size: 1.6em;
+      text-transform: none; }
+      .theme--light .work-in-progress__btn--span {
+        color: #ffffff; }
+      .theme--dark .work-in-progress__btn--span {
+        color: #101320; }
 
 /*
     to use styles without modifier class on .inline-icon
