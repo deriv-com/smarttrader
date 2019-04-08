@@ -1235,6 +1235,20 @@ label + input {
   #footer .age-restriction-sign {
     margin-right: 0; } }
 
+@media screen and (max-width: 380px) {
+  #footer .regulation-logos .vanuatu-icon {
+    width: 75px;
+    margin: 5px; }
+  #footer .regulation-logos .bvi-icon {
+    width: 50px;
+    margin: 5px; }
+  #footer .regulation-logos .labuan-icon {
+    width: 90px;
+    margin: 5px; }
+  #footer .regulation-logos .age-restriction-sign {
+    width: 35px;
+    margin: 5px; } }
+
 body #topbar {
   text-align: right; }
   body #topbar .container {
