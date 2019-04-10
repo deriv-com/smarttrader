@@ -4237,6 +4237,8 @@ html {
       /* postcss-bem-linter: ignore */ }
       .contract-type-item__icon:hover svg {
         pointer-events: none; }
+  .contract-type-item--invisible {
+    display: none; }
   .contract-type-item--selected {
     /* postcss-bem-linter: ignore */ }
     .theme--light .contract-type-item--selected {
