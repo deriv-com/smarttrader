@@ -6578,11 +6578,13 @@ html {
         transition: -webkit-transform 0.2s ease-out;
         transition: transform 0.2s ease-out;
         transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
-      .digits__digit-value--win {
+      .theme--light .digits__digit-value--win {
+        background-color: #39b19d;
+        color: #ffffff; }
+      .theme--dark .digits__digit-value--win {
         background-color: #39b19d;
         color: #ffffff; }
       .digits__digit-value--blink {
-        background-color: #39b19d;
         -webkit-animation-duration: 500ms;
                 animation-duration: 500ms;
         -webkit-animation-iteration-count: 4;
@@ -6596,9 +6598,13 @@ html {
           -webkit-animation-name: blinking-dark-blue-2;
                   animation-name: blinking-dark-blue-2; }
       .digits__digit-value--loss {
-        background-color: #e31c4b;
-        border: none;
-        color: #ffffff; }
+        border: none !important; }
+        .theme--light .digits__digit-value--loss {
+          background-color: #e31c4b;
+          color: #ffffff; }
+        .theme--dark .digits__digit-value--loss {
+          background-color: #e31c4b;
+          color: #ffffff; }
     .digits__digit-spot {
       position: absolute;
       top: -35px;
