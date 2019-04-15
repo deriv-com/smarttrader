@@ -237,6 +237,14 @@ html {
   top: 0;
   bottom: 0; }
 
+/** @define link */
+.link {
+  color: #ff9933;
+  font-weight: bold;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: underline; }
+
 /** @define icon */
 .icon--centered, .time-picker__icon, .datepicker__icon {
   top: 0.8em;
