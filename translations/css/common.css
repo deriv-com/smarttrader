@@ -206,8 +206,7 @@ fieldset {
   fieldset legend {
     color: #44484c;
     padding: 0 0.8em;
-    font-weight: bold;
-    text-transform: capitalize; }
+    font-weight: bold; }
     fieldset legend + .hint {
       padding-left: 1em; }
   fieldset .text-display {
