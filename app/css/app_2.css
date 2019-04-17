@@ -4040,6 +4040,9 @@ html {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      .calendar__cell-tooltip[data-tooltip]:before {
+        white-space: nowrap;
+        width: auto; }
     .calendar__cell-tooltip-icon {
       margin-top: 0.1em; }
 
@@ -4698,7 +4701,7 @@ html {
   .datepicker__picker {
     position: absolute;
     top: 7px;
-    z-index: 1;
+    z-index: 2;
     -webkit-transform-origin: left;
             transform-origin: left;
     -webkit-transform: scale(1, 0) translate3d(20px, 0, 0);
