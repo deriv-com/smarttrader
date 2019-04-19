@@ -728,6 +728,8 @@ label + input {
   transition: none; }
   .max_30day_turnover input.hide {
     color: transparent; }
+    .max_30day_turnover input.hide::-moz-selection {
+      color: transparent; }
     .max_30day_turnover input.hide::selection {
       color: transparent; }
 
