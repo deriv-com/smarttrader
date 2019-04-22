@@ -7415,7 +7415,7 @@ html {
     padding-left: 0.5em;
     height: 100%; }
     .theme--light .chart-marker-line__wrapper {
-      border-color: rgba(0, 0, 0, 0.8); }
+      border-color: #999cac; }
     .theme--dark .chart-marker-line__wrapper {
       border-color: #ffffff; }
   .chart-marker-line__icon {
@@ -7423,6 +7423,12 @@ html {
     bottom: -23px;
     left: -11px;
     white-space: nowrap; }
+    .chart-marker-line__icon--time {
+      /* postcss-bem-linter: ignore */ }
+      .theme--light .chart-marker-line__icon--time path {
+        fill: #999cac; }
+      .theme--dark .chart-marker-line__icon--time path {
+        fill: #ffffff; }
     .chart-marker-line__icon--won {
       /* postcss-bem-linter: ignore */ }
       .chart-marker-line__icon--won circle {
