@@ -960,21 +960,21 @@ label + input {
     padding-bottom: 10px;
     float: none; } }
 
-.highcharts-container .highcharts-subtitle > div:not(.delay) {
-  display: inline-block; }
-
-.highcharts-container .highcharts-subtitle > div .chart-delay {
-  display: block;
-  text-align: center;
-  margin-bottom: 0.2em;
-  color: #c03; }
-
-.highcharts-container .highcharts-subtitle > div .chart-payout-range {
-  margin-left: 10px;
-  margin-right: 5px; }
-  .highcharts-container .highcharts-subtitle > div .chart-payout-range:before {
-    content: url("../images/pages/trade/chart_payout_range.svg");
+.highcharts-container .highcharts-subtitle {
+  white-space: normal !important; }
+  .highcharts-container .highcharts-subtitle > div:not(.delay) {
     display: inline-block; }
+  .highcharts-container .highcharts-subtitle > div .chart-delay {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.2em;
+    color: #c03; }
+  .highcharts-container .highcharts-subtitle > div .chart-payout-range {
+    margin-left: 10px;
+    margin-right: 5px; }
+    .highcharts-container .highcharts-subtitle > div .chart-payout-range:before {
+      content: url("../images/pages/trade/chart_payout_range.svg");
+      display: inline-block; }
 
 .highcharts-container .highcharts-tooltip span {
   background-color: #fff; }
