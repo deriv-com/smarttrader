@@ -2184,12 +2184,6 @@ html {
       .positions-drawer-card__profit-loss--positive:before {
         content: '+';
         color: inherit; }
-    .positions-drawer-card__profit-loss--plus:before {
-      content: '+';
-      color: inherit; }
-    .positions-drawer-card__profit-loss--minus:before {
-      content: '-';
-      color: inherit; }
   .positions-drawer-card__underlying-name {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7362,7 +7356,9 @@ html {
   /* postcss-bem-linter: ignore */ }
   .chart-spot-label__time-container svg {
     /* postcss-bem-linter: ignore */ }
-    .chart-spot-label__time-container svg g {
+    .theme--light .chart-spot-label__time-container svg g {
+      stroke: rgba(0, 0, 0, 0.8); }
+    .theme--dark .chart-spot-label__time-container svg g {
       stroke: #ffffff; }
 
 .chart-spot-label__time {
@@ -7411,17 +7407,30 @@ html {
 
 /** @define chart-marker-line */
 .chart-marker-line {
-  height: 100%;
+  height: 94.5%;
   margin-bottom: 0.8em;
   z-index: 0 !important; }
   .chart-marker-line__wrapper {
-    border-left-width: 1px;
+    border-left-width: 2px;
     padding-left: 0.5em;
     height: 100%; }
-  .chart-marker-line__label {
+    .theme--light .chart-marker-line__wrapper {
+      border-color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .chart-marker-line__wrapper {
+      border-color: #ffffff; }
+  .chart-marker-line__icon {
     position: absolute;
-    bottom: 0;
+    bottom: -23px;
+    left: -11px;
     white-space: nowrap; }
+    .chart-marker-line__icon--won {
+      /* postcss-bem-linter: ignore */ }
+      .chart-marker-line__icon--won circle {
+        fill: #39b19d; }
+    .chart-marker-line__icon--lost {
+      /* postcss-bem-linter: ignore */ }
+      .chart-marker-line__icon--lost circle {
+        fill: #e31c4b; }
   .chart-marker-line--solid {
     border-left-style: solid; }
   .chart-marker-line--dash {
