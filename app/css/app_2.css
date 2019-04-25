@@ -4821,6 +4821,75 @@ html {
             align-items: flex-start;
     text-transform: initial; }
 
+.notification-bar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -100px);
+          transform: translate(-50%, -100px);
+  max-width: 640px;
+  width: auto;
+  z-index: 800;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  padding: 1.6em;
+  -webkit-transition: visibility 0s linear 0.7s, opacity 0.7s, -webkit-transform 0.7s;
+  transition: visibility 0s linear 0.7s, opacity 0.7s, -webkit-transform 0.7s;
+  transition: transform 0.7s, visibility 0s linear 0.7s, opacity 0.7s;
+  transition: transform 0.7s, visibility 0s linear 0.7s, opacity 0.7s, -webkit-transform 0.7s;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .notification-bar__message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: unset;
+    text-align: center;
+    line-height: 1.25; }
+    .theme--light .notification-bar__message {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .notification-bar__message {
+      color: #ffffff; }
+  .notification-bar__button {
+    margin: 0 0 0 1.6em;
+    font-size: 0.68em;
+    pointer-events: auto;
+    cursor: pointer; }
+  .notification-bar__icon path {
+    fill: #ffffff; }
+  .notification-bar--is-active {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+  .theme--light .notification-bar--info {
+    background-color: #ffffff; }
+  .theme--dark .notification-bar--info {
+    background-color: #191c31; }
+
 /** @define number-selector */
 .number-selector {
   margin-top: 1.2em;
