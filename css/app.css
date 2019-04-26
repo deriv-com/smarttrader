@@ -2476,6 +2476,49 @@ a.previous-wrapper {
   .realws-content {
     width: 280px !important; } }
 
+#paymentagent_withdrawal .wrapper-row-agent label {
+  padding-bottom: 10px; }
+
+#paymentagent_withdrawal .wrapper-row-agent .row-agent > div:not(:first-child) {
+  margin-top: 10px; }
+
+#paymentagent_withdrawal .wrapper-row-agent .row-agent > div:nth-child(2) {
+  text-align: center;
+  width: 260px; }
+
+#paymentagent_withdrawal .wrapper-row-agent .row-agent .hint {
+  width: 260px;
+  line-height: 1.4; }
+
+#paymentagent_withdrawal .select-dropdown, #paymentagent_withdrawal #txtAgents, #paymentagent_withdrawal #txtAmount, #paymentagent_withdrawal .row-agent .hint, #paymentagent_withdrawal .row-agent > div:nth-child(2) {
+  min-width: 260px; }
+
+#paymentagent_withdrawal .select-options {
+  min-width: 276px; }
+
+#paymentagent_withdrawal #txtDescription {
+  width: 260px; }
+
+#paymentagent_withdrawal .separator-line {
+  border-color: #f2f2f2; }
+
+@media screen and (max-width: 480px) {
+  #paymentagent_withdrawal .wrapper-row-agent .row-agent {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto; }
+    #paymentagent_withdrawal .wrapper-row-agent .row-agent .hint, #paymentagent_withdrawal .wrapper-row-agent .row-agent > div:nth-child(2) {
+      margin-left: auto;
+      margin-right: auto; }
+  #paymentagent_withdrawal .select {
+    width: 302px; }
+  #paymentagent_withdrawal .row-agent > div:nth-child(2) {
+    width: 100%; }
+  #paymentagent_withdrawal #txtAgents, #paymentagent_withdrawal #txtAmount, #paymentagent_withdrawal #txtDescription, #paymentagent_withdrawal .row-agent .hint {
+    width: 284px; }
+  #paymentagent_withdrawal .select-options {
+    width: 290px; } }
+
 .markets {
   min-width: 120px;
   position: relative; }

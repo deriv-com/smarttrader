@@ -563,7 +563,7 @@ html {
       transition: opacity 0.3s 0.2s;
       opacity: 1; }
   .tooltip[data-tooltip] {
-    cursor: help;
+    cursor: initial;
     display: block; }
     .theme--light .tooltip[data-tooltip]:before {
       background: rgba(0, 0, 0, 0.8); }
