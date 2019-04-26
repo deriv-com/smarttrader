@@ -771,23 +771,142 @@ html {
   .barspinner--dark .barspinner__rect {
     background-color: #2a3052; }
 
+@-webkit-keyframes fill-up {
+  0% {
+    height: 0px; }
+  100% {
+    height: 90px; } }
+
+@keyframes fill-up {
+  0% {
+    height: 0px; }
+  100% {
+    height: 90px; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes shrink {
+  0% {
+    height: 90px;
+    width: 90px;
+    opacity: 1; }
+  100% {
+    height: 0px;
+    width: 0px;
+    opacity: 0; } }
+
+@keyframes shrink {
+  0% {
+    height: 90px;
+    width: 90px;
+    opacity: 1; }
+  100% {
+    height: 0px;
+    width: 0px;
+    opacity: 0; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); }
+  20% {
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2); } }
+
 @keyframes sk-stretchdelay {
   0%, 40%, 100% {
     -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
+            transform: scaleY(1); }
   20% {
     -webkit-transform: scaleY(2);
-    transform: scaleY(2); } }
+            transform: scaleY(2); } }
 
-@-webkit-keyframes sk-stretchdelay {
-  /* postcss-bem-linter: ignore */
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
-  /* postcss-bem-linter: ignore */
-  20% {
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2); } }
+/** @define initial-loader */
+.initial-loader {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .theme--light .initial-loader {
+    background-color: #f4f4f6; }
+  .theme--dark .initial-loader {
+    background-color: #101320; }
+  .initial-loader__wrapper {
+    margin-top: 4.6666666667em; }
+  .initial-loader__status {
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0;
+    will-change: opacity, transform;
+    -webkit-animation: fade-in 0.75s, fade-out 0.25s ease-out 0.5s;
+            animation: fade-in 0.75s, fade-out 0.25s ease-out 0.5s; }
+    .theme--light .initial-loader__status {
+      color: rgba(0, 0, 0, 0.8); }
+    .theme--dark .initial-loader__status {
+      color: #ffffff; }
+  .initial-loader__mask {
+    fill: transparent; }
+  .initial-loader__fill {
+    -webkit-animation: fill-up 3s;
+            animation: fill-up 3s;
+    will-change: height; }
+    .theme--light .initial-loader__fill {
+      fill: #2a3052; }
+    .theme--dark .initial-loader__fill {
+      fill: #ffffff; }
+  .initial-loader__image {
+    will-change: height, width, opacity;
+    -webkit-animation: shrink 0.5s ease-out 2.75s;
+            animation: shrink 0.5s ease-out 2.75s; }
 
 /** @define app-contents; weak */
 .app-contents {
@@ -1142,13 +1261,14 @@ html {
   z-index: 99;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  opacity: 0;
+  height: 0;
   width: 100%;
-  height: 48px;
   top: 0;
-  -webkit-transition: -webkit-filter 0.25s linear;
-  transition: -webkit-filter 0.25s linear;
-  transition: filter 0.25s linear;
-  transition: filter 0.25s linear, -webkit-filter 0.25s linear;
+  -webkit-transition: height 0.25s, opacity 0.25s, -webkit-filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, -webkit-filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, filter 0.25s linear, -webkit-filter 0.25s linear;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-filter: blur(0);
@@ -1162,6 +1282,9 @@ html {
   .header--is-blurred {
     -webkit-filter: blur(3px);
             filter: blur(3px); }
+  .header--show {
+    opacity: 1;
+    height: 48px; }
   .header__menu-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1300,7 +1423,8 @@ html {
   bottom: 0;
   padding: 0 1em;
   width: 100%;
-  height: 35px;
+  height: 0;
+  opacity: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 3;
@@ -1313,10 +1437,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-filter 0.25s linear;
-  transition: -webkit-filter 0.25s linear;
-  transition: filter 0.25s linear;
-  transition: filter 0.25s linear, -webkit-filter 0.25s linear;
+  -webkit-transition: height 0.25s, opacity 0.25s, -webkit-filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, -webkit-filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, filter 0.25s linear;
+  transition: height 0.25s, opacity 0.25s, filter 0.25s linear, -webkit-filter 0.25s linear;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-filter: blur(0);
@@ -1330,6 +1454,9 @@ html {
   .footer--is-blurred {
     -webkit-filter: blur(3px);
             filter: blur(3px); }
+  .footer--show {
+    opacity: 1;
+    height: 35px; }
   .footer__links {
     display: -webkit-box;
     display: -ms-flexbox;
