@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/javascript/landing_pages/binary_grid.js"],"names":["window","onload","commonOnload"],"mappings":"AAAAA,OAAOC,MAAP,CAAgB,UAAY,CACxBC,cACH,CAFD","file":"binary_grid.js","sourcesContent":["window.onload = function () {\n    commonOnload();\n};\n"]}
