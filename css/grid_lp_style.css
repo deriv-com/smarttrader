@@ -8860,7 +8860,7 @@ body {
     margin-top: 0; }
   .home--header .header-sub {
     font-size: 24px;
-    line-height: 50px;
+    line-height: 36px;
     font-weight: bold; }
   .home--header .home-header-content {
     padding: 124px 0; }
@@ -8884,6 +8884,11 @@ body {
 
 .block-element {
   display: block; }
+
+@media (max-width: 480px) {
+  .block-xs {
+    display: block;
+    margin-top: 10px; } }
 
 @media only screen and (max-width: 1024px) {
   .binary-grid-landing .home--header {
