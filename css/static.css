@@ -164,6 +164,8 @@
       position: absolute;
       margin-right: 100%;
       right: 10px; }
+    #mt-tnc ol li ul {
+      list-style: none; }
   #mt-tnc ol ol {
     counter-reset: item2; }
     #mt-tnc ol ol li:before {
