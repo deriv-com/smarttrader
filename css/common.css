@@ -10723,3 +10723,50 @@ html.mm-opened.mm-black .mm-page {
 
 .mm-menu.mm-black .mm-header a:before {
   border-color: rgba(255, 255, 255, 0.3); }
+
+#elevio-shell {
+  height: 60px;
+  min-width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e98024;
+  position: fixed;
+  right: 8px !important;
+  bottom: 8px !important;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  cursor: pointer; }
+  #elevio-shell:hover .text {
+    max-width: 1000px;
+    padding: 0 25px; }
+  #elevio-shell .icon {
+    float: right;
+    padding: 0 15px; }
+    #elevio-shell .icon svg {
+      fill: #fff;
+      height: 30px !important;
+      width: 30px !important; }
+  #elevio-shell .text {
+    float: left;
+    display: inline-block;
+    padding: 0;
+    line-height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    -webkit-transition: max-width 0.1s ease, padding 0.1s ease;
+    transition: max-width 0.1s ease, padding 0.1s ease;
+    color: #fff;
+    font-size: 13px; }
