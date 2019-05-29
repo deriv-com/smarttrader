@@ -1396,6 +1396,27 @@ body #not_authenticated_financial ul.checked > li {
 .platforms-content h2 {
   line-height: 36px; }
 
+.platforms-content .beta {
+  position: relative;
+  top: -15px;
+  left: 5px;
+  background-color: #f44336;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 400;
+  height: 16px;
+  line-height: 1.8;
+  text-align: center;
+  width: 34px; }
+
+.platforms-content .new:after {
+  content: url("../images/pages/platforms/new_badge.svg");
+  position: relative;
+  top: -15px;
+  left: 5px; }
+
 .platforms-content #new_badge {
   position: relative;
   top: -15px; }
@@ -1410,10 +1431,15 @@ body #not_authenticated_financial ul.checked > li {
   max-width: 100%;
   vertical-align: middle; }
 
+.platforms-content .b-m-md li {
+  margin-bottom: 20px; }
+
 @media screen and (max-width: 768px) {
   .platforms-content .no-center-text-p-m {
     text-align: inherit;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+  .platforms-content .mobile-hide {
+    display: none; } }
 
 #mt5_types_of_accounts .box {
   border: 1px solid #dedede;
