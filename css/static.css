@@ -73,28 +73,24 @@
 
 .affiliate-ib-content {
   margin: 0 !important; }
-  .affiliate-ib-content h1 {
-    font-size: 3.5rem; }
   .affiliate-ib-content h2 {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px; }
   .affiliate-ib-content h4 {
     font-weight: 500; }
-  .affiliate-ib-content .text-align-left {
-    text-align: left; }
-  .affiliate-ib-content .hero {
+  .affiliate-ib-content #hero {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: url("../images/pages/affiliates_ib_landing/background/hero.png");
+    background-image: url("../images/pages/affiliates_ib_landing/background/hero.png");
     background-size: cover;
     background-position: center;
     min-height: 417px; }
-    .affiliate-ib-content .hero-header {
+    .affiliate-ib-content #hero h2 {
       font-weight: 300;
       color: #fff; }
-  .affiliate-ib-content .statistics {
+  .affiliate-ib-content #statistics {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -103,58 +99,52 @@
             align-items: center;
     background: url("../images/pages/contact/banner-bg.svg");
     min-height: 200px; }
-    .affiliate-ib-content .statistics h1 {
+    .affiliate-ib-content #statistics h1 {
       font-size: 64px; }
-    .affiliate-ib-content .statistics h3 {
+    .affiliate-ib-content #statistics h3 {
       margin: 0; }
-  .affiliate-ib-content .how-it-works {
+  .affiliate-ib-content #how-it-works {
     background: url("../images/pages/affiliates_ib_landing/background/orange.png");
-    background-size: cover;
-    color: #fff; }
-    .affiliate-ib-content .how-it-works h2, .affiliate-ib-content .how-it-works h3 {
-      color: #fff;
-      margin: 20px 0; }
-    .affiliate-ib-content .how-it-works h3 {
-      font-weight: 700; }
-    .affiliate-ib-content .how-it-works p {
+    background-size: cover; }
+    .affiliate-ib-content #how-it-works p {
       font-size: 22px;
       font-weight: normal;
       line-height: 28px; }
-  .affiliate-ib-content .who-apply {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .affiliate-ib-content .who-apply .gr-row {
-      max-width: 780px; }
-      .affiliate-ib-content .who-apply .gr-row h2 {
-        margin: 20px 0; }
-      .affiliate-ib-content .who-apply .gr-row h2, .affiliate-ib-content .who-apply .gr-row h4 {
-        font-weight: 700; }
-  .affiliate-ib-content .why-partner {
+    .affiliate-ib-content #how-it-works h2 {
+      margin: 40px 0; }
+    .affiliate-ib-content #how-it-works h3 {
+      font-weight: 700;
+      margin: 20px 0; }
+    .affiliate-ib-content #how-it-works p, .affiliate-ib-content #how-it-works h2, .affiliate-ib-content #how-it-works h3 {
+      color: #fff; }
+  .affiliate-ib-content #who-can-apply {
+    padding: 50px 0; }
+    .affiliate-ib-content #who-can-apply h4 {
+      font-weight: 700; }
+  .affiliate-ib-content #why-partner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .affiliate-ib-content .why-partner h2, .affiliate-ib-content .why-partner h4 {
+    .affiliate-ib-content #why-partner h2, .affiliate-ib-content #why-partner h4 {
       margin-top: 25px; }
-    .affiliate-ib-content .why-partner h4 {
+    .affiliate-ib-content #why-partner h4 {
       margin-bottom: 15px; }
-    .affiliate-ib-content .why-partner img {
+    .affiliate-ib-content #why-partner img {
       height: 64px; }
     @media screen and (max-width: 480px) {
-      .affiliate-ib-content .why-partner h4 {
+      .affiliate-ib-content #why-partner h4 {
         font-size: 1rem; }
-      .affiliate-ib-content .why-partner img {
+      .affiliate-ib-content #why-partner img {
         height: 56px; } }
-  .affiliate-ib-content .payment-method .container {
+  .affiliate-ib-content #payment-method .container {
     max-width: 1012px; }
-  .affiliate-ib-content .payment-method .gr-row {
+  .affiliate-ib-content #payment-method .gr-row {
     max-width: 940px;
     margin: 0 auto; }
-  .affiliate-ib-content .payment-method h2 {
+  .affiliate-ib-content #payment-method h2 {
     margin: 25px 0; }
+  .affiliate-ib-content .type-of-partner .text-align-left {
+    text-align: left; }
   .affiliate-ib-content .type-of-partner p {
     font-size: 18px;
     line-height: 27px; }
