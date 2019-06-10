@@ -1436,6 +1436,9 @@ body #not_authenticated_financial ul.checked > li {
 .about-us-content .btn-margin-top {
   margin-top: 1.5em; }
 
+.about-us-content .mac {
+  width: 100%; }
+
 .accounts-content .table-container {
   overflow-x: visible; }
 
