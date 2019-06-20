@@ -1022,6 +1022,8 @@ a.previous-wrapper {
               color: #c2c2c2; }
               .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper #tick_chart.normal-font #table_digits p.gray strong {
                 color: #000; }
+        .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper #table_digits_container {
+          margin-bottom: 20px; }
         @media screen and (max-width: 768px) {
           .inpage_popup_container .inpage_popup_content_box #sell_content_wrapper #sell_details_chart_wrapper {
             border-right: none; } }
