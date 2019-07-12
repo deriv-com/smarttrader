@@ -1537,7 +1537,7 @@ body #not_authenticated_financial ul.checked > li {
   position: relative;
   top: -15px;
   left: 5px;
-  background-color: #f44336;
+  background-color: #2a3052;
   border-radius: 10px;
   color: #fff;
   display: inline-block;
@@ -1570,6 +1570,10 @@ body #not_authenticated_financial ul.checked > li {
 
 .platforms-content .b-m-md li {
   margin-bottom: 20px; }
+
+.platforms-content .divider-sm {
+  width: 10px;
+  display: inline-block; }
 
 @media screen and (max-width: 768px) {
   .platforms-content .no-center-text-p-m {

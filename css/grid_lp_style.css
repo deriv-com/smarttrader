@@ -8738,7 +8738,27 @@ body {
 .binary-grid-landing .button-lg {
   padding: 13px 40px;
   margin-top: 30px;
+  text-align: center;
+  line-height: 100%;
+  display: inline-block;
+  font-weight: 400;
   font-size: 24px; }
+
+.binary-grid-landing .button-transparent {
+  padding: 10px 40px;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 100%;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 24px;
+  background: none;
+  border: 3px solid #2e8836;
+  border-radius: 3px;
+  color: #2e8836; }
+  .binary-grid-landing .button-transparent:hover {
+    background-color: #2e8836;
+    color: #ffffff; }
 
 .binary-grid-landing .icon-block {
   width: 50px;
@@ -8871,6 +8891,9 @@ body {
   margin-top: 0;
   margin-bottom: 0; }
 
+.binary-grid-landing .try-desktop {
+  margin-left: 10px; }
+
 .home--header {
   width: 100%;
   background: linear-gradient(rgba(42, 48, 82, 0.6), rgba(42, 48, 82, 0.1)), url("../images/grid_lp/header-bg.jpg") no-repeat;
@@ -8943,7 +8966,9 @@ body {
     display: table !important;
     text-align: left;
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .binary-grid-landing .try-desktop {
+    display: none; } }
 
 @media (min-width: 1200px) {
   .container {

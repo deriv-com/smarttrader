@@ -1,2 +1,9 @@
-fetch('https://grid.binary.me/version.json').then(function(response){return response.json()}).then(function(app){$('.download').attr('href','https://grid.binary.me/download/'+app.name)});window.onload=function(){commonOnload()};
+var systems={mac:['Mac68K','MacIntel','MacPPC'],linux:['HP-UX','Linux i686','Linux amd64','Linux i686 on x86_64','Linux i686 X11','Linux x86_64','Linux x86_64 X11','FreeBSD','FreeBSD i386','FreeBSD amd64','X11'],ios:['iPhone','iPod','iPad','iPhone Simulator','iPod Simulator','iPad Simulator'],android:['Android','Linux armv7l',// Samsung galaxy s2 ~ s5, nexus 4/5
+'Linux armv8l',null],windows:['Win16','Win32','Win64','WinCE']};fetch('https://grid.binary.me/version.json').then(function(response){return response.json()}).then(function(app){$('.download').attr('href','https://grid.binary.me/download/'+app.name)});var OSDetect=function OSDetect(){// For testing purposes or more compatibility, if we set 'config.os'
+// inside our localStorage, we ignore fetching information from
+// navigator object and return what we have straight away.
+if(localStorage.getItem('config.os')){return localStorage.getItem('config.os')}if(typeof navigator!=='undefined'&&navigator.platform){return Object.keys(systems).map(function(os){if(systems[os].some(function(platform){return navigator.platform===platform})){return os}return false}).filter(function(os){return os})[0]}return'Unknown OS'};window.onload=function(){var os=OSDetect();var desktop_buttons=document.querySelectorAll('.try-desktop');var ios_messages=document.querySelectorAll('.ios-message');var android_buttons=document.querySelectorAll('.android-button');if(os==='android'){// hide desktop
+android_buttons.forEach(function(element){return element.classList.remove('invisible')})}else if(os==='ios'){// hide all button
+ios_messages.forEach(function(element){return element.classList.remove('invisible')})}else{// show both buttons on desktop
+android_buttons.forEach(function(element){return element.classList.remove('invisible')});desktop_buttons.forEach(function(element){return element.classList.remove('invisible')})}commonOnload()};
 //# sourceMappingURL=binary_grid.js.map
