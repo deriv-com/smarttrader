@@ -322,7 +322,10 @@ a.previous-wrapper {
         -ms-flex: 0;
             flex: 0; }
     #mt_account_management #account_details .acc-info {
-      font-size: 0.8695652174rem; }
+      font-size: 0.8695652174rem;
+      word-wrap: break-word; }
+      #mt_account_management #account_details .acc-info [data=login] {
+        margin-left: 10px; }
       #mt_account_management #account_details .acc-info .balance {
         font-size: 1.520875rem;
         color: #2a3052; }
