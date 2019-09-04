@@ -1731,8 +1731,21 @@ body #not_authenticated_financial ul.checked > li {
         margin: 1em auto;
         max-width: 80%;
         font-weight: 300; }
+  #content.careers-content .career .video-container {
+    width: 100%;
+    height: 0px;
+    position: relative;
+    padding-bottom: 56.3%; }
+  #content.careers-content .career .video-container iframe, #content.careers-content .career .video-container object, #content.careers-content .career .video-container embed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
   #content.careers-content .career .center-element {
     margin: 0 auto; }
+  #content.careers-content .career .margin-top-50 {
+    margin-top: 50px; }
   #content.careers-content .career .margin-top-100 {
     margin-top: 100px; }
   #content.careers-content .career .btn-margin-top {
