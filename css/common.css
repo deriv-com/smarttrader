@@ -265,7 +265,6 @@ fieldset {
     margin: 0; }
 
 .error-msg {
-  width: 100%;
   text-align: left;
   margin-top: 5px; }
 
@@ -613,7 +612,8 @@ ul.bullet.gr-row > li {
         margin-bottom: -1px;
         border-bottom: 1px solid #dedede; }
         #content .light .tab-menu-wrap ul.tm-ul li.tm-li, #content .light .tab-menu-wrap ul.tm-ul li.tm-li a {
-          color: #2a3052; }
+          color: #2a3052;
+          text-transform: initial; }
         #content .light .tab-menu-wrap ul.tm-ul li.tm-li > a, #content .light .tab-menu-wrap ul.tm-ul li.tm-li > span {
           display: block;
           padding: 0 20px; }

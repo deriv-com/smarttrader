@@ -1623,6 +1623,27 @@ body #not_authenticated_financial ul.checked > li {
   margin-left: 5px;
   margin-bottom: 3px; }
 
+.authenticate-content #onfido .onfido-sdk-ui-NavigationBar-back {
+  background: transparent; }
+
+.authenticate-content #onfido .onfido-sdk-ui-Button-button-primary:hover {
+  background: #353ff4; }
+
+.authenticate-content #onfido .onfido-sdk-ui-Button-button-outline:hover {
+  background-color: transparent; }
+
+.authenticate-content #onfido .onfido-sdk-ui-crossDevice-CrossDeviceLink-copyToClipboard {
+  background: #fff;
+  color: #000;
+  border-radius: 0; }
+
+.authenticate-content #onfido input:hover, .authenticate-content #onfido input:focus, .authenticate-content #onfido textarea:hover, .authenticate-content #onfido textarea:focus {
+  outline: 0;
+  border: none; }
+
+.authenticate-content #onfido button:hover, .authenticate-content #onfido button:focus {
+  background-color: inherit; }
+
 .authenticate-content .fields > .gr-row > div > .button {
   display: block;
   text-align: center;
@@ -1680,6 +1701,9 @@ body #not_authenticated_financial ul.checked > li {
 
 .authenticate-content #resolve_error {
   color: #c03; }
+
+.authenticate-content .mar-top-0 {
+  margin-top: 0; }
 
 #content.careers-content {
   margin-top: 0; }
