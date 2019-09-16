@@ -202,7 +202,8 @@ fieldset {
   position: relative;
   border: 1px solid #dedede;
   padding: 5px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  word-break: break-word; }
   fieldset legend {
     color: #44484c;
     padding: 0 0.8em;

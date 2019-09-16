@@ -2162,6 +2162,11 @@ a.previous-wrapper {
 #paymentagent_withdrawal #txtDescription {
   width: 260px; }
 
+#paymentagent_withdrawal #viewForm .disclaimer {
+  font-size: 1rem; }
+  #paymentagent_withdrawal #viewForm .disclaimer strong {
+    font-style: italic; }
+
 #paymentagent_withdrawal .separator-line {
   border-color: #f2f2f2; }
 
