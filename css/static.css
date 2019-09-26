@@ -1620,28 +1620,28 @@ body #not_authenticated_financial ul.checked > li {
   margin-left: 5px;
   margin-bottom: 3px; }
 
-.authenticate-content #onfido .onfido-sdk-ui-NavigationBar-back {
+.authentication #onfido .onfido-sdk-ui-NavigationBar-back {
   background: transparent; }
 
-.authenticate-content #onfido .onfido-sdk-ui-Button-button-primary:hover {
+.authentication #onfido .onfido-sdk-ui-Button-button-primary:hover {
   background: #353ff4; }
 
-.authenticate-content #onfido .onfido-sdk-ui-Button-button-outline:hover {
+.authentication #onfido .onfido-sdk-ui-Button-button-outline:hover {
   background-color: transparent; }
 
-.authenticate-content #onfido .onfido-sdk-ui-crossDevice-CrossDeviceLink-copyToClipboard {
+.authentication #onfido .onfido-sdk-ui-crossDevice-CrossDeviceLink-copyToClipboard {
   background: #fff;
   color: #000;
   border-radius: 0; }
 
-.authenticate-content #onfido input:hover, .authenticate-content #onfido input:focus, .authenticate-content #onfido textarea:hover, .authenticate-content #onfido textarea:focus {
+.authentication #onfido input:hover, .authentication #onfido input:focus, .authentication #onfido textarea:hover, .authentication #onfido textarea:focus {
   outline: 0;
   border: none; }
 
-.authenticate-content #onfido button:hover, .authenticate-content #onfido button:focus {
+.authentication #onfido button:hover, .authentication #onfido button:focus {
   background-color: inherit; }
 
-.authenticate-content .fields > .gr-row > div > .button {
+.authentication .fields > .gr-row > div > .button {
   display: block;
   text-align: center;
   background: #f2f2f2;
@@ -1650,7 +1650,7 @@ body #not_authenticated_financial ul.checked > li {
   width: 100%;
   pointer-events: auto;
   cursor: pointer; }
-  .authenticate-content .fields > .gr-row > div > .button > span {
+  .authentication .fields > .gr-row > div > .button > span {
     position: relative;
     top: 2px;
     padding: 0;
@@ -1660,47 +1660,59 @@ body #not_authenticated_financial ul.checked > li {
     width: 1em;
     height: 1em;
     margin-left: 10px; }
-    .authenticate-content .fields > .gr-row > div > .button > span.add {
+    .authentication .fields > .gr-row > div > .button > span.add {
       background: url("../images/pages/authenticate/add.svg") no-repeat; }
-    .authenticate-content .fields > .gr-row > div > .button > span.remove {
+    .authentication .fields > .gr-row > div > .button > span.remove {
       background: url("../images/pages/authenticate/remove.svg") no-repeat; }
-    .authenticate-content .fields > .gr-row > div > .button > span.checked {
+    .authentication .fields > .gr-row > div > .button > span.checked {
       width: 16px;
       height: 12px; }
-    .authenticate-content .fields > .gr-row > div > .button > span:hover {
+    .authentication .fields > .gr-row > div > .button > span:hover {
       background-color: transparent; }
-  .authenticate-content .fields > .gr-row > div > .button.selected {
+  .authentication .fields > .gr-row > div > .button.selected {
     background-color: #fff; }
-  .authenticate-content .fields > .gr-row > div > .button.error {
+  .authentication .fields > .gr-row > div > .button.error {
     color: #c03; }
-    .authenticate-content .fields > .gr-row > div > .button.error:before {
+    .authentication .fields > .gr-row > div > .button.error:before {
       content: '*'; }
 
-.authenticate-content .fields > .gr-row > div > input[type=file] {
+.authentication .fields > .gr-row > div > input[type=file] {
   display: none; }
 
-.authenticate-content .center-text .button .barspinner {
+.authentication .center-text .button .barspinner {
   margin: 0 auto; }
 
-.authenticate-content .submit-status table th:not(:last-child) {
+.authentication .submit-status table th:not(:last-child) {
   width: 25%; }
 
-.authenticate-content .submit-status table .status.error-msg {
+.authentication .submit-status table .status.error-msg {
   font-size: inherit;
   font-style: normal; }
 
-.authenticate-content .checked {
+.authentication .checked {
   background: url("../images/pages/authenticate/checked.svg") no-repeat;
   width: 16px;
   height: 12px;
   display: inline-block;
   margin-left: 5px; }
 
-.authenticate-content #resolve_error {
+.authentication #resolve_error {
   color: #c03; }
 
-.authenticate-content .mar-top-0 {
+.authentication .mar-top-0 {
   margin-top: 0; }
+
+@media screen and (max-width: 479px) {
+  .authentication .onfido-sdk-ui-Modal-inner {
+    position: relative !important;
+    height: 37.4em !important; }
+  .authentication .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0; }
+    .authentication .mobile-menu strong {
+      text-align: center; } }
 
 #content.careers-content {
   margin-top: 0; }
