@@ -414,7 +414,7 @@ button .barspinner.white {
         left: 0;
         z-index: 9999;
         content: attr(data-message);
-        background: $COLOR_YELLOW;
+        background: $COLOR_RED;
         color: $COLOR_RED;
         border-bottom: 1px solid $COLOR_RED;
     }
