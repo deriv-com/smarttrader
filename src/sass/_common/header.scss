@@ -17,11 +17,24 @@ body #topbar {
     padding: 0;
     border-top: 1px solid $COLOR_BORDER_GRAY;
 
-    #topbar-fullscreen {
-        display: inline-flex;
-        flex-direction: row;
-        width: 16px;
-        height: 16px;
+    #topbar-fullscreen-wrapper {
+        display: flex;
+        align-self: center;
+        height: 100%;
+
+        #topbar-fullscreen {
+            height: inherit;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+            }
+            img {
+                width: 16px;
+                height: 16px;
+                margin: 10px;
+            }
+        }
     }
     [data-balloon] {
         &:before {

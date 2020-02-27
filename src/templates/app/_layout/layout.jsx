@@ -52,8 +52,10 @@ const Topbar = () => (
                     <div className='gr-7 gr-6-m align-self-center'>
                         <span className='no-underline nowrap' id='gmt-clock' />
                     </div>
-                    <div className='gr-2 align-self-center' id='topbar-fullscreen'>
-                        <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
+                    <div className='gr-2 align-self-center' id='topbar-fullscreen-wrapper'>
+                        <div id='topbar-fullscreen'>
+                            <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
+                        </div>
                     </div>
                     {/* <div className='gr-3 gr-5-m'>
                         <div className='languages invisible'>
