@@ -2,7 +2,7 @@ import React from 'react';
 import Head from './head.jsx';
 import Header from './header.jsx';
 import MobileMenu from './mobile_menu.jsx';
-import Footer from './footer.jsx';
+// import Footer from './footer.jsx';
 import InterviewPopup from '../../_common/components/interview_popup.jsx';
 import Title from '../../_common/components/title.jsx';
 import Elevio from '../../_common/includes/elevio.jsx';
@@ -87,7 +87,7 @@ const Layout = () => {
                             <a href='javascript:;' id='scrollup' />
                             <InnerContent />
                         </div>
-                        <Footer />
+                        {/* <Footer /> */}
                         <Topbar />
                     </div>
                     <InterviewPopup /> {/* TODO: remove when UX research is finished */}
