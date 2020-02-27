@@ -21,7 +21,6 @@ const Clock = (() => {
 
         const time_str = `${server_time.format('YYYY-MM-DD HH:mm:ss')} GMT`;
         elementInnerHtml(el_clock, time_str);
-        showLocalTimeOnHover('#gmt-clock');
 
         if (typeof fncExternalTimer === 'function') {
             fncExternalTimer();
