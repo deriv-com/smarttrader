@@ -4,12 +4,12 @@ const Note = ({ children, text }) => (
     <p className='hint'><strong>{it.L('Note')}: </strong>{text || children}</p>
 );
 
-const Duration = ({ link }) => (
-    <React.Fragment>
-        <h3>{it.L('Contract duration')}</h3>
-        <p>{it.L('Please refer to the [_1]asset index[_2] for each asset\'s minimum and maximum contract durations based on trade type.', `<a href='${it.url_for('resources/asset_indexws')}#${link}' target='_blank'>`, '</a>')}</p>
-    </React.Fragment>
-);
+// const Duration = ({ link }) => (
+//     <React.Fragment>
+//         <h3>{it.L('Contract duration')}</h3>
+//         <p>{it.L('Please refer to the [_1]asset index[_2] for each asset\'s minimum and maximum contract durations based on trade type.', `<a href='${it.url_for('resources/asset_indexws')}#${link}' target='_blank'>`, '</a>')}</p>
+//     </React.Fragment>
+// );
 
 const Explanation = () => (
     <div className='gr-parent'>
@@ -44,11 +44,9 @@ const Explanation = () => (
 
             <div id='winning_higherlower' className='invisible'>
                 <h3>{it.L('Winning the contract')}</h3>
-                <p className='hide-mb'>{it.L('If you select "Higher", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>.')}</p>
-                <p className='show-mb'>{it.L('If you select "Higher", you win the payout if the <strong>exit spot</strong> is higher than the <strong>barrier</strong>.')}</p>
+                <p>{it.L('If you select "Higher", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>.')}</p>
                 <p>{it.L('If you select "Lower", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>.')}</p>
-                <p className='show-mb'>{it.L('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you only win the payout for "Higher" contracts')}</p>
-                <p className='hide-mb'>{it.L('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don\'t win the payout.')}</p>
+                <p>{it.L('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don\'t win the payout.')}</p>
             </div>
 
             <div id='winning_overunder' className='invisible'>
@@ -196,8 +194,7 @@ const Explanation = () => (
             <div id='explain_higherlower' className='invisible'>
                 <h3>{it.L('Exit spot')}</h3>
                 <p>{it.L('The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.')}</p>
-                <p className='hide-mb'>{it.L('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}</p>
-                <p className='show-mb'>{it.L('The <strong>remaining time</strong> is the time remaining until the contract expires.')}</p>
+                <p>{it.L('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}</p>
                 <p>{it.L('The <strong>start time</strong> is when the contract is processed by our servers.')}</p>
             </div>
 
@@ -311,23 +308,23 @@ const Explanation = () => (
         </div>
 
         {/* ========== Duration ========== */}
-        <div id='explanation_duration'>
-            <div id='duration_forex' className='invisible'>
-                <Duration link='market-forex' />
-            </div>
+        {/* <div id='explanation_duration'> */}
+        {/*    <div id='duration_forex' className='invisible'> */}
+        {/*        <Duration link='market-forex' /> */}
+        {/*    </div> */}
 
-            <div id='duration_indices' className='invisible'>
-                <Duration link='market-indices' />
-            </div>
+        {/*    <div id='duration_indices' className='invisible'> */}
+        {/*        <Duration link='market-indices' /> */}
+        {/*    </div> */}
 
-            <div id='duration_commodities' className='invisible'>
-                <Duration link='market-commodities' />
-            </div>
+        {/*    <div id='duration_commodities' className='invisible'> */}
+        {/*        <Duration link='market-commodities' /> */}
+        {/*    </div> */}
 
-            <div id='duration_synthetic_index' className='invisible'>
-                <Duration link='market-synthetic_index' />
-            </div>
-        </div>
+        {/*    <div id='duration_synthetic_index' className='invisible'> */}
+        {/*        <Duration link='market-synthetic_index' /> */}
+        {/*    </div> */}
+        {/* </div> */}
 
         {/* ========== Note ========== */}
         <div id='explanation_note' className='invisible gr-padding-20 gr-child'>

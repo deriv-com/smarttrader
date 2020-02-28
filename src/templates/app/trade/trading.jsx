@@ -1,6 +1,5 @@
 import React from 'react';
 import Analysis from './analysis.jsx';
-import Portfolio from '../user/portfolio.jsx';
 import Loading from '../../_common/components/loading.jsx';
 
 const Trading = () => (
@@ -8,17 +7,23 @@ const Trading = () => (
         <div id='trading_socket_container'>
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
-            <a id='deposit_btn_trade' className='client_real invisible gr-hide-m button' href={it.url_for('cashier/forwardws?action=deposit')}>
+            <a
+                id='deposit_btn_trade'
+                className='client_real invisible gr-hide-m button'
+                href='https://deriv.app/cashier/deposit'
+                target='_blank'
+                rel='noopener noreferrer'
+            >
                 <span>
                     <img src={it.url_for('images/common/plus.svg')} />
                     {it.L('Deposit')}
                 </span>
             </a>
-            <div className='client_virtual invisible'>
-                <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'>
-                    <a className='button' />
-                </div>
-            </div>
+            {/* <div className='client_virtual invisible'> */}
+            {/*    <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'> */}
+            {/*        <a className='button' /> */}
+            {/*    </div> */}
+            {/* </div> */}
             <div className='client_virtual client_logged_out invisible' id='guideBtn' />
             <div className='row' id='contract_symbol_container'>
                 <div id='contract_markets_container'>
@@ -179,9 +184,6 @@ const Trading = () => (
                                     </div>
                                 </form>
                             </div>
-                            <div id='open_positions_container'>
-                                <Portfolio />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,7 +213,7 @@ const Trading = () => (
                             <div id='authorization_error_container' className='center-text invisible'>
                                 <div className='authorization_error'>
                                     <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                    <a className='button' href={it.url_for('new-account')}>
+                                    <a className='button' href='https://www.deriv.com/signup/'>
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
