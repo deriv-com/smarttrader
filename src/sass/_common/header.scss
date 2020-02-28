@@ -9,21 +9,34 @@
 
 body #topbar {
     @include BIDIR_VALUE(text-align, right, left);
-    min-height: 36px;
-    background-color: $COLOR_WHITE;
-    color: $COLOR_BLACK;
+    display: flex;
     position: sticky;
     bottom: 0;
+    height: 36px;
     padding: 0;
+    color: $COLOR_BLACK;
+    background-color: $COLOR_WHITE;
     border-top: 1px solid $COLOR_BORDER_GRAY;
+    align-items: center;
+    justify-content: flex-end;
 
-    #topbar-fullscreen-wrapper {
+    #topbar-info {
         display: flex;
-        align-self: center;
-        height: 100%;
+        align-items: center;
+        height: 36px;
+        margin: 0 0.8em;
 
+        div, span {
+            display: inline-flex;
+            align-items: center;
+        }
+        #network_status_wrapper {
+            width: 42px;
+        }
         #topbar-fullscreen {
             height: inherit;
+            padding: 0 0.8em;
+            margin-left: 0.8em;
             cursor: pointer;
 
             &:hover {
@@ -32,7 +45,7 @@ body #topbar {
             img {
                 width: 16px;
                 height: 16px;
-                margin: 10px;
+                align-self: center;
             }
         }
     }
@@ -72,17 +85,12 @@ body #topbar {
     #virtual-text {
         font-weight: 700;
     }
-    #topbar-info {
-        @include BIDIR_PROP(margin-left, margin-right, auto);
-
-        > div {
-            height: 36px;
-        }
-    }
     #gmt-clock {
         font-size: 0.75rem;
         font-weight: 100;
         font-family: 'IBM Plex Sans';
+        padding: 0 0.8em;
+        width: 147px;
     }
     #gmt-clock, #contact-us, .upgrademessage {
         align-self: center;

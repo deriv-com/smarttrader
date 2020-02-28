@@ -36,34 +36,13 @@ const InnerContent = () => (
 
 const Topbar = () => (
     <div id='topbar' className='no-print primary-bg-color-dark'>
-        <div className='gr-row'>
-            {/* <div id='topbar-msg' className='gr-6 gr-5-t gr-12-p gr-12-m invisible upgrademessage center-text'>
-                <span className='gr-hide-m invisible' id='virtual-wrapper'>
-                    <span id='virtual-text'>{it.L('You\'re using a Virtual Account.')}</span>
-                </span>
-                <a className='pulser invisible' />
-            </div> */}
-            <div className='gr-3 gr-3-t gr-12-p gr-12-m' id='topbar-info'>
-                <div className='gr-row'>
-                    <div className='gr-2' />
-                    <div className='gr-1 align-self-center no-underline' data-balloon-pos='up'>
-                        <div id='network_status' />
-                    </div>
-                    <div className='gr-7 gr-6-m align-self-center'>
-                        <span className='no-underline nowrap' id='gmt-clock' />
-                    </div>
-                    <div className='gr-2 align-self-center' id='topbar-fullscreen-wrapper'>
-                        <div id='topbar-fullscreen'>
-                            <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
-                        </div>
-                    </div>
-                    {/* <div className='gr-3 gr-5-m'>
-                        <div className='languages invisible'>
-                            <LanguageUl type='display'  color='white' />
-                            <LanguageUl type='select'   color='black' />
-                        </div>
-                    </div> */}
-                </div>
+        <div id='topbar-info'>
+            <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
+                <div id='network_status' />
+            </div>
+            <span className='no-underline nowrap' id='gmt-clock' />
+            <div id='topbar-fullscreen'>
+                <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
             </div>
         </div>
     </div>
