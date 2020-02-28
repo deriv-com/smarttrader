@@ -20,7 +20,7 @@ const localize         = require('../../_common/localize').localize;
 const isMobile         = require('../../_common/os_detect').isMobile;
 const LocalStore       = require('../../_common/storage').LocalStore;
 const State            = require('../../_common/storage').State;
-const scrollToTop      = require('../../_common/scroll').scrollToTop;
+// const scrollToTop      = require('../../_common/scroll').scrollToTop;
 const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
 const createElement    = require('../../_common/utility').createElement;
@@ -68,7 +68,7 @@ const Page = (() => {
                     // no default
                 }
             });
-            scrollToTop();
+            // scrollToTop();
         });
     };
 

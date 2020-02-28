@@ -73,28 +73,28 @@ const Scroll = (() => {
         }
     };
 
-    const scrollToTop = () => {
-        let is_displaying = false;
-        const $scrollup   = $('#scrollup');
-        $(document).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                if (is_displaying) return;
-                $scrollup.fadeIn();
-                is_displaying = true;
-            } else if (is_displaying) {
-                $scrollup.fadeOut();
-                is_displaying = false;
-            }
-        });
+    // const scrollToTop = () => {
+    //     let is_displaying = false;
+    //     const $scrollup   = $('#scrollup');
+    //     $(document).scroll(function () {
+    //         if ($(this).scrollTop() > 100) {
+    //             if (is_displaying) return;
+    //             $scrollup.fadeIn();
+    //             is_displaying = true;
+    //         } else if (is_displaying) {
+    //             $scrollup.fadeOut();
+    //             is_displaying = false;
+    //         }
+    //     });
 
-        $scrollup.click(() => {
-            $.scrollTo(0, 500);
-        });
-    };
+    //     $scrollup.click(() => {
+    //         $.scrollTo(0, 500);
+    //     });
+    // };
 
     return {
         sidebarScroll,
-        scrollToTop,
+        // scrollToTop,
         offScroll: () => {
             $(window).off('scroll');
             if ($main_container) {
