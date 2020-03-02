@@ -10,8 +10,73 @@
 }
 
 #ui-timepicker-div, #ui-datepicker-div {
+    border-radius: 4px;
+    padding: 0 !important;
+
     &, &:before, &:after {
         transition: none;
+    }
+    & .ui-widget-header {
+        background: $COLOR_BORDER_GRAY !important;
+        border: none;
+        color: $COLOR_BLACK !important;
+        font-weight: 100;
+    }
+    & .ui-widget-content {
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
+
+        & .ui-state-default:not(.ui-state-disabled):not(.ui-state-active) {
+            border-radius: 4px;
+
+            &:hover {
+                border: 2px solid $COLOR_HOVER_FULLSCREEN_GRAY;
+                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+            }
+        }
+        &.ui-timepicker-table {
+            border-radius: 4px;
+        }
+        & .ui-timepicker {
+            border-bottom: none;
+            padding: 0.15em 0 0;
+
+            & .ui-state-default.ui-state-active {
+                border: 2px solid $COLOR_BALLOON_GRAY !important;
+                background-color: $COLOR_BALLOON_GRAY !important;
+                color: $COLOR_BLACK;
+            }
+            th {
+                min-height: 69px;
+                min-width: 35px;
+            }
+            th, td a {
+                font-weight: 100;
+            }
+        }
+        & .ui-timepicker-hours {
+            .ui-timepicker-title {
+                border-top-left-radius: 4px;
+            }
+            .ui-timepicker {
+                border-left: none;
+
+                tbody {
+                    border-bottom-left-radius: 4px;
+                }
+            }
+        }
+        & .ui-timepicker-minutes {
+            .ui-timepicker-title {
+                border-top-right-radius: 4px;
+            }
+            .ui-timepicker {
+                border-right: none;
+
+                tbody {
+                    border-bottom-right-radius: 4px;
+                }
+            }
+        }
     }
 }
 
