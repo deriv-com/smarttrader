@@ -422,7 +422,7 @@ button .barspinner.white {
         left: 0;
         z-index: 9999;
         content: attr(data-message);
-        background: $COLOR_YELLOW;
+        background: $COLOR_RED;
         color: $COLOR_RED;
         border-bottom: 1px solid $COLOR_RED;
     }
@@ -432,7 +432,7 @@ button .barspinner.white {
     width: 40px;
     height: 40px;
     position: fixed;
-    bottom: 78px;
+    bottom: 44px;
     right: 18px;
     display: none;
     background: url('../images/common/scrollup_icon.svg') no-repeat;

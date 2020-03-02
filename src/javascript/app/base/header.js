@@ -180,6 +180,18 @@ const Header = (() => {
                 showAccountSwitcher(false);
             }
         });
+
+        const topbar_fullscreen = getElementById('topbar-fullscreen');
+        topbar_fullscreen.removeEventListener('click', toggleFullscreen);
+        topbar_fullscreen.addEventListener('click', toggleFullscreen);
+    };
+
+    const toggleFullscreen = () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
     };
 
     // const logoOnClick = () => {
