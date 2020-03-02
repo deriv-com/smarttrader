@@ -1,7 +1,8 @@
-const BinaryPjax               = require('./binary_pjax');
+// const BinaryPjax               = require('./binary_pjax');
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
+const formatMoney              = require('../common/currency').formatMoney;
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
@@ -19,46 +20,176 @@ const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const template                 = require('../../_common/utility').template;
 
+const header_icon_base_path = '/images/pages/header/';
+
 const Header = (() => {
     const onLoad = () => {
         populateAccountsList();
         bindClick();
+        bindSvg();
+        bindPlatform();
         if (Client.isLoggedIn()) {
-            getElementById('menu-top').classList.add('smaller-font', 'top-nav-menu');
             displayAccountStatus();
-            if (!Client.get('is_virtual')) {
-                BinarySocket.wait('website_status', 'authorize', 'balance').then(() => {
-                    if (Client.canTransferFunds()) {
-                        getElementById('user_menu_account_transfer').setVisibility(1);
-                    }
-                });
-            }
         }
     };
 
-    const bindClick = () => {
+    const bindSvg = () => {
         const logo = getElementById('logo');
-        logo.removeEventListener('click', logoOnClick);
-        logo.addEventListener('click', logoOnClick);
+        const reports = getElementById('reports_icon');
+        const cashier = getElementById('cashier_icon');
+        const account = getElementById('header__account-settings');
+        const logout  = getElementById('account__switcher-logout-icon');
+
+        applyToAllElements('.header__expand', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+        });
+        // TODO : Change to light arrow down icon
+        applyToAllElements('.header__expand-light', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+        });
+
+        logo.src = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
+        reports.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
+        cashier.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+        account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+        logout.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+    };
+
+    const bindPlatform = () => {
+        const platform_list = getElementById('platform__list');
+        const platforms = {
+            dtrader: {
+                name: 'DTrader',
+                desc: 'Start trading now with a powerful, yet easy-to-use platform',
+                icon: 'ic-brand-dtrader.svg',
+            },
+            dbot: {
+                name: 'DBot',
+                desc: 'Automate your trading ideas without coding',
+                icon: 'ic-brand-dbot.svg',
+            },
+            dsmarttrader: {
+                name: 'DSmartTrader',
+                desc: 'Lorem Ipsum is not simply random text.',
+                icon: 'logo_smart_trader.svg',
+            },
+            dmt5: {
+                name: 'DMT5',
+                desc: 'Trade with platform of choice for professionals',
+                icon: 'ic-brand-dmt5.svg',
+            },
+        };
+
+        Object.keys(platforms).forEach(key => {
+            const platform = platforms[key];
+            const platform_div = createElement('div', { class: `platform__list-item ${key === 'dsmarttrader' ? 'platform__list-item--active' : ''}` });
+            const platform_icon = createElement('img', { src: `${header_icon_base_path}${platform.icon}`, class: 'platform__list-item-icon' });
+            const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
+            const platform_name = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
+            const platform_desc = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
+
+            platform_div.appendChild(platform_icon);
+            platform_text_container.appendChild(platform_name);
+            platform_text_container.appendChild(platform_desc);
+            platform_div.appendChild(platform_text_container);
+
+            platform_list.appendChild(platform_div);
+        });
+    };
+
+    const bindClick = () => {
+        // const logo = getElementById('logo');
+        // logo.removeEventListener('click', logoOnClick);
+        // logo.addEventListener('click', logoOnClick);
 
         const btn_login = getElementById('btn_login');
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
-        applyToAllElements('a.logout', (el) => {
+        applyToAllElements('#logout', (el) => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
+
+        // Account Switcher Event
+        const acc_switcher = getElementById('acc_switcher');
+        const account_switcher_dropdown = getElementById('account__switcher');
+        const acc_expand = getElementById('header__acc-expand');
+        const showAccountSwitcher = (should_open) => {
+            if (should_open) {
+                account_switcher_dropdown.classList.add('account__switcher--show');
+                acc_expand.classList.add('rotated');
+            } else {
+                account_switcher_dropdown.classList.remove('account__switcher--show');
+                acc_expand.classList.remove('rotated');
+            }
+        };
+
+        acc_switcher.addEventListener('click', (event) => {
+            if (!account_switcher_dropdown.contains(event.target)) {
+                if (account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                    showAccountSwitcher(false);
+                } else {
+                    showAccountSwitcher(true);
+                }
+
+                if (platform_dropdown.classList.contains('platform__dropdown--show')) {
+                    showPlatformSwitcher(false);
+                }
+            }
+        });
+
+        // Platform Switcher Event
+        const platform_switcher_arrow = getElementById('platform__switcher-expand');
+        const platform_switcher = getElementById('platform__switcher');
+        const platform_dropdown = getElementById('platform__dropdown');
+        const body = document.body;
+        const showPlatformSwitcher = (should_open) => {
+            if (should_open) {
+                platform_dropdown.classList.add('platform__dropdown--show');
+                platform_switcher_arrow.classList.add('rotated');
+                body.classList.add('stop-scrolling');
+            } else {
+                platform_dropdown.classList.remove('platform__dropdown--show');
+                platform_switcher_arrow.classList.remove('rotated');
+                body.classList.remove('stop-scrolling');
+            }
+        };
+
+        platform_switcher.addEventListener('click', () => {
+            if (platform_dropdown.classList.contains('platform__dropdown--show')) {
+                showPlatformSwitcher(false);
+            } else {
+                showPlatformSwitcher(true);
+            }
+        });
+
+        // OnClickOutisde Event Handle
+        document.addEventListener('click', (event) => {
+            // Platform Switcher
+            const header = getElementById('deriv__header');
+            const platform_lists = getElementById('platform__list');
+            if (!header.contains(event.target) && !platform_lists.contains(event.target) && platform_dropdown.classList.contains('platform__dropdown--show')) {
+                showPlatformSwitcher(false);
+            }
+
+            // Account Switcher
+            if (!account_switcher_dropdown.contains(event.target)
+                && !acc_switcher.contains(event.target)
+                && account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                showAccountSwitcher(false);
+            }
+        });
     };
 
-    const logoOnClick = () => {
-        if (Client.isLoggedIn()) {
-            const url = Client.isAccountOfType('financial') ? Url.urlFor('user/metatrader') : Client.defaultRedirectUrl();
-            BinaryPjax.load(url);
-        } else {
-            BinaryPjax.load(Url.urlFor(''));
-        }
-    };
+    // const logoOnClick = () => {
+    //     if (Client.isLoggedIn()) {
+    //         const url = Client.isAccountOfType('financial') ? Url.urlFor('user/metatrader') : Client.defaultRedirectUrl();
+    //         BinaryPjax.load(url);
+    //     } else {
+    //         BinaryPjax.load(Url.urlFor(''));
+    //     }
+    // };
 
     const loginOnClick = (e) => {
         e.preventDefault();
@@ -71,40 +202,105 @@ const Header = (() => {
 
     const populateAccountsList = () => {
         if (!Client.isLoggedIn()) return;
-        BinarySocket.wait('authorize').then(() => {
-            const loginid_select = document.createElement('div');
+        BinarySocket.wait('authorize', 'website_status', 'balance').then(() => {
+            const loginid_real_select = createElement('div');
+            const loginid_demo_select = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
-                    const account_title  = Client.getAccountTitle(loginid);
+                    // const account_title  = Client.getAccountTitle(loginid);
                     const is_real        = !Client.getAccountType(loginid); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
-                    const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
-                    if (loginid === Client.get('loginid')) { // default account
-                        applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
-                        applyToAllElements('.account-id', (el) => { elementInnerHtml(el, loginid); });
-                    } else {
-                        const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
-                        const li_type = createElement('li', { text: localized_type });
-
-                        li_type.appendChild(createElement('div', { text: loginid }));
-                        link.appendChild(li_type);
-                        loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
+                    // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
+                    const icon           = Client.getAccountIcon(currency);
+                    const is_current     = loginid === Client.get('loginid');
+                    
+                    if (is_current) { // default account
+                        // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
+                        // applyToAllElements('.account-id', (el) => { elementInnerHtml(el, loginid); });
+                        applyToAllElements('#header__acc-icon', (el) => {
+                            el.src = `${header_icon_base_path}${is_real ? icon : 'ic-currency-virtual.svg'}`;
+                        });
                     }
+
+                    const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
+                    const account_icon      = createElement('img', { src: `${header_icon_base_path}${icon}` });
+                    const account_detail    = createElement('span', { text: currency });
+                    const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
+                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
+
+                    account_detail.appendChild(account_loginid);
+                    account.appendChild(account_icon);
+                    account.appendChild(account_detail);
+                    account.appendChild(account_balance);
+
+                    if (is_real) {
+                        loginid_real_select.appendChild(account);
+                    } else {
+                        loginid_demo_select.appendChild(account);
+                    }
+                    
+                    // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
+                    // const li_type = createElement('li', { text: localized_type });
+
+                    // li_type.appendChild(createElement('div', { text: loginid }));
+                    // link.appendChild(li_type);
+                    // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
                 }
-                applyToAllElements('.login-id-list', (el) => {
-                    el.html(loginid_select.innerHTML);
-                    applyToAllElements('a', (ele) => {
+                applyToAllElements('#account__switcher-real-list', (el) => {
+                    el.html(loginid_real_select.innerHTML);
+                    applyToAllElements('div.account__switcher-acc', (ele) => {
                         ele.removeEventListener('click', loginIDOnClick);
                         ele.addEventListener('click', loginIDOnClick);
                     }, '', el);
+                    bindAccordion('#account__switcher-accordion-real');
+                });
+                applyToAllElements('#account__switcher-demo-list', (el) => {
+                    el.html(loginid_demo_select.innerHTML);
+                    applyToAllElements('div.account__switcher-acc', (ele) => {
+                        ele.removeEventListener('click', loginIDOnClick);
+                        ele.addEventListener('click', loginIDOnClick);
+                    }, '', el);
+                    bindAccordion('#account__switcher-accordion-demo');
                 });
             });
+            bindTabs();
+        });
+    };
+
+    const bindTabs = () => {
+        const virtual_account = Client.getAccountOfType('virtual');
+        const real_balance = Client.getTotalBalance();
+        let is_virtual_tab = /^VRT/.test(Client.get('loginid'));
+        $('#acc_tabs').tabs({
+            active: is_virtual_tab ? 1 : 0,
+            create() {
+                $('#account__switcher-total-balance-amount')
+                    .html(formatMoney('USD', is_virtual_tab ? virtual_account.balance : real_balance))
+                    .addClass(is_virtual_tab ? 'account__switcher-balance-virtual' : '');
+            },
+            activate(event, ui) {
+                is_virtual_tab = ui.newPanel[0].id === 'demo_tab';
+                const total_amount = $('#account__switcher-total-balance-amount');
+                if (is_virtual_tab) {
+                    total_amount.html(formatMoney('USD', virtual_account.balance)).addClass('account__switcher-balance-virtual');
+                } else {
+                    total_amount.html(formatMoney('USD', real_balance)).removeClass('account__switcher-balance-virtual');
+                }
+            },
+        });
+    };
+
+    const bindAccordion = (selector) => {
+        $(selector).accordion({
+            heightStyle: 'content',
+            collapsible: true,
+            active     : 0,
         });
     };
 
     const loginIDOnClick =  (e) => {
         e.preventDefault();
-        const el_loginid = findParent(e.target, 'a');
+        const el_loginid = findParent(e.target, 'div.account__switcher-acc');
         if (el_loginid) {
             el_loginid.setAttribute('disabled', 'disabled');
             switchLoginid(el_loginid.getAttribute('data-value'));
