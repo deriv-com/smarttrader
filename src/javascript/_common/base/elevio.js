@@ -13,9 +13,8 @@ const Elevio = (() => {
     const init = () => {
         if (isLoginPages()) return;
 
-        el_shell = document.getElementById(el_shell_id);
-
-        el_shell.addEventListener('click', () => injectElevio(true));
+        // el_shell = document.getElementById(el_shell_id);
+        // el_shell.addEventListener('click', () => injectElevio(true));
     };
 
     const injectElevio = (is_open = false) => {

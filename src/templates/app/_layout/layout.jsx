@@ -62,13 +62,14 @@ const Layout = () => {
                     <Header />
                     <div id='content-holder'>
                         <MobileMenu />
-                        <a href='javascript:;' id='scrollup' />
+                        {/* <a href='javascript:;' id='scrollup' /> */}
                         <InnerContent />
                     </div>
                     {/* <Footer /> */}
                     <Topbar />
                 </div>
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
+                {/* <Elevio /> */}
             </body>
         </html>
     );
