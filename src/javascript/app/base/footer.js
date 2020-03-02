@@ -32,7 +32,7 @@ const Footer = (() => {
     };
 
     // by default elevio is 8px above bottom of page, and scrollup is 18px above elevio
-    const adjustElevioAndScrollup = (elevio_height = 8,  scrollup_height = 18) => {
+    const adjustElevioAndScrollup = (elevio_height = 8, scrollup_height = 18) => {
         const $elevio_button = $('#_elev_io ._6byvm');
         const $scrollup = $('#scrollup');
 
