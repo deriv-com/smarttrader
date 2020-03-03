@@ -57,6 +57,9 @@ const Header = (() => {
 
     const bindPlatform = () => {
         const platform_list = getElementById('platform__list');
+        if (platform_list.hasChildNodes()) {
+            return;
+        }
         const platforms = {
             dtrader: {
                 name: 'DTrader',
