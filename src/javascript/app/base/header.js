@@ -82,6 +82,7 @@ const Header = (() => {
             smarttrader: {
                 name: 'SmartTrader',
                 desc: 'Trade in the world\'s financial markets with a simple online platform',
+                link: '#',
                 icon: 'logo_smart_trader.svg',
             },
         };
