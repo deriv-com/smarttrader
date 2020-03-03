@@ -302,15 +302,19 @@
 
         &.ASIANU {
             background: url('../images/pages/trade/asian-u_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.ASIAND {
             background: url('../images/pages/trade/asian-d_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITDIFF {
             background: url('../images/pages/trade/differs_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITMATCH {
             background: url('../images/pages/trade/matches_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITEVEN {
             background: url('../images/pages/trade/digits_even_1.svg') no-repeat no-repeat top center;
@@ -329,80 +333,96 @@
             background-size: 40%;
         }
         &.CALL {
-            background: url('../images/pages/trade/rise_1.png') no-repeat top center;
+            background: url('../images/pages/trade/rise_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.PUT {
-            background: url('../images/pages/trade/fall_1.png') no-repeat top center;
+            background: url('../images/pages/trade/fall_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.CALLE {
-            background: url('../images/pages/trade/rise_1.png') no-repeat top center;
+            background: url('../images/pages/trade/rise_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.PUTE {
-            background: url('../images/pages/trade/fall_1.png') no-repeat top center;
+            background: url('../images/pages/trade/fall_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.ONETOUCH {
-            background: url('../images/pages/trade/touch_1.png') no-repeat top center;
+            background: url('../images/pages/trade/touch_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.NOTOUCH {
-            background: url('../images/pages/trade/no-touch_1.png') no-repeat top center;
+            background: url('../images/pages/trade/no-touch_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.RANGE {
-            background: url('../images/pages/trade/stay-in-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/stay-in-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.UPORDOWN {
-            background: url('../images/pages/trade/stay-out_1.png') no-repeat top center;
+            background: url('../images/pages/trade/stay-out_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYRANGEE {
-            background: url('../images/pages/trade/ends-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYMISSE {
-            background: url('../images/pages/trade/ends-outside_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-outside_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYRANGE {
-            background: url('../images/pages/trade/ends-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYMISS {
-            background: url('../images/pages/trade/ends-outside_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-outside_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.LBFLOATPUT {
             background: url('../images/pages/trade/low_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.LBFLOATCALL {
             background: url('../images/pages/trade/high_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.LBHIGHLOW {
             background: url('../images/pages/trade/high_low_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RESETCALL {
             background: url('../images/pages/trade/reset_call.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RESETPUT {
             background: url('../images/pages/trade/reset_put.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.CALLSPREAD {
             background: url('../images/pages/trade/call_spread.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.PUTSPREAD {
             background: url('../images/pages/trade/put_spread.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RUNHIGH {
             background: url('../images/pages/trade/run_high.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.RUNLOW {
             background: url('../images/pages/trade/run_low.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.TICKHIGH {
             background: url('../images/pages/trade/high_tick.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.TICKLOW {
             background: url('../images/pages/trade/low_tick.svg') no-repeat center top;
+            background-size: 40%;
         }
     }
     #contract_prices_container {
@@ -467,7 +487,7 @@
                         }
                     }
                 }
-                #purchase_button_top {
+                #purchase_button_top, #purchase_button_middle {
                     background-color: $COLOR_NETWORK_STATUS_ONLINE;
                 }
                 #purchase_button_bottom {

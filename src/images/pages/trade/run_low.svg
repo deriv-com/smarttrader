@@ -1,1 +1,6 @@
-<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>only downs</title><g fill="none" fill-rule="evenodd"><path fill="#00ACE8" d="M0 0h36v36H0z"/><path fill="#FFF" fill-rule="nonzero" d="M25 31v-8h6v8zM15 31V15h6v16zM5 31V5h6v26z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none">
+        <path fill="#85ACB0" d="M16 0v16h-2V0h2zm-4 0v8h-2V0h2zM1.414 4l2 2H0V4h1.414zM8 0v4H6V0h2zM4 0v2H2V0h2z"/>
+        <path fill="#FF444F" d="M11.99 9C10.891 9 10 9.891 10 10.99v1.6l-6-6v2.824L8.586 14H6.99C5.891 14 5 14.891 5 15.99V16h5c1.105 0 2-.895 2-2V9h-.01z"/>
+    </g>
+</svg>

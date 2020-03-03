@@ -1,1 +1,6 @@
-<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><title>high-low ICON</title><g fill="none" fill-rule="evenodd"><path fill="#2AAAE2" d="M0 0h48v48H0z"/><path fill="#FFF" d="M0 6h48v2H0zm0 34h48v2H0z"/><path stroke="#FFF" stroke-width="4" d="M3 36l11-23 12 23 11-15"/><path fill="#FFF" d="M39 19.5h-8L27.5 23l5.126.094 2.824 2.854L35.5 31l3.5-3.5z"/><path d="M42 12v25m-3-23l3-3 3 3m-6 20.5l3 3 3-3" stroke="#FFF" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none">
+        <path fill="#85ACB0" d="M16 14v2H0v-2h16zM15 3v10h-2V3h2zm1-3v2H0V0h16z"/>
+        <path fill="#FF444F" d="M4.422 11l-.998 1L0 13v-2h4.422zM9 3c1.105 0 2 .895 2 2l-.01 5C9.89 9.994 9 9.1 9 8V6.414l-4 4.007V7.586L7.586 5H6c-1.103-.003-1.997-.897-2-2h5z"/>
+    </g>
+</svg>
