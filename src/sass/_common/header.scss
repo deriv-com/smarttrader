@@ -177,7 +177,7 @@ body .header {
                 transition: background-color 0.3s;
                 cursor: pointer;
                 font-size: $FONT_SIZE_N;
-                color: var(--text-general);
+                color: var(--text-general) !important;
                 font-weight: 300;
                 text-transform: none;
                 text-align: left;
