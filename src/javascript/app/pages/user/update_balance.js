@@ -1,4 +1,5 @@
 const PortfolioInit         = require('./account/portfolio/portfolio.init');
+const updateTotal           = require('./update_total');
 const updateContractBalance = require('../trade/update_values').updateContractBalance;
 const Client                = require('../../base/client');
 const BinarySocket          = require('../../base/socket');
@@ -36,6 +37,7 @@ const updateBalance = (response) => {
         }
 
         Client.setTotalBalance(total);
+        updateTotal(total);
         updateContractBalance(balance);
         // $('#header__acc-balance, .topMenuBalance, .binary-balance').html(view)
         //     .css('visibility', 'visible');

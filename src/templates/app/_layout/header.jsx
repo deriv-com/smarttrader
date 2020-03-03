@@ -68,15 +68,15 @@ const Header = () => (
                 <div id='platform__switcher' className='header__menu-item platform__switcher'>
                     <img id='logo' className='header__logo' />
                     <div className='platform__switcher-header'>DSmartTrader</div>
-                    <img className='header__icon header__expand' />
+                    <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links is-login'>
-                    <animateTransform className='header__menu-links-item' href='https://deriv.app/reports/positions'>
+                    <a className='header__menu-links-item' href='https://deriv.app/reports/positions'>
                         <span>
                             <img id='reports_icon' className='header__icon-text' />
                             {it.L('Reports')}
                         </span>
-                    </animateTransform>
+                    </a>
                     <a className='header__menu-links-item' href='https://deriv.app/cashier/deposit'>
                         <span>
                             <img id='cashier_icon' className='header__icon-text' />
@@ -94,7 +94,7 @@ const Header = () => (
                     <div className='header__acc-info'>
                         <img id='header__acc-icon' />
                         <div id='header__acc-balance' className='header__acc-balance' />
-                        <img className='header__icon header__expand' />
+                        <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
                     <div className='header__acc-list account__switcher' id='account__switcher'>
                         <div id='acc_tabs' className='account__switcher-container'>
@@ -140,12 +140,12 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <button className='header__deposit' href='https://deriv.app/cashier/deposit'>{it.L('Deposit')}</button>
+                <a className='btn btn--primary header__deposit' href='https://deriv.app/cashier/deposit'>{it.L('Deposit')}</a>
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
-                    <button id='btn_login' className='header__login btn--outline'>{it.L('Login')}</button>
-                    <button className='header__login' href='https://deriv.com/signup/'>{it.L('Sign Up')}</button>
+                    <button id='btn__login' className='btn btn--primary btn--outline header__btn-login'>{it.L('Login')}</button>
+                    <a className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' href='https://deriv.com/signup/'>{it.L('Sign Up')}</a>
                 </div>
             </div>
         </div>

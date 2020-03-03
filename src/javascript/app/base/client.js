@@ -65,7 +65,7 @@ const Client = (() => {
             // topbar_class.add(primary_bg_color_dark);
             // topbar_class.remove(secondary_bg_color);
             applyToAllElements('.is-logout', (el) => {
-                el.style.display = 'block';
+                el.style.display = 'inline-flex';
             });
         }
     };

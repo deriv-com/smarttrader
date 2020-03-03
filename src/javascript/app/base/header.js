@@ -2,7 +2,7 @@
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
-const formatMoney              = require('../common/currency').formatMoney;
+const updateTotal              = require('../pages/user/update_total');
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
@@ -102,7 +102,7 @@ const Header = (() => {
         // logo.removeEventListener('click', logoOnClick);
         // logo.addEventListener('click', logoOnClick);
 
-        const btn_login = getElementById('btn_login');
+        const btn_login = getElementById('btn__login');
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
@@ -280,24 +280,12 @@ const Header = (() => {
     };
 
     const bindTabs = () => {
-        const virtual_account = Client.getAccountOfType('virtual');
-        const real_balance = Client.getTotalBalance();
-        let is_virtual_tab = /^VRT/.test(Client.get('loginid'));
+        const is_virtual_tab = /^VRT/.test(Client.get('loginid'));
+        
         $('#acc_tabs').tabs({
             active: is_virtual_tab ? 1 : 0,
-            create() {
-                $('#account__switcher-total-balance-amount')
-                    .html(formatMoney('USD', is_virtual_tab ? virtual_account.balance : real_balance))
-                    .addClass(is_virtual_tab ? 'account__switcher-balance-virtual' : '');
-            },
-            activate(event, ui) {
-                is_virtual_tab = ui.newPanel[0].id === 'demo_tab';
-                const total_amount = $('#account__switcher-total-balance-amount');
-                if (is_virtual_tab) {
-                    total_amount.html(formatMoney('USD', virtual_account.balance)).addClass('account__switcher-balance-virtual');
-                } else {
-                    total_amount.html(formatMoney('USD', real_balance)).removeClass('account__switcher-balance-virtual');
-                }
+            activate() {
+                updateTotal();
             },
         });
     };

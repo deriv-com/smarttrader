@@ -140,7 +140,11 @@ body .header {
     &__btn {
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 100;
+
+        &-login, &-signup {
+            margin-right: 17px;
+        }
     }
     &__menu {
         &-acc {
@@ -212,7 +216,7 @@ body .header {
             padding: 0 8px;
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
-            font-weight: bold;
+            font-weight: 500;
         }
     }
     &__logo {
