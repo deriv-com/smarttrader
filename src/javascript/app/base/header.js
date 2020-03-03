@@ -83,7 +83,7 @@ const Header = (() => {
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
             const platform_div = createElement('div', { class: `platform__list-item ${key === 'dsmarttrader' ? 'platform__list-item--active' : ''}` });
-            const platform_icon = createElement('img', { src: `${header_icon_base_path}${platform.icon}`, class: 'platform__list-item-icon' });
+            const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
             const platform_desc = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
