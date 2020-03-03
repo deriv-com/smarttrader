@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from './head.jsx';
-import Header from './header.jsx';
-import MobileMenu from './mobile_menu.jsx';
+// import Header from './header.jsx';
+// import MobileMenu from './mobile_menu.jsx';
 // import Footer from './footer.jsx';
 import InterviewPopup from '../../_common/components/interview_popup.jsx';
 import Title from '../../_common/components/title.jsx';
@@ -61,10 +61,10 @@ const Layout = () => {
                     <Gtm />
                     <div id='msg_notification' className='notice-msg center-text' />
                     <div id='page-wrapper'>
-                        <Header />
+                        {/* <Header /> */}
                         <div id='content-holder'>
-                            <MobileMenu />
-                            <a href='javascript:;' id='scrollup' />
+                            {/* <MobileMenu /> */}
+                            {/* <a href='javascript:;' id='scrollup' /> */}
                             <InnerContent />
                         </div>
                         {/* <Footer /> */}
@@ -72,6 +72,7 @@ const Layout = () => {
                     </div>
                     <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                     <DerivIFrame />
+                    {/* <Elevio /> */}
                 </body>
             </html>
         </React.Fragment>

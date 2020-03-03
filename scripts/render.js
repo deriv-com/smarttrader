@@ -131,7 +131,7 @@ const createUrlFinder = (default_lang, section_path, root_url = getConfig().root
 
         let new_url = url;
         if (new_url === '' || new_url === '/') {
-            new_url = '/home';
+            new_url = '/trading';
         }
 
         if (/(^\/?(images|js|css|scripts|download))|(manifest\.json)/.test(new_url)) {

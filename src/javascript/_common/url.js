@@ -55,7 +55,7 @@ const Url = (() => {
         if (should_change_to_legacy) {
             domain = domain.replace(/\/app/,'');
         }
-        const new_url = `${domain}${(normalizePath(path) || 'home')}.html${(pars ? `?${pars}` : '')}`;
+        const new_url = `${domain}${(normalizePath(path) || 'trading')}.html${(pars ? `?${pars}` : '')}`;
         // replace old lang with new lang
         return urlForLanguage(lang, new_url);
     };
