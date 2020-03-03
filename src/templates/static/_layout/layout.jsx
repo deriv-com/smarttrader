@@ -7,6 +7,7 @@ import InterviewPopup from '../../_common/components/interview_popup.jsx';
 import Title from '../../_common/components/title.jsx';
 // import Elevio from '../../_common/includes/elevio.jsx';
 import Gtm from '../../_common/includes/gtm.jsx';
+import DerivIFrame from '../../_common/includes/deriv-iframe.jsx';
 
 const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
@@ -70,6 +71,7 @@ const Layout = () => {
                         <Topbar />
                     </div>
                     <InterviewPopup /> {/* TODO: remove when UX research is finished */}
+                    <DerivIFrame />
                 </body>
             </html>
         </React.Fragment>
