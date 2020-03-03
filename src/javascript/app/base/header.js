@@ -68,15 +68,15 @@ const Header = (() => {
                 desc: 'Automate your trading ideas without coding',
                 icon: 'ic-brand-dbot.svg',
             },
-            dsmarttrader: {
-                name: 'DSmartTrader',
-                desc: 'Lorem Ipsum is not simply random text.',
-                icon: 'logo_smart_trader.svg',
-            },
             dmt5: {
                 name: 'DMT5',
                 desc: 'Trade with platform of choice for professionals',
                 icon: 'ic-brand-dmt5.svg',
+            },
+            dsmarttrader: {
+                name: 'SmartTrader',
+                desc: 'Trade in the world\'s financial markets with a simple online platform',
+                icon: 'logo_smart_trader.svg',
             },
         };
 
