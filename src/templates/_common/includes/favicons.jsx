@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Favicons = () => {
+const Favicons = () => (
     // const favicons = [
     //     { size: '57' },
     //     { size: '114' },
@@ -32,13 +32,11 @@ const Favicons = () => {
     //         />
     //     );
     // });
-    return (
-        <link
-            rel='icon'
-            type={'image/svg'}
-            href={it.url_for('/images/common/logos/icon_deriv.svg')}
-        />
-    );
-};
+    <link
+        rel='icon'
+        type={'image/svg'}
+        href={it.url_for('/images/common/logos/icon_deriv.svg')}
+    />
+);
 
 export default Favicons;
