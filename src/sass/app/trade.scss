@@ -793,10 +793,6 @@
     }
 }
 
-#open_positions_container {
-    display: none;
-}
-
 @media all and (max-width: 480px) {
     #trading_socket_container {
         #contract_market_form_container ul#contract_form_name_nav a.tm-a {
@@ -1071,8 +1067,4 @@
             margin-right: 5px;
         }
     }
-}
-
-.show-mb {
-    display: none;
 }
