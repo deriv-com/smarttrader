@@ -11,7 +11,6 @@
                     'https://staging.deriv.app'
                 ];
 
-                // TODO: Remove always true condition.
                 if (restricted_origins.includes(message.origin)) {
                     switch (message.data.key) {
                         case 'active_loginid': 
