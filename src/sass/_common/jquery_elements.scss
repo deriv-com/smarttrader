@@ -12,9 +12,17 @@
 #ui-timepicker-div, #ui-datepicker-div {
     border-radius: 4px;
     padding: 0 !important;
-
+    
     &, &:before, &:after {
         transition: none;
+    }
+    .ui-icon-circle-triangle-w {
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23398.295 -21118.941 14.82 24"><path fill="#{rgba($COLOR_BLUE,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-23374.885 -21088.941) rotate(180)"/></svg>');
+        background-position: initial;
+    }
+    .ui-icon-circle-triangle-e {
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22965 -21118.941 14.82 24"><path fill="#{rgba($COLOR_BLUE,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-22973.59 -21124.941)"/></svg>');
+        background-position: initial;
     }
     .ui-widget-header {
         background: $COLOR_BORDER_GRAY !important;
