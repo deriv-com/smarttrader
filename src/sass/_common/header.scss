@@ -316,7 +316,6 @@ body .header {
                 border-radius: 8px;
                 margin: 24px 16px;
                 padding: 24px 16px;
-                cursor: pointer;
                 flex-basis: 100%;
                 width: 302px;
 
@@ -332,6 +331,7 @@ body .header {
                 }
                 &-text {
                     margin-left: 15px;
+                    font-weight: normal;
                 }
                 &-name {
                     font-size: $FONT_SIZE_N;
