@@ -84,8 +84,11 @@
                 padding: 0 7px;
                 width: 100%;
 
-                &:hover, &:focus {
+                &:hover {
                     border: 1px solid $COLOR_DARK_GRAY_4;
+                }
+                &:focus {
+                    border: 1px solid $COLOR_GREEN_1;
                 }
                 &::-webkit-input-placeholder { /* Edge */
                     color: $COLOR_BALLOON_GRAY;
