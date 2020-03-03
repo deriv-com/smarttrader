@@ -115,7 +115,7 @@
     "@deriv/p2p": "^0.3.0",
     "babel-polyfill": "6.26.0",
     "canvas-toBlob": "1.0.0",
-    "classnames": "^2.2.5",
+    "classnames": "2.2.5",
     "custom-event-polyfill": "0.3.0",
     "davidshimjs-qrcodejs": "0.0.2",
     "event-source-polyfill": "0.0.9",
