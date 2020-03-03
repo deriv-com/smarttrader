@@ -364,7 +364,7 @@ const ClientBase = (() => {
             } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
                 origin = 'https://deriv.app';
             } else {
-                origin = '*'; // TODO: RETURN HERE.
+                return;
             }
 
             // Keep client.accounts in sync (in case user wasn't logged in).

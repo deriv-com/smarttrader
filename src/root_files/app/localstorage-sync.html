@@ -12,7 +12,7 @@
                 ];
 
                 // TODO: Remove always true condition.
-                if (true || restricted_origins.includes(message.origin)) {
+                if (restricted_origins.includes(message.origin)) {
                     switch (message.data.key) {
                         case 'active_loginid': 
                         case 'client.accounts': {
