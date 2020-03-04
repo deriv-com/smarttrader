@@ -16,14 +16,14 @@ const LoggedIn = () => (
                 // #header-binary #symbol-logo {vertical-align: middle; height: 55px;}
                 // #header-binary #type-logo {vertical-align: middle; height: 37px; margin-left: 6px;}
                 // #login_loading {text-align: center; padding-top: 90px;}
-                div.barspinner--primary {
+                #logged_in_loading {
                     position: absolute;
                     bottom: 80px;
                     left: 50%;
                     transform: translateX(-50%);
                     margin: 0;
                 }
-                div.barspinner--primary div.barspinner__rect {
+                #logged_in_loading div.barspinner__rect {
                     background-color: #ff444f;
                 }
                 #content-holder {
@@ -48,7 +48,7 @@ const LoggedIn = () => (
                 <div id='content'>
                     <div id='login_loading'>
                         <a href={it.url_for('/')} id='loading_link'>
-                            <Loading theme='primary' />
+                            <Loading id='logged_in_loading' />
                         </a>
                     </div>
                 </div>
