@@ -974,11 +974,34 @@
             padding: unset;
             justify-content: unset;
         }
-        .chartOptions .vertical-bottom {
-            font-size: 12px;
+        .chart-view {
+            width: calc(100% + 10px);
+            margin-left: -5px;
+        }
+        .chartOptions {
+            .vertical-bottom {
+                font-size: 12px;
+                margin-top: 13px;
+            }
+            .drawingToolOverlay .row:not(:last-child) {
+                border-bottom: 1px solid $COLOR_BALLOON_GRAY;
+            }
+            .img {
+                display: inline-flex;
+
+                span {
+                    margin: 7px 5px;
+                }
+            }
+            .nav-caret.triangle {
+                margin: 15px 5px 15px 0;
+            }
         }
         .chartOptions_button {
             background-color: $COLOR_BORDER_GRAY;
+            height: 34px;
+            margin-left: 0;
+            margin-right: 5px;
 
             &, &.button_selected {
                 color: $COLOR_BLACK;
@@ -989,15 +1012,18 @@
             .share-w-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cpolyline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' points='34.17 35.82 15.83 25 34.17 14.18'/%3E %3Ccircle fill='%232a3052' cx='15.83' cy='25' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='14.18' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='35.82' r='3.5'/%3E%3C/svg%3E");
             }
+            .drawing-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Crect width='20' height='20' fill='none'/%3E %3Cpath fill='%232a3052' d='M4,13.4995206 L4,15.9995133 L6.49999276,15.9995133 L13.8724714,8.62703469 L11.3724786,6.12704193 L4,13.4995206 Z M15.8049658,6.69454028 C16.0643625,6.43489417 16.0643625,6.01418912 15.8049658,5.75454301 L14.2499703,4.19454753 C13.9903242,3.93515082 13.5696191,3.93515082 13.309973,4.19454753 L12.0849766,5.41454399 L14.5849693,7.91453675 L15.8049658,6.69454028 Z'/%3E %3C/g%3E %3C/svg%3E");
+            }
             &:not(.button_selected):hover {
                 background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
             }
         }
         .chartOptions_overlay {
+            margin-left: 0 !important;
+
             &.exportOverlay {
-                margin-left: 5px !important;
-                margin-top: 10px;
-                border: 1px solid $COLOR_BALLOON_GRAY;
+                margin-left: 0 !important;
 
                 .row .cell .table.download {
                     margin: 10px;
@@ -1026,6 +1052,10 @@
                     background-color: $COLOR_BORDER_GRAY;
                 }
             }
+            &.table {
+                margin-top: 10px;
+                border: 1px solid $COLOR_BALLOON_GRAY;
+            }
         }
     }
     #last_digit_histo_form {
@@ -1053,6 +1083,123 @@
         }
         img {
             margin-right: 5px;
+        }
+    }
+}
+
+body #lean_overlay {
+    .lean_overlay_titlebar {
+        background-color: var(--general-section-1);
+        line-height: 24px;
+        padding: 8px 16px;
+        color: $COLOR_BLACK;
+        font-weight: bold;
+
+        .close {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik0zLjcwNyAyLjI5M0w4IDYuNTg3bDQuMjkzLTQuMjk0Yy4zOS0uMzkgMS4wMjMtLjM5IDEuNDE0IDAgLjM5LjM5LjM5IDEuMDIzIDAgMS40MTRMOS40MTQgOC4wMDFsNC4yOTMgNC4yOTVjLjM5LjM5LjM5IDEuMDI0IDAgMS40MTQtLjM5LjM5LTEuMDI0LjM5LTEuNDE0IDBMOCA5LjQxNiAzLjcwNyAxMy43MWMtLjM5LjM5LTEuMDIzLjM5LTEuNDE0IDAtLjM5LS4zOS0uMzktMS4wMjMgMC0xLjQxNGw0LjI5Mi00LjI5NS00LjI5Mi00LjI5NGMtLjM5LS4zOS0uMzktMS4wMjQgMC0xLjQxNC4zOS0uMzkgMS4wMjQtLjM5IDEuNDE0IDB6Ii8+Cjwvc3ZnPgo=') !important;
+        }
+    }
+    .webtrader-charts-dialog {
+        font-size: 16px;
+        line-height: 24px;
+        height: auto !important;
+        padding-bottom: 36px;
+
+        table {
+            td {
+                border-bottom: 1px solid var(--border-normal);
+                width: 50%;
+
+                &:first-child {
+                    padding: 10px 0 8px 16px;
+                }
+                &:not(:first-child) {
+                    padding: 4px 4px 4px 0;
+                }
+                strong {
+                    font-weight: normal;
+                }
+                input {
+                    font-size: 14px;
+                    height: 15px;
+                    padding: 9px 15px 9px 9px;
+                    width: 120px !important;
+
+                    &:hover {
+                        border: 1px solid $COLOR_DARK_GRAY_4;
+                    }
+                    &:focus {
+                        border: 1px solid var(--brand-secondary);
+                    }
+                    &#color {
+                        display: none;
+                    }
+                }
+                .sp-replacer {
+                    background-color: $COLOR_WHITE;
+                    border-color: var(--border-normal);
+                    border-radius: $BORDER_RADIUS;
+
+                    .sp-preview {
+                        width: 25px;
+                        height: 25px;
+                        border: none;
+                        margin-right: 8px;
+
+                        &-inner {
+                            border-radius: $BORDER_RADIUS;
+                            border: 3px solid rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                    .sp-dd {
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .lean_overlay_buttonpane {
+        border-top: 1px solid var(--border-normal);
+        padding: 18px 16px;
+
+        > div {
+            width: auto;
+            padding: 6px 22px 6px 23px;
+            line-height: 24px;
+            background-color: var(--status-default);
+            color: $COLOR_BLACK;
+
+            &:hover {
+                background-color: var(--state-active);
+            }
+            &:not(:first-child) {
+                margin-left: 16px;
+                background-color: $COLOR_CORAL_RED;
+                color: $COLOR_WHITE;
+
+                &:hover {
+                    background-color: var(--button-primary-hover);
+                }
+            }
+        }
+    }
+}
+
+body .sp-container {
+    background-color: $COLOR_WHITE;
+    border: 1px solid var(--border-normal);
+    border-radius: $BORDER_RADIUS;
+
+    .sp-picker-container {
+        margin: 0;
+        padding: 8px;
+        height: 161px;
+
+        .sp-top {
+            margin-bottom: 0;
+        }
+        .sp-fill {
+            padding-top: 161px;
         }
     }
 }
