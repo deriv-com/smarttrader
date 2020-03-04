@@ -3,7 +3,7 @@
     position: relative;
 
     .market_current {
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid $COLOR_BALLOON_GRAY;
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -13,12 +13,13 @@
         min-width: 150px;
 
         &:hover {
-            border: 1px solid $COLOR_BLUE;
+            border: 1px solid $COLOR_DARK_GRAY_4;
         }
         .market {
             font-size: 14px;
             font-weight: 400;
             margin: 5px 0;
+            color: $COLOR_DARK_GRAY_4;
         }
         .underlying {
             font-size: 16px;
@@ -34,9 +35,9 @@
     }
     .markets_dropdown {
         background: $COLOR_WHITE;
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid $COLOR_BALLOON_GRAY;
         border-radius: 4px;
-        box-shadow: 0 0 2px 1px $COLOR_GRAY;
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -73,18 +74,30 @@
             padding: 15px 15px 0;
             background: $COLOR_WHITE;
             border-radius: 4px 4px 0px 0px;
-            border-bottom: 1px solid $COLOR_GRAY;
+            border-bottom: 1px solid $COLOR_BALLOON_GRAY;
 
             input {
                 outline: none;
-                border: 1px solid $COLOR_GRAY;
+                border: 1px solid $COLOR_BALLOON_GRAY;
                 border-radius: 4px;
                 line-height: 30px;
                 padding: 0 7px;
                 width: 100%;
 
-                &:hover, &:focus {
-                    border: 1px solid $COLOR_BLUE_SHADE;
+                &:hover {
+                    border: 1px solid $COLOR_DARK_GRAY_4;
+                }
+                &:focus {
+                    border: 1px solid $COLOR_GREEN_1;
+                }
+                &::-webkit-input-placeholder { /* Edge */
+                    color: $COLOR_BALLOON_GRAY;
+                }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: $COLOR_BALLOON_GRAY;
+                }
+                &::placeholder {
+                    color: $COLOR_BALLOON_GRAY;
                 }
             }
             .icon {
@@ -110,9 +123,9 @@
                 display: flex;
                 flex-direction: column;
                 flex: 1 0 auto;
-                min-width: 140px;
+                min-width: 150px;
                 background: $COLOR_WHITE;
-                border-right: 1px solid $COLOR_GRAY;
+                border-right: 1px solid $COLOR_BALLOON_GRAY;
                 border-bottom-left-radius: 4px;
                 @media (min-width: 320px) and (max-width: 767px) {
                     border-right: 0;
@@ -121,20 +134,19 @@
                 .desktop .market {
                     font-size: 12px;
                     padding: 8px 10px;
-                    color: $COLOR_BLUE;
+                    cursor: pointer;
                     transition: background 0.2s 0.1s;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    cursor: pointer;
 
-                    &:hover {
-                        text-decoration: underline;
+                    &:not(.active):hover {
+                        background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
                     }
                     &.active {
                         text-decoration: none;
                         font-weight: 600;
-                        border-right: 2px solid $COLOR_BLUE;
+                        border-right: 2px solid $COLOR_CORAL_RED;
                     }
                     span:nth-of-type(2) {
                         margin-left: 10px;
@@ -148,7 +160,7 @@
                         flex-direction: row;
                         justify-content: space-between;
                         padding: 5px 15px 0;
-                        border-bottom: 1px solid $COLOR_GRAY;
+                        border-bottom: 1px solid $COLOR_BALLOON_GRAY;
 
                         li {
                             margin: 0 !important;
@@ -160,7 +172,7 @@
                             -webkit-tap-highlight-color: transparent;
 
                             &.active {
-                                border-bottom: 2px solid $COLOR_BLUE;
+                                border-bottom: 2px solid $COLOR_CORAL_RED;
                             }
                             .icon {
                                 width: 24px;
@@ -181,50 +193,50 @@
                         background-size: contain;
                         transition: none;
 
-                        &.active {
-                            background: url('../images/pages/trade/assets/ic-forex-active.svg') no-repeat;
-                            background-size: contain;
-                        }
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-forex-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
                     }
                     &.indices {
                         background: url('../images/pages/trade/assets/ic-indices-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
 
-                        &.active {
-                            background: url('../images/pages/trade/assets/ic-indices-active.svg') no-repeat;
-                            background-size: contain;
-                        }
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-indices-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
                     }
                     &.stocks {
                         background: url('../images/pages/trade/assets/ic-stocks-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
 
-                        &.active {
-                            background: url('../images/pages/trade/assets/ic-stocks-active.svg') no-repeat;
-                            background-size: contain;
-                        }
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-stocks-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
                     }
                     &.commodities {
                         background: url('../images/pages/trade/assets/ic-commodities-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
 
-                        &.active {
-                            background: url('../images/pages/trade/assets/ic-commodities-active.svg') no-repeat;
-                            background-size: contain;
-                        }
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-commodities-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
                     }
                     &.synthetic_index {
                         background: url('../images/pages/trade/assets/ic-synthetic_index-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
 
-                        &.active {
-                            background: url('../images/pages/trade/assets/ic-synthetic_index-active.svg') no-repeat;
-                            background-size: contain;
-                        }
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-synthetic_index-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
                     }
                 }
                 // For mobile devices
@@ -257,9 +269,8 @@
                     .market_name {
                         font-size: 18px;
                         padding: 10px 0;
-                        font-weight: 400;
+                        font-weight: bold;
                         flex: 1 0 auto;
-                        color: $COLOR_BLUE;
                         transition: none;
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 20px;
@@ -267,7 +278,7 @@
 
                         &.sticky {
                             position: absolute;
-                            width: 431px;
+                            width: 70%;
                             top: 60px;
                             background: $COLOR_WHITE;
                             @media (max-width: 767px) {
@@ -290,7 +301,7 @@
                             padding: 10px 0 0;
                             flex: 1 0 auto;
                             font-weight: 300;
-                            color: $COLOR_ORANGE;
+                            color: $COLOR_DARK_GRAY_4;
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 14px;
                             }
@@ -303,7 +314,7 @@
 
                             .symbol_name {
                                 padding: 5px;
-                                margin: 10px 0 5px 5px;
+                                margin: 10px 5px 5px 0;
                                 line-height: 18px;
                                 cursor: pointer;
                                 width: 162px;
@@ -315,16 +326,15 @@
                                     font-size: 16px;
                                 }
 
-                                &:hover {
-                                    background: $COLOR_GRAY;
+                                &:not(.active):hover {
+                                    background: $COLOR_HOVER_FULLSCREEN_GRAY;
                                 }
                                 &.active {
-                                    background: $COLOR_BLUE;
-                                    color: $COLOR_WHITE;
+                                    background: $COLOR_BALLOON_GRAY;
+                                    font-weight: bold;
                                     @media (min-width: 320px) and (max-width: 767px) {
-                                        background: $COLOR_BLUE;
-                                        color: $COLOR_WHITE;
-                                        font-weight: normal;
+                                        background: $COLOR_BALLOON_GRAY;
+                                        font-weight: bold;
                                         padding-left: 5px;
                                     }
                                 }
