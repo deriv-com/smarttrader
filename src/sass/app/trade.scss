@@ -486,6 +486,7 @@
                     cursor: pointer;
                     width: 100%;
                     color: $COLOR_WHITE;
+                    font-size: 16px;
                 }
                 #purchase_button_top, #purchase_button_middle {
                     background-color: $COLOR_NETWORK_STATUS_ONLINE;
@@ -726,7 +727,7 @@
                 align-items: center;
                 margin-bottom: 10px;
 
-                &, .contract_amount, .contract_payout {
+                &, .stake .contract_amount, .contract_payout {
                     vertical-align: middle;
                 }
                 div {
