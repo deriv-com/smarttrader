@@ -215,7 +215,7 @@ body .header {
             padding: 0 8px;
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
-            font-weight: 500;
+            font-weight: bold;
         }
     }
     &__logo {
@@ -236,7 +236,7 @@ body .header {
         }
     }
     &__deposit {
-        margin: 0 8px;
+        margin-right: 16px;
     }
     &__divider {
         height: 32px;
