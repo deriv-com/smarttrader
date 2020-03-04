@@ -10,6 +10,7 @@ const isEmptyObject    = require('../utility').isEmptyObject;
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
     let client_object = {};
+    let total_balance = '';
     let current_loginid;
 
     const init = () => {
@@ -71,6 +72,10 @@ const ClientBase = (() => {
         }
         return value;
     };
+
+    const setTotalBalance = (total) => total_balance = total;
+
+    const getTotalBalance = () => total_balance;
 
     const getAllAccountsObject = () => LocalStore.getObject(storage_key);
 
@@ -151,6 +156,23 @@ const ClientBase = (() => {
     const getAccountTitle = loginid => {
         const types_map = TypesMapConfig.get();
         return (types_map[getAccountType(loginid)] || types_map.default);
+    };
+
+    const getAccountIcon = currency => {
+        switch (currency) {
+            case 'USD':
+                return 'ic-currency-usd.svg';
+            case 'BTC':
+                return 'ic-currency-btc.svg';
+            case 'ETH':
+                return 'ic-currency-eth.svg';
+            case 'LTC':
+                return 'ic-currency-ltc.svg';
+            case 'UST':
+                return 'ic-currency-ust.svg';
+            default:
+                return '';
+        }
     };
 
     const responseAuthorize = (response) => {
@@ -385,6 +407,8 @@ const ClientBase = (() => {
         isValidLoginid,
         set,
         get,
+        setTotalBalance,
+        getTotalBalance,
         getAllLoginids,
         getAccountType,
         isAccountOfType,
@@ -394,6 +418,7 @@ const ClientBase = (() => {
         hasCurrencyType,
         hasOnlyCurrencyType,
         getAccountTitle,
+        getAccountIcon,
         responseAuthorize,
         shouldAcceptTnc,
         clearAllAccounts,
