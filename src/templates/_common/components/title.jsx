@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Title = () => (
-    <title>{`${it.title ? `${it.L(it.title)} | ` : ''}${it.website_name}`}</title>
+    <title>{`${it.title ? `${it.L(it.title)} | ` : ''}${'Deriv'}`}</title>
 );
 
 export default Title;
