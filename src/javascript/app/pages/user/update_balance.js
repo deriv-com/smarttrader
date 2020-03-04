@@ -1,4 +1,5 @@
 const PortfolioInit         = require('./account/portfolio/portfolio.init');
+const updateTotal           = require('./update_total');
 const updateContractBalance = require('../trade/update_values').updateContractBalance;
 const Client                = require('../../base/client');
 const BinarySocket          = require('../../base/socket');
@@ -11,18 +12,35 @@ const updateBalance = (response) => {
         return;
     }
     BinarySocket.wait('website_status').then(() => {
-        const balance = response.balance.balance;
-        Client.set('balance', balance);
-        PortfolioInit.updateBalance();
-        const currency = response.balance.currency;
+        const loginid    = response.balance.loginid;
+        const balance    = response.balance.balance;
+        const currency   = response.balance.currency;
+        const total      = response.balance.total.real.amount;
+        const is_current = Client.get('loginid') === loginid;
+        const is_virtual    = /^VRT/.test(loginid);
         if (!currency) {
             return;
         }
+
         const view = formatMoney(currency, balance);
+        if (is_current) {
+            $('#header__acc-balance').html(view);
+            Client.set('balance', balance);
+            PortfolioInit.updateBalance();
+        }
+
+        if (is_virtual) {
+            $('.account__switcher-balance-virtual').html(view);
+            TopUpVirtualPopup.init(balance);
+        } else {
+            $(`.account__switcher-balance-${currency}`).html(view);
+        }
+
+        Client.setTotalBalance(total);
+        updateTotal(total);
         updateContractBalance(balance);
-        $('.topMenuBalance, .binary-balance').html(view)
-            .css('visibility', 'visible');
-        TopUpVirtualPopup.init(balance);
+        // $('#header__acc-balance, .topMenuBalance, .binary-balance').html(view)
+        //     .css('visibility', 'visible');
     });
 };
 
