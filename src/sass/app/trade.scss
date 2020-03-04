@@ -924,6 +924,10 @@
     &.active, &.ui-tabs-active {
         background: $COLOR_BLUE;
         color: $COLOR_WHITE;
+
+        a {
+            font-weight: bold;
+        }
     }
 }
 
@@ -969,6 +973,59 @@
         .row {
             padding: unset;
             justify-content: unset;
+        }
+        .chartOptions .vertical-bottom {
+            font-size: 12px;
+        }
+        .chartOptions_button {
+            background-color: $COLOR_BORDER_GRAY;
+
+            &, &.button_selected {
+                color: $COLOR_BLACK;
+            }
+            &.button_selected {
+                background-color: $COLOR_BALLOON_GRAY;
+            }
+            .share-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cpolyline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' points='34.17 35.82 15.83 25 34.17 14.18'/%3E %3Ccircle fill='%232a3052' cx='15.83' cy='25' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='14.18' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='35.82' r='3.5'/%3E%3C/svg%3E");
+            }
+            &:not(.button_selected):hover {
+                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+            }
+        }
+        .chartOptions_overlay {
+            &.exportOverlay {
+                margin-left: 5px !important;
+                margin-top: 10px;
+                border: 1px solid $COLOR_BALLOON_GRAY;
+
+                .row .cell .table.download {
+                    margin: 10px;
+
+                    span {
+                        margin: 0;
+                        padding: 0;
+                        height: auto;
+                    }
+                    .cell {
+                        height: 32px;
+                        min-width: 32px;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $COLOR_BORDER_GRAY;
+
+                        &:not(:first-child) {
+                            margin-left: 10px;
+                        }
+                        &:hover {
+                            background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        }
+                    }
+                }
+                .fill-bg-color {
+                    background-color: $COLOR_BORDER_GRAY;
+                }
+            }
         }
     }
     #last_digit_histo_form {
