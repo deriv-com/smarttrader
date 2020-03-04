@@ -765,7 +765,7 @@ const ViewPopup = (() => {
 
             $sell_wrapper.setVisibility(1)
                 .append($('<div/>', { id: sell_wrapper_id })
-                    .append($('<button/>', { id: sell_button_id, class: 'button', text: is_started ? localize('Sell at market') : localize('Sell') })));
+                    .append($('<button/>', { id: sell_button_id, class: 'button btn btn--primary', text: is_started ? localize('Sell at market') : localize('Sell') })));
             if (is_started) {
                 addSellNote($sell_wrapper);
             }

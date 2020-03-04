@@ -49,6 +49,7 @@
 }
 
 #trading_socket_container {
+    color: $color-black-1;
     font-size: $FONT_SIZE_N;
     position: relative;
     opacity: 0;
@@ -418,8 +419,11 @@
                 }
             }
         }
+        #contract_purchase_barrier {
+            padding-bottom: 7px;
+        }
         #contract_purchase_reference {
-            padding-top: 7px;
+            padding-bottom: 7px;
         }
         #confirmation_error {
             padding: 20px;
@@ -470,7 +474,7 @@
             bottom: 0;
             color: $COLOR_WHITE;
             box-sizing: border-box;
-            background-color: $COLOR_ORANGE;
+            background-color: var(--purchase-main-1);
             width: 100%;
             display: flex;  /* fix for iOS */
             justify-content: center;
@@ -488,7 +492,7 @@
             padding-bottom: 34px;
 
             div.button {
-                padding-top: 7px;
+                padding-bottom: 7px;
             }
             #trade_tick_chart {
                 .highcharts-tooltip span {
@@ -505,12 +509,13 @@
             }
         }
         #contract_purchase_descr {
-            background-color: $COLOR_WHITE;
-            border: 2px solid $COLOR_GRAY;
-            margin: 0 10px;
-            padding: 10px;
+            background-color: var(--general-main-1);
+            border: 1px solid var(--border-normal);
+            border-radius: $BORDER_RADIUS;
+            line-height: normal;
+            margin: 20px 10px;
+            padding: 12px;
             text-align: justify;
-            line-height: 1.4em;
         }
         #contract_purchase_button {
             margin-top: 10px;
@@ -546,10 +551,10 @@
             }
         }
         #contract_purchase_payout {
-            border-right: 1px solid $COLOR_GRAY;
+            border-right: 1px solid var(--border-normal);
         }
         #contract_purchase_profit {
-            border-left: 1px solid $COLOR_GRAY;
+            border-left: 1px solid var(--border-normal);
         }
         .contract_amount, .contract_payout, .payout, .stake {
             @include BIDIR_VALUE(padding, 3px, 3px);
@@ -595,11 +600,11 @@
         }
     }
     #contract_confirmation_container {
-        background-color: $COLOR_LIGHT_GRAY;
+        background-color: var(--general-section-1);
         text-align: center;
 
         a.close {
-            background-color: $COLOR_BLUE;
+            background-color: var(--text-prominent);
             border-radius: 0 0 0 $BORDER_RADIUS;
         }
         #confirmation_message_container {
@@ -607,6 +612,11 @@
             height: 90%;
             height: calc(100% - 30px);
         }
+    }
+    #contract_purchase_heading {
+        font-size: $FONT_SIZE_XL;
+        font-weight: normal;
+        color: var(--text-prominent);
     }
     #contract_prices_container .price_container .price_wrapper {
         text-align: center;

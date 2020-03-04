@@ -1,3 +1,4 @@
+/* styline-disable */
 .popup_bet_desc {
     padding: 5px 0;
     border: 1px solid $COLOR_GRAY;
@@ -26,8 +27,7 @@
 }
 
 .inpage_popup_container {
-    border: 2px solid $COLOR_BLUE;
-    border-top: 1px solid $COLOR_WHITE;
+    border: 2px solid $color-grey-5;
     background-color: $COLOR_WHITE;
 
     .inpage_popup_content_box {
@@ -46,9 +46,11 @@
         .popup_bet_desc {
             border: 0;
             padding: 5px;
-            line-height: 20px;
-            background-color: $COLOR_BLUE;
-            color: $COLOR_WHITE;
+            font-size: $FONT_SIZE_S;
+            font-weight: bold;
+            line-height: 1.43;
+            background-color: var(--general-section-1);
+            color: var(--text-prominent);
             @include BIDIR_PROP(padding-right, padding-left, 30px);
         }
         td {
@@ -104,7 +106,7 @@
             }
             #sell_details_table, #sell_details_audit {
                 padding: 0;
-                border-left: 1px solid $COLOR_DARK_GRAY;
+                border-left: 1px solid $color-grey-5;
 
                 th {
                     line-height: 24px;
@@ -115,7 +117,7 @@
                     }
                 }
                 td, td[data-balloon] {
-                    border-bottom: 1px solid $COLOR_LIGHT_GRAY;
+                    border-bottom: 1px solid $color-grey-5;
                     vertical-align: middle;
                 }
                 #trade_details_profit_loss, #trade_details_total_pnl {
@@ -149,7 +151,7 @@
                 #trade_details_entry_spot, #trade_details_current_spot {
                     line-height: 32px;
 
-                    span {
+                    span:not(:last-child) {
                         padding-right: 20px;
                     }
                     a {
@@ -232,3 +234,4 @@
         }
     }
 }
+/* styline-enable */

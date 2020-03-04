@@ -10,7 +10,6 @@ $IS_LTR : true;
 
 // Brand colors and derivatives
 /* stylelint-disable color-no-hex */
-$COLOR_TEXT: #3d474d;
 $COLOR_CONTROL_BORDER: #dadada;
 $COLOR_ACTIVE: #ff992a;
 
@@ -38,18 +37,8 @@ $COLOR_LIGHT_GRAY    : $fillColor;     // #f2f2f2
 $COLOR_GRAY          : $borderColor;   // #dedede
 $COLOR_DARK_GRAY     : #44484c;
 $COLOR_GREEN         : $positiveColor; // #2e8836
-
-$COLOR_NETWORK_STATUS_ONLINE: #4bb4b3;
-$COLOR_NETWORK_STATUS_OFFLINE: #ec3f3f;
-$COLOR_NETWORK_STATUS_BLINKER: #4bb4b3;
-$COLOR_BORDER_GRAY: #f2f3f4;
-$COLOR_BALLOON_GRAY: #d6dadb;
-$COLOR_HOVER_FULLSCREEN_GRAY: #e6e9e9;
-
-// colors used in deriv
-$COLOR_DARK_GRAY_4: #999999;
-$COLOR_CORAL_RED: #ff444f;
-$COLOR_GREEN_1: #85acb0;
+$COLOR_BORDER_GRAY   : #f2f3f4;
+$COLOR_BALLOON_GRAY  : #d6dadb;
 
 /* stylelint-enable color-no-hex */
 
@@ -63,7 +52,6 @@ $CONTROL_PADDING_L: 0.5em 1em;
 $PAGE_PADDING: 0.5em;
 $HEADER_HEIGHT: 3em;
 $BOX_SHADOW: 0 0 50px 0 rgba(0, 0, 0, 0.25);
-
 
 $FONT-STACK: 'IBM Plex Sans', sans-serif; // same variable/value exists in @binary-com/binary-style/constants.scss with roboto instead of IBM
 $FONT_BASE: 1rem;

@@ -40,7 +40,7 @@ body #topbar {
             cursor: pointer;
 
             &:hover {
-                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                background-color: var(--general-hover);
             }
             img {
                 width: 16px;
@@ -88,7 +88,6 @@ body #topbar {
     #gmt-clock {
         font-size: 0.75rem;
         font-weight: 100;
-        font-family: 'IBM Plex Sans';
         padding: 0 0.8em;
         width: 147px;
     }
@@ -114,14 +113,14 @@ body #topbar {
         height: 10px;
         margin: auto;
         border-radius: 50%;
-        background: $COLOR_NETWORK_STATUS_ONLINE;
+        background: var(--text-profit-success);
 
         &.offline {
-            background: $COLOR_NETWORK_STATUS_OFFLINE;
+            background: var(--text-loss-danger);
         }
         &.blinker {
             animation: blinking-network-status 0.4s alternate infinite;
-            background: $COLOR_NETWORK_STATUS_ONLINE;
+            background: var(--text-profit-success);
         }
     }
 }

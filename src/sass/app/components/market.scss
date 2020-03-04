@@ -88,7 +88,7 @@
                     border: 1px solid $COLOR_DARK_GRAY_4;
                 }
                 &:focus {
-                    border: 1px solid $COLOR_GREEN_1;
+                    border: 1px solid var(--status-success);
                 }
                 &::-webkit-input-placeholder { /* Edge */
                     color: $COLOR_BALLOON_GRAY;
@@ -141,7 +141,7 @@
                     align-items: center;
 
                     &:not(.active):hover {
-                        background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        background-color: var(--general-hover);
                     }
                     &.active {
                         text-decoration: none;
@@ -327,7 +327,7 @@
                                 }
 
                                 &:not(.active):hover {
-                                    background: $COLOR_HOVER_FULLSCREEN_GRAY;
+                                    background: var(--general-hover);
                                 }
                                 &.active {
                                     background: $COLOR_BALLOON_GRAY;

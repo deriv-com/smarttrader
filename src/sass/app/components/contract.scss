@@ -133,7 +133,7 @@
                     line-height: normal;
 
                     &:hover {
-                        background: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        background: var(--general-hover);
                     }
                     &.active {
                         background: $COLOR_BALLOON_GRAY;

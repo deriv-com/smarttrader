@@ -129,43 +129,43 @@ $COLOR_PEEK_LIGHT_GRAY: #c2c2c2;
     .peek-box.digit-running {
         @each $item in $PEEKBOX_GRID_ITEMS {
             .#{$item} {
-                background-color: $COLOR_PEEK_RUNNING_GRAY;
+                background-color: var(--text-prominent);
             }
         }
 
         .peek {
-            border: 5px solid $COLOR_PEEK_RUNNING_GRAY;
+            border: 5px solid var(--text-prominent);
         }
         .mask {
-            border: 1px solid $COLOR_PEEK_RUNNING_GRAY;
+            border: 1px solid var(--text-prominent);
         }
     }
     .peek-box.digit-losing {
         @each $item in $PEEKBOX_GRID_ITEMS {
             .#{$item} {
-                background-color: $COLOR_PEEK_RED;
+                background-color: var(--text-loss-danger);
             }
         }
 
         .peek {
-            border: 5px solid $COLOR_PEEK_RED;
+            border: 5px solid var(--text-loss-danger);
         }
         .mask {
-            border: 1px solid $COLOR_PEEK_RED;
+            border: 1px solid var(--text-loss-danger);
         }
     }
     .peek-box.digit-winning {
         @each $item in $PEEKBOX_GRID_ITEMS {
             .#{$item} {
-                background-color: $COLOR_PEEK_GREEN;
+                background-color: var(--text-profit-success);
             }
         }
 
         .peek {
-            border: 5px solid $COLOR_PEEK_GREEN;
+            border: 5px solid var(--text-profit-success);
         }
         .mask {
-            border: 1px solid $COLOR_PEEK_GREEN;
+            border: 1px solid var(--text-profit-success);
         }
     }
     .digits {
@@ -183,15 +183,14 @@ $COLOR_PEEK_LIGHT_GRAY: #c2c2c2;
         }
     }
     .digit.digit-winning {
-        background-color: $COLOR_DIGIT_WINNING_BACKGROUND;
-        color: $COLOR_DIGIT_WINNING;
-        border: none;
+        background-color: $color-green-5;
+        color: $color-green-6;
     }
     .digit.digit-lost {
-        color: $COLOR_PEEK_RED;
+        color: var(--text-loss-danger);
     }
     .digit.digit-won {
-        color: $COLOR_PEEK_GREEN;
+        color: var(--text-profit-success);
     }
     .digit {
         height: 36px;
@@ -203,10 +202,10 @@ $COLOR_PEEK_LIGHT_GRAY: #c2c2c2;
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        border-right: 1px solid $COLOR_GRAY;
-        border-top: 1px solid $COLOR_GRAY;
-        border-bottom: 1px solid $COLOR_GRAY;
-        color: $COLOR_PEEK_LIGHT_GRAY;
+        border-right: 1px solid $color-grey-5;
+        border-top: 1px solid $color-grey-5;
+        border-bottom: 1px solid $color-grey-5;
+        color: $color-grey-5;
 
         @media screen and (max-width: 480px) {
             height: 28px;

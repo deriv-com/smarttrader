@@ -41,8 +41,8 @@ const TickDisplay = (() => {
 
     let id_render = 'tick_chart';
 
-    const winning_color = 'rgba(46, 136, 54, 0.2)';
-    const losing_color  = 'rgba(204, 0, 0, 0.1)';
+    const winning_color = 'rgba(75, 180, 179, 0.16)';
+    const losing_color  = 'rgba(236, 63, 63, 0.16)';
 
     const color  = 'orange';
     const marker = {
