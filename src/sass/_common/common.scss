@@ -11,6 +11,7 @@ body {
     position: relative;
     background: repeat-x bottom;
     overflow-x: hidden;
+    font-family: $FONT-STACK !important;
 
     .ui-widget {
         font-size: $FONT_SIZE_N;
@@ -18,10 +19,21 @@ body {
     .mm-page {
         overflow-x: hidden;
     }
+    * {
+        font-family: $FONT-STACK;
+    }
 }
 
 h1, h2, h3 {
     margin-bottom: 20px;
+}
+
+*:focus {
+    outline: none;
+}
+
+a:active, a:hover, a:visited:active, a:visited:hover {
+    text-decoration: none !important;
 }
 
 sup, .sup, .sup:visited {
@@ -414,7 +426,7 @@ button .barspinner.white {
         left: 0;
         z-index: 9999;
         content: attr(data-message);
-        background: $COLOR_YELLOW;
+        background: $COLOR_RED;
         color: $COLOR_RED;
         border-bottom: 1px solid $COLOR_RED;
     }
@@ -424,7 +436,7 @@ button .barspinner.white {
     width: 40px;
     height: 40px;
     position: fixed;
-    bottom: 78px;
+    bottom: 44px;
     right: 18px;
     display: none;
     background: url('../images/common/scrollup_icon.svg') no-repeat;
@@ -962,4 +974,53 @@ label + input {
 
 .font-style-normal {
     font-style: normal;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.btn {
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 0 16px;
+    display: inline-flex;
+    border: 0;
+    height: 32px;
+    border-radius: 4px;
+    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: none !important;
+    font-size: $FONT_SIZE_S;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+
+    &--primary {
+        background: var(--button-primary-default);
+        color: var(--text-colored-background) !important;
+
+        &:hover {
+            background: var(--button-primary-hover);
+        }
+    }
+    &--outline {
+        background: transparent;
+        color: var(--button-primary-default) !important;
+
+        &:hover {
+            background: var(--button-tertiary-hover);
+        }
+    }
+    &:focus {
+        background: inherit;
+        outline: 0;
+    }
 }

@@ -1,5 +1,6 @@
 @at-root {
     @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic');
+    @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
 }
 @import '../../../../node_modules/@binary-com/binary-style/src/sass/colors';
 @import '../../../../node_modules/@binary-com/binary-style/src/sass/constants';
@@ -37,6 +38,19 @@ $COLOR_LIGHT_GRAY    : $fillColor;     // #f2f2f2
 $COLOR_GRAY          : $borderColor;   // #dedede
 $COLOR_DARK_GRAY     : #44484c;
 $COLOR_GREEN         : $positiveColor; // #2e8836
+
+$COLOR_NETWORK_STATUS_ONLINE: #4bb4b3;
+$COLOR_NETWORK_STATUS_OFFLINE: #ec3f3f;
+$COLOR_NETWORK_STATUS_BLINKER: #4bb4b3;
+$COLOR_BORDER_GRAY: #f2f3f4;
+$COLOR_BALLOON_GRAY: #d6dadb;
+$COLOR_HOVER_FULLSCREEN_GRAY: #e6e9e9;
+
+// colors used in deriv
+$COLOR_DARK_GRAY_4: #999999;
+$COLOR_CORAL_RED: #ff444f;
+$COLOR_GREEN_1: #85acb0;
+
 /* stylelint-enable color-no-hex */
 
 // colors to remove
@@ -50,7 +64,8 @@ $PAGE_PADDING: 0.5em;
 $HEADER_HEIGHT: 3em;
 $BOX_SHADOW: 0 0 50px 0 rgba(0, 0, 0, 0.25);
 
-//$FONT-STACK: roboto, sans-serif; // same variable/value exists in @binary-com/binary-style/constants.scss
+
+$FONT-STACK: 'IBM Plex Sans', sans-serif; // same variable/value exists in @binary-com/binary-style/constants.scss with roboto instead of IBM
 $FONT_BASE: 1rem;
 $FONT_SCALE: 1.15;
 

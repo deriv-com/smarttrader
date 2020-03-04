@@ -131,7 +131,7 @@ const createUrlFinder = (default_lang, section_path, root_url = getConfig().root
 
         let new_url = url;
         if (new_url === '' || new_url === '/') {
-            new_url = '/home';
+            new_url = '/trading';
         }
 
         if (/(^\/?(images|js|css|scripts|download))|(manifest\.json)/.test(new_url)) {
@@ -237,7 +237,7 @@ async function compile(page) {
     const tasks = languages.map(async lang => {
         const affiliate_language_code = common.getAffiliateSignupLanguage(lang);
         const model = {
-            website_name   : 'Binary.com',
+            website_name   : 'Deriv',
             title          : page.title,
             layout         : page.layout,
             language       : lang.toUpperCase(),
