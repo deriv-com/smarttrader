@@ -76,7 +76,7 @@ commands:
     steps:
       - s3/copy:
           from: artifact.tar
-          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/deriv-${CIRCLE_PROJECT_REPONAME}/'
           aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
@@ -86,7 +86,7 @@ commands:
     steps:
       - s3/copy:
           from: artifact-info.txt
-          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/deriv-${CIRCLE_PROJECT_REPONAME}/'
           aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
