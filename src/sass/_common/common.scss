@@ -11,6 +11,7 @@ body {
     position: relative;
     background: repeat-x bottom;
     overflow-x: hidden;
+    font-family: $FONT-STACK !important;
 
     .ui-widget {
         font-size: $FONT_SIZE_N;
