@@ -11,12 +11,12 @@ module.exports ={
             // This branch
             { expand: true, cwd: 'src/download/fonts', src: ['binary_symbols.woff'], dest: `${global.dist}/download/fonts/` },
 
-            { expand: true, cwd: `${global.node_modules_paths.binary_style}/src/images/favicons`, src: ['favicon.ico'], dest: global.dist },
+            { expand: true, src: ['favicon.ico'], dest: global.dist },
 
             // Serve pushwoosh SDKs
             { expand: true, cwd: 'src/javascript/_common/lib/pushwooshSDK/', src: ['**'], dest: global.dist },
-            { expand: true, cwd:  'src/root_files/app', src: ['**', '!index.html'], dest: 'dist' }, // top level
-            { expand: true, cwd:  'src/root_files/app', src: ['index.html'],        dest: global.dist },
+            { expand: true, cwd: 'src/root_files/app', src: ['**', '!index.html'], dest: 'dist' }, // top level
+            { expand: true, cwd: 'src/root_files/app', src: ['index.html', 'localstorage-sync.html'], dest: global.dist },
 
             // app, static
             { expand: true, cwd: 'src/download/',                  src: ['**'],                  dest: `${global.dist}/download/` },

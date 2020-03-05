@@ -237,7 +237,7 @@ async function compile(page) {
     const tasks = languages.map(async lang => {
         const affiliate_language_code = common.getAffiliateSignupLanguage(lang);
         const model = {
-            website_name   : 'Binary.com',
+            website_name   : 'Deriv',
             title          : page.title,
             layout         : page.layout,
             language       : lang.toUpperCase(),

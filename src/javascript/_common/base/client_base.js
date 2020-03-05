@@ -10,6 +10,7 @@ const isEmptyObject    = require('../utility').isEmptyObject;
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
     let client_object = {};
+    let total_balance = '';
     let current_loginid;
 
     const init = () => {
@@ -39,6 +40,7 @@ const ClientBase = (() => {
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
             LocalStore.set('active_loginid', value);
+            syncWithDerivApp(value, client_object);
             current_loginid = value;
         } else {
             if (!(loginid in client_object)) {
@@ -46,6 +48,7 @@ const ClientBase = (() => {
             }
             client_object[loginid][key] = value;
             LocalStore.setObject(storage_key, client_object);
+            syncWithDerivApp(loginid, client_object);
         }
     };
 
@@ -69,6 +72,10 @@ const ClientBase = (() => {
         }
         return value;
     };
+
+    const setTotalBalance = (total) => total_balance = total;
+
+    const getTotalBalance = () => total_balance;
 
     const getAllAccountsObject = () => LocalStore.getObject(storage_key);
 
@@ -149,6 +156,23 @@ const ClientBase = (() => {
     const getAccountTitle = loginid => {
         const types_map = TypesMapConfig.get();
         return (types_map[getAccountType(loginid)] || types_map.default);
+    };
+
+    const getAccountIcon = currency => {
+        switch (currency) {
+            case 'USD':
+                return 'ic-currency-usd.svg';
+            case 'BTC':
+                return 'ic-currency-btc.svg';
+            case 'ETH':
+                return 'ic-currency-eth.svg';
+            case 'LTC':
+                return 'ic-currency-ltc.svg';
+            case 'UST':
+                return 'ic-currency-ust.svg';
+            default:
+                return '';
+        }
     };
 
     const responseAuthorize = (response) => {
@@ -353,12 +377,38 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    const syncWithDerivApp = (active_loginid, client_accounts) => {
+        const iframe_window = document.getElementById('localstorage-sync');
+        if (iframe_window) {
+            let origin;
+            if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
+                origin = 'https://staging.deriv.app';
+            } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+                origin = 'https://deriv.app';
+            } else {
+                return;
+            }
+
+            // Keep client.accounts in sync (in case user wasn't logged in).
+            iframe_window.contentWindow.postMessage({
+                key  : 'client.accounts',
+                value: JSON.stringify(client_accounts),
+            }, origin);
+            iframe_window.contentWindow.postMessage({
+                key  : 'active_loginid',
+                value: active_loginid,
+            }, origin);
+        }
+    };
+
     return {
         init,
         isLoggedIn,
         isValidLoginid,
         set,
         get,
+        setTotalBalance,
+        getTotalBalance,
         getAllLoginids,
         getAccountType,
         isAccountOfType,
@@ -368,6 +418,7 @@ const ClientBase = (() => {
         hasCurrencyType,
         hasOnlyCurrencyType,
         getAccountTitle,
+        getAccountIcon,
         responseAuthorize,
         shouldAcceptTnc,
         clearAllAccounts,

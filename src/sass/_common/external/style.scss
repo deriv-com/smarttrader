@@ -64,19 +64,19 @@ html {
 	font:11px/1.5 'Helvetica Neue', Verdana, sans-serif;
 	color: darken($primary-color, 60%);
 }
-#header {
-	background-image:url('http://gridle.org/assets/img/highlight-bkg-04.jpg?1443433037');
-	background-size:cover;
-	background-position:50% 50%;
-	min-height:150px;
-	color: white;
-	padding:50px 0;
-	line-height:1;
+// #header {
+// 	background-image:url('http://gridle.org/assets/img/highlight-bkg-04.jpg?1443433037');
+// 	background-size:cover;
+// 	background-position:50% 50%;
+// 	min-height:150px;
+// 	color: white;
+// 	padding:50px 0;
+// 	line-height:1;
 
-	&, * {
-		text-shadow:rgba(0,0,0,1) 0 0 10px;
-	}
-}
+// 	&, * {
+// 		text-shadow:rgba(0,0,0,1) 0 0 10px;
+// 	}
+// }
 #head {
 	background: $light;
 	margin-bottom:50px;

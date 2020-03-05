@@ -80,7 +80,7 @@ const BinarySocketGeneral = (() => {
                         Client.sendLogoutRequest(true);
                     } else {
                         Client.responseAuthorize(response);
-                        BinarySocket.send({ balance: 1, subscribe: 1 });
+                        BinarySocket.send({ balance: 1, account: 'all', subscribe: 1 });
                         BinarySocket.send({ get_settings: 1 });
                         BinarySocket.send({ get_account_status: 1 });
                         BinarySocket.send({ payout_currencies: 1 });
