@@ -202,10 +202,10 @@ $COLOR_PEEK_LIGHT_GRAY: #c2c2c2;
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        border-right: 1px solid $color-grey-5;
-        border-top: 1px solid $color-grey-5;
-        border-bottom: 1px solid $color-grey-5;
-        color: $color-grey-5;
+        border-right: 1px solid var(--border-normal);
+        border-top: 1px solid var(--border-normal);
+        border-bottom: 1px solid var(--border-normal);
+        color: var(--border-normal);
 
         @media screen and (max-width: 480px) {
             height: 28px;

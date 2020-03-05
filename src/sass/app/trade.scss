@@ -49,7 +49,7 @@
 }
 
 #trading_socket_container {
-    color: $color-black-1;
+    color: var(--text-prominent);
     font-size: $FONT_SIZE_N;
     position: relative;
     opacity: 0;
