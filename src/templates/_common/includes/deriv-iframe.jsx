@@ -1,6 +1,11 @@
 import React from 'react';
 
 const DerivIFrame = () => {
+    // Workaround for undefined window in server-side render.
+    if (typeof window === 'undefined') {
+        global.window = { location: '' };
+    }
+
     let url;
     
     if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
@@ -16,6 +21,7 @@ const DerivIFrame = () => {
             id='localstorage-sync'
             src={url}
             style={{ display: 'none', visibility: 'hidden' }}
+            sandbox='allow-same-origin allow-scripts'
         />
     );
 };
