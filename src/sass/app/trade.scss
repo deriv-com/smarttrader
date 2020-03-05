@@ -984,7 +984,7 @@
                 margin-top: 13px;
             }
             .drawingToolOverlay .row:not(:last-child) {
-                border-bottom: 1px solid $COLOR_BALLOON_GRAY;
+                border-bottom: 1px solid var(--border-normal);
             }
             .img {
                 display: inline-flex;
@@ -999,22 +999,22 @@
             .countBubl {
                 margin-left: 15px;
                 margin-top: -33px;
-                background-color: $COLOR_RED_3;
+                background-color: var(--status-danger);
                 padding: 3px 1px;
                 min-width: 13px;
             }
         }
         .chartOptions_button {
-            background-color: $COLOR_BORDER_GRAY;
+            background-color: var(--general-section-1);
             height: 34px;
             margin-left: 0;
             margin-right: 5px;
 
             &, &.button_selected {
-                color: $COLOR_BLACK;
+                color: var(--text-general);
             }
             &.button_selected {
-                background-color: $COLOR_BALLOON_GRAY;
+                background-color: var(--general-active);
             }
             .drawing-w-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Crect width='20' height='20' fill='none'/%3E %3Cpath fill='%232a3052' d='M4,13.4995206 L4,15.9995133 L6.49999276,15.9995133 L13.8724714,8.62703469 L11.3724786,6.12704193 L4,13.4995206 Z M15.8049658,6.69454028 C16.0643625,6.43489417 16.0643625,6.01418912 15.8049658,5.75454301 L14.2499703,4.19454753 C13.9903242,3.93515082 13.5696191,3.93515082 13.309973,4.19454753 L12.0849766,5.41454399 L14.5849693,7.91453675 L15.8049658,6.69454028 Z'/%3E %3C/g%3E %3C/svg%3E");
@@ -1026,7 +1026,7 @@
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cpolyline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' points='34.17 35.82 15.83 25 34.17 14.18'/%3E %3Ccircle fill='%232a3052' cx='15.83' cy='25' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='14.18' r='3.5'/%3E %3Ccircle fill='%232a3052' cx='34.17' cy='35.82' r='3.5'/%3E%3C/svg%3E");
             }
             &:not(.button_selected):hover {
-                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                background-color: var(--general-hover);
             }
         }
         .chartOptions_overlay {
@@ -1048,24 +1048,24 @@
                         min-width: 32px;
                         align-items: center;
                         justify-content: center;
-                        background-color: $COLOR_BORDER_GRAY;
+                        background-color: var(--general-section-1);
                         border-radius: $BORDER_RADIUS;
 
                         &:not(:first-child) {
                             margin-left: 10px;
                         }
                         &:hover {
-                            background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                            background-color: var(--general-hover);
                         }
                     }
                 }
                 .fill-bg-color {
-                    background-color: $COLOR_BORDER_GRAY;
+                    background-color: var(--general-section-1);
                 }
             }
             &.table {
                 margin-top: 10px;
-                border: 1px solid $COLOR_BALLOON_GRAY;
+                border: 1px solid var(--border-normal);
             }
             &.loadSaveOverlay {
                 .button-secondary {
@@ -1145,7 +1145,7 @@
                             border: 1px solid var(--border-normal);
 
                             &:hover {
-                                border-color: $COLOR_DARK_GRAY_4;
+                                border-color: var(--border-hover);
                             }
                             &:focus {
                                 border-color: var(--brand-secondary);
@@ -1209,7 +1209,7 @@ body #lean_overlay {
         border: 1px solid var(--border-normal);
 
         &:hover {
-            border-color: $COLOR_DARK_GRAY_4;
+            border-color: var(--border-hover);
         }
         &:focus {
             border-color: var(--brand-secondary);
@@ -1219,7 +1219,7 @@ body #lean_overlay {
         background-color: var(--general-section-1);
         line-height: 24px;
         padding: 8px 16px;
-        color: $COLOR_BLACK;
+        color: var(--text-general);
         font-weight: bold;
 
         .close {
@@ -1255,7 +1255,7 @@ body #lean_overlay {
                     }
                 }
                 .sp-replacer {
-                    background-color: $COLOR_WHITE;
+                    background-color: var(--text-colored-background);
                     border-color: var(--border-normal);
                     border-radius: $BORDER_RADIUS;
 
@@ -1286,7 +1286,7 @@ body #lean_overlay {
         }
         span.title-sub {
             padding-left: 15px;
-            color: $COLOR_DARK_GRAY_4;
+            color: var(--text-less-prominent);
         }
         .add-overlays {
             input {
@@ -1308,7 +1308,7 @@ body #lean_overlay {
             padding: 6px 22px 6px 23px;
             line-height: 24px;
             background-color: var(--status-default);
-            color: $COLOR_BLACK;
+            color: var(--text-general);
             font-weight: bold;
 
             &:hover {
@@ -1316,8 +1316,8 @@ body #lean_overlay {
             }
             &:not(:first-child) {
                 margin-left: 16px;
-                background-color: $COLOR_CORAL_RED;
-                color: $COLOR_WHITE;
+                background-color: var(--brand-red-coral);
+                color: var(--text-colored-background);
 
                 &:hover {
                     background-color: var(--button-primary-hover);
@@ -1328,7 +1328,7 @@ body #lean_overlay {
 }
 
 body .sp-container {
-    background-color: $COLOR_WHITE;
+    background-color: var(--text-colored-background);
     border: 1px solid var(--border-normal);
     border-radius: $BORDER_RADIUS;
 
