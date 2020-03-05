@@ -11,9 +11,9 @@ const ViewPopup         = require('../user/view_popup/view_popup');
 const Client            = require('../../base/client');
 const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
-const getIFrameUrl      = require('../../common/deriv-iframe').getIFrameUrl;
 const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
+const getIFrameUrl      = require('../../pages/trade/deriv-iframe').getIFrameUrl;
 const State             = require('../../../_common/storage').State;
 
 const TradePage = (() => {
