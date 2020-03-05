@@ -13,6 +13,7 @@ const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
 const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
+const getIFrameUrl      = require('../../pages/trade/deriv-iframe').getIFrameUrl;
 const State             = require('../../../_common/storage').State;
 
 const TradePage = (() => {
@@ -20,6 +21,13 @@ const TradePage = (() => {
     State.remove('is_trading');
 
     const onLoad = () => {
+        const el_iframe  = document.getElementById('localstorage-sync');
+        const iframe_src = getIFrameUrl();
+
+        if (el_iframe && iframe_src) {
+            el_iframe.src = iframe_src;
+        }
+
         BinarySocket.wait('authorize').then(() => {
             init();
         });
