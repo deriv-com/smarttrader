@@ -58,7 +58,7 @@ table {
 
 select, input, button, textarea {
     background: $COLOR_WHITE;
-    border: 1px solid $color-grey-5;
+    border: 1px solid var(--border-normal);
     padding: 2px 3px;
 }
 

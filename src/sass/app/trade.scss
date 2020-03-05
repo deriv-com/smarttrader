@@ -41,7 +41,7 @@
         padding: 12px 8px;
         max-width: 262px;
         border-radius: 4px;
-        background: $color-grey-5;
+        background: var(--general-active);
         color: $COLOR_BLACK;
         content: attr(data-balloon);
         margin-bottom: 11px;
@@ -125,7 +125,7 @@
         border-radius: 5px;
         box-sizing: border-box;
         height: 28px;
-        border: solid 1px $color-grey-5;
+        border: solid 1px var(--border-normal);
     }
     ul.select-options {
         box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
@@ -135,13 +135,13 @@
             font-size: 14px;
 
             &:hover {
-                background-color: $color-grey-4;
+                background-color: var(--general-hover);
             }
         }
         .select-items.selected {
             font-weight: bold;
             color: $COLOR_BLACK;
-            background-color: $color-grey-5;
+            background-color: var(--general-active);
         }
     }
     label {
@@ -315,7 +315,7 @@
                 top: 0;
             }
         }
-        border: solid 1px $color-grey-5;
+        border: solid 1px var(--border-normal);
         flex: 1 0 auto;
 
         input[type=number] {
@@ -461,7 +461,7 @@
         @include BIDIR_PROP(margin-left, margin-right, 1em);
 
         .price_container {
-            border: 1px solid $color-grey-5;
+            border: 1px solid var(--border-normal);
             align-items: stretch;
             padding: 0;
             flex: 1 0 auto;
@@ -489,16 +489,16 @@
                     font-size: 16px;
                 }
                 #purchase_button_top, #purchase_button_middle {
-                    background-color: $COLOR_GREEN_5;
+                    background-color: var(--text-profit-success);
                 }
                 #purchase_button_bottom {
-                    background-color: $COLOR_RED_3;
+                    background-color: var(--text-loss-danger);
                 }
                 &.button-disabled #purchase_button_top {
-                    background-color: rgba($COLOR_GREEN_5, 0.36);
+                    background-color: transparentize($color-green-1, 0.36);
                 }
                 &.button-disabled #purchase_button_bottom {
-                    background-color: rgba($COLOR_RED_3, 0.36);
+                    background-color: transparentize($color-red-1, 0.36);
                 }
                 &.button-disabled .purchase_button {
                     cursor: auto;
@@ -545,7 +545,7 @@
             }
         }
         .price_comment, .contract_error, #contract_purchase_balance {
-            background-color: $color-grey-2;
+            background-color: var(--general-section-1);
             line-height: 1.5rem;
             font-size: $FONT_SIZE_XS;
             padding: 5px;
