@@ -11,6 +11,7 @@ const ViewPopup         = require('../user/view_popup/view_popup');
 const Client            = require('../../base/client');
 const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
+const getIFrameUrl      = require('../../common/deriv-iframe').getIFrameUrl;
 const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
@@ -22,6 +23,13 @@ const TradePage = (() => {
     const onLoad = () => {
         BinarySocket.wait('authorize').then(() => {
             init();
+
+            const el_iframe  = document.getElementById('localstorage-sync');
+            const iframe_src = getIFrameUrl();
+
+            if (el_iframe && iframe_src) {
+                el_iframe.src = iframe_src;
+            }
         });
     };
 
