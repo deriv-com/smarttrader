@@ -56,7 +56,7 @@ const DigitTicker = (() => {
 
         const temp_mask_el = document.createElement('div');
         temp_mask_el.classList.add('mask');
-        temp_mask_el.append(document.createTextNode('0/0'));
+        temp_mask_el.append(document.createTextNode('0 / 0'));
 
         const temp_peek_el = document.createElement('div');
         temp_peek_el.classList.add('peek');
