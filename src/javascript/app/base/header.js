@@ -9,7 +9,6 @@ const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
 const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
-const elementTextContent       = require('../../_common/common_functions').elementTextContent;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
