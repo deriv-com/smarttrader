@@ -25,9 +25,9 @@ const header_icon_base_path = '/images/pages/header/';
 const Header = (() => {
     const onLoad = () => {
         populateAccountsList();
+        bindPlatform();
         bindClick();
         bindSvg();
-        bindPlatform();
         if (Client.isLoggedIn()) {
             displayAccountStatus();
         }
@@ -162,6 +162,12 @@ const Header = (() => {
                 body.classList.remove('stop-scrolling');
             }
         };
+
+        applyToAllElements('.platform__list-item', (el) => {
+            el.addEventListener('click', () => {
+                showPlatformSwitcher(false);
+            });
+        });
 
         platform_switcher.addEventListener('click', () => {
             if (platform_dropdown.classList.contains('platform__dropdown--show')) {
@@ -416,6 +422,7 @@ const Header = (() => {
 
     const displayNotification = (message, is_error = false, msg_code = '') => {
         const msg_notification = getElementById('msg_notification');
+        const platform_switcher = getElementById('platform__dropdown');
         if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
 
         msg_notification.html(message);
@@ -427,10 +434,14 @@ const Header = (() => {
         } else {
             $(msg_notification).slideDown(500, () => { if (is_error) msg_notification.classList.add('error'); });
         }
+
+        // Removed once notification feature is implemented
+        platform_switcher.style.top = `${51 + 26}px`;
     };
 
     const hideNotification = (msg_code) => {
         const msg_notification = getElementById('msg_notification');
+        const platform_switcher = getElementById('platform__dropdown');
         if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
             msg_code && msg_notification.getAttribute('data-code') !== msg_code) {
             return;
@@ -443,6 +454,9 @@ const Header = (() => {
                 msg_notification.removeAttribute('data-message data-code');
             });
         }
+
+        // Removed once notification feature is implemented
+        platform_switcher.style.top = '51px';
     };
 
     const displayAccountStatus = () => {

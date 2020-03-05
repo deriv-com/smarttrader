@@ -11,7 +11,7 @@ module.exports ={
             // This branch
             { expand: true, cwd: 'src/download/fonts', src: ['binary_symbols.woff'], dest: `${global.dist}/download/fonts/` },
 
-            { expand: true, cwd: `${global.node_modules_paths.binary_style}/src/images/favicons`, src: ['favicon.ico'], dest: global.dist },
+            { expand: true, src: ['favicon.ico'], dest: global.dist },
 
             // Serve pushwoosh SDKs
             { expand: true, cwd: 'src/javascript/_common/lib/pushwooshSDK/', src: ['**'], dest: global.dist },
