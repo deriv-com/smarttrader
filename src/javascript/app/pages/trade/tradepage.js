@@ -48,7 +48,7 @@ const TradePage = (() => {
                 }
             }
             Client.activateByClientType('trading_socket_container');
-            BinarySocket.send({ payout_currencies: 1 }).then(() => {
+            BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
                 displayCurrencies();
                 Dropdown('#currency', true);
                 if (document.getElementById('multiplier_currency').tagName === 'SELECT') {
