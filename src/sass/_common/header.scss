@@ -355,6 +355,32 @@ body .header {
             background: var(--general-main-2);
             box-shadow: 0 8px 16px 0 var(--shadow-menu);
 
+            &-add {
+                display: none;
+
+                &--active {
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    margin: 0 0 14px;
+                    height: 40px;
+                    color: var(--brand-red-coral);
+                    font-size: $FONT_SIZE_S;
+
+                    &:hover {
+                        background-color: rgba(255, 68, 79, 0.08) !important;
+                    }
+                }
+                &-icon {
+                    width: 24px;
+                    height: 24px;
+                    padding: 0 8px;
+                }
+                &-text {
+                    font-weight: normal;
+                }
+            }
             &-acc {
                 display: flex;
                 align-items: center;
