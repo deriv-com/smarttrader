@@ -40,6 +40,7 @@ const ClientBase = (() => {
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
             LocalStore.set('active_loginid', value);
+            syncWithDerivApp(value, client_object);
             current_loginid = value;
         } else {
             if (!(loginid in client_object)) {
@@ -47,6 +48,7 @@ const ClientBase = (() => {
             }
             client_object[loginid][key] = value;
             LocalStore.setObject(storage_key, client_object);
+            syncWithDerivApp(loginid, client_object);
         }
     };
 
@@ -373,6 +375,30 @@ const ClientBase = (() => {
         // 3. Not be a crypto account
         // 4. Not be a virtual account
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
+    };
+
+    const syncWithDerivApp = (active_loginid, client_accounts) => {
+        const iframe_window = document.getElementById('localstorage-sync');
+        if (iframe_window) {
+            let origin;
+            if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
+                origin = 'https://staging.deriv.app';
+            } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+                origin = 'https://deriv.app';
+            } else {
+                return;
+            }
+
+            // Keep client.accounts in sync (in case user wasn't logged in).
+            iframe_window.contentWindow.postMessage({
+                key  : 'client.accounts',
+                value: JSON.stringify(client_accounts),
+            }, origin);
+            iframe_window.contentWindow.postMessage({
+                key  : 'active_loginid',
+                value: active_loginid,
+            }, origin);
+        }
     };
 
     return {

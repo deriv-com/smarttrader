@@ -2,6 +2,7 @@ import React                  from 'react';
 import OutdatedBrowserMessage from './outdated_browser_message.jsx';
 import Title                  from '../../_common/components/title.jsx';
 import AntiClickjack          from '../../_common/includes/anti_clickjack.jsx';
+import DerivIFrame            from '../../_common/includes/deriv-iframe.jsx';
 import Favicons               from '../../_common/includes/favicons.jsx';
 import GoogleOptimizer        from '../../_common/includes/google_optimizer.jsx';
 import Gtm                    from '../../_common/includes/gtm.jsx';
@@ -50,6 +51,7 @@ const Layout = ({
             { js_files.map((js_file, idx) => (
                 <script key={idx} src={`${js_file}?${it.static_hash}`} />
             ))}
+            <DerivIFrame />
         </body>
     </html>
 );

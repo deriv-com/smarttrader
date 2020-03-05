@@ -7,6 +7,7 @@ import Header from './header.jsx';
 import Gtm from '../../_common/includes/gtm.jsx';
 import InterviewPopup from '../../_common/components/interview_popup.jsx';
 import Title from '../../_common/components/title.jsx';
+import DerivIFrame from '../../_common/includes/deriv-iframe.jsx';
 
 const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
@@ -69,6 +70,7 @@ const Layout = () => {
                     <Topbar />
                 </div>
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
+                <DerivIFrame />
                 {/* <Elevio /> */}
             </body>
         </html>
