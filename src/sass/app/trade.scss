@@ -996,6 +996,13 @@
             .nav-caret.triangle {
                 margin: 15px 5px 15px 0;
             }
+            .countBubl {
+                margin-left: 15px;
+                margin-top: -33px;
+                background-color: $COLOR_RED_3;
+                padding: 3px 1px;
+                min-width: 13px;
+            }
         }
         .chartOptions_button {
             background-color: $COLOR_BORDER_GRAY;
@@ -1088,6 +1095,18 @@
 }
 
 body #lean_overlay {
+    input {
+        font-size: 14px;
+        padding: 9px 15px 9px 9px;
+        border: 1px solid var(--border-normal);
+
+        &:hover {
+            border-color: $COLOR_DARK_GRAY_4;
+        }
+        &:focus {
+            border-color: var(--brand-secondary);
+        }
+    }
     .lean_overlay_titlebar {
         background-color: var(--general-section-1);
         line-height: 24px;
@@ -1120,17 +1139,9 @@ body #lean_overlay {
                     font-weight: normal;
                 }
                 input {
-                    font-size: 14px;
                     height: 15px;
-                    padding: 9px 15px 9px 9px;
                     width: 120px !important;
 
-                    &:hover {
-                        border: 1px solid $COLOR_DARK_GRAY_4;
-                    }
-                    &:focus {
-                        border: 1px solid var(--brand-secondary);
-                    }
                     &#color {
                         display: none;
                     }
@@ -1155,6 +1166,28 @@ body #lean_overlay {
                         line-height: 24px;
                     }
                 }
+            }
+        }
+    }
+    .overlay-dialog {
+        .title-big {
+            font-size: 22px;
+        }
+        .title {
+            padding-top: 0;
+        }
+        span.title-sub {
+            padding-left: 15px;
+            color: $COLOR_DARK_GRAY_4;
+        }
+        .add-overlays {
+            input {
+                height: 12px;
+                width: 194px !important;
+            }
+            span.circle-close {
+                top: 9px;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTggMGM0LjQxOCAwIDggMy41ODIgOCA4cy0zLjU4MiA4LTggOC04LTMuNTgyLTgtOCAzLjU4Mi04IDgtOHptMCAxQzQuMTM0IDEgMSA0LjEzNCAxIDhzMy4xMzQgNyA3IDcgNy0zLjEzNCA3LTctMy4xMzQtNy03LTd6TTYuMjMyIDUuNTI1TDggNy4yOTJsMS43NjktMS43NjdjLjE5NS0uMTk2LjUxMS0uMTk2LjcwNyAwIC4xOTUuMTk1LjE5NS41MTIgMCAuNzA3TDguNzA2IDcuOTk5bDEuNzY5IDEuNzY4Yy4xOTUuMTk2LjE5NS41MTIgMCAuNzA3LS4xOTYuMTk2LS41MTIuMTk2LS43MDcgMEw3Ljk5OSA4LjcwNmwtMS43NjcgMS43NjhjLS4xOTUuMTk2LS41MTIuMTk2LS43MDcgMC0uMTk1LS4xOTUtLjE5NS0uNTExIDAtLjcwN0w3LjI5MiA4IDUuNTI1IDYuMjMyYy0uMTk1LS4xOTUtLjE5NS0uNTEyIDAtLjcwNy4xOTUtLjE5Ni41MTItLjE5Ni43MDcgMHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==');
             }
         }
     }
