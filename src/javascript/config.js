@@ -9,9 +9,10 @@
  *
  */
 const domain_app_ids = { // these domains also being used in '_common/url.js' as supported "production domains"
-    'binary.com': 1,
-    'binary.me' : 15284,
-    'deriv.com' : 16929,
+    'binary.com'           : 1,
+    'smarttrader.deriv.app': 22168,
+    'binary.me'            : 15284,
+    'deriv.com'            : 16929,
 };
 
 const getCurrentBinaryDomain = () =>
@@ -38,6 +39,9 @@ const getAppId = () => {
     } else if (/staging\.binary\.com/i.test(window.location.hostname)) {
         window.localStorage.removeItem('config.default_app_id');
         app_id = is_new_app ? 16303 : 1098;
+    } else if (/smarttrader-staging\.deriv\.app/i.test(window.location.hostname)) {
+        window.localStorage.removeItem('config.default_app_id');
+        app_id = 22169;
     } else if (user_app_id.length) {
         window.localStorage.setItem('config.default_app_id', user_app_id); // it's being used in endpoint chrome extension - please do not remove
         app_id = user_app_id;
@@ -47,7 +51,7 @@ const getAppId = () => {
         window.localStorage.removeItem('config.default_app_id');
         const current_domain = getCurrentBinaryDomain();
         // TODO: remove is_new_app && deriv.com check when repos are split
-        app_id = (is_new_app && current_domain !== 'deriv.com') ? 15265 : (domain_app_ids[current_domain] || 1);
+        app_id = (is_new_app && current_domain !== 'deriv.com') ? 22168 : (domain_app_ids[current_domain] || 22168);
     }
     return app_id;
 };

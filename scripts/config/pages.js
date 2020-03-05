@@ -56,7 +56,7 @@ module.exports = [
     // ['user/tnc_approvalws',                     'app/user/tnc_approval',                       'default',    'Terms and Conditions Approval'],
     // ['user/video-facility',                     'app/user/video_facility',                     'default',    'Video Room Facility'],
 
-    // ['endpoint',                                'app/endpoint',                                'default',    'Endpoint'],
+    ['endpoint',                                'app/endpoint',                                'default',    'Endpoint'],
     // ['new-account',                             'app/new_account',                             'default',    'Signup'],
 
     // ['dialog',                                  'app/dialog',                                  null],
