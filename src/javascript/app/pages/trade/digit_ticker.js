@@ -208,7 +208,7 @@ const DigitTicker = (() => {
         el_container.classList.remove('invisible');
         adjustBoxSizes();
         current_spot = quote.substr(-1);
-        if (el_mask) el_mask.innerText = `${current_tick_count}/${total_tick_count}`;
+        if (el_mask) el_mask.innerText = `${current_tick_count} / ${total_tick_count}`;
         if (el_peek_box) {
             el_peek_box.classList.add('digit-running');
             el_peek_box.setAttribute('style', `transform: translateX(${calculateOffset()}px)`);
