@@ -11,6 +11,14 @@
 
 #ui-timepicker-div {
     display: flex;
+
+    .ui-widget-header {
+        font-weight: bold;
+    }
+}
+
+#ui-datepicker-div .ui-widget-header {
+    font-weight: 100;
 }
 
 #ui-timepicker-div, #ui-datepicker-div {
@@ -26,14 +34,13 @@
         background: $color-grey-2 !important;
         border: none;
         color: $COLOR_BLACK !important;
-        font-weight: 100;
     }
     a .ui-icon-circle-triangle-w {
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23398.295 -21118.941 14.82 24"><path fill="#{rgba($COLOR_BLUE,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-23374.885 -21088.941) rotate(180)"/></svg>');
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23398.295 -21118.941 14.82 24"><path fill="#{rgba($primaryBrandColor,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-23374.885 -21088.941) rotate(180)"/></svg>');
         background-position: initial;
     }
     a .ui-icon-circle-triangle-e {
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22965 -21118.941 14.82 24"><path fill="#{rgba($COLOR_BLUE,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-22973.59 -21124.941)"/></svg>');
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22965 -21118.941 14.82 24"><path fill="#{rgba($primaryBrandColor,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-22973.59 -21124.941)"/></svg>');
         background-position: initial;
     }
     .ui-datepicker-calendar tbody tr td .ui-state-default.ui-state-active, table .ui-timepicker .ui-state-default.ui-state-active {
