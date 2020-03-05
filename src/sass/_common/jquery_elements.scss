@@ -14,7 +14,7 @@
 }
 
 #ui-timepicker-div, #ui-datepicker-div {
-    border: 2px solid $COLOR_BALLOON_GRAY;
+    border: 2px solid $color-grey-5;
     border-radius: 4px;
     padding: 0 !important;
     margin-top: 5px;
@@ -23,7 +23,7 @@
         transition: none;
     }
     .ui-widget-header {
-        background: $COLOR_BORDER_GRAY !important;
+        background: $color-grey-2 !important;
         border: none;
         color: $COLOR_BLACK !important;
         font-weight: 100;
@@ -37,8 +37,8 @@
         background-position: initial;
     }
     .ui-datepicker-calendar tbody tr td .ui-state-default.ui-state-active, table .ui-timepicker .ui-state-default.ui-state-active {
-        border: 2px solid $COLOR_BALLOON_GRAY !important;
-        background-color: $COLOR_BALLOON_GRAY !important;
+        border: 2px solid $color-grey-5 !important;
+        background-color: $color-grey-5 !important;
         color: $COLOR_BLACK !important;
     }
     .ui-timepicker-table, .ui-datepicker-calendar {
@@ -51,8 +51,8 @@
             border-radius: 4px;
 
             &:hover {
-                border: 2px solid $COLOR_HOVER_FULLSCREEN_GRAY;
-                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                border: 2px solid $color-grey-4;
+                background-color: $color-grey-4;
             }
         }
         .ui-timepicker-table {
@@ -75,14 +75,14 @@
             }
             tbody {
                 padding: 0.15em;
-                border-color: $COLOR_BALLOON_GRAY;
+                border-color: $color-grey-5;
                 border: none;
             }
         }
         .ui-timepicker-hours .ui-timepicker tbody {
             border-style: solid;
             border-width: 0 2px 0 0;
-            border-color: $COLOR_BALLOON_GRAY;
+            border-color: $color-grey-5;
         }
     }
 }

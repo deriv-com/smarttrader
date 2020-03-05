@@ -2,7 +2,7 @@
     position: relative;
 
     .contract_current {
-        border: 1px solid $COLOR_BALLOON_GRAY;
+        border: 1px solid $color-grey-5;
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -35,7 +35,7 @@
         position: absolute;
         top: 0;
         background: $COLOR_WHITE;
-        border: 1px solid $COLOR_BALLOON_GRAY;
+        border: 1px solid $color-grey-5;
         border-radius: 4px;
         box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
         display: flex;
@@ -133,13 +133,13 @@
                     line-height: normal;
 
                     &:hover {
-                        background: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        background: $color-grey-4;
                     }
                     &.active {
-                        background: $COLOR_BALLOON_GRAY;
+                        background: $color-grey-5;
                         font-weight: bold;
                         @media (min-width: 320px) and (max-width: 767px) {
-                            background: $COLOR_BALLOON_GRAY;
+                            background: $color-grey-5;
                             padding: 5px;
                             margin: 0 0 10px;
                             font-weight: bold;

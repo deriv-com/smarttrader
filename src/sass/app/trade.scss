@@ -41,14 +41,14 @@
         padding: 12px 8px;
         max-width: 262px;
         border-radius: 4px;
-        background: $COLOR_BALLOON_GRAY;
+        background: $color-grey-5;
         color: $COLOR_BLACK;
         content: attr(data-balloon);
         margin-bottom: 11px;
         box-shadow: none;
     }
     &:after {
-        background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="#{rgba($COLOR_BALLOON_GRAY, 1)}" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+        background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="#{rgba($color-grey-5, 1)}" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
         background-size: 100% auto;
         height: 6px;
         width: 18px;
@@ -125,7 +125,7 @@
         border-radius: 5px;
         box-sizing: border-box;
         height: 28px;
-        border: solid 1px $COLOR_BALLOON_GRAY;
+        border: solid 1px $color-grey-5;
     }
     ul.select-options {
         box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
@@ -135,13 +135,13 @@
             font-size: 14px;
 
             &:hover {
-                background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                background-color: $color-grey-4;
             }
         }
         .select-items.selected {
             font-weight: bold;
             color: $COLOR_BLACK;
-            background-color: $COLOR_BALLOON_GRAY;
+            background-color: $color-grey-5;
         }
     }
     label {
@@ -315,7 +315,7 @@
                 top: 0;
             }
         }
-        border: solid 1px $COLOR_BALLOON_GRAY;
+        border: solid 1px $color-grey-5;
         flex: 1 0 auto;
 
         input[type=number] {
@@ -461,7 +461,7 @@
         @include BIDIR_PROP(margin-left, margin-right, 1em);
 
         .price_container {
-            border: 1px solid $COLOR_BALLOON_GRAY;
+            border: 1px solid $color-grey-5;
             align-items: stretch;
             padding: 0;
             flex: 1 0 auto;
@@ -489,16 +489,16 @@
                     font-size: 16px;
                 }
                 #purchase_button_top, #purchase_button_middle {
-                    background-color: $COLOR_NETWORK_STATUS_ONLINE;
+                    background-color: $COLOR_GREEN_5;
                 }
                 #purchase_button_bottom {
-                    background-color: $COLOR_NETWORK_STATUS_OFFLINE;
+                    background-color: $COLOR_RED_3;
                 }
                 &.button-disabled #purchase_button_top {
-                    background-color: rgba($COLOR_NETWORK_STATUS_ONLINE, 0.36);
+                    background-color: rgba($COLOR_GREEN_5, 0.36);
                 }
                 &.button-disabled #purchase_button_bottom {
-                    background-color: rgba($COLOR_NETWORK_STATUS_OFFLINE, 0.36);
+                    background-color: rgba($COLOR_RED_3, 0.36);
                 }
                 &.button-disabled .purchase_button {
                     cursor: auto;
@@ -545,7 +545,7 @@
             }
         }
         .price_comment, .contract_error, #contract_purchase_balance {
-            background-color: $COLOR_BORDER_GRAY;
+            background-color: $color-grey-2;
             line-height: 1.5rem;
             font-size: $FONT_SIZE_XS;
             padding: 5px;

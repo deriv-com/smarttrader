@@ -1,10 +1,10 @@
 .price_moved_up {
-    background-color: $COLOR_NETWORK_STATUS_ONLINE;
+    background-color: $COLOR_GREEN_5;
     color: $COLOR_WHITE;
 }
 
 .price_moved_down {
-    background-color: $COLOR_NETWORK_STATUS_OFFLINE;
+    background-color: $COLOR_RED_3;
     color: $COLOR_WHITE;
 }
 
