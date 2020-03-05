@@ -21,15 +21,15 @@ const TradePage = (() => {
     State.remove('is_trading');
 
     const onLoad = () => {
+        const el_iframe  = document.getElementById('localstorage-sync');
+        const iframe_src = getIFrameUrl();
+
+        if (el_iframe && iframe_src) {
+            el_iframe.src = iframe_src;
+        }
+
         BinarySocket.wait('authorize').then(() => {
             init();
-
-            const el_iframe  = document.getElementById('localstorage-sync');
-            const iframe_src = getIFrameUrl();
-
-            if (el_iframe && iframe_src) {
-                el_iframe.src = iframe_src;
-            }
         });
     };
 
