@@ -47,6 +47,7 @@
         border: 2px solid var(--general-active) !important;
         background-color: var(--general-active) !important;
         color: $COLOR_BLACK !important;
+        font-weight: bold;
     }
     .ui-timepicker-table, .ui-datepicker-calendar {
         box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
