@@ -1022,6 +1022,15 @@ label + input {
             background: var(--button-primary-hover);
         }
     }
+    &--secondary {
+        background: transparent;
+        border: 1px solid var(--button-secondary-default);
+        color: var(--text-prominent);
+
+        &:hover {
+            background: var(--button-secondary-hover);
+        }
+    }
     &--outline {
         background: transparent;
         color: var(--button-primary-default) !important;
