@@ -124,8 +124,7 @@
                 flex-direction: column;
                 flex: 1 0 auto;
                 min-width: 150px;
-                background: $COLOR_WHITE;
-                border-right: 1px solid $COLOR_BALLOON_GRAY;
+                background: var(--general-section-1);
                 border-bottom-left-radius: 4px;
                 @media (min-width: 320px) and (max-width: 767px) {
                     border-right: 0;
@@ -133,6 +132,7 @@
 
                 .desktop .market {
                     font-size: 12px;
+                    font-weight: 300;
                     padding: 8px 10px;
                     cursor: pointer;
                     transition: background 0.2s 0.1s;
@@ -141,12 +141,12 @@
                     align-items: center;
 
                     &:not(.active):hover {
-                        background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        background-color: var(--general-hover);
                     }
                     &.active {
                         text-decoration: none;
                         font-weight: 600;
-                        border-right: 2px solid $COLOR_CORAL_RED;
+                        background-color: var(--general-main-1);
                     }
                     span:nth-of-type(2) {
                         margin-left: 10px;
@@ -319,7 +319,7 @@
                                 cursor: pointer;
                                 width: 162px;
                                 font-size: 14px;
-                                font-weight: 400;
+                                font-weight: 300;
                                 transition: all 0.2s;
                                 @media (min-width: 320px) and (max-width: 767px) {
                                     width: 200px;
