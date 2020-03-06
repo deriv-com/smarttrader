@@ -377,7 +377,7 @@ const ViewPopup = (() => {
             el_live_date.parentNode.setVisibility(0);
         }
 
-        containerSetText('trade_details_current_title', localize('Contract Result'));
+        containerSetText('trade_details_current_title', localize('Contract result'));
         containerSetText('trade_details_indicative_label', localize('Payout'));
         containerSetText('trade_details_profit_loss_label', localize('Profit/Loss'));
         if (contract.status === 'sold') {
@@ -655,7 +655,7 @@ const ViewPopup = (() => {
         const should_show_barrier = !/runhigh|runlow/i.test(contract.contract_type);
         $sections.find('#sell_details_table').append($(
             `<table>
-            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract Information')}</th></tr><tbody id="contract_information_content">
+            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract information')}</th></tr><tbody id="contract_information_content">
             ${createRow(localize('Contract Type'), '', 'trade_details_contract_type')}
             ${createRow(localize('Transaction ID'), '', 'trade_details_ref_id')}
             ${createRow(localize('Start Time'), '', 'trade_details_start_date', true)}
