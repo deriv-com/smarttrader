@@ -97,14 +97,14 @@ const ChartSettings = (() => {
                     zones   : [{
                         // make the line grey until it reaches entry time or start time if entry spot time is not yet known
                         value: params.entry_time,
-                        color: '#ccc',
+                        color: 'var(--brand-secondary)',
                     }, {
                         // make the line default color until exit time is reached
                         value: params.exit_time,
                         color: '',
                     }, {
                         // make the line grey again after trade ended
-                        color: '#ccc',
+                        color: 'var(--brand-secondary)',
                     }],
                 }),
             }],
