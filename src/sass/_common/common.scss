@@ -1035,3 +1035,9 @@ label + input {
         outline: 0;
     }
 }
+
+.button-secondary {
+    span {
+        font-weight: bold !important;
+    }
+}
