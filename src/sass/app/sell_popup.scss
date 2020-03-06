@@ -44,6 +44,7 @@
         }
         .popup_bet_desc {
             border: 0;
+            border-bottom: 2px solid var(--border-normal);
             padding: 5px;
             font-size: $FONT_SIZE_S;
             font-weight: bold;
