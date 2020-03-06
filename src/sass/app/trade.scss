@@ -965,6 +965,11 @@
     #trade_bottom_content {
         padding-top: 1em;
     }
+    #tab_graph-content {
+        // needs wider width to avoid cropping the tooltip on the first chart toolbar element
+        width: calc(100% + 16px);
+        margin-left: -14px;
+    }
     #webtrader_chart {
         width: 100%;
         height: 630px;
@@ -1016,13 +1021,18 @@
             }
         }
         .chart-view {
-            width: calc(100% + 10px);
-            margin-left: -5px;
+            margin: 0 8px;
         }
         .chartOptions {
             .vertical-bottom {
                 font-size: 12px;
+                margin: auto 0;
+            }
+            .charttype-name, .timeperiod-name {
                 margin-top: 13px;
+            }
+            .charttype-name {
+                margin-left: -5px;
             }
             .drawingToolOverlay {
                 .row:not(:last-child) {
@@ -1084,8 +1094,20 @@
             &.button_selected {
                 background-color: var(--general-active);
             }
-            .line-w-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x1='7.14' y1='25' x2='42.86' y2='25'/%3E%3C/svg%3E");
+            .line-w-icon, .line-icon {
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIgMTBIMThWMTFIMnoiLz4KICAgIDwvZz4KPC9zdmc+Cg==');
+            }
+            .candlestick-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x1='25' y1='8.5' x2='25' y2='41.5'/%3E %3Crect fill='white' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x='20.842' y='17.146' width='8.316' height='15.708'/%3E %3C/svg%3E");
+            }
+            .ohlc-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x1='25' y1='8.5' x2='25' y2='41.5'/%3E %3Cline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x1='13.912' y1='14.403' x2='25' y2='14.403'/%3E %3Cline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' x1='25' y1='35.597' x2='36.088' y2='35.597'/%3E%3C/svg%3E");
+            }
+            .dot-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Ccircle fill='%232a3052' cx='25' cy='25' r='3.234'/%3E %3Ccircle fill='%232a3052' cx='38.266' cy='25' r='3.234'/%3E %3Ccircle fill='%232a3052' cx='11.734' cy='25' r='3.234'/%3E%3C/svg%3E");
+            }
+            .spline-w-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cpath fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' d='M8.5,23.733l3-3.559a6.468,6.468,0,0,1,10.52.9l4.619,7.862a6.468,6.468,0,0,0,10.858.458l4-5.656'/%3E%3C/svg%3E");
             }
             .indicator-w-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 50 50'%3E %3Cpolyline fill='none' stroke='%232a3052' stroke-miterlimit='10' stroke-width='2' points='7.14 16.68 18.02 7.5 31.84 19.3 42.86 10.75'/%3E %3Crect fill='%232a3052' x='7.14' y='23.37' width='3.88' height='19.13'/%3E %3Crect fill='%232a3052' x='15.1' y='15.67' width='3.88' height='26.83'/%3E %3Crect fill='%232a3052' x='23.06' y='22.3' width='3.88' height='20.2'/%3E %3Crect fill='%232a3052' x='31.02' y='26.8' width='3.88' height='15.7'/%3E %3Crect fill='%232a3052' x='38.98' y='18.83' width='3.88' height='23.67'/%3E%3C/svg%3E");
@@ -1350,9 +1372,6 @@
             &.chartTypeOverlay {
                 width: 86px;
 
-                .vertical-bottom {
-                    margin: auto 0;
-                }
                 .row {
                     &.showborder, .chartOptions .chartTypeOverlay .row:nth-last-child(2), .chartOptions .chartTypeOverlay .row:nth-last-child(3) {
                         border-color: var(--border-normal);
@@ -1378,6 +1397,32 @@
                 }
                 .crosshair-icon {
                     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEwLjUgMTJ2NGgtMXYtNGgxek0xNiA5LjV2MWgtNHYtMWg0em0tOCAwdjFINHYtMWg0ek0xMC41IDR2NGgtMVY0aDF6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=');
+                }
+            }
+            &.timePeriodOverlay {
+                .vertical-bottom {
+                    &.button {
+                        width: 32px;
+                        height: 32px;
+                        margin: 4px 10px 4px 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:last-child {
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            background-color: var(--general-hover);
+                        }
+                    }
+                    &.time {
+                        margin-left: 5px;
+                    }
+                }
+                .row:not(:last-child) {
+                    border-color: var(--border-normal);
                 }
             }
         }
