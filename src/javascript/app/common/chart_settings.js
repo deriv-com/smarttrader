@@ -122,10 +122,12 @@ const ChartSettings = (() => {
                 useHTML: true,
             },
             xAxis: {
+                lineColor: 'var(--border-normal)',
                 ...(params.x_axis || {}),
             },
             yAxis: {
-                labels: {
+                gridLineColor: 'var(--border-normal)',
+                labels       : {
                     align: 'left',
                     formatter() {
                         return addComma(this.value.toFixed(params.display_decimals));
