@@ -75,7 +75,60 @@ const WebtraderChart = (() => {
             showShare         : true,
         };
 
-        chart = WebtraderCharts.chartWindow.addNewChart($('#webtrader_chart'), chart_config);
+        const custom_highcharts_opts = {
+            webtrader: {
+                currentPrice: {
+                    stroke: 'var(--brand-red-coral)',
+                },
+            },
+            navigator: {
+                series: {
+                    // TODO: Dark theme -- fillOpacity cannot be applied to
+                    // CSS vars and is dependent on this value.
+                    maskFill   : 'rgba(255, 255, 255, 0)',
+                    color      : '#85acb0',
+                    lineWidth  : 1,
+                    fillOpacity: 0.1,
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            color: 'var(--text-prominent)',
+                        },
+                    },
+                },
+            },
+            plotOptions: {
+                candlestick: {
+                    color    : '#f95454',
+                    upColor  : '#4caf50',
+                    lineWidth: 0,
+                },
+                ohlc: {
+                    color  : '#f95454',
+                    upColor: '#4caf50',
+                },
+                line  : { color: 'var(--brand-secondary)' },
+                spline: { color: 'var(--brand-secondary)' },
+            },
+            xAxis: {
+                color : 'var(--text-prominent)',
+                labels: {
+                    style: {
+                        color: 'var(--text-prominent)',
+                    },
+                },
+            },
+            yAxis: [{
+                labels: {
+                    style: {
+                        color: 'var(--text-prominent)',
+                    },
+                },
+            }],
+        };
+
+        chart = WebtraderCharts.chartWindow.addNewChart($('#webtrader_chart'), chart_config, custom_highcharts_opts);
     };
 
     const redrawChart = () => {
