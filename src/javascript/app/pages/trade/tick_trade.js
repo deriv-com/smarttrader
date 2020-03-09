@@ -41,10 +41,10 @@ const TickDisplay = (() => {
 
     let id_render = 'tick_chart';
 
-    const winning_color = 'rgba(46, 136, 54, 0.2)';
-    const losing_color  = 'rgba(204, 0, 0, 0.1)';
+    const winning_color = 'rgba(75, 180, 179, 0.16)';
+    const losing_color  = 'rgba(236, 63, 63, 0.16)';
 
-    const color  = 'orange';
+    const color  = 'var(--brand-red-coral)';
     const marker = {
         fillColor: color,
         lineColor: color,
@@ -227,7 +227,7 @@ const TickDisplay = (() => {
                     align: Reset.isReset(contract_category) ? 'right' : 'center',
                     x    : Reset.isReset(contract_category) ? -60 : 0,
                 },
-                color : 'green',
+                color : 'var(--border-hover)',
                 width : 2,
                 zIndex: 2,
             });
@@ -248,7 +248,7 @@ const TickDisplay = (() => {
             chart.yAxis[0].addPlotLine({
                 id   : 'tick-barrier',
                 value: calc_barrier,
-                color: 'green',
+                color: 'var(--border-hover)',
                 label: {
                     text : `${localize('Average')} (${addComma(calc_barrier)})`,
                     align: 'center',
@@ -269,7 +269,7 @@ const TickDisplay = (() => {
             value    : indicator.index,
             id       : indicator.id,
             label    : { text: indicator.label, x: /start_tick|entry_tick/.test(indicator.id) ? -15 : 5 },
-            color    : indicator.color || '#e98024',
+            color    : indicator.color || 'var(--brand-red-coral)',
             width    : 2,
             zIndex   : 2,
             dashStyle: indicator.dashStyle || '',
@@ -470,7 +470,7 @@ const TickDisplay = (() => {
                 id    : 'tick-reset-barrier',
                 value : +reset_barrier,
                 label : { text: `${localize('Reset Barrier')} (${addComma(reset_barrier)})`, align: 'right', x: -60, y: is_resetcall ? 15 : -5 },
-                color : 'green',
+                color : 'var(--border-hover)',
                 width : 2,
                 zIndex: 3,
             });
@@ -478,7 +478,7 @@ const TickDisplay = (() => {
                 id       : 'tick-barrier',
                 value    : +entry_barrier,
                 label    : { text: `${localize('Barrier')} (${addComma(entry_barrier)})`,    align: 'right', x: -60, y: is_resetcall ? -5 : 15 },
-                color    : 'green',
+                color    : 'var(--border-hover)',
                 width    : 2,
                 zIndex   : 3,
                 dashStyle: 'dot',

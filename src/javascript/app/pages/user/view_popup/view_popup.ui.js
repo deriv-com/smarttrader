@@ -21,7 +21,7 @@ const ViewPopupUI = (() => {
             $container = null;
         }
         if (!$container) {
-            const $con = $('<div class="inpage_popup_container" id="sell_popup_container"><a class="close"></a><div class="inpage_popup_content"></div></div>');
+            const $con = $('<div class="inpage_popup_container" id="sell_popup_container"><a class="close close--light-bg"></a><div class="inpage_popup_content"></div></div>');
             $con.hide();
             const onClose = () => {
                 cleanup(true);
