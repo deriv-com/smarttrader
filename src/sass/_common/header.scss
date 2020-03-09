@@ -40,7 +40,7 @@ body #topbar {
             cursor: pointer;
 
             &:hover {
-                background-color: var(--color-grey-4);
+                background-color: var(--general-hover);
             }
             img {
                 width: 16px;
@@ -88,7 +88,6 @@ body #topbar {
     #gmt-clock {
         font-size: 0.75rem;
         font-weight: 100;
-        font-family: 'IBM Plex Sans';
         padding: 0 0.8em;
         width: 147px;
     }
@@ -206,6 +205,7 @@ body .header {
             align-items: center;
             height: 100%;
             padding: 0 20px;
+            margin-right: 8px;
             cursor: pointer;
 
             &:hover {
@@ -216,7 +216,7 @@ body .header {
             padding: 0 8px;
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
-            font-weight: 500;
+            font-weight: bold;
         }
     }
     &__logo {
@@ -237,7 +237,7 @@ body .header {
         }
     }
     &__deposit {
-        margin: 0 8px;
+        margin-right: 16px;
     }
     &__divider {
         height: 32px;
