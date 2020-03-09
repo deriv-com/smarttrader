@@ -1085,6 +1085,9 @@
                 font-weight: bold;
                 padding: 6px 22px 6px 23px;
             }
+            &:not(.button-disabled) span {
+                color: var(--text-general);
+            }
         }
         .button {
             span {
@@ -1277,6 +1280,8 @@
                 border: 1px solid var(--border-normal);
             }
             &.loadSaveOverlay {
+                font-size: 12px;
+
                 .chart-template-manager-root {
                     .templates {
                         > div > div {
@@ -1359,8 +1364,13 @@
                         }
                     }
                 }
-                span.back-arrow > span {
-                    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTguMjIyIDYuNTY0VjMuMDFMMiA5LjIzbDYuMjIyIDYuMjIyVjExLjgxYzQuNDQ1IDAgNy41NTYgMS40MjIgOS43NzggNC41MzMtLjg4OS00LjQ0NC0zLjU1Ni04Ljg4OS05Ljc3OC05Ljc3OHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==') !important;
+                span.back-arrow {
+                    > span {
+                        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTguMjIyIDYuNTY0VjMuMDFMMiA5LjIzbDYuMjIyIDYuMjIyVjExLjgxYzQuNDQ1IDAgNy41NTYgMS40MjIgOS43NzggNC41MzMtLjg4OS00LjQ0NC0zLjU1Ni04Ljg4OS05Ljc3OC05Ljc3OHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==') !important;
+                    }
+                    a {
+                        font-weight: normal;
+                    }
                 }
             }
             &.indicators > .indicator-dialog {
@@ -1625,6 +1635,9 @@ body #lean_overlay {
         height: auto !important;
         padding-bottom: 36px;
 
+        &.webtrader-charts-properties-selector-dialog table strong {
+            font-size: 16px;
+        }
         table {
             td {
                 border-bottom: 1px solid var(--border-normal);

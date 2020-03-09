@@ -12,6 +12,7 @@ body {
     background: repeat-x bottom;
     overflow-x: hidden;
     font-family: $FONT-STACK !important;
+    color: var(--text-general) !important;
 
     .ui-widget {
         font-size: $FONT_SIZE_N;
