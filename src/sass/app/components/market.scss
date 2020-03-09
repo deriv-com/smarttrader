@@ -135,7 +135,7 @@
                     font-weight: 300;
                     padding: 8px 10px;
                     cursor: pointer;
-                    transition: background 0.2s 0.1s;
+                    transition: background-color, border-left;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -143,6 +143,8 @@
 
                     &:not(.active):hover {
                         background-color: var(--general-hover);
+                        border-left: 2px solid var(--general-hover);
+                        transition: background-color, border-left;
                     }
                     &.active {
                         text-decoration: none;
