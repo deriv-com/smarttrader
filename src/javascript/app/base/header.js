@@ -37,6 +37,7 @@ const Header = (() => {
         const add     = getElementById('add_icon');
         const reports = getElementById('reports_icon');
         const cashier = getElementById('cashier_icon');
+        const bell    = getElementById('header__notification-icon');
         const account = getElementById('header__account-settings');
         const logout  = getElementById('account__switcher-logout-icon');
 
@@ -51,6 +52,7 @@ const Header = (() => {
         logo.src    = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
         reports.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         cashier.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+        bell.src    = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         logout.src  = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
         add.src     = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);

@@ -255,6 +255,9 @@ body .header {
             transition: transform 500ms;
         }
     }
+    &__notification {
+        height: min-content;
+    }
     .platform {
         &__switcher {
             display: flex;
