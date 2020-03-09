@@ -34,6 +34,37 @@
     }
 }
 
+[data-balloon] {
+    &:before {
+        font-size: 0.75rem;
+        text-align: left;
+        padding: 12px 8px;
+        max-width: 262px;
+        border-radius: 4px;
+        background: var(--general-active);
+        color: var(--text-prominent);
+        content: attr(data-balloon);
+        margin-bottom: 11px;
+        box-shadow: none;
+    }
+    &:after {
+        background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="#{rgba($color-grey-5, 1)}" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+        background-size: 100% auto;
+        height: 6px;
+        width: 18px;
+        content: '';
+        margin-bottom: 6px;
+    }
+    &:before, &:after {
+        opacity: 0;
+        transition: opacity ease 0.2s;
+        transform: translate(-50%, 0);
+    }
+    &:hover:before, &:hover:after {
+        opacity: 1;
+    }
+}
+
 #trading_init_progress {
     cursor: pointer;
     /*background-image: url('../images/pages/binary-symbol-logo.png');
@@ -91,13 +122,35 @@
         animation: fade 1s;
         animation-fill-mode: forwards;
     }
-    select, input {
+    select, input, div.select-dropdown {
         border-radius: 5px;
         box-sizing: border-box;
         height: 28px;
+        border: solid 1px var(--border-normal);
     }
-    div.select-dropdown {
-        line-height: 1.4em;
+    div.select-dropdown:after {
+        content: '';
+        height: 16px;
+        width: 16px;
+        transform-origin: initial;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.836 10.87C2.632 11.056 2.316 11.04 2.13 10.836C1.944 10.632 1.96 10.316 2.164 10.13L7.664 5.13C7.854 4.957 8.146 4.957 8.336 5.13L13.836 10.13C14.041 10.316 14.056 10.632 13.87 10.836C13.684 11.041 13.368 11.056 13.164 10.87L8 6.176L2.836 10.87Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+    }
+    ul.select-options {
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
+
+        .select-items {
+            padding: 6px 16px;
+            font-size: 14px;
+
+            &:hover {
+                background-color: var(--general-hover);
+            }
+        }
+        .select-items.selected {
+            font-weight: bold;
+            color: $COLOR_BLACK;
+            background-color: var(--general-active);
+        }
     }
     label {
         line-height: 28px;
@@ -108,6 +161,9 @@
     }
     #contract_market_form_container {
         height: 28px;
+        font-family: 'IBM Plex Sans';
+        font-size: 0.75rem;
+        font-weight: 100;
 
         .tm-li {
             height: 28px;
@@ -164,6 +220,10 @@
     }
     #contract_form_content_wrapper {
         padding-top: 0.5em;
+        font-family: 'IBM Plex Sans';
+        font-weight: 100;
+        line-height: 1.4em;
+        font-size: 14px;
     }
     #contract_symbol_container {
         padding: 0;
@@ -263,7 +323,7 @@
                 top: 0;
             }
         }
-        border: 1px solid $COLOR_GRAY;
+        border: solid 1px var(--border-normal);
         flex: 1 0 auto;
 
         input[type=number] {
@@ -281,15 +341,19 @@
 
         &.ASIANU {
             background: url('../images/pages/trade/asian-u_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.ASIAND {
             background: url('../images/pages/trade/asian-d_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITDIFF {
             background: url('../images/pages/trade/differs_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITMATCH {
             background: url('../images/pages/trade/matches_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.DIGITEVEN {
             background: url('../images/pages/trade/digits_even_1.svg') no-repeat no-repeat top center;
@@ -308,80 +372,96 @@
             background-size: 40%;
         }
         &.CALL {
-            background: url('../images/pages/trade/rise_1.png') no-repeat top center;
+            background: url('../images/pages/trade/rise_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.PUT {
-            background: url('../images/pages/trade/fall_1.png') no-repeat top center;
+            background: url('../images/pages/trade/fall_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.CALLE {
-            background: url('../images/pages/trade/rise_1.png') no-repeat top center;
+            background: url('../images/pages/trade/rise_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.PUTE {
-            background: url('../images/pages/trade/fall_1.png') no-repeat top center;
+            background: url('../images/pages/trade/fall_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.ONETOUCH {
-            background: url('../images/pages/trade/touch_1.png') no-repeat top center;
+            background: url('../images/pages/trade/touch_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.NOTOUCH {
-            background: url('../images/pages/trade/no-touch_1.png') no-repeat top center;
+            background: url('../images/pages/trade/no-touch_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.RANGE {
-            background: url('../images/pages/trade/stay-in-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/stay-in-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.UPORDOWN {
-            background: url('../images/pages/trade/stay-out_1.png') no-repeat top center;
+            background: url('../images/pages/trade/stay-out_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYRANGEE {
-            background: url('../images/pages/trade/ends-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYMISSE {
-            background: url('../images/pages/trade/ends-outside_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-outside_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYRANGE {
-            background: url('../images/pages/trade/ends-between_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-between_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.EXPIRYMISS {
-            background: url('../images/pages/trade/ends-outside_1.png') no-repeat top center;
+            background: url('../images/pages/trade/ends-outside_1.svg') no-repeat top center;
+            background-size: 40%;
         }
         &.LBFLOATPUT {
             background: url('../images/pages/trade/low_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.LBFLOATCALL {
             background: url('../images/pages/trade/high_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.LBHIGHLOW {
             background: url('../images/pages/trade/high_low_icon.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RESETCALL {
             background: url('../images/pages/trade/reset_call.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RESETPUT {
             background: url('../images/pages/trade/reset_put.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.CALLSPREAD {
             background: url('../images/pages/trade/call_spread.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.PUTSPREAD {
             background: url('../images/pages/trade/put_spread.svg') no-repeat center top;
-            background-size: 50%;
+            background-size: 40%;
         }
         &.RUNHIGH {
             background: url('../images/pages/trade/run_high.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.RUNLOW {
             background: url('../images/pages/trade/run_low.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.TICKHIGH {
             background: url('../images/pages/trade/high_tick.svg') no-repeat center top;
+            background-size: 40%;
         }
         &.TICKLOW {
             background: url('../images/pages/trade/low_tick.svg') no-repeat center top;
+            background-size: 40%;
         }
     }
     #contract_prices_container {
@@ -389,7 +469,7 @@
         @include BIDIR_PROP(margin-left, margin-right, 1em);
 
         .price_container {
-            border: 1px solid $COLOR_GRAY;
+            border: 1px solid var(--border-normal);
             align-items: stretch;
             padding: 0;
             flex: 1 0 auto;
@@ -413,6 +493,21 @@
                 .purchase_button {
                     cursor: pointer;
                     width: 100%;
+                    color: $COLOR_WHITE;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                #purchase_button_top, #purchase_button_middle {
+                    background-color: var(--text-profit-success);
+                }
+                #purchase_button_bottom {
+                    background-color: var(--text-loss-danger);
+                }
+                &.button-disabled #purchase_button_top {
+                    background-color: transparentize($color-green-1, 0.36);
+                }
+                &.button-disabled #purchase_button_bottom {
+                    background-color: transparentize($color-red-1, 0.36);
                 }
                 &.button-disabled .purchase_button {
                     cursor: auto;
@@ -462,12 +557,15 @@
             }
         }
         .price_comment, .contract_error, #contract_purchase_balance {
-            background-color: $COLOR_GRAY;
+            background-color: var(--general-section-1);
             line-height: 1.5rem;
             font-size: $FONT_SIZE_XS;
             padding: 5px;
             text-align: center;
             flex: 0 0 auto;
+        }
+        .contract_error {
+            background-color: $COLOR_CONTRACT_ERROR_YELLOW !important;
         }
         #contract_purchase_balance {
             position: absolute;
@@ -649,7 +747,7 @@
                 align-items: center;
                 margin-bottom: 10px;
 
-                &, .contract_amount, .contract_payout {
+                &, .stake, .payout, .contract_amount, .contract_payout {
                     vertical-align: middle;
                 }
                 div {

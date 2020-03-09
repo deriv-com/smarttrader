@@ -9,7 +9,6 @@ const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
 const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
-const elementTextContent       = require('../../_common/common_functions').elementTextContent;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
@@ -34,7 +33,8 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const logo = getElementById('logo');
+        const logo    = getElementById('logo');
+        const add     = getElementById('add_icon');
         const reports = getElementById('reports_icon');
         const cashier = getElementById('cashier_icon');
         const account = getElementById('header__account-settings');
@@ -48,11 +48,12 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
         });
 
-        logo.src = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
+        logo.src    = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
         reports.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         cashier.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
-        logout.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+        logout.src  = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+        add.src     = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
     };
 
     const bindPlatform = () => {
@@ -236,20 +237,20 @@ const Header = (() => {
                     const is_real        = !Client.getAccountType(loginid); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
-                    const icon           = Client.getAccountIcon(currency);
+                    const icon           = `${Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? currency.toLowerCase() : 'virtual'}.svg`)}`;
                     const is_current     = loginid === Client.get('loginid');
                     
                     if (is_current) { // default account
                         // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
                         // applyToAllElements('.account-id', (el) => { elementInnerHtml(el, loginid); });
                         applyToAllElements('#header__acc-icon', (el) => {
-                            el.src = `${Url.urlForStatic(`${header_icon_base_path}${is_real ? icon : 'ic-currency-virtual.svg'}`)}`;
+                            el.src = icon;
                         });
                     }
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const account_icon      = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${icon}`)}` });
-                    const account_detail    = createElement('span', { text: currency });
+                    const account_icon      = createElement('img', { src: icon });
+                    const account_detail    = createElement('span', { text: is_real ? currency : 'Demo' });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
 
@@ -272,7 +273,7 @@ const Header = (() => {
                     // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
                 }
                 applyToAllElements('#account__switcher-real-list', (el) => {
-                    el.html(loginid_real_select.innerHTML);
+                    el.insertBefore(loginid_real_select, el.firstChild);
                     applyToAllElements('div.account__switcher-acc', (ele) => {
                         ele.removeEventListener('click', loginIDOnClick);
                         ele.addEventListener('click', loginIDOnClick);
@@ -280,7 +281,7 @@ const Header = (() => {
                     bindAccordion('#account__switcher-accordion-real');
                 });
                 applyToAllElements('#account__switcher-demo-list', (el) => {
-                    el.html(loginid_demo_select.innerHTML);
+                    el.insertBefore(loginid_demo_select, el.firstChild);
                     applyToAllElements('div.account__switcher-acc', (ele) => {
                         ele.removeEventListener('click', loginIDOnClick);
                         ele.addEventListener('click', loginIDOnClick);
@@ -408,17 +409,19 @@ const Header = (() => {
 
     const showHideNewAccount = (upgrade_info) => {
         if (upgrade_info.can_upgrade || upgrade_info.can_open_multi) {
-            changeAccountsText(1, localize('Create Account'));
+            $('#account__switcher-add').addClass('account__switcher-add--active');
+            // changeAccountsText(1, localize('Create Account'));
         } else {
-            changeAccountsText(0, localize('Accounts List'));
+            $('#account__switcher-add').removeClass('account__switcher-add--active');
+            // changeAccountsText(0, localize('Accounts List'));
         }
     };
 
-    const changeAccountsText = (add_new_style, localized_text) => {
-        const user_accounts = getElementById('user_accounts');
-        user_accounts.classList[add_new_style ? 'add' : 'remove']('create_new_account');
-        applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
-    };
+    // const changeAccountsText = (add_new_style, localized_text) => {
+    //     const user_accounts = getElementById('user_accounts');
+    //     user_accounts.classList[add_new_style ? 'add' : 'remove']('create_new_account');
+    //     applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
+    // };
 
     const displayNotification = (message, is_error = false, msg_code = '') => {
         const msg_notification = getElementById('msg_notification');
