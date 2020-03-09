@@ -1080,7 +1080,7 @@
     }
     #tab_explanation-content {
         h3, p {
-            color: $COLOR_BLACK;
+            color: var(--text-prominent);
             font-weight: 300;
         }
         h3 {
