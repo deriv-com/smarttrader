@@ -88,7 +88,7 @@
                     border: 1px solid $COLOR_DARK_GRAY_4;
                 }
                 &:focus {
-                    border: 1px solid var(--status-success);
+                    border: 1px solid var(--brand-secondary);
                 }
                 &::-webkit-input-placeholder { /* Edge */
                     color: var(--general-active);
@@ -124,8 +124,7 @@
                 flex-direction: column;
                 flex: 1 0 auto;
                 min-width: 150px;
-                background: $COLOR_WHITE;
-                border-right: 1px solid var(--border-normal);
+                background: var(--general-section-1);
                 border-bottom-left-radius: 4px;
                 @media (min-width: 320px) and (max-width: 767px) {
                     border-right: 0;
@@ -133,20 +132,25 @@
 
                 .desktop .market {
                     font-size: 12px;
+                    font-weight: 300;
                     padding: 8px 10px;
                     cursor: pointer;
-                    transition: background 0.2s 0.1s;
+                    transition: background-color, border-left;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    border-left: 2px solid var(--general-section-1);
 
                     &:not(.active):hover {
                         background-color: var(--general-hover);
+                        border-left: 2px solid var(--general-hover);
+                        transition: background-color, border-left;
                     }
                     &.active {
                         text-decoration: none;
                         font-weight: 600;
-                        border-right: 2px solid $COLOR_CORAL_RED;
+                        background-color: var(--general-main-1);
+                        border-left: 2px solid var(--brand-red-coral);
                     }
                     span:nth-of-type(2) {
                         margin-left: 10px;
@@ -319,7 +323,7 @@
                                 cursor: pointer;
                                 width: 162px;
                                 font-size: 14px;
-                                font-weight: 400;
+                                font-weight: 300;
                                 transition: all 0.2s;
                                 @media (min-width: 320px) and (max-width: 767px) {
                                     width: 200px;
