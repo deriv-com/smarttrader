@@ -377,7 +377,7 @@ const ViewPopup = (() => {
             el_live_date.parentNode.setVisibility(0);
         }
 
-        containerSetText('trade_details_current_title', localize('Contract Result'));
+        containerSetText('trade_details_current_title', localize('Contract result'));
         containerSetText('trade_details_indicative_label', localize('Payout'));
         containerSetText('trade_details_profit_loss_label', localize('Profit/Loss'));
         if (contract.status === 'sold') {
@@ -639,7 +639,7 @@ const ViewPopup = (() => {
 
         $container.prepend($('<div/>', { id: 'sell_bet_desc', class: 'popup_bet_desc drag-handle', text: longcode }));
         const $sections  = $('<div/>').append($('<div class="gr-row container"><div id="sell_details_chart_wrapper" class="gr-8 gr-12-p gr-12-m"></div><div id="sell_details_table" class="gr-4 gr-12-p gr-12-m"></div></div>'));
-        let [barrier_text, low_barrier_text] = localize(['Barrier', 'Low Barrier']);
+        let [barrier_text, low_barrier_text] = localize(['Barrier', 'Low barrier']);
         if (Lookback.isLookback(contract.contract_type)) {
             [barrier_text, low_barrier_text] =
                 Lookback.getBarrierLabel(contract.contract_type, contract.barrier_count);
@@ -655,31 +655,31 @@ const ViewPopup = (() => {
         const should_show_barrier = !/runhigh|runlow/i.test(contract.contract_type);
         $sections.find('#sell_details_table').append($(
             `<table>
-            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract Information')}</th></tr><tbody id="contract_information_content">
-            ${createRow(localize('Contract Type'), '', 'trade_details_contract_type')}
+            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract information')}</th></tr><tbody id="contract_information_content">
+            ${createRow(localize('Contract type'), '', 'trade_details_contract_type')}
             ${createRow(localize('Transaction ID'), '', 'trade_details_ref_id')}
-            ${createRow(localize('Start Time'), '', 'trade_details_start_date', true)}
-            ${createRow(localize('Purchase Time'), '', 'trade_details_purchase_time', true)}
-            ${(!contract.tick_count && !is_multiplier_contract ? createRow(localize('Remaining Time'), '', 'trade_details_live_remaining') : '')}
-            ${should_show_entry_spot ? createRow(localize('Entry Spot'), '', 'trade_details_entry_spot', 0, '<span></span>') : ''}
+            ${createRow(localize('Start time'), '', 'trade_details_start_date', true)}
+            ${createRow(localize('Purchase time'), '', 'trade_details_purchase_time', true)}
+            ${(!contract.tick_count && !is_multiplier_contract ? createRow(localize('Remaining time'), '', 'trade_details_live_remaining') : '')}
+            ${should_show_entry_spot ? createRow(localize('Entry spot'), '', 'trade_details_entry_spot', 0, '<span></span>') : ''}
             ${should_show_barrier ? createRow(barrier_text, '', 'trade_details_barrier', true) : ''}
-            ${Reset.isReset(contract.contract_type) ? createRow(localize('Reset Barrier'), '', 'trade_details_reset_barrier', true) : ''}
+            ${Reset.isReset(contract.contract_type) ? createRow(localize('Reset barrier'), '', 'trade_details_reset_barrier', true) : ''}
             ${(contract.barrier_count > 1 ? createRow(low_barrier_text, '', 'trade_details_barrier_low', true) : '')}
-            ${createRow(Callputspread.isCallputspread(contract.contract_type) ? localize('Maximum payout') : localize('Potential Payout'), '', 'trade_details_payout')}
+            ${createRow(Callputspread.isCallputspread(contract.contract_type) ? localize('Maximum payout') : localize('Potential payout'), '', 'trade_details_payout')}
             ${multiplier && Lookback.isLookback(contract.contract_type) ? createRow(localize('Multiplier'), '', 'trade_details_multiplier') : ''}
-            ${createRow(localize('Purchase Price'), '', 'trade_details_purchase_price')}
+            ${createRow(localize('Purchase price'), '', 'trade_details_purchase_price')}
             </tbody>
-            <th colspan="2" id="barrier_change" class="invisible">${localize('Barrier Change')}</th>
+            <th colspan="2" id="barrier_change" class="invisible">${localize('Barrier change')}</th>
             <tbody id="barrier_change_content" class="invisible"></tbody>
             <tr><th colspan="2" id="trade_details_current_title">${localize('Current')}</th></tr>
             ${createRow(localize('Spot'), 'trade_details_spot_label', 'trade_details_current_spot', 0, '<span></span>')}
-            ${createRow(localize('Spot Time'), 'trade_details_spottime_label', 'trade_details_current_date')}
-            ${createRow(localize('Current Time'), '', 'trade_details_live_date')}
+            ${createRow(localize('Spot time'), 'trade_details_spottime_label', 'trade_details_current_date')}
+            ${createRow(localize('Current time'), '', 'trade_details_live_date')}
             ${!contract.tick_count ? createRow('', 'trade_details_end_label', 'trade_details_end_date', true) : ''}
             ${createRow(localize('Indicative'), 'trade_details_indicative_label', 'trade_details_indicative_price')}
-            ${createRow(localize('Potential Profit/Loss'), 'trade_details_profit_loss_label', 'trade_details_profit_loss')}
-            ${is_multiplier_contract ? createRow(localize('Deal Cancel. Fee'), 'trade_details_deal_cancellation_label', 'trade_details_deal_cancellation') : ''}
-            ${is_multiplier_contract ? createRow(localize('Total Profit/Loss'), 'trade_details_total_pnl_label', 'trade_details_total_pnl') : ''}
+            ${createRow(localize('Potential profit/loss'), 'trade_details_profit_loss_label', 'trade_details_profit_loss')}
+            ${is_multiplier_contract ? createRow(localize('Deal cancel. fee'), 'trade_details_deal_cancellation_label', 'trade_details_deal_cancellation') : ''}
+            ${is_multiplier_contract ? createRow(localize('Total profit/loss'), 'trade_details_total_pnl_label', 'trade_details_total_pnl') : ''}
             <tr><td colspan="2" class="last_cell" id="trade_details_message">&nbsp;</td></tr>
             </table>
             <div id="errMsg" class="notice-msg ${hidden_class}"></div>
@@ -765,7 +765,7 @@ const ViewPopup = (() => {
 
             $sell_wrapper.setVisibility(1)
                 .append($('<div/>', { id: sell_wrapper_id })
-                    .append($('<button/>', { id: sell_button_id, class: 'button', text: is_started ? localize('Sell at market') : localize('Sell') })));
+                    .append($('<button/>', { id: sell_button_id, class: 'button btn btn--secondary', text: is_started ? localize('Sell at market') : localize('Sell') })));
             if (is_started) {
                 addSellNote($sell_wrapper);
             }

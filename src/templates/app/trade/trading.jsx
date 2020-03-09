@@ -189,7 +189,7 @@ const Trading = () => (
                 </div>
                 <div id='contract_prices_container' className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
                     <div id='contract_confirmation_container' className='overlay_container col'>
-                        <a className='close' id='close_confirmation_container' />
+                        <a className='close close--dark-bg' id='close_confirmation_container' />
                         <div id='confirmation_message_container'>
                             <div id='confirmation_message'>
                                 <h3 id='contract_purchase_heading' />
@@ -201,9 +201,7 @@ const Trading = () => (
                                 </div>
                                 <div id='contract_purchase_barrier' />
                                 <div id='contract_purchase_reference' />
-                                <div className='button'>
-                                    <span id='contract_purchase_button' className='button open_contract_details' />
-                                </div>
+                                <button id='contract_purchase_button'className='open_contract_details button btn btn--primary' />
                                 <div id='contract_purchase_spots' />
                                 <div id='trade_tick_chart' />
                                 <div id='digit_ticker_table' className='digit-ticker invisible' />

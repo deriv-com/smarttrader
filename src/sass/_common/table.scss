@@ -10,8 +10,9 @@ table {
         line-height: 1.1em;
         font-weight: bold;
         padding: 3px 8px;
-        background: $COLOR_LIGHT_GRAY;
-        border-bottom: 1px solid $COLOR_DARK_GRAY;
+        color: var(--text-prominent);
+        background: var(--general-section-1);
+        border-bottom: 1px solid var(--general-section-1);
         vertical-align: middle;
     }
     td {

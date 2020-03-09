@@ -12,6 +12,11 @@ body {
     background: repeat-x bottom;
     overflow-x: hidden;
     font-family: $FONT-STACK !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 
     .ui-widget {
         font-size: $FONT_SIZE_N;
@@ -1007,7 +1012,7 @@ label + input {
     text-decoration: none;
     text-transform: none !important;
     font-size: $FONT_SIZE_S;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     line-height: 1.5;
 
@@ -1017,6 +1022,15 @@ label + input {
 
         &:hover {
             background: var(--button-primary-hover);
+        }
+    }
+    &--secondary {
+        background: transparent;
+        border: 1px solid var(--button-secondary-default);
+        color: var(--text-prominent);
+
+        &:hover {
+            background: var(--button-secondary-hover);
         }
     }
     &--outline {
@@ -1030,5 +1044,11 @@ label + input {
     &:focus {
         background: inherit;
         outline: 0;
+    }
+}
+
+.button-secondary {
+    span {
+        font-weight: bold !important;
     }
 }
