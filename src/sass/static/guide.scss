@@ -2,7 +2,7 @@
     @include BIDIR_VALUE(display, inline-block, none);
     background-color: var(--general-section-1);
     border-radius: 4px;
-    padding: 8px 16px 8px 10px;
+    padding: 8px 10px;
     position: relative;
     @include BIDIR_PROP(margin-left, margin-right, 15px);
 
@@ -14,11 +14,11 @@
         position: absolute;
         @include BIDIR_PROP(right, left, 4px);
     }
-    &:hover {
-        span.close {
-            display: block;
-        }
-    }
+    // &:hover {
+    //     span.close {
+    //         display: block;
+    //     }
+    // }
     strong {
         color: $COLOR_BLUE;
         cursor: pointer;
