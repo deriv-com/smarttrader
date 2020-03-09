@@ -3,7 +3,7 @@ const RealityCheckData   = require('../pages/user/reality_check/reality_check.da
 const ClientBase         = require('../../_common/base/client_base');
 const GTM                = require('../../_common/base/gtm');
 const SocketCache        = require('../../_common/base/socket_cache');
-// const getElementById     = require('../../_common/common_functions').getElementById;
+const getElementById     = require('../../_common/common_functions').getElementById;
 const removeCookies      = require('../../_common/storage').removeCookies;
 const urlFor             = require('../../_common/url').urlFor;
 const applyToAllElements = require('../../_common/utility').applyToAllElements;
@@ -17,9 +17,9 @@ const Client = (() => {
     };
 
     // const activateByClientType = (section_id) => {
-    const activateByClientType = () => {
+    const activateByClientType = (section_id) => {
         // const topbar_class = getElementById('topbar').classList;
-        // const el_section   = section_id ? getElementById(section_id) : document.body;
+        const el_section   = section_id ? getElementById(section_id) : document.body;
 
         // const primary_bg_color_dark = 'primary-bg-color-dark';
         // const secondary_bg_color    = 'secondary-bg-color';
@@ -32,6 +32,8 @@ const Client = (() => {
                 // applyToAllElements('.client_logged_in', (el) => {
                 //     el.setVisibility(1);
                 // });
+
+                if (ClientBase.get('is_virtual')) applyToAllElements('.client_virtual', el => el.setVisibility(1), '', el_section);
 
                 // if (ClientBase.get('is_virtual')) {
                 //     applyToAllElements('.client_virtual', (el) => { el.setVisibility(1); }, '', el_section);
