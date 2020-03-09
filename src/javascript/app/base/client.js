@@ -48,6 +48,9 @@ const Client = (() => {
                 applyToAllElements('.is-login', (el) => {
                     el.style.display = 'inherit';
                 });
+                applyToAllElements('.is-logout', (el) => {
+                    el.style.display = 'none';
+                });
             });
         } else {
             // applyToAllElements('.client_logged_in', (el) => {
@@ -64,6 +67,10 @@ const Client = (() => {
             // }, '', el_section);
             // topbar_class.add(primary_bg_color_dark);
             // topbar_class.remove(secondary_bg_color);
+
+            applyToAllElements('.is-login', (el) => {
+                el.style.display = 'none';
+            });
             applyToAllElements('.is-logout', (el) => {
                 el.style.display = 'inline-flex';
             });

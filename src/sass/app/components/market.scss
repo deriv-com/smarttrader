@@ -3,7 +3,7 @@
     position: relative;
 
     .market_current {
-        border: 1px solid $COLOR_BALLOON_GRAY;
+        border: 1px solid var(--border-normal);
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -35,7 +35,7 @@
     }
     .markets_dropdown {
         background: $COLOR_WHITE;
-        border: 1px solid $COLOR_BALLOON_GRAY;
+        border: 1px solid var(--border-normal);
         border-radius: 4px;
         box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
         display: flex;
@@ -74,11 +74,11 @@
             padding: 15px 15px 0;
             background: $COLOR_WHITE;
             border-radius: 4px 4px 0px 0px;
-            border-bottom: 1px solid $COLOR_BALLOON_GRAY;
+            border-bottom: 1px solid var(--border-normal);
 
             input {
                 outline: none;
-                border: 1px solid $COLOR_BALLOON_GRAY;
+                border: 1px solid var(--border-normal);
                 border-radius: 4px;
                 line-height: 30px;
                 padding: 0 7px;
@@ -88,16 +88,16 @@
                     border: 1px solid $COLOR_DARK_GRAY_4;
                 }
                 &:focus {
-                    border: 1px solid $COLOR_GREEN_1;
+                    border: 1px solid $COLOR_GREEN_NEW;
                 }
                 &::-webkit-input-placeholder { /* Edge */
-                    color: $COLOR_BALLOON_GRAY;
+                    color: var(--general-active);
                 }
                 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: $COLOR_BALLOON_GRAY;
+                    color: var(--general-active);
                 }
                 &::placeholder {
-                    color: $COLOR_BALLOON_GRAY;
+                    color: var(--general-active);
                 }
             }
             .icon {
@@ -125,7 +125,7 @@
                 flex: 1 0 auto;
                 min-width: 150px;
                 background: $COLOR_WHITE;
-                border-right: 1px solid $COLOR_BALLOON_GRAY;
+                border-right: 1px solid var(--border-normal);
                 border-bottom-left-radius: 4px;
                 @media (min-width: 320px) and (max-width: 767px) {
                     border-right: 0;
@@ -141,7 +141,7 @@
                     align-items: center;
 
                     &:not(.active):hover {
-                        background-color: $COLOR_HOVER_FULLSCREEN_GRAY;
+                        background-color: var(--general-hover);
                     }
                     &.active {
                         text-decoration: none;
@@ -160,7 +160,7 @@
                         flex-direction: row;
                         justify-content: space-between;
                         padding: 5px 15px 0;
-                        border-bottom: 1px solid $COLOR_BALLOON_GRAY;
+                        border-bottom: 1px solid var(--border-normal);
 
                         li {
                             margin: 0 !important;
@@ -327,13 +327,13 @@
                                 }
 
                                 &:not(.active):hover {
-                                    background: $COLOR_HOVER_FULLSCREEN_GRAY;
+                                    background: var(--general-hover);
                                 }
                                 &.active {
-                                    background: $COLOR_BALLOON_GRAY;
+                                    background: var(--general-active);
                                     font-weight: bold;
                                     @media (min-width: 320px) and (max-width: 767px) {
-                                        background: $COLOR_BALLOON_GRAY;
+                                        background: var(--general-active);
                                         font-weight: bold;
                                         padding-left: 5px;
                                     }

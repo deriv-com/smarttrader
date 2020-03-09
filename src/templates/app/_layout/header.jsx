@@ -110,7 +110,12 @@ const Header = () => (
                                             <img className='header__expand-light' />
                                         </div>
                                     </h3>
-                                    <div className='account__switcher-list' id='account__switcher-real-list' />
+                                    <div className='account__switcher-list' id='account__switcher-real-list'>
+                                        <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-add' className='account__switcher-add'>
+                                            <img id='add_icon' className='account__switcher-add-icon' />
+                                            <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div id='demo_tab' className='account__switcher-tabs-content'>

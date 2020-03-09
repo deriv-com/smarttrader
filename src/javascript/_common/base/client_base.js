@@ -158,23 +158,6 @@ const ClientBase = (() => {
         return (types_map[getAccountType(loginid)] || types_map.default);
     };
 
-    const getAccountIcon = currency => {
-        switch (currency) {
-            case 'USD':
-                return 'ic-currency-usd.svg';
-            case 'BTC':
-                return 'ic-currency-btc.svg';
-            case 'ETH':
-                return 'ic-currency-eth.svg';
-            case 'LTC':
-                return 'ic-currency-ltc.svg';
-            case 'UST':
-                return 'ic-currency-ust.svg';
-            default:
-                return '';
-        }
-    };
-
     const responseAuthorize = (response) => {
         const authorize = response.authorize;
         const local_currency_config = {};
@@ -418,7 +401,6 @@ const ClientBase = (() => {
         hasCurrencyType,
         hasOnlyCurrencyType,
         getAccountTitle,
-        getAccountIcon,
         responseAuthorize,
         shouldAcceptTnc,
         clearAllAccounts,
