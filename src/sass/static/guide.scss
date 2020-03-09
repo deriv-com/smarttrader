@@ -1,7 +1,8 @@
 #guideBtn {
     @include BIDIR_VALUE(display, inline-block, none);
-    background-color: $COLOR_LIGHT_GRAY;
-    padding: 4px 20px;
+    background-color: var(--general-section-1);
+    border-radius: 4px;
+    padding: 8px 10px;
     position: relative;
     @include BIDIR_PROP(margin-left, margin-right, 15px);
 
