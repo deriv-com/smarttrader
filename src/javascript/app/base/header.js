@@ -64,7 +64,7 @@ const Header = (() => {
         const platforms = {
             dtrader: {
                 name: 'DTrader',
-                desc: 'Start trading now with a powerful, yet easy-to-use platform',
+                desc: 'A whole new trading experience on a powerful yet easy to use platform.',
                 link: 'https://deriv.app',
                 icon: 'ic-brand-dtrader.svg',
             },
@@ -82,7 +82,7 @@ const Header = (() => {
             },
             smarttrader: {
                 name: 'SmartTrader',
-                desc: 'Trade in the world\'s financial markets with a simple online platform',
+                desc: 'Trade the world\'s markets with a simple and familiar platform.',
                 link: '#',
                 icon: 'logo_smart_trader.svg',
             },
@@ -239,7 +239,7 @@ const Header = (() => {
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
                     const icon           = `${Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? currency.toLowerCase() : 'virtual'}.svg`)}`;
                     const is_current     = loginid === Client.get('loginid');
-                    
+
                     if (is_current) { // default account
                         // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
                         // applyToAllElements('.account-id', (el) => { elementInnerHtml(el, loginid); });
@@ -264,7 +264,7 @@ const Header = (() => {
                     } else {
                         loginid_demo_select.appendChild(account);
                     }
-                    
+
                     // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
                     // const li_type = createElement('li', { text: localized_type });
 
@@ -295,7 +295,7 @@ const Header = (() => {
 
     const bindTabs = () => {
         const is_virtual_tab = /^VRT/.test(Client.get('loginid'));
-        
+
         $('#acc_tabs').tabs({
             active: is_virtual_tab ? 1 : 0,
             activate() {
