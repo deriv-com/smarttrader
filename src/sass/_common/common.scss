@@ -58,7 +58,7 @@ table {
 
 select, input, button, textarea {
     background: $COLOR_WHITE;
-    border: 1px solid $COLOR_GRAY;
+    border: 1px solid var(--border-normal);
     padding: 2px 3px;
 }
 
@@ -561,6 +561,8 @@ ul.bullet.gr-row > li {
 
     div.select {
         .select-dropdown {
+            display: flex;
+            align-items: center;
             text-transform: none;
         }
         ul.select-options {
