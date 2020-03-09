@@ -82,10 +82,10 @@ const WebtraderChart = (() => {
                 },
             },
             navigator: {
-                series: {
+                maskFill: 'rgba(255, 255, 255, 0)',
+                series  : {
                     // TODO: Dark theme -- fillOpacity cannot be applied to
                     // CSS vars and is dependent on this value.
-                    maskFill   : 'rgba(255, 255, 255, 0)',
                     color      : '#85acb0',
                     lineWidth  : 1,
                     fillOpacity: 0.1,
