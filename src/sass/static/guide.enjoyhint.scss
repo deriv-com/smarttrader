@@ -54,19 +54,11 @@
     -o-text-overflow: clip;
     text-overflow: clip;
     letter-spacing: 1px;
-    background: 0 0;
+    // background: 0 0;
     -webkit-transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
     -moz-transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
     -o-transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
     transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
-
-    span {
-        background-color: var(--brand-red-coral);
-
-        &:hover {
-            background-color: var(--text-loss-danger);
-        }
-    }
 }
 
 .enjoyhint_next_btn:hover {

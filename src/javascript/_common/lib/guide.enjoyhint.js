@@ -376,7 +376,7 @@ var methods = {
                 that.hide();
                 that.options.onSkipClick();
             });
-            that.$next_btn = $('<div>', {'class': that.cl.next_btn}).appendTo(that.enjoyhint).html('Next').click(function (e) {
+            that.$next_btn = $('<button>', {'class': that.cl.next_btn}).appendTo(that.enjoyhint).html('Next').click(function (e) {
                 that.options.onNextClick();
             });
 
