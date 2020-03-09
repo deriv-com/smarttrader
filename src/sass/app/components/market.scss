@@ -88,7 +88,7 @@
                     border: 1px solid $COLOR_DARK_GRAY_4;
                 }
                 &:focus {
-                    border: 1px solid $COLOR_GREEN_NEW;
+                    border: 1px solid var(--status-success);
                 }
                 &::-webkit-input-placeholder { /* Edge */
                     color: var(--general-active);
