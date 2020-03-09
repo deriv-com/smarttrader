@@ -1,10 +1,10 @@
 .price_moved_up {
-    background-color: $COLOR_LIGHT_BLUE;
+    background-color: var(--text-profit-success);
     color: $COLOR_WHITE;
 }
 
 .price_moved_down {
-    background-color: $COLOR_RED;
+    background-color: var(--text-loss-danger);
     color: $COLOR_WHITE;
 }
 
