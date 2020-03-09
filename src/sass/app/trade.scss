@@ -1085,15 +1085,14 @@
                 font-weight: bold;
                 padding: 6px 22px 6px 23px;
             }
-            &:not(.button-disabled) span {
-                color: var(--text-general);
-            }
         }
         .button {
             span {
                 background-color: var(--brand-red-coral);
             }
             &:not(.button-disabled) span {
+                color: var(--general-main-1);
+
                 &:hover {
                     background-color: var(--button-primary-hover);
                 }
@@ -1104,6 +1103,8 @@
                 background-color: var(--status-default);
             }
             &:not(.button-disabled) span {
+                color: var(--text-general);
+
                 &:hover {
                     background-color: var(--general-hover);
                 }
@@ -1451,6 +1452,7 @@
                     > table tr {
                         td:first-child {
                             padding: 20px 15px 19px;
+                            font-size: 12px;
                         }
                         .colorpicker-td {
                             margin-top: 8px;
@@ -1490,6 +1492,41 @@
                     table.levels {
                         margin-top: -20px;
                         margin-bottom: 17px;
+
+                        thead td {
+                            vertical-align: middle;
+                        }
+                        tr td {
+                            line-height: 18px;
+                            font-size: 12px;
+                            padding: 9px 13px;
+                            width: 56px;
+
+                            &:nth-child(3) > div {
+                                border-radius: $BORDER_RADIUS;
+                                border: 3px solid rgba(0, 0, 0, 0.1);
+                                height: 14px !important;
+                                width: 46px !important;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            &:last-child {
+                                width: 14px;
+                            }
+                        }
+                        .circle-close {
+                            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTggMGM0LjQxOCAwIDggMy41ODIgOCA4cy0zLjU4MiA4LTggOC04LTMuNTgyLTgtOCAzLjU4Mi04IDgtOHptMCAxQzQuMTM0IDEgMSA0LjEzNCAxIDhzMy4xMzQgNyA3IDcgNy0zLjEzNCA3LTctMy4xMzQtNy03LTd6TTYuMjMyIDUuNTI1TDggNy4yOTJsMS43NjktMS43NjdjLjE5NS0uMTk2LjUxMS0uMTk2LjcwNyAwIC4xOTUuMTk1LjE5NS41MTIgMCAuNzA3TDguNzA2IDcuOTk5bDEuNzY5IDEuNzY4Yy4xOTUuMTk2LjE5NS41MTIgMCAuNzA3LS4xOTYuMTk2LS41MTIuMTk2LS43MDcgMEw3Ljk5OSA4LjcwNmwtMS43NjcgMS43NjhjLS4xOTUuMTk2LS41MTIuMTk2LS43MDcgMC0uMTk1LS4xOTUtLjE5NS0uNTExIDAtLjcwN0w3LjI5MiA4IDUuNTI1IDYuMjMyYy0uMTk1LS4xOTUtLjE5NS0uNTEyIDAtLjcwNy4xOTUtLjE5Ni41MTItLjE5Ni43MDcgMHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==');
+                        }
+                        .no-underline[data-balloon] {
+                            vertical-align: sub;
+
+                            &:before {
+                                padding: 16px 8px;
+                            }
+                            &:after {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36px' height='12px'%3E%3Cpath fill='%23d6dadb' transform='rotate(0)' d='M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z'/%3E%3C/svg%3E");
+                            }
+                        }
                     }
                     a.button, a.button-secondary {
                         span {
@@ -1671,7 +1708,7 @@ body #lean_overlay {
                         border: none;
                         margin-right: 8px;
 
-                        &-inner {
+                        .sp-preview-inner {
                             border-radius: $BORDER_RADIUS;
                             border: 3px solid rgba(0, 0, 0, 0.1);
                         }
