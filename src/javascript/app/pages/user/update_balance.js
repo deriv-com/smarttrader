@@ -12,12 +12,13 @@ const updateBalance = (response) => {
         return;
     }
     BinarySocket.wait('website_status').then(() => {
-        const loginid    = response.balance.loginid;
-        const balance    = response.balance.balance;
-        const currency   = response.balance.currency;
-        const total      = response.balance.total.real.amount;
-        const is_current = Client.get('loginid') === loginid;
-        const is_virtual    = /^VRT/.test(loginid);
+        const loginid        = response.balance.loginid;
+        const balance        = response.balance.balance;
+        const currency       = response.balance.currency;
+        const total          = response.balance.total.real.amount;
+        const total_currency = response.balance.total.real.currency;
+        const is_current     = Client.get('loginid') === loginid;
+        const is_virtual     = /^VRT/.test(loginid);
         if (!currency) {
             return;
         }
@@ -36,8 +37,8 @@ const updateBalance = (response) => {
             $(`.account__switcher-balance-${currency}`).html(view);
         }
 
-        Client.setTotalBalance(total);
-        updateTotal(total);
+        Client.setTotalBalance(total, total_currency);
+        updateTotal({ amount: total , currency: total_currency });
         updateContractBalance(balance);
         // $('#header__acc-balance, .topMenuBalance, .binary-balance').html(view)
         //     .css('visibility', 'visible');

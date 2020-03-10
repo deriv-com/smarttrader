@@ -10,7 +10,7 @@ const isEmptyObject    = require('../utility').isEmptyObject;
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
     let client_object = {};
-    let total_balance = '';
+    let total_balance = {};
     let current_loginid;
 
     const init = () => {
@@ -73,7 +73,7 @@ const ClientBase = (() => {
         return value;
     };
 
-    const setTotalBalance = (total) => total_balance = total;
+    const setTotalBalance = (amount, currency) => total_balance = { amount, currency };
 
     const getTotalBalance = () => total_balance;
 
