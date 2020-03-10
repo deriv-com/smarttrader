@@ -65,6 +65,16 @@
     }
 }
 
+[data-balloon-pos=left]:after {
+    transform: rotate(270deg) !important;
+    margin-right: 2px;
+}
+
+[data-balloon-pos=down]:after {
+    transform: rotate(180deg) translate(50%, 0) !important;
+    margin-top: 12px;
+}
+
 #trading_init_progress {
     cursor: pointer;
     /*background-image: url('../images/pages/binary-symbol-logo.png');

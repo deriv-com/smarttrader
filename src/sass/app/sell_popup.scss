@@ -192,9 +192,18 @@
                         &.secondary-color {
                             font-size: $FONT_SIZE_N;
                         }
+                        &.fill-bg-color {
+                            background-color: var(--status-default);
+                        }
+                        &.secondary-bg-color {
+                            background-color: var(--brand-red-coral);
+                        }
                         &.remark {
                             text-align: right;
                             padding-right: 20px;
+                        }
+                        &.audit-table-head {
+                            font-size: $FONT_SIZE_N;
                         }
                     }
                     @media screen and (max-width: 768px) {

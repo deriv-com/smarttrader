@@ -550,9 +550,15 @@ const ViewPopup = (() => {
     const createAuditHeader = (table) => {
         const tr = Utility.createElement('tr', { class: 'gr-row' });
 
+        const td_mid = Utility.createElement('td', { class: 'gr-3 audit-table-head no-margin' });
+        td_mid.appendChild(Utility.createElement('strong', { text: localize('Spot') }));
+
+        const td_last = Utility.createElement('td', { class: 'gr-4 audit-table-head no-margin' });
+        td_last.appendChild(Utility.createElement('strong', { text: localize('Spot Time (GMT)') }));
+
         tr.appendChild(Utility.createElement('td', { class: 'gr-4' }));
-        tr.appendChild(Utility.createElement('td', { class: 'gr-3 no-margin secondary-color', text: localize('Spot') }));
-        tr.appendChild(Utility.createElement('td', { class: 'gr-4 no-margin secondary-color', text: localize('Spot Time (GMT)') }));
+        tr.appendChild(td_mid);
+        tr.appendChild(td_last);
 
         table.insertBefore(tr, table.childNodes[0]);
     };
