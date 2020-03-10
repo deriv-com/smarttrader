@@ -1512,7 +1512,11 @@
                             line-height: 18px;
                             font-size: 12px;
                             padding: 9px 13px;
-                            width: 56px;
+                            // 40px is the fixed width of the last child to make it smaller
+                            // divide by the remaining four tds
+                            // minus 26px padding (13px left and 13px right)
+                            width: calc(calc(calc(100% - 40px) / 4) - 26px);
+                            display: inline-block;
 
                             &:nth-child(3) > div {
                                 border-radius: $BORDER_RADIUS;
@@ -1524,6 +1528,7 @@
                             }
                             &:last-child {
                                 width: 14px;
+                                padding: 9px 13px 8px;
                             }
                         }
                         .circle-close {
