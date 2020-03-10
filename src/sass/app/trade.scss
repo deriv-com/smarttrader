@@ -1442,6 +1442,10 @@
                                 font-size: 12px;
                                 font-weight: normal;
                             }
+                            &.option-0 {
+                                color: var(--brand-red-coral);
+                                border-color: var(--brand-red-coral);
+                            }
                             &.option-1.edit {
                                 right: 36px;
                                 background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgxNlYxNkgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEyLjE0NiA1LjQ0TDQgMTMuNTg2SDJ2LTJoLjAxN2w4LjEzLTguMTQ1IDIgMS45OTloLS4wMDF6bS43MDgtLjcwN2wtMi0yIC40NC0uNDRoLS4wMDFjLjM5LS4zOSAxLjAyNC0uMzkgMS40MTQgMGwuNTg2LjU4NmMuMzkuMzkuMzkgMS4wMjMgMCAxLjQxNGwtLjQ0LjQ0aC4wMDF6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=');
