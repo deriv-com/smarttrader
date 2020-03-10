@@ -4,11 +4,11 @@ const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
-const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
+// const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
-const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
+// const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
@@ -23,6 +23,13 @@ const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
     const notifications = [];
+    let is_full_screen = false;
+    const fullscreen_map = {
+        event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
+        element  : ['fullscreenElement', 'webkitFullscreenElement', 'mozFullScreenElement', 'msFullscreenElement'],
+        fnc_enter: ['requestFullscreen', 'webkitRequestFullscreen', 'mozRequestFullScreen', 'msRequestFullscreen'],
+        fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
+    };
 
     const onLoad = () => {
         populateAccountsList();
@@ -32,6 +39,19 @@ const Header = (() => {
         if (Client.isLoggedIn()) {
             displayAccountStatus();
         }
+        fullscreen_map.event.forEach(event => {
+            document.addEventListener(event, onFullScreen, false);
+        });
+    };
+
+    const onUnload = () => {
+        fullscreen_map.event.forEach(event => {
+            document.removeEventListener(event, onFullScreen);
+        });
+    };
+
+    const onFullScreen = () => {
+        is_full_screen = fullscreen_map.element.some(el => document[el]);
     };
 
     const bindSvg = () => {
@@ -70,25 +90,25 @@ const Header = (() => {
         const platforms = {
             dtrader: {
                 name: 'DTrader',
-                desc: 'Start trading now with a powerful, yet easy-to-use platform',
+                desc: 'A whole new trading experience on a powerful yet easy to use platform.',
                 link: 'https://deriv.app',
                 icon: 'ic-brand-dtrader.svg',
             },
             dbot: {
                 name: 'DBot',
-                desc: 'Automate your trading ideas without coding',
+                desc: 'Automated trading at your fingertips. No coding needed.',
                 link: 'https://deriv.app/bot',
                 icon: 'ic-brand-dbot.svg',
             },
             dmt5: {
                 name: 'DMT5',
-                desc: 'Trade with platform of choice for professionals',
+                desc: 'The platform of choice for professionals worldwide.',
                 link: 'https://deriv.app/mt5',
                 icon: 'ic-brand-dmt5.svg',
             },
             smarttrader: {
                 name: 'SmartTrader',
-                desc: 'Trade in the world\'s financial markets with a simple online platform',
+                desc: 'Trade the world\'s markets with a simple and familiar platform.',
                 link: '#',
                 icon: 'logo_smart_trader.svg',
             },
@@ -216,10 +236,14 @@ const Header = (() => {
     };
 
     const toggleFullscreen = () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else if (document.exitFullscreen) {
-            document.exitFullscreen();
+        const to_exit = is_full_screen;
+        const el = to_exit ? document : document.documentElement;
+        const fncToCall = fullscreen_map[to_exit ? 'fnc_exit' : 'fnc_enter'].find(fnc => el[fnc]);
+
+        if (fncToCall) {
+            el[fncToCall]();
+        } else {
+            is_full_screen = false; // fullscreen API is not enabled
         }
     };
 
@@ -254,7 +278,7 @@ const Header = (() => {
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
                     const icon           = `${Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? currency.toLowerCase() : 'virtual'}.svg`)}`;
                     const is_current     = loginid === Client.get('loginid');
-                    
+
                     if (is_current) { // default account
                         // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
                         // applyToAllElements('.account-id', (el) => { elementInnerHtml(el, loginid); });
@@ -279,7 +303,7 @@ const Header = (() => {
                     } else {
                         loginid_demo_select.appendChild(account);
                     }
-                    
+
                     // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
                     // const li_type = createElement('li', { text: localized_type });
 
@@ -310,7 +334,7 @@ const Header = (() => {
 
     const bindTabs = () => {
         const is_virtual_tab = /^VRT/.test(Client.get('loginid'));
-        
+
         $('#acc_tabs').tabs({
             active: is_virtual_tab ? 1 : 0,
             activate() {
@@ -462,7 +486,7 @@ const Header = (() => {
 
         const notification_content = getElementById('header__notification-content');
         const notification_item    = createElement('div', { class: 'header__notification-content-item' });
-        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) })
+        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
         const notification_message = createElement('div', { class: 'header__notification-content-message' });
         const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
         const notification_text    = createElement('div', { text: message, class: 'header__notification-content-desc' });
@@ -517,7 +541,7 @@ const Header = (() => {
                 
             }
         });
-    }
+    };
 
     const displayAccountStatus = () => {
         BinarySocket.wait('get_account_status', 'authorize', 'landing_company').then(() => {
@@ -552,9 +576,10 @@ const Header = (() => {
                 return required_fields.some(field => !get_settings[field]);
             };
 
-            const buildMessage = (string, path) => /* template(string, [`<a href="${path}">`, '</a>']) */string;
+            const buildMessage = (string, path) => template(string, [`<a href="${path}">`, '</a>']);
             const buildSpecificMessage = (string, additional) => template(string, [...additional]);
-            const hasStatus = (string) => status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true);
+            const hasStatus = (string) => status &&
+                (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
             const hasVerification = (string) => {
                 const { identity, document, needs_verification } = authentication;
                 // if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
@@ -747,6 +772,7 @@ const Header = (() => {
 
     return {
         onLoad,
+        onUnload,
         populateAccountsList,
         upgradeMessageVisibility,
         displayNotification,
