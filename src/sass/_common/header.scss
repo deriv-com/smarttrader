@@ -219,6 +219,9 @@ body .header {
             font-weight: bold;
         }
     }
+    &__account {
+        margin-right: 13px;
+    }
     &__logo {
         height: 35px;
     }
@@ -230,10 +233,10 @@ body .header {
             margin-right: 0.5rem;
         }
         &-button {
-            height: 22px;
-            width: 22px;
+            height: 20px;
+            width: 20px;
             cursor: pointer;
-            margin: 0 20px;
+            margin: 0 7px;
         }
     }
     &__deposit {
@@ -257,6 +260,12 @@ body .header {
     }
     &__notification {
         height: min-content;
+        margin-right: 10px;
+
+        > img {
+            height: 24px;
+            width: 24px;
+        }
     }
     .platform {
         &__switcher {

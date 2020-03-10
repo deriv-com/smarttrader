@@ -90,7 +90,7 @@ const Header = () => (
                     <img id='header__notification-icon' className='header__icon-button' />
                     <div id='header__notification-content' />
                 </div>
-                <a href='https://deriv.app/account/personal-details'>
+                <a className='header__account' href='https://deriv.app/account/personal-details'>
                     <img className='header__menu-item header__icon-button' id='header__account-settings' />
                 </a>
                 <div className='header__divider' />
