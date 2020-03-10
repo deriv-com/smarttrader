@@ -50,7 +50,7 @@ const Header = (() => {
     };
 
     const onFullScreen = () => {
-        is_full_screen = this.fullscreen_map.element.some(el => document[el]);
+        is_full_screen = fullscreen_map.element.some(el => document[el]);
     };
 
     const bindSvg = () => {
