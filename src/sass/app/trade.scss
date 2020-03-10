@@ -600,7 +600,7 @@
                     left: 2px !important;
 
                     .tooltip-body {
-                        background-color: $COLOR_WHITE;
+                        background-color: var(--general-active);
                         padding: 6px;
                         margin-bottom: -14px;
                         margin-right: -14px;
