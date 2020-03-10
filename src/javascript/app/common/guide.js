@@ -74,7 +74,7 @@ const Guide = (() => {
         }
 
         $(opt.guideBtnID)
-            .addClass('gr-hide-m pulser')
+            .addClass('gr-hide-m')
             .append($('<span/>', { class: 'close', text: 'X' }))
             .append($('<strong/>'));
         $(`${opt.guideBtnID} strong`).html(`<span></span>${opt.btnText}`);
