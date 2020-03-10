@@ -33,7 +33,7 @@ const Guide = (() => {
 
         cookie_name = 'hide_guide';
         btn_next    = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Next') }) };
-        btn_finish  = { className: 'button btnFinish', html: $('<span/>', { text: localize('Finish') }) };
+        btn_finish  = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Finish') }) };
 
         if ($(opt.guideBtnID).length === 0 || opt.script.length === 0) {
             return;
