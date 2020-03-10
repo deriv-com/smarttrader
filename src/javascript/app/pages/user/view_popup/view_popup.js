@@ -379,7 +379,7 @@ const ViewPopup = (() => {
 
         containerSetText('trade_details_current_title', localize('Contract result'));
         containerSetText('trade_details_indicative_label', localize('Payout'));
-        containerSetText('trade_details_profit_loss_label', localize('Profit/Loss'));
+        containerSetText('trade_details_profit_loss_label', localize('Profit/loss'));
         if (contract.status === 'sold') {
             containerSetText('trade_details_end_label', localize('End time'));
             containerSetText('trade_details_end_date', epochToDateTime(contract.sell_time), '', true);
