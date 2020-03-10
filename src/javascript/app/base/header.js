@@ -70,13 +70,13 @@ const Header = (() => {
             },
             dbot: {
                 name: 'DBot',
-                desc: 'Automate your trading ideas without coding',
+                desc: 'Automated trading at your fingertips. No coding needed.',
                 link: 'https://deriv.app/bot',
                 icon: 'ic-brand-dbot.svg',
             },
             dmt5: {
                 name: 'DMT5',
-                desc: 'Trade with platform of choice for professionals',
+                desc: 'The platform of choice for professionals worldwide.',
                 link: 'https://deriv.app/mt5',
                 icon: 'ic-brand-dmt5.svg',
             },
