@@ -26,7 +26,7 @@ const HighchartUI = (() => {
             value    : params.value,
             id       : params.id || (is_plotx ? params.value : params.label),
             label    : { text: params.label || '' },
-            color    : params.color || (is_plotx ? '#e98024' : 'green'),
+            color    : params.color || (is_plotx ? 'var(--brand-red-coral)' : 'green'),
             zIndex   : is_plotx ? 2 : 1,
             width    : params.width || 2,
             dashStyle: params.dashStyle || 'Solid',
@@ -48,8 +48,8 @@ const HighchartUI = (() => {
     };
 
     const getMarkerObject = (type) => {
-        const color = type === 'entry' ? 'white' : 'orange';
-        return { fillColor: color, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor: color, lineColor: 'orange', lineWidth: 3, radius: 4 } } };
+        const color = type === 'entry' ? 'white' : 'var(--brand-red-coral)';
+        return { fillColor: color, lineColor: 'var(--brand-red-coral)', lineWidth: 3, radius: 4, states: { hover: { fillColor: color, lineColor: 'var(--brand-red-coral)', lineWidth: 3, radius: 4 } } };
     };
 
     return {
