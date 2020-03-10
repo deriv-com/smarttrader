@@ -128,6 +128,10 @@ const WebtraderChart = (() => {
                     },
                 },
             }],
+            tooltip: {
+                borderWidth: 0,
+                shadow     : false,
+            },
         };
 
         chart = WebtraderCharts.chartWindow.addNewChart($('#webtrader_chart'), chart_config, custom_highcharts_opts);
