@@ -221,6 +221,10 @@
             #sell_details_audit {
                 border-left: none;
 
+                .explanation-section h3 {
+                    font-weight: bold;
+                    color: var(--text-prominent);
+                }
                 @media screen and (max-width: 480px) {
                     .view-chart {
                         display: none;
