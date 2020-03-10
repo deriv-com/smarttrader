@@ -75,12 +75,16 @@ const WebtraderChart = (() => {
             showShare         : true,
         };
 
+        // Combination of Deriv.app + Highcharts default colours.
+        const line_colours = ['var(--brand-secondary)', '#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce','#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
+
         const custom_highcharts_opts = {
             webtrader: {
                 currentPrice: {
                     stroke: 'var(--brand-red-coral)',
                 },
             },
+            colors   : line_colours,
             navigator: {
                 maskFill: 'rgba(255, 255, 255, 0)',
                 series  : {
@@ -108,8 +112,6 @@ const WebtraderChart = (() => {
                     color  : '#f95454',
                     upColor: '#4caf50',
                 },
-                line  : { color: 'var(--brand-secondary)' },
-                spline: { color: 'var(--brand-secondary)' },
             },
             xAxis: {
                 color : 'var(--text-prominent)',
