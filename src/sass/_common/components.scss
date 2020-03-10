@@ -54,7 +54,7 @@
         }
     }
     .highcharts-tooltip span {
-        background-color: $COLOR_WHITE;
+        background-color: var(--general-active);
 
         span:first-child {
             height: 30px;
