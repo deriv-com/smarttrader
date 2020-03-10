@@ -408,7 +408,7 @@ const ViewPopup = (() => {
     };
 
     const appendAuditLink = (element_id) => {
-        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit button-secondary' });
+        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit btn btn__small btn--secondary' });
         const span = Utility.createElement('span', { text: localize('Audit') });
         link.appendChild(span);
         link.addEventListener('click', () => { initAuditTable(1); });

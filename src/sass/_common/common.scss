@@ -1047,6 +1047,11 @@ label + input {
         background: inherit;
         outline: 0;
     }
+    &__small {
+        height: 24px;
+        border-width: 1px;
+        font-size: $FONT_SIZE_XS;
+    }
 }
 
 .button-secondary {
