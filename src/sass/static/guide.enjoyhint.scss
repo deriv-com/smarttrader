@@ -59,6 +59,10 @@
     -moz-transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
     -o-transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
     transition: background-color 00.3s cubic-bezier(0, 0, 0, 0), color 00.3s cubic-bezier(0, 0, 0, 0), width 00.3s cubic-bezier(0, 0, 0, 0), border-width 00.3s cubic-bezier(0, 0, 0, 0), border-color 00.3s cubic-bezier(0, 0, 0, 0);
+    padding: 0 16px;
+    height: 32px;
+    font-size: $FONT_SIZE_S;
+    font-weight: bold;
 }
 
 .enjoyhint_next_btn:hover {
