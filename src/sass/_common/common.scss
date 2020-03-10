@@ -31,10 +31,11 @@ body {
     a, a:visited {
         color: var(--text-general);
     }
-    table {
-        th, thead {
-            background-color: var(--general-section-1);
-        }
+    .fill-bg-color, table th, table thead {
+        background-color: var(--general-section-1);
+    }
+    .secondary-bg-color {
+        background-color: var(--brand-red-coral);
     }
 }
 
