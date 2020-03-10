@@ -381,15 +381,15 @@ const ViewPopup = (() => {
         containerSetText('trade_details_indicative_label', localize('Payout'));
         containerSetText('trade_details_profit_loss_label', localize('Profit/Loss'));
         if (contract.status === 'sold') {
-            containerSetText('trade_details_end_label', localize('End Time'));
+            containerSetText('trade_details_end_label', localize('End time'));
             containerSetText('trade_details_end_date', epochToDateTime(contract.sell_time), '', true);
         }
         if (Lookback.isLookback(contract.contract_type)) {
             containerSetText('trade_details_spot_label', localize('Close'));
-            containerSetText('trade_details_spottime_label', localize('Close Time'));
+            containerSetText('trade_details_spottime_label', localize('Close time'));
         } else {
-            containerSetText('trade_details_spot_label', localize('Exit Spot'));
-            containerSetText('trade_details_spottime_label', localize('Exit Spot Time'));
+            containerSetText('trade_details_spot_label', localize('Exit spot'));
+            containerSetText('trade_details_spottime_label', localize('Exit spot time'));
         }
 
         // show validation error if contract is not settled yet
@@ -453,7 +453,7 @@ const ViewPopup = (() => {
         th_previous.appendChild(link);
 
         tr.appendChild(th_previous);
-        tr.appendChild(Utility.createElement('th', { class: 'gr-8 gr-6-t gr-6-p gr-4-m', text: localize('Audit Page') }));
+        tr.appendChild(Utility.createElement('th', { class: 'gr-8 gr-6-t gr-6-p gr-4-m', text: localize('Audit page') }));
         tr.appendChild(Utility.createElement('th', { class: 'gr-2 gr-3-t gr-3-p gr-4-m' }));
         table.appendChild(tr);
         div.appendChild(table);
@@ -554,7 +554,7 @@ const ViewPopup = (() => {
         td_mid.appendChild(Utility.createElement('strong', { text: localize('Spot') }));
 
         const td_last = Utility.createElement('td', { class: 'gr-4 audit-table-head no-margin' });
-        td_last.appendChild(Utility.createElement('strong', { text: localize('Spot Time (GMT)') }));
+        td_last.appendChild(Utility.createElement('strong', { text: localize('Spot time (GMT)') }));
 
         tr.appendChild(Utility.createElement('td', { class: 'gr-4' }));
         tr.appendChild(td_mid);
@@ -591,7 +591,7 @@ const ViewPopup = (() => {
 
     const populateAuditTable = (show_audit_table) => {
         if (!contract.tick_count) {
-            const contract_starts = createAuditTable(localize('Contract Starts'));
+            const contract_starts = createAuditTable(localize('Contract starts'));
             parseAuditResponse(contract_starts.table, contract.audit_details.contract_start).then(() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
@@ -601,7 +601,7 @@ const ViewPopup = (() => {
                 }
                 // don't show exit tick information if missing or manual sold
                 if (contract.audit_details.contract_end && contract.status !== 'sold') {
-                    const contract_ends = createAuditTable(localize('Contract Ends'));
+                    const contract_ends = createAuditTable(localize('Contract ends'));
                     parseAuditResponse(contract_ends.table, contract.audit_details.contract_end).then(() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
@@ -616,7 +616,7 @@ const ViewPopup = (() => {
                 }
             });
         } else {
-            const contract_details = createAuditTable(localize('Contract Details'));
+            const contract_details = createAuditTable(localize('Contract details'));
             parseAuditResponse(contract_details.table, contract.audit_details.all_ticks).then(() => {
                 if (contract.audit_details.all_ticks) {
                     createAuditHeader(contract_details.table);
@@ -650,11 +650,11 @@ const ViewPopup = (() => {
             [barrier_text, low_barrier_text] =
                 Lookback.getBarrierLabel(contract.contract_type, contract.barrier_count);
         } else if (contract.barrier_count > 1) {
-            barrier_text = localize('High Barrier');
+            barrier_text = localize('High barrier');
         } else if (/^DIGIT(MATCH|DIFF)$/.test(contract.contract_type)) {
             barrier_text = localize('Target');
         } else if (/^(tickhigh|ticklow)$/i.test(contract.contract_type)) {
-            barrier_text = localize('Selected Tick');
+            barrier_text = localize('Selected tick');
         }
 
         const should_show_entry_spot = !Lookback.isLookback(contract.contract_type) && !/digit/i.test(contract.contract_type);

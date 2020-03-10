@@ -31,6 +31,11 @@ body {
     a, a:visited {
         color: var(--text-general);
     }
+    table {
+        th, thead {
+            background-color: var(--general-section-1);
+        }
+    }
 }
 
 h1, h2, h3 {
