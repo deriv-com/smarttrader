@@ -261,7 +261,96 @@ body .header {
     &__notification {
         height: min-content;
         margin-right: 10px;
+        position: relative;
 
+        &-container {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 58px;
+            transform: translateX(-45%);
+            background: var(--general-main-1);
+            box-shadow: 0 4px 8px 2px var(--shadow-menu);
+            height: 525px;
+            width: 264px;
+
+            &--show {
+                display: block;
+            }
+        }
+        &-header {
+            text-align: center;
+            font-size: $FONT_SIZE_N;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-normal);
+            color: var(--text-prominent);
+        }
+        &-count {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--status-danger);
+            font-size: 10px;
+            width: 16px;
+            height: 16px;
+            color: var(--text-colored-background);
+            text-align: center;
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            top: -2px;
+            right: 5px;
+        }
+        &-content {
+            height: calc(100% - 37px);
+
+            &-item {
+                border-bottom: 1px solid var(--border-disabled);
+                padding: 10px 24px 10px 16px;
+                display: flex;
+
+                > img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 8px;
+                }
+            }
+            &-title {
+                font-size: $FONT_SIZE_S;
+                font-weight: 600;
+                margin-bottom: 4px;
+                color: var(--text-prominent);
+                position: relative;
+                line-height: 1.5;
+            }
+            &-desc {
+                font-size: $FONT_SIZE_XS;
+                color: var(--text-prominent);
+                line-height: 1.5;
+                padding-right: 8px;
+            }
+        }
+        &-empty {
+            text-align: center;
+            margin-top: 50%;
+
+            &-text {
+                font-size: $FONT_SIZE_S;
+                font-weight: 600;
+                color: var(--text-less-prominent);
+                padding: 8px;
+            }
+            &-desc {
+                font-size: $FONT_SIZE_XS;
+                color: var(--text-less-prominent);
+            }
+        }
+        &-btn {
+            margin: 8px 0 0 auto;
+            height: 24px !important;
+            width: 106px;
+            font-size: $FONT_SIZE_XS;
+        }
         > img {
             height: 24px;
             width: 24px;

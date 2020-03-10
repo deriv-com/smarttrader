@@ -88,7 +88,17 @@ const Header = () => (
             <div className='header__menu-right is-login'>
                 <div className='header__notification header__menu-item'>
                     <img id='header__notification-icon' className='header__icon-button' />
-                    <div id='header__notification-content' />
+                    <div id='header__notification-count' className='header__notification-count' />
+                    <div id='header__notification-container' className='header__notification-container' >
+                        <div className='header__notification-header'>{it.L('Notifications')}</div>
+                        <div id='header__notification-content' className='header__notification-content'>
+                            <div id='header__notification-empty' className='header__notification-empty'>
+                                <img id='header__notification-empty-img' />
+                                <div className='header__notification-empty-text'>{it.L('No notifications')}</div>
+                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notification')}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a className='header__account' href='https://deriv.app/account/personal-details'>
                     <img className='header__menu-item header__icon-button' id='header__account-settings' />
@@ -153,7 +163,7 @@ const Header = () => (
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
-                    <button id='btn__login' className='btn btn--primary btn--outline header__btn-login'>{it.L('Log in')}</button>
+                    <button id='btn__login' className='btn btn--primary btn--transparent header__btn-login'>{it.L('Log in')}</button>
                     <a className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' href='https://deriv.com/signup/'>{it.L('Sign up')}</a>
                 </div>
             </div>

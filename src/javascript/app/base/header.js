@@ -22,6 +22,8 @@ const template                 = require('../../_common/utility').template;
 const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
+    const notifications = [];
+
     const onLoad = () => {
         populateAccountsList();
         bindPlatform();
@@ -40,6 +42,7 @@ const Header = (() => {
         const bell    = getElementById('header__notification-icon');
         const account = getElementById('header__account-settings');
         const logout  = getElementById('account__switcher-logout-icon');
+        const empty   = getElementById('header__notification-empty-img');
 
         applyToAllElements('.header__expand', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
@@ -56,6 +59,7 @@ const Header = (() => {
         account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         logout.src  = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
         add.src     = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        empty.src   = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
     };
 
     const bindPlatform = () => {
@@ -121,49 +125,51 @@ const Header = (() => {
             el.addEventListener('click', logoutOnClick);
         });
 
-        // Account Switcher Event
-        const acc_switcher = getElementById('acc_switcher');
-        const account_switcher_dropdown = getElementById('account__switcher');
-        const acc_expand = getElementById('header__acc-expand');
-        const showAccountSwitcher = (should_open) => {
-            if (should_open) {
-                account_switcher_dropdown.classList.add('account__switcher--show');
-                acc_expand.classList.add('rotated');
+        // Notificatiopn Event
+        const notification_bell      = getElementById('header__notification-icon');
+        const notification_container = getElementById('header__notification-container');
+        const notification_active    = 'header__notification-container--show';
+        const showNotification       = (should_open) => {
+            notification_container.toggleClass(notification_active, should_open);
+        };
+
+        notification_bell.addEventListener('click', () => {
+            if (notification_container.classList.contains(notification_active)) {
+                showNotification(false);
             } else {
-                account_switcher_dropdown.classList.remove('account__switcher--show');
-                acc_expand.classList.remove('rotated');
+                showNotification(true);
             }
+        });
+
+        // Account Switcher Event
+        const acc_switcher              = getElementById('acc_switcher');
+        const account_switcher_dropdown = getElementById('account__switcher');
+        const acc_expand                = getElementById('header__acc-expand');
+        const acc_switcher_active       = 'account__switcher--show';
+        const showAccountSwitcher       = (should_open) => {
+            account_switcher_dropdown.toggleClass(acc_switcher_active, should_open);
+            acc_expand.toggleClass('rotated', should_open);
         };
 
         acc_switcher.addEventListener('click', (event) => {
-            if (!account_switcher_dropdown.contains(event.target)) {
-                if (account_switcher_dropdown.classList.contains('account__switcher--show')) {
-                    showAccountSwitcher(false);
-                } else {
-                    showAccountSwitcher(true);
-                }
-
-                if (platform_dropdown.classList.contains('platform__dropdown--show')) {
-                    showPlatformSwitcher(false);
-                }
+            if (account_switcher_dropdown.classList.contains(acc_switcher_active)
+                && !account_switcher_dropdown.contains(event.target)) {
+                showAccountSwitcher(false);
+            } else {
+                showAccountSwitcher(true);
             }
         });
 
         // Platform Switcher Event
-        const platform_switcher_arrow = getElementById('platform__switcher-expand');
-        const platform_switcher = getElementById('platform__switcher');
-        const platform_dropdown = getElementById('platform__dropdown');
+        const platform_switcher_arrow  = getElementById('platform__switcher-expand');
+        const platform_switcher        = getElementById('platform__switcher');
+        const platform_dropdown        = getElementById('platform__dropdown');
+        const platform_dropdown_active = 'platform__dropdown--show';
         const body = document.body;
         const showPlatformSwitcher = (should_open) => {
-            if (should_open) {
-                platform_dropdown.classList.add('platform__dropdown--show');
-                platform_switcher_arrow.classList.add('rotated');
-                body.classList.add('stop-scrolling');
-            } else {
-                platform_dropdown.classList.remove('platform__dropdown--show');
-                platform_switcher_arrow.classList.remove('rotated');
-                body.classList.remove('stop-scrolling');
-            }
+            platform_dropdown.toggleClass(platform_dropdown_active, should_open);
+            platform_switcher_arrow.toggleClass('rotated', should_open);
+            body.toggleClass('stop-scrolling', should_open);
         };
 
         applyToAllElements('.platform__list-item', (el) => {
@@ -173,7 +179,7 @@ const Header = (() => {
         });
 
         platform_switcher.addEventListener('click', () => {
-            if (platform_dropdown.classList.contains('platform__dropdown--show')) {
+            if (platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             } else {
                 showPlatformSwitcher(true);
@@ -183,17 +189,24 @@ const Header = (() => {
         // OnClickOutisde Event Handle
         document.addEventListener('click', (event) => {
             // Platform Switcher
-            const header = getElementById('deriv__header');
-            const platform_lists = getElementById('platform__list');
-            if (!header.contains(event.target) && !platform_lists.contains(event.target) && platform_dropdown.classList.contains('platform__dropdown--show')) {
+            if (!platform_switcher.contains(event.target)
+                && !platform_dropdown.contains(event.target)
+                && platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             }
 
             // Account Switcher
             if (!account_switcher_dropdown.contains(event.target)
                 && !acc_switcher.contains(event.target)
-                && account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                && account_switcher_dropdown.classList.contains(acc_switcher_active)) {
                 showAccountSwitcher(false);
+            }
+
+            // Notification
+            if (!notification_container.contains(event.target)
+                && !notification_bell.contains(event.target)
+                && notification_container.classList.contains(notification_active)) {
+                showNotification(false);
             }
         });
 
@@ -425,44 +438,86 @@ const Header = (() => {
     //     applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
     // };
 
-    const displayNotification = (message, is_error = false, msg_code = '') => {
-        const msg_notification = getElementById('msg_notification');
-        const platform_switcher = getElementById('platform__dropdown');
-        if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
+    const displayNotification = ({ type, title = '', message, button_text, button_link }) => {
+        // const msg_notification = getElementById('msg_notification');
+        // const platform_switcher = getElementById('platform__dropdown');
+        // if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
 
-        msg_notification.html(message);
-        msg_notification.setAttribute('data-message', message);
-        msg_notification.setAttribute('data-code', msg_code);
+        // msg_notification.html(message);
+        // msg_notification.setAttribute('data-message', message);
+        // msg_notification.setAttribute('data-code', msg_code);
 
-        if (msg_notification.offsetParent) {
-            msg_notification.toggleClass('error', is_error);
-        } else {
-            $(msg_notification).slideDown(500, () => { if (is_error) msg_notification.classList.add('error'); });
-        }
+        // if (msg_notification.offsetParent) {
+        //     msg_notification.toggleClass('error', is_error);
+        // } else {
+        //     $(msg_notification).slideDown(500, () => { if (is_error) msg_notification.classList.add('error'); });
+        // }
 
-        // Removed once notification feature is implemented
-        platform_switcher.style.top = `${51 + 26}px`;
+        // // Removed once notification feature is implemented
+        // platform_switcher.style.top = `${51 + 26}px`;
+
+        const data_code = title.trim();
+
+        if (notifications.some(notification => notification === data_code)) return;
+
+        const notification_content = getElementById('header__notification-content');
+        const notification_item    = createElement('div', { class: 'header__notification-content-item' });
+        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) })
+        const notification_message = createElement('div', { class: 'header__notification-content-message' });
+        const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
+        const notification_text    = createElement('div', { text: message, class: 'header__notification-content-desc' });
+        const notification_button  = createElement('button', { text: button_text, class: 'btn btn--secondary header__notification-btn', href: button_link });
+
+        notification_message.appendChild(notification_title);
+        notification_message.appendChild(notification_text);
+        notification_message.appendChild(notification_button);
+        notification_item.appendChild(notification_icon);
+        notification_item.appendChild(notification_message);
+        notification_content.appendChild(notification_item);
+        notifications.push(data_code);
+        updateNotificationCount();
     };
 
-    const hideNotification = (msg_code) => {
-        const msg_notification = getElementById('msg_notification');
-        const platform_switcher = getElementById('platform__dropdown');
-        if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
-            msg_code && msg_notification.getAttribute('data-code') !== msg_code) {
-            return;
-        }
+    const hideNotification = (title = '') => {
+        // const msg_notification = getElementById('msg_notification');
+        // const platform_switcher = getElementById('platform__dropdown');
+        // if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
+        //     msg_code && msg_notification.getAttribute('data-code') !== msg_code) {
+        //     return;
+        // }
 
-        if (msg_notification.offsetParent) {
-            msg_notification.classList.remove('error');
-            $(msg_notification).slideUp(500, () => {
-                elementInnerHtml(msg_notification, '');
-                msg_notification.removeAttribute('data-message data-code');
-            });
-        }
+        // if (msg_notification.offsetParent) {
+        //     msg_notification.classList.remove('error');
+        //     $(msg_notification).slideUp(500, () => {
+        //         elementInnerHtml(msg_notification, '');
+        //         msg_notification.removeAttribute('data-message data-code');
+        //     });
+        // }
 
-        // Removed once notification feature is implemented
-        platform_switcher.style.top = '51px';
+        // // Removed once notification feature is implemented
+        // platform_switcher.style.top = '51px';
+
+        const data_code = title.trim();
+        if (!notifications.some(notification => notification === data_code)) return;
+
+        notifications.splice(notifications.indexOf(data_code), 1);
+        updateNotificationCount();
     };
+
+    const updateNotificationCount = () => {
+        applyToAllElements('#header__notification-count', (el) => {
+            const notification_empty   = getElementById('header__notification-empty');
+            if (notifications.length) {
+                el.style.display = 'flex';
+                el.html(notifications.length);
+                notification_empty.style.display = 'none';
+            } else {
+                el.style.display = 'none';
+                notification_empty.style.display = 'block';
+                
+            }
+        });
+    }
 
     const displayAccountStatus = () => {
         BinarySocket.wait('get_account_status', 'authorize', 'landing_company').then(() => {
@@ -497,24 +552,26 @@ const Header = (() => {
                 return required_fields.some(field => !get_settings[field]);
             };
 
-            const buildMessage = (string, path) => template(string, [`<a href="${path}">`, '</a>']);
+            const buildMessage = (string, path) => /* template(string, [`<a href="${path}">`, '</a>']) */string;
             const buildSpecificMessage = (string, additional) => template(string, [...additional]);
             const hasStatus = (string) => status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true);
             const hasVerification = (string) => {
                 const { identity, document, needs_verification } = authentication;
-                if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
-                    return false;
-                }
+                // if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
+                //     return false;
+                // }
                 const verification_length = needs_verification.length;
                 let result = false;
 
                 switch (string) {
                     case 'unsubmitted': {
-                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
+                        result = true;
+                        // result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
                         break;
                     }
                     case 'expired': {
-                        result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
+                        result = true;
+                        // result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
                         break;
                     }
                     case 'expired_identity': {
@@ -557,7 +614,8 @@ const Header = (() => {
             const messages = {
                 cashier_locked       : () => localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'),
                 currency             : () => buildMessage(localizeKeepPlaceholders('Please set the [_1]currency[_2] of your account.'),                                                                                    'https://deriv.app'), // TODO: redirect to set currency modal when link is available
-                unsubmitted          : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity and proof of address[_2].'),                                                                  'https://deriv.app/account/proof-of-identity'),
+                // unsubmitted          : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity and proof of address[_2].'),                                                                  'https://deriv.app/account/proof-of-identity'),
+                unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
                 expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
                 expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
@@ -659,7 +717,7 @@ const Header = (() => {
             const checkStatus = (check_statuses) => {
                 const notified = check_statuses.some((check_type) => {
                     if (validations[check_type]()) {
-                        displayNotification(messages[check_type](), false);
+                        displayNotification(messages[check_type]());
                         return true;
                     }
                     return false;
