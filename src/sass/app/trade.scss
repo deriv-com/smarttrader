@@ -1604,6 +1604,10 @@
                     line-height: 24px;
                     font-size: 14px;
                     background-color: var(--general-section-1);
+
+                    td {
+                        background-color: var(--general-section-1);
+                    }
                 }
                 td {
                     background-color: var(--general-main-1);
