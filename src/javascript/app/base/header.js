@@ -22,6 +22,14 @@ const template                 = require('../../_common/utility').template;
 const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
+    let is_full_screen = false;
+    const fullscreen_map = {
+        event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
+        element  : ['fullscreenElement', 'webkitFullscreenElement', 'mozFullScreenElement', 'msFullscreenElement'],
+        fnc_enter: ['requestFullscreen', 'webkitRequestFullscreen', 'mozRequestFullScreen', 'msRequestFullscreen'],
+        fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
+    };
+
     const onLoad = () => {
         populateAccountsList();
         bindPlatform();
@@ -30,6 +38,19 @@ const Header = (() => {
         if (Client.isLoggedIn()) {
             displayAccountStatus();
         }
+        fullscreen_map.event.forEach(event => {
+            document.addEventListener(event, onFullScreen, false);
+        });
+    };
+
+    const onUnload = () => {
+        fullscreen_map.event.forEach(event => {
+            document.removeEventListener(event, onFullScreen);
+        });
+    };
+
+    const onFullScreen = () => {
+        is_full_screen = fullscreen_map.element.some(el => document[el]);
     };
 
     const bindSvg = () => {
@@ -201,10 +222,14 @@ const Header = (() => {
     };
 
     const toggleFullscreen = () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else if (document.exitFullscreen) {
-            document.exitFullscreen();
+        const to_exit = is_full_screen;
+        const el = to_exit ? document : document.documentElement;
+        const fncToCall = fullscreen_map[to_exit ? 'fnc_exit' : 'fnc_enter'].find(fnc => el[fnc]);
+
+        if (fncToCall) {
+            el[fncToCall]();
+        } else {
+            is_full_screen = false; // fullscreen API is not enabled
         }
     };
 
@@ -688,6 +713,7 @@ const Header = (() => {
 
     return {
         onLoad,
+        onUnload,
         populateAccountsList,
         upgradeMessageVisibility,
         displayNotification,
