@@ -497,7 +497,8 @@ const Header = (() => {
 
             const buildMessage = (string, path) => template(string, [`<a href="${path}">`, '</a>']);
             const buildSpecificMessage = (string, additional) => template(string, [...additional]);
-            const hasStatus = (string) => status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true);
+            const hasStatus = (string) => status &&
+                (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
             const hasVerification = (string) => {
                 const { identity, document, needs_verification } = authentication;
                 if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
