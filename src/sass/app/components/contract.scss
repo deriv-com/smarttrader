@@ -113,9 +113,9 @@
             }
             .contract_type {
                 font-size: 12px;
-                // font-weight: 300;
+                font-weight: bold;
                 padding: 0 0 10px;
-                color: var(--text-less-prominent);
+                color: var(--text-prominent);
                 @media (max-width: 767px) {
                     font-size: 14px;
                 }

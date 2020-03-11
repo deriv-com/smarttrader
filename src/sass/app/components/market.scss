@@ -304,8 +304,8 @@
                             font-size: 12px;
                             padding: 10px 0 0;
                             flex: 1 0 auto;
-                            // font-weight: 300;
-                            color: var(--text-less-prominent);
+                            font-weight: bold;
+                            color: var(--text-prominent);
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 14px;
                             }
