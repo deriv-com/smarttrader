@@ -218,9 +218,13 @@ body .header {
             font-size: $FONT_SIZE_N;
             font-weight: bold;
         }
+        &-icon {
+            margin-right: 5px;
+        }
     }
     &__account {
         margin-right: 13px;
+        height: min-content;
     }
     &__logo {
         height: 35px;
@@ -235,8 +239,8 @@ body .header {
         &-button {
             height: 20px;
             width: 20px;
-            cursor: pointer;
             margin: 0 7px;
+            cursor: pointer;
         }
     }
     &__deposit {
@@ -263,11 +267,18 @@ body .header {
         margin-right: 10px;
         position: relative;
 
+        &-link {
+            color: var(--text-general) !important;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
         &-container {
             display: none;
             position: absolute;
             z-index: 1;
-            top: 58px;
+            top: 48px;
             transform: translateX(-45%);
             background: var(--general-main-1);
             box-shadow: 0 4px 8px 2px var(--shadow-menu);
@@ -303,6 +314,7 @@ body .header {
         }
         &-content {
             height: calc(100% - 37px);
+            overflow: auto;
 
             &-item {
                 border-bottom: 1px solid var(--border-disabled);

@@ -86,7 +86,7 @@ const Header = () => (
                 </div>
             </div>
             <div className='header__menu-right is-login'>
-                <div className='header__notification header__menu-item'>
+                <div id='header__notification' className='header__notification header__menu-item'>
                     <img id='header__notification-icon' className='header__icon-button' />
                     <div id='header__notification-count' className='header__notification-count' />
                     <div id='header__notification-container' className='header__notification-container' >
@@ -100,13 +100,13 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <a className='header__account' href='https://deriv.app/account/personal-details'>
-                    <img className='header__menu-item header__icon-button' id='header__account-settings' />
+                <a className='header__account header__menu-item' href='https://deriv.app/account/personal-details'>
+                    <img className='header__icon-button' id='header__account-settings' />
                 </a>
                 <div className='header__divider' />
                 <div className='header__menu-item header__menu-acc' id='acc_switcher'>
                     <div className='header__acc-info'>
-                        <img id='header__acc-icon' />
+                        <img id='header__acc-icon' className='header__acc-icon' />
                         <div id='header__acc-balance' className='header__acc-balance' />
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>

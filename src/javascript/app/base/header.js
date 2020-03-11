@@ -4,7 +4,7 @@ const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
-// const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
+const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
@@ -146,15 +146,16 @@ const Header = (() => {
         });
 
         // Notificatiopn Event
-        const notification_bell      = getElementById('header__notification-icon');
+        const notification_bell      = getElementById('header__notification');
         const notification_container = getElementById('header__notification-container');
         const notification_active    = 'header__notification-container--show';
         const showNotification       = (should_open) => {
             notification_container.toggleClass(notification_active, should_open);
         };
 
-        notification_bell.addEventListener('click', () => {
-            if (notification_container.classList.contains(notification_active)) {
+        notification_bell.addEventListener('click', (event) => {
+            if (notification_container.classList.contains(notification_active)
+                && !notification_container.contains(event.target)) {
                 showNotification(false);
             } else {
                 showNotification(true);
@@ -462,7 +463,7 @@ const Header = (() => {
     //     applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
     // };
 
-    const displayNotification = ({ type, title = '', message, button_text, button_link }) => {
+    const displayNotification = ({ key, type, title, message, button_text, button_link }) => {
         // const msg_notification = getElementById('msg_notification');
         // const platform_switcher = getElementById('platform__dropdown');
         // if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
@@ -480,29 +481,29 @@ const Header = (() => {
         // // Removed once notification feature is implemented
         // platform_switcher.style.top = `${51 + 26}px`;
 
-        const data_code = title.trim();
-
-        if (notifications.some(notification => notification === data_code)) return;
+        if (notifications.some(notification => notification === key)) return;
 
         const notification_content = getElementById('header__notification-content');
         const notification_item    = createElement('div', { class: 'header__notification-content-item' });
         const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
         const notification_message = createElement('div', { class: 'header__notification-content-message' });
         const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
-        const notification_text    = createElement('div', { text: message, class: 'header__notification-content-desc' });
-        const notification_button  = createElement('button', { text: button_text, class: 'btn btn--secondary header__notification-btn', href: button_link });
+        const notification_text    = createElement('div', { html: message, class: 'header__notification-content-desc' });
 
         notification_message.appendChild(notification_title);
         notification_message.appendChild(notification_text);
-        notification_message.appendChild(notification_button);
         notification_item.appendChild(notification_icon);
+        if (button_text && button_link) {
+            const notification_button  = createElement('a', { text: button_text, class: 'btn btn--secondary header__notification-btn', href: button_link });
+            notification_message.appendChild(notification_button);
+        }
         notification_item.appendChild(notification_message);
         notification_content.appendChild(notification_item);
-        notifications.push(data_code);
+        notifications.push(key);
         updateNotificationCount();
     };
 
-    const hideNotification = (title = '') => {
+    const hideNotification = (key) => {
         // const msg_notification = getElementById('msg_notification');
         // const platform_switcher = getElementById('platform__dropdown');
         // if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
@@ -521,10 +522,9 @@ const Header = (() => {
         // // Removed once notification feature is implemented
         // platform_switcher.style.top = '51px';
 
-        const data_code = title.trim();
-        if (!notifications.some(notification => notification === data_code)) return;
+        if (!notifications.some(notification => notification === key)) return;
 
-        notifications.splice(notifications.indexOf(data_code), 1);
+        notifications.splice(notifications.indexOf(key), 1);
         updateNotificationCount();
     };
 
@@ -576,8 +576,8 @@ const Header = (() => {
                 return required_fields.some(field => !get_settings[field]);
             };
 
-            const buildMessage = (string, path) => template(string, [`<a href="${path}">`, '</a>']);
-            const buildSpecificMessage = (string, additional) => template(string, [...additional]);
+            const buildMessage = (string, path) => template(string, [`<a class="header__notification-link" href="${path}">`, '</a>']);
+            // const buildSpecificMessage = (string, additional) => template(string, [...additional]);
             const hasStatus = (string) => status &&
                 (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
             const hasVerification = (string) => {
@@ -585,18 +585,45 @@ const Header = (() => {
                 // if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
                 //     return false;
                 // }
-                const verification_length = needs_verification.length;
+                const verification_length = needs_verification.length || 0;
                 let result = false;
 
                 switch (string) {
-                    case 'unsubmitted': {
+                    case 'authenticate': {
                         result = true;
-                        // result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
+                        // result = verification_length && document.status === 'none' && identity.status === 'none';
+                        break;
+                    }
+                    case 'needs_poi': {
+                        result = verification_length
+                            && needs_verification.includes('identity')
+                            && !needs_verification.includes('document')
+                            && identity.status !== 'rejected'
+                            && identity.status !== 'expired';
+                        break;
+                    }
+                    case 'needs_poa': {
+                        result = verification_length
+                            && needs_verification.includes('document')
+                            && !needs_verification.includes('identity')
+                            && document.status !== 'rejected'
+                            && document.status !== 'expired';
+                        break;
+                    }
+                    case 'poi_expired': {
+                        result = identity.status === 'expired';
+                        break;
+                    }
+                    case 'poa_expired': {
+                        result = document.status === 'expired';
+                        break;
+                    }
+                    /* case 'unsubmitted': {
+                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
                         break;
                     }
                     case 'expired': {
-                        result = true;
-                        // result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
+                        result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
                         break;
                     }
                     case 'expired_identity': {
@@ -626,7 +653,7 @@ const Header = (() => {
                     case 'document': {
                         result = verification_length && document.status === 'none';
                         break;
-                    }
+                    } */
                     default:
                         break;
                 }
@@ -634,38 +661,68 @@ const Header = (() => {
                 return result;
             };
 
-            const has_no_tnc_limit = is_svg;
+            // const has_no_tnc_limit = is_svg;
+
+            const getDateNow = () => {
+                const now = new Date();
+                return `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+            };
 
             const messages = {
-                cashier_locked       : () => localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'),
-                currency             : () => buildMessage(localizeKeepPlaceholders('Please set the [_1]currency[_2] of your account.'),                                                                                    'https://deriv.app'), // TODO: redirect to set currency modal when link is available
-                // unsubmitted          : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity and proof of address[_2].'),                                                                  'https://deriv.app/account/proof-of-identity'),
-                unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
-                expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
-                expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
-                rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://deriv.app/account/proof-of-identity'),
-                rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
-                identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
-                document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
-                excluded_until       : () => buildMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'),                                                 'https://www.deriv.com/contact-us/'),
-                // financial_limit      : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'),                                                             'user/security/self_exclusionws'), // TODO: handle this when self exclusion is available
-                mt5_withdrawal_locked: () => localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'),
-                required_fields      : () => buildMessage(localizeKeepPlaceholders('Please complete your [_1]personal details[_2] before you proceed.'),                                                                   'https://deriv.app/account/personal-details'),
-                residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'https://deriv.app'),
-                risk                 : () => buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'),                                   'https://deriv.app/account/financial-assessment'),
-                tax                  : () => buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'),                                            'https://deriv.app/account/personal-details'),
-                unwelcome            : () => buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                    'https://www.deriv.com/contact-us/'),
-                withdrawal_locked    : () => localize('Withdrawals have been disabled on your account. Please check your email for more details.'),
-                tnc                  : () => buildMessage(has_no_tnc_limit
-                    ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
-                    : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'https://deriv.app'),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
+                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildMessage(localizeKeepPlaceholders(`You have opted to be excluded from Binary.com until ${Client.get('excluded_until') || getDateNow()}. Please [_1]contact us[_2] for assistance.`), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                authenticate         : () => ({ key: 'authenticate', title: localize('Authenticate'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                document_needs_action: () => ({ key: 'document_needs_action', title: localize('Authentication failed'), message: buildMessage(localizeKeepPlaceholders('[_1]Your Proof of Identity or Proof of Address[_2] did not meet our requirements. Please check your email for further instructions.'), 'https://deriv.app/account/proof-of-identity'), type: 'warning' }),
+                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                mf_retail            : () => ({ key: 'mf_retail', title: localize('Digital options trading disabled'), message: buildMessage(localizeKeepPlaceholders('Digital Options Trading has been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
+                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/financial-assessment'), type: 'warning' }),
+                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/personal-details'), type: 'danger' }),
+                tnc                  : () => ({ key: 'tnc', title: localize('Term & conditions updated'), message: buildMessage(localizeKeepPlaceholders('Please accept our [_1]updated Terms and Conditions[_2] to proceed.'), 'https://www.deriv.com/terms-and-conditions/'), type: 'warning' }),
+                required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
+                needs_poi            : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
+                needs_poa            : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
+                poi_expired          : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
+                poa_expired          : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
+                // poa_rejected         : () => ({ key: 'poa_expired', title: localize('Proff of address'), message: localize('Your documents for proof of address is expired. Please submit again.'), type: 'danger'}),
+                // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
+                // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
+                // expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
+                // rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
+                // rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://deriv.app/account/proof-of-identity'),
+                // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
+                // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
+                // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
+                // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'https://deriv.app'),
+                // tnc                  : () => buildMessage(has_no_tnc_limit
+                //     ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
+                //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'https://deriv.app'),
             };
 
             const validations = {
-                cashier_locked       : () => hasStatus('cashier_locked'),
-                currency             : () => !Client.get('currency'),
+                currency             : () => /* !Client.get('currency') */ true,
+                excluded_until       : () => Client.get('excluded_until'),
+                authenticate         : () => hasVerification('authenticate'),
+                cashier_locked       : () => /* hasStatus('cashier_locked') */ true,
+                withdrawal_locked    : () => hasStatus('withdrawal_locked'),
+                mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
+                document_needs_action: () => /* hasStatus('document_needs_action') */ true,
+                unwelcome            : () => hasStatus('unwelcome'),
+                mf_retail            : () => Client.get('landing_company_shortcode') === 'maltainvest' && hasStatus('professional'),
+                financial_limit      : () => hasStatus('max_turnover_limit_not_set'),
+                risk                 : () => Client.getRiskAssessment(),
+                tax                  : () => Client.shouldCompleteTax(),
+                tnc                  : () => Client.shouldAcceptTnc(),
+                required_fields      : () => hasMissingRequiredField(),
+                needs_poi            : () => hasVerification('needs_poi'),
+                needs_poa            : () => hasVerification('needs_poa'),
+                poi_expired          : () => hasVerification('poi_expired'),
+                poa_expired          : () => hasVerification('poa_expired'),
+                /* poa_rejected         : () => hasVerification('poa_rejected'),
                 unsubmitted          : () => hasVerification('unsubmitted'),
                 expired              : () => hasVerification('expired'),
                 expired_identity     : () => hasVerification('expired_identity'),
@@ -675,31 +732,34 @@ const Header = (() => {
                 rejected_document    : () => hasVerification('rejected_document'),
                 identity             : () => hasVerification('identity'),
                 document             : () => hasVerification('document'),
-                excluded_until       : () => Client.get('excluded_until'),
-                financial_limit      : () => hasStatus('max_turnover_limit_not_set'),
-                mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
                 required_fields      : () => hasMissingRequiredField(),
                 residence            : () => !Client.get('residence'),
                 risk                 : () => Client.getRiskAssessment(),
                 tax                  : () => Client.shouldCompleteTax(),
-                tnc                  : () => Client.shouldAcceptTnc(),
-                unwelcome            : () => hasStatus('unwelcome'),
-                withdrawal_locked    : () => hasStatus('withdrawal_locked'),
+                tnc                  : () => Client.shouldAcceptTnc(), */
             };
 
             // real account checks in order
             const check_statuses_real = [
-                'excluded_until',
-                'tnc',
-                'required_fields',
-                'financial_limit',
-                'risk',
-                'tax',
                 'currency',
+                'excluded_until',
+                'authenticate',
                 'cashier_locked',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',
+                'document_needs_action',
                 'unwelcome',
+                'mf_retail',
+                'financial_limit',
+                'risk',
+                'tax',
+                'tnc',
+                'required_fields',
+                'needs_poi',
+                'needs_poa',
+                'poi_expired',
+                'poa_expired',
+                /* 'poa_rejected',
                 'unsubmitted',
                 'expired',
                 'expired_identity',
@@ -708,17 +768,16 @@ const Header = (() => {
                 'rejected_identity',
                 'rejected_document',
                 'identity',
-                'document',
+                'document', */
             ];
 
-            const check_statuses_mf_mlt = [
+            /* const check_statuses_mf_mlt = [
                 'excluded_until',
                 'tnc',
                 'required_fields',
                 'financial_limit',
                 'risk',
                 'tax',
-                'currency',
                 'unsubmitted',
                 'expired',
                 'expired_identity',
@@ -732,7 +791,8 @@ const Header = (() => {
                 'cashier_locked',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',
-            ];
+                'authenticate',
+            ]; */
 
             // virtual checks
             const check_statuses_virtual = [
@@ -743,9 +803,9 @@ const Header = (() => {
                 const notified = check_statuses.some((check_type) => {
                     if (validations[check_type]()) {
                         displayNotification(messages[check_type]());
-                        return true;
+                        // return true;
                     }
-                    return false;
+                    // return false;
                 });
                 if (!notified) hideNotification();
             };
@@ -758,11 +818,11 @@ const Header = (() => {
                     authentication = State.getResponse('get_account_status.authentication') || {};
                     get_account_status = State.getResponse('get_account_status') || {};
                     status             = get_account_status.status;
-                    if (Client.get('landing_company_shortcode') === 'maltainvest' || Client.get('landing_company_shortcode') === 'malta' || Client.get('landing_company_shortcode') === 'iom') {
+                    /* if (Client.get('landing_company_shortcode') === 'maltainvest' || Client.get('landing_company_shortcode') === 'malta' || Client.get('landing_company_shortcode') === 'iom') {
                         checkStatus(check_statuses_mf_mlt);
-                    } else {
-                        checkStatus(check_statuses_real);
-                    }
+                    /* } else { */
+                    checkStatus(check_statuses_real);
+                    // }
                     const is_fully_authenticated = hasStatus('authenticated') && !+get_account_status.prompt_client_to_authenticate;
                     $('.account-id')[is_fully_authenticated ? 'append' : 'remove'](el_account_status);
                 });
