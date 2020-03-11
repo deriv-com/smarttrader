@@ -65,6 +65,14 @@
     }
 }
 
+ul.bullet {
+    list-style-type: disc;
+
+    li {
+        list-style-image: initial;
+    }
+}
+
 #trading_init_progress {
     cursor: pointer;
     /*background-image: url('../images/pages/binary-symbol-logo.png');
