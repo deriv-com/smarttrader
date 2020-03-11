@@ -132,7 +132,7 @@
 
                 .desktop .market {
                     font-size: 12px;
-                    font-weight: 300;
+                    // font-weight: 300;
                     padding: 8px 10px;
                     cursor: pointer;
                     transition: background-color, border-left;
@@ -304,8 +304,8 @@
                             font-size: 12px;
                             padding: 10px 0 0;
                             flex: 1 0 auto;
-                            font-weight: 300;
-                            color: $COLOR_DARK_GRAY_4;
+                            // font-weight: 300;
+                            color: var(--text-less-prominent);
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 14px;
                             }
@@ -323,7 +323,7 @@
                                 cursor: pointer;
                                 width: 162px;
                                 font-size: 14px;
-                                font-weight: 300;
+                                // font-weight: 300;
                                 transition: all 0.2s;
                                 @media (min-width: 320px) and (max-width: 767px) {
                                     width: 200px;
