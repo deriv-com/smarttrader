@@ -589,7 +589,7 @@ const Header = (() => {
             };
 
             const buildMessage = (string, path) => template(string, [`<a class="header__notification-link" href="${path}">`, '</a>']);
-            // const buildSpecificMessage = (string, additional) => template(string, [...additional]);
+            const buildSpecificMessage = (string, additional) => template(string, [...additional]);
             const hasStatus = (string) => status &&
                 (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
             const hasVerification = (string) => {
@@ -681,7 +681,7 @@ const Header = (() => {
 
             const messages = {
                 currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
-                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildMessage(localizeKeepPlaceholders(`You have opted to be excluded from Binary.com until ${Client.get('excluded_until') || getDateNow()}. Please [_1]contact us[_2] for assistance.`), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${Client.get('excluded_until') || getDateNow()}`, '<a href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
                 authenticate         : () => ({ key: 'authenticate', title: localize('Authenticate'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
@@ -716,7 +716,7 @@ const Header = (() => {
 
             const validations = {
                 currency             : () => !Client.get('currency'),
-                excluded_until       : () => Client.get('excluded_until'),
+                excluded_until       : () => /* Client.get('excluded_until') */ true,
                 authenticate         : () => hasVerification('authenticate'),
                 cashier_locked       : () => hasStatus('cashier_locked'),
                 withdrawal_locked    : () => hasStatus('withdrawal_locked'),

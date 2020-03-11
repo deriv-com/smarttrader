@@ -29,7 +29,7 @@ const BinaryLoader = (() => {
         }
 
         if (!isStorageSupported(localStorage) || !isStorageSupported(sessionStorage)) {
-            Header.displayNotification({ key: 'storage_not_supported', title: 'Storage not supported', message: localize('[_1] requires your browser\'s web storage to be enabled in order to function properly. Please enable it or exit private browsing mode.', 'Binary.com'), type: 'danger' });
+            Header.displayNotification({ key: 'storage_not_supported', title: 'Storage not supported', message: localize('Requires your browser\'s web storage to be enabled in order to function properly. Please enable it or exit private browsing mode.'), type: 'danger' });
             getElementById('btn_login').classList.add('button-disabled');
         }
 
