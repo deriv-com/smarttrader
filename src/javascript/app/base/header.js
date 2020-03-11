@@ -448,7 +448,7 @@ const Header = (() => {
     //     applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
     // };
 
-    const displayNotification = (message, is_error = false, msg_code = '') => {
+    const displayNotification = (/* message, is_error = false, msg_code = '' */) => {
         // const msg_notification = getElementById('msg_notification');
         // const platform_switcher = getElementById('platform__dropdown');
         // if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
