@@ -75,7 +75,66 @@ const WebtraderChart = (() => {
             showShare         : true,
         };
 
-        chart = WebtraderCharts.chartWindow.addNewChart($('#webtrader_chart'), chart_config);
+        // Combination of Deriv.app + Highcharts default colours.
+        const line_colours = ['var(--brand-secondary)', '#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce','#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
+
+        const custom_highcharts_opts = {
+            webtrader: {
+                currentPrice: {
+                    stroke: 'var(--brand-red-coral)',
+                },
+            },
+            colors   : line_colours,
+            navigator: {
+                maskFill: 'rgba(255, 255, 255, 0)',
+                series  : {
+                    // TODO: Dark theme -- fillOpacity cannot be applied to
+                    // CSS vars and is dependent on this value.
+                    color      : '#85acb0',
+                    lineWidth  : 1,
+                    fillOpacity: 0.1,
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            color: 'var(--text-prominent)',
+                        },
+                    },
+                },
+            },
+            plotOptions: {
+                candlestick: {
+                    color    : '#f95454',
+                    upColor  : '#4caf50',
+                    lineWidth: 0,
+                },
+                ohlc: {
+                    color  : '#f95454',
+                    upColor: '#4caf50',
+                },
+            },
+            xAxis: {
+                color : 'var(--text-prominent)',
+                labels: {
+                    style: {
+                        color: 'var(--text-prominent)',
+                    },
+                },
+            },
+            yAxis: [{
+                labels: {
+                    style: {
+                        color: 'var(--text-prominent)',
+                    },
+                },
+            }],
+            tooltip: {
+                borderWidth: 0,
+                shadow     : false,
+            },
+        };
+
+        chart = WebtraderCharts.chartWindow.addNewChart($('#webtrader_chart'), chart_config, custom_highcharts_opts);
     };
 
     const redrawChart = () => {

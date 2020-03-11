@@ -119,7 +119,13 @@ const ChartSettings = (() => {
             },
             tooltip: {
                 ...(params.tooltip || {}),
-                useHTML: true,
+                useHTML    : true,
+                borderWidth: 0,
+                shadow     : false,
+                style      : {
+                    backgroundColor: 'var(--general-active)',
+                    color          : 'var(--text-prominent)',
+                },
             },
             xAxis: {
                 lineColor: 'var(--border-normal)',
