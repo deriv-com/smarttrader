@@ -449,18 +449,22 @@ const Header = (() => {
     // };
 
     const displayNotification = (message, is_error = false, msg_code = '') => {
-        const msg_notification = getElementById('msg_notification');
-        if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
+        // const msg_notification = getElementById('msg_notification');
+        // const platform_switcher = getElementById('platform__dropdown');
+        // if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
 
-        msg_notification.html(message);
-        msg_notification.setAttribute('data-message', message);
-        msg_notification.setAttribute('data-code', msg_code);
+        // msg_notification.html(message);
+        // msg_notification.setAttribute('data-message', message);
+        // msg_notification.setAttribute('data-code', msg_code);
 
-        if (msg_notification.offsetParent) {
-            msg_notification.toggleClass('error', is_error);
-        } else {
-            $(msg_notification).slideDown(500, () => { if (is_error) msg_notification.classList.add('error'); });
-        }
+        // if (msg_notification.offsetParent) {
+        //     msg_notification.toggleClass('error', is_error);
+        // } else {
+        //     $(msg_notification).slideDown(500, () => { if (is_error) msg_notification.classList.add('error'); });
+        // }
+
+        // // Removed once notification feature is implemented
+        // platform_switcher.style.top = `${51 + 26}px`;
     };
 
     const hideNotification = (msg_code) => {
