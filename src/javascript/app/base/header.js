@@ -484,7 +484,7 @@ const Header = (() => {
         if (notifications.some(notification => notification === key)) return;
 
         const notification_content = getElementById('header__notification-content');
-        const notification_item    = createElement('div', { class: 'header__notification-content-item' });
+        const notification_item    = createElement('div', { class: 'header__notification-content-item', 'notification-key': key });
         const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
         const notification_message = createElement('div', { class: 'header__notification-content-message' });
         const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
@@ -525,20 +525,32 @@ const Header = (() => {
         if (!notifications.some(notification => notification === key)) return;
 
         notifications.splice(notifications.indexOf(key), 1);
+
+        const removed_item = document.querySelector(`div[notification-key="${key}"]`);
+        applyToAllElements('#header__notification-content', (el) => {
+            el.removeChild(removed_item);
+        });
         updateNotificationCount();
     };
 
     const updateNotificationCount = () => {
         applyToAllElements('#header__notification-count', (el) => {
-            const notification_empty   = getElementById('header__notification-empty');
+            const notification_length = notifications.length;
+            el.html(notification_length);
             if (notifications.length) {
                 el.style.display = 'flex';
                 el.html(notifications.length);
-                notification_empty.style.display = 'none';
             } else {
                 el.style.display = 'none';
-                notification_empty.style.display = 'block';
                 
+            }
+        });
+
+        applyToAllElements('#header__notification-empty', (el) => {
+            if (notifications.length) {
+                el.style.display = 'none';
+            } else {
+                el.style.display = 'block';
             }
         });
     };
@@ -582,16 +594,15 @@ const Header = (() => {
                 (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
             const hasVerification = (string) => {
                 const { identity, document, needs_verification } = authentication;
-                // if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
-                //     return false;
-                // }
+                if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
+                    return false;
+                }
                 const verification_length = needs_verification.length || 0;
                 let result = false;
 
                 switch (string) {
                     case 'authenticate': {
-                        result = true;
-                        // result = verification_length && document.status === 'none' && identity.status === 'none';
+                        result = verification_length && document.status === 'none' && identity.status === 'none';
                         break;
                     }
                     case 'needs_poi': {
@@ -704,13 +715,13 @@ const Header = (() => {
             };
 
             const validations = {
-                currency             : () => /* !Client.get('currency') */ true,
+                currency             : () => !Client.get('currency'),
                 excluded_until       : () => Client.get('excluded_until'),
                 authenticate         : () => hasVerification('authenticate'),
-                cashier_locked       : () => /* hasStatus('cashier_locked') */ true,
+                cashier_locked       : () => hasStatus('cashier_locked'),
                 withdrawal_locked    : () => hasStatus('withdrawal_locked'),
                 mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
-                document_needs_action: () => /* hasStatus('document_needs_action') */ true,
+                document_needs_action: () => hasStatus('document_needs_action'),
                 unwelcome            : () => hasStatus('unwelcome'),
                 mf_retail            : () => Client.get('landing_company_shortcode') === 'maltainvest' && hasStatus('professional'),
                 financial_limit      : () => hasStatus('max_turnover_limit_not_set'),

@@ -5,7 +5,7 @@ const getElementById      = require('../../_common/common_functions').getElement
 const localize            = require('../../_common/localize').localize;
 
 const NetworkMonitor = (() => {
-    const connection_error_code = 'CONNECTION_ERROR';
+    const connection_error_code = 'you_are_offline';
 
     let el_status,
         el_tooltip;
@@ -21,7 +21,7 @@ const NetworkMonitor = (() => {
         if (is_online) {
             Header.hideNotification(connection_error_code);
         } else {
-            Header.displayNotification({ key: 'you_are_offline', title: localize('You are offline'), message: localize('Check your conenction.'), type: 'danger' });
+            Header.displayNotification({ key: connection_error_code, title: localize('You are offline'), message: localize('Check your conenction.'), type: 'danger' });
         }
 
         if (el_status && el_tooltip) {
