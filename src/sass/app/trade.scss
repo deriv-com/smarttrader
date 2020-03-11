@@ -38,7 +38,7 @@
     &:before {
         font-size: 0.75rem;
         text-align: left;
-        padding: 12px 8px;
+        padding: 8px;
         max-width: 262px;
         border-radius: 4px;
         background: var(--general-active);
@@ -221,9 +221,9 @@
     #contract_form_content_wrapper {
         padding-top: 0.5em;
         font-family: 'IBM Plex Sans';
-        font-weight: 100;
+        font-weight: 400;
         line-height: 1.4em;
-        font-size: 14px;
+        font-size: 16px;
     }
     #contract_symbol_container {
         padding: 0;
@@ -495,7 +495,7 @@
                     width: 100%;
                     color: $COLOR_WHITE;
                     font-size: 16px;
-                    font-weight: 500;
+                    font-weight: 600;
                 }
                 #purchase_button_top, #purchase_button_middle {
                     background-color: var(--text-profit-success);

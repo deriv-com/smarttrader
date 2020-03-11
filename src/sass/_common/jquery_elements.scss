@@ -9,18 +9,6 @@
     }
 }
 
-#ui-timepicker-div {
-    display: flex;
-
-    .ui-widget-header {
-        font-weight: bold;
-    }
-}
-
-#ui-datepicker-div .ui-widget-header {
-    font-weight: 100;
-}
-
 #ui-timepicker-div, #ui-datepicker-div {
     border: 2px solid var(--general-active);
     border-radius: 4px;
@@ -43,16 +31,13 @@
         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22965 -21118.941 14.82 24"><path fill="#{rgba($primaryBrandColor,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-22973.59 -21124.941)"/></svg>');
         background-position: initial;
     }
-    .ui-datepicker-calendar tbody tr td .ui-state-default.ui-state-active, table .ui-timepicker .ui-state-default.ui-state-active {
+    .ui-datepicker-calendar td .ui-state-default.ui-state-active, .ui-timepicker-table .ui-timepicker .ui-state-default.ui-state-active {
         border: 2px solid var(--general-active) !important;
         background-color: var(--general-active) !important;
         color: $COLOR_BLACK !important;
         font-weight: bold;
     }
-    .ui-timepicker-table, .ui-datepicker-calendar {
-        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
-    }
-    table {
+    .ui-datepicker-calendar, table.ui-timepicker-table {
         border: none;
 
         .ui-state-default:not(.ui-state-disabled):not(.ui-state-active) {
@@ -63,36 +48,51 @@
                 background-color: var(--general-hover);
             }
         }
-        .ui-timepicker-table {
-            border-radius: 4px;
-            margin: none;
-            padding: 0.15em 0 0;
-        }
-        .ui-timepicker {
-            border-bottom: none;
-            padding: 0.15em 0 0;
-            margin: 0;
-            border-right: none;
+    }
+}
 
-            th {
-                min-height: 69px;
-                min-width: 35px;
-            }
-            th, td a {
-                font-weight: 100;
-            }
-            tbody {
-                padding: 0.15em;
-                border-color: var(--general-active);
-                border: none;
-            }
+#ui-timepicker-div {
+    display: flex;
+
+    .ui-widget-header {
+        font-weight: bold;
+    }
+    .ui-timepicker-table {
+        border-radius: 4px;
+        margin: none;
+        padding: 0.15em 0 0;
+    }
+    .ui-timepicker {
+        border: none;
+        padding: 0.15em 0 0;
+        margin: 0;
+
+        th {
+            min-height: 69px;
+            min-width: 35px;
         }
-        .ui-timepicker-hours .ui-timepicker tbody {
-            border-style: solid;
-            border-width: 0 2px 0 0;
+        th, td a {
+            font-weight: 100;
+        }
+        tbody {
+            padding: 0.15em;
             border-color: var(--general-active);
+            border: none;
         }
     }
+    .ui-timepicker-hours .ui-timepicker tbody {
+        border-style: solid;
+        border-width: 0 2px 0 0;
+        border-color: var(--general-active);
+    }
+}
+
+#ui-datepicker-div .ui-widget-header {
+    font-weight: 400;
+}
+
+.ui-datepicker-calendar thead th {
+    font-weight: bold;
 }
 
 @media screen and (min-width: 770px) {
