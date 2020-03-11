@@ -126,12 +126,14 @@ body #topbar {
 }
 
 body .header {
-    background-color: $COLOR_WHITE;
+    position: fixed;
+    background-color: var(--general-main-1);
     height: 48px;
     display: flex;
     transition: opacity 0.3s;
     width: 100%;
     border: none;
+    z-index: 99;
 
     .is-login, .is-logout {
         display: none;
@@ -290,8 +292,8 @@ body .header {
         }
         &__dropdown {
             position: absolute;
-            height: 100%;
-            width: 100%;
+            height: 100vh;
+            width: 100vw;
             background: var(--overlay-outside-dialog);
             z-index: 99999;
             top: 51px;
