@@ -362,7 +362,7 @@ var methods = {
             that.rect = new Kinetic.Rect({
 //          x: 0,
 //          y: 0,
-                fill: 'rgba(0,0,0,0.6)',
+                fill: 'rgba(0,0,0,0.8)',
                 width: that.canvas_size.w,
                 height: that.canvas_size.h
             });
