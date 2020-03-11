@@ -21,7 +21,7 @@
     .ui-widget-header {
         background: var(--general-section-1) !important;
         border: none;
-        color: $COLOR_BLACK !important;
+        color: var(--text-prominent) !important;
     }
     a .ui-icon-circle-triangle-w {
         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23398.295 -21118.941 14.82 24"><path fill="#{rgba($primaryBrandColor,1)}" d="M8.59,27.18,17.75,18,8.59,8.82,11.41,6l12,12-12,12Z" transform="translate(-23374.885 -21088.941) rotate(180)"/></svg>');
@@ -34,7 +34,7 @@
     .ui-datepicker-calendar td .ui-state-default.ui-state-active, .ui-timepicker-table .ui-timepicker .ui-state-default.ui-state-active {
         border: 2px solid var(--general-active) !important;
         background-color: var(--general-active) !important;
-        color: $COLOR_BLACK !important;
+        color: var(--text-prominent) !important;
         font-weight: bold;
     }
     .ui-datepicker-calendar, table.ui-timepicker-table {
@@ -42,6 +42,7 @@
 
         .ui-state-default:not(.ui-state-disabled):not(.ui-state-active) {
             border-radius: 4px;
+            color: var(--text-prominent);
 
             &:hover {
                 border: 2px solid var(--general-hover);
@@ -70,9 +71,7 @@
         th {
             min-height: 69px;
             min-width: 35px;
-        }
-        th, td a {
-            font-weight: 100;
+            font-weight: 400;
         }
         tbody {
             padding: 0.15em;
