@@ -104,21 +104,25 @@
                     border-right: none;
                 }
             }
+            #sell_details_table {
+                tr:not(:last-child) {
+                    border-bottom: 1px solid var(--border-normal);
+                }
+            }
             #sell_details_table, #sell_details_audit {
                 padding: 0;
                 border-left: 1px solid var(--border-normal);
 
                 th {
                     line-height: 24px;
-                    border-bottom: $COLOR_GRAY_SHADE;
 
                     @media screen and (max-width: 480px) {
                         line-height: 30px;
                     }
                 }
                 td, td[data-balloon] {
-                    border-bottom: 1px solid var(--border-normal);
                     vertical-align: middle;
+                    border-bottom: none;
                 }
                 #trade_details_profit_loss, #trade_details_total_pnl {
                     font-weight: bold;
