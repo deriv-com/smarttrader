@@ -12,6 +12,7 @@ body {
     background: repeat-x bottom;
     overflow-x: hidden;
     font-family: $FONT-STACK !important;
+    color: var(--text-general) !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -595,10 +596,10 @@ ul.bullet.gr-row > li {
                     padding: 0;
                     font-size: $FONT_SIZE_XL;
                     margin-bottom: -1px;
-                    border-bottom: 1px solid $COLOR_GRAY;
+                    border-bottom: 1px solid var(--general-section-1);
 
                     &, a {
-                        color: $COLOR_BLUE;
+                        color: var(--text-general);
                         text-transform: initial;
                     }
                     > a, > span {
@@ -607,12 +608,13 @@ ul.bullet.gr-row > li {
                     }
                     &.tab-selector {
                         height: 3px;
-                        background-color: $COLOR_BLUE;
+                        background-color: var(--brand-red-coral);
                         z-index: 1;
                         position: absolute;
                         margin-left: 0;
                         top: 37px;
                         left: 0;
+                        border: none;
                         border-radius: $BORDER_RADIUS;
                         transition: margin-left 0.4s ease-in-out, width 0.2s 0.1s ease-in-out;
                     }
