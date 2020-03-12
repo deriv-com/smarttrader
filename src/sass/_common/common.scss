@@ -1052,6 +1052,11 @@ label + input {
         border-width: 1px;
         font-size: $FONT_SIZE_XS;
     }
+    &__large {
+        height: 40px;
+        border-width: 2px;
+        font-size: $FONT_SIZE_S;
+    }
 }
 
 .button-secondary {
