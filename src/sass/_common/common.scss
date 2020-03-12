@@ -1036,6 +1036,9 @@ label + input {
         &:hover {
             background: var(--button-primary-hover);
         }
+        &:focus {
+            background: var(--button-primary-default);
+        }
     }
     &--secondary {
         background: transparent;

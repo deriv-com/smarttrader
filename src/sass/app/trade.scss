@@ -65,6 +65,27 @@
     }
 }
 
+<<<<<<< HEAD
+=======
+ul.bullet {
+    list-style-type: disc;
+
+    li {
+        list-style-image: initial;
+    }
+}
+
+[data-balloon-pos=left]:after {
+    transform: rotate(270deg) !important;
+    margin-right: 2px;
+}
+
+[data-balloon-pos=down]:after {
+    transform: rotate(180deg) translate(50%, 0) !important;
+    margin-top: 12px;
+}
+
+>>>>>>> 188cf3dd2dc0cbb04e8fbacc99830b11b7e88177
 #trading_init_progress {
     cursor: pointer;
     /*background-image: url('../images/pages/binary-symbol-logo.png');
@@ -503,11 +524,11 @@
                 #purchase_button_bottom {
                     background-color: var(--text-loss-danger);
                 }
-                &.button-disabled #purchase_button_top {
-                    background-color: transparentize($color-green-1, 0.36);
+                &.button-disabled #purchase_button_top, &.button-disabled #purchase_button_middle {
+                    background-color: rgba($color-green-1, 0.32);
                 }
                 &.button-disabled #purchase_button_bottom {
-                    background-color: transparentize($color-red-1, 0.36);
+                    background-color: rgba($color-red-1, 0.32);
                 }
                 &.button-disabled .purchase_button {
                     cursor: auto;
@@ -1708,6 +1729,26 @@
     }
     #digit_underlying ~ ul.select-options {
         font-size: 85%;
+    }
+    #tab_explanation-content {
+        h3, p {
+            color: var(--text-prominent);
+            font-weight: 400;
+        }
+        h3 {
+            font-weight: bold;
+        }
+        #explanation_explain h3 {
+            margin: 40px 0 20px;
+        }
+        p strong {
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            margin: 20px 0;
+        }
+        img {
+            margin: 40px 0 0;
+        }
     }
 }
 

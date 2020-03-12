@@ -15,7 +15,7 @@ program
 
 const config = [
     {
-        url_prefix: 'https://www.binary.com/',
+        url_prefix: 'https://smarttrader.deriv.app/',
         filename  : 'sitemap.xml',
         section   : 'app',
     },
