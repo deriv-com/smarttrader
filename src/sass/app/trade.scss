@@ -1054,6 +1054,18 @@
     color: $COLOR_RED;
 }
 
+.action_btn {
+    display: flex;
+    flex-direction: row-reverse;
+
+    > a {
+        margin-right: 0 !important;
+    }
+    > a + a {
+        margin-right: 8px !important;
+    }
+}
+
 #trading_bottom_content {
     margin-top: 15px;
     font-size: $FONT_SIZE_N;
@@ -1095,27 +1107,35 @@
         .button-secondary, .button {
             span {
                 font-weight: bold;
-                padding: 6px 22px 6px 23px;
+                padding: 0 16px;
+                height: 40px;
+                display: inline-flex;
+                align-items: center;
             }
         }
         .button {
             span {
+                box-sizing: border-box;
                 background-color: var(--brand-red-coral);
+                border: 2px solid var(--button-primary-default);
             }
             &:not(.button-disabled) span {
                 color: var(--general-main-1);
 
                 &:hover {
                     background-color: var(--button-primary-hover);
+                    border: 2px solid var(--button-primary-hover);
                 }
             }
         }
         .button-secondary {
             span {
-                background-color: var(--status-default);
+                box-sizing: border-box;
+                background: transparent;
+                border: 2px solid var(--button-secondary-default);
             }
             &:not(.button-disabled) span {
-                color: var(--text-general);
+                color: var(--text-prominent);
 
                 &:hover {
                     background-color: var(--general-hover);
@@ -1483,6 +1503,9 @@
                             padding: 20px 15px 19px;
                             font-size: 12px;
                         }
+                        td a span {
+                            height: 32px !important;
+                        }
                         .colorpicker-td {
                             margin-top: 8px;
 
@@ -1564,7 +1587,7 @@
                     }
                     a.button, a.button-secondary {
                         span {
-                            font-size: 16px;
+                            font-size: 14px;
                             line-height: 24px;
                         }
                     }
