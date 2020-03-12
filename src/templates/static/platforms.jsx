@@ -187,7 +187,7 @@ const Platform = () => (
                             />
                             <Platforms
                                 image='trading-page'
-                                header='SmartTrader'
+                                header={it.L('SmartTrader')}
                                 description={it.L('Premier binary options trading platform')}
                                 text={it.L('Trade in the world\'s financial markets with a simple and user-friendly online platform.')}
                                 buttons={[
