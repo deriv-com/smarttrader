@@ -12,12 +12,12 @@ body {
     background: repeat-x bottom;
     overflow-x: hidden;
     font-family: $FONT-STACK !important;
-    color: var(--text-general) !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    color: var(--text-general) !important;
 
     .ui-widget {
         font-size: $FONT_SIZE_N;
@@ -27,6 +27,18 @@ body {
     }
     * {
         font-family: $FONT-STACK;
+    }
+    a, a:visited {
+        color: var(--text-general);
+    }
+    .fill-bg-color, table th, table thead {
+        background-color: var(--general-section-1);
+    }
+    .secondary-bg-color {
+        background-color: var(--brand-red-coral);
+    }
+    fieldset {
+        border: 1px solid var(--border-normal);
     }
 }
 
@@ -135,13 +147,12 @@ em {
 
 fieldset {
     position: relative;
-    border: 1px solid $COLOR_GRAY;
     padding: 5px;
     margin-bottom: 10px;
     word-break: break-word;
 
     legend {
-        color: $COLOR_DARK_GRAY;
+        color: var(--text-general);
         padding: 0 0.8em;
         font-weight: bold;
 

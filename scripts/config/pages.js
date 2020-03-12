@@ -60,7 +60,7 @@ module.exports = [
     // ['new-account',                             'app/new_account',                             'default',    'Signup'],
 
     // ['dialog',                                  'app/dialog',                                  null],
-    // ['explanation',                             'app/trade/explanation',                       null],
+    ['explanation',                             'app/trade/explanation',                       null],
     ['logged_inws',                             'app/logged_in',                               null],
     // ['redirect',                                'app/logged_in',                               null,         'Redirecting...'],
 
