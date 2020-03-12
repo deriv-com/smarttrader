@@ -511,11 +511,11 @@ ul.bullet {
                 #purchase_button_bottom {
                     background-color: var(--text-loss-danger);
                 }
-                &.button-disabled #purchase_button_top {
-                    background-color: transparentize($color-green-1, 0.36);
+                &.button-disabled #purchase_button_top, &.button-disabled #purchase_button_middle {
+                    background-color: rgba($color-green-1, 0.32);
                 }
                 &.button-disabled #purchase_button_bottom {
-                    background-color: transparentize($color-red-1, 0.36);
+                    background-color: rgba($color-red-1, 0.32);
                 }
                 &.button-disabled .purchase_button {
                     cursor: auto;
