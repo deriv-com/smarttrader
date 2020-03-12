@@ -166,7 +166,7 @@ const Explanation = () => (
         </div>
 
         {/* ========== Explain ========== */}
-        <div id='explanation_explain' className='invisible gr-padding-20 gr-child'>
+        <div id='explanation_explain' className='invisible gr-child'>
             <div id='explain_asian' className='invisible'>
                 <h3>{it.L('Entry Spot')}</h3>
                 <p>{it.L('The entry spot is the first tick after the contract is processed by our servers.')}</p>
