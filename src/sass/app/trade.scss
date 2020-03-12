@@ -1876,25 +1876,32 @@ body .sp-container {
             height: 4px;
         }
         .sp-button-container {
-            margin-top: 6px;
+            margin-top: 11px;
             margin-bottom: 3px;
 
             .sp-cancel.sp-cancel, .sp-choose.sp-choose {
                 font-weight: bold;
-                padding: 6px 0;
-                line-height: 18px;
-                width: 84px;
+                padding: 0;
+                width: calc(50% - 4px);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+                box-sizing: border-box;
 
                 &:first-child {
-                    background-color: var(--status-default) !important;
-                    margin-right: 4px;
+                    background: transparent !important;
+                    border: 1px solid var(--button-secondary-default);
+                    color: var(--text-prominent);
+                    margin-right: 8px;
 
                     &:hover {
-                        background-color: var(--general-hover) !important;
+                        background: var(--button-secondary-hover);
                     }
                 }
                 &:last-child {
                     background-color: var(--brand-red-coral);
+                    text-transform: uppercase;
 
                     &:hover {
                         background-color: var(--button-primary-hover);
