@@ -200,7 +200,7 @@ const createContextBuilder = async (sections) => {
         ],
         css_files  : css_files_list[section],
         languages  : config.languages,
-        broker_name: 'Binary.com',
+        broker_name: 'Deriv',
         static_hash: static_hash[section],
     });
 

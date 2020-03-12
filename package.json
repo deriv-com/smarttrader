@@ -1,7 +1,7 @@
 {
   "name": "binary-static",
   "version": "3.8.0",
-  "description": "Binary.com static content",
+  "description": "Deriv SmartTrader static content",
   "scripts": {
     "test": "grunt test",
     "livereload": "sudo -p 'enter password for sudo:' grunt livereload",
