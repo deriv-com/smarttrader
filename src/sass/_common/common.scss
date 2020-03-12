@@ -37,6 +37,9 @@ body {
     .secondary-bg-color {
         background-color: var(--brand-red-coral);
     }
+    fieldset {
+        border: 1px solid var(--border-normal);
+    }
 }
 
 h1, h2, h3 {
@@ -144,7 +147,6 @@ em {
 
 fieldset {
     position: relative;
-    border: 1px solid var(--border-normal);
     padding: 5px;
     margin-bottom: 10px;
     word-break: break-word;
