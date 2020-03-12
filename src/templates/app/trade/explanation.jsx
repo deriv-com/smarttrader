@@ -284,8 +284,7 @@ const Explanation = () => (
             </div>
             <div id='explain_runs' className='invisible'>
                 <h3>{it.L('Entry spot')}</h3>
-                <p>{it.L('The [_1]start time[_2] is when the contract has been processed by our servers.', '<strong>', '</strong>')}</p>
-                <p>{it.L('The [_1]entry spot[_2] is the next tick after the [_1]start time[_2].', '<strong>', '</strong>')}</p>
+                <p>{it.L('The [_1]start time[_2] is when the contract has been processed by our servers and the [_1]entry spot[_2] is the [_1]next tick[_2]', '<strong>', '</strong>')}</p>
                 <h3>{it.L('Exit Spot')}</h3>
                 <p>{it.L('The [_1]exit spot[_2] is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern.', '<strong>', '</strong>')}</p>
             </div>
