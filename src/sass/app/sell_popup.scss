@@ -104,21 +104,25 @@
                     border-right: none;
                 }
             }
+            #sell_details_table {
+                tr:not(:last-child) {
+                    border-bottom: 1px solid var(--border-normal);
+                }
+            }
             #sell_details_table, #sell_details_audit {
                 padding: 0;
                 border-left: 1px solid var(--border-normal);
 
                 th {
                     line-height: 24px;
-                    border-bottom: $COLOR_GRAY_SHADE;
 
                     @media screen and (max-width: 480px) {
                         line-height: 30px;
                     }
                 }
                 td, td[data-balloon] {
-                    border-bottom: 1px solid var(--border-normal);
                     vertical-align: middle;
+                    border-bottom: none;
                 }
                 #trade_details_profit_loss, #trade_details_total_pnl {
                     font-weight: bold;
@@ -159,11 +163,8 @@
                     }
                 }
                 .audit-table {
-                    padding: 40px;
+                    padding: 40px 40px 0;
 
-                    &:nth-child(2) {
-                        padding-bottom: 0;
-                    }
                     legend {
                         font-size: $FONT_SIZE_L;
                     }
@@ -196,6 +197,9 @@
                             text-align: right;
                             padding-right: 20px;
                         }
+                        &.audit-table-head {
+                            font-size: $FONT_SIZE_N;
+                        }
                     }
                     @media screen and (max-width: 768px) {
                         padding: 20px;
@@ -205,7 +209,7 @@
                     }
                 }
                 .explanation-section {
-                    padding: 40px;
+                    padding: 40px !important;
 
                     p {
                         line-height: 25px;
@@ -218,6 +222,10 @@
             #sell_details_audit {
                 border-left: none;
 
+                .explanation-section h3 {
+                    font-weight: bold;
+                    color: var(--text-prominent);
+                }
                 @media screen and (max-width: 480px) {
                     .view-chart {
                         display: none;

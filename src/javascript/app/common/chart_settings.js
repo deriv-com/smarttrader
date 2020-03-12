@@ -17,18 +17,18 @@ const ChartSettings = (() => {
         labels = labels || { // needs to be inside setLabels function so localize works
             barrier_line : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_horizontal_line_style} border-color: var(--border-hover); border-style: solid;"></span>${localize('Barrier')}&nbsp;</div>`,
             barrier_spot : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_horizontal_line_style} border-color: var(--border-hover); border-style: dotted;"></span>${localize('Barrier')}&nbsp;</div>`,
-            entry_spot   : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_spot_style} border: 3px solid var(--brand-red-coral); width: 4px; height: 4px;"></span>${localize('Entry Spot')}&nbsp;</div>`,
-            exit_spot    : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_spot_style} background-color: var(--brand-red-coral); width:10px; height: 10px;"></span>${localize('Exit Spot')}&nbsp;</div>`,
+            entry_spot   : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_spot_style} border: 3px solid var(--brand-red-coral); width: 4px; height: 4px;"></span>${localize('Entry spot')}&nbsp;</div>`,
+            exit_spot    : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_spot_style} background-color: var(--brand-red-coral); width:10px; height: 10px;"></span>${localize('Exit spot')}&nbsp;</div>`,
             delay        : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label delay'><span class="chart-delay">${localize('Charting for this underlying is delayed')}&nbsp;</span></div>`,
-            payout_range : `<div class='nowrap gr-padding-10 gr-parent'><span class="chart-payout-range"></span>${localize('Payout Range')}&nbsp;</div>`,
-            purchase_time: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-secondary); border-style: solid;"></span>${localize('Purchase Time')}&nbsp;</div>`,
-            reset_barrier: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_horizontal_line_style} border-color: var(   --border-hover); border-style: solid;"></span>${localize('Reset Barrier')}&nbsp;</div>`,
-            reset_time   : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-color: #000; border-style: solid;"></span>${localize('Reset Time')}&nbsp;</div>`,
-            selected_tick: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="margin-left: 10px; margin-right: 5px; display: inline-block; border-radius: 6px; background-color: var(--brand-red-coral); width:10px; height: 10px;"></span>${localize('Selected Tick')}&nbsp;</div>`,
+            payout_range : `<div class='nowrap gr-padding-10 gr-parent'><span class="chart-payout-range"></span>${localize('Payout range')}&nbsp;</div>`,
+            purchase_time: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-secondary); border-style: solid;"></span>${localize('Purchase time')}&nbsp;</div>`,
+            reset_barrier: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_horizontal_line_style} border-color: var(   --border-hover); border-style: solid;"></span>${localize('Reset barrier')}&nbsp;</div>`,
+            reset_time   : `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-color: #000; border-style: solid;"></span>${localize('Reset time')}&nbsp;</div>`,
+            selected_tick: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="margin-left: 10px; margin-right: 5px; display: inline-block; border-radius: 6px; background-color: var(--brand-red-coral); width:10px; height: 10px;"></span>${localize('Selected tick')}&nbsp;</div>`,
 
             // need to pass is_tick_trade params explicitly to return correct label when switching between ticks and non-ticks charts
-            getEndTime  : (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-style: dashed;"></span>${is_tick_trade ? localize('Exit Spot') : localize('End Time')}&nbsp;</div>`,
-            getStartTime: (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-style: solid;"></span>${is_tick_trade ? localize('Entry Spot') : localize('Start Time')}&nbsp;</div>`,
+            getEndTime  : (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-style: dashed;"></span>${is_tick_trade ? localize('Exit spot') : localize('End time')}&nbsp;</div>`,
+            getStartTime: (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-red-coral); border-style: solid;"></span>${is_tick_trade ? localize('Entry spot') : localize('Start time')}&nbsp;</div>`,
         };
 
         const is_high_low_ticks = params.contract_type === 'highlowticks';
@@ -119,7 +119,13 @@ const ChartSettings = (() => {
             },
             tooltip: {
                 ...(params.tooltip || {}),
-                useHTML: true,
+                useHTML    : true,
+                borderWidth: 0,
+                shadow     : false,
+                style      : {
+                    backgroundColor: 'var(--general-active)',
+                    color          : 'var(--text-prominent)',
+                },
             },
             xAxis: {
                 lineColor: 'var(--border-normal)',
