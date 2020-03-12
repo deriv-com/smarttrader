@@ -109,3 +109,16 @@ a.previous-wrapper {
     font-size: 11px;
     color: var(--text-prominent);
 }
+
+// Highcharts overrides
+.highcharts {
+    &-label-box {
+        background-color: var(--general-active);
+        fill: var(--general-active);
+    }
+    &-crosshair-label {
+        > text {
+            fill: var(--text-prominent) !important;
+        }
+    }
+}
