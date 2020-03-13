@@ -133,7 +133,7 @@ body .header {
     transition: opacity 0.3s;
     width: 100%;
     border: none;
-    z-index: 99;
+    z-index: 1;
 
     .is-login, .is-logout {
         display: none;
@@ -351,7 +351,7 @@ body .header {
         &__switcher {
             display: none;
             position: absolute;
-            z-index: 99;
+            z-index: 2;
             right: 0;
             border-radius: 4px;
             background: var(--general-main-2);
