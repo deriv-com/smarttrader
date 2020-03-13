@@ -215,7 +215,7 @@ const commonTrading = (() => {
         if (node && type && payout) {
             const profit         = payout - type;
             const return_percent = (profit / type) * 100;
-            const comment        = `${localize('Net profit')}: ${formatMoney(currency, profit)} | ${localize('Return')} ${return_percent.toFixed(1)}%`;
+            const comment        = `${localize('Net profit')}: ${formatMoney(currency, profit)} | ${localize('Return')}: ${return_percent.toFixed(1)}%`;
 
             if (isNaN(profit) || isNaN(return_percent)) {
                 node.hide();
