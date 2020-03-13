@@ -1878,20 +1878,25 @@ body #lean_overlay {
         padding: 18px 16px;
 
         > div {
+            box-sizing: border-box;
             width: auto;
-            padding: 6px 22px 6px 23px;
-            line-height: 24px;
-            background-color: var(--status-default);
+            padding: 0 16px;
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            height: 40px;
             color: var(--text-general);
             font-weight: bold;
+            border: 2px solid var(--button-secondary-default);
 
             &:hover {
-                background-color: var(--state-active);
+                background: var(--button-secondary-hover);
             }
             &:not(:first-child) {
-                margin-left: 16px;
+                margin-left: 8px;
                 background-color: var(--brand-red-coral);
                 color: var(--text-colored-background);
+                border: none;
 
                 &:hover {
                     background-color: var(--button-primary-hover);
