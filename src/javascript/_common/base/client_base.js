@@ -39,16 +39,16 @@ const ClientBase = (() => {
      */
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
-            LocalStore.set('active_loginid', value);
             syncWithDerivApp(value, client_object);
+            LocalStore.set('active_loginid', value);
             current_loginid = value;
         } else {
             if (!(loginid in client_object)) {
                 client_object[loginid] = {};
             }
             client_object[loginid][key] = value;
-            LocalStore.setObject(storage_key, client_object);
             syncWithDerivApp(loginid, client_object);
+            LocalStore.setObject(storage_key, client_object);
         }
     };
 
