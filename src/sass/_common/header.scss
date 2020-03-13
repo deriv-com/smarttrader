@@ -359,6 +359,7 @@ body .header {
             }
         }
         &-btn {
+            color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
             width: 106px;
@@ -431,7 +432,7 @@ body .header {
                 margin: 24px 16px;
                 padding: 24px 16px;
                 flex-basis: 100%;
-                width: 302px;
+                width: 288px;
 
                 &:not(.platform__list-item--active):hover {
                     background: var(--state-hover);
