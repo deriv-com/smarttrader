@@ -26,7 +26,7 @@ const HighchartUI = (() => {
             value    : params.value,
             id       : params.id || (is_plotx ? params.value : params.label),
             label    : { text: params.label || '' },
-            color    : params.color || (is_plotx ? 'var(--brand-red-coral)' : 'green'),
+            color    : params.color || (is_plotx ? 'var(--brand-red-coral)' : 'var(--text-prominent)'),
             zIndex   : is_plotx ? 2 : 1,
             width    : params.width || 2,
             dashStyle: params.dashStyle || 'Solid',
