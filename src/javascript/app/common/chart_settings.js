@@ -128,11 +128,11 @@ const ChartSettings = (() => {
                 },
             },
             xAxis: {
-                lineColor: 'var(--border-normal)',
+                lineColor: 'var(--general-section-1)',
                 ...(params.x_axis || {}),
             },
             yAxis: {
-                gridLineColor: 'var(--border-normal)',
+                gridLineColor: 'var(--general-section-1)',
                 labels       : {
                     align: 'left',
                     formatter() {
