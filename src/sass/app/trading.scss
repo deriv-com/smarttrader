@@ -45,7 +45,7 @@ a.previous-wrapper {
             z-index: 1;
             width: 16px;
             height: 14px;
-            background: svg-url('<svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#{rgba($COLOR_BLUE, 1)}"><path d="M7.737 1.676L6.263.324.14 7l6.124 6.676 1.474-1.352L2.853 7z"/><path d="M2 8h14V6H2z"/></g></svg>') no-repeat center;
+            background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#{rgba(var(--text-prominent), 1)}" d="M8.707.293c.39.39.39 1.024 0 1.414L3.414 7 15 7c.552 0 1 .448 1 1s-.448 1-1 1L3.414 8.999l5.293 5.294c.39.39.39 1.024 0 1.414-.39.39-1.024.39-1.414 0l-7-7-.073-.082-.007-.008.08.09c-.036-.035-.068-.073-.097-.112-.018-.024-.034-.049-.05-.074l-.021-.037c-.011-.02-.022-.04-.031-.06L.07 8.37l-.021-.06-.014-.045-.016-.065-.009-.053-.007-.058L0 8.02v-.04c0-.023.002-.046.004-.07L0 8c0-.05.004-.1.011-.149l.01-.052c.004-.022.009-.043.015-.065l.014-.046.021-.06.023-.051.03-.061.022-.037c.016-.025.032-.05.05-.074l.017-.022c.025-.031.051-.062.08-.09l7-7c.39-.39 1.024-.39 1.414 0z"/></svg>') no-repeat center;
         }
         &.nowrap {
             padding-left: 5px;
@@ -105,7 +105,20 @@ a.previous-wrapper {
 }
 
 .chart-legend-label {
-    margin: 0 10px;
+    margin: 0 10px 0 0;
     font-size: 11px;
     color: var(--text-prominent);
+}
+
+// Highcharts overrides
+.highcharts {
+    &-label-box {
+        background-color: var(--general-active);
+        fill: var(--general-active);
+    }
+    &-crosshair-label {
+        > text {
+            fill: var(--text-prominent) !important;
+        }
+    }
 }

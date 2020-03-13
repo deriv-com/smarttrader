@@ -1,7 +1,7 @@
 {
   "name": "binary-static",
   "version": "3.8.0",
-  "description": "Binary.com static content",
+  "description": "Deriv SmartTrader static content",
   "scripts": {
     "test": "grunt test",
     "livereload": "sudo -p 'enter password for sudo:' grunt livereload",
@@ -111,7 +111,7 @@
   "dependencies": {
     "@binary-com/binary-document-uploader": "^2.4.4",
     "@binary-com/binary-style": "^0.2.18",
-    "@binary-com/webtrader-charts": "0.5.6",
+    "@binary-com/webtrader-charts": "^0.5.14",
     "@deriv/p2p": "^0.3.0",
     "babel-polyfill": "6.26.0",
     "canvas-toBlob": "1.0.0",

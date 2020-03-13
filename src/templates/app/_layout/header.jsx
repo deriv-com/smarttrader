@@ -67,7 +67,7 @@ const Header = () => (
             <div className='header__menu-left'>
                 <div id='platform__switcher' className='header__menu-item platform__switcher'>
                     <img id='logo' className='header__logo' />
-                    <div className='platform__switcher-header'>SmartTrader</div>
+                    <div className='platform__switcher-header'>{it.L('SmartTrader')}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links is-login'>

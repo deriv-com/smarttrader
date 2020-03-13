@@ -7,7 +7,7 @@ const Trading = () => (
         <div id='trading_socket_container'>
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
-            <a
+            {/* <a
                 id='deposit_btn_trade'
                 className='client_real invisible gr-hide-m button'
                 href='https://deriv.app/cashier/deposit'
@@ -18,7 +18,7 @@ const Trading = () => (
                     <img src={it.url_for('images/common/plus.svg')} />
                     {it.L('Deposit')}
                 </span>
-            </a>
+            </a> */}
             {/* <div className='client_virtual invisible'> */}
             {/*    <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'> */}
             {/*        <a className='button' /> */}

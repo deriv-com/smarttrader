@@ -258,7 +258,7 @@ const Highchart = (() => {
                             drawLineX({
                                 value: purchase_time,
                                 label: localize('Purchase Time'),
-                                color: '#7cb5ec',
+                                color: '#333333',
                             });
                         }
 
