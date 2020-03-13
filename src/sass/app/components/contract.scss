@@ -113,16 +113,16 @@
             }
             .contract_type {
                 font-size: 12px;
-                font-weight: 300;
+                font-weight: bold;
                 padding: 0 0 10px;
-                color: $COLOR_DARK_GRAY_4;
+                color: var(--text-prominent);
                 @media (max-width: 767px) {
                     font-size: 14px;
                 }
             }
             .contract_subtypes {
                 font-size: 14px;
-                font-weight: 300;
+                // font-weight: 300;
                 @media (max-width: 767px) {
                     font-size: 16px;
                 }
