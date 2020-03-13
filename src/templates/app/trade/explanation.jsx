@@ -124,13 +124,13 @@ const Explanation = () => (
 
             <div id='winning_callputspread' className='invisible'>
                 <h3>{it.L('Winning the contract')}</h3>
-                <h4>{it.L('Call Spread')}</h4>
+                <h5>{it.L('Call Spread')}</h5>
                 <ul className='bullet'>
                     <li>{it.L('Win maximum payout if the exit spot is higher than or equal to the upper barrier.')}</li>
                     <li>{it.L('Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier.')}</li>
                     <li>{it.L('No payout if exit spot is below or equal to the lower barrier.')}</li>
                 </ul>
-                <h4>{it.L('Put Spread')}</h4>
+                <h5>{it.L('Put Spread')}</h5>
                 <ul className='bullet'>
                     <li>{it.L('Win maximum payout if the exit spot is lower than or equal to the lower barrier.')}</li>
                     <li>{it.L('Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot.')}</li>
@@ -166,7 +166,7 @@ const Explanation = () => (
         </div>
 
         {/* ========== Explain ========== */}
-        <div id='explanation_explain' className='invisible gr-padding-20 gr-child'>
+        <div id='explanation_explain' className='invisible gr-child'>
             <div id='explain_asian' className='invisible'>
                 <h3>{it.L('Entry Spot')}</h3>
                 <p>{it.L('The entry spot is the first tick after the contract is processed by our servers.')}</p>
@@ -205,21 +205,12 @@ const Explanation = () => (
 
             <div id='explain_risefall' className='invisible'>
                 <h3>{it.L('Entry spot')}</h3>
-                <p>
-                    {it.L('The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.')}
-                    <br />
-                    {it.L('If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time.')}
-                </p>
-                <br />
+                <p>{it.L('The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.')}</p>
+                <p>{it.L('If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time.')}</p>
                 <h3>{it.L('Exit spot')}</h3>
-                <p>
-                    {it.L('The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.')}
-                    <br />
-                    {it.L('If you select a <strong>start time</strong> of "Now", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}
-                    <br />
-                    {it.L('If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.')}
-                </p>
-                <br />
+                <p>{it.L('The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.')}</p>
+                <p>{it.L('If you select a <strong>start time</strong> of "Now", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}</p>
+                <p>{it.L('If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.')}</p>
             </div>
 
             <div id='explain_staysinout' className='invisible'>
@@ -280,18 +271,11 @@ const Explanation = () => (
 
             <div id='explain_callputspread' className='invisible'>
                 <h3>{it.L('Entry spot')}</h3>
-                <p>
-                    {it.L('The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.')}
-                </p>
-                <br />
+                <p>{it.L('The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.')}</p>
                 <h3>{it.L('Exit spot')}</h3>
-                <p>
-                    {it.L('The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.')}
-                    <br />
-                    {it.L('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}
-                    <br />
-                    {it.L('If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.')}
-                </p>
+                <p>{it.L('The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.')}</p>
+                <p>{it.L('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).')}</p>
+                <p>{it.L('If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.')}</p>
             </div>
 
             <div id='explain_highlowticks' className='invisible'>
@@ -300,8 +284,7 @@ const Explanation = () => (
             </div>
             <div id='explain_runs' className='invisible'>
                 <h3>{it.L('Entry spot')}</h3>
-                <p>{it.L('The [_1]start time[_2] is when the contract has been processed by our servers.', '<strong>', '</strong>')}</p>
-                <p>{it.L('The [_1]entry spot[_2] is the next tick after the [_1]start time[_2].', '<strong>', '</strong>')}</p>
+                <p>{it.L('The [_1]start time[_2] is when the contract has been processed by our servers and the [_1]entry spot[_2] is the [_1]next tick[_2] thereafter.', '<strong>', '</strong>')}</p>
                 <h3>{it.L('Exit Spot')}</h3>
                 <p>{it.L('The [_1]exit spot[_2] is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern.', '<strong>', '</strong>')}</p>
             </div>
