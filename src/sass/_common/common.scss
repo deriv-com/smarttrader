@@ -1036,6 +1036,9 @@ label + input {
         &:hover {
             background: var(--button-primary-hover);
         }
+        &:focus {
+            background: var(--button-primary-default);
+        }
     }
     &--secondary {
         background: transparent;
@@ -1053,10 +1056,6 @@ label + input {
         &:hover {
             background: var(--button-tertiary-hover);
         }
-    }
-    &:focus {
-        background: inherit;
-        outline: 0;
     }
 }
 
