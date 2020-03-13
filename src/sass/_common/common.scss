@@ -1009,6 +1009,7 @@ label + input {
 }
 
 .btn {
+    box-sizing: border-box;
     vertical-align: middle;
     align-items: center;
     justify-content: center;
@@ -1029,6 +1030,7 @@ label + input {
     font-weight: bold;
     text-align: center;
     line-height: 1.5;
+    min-width: 56px;
 
     &--primary {
         background: var(--button-primary-default);
@@ -1067,11 +1069,13 @@ label + input {
         border-width: 1px;
         font-size: $FONT_SIZE_XS;
         padding: 0 8px;
+        min-width: 48px;
     }
     &__large {
         height: 40px;
         border-width: 2px;
         font-size: $FONT_SIZE_S;
+        min-width: 64px;
     }
 }
 
