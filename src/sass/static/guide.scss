@@ -20,7 +20,7 @@
     //     }
     // }
     strong {
-        color: $COLOR_BLUE;
+        color: var(--text-general);
         cursor: pointer;
         display: inline-block;
         white-space: nowrap;
