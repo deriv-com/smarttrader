@@ -1129,7 +1129,10 @@ ul.bullet {
         }
         .button {
             span {
+                display: inline-flex;
                 box-sizing: border-box;
+                min-width: 64px;
+                justify-content: center;
                 background-color: var(--brand-red-coral);
                 border: 2px solid var(--button-primary-default);
             }
@@ -1878,16 +1881,20 @@ body #lean_overlay {
         padding: 18px 16px;
 
         > div {
+            border-radius: 4px;
             box-sizing: border-box;
             width: auto;
             padding: 0 16px;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             background: transparent;
             height: 40px;
             color: var(--text-general);
             font-weight: bold;
             border: 2px solid var(--button-secondary-default);
+            min-width: 64px;
+            font-size: 14px;
 
             &:hover {
                 background: var(--button-secondary-hover);
