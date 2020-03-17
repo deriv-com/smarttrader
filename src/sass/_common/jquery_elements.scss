@@ -42,12 +42,14 @@
 
         .ui-state-default:not(.ui-state-disabled):not(.ui-state-active) {
             border-radius: 4px;
-            color: var(--text-prominent);
+        }
+    }
+    .ui-datepicker-calendar .ui-datepicker-unselectable:not(.ui-state-disabled) .ui-state-default, table.ui-timepicker-table .ui-state-default:not(.ui-state-disabled):not(.ui-state-active) {
+        color: var(--text-prominent);
 
-            &:hover {
-                border: 2px solid var(--general-hover);
-                background-color: var(--general-hover);
-            }
+        &:hover {
+            border: 2px solid var(--general-hover);
+            background-color: var(--general-hover);
         }
     }
 }
