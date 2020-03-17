@@ -215,7 +215,13 @@ const Trading = () => (
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
-                                    <a id='authorization_error_btn_login' href='javascript:;'>{it.L('Log in here')}</a>
+                                    <a 
+                                        id='authorization_error_btn_login'
+                                        className='btn btn--outline'
+                                        href='javascript:;'
+                                    >
+                                        {it.L('Log in here')}
+                                    </a>
                                 </div>
                             </div>
                         </div>
