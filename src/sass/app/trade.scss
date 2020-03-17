@@ -1533,10 +1533,14 @@ ul.bullet {
                     }
                     &.indicator > div {
                         color: var(--text-general);
+                        font-weight: normal;
                     }
                 }
                 .indicator-builder {
                     > table tr {
+                        td {
+                            font-weight: normal;
+                        }
                         td:first-child {
                             padding: 20px 15px 19px;
                             font-size: 12px;
