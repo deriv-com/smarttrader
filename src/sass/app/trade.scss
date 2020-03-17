@@ -575,6 +575,7 @@ ul.bullet {
             }
         }
         .price_comment, .contract_error, #contract_purchase_balance {
+            border-radius: 4px;
             background-color: var(--general-section-1);
             line-height: 1.5rem;
             font-size: $FONT_SIZE_XS;
