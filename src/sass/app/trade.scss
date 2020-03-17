@@ -509,7 +509,7 @@ ul.bullet {
                     width: 100%;
                     color: $COLOR_WHITE;
                     font-size: 16px;
-                    font-weight: 500;
+                    font-weight: bold;
                 }
                 #purchase_button_top, #purchase_button_middle {
                     background-color: var(--text-profit-success);
@@ -1342,6 +1342,7 @@ ul.bullet {
                             border: none;
                             font-weight: normal !important;
                             font-size: 12px !important;
+                            height: 30px !important;
 
                             &:hover {
                                 background-color: var(--general-hover);
@@ -1427,7 +1428,7 @@ ul.bullet {
                             margin-bottom: 0;
                         }
                         input {
-                            width: 162px;
+                            width: 164px;
                         }
                     }
                 }
@@ -1436,7 +1437,7 @@ ul.bullet {
                         background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTguMjIyIDYuNTY0VjMuMDFMMiA5LjIzbDYuMjIyIDYuMjIyVjExLjgxYzQuNDQ1IDAgNy41NTYgMS40MjIgOS43NzggNC41MzMtLjg4OS00LjQ0NC0zLjU1Ni04Ljg4OS05Ljc3OC05Ljc3OHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==') !important;
                     }
                     a {
-                        font-weight: normal;
+                        font-weight: bold;
                     }
                 }
             }
@@ -1534,6 +1535,8 @@ ul.bullet {
                     &.indicator > div {
                         color: var(--text-general);
                         font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
                     }
                 }
                 .indicator-builder {
