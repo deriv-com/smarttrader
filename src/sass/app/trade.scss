@@ -1560,6 +1560,25 @@ ul.bullet {
                         }
                         .dd-select {
                             margin-top: 11px;
+                            border-radius: $BORDER_RADIUS;
+
+                            &.dd-open {
+                                border: 1px solid var(--brand-secondary);
+                            }
+                        }
+                        .dd-options {
+                            border-radius: $BORDER_RADIUS;
+                            border: 1px solid var(--border-normal);
+                        }
+                        .dd-option {
+                            border-bottom: none;
+
+                            &:hover {
+                                background-color: var(--state-hover);
+                            }
+                            &-selected {
+                                background-color: var(--state-active);
+                            }
                         }
                         .applied-to {
                             border: 1px solid var(--border-normal);
