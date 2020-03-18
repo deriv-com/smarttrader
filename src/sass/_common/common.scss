@@ -1009,7 +1009,7 @@ label + input {
 }
 
 .btn {
-    @include deriv-btn;
+    @include deriv-btn('default', null);
 
     &--primary {
         @include deriv-btn(null, 'primary');

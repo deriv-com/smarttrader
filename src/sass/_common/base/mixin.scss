@@ -97,34 +97,26 @@
     }
 }
 
-@mixin deriv-btn($size: 'normal', $type: 'primary') {
-    box-sizing: border-box;
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
-    touch-action: manipulation;
-    cursor: pointer;
-    white-space: nowrap;
-    display: inline-flex;
-    border: 0;
-    border-radius: 4px;
-    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
-    outline: 0;
-    position: relative;
-    text-decoration: none;
-    text-transform: none !important;
-    font-weight: bold !important;
-    text-align: center;
-    line-height: 1.5;
-    height: 32px;
-    border-width: 1px;
-    font-size: $FONT_SIZE_S !important;
-    padding: 0 16px;
-    min-width: 56px;
-
-    &:focus {
-        background: inherit;
+@mixin deriv-btn($size: 'default', $type: '') {
+    @if $size == 'default' {
+        box-sizing: border-box;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        white-space: nowrap;
+        display: inline-flex;
+        border: 0;
+        border-radius: 4px;
+        transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
         outline: 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: none !important;
+        font-weight: bold !important;
+        text-align: center;
+        line-height: 1.5;
     }
 
     // Types
@@ -132,7 +124,10 @@
         background: var(--button-primary-default);
         color: var(--text-colored-background) !important;
 
-        &:hover:not([disabled]) {
+        &:focus {
+            background: var(--button-primary-hover);
+        }
+        &:hover {
             background: var(--button-primary-hover);
         }
         &:active:not([disabled]) {
@@ -154,7 +149,10 @@
             border: 1px solid var(--button-secondary-default);
         }
 
-        &:hover:not([disabled]) {
+        &:focus {
+            background: var(--button-secondary-hover);
+        }
+        &:hover {
             background: var(--button-secondary-hover);
         }
         &:active:not([disabled]) {
@@ -169,7 +167,10 @@
         background: var(--button-tertiary-default);
         color: var(--brand-red-coral) !important;
 
-        &:hover:not([disabled]) {
+        &:focus {
+            background: var(--button-tertiary-hover);
+        }
+        &:hover {
             background: var(--button-tertiary-hover);
         }
         &:active:not([disabled]) {
@@ -181,17 +182,24 @@
         }
     }
     // Sizes
+    @if ($size == 'default') {
+        height: 32px;
+        border-width: 1px;
+        font-size: $FONT_SIZE_S !important;
+        padding: 0 16px;
+        min-width: 56px;
+    }
     @if $size == 'small' {
         height: 24px;
         border-width: 1px;
-        font-size: $FONT_SIZE_XS;
+        font-size: $FONT_SIZE_XS !important;
         padding: 0 8px;
         min-width: 48px;
     }
     @if $size == 'large' {
         height: 40px;
         border-width: 2px;
-        font-size: $FONT_SIZE_S;
+        font-size: $FONT_SIZE_S !important;
         padding: 0 16px;
         min-width: 64px;
     }
