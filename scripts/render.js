@@ -72,7 +72,7 @@ const getConfig = () => (
         dist_path       : Path.join(common.root_path, 'dist', (program.branch || '')),
         languages       : program.branch === 'translations' ? ['ACH'] : common.languages,
         root_path       : common.root_path,
-        root_url        : `/${program.dev && !fs.existsSync(Path.join(common.root_path, 'scripts', 'CNAME')) ? 'binary-static/' : ''}${program.branch ? `${program.branch}/` : ''}`,
+        root_url        : `/${program.dev && !fs.existsSync(Path.join(common.root_path, 'scripts', 'CNAME')) ? 'smarttrader/' : ''}${program.branch ? `${program.branch}/` : ''}`,
     }
 );
 
