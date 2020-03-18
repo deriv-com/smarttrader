@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                     ];
 
                     const rules = [
-                        '^/binary-static/(.*)$ /$1',
+                        '^/smarttrader/(.*)$ /$1',
                         `^/app/(${lang_regex})/index(\\.html)?/(.*)$ /app/$1/$2 [L]`,
                         `^/app/(${lang_regex})/service-worker\\.js$ - [L]`,
                         `^/app/(${lang_regex})/manifest\\.json$ - [L]`,
