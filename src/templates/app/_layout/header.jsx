@@ -84,7 +84,7 @@ const MobileMenu = () => (
                         <div className='mobile__platform-switcher-text'>{it.L('Reports')}</div>
                         <img id='mobile__platform-switcher-icon-arrowright' className='mobile__platform-switcher-icon-right' />
                     </div>
-                    <div className='mobile__platform-switcher-item'>
+                    <div className='mobile__platform-switcher-item logout'>
                         <img className='mobile__platform-switcher-icon logout-icon' />
                         <div className='mobile__platform-switcher-text'>{it.L('Log out')}</div>
                     </div>
@@ -203,7 +203,7 @@ const Header = () => (
                                 <div className='account__switcher-total-text'>{it.L('Total assets in your Deriv accounts')}</div>
                             </div>
                             <div className='account__switcher-seperator' />
-                            <div id='logout' className='account__switcher-logout'>
+                            <div className='account__switcher-logout logout'>
                                 <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
                                 <img className='account__switcher-logout-icon logout-icon' />
                             </div>

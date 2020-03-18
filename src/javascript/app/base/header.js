@@ -155,7 +155,7 @@ const Header = (() => {
             platform_div.appendChild(platform_text_container);
 
             if (platform.on_mobile) {
-                mobile_platform_list.appendChild(platform_div);
+                mobile_platform_list.appendChild(platform_div.cloneNode(true));
             }
             platform_list.appendChild(platform_div);
         });
@@ -170,7 +170,7 @@ const Header = (() => {
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
-        applyToAllElements('#logout', (el) => {
+        applyToAllElements('.logout', (el) => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
