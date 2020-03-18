@@ -215,7 +215,7 @@ const Trading = () => (
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
-                                    <a 
+                                    <a
                                         id='authorization_error_btn_login'
                                         className='btn btn--tertiary'
                                         href='javascript:;'
