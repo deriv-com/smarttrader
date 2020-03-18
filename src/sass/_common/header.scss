@@ -220,6 +220,13 @@ body .header {
             font-size: $FONT_SIZE_N;
             font-weight: bold;
         }
+        &-icon {
+            margin-right: 5px;
+        }
+    }
+    &__account {
+        margin-right: 13px;
+        height: min-content;
     }
     &__logo {
         height: 35px;
@@ -232,10 +239,10 @@ body .header {
             margin-right: 0.5rem;
         }
         &-button {
-            height: 22px;
-            width: 22px;
+            height: 20px;
+            width: 20px;
+            margin: 0 7px;
             cursor: pointer;
-            margin: 0 20px;
         }
     }
     &__deposit {
@@ -255,6 +262,114 @@ body .header {
         &.rotated {
             transform: rotate(180deg);
             transition: transform 500ms;
+        }
+    }
+    &__notification {
+        height: min-content;
+        margin-right: 10px;
+        position: relative;
+
+        &-link {
+            color: var(--text-general) !important;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+        &-container {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 48px;
+            transform: translateX(-45%);
+            background: var(--general-main-1);
+            box-shadow: 0 4px 8px 2px var(--shadow-menu);
+            height: 525px;
+            width: 264px;
+
+            &--show {
+                display: block;
+            }
+        }
+        &-header {
+            text-align: center;
+            font-size: $FONT_SIZE_N;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-normal);
+            color: var(--text-prominent);
+        }
+        &-count {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--status-danger);
+            font-size: 10px;
+            width: 16px;
+            height: 16px;
+            color: var(--text-colored-background);
+            text-align: center;
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            top: -2px;
+            right: 5px;
+            cursor: pointer;
+        }
+        &-content {
+            height: calc(100% - 37px);
+            overflow: auto;
+
+            &-item {
+                border-bottom: 1px solid var(--border-disabled);
+                padding: 10px 24px 10px 16px;
+                display: flex;
+
+                > img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 8px;
+                }
+            }
+            &-title {
+                font-size: $FONT_SIZE_S;
+                font-weight: 600;
+                margin-bottom: 4px;
+                color: var(--text-prominent);
+                position: relative;
+                line-height: 1.5;
+            }
+            &-desc {
+                font-size: $FONT_SIZE_XS;
+                color: var(--text-prominent);
+                line-height: 1.5;
+                padding-right: 8px;
+            }
+        }
+        &-empty {
+            text-align: center;
+            margin-top: 50%;
+
+            &-text {
+                font-size: $FONT_SIZE_S;
+                font-weight: 600;
+                color: var(--text-less-prominent);
+                padding: 8px;
+            }
+            &-desc {
+                font-size: $FONT_SIZE_XS;
+                color: var(--text-less-prominent);
+            }
+        }
+        &-btn {
+            color: var(--text-general) !important;
+            margin: 8px 0 0 auto;
+            height: 24px !important;
+            width: 106px;
+            font-size: $FONT_SIZE_XS;
+        }
+        > img {
+            height: 24px;
+            width: 24px;
         }
     }
     .platform {
@@ -319,7 +434,7 @@ body .header {
                 margin: 24px 16px;
                 padding: 24px 16px;
                 flex-basis: 100%;
-                width: 302px;
+                width: 288px;
 
                 &:not(.platform__list-item--active):hover {
                     background: var(--state-hover);
@@ -549,5 +664,14 @@ body .header {
                 }
             }
         }
+    }
+}
+
+.notification {
+    &__messages {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 48px;
     }
 }

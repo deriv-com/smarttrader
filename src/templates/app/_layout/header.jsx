@@ -86,13 +86,27 @@ const Header = () => (
                 </div>
             </div>
             <div className='header__menu-right is-login'>
-                <a href='https://deriv.app/account/personal-details'>
-                    <img className='header__menu-item header__icon-button' id='header__account-settings' />
+                <div id='header__notification' className='header__notification header__menu-item'>
+                    <img id='header__notification-icon' className='header__icon-button' />
+                    <div id='header__notification-count' className='header__notification-count' />
+                    <div id='header__notification-container' className='header__notification-container' >
+                        <div className='header__notification-header'>{it.L('Notifications')}</div>
+                        <div id='header__notification-content' className='header__notification-content'>
+                            <div id='header__notification-empty' className='header__notification-empty'>
+                                <img id='header__notification-empty-img' />
+                                <div className='header__notification-empty-text'>{it.L('No notifications')}</div>
+                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notification')}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a className='header__account header__menu-item' href='https://deriv.app/account/personal-details'>
+                    <img className='header__icon-button' id='header__account-settings' />
                 </a>
                 <div className='header__divider' />
                 <div className='header__menu-item header__menu-acc' id='acc_switcher'>
                     <div className='header__acc-info'>
-                        <img id='header__acc-icon' />
+                        <img id='header__acc-icon' className='header__acc-icon' />
                         <div id='header__acc-balance' className='header__acc-balance' />
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
@@ -149,7 +163,7 @@ const Header = () => (
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
-                    <button id='btn__login' className='btn btn--primary btn--outline header__btn-login'>{it.L('Log in')}</button>
+                    <button id='btn__login' className='btn btn--primary btn--transparent header__btn-login'>{it.L('Log in')}</button>
                     <a className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' href='https://deriv.com/signup/'>{it.L('Sign up')}</a>
                 </div>
             </div>
