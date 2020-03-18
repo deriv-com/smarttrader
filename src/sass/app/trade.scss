@@ -1120,36 +1120,20 @@ ul.bullet {
         }
         .button-secondary, .button {
             span {
-                font-weight: bold;
-                padding: 0 16px;
-                height: 40px;
-                display: inline-flex;
-                align-items: center;
+                @include deriv-btn;
             }
         }
         .button {
             span {
-                display: inline-flex;
-                box-sizing: border-box;
-                min-width: 64px;
-                justify-content: center;
-                background-color: var(--brand-red-coral);
-                border: 2px solid var(--button-primary-default);
+                @include deriv-btn('large', 'primary');
             }
             &:not(.button-disabled) span {
-                color: var(--general-main-1);
-
-                &:hover {
-                    background-color: var(--button-primary-hover);
-                    border: 2px solid var(--button-primary-hover);
-                }
+                @include deriv-btn('large', 'primary');
             }
         }
         .button-secondary {
             span {
-                box-sizing: border-box;
-                background: transparent;
-                border: 2px solid var(--button-secondary-default);
+                @include deriv-btn('large', 'secondary');
             }
             &:not(.button-disabled) span {
                 color: var(--text-prominent);
@@ -1389,25 +1373,11 @@ ul.bullet {
                             margin-bottom: 0;
                         }
                         button {
+                            @include deriv-btn('normal', 'primary');
                             margin: 0 5px 3px 3px;
-                            padding: 0 16px;
-                            height: 32px;
-                            font-weight: bold;
-                            background-color: var(--brand-red-coral);
-                            color: var(--text-colored-background) !important;
-                            font-size: 14px;
 
-                            &:not(:disabled):hover {
-                                background-color: var(--button-primary-hover);
-                            }
                             &:nth-child(2) {
-                                background: transparent;
-                                border: 1px solid var(--button-secondary-default);
-                                color: var(--text-prominent) !important;
-
-                                &:not(:disabled):hover {
-                                    background: var(--button-secondary-hover);
-                                }
+                                @include deriv-btn('normal', 'secondary');
                             }
                         }
                         input {
@@ -1523,11 +1493,8 @@ ul.bullet {
                                 line-height: 18px;
                             }
                             > a > span {
+                                @include deriv-btn('large', 'secondary');
                                 width: 192px;
-                                line-height: 24px;
-                                font-size: 14px;
-                                display: inline-flex;
-                                justify-content: center;
                                 white-space: nowrap;
                             }
                         }
@@ -1556,28 +1523,6 @@ ul.bullet {
 
                             input {
                                 display: none;
-                            }
-                        }
-                        .dd-select {
-                            margin-top: 11px;
-                            border-radius: $BORDER_RADIUS;
-
-                            &.dd-open {
-                                border: 1px solid var(--brand-secondary);
-                            }
-                        }
-                        .dd-options {
-                            border-radius: $BORDER_RADIUS;
-                            border: 1px solid var(--border-normal);
-                        }
-                        .dd-option {
-                            border-bottom: none;
-
-                            &:hover {
-                                background-color: var(--state-hover);
-                            }
-                            &-selected {
-                                background-color: var(--state-active);
                             }
                         }
                         .applied-to {
@@ -1653,6 +1598,38 @@ ul.bullet {
                         span {
                             font-size: 14px;
                             line-height: 24px;
+                        }
+                    }
+                    .dd-select {
+                        margin-top: 11px;
+                        border-radius: $BORDER_RADIUS;
+
+                        &.dd-open {
+                            border: 1px solid var(--brand-secondary);
+                        }
+                    }
+                    .dd-options {
+                        border-radius: $BORDER_RADIUS;
+                        border: 1px solid var(--border-normal);
+                    }
+                    .dd-option {
+                        border-bottom: none;
+
+                        &:hover {
+                            background-color: var(--state-hover);
+                        }
+                        &-selected {
+                            background-color: var(--state-active);
+                        }
+                    }
+                    .levels-dialog {
+                        button {
+                            &:first-of-type {
+                                @include deriv-btn('normal', 'secondary');
+                            }
+                            &:nth-of-type(2) {
+                                @include deriv-btn('normal', 'primary');
+                            }
                         }
                     }
                 }
@@ -1907,33 +1884,11 @@ body #lean_overlay {
         padding: 18px 16px;
 
         > div {
-            border-radius: 4px;
-            box-sizing: border-box;
-            width: auto;
-            padding: 0 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            height: 40px;
-            color: var(--text-general);
-            font-weight: bold;
-            border: 2px solid var(--button-secondary-default);
-            min-width: 64px;
-            font-size: 14px;
+            @include deriv-btn('large', 'secondary');
 
-            &:hover {
-                background: var(--button-secondary-hover);
-            }
             &:not(:first-child) {
+                @include deriv-btn('large', 'primary');
                 margin-left: 8px;
-                background-color: var(--brand-red-coral);
-                color: var(--text-colored-background);
-                border: none;
-
-                &:hover {
-                    background-color: var(--button-primary-hover);
-                }
             }
         }
     }
