@@ -54,12 +54,17 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const logo    = getElementById('logo');
-        const add     = getElementById('add_icon');
-        const reports = getElementById('reports_icon');
-        const cashier = getElementById('cashier_icon');
-        const account = getElementById('header__account-settings');
-        const logout  = getElementById('account__switcher-logout-icon');
+        const add       = getElementById('add_icon');
+        const cashier   = getElementById('cashier_icon');
+        const account   = getElementById('header__account-settings');
+        const menu      = getElementById('header__hamburger');
+        const close     = getElementById('btn__close');
+        const trade     = getElementById('mobile__platform-switcher-icon-trade');
+        const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
+        const back      = getElementById('mobile__menu-content-submenu-icon-back');
+        const open      = getElementById('mobile__menu-content-submenu-icon-open');
+        const profit    = getElementById('mobile__menu-content-submenu-icon-profit');
+        const statement = getElementById('mobile__menu-content-submenu-icon-statement');
 
         applyToAllElements('.header__expand', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
@@ -69,43 +74,70 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
         });
 
-        logo.src    = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
-        reports.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
-        cashier.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
-        account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
-        logout.src  = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
-        add.src     = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        applyToAllElements('.header__logo', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
+        });
+
+        applyToAllElements('.logout-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+        });
+
+        applyToAllElements('.reports-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
+        });
+
+        cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+        account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+        add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
+        close.src      = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+        trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
+        arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
+        back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
+        open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
+        profit.src     = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
+        statement.src  = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+
     };
 
     const bindPlatform = () => {
+        // Web
         const platform_list = getElementById('platform__list');
+
+        // Mobile
+        const mobile_platform_list = getElementById('mobile__platform-switcher-dropdown');
         if (platform_list.hasChildNodes()) {
             return;
         }
         const platforms = {
             dtrader: {
-                name: 'DTrader',
-                desc: 'A whole new trading experience on a powerful yet easy to use platform.',
-                link: 'https://deriv.app',
-                icon: 'ic-brand-dtrader.svg',
+                name     : 'DTrader',
+                desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
+                link     : 'https://deriv.app',
+                icon     : 'ic-brand-dtrader.svg',
+                on_mobile: true,
             },
             dbot: {
-                name: 'DBot',
-                desc: 'Automated trading at your fingertips. No coding needed.',
-                link: 'https://deriv.app/bot',
-                icon: 'ic-brand-dbot.svg',
+                name     : 'DBot',
+                desc     : 'Automated trading at your fingertips. No coding needed.',
+                link     : 'https://deriv.app/bot',
+                icon     : 'ic-brand-dbot.svg',
+                on_mobile: false,
             },
             dmt5: {
-                name: 'DMT5',
-                desc: 'The platform of choice for professionals worldwide.',
-                link: 'https://deriv.app/mt5',
-                icon: 'ic-brand-dmt5.svg',
+                name     : 'DMT5',
+                desc     : 'The platform of choice for professionals worldwide.',
+                link     : 'https://deriv.app/mt5',
+                icon     : 'ic-brand-dmt5.svg',
+                on_mobile: true,
+
             },
             smarttrader: {
-                name: 'SmartTrader',
-                desc: 'Trade the world\'s markets with a simple and familiar platform.',
-                link: '#',
-                icon: 'logo_smart_trader.svg',
+                name     : 'SmartTrader',
+                desc     : 'Trade the world\'s markets with a simple and familiar platform.',
+                link     : '#',
+                icon     : 'logo_smart_trader.svg',
+                on_mobile: true,
             },
         };
 
@@ -122,6 +154,9 @@ const Header = (() => {
             platform_text_container.appendChild(platform_desc);
             platform_div.appendChild(platform_text_container);
 
+            if (platform.on_mobile) {
+                mobile_platform_list.appendChild(platform_div);
+            }
             platform_list.appendChild(platform_div);
         });
     };
@@ -140,23 +175,40 @@ const Header = (() => {
             el.addEventListener('click', logoutOnClick);
         });
 
+        const mobile_menu_overlay = getElementById('mobile__container');
+        const mobile_menu         = getElementById('mobile__menu');
+        const hamburger_menu      = getElementById('header__hamburger');
+        const showMobileMenu = (shouldShow) => {
+            if (shouldShow) {
+                mobile_menu_overlay.classList.add('mobile__container--active');
+            } else {
+                mobile_menu_overlay.classList.remove('mobile__container--active');
+            }
+        };
+
+        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
+        applyToAllElements('#btn__close', (el) => {
+            el.addEventListener('click', () => showMobileMenu(false));
+        });
+
         // Account Switcher Event
-        const acc_switcher = getElementById('acc_switcher');
-        const account_switcher_dropdown = getElementById('account__switcher');
-        const acc_expand = getElementById('header__acc-expand');
-        const showAccountSwitcher = (should_open) => {
+        const acc_switcher              = getElementById('acc_switcher');
+        const account_switcher          = getElementById('account__switcher');
+        const account_switcher_dropdown = getElementById('account__switcher-dropdown');
+        const acc_expand                = getElementById('header__acc-expand');
+        const showAccountSwitcher       = (should_open) => {
             if (should_open) {
-                account_switcher_dropdown.classList.add('account__switcher--show');
+                account_switcher_dropdown.classList.add('account__switcher-dropdown--show');
                 acc_expand.classList.add('rotated');
             } else {
-                account_switcher_dropdown.classList.remove('account__switcher--show');
+                account_switcher_dropdown.classList.remove('account__switcher-dropdown--show');
                 acc_expand.classList.remove('rotated');
             }
         };
 
         acc_switcher.addEventListener('click', (event) => {
             if (!account_switcher_dropdown.contains(event.target)) {
-                if (account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                if (account_switcher_dropdown.classList.contains('account__switcher-dropdown--show')) {
                     showAccountSwitcher(false);
                 } else {
                     showAccountSwitcher(true);
@@ -168,12 +220,19 @@ const Header = (() => {
             }
         });
 
+        // Mobile account switcher click outside
+        account_switcher_dropdown.addEventListener('click', (event) => {
+            if (!account_switcher.contains(event.target)) {
+                showAccountSwitcher(false);
+            }
+        });
+
         // Platform Switcher Event
         const platform_switcher_arrow = getElementById('platform__switcher-expand');
-        const platform_switcher = getElementById('platform__switcher');
-        const platform_dropdown = getElementById('platform__dropdown');
+        const platform_switcher       = getElementById('platform__switcher');
+        const platform_dropdown       = getElementById('platform__dropdown');
         const body = document.body;
-        const showPlatformSwitcher = (should_open) => {
+        const showPlatformSwitcher    = (should_open) => {
             if (should_open) {
                 platform_dropdown.classList.add('platform__dropdown--show');
                 platform_switcher_arrow.classList.add('rotated');
@@ -199,6 +258,51 @@ const Header = (() => {
             }
         });
 
+        // Mobile Platform Switcher Event
+        const mobile_platform_switcher_current  = getElementById('mobile__platform-switcher-current');
+        const mobile_platform_switcher          = getElementById('mobile__platform-switcher-expand');
+        const mobile_platform_switcher_dropdown = getElementById('mobile__platform-switcher-dropdown');
+        const showMobilePlatformSwitcher        = (shouldShow) => {
+            if (shouldShow) {
+                mobile_platform_switcher.classList.add('rotated');
+                mobile_platform_switcher_dropdown.classList.add('mobile__platform-switcher-dropdown--show');
+            } else {
+                mobile_platform_switcher.classList.remove('rotated');
+                mobile_platform_switcher_dropdown.classList.remove('mobile__platform-switcher-dropdown--show');
+            }
+        };
+
+        mobile_platform_switcher_current.addEventListener('click', () => {
+            if (mobile_platform_switcher_dropdown.classList.contains('mobile__platform-switcher-dropdown--show')) {
+                showMobilePlatformSwitcher(false);
+            } else {
+                showMobilePlatformSwitcher(true);
+            }
+        });
+
+        // Mobile reports menu
+        const report_menu       = getElementById('mobile__platform-switcher-item-reports');
+        const menu              = getElementById('mobile_menu-content');
+        const submenu           = getElementById('mobile__menu-content-submenu');
+        const back              = getElementById('mobile__menu-content-submenu-header');
+        const showMobileSubmenu = (shouldShow) => {
+            if (shouldShow) {
+                submenu.classList.add('mobile__menu-content-submenu--active');
+                menu.classList.remove('mobile__menu-content--active');
+            } else {
+                submenu.classList.remove('mobile__menu-content-submenu--active');
+                menu.classList.add('mobile__menu-content--active');
+            }
+        };
+
+        report_menu.addEventListener('click', () => {
+            showMobileSubmenu(true);
+        });
+
+        back.addEventListener('click', () => {
+            showMobileSubmenu(false);
+        });
+
         // OnClickOutisde Event Handle
         document.addEventListener('click', (event) => {
             // Platform Switcher
@@ -211,8 +315,14 @@ const Header = (() => {
             // Account Switcher
             if (!account_switcher_dropdown.contains(event.target)
                 && !acc_switcher.contains(event.target)
-                && account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                && account_switcher_dropdown.classList.contains('account__switcher-dropdown--show')) {
                 showAccountSwitcher(false);
+            }
+
+            // Mobile Menu
+            if (!mobile_menu.contains(event.target) && !hamburger_menu.contains(event.target) && mobile_menu_overlay.classList.contains('mobile__container--active')) {
+                showMobilePlatformSwitcher(false);
+                showMobileMenu(false);
             }
         });
 
