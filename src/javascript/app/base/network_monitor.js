@@ -1,20 +1,13 @@
 const Header              = require('./header');
 const BinarySocketGeneral = require('./socket_general');
 const NetworkMonitorBase  = require('../../_common/base/network_monitor_base');
-const getElementById      = require('../../_common/common_functions').getElementById;
 const applyToAllElements  = require('../../_common/utility').applyToAllElements;
 const localize            = require('../../_common/localize').localize;
 
 const NetworkMonitor = (() => {
     const connection_error_code = 'CONNECTION_ERROR';
 
-    let el_status,
-        el_tooltip;
-
     const init = () => {
-        el_status  = getElementById('network_status');
-        el_tooltip = el_status.parentNode;
-
         NetworkMonitorBase.init(BinarySocketGeneral, updateUI);
     };
 
