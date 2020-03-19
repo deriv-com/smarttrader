@@ -853,6 +853,19 @@ body .mobile {
             > img {
                 margin: 0;
             }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px;
+                font-size: $FONT_SIZE_S;
+            }
+            &-container {
+                width: 100vw;
+                height: 100vh;
+                top: -10px;
+                left: 24px;
+            }
         }
         .account {
             &__switcher {

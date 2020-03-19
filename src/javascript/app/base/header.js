@@ -59,7 +59,7 @@ const Header = (() => {
         const cashier   = getElementById('cashier_icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
-        const close     = getElementById('btn__close');
+        const empty     = getElementById('header__notification-empty-img');
         const bell      = getElementById('header__notification-icon');
         const trade     = getElementById('mobile__platform-switcher-icon-trade');
         const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
@@ -88,12 +88,16 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         });
 
+        applyToAllElements('.btn__close', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+        });
+
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
         bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
-        close.src      = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
@@ -165,10 +169,6 @@ const Header = (() => {
     };
 
     const bindClick = () => {
-        // const logo = getElementById('logo');
-        // logo.removeEventListener('click', logoOnClick);
-        // logo.addEventListener('click', logoOnClick);
-
         const btn_login = getElementById('btn__login');
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
@@ -178,21 +178,23 @@ const Header = (() => {
             el.addEventListener('click', logoutOnClick);
         });
 
+        // Mobile menu
         const mobile_menu_overlay = getElementById('mobile__container');
         const mobile_menu         = getElementById('mobile__menu');
+        const mobile_menu_close   = getElementById('mobile__menu-close');
         const hamburger_menu      = getElementById('header__hamburger');
         const mobile_menu_active  = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
-            if (shouldShow) {
-                mobile_menu_overlay.classList.add(mobile_menu_active);
-            } else {
-                mobile_menu_overlay.classList.remove(mobile_menu_active);
-            }
+            mobile_menu_overlay.toggleClass(mobile_menu_active, shouldShow);
         };
 
+        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
+        mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
+
         // Notificatiopn Event
-        const notification_bell      = getElementById('header__notification');
+        const notification_bell      = getElementById('header__notification-icon');
         const notification_container = getElementById('header__notification-container');
+        const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
         const showNotification       = (should_open) => {
             notification_container.toggleClass(notification_active, should_open);
@@ -206,11 +208,7 @@ const Header = (() => {
                 showNotification(true);
             }
         });
-
-        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
-        applyToAllElements('#btn__close', (el) => {
-            el.addEventListener('click', () => showMobileMenu(false));
-        });
+        notification_close.addEventListener('click', () => showNotification(false));
 
         // Platform Switcher Event
         const platform_switcher_arrow  = getElementById('platform__switcher-expand');

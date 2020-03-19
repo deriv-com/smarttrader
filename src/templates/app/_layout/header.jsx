@@ -62,7 +62,7 @@ const MobileMenu = () => (
     <div id='mobile__container' className='mobile__container mobile-show'>
         <div id='mobile__menu' className='mobile__menu'>
             <div className='mobile__menu-header'>
-                <img id='btn__close' />
+                <img id='mobile__menu-close' className='btn__close' />
                 <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
             </div>
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
@@ -153,7 +153,10 @@ const Header = () => (
                     <img id='header__notification-icon' className='header__icon-button' />
                     <div id='header__notification-count' className='header__notification-count' />
                     <div id='header__notification-container' className='header__notification-container' >
-                        <div className='header__notification-header'>{it.L('Notifications')}</div>
+                        <div className='header__notification-header'>
+                            <span>{it.L('Notifications')}</span>
+                            <img id='header__notification-close' className='btn__close mobile-show' />
+                        </div>
                         <div id='header__notification-content' className='header__notification-content'>
                             <div id='header__notification-empty' className='header__notification-empty'>
                                 <img id='header__notification-empty-img' />
