@@ -185,7 +185,13 @@ const Header = (() => {
         const hamburger_menu      = getElementById('header__hamburger');
         const mobile_menu_active  = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
-            mobile_menu_overlay.toggleClass(mobile_menu_active, shouldShow);
+            if (shouldShow) {
+                mobile_menu_overlay.classList.add(mobile_menu_active);
+                document.body.classList.add('stop-scrolling');
+            } else {
+                mobile_menu_overlay.classList.remove(mobile_menu_active);
+                document.body.classList.remove('stop-scrolling');
+            }
         };
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
@@ -215,17 +221,16 @@ const Header = (() => {
         const platform_switcher        = getElementById('platform__switcher');
         const platform_dropdown        = getElementById('platform__dropdown');
         const platform__list           = getElementById('platform__list');
-        const body                     = document.body;
         const platform_dropdown_active = 'platform__dropdown--show';
         const showPlatformSwitcher     = (should_open) => {
             if (should_open) {
                 platform_dropdown.classList.add(platform_dropdown_active);
                 platform_switcher_arrow.classList.add('rotated');
-                body.classList.add('stop-scrolling');
+                document.body.classList.add('stop-scrolling');
             } else {
                 platform_dropdown.classList.remove(platform_dropdown_active);
                 platform_switcher_arrow.classList.remove('rotated');
-                body.classList.remove('stop-scrolling');
+                document.body.classList.remove('stop-scrolling');
             }
         };
 
