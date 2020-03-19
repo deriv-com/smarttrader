@@ -8,7 +8,7 @@ const isAuthenticationAllowed  = require('../../_common/base/client_base').isAut
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
-const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
+// const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
@@ -22,6 +22,7 @@ const template                 = require('../../_common/utility').template;
 const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
+    const notifications = [];
     let is_full_screen = false;
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
@@ -54,12 +55,18 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const logo    = getElementById('logo');
-        const add     = getElementById('add_icon');
-        const reports = getElementById('reports_icon');
-        const cashier = getElementById('cashier_icon');
-        const account = getElementById('header__account-settings');
-        const logout  = getElementById('account__switcher-logout-icon');
+        const add       = getElementById('add_icon');
+        const cashier   = getElementById('cashier_icon');
+        const account   = getElementById('header__account-settings');
+        const menu      = getElementById('header__hamburger');
+        const close     = getElementById('btn__close');
+        const bell      = getElementById('header__notification-icon');
+        const trade     = getElementById('mobile__platform-switcher-icon-trade');
+        const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
+        const back      = getElementById('mobile__menu-content-submenu-icon-back');
+        const open      = getElementById('mobile__menu-content-submenu-icon-open');
+        const profit    = getElementById('mobile__menu-content-submenu-icon-profit');
+        const statement = getElementById('mobile__menu-content-submenu-icon-statement');
 
         applyToAllElements('.header__expand', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
@@ -69,43 +76,71 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
         });
 
-        logo.src    = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
-        reports.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
-        cashier.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
-        account.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
-        logout.src  = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
-        add.src     = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        applyToAllElements('.header__logo', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
+        });
+
+        applyToAllElements('.logout-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+        });
+
+        applyToAllElements('.reports-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
+        });
+
+        cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+        account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+        add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
+        menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
+        close.src      = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+        trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
+        arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
+        back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
+        open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
+        profit.src     = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
+        statement.src  = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+
     };
 
     const bindPlatform = () => {
+        // Web
         const platform_list = getElementById('platform__list');
+
+        // Mobile
+        const mobile_platform_list = getElementById('mobile__platform-switcher-dropdown');
         if (platform_list.hasChildNodes()) {
             return;
         }
         const platforms = {
             dtrader: {
-                name: 'DTrader',
-                desc: 'A whole new trading experience on a powerful yet easy to use platform.',
-                link: 'https://deriv.app',
-                icon: 'ic-brand-dtrader.svg',
+                name     : 'DTrader',
+                desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
+                link     : 'https://deriv.app',
+                icon     : 'ic-brand-dtrader.svg',
+                on_mobile: true,
             },
             dbot: {
-                name: 'DBot',
-                desc: 'Automated trading at your fingertips. No coding needed.',
-                link: 'https://deriv.app/bot',
-                icon: 'ic-brand-dbot.svg',
+                name     : 'DBot',
+                desc     : 'Automated trading at your fingertips. No coding needed.',
+                link     : 'https://deriv.app/bot',
+                icon     : 'ic-brand-dbot.svg',
+                on_mobile: false,
             },
             dmt5: {
-                name: 'DMT5',
-                desc: 'The platform of choice for professionals worldwide.',
-                link: 'https://deriv.app/mt5',
-                icon: 'ic-brand-dmt5.svg',
+                name     : 'DMT5',
+                desc     : 'The platform of choice for professionals worldwide.',
+                link     : 'https://deriv.app/mt5',
+                icon     : 'ic-brand-dmt5.svg',
+                on_mobile: true,
+
             },
             smarttrader: {
-                name: 'SmartTrader',
-                desc: 'Trade the world\'s markets with a simple and familiar platform.',
-                link: '#',
-                icon: 'logo_smart_trader.svg',
+                name     : 'SmartTrader',
+                desc     : 'Trade the world\'s markets with a simple and familiar platform.',
+                link     : '#',
+                icon     : 'logo_smart_trader.svg',
+                on_mobile: true,
             },
         };
 
@@ -122,6 +157,9 @@ const Header = (() => {
             platform_text_container.appendChild(platform_desc);
             platform_div.appendChild(platform_text_container);
 
+            if (platform.on_mobile) {
+                mobile_platform_list.appendChild(platform_div.cloneNode(true));
+            }
             platform_list.appendChild(platform_div);
         });
     };
@@ -135,53 +173,62 @@ const Header = (() => {
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
-        applyToAllElements('#logout', (el) => {
+        applyToAllElements('.logout', (el) => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
 
-        // Account Switcher Event
-        const acc_switcher = getElementById('acc_switcher');
-        const account_switcher_dropdown = getElementById('account__switcher');
-        const acc_expand = getElementById('header__acc-expand');
-        const showAccountSwitcher = (should_open) => {
-            if (should_open) {
-                account_switcher_dropdown.classList.add('account__switcher--show');
-                acc_expand.classList.add('rotated');
+        const mobile_menu_overlay = getElementById('mobile__container');
+        const mobile_menu         = getElementById('mobile__menu');
+        const hamburger_menu      = getElementById('header__hamburger');
+        const mobile_menu_active  = 'mobile__container--active';
+        const showMobileMenu = (shouldShow) => {
+            if (shouldShow) {
+                mobile_menu_overlay.classList.add(mobile_menu_active);
+                document.body.classList.add('stop-scrolling');
             } else {
-                account_switcher_dropdown.classList.remove('account__switcher--show');
-                acc_expand.classList.remove('rotated');
+                mobile_menu_overlay.classList.remove(mobile_menu_active);
+                document.body.classList.remove('stop-scrolling');
             }
         };
 
-        acc_switcher.addEventListener('click', (event) => {
-            if (!account_switcher_dropdown.contains(event.target)) {
-                if (account_switcher_dropdown.classList.contains('account__switcher--show')) {
-                    showAccountSwitcher(false);
-                } else {
-                    showAccountSwitcher(true);
-                }
+        // Notificatiopn Event
+        const notification_bell      = getElementById('header__notification');
+        const notification_container = getElementById('header__notification-container');
+        const notification_active    = 'header__notification-container--show';
+        const showNotification       = (should_open) => {
+            notification_container.toggleClass(notification_active, should_open);
+        };
 
-                if (platform_dropdown.classList.contains('platform__dropdown--show')) {
-                    showPlatformSwitcher(false);
-                }
+        notification_bell.addEventListener('click', (event) => {
+            if (notification_container.classList.contains(notification_active)
+                && !notification_container.contains(event.target)) {
+                showNotification(false);
+            } else {
+                showNotification(true);
             }
         });
 
+        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
+        applyToAllElements('#btn__close', (el) => {
+            el.addEventListener('click', () => showMobileMenu(false));
+        });
+
         // Platform Switcher Event
-        const platform_switcher_arrow = getElementById('platform__switcher-expand');
-        const platform_switcher = getElementById('platform__switcher');
-        const platform_dropdown = getElementById('platform__dropdown');
-        const body = document.body;
-        const showPlatformSwitcher = (should_open) => {
+        const platform_switcher_arrow  = getElementById('platform__switcher-expand');
+        const platform_switcher        = getElementById('platform__switcher');
+        const platform_dropdown        = getElementById('platform__dropdown');
+        const platform__list           = getElementById('platform__list');
+        const platform_dropdown_active = 'platform__dropdown--show';
+        const showPlatformSwitcher     = (should_open) => {
             if (should_open) {
-                platform_dropdown.classList.add('platform__dropdown--show');
+                platform_dropdown.classList.add(platform_dropdown_active);
                 platform_switcher_arrow.classList.add('rotated');
-                body.classList.add('stop-scrolling');
+                document.body.classList.add('stop-scrolling');
             } else {
-                platform_dropdown.classList.remove('platform__dropdown--show');
+                platform_dropdown.classList.remove(platform_dropdown_active);
                 platform_switcher_arrow.classList.remove('rotated');
-                body.classList.remove('stop-scrolling');
+                document.body.classList.remove('stop-scrolling');
             }
         };
 
@@ -192,27 +239,127 @@ const Header = (() => {
         });
 
         platform_switcher.addEventListener('click', () => {
-            if (platform_dropdown.classList.contains('platform__dropdown--show')) {
+            if (platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             } else {
                 showPlatformSwitcher(true);
             }
         });
 
+        // Mobile Platform Switcher Event
+        const mobile_platform_switcher_current  = getElementById('mobile__platform-switcher-current');
+        const mobile_platform_switcher          = getElementById('mobile__platform-switcher-expand');
+        const mobile_platform_switcher_dropdown = getElementById('mobile__platform-switcher-dropdown');
+        const mobile_platform_switcher_active   = 'mobile__platform-switcher-dropdown--show';
+        const showMobilePlatformSwitcher        = (shouldShow) => {
+            if (shouldShow) {
+                mobile_platform_switcher.classList.add('rotated');
+                mobile_platform_switcher_dropdown.classList.add(mobile_platform_switcher_active);
+            } else {
+                mobile_platform_switcher.classList.remove('rotated');
+                mobile_platform_switcher_dropdown.classList.remove(mobile_platform_switcher_active);
+            }
+        };
+
+        mobile_platform_switcher_current.addEventListener('click', () => {
+            if (mobile_platform_switcher_dropdown.classList.contains(mobile_platform_switcher_active)) {
+                showMobilePlatformSwitcher(false);
+            } else {
+                showMobilePlatformSwitcher(true);
+            }
+        });
+
+        // Account Switcher Event
+        const acc_switcher              = getElementById('acc_switcher');
+        const account_switcher          = getElementById('account__switcher');
+        const account_switcher_dropdown = getElementById('account__switcher-dropdown');
+        const acc_expand                = getElementById('header__acc-expand');
+        const account_switcher_active   = 'account__switcher-dropdown--show';
+        const showAccountSwitcher       = (should_open) => {
+            if (should_open) {
+                account_switcher_dropdown.classList.add(account_switcher_active);
+                acc_expand.classList.add('rotated');
+            } else {
+                account_switcher_dropdown.classList.remove(account_switcher_active);
+                acc_expand.classList.remove('rotated');
+            }
+        };
+
+        acc_switcher.addEventListener('click', (event) => {
+            if (!account_switcher_dropdown.contains(event.target)) {
+                if (account_switcher_dropdown.classList.contains(account_switcher_active)) {
+                    showAccountSwitcher(false);
+                } else {
+                    showAccountSwitcher(true);
+                }
+
+                if (platform_dropdown.classList.contains(platform_dropdown_active)) {
+                    showPlatformSwitcher(false);
+                }
+            }
+        });
+
+        // Mobile account switcher click outside
+        account_switcher_dropdown.addEventListener('click', (event) => {
+            if (!account_switcher.contains(event.target)) {
+                showAccountSwitcher(false);
+            }
+        });
+
+        // Mobile reports menu
+        const report_menu       = getElementById('mobile__platform-switcher-item-reports');
+        const menu              = getElementById('mobile_menu-content');
+        const submenu           = getElementById('mobile__menu-content-submenu');
+        const back              = getElementById('mobile__menu-content-submenu-header');
+        const submenu_active    = 'mobile__menu-content-submenu--active';
+        const menu_active       = 'mobile__menu-content--active';
+        const showMobileSubmenu = (shouldShow) => {
+            if (shouldShow) {
+                submenu.classList.add(submenu_active);
+                menu.classList.remove(menu_active);
+            } else {
+                submenu.classList.remove(submenu_active);
+                menu.classList.add(menu_active);
+            }
+        };
+
+        report_menu.addEventListener('click', () => {
+            showMobileSubmenu(true);
+        });
+
+        back.addEventListener('click', () => {
+            showMobileSubmenu(false);
+        });
+
         // OnClickOutisde Event Handle
         document.addEventListener('click', (event) => {
             // Platform Switcher
-            const header = getElementById('deriv__header');
-            const platform_lists = getElementById('platform__list');
-            if (!header.contains(event.target) && !platform_lists.contains(event.target) && platform_dropdown.classList.contains('platform__dropdown--show')) {
+            if (!platform_switcher.contains(event.target)
+                && !platform__list.contains(event.target)
+                && platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             }
 
             // Account Switcher
             if (!account_switcher_dropdown.contains(event.target)
                 && !acc_switcher.contains(event.target)
-                && account_switcher_dropdown.classList.contains('account__switcher--show')) {
+                && account_switcher_dropdown.classList.contains(account_switcher_active)) {
                 showAccountSwitcher(false);
+            }
+
+            // Mobile Menu
+            if (!mobile_menu.contains(event.target)
+                && !hamburger_menu.contains(event.target)
+                && mobile_menu_overlay.classList.contains(mobile_menu_active)) {
+                showMobilePlatformSwitcher(false);
+                showMobileMenu(false);
+            }
+
+            // Notification
+            if (!notification_container.contains(event.target)
+                && !notification_bell.contains(event.target)
+                && notification_container.classList.contains(notification_active)) {
+                showNotification(false);
             }
         });
 
@@ -448,7 +595,7 @@ const Header = (() => {
     //     applyToAllElements('li', (el) => { elementTextContent(el, localized_text); }, '', user_accounts);
     // };
 
-    const displayNotification = (/* message, is_error = false, msg_code = '' */) => {
+    const displayNotification = ({ key, type, title, message, button_text, button_link }) => {
         // const msg_notification = getElementById('msg_notification');
         // const platform_switcher = getElementById('platform__dropdown');
         // if (msg_notification.getAttribute('data-code') === 'STORAGE_NOT_SUPPORTED') return;
@@ -465,26 +612,79 @@ const Header = (() => {
 
         // // Removed once notification feature is implemented
         // platform_switcher.style.top = `${51 + 26}px`;
+
+        if (notifications.some(notification => notification === key)) return;
+
+        const notification_content = getElementById('header__notification-content');
+        const notification_item    = createElement('div', { class: 'header__notification-content-item', 'notification-key': key });
+        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
+        const notification_message = createElement('div', { class: 'header__notification-content-message' });
+        const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
+        const notification_text    = createElement('div', { html: message, class: 'header__notification-content-desc' });
+
+        notification_message.appendChild(notification_title);
+        notification_message.appendChild(notification_text);
+        notification_item.appendChild(notification_icon);
+        if (button_text && button_link) {
+            const notification_button  = createElement('a', { text: button_text, class: 'btn btn--secondary header__notification-btn', href: button_link });
+            notification_message.appendChild(notification_button);
+        }
+        notification_item.appendChild(notification_message);
+        notification_content.appendChild(notification_item);
+        notifications.push(key);
+        updateNotificationCount();
     };
 
-    const hideNotification = (msg_code) => {
-        const msg_notification = getElementById('msg_notification');
-        const platform_switcher = getElementById('platform__dropdown');
-        if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
-            msg_code && msg_notification.getAttribute('data-code') !== msg_code) {
-            return;
-        }
+    const hideNotification = (key) => {
+        // const msg_notification = getElementById('msg_notification');
+        // const platform_switcher = getElementById('platform__dropdown');
+        // if (/^(STORAGE_NOT_SUPPORTED|MFSA_MESSAGE)$/.test(msg_notification.getAttribute('data-code')) ||
+        //     msg_code && msg_notification.getAttribute('data-code') !== msg_code) {
+        //     return;
+        // }
 
-        if (msg_notification.offsetParent) {
-            msg_notification.classList.remove('error');
-            $(msg_notification).slideUp(500, () => {
-                elementInnerHtml(msg_notification, '');
-                msg_notification.removeAttribute('data-message data-code');
-            });
-        }
+        // if (msg_notification.offsetParent) {
+        //     msg_notification.classList.remove('error');
+        //     $(msg_notification).slideUp(500, () => {
+        //         elementInnerHtml(msg_notification, '');
+        //         msg_notification.removeAttribute('data-message data-code');
+        //     });
+        // }
 
-        // Removed once notification feature is implemented
-        platform_switcher.style.top = '51px';
+        // // Removed once notification feature is implemented
+        // platform_switcher.style.top = '51px';
+
+        if (!notifications.some(notification => notification === key)) return;
+
+        notifications.splice(notifications.indexOf(key), 1);
+
+        const removed_item = document.querySelector(`div[notification-key="${key}"]`);
+        applyToAllElements('#header__notification-content', (el) => {
+            el.removeChild(removed_item);
+        });
+        updateNotificationCount();
+    };
+
+    const updateNotificationCount = () => {
+        applyToAllElements('#header__notification-count', (el) => {
+            const notification_length = notifications.length;
+            el.html(notification_length);
+            if (notifications.length) {
+                el.style.display = 'flex';
+                el.html(notifications.length);
+            } else {
+                el.style.display = 'none';
+                
+            }
+        });
+
+        applyToAllElements('#header__notification-empty', (el) => {
+            if (notifications.length) {
+                el.style.display = 'none';
+            } else {
+                el.style.display = 'block';
+            }
+        });
     };
 
     const displayAccountStatus = () => {
@@ -520,7 +720,7 @@ const Header = (() => {
                 return required_fields.some(field => !get_settings[field]);
             };
 
-            const buildMessage = (string, path) => template(string, [`<a href="${path}">`, '</a>']);
+            const buildMessage = (string, path) => template(string, [`<a class="header__notification-link" href="${path}">`, '</a>']);
             const buildSpecificMessage = (string, additional) => template(string, [...additional]);
             const hasStatus = (string) => status &&
                 (status.findIndex(s => s === string) < 0 ? Boolean(false) : Boolean(true));
@@ -529,11 +729,39 @@ const Header = (() => {
                 if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
                     return false;
                 }
-                const verification_length = needs_verification.length;
+                const verification_length = needs_verification.length || 0;
                 let result = false;
 
                 switch (string) {
-                    case 'unsubmitted': {
+                    case 'authenticate': {
+                        result = verification_length && document.status === 'none' && identity.status === 'none';
+                        break;
+                    }
+                    case 'needs_poi': {
+                        result = verification_length
+                            && needs_verification.includes('identity')
+                            && !needs_verification.includes('document')
+                            && identity.status !== 'rejected'
+                            && identity.status !== 'expired';
+                        break;
+                    }
+                    case 'needs_poa': {
+                        result = verification_length
+                            && needs_verification.includes('document')
+                            && !needs_verification.includes('identity')
+                            && document.status !== 'rejected'
+                            && document.status !== 'expired';
+                        break;
+                    }
+                    case 'poi_expired': {
+                        result = identity.status === 'expired';
+                        break;
+                    }
+                    case 'poa_expired': {
+                        result = document.status === 'expired';
+                        break;
+                    }
+                    /* case 'unsubmitted': {
                         result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
                         break;
                     }
@@ -568,7 +796,7 @@ const Header = (() => {
                     case 'document': {
                         result = verification_length && document.status === 'none';
                         break;
-                    }
+                    } */
                     default:
                         break;
                 }
@@ -576,37 +804,69 @@ const Header = (() => {
                 return result;
             };
 
-            const has_no_tnc_limit = is_svg;
+            // const has_no_tnc_limit = is_svg;
+
+            const formatDate = (date) => {
+                const date_obj = new Date(date * 1000);
+                return `${String(date_obj.getDate()).padStart(2, '0')}/${String(date_obj.getMonth() + 1).padStart(2, '0')}/${date_obj.getFullYear()}`;
+            };
 
             const messages = {
-                cashier_locked       : () => localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'),
-                currency             : () => buildMessage(localizeKeepPlaceholders('Please set the [_1]currency[_2] of your account.'),                                                                                    'https://deriv.app'), // TODO: redirect to set currency modal when link is available
-                unsubmitted          : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity and proof of address[_2].'),                                                                  'https://deriv.app/account/proof-of-identity'),
-                expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
-                expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
-                rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://deriv.app/account/proof-of-identity'),
-                rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
-                identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
-                document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
-                excluded_until       : () => buildMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'),                                                 'https://www.deriv.com/contact-us/'),
-                // financial_limit      : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'),                                                             'user/security/self_exclusionws'), // TODO: handle this when self exclusion is available
-                mt5_withdrawal_locked: () => localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'),
-                required_fields      : () => buildMessage(localizeKeepPlaceholders('Please complete your [_1]personal details[_2] before you proceed.'),                                                                   'https://deriv.app/account/personal-details'),
-                residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'https://deriv.app'),
-                risk                 : () => buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'),                                   'https://deriv.app/account/financial-assessment'),
-                tax                  : () => buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'),                                            'https://deriv.app/account/personal-details'),
-                unwelcome            : () => buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                    'https://www.deriv.com/contact-us/'),
-                withdrawal_locked    : () => localize('Withdrawals have been disabled on your account. Please check your email for more details.'),
-                tnc                  : () => buildMessage(has_no_tnc_limit
-                    ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
-                    : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'https://deriv.app'),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
+                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
+                authenticate         : () => ({ key: 'authenticate', title: localize('Authenticate'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                document_needs_action: () => ({ key: 'document_needs_action', title: localize('Authentication failed'), message: buildMessage(localizeKeepPlaceholders('[_1]Your Proof of Identity or Proof of Address[_2] did not meet our requirements. Please check your email for further instructions.'), 'https://deriv.app/account/proof-of-identity'), type: 'warning' }),
+                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                mf_retail            : () => ({ key: 'mf_retail', title: localize('Digital options trading disabled'), message: buildMessage(localizeKeepPlaceholders('Digital Options Trading has been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
+                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/financial-assessment'), type: 'warning' }),
+                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/personal-details'), type: 'danger' }),
+                tnc                  : () => ({ key: 'tnc', title: localize('Term & conditions updated'), message: buildMessage(localizeKeepPlaceholders('Please accept our [_1]updated Terms and Conditions[_2] to proceed.'), 'https://www.deriv.com/terms-and-conditions/'), type: 'warning' }),
+                required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
+                needs_poi            : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
+                needs_poa            : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
+                poi_expired          : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
+                poa_expired          : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
+                // residence            : () => ({ key: 'residence', title: localize('Country of residence'), message: buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'), type: 'danger' }),
+                // poa_rejected         : () => ({ key: 'poa_expired', title: localize('Proff of address'), message: localize('Your documents for proof of address is expired. Please submit again.'), type: 'danger'}),
+                // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
+                // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
+                // expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
+                // rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
+                // rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://deriv.app/account/proof-of-identity'),
+                // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
+                // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
+                // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
+                // tnc                  : () => buildMessage(has_no_tnc_limit
+                //     ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
+                //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'https://deriv.app'),
             };
 
             const validations = {
-                cashier_locked       : () => hasStatus('cashier_locked'),
                 currency             : () => !Client.get('currency'),
+                excluded_until       : () => Client.get('excluded_until'),
+                authenticate         : () => hasVerification('authenticate'),
+                cashier_locked       : () => hasStatus('cashier_locked'),
+                withdrawal_locked    : () => hasStatus('withdrawal_locked'),
+                mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
+                document_needs_action: () => hasStatus('document_needs_action'),
+                unwelcome            : () => hasStatus('unwelcome'),
+                mf_retail            : () => Client.get('landing_company_shortcode') === 'maltainvest' && hasStatus('professional'),
+                financial_limit      : () => hasStatus('max_turnover_limit_not_set'),
+                risk                 : () => Client.getRiskAssessment(),
+                tax                  : () => Client.shouldCompleteTax(),
+                tnc                  : () => Client.shouldAcceptTnc(),
+                required_fields      : () => hasMissingRequiredField(),
+                needs_poi            : () => hasVerification('needs_poi'),
+                needs_poa            : () => hasVerification('needs_poa'),
+                poi_expired          : () => hasVerification('poi_expired'),
+                poa_expired          : () => hasVerification('poa_expired'),
+                /* residence            : () => !Client.get('residence'),
+                poa_rejected         : () => hasVerification('poa_rejected'),
                 unsubmitted          : () => hasVerification('unsubmitted'),
                 expired              : () => hasVerification('expired'),
                 expired_identity     : () => hasVerification('expired_identity'),
@@ -616,31 +876,34 @@ const Header = (() => {
                 rejected_document    : () => hasVerification('rejected_document'),
                 identity             : () => hasVerification('identity'),
                 document             : () => hasVerification('document'),
-                excluded_until       : () => Client.get('excluded_until'),
-                financial_limit      : () => hasStatus('max_turnover_limit_not_set'),
-                mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
                 required_fields      : () => hasMissingRequiredField(),
                 residence            : () => !Client.get('residence'),
                 risk                 : () => Client.getRiskAssessment(),
                 tax                  : () => Client.shouldCompleteTax(),
-                tnc                  : () => Client.shouldAcceptTnc(),
-                unwelcome            : () => hasStatus('unwelcome'),
-                withdrawal_locked    : () => hasStatus('withdrawal_locked'),
+                tnc                  : () => Client.shouldAcceptTnc(), */
             };
 
             // real account checks in order
             const check_statuses_real = [
-                'excluded_until',
-                'tnc',
-                'required_fields',
-                'financial_limit',
-                'risk',
-                'tax',
                 'currency',
+                'excluded_until',
+                'authenticate',
                 'cashier_locked',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',
+                'document_needs_action',
                 'unwelcome',
+                'mf_retail',
+                'financial_limit',
+                'risk',
+                'tax',
+                'tnc',
+                'required_fields',
+                'needs_poi',
+                'needs_poa',
+                'poi_expired',
+                'poa_expired',
+                /* 'poa_rejected',
                 'unsubmitted',
                 'expired',
                 'expired_identity',
@@ -649,17 +912,16 @@ const Header = (() => {
                 'rejected_identity',
                 'rejected_document',
                 'identity',
-                'document',
+                'document', */
             ];
 
-            const check_statuses_mf_mlt = [
+            /* const check_statuses_mf_mlt = [
                 'excluded_until',
                 'tnc',
                 'required_fields',
                 'financial_limit',
                 'risk',
                 'tax',
-                'currency',
                 'unsubmitted',
                 'expired',
                 'expired_identity',
@@ -673,37 +935,38 @@ const Header = (() => {
                 'cashier_locked',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',
-            ];
+                'authenticate',
+            ]; */
 
             // virtual checks
-            const check_statuses_virtual = [
-                'residence',
-            ];
+            // const check_statuses_virtual = [
+            //     'residence',
+            // ];
 
             const checkStatus = (check_statuses) => {
                 const notified = check_statuses.some((check_type) => {
                     if (validations[check_type]()) {
-                        displayNotification(messages[check_type](), false);
-                        return true;
+                        displayNotification(messages[check_type]());
+                        // return true;
                     }
-                    return false;
+                    // return false;
                 });
                 if (!notified) hideNotification();
             };
 
-            if (Client.get('is_virtual')) {
-                checkStatus(check_statuses_virtual);
-            } else {
+            if (!Client.get('is_virtual')) {
+            //     checkStatus(check_statuses_virtual);
+            // } else {
                 const el_account_status = createElement('span', { class: 'authenticated', 'data-balloon': localize('Account Authenticated'), 'data-balloon-pos': 'down' });
                 BinarySocket.wait('website_status', 'get_account_status', 'get_settings', 'balance').then(() => {
                     authentication = State.getResponse('get_account_status.authentication') || {};
                     get_account_status = State.getResponse('get_account_status') || {};
                     status             = get_account_status.status;
-                    if (Client.get('landing_company_shortcode') === 'maltainvest' || Client.get('landing_company_shortcode') === 'malta' || Client.get('landing_company_shortcode') === 'iom') {
+                    /* if (Client.get('landing_company_shortcode') === 'maltainvest' || Client.get('landing_company_shortcode') === 'malta' || Client.get('landing_company_shortcode') === 'iom') {
                         checkStatus(check_statuses_mf_mlt);
-                    } else {
-                        checkStatus(check_statuses_real);
-                    }
+                    /* } else { */
+                    checkStatus(check_statuses_real);
+                    // }
                     const is_fully_authenticated = hasStatus('authenticated') && !+get_account_status.prompt_client_to_authenticate;
                     $('.account-id')[is_fully_authenticated ? 'append' : 'remove'](el_account_status);
                 });
