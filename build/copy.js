@@ -6,7 +6,7 @@ module.exports = function (grunt) {
                 ...(global.is_release ? [] : [
                     { expand: true, cwd: 'scripts', src: ['CNAME'], dest: 'dist' },
                 ]),
-                { expand: true, cwd: 'src/root_filPes/_common',  src: ['**'], dest: 'dist' },
+                { expand: true, cwd: 'src/root_files/_common',  src: ['**'], dest: 'dist' },
                 { expand: true, cwd: 'src/images/common/logos', src: ['**'], dest: `${global.dist}/images/common/logos/` },
                 ...(grunt.option('cleanup') ? [
                     { expand: true, cwd: 'scripts', src: ['.gitlab-ci.yml'], dest: 'dist' },
