@@ -508,7 +508,7 @@ const Header = (() => {
         GTM.setLoginFlag('account_switch');
         Client.set('loginid', loginid);
         SocketCache.clear();
-        window.location.reload();
+        setTimeout(() => window.location.reload(), 0);
     };
 
     const upgradeMessageVisibility = () => {
