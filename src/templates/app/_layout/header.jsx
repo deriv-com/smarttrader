@@ -68,8 +68,10 @@ const MobileMenu = () => (
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
                 <div className='mobile__platform-switcher' >
                     <div id='mobile__platform-switcher-current' className='mobile__platform-switcher-current' >
-                        <img className='header__logo' />
-                        <div className='platform__switcher-header'>{it.L('SmartTrader')}</div>
+                        <div className='mobile__platform-switcher-container'>
+                            <img className='header__logo mobile__platform-switcher-logo' />
+                            <div className='mobile__platform-switcher-header platform__switcher-header'>{it.L('SmartTrader')}</div>
+                        </div>
                         <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
                     </div>
                     <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />

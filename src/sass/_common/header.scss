@@ -766,12 +766,25 @@ body .mobile {
     &__platform-switcher {
         height: 72px;
 
+        &-header {
+            font-size: $FONT_SIZE_L;
+        }
+        &-logo {
+            width: 42px;
+            height: 42px;
+        }
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &-current {
             height: 72px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             border-bottom: 1px solid var(--general-section-2);
             align-items: center;
+            padding: 0 32px;
             cursor: pointer;
         }
         &-dropdown {
