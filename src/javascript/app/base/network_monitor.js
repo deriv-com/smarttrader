@@ -5,7 +5,7 @@ const applyToAllElements  = require('../../_common/utility').applyToAllElements;
 const localize            = require('../../_common/localize').localize;
 
 const NetworkMonitor = (() => {
-    const connection_error_code = 'CONNECTION_ERROR';
+    const connection_error_code = 'you_are_offline';
 
     const init = () => {
         NetworkMonitorBase.init(BinarySocketGeneral, updateUI);
@@ -15,7 +15,7 @@ const NetworkMonitor = (() => {
         if (is_online) {
             Header.hideNotification(connection_error_code);
         } else {
-            Header.displayNotification(localize('Connection error: Please check your internet connection.'), true, connection_error_code);
+            Header.displayNotification({ key: connection_error_code, title: localize('You are offline'), message: localize('Check your conenction.'), type: 'danger' });
         }
 
         applyToAllElements('.network_status', (el) => {
