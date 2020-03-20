@@ -58,6 +58,70 @@ import React from 'react';
 //     </div>
 // );
 
+const MobileMenu = () => (
+    <div id='mobile__container' className='mobile__container mobile-show'>
+        <div id='mobile__menu' className='mobile__menu'>
+            <div className='mobile__menu-header'>
+                <img id='btn__close' />
+                <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
+            </div>
+            <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
+                <div className='mobile__platform-switcher' >
+                    <div id='mobile__platform-switcher-current' className='mobile__platform-switcher-current' >
+                        <div className='mobile__platform-switcher-container'>
+                            <img className='header__logo mobile__platform-switcher-logo' />
+                            <div className='mobile__platform-switcher-header platform__switcher-header'>{it.L('SmartTrader')}</div>
+                        </div>
+                        <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
+                    </div>
+                    <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />
+                </div>
+                <div className='mobile__platform-switcher-lists'>
+                    <div className='mobile__platform-switcher-item'>
+                        <img id='mobile__platform-switcher-icon-trade' className='mobile__platform-switcher-icon' />
+                        <div className='mobile__platform-switcher-text mobile__platform-switcher-text-bold'>{it.L('Trade')}</div>
+                    </div>
+                    <div id='mobile__platform-switcher-item-reports' className='mobile__platform-switcher-item'>
+                        <img className='mobile__platform-switcher-icon reports-icon' />
+                        <div className='mobile__platform-switcher-text'>{it.L('Reports')}</div>
+                        <img id='mobile__platform-switcher-icon-arrowright' className='mobile__platform-switcher-icon-right' />
+                    </div>
+                    <div className='mobile__platform-switcher-item logout'>
+                        <img className='mobile__platform-switcher-icon logout-icon' />
+                        <div className='mobile__platform-switcher-text'>{it.L('Log out')}</div>
+                    </div>
+                </div>
+            </div>
+            <div id='mobile__menu-content-submenu' className='mobile__menu-content-submenu mobile__menu-content'>
+                <div id='mobile__menu-content-submenu-header' className='mobile__menu-content-submenu-header mobile__platform-switcher-item'>
+                    <img id='mobile__menu-content-submenu-icon-back' className='mobile__menu-content-submenu-icon' />
+                    <div className='mobile__menu-content-submenu-header-text' >{it.L('Reports')}</div>
+                </div>
+                <div className='mobile__menu-content-submenu-lists'>
+                    <a href='https://deriv.app/reports/positions' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                        <img id='mobile__menu-content-submenu-icon-open' className='mobile__menu-content-submenu-icon' />
+                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Open positions')}</div>
+                    </a>
+                    <a href='https://deriv.app/reports/profit' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                        <img id='mobile__menu-content-submenu-icon-profit' className='mobile__menu-content-submenu-icon' />
+                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Profit table')}</div>
+                    </a>
+                    <a href='https://deriv.app/reports/statement' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                        <img id='mobile__menu-content-submenu-icon-statement' className='mobile__menu-content-submenu-icon' />
+                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Statements')}</div>
+                    </a>
+                </div>
+            </div>
+            <div className='mobile__menu-footer topbar'>
+                <span className='no-underline nowrap gmt-clock' />
+                <div className='no-underline' data-balloon-pos='up'>
+                    <div className='network_status' />
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
 const Header = () => (
     <div className='header'>
         <div id='platform__dropdown' className='platform__dropdown'>
@@ -65,15 +129,16 @@ const Header = () => (
         </div>
         <div id='deriv__header' className='header__menu-items'>
             <div className='header__menu-left'>
-                <div id='platform__switcher' className='header__menu-item platform__switcher'>
-                    <img id='logo' className='header__logo' />
+                <img id='header__hamburger' className='header__hamburger mobile-show' />
+                <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
+                    <img className='header__logo' />
                     <div className='platform__switcher-header'>{it.L('SmartTrader')}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
-                <div className='header__menu-item header__menu-links is-login'>
+                <div className='header__menu-item header__menu-links is-login mobile-hide'>
                     <a className='header__menu-links-item' href='https://deriv.app/reports/positions'>
                         <span>
-                            <img id='reports_icon' className='header__icon-text' />
+                            <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
                     </a>
@@ -86,66 +151,82 @@ const Header = () => (
                 </div>
             </div>
             <div className='header__menu-right is-login'>
-                <a href='https://deriv.app/account/personal-details'>
-                    <img className='header__menu-item header__icon-button' id='header__account-settings' />
-                </a>
-                <div className='header__divider' />
-                <div className='header__menu-item header__menu-acc' id='acc_switcher'>
-                    <div className='header__acc-info'>
-                        <img id='header__acc-icon' />
-                        <div id='header__acc-balance' className='header__acc-balance' />
-                        <img id='header__acc-expand' className='header__icon header__expand' />
-                    </div>
-                    <div className='header__acc-list account__switcher' id='account__switcher'>
-                        <div id='acc_tabs' className='account__switcher-container'>
-                            <ul className='account__switcher-tabs'>
-                                <li className='account__switcher-tab'><a href='#real_tab'>{it.L('Real')}</a></li>
-                                <li className='account__switcher-tab'><a href='#demo_tab'>{it.L('Demo')}</a></li>
-                            </ul>
-                            <div id='real_tab' className='account__switcher-tabs-content'>
-                                <div id='account__switcher-accordion-real' className='account__switcher-accordion'>
-                                    <h3>
-                                        <div className='account__switcher-accordion-header-text'>
-                                            <span>{it.L('Deriv Accounts')}</span>
-                                            <img className='header__expand-light' />
-                                        </div>
-                                    </h3>
-                                    <div className='account__switcher-list' id='account__switcher-real-list'>
-                                        <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-add' className='account__switcher-add'>
-                                            <img id='add_icon' className='account__switcher-add-icon' />
-                                            <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
-                                        </a>
-                                    </div>
-                                </div>
+                <div id='header__notification' className='header__notification header__menu-item'>
+                    <img id='header__notification-icon' className='header__icon-button' />
+                    <div id='header__notification-count' className='header__notification-count' />
+                    <div id='header__notification-container' className='header__notification-container' >
+                        <div className='header__notification-header'>{it.L('Notifications')}</div>
+                        <div id='header__notification-content' className='header__notification-content'>
+                            <div id='header__notification-empty' className='header__notification-empty'>
+                                <img id='header__notification-empty-img' />
+                                <div className='header__notification-empty-text'>{it.L('No notifications')}</div>
+                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notification')}</div>
                             </div>
-                            <div id='demo_tab' className='account__switcher-tabs-content'>
-                                <div id='account__switcher-accordion-demo' className='account__switcher-accordion'>
-                                    <h3>
-                                        <div className='account__switcher-accordion-header-text'>
-                                            <span>{it.L('Demo Accounts')}</span>
-                                            <img className='header__expand-light' />
-                                        </div>
-                                    </h3>
-                                    <div className='account__switcher-list' id='account__switcher-demo-list' />
-                                </div>
-                            </div>
-                        </div>
-                        <div className='account__switcher-seperator' />
-                        <div className='account__switcher-total'>
-                            <div className='account__switcher-total-balance'>
-                                <span className='account__switcher-total-balance-text'>{it.L('Total assets')}</span>
-                                <span id='account__switcher-total-balance-amount' className='account__switcher-total-balance-amount account__switcher-balance' />
-                            </div>
-                            <div className='account__switcher-total-text'>{it.L('Total assets in your Deriv accounts')}</div>
-                        </div>
-                        <div className='account__switcher-seperator' />
-                        <div id='logout' className='account__switcher-logout'>
-                            <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
-                            <img id='account__switcher-logout-icon' className='account__switcher-logout-icon' />
                         </div>
                     </div>
                 </div>
-                <a className='btn btn--primary header__deposit' href='https://deriv.app/cashier/deposit'>{it.L('Deposit')}</a>
+                <a className='header__account header__menu-item mobile-hide' href='https://deriv.app/account/personal-details'>
+                    <img className='header__icon-button' id='header__account-settings' />
+                </a>
+                <div className='header__divider mobile-hide' />
+                <div className='header__menu-item header__menu-acc' id='acc_switcher'>
+                    <div className='header__acc-info'>
+                        <img id='header__acc-icon' className='header__acc-icon' />
+                        <div id='header__acc-balance' className='header__acc-balance' />
+                        <img id='header__acc-expand' className='header__icon header__expand' />
+                    </div>
+                    <div id='account__switcher-dropdown' className='account__switcher-dropdown'>
+                        <div className='account__switcher' id='account__switcher'>
+                            <div id='acc_tabs' className='account__switcher-container'>
+                                <ul className='account__switcher-tabs'>
+                                    <li className='account__switcher-tab'><a href='#real_tab'>{it.L('Real')}</a></li>
+                                    <li className='account__switcher-tab'><a href='#demo_tab'>{it.L('Demo')}</a></li>
+                                </ul>
+                                <div id='real_tab' className='account__switcher-tabs-content'>
+                                    <div id='account__switcher-accordion-real' className='account__switcher-accordion'>
+                                        <h3>
+                                            <div className='account__switcher-accordion-header-text'>
+                                                <span>{it.L('Deriv Accounts')}</span>
+                                                <img className='header__expand-light' />
+                                            </div>
+                                        </h3>
+                                        <div className='account__switcher-list' id='account__switcher-real-list'>
+                                            <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-add' className='account__switcher-add'>
+                                                <img id='add_icon' className='account__switcher-add-icon' />
+                                                <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='demo_tab' className='account__switcher-tabs-content'>
+                                    <div id='account__switcher-accordion-demo' className='account__switcher-accordion'>
+                                        <h3>
+                                            <div className='account__switcher-accordion-header-text'>
+                                                <span>{it.L('Demo Accounts')}</span>
+                                                <img className='header__expand-light' />
+                                            </div>
+                                        </h3>
+                                        <div className='account__switcher-list' id='account__switcher-demo-list' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='account__switcher-seperator' />
+                            <div className='account__switcher-total'>
+                                <div className='account__switcher-total-balance'>
+                                    <span className='account__switcher-total-balance-text'>{it.L('Total assets')}</span>
+                                    <span id='account__switcher-total-balance-amount' className='account__switcher-total-balance-amount account__switcher-balance' />
+                                </div>
+                                <div className='account__switcher-total-text'>{it.L('Total assets in your Deriv accounts')}</div>
+                            </div>
+                            <div className='account__switcher-seperator' />
+                            <div className='account__switcher-logout logout'>
+                                <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
+                                <img className='account__switcher-logout-icon logout-icon' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a className='btn btn--primary header__deposit mobile-hide' href='https://deriv.app/cashier/deposit'>{it.L('Deposit')}</a>
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
@@ -154,6 +235,7 @@ const Header = () => (
                 </div>
             </div>
         </div>
+        <MobileMenu />
     </div>
 );
 
