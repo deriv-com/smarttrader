@@ -862,6 +862,7 @@ body .mobile {
         }
         &__notification {
             margin-right: 0;
+            position: unset;
 
             > img {
                 margin: 0;
@@ -876,8 +877,9 @@ body .mobile {
             &-container {
                 width: 100vw;
                 height: 100vh;
-                top: -10px;
-                left: 24px;
+                top: 0;
+                left: 0;
+                transform: unset;
             }
         }
         .account {
