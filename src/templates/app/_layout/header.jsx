@@ -152,8 +152,10 @@ const Header = () => (
             </div>
             <div className='header__menu-right is-login'>
                 <div id='header__notification' className='header__notification header__menu-item'>
-                    <img id='header__notification-icon' className='header__icon-button' />
-                    <div id='header__notification-count' className='header__notification-count' />
+                    <div id='header__notiifcation-icon-container' className='header__notification-icon-container'>
+                        <img id='header__notification-icon' className='header__notification-icon header__icon-button' />
+                        <div id='header__notification-count' className='header__notification-count' />
+                    </div>
                     <div id='header__notification-container' className='header__notification-container' >
                         <div className='header__notification-header'>
                             <span>{it.L('Notifications')}</span>

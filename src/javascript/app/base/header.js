@@ -198,7 +198,7 @@ const Header = (() => {
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
 
         // Notificatiopn Event
-        const notification_bell      = getElementById('header__notification-icon');
+        const notification_bell      = getElementById('header__notiifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
         const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
