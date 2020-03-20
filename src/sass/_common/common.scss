@@ -1025,6 +1025,7 @@ label + input {
     }
     &__large {
         @include deriv-btn('large', null);
+    }
 }
 
 .button-secondary {
