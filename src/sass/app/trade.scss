@@ -1740,10 +1740,15 @@ ul.bullet {
         #explanation_explain h3 {
             margin: 40px 0 20px;
         }
-        p strong {
-            font-weight: 600;
-            letter-spacing: 0.25px;
-            margin: 20px 0;
+        p {
+            margin: 16px 0;
+            line-height: 22px;
+
+            strong {
+                font-weight: 600;
+                letter-spacing: 0.25px;
+                margin: 20px 0;
+            }
         }
         img {
             margin: 40px 0 0;
