@@ -1020,6 +1020,9 @@ label + input {
     &--tertiary {
         @include deriv-btn(null, 'tertiary');
     }
+    &--link {
+        @include deriv-btn(null, 'link');
+    }
     &__small {
         @include deriv-btn('small', null);
     }

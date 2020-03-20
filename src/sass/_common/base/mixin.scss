@@ -119,23 +119,21 @@
         line-height: 1.5;
     }
 
+    &:disabled, &[disabled] {
+        opacity: 0.32;
+        cursor: not-allowed !important;
+    }
+
     // Types
     @if $type == 'primary' {
         background: var(--button-primary-default);
         color: var(--text-colored-background) !important;
 
-        &:focus {
-            background: var(--button-primary-hover);
-        }
-        &:hover {
+        &:focus, &:hover {
             background: var(--button-primary-hover);
         }
         &:active:not([disabled]) {
             background: var(--button-primary-default);
-        }
-        &:disabled, &[disabled] {
-            opacity: 0.32;
-            cursor: not-allowed !important;
         }
     }
     @if $type == 'secondary' {
@@ -149,36 +147,30 @@
             border: 1px solid var(--button-secondary-default);
         }
 
-        &:focus {
-            background: var(--button-secondary-hover);
-        }
-        &:hover {
+        &:focus, &:hover {
             background: var(--button-secondary-hover);
         }
         &:active:not([disabled]) {
             border: 1px solid var(--button-secondary-default);
-        }
-        &:disabled, &[disabled] {
-            opacity: 0.32;
-            cursor: not-allowed !important;
         }
     }
     @if $type == 'tertiary' {
         background: var(--button-tertiary-default);
         color: var(--brand-red-coral) !important;
 
-        &:focus {
-            background: var(--button-tertiary-hover);
-        }
-        &:hover {
+        &:focus, &:hover {
             background: var(--button-tertiary-hover);
         }
         &:active:not([disabled]) {
             background: var(--button-tertiary-default);
         }
-        &:disabled, &[disabled] {
-            opacity: 0.32;
-            cursor: not-allowed !important;
+    }
+    @if $type == 'link' {
+        background: transparent;
+        color: var(--brand-red-coral) !important;
+
+        &:focus:not([disabled]), &:hover:not([disabled]) {
+            text-decoration: underline !important;
         }
     }
     // Sizes

@@ -1563,8 +1563,9 @@ ul.bullet {
                             padding: 9px 13px;
                             // 40px is the fixed width of the last child to make it smaller
                             // divide by the remaining four tds
-                            // minus 26px padding (13px left and 13px right)
-                            width: calc(calc(calc(100% - 40px) / 4) - 26px);
+                            // minus 29px padding (13px left and 13px right) + 1px from parent due to parent td width.
+                            // width: calc(calc(calc(100% - 40px) / 4) - 29px);
+                            width: calc((100% - 40px) / 4 - 29px);
                             display: inline-block;
 
                             &:nth-child(3) > div {
