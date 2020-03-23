@@ -5,7 +5,6 @@ const showHidePulser           = require('../common/account_opening').showHidePu
 const updateTotal              = require('../pages/user/update_total');
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
-const getDerivAppOrigin        = require('../../_common/base/client_base').getDerivAppOrigin;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
@@ -113,27 +112,25 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-
-        const deriv_app_origin = getDerivAppOrigin();
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
                 desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
-                link     : `${deriv_app_origin}`,
+                link     : 'https://deriv.app',
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
             dbot: {
                 name     : 'DBot',
                 desc     : 'Automated trading at your fingertips. No coding needed.',
-                link     : `${deriv_app_origin}/bot`,
+                link     : 'https://deriv.app/bot',
                 icon     : 'ic-brand-dbot.svg',
                 on_mobile: false,
             },
             dmt5: {
                 name     : 'DMT5',
                 desc     : 'The platform of choice for professionals worldwide.',
-                link     : `${deriv_app_origin}/mt5`,
+                link     : 'https://deriv.app/mt5',
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
 
