@@ -90,6 +90,10 @@
 
 #ui-datepicker-div .ui-widget-header {
     font-weight: 400;
+
+    .ui-datepicker-title select {
+        font-family: 'IBM Plex Sans';
+    }
 }
 
 .ui-datepicker-calendar thead th {
