@@ -146,6 +146,9 @@ ul.bullet {
         height: 28px;
         border: solid 1px var(--border-normal);
     }
+    div.select {
+        padding-right: 5px;
+    }
     div.select-dropdown:after {
         content: '';
         height: 16px;
