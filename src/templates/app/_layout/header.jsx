@@ -98,15 +98,15 @@ const MobileMenu = () => (
                     <div className='mobile__menu-content-submenu-header-text' >{it.L('Reports')}</div>
                 </div>
                 <div className='mobile__menu-content-submenu-lists'>
-                    <a href='https://deriv.app/reports/positions' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                    <a className='url-reports-positions mobile__menu-content-submenu-item mobile__platform-switcher-item'>
                         <img id='mobile__menu-content-submenu-icon-open' className='mobile__menu-content-submenu-icon' />
                         <div className='mobile__menu-content-submenu-item-text'>{it.L('Open positions')}</div>
                     </a>
-                    <a href='https://deriv.app/reports/profit' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                    <a className='url-reports-profit mobile__menu-content-submenu-item mobile__platform-switcher-item'>
                         <img id='mobile__menu-content-submenu-icon-profit' className='mobile__menu-content-submenu-icon' />
                         <div className='mobile__menu-content-submenu-item-text'>{it.L('Profit table')}</div>
                     </a>
-                    <a href='https://deriv.app/reports/statement' className='mobile__menu-content-submenu-item mobile__platform-switcher-item'>
+                    <a className='url-reports-statement mobile__menu-content-submenu-item mobile__platform-switcher-item'>
                         <img id='mobile__menu-content-submenu-icon-statement' className='mobile__menu-content-submenu-icon' />
                         <div className='mobile__menu-content-submenu-item-text'>{it.L('Statements')}</div>
                     </a>
@@ -136,13 +136,13 @@ const Header = () => (
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links is-login mobile-hide'>
-                    <a className='header__menu-links-item' href='https://deriv.app/reports/positions'>
+                    <a className='url-reports-positions header__menu-links-item header__menu-links-item--external'>
                         <span>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
                     </a>
-                    <a className='header__menu-links-item' href='https://deriv.app/cashier/deposit'>
+                    <a className='url-cashier-deposit header__menu-links-item header__menu-links-item--external'>
                         <span>
                             <img id='cashier_icon' className='header__icon-text' />
                             {it.L('Cashier')}
@@ -165,7 +165,7 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <a className='header__account header__menu-item mobile-hide' href='https://deriv.app/account/personal-details'>
+                <a className='url-account-details header__account header__menu-item header__menu-links-item--external mobile-hide'>
                     <img className='header__icon-button' id='header__account-settings' />
                 </a>
                 <div className='header__divider mobile-hide' />
@@ -191,7 +191,7 @@ const Header = () => (
                                             </div>
                                         </h3>
                                         <div className='account__switcher-list' id='account__switcher-real-list'>
-                                            <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-add' className='account__switcher-add'>
+                                            <a id='account__switcher-add' target='_blank' rel='noopener noreferrer'  className='url-add-account account__switcher-add'>
                                                 <img id='add_icon' className='account__switcher-add-icon' />
                                                 <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
                                             </a>
@@ -226,7 +226,7 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <a className='btn btn--primary header__deposit mobile-hide' href='https://deriv.app/cashier/deposit'>{it.L('Deposit')}</a>
+                <a className='url-cashier-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Deposit')}</a>
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
