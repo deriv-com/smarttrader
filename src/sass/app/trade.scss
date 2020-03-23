@@ -78,10 +78,10 @@ ul.bullet {
     margin-right: 2px;
 }
 
-[data-balloon-pos=down]:after {
-    transform: rotate(180deg) translate(50%, 0) !important;
-    margin-top: 12px;
-}
+// [data-balloon-pos=down]:after {
+//     transform: rotate(180deg) translate(50%, 0) !important;
+//     margin-top: 12px;
+// }
 
 #trading_init_progress {
     cursor: pointer;
@@ -1375,6 +1375,7 @@ ul.bullet {
                         button {
                             @include deriv-btn('normal', 'primary');
                             margin: 0 5px 3px 3px;
+                            font-weight: bold;
 
                             &:nth-child(2) {
                                 @include deriv-btn('normal', 'secondary');
