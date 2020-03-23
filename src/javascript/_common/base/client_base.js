@@ -360,17 +360,20 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    const getDerivAppOrigin = () => {
+        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://staging.deriv.app';
+        } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://deriv.app';
+        }
+
+        return '';
+    };
+
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
-            let origin;
-            if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
-                origin = 'https://staging.deriv.app';
-            } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
-                origin = 'https://deriv.app';
-            } else {
-                return;
-            }
+            const origin = getDerivAppOrigin();
 
             // Keep client.accounts in sync (in case user wasn't logged in).
             iframe_window.contentWindow.postMessage({
@@ -415,6 +418,7 @@ const ClientBase = (() => {
         canTransferFunds,
         hasSvgAccount,
         canChangeCurrency,
+        getDerivAppOrigin,
     };
 })();
 
