@@ -96,3 +96,103 @@
         }
     }
 }
+
+@mixin deriv-btn($size: 'default', $type: '') {
+    @if $size == 'default' {
+        box-sizing: border-box;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        white-space: nowrap;
+        display: inline-flex;
+        border: 0;
+        border-radius: 4px;
+        transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+        outline: 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: none !important;
+        font-weight: bold !important;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &:disabled, &[disabled] {
+        opacity: 0.32;
+        cursor: not-allowed !important;
+    }
+
+    // Types
+    @if $type == 'primary' {
+        background: var(--button-primary-default);
+        color: var(--text-colored-background) !important;
+
+        &:focus, &:hover {
+            background: var(--button-primary-hover);
+        }
+        &:active:not([disabled]) {
+            background: var(--button-primary-default);
+        }
+    }
+    @if $type == 'secondary' {
+        background: transparent;
+        color: var(--text-prominent) !important;
+
+        @if ($size == 'large') {
+            border: 2px solid var(--button-secondary-default);
+        }
+        @else {
+            border: 1px solid var(--button-secondary-default);
+        }
+
+        &:focus, &:hover {
+            background: var(--button-secondary-hover);
+        }
+        &:active:not([disabled]) {
+            border: 1px solid var(--button-secondary-default);
+        }
+    }
+    @if $type == 'tertiary' {
+        background: var(--button-tertiary-default);
+        color: var(--brand-red-coral) !important;
+
+        &:focus, &:hover {
+            background: var(--button-tertiary-hover);
+        }
+        &:active:not([disabled]) {
+            background: var(--button-tertiary-default);
+        }
+    }
+    @if $type == 'link' {
+        background: transparent;
+        color: var(--brand-red-coral) !important;
+
+        &:focus:not([disabled]), &:hover:not([disabled]) {
+            text-decoration: underline !important;
+        }
+    }
+    // Sizes
+    @if ($size == 'default') {
+        height: 32px;
+        border-width: 1px;
+        font-size: $FONT_SIZE_S !important;
+        padding: 0 16px;
+        min-width: 56px;
+    }
+    @if $size == 'small' {
+        height: 24px;
+        border-width: 1px;
+        font-size: $FONT_SIZE_XS !important;
+        padding: 0 8px;
+        min-width: 48px;
+    }
+    @if $size == 'large' {
+        height: 40px;
+        border-width: 2px;
+        font-size: $FONT_SIZE_S !important;
+        padding: 0 16px;
+        min-width: 64px;
+    }
+}
