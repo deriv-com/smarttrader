@@ -1014,54 +1014,25 @@ label + input {
 }
 
 .btn {
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
-    touch-action: manipulation;
-    cursor: pointer;
-    white-space: nowrap;
-    padding: 0 16px;
-    display: inline-flex;
-    border: 0;
-    height: 32px;
-    border-radius: 4px;
-    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
-    outline: 0;
-    position: relative;
-    text-decoration: none;
-    text-transform: none !important;
-    font-size: $FONT_SIZE_S;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.5;
+    @include deriv-btn('default', null);
 
     &--primary {
-        background: var(--button-primary-default);
-        color: var(--text-colored-background) !important;
-
-        &:hover {
-            background: var(--button-primary-hover);
-        }
-        &:focus {
-            background: var(--button-primary-default);
-        }
+        @include deriv-btn(null, 'primary');
     }
     &--secondary {
-        background: transparent;
-        border: 1px solid var(--button-secondary-default);
-        color: var(--text-prominent);
-
-        &:hover {
-            background: var(--button-secondary-hover);
-        }
+        @include deriv-btn(null, 'secondary');
     }
-    &--transparent {
-        background: transparent;
-        color: var(--button-primary-default) !important;
-
-        &:hover {
-            background: var(--button-tertiary-hover);
-        }
+    &--tertiary {
+        @include deriv-btn(null, 'tertiary');
+    }
+    &--link {
+        @include deriv-btn(null, 'link');
+    }
+    &__small {
+        @include deriv-btn('small', null);
+    }
+    &__large {
+        @include deriv-btn('large', null);
     }
 }
 

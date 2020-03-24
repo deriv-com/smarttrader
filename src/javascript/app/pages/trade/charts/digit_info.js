@@ -19,12 +19,12 @@ const DigitInfo = (() => {
         chart: {
             renderTo           : 'last_digit_histo',
             defaultSeriesType  : 'column',
-            backgroundColor    : '#eee',
+            backgroundColor    : 'var(--border-normal)',
             borderWidth        : 1,
-            borderColor        : '#ccc',
-            plotBackgroundColor: '#fff',
+            borderColor        : 'var(--border-normal)',
+            plotBackgroundColor: 'var(--fill-normal)',
             plotBorderWidth    : 1,
-            plotBorderColor    : '#ccc',
+            plotBorderColor    : 'var(--border-normal)',
             height             : 225, // This is "unresponsive", but so is leaving it empty where it goes to 400px.
         },
         title    : { text: '' },
@@ -34,7 +34,8 @@ const DigitInfo = (() => {
             enabled: false,
         },
         tooltip: {
-            borderWidth: 1,
+            borderWidth : 0,
+            borderRadius: 4,
             formatter() {
                 const total      = $('#tick_count').val();
                 const percentage = (this.y / total) * 100;
@@ -45,15 +46,16 @@ const DigitInfo = (() => {
             column: {
                 shadow      : false,
                 borderWidth : 0.5,
-                borderColor : '#666',
+                borderColor : 'var(--border-normal)',
                 pointPadding: 0,
                 groupPadding: 0.0,
-                color       : '#e1f0fb',
+                color       : 'var(--general-section-1)',
             },
             series: {
                 dataLabels: {
-                    enabled: true,
-                    style  : {
+                    enabled    : true,
+                    borderWidth: 0,
+                    style      : {
                         textShadow: false,
                     },
                     formatter() {
@@ -67,18 +69,19 @@ const DigitInfo = (() => {
         xAxis: {
             categories: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
             lineWidth : 0,
-            lineColor : '#999',
+            lineColor : 'var(--border-normal)',
             tickLength: 10,
-            tickColor : '#ccc',
+            tickWidth : 0,
+            tickColor : 'var(--border-normal)',
         },
         yAxis: {
             title        : { text: '' },
             maxPadding   : 0,
-            gridLineColor: '#e9e9e9',
+            gridLineColor: 'var(--general-section-1)',
             tickWidth    : 1,
             tickLength   : 3,
-            tickColor    : '#ccc',
-            lineColor    : '#ccc',
+            tickColor    : 'var(--border-normal)',
+            lineColor    : 'var(--border-normal)',
             endOnTick    : true,
             opposite     : false,
             labels       : {
@@ -217,28 +220,28 @@ const DigitInfo = (() => {
         const max_index = filtered_spots.indexOf(max);
         // changing color
         if (min_max_counter[min] >= 1) {
-            filtered_spots[min_index] = { y: min, color: '#CC0000' };
+            filtered_spots[min_index] = { y: min, color: 'var(--status-danger)' };
             if (prev_min_index === -1) {
                 prev_min_index = min_index;
             } else if (prev_min_index !== min_index) {
                 if (typeof filtered_spots[prev_min_index] === 'object') {
-                    filtered_spots[prev_min_index] = { y: filtered_spots[prev_min_index].y, color: '#e1f0fb' };
+                    filtered_spots[prev_min_index] = { y: filtered_spots[prev_min_index].y, color: 'var(--general-section-1)' };
                 } else {
-                    filtered_spots[prev_min_index] = { y: filtered_spots[prev_min_index], color: '#e1f0fb' };
+                    filtered_spots[prev_min_index] = { y: filtered_spots[prev_min_index], color: 'var(--general-section-1)' };
                 }
                 prev_min_index = min_index;
             }
         }
 
         if (min_max_counter[max] >= 1) {
-            filtered_spots[max_index] = { y: max, color: '#2E8836' };
+            filtered_spots[max_index] = { y: max, color: 'var(--status-success)' };
             if (prev_max_index === -1) {
                 prev_max_index = max_index;
             } else if (prev_max_index !== max_index) {
                 if (typeof filtered_spots[prev_max_index] === 'object') {
-                    filtered_spots[prev_max_index] = { y: filtered_spots[prev_max_index].y, color: '#e1f0fb' };
+                    filtered_spots[prev_max_index] = { y: filtered_spots[prev_max_index].y, color: 'var(--general-section-1)' };
                 } else {
-                    filtered_spots[prev_max_index] = { y: filtered_spots[prev_max_index], color: '#e1f0fb' };
+                    filtered_spots[prev_max_index] = { y: filtered_spots[prev_max_index], color: 'var(--general-section-1)' };
                 }
                 prev_max_index = max_index;
             }

@@ -78,10 +78,10 @@ ul.bullet {
     margin-right: 2px;
 }
 
-[data-balloon-pos=down]:after {
-    transform: rotate(180deg) translate(50%, 0) !important;
-    margin-top: 12px;
-}
+// [data-balloon-pos=down]:after {
+//     transform: rotate(180deg) translate(50%, 0) !important;
+//     margin-top: 12px;
+// }
 
 #trading_init_progress {
     cursor: pointer;
@@ -509,7 +509,7 @@ ul.bullet {
                     width: 100%;
                     color: $COLOR_WHITE;
                     font-size: 16px;
-                    font-weight: 500;
+                    font-weight: bold;
                 }
                 #purchase_button_top, #purchase_button_middle {
                     background-color: var(--text-profit-success);
@@ -1071,6 +1071,18 @@ ul.bullet {
     color: $COLOR_RED;
 }
 
+.action_btn {
+    display: flex;
+    flex-direction: row-reverse;
+
+    > a {
+        margin-right: 0 !important;
+    }
+    > a + a {
+        margin-right: 8px !important;
+    }
+}
+
 #trading_bottom_content {
     margin-top: 15px;
     font-size: $FONT_SIZE_N;
@@ -1111,28 +1123,23 @@ ul.bullet {
         }
         .button-secondary, .button {
             span {
-                font-weight: bold;
-                padding: 6px 22px 6px 23px;
+                @include deriv-btn;
             }
         }
         .button {
             span {
-                background-color: var(--brand-red-coral);
+                @include deriv-btn('large', 'primary');
             }
             &:not(.button-disabled) span {
-                color: var(--general-main-1);
-
-                &:hover {
-                    background-color: var(--button-primary-hover);
-                }
+                @include deriv-btn('large', 'primary');
             }
         }
         .button-secondary {
             span {
-                background-color: var(--status-default);
+                @include deriv-btn('large', 'secondary');
             }
             &:not(.button-disabled) span {
-                color: var(--text-general);
+                color: var(--text-prominent);
 
                 &:hover {
                     background-color: var(--general-hover);
@@ -1313,6 +1320,22 @@ ul.bullet {
                 font-size: 12px;
 
                 .chart-template-manager-root {
+                    .button-secondary {
+                        > span {
+                            display: inline-flex;
+                            justify-content: center;
+                            background-color: var(--general-section-1);
+                            width: 100%;
+                            border: none;
+                            font-weight: normal !important;
+                            font-size: 12px !important;
+                            height: 30px !important;
+
+                            &:hover {
+                                background-color: var(--general-hover);
+                            }
+                        }
+                    }
                     .templates {
                         > div > div {
                             margin-top: 6px;
@@ -1346,30 +1369,19 @@ ul.bullet {
                     }
                     .confirm, .rename, .save-as {
                         .title {
-                            margin: 6px 0 8px;
+                            margin: 8px 0;
                             line-height: 18px;
                         }
                         .button {
                             margin-bottom: 0;
                         }
                         button {
+                            @include deriv-btn('normal', 'primary');
                             margin: 0 5px 3px 3px;
-                            padding: 6px 22px 6px 23px;
-                            line-height: 24px;
                             font-weight: bold;
-                            background-color: var(--brand-red-coral);
-                            color: var(--text-colored-background) !important;
 
-                            &:not(:disabled):hover {
-                                background-color: var(--button-primary-hover);
-                            }
                             &:nth-child(2) {
-                                background-color: var(--status-default);
-                                color: var(--text-general) !important;
-
-                                &:not(:disabled):hover {
-                                    background-color: var(--state-active);
-                                }
+                                @include deriv-btn('normal', 'secondary');
                             }
                         }
                         input {
@@ -1390,7 +1402,7 @@ ul.bullet {
                             margin-bottom: 0;
                         }
                         input {
-                            width: 162px;
+                            width: 164px;
                         }
                     }
                 }
@@ -1399,7 +1411,7 @@ ul.bullet {
                         background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMEgyMFYyMEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTguMjIyIDYuNTY0VjMuMDFMMiA5LjIzbDYuMjIyIDYuMjIyVjExLjgxYzQuNDQ1IDAgNy41NTYgMS40MjIgOS43NzggNC41MzMtLjg4OS00LjQ0NC0zLjU1Ni04Ljg4OS05Ljc3OC05Ljc3OHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==') !important;
                     }
                     a {
-                        font-weight: normal;
+                        font-weight: bold;
                     }
                 }
             }
@@ -1485,20 +1497,30 @@ ul.bullet {
                                 line-height: 18px;
                             }
                             > a > span {
-                                width: 182px;
-                                line-height: 24px;
+                                @include deriv-btn('large', 'secondary');
+                                width: 192px;
+                                white-space: nowrap;
                             }
                         }
                     }
                     &.indicator > div {
                         color: var(--text-general);
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
                     }
                 }
                 .indicator-builder {
                     > table tr {
+                        td {
+                            font-weight: normal;
+                        }
                         td:first-child {
                             padding: 20px 15px 19px;
                             font-size: 12px;
+                        }
+                        td a span {
+                            height: 32px !important;
                         }
                         .colorpicker-td {
                             margin-top: 8px;
@@ -1506,9 +1528,6 @@ ul.bullet {
                             input {
                                 display: none;
                             }
-                        }
-                        .dd-select {
-                            margin-top: 11px;
                         }
                         .applied-to {
                             border: 1px solid var(--border-normal);
@@ -1548,8 +1567,9 @@ ul.bullet {
                             padding: 9px 13px;
                             // 40px is the fixed width of the last child to make it smaller
                             // divide by the remaining four tds
-                            // minus 26px padding (13px left and 13px right)
-                            width: calc(calc(calc(100% - 40px) / 4) - 26px);
+                            // minus 29px padding (13px left and 13px right) + 1px from parent due to parent td width.
+                            // width: calc(calc(calc(100% - 40px) / 4) - 29px);
+                            width: calc((100% - 40px) / 4 - 29px);
                             display: inline-block;
 
                             &:nth-child(3) > div {
@@ -1581,8 +1601,40 @@ ul.bullet {
                     }
                     a.button, a.button-secondary {
                         span {
-                            font-size: 16px;
+                            font-size: 14px;
                             line-height: 24px;
+                        }
+                    }
+                    .dd-select {
+                        margin-top: 11px;
+                        border-radius: $BORDER_RADIUS;
+
+                        &.dd-open {
+                            border: 1px solid var(--brand-secondary);
+                        }
+                    }
+                    .dd-options {
+                        border-radius: $BORDER_RADIUS;
+                        border: 1px solid var(--border-normal);
+                    }
+                    .dd-option {
+                        border-bottom: none;
+
+                        &:hover {
+                            background-color: var(--state-hover);
+                        }
+                        &-selected {
+                            background-color: var(--state-active);
+                        }
+                    }
+                    .levels-dialog {
+                        button {
+                            &:first-of-type {
+                                @include deriv-btn('normal', 'secondary');
+                            }
+                            &:nth-of-type(2) {
+                                @include deriv-btn('normal', 'primary');
+                            }
                         }
                     }
                 }
@@ -1693,10 +1745,15 @@ ul.bullet {
         #explanation_explain h3 {
             margin: 40px 0 20px;
         }
-        p strong {
-            font-weight: 600;
-            letter-spacing: 0.25px;
-            margin: 20px 0;
+        p {
+            margin: 16px 0;
+            line-height: 22px;
+
+            strong {
+                font-weight: 600;
+                letter-spacing: 0.25px;
+                margin: 20px 0;
+            }
         }
         img {
             margin: 40px 0 0;
@@ -1711,11 +1768,11 @@ ul.bullet {
     span {
         height: 20px;
         line-height: 20px;
-        background-color: $COLOR_ORANGE;
+        // background-color: $COLOR_ORANGE;
 
-        &:hover {
-            background-color: $COLOR_DARK_ORANGE;
-        }
+        // &:hover {
+        //     background-color: $COLOR_DARK_ORANGE;
+        // }
         img {
             margin-right: 5px;
         }
@@ -1837,24 +1894,11 @@ body #lean_overlay {
         padding: 18px 16px;
 
         > div {
-            width: auto;
-            padding: 6px 22px 6px 23px;
-            line-height: 24px;
-            background-color: var(--status-default);
-            color: var(--text-general);
-            font-weight: bold;
+            @include deriv-btn('large', 'secondary');
 
-            &:hover {
-                background-color: var(--state-active);
-            }
             &:not(:first-child) {
-                margin-left: 16px;
-                background-color: var(--brand-red-coral);
-                color: var(--text-colored-background);
-
-                &:hover {
-                    background-color: var(--button-primary-hover);
-                }
+                @include deriv-btn('large', 'primary');
+                margin-left: 8px;
             }
         }
     }
@@ -1886,25 +1930,32 @@ body .sp-container {
             height: 4px;
         }
         .sp-button-container {
-            margin-top: 6px;
+            margin-top: 11px;
             margin-bottom: 3px;
 
             .sp-cancel.sp-cancel, .sp-choose.sp-choose {
                 font-weight: bold;
-                padding: 6px 0;
-                line-height: 18px;
-                width: 84px;
+                padding: 0;
+                width: calc(50% - 4px);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+                box-sizing: border-box;
 
                 &:first-child {
-                    background-color: var(--status-default) !important;
-                    margin-right: 4px;
+                    background: transparent !important;
+                    border: 1px solid var(--button-secondary-default);
+                    color: var(--text-prominent);
+                    margin-right: 8px;
 
                     &:hover {
-                        background-color: var(--general-hover) !important;
+                        background: var(--button-secondary-hover);
                     }
                 }
                 &:last-child {
                     background-color: var(--brand-red-coral);
+                    text-transform: uppercase;
 
                     &:hover {
                         background-color: var(--button-primary-hover);
