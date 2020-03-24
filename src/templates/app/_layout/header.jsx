@@ -81,18 +81,18 @@ const MobileMenu = () => (
                         <img id='mobile__platform-switcher-icon-trade' className='mobile__platform-switcher-icon' />
                         <div className='mobile__platform-switcher-text mobile__platform-switcher-text-bold'>{it.L('Trade')}</div>
                     </div>
-                    <div id='mobile__platform-switcher-item-reports' className='mobile__platform-switcher-item'>
+                    <div id='mobile__platform-switcher-item-reports' className='mobile__platform-switcher-item client_logged_in invisible'>
                         <img className='mobile__platform-switcher-icon reports-icon' />
                         <div className='mobile__platform-switcher-text'>{it.L('Reports')}</div>
                         <img id='mobile__platform-switcher-icon-arrowright' className='mobile__platform-switcher-icon-right' />
                     </div>
-                    <div className='mobile__platform-switcher-item logout'>
+                    <div className='mobile__platform-switcher-item client_logged_in invisible logout'>
                         <img className='mobile__platform-switcher-icon logout-icon' />
                         <div className='mobile__platform-switcher-text'>{it.L('Log out')}</div>
                     </div>
                 </div>
             </div>
-            <div id='mobile__menu-content-submenu' className='mobile__menu-content-submenu mobile__menu-content'>
+            <div id='mobile__menu-content-submenu' className='mobile__menu-content-submenu mobile__menu-content client_logged_in invisible'>
                 <div id='mobile__menu-content-submenu-header' className='mobile__menu-content-submenu-header mobile__platform-switcher-item'>
                     <img id='mobile__menu-content-submenu-icon-back' className='mobile__menu-content-submenu-icon' />
                     <div className='mobile__menu-content-submenu-header-text' >{it.L('Reports')}</div>
@@ -135,14 +135,14 @@ const Header = () => (
                     <div className='platform__switcher-header'>{it.L('SmartTrader')}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
-                <div className='header__menu-item header__menu-links is-login mobile-hide'>
-                    <a className='url-reports-positions header__menu-links-item header__menu-links-item--external'>
+                <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
+                    <a className='url-reports-positions header__menu-links-item'>
                         <span>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
                     </a>
-                    <a className='url-cashier-deposit header__menu-links-item header__menu-links-item--external'>
+                    <a className='url-cashier-deposit header__menu-links-item'>
                         <span>
                             <img id='cashier_icon' className='header__icon-text' />
                             {it.L('Cashier')}
@@ -150,7 +150,7 @@ const Header = () => (
                     </a>
                 </div>
             </div>
-            <div className='header__menu-right is-login'>
+            <div className='header__menu-right client_logged_in invisible'>
                 <div id='header__notification' className='header__notification header__menu-item'>
                     <img id='header__notification-icon' className='header__icon-button' />
                     <div id='header__notification-count' className='header__notification-count' />
@@ -165,7 +165,7 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <a className='url-account-details header__account header__menu-item header__menu-links-item--external mobile-hide'>
+                <a className='url-account-details header__account header__menu-item mobile-hide'>
                     <img className='header__icon-button' id='header__account-settings' />
                 </a>
                 <div className='header__divider mobile-hide' />
