@@ -594,6 +594,11 @@ ul.bullet.gr-row > li {
                 text-transform: none;
             }
         }
+        @media all and (max-width: 480px) {
+            &:after {
+                content: '';
+            }
+        }
     }
     .light {
         .tab-menu-wrap {
