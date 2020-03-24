@@ -408,7 +408,7 @@ const ViewPopup = (() => {
     };
 
     const appendAuditLink = (element_id) => {
-        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit button-secondary' });
+        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit btn btn__small btn--secondary' });
         const span = Utility.createElement('span', { text: localize('Audit') });
         link.appendChild(span);
         link.addEventListener('click', () => { initAuditTable(1); });
@@ -771,7 +771,7 @@ const ViewPopup = (() => {
 
             $sell_wrapper.setVisibility(1)
                 .append($('<div/>', { id: sell_wrapper_id })
-                    .append($('<button/>', { id: sell_button_id, class: 'button btn btn--secondary', text: is_started ? localize('Sell at market') : localize('Sell') })));
+                    .append($('<button/>', { id: sell_button_id, class: 'btn btn__large btn--secondary', text: is_started ? localize('Sell at market') : localize('Sell') })));
             if (is_started) {
                 addSellNote($sell_wrapper);
             }

@@ -9,7 +9,7 @@ const Trading = () => (
             <div id='loading_container' className='overlay_container' />
             {/* <a
                 id='deposit_btn_trade'
-                className='client_real invisible gr-hide-m button'
+                className='client_real invisible gr-hide-m btn btn--primary'
                 href='https://deriv.app/cashier/deposit'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -201,7 +201,7 @@ const Trading = () => (
                                 </div>
                                 <div id='contract_purchase_barrier' />
                                 <div id='contract_purchase_reference' />
-                                <button id='contract_purchase_button'className='open_contract_details button btn btn--primary' />
+                                <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
                                 <div id='contract_purchase_spots' />
                                 <div id='trade_tick_chart' />
                                 <div id='digit_ticker_table' className='digit-ticker invisible' />
@@ -211,11 +211,17 @@ const Trading = () => (
                             <div id='authorization_error_container' className='center-text invisible'>
                                 <div className='authorization_error'>
                                     <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                    <a className='button' href='https://www.deriv.com/signup/'>
+                                    <a className='btn btn__large btn--primary' href='https://www.deriv.com/signup/'>
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
-                                    <a id='authorization_error_btn_login' href='javascript:;'>{it.L('Log in here')}</a>
+                                    <a
+                                        id='authorization_error_btn_login'
+                                        className='btn btn--link'
+                                        href='javascript:;'
+                                    >
+                                        {it.L('Log in here')}
+                                    </a>
                                 </div>
                             </div>
                         </div>
