@@ -527,6 +527,9 @@ ul.bullet {
                     cursor: auto;
                 }
             }
+            .button-disabled span {
+                white-space: normal;
+            }
         }
         #contract_purchase_barrier {
             padding-bottom: 7px;
