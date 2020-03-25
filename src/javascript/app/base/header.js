@@ -425,6 +425,12 @@ const Header = (() => {
                     const account_detail    = createElement('span', { text: is_real ? (currency || 'Real') : 'Demo' });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
+                    
+                    if (!currency) {
+                        $('#header__acc-balance').html(createElement('p', { text: 'No Currency Assigned' }));
+                        account_balance.html(createElement('span', { text: 'No currency selected', class: 'no-currency' }));
+                        $('.account__switcher-select_currencies').css('display', 'block');
+                    }
 
                     account_detail.appendChild(account_loginid);
                     account.appendChild(account_icon);

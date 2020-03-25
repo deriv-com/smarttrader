@@ -6,7 +6,6 @@ const BinarySocket          = require('../../base/socket');
 const formatMoney           = require('../../common/currency').formatMoney;
 const TopUpVirtualPopup     = require('../../pages/user/account/top_up_virtual/pop_up');
 const getPropertyValue      = require('../../../_common/utility').getPropertyValue;
-const createElement         = require('../../../_common/utility').createElement;
 
 const updateBalance = (response) => {
     if (getPropertyValue(response, 'error')) {
@@ -29,17 +28,13 @@ const updateBalance = (response) => {
             $('#header__acc-balance').html(view);
             Client.set('balance', balance);
             PortfolioInit.updateBalance();
+        }
         
-            if (is_virtual) {
-                $('.account__switcher-balance-virtual').html(view);
-                TopUpVirtualPopup.init(balance);
-            } else {
-                $(`.account__switcher-balance-${currency}`).html(view);
-            }
+        if (is_virtual) {
+            $('.account__switcher-balance-virtual').html(view);
+            TopUpVirtualPopup.init(balance);
         } else {
-            $('#header__acc-balance').html(createElement('p', { text: 'No Currency Assigned' }));
-            $('.account__switcher-balance').html(createElement('span', { text: 'No currency selected', class: 'no-currency' }));
-            $('.account__switcher-select_currencies').css('display', 'block');
+            $(`.account__switcher-balance-${currency}`).html(view);
         }
 
         Client.setTotalBalance(total, total_currency);
