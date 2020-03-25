@@ -342,7 +342,7 @@ body .header {
                 > img {
                     width: 16px;
                     height: 16px;
-                    margin-right: 8px;
+                    margin: 3px 8px 0 0;
                 }
             }
             &-title {
@@ -379,7 +379,8 @@ body .header {
             color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
-            width: 106px;
+            width: 90px;
+            padding: 0;
             font-size: $FONT_SIZE_XS;
         }
         > img {
