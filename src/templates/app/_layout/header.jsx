@@ -164,8 +164,8 @@ const Header = () => (
                         <div id='header__notification-content' className='header__notification-content'>
                             <div id='header__notification-empty' className='header__notification-empty'>
                                 <img id='header__notification-empty-img' />
-                                <div className='header__notification-empty-text'>{it.L('No notifications')}</div>
-                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notification')}</div>
+                                <div className='header__notification-empty-text'>{it.L('No Notifications')}</div>
+                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notifications')}</div>
                             </div>
                         </div>
                     </div>
