@@ -409,7 +409,7 @@ const Header = (() => {
                     const is_real        = !Client.getAccountType(loginid); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
-                    const icon           = `${Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? currency.toLowerCase() : 'virtual'}.svg`)}`;
+                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? (currency ? currency.toLowerCase() : 'unknown') : 'virtual'}.svg`);
                     const is_current     = loginid === Client.get('loginid');
 
                     if (is_current) { // default account
@@ -422,7 +422,7 @@ const Header = (() => {
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
                     const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? currency : 'Demo' });
+                    const account_detail    = createElement('span', { text: is_real ? (currency || 'Real') : 'Demo' });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
 

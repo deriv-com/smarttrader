@@ -191,6 +191,9 @@ const Header = () => (
                                             </div>
                                         </h3>
                                         <div className='account__switcher-list' id='account__switcher-real-list'>
+                                            <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-select_currencies' className='account__switcher-select_currencies'>
+                                                <span className='account__switcher-select_currencies-text'>Select Currency</span>
+                                            </a>
                                             <a href='https://deriv.app/redirect?action=add_account' target='_blank' rel='noopener noreferrer' id='account__switcher-add' className='account__switcher-add'>
                                                 <img id='add_icon' className='account__switcher-add-icon' />
                                                 <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
