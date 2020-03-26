@@ -17,7 +17,7 @@ const ThirdPartyLinks = (() => {
         if (!el_link) return;
 
         const href = el_link.href;
-        if (isEuCountry()) {
+        if (true || isEuCountry()) {
             const dialog = document.querySelector('#third_party_redirect_dialog');
             if (dialog && dialog.contains(el_link)) return;
 
@@ -79,7 +79,7 @@ const ThirdPartyLinks = (() => {
         }
         return !!destination.host
             && !new RegExp(`^.*\\.${getCurrentBinaryDomain() || 'binary\\.com'}$`).test(destination.host) // destination host is not binary subdomain
-            && !new RegExp('^.*\\.deriv\\.app$').test(destination.host) // destination host is not binary subdomain
+            && !new RegExp('deriv\\.app$').test(destination.host) // destination host is not deriv.app
             && !new RegExp('^.*\\.binary\\.bot$').test(destination.host) // destination host is not binary subdomain
             && !/www.(betonmarkets|xodds).com/.test(destination.host) // destination host is not binary old domain
             && window.location.host !== destination.host;

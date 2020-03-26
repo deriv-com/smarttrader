@@ -851,7 +851,7 @@ const Header = (() => {
             const validations = {
                 currency             : () => !Client.get('currency'),
                 excluded_until       : () => Client.get('excluded_until'),
-                authenticate         : () => hasVerification('authenticate'),
+                authenticate         : () => /* hasVerification('authenticate') */ true,
                 cashier_locked       : () => hasStatus('cashier_locked'),
                 withdrawal_locked    : () => hasStatus('withdrawal_locked'),
                 mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
