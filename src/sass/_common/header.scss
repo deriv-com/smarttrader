@@ -379,8 +379,7 @@ body .header {
             color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
-            width: 90px;
-            padding: 0;
+            float: right;
             font-size: $FONT_SIZE_XS;
         }
         > img {
@@ -885,7 +884,8 @@ body .mobile {
                 font-size: $FONT_SIZE_S;
             }
             &-btn {
-                float: right;
+                width: 90px;
+                padding: 0;
             }
             &-content {
                 &-message {
