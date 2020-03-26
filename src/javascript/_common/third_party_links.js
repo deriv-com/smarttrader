@@ -17,7 +17,7 @@ const ThirdPartyLinks = (() => {
         if (!el_link) return;
 
         const href = el_link.href;
-        if (true || isEuCountry()) {
+        if (isEuCountry()) {
             const dialog = document.querySelector('#third_party_redirect_dialog');
             if (dialog && dialog.contains(el_link)) return;
 
