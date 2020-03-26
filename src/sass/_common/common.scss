@@ -596,6 +596,9 @@ ul.bullet.gr-row > li {
             }
         }
         @media all and (max-width: 480px) {
+            .select-dropdown {
+                display: none;
+            }
             &:after {
                 content: '';
             }
