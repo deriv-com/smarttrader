@@ -87,7 +87,7 @@ const pages_config = {
     // dp2p                     : { module: DP2P,                       is_authenticated: true },
     // dubai                    : { module: StaticPages.Locations },
     // economic_calendar        : { module: EconomicCalendar },
-    endpoint                 : { module: Endpoint },
+    endpoint   : { module: Endpoint },
     // epg_forwardws            : { module: DepositWithdraw,            is_authenticated: true, only_real: true },
     // faq                      : { module: StaticPages.AffiliatesFAQ },
     // forex                    : { module: GetStarted.Forex },
