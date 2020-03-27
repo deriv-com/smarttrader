@@ -18,11 +18,13 @@ const applyToAllElements       = require('../../_common/utility').applyToAllElem
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const template                 = require('../../_common/utility').template;
+const Language                 = require('../../_common/language');
 
 const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
     const notifications = [];
+    let is_language_popup_on = false;
     let is_full_screen = false;
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
@@ -365,9 +367,22 @@ const Header = (() => {
             }
         });
 
+        // Language Popup.
+        const $language_select = getElementById('language-select');
+        $language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${Language.get().toLowerCase()}.svg`);
+        $language_select.addEventListener('click', toggleLanguagePopup);
+        $language_select.addEventListener('click', toggleLanguagePopup);
+
+        getElementById('language-menu').setVisibility(is_language_popup_on);
+
+        // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
         topbar_fullscreen.removeEventListener('click', toggleFullscreen);
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
+    };
+
+    const toggleLanguagePopup = () => {
+        is_language_popup_on = !is_language_popup_on;
     };
 
     const toggleFullscreen = () => {

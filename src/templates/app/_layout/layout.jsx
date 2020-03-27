@@ -38,6 +38,10 @@ const InnerContent = () => (
 const Topbar = () => (
     <div className='no-print primary-bg-color-dark topbar mobile-hide'>
         <div id='topbar-info'>
+            <div id='language-select'>
+                <img />
+            </div>
+            <div id='language-menu' className='invisible lightbox' />
             <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
                 <div className='network_status' />
             </div>

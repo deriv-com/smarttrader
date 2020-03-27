@@ -123,6 +123,15 @@ body .topbar {
             background: var(--text-profit-success);
         }
     }
+    #language-select {
+        cursor: pointer;
+        height: inherit;
+        padding: 0 0.8rem;
+
+        &:hover {
+            background-color: var(--general-hover);
+        }
+    }
 }
 
 body .header {

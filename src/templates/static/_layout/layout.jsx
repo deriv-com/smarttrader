@@ -36,12 +36,16 @@ const InnerContent = () => (
 );
 
 const Topbar = () => (
-    <div id='topbar' className='no-print primary-bg-color-dark'>
+    <div className='no-print primary-bg-color-dark topbar mobile-hide'>
         <div id='topbar-info'>
-            <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
-                <div id='network_status' />
+            <div id='language-select'>
+                <img />
             </div>
-            <span className='no-underline nowrap' id='gmt-clock' />
+            <div id='language-menu' className='invisible' />
+            <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
+                <div className='network_status' />
+            </div>
+            <span className='no-underline nowrap gmt-clock' />
             <div id='topbar-fullscreen'>
                 <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
             </div>
