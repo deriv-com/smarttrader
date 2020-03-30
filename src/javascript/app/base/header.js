@@ -368,21 +368,46 @@ const Header = (() => {
         });
 
         // Language Popup.
+        const current_language = Language.get();
+        const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
+
         const $language_select = getElementById('language-select');
-        $language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${Language.get().toLowerCase()}.svg`);
-        $language_select.addEventListener('click', toggleLanguagePopup);
+        $language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
         $language_select.addEventListener('click', toggleLanguagePopup);
 
-        getElementById('language-menu').setVisibility(is_language_popup_on);
+        const $language_menu_modal = getElementById('language-menu-modal');
+        $language_menu_modal.addEventListener('click', (e) => {
+            if ($(e.target).is($language_menu_modal)) {
+                toggleLanguagePopup();
+            }
+        });
+
+        available_languages.map((language) => {
+            const language_menu_item = createElement('div', {
+                class: `language-menu-item${ current_language === language[0] ? ' language-menu-item__active' : '' }`,
+                id   : language[0],
+            });
+            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg`) }));
+            language_menu_item.appendChild(createElement('span', { text: language[1] }));
+            getElementById('language-menu-list').appendChild(language_menu_item);
+        });
+
+        applyToAllElements('.language-menu-item', (el) => {
+            el.addEventListener('click', () => {
+                const item_language = el.getAttribute('id');
+                if (item_language === current_language) return;
+                document.location = Language.urlFor(item_language);
+            });
+        }, '', getElementById('language-menu-list'));
 
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
-        topbar_fullscreen.removeEventListener('click', toggleFullscreen);
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
     };
 
     const toggleLanguagePopup = () => {
         is_language_popup_on = !is_language_popup_on;
+        getElementById('language-menu-modal').setVisibility(is_language_popup_on);
     };
 
     const toggleFullscreen = () => {
