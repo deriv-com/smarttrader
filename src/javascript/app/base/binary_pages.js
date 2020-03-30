@@ -10,7 +10,7 @@ const LoggedInHandler         = require('./logged_in');
 // const DP2P                    = require('../pages/cashier/dp2p');
 // const PaymentAgentList        = require('../pages/cashier/payment_agent_list');
 // const PaymentAgentWithdraw    = require('../pages/cashier/payment_agent_withdraw');
-// const Endpoint                = require('../pages/endpoint');
+const Endpoint                = require('../pages/endpoint');
 // const EconomicCalendar        = require('../pages/resources/economic_calendar/economic_calendar');
 // const AssetIndexUI            = require('../pages/resources/asset_index/asset_index.ui');
 // const MetatraderDownloadUI    = require('../pages/resources/metatrader/download.ui');
@@ -87,7 +87,7 @@ const pages_config = {
     // dp2p                     : { module: DP2P,                       is_authenticated: true },
     // dubai                    : { module: StaticPages.Locations },
     // economic_calendar        : { module: EconomicCalendar },
-    // endpoint                 : { module: Endpoint },
+    endpoint   : { module: Endpoint },
     // epg_forwardws            : { module: DepositWithdraw,            is_authenticated: true, only_real: true },
     // faq                      : { module: StaticPages.AffiliatesFAQ },
     // forex                    : { module: GetStarted.Forex },

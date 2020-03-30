@@ -81,7 +81,7 @@ const Header = (() => {
         const cashier   = getElementById('cashier_icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
-        const close     = getElementById('btn__close');
+        const empty     = getElementById('header__notification-empty-img');
         const bell      = getElementById('header__notification-icon');
         const trade     = getElementById('mobile__platform-switcher-icon-trade');
         const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
@@ -110,12 +110,16 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         });
 
+        applyToAllElements('.btn__close', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+        });
+
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
         bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
-        close.src      = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
@@ -187,10 +191,6 @@ const Header = (() => {
     };
 
     const bindClick = () => {
-        // const logo = getElementById('logo');
-        // logo.removeEventListener('click', logoOnClick);
-        // logo.addEventListener('click', logoOnClick);
-
         const btn_login = getElementById('btn__login');
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
@@ -200,8 +200,10 @@ const Header = (() => {
             el.addEventListener('click', logoutOnClick);
         });
 
+        // Mobile menu
         const mobile_menu_overlay = getElementById('mobile__container');
         const mobile_menu         = getElementById('mobile__menu');
+        const mobile_menu_close   = getElementById('mobile__menu-close');
         const hamburger_menu      = getElementById('header__hamburger');
         const mobile_menu_active  = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
@@ -214,9 +216,13 @@ const Header = (() => {
             }
         };
 
+        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
+        mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
+
         // Notificatiopn Event
-        const notification_bell      = getElementById('header__notification');
+        const notification_bell      = getElementById('header__notiifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
+        const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
         const showNotification       = (should_open) => {
             notification_container.toggleClass(notification_active, should_open);
@@ -230,11 +236,7 @@ const Header = (() => {
                 showNotification(true);
             }
         });
-
-        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
-        applyToAllElements('#btn__close', (el) => {
-            el.addEventListener('click', () => showMobileMenu(false));
-        });
+        notification_close.addEventListener('click', () => showNotification(false));
 
         // Platform Switcher Event
         const platform_switcher_arrow  = getElementById('platform__switcher-expand');
@@ -836,7 +838,7 @@ const Header = (() => {
             const messages = {
                 currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
-                authenticate         : () => ({ key: 'authenticate', title: localize('Authenticate'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                authenticate         : () => ({ key: 'authenticate', title: localize('Account Authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),

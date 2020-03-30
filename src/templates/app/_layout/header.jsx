@@ -62,7 +62,7 @@ const MobileMenu = () => (
     <div id='mobile__container' className='mobile__container mobile-show'>
         <div id='mobile__menu' className='mobile__menu'>
             <div className='mobile__menu-header'>
-                <img id='btn__close' />
+                <img id='mobile__menu-close' className='btn__close' />
                 <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
             </div>
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
@@ -152,15 +152,20 @@ const Header = () => (
             </div>
             <div className='header__menu-right client_logged_in invisible'>
                 <div id='header__notification' className='header__notification header__menu-item'>
-                    <img id='header__notification-icon' className='header__icon-button' />
-                    <div id='header__notification-count' className='header__notification-count' />
+                    <div id='header__notiifcation-icon-container' className='header__notification-icon-container'>
+                        <img id='header__notification-icon' className='header__notification-icon header__icon-button' />
+                        <div id='header__notification-count' className='header__notification-count' />
+                    </div>
                     <div id='header__notification-container' className='header__notification-container' >
-                        <div className='header__notification-header'>{it.L('Notifications')}</div>
+                        <div className='header__notification-header'>
+                            <span>{it.L('Notifications')}</span>
+                            <img id='header__notification-close' className='btn__close mobile-show' />
+                        </div>
                         <div id='header__notification-content' className='header__notification-content'>
                             <div id='header__notification-empty' className='header__notification-empty'>
                                 <img id='header__notification-empty-img' />
                                 <div className='header__notification-empty-text'>{it.L('No notifications')}</div>
-                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notification')}</div>
+                                <div className='header__notification-empty-desc'>{it.L('You have yet to receive any notifications')}</div>
                             </div>
                         </div>
                     </div>

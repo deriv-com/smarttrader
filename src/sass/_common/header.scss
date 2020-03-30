@@ -276,6 +276,14 @@ body .header {
         margin-right: 10px;
         position: relative;
 
+        &-icon {
+            width: 25px;
+            height: 25px;
+
+            &-container {
+                position: relative;
+            }
+        }
         &-link {
             color: var(--text-general) !important;
 
@@ -334,7 +342,7 @@ body .header {
                 > img {
                     width: 16px;
                     height: 16px;
-                    margin-right: 8px;
+                    margin: 2px 8px 0 0;
                 }
             }
             &-title {
@@ -371,7 +379,7 @@ body .header {
             color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
-            width: 106px;
+            float: right;
             font-size: $FONT_SIZE_XS;
         }
         > img {
@@ -682,6 +690,7 @@ body .mobile {
         background: var(--overlay-outside-dialog) !important;
         height: 100vh;
         width: 100%;
+        position: absolute;
         display: none !important;
 
         &--active {
@@ -828,7 +837,7 @@ body .mobile {
     }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 880px) {
     .mobile-hide {
         display: inherit !important;
     }
@@ -837,7 +846,7 @@ body .mobile {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 879px) {
     .mobile-hide {
         display: none !important;
     }
@@ -862,9 +871,33 @@ body .mobile {
         }
         &__notification {
             margin-right: 0;
+            position: unset;
 
             > img {
                 margin: 0;
+            }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: left;
+                padding: 12px;
+                font-size: $FONT_SIZE_S;
+            }
+            &-btn {
+                width: 90px;
+                padding: 0;
+            }
+            &-content {
+                &-message {
+                    width: 100%;
+                }
+            }
+            &-container {
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                transform: unset;
             }
         }
         .account {
