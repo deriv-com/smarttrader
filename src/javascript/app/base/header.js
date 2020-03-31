@@ -400,6 +400,9 @@ const Header = (() => {
             });
         }, '', getElementById('language-menu-list'));
 
+        const el_language_menu_close_btn = getElementById('language-menu-close_btn');
+        el_language_menu_close_btn.addEventListener('click', toggleLanguagePopup);
+
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
