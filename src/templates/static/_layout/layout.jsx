@@ -77,7 +77,7 @@ const Layout = () => {
                     <div id='language-menu-modal' className='invisible'>
                         <div id='language-menu'>
                             <div id='language-menu-header'>
-                                <h3>{it.L('Language Settings')}</h3>
+                                <h3>{it.L('Language settings')}</h3>
                             </div>
                             <div id='language-menu-list' />
                         </div>
