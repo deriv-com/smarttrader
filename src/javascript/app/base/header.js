@@ -371,13 +371,13 @@ const Header = (() => {
         const current_language = Language.get();
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
 
-        const $language_select = getElementById('language-select');
-        $language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
-        $language_select.addEventListener('click', toggleLanguagePopup);
+        const el_language_select = getElementById('language-select');
+        el_language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
+        el_language_select.addEventListener('click', toggleLanguagePopup);
 
-        const $language_menu_modal = getElementById('language-menu-modal');
-        $language_menu_modal.addEventListener('click', (e) => {
-            if ($(e.target).is($language_menu_modal)) {
+        const el_language_menu_modal = getElementById('language-menu-modal');
+        el_language_menu_modal.addEventListener('click', (e) => {
+            if ($(e.target).is(el_language_menu_modal)) {
                 toggleLanguagePopup();
             }
         });
