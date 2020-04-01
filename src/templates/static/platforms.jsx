@@ -189,7 +189,7 @@ const Platform = () => (
                                 image='trading-page'
                                 header={it.L('SmartTrader')}
                                 description={it.L('Premier binary options trading platform')}
-                                text={it.L('Trade in the world\'s financial markets with a simple and user-friendly online platform.')}
+                                text={it.L('Trade the world’s markets on Binary.com’s classic platform')}
                                 buttons={[
                                     { text: it.L('Trade now'), url: it.url_for('trading') },
                                 ]}
