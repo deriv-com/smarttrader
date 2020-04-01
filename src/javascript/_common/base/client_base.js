@@ -372,15 +372,19 @@ const ClientBase = (() => {
                 return;
             }
 
-            // Keep client.accounts in sync (in case user wasn't logged in).
-            iframe_window.contentWindow.postMessage({
-                key  : 'client.accounts',
-                value: JSON.stringify(client_accounts),
-            }, origin);
-            iframe_window.contentWindow.postMessage({
-                key  : 'active_loginid',
-                value: active_loginid,
-            }, origin);
+            try {
+                // Keep client.accounts in sync (in case user wasn't logged in).
+                iframe_window.contentWindow.postMessage({
+                    key  : 'client.accounts',
+                    value: JSON.stringify(client_accounts),
+                }, origin);
+                iframe_window.contentWindow.postMessage({
+                    key  : 'active_loginid',
+                    value: active_loginid,
+                }, origin);
+            } catch (e) {
+                // Ignore (iframe isn't loaded yet).
+            }
         }
     };
 
