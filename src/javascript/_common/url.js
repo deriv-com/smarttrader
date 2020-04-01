@@ -114,7 +114,7 @@ const Url = (() => {
         } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
             return 'https://deriv.app';
         }
-        return 'https://aaron-binary.binary.sx/br_route-back-to-smarttrader';
+        return false;
     };
 
     /**
