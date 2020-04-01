@@ -141,7 +141,7 @@ const Header = (() => {
             },
             smarttrader: {
                 name     : 'SmartTrader',
-                desc     : 'Trade the world\'s markets with a simple and familiar platform.',
+                desc     : 'Trade the world\'s markets on Binary.com\'s classic platform.',
                 link     : '#',
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
