@@ -1,11 +1,12 @@
-const moment           = require('moment');
-const isCryptocurrency = require('./currency_base').isCryptocurrency;
-const SocketCache      = require('./socket_cache');
-const localize         = require('../localize').localize;
-const LocalStore       = require('../storage').LocalStore;
-const State            = require('../storage').State;
-const getPropertyValue = require('../utility').getPropertyValue;
-const isEmptyObject    = require('../utility').isEmptyObject;
+const moment                       = require('moment');
+const isCryptocurrency             = require('./currency_base').isCryptocurrency;
+const SocketCache                  = require('./socket_cache');
+const localize                     = require('../localize').localize;
+const LocalStore                   = require('../storage').LocalStore;
+const State                        = require('../storage').State;
+const getPropertyValue             = require('../utility').getPropertyValue;
+const isEmptyObject                = require('../utility').isEmptyObject;
+const getAllowedLocalStorageOrigin = require('../url').getAllowedLocalStorageOrigin;
 
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
@@ -363,12 +364,8 @@ const ClientBase = (() => {
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
-            let origin;
-            if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
-                origin = 'https://staging.deriv.app';
-            } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
-                origin = 'https://deriv.app';
-            } else {
+            const origin = getAllowedLocalStorageOrigin();
+            if (!origin) {
                 return;
             }
 

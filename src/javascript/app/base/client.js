@@ -29,9 +29,9 @@ const Client = (() => {
                 // const client_logged_in = getElementById('client-logged-in');
                 // client_logged_in.classList.add('gr-centered');
 
-                // applyToAllElements('.client_logged_in', (el) => {
-                //     el.setVisibility(1);
-                // });
+                applyToAllElements('.client_logged_in', (el) => {
+                    el.setVisibility(1);
+                });
 
                 if (ClientBase.get('is_virtual')) applyToAllElements('.client_virtual', el => el.setVisibility(1), '', el_section);
 

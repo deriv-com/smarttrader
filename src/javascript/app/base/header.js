@@ -33,6 +33,7 @@ const Header = (() => {
 
     const onLoad = () => {
         populateAccountsList();
+        setHeaderUrls();
         bindPlatform();
         bindClick();
         bindSvg();
@@ -41,6 +42,27 @@ const Header = (() => {
         }
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
+        });
+    };
+
+    const setHeaderUrls = () => {
+        applyToAllElements('.url-reports-positions', (el) => {
+            el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-reports-profit', (el) => {
+            el.href = Url.urlForDeriv('reports/profit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-reports-statement', el => {
+            el.href = Url.urlForDeriv('reports/statement', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-cashier-deposit', el => {
+            el.href = Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-account-details', el => {
+            el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-add-account', el => {
+            el.href = Url.urlForDeriv('redirect', 'action=add_account');
         });
     };
 
