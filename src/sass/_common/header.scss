@@ -175,7 +175,7 @@ body {
             cursor: pointer;
 
             &:hover {
-                background-color: $COLOR_GRAY;
+                background-color: var(--general-hover);
             }
         }
         &-list {
@@ -194,7 +194,7 @@ body {
             align-items: center;
             cursor: pointer;
 
-            &:hover {
+            &:not(.language-menu-item__active):hover {
                 border: 1px solid var(--border-hover);
             }
             &__active {
