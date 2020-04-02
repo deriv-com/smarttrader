@@ -33,9 +33,8 @@ body .topbar {
         #network_status_wrapper {
             width: 42px;
         }
-        #topbar-fullscreen {
+        #topbar-help-centre, #topbar-fullscreen {
             height: inherit;
-            margin-left: 0.8em;
             cursor: pointer;
 
             &:hover {
@@ -46,7 +45,16 @@ body .topbar {
                 height: 16px;
                 align-self: center;
                 padding: 0 0.8rem;
+            }
+        }
+        #topbar-help-centre {
+            margin-left: 0.8em;
+
+            img {
                 border-left: 1px solid var(--general-section-1);
+            }
+            &:hover img {
+                border-left-color: var(--general-hover);
             }
         }
     }

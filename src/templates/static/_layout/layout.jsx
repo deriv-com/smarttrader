@@ -43,6 +43,9 @@ const Topbar = () => (
             </div>
             <div id='language-select'><img /></div>
             <span className='no-underline nowrap gmt-clock' />
+            <div id='topbar-help-centre'>
+                <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
+            </div>
             <div id='topbar-fullscreen'>
                 <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
             </div>

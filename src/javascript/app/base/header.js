@@ -403,6 +403,10 @@ const Header = (() => {
         const el_language_menu_close_btn = getElementById('language-menu-close_btn');
         el_language_menu_close_btn.addEventListener('click', toggleLanguagePopup);
 
+        // Help center.
+        const topbar_help_center = getElementById('topbar-help-centre');
+        topbar_help_center.addEventListener('click', () => window.location = 'https://www.deriv.com/help-centre/');
+
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
