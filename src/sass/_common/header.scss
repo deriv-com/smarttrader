@@ -35,7 +35,6 @@ body .topbar {
         }
         #topbar-fullscreen {
             height: inherit;
-            padding: 0 0.8em;
             margin-left: 0.8em;
             cursor: pointer;
 
@@ -46,6 +45,8 @@ body .topbar {
                 width: 16px;
                 height: 16px;
                 align-self: center;
+                padding: 0 0.8rem;
+                border-left: 1px solid var(--general-section-1);
             }
         }
     }
@@ -126,11 +127,13 @@ body .topbar {
     #language-select {
         cursor: pointer;
         height: inherit;
-        padding: 0 0.8rem;
 
         img {
+            padding: 0 0.8rem;
             width: 24px;
             height: 16px;
+            border-left: 1px solid var(--general-section-1);
+            border-right: 1px solid var(--general-section-1);
         }
         &:hover {
             background-color: var(--general-hover);
