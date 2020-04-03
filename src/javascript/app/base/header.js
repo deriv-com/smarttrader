@@ -18,11 +18,13 @@ const applyToAllElements       = require('../../_common/utility').applyToAllElem
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const template                 = require('../../_common/utility').template;
+const Language                 = require('../../_common/language');
 
 const header_icon_base_path = '/images/pages/header/';
 
 const Header = (() => {
     const notifications = [];
+    let is_language_popup_on = false;
     let is_full_screen = false;
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
@@ -33,6 +35,7 @@ const Header = (() => {
 
     const onLoad = () => {
         populateAccountsList();
+        setHeaderUrls();
         bindPlatform();
         bindClick();
         bindSvg();
@@ -41,6 +44,27 @@ const Header = (() => {
         }
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
+        });
+    };
+
+    const setHeaderUrls = () => {
+        applyToAllElements('.url-reports-positions', (el) => {
+            el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-reports-profit', (el) => {
+            el.href = Url.urlForDeriv('reports/profit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-reports-statement', el => {
+            el.href = Url.urlForDeriv('reports/statement', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-cashier-deposit', el => {
+            el.href = Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-account-details', el => {
+            el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-add-account', el => {
+            el.href = Url.urlForDeriv('redirect', 'action=add_account');
         });
     };
 
@@ -59,7 +83,7 @@ const Header = (() => {
         const cashier   = getElementById('cashier_icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
-        const close     = getElementById('btn__close');
+        const empty     = getElementById('header__notification-empty-img');
         const bell      = getElementById('header__notification-icon');
         const trade     = getElementById('mobile__platform-switcher-icon-trade');
         const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
@@ -88,12 +112,16 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         });
 
+        applyToAllElements('.btn__close', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+        });
+
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
+        empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
         bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
-        close.src      = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
@@ -137,7 +165,7 @@ const Header = (() => {
             },
             smarttrader: {
                 name     : 'SmartTrader',
-                desc     : 'Trade the world\'s markets with a simple and familiar platform.',
+                desc     : 'Trade the world\'s markets on Binary.com\'s classic platform.',
                 link     : '#',
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
@@ -165,10 +193,6 @@ const Header = (() => {
     };
 
     const bindClick = () => {
-        // const logo = getElementById('logo');
-        // logo.removeEventListener('click', logoOnClick);
-        // logo.addEventListener('click', logoOnClick);
-
         const btn_login = getElementById('btn__login');
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
@@ -178,8 +202,10 @@ const Header = (() => {
             el.addEventListener('click', logoutOnClick);
         });
 
+        // Mobile menu
         const mobile_menu_overlay = getElementById('mobile__container');
         const mobile_menu         = getElementById('mobile__menu');
+        const mobile_menu_close   = getElementById('mobile__menu-close');
         const hamburger_menu      = getElementById('header__hamburger');
         const mobile_menu_active  = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
@@ -192,9 +218,13 @@ const Header = (() => {
             }
         };
 
+        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
+        mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
+
         // Notificatiopn Event
-        const notification_bell      = getElementById('header__notification');
+        const notification_bell      = getElementById('header__notiifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
+        const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
         const showNotification       = (should_open) => {
             notification_container.toggleClass(notification_active, should_open);
@@ -208,11 +238,7 @@ const Header = (() => {
                 showNotification(true);
             }
         });
-
-        hamburger_menu.addEventListener('click', () => showMobileMenu(true));
-        applyToAllElements('#btn__close', (el) => {
-            el.addEventListener('click', () => showMobileMenu(false));
-        });
+        notification_close.addEventListener('click', () => showNotification(false));
 
         // Platform Switcher Event
         const platform_switcher_arrow  = getElementById('platform__switcher-expand');
@@ -363,9 +389,56 @@ const Header = (() => {
             }
         });
 
+        // Language Popup.
+        const current_language = Language.get();
+        const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
+
+        const el_language_select = getElementById('language-select');
+        if (el_language_select) {
+            el_language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
+            el_language_select.addEventListener('click', toggleLanguagePopup);
+        }
+
+        const el_language_menu_modal = getElementById('language-menu-modal');
+        el_language_menu_modal.addEventListener('click', (e) => {
+            if ($(e.target).is(el_language_menu_modal)) {
+                toggleLanguagePopup();
+            }
+        });
+
+        available_languages.map((language) => {
+            const language_menu_item = createElement('div', {
+                class: `language-menu-item${ current_language === language[0] ? ' language-menu-item__active' : '' }`,
+                id   : language[0],
+            });
+            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg`) }));
+            language_menu_item.appendChild(createElement('span', { text: language[1] }));
+            getElementById('language-menu-list').appendChild(language_menu_item);
+        });
+
+        applyToAllElements('.language-menu-item', (el) => {
+            el.addEventListener('click', () => {
+                const item_language = el.getAttribute('id');
+                if (item_language === current_language) return;
+                document.location = Language.urlFor(item_language);
+            });
+        }, '', getElementById('language-menu-list'));
+
+        const el_language_menu_close_btn = getElementById('language-menu-close_btn');
+        el_language_menu_close_btn.addEventListener('click', toggleLanguagePopup);
+
+        // Help center.
+        const topbar_help_center = getElementById('topbar-help-centre');
+        topbar_help_center.addEventListener('click', () => window.location = 'https://www.deriv.com/help-centre/');
+
+        // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
-        topbar_fullscreen.removeEventListener('click', toggleFullscreen);
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
+    };
+
+    const toggleLanguagePopup = () => {
+        is_language_popup_on = !is_language_popup_on;
+        getElementById('language-menu-modal').setVisibility(is_language_popup_on);
     };
 
     const toggleFullscreen = () => {
@@ -406,7 +479,7 @@ const Header = (() => {
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
                     // const account_title  = Client.getAccountTitle(loginid);
-                    const is_real        = !Client.getAccountType(loginid); // this function only returns virtual/gaming/financial types
+                    const is_real        = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
                     const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? (currency ? currency.toLowerCase() : 'unknown') : 'virtual'}.svg`);
@@ -820,7 +893,7 @@ const Header = (() => {
             const messages = {
                 currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
-                authenticate         : () => ({ key: 'authenticate', title: localize('Authenticate'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                authenticate         : () => ({ key: 'authenticate', title: localize('Account Authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),

@@ -33,10 +33,8 @@ body .topbar {
         #network_status_wrapper {
             width: 42px;
         }
-        #topbar-fullscreen {
+        #topbar-help-centre, #topbar-fullscreen {
             height: inherit;
-            padding: 0 0.8em;
-            margin-left: 0.8em;
             cursor: pointer;
 
             &:hover {
@@ -46,6 +44,17 @@ body .topbar {
                 width: 16px;
                 height: 16px;
                 align-self: center;
+                padding: 0 0.8rem;
+            }
+        }
+        #topbar-help-centre {
+            margin-left: 0.8em;
+
+            img {
+                border-left: 1px solid var(--general-section-1);
+            }
+            &:hover img {
+                border-left-color: var(--general-hover);
             }
         }
     }
@@ -121,6 +130,98 @@ body .topbar {
         &[status='blinker'] {
             animation: blinking-network-status 0.4s alternate infinite;
             background: var(--text-profit-success);
+        }
+    }
+    #language-select {
+        cursor: pointer;
+        height: inherit;
+
+        img {
+            padding: 0 0.8rem;
+            width: 24px;
+            height: 16px;
+            border-left: 1px solid var(--general-section-1);
+            border-right: 1px solid var(--general-section-1);
+        }
+        &:hover {
+            background-color: var(--general-hover);
+        }
+    }
+}
+
+body {
+    #language-menu-modal {
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--overlay-outside-dialog);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    #language-menu {
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--general-main-2);
+        border-radius: 8px;
+
+        &-header {
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 16px 24px;
+            border-bottom: 2px solid var(--general-section-1);
+        }
+        &-close_btn {
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            width: 32px;
+            height: 32px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%333' d='M3.707 2.293L8 6.587l4.293-4.294c.39-.39 1.023-.39 1.414 0 .39.39.39 1.023 0 1.414L9.414 8.001l4.293 4.295c.39.39.39 1.024 0 1.414-.39.39-1.024.39-1.414 0L8 9.416 3.707 13.71c-.39.39-1.023.39-1.414 0-.39-.39-.39-1.023 0-1.414l4.292-4.295-4.292-4.294c-.39-.39-.39-1.024 0-1.414.39-.39 1.024-.39 1.414 0z'/%3E%3C/svg%3E%0A") no-repeat center;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--general-hover);
+            }
+        }
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(2, 84px);
+            grid-gap: 40px;
+            padding: 40px;
+        }
+        .language-menu-item {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 16px 5px;
+            align-items: center;
+            cursor: pointer;
+
+            &:not(.language-menu-item__active):hover {
+                border: 1px solid var(--border-hover);
+            }
+            &__active {
+                cursor: initial;
+                border: 1px solid var(--border-active);
+                font-weight: 700;
+            }
+            img {
+                width: 36px;
+                height: 24px;
+            }
+            span {
+                font-size: 0.9rem;
+                color: var(--text-prominent);
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -276,6 +377,14 @@ body .header {
         margin-right: 10px;
         position: relative;
 
+        &-icon {
+            width: 25px;
+            height: 25px;
+
+            &-container {
+                position: relative;
+            }
+        }
         &-link {
             color: var(--text-general) !important;
 
@@ -334,7 +443,7 @@ body .header {
                 > img {
                     width: 16px;
                     height: 16px;
-                    margin-right: 8px;
+                    margin: 2px 8px 0 0;
                 }
             }
             &-title {
@@ -371,7 +480,7 @@ body .header {
             color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
-            width: 106px;
+            float: right;
             font-size: $FONT_SIZE_XS;
         }
         > img {
@@ -700,6 +809,7 @@ body .mobile {
         background: var(--overlay-outside-dialog) !important;
         height: 100vh;
         width: 100%;
+        position: absolute;
         display: none !important;
 
         &--active {
@@ -846,7 +956,7 @@ body .mobile {
     }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 880px) {
     .mobile-hide {
         display: inherit !important;
     }
@@ -855,7 +965,7 @@ body .mobile {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 879px) {
     .mobile-hide {
         display: none !important;
     }
@@ -880,9 +990,33 @@ body .mobile {
         }
         &__notification {
             margin-right: 0;
+            position: unset;
 
             > img {
                 margin: 0;
+            }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: left;
+                padding: 12px;
+                font-size: $FONT_SIZE_S;
+            }
+            &-btn {
+                width: 90px;
+                padding: 0;
+            }
+            &-content {
+                &-message {
+                    width: 100%;
+                }
+            }
+            &-container {
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                transform: unset;
             }
         }
         .account {
