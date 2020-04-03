@@ -200,7 +200,7 @@ workflows:
             tags:
               only: /^staging.*/
       - deploy_staging:
-          context: binary-frontend-artifact-upload
+          context: deriv-app-artifact-upload
           requires:
             - build_push_staging
           filters:
@@ -226,4 +226,3 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
-
