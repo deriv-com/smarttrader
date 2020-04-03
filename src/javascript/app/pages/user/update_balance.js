@@ -29,7 +29,7 @@ const updateBalance = (response) => {
             Client.set('balance', balance);
             PortfolioInit.updateBalance();
         }
-        
+
         if (is_virtual) {
             $('.account__switcher-balance-virtual').html(view);
             TopUpVirtualPopup.init(balance);
