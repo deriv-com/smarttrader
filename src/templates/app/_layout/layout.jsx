@@ -41,7 +41,11 @@ const Topbar = () => (
             <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
                 <div className='network_status' />
             </div>
+            <div id='language-select'><img /></div>
             <span className='no-underline nowrap gmt-clock' />
+            <div id='topbar-help-centre'>
+                <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
+            </div>
             <div id='topbar-fullscreen'>
                 <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
             </div>
@@ -72,6 +76,15 @@ const Layout = () => {
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                 <DerivIFrame />
                 {/* <Elevio /> */}
+                <div id='language-menu-modal' className='invisible'>
+                    <div id='language-menu'>
+                        <div id='language-menu-header'>
+                            <span>{it.L('Language settings')}</span>
+                            <span id='language-menu-close_btn' />
+                        </div>
+                        <div id='language-menu-list' />
+                    </div>
+                </div>
             </body>
         </html>
     );
