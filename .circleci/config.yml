@@ -193,12 +193,14 @@ workflows:
   tagged_release_staging:
     jobs:
       - build_push_staging:
+          context: binary-frontend-artifact-upload
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^staging.*/
       - deploy_staging:
+          context: binary-frontend-artifact-upload
           requires:
             - build_push_staging
           filters:
@@ -209,12 +211,14 @@ workflows:
   tagged_release_production:
     jobs:
       - build_push_production:
+          context: binary-frontend-artifact-upload
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^production.*/
       - deploy_production:
+          context: binary-frontend-artifact-upload
           requires:
             - build_push_production
           filters:
@@ -222,4 +226,4 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
-          context: deriv-app-artifact-upload  # using context to retrieve shared secret from circle ci
+
