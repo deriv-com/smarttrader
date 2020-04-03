@@ -218,7 +218,7 @@ workflows:
             tags:
               only: /^production.*/
       - deploy_production:
-          context: binary-frontend-artifact-upload
+          context: deriv-app-artifact-upload
           requires:
             - build_push_production
           filters:
