@@ -211,7 +211,7 @@ workflows:
   tagged_release_production:
     jobs:
       - build_push_production:
-          context: binary-frontend-artifact-upload
+          context: deriv-app-artifact-upload
           filters:
             branches:
               ignore: /.*/
