@@ -394,10 +394,8 @@ const Header = (() => {
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
 
         const el_language_select = getElementById('language-select');
-        if (el_language_select) {
-            el_language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
-            el_language_select.addEventListener('click', toggleLanguagePopup);
-        }
+        el_language_select.getElementsByTagName('img')[0].src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
+        el_language_select.addEventListener('click', toggleLanguagePopup);
 
         const el_language_menu_modal = getElementById('language-menu-modal');
         el_language_menu_modal.addEventListener('click', (e) => {
