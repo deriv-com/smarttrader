@@ -193,7 +193,7 @@ workflows:
   tagged_release_staging:
     jobs:
       - build_push_staging:
-          context: binary-frontend-artifact-upload
+          context: deriv-app-artifact-upload
           filters:
             branches:
               ignore: /.*/
