@@ -11,8 +11,6 @@
                     'https://staging.deriv.app',
                 ];
 
-                console.log(message.origin);
-
                 if (allowed_origins.includes(message.origin)) {
                     switch (message.data.key) {
                         case 'active_loginid': 
