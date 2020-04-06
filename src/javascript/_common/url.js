@@ -108,7 +108,14 @@ const Url = (() => {
 
     const urlForDeriv = (path, pars) => `${getAllowedLocalStorageOrigin()}/${path}${pars ? `?${pars}` : ''}`;
 
-    const getAllowedLocalStorageOrigin = () => 'https://ahkuma.binary.sx';
+    const getAllowedLocalStorageOrigin = () => {
+        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://staging.deriv.app';
+        } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://deriv.app';
+        }
+        return 'https://deriv.app';
+    };
 
     /**
      * @param {Object} new_params - Object with param-value pairs. To delete param, set value to null.

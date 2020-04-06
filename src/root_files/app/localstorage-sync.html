@@ -9,8 +9,9 @@
                 var allowed_origins = [
                     'https://deriv.app', 
                     'https://staging.deriv.app',
-                    'https://ahkuma.binary.sx',
                 ];
+
+                console.log(message.origin);
 
                 if (allowed_origins.includes(message.origin)) {
                     switch (message.data.key) {
