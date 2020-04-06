@@ -494,13 +494,13 @@ const Header = (() => {
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
                     const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? (currency || 'Real') : 'Demo' });
+                    const account_detail    = createElement('span', { text: is_real ? (currency || localize('Real')) : localize('Demo') });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
                     
                     if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: 'No Currency Assigned' }));
-                        account_balance.html(createElement('span', { text: 'No currency selected', class: 'no-currency' }));
+                        $('#header__acc-balance').html(createElement('p', { text: localize('No Currency Assigned') }));
+                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
                         $('.account__switcher-select_currencies').css('display', 'block');
                     }
 
