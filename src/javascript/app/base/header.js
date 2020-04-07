@@ -499,7 +499,7 @@ const Header = (() => {
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
                     
                     if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: localize('No Currency Assigned') }));
+                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
                         account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
                         $('.account__switcher-select_currencies').css('display', 'block');
                     }
