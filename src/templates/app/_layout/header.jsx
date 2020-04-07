@@ -197,7 +197,7 @@ const Header = () => (
                                         </h3>
                                         <div className='account__switcher-list' id='account__switcher-real-list'>
                                             <a id='account__switcher-select_currencies' target='_blank' rel='noopener noreferrer' className='url-add-account account__switcher-select_currencies'>
-                                                <span className='account__switcher-select_currencies-text'>{it.L('Select Currency')}</span>
+                                                <span className='account__switcher-select_currencies-text'>{it.L('Select currency')}</span>
                                             </a>
                                             <a id='account__switcher-add' target='_blank' rel='noopener noreferrer' className='url-add-account account__switcher-add'>
                                                 <img id='add_icon' className='account__switcher-add-icon' />
