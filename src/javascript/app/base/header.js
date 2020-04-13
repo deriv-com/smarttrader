@@ -502,6 +502,7 @@ const Header = (() => {
                         $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
                         account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
                         $('.account__switcher-select_currencies').css('display', 'block');
+                        $('.header__deposit').text('Set currency');
                     }
 
                     account_detail.appendChild(account_loginid);
