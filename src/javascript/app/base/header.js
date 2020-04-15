@@ -64,7 +64,7 @@ const Header = (() => {
             el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
         applyToAllElements('.url-add-account', el => {
-            el.href = Url.urlForDeriv('redirect', `action=add_account?ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
     };
 
@@ -505,7 +505,7 @@ const Header = (() => {
                         
                         const header_deposit = $('.header__deposit');
                         header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account?ext_platform_url=${encodeURIComponent(window.location.href)}`));
+                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
                     }
 
                     account_detail.appendChild(account_loginid);
@@ -894,7 +894,7 @@ const Header = (() => {
             };
 
             const messages = {
-                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account?ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
                 authenticate         : () => ({ key: 'authenticate', title: localize('Account Authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
