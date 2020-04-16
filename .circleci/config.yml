@@ -90,7 +90,7 @@ commands:
           aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
-  docker_build_staging:
+  docker_build:
     description: "Build Docker image"
     steps:
       - setup_remote_docker
@@ -152,8 +152,8 @@ jobs:
          target: 'staging'
       - grunt_release:
           target: 'translations'
-      - docker_build_staging
-      - docker_push_staging
+      - docker_build
+      - docker_push
       
   build_push_production:
     docker:
@@ -166,8 +166,8 @@ jobs:
       - compress
       - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
       - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint
-      - docker_build_production
-      - docker_push_production
+      - docker_build
+      - docker_push
 
   deploy_staging:
     docker:
@@ -183,9 +183,13 @@ jobs:
           k8s_svc_name: "production-smarttrader-deriv-app"
       
 workflows:
-  test:
+  build_and_push_master:
     jobs:
       - test
+      - build_push_staging:
+          filters:
+            branches:
+              only: /^master/
   tagged_release_staging:
     jobs:
       - build_push_staging:
@@ -195,7 +199,6 @@ workflows:
               ignore: /.*/
             tags:
               only: /^staging.*/
-          context: binary-frontend-artifact-upload
       - deploy_staging:
           context: deriv-app-artifact-upload
           requires:
@@ -205,7 +208,6 @@ workflows:
               ignore: /.*/
             tags:
               only: /^staging.*/
-          context: binary-frontend-artifact-upload
   tagged_release_production:
     jobs:
       - build_push_production:
@@ -224,4 +226,3 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
-          context: binary-frontend-artifact-upload
