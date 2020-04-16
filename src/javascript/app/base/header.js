@@ -1004,6 +1004,7 @@ const Header = (() => {
                 'identity',
                 'document',
                 'unwelcome',
+                'no_withdrawal_or_trading',
                 'cashier_locked',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',

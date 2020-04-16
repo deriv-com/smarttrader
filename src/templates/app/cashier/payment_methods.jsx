@@ -93,7 +93,7 @@ const PaymentMethods = () => {
     const withdrawal               = 'Withdrawal: ';
     const working_day              = '[_1] working day';
     const instant                  = 'Instant';
-    const instant_with_mins        = 'Instant to [_1] min';
+    const working_day_range        = '[_1] to [_2] working days';
     const not_applicable           = 'Not applicable';
     const blockchain_confirmations = '[_1] blockchain confirmations';
 
@@ -130,25 +130,6 @@ const PaymentMethods = () => {
                                             { text: '500 - 100,000' },
                                             { text: '500 - 100,000' },
                                             { text: <TableValues value={[it.L(`${deposit}${working_day}`, 1), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks pdf_file='Binary.com_BankWire.pdf' video_link='https://youtu.be/fbnOZAf-04Y' /> },
-                                        ],
-                                        },
-                                    ]}
-                                    />,
-                                    },
-                                ],
-                            },
-                            {
-                                id : 'internet-bank-transfer',
-                                row: [
-                                    { text: <PaymentLogo logo='internet_bank_transfer' /> },
-                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
-                                        { td: it.L('Enjoy the simplicity of online banking to fund your [_1] account.', it.website_name) },
-                                        { td_list: [
-                                            { text: 'USD GBP EUR' },
-                                            { text: '25 - 10,000' },
-                                            { text: '25 - 10,000' },
-                                            { text: <TableValues value={[it.L(`${deposit}${instant_with_mins}`, 15), it.L(`${withdrawal}${working_day}`, 1)]} /> },
                                             { text: <ReferenceLinks /> },
                                         ],
                                         },
@@ -176,6 +157,63 @@ const PaymentMethods = () => {
                                     />,
                                     },
 
+                                ],
+                            },
+                            {
+                                id : 'zing-pay',
+                                row: [
+                                    { text: <PaymentLogo logo='zingpay' /> },
+                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
+                                        { td: it.L('ZingPay is a payment facility that allows online bank transfers for clients in South Africa.') },
+                                        { td_list: [
+                                            { text: 'USD GBP EUR AUD' },
+                                            { text: '10 - 10,000' },
+                                            { text: '10 - 10,000' },
+                                            { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${working_day_range}`, 1, 3)]} /> },
+                                            { text: <ReferenceLinks /> },
+                                        ],
+                                        },
+                                    ]}
+                                    />,
+                                    },
+                                ],
+                            },
+                            {
+                                id : 'help-2-pay',
+                                row: [
+                                    { text: <PaymentLogo logo='help2pay' /> },
+                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
+                                        { td: it.L('Help2Pay is a payment facility that allows online bank transfers for clients across Southeast Asia.') },
+                                        { td_list: [
+                                            { text: 'USD' },
+                                            { text: '10 - 10,000' },
+                                            { text: 'N/A' },
+                                            { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${not_applicable}`)]} /> },
+                                            { text: <ReferenceLinks /> },
+                                        ],
+                                        },
+                                    ]}
+                                    />,
+                                    },
+                                ],
+                            },
+                            {
+                                id : 'dragon-pheonix',
+                                row: [
+                                    { text: <PaymentLogo logo='dragon_pheonix' /> },
+                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
+                                        { td: it.L('DragonPhoenix is a payment facility that allows online bank transfers for clients across Southeast Asia.') },
+                                        { td_list: [
+                                            { text: 'USD' },
+                                            { text: '10 - 10,000' },
+                                            { text: 'N/A' },
+                                            { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${not_applicable}`)]} /> },
+                                            { text: <ReferenceLinks /> },
+                                        ],
+                                        },
+                                    ]}
+                                    />,
+                                    },
                                 ],
                             },
                         ],
@@ -230,7 +268,7 @@ const PaymentMethods = () => {
                                 row: [
                                     { text: <PaymentLogo logo='maestro' /> },
                                     { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
-                                        { td: it.L('Maestro is an international debit card service by Mastercard. For more information, please visit [_1].', '<a href="http://stage.maestrocard.com/" target="_blank">stage.maestrocard.com</a>') },
+                                        { td: it.L('Maestro is an international debit card service by Mastercard. For more information, please visit [_1].', `${createLink('https://brand.mastercard.com/brandcenter/more-about-our-brands.html')}`) },
                                         { td_list: [
                                             { text: 'USD GBP EUR AUD' },
                                             { text: '10 - 10,000' },
@@ -364,29 +402,9 @@ const PaymentMethods = () => {
                                         { td_list: [
                                             { text: 'USD EUR' },
                                             { text: <TableValues value={['5 - 200 (USD)', '5 - 150 (EUR)']} /> },
-                                            { text: <TableValues value={['5 - 200 (USD)', '5 - 150 (EUR)']} /> },
+                                            { text: <TableValues value={['5 - 180 (USD)', '5 - 150 (EUR)']} /> },
                                             { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${working_day}`, 1)]} /> },
                                             { text: <ReferenceLinks pdf_file='Binary.com_Qiwi.pdf' video_link='https://youtu.be/CMAF29cn9XQ' /> },
-                                        ],
-                                        },
-                                    ]}
-                                    />,
-                                    },
-                                ],
-                            },
-                            {
-                                id      : 'yandex',
-                                dataShow: '-eucountry',
-                                row     : [
-                                    { text: <PaymentLogo logo='yandex' /> },
-                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
-                                        { td: it.L('Yandex.Money is an electronic payment service provider that offers consumers an easy, safe, and reliable online payment method. For more information, please visit [_1].', `${createLink('https://money.yandex.ru')}`) },
-                                        { td_list: [
-                                            { text: 'USD' },
-                                            { text: '25 - 10,000' },
-                                            { text: 'N/A' },
-                                            { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${not_applicable}`)]} /> },
-                                            { text: <ReferenceLinks /> },
                                         ],
                                         },
                                     ]}
@@ -421,26 +439,6 @@ const PaymentMethods = () => {
                                         { td: it.L('Jeton is an international e-wallet for money transfers and online payments. For more information, please visit [_1].', '<a href="https://www.jeton.com/" target="_blank">www.jeton.com</a>') },
                                         { td_list: [
                                             { text: 'USD EUR' },
-                                            { text: '5 - 10,000' },
-                                            { text: 'N/A' },
-                                            { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks /> },
-                                        ],
-                                        },
-                                    ]}
-                                    />,
-                                    },
-                                ],
-                            },
-                            {
-                                id      : 'iwallet',
-                                dataShow: '-eucountry',
-                                row     : [
-                                    { text: <PaymentLogo logo='iwallet' /> },
-                                    { attributes: { colSpan: 5, className: 'toggler' }, custom_td : <CustomTableData data={[
-                                        { td: it.L('iWallet is an online payment service provider that allows deposits, withdrawals, and transaction payments. For more information, please visit [_1].', '<a href="https://www.iwl.hk/" target="_blank">www.iwl.hk</a>') },
-                                        { td_list: [
-                                            { text: 'USD' },
                                             { text: '5 - 10,000' },
                                             { text: 'N/A' },
                                             { text: <TableValues value={[it.L(`${deposit}${instant}`), it.L(`${withdrawal}${working_day}`, 1)]} /> },
@@ -526,10 +524,10 @@ const PaymentMethods = () => {
                                         { td: it.L('Bitcoin is the world\'s first decentralised cryptocurrency, created in 2009. For more information, please visit [_1].', `${createLink('https://bitcoin.org')}`) },
                                         { td_list: [
                                             { text: 'BTC' },
-                                            { text: '-' },
+                                            { text: '—' },
                                             { text: '' },
                                             { text: <TableValues value={[it.L(`${deposit}${blockchain_confirmations}`, 3), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks pdf_file='Binary.com_Bitcoin.pdf' video_link='https://youtu.be/StIW7CviBTw' /> },
+                                            { text: <ReferenceLinks /* pdf_file='Binary.com_Bitcoin.pdf' video_link='https://youtu.be/StIW7CviBTw' */ /> },
                                         ],
                                         },
                                     ]}
@@ -545,10 +543,10 @@ const PaymentMethods = () => {
                                         { td: it.L('Ether is a cryptocurrency that is used to pay for transactions on the Ethereum platform. For more information, please visit [_1].', `${createLink('https://www.ethereum.org')}`) },
                                         { td_list: [
                                             { text: 'ETH' },
-                                            { text: '-' },
+                                            { text: '—' },
                                             { text: '' },
                                             { text: <TableValues value={[it.L(`${deposit}${blockchain_confirmations}`, 3), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks pdf_file='Binary.com_Ethereum.pdf' video_link='https://youtu.be/B7EVLt3lIMs' /> },
+                                            { text: <ReferenceLinks /* pdf_file='Binary.com_Ethereum.pdf' video_link='https://youtu.be/B7EVLt3lIMs' */ /> },
                                         ],
                                         },
                                     ]}
@@ -564,10 +562,10 @@ const PaymentMethods = () => {
                                         { td: it.L('Litecoin is a cryptocurrency similar to Bitcoin, but capable of a higher transaction volume and faster confirmation times. For more information, please visit [_1].', `${createLink('https://www.litecoin.org')}`) },
                                         { td_list: [
                                             { text: 'LTC' },
-                                            { text: '-' },
+                                            { text: '—' },
                                             { text: '' },
                                             { text: <TableValues value={[it.L(`${deposit}${blockchain_confirmations}`, 3), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks pdf_file='Binary.com_Litecoin.pdf' video_link='https://youtu.be/DJhP5UjKPpI' /> },
+                                            { text: <ReferenceLinks /* pdf_file='Binary.com_Litecoin.pdf' video_link='https://youtu.be/DJhP5UjKPpI' */ /> },
                                         ],
                                         },
                                     ]}
@@ -583,10 +581,10 @@ const PaymentMethods = () => {
                                         { td: it.L('Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit [_1].', `${createLink('https://www.tether.to')}`) },
                                         { td_list: [
                                             { text: 'UST' },
-                                            { text: '-' },
+                                            { text: '—' },
                                             { text: '' },
                                             { text: <TableValues value={[it.L(`${deposit}${blockchain_confirmations}`, 3), it.L(`${withdrawal}${working_day}`, 1)]} /> },
-                                            { text: <ReferenceLinks pdf_file='Binary.com_Tether.pdf' video_link='https://youtu.be/N1WPsq67290' /> },
+                                            { text: <ReferenceLinks /* pdf_file='Binary.com_Tether.pdf' video_link='https://youtu.be/N1WPsq67290' */ /> },
                                         ],
                                         },
                                     ]}
@@ -597,6 +595,10 @@ const PaymentMethods = () => {
                         ],
                     }}
                 />
+
+                <div className='gr-padding-10' data-show='-eucountry'>
+                    <p className='hint'>{it.L('Note:')} {it.L('Figures have been rounded.')}</p>
+                </div>
             </div>
 
             <div className='gr-padding-10'>
