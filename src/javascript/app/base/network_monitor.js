@@ -15,7 +15,7 @@ const NetworkMonitor = (() => {
         if (is_online) {
             Header.hideNotification(connection_error_code);
         } else {
-            Header.displayNotification({ key: connection_error_code, title: localize('You are offline'), message: localize('Check your conenction.'), type: 'danger' });
+            Header.displayNotification({ key: connection_error_code, title: localize('You are offline'), message: localize('Check your connection.'), type: 'danger' });
         }
 
         applyToAllElements('.network_status', (el) => {
