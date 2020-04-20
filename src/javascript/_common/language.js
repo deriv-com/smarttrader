@@ -48,7 +48,7 @@ const Language = (() => {
 
     const getLanguage = () => {
         if (/ach/i.test(current_lang) || /ach/i.test(languageFromUrl())) {
-            const crowdin_lang_key = 'jipt_language_code_binary-static';
+            const crowdin_lang_key = 'jipt_language_code_dsmarttrader';
             const crowdin_lang     = localStorage.getItem(crowdin_lang_key) || Cookies.get(crowdin_lang_key); // selected language for in-context translation
             if (crowdin_lang) {
                 current_lang = crowdin_lang.toUpperCase().replace('-', '_').toUpperCase();

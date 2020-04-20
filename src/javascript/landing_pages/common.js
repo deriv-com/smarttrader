@@ -151,8 +151,8 @@ function toggleAllSiblings(elem, filter, class_name) {
 
 function setupCrowdin() {
     const isInContextEnvironment = () => (
-        /^https:\/\/staging\.binary\.com\/translations\//i.test(window.location.href) &&
-            /ach/i.test(getLanguage())
+        /^https:\/\/smarttrader-staging\.deriv\.app/i.test(window.location.href) &&
+        /ach/i.test(getLanguage())
     );
 
     if (isInContextEnvironment()) {
@@ -160,7 +160,7 @@ function setupCrowdin() {
         if (el_lang) el_lang.style.display = 'none';
         /* eslint-disable no-underscore-dangle */
         window._jipt = [];
-        window._jipt.push(['project', 'binary-static']);
+        window._jipt.push(['project', 'dsmarttrader']);
         /* eslint-enable no-underscore-dangle */
         if (document.body) {
             const crowdinScript = document.createElement('script');
