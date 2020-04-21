@@ -150,10 +150,7 @@ function toggleAllSiblings(elem, filter, class_name) {
 }
 
 function setupCrowdin() {
-    const isInContextEnvironment = () => (
-        window.location.hostname !== 'smarttrader.deriv.app' &&
-        /^\/ach\//.test(window.location.pathname)
-    );
+    const isInContextEnvironment = () => /ach/i.test(getLanguage());
 
     if (isInContextEnvironment()) {
         const el_lang = document.getElementById('language');

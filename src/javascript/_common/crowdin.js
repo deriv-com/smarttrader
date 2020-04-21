@@ -1,3 +1,4 @@
+const urlLang       = require('./language').urlLang;
 const createElement = require('./utility').createElement;
 
 const Crowdin = (() => {
@@ -5,10 +6,7 @@ const Crowdin = (() => {
      * in-context translation provided at: https://domain.tld/ach/
      * and uses 'ach' as pseudo language code
      */
-    const isInContextEnvironment = () => (
-        window.location.hostname !== 'smarttrader.deriv.app' &&
-        /^\/ach\//.test(window.location.pathname)
-    );
+    const isInContextEnvironment = () => urlLang() === 'ach';
 
     /**
      * initialize Crowdin in-context environment
