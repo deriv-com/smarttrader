@@ -1,4 +1,3 @@
-const urlLang       = require('./language').urlLang;
 const createElement = require('./utility').createElement;
 
 const Crowdin = (() => {
