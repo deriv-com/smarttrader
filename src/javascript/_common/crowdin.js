@@ -3,12 +3,12 @@ const createElement = require('./utility').createElement;
 
 const Crowdin = (() => {
     /**
-     * in-context translation provided at: https://smarttrader-staging.deriv.app/ach/
+     * in-context translation provided at: https://domain.tld/ach/
      * and uses 'ach' as pseudo language code
      */
     const isInContextEnvironment = () => (
-        /^https:\/\/smarttrader-staging\.deriv\.app/i.test(window.location.href)
-        && /ach/i.test(urlLang())
+        window.location.hostname !== 'smarttrader.deriv.app' &&
+        /^\/ach\//.test(window.location.pathname)
     );
 
     /**

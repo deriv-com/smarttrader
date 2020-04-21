@@ -151,8 +151,8 @@ function toggleAllSiblings(elem, filter, class_name) {
 
 function setupCrowdin() {
     const isInContextEnvironment = () => (
-        /^https:\/\/smarttrader-staging\.deriv\.app/i.test(window.location.href) &&
-        /ach/i.test(getLanguage())
+        window.location.hostname !== 'smarttrader.deriv.app' &&
+        /^\/ach\//.test(window.location.pathname)
     );
 
     if (isInContextEnvironment()) {
