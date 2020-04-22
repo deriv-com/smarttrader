@@ -369,8 +369,8 @@ const ClientBase = (() => {
                 return;
             }
 
-            try {
-                // Keep client.accounts in sync (in case user wasn't logged in).
+            // Keep client.accounts in sync (in case user wasn't logged in).
+            if (iframe_window.src === `${origin}/localstorage-sync.html`) {
                 iframe_window.contentWindow.postMessage({
                     key  : 'client.accounts',
                     value: JSON.stringify(client_accounts),
@@ -379,8 +379,6 @@ const ClientBase = (() => {
                     key  : 'active_loginid',
                     value: active_loginid,
                 }, origin);
-            } catch (e) {
-                // Ignore (iframe isn't loaded yet).
             }
         }
     };
