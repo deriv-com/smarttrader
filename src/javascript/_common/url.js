@@ -106,7 +106,7 @@ const Url = (() => {
         return static_host + path.replace(/(^\/)/g, '');
     };
 
-    const urlForDeriv = (path, pars) => `${getAllowedLocalStorageOrigin()}/${path}${pars ? `?${pars}` : ''}`;
+    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || 'https://deriv.app')}/${path}${pars ? `?${pars}` : ''}`;
 
     const getAllowedLocalStorageOrigin = () => {
         if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {

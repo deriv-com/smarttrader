@@ -1,6 +1,7 @@
 const DocumentUploader        = require('@binary-com/binary-document-uploader');
 const Cookies                 = require('js-cookie');
 const Onfido                  = require('onfido-sdk-ui');
+const onfido_phrases          = require('./onfido_phrases');
 const Client                  = require('../../../base/client');
 const Header                  = require('../../../base/header');
 const BinarySocket            = require('../../../base/socket');
@@ -841,7 +842,8 @@ const Authenticate = (() => {
                 onfido = Onfido.init({
                     containerId: 'onfido',
                     language   : {
-                        locale: getLanguage().toLowerCase() || 'en',
+                        locale : getLanguage().toLowerCase() || 'en',
+                        phrases: onfido_phrases[getLanguage().toLowerCase()],
                     },
                     token     : sdk_token,
                     useModal  : false,
@@ -1040,13 +1042,6 @@ const Authenticate = (() => {
         if (is_required || has_svg_account){
             initTab();
             initAuthentication();
-
-            const { identity, document } = authentication_status;
-            const is_not_fully_authenticated = identity.status !== 'verified' && document.status !== 'verified';
-            const is_not_high_risk = !/high/.test(State.getResponse('get_account_status.risk_classification'));
-            if (is_not_fully_authenticated && has_svg_account && is_not_high_risk && !isAuthenticationAllowed()) {
-                $('#authenticate_only_real_mt5_advanced').setVisibility(1);
-            }
         } else {
             $('#authentication_tab').setVisibility(0);
             $('#not_required_msg').setVisibility(1);
