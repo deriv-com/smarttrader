@@ -60,6 +60,9 @@ const Page = (() => {
                             reload();
                         }
                         break;
+                    case 'client.accounts':
+                        reload();
+                        break;
                     case 'new_release_reload_time':
                         if (evt.newValue !== evt.oldValue) {
                             reload(true);
