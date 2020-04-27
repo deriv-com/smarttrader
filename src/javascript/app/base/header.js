@@ -64,7 +64,7 @@ const Header = (() => {
             el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
         applyToAllElements('.url-add-account', el => {
-            el.href = Url.urlForDeriv('redirect', 'action=add_account');
+            el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
     };
 
@@ -481,7 +481,7 @@ const Header = (() => {
                     const is_real        = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
                     // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
-                    const icon           = `${Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? currency.toLowerCase() : 'virtual'}.svg`)}`;
+                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? (currency ? currency.toLowerCase() : 'unknown') : 'virtual'}.svg`);
                     const is_current     = loginid === Client.get('loginid');
 
                     if (is_current) { // default account
@@ -494,9 +494,19 @@ const Header = (() => {
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
                     const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? currency : 'Demo' });
+                    const account_detail    = createElement('span', { text: is_real ? (currency || localize('Real')) : localize('Demo') });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
+                    
+                    if (!currency) {
+                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
+                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
+                        $('.account__switcher-select_currencies').css('display', 'block');
+                        
+                        const header_deposit = $('.header__deposit');
+                        header_deposit.text('Set currency');
+                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
+                    }
 
                     account_detail.appendChild(account_loginid);
                     account.appendChild(account_icon);
@@ -884,7 +894,7 @@ const Header = (() => {
             };
 
             const messages = {
-                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set Currency', button_link: 'https://deriv.app/redirect?action=add_account' }),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
                 authenticate         : () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),

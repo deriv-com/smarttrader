@@ -480,7 +480,7 @@ body .header {
             color: var(--text-general) !important;
             margin: 8px 0 0 auto;
             height: 24px !important;
-            float: right;
+            float: left;
             font-size: $FONT_SIZE_XS;
         }
         > img {
@@ -592,6 +592,20 @@ body .header {
 
                 &--show {
                     display: block;
+                }
+            }
+            &-select_currencies {
+                display: none;
+                padding: 0.3rem 0.4rem;
+                text-align: right;
+
+                &-text {
+                    color: var(--brand-red-coral);
+                    font-size: $FONT_SIZE_XS;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
             &-add {
@@ -757,6 +771,10 @@ body .header {
             &-balance {
                 margin-left: auto;
 
+                .no-currency {
+                    color: var(--text-prominent);
+                    font-size: 0.6rem;
+                }
                 &-virtual {
                     color: var(--text-general);
                 }

@@ -114,7 +114,7 @@ const Url = (() => {
         } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
             return 'https://deriv.app';
         }
-        return false;
+        return 'https://deriv.app';
     };
 
     /**
