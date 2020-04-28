@@ -187,6 +187,7 @@ workflows:
     jobs:
       - test
       - build_push_staging:
+          context: deriv-app-artifact-upload
           filters:
             branches:
               only: /^master/
