@@ -19,7 +19,10 @@ const getCurrentBinaryDomain = () =>
     Object.keys(domain_app_ids).find(domain => new RegExp(`.${domain}$`, 'i').test(window.location.hostname));
 
 const isProduction = () => {
-    const all_domains = Object.keys(domain_app_ids).map(domain => `www\\.${domain.replace('.', '\\.')}`);
+    const all_domains = Object.keys(domain_app_ids).map(domain => {
+        const is_on_subdomain = domain.match(/\./g).length === 2;
+        return `${!is_on_subdomain ? 'www\\.' : ''}${domain.replace(/\./g, '\\.')}`;
+    });
     return new RegExp(`^(${all_domains.join('|')})$`, 'i').test(window.location.hostname);
 };
 
