@@ -97,7 +97,8 @@ commands:
       - run: 
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_TAG} -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:latest .
+            TAG=${CIRCLE_TAG:-$CIRCLE_SHA1}
+            docker build -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${TAG} -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:latest .
   docker_push:
     description: "Push image to docker hub"
     steps:
