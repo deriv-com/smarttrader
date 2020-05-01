@@ -61,7 +61,12 @@ const Page = (() => {
                         }
                         break;
                     case 'client.accounts':
-                        reload();
+                        if (evt.newValue !== evt.oldValue) {
+                            const removeSessionStart = (input) => input.replace(/"session_start":([0-9]+),/g, '');
+                            if (removeSessionStart(evt.newValue) !== removeSessionStart(evt.oldValue)) {
+                                reload();
+                            }
+                        }
                         break;
                     case 'new_release_reload_time':
                         if (evt.newValue !== evt.oldValue) {
