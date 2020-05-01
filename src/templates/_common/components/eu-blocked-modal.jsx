@@ -1,0 +1,32 @@
+import React from 'react';
+
+const EuBlockedModal = () => (
+    <div id='eu-client-blocked-modal' className='invisible'>
+        <div id='eu-client-blocked'>
+            <div id='eu-client-blocked-header'>
+                <span>{it.L('Whoops!')}</span>
+            </div>
+            <div id='eu-client-blocked-message'>
+                {it.L('You cannot use your real money account with Deriv at this time.')}
+            </div>
+            <div id='eu-client-blocked-buttons'>
+                <a
+                    className='btn btn--link'
+                    href='https://binary.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    {it.L('Back to main website')}
+                </a>
+                <button
+                    id='eu-client-blocked-switch-to-demo'
+                    className='btn btn--primary'
+                >
+                    {it.L('Continue with Demo Account')}
+                </button>
+            </div>
+        </div>
+    </div>
+);
+
+export default EuBlockedModal;

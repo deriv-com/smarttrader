@@ -11,6 +11,7 @@ const ViewPopup                    = require('../user/view_popup/view_popup');
 const Client                       = require('../../base/client');
 const Header                       = require('../../base/header');
 const BinarySocket                 = require('../../base/socket');
+const isEuCountry                  = require('../../common/country_base').isEuCountry;
 const Guide                        = require('../../common/guide');
 const TopUpVirtualPopup            = require('../../pages/user/account/top_up_virtual/pop_up');
 const State                        = require('../../../_common/storage').State;
@@ -53,6 +54,20 @@ const TradePage = (() => {
                         TopUpVirtualPopup.init(State.getResponse('balance.balance'));
                     });
                 }
+            } else {
+                BinarySocket.send({ landing_company: 1 }).then(() => {
+                    if (isEuCountry()) {
+                        const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
+                        const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
+                        el_switch_to_demo_button.onclick = () => {
+                            const virtual_loginid = Client.getAllLoginids().find(loginid => /^VRTC/.test(loginid));
+                            Client.set('loginid', virtual_loginid);
+                            window.location.reload();
+                        };
+                        eu_blocked_modal.setVisibility(true);
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
             }
             Client.activateByClientType('trading_socket_container');
             BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {

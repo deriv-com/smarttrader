@@ -8,6 +8,8 @@ import Title from '../../_common/components/title.jsx';
 // import Elevio from '../../_common/includes/elevio.jsx';
 import Gtm from '../../_common/includes/gtm.jsx';
 import DerivIFrame from '../../_common/includes/deriv-iframe.jsx';
+import EuBlockedModal from '../../_common/components/eu-blocked-modal.jsx';
+import LanguageMenuModal from '../../_common/components/language-menu-modal.jsx';
 
 const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
@@ -77,15 +79,8 @@ const Layout = () => {
                     <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                     <DerivIFrame />
                     {/* <Elevio /> */}
-                    <div id='language-menu-modal' className='invisible'>
-                        <div id='language-menu'>
-                            <div id='language-menu-header'>
-                                <span>{it.L('Language settings')}</span>
-                                <span id='language-menu-close_btn' />
-                            </div>
-                            <div id='language-menu-list' />
-                        </div>
-                    </div>
+                    <LanguageMenuModal />
+                    <EuBlockedModal />
                 </body>
             </html>
         </React.Fragment>
