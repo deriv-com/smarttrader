@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Use custom modal as styling is much different from dialog.js.
 const EuBlockedModal = () => (
     <div id='eu-client-blocked-modal' className='invisible'>
         <div id='eu-client-blocked'>
