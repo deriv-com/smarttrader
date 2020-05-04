@@ -55,7 +55,7 @@ const TradePage = (() => {
                     });
                 }
             } else {
-                BinarySocket.send({ landing_company: 1 }).then(() => {
+                BinarySocket.wait('landing_company').then(() => {
                     if (isEuCountry()) {
                         const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
                         const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
