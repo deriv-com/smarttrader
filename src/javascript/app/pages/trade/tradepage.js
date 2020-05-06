@@ -34,6 +34,22 @@ const TradePage = (() => {
     };
 
     const init = () => {
+        if (!Client.get('is_virtual')) {
+            BinarySocket.wait('landing_company').then(() => {
+                if (isEuCountry()) {
+                    const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
+                    const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
+                    el_switch_to_demo_button.onclick = () => {
+                        const virtual_loginid = Client.getAllLoginids().find(loginid => /^VRTC/.test(loginid));
+                        Client.set('loginid', virtual_loginid);
+                        window.location.reload();
+                    };
+                    eu_blocked_modal.setVisibility(true);
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        }
+        
         if (Client.isAccountOfType('financial')) {
             return;
         }
@@ -45,7 +61,6 @@ const TradePage = (() => {
             TradingEvents.init();
         }
         BinarySocket.wait('authorize').then(() => {
-            Header.displayAccountStatus();
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
                 // if not loaded by pjax, balance update function calls TopUpVirtualPopup
@@ -54,21 +69,8 @@ const TradePage = (() => {
                         TopUpVirtualPopup.init(State.getResponse('balance.balance'));
                     });
                 }
-            } else {
-                BinarySocket.wait('landing_company').then(() => {
-                    if (isEuCountry()) {
-                        const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
-                        const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
-                        el_switch_to_demo_button.onclick = () => {
-                            const virtual_loginid = Client.getAllLoginids().find(loginid => /^VRTC/.test(loginid));
-                            Client.set('loginid', virtual_loginid);
-                            window.location.reload();
-                        };
-                        eu_blocked_modal.setVisibility(true);
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
             }
+            Header.displayAccountStatus();
             Client.activateByClientType('trading_socket_container');
             BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
                 displayCurrencies();
