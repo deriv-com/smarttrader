@@ -10,7 +10,7 @@
 body .topbar {
     @include BIDIR_VALUE(text-align, right, left);
     display: flex;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     height: 36px;
     padding: 0;
