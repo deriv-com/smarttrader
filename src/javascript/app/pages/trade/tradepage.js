@@ -39,11 +39,17 @@ const TradePage = (() => {
                 if (isEuCountry()) {
                     const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
                     const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
+                    const el_back_to_binary_button = document.getElementById('eu-client-blocked-back-to-binary');
+
+                    el_back_to_binary_button.onclick = () => {
+                        window.location.href = 'https://binary.com';
+                    };
                     el_switch_to_demo_button.onclick = () => {
                         const virtual_loginid = Client.getAllLoginids().find(loginid => /^VRTC/.test(loginid));
                         Client.set('loginid', virtual_loginid);
                         window.location.reload();
                     };
+
                     eu_blocked_modal.setVisibility(true);
                     document.body.style.overflow = 'hidden';
                 }

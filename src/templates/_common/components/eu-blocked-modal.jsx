@@ -12,12 +12,11 @@ const EuBlockedModal = () => (
             </div>
             <div id='eu-client-blocked-buttons'>
                 <a
+                    id='eu-client-blocked-back-to-binary'
                     className='btn btn--link'
-                    href='https://binary.com'
-                    target='_blank'
                     rel='noopener noreferrer'
                 >
-                    {it.L('Back to main website')}
+                    <span>{it.L('Back to main website')}</span>
                 </a>
                 <button
                     id='eu-client-blocked-switch-to-demo'
