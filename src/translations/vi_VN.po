@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-20 03:36\n"
+"PO-Revision-Date: 2020-05-13 03:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Language: vi_VN\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 Account %2"
 msgstr "%1 tài khoản %2"
@@ -32,7 +32,7 @@ msgstr "%1 ngày %2 giờ %3 phút"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "tiền gửi %1 từ %2 đến tài khoản số %3 được thực hiện. Giao dịch ID: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices, commodities, and synthetic indices."
+msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
 msgstr ""
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
@@ -54,10 +54,10 @@ msgid "%1Return to trading page%2"
 msgstr "%1Trở về trang giao dịch%2"
 
 msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
+msgstr "%1Chứng minh danh tính hoặc chứng minh địa chỉ của bạn%2 không đáp ứng yêu cầu của chúng tôi. Vui lòng kiểm tra email của bạn để được hướng dẫn thêm."
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Account"
 msgstr "Tài khoản"
@@ -69,7 +69,7 @@ msgid "Account access is temporarily limited. Please check your inbox for more d
 msgstr "Truy cập tài khoản tạm thời bị giới hạn. Vui lòng kiểm tra hòm thư của bạn để biết thêm chi tiết."
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Xác thực tài khoản"
 
 msgid "Account balance:"
 msgstr "Số Dư Tài Khoản:"
@@ -84,7 +84,7 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "Thêm /-để xác định một độ lệch giới hạn. Ví dụ, +0.005 có nghĩa là một giới hạn mà cao hơn 0,005 so với điểm khởi đầu."
 
 msgid "Add Deriv account"
-msgstr ""
+msgstr "Thêm tài khoản Deriv"
 
 msgid "Adjust trade parameters"
 msgstr "Điều giới hạn giao dịch"
@@ -165,7 +165,7 @@ msgid "Audit"
 msgstr "Kiểm toán"
 
 msgid "Audit page"
-msgstr ""
+msgstr "Kiểm tra trang"
 
 msgid "Aug"
 msgstr "Tháng 8"
@@ -174,10 +174,10 @@ msgid "August"
 msgstr "Tháng 8"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "Xác thực tài khoản của bạn ngay để sử dụng đầy đủ tất cả các hình thức thanh toán có sẵn."
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "Quá trình xác thực đã thất bại"
 
 msgid "Available Currencies"
 msgstr "Các loại tiền tệ có sẵn"
@@ -187,6 +187,9 @@ msgstr "Những thị trường đang có sẵn"
 
 msgid "Average"
 msgstr "Trung bình"
+
+msgid "Back to main website"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "Tiếp tục giao dịch"
@@ -198,7 +201,7 @@ msgid "Barrier"
 msgstr "Giới hạn"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "Giới hạn thay đổi"
 
 msgid "Barrier offset"
 msgstr "Độ lệch giới hạn"
@@ -207,10 +210,10 @@ msgid "Bid"
 msgstr "Giá thầu"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "Binary Coin"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 msgid "Browser"
 msgstr "Duyệt tìm"
@@ -234,7 +237,7 @@ msgid "Call Spread"
 msgstr "Gọi biên"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Gọi Chênh Lệch/Đặt Chênh Lệch"
 
 msgid "Can you spare 15 minutes?"
 msgstr "Bạn có thể dành ra 15 phút không?"
@@ -246,7 +249,7 @@ msgid "Cashier"
 msgstr "Thu Ngân"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "Thu ngân đã bị vô hiệu hóa"
 
 msgid "Change"
 msgstr "Thay đổi"
@@ -266,7 +269,7 @@ msgstr "Biểu đồ không phải là có sẵn cho cơ sở này."
 msgid "Charting for this underlying is delayed"
 msgstr "Biểu đồ cho tài sản cơ sở này bị hoãn"
 
-msgid "Check your conenction."
+msgid "Check your connection."
 msgstr ""
 
 msgid "Checked"
@@ -291,7 +294,7 @@ msgid "Close"
 msgstr "Đóng"
 
 msgid "Close time"
-msgstr ""
+msgstr "Thời gian đóng"
 
 msgid "Close-Low"
 msgstr "Đóng-Thấp"
@@ -312,7 +315,7 @@ msgid "Commodities"
 msgstr "Hàng hóa"
 
 msgid "Complete details"
-msgstr ""
+msgstr "Chi tiết đầy đủ"
 
 msgid "Compressing Image"
 msgstr "Nén hình ảnh"
@@ -323,6 +326,9 @@ msgstr "Đang kết nối với máy chủ"
 msgid "Continue trading"
 msgstr "Tiếp tục giao dịch"
 
+msgid "Continue with Demo Account"
+msgstr ""
+
 msgid "Contract"
 msgstr "Hợp đồng"
 
@@ -330,34 +336,34 @@ msgid "Contract Confirmation"
 msgstr "Xác nhận Hợp đồng"
 
 msgid "Contract details"
-msgstr ""
+msgstr "Chi tiết hợp đồng"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "Kết thúc hợp đồng"
 
 msgid "Contract has not started yet"
 msgstr "Hợp đồng chưa được bắt đầu"
 
 msgid "Contract information"
-msgstr ""
+msgstr "Thông tin của Hợp đồng"
 
 msgid "Contract period"
 msgstr "Thời hạn hợp đồng"
 
 msgid "Contract result"
-msgstr ""
+msgstr "Kết quả hợp đồng"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "Hợp đồng bắt đầu"
 
 msgid "Contract type"
-msgstr ""
+msgstr "Loại hợp đồng"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Hợp đồng sẽ được bán ở giá thị trường hiện hành khi máy chủ nhận được yêu cầu. Giá này có thể khác với giá đã được chỉ định."
 
 msgid "Counterparty"
-msgstr ""
+msgstr "Đối tác"
 
 msgid "Country of Residence"
 msgstr "Quốc gia cư trú"
@@ -372,7 +378,7 @@ msgid "Credit/Debit"
 msgstr "Tín dụng/Ghi nợ"
 
 msgid "Crypto"
-msgstr ""
+msgstr "Crypto"
 
 msgid "Currency"
 msgstr "Tiền tệ"
@@ -384,7 +390,7 @@ msgid "Current password"
 msgstr "Mật khẩu hiện tại"
 
 msgid "Current time"
-msgstr ""
+msgstr "Thời gian hiện tại"
 
 msgid "Date"
 msgstr "Ngày"
@@ -393,7 +399,7 @@ msgid "Date and Time"
 msgstr "Ngày và Thời gian"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "Hủy giao dịch. Phí"
 
 msgid "Dec"
 msgstr "Tháng 12"
@@ -429,7 +435,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "Gửi tiền và rút tiền đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
 
 msgid "Deriv Accounts"
-msgstr ""
+msgstr "Tài khoản Deriv"
 
 msgid "Description"
 msgstr "Mô tả"
@@ -462,10 +468,10 @@ msgid "Digit contracts will be refunded at the purchase price if the contract do
 msgstr "Các hợp đồng chữ số sẽ được hoàn tiền tại giá mua nếu hợp đồng không kết thúc trong vòng 5 phút."
 
 msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr ""
+msgstr "Giao dịch Tùy chọn Số hóa đã bị khóa trên tài khoản của bạn. Vui lòng liên hệ %1chỗ trợ khách hàng%2 để được trợ giúp."
 
 msgid "Digital options trading disabled"
-msgstr ""
+msgstr "Vô hiệu hóa giao dịch tùy chọn số hóa"
 
 msgid "Digits"
 msgstr "Chữ số"
@@ -501,7 +507,7 @@ msgid "End Time"
 msgstr "Thời Gian Kết Thúc"
 
 msgid "End time"
-msgstr ""
+msgstr "Thời gian kết thúc"
 
 msgid "Endpoint"
 msgstr "Điểm kết thúc"
@@ -528,10 +534,10 @@ msgid "Equals"
 msgstr "Bằng nhau"
 
 msgid "Ether"
-msgstr ""
+msgstr "Ether"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "Ether Classic"
 
 msgid "Even/Odd"
 msgstr "Hòa vốn/ Số dư"
@@ -555,6 +561,9 @@ msgid "Exit spot"
 msgstr "Điểm chốt"
 
 msgid "Exit spot time"
+msgstr "Thời gian tại điểm chốt"
+
+msgid "Exit time"
 msgstr ""
 
 msgid "Expiry date is required for %1."
@@ -573,7 +582,7 @@ msgid "February"
 msgstr "Tháng Hai"
 
 msgid "Fiat"
-msgstr ""
+msgstr "Tiền pháp định"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "Kích thước tập tin (%1) vượt quá giới hạn cho phép. Kích thước tập tin tối đa cho phép: %2"
@@ -623,6 +632,9 @@ msgstr "Ra Ngoài"
 msgid "Guide"
 msgstr "Hướng dẫn"
 
+msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
+msgstr ""
+
 msgid "High"
 msgstr "Cao"
 
@@ -668,7 +680,7 @@ msgstr "Cao Hơn/Thấp Hơn"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "Hợp đồng giá trên/ dưới sẽ được hoàn lại bằng giá mua nếu có ít hơn 2 tick giữa thời điểm bắt đầu và kết thúc hợp đồng."
 
-msgid "Hint: it would take approximately %1%2 to crack this password."
+msgid "Hint: it would take approximately %1%2 to crack your password."
 msgstr ""
 
 msgid "Hour"
@@ -815,14 +827,11 @@ msgstr "Biểu thị trường bắt buộc"
 msgid "Indicative"
 msgstr "Chỉ thị"
 
-msgid "Indices"
-msgstr ""
-
 msgid "Insufficient balance."
 msgstr "Số dư tài khoản không đủ."
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "Id ứng dụng không khả dụng"
 
 msgid "Invalid document format."
 msgstr "Định dạng tài liệu không hợp lệ."
@@ -858,7 +867,7 @@ msgid "Jurisdiction"
 msgstr "Thẩm quyền"
 
 msgid "Language settings"
-msgstr ""
+msgstr "Cài đặt ngôn ngữ"
 
 msgid "Last Digit Prediction"
 msgstr "Dự Đoán Chữ số Cuối Cùng"
@@ -876,7 +885,7 @@ msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Chữ số cuối cùng cho tick %1 gần nhất trên %2"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 msgid "Log in"
 msgstr "Đăng nhập"
@@ -888,7 +897,7 @@ msgid "Log out"
 msgstr "Đăng xuất"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Loss"
 msgstr "Thua lỗ"
@@ -915,7 +924,7 @@ msgid "Lower or equal"
 msgstr "Thấp hơn hoặc bằng"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "Rút tiền MT5 đã bị vô hiệu hóa"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Rút tiền MT5 đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
@@ -945,7 +954,7 @@ msgid "May"
 msgstr "Tháng Năm"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgid "Minimum of %1 characters required."
 msgstr "Tối thiểu %1 các kí tự cần thiết."
@@ -1004,8 +1013,14 @@ msgstr "Tiếp theo"
 msgid "No authentication required"
 msgstr "Không cần xác minh"
 
-msgid "No notifications"
+msgid "No currency assigned"
 msgstr ""
+
+msgid "No currency selected"
+msgstr ""
+
+msgid "No notifications"
+msgstr "Không có thông báo"
 
 msgid "No payout if exit spot is above or equal to the upper barrier."
 msgstr "Sẽ không được thanh toán nếu điểm chốt cao hơn hoặc bằng giới hạn trên."
@@ -1032,7 +1047,7 @@ msgid "Note: You are limited to one fiat currency account. The currency of your 
 msgstr "Lưu ý: Bạn chỉ được phép sở hữu 1 tài khoản tiền thật. Đơn vị tiền tệ của tài khoản tiền thật có thể được thay đổi trước lần gửi tiền đầu tiên hoặc khi bạn tạo tài khoản MT5. Bạn cũng có thể mở một tài khoản cho mỗi loại tiền ảo được hỗ trợ."
 
 msgid "Notifications"
-msgstr ""
+msgstr "Thông báo"
 
 msgid "Nov"
 msgstr "Tháng Mười Một"
@@ -1091,9 +1106,6 @@ msgstr "Chỉ chữ cái, số, space, gạch dưới và dấu nối được p
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Chỉ chữ cái, khoảng trắng, dấu nối, dấu chấm hết và dấu nháy đơn được cho phép."
 
-msgid "Only numbers, hyphens, and spaces are allowed."
-msgstr ""
-
 msgid "Oops... Page Not Available"
 msgstr "Rất tiếc... Trang không tồn tại"
 
@@ -1119,7 +1131,7 @@ msgid "Over/Under contracts will be refunded at the purchase price if the contra
 msgstr "Các hợp đồng trên giá/ dưới giá sẽ được hoàn tiền nếu hợp đồng không kết thúc trong vòng 5 phút."
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Passport"
 msgstr "Hộ chiếu"
@@ -1143,7 +1155,7 @@ msgid "Payout"
 msgstr "Khoảng được trả"
 
 msgid "Payout range"
-msgstr ""
+msgstr "Phạm vi thanh toán"
 
 msgid "Pending"
 msgstr "Đang chờ xử lý"
@@ -1167,7 +1179,7 @@ msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "Xin vui lòng %1đăng nhập%2 hoặc %3đăng ký%4 để xem trang này."
 
 msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr ""
+msgstr "Vui lòng chấp nhận %1Điều khoản và Điều kiện cập nhật%2 của chúng tôi để tiếp tục."
 
 msgid "Please accept the terms and conditions."
 msgstr "Xin vui lòng chấp nhận các điều khoản và điều kiện."
@@ -1188,7 +1200,7 @@ msgid "Please complete the %1financial assessment form%2 to lift your withdrawal
 msgstr "Xin vui lòng hoàn tất %1mẫu đánh giá tài chính%2 để nâng giới hạn rút tiền và giao dịch của bạn."
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "Xin vui lòng điền đầy đủ thông tin cá nhân của bạn trước khi tiếp tục."
 
 msgid "Please confirm that all the information above is true and complete."
 msgstr "Xin vui lòng xác nhận rằng tất cả các thông tin trên là đúng sự thật và đầy đủ."
@@ -1201,6 +1213,12 @@ msgstr "Hãy đảm bảo rằng bạn đã cài đặt ứng dụng Telegram tr
 
 msgid "Please enter a valid Login ID."
 msgstr "Vui lòng nhập một ID đăng kí hợp lệ."
+
+msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please note that the selected currency is allowed for limited accounts only."
+msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "Xin vui lòng nộp đơn xin lại sau khi các tiêu chí yêu cầu đã đầy đủ."
@@ -1230,7 +1248,7 @@ msgid "Please select the currency for this account:"
 msgstr "Vui lòng chọn đơn vị tiền tệ cho tài khoản:"
 
 msgid "Please set the currency of your account to enable trading."
-msgstr ""
+msgstr "Vui lòng thiết lập tiền tệ trong tài khoản của bạn để cho phép giao dịch."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "Xin vui lòng thiết lập %130 ngày giới hạn doanh thu%2 của bạn để loại bỏ giới hạn tiền gửi."
@@ -1239,10 +1257,10 @@ msgid "Please specify the reasons for closing your accounts"
 msgstr "Vui lòng nêu rõ lý do bạn đóng các tài khoản của mình"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "Vui lòng nộp xác minh địa chỉ của bạn."
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "Vui lòng nộp xác minh danh tính của bạn."
 
 msgid "Postal Code/ZIP"
 msgstr "Mã bưu chính/ Mã ZIP"
@@ -1254,10 +1272,10 @@ msgid "Potential Profit"
 msgstr "Lợi Nhuận Tiềm Năng"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "Lợi nhuận tiềm năng"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "Lợi nhuận/thua lỗ tiềm năng"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Dự đoán khuynh hướng<br />và thu mua"
@@ -1269,31 +1287,31 @@ msgid "Profit"
 msgstr "Lợi nhuận"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Bảng lợi nhuận"
 
 msgid "Profit/Loss"
 msgstr "Lợi Nhuận/Thua Lỗ"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "Lãi/Lỗ"
 
 msgid "Proof of address"
 msgstr "Chứng minh nơi chốn"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "Bằng chứng xác nhận địa chỉ đã hết hạn"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "Yêu cầu bằng chứng xác nhận địa chỉ"
 
 msgid "Proof of identity"
 msgstr "Chứng minh danh tính"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "Giấy xác nhận danh tính đã hết hạn"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "Yêu cầu bằng chứng xác nhận danh tính"
 
 msgid "Purchase"
 msgstr "Mua"
@@ -1305,13 +1323,13 @@ msgid "Purchase Time"
 msgstr "Thời Gian Mua"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "Giá Mua"
 
 msgid "Purchase request sent"
 msgstr "Yêu cầu mua hàng được gửi"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "Thời gian mua"
 
 msgid "Put Spread"
 msgstr "Đặt biên lãi"
@@ -1350,16 +1368,16 @@ msgid "Reference ID"
 msgstr "ID tham khảo"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "Thời gian còn lại"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "Xóa giới hạn tiền gửi"
 
 msgid "Reports"
-msgstr ""
+msgstr "Báo cáo"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "Yêu cầu lưu trữ trình duyệt web của bạn phải được kích hoạt để có thể hoạt động. Xin vui lòng kích hoạt nó hoặc thoát ra khỏi chế độ duyệt web riêng tư."
 
 msgid "Resale not offered"
 msgstr "Không được bán lại"
@@ -1383,10 +1401,10 @@ msgid "Reset Time"
 msgstr "Thời gian đặt lại"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "Đặt lại giới hạn"
 
 msgid "Reset time"
-msgstr ""
+msgstr "Thời gian đặt lại"
 
 msgid "Reset to original settings"
 msgstr "Thiết lập lại cài đặt gốc"
@@ -1430,6 +1448,9 @@ msgstr "Lựa chọn tài sản"
 msgid "Select Trade Type"
 msgstr "Chọn loại hình giao dịch"
 
+msgid "Select currency"
+msgstr ""
+
 msgid "Select date"
 msgstr "Chọn ngày"
 
@@ -1446,10 +1467,10 @@ msgid "Select your trade type"
 msgstr "Chọn loại giao dịch của bạn"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "Tick đã chọn"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "Tự loại trừ"
 
 msgid "Sell"
 msgstr "Bán"
@@ -1473,7 +1494,7 @@ msgid "Set Currency"
 msgstr "Thiết lập tiền tệ"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "Đặt tiền tệ cho tài khoản"
 
 msgid "Settles"
 msgstr "Quyết toán"
@@ -1503,7 +1524,7 @@ msgid "Sign up"
 msgstr "Đăng kí"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "Rất tiếc, không thể thực hiện đăng ký tài khoản ở quốc gia của bạn."
@@ -1517,20 +1538,26 @@ msgstr "Rất tiếc, đã xảy ra lỗi khi đang xử lý yêu cầu của 
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "Rất tiếc, các quyền chọn giao dịch nhị phân không khả dụng cho tài khoản tài chính của bạn."
 
+msgid "Sorry, deposits for this currency are currently disabled."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Rất tiếc, tính năng này chỉ khả dụng với tài khoản tiền ảo."
 
 msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "Xin lỗi, tính năng này không có sẵn trong thẩm quyền của bạn."
 
+msgid "Sorry, withdrawals for this currency are currently disabled."
+msgstr ""
+
 msgid "Spot"
 msgstr "Giao ngay"
 
 msgid "Spot time"
-msgstr ""
+msgstr "Thời điểm làm giá"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "Thời điểm làm giá (GMT)"
 
 msgid "Stake"
 msgstr "Vốn đầu tư"
@@ -1545,7 +1572,7 @@ msgid "State/Province"
 msgstr "Quốc gia/Tỉnh"
 
 msgid "Statements"
-msgstr ""
+msgstr "Bảng kê"
 
 msgid "Status"
 msgstr "Tình trạng"
@@ -1561,6 +1588,9 @@ msgstr "Các hợp đồng Nằm Giữa/ Ra Ngoài sẽ được hoàn lại b
 
 msgid "Step"
 msgstr "Bước"
+
+msgid "Stock Indices"
+msgstr ""
 
 msgid "Stocks"
 msgstr "Chứng khoáng"
@@ -1593,10 +1623,10 @@ msgid "Telephone"
 msgstr "Điện thoại"
 
 msgid "Term & conditions updated"
-msgstr ""
+msgstr "Điều khoản và Điều kiện mới cập nhật"
 
 msgid "Tether"
-msgstr ""
+msgstr "Tether"
 
 msgid "Th"
 msgstr "Thứ 5"
@@ -1632,7 +1662,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "%1thời gian bắt đầu%2 bắt đầu khi hợp đồng được xử lý bởi máy chủ của chúng tôi."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1Thời gian bắt đầu%2 là khi hợp đồng được xử lý bới máy chủ và %1điểm truy cập%2 là %1tick tiếp theo%2 sau đó."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "<strong>Thời hạn hợp đồng</strong> là khoảng thời gian giữa <strong>tick tiếp theo</strong> sau <strong>thời gian bắt đầu</strong> và <strong>thời gian kết thúc</strong>."
@@ -1676,9 +1706,6 @@ msgstr "Đã đạt đến độ dài tối đa của mã token (%1)."
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "Không tìm thấy trang bạn yêu cầu. Nó hoặc không còn tồn tại hoặc địa chỉ bị sai. Xin vui lòng kiểm tra lỗi chính tả."
 
-msgid "The password you entered is one of the world's most commonly used passwords. You should not be using this password."
-msgstr ""
-
 msgid "The reason should be between 5 and 250 characters"
 msgstr "Lý do nên được vết trong khoảng từ 5 đến 250 chữ"
 
@@ -1705,12 +1732,6 @@ msgstr "Đã có lỗi xảy ra"
 
 msgid "There was some invalid character in an input field."
 msgstr "Có một vài ký tự không hợp lệ trong dữ liệu nhập vào."
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr ""
 
 msgid "This account is disabled"
 msgstr "Tài khoản này bị vô hiệu hoá"
@@ -1752,7 +1773,7 @@ msgid "Thursday"
 msgstr "Thứ Năm"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Prediction"
 msgstr "Dự đoán tick"
@@ -1800,13 +1821,13 @@ msgid "Total Profit/Loss"
 msgstr "Tổng Lợi Nhuận/Thua Lỗ"
 
 msgid "Total assets"
-msgstr ""
+msgstr "Tổng tài sản"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "Tổng tài sản trong các tài khoản Deriv của bạn"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "Tổng Lợi nhuận/Thua lỗ"
 
 msgid "Touch/No Touch"
 msgstr "Chạm/Không Chạm"
@@ -1823,13 +1844,13 @@ msgstr "Thành phố/Tỉnh thành"
 msgid "Trade"
 msgstr "Giao dịch"
 
-msgid "Trading Contracts for Difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
-
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "Giao dịch và tiền gửi bị vô hiệu hóa"
 
 msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgstr "Giao dịch và gửi tiền đã bị khóa trên tài khoản của bạn. Xin vui lòng liên hệ cho %1chăm sóc khách hàng%2 để được trợ giúp."
+
+msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr ""
 
 msgid "Trading is unavailable at this time."
@@ -1916,6 +1937,9 @@ msgstr "Thứ Tư"
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "Khi bạn nhấp vào \"OK\" bạn sẽ bị loại bỏ khỏi giao dịch trên trang web tới ngày được chọn."
 
+msgid "Whoops!"
+msgstr ""
+
 msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
 msgstr "Giành tối đa thanh toán nếu điểm chốt cao hơn hoặc bằng giới hạn trên."
 
@@ -1941,10 +1965,10 @@ msgid "Withdrawal"
 msgstr "Rút tiền"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "Hạn mức rút tiền và giao dịch"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "Rút tiền đã bị vô hiệu hóa"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Rút tiền đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
@@ -1968,7 +1992,7 @@ msgid "You are limited to one fiat account. You can change the currency of your 
 msgstr "Bạn chỉ được sở hữu một tài khoản fiat. Bạn có thể thay đổi loại tiền tệ của tài khoản fiat bất cứ lúc nào trước khi bạn lần đầu tiên gửi tiền hoặc tạo một tài khoản MT5."
 
 msgid "You are offline"
-msgstr ""
+msgstr "Bạn đang ngoại tuyến"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Bạn có thể đặt một đơn vị tiền tệ mới trước lần gửi tiền đầu tiên hoặc tạo một tài khoản MT5."
@@ -1988,19 +2012,19 @@ msgstr "Bạn có thể nạp %1 vào tài khoản demo nếu số dư của b�
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr "Bạn có thể nạp %1 vào tài khoản ảo nếu số dư của bạn là từ %2 trở xuống."
 
+msgid "You cannot use your real money account with Deriv at this time."
+msgstr ""
+
 msgid "You did not change anything."
 msgstr "Bạn chưa thay đổi bất cứ nội dung nào."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
 msgstr "Bạn không cần phải xác nhận tài khoản của mình vào lúc này. %1Chúng tôi sẽ thông báo khi nào tài khoản của bạn cần được xác nhận."
 
-msgid "You have already withdrawn %1 %2."
+msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
-msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2."
+msgid "You have already withdrawn %1%2."
 msgstr ""
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
@@ -2010,7 +2034,7 @@ msgid "You have not granted access to any applications."
 msgstr "Bạn không được phép truy cập bất kỳ một ứng dụng nào."
 
 msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr ""
+msgstr "Bạn đã chọn loại trừ khỏi Binary.com cho đến %1. Vui lòng %2liên hệ với chúng tôi%3 để được hỗ trợ."
 
 msgid "You have reached the limit."
 msgstr "Bạn đã đạt đến giới hạn."
@@ -2037,7 +2061,7 @@ msgid "You have to register and get App ID before you can use different OAuth se
 msgstr "Bạn phải đăng ký và có ID Ứng Dụng trước khi bạn có thể sử dụng hệ thống máy chủ OAuth khác cho việc xác thực. Nhận thêm thông tin liên quan đến OAuth tại đây https://developers.binary.com/."
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "Bạn chưa nhận được thông báo nào"
 
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "Bạn được phép mở một tài khoản cho mỗi đồng tiền ảo được hỗ trợ."
@@ -2060,7 +2084,7 @@ msgstr "Bạn sẽ lĩnh tiền thưởng nếu giá thị trường khôn
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "Bạn sẽ nhận được tiền thưởng nếu giá thị trường kết thúc trong con số bạn đã chọn."
 
-msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
+msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
@@ -2095,6 +2119,9 @@ msgstr "Tài khoản fiat của bạn có đơn vị tiền tệ là %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Mật khẩu của bạn đã được đổi thành công. Vui lòng dùng mật khẩu mới đăng nhập vào tài khoản của bạn."
+
+msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Yêu cầu trở thành khách hàng chuyên nghiệp của bạn %1nkhông được chấp thuận%2."
@@ -2132,10 +2159,7 @@ msgstr "Số dư tài khoản ảo của bạn hiện nay là %1 hoặc ít hơn
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Trình duyệt web (%1) của bạn đã hết hạn và có thể ảnh hưởng đến trải nghiệm giao dịch của bạn. Nếu tiếp tục bạn sẽ có thể gặp một vài rắc rối. %2Nâng cấp trình duyệt%3"
 
-msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Your withdrawal limit is %1 %2."
+msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
@@ -2144,7 +2168,7 @@ msgstr "tài khoản"
 msgid "accounts"
 msgstr "các tài khoản"
 
-msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr ""
 
 msgid "day"
@@ -2205,7 +2229,7 @@ msgid "thousand"
 msgstr "nghìn"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
 msgstr "tick"
@@ -2223,11 +2247,11 @@ msgid "years"
 msgstr "năm"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for Difference and Forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
+msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 msgstr ""
 

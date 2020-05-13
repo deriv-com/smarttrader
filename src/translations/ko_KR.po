@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-20 03:33\n"
+"PO-Revision-Date: 2020-05-13 03:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -15,10 +15,10 @@ msgstr ""
 "Language: ko_KR\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 Account %2"
-msgstr ""
+msgstr "%1 계좌 %2"
 
 msgid "%1 Please click the link below to restart the password recovery process."
 msgstr "%1비밀번호 복구 절차를 위해 아래의 링크를 클릭하세요."
@@ -32,7 +32,7 @@ msgstr "%1일 %2시간 %3분"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr ""
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices, commodities, and synthetic indices."
+msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
 msgstr ""
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
@@ -54,10 +54,10 @@ msgid "%1Return to trading page%2"
 msgstr "%1트레이딩 페이지로 돌아가기%2"
 
 msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
+msgstr "%1귀하의 신분증명 또는 거주증명%2이 우리의 요구사항을 만족시키지 못했습니다. 추가적인 조치를 위해 귀하의 이메일을 확인해주시기 바랍니다."
 
 msgid "AM"
-msgstr ""
+msgstr "오전"
 
 msgid "Account"
 msgstr "계좌"
@@ -69,7 +69,7 @@ msgid "Account access is temporarily limited. Please check your inbox for more d
 msgstr "계좌 접근이 일시적으로 제한되었습니다. 더 자세한 사항을 위해 귀하의 수신함을 확인해주세요."
 
 msgid "Account authentication"
-msgstr ""
+msgstr "계좌 인증"
 
 msgid "Account balance:"
 msgstr "계좌 잔액:"
@@ -84,7 +84,7 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "장벽 오프셋을 정의하기 위해 +/–를 추가하세요. 예를 들어서 +0.005는 엔트리 스팟보다 0.005가 더 높은 장벽을 의미합니다."
 
 msgid "Add Deriv account"
-msgstr ""
+msgstr "Deriv 계좌 추가하기"
 
 msgid "Adjust trade parameters"
 msgstr "거래 파라미터를 조정하세요"
@@ -105,7 +105,7 @@ msgid "Already have an account?"
 msgstr "이미 계좌를 가지고 있으신가요?"
 
 msgid "Amount"
-msgstr ""
+msgstr "양"
 
 msgid "Amount in"
 msgstr ""
@@ -123,16 +123,16 @@ msgid "Are you sure that you want to permanently delete the token"
 msgstr "귀하께서는 토큰을 영구적으로 삭제하기를 확실히 원하십니까"
 
 msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr ""
+msgstr "해당 앱으로의 접근권한이 영구적으로 취소되는 것을 확실히 원하십니까?"
 
 msgid "Are you sure you want to create a fiat account in %1?"
-msgstr ""
+msgstr "귀하께서는 %1 피앗 계좌를 개설하기를 확실히 희망하십니까?"
 
 msgid "Are you sure you want to create your %1 account now?"
 msgstr "귀하께서 %1 계좌를 지금 만드는것을 희망하는것이 확실합니까?"
 
 msgid "Are you sure you want to deposit in %1?"
-msgstr ""
+msgstr "귀하께서는 %1에 예금하시기를 확실히 희망하십니까?"
 
 msgid "Are you sure?"
 msgstr "확실한가요?"
@@ -144,10 +144,10 @@ msgid "Asian Up"
 msgstr "아시안 업"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "아시안 컨트랙트는 5분 안으로 종료되지 않는 경우 해당 계약을 구매한 가격으로 환불받게 됩니다."
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr ""
+msgstr "아시안 옵션은 해당 기간에 걸쳐 평균적인 스팟을 <strong>마지막 틱</strong>과 함께 비교함으로써 정산됩니다."
 
 msgid "Asians"
 msgstr "아시안"
@@ -162,10 +162,10 @@ msgid "At reset time, if the spot is in the opposite direction of your predictio
 msgstr "리셋 시간에, 만약 스팟이 귀하의 예상과는 반대의 방향인 경우, 장벽은 해당 스팟으로 조정됩니다."
 
 msgid "Audit"
-msgstr ""
+msgstr "감사"
 
 msgid "Audit page"
-msgstr ""
+msgstr "감사 페이지"
 
 msgid "Aug"
 msgstr "8월"
@@ -174,10 +174,10 @@ msgid "August"
 msgstr "8월"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "이용가능한 모든 지불 방식의 활용을 위해 지금 귀하의 계좌를 인증하세요."
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "인증실패"
 
 msgid "Available Currencies"
 msgstr "가용 통화"
@@ -187,6 +187,9 @@ msgstr "가용 시장"
 
 msgid "Average"
 msgstr "평균"
+
+msgid "Back to main website"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "트레이딩으로 돌아가기"
@@ -198,7 +201,7 @@ msgid "Barrier"
 msgstr "장벽"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "장벽 변동"
 
 msgid "Barrier offset"
 msgstr "배리어 오프셋"
@@ -207,7 +210,7 @@ msgid "Bid"
 msgstr "매수"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "바이너리 코인"
 
 msgid "Bitcoin"
 msgstr "비트코인"
@@ -219,13 +222,13 @@ msgid "Buy"
 msgstr "매수"
 
 msgid "Buy price"
-msgstr ""
+msgstr "매수 가격"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "%1\"Close-Low\"%2 계약을 구매함으로써, 귀하께서는 해당 계약의 기간에 걸쳐 %1Close%2와 %1Low%2간의 차이에 승수 곱하기 된 부분을 획득하게 될 것입니다."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "%1\"High-Close\"%2 계약을 구매함으로써, 귀하께서는 해당 게약 기간에 걸쳐 %1high%2와 %1close%2의 차이에 승수 곱하기 된 부분을 획득하게 될 것입니다."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
 msgstr ""
@@ -237,7 +240,7 @@ msgid "Call Spread/Put Spread"
 msgstr "콜 스프레드/풋 스프레드"
 
 msgid "Can you spare 15 minutes?"
-msgstr ""
+msgstr "15분을 할애하실 수 있으신가요?"
 
 msgid "Cancel"
 msgstr "취소"
@@ -246,10 +249,10 @@ msgid "Cashier"
 msgstr "캐쉬어"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "캐셔가 비활성화 되었습니다"
 
 msgid "Change"
-msgstr ""
+msgstr "변경"
 
 msgid "Change API Endpoint"
 msgstr "API 종점 교체"
@@ -261,19 +264,19 @@ msgid "Chart"
 msgstr "차트"
 
 msgid "Chart is not available for this underlying."
-msgstr ""
+msgstr "이 언더라잉에는 이용 가능한 차트가 없습니다."
 
 msgid "Charting for this underlying is delayed"
-msgstr ""
+msgstr "이 언더라잉을 위한 차팅은 지연되었습니다"
 
-msgid "Check your conenction."
+msgid "Check your connection."
 msgstr ""
 
 msgid "Checked"
-msgstr ""
+msgstr "확인되었습니다"
 
 msgid "Checking"
-msgstr ""
+msgstr "확인중입니다"
 
 msgid "Christmas Day"
 msgstr "성탄절"
@@ -291,19 +294,19 @@ msgid "Close"
 msgstr "종료"
 
 msgid "Close time"
-msgstr ""
+msgstr "종료 시간"
 
 msgid "Close-Low"
 msgstr "종가-저가"
 
 msgid "Closed Bid"
-msgstr ""
+msgstr "비공개 입찰"
 
 msgid "Closes"
 msgstr "마감"
 
 msgid "Closes early (at 18:00)"
-msgstr ""
+msgstr "조기 마감됩니다 (18:00시)"
 
 msgid "Closes early (at 21:00)"
 msgstr "조기 마감 (21:00시)"
@@ -312,61 +315,64 @@ msgid "Commodities"
 msgstr "상품"
 
 msgid "Complete details"
-msgstr ""
+msgstr "완전한 세부사항"
 
 msgid "Compressing Image"
-msgstr ""
+msgstr "이미지를 압축중입니다"
 
 msgid "Connecting to server"
-msgstr ""
+msgstr "서버에 연결중입니다"
 
 msgid "Continue trading"
+msgstr "계속 거래하기"
+
+msgid "Continue with Demo Account"
 msgstr ""
 
 msgid "Contract"
-msgstr ""
+msgstr "계약"
 
 msgid "Contract Confirmation"
 msgstr "계약확인"
 
 msgid "Contract details"
-msgstr ""
+msgstr "계약 세부사항"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "계약이 종료됩니다"
 
 msgid "Contract has not started yet"
 msgstr "계약이 아직 시작되지 않았습니다."
 
 msgid "Contract information"
-msgstr ""
+msgstr "계약 정보"
 
 msgid "Contract period"
 msgstr "계약기간"
 
 msgid "Contract result"
-msgstr ""
+msgstr "계약 결과"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "계약이 시작됩니다"
 
 msgid "Contract type"
-msgstr ""
+msgstr "계약 종류"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "우리의 서버에 의해 요구사항이 접수되면 우세한 시장 가격으로 계약이 판매될것입니다. 이 가격은 표시된 가격과 다를 수 있습니다."
 
 msgid "Counterparty"
-msgstr ""
+msgstr "카운터파티"
 
 msgid "Country of Residence"
-msgstr ""
+msgstr "거주국가"
 
 msgid "Create"
-msgstr ""
+msgstr "생성하기"
 
 msgid "Create %1 account"
-msgstr ""
+msgstr "%1 계좌 생성하기"
 
 msgid "Credit/Debit"
 msgstr "신용/직불"
@@ -384,7 +390,7 @@ msgid "Current password"
 msgstr "현재 비밀번호"
 
 msgid "Current time"
-msgstr ""
+msgstr "현재 시간"
 
 msgid "Date"
 msgstr "날짜"
@@ -393,7 +399,7 @@ msgid "Date and Time"
 msgstr "날짜와 시간"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "딜 취소. 비용"
 
 msgid "Dec"
 msgstr "12월"
@@ -405,31 +411,31 @@ msgid "Delete"
 msgstr "삭제"
 
 msgid "Demo"
-msgstr ""
+msgstr "데모"
 
 msgid "Demo Account"
-msgstr ""
+msgstr "데모 계좌"
 
 msgid "Demo Accounts"
-msgstr ""
+msgstr "뎨모 계좌들"
 
 msgid "Demo Advanced"
-msgstr ""
+msgstr "데모 어드벤스드"
 
 msgid "Demo Standard"
-msgstr ""
+msgstr "데모 스탠다드"
 
 msgid "Demo Synthetic Indices"
-msgstr ""
+msgstr "데모 종합지수"
 
 msgid "Deposit"
-msgstr ""
+msgstr "예금"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "귀하의 계좌에서 예금과 인출이 중단되었습니다. 자세한 정보를 위해 귀하의 이메일을 확인하세요."
 
 msgid "Deriv Accounts"
-msgstr ""
+msgstr "Deriv 계좌"
 
 msgid "Description"
 msgstr "설명"
@@ -438,7 +444,7 @@ msgid "Details"
 msgstr "상세정보"
 
 msgid "Digit"
-msgstr ""
+msgstr "숫자"
 
 msgid "Digit Differs"
 msgstr ""
@@ -459,28 +465,28 @@ msgid "Digit Under"
 msgstr ""
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Digit 계약은 5분 안으로 종료되지 않는 경우 해당 계약을 구매한 계약으로 환불받게 됩니다."
 
 msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
 msgstr ""
 
 msgid "Digital options trading disabled"
-msgstr ""
+msgstr "디지털 옵션 거래가 비활성화되었습니다"
 
 msgid "Digits"
 msgstr "숫자"
 
 msgid "Disable"
-msgstr ""
+msgstr "비활성화"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr ""
+msgstr "귀하께서는 이것이 피앗 계좌가 되기를 희망하십니까? 또는 암호화폐 계좌로 되기를 원하십니까? 한가지를 선택해주세요:"
 
 msgid "Do you wish to continue?"
 msgstr "Apakah Anda ingin melanjutkan?"
 
 msgid "Does Not Touch"
-msgstr ""
+msgstr "터치되지 않습니다"
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "%1로 거래하고 싶지 않으신가요? 귀하께서는 다른 암호화폐 계좌를 개설하실 수 있습니다."
@@ -495,13 +501,13 @@ msgid "Email address"
 msgstr "이메일 주소"
 
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 msgid "End Time"
 msgstr "종료 시간"
 
 msgid "End time"
-msgstr ""
+msgstr "종료 시간"
 
 msgid "Endpoint"
 msgstr ""
@@ -519,7 +525,7 @@ msgid "Ends Outside"
 msgstr ""
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "엔트리 스팟"
 
 msgid "Entry spot"
 msgstr "진입부"
@@ -537,34 +543,37 @@ msgid "Even/Odd"
 msgstr "짝/홀"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "짝수/홀수 계약은 만약 해당 계약이 5분 안으로 종료되지 않을 경우 구매한 가격으로 환불받게 됩니다."
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr ""
+msgstr "제외 시간은 5년보다 더 길 수 없습니다."
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr ""
+msgstr "제외 시간은 6개월보다 더 적을 수는 없습니다."
 
 msgid "Excluded from the website until"
-msgstr ""
+msgstr "때까지 해당 웹사이트에서 제외됩니다"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "엑싯 스팟"
 
 msgid "Exit spot"
 msgstr "출구부"
 
 msgid "Exit spot time"
+msgstr "엑싯 스팟 시간"
+
+msgid "Exit time"
 msgstr ""
 
 msgid "Expiry date is required for %1."
-msgstr ""
+msgstr "%1을 위해서는 만기일이 요구되어집니다."
 
 msgid "Explanation"
 msgstr "설명"
 
 msgid "Failed"
-msgstr ""
+msgstr "실패되었습니다"
 
 msgid "Feb"
 msgstr "2월"
@@ -573,22 +582,22 @@ msgid "February"
 msgstr "2월"
 
 msgid "Fiat"
-msgstr ""
+msgstr "피앗"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
-msgstr ""
+msgstr "파일(%1) 크기가 허용된 한계를 초과했습니다. 허용된 최대 파일 크기는 다음과 같습니다: %2"
 
 msgid "Final price"
 msgstr "최종 가격"
 
 msgid "Financial Account"
-msgstr ""
+msgstr "금융 계좌"
 
 msgid "Finish"
 msgstr ""
 
 msgid "First line of home address"
-msgstr ""
+msgstr "집주소의 첫째 줄"
 
 msgid "Forex"
 msgstr "외환"
@@ -609,43 +618,46 @@ msgid "Front Side"
 msgstr ""
 
 msgid "Gaming"
-msgstr ""
+msgstr "게이밍"
 
 msgid "Get %1"
 msgstr ""
 
 msgid "Go to statement"
-msgstr ""
+msgstr "내역서로 가기"
 
 msgid "Goes Outside"
 msgstr ""
 
 msgid "Guide"
+msgstr "가이드"
+
+msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr ""
 
 msgid "High"
-msgstr ""
+msgstr "하이"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "높은 장벽"
 
 msgid "High Tick"
-msgstr ""
+msgstr "하이 틱"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr ""
+msgstr "높은 틱/낮은 틱 계약들은 5틱이라는 엄격한 기간이 있습니다."
 
 msgid "High barrier"
-msgstr ""
+msgstr "높은 장벽"
 
 msgid "High barrier must be higher than low barrier"
-msgstr ""
+msgstr "높은 장벽은 낮은 장벽보다 꼭 높아야 합니다"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "높은 장벽 오프셋"
 
 msgid "High, Low and Close"
-msgstr ""
+msgstr "High, Low 및 Close"
 
 msgid "High-Close"
 msgstr "고가-종가"
@@ -660,25 +672,25 @@ msgid "Higher"
 msgstr "상승"
 
 msgid "Higher or equal"
-msgstr ""
+msgstr "더 높음 또는 동등"
 
 msgid "Higher/Lower"
 msgstr "하이어/로우어"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Higher/Lower 계약은 시작 및 종료 시간 사이에 2틱보다 적을 경우에 구매 가격으로 환불받게 될 것입니다."
 
-msgid "Hint: it would take approximately %1%2 to crack this password."
+msgid "Hint: it would take approximately %1%2 to crack your password."
 msgstr ""
 
 msgid "Hour"
 msgstr "시간"
 
 msgid "I want to reapply"
-msgstr ""
+msgstr "재신청하고 싶습니다"
 
 msgid "I'm interested"
-msgstr ""
+msgstr "저는 관심있습니다"
 
 msgid "ID number is required for %1."
 msgstr "%1에 ID 번호가 요구되어집니다."
@@ -690,28 +702,28 @@ msgid "Identity card"
 msgstr "신분증"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "만약 <strong>엑싯 스팟</strong>이 <strong>낮은장벽</strong> 또는 <strong>높은 장벽</strong>과 동등할 경우, 귀하께서는 지불금을 받지 않습니다."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "만약 <strong>엑싯 스팟</strong>이 <strong>장벽</strong> 또는 <stronm g>새로운 장벽 (만약 재설정되는경우)</stronmg>, 귀하께서는 지불금을 받지 않습니다."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "만약 <strong>엑싯 스팟</strong>이 <strong>장벽</strong>과 동등할 경우, 귀하께서는 지불금을 받지 않습니다."
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr ""
+msgstr "만약 <strong>마지막 틱</strong>이 틱 병균과 동등할 경우, 귀하께서는 지불금을 받지 않습니다."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
 msgstr "귀하께서 만약 \"Allow equals\"을 선택하시면, \"Higher\"에 대하여 출구부가 진입부보다 더 높거나 동등할 때 귀하께서 지불금을 획득합니다. 비슷하게, \"Lower\"에 대하여 출구부가 진입부보다 더 낮거나 동등할 경우에 귀하께서 지불금을 획득합니다."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "만약 귀하께서 \"Asian Fall\"를 선택하실 경우, 만약 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 더 <strong>낮은</strong>경우 지불금을 받게 되실 것입니다."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "만약 귀하께서 \"Asian Rise\"를 선택하실 경우, 귀하께서는 만약 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 더 <strong>높을</strong>경우 지불금을 받게 되실 것입니다."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "만약 귀하께서 \"Differs\"를 선택하신다면 귀하께서는 마지막 틱의 <strong>마지막 숫자</strong>가 귀하의 <strong>예측</strong>과 <strong>같지 않을때</strong> 귀하께서는 지불금을 받게 되십니다."
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr ""
@@ -786,7 +798,7 @@ msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick 
 msgstr ""
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr ""
+msgstr "만약 귀하께서 %1\"낮은 틱\"%2을 선택하실 경우, 만약 선택하신 틱이 %1다음의 다섯 틱들중에서 가장 낮을 경우%2 귀하께서는 지불금을 받게 됩니다."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
 msgstr ""
@@ -810,31 +822,28 @@ msgid "In/Out"
 msgstr "인/아웃"
 
 msgid "Indicates required field"
-msgstr ""
+msgstr "요구되는 영역을 나타냅니다"
 
 msgid "Indicative"
 msgstr ""
 
-msgid "Indices"
-msgstr ""
-
 msgid "Insufficient balance."
-msgstr ""
+msgstr "부족한 잔액."
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "유효하지 않은 앱 아이디"
 
 msgid "Invalid document format."
-msgstr ""
+msgstr "유효하지 않은 서류 형식."
 
 msgid "Invalid email address."
-msgstr ""
+msgstr "유효하지 않은 이메일 주소."
 
 msgid "Invalid verification code."
-msgstr ""
+msgstr "유효하지 않은 검증 코드"
 
 msgid "Investment"
-msgstr ""
+msgstr "투자"
 
 msgid "Jan"
 msgstr "1월"
@@ -846,28 +855,28 @@ msgid "Jul"
 msgstr "7월"
 
 msgid "July"
-msgstr ""
+msgstr "7월"
 
 msgid "Jun"
 msgstr "6월"
 
 msgid "June"
-msgstr ""
+msgstr "6월"
 
 msgid "Jurisdiction"
-msgstr ""
+msgstr "관할권"
 
 msgid "Language settings"
-msgstr ""
+msgstr "언어 설정"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "마지막 숫자 예측"
 
 msgid "Last Digit Stats"
-msgstr ""
+msgstr "마지막 숫자 스탯"
 
 msgid "Last Login"
-msgstr ""
+msgstr "지난 로그인"
 
 msgid "Last Used"
 msgstr ""
@@ -882,106 +891,106 @@ msgid "Log in"
 msgstr "로그인"
 
 msgid "Log in here"
-msgstr ""
+msgstr "여기에서 로그인하세요"
 
 msgid "Log out"
-msgstr ""
+msgstr "로그아웃"
 
 msgid "Lookbacks"
 msgstr "룩백"
 
 msgid "Loss"
-msgstr ""
+msgstr "손실"
 
 msgid "Low"
-msgstr ""
+msgstr "낮음"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "낮은 장벽"
 
 msgid "Low Tick"
-msgstr ""
+msgstr "낮은 틱"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "낮은 장벽"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "낮은 장벽 오프셋"
 
 msgid "Lower"
 msgstr "하락"
 
 msgid "Lower or equal"
-msgstr ""
+msgstr "더 낮음 또는 동등"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "MT5 인출이 중단되었습니다"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "귀하의 계좌에서 MT5 인출이 중단되었습니다. 더 자세한 사항을 위해 귀하의 이메일을 확인해주세요."
 
 msgid "Mar"
 msgstr "3월"
 
 msgid "March"
-msgstr ""
+msgstr "3월"
 
 msgid "Matches/Differs"
 msgstr "맞춤/다름"
 
 msgid "Maximum Payout"
-msgstr ""
+msgstr "최대 지불금"
 
 msgid "Maximum Profit"
-msgstr ""
+msgstr "최대 이익"
 
 msgid "Maximum multiplier of 1000."
-msgstr ""
+msgstr "1000의 최대 승수"
 
 msgid "Maximum payout"
-msgstr ""
+msgstr "최대 지불금"
 
 msgid "May"
 msgstr "5월"
 
 msgid "Menu"
-msgstr ""
+msgstr "메뉴"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "최소한 %1의 글자수가 요구됩니다."
 
 msgid "Minimum:"
 msgstr "최소:"
 
 msgid "Minute"
-msgstr ""
+msgstr "분"
 
 msgid "Mo"
 msgstr "월"
 
 msgid "Monday"
-msgstr ""
+msgstr "월요일"
 
 msgid "More information can be found in an email sent to you."
-msgstr ""
+msgstr "귀하에게 전송된 이메일에서 더 많은 정보를 찾으실 수 있습니다."
 
 msgid "Multiplier"
-msgstr ""
+msgstr "승수"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "승수 다운"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "승수 업"
 
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 msgid "Net profit"
 msgstr "순이익"
 
 msgid "Network status"
-msgstr ""
+msgstr "네트워크 상태"
 
 msgid "Never"
 msgstr ""
@@ -990,22 +999,28 @@ msgid "Never Used"
 msgstr ""
 
 msgid "New Year's Day"
-msgstr ""
+msgstr "새해 첫날"
 
 msgid "New password"
 msgstr "새 비밀번호"
 
 msgid "New token created."
-msgstr ""
+msgstr "새 토큰이 생성되었습니다."
 
 msgid "Next"
 msgstr "다음"
 
 msgid "No authentication required"
+msgstr "인증이 필요없습니다"
+
+msgid "No currency assigned"
+msgstr ""
+
+msgid "No currency selected"
 msgstr ""
 
 msgid "No notifications"
-msgstr ""
+msgstr "공지 없음"
 
 msgid "No payout if exit spot is above or equal to the upper barrier."
 msgstr ""
@@ -1014,7 +1029,7 @@ msgid "No payout if exit spot is below or equal to the lower barrier."
 msgstr ""
 
 msgid "No thanks"
-msgstr ""
+msgstr "아니오 괜찮습니다"
 
 msgid "Not"
 msgstr ""
@@ -1032,37 +1047,37 @@ msgid "Note: You are limited to one fiat currency account. The currency of your 
 msgstr ""
 
 msgid "Notifications"
-msgstr ""
+msgstr "공지"
 
 msgid "Nov"
 msgstr "11월"
 
 msgid "November"
-msgstr ""
+msgstr "11월"
 
 msgid "Now"
 msgstr "지금"
 
 msgid "Number of ticks:"
-msgstr ""
+msgstr "틱의 수:"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "OAuth App ID"
 
 msgid "Oct"
 msgstr "10월"
 
 msgid "October"
-msgstr ""
+msgstr "10월"
 
 msgid "Offline"
-msgstr ""
+msgstr "오프라인"
 
 msgid "Online"
-msgstr ""
+msgstr "온라인"
 
 msgid "Only %1 are allowed."
-msgstr ""
+msgstr "%1만 허용됩니다."
 
 msgid "Only Downs"
 msgstr "오직 Downs"
@@ -1074,34 +1089,31 @@ msgid "Only Ups/Only Downs"
 msgstr "오직 Ups/오직 Downs"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr ""
+msgstr "오직 문자, 숫자, 띄어쓰기, 및 하이픈만 허용됩니다."
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr ""
+msgstr "오직 문자, 숫자, 띄어쓰기 및 다음의 특수문자들만 허용됩니다: %1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "오직 문자, 숫자, 띄어쓰기, 하이픈, 온점 및 아포스트로피만 허용됩니다."
 
 msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr ""
+msgstr "오직 문자, 숫자, 띄어쓰기, 하이픈, 온점, 쉼표, 아포스트로피만 허용됩니다."
 
 msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
-msgstr ""
+msgstr "아이디 번호(%1)를 위해 오직 문자, 숫자, 띄어쓰기, 밑줄 및 하이픈만 허용됩니다."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
-
-msgid "Only numbers, hyphens, and spaces are allowed."
-msgstr ""
+msgstr "오직 문자, 띄어쓰기, 하이픈, 온점, 및 아포스트로피만 허용됩니다."
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "앗... 페이지에 접근할 수 없습니다"
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "금융계좌를 개설하세요"
 
 msgid "Open a Real Account"
-msgstr ""
+msgstr "실제 계좌를 개설하세요"
 
 msgid "Open a free account"
 msgstr "무료로 계좌를 개설하세요."
@@ -1119,10 +1131,10 @@ msgid "Over/Under contracts will be refunded at the purchase price if the contra
 msgstr ""
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Passport"
-msgstr ""
+msgstr "여권"
 
 msgid "Password is not strong enough."
 msgstr "비밀번호가 취약합니다."
@@ -1131,10 +1143,10 @@ msgid "Password should have lower and uppercase letters with numbers."
 msgstr "비밀번호는 소문자 및 대문자와 숫자를 포함해야 합니다."
 
 msgid "Pay-out"
-msgstr ""
+msgstr "배당"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr ""
+msgstr "귀하의 국가 또는 귀하께서 선호하는 통화에 대해서는 지불 에이전트 서비스를 이용할 수 없습니다."
 
 msgid "Payments"
 msgstr "지불"
@@ -1143,19 +1155,19 @@ msgid "Payout"
 msgstr "지불금"
 
 msgid "Payout range"
-msgstr ""
+msgstr "지불금 범위"
 
 msgid "Pending"
 msgstr ""
 
 msgid "Percentage"
-msgstr ""
+msgstr "퍼센트"
 
 msgid "Permissions"
-msgstr ""
+msgstr "허가"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "출생지"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
 msgstr ""
@@ -1182,85 +1194,91 @@ msgid "Please choose a currency"
 msgstr "화폐를 선택해주시기 바랍니다"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr ""
+msgstr "%3영국 도박%4위원회 (UKGC)에 의해 요구됨에 따라 귀하의 나이를 확인하기 위해 %1실제 계좌 서류%2를 완료해주시기 바랍니다."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "귀하의 인출과 거래 제한을 해소하기 위해 %1재무평가서류%2를 완료해주시기 바랍니다."
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "진행하기 이전에 귀하의 신상정보를 완료해주시기 바랍니다."
 
 msgid "Please confirm that all the information above is true and complete."
-msgstr ""
+msgstr "상기 모든 정보가 사실이며 완전한 것임을 확인해주시기 바랍니다."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr ""
+msgstr "귀하께서 정치적으로 드러나는 사람이 아니라는 것을 확인해주시기 바랍니다."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr ""
+msgstr "귀하의 장치에 텔레그램 앱이 설치되어 있는지를 확인해주시기 바랍니다."
 
 msgid "Please enter a valid Login ID."
+msgstr "유효한 로그인 아이디를 입력해주시기 바랍니다."
+
+msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr ""
+msgstr "요구되는 기준이 충족되면 재신청해주시기 바랍니다."
 
 msgid "Please reload the page"
-msgstr ""
+msgstr "페이지를 새로고침 해주시기 바랍니다"
 
 msgid "Please select"
-msgstr ""
+msgstr "선택해주세요"
 
 msgid "Please select a country"
-msgstr ""
+msgstr "국가를 선택해주시기 바랍니다"
 
 msgid "Please select a reason."
-msgstr ""
+msgstr "이유를 선택해주시기 바랍니다."
 
 msgid "Please select a valid time."
 msgstr "유효시간을 선택해주세요."
 
 msgid "Please select at least one scope"
-msgstr ""
+msgstr "적어도 하나의 범위를 선택해주시기 바랍니다"
 
 msgid "Please select the checkbox."
 msgstr "체크박스를 선택해주세요."
 
 msgid "Please select the currency for this account:"
-msgstr ""
+msgstr "이 계좌를 위한 통화를 선택해주시기 바랍니다:"
 
 msgid "Please set the currency of your account to enable trading."
-msgstr ""
+msgstr "거래를 활성화하기 위해 귀하의 계좌에 통화를 설정해주시기 바랍니다."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr ""
+msgstr "예금 제한을 제거하기 위해 귀하의 %130일 턴오버 제한%2을 설정해주시기 바랍니다."
 
 msgid "Please specify the reasons for closing your accounts"
-msgstr ""
+msgstr "귀하의 계좌를 닫는 이유를 구체적으로 명시해주시기 바랍니다"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "귀하의 거주증명을 제출해주세요"
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "귀하의 신분증명을 제출해주세요."
 
 msgid "Postal Code/ZIP"
-msgstr ""
+msgstr "우편번호"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "잠재적인 지불금"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "잠재적인 이익"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "잠재적인 지불금"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "잠재적인 이익/손실"
 
 msgid "Predict the direction<br />and purchase"
-msgstr ""
+msgstr "방향<br />과 구매를 예측하세요"
 
 msgid "Previous"
 msgstr "이전"
@@ -1269,79 +1287,79 @@ msgid "Profit"
 msgstr "이익"
 
 msgid "Profit table"
-msgstr ""
+msgstr "이익표"
 
 msgid "Profit/Loss"
-msgstr ""
+msgstr "이익/손실"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "이익/손실"
 
 msgid "Proof of address"
-msgstr ""
+msgstr "주소증명"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "주소증명이 만기되었습니다"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "주소증명이 요구됩니다"
 
 msgid "Proof of identity"
-msgstr ""
+msgstr "신분증명"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "신분증명이 만기되었습니다"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "신분증명이 요구됩니다"
 
 msgid "Purchase"
-msgstr ""
+msgstr "구매"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "구매가격"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "구매시간"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "구매가격"
 
 msgid "Purchase request sent"
-msgstr ""
+msgstr "구매 신청서가 전송되었습니다"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "구매시간"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "풋 스프레드"
 
 msgid "Read"
 msgstr ""
 
 msgid "Ready to trade?"
-msgstr ""
+msgstr "거래할 준비가 되었나요?"
 
 msgid "Real"
-msgstr ""
+msgstr "실제"
 
 msgid "Real Account"
 msgstr "실제계정"
 
 msgid "Real Advanced"
-msgstr ""
+msgstr "리얼 어드벤스드"
 
 msgid "Real Standard"
-msgstr ""
+msgstr "리얼 스탠다드"
 
 msgid "Real Synthetic Indices"
-msgstr ""
+msgstr "실제 종합지수"
 
 msgid "Real-Money Account"
-msgstr ""
+msgstr "실제-자금 계좌"
 
 msgid "Real-Money Accounts"
-msgstr ""
+msgstr "실제-자금 계좌"
 
 msgid "Ref."
 msgstr ""
@@ -1416,7 +1434,7 @@ msgid "Sale Price"
 msgstr ""
 
 msgid "Saturday"
-msgstr ""
+msgstr "토요일"
 
 msgid "Scopes"
 msgstr ""
@@ -1430,50 +1448,53 @@ msgstr ""
 msgid "Select Trade Type"
 msgstr ""
 
-msgid "Select date"
+msgid "Select currency"
 msgstr ""
+
+msgid "Select date"
+msgstr "날을 선택하세요"
 
 msgid "Select market:"
-msgstr ""
+msgstr "시장을 선택하세요:"
 
 msgid "Select payment agent"
-msgstr ""
+msgstr "지불 에이전트를 선택하세요"
 
 msgid "Select your market and underlying asset"
-msgstr ""
+msgstr "귀하의 시장과 기초자산을 선택하세요"
 
 msgid "Select your trade type"
-msgstr ""
+msgstr "귀하의 거래 종류를 선택하세요"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "선택된 틱"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "자가 제한"
 
 msgid "Sell"
 msgstr "매도"
 
 msgid "Sell at market"
-msgstr ""
+msgstr "시장에서 판매하세요"
 
 msgid "Sep"
 msgstr "9월"
 
 msgid "September"
-msgstr ""
+msgstr "9월"
 
 msgid "Server"
-msgstr ""
+msgstr "서버"
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr ""
+msgstr "세션 기간제한은 6주보다 더 길 수 없습니다."
 
 msgid "Set Currency"
-msgstr ""
+msgstr "통화를 설정하세요"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "계좌 통화를 설정하세요"
 
 msgid "Settles"
 msgstr "정착"
@@ -1482,28 +1503,28 @@ msgid "Should be %1"
 msgstr ""
 
 msgid "Should be a valid number."
-msgstr ""
+msgstr "유효한 숫자여야 합니다."
 
 msgid "Should be between %1 and %2"
-msgstr ""
+msgstr "%1과 %2사이여야 합니다"
 
 msgid "Should be less than %1"
-msgstr ""
+msgstr "%1보다 작아야 합니다"
 
 msgid "Should be more than %1"
-msgstr ""
+msgstr "%1보다 더 많아야 합니다"
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr ""
+msgstr "문자 또는 숫자로 시작해야 하며, 하이픈과 밑줄을 포함할 수 있습니다."
 
 msgid "Sign out"
-msgstr ""
+msgstr "로그아웃"
 
 msgid "Sign up"
 msgstr "가입"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "죄송합니다. 귀하의 나라에서는 계정 가입이 불가합니다."
@@ -1517,10 +1538,16 @@ msgstr ""
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr ""
 
+msgid "Sorry, deposits for this currency are currently disabled."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr ""
 
 msgid "Sorry, this feature is not available in your jurisdiction."
+msgstr ""
+
+msgid "Sorry, withdrawals for this currency are currently disabled."
 msgstr ""
 
 msgid "Spot"
@@ -1548,7 +1575,7 @@ msgid "Statements"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "상태"
 
 msgid "Stays Between"
 msgstr ""
@@ -1560,10 +1587,13 @@ msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase pri
 msgstr ""
 
 msgid "Step"
+msgstr "스텝"
+
+msgid "Stock Indices"
 msgstr ""
 
 msgid "Stocks"
-msgstr ""
+msgstr "주식"
 
 msgid "Su"
 msgstr "일"
@@ -1572,16 +1602,16 @@ msgid "Submit"
 msgstr ""
 
 msgid "Submitted"
-msgstr ""
+msgstr "제출되었습니다"
 
 msgid "Submitting"
 msgstr ""
 
 msgid "Successful"
-msgstr ""
+msgstr "성공적입니다"
 
 msgid "Sunday"
-msgstr ""
+msgstr "일요일"
 
 msgid "Synthetic Indices"
 msgstr "종합 지수"
@@ -1590,10 +1620,10 @@ msgid "Target"
 msgstr ""
 
 msgid "Telephone"
-msgstr ""
+msgstr "전화"
 
 msgid "Term & conditions updated"
-msgstr ""
+msgstr "약관이 업데이트되었습니다"
 
 msgid "Tether"
 msgstr "테더"
@@ -1605,10 +1635,10 @@ msgid "Thank you for signing up! Please check your email to complete the registr
 msgstr "가입해주셔서 감사합니다! 등록절차를 완료하기 위해 회원님의 이메일을 확인 해주세요."
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr ""
+msgstr "감사합니다, 우리는 24시간 이내에 응답해드리겠습니다"
 
 msgid "The %1 password of account number %2 has been changed."
-msgstr ""
+msgstr "계좌번호 %2의 %1 비밀번호가 변경되었습니다."
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
 msgstr ""
@@ -1676,9 +1706,6 @@ msgstr ""
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr ""
 
-msgid "The password you entered is one of the world's most commonly used passwords. You should not be using this password."
-msgstr ""
-
 msgid "The reason should be between 5 and 250 characters"
 msgstr ""
 
@@ -1706,14 +1733,8 @@ msgstr ""
 msgid "There was some invalid character in an input field."
 msgstr ""
 
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr ""
-
 msgid "This account is disabled"
-msgstr ""
+msgstr "이 계좌는 비활성화되었습니다"
 
 msgid "This account is excluded until %1"
 msgstr ""
@@ -1731,31 +1752,31 @@ msgid "This contract won"
 msgstr ""
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr ""
+msgstr "이 특성은 가상 자금 계좌와는 관계가 없습니다."
 
 msgid "This field is required."
 msgstr "이 항목을 채워주십시오."
 
 msgid "This is a staging server - For testing purposes only"
-msgstr ""
+msgstr "이것은 단계서버입니다 - 오직 시험용입니다"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr ""
+msgstr "이것은 직설적인 장벽입니다. 실질적인 장벽은 엔트리 스팟과 장벽 오프셋의 합이 될 것입니다."
 
 msgid "This is your %1 account."
-msgstr ""
+msgstr "이것은 귀하의 %1 계좌입니다."
 
 msgid "This page is only available to logged out clients."
-msgstr ""
+msgstr "이 페이지는 로그아웃된 고객들만 이용할수 있습니다."
 
 msgid "Thursday"
-msgstr ""
+msgstr "목요일"
 
 msgid "Tick"
 msgstr "틱"
 
 msgid "Tick Prediction"
-msgstr ""
+msgstr "틱 예측"
 
 msgid "Ticks"
 msgstr "틱"
@@ -1764,16 +1785,16 @@ msgid "Ticks history returned an empty array."
 msgstr ""
 
 msgid "Time is in the wrong format."
-msgstr ""
+msgstr "시간이 잘못된 형식으로 되어 있습니다."
 
 msgid "Time out cannot be in the past."
-msgstr ""
+msgstr "타임아웃은 과거형으로 있을 수 없습니다."
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr ""
+msgstr "타임아웃은 6주보다 더 길수 없습니다."
 
 msgid "Time out must be after today."
-msgstr ""
+msgstr "타임아웃은 꼭 오늘 이후여야 합니다."
 
 msgid "Timed out until"
 msgstr ""
@@ -1785,13 +1806,13 @@ msgid "Today"
 msgstr "오늘"
 
 msgid "Token"
-msgstr ""
+msgstr "토큰"
 
 msgid "Top up error"
-msgstr ""
+msgstr "탑 업 오류"
 
 msgid "Top-up successful"
-msgstr ""
+msgstr "탑업 성공"
 
 msgid "Total Cost"
 msgstr ""
@@ -1800,13 +1821,13 @@ msgid "Total Profit/Loss"
 msgstr ""
 
 msgid "Total assets"
-msgstr ""
+msgstr "총 자산"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "귀하의 Deriv 계좌에 있는 총 자산"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "총 이익/손실"
 
 msgid "Touch/No Touch"
 msgstr "터치/노 터치"
@@ -1818,13 +1839,10 @@ msgid "Touches"
 msgstr ""
 
 msgid "Town/City"
-msgstr ""
+msgstr "타운/도시"
 
 msgid "Trade"
 msgstr "트레이드"
-
-msgid "Trading Contracts for Difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
 
 msgid "Trading and deposit disabled"
 msgstr ""
@@ -1832,17 +1850,20 @@ msgstr ""
 msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
 msgstr ""
 
-msgid "Trading is unavailable at this time."
+msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr ""
+
+msgid "Trading is unavailable at this time."
+msgstr "이 시간에 거래는 할 수 없습니다."
 
 msgid "Transaction ID"
 msgstr "거래 ID"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr ""
+msgstr "%1에 의해 거래가 진행되었습니다 (App ID: %2)"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "우리의 %1종합 지수%2를 활용해보세요."
 
 msgid "Try our other markets."
 msgstr "다른 시장을 이용해보세요."
@@ -1860,10 +1881,10 @@ msgid "Unable to read file %1"
 msgstr ""
 
 msgid "Understood"
-msgstr ""
+msgstr "이해되었습니다"
 
 msgid "Unknown OS"
-msgstr ""
+msgstr "알수없는 OS"
 
 msgid "Up to %1 decimal places are allowed."
 msgstr ""
@@ -1875,25 +1896,25 @@ msgid "Upcoming Events"
 msgstr "예정된 행사"
 
 msgid "Upgrade now"
-msgstr ""
+msgstr "지금 업그레이드하세요"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr ""
+msgstr "인증번호가 잘못되었습니다. 귀하의 이메일로 전송된 링크를 사용해주세요."
 
 msgid "Verify Reset Password"
-msgstr ""
+msgstr "재설정 암호를 확인해주세요"
 
 msgid "View"
 msgstr "보기"
 
 msgid "View chart"
-msgstr ""
+msgstr "차트 보기"
 
 msgid "Virtual"
 msgstr "가상"
 
 msgid "Waiting for contract settlement."
-msgstr ""
+msgstr "계약 정산을 기다리는중입니다."
 
 msgid "Waiting for entry tick."
 msgstr ""
@@ -1905,7 +1926,7 @@ msgid "We"
 msgstr "수"
 
 msgid "We'd love to hear what you think."
-msgstr ""
+msgstr "귀하께서 어떻게 생각하시는지 알고싶습니다."
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr ""
@@ -1914,6 +1935,9 @@ msgid "Wednesday"
 msgstr "수요일"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
+msgstr ""
+
+msgid "Whoops!"
 msgstr ""
 
 msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
@@ -1968,39 +1992,39 @@ msgid "You are limited to one fiat account. You can change the currency of your 
 msgstr ""
 
 msgid "You are offline"
-msgstr ""
+msgstr "귀하께서는 오프라인입니다"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr ""
+msgstr "귀하께서는 처음으로 입금하시거나 또는 MT5 계좌를 생성하기 이전에 %1새로운 통화%2를 설정하실 수 있습니다."
 
 msgid "You can close this window without interrupting your trade."
-msgstr ""
+msgstr "귀하께서는 귀하의 거래를 방해하지않고 이 윈도우 창을 닫으실 수 있습니다."
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr ""
+msgstr "귀하께서는 MT5 계좌를 생성하셨기 때문에 더이상 통화를 변경하실 수 없습니다."
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr ""
+msgstr "귀하께서는 첫 예금을 하셨기 때문에 더이상 통화를 변경하실 수 없습니다."
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr ""
+msgstr "귀하께서는 귀하의 잔액이 %2 또는 그보다 적을 경우 귀하의 데모계좌에 추가적인 %1만큼 추가로 넣을 수 있습니다."
 
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
+msgstr "귀하의 잔액이 %2 또는 그보다 적은 경우 추가적으로 %1를 귀하의 가상 계좌에 넣을 수 있습니다."
+
+msgid "You cannot use your real money account with Deriv at this time."
 msgstr ""
 
 msgid "You did not change anything."
-msgstr ""
+msgstr "귀하께서는 아무것도 변경하지 않으셨습니다."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
+msgstr "귀하께서는 귀하의 계좌를 지금 인증을 하지 않으셔도 됩니다. %1귀하의 계좌가 인증이 필요할때 우리가 귀하에게 공지해드리겠습니다."
+
+msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
-msgid "You have already withdrawn %1 %2."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2."
+msgid "You have already withdrawn %1%2."
 msgstr ""
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
@@ -2013,13 +2037,13 @@ msgid "You have opted to be excluded from Binary.com until %1. Please %2contact 
 msgstr ""
 
 msgid "You have reached the limit."
-msgstr ""
+msgstr "귀하께서는 한계에 도달하셨습니다."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr ""
 
 msgid "You have reached the withdrawal limit."
-msgstr ""
+msgstr "귀하께서는 인출 한계에 도달하셨습니다."
 
 msgid "You have sold this contract at %1 %2"
 msgstr ""
@@ -2037,7 +2061,7 @@ msgid "You have to register and get App ID before you can use different OAuth se
 msgstr ""
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "귀하께서는 아직 공지를 받지 않으셨습니다"
 
 msgid "You may open one account for each supported cryptocurrency."
 msgstr ""
@@ -2060,14 +2084,14 @@ msgstr ""
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr ""
 
-msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
+msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
-msgstr ""
+msgstr "귀하의 계좌는 로그인/로그아웃 활동이 없습니다."
 
 msgid "Your account has no trading activity."
-msgstr ""
+msgstr "귀하의 계좌는 거래활동이 없습니다."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr ""
@@ -2095,6 +2119,9 @@ msgstr ""
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "귀하의 비밀번호가 성공적으로 재설정되었습니다. 새 비밀번호를 이용하여 귀하의 계정에 로그인 바랍니다."
+
+msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr ""
@@ -2132,19 +2159,16 @@ msgstr ""
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr ""
 
-msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Your withdrawal limit is %1 %2."
+msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
-msgstr ""
+msgstr "계좌"
 
 msgid "accounts"
-msgstr ""
+msgstr "계좌들"
 
-msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr ""
 
 msgid "day"
@@ -2154,7 +2178,7 @@ msgid "days"
 msgstr "일"
 
 msgid "details"
-msgstr ""
+msgstr "세부사항"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr ""
@@ -2175,7 +2199,7 @@ msgid "letters"
 msgstr ""
 
 msgid "login"
-msgstr ""
+msgstr "로그인"
 
 msgid "logout"
 msgstr "로그아웃"
@@ -2184,19 +2208,19 @@ msgid "million"
 msgstr ""
 
 msgid "minute"
-msgstr ""
+msgstr "분"
 
 msgid "minutes"
 msgstr "분"
 
 msgid "numbers"
-msgstr ""
+msgstr "숫자"
 
 msgid "second"
-msgstr ""
+msgstr "초"
 
 msgid "seconds"
-msgstr ""
+msgstr "초"
 
 msgid "space"
 msgstr ""
@@ -2205,13 +2229,13 @@ msgid "thousand"
 msgstr ""
 
 msgid "tick"
-msgstr ""
+msgstr "틱"
 
 msgid "ticks"
 msgstr "틱"
 
 msgid "today"
-msgstr ""
+msgstr "오늘"
 
 msgid "today, Fridays"
 msgstr "오늘, 매 금요일"
@@ -2228,6 +2252,6 @@ msgstr ""
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 msgstr ""
 
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for Difference and Forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
+msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 msgstr ""
 
