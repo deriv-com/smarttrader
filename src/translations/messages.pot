@@ -19,7 +19,7 @@ msgstr ""
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr ""
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices, commodities, and synthetic indices."
+msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
 msgstr ""
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
@@ -175,6 +175,9 @@ msgstr ""
 msgid "Average"
 msgstr ""
 
+msgid "Back to main website"
+msgstr ""
+
 msgid "Back to trading"
 msgstr ""
 
@@ -253,7 +256,7 @@ msgstr ""
 msgid "Charting for this underlying is delayed"
 msgstr ""
 
-msgid "Check your conenction."
+msgid "Check your connection."
 msgstr ""
 
 msgid "Checked"
@@ -308,6 +311,9 @@ msgid "Connecting to server"
 msgstr ""
 
 msgid "Continue trading"
+msgstr ""
+
+msgid "Continue with Demo Account"
 msgstr ""
 
 msgid "Contract"
@@ -544,6 +550,9 @@ msgstr ""
 msgid "Exit spot time"
 msgstr ""
 
+msgid "Exit time"
+msgstr ""
+
 msgid "Expiry date is required for %1."
 msgstr ""
 
@@ -610,6 +619,9 @@ msgstr ""
 msgid "Guide"
 msgstr ""
 
+msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
+msgstr ""
+
 msgid "High"
 msgstr ""
 
@@ -655,7 +667,7 @@ msgstr ""
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr ""
 
-msgid "Hint: it would take approximately %1%2 to crack this password."
+msgid "Hint: it would take approximately %1%2 to crack your password."
 msgstr ""
 
 msgid "Hour"
@@ -800,9 +812,6 @@ msgid "Indicates required field"
 msgstr ""
 
 msgid "Indicative"
-msgstr ""
-
-msgid "Indices"
 msgstr ""
 
 msgid "Insufficient balance."
@@ -991,6 +1000,12 @@ msgstr ""
 msgid "No authentication required"
 msgstr ""
 
+msgid "No currency assigned"
+msgstr ""
+
+msgid "No currency selected"
+msgstr ""
+
 msgid "No notifications"
 msgstr ""
 
@@ -1076,9 +1091,6 @@ msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID n
 msgstr ""
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
-
-msgid "Only numbers, hyphens, and spaces are allowed."
 msgstr ""
 
 msgid "Oops... Page Not Available"
@@ -1187,6 +1199,12 @@ msgid "Please ensure that you have the Telegram app installed on your device."
 msgstr ""
 
 msgid "Please enter a valid Login ID."
+msgstr ""
+
+msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
@@ -1417,6 +1435,9 @@ msgstr ""
 msgid "Select Trade Type"
 msgstr ""
 
+msgid "Select currency"
+msgstr ""
+
 msgid "Select date"
 msgstr ""
 
@@ -1504,10 +1525,16 @@ msgstr ""
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr ""
 
+msgid "Sorry, deposits for this currency are currently disabled."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr ""
 
 msgid "Sorry, this feature is not available in your jurisdiction."
+msgstr ""
+
+msgid "Sorry, withdrawals for this currency are currently disabled."
 msgstr ""
 
 msgid "Spot"
@@ -1547,6 +1574,9 @@ msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase pri
 msgstr ""
 
 msgid "Step"
+msgstr ""
+
+msgid "Stock Indices"
 msgstr ""
 
 msgid "Stocks"
@@ -1663,9 +1693,6 @@ msgstr ""
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr ""
 
-msgid "The password you entered is one of the world's most commonly used passwords. You should not be using this password."
-msgstr ""
-
 msgid "The reason should be between 5 and 250 characters"
 msgstr ""
 
@@ -1691,12 +1718,6 @@ msgid "There was an error"
 msgstr ""
 
 msgid "There was some invalid character in an input field."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
 msgstr ""
 
 msgid "This account is disabled"
@@ -1810,13 +1831,13 @@ msgstr ""
 msgid "Trade"
 msgstr ""
 
-msgid "Trading Contracts for Difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
-
 msgid "Trading and deposit disabled"
 msgstr ""
 
 msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgstr ""
+
+msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr ""
 
 msgid "Trading is unavailable at this time."
@@ -1903,6 +1924,9 @@ msgstr ""
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr ""
 
+msgid "Whoops!"
+msgstr ""
+
 msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
 msgstr ""
 
@@ -1975,19 +1999,19 @@ msgstr ""
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr ""
 
+msgid "You cannot use your real money account with Deriv at this time."
+msgstr ""
+
 msgid "You did not change anything."
 msgstr ""
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
 msgstr ""
 
-msgid "You have already withdrawn %1 %2."
+msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
-msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2."
+msgid "You have already withdrawn %1%2."
 msgstr ""
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
@@ -2047,7 +2071,7 @@ msgstr ""
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr ""
 
-msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
+msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
@@ -2081,6 +2105,9 @@ msgid "Your fiat account's currency is set to %1."
 msgstr ""
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
+msgstr ""
+
+msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
 msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
@@ -2119,10 +2146,7 @@ msgstr ""
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr ""
 
-msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Your withdrawal limit is %1 %2."
+msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
@@ -2131,7 +2155,7 @@ msgstr ""
 msgid "accounts"
 msgstr ""
 
-msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr ""
 
 msgid "day"
@@ -2215,5 +2239,5 @@ msgstr ""
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 msgstr ""
 
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for Difference and Forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
+msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 msgstr ""

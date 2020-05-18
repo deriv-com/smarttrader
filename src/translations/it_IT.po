@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-20 03:33\n"
+"PO-Revision-Date: 2020-05-13 03:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -15,10 +15,10 @@ msgstr ""
 "Language: it_IT\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 Account %2"
-msgstr ""
+msgstr "%1 Conto %2"
 
 msgid "%1 Please click the link below to restart the password recovery process."
 msgstr "%1 Per riavviare la procedura di ripristino della password, clicca sul link qui sotto."
@@ -32,7 +32,7 @@ msgstr "%1 giorni %2 ore %3 minuti"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Il deposito di %1 da %2 sul numero di account %3 è stato effettuato. ID della transazione: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices, commodities, and synthetic indices."
+msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
 msgstr ""
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
@@ -54,13 +54,13 @@ msgid "%1Return to trading page%2"
 msgstr "%1Ritorna alla pagina di trading%2"
 
 msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
+msgstr "%1La verifica dell'identità o della residenza%2 non soddisfa i requisiti. Controlla l'e-mail che ti abbiamo inviato per istruzioni aggiuntive."
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Account"
-msgstr ""
+msgstr "Conto"
 
 msgid "Account Authenticated"
 msgstr "Autenticazione del conto"
@@ -69,7 +69,7 @@ msgid "Account access is temporarily limited. Please check your inbox for more d
 msgstr "L'accesso al conto è temporaneamente limitato: controlla la posta in arrivo per ulteriori informazioni."
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Autenticazione del conto"
 
 msgid "Account balance:"
 msgstr "Saldo dell'account:"
@@ -84,7 +84,7 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "Aggiungi +/– per definire una compensazione della barriera. Per esempio, +0,005 indica che una barriera è superiore di 0,005 rispetto al punto di entrata."
 
 msgid "Add Deriv account"
-msgstr ""
+msgstr "Aggiungi conto Deriv"
 
 msgid "Adjust trade parameters"
 msgstr "Regola i parametri di trading"
@@ -114,7 +114,7 @@ msgid "Apply now as a professional investor"
 msgstr "Candidati ora per la posizione di investitore professionista"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
 msgstr "Aprile"
@@ -156,7 +156,7 @@ msgid "Ask me later"
 msgstr "Chiedimelo più tardi"
 
 msgid "Asset"
-msgstr ""
+msgstr "Asset"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
 msgstr "Se alla data di reset il punto è nella direzione opposta rispetto alla tua previsione, la barriera viene reimpostata su quel punto."
@@ -165,7 +165,7 @@ msgid "Audit"
 msgstr "Controllo"
 
 msgid "Audit page"
-msgstr ""
+msgstr "Pagina di controllo"
 
 msgid "Aug"
 msgstr "Ago"
@@ -174,10 +174,10 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "Autentica subito il tuo conto per accedere a tutte le opzioni di pagamento disponibili."
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "Autenticazione non riuscita"
 
 msgid "Available Currencies"
 msgstr "Valute disponibili"
@@ -187,6 +187,9 @@ msgstr "Mercati disponibili"
 
 msgid "Average"
 msgstr "Media"
+
+msgid "Back to main website"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "Torna ai trade"
@@ -198,7 +201,7 @@ msgid "Barrier"
 msgstr "Barriera"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "Modifica della barriera"
 
 msgid "Barrier offset"
 msgstr "Correzione della barriera"
@@ -207,13 +210,13 @@ msgid "Bid"
 msgstr "Offerta"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "Moneta Binary"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 msgid "Browser"
-msgstr ""
+msgstr "Browser"
 
 msgid "Buy"
 msgstr "Acquista"
@@ -231,10 +234,10 @@ msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier ti
 msgstr "Acquistando il contratto %1 \"High-Low\"%2, la vincita corrisponderà alla moltiplicazione tra il moltiplicatore e la differenza tra il valore di %1massimo%2 (high) e %1minimo%2 (low) nel corso della durata del contratto."
 
 msgid "Call Spread"
-msgstr ""
+msgstr "Call Spread"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Call Spread/Put Spread"
 
 msgid "Can you spare 15 minutes?"
 msgstr "Hai 15 minuti per noi?"
@@ -246,7 +249,7 @@ msgid "Cashier"
 msgstr "Cassa"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "Cassa disabilitata"
 
 msgid "Change"
 msgstr "Modifica"
@@ -266,7 +269,7 @@ msgstr "Il grafico non è disponibile per questo sottostante."
 msgid "Charting for this underlying is delayed"
 msgstr "I grafici per questo strumento sono differiti"
 
-msgid "Check your conenction."
+msgid "Check your connection."
 msgstr ""
 
 msgid "Checked"
@@ -291,10 +294,10 @@ msgid "Close"
 msgstr "Chiudi"
 
 msgid "Close time"
-msgstr ""
+msgstr "Orario di chiusura"
 
 msgid "Close-Low"
-msgstr ""
+msgstr "Close-Low"
 
 msgid "Closed Bid"
 msgstr "Offerta chiusa"
@@ -312,7 +315,7 @@ msgid "Commodities"
 msgstr "Materie prime"
 
 msgid "Complete details"
-msgstr ""
+msgstr "Completa i dettagli"
 
 msgid "Compressing Image"
 msgstr "Compressione immagine"
@@ -323,6 +326,9 @@ msgstr "Connessione al server in corso"
 msgid "Continue trading"
 msgstr "Continua il trading"
 
+msgid "Continue with Demo Account"
+msgstr ""
+
 msgid "Contract"
 msgstr "Contratto"
 
@@ -330,28 +336,28 @@ msgid "Contract Confirmation"
 msgstr "Conferma del contratto"
 
 msgid "Contract details"
-msgstr ""
+msgstr "Dettagli del contratto"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "Il contratto termina"
 
 msgid "Contract has not started yet"
 msgstr "Il contratto non è ancora iniziato"
 
 msgid "Contract information"
-msgstr ""
+msgstr "Informazioni sul contratto"
 
 msgid "Contract period"
 msgstr "Periodo del contratto"
 
 msgid "Contract result"
-msgstr ""
+msgstr "Esito del contratto"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "Il contratto inizia"
 
 msgid "Contract type"
-msgstr ""
+msgstr "Tipo di contratto"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Il Contratto verrá venduto al prezzo di mercato prevalente nel momento in cui i nostri server ricevono la richiesta. Tale prezzo può differire rispetto al prezzo indicato."
@@ -384,7 +390,7 @@ msgid "Current password"
 msgstr "Password attuale"
 
 msgid "Current time"
-msgstr ""
+msgstr "Orario attuale"
 
 msgid "Date"
 msgstr "Data"
@@ -393,7 +399,7 @@ msgid "Date and Time"
 msgstr "Data e orario"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "Commissione per la cancellazione"
 
 msgid "Dec"
 msgstr "Dic"
@@ -405,7 +411,7 @@ msgid "Delete"
 msgstr "Elimina"
 
 msgid "Demo"
-msgstr ""
+msgstr "Di prova"
 
 msgid "Demo Account"
 msgstr "Conto demo"
@@ -429,7 +435,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "La funzione di deposito e prelievo è stata disabilitata per il tuo conto. Ti invitiamo a controllare il tuo indirizzo e-mail per ulteriori indicazioni."
 
 msgid "Deriv Accounts"
-msgstr ""
+msgstr "Conti Deriv"
 
 msgid "Description"
 msgstr "Descrizione"
@@ -462,10 +468,10 @@ msgid "Digit contracts will be refunded at the purchase price if the contract do
 msgstr "I contratti digit verranno rimborsati al prezzo d'acquisto se il contratto non termina entro 5 minuti."
 
 msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr ""
+msgstr "La funzione di trading di opzioni digitali è stata disabilitata per questo conto. Contatta l'%1assistenza clienti%2 per ricevere supporto."
 
 msgid "Digital options trading disabled"
-msgstr ""
+msgstr "Il trading su opzioni digitali è disabilitato"
 
 msgid "Digits"
 msgstr "Cifre"
@@ -501,7 +507,7 @@ msgid "End Time"
 msgstr "Orario di fine"
 
 msgid "End time"
-msgstr ""
+msgstr "Orario di fine"
 
 msgid "Endpoint"
 msgstr "Termine"
@@ -528,10 +534,10 @@ msgid "Equals"
 msgstr "Equivale a"
 
 msgid "Ether"
-msgstr ""
+msgstr "Ether"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "Ether Classic"
 
 msgid "Even/Odd"
 msgstr "Pari/Dispari"
@@ -555,6 +561,9 @@ msgid "Exit spot"
 msgstr "Prezzo di uscita"
 
 msgid "Exit spot time"
+msgstr "Orario del punto di uscita"
+
+msgid "Exit time"
 msgstr ""
 
 msgid "Expiry date is required for %1."
@@ -567,13 +576,13 @@ msgid "Failed"
 msgstr "Non riuscito"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
 msgstr "Febbraio"
 
 msgid "Fiat"
-msgstr ""
+msgstr "Fiat"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "La dimensione del file (%1) supera il limite consentito. Dimensione massima consentita: %2"
@@ -591,7 +600,7 @@ msgid "First line of home address"
 msgstr "Prima linea dell'indirizzo di residenza"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Fr"
 msgstr "Ven"
@@ -623,8 +632,11 @@ msgstr "Esce fuori"
 msgid "Guide"
 msgstr "Guida"
 
-msgid "High"
+msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr ""
+
+msgid "High"
+msgstr "High"
 
 msgid "High Barrier"
 msgstr "Barriera superiore"
@@ -648,10 +660,10 @@ msgid "High, Low and Close"
 msgstr "High, Low e Close"
 
 msgid "High-Close"
-msgstr ""
+msgstr "High-Close"
 
 msgid "High-Low"
-msgstr ""
+msgstr "High-Low"
 
 msgid "High/Low Ticks"
 msgstr "Tick alti/bassi"
@@ -668,7 +680,7 @@ msgstr "Superiore/Inferiore"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "I contratti Higher/Lower verranno rimborsati al prezzo d'acquisto nel caso in cui si verifichino meno di 2 tick tra l'orario di inizio e quello di fine."
 
-msgid "Hint: it would take approximately %1%2 to crack this password."
+msgid "Hint: it would take approximately %1%2 to crack your password."
 msgstr ""
 
 msgid "Hour"
@@ -815,14 +827,11 @@ msgstr "Indica un campo obbligatorio"
 msgid "Indicative"
 msgstr "Indicativo"
 
-msgid "Indices"
-msgstr ""
-
 msgid "Insufficient balance."
 msgstr "Saldo non sufficiente."
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "Id dell'app non valido"
 
 msgid "Invalid document format."
 msgstr "Formato del documento non valido."
@@ -858,7 +867,7 @@ msgid "Jurisdiction"
 msgstr "Giurisdizione"
 
 msgid "Language settings"
-msgstr ""
+msgstr "Imposazioni lingua"
 
 msgid "Last Digit Prediction"
 msgstr "Previsione dell'ultima cifra"
@@ -876,7 +885,7 @@ msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Le statistiche delle ultime cifre per i %1 tick più recenti su %2"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 msgid "Log in"
 msgstr "Login"
@@ -894,7 +903,7 @@ msgid "Loss"
 msgstr "Perdita"
 
 msgid "Low"
-msgstr ""
+msgstr "Low"
 
 msgid "Low Barrier"
 msgstr "Barriera inferiore"
@@ -915,13 +924,13 @@ msgid "Lower or equal"
 msgstr "Inferiore o uguale"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "Prelievi da MT5 disabilitati"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "La funzione di prelievo è stata disabilitata per il tuo conto MT5. Ti invitiamo a controllare il tuo indirizzo e-mail per ulteriori indicazioni."
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
@@ -945,7 +954,7 @@ msgid "May"
 msgstr "Mag"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgid "Minimum of %1 characters required."
 msgstr "Sono richiesti minimo %1 caratteri."
@@ -1004,8 +1013,14 @@ msgstr "Successivo"
 msgid "No authentication required"
 msgstr "Non è richiesta autenticazione"
 
-msgid "No notifications"
+msgid "No currency assigned"
 msgstr ""
+
+msgid "No currency selected"
+msgstr ""
+
+msgid "No notifications"
+msgstr "Nessuna notifica"
 
 msgid "No payout if exit spot is above or equal to the upper barrier."
 msgstr "Nessun payout se il punto di uscita è superiore o uguale alla barriera superiore."
@@ -1032,10 +1047,10 @@ msgid "Note: You are limited to one fiat currency account. The currency of your 
 msgstr "Nota: è previsto un limite di una sola valuta per conto fiat. Puoi modificare la valuta del conto fiat prima di effettuare il primo deposito o di creare un conto MT5. Puoi anche aprire un conto per ogni criptovaluta supportata."
 
 msgid "Notifications"
-msgstr ""
+msgstr "Notifiche"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
 msgstr "Novembre"
@@ -1056,10 +1071,10 @@ msgid "October"
 msgstr "Ottobre"
 
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 msgid "Only %1 are allowed."
 msgstr "Sono consentiti solo %1."
@@ -1091,9 +1106,6 @@ msgstr "Per il numero ID (%1) sono consentiti solo lettere, numeri, spazio, trat
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Sono consentite solo lettere, spazi, trattini, punti e apostrofi."
 
-msgid "Only numbers, hyphens, and spaces are allowed."
-msgstr ""
-
 msgid "Oops... Page Not Available"
 msgstr "Ops... Pagina non disponibile"
 
@@ -1119,7 +1131,7 @@ msgid "Over/Under contracts will be refunded at the purchase price if the contra
 msgstr "I contratti Over/Under verranno rimborsati al prezzo d'acquisto se il contratto non termina entro 5 minuti."
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Passport"
 msgstr "Passaporto"
@@ -1131,7 +1143,7 @@ msgid "Password should have lower and uppercase letters with numbers."
 msgstr "La password deve contenere lettere minuscole e maiuscole con numeri."
 
 msgid "Pay-out"
-msgstr ""
+msgstr "Pay-out"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
 msgstr "I servizi relativi agli agenti di pagamento non sono disponibili nel tuo paese o nella valuta selezionata."
@@ -1140,10 +1152,10 @@ msgid "Payments"
 msgstr "Pagamenti"
 
 msgid "Payout"
-msgstr ""
+msgstr "Payout"
 
 msgid "Payout range"
-msgstr ""
+msgstr "Intervallo di payout"
 
 msgid "Pending"
 msgstr "In sospeso"
@@ -1167,7 +1179,7 @@ msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "Ti preghiamo di effettuare il %1log in%2 o %3registrarti%4 per visualizzare questa pagina."
 
 msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr ""
+msgstr "Per proseguire, è necessario accettare i %1Termini e le condizioni aggiornati%2."
 
 msgid "Please accept the terms and conditions."
 msgstr "Accetta i termini e le condizioni."
@@ -1188,7 +1200,7 @@ msgid "Please complete the %1financial assessment form%2 to lift your withdrawal
 msgstr "Per aumentare il limite dei prelievi e del trading, %1compila il modulo della valutazione finanziaria%2."
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "Prima di procedere, completa i tuoi dati personali."
 
 msgid "Please confirm that all the information above is true and complete."
 msgstr "Ti chiediamo di confermare che tutte le informazioni sopra riportate sono veritiere e complete."
@@ -1201,6 +1213,12 @@ msgstr "Assicurati di aver installato l'app Telegram sul tuo dispositivo."
 
 msgid "Please enter a valid Login ID."
 msgstr "Inserire credenziali di accesso valide."
+
+msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please note that the selected currency is allowed for limited accounts only."
+msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "Invia nuovamente la richiesta una volta in possesso dei requisiti necessari."
@@ -1230,7 +1248,7 @@ msgid "Please select the currency for this account:"
 msgstr "Seleziona la valuta per questo conto:"
 
 msgid "Please set the currency of your account to enable trading."
-msgstr ""
+msgstr "Imposta la valuta del conto per iniziare il trading."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "Imposta il tuo %1limite del turnover di 30 giorni%2 per eliminare i limiti sui depositi."
@@ -1239,10 +1257,10 @@ msgid "Please specify the reasons for closing your accounts"
 msgstr "Specificare per quale motivo si desidera chiudere i propri conti"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "Invia il documento di verifica dell'indirizzo."
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "Invia un documento di verifica dell'identità."
 
 msgid "Postal Code/ZIP"
 msgstr "Codice postale/CAP"
@@ -1254,10 +1272,10 @@ msgid "Potential Profit"
 msgstr "Profitto potenziale"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "Payout potenziale"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "Profitto/perdita potenziale"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Prevedi la direzione<br />e acquista"
@@ -1269,31 +1287,31 @@ msgid "Profit"
 msgstr "Profitto"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Tabella dei profitti"
 
 msgid "Profit/Loss"
 msgstr "Profitto/Perdita"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "Profitto/perdita"
 
 msgid "Proof of address"
 msgstr "Prova dell'indirizzo"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "Il documento di verifica dell'indirizzo è scaduto"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "È richiesto un documento di verifica dell'indirizzo"
 
 msgid "Proof of identity"
 msgstr "Verifica dell'identità"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "Il documento di verifica dell'identità è scaduto"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "È richiesto un documento di verifica dell'identità"
 
 msgid "Purchase"
 msgstr "Acquisto"
@@ -1305,16 +1323,16 @@ msgid "Purchase Time"
 msgstr "Orario d'acquisto"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "Prezzo d'acquisto"
 
 msgid "Purchase request sent"
 msgstr "Richiesta di acquisto inviata"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "Orario d'acquisto"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "Put Spread"
 
 msgid "Read"
 msgstr "Leggi"
@@ -1350,16 +1368,16 @@ msgid "Reference ID"
 msgstr "ID di riferimento"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "Tempo residuo"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "Rimuovi limiti sui depositi"
 
 msgid "Reports"
-msgstr ""
+msgstr "Report"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "Richiede che la funzione di archiviazione web del tuo browser venga attivata in modo da funzionare adeguatamente. Si prega di attivarla oppure uscire dalla modalità di navigazione in incognito."
 
 msgid "Resale not offered"
 msgstr "La rivendita non è offerta"
@@ -1380,13 +1398,13 @@ msgid "Reset Put"
 msgstr "Reimposta l'opzione Put"
 
 msgid "Reset Time"
-msgstr "Data di reset"
+msgstr "Reimposta orario"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "Reimpostare la barriera"
 
 msgid "Reset time"
-msgstr ""
+msgstr "Reimposta orario"
 
 msgid "Reset to original settings"
 msgstr "Ripristina le impostazioni originarie"
@@ -1430,6 +1448,9 @@ msgstr "Seleziona asset"
 msgid "Select Trade Type"
 msgstr "Seleziona il tipo di trade"
 
+msgid "Select currency"
+msgstr ""
+
 msgid "Select date"
 msgstr "Selezionare una data"
 
@@ -1446,10 +1467,10 @@ msgid "Select your trade type"
 msgstr "Seleziona la tua tipologia di trade"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "Tick selezionato"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "Autoesclusione"
 
 msgid "Sell"
 msgstr "Vendi"
@@ -1464,7 +1485,7 @@ msgid "September"
 msgstr "Settembre"
 
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Il limite di durata della sessione non può essere superiore a 6 settimane."
@@ -1473,7 +1494,7 @@ msgid "Set Currency"
 msgstr "Imposta la valuta"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "Imposta valuta del conto"
 
 msgid "Settles"
 msgstr "Liquida"
@@ -1503,7 +1524,7 @@ msgid "Sign up"
 msgstr "Iscriviti"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "Siamo spiacenti, la registrazione di un account non è disponibile nel tuo paese."
@@ -1517,26 +1538,32 @@ msgstr "Siamo spiacenti, si è verificato un errore durante l'elaborazione della
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "Siamo spiacenti, le opzioni binarie non sono disponibili per il tuo conto finanziario."
 
+msgid "Sorry, deposits for this currency are currently disabled."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Siamo spiacenti, questa funzione è disponibile solo sugli account virtuali."
 
 msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "Siamo spiacenti, questa funzione non è disponibile nella tua giurisdizione."
 
-msgid "Spot"
+msgid "Sorry, withdrawals for this currency are currently disabled."
 msgstr ""
+
+msgid "Spot"
+msgstr "Spot"
 
 msgid "Spot time"
-msgstr ""
+msgstr "Orario di spot"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "Orario di spot (GMT)"
 
 msgid "Stake"
 msgstr "Puntata"
 
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 msgid "Start time"
 msgstr "Orario d'inizio"
@@ -1545,7 +1572,7 @@ msgid "State/Province"
 msgstr "Stato/Provincia"
 
 msgid "Statements"
-msgstr ""
+msgstr "Estratti conto"
 
 msgid "Status"
 msgstr "Stato"
@@ -1560,6 +1587,9 @@ msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase pri
 msgstr "I contratti Resta Dentro/Esce saranno rimborsati al prezzo di acquisto, qualora i tick tra l'orario di inizio e quello di termine fossero meno di 2."
 
 msgid "Step"
+msgstr "Step"
+
+msgid "Stock Indices"
 msgstr ""
 
 msgid "Stocks"
@@ -1593,10 +1623,10 @@ msgid "Telephone"
 msgstr "Telefono"
 
 msgid "Term & conditions updated"
-msgstr ""
+msgstr "Termini e condizioni aggiornati"
 
 msgid "Tether"
-msgstr ""
+msgstr "Tether"
 
 msgid "Th"
 msgstr "Gio"
@@ -1632,7 +1662,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "Per %1orario di inizio%2 s'intende il momento in cui il contratto viene processato dai nostri server."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1L'orario di inizio%2 indica quando il contratto verrà elaborato dai nostri server e lo %1spot d'ingresso%2 è il %1tick successivo%2."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "Il <strong>periodo del contratto</strong> è il periodo tra il <strong>tick successivo</strong> all'<strong>orario d'inizio</strong> e all'<strong>orario di fine</strong>."
@@ -1676,9 +1706,6 @@ msgstr "Il numero massimo di token (%1) è stato raggiunto."
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "Impossibile trovare la pagina che stai cercando, probabilmente non esiste più oppure l'indirizzo è errato. Verifica eventuali errori di battitura."
 
-msgid "The password you entered is one of the world's most commonly used passwords. You should not be using this password."
-msgstr ""
-
 msgid "The reason should be between 5 and 250 characters"
 msgstr "La motivazione deve essere compresa tra i 5 e i 250 caratteri"
 
@@ -1705,12 +1732,6 @@ msgstr "Si è verificato un errore"
 
 msgid "There was some invalid character in an input field."
 msgstr "Un campo di immissione testo conteneva uno o più caratteri non validi."
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr ""
 
 msgid "This account is disabled"
 msgstr "Questo conto è disattivato"
@@ -1752,7 +1773,7 @@ msgid "Thursday"
 msgstr "Giovedì"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Prediction"
 msgstr "Previsione del tick"
@@ -1785,7 +1806,7 @@ msgid "Today"
 msgstr "Oggi"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Top up error"
 msgstr "Errore di caricamento"
@@ -1800,13 +1821,13 @@ msgid "Total Profit/Loss"
 msgstr "Profitto/Perdita totale"
 
 msgid "Total assets"
-msgstr ""
+msgstr "Asset totali"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "Asset totali nei conti Deriv"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "Profitto/perdita totale"
 
 msgid "Touch/No Touch"
 msgstr "Tocca/Non Tocca"
@@ -1821,15 +1842,15 @@ msgid "Town/City"
 msgstr "Città"
 
 msgid "Trade"
-msgstr ""
-
-msgid "Trading Contracts for Difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "Trade"
 
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "Sono stati disattivati trading e depositi"
 
 msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgstr "Le funzioni di trading e di deposito sono state disabilitate per il tuo conto. Ti preghiamo di %1contattare l'assistenza clienti%2."
+
+msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr ""
 
 msgid "Trading is unavailable at this time."
@@ -1916,6 +1937,9 @@ msgstr "Mercoledì"
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "Quando clicchi su \"OK\" verrai escluso dal trading sul sito fino alla data selezionata."
 
+msgid "Whoops!"
+msgstr ""
+
 msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
 msgstr "Vinci il payout massimo se il punto di uscita è superiore o uguale alla barriera superiore."
 
@@ -1941,10 +1965,10 @@ msgid "Withdrawal"
 msgstr "Prelievo"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "Limiti su trading e prelievi"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "Prelievi disabilitati"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "La funzione di prelievo è stata disabilitata per il tuo conto. Ti invitiamo a controllare il tuo indirizzo e-mail per ulteriori indicazioni."
@@ -1968,7 +1992,7 @@ msgid "You are limited to one fiat account. You can change the currency of your 
 msgstr "È previsto un limite di un solo conto fiat. Puoi modificare la valuta del tuo conto fiat in qualsiasi momento prima di effettuare il primo deposito o di creare un conto MT5."
 
 msgid "You are offline"
-msgstr ""
+msgstr "Sei offline"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "È possibile %1impostare una nuova valuta%2 prima di effettuare il primo deposito o di creare un conto MT5."
@@ -1988,19 +2012,19 @@ msgstr "Puoi ricaricare il tuo conto demo con un importo aggiuntivo di %1 se il 
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr "Puoi ricaricare il tuo conto virtuale con un importo aggiuntivo di %1 se il saldo è inferiore o uguale a %2."
 
+msgid "You cannot use your real money account with Deriv at this time."
+msgstr ""
+
 msgid "You did not change anything."
 msgstr "Non è stata apportata alcuna modifica."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
 msgstr "Non è ancora il momento di autenticare il conto. %1Ti avviseremo quando sarà necessario."
 
-msgid "You have already withdrawn %1 %2."
+msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
-msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2."
+msgid "You have already withdrawn %1%2."
 msgstr ""
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
@@ -2010,7 +2034,7 @@ msgid "You have not granted access to any applications."
 msgstr "Non è possibile accedere ad alcuna applicazione."
 
 msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr ""
+msgstr "Hai scelto di essere escluso da Binary.com fino a %1. %2Contattaci%3 per ricevere assistenza."
 
 msgid "You have reached the limit."
 msgstr "Hai raggiunto il limite."
@@ -2037,7 +2061,7 @@ msgid "You have to register and get App ID before you can use different OAuth se
 msgstr "Per utilizzare un server OAuth diverso per l'autenticazione, è necessario registrarsi e ottenere un ID dell'App. Per ulteriori informazioni, consulta maggiori informazione di OAuth su https://developers.binary.com/."
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "Non hai ancora ricevuto notifiche"
 
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "È possibile aprire un conto per ogni criptovaluta supportata."
@@ -2060,7 +2084,7 @@ msgstr "Vinci il payout se il prezzo di mercato non termina con la cifra che hai
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "Vinci il payout se il prezzo di mercato termina con la cifra che hai selezionato."
 
-msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
+msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
@@ -2095,6 +2119,9 @@ msgstr "La valuta del tuo conto fiat è impostata su %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "La tua password è stata ripristinata con successo. Effettua il login sul conto utilizzando la nuova password."
+
+msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "La richiesta di passaggio a cliente professionista %1non è stata approvata%2."
@@ -2132,10 +2159,7 @@ msgstr "Al momento, il saldo del tuo conto virtuale è inferiore o uguale a %1; 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Il tuo web browser (%1) non è aggiornato e potrebbe influire sulla tua esperienza di trading. Prosegui a tuo rischio. %2Aggiorna il browser%3"
 
-msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Your withdrawal limit is %1 %2."
+msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
@@ -2144,7 +2168,7 @@ msgstr "conto"
 msgid "accounts"
 msgstr "conti"
 
-msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr ""
 
 msgid "day"
@@ -2175,10 +2199,10 @@ msgid "letters"
 msgstr "lettere"
 
 msgid "login"
-msgstr ""
+msgstr "accedi"
 
 msgid "logout"
-msgstr ""
+msgstr "esci"
 
 msgid "million"
 msgstr "milioni"
@@ -2205,7 +2229,7 @@ msgid "thousand"
 msgstr "mila"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
 msgstr "tick"
@@ -2223,11 +2247,11 @@ msgid "years"
 msgstr "anni"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for Difference and Forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
+msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 msgstr ""
 

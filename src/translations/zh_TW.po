@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-04-20 03:33\n"
+"PO-Revision-Date: 2020-05-13 03:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Language: zh_TW\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 Account %2"
 msgstr "%1帳戶%2"
@@ -32,7 +32,7 @@ msgstr "%1 天 %2 小時 %3 分鐘"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "已完成從%2至帳號%3的%1存款。交易編號: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices, commodities, and synthetic indices."
+msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
 msgstr ""
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
@@ -54,7 +54,7 @@ msgid "%1Return to trading page%2"
 msgstr "%1返回交易頁面%2"
 
 msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
+msgstr "%1您的身份證明或地址證明%2 不符合我們的要求。請檢查您的電子郵件收取進一步指示。"
 
 msgid "AM"
 msgstr "上午"
@@ -69,7 +69,7 @@ msgid "Account access is temporarily limited. Please check your inbox for more d
 msgstr "帳戶存取已暫時受限制。欲知詳情請檢視收件匣。"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "帳戶驗證"
 
 msgid "Account balance:"
 msgstr "帳戶餘額："
@@ -84,7 +84,7 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "透過新增+/-給障礙偏移量定義。例如, +0.005 表示比入市現價高0.005 的障礙。"
 
 msgid "Add Deriv account"
-msgstr ""
+msgstr "新增Deriv帳戶"
 
 msgid "Adjust trade parameters"
 msgstr "調整交易參數"
@@ -165,7 +165,7 @@ msgid "Audit"
 msgstr "審計"
 
 msgid "Audit page"
-msgstr ""
+msgstr "審核頁面"
 
 msgid "Aug"
 msgstr "八月"
@@ -174,10 +174,10 @@ msgid "August"
 msgstr "八月"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "立刻進行帳戶驗證，以獲得付款選項的所有優惠。"
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "驗證失敗"
 
 msgid "Available Currencies"
 msgstr "可用的貨幣"
@@ -187,6 +187,9 @@ msgstr "可用的市場"
 
 msgid "Average"
 msgstr "平均"
+
+msgid "Back to main website"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "返回交易"
@@ -198,7 +201,7 @@ msgid "Barrier"
 msgstr "障礙"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "障礙變更"
 
 msgid "Barrier offset"
 msgstr "障礙位移"
@@ -246,7 +249,7 @@ msgid "Cashier"
 msgstr "收銀台"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "收銀台已禁用"
 
 msgid "Change"
 msgstr "變更"
@@ -266,7 +269,7 @@ msgstr "此標的工具圖表不可用。"
 msgid "Charting for this underlying is delayed"
 msgstr "此標的資產的圖表資料已延遲"
 
-msgid "Check your conenction."
+msgid "Check your connection."
 msgstr ""
 
 msgid "Checked"
@@ -291,7 +294,7 @@ msgid "Close"
 msgstr "收盤"
 
 msgid "Close time"
-msgstr ""
+msgstr "收盤時間"
 
 msgid "Close-Low"
 msgstr "收盤-最低值"
@@ -312,7 +315,7 @@ msgid "Commodities"
 msgstr "商品"
 
 msgid "Complete details"
-msgstr ""
+msgstr "完整資料"
 
 msgid "Compressing Image"
 msgstr "正在壓縮圖像"
@@ -323,6 +326,9 @@ msgstr "連接伺服器"
 msgid "Continue trading"
 msgstr "繼續交易"
 
+msgid "Continue with Demo Account"
+msgstr ""
+
 msgid "Contract"
 msgstr "合約"
 
@@ -330,28 +336,28 @@ msgid "Contract Confirmation"
 msgstr "合約確認"
 
 msgid "Contract details"
-msgstr ""
+msgstr "合約詳情"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "合約結束"
 
 msgid "Contract has not started yet"
 msgstr "合約尚未開始"
 
 msgid "Contract information"
-msgstr ""
+msgstr "合約資訊"
 
 msgid "Contract period"
 msgstr "合約期限"
 
 msgid "Contract result"
-msgstr ""
+msgstr "合約結果"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "合約開始時間"
 
 msgid "Contract type"
-msgstr ""
+msgstr "合約類型"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異。"
@@ -384,7 +390,7 @@ msgid "Current password"
 msgstr "目前密碼"
 
 msgid "Current time"
-msgstr ""
+msgstr "目前時間"
 
 msgid "Date"
 msgstr "日期"
@@ -393,7 +399,7 @@ msgid "Date and Time"
 msgstr "日期和時間"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "交易取消。費用"
 
 msgid "Dec"
 msgstr "十二月"
@@ -429,7 +435,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "您的帳戶已被禁存款和提款。請檢查您的電子郵件, 以瞭解更多詳情。"
 
 msgid "Deriv Accounts"
-msgstr ""
+msgstr "Deriv 帳戶"
 
 msgid "Description"
 msgstr "描述"
@@ -462,10 +468,10 @@ msgid "Digit contracts will be refunded at the purchase price if the contract do
 msgstr "數位合約如果沒在 5 分鐘內結束，將退還購入價格。"
 
 msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr ""
+msgstr "您的帳戶已被禁進行數字期權交易。請聯繫%1客服部%2尋求幫助。"
 
 msgid "Digital options trading disabled"
-msgstr ""
+msgstr "數字期權交易已禁用"
 
 msgid "Digits"
 msgstr "數字期權"
@@ -501,7 +507,7 @@ msgid "End Time"
 msgstr "結束時間"
 
 msgid "End time"
-msgstr ""
+msgstr "結束時間"
 
 msgid "Endpoint"
 msgstr "端點"
@@ -555,6 +561,9 @@ msgid "Exit spot"
 msgstr "退市現價"
 
 msgid "Exit spot time"
+msgstr "退市現價時間"
+
+msgid "Exit time"
 msgstr ""
 
 msgid "Expiry date is required for %1."
@@ -573,7 +582,7 @@ msgid "February"
 msgstr "二月"
 
 msgid "Fiat"
-msgstr ""
+msgstr "法定貨幣"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "檔案 (%1) 大小超過允許限額。允許的最大檔案大小: %2"
@@ -623,6 +632,9 @@ msgstr "處於區間之外"
 msgid "Guide"
 msgstr "指南"
 
+msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
+msgstr ""
+
 msgid "High"
 msgstr "最高值"
 
@@ -668,7 +680,7 @@ msgstr "高於/低於"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "如果開始和結束期間價格跳動次數少於2，「高於/低於」合約購入價將全額退還。"
 
-msgid "Hint: it would take approximately %1%2 to crack this password."
+msgid "Hint: it would take approximately %1%2 to crack your password."
 msgstr ""
 
 msgid "Hour"
@@ -815,14 +827,11 @@ msgstr "表示必填欄位"
 msgid "Indicative"
 msgstr "指示性"
 
-msgid "Indices"
-msgstr ""
-
 msgid "Insufficient balance."
 msgstr "餘額不足。"
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "無效的應用 id"
 
 msgid "Invalid document format."
 msgstr "無效的文檔格式."
@@ -858,7 +867,7 @@ msgid "Jurisdiction"
 msgstr "管轄"
 
 msgid "Language settings"
-msgstr ""
+msgstr "語言設定"
 
 msgid "Last Digit Prediction"
 msgstr "最後數字的預測"
@@ -915,7 +924,7 @@ msgid "Lower or equal"
 msgstr "低於或等值"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "MT5已被禁提款"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "您的MT5帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
@@ -945,7 +954,7 @@ msgid "May"
 msgstr "五月"
 
 msgid "Menu"
-msgstr ""
+msgstr "功能表"
 
 msgid "Minimum of %1 characters required."
 msgstr "需至少%1 個字元。"
@@ -1004,8 +1013,14 @@ msgstr "下一頁"
 msgid "No authentication required"
 msgstr "不需要驗證"
 
-msgid "No notifications"
+msgid "No currency assigned"
 msgstr ""
+
+msgid "No currency selected"
+msgstr ""
+
+msgid "No notifications"
+msgstr "沒有通知"
 
 msgid "No payout if exit spot is above or equal to the upper barrier."
 msgstr "如果退市現價高於或等於高障礙, 不能獲得賠付。"
@@ -1032,7 +1047,7 @@ msgid "Note: You are limited to one fiat currency account. The currency of your 
 msgstr "注意: 您只能使用一個法定貨幣帳戶。首次把資金存入法定帳戶或開立 MT5 帳戶之前, 可以更改 法定帳戶的幣種。您還可以為每種受支持的加密貨幣開立專用帳戶。"
 
 msgid "Notifications"
-msgstr ""
+msgstr "通知"
 
 msgid "Nov"
 msgstr "十一月"
@@ -1091,9 +1106,6 @@ msgstr "ID 號(%1) 只允許字母、數位、空格、底線和連字號。"
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "只允許字母、空格、連字號、句號和所有格號。"
 
-msgid "Only numbers, hyphens, and spaces are allowed."
-msgstr ""
-
 msgid "Oops... Page Not Available"
 msgstr "抱歉!找不到頁面"
 
@@ -1143,7 +1155,7 @@ msgid "Payout"
 msgstr "賠付"
 
 msgid "Payout range"
-msgstr ""
+msgstr "賠付範圍"
 
 msgid "Pending"
 msgstr "待決"
@@ -1167,7 +1179,7 @@ msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "請%1登入%2 或 %3註冊%4 以檢視此頁。"
 
 msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr ""
+msgstr "請接受%1更新條款和條件%2以繼續操作。"
 
 msgid "Please accept the terms and conditions."
 msgstr "請接受條款和條件。"
@@ -1188,7 +1200,7 @@ msgid "Please complete the %1financial assessment form%2 to lift your withdrawal
 msgstr "請完成%1財務評估表格%2，以便提升您的取款和交易限額。"
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "繼續操作前請填寫您的個人資料。"
 
 msgid "Please confirm that all the information above is true and complete."
 msgstr "請確認以上所有資訊是真實和完整的。"
@@ -1201,6 +1213,12 @@ msgstr "請確保您的設備已安裝了電報應用程式。"
 
 msgid "Please enter a valid Login ID."
 msgstr "請輸入有效的登入識別碼。"
+
+msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please note that the selected currency is allowed for limited accounts only."
+msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "一旦滿足所需標準, 請重新申請。"
@@ -1230,7 +1248,7 @@ msgid "Please select the currency for this account:"
 msgstr "請選擇此帳戶的幣種："
 
 msgid "Please set the currency of your account to enable trading."
-msgstr ""
+msgstr "請設定帳戶的幣種以啟用交易。"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "請將 %130 天交易額限制%2 設置為刪除存款限額。"
@@ -1239,10 +1257,10 @@ msgid "Please specify the reasons for closing your accounts"
 msgstr "請指定您關閉帳戶的原因"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "請提交您的地址證明。"
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "請提交您的身份證明。"
 
 msgid "Postal Code/ZIP"
 msgstr "郵遞區號"
@@ -1254,10 +1272,10 @@ msgid "Potential Profit"
 msgstr "潛在利潤"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "可能的賠付額"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "潛在利潤/虧損"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "預測價格走向<br />並購入"
@@ -1269,31 +1287,31 @@ msgid "Profit"
 msgstr "利潤"
 
 msgid "Profit table"
-msgstr ""
+msgstr "利潤表"
 
 msgid "Profit/Loss"
 msgstr "利潤/虧損"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "利潤/虧損"
 
 msgid "Proof of address"
 msgstr "地址證明"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "地址證明已過期"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "需要地址證明"
 
 msgid "Proof of identity"
 msgstr "身份證明"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "身份證明已過期"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "需要身份證明"
 
 msgid "Purchase"
 msgstr "買入"
@@ -1305,13 +1323,13 @@ msgid "Purchase Time"
 msgstr "買入時間"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "購入價格"
 
 msgid "Purchase request sent"
 msgstr "採購請求已發送"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "買入時間"
 
 msgid "Put Spread"
 msgstr "賣權價差"
@@ -1350,16 +1368,16 @@ msgid "Reference ID"
 msgstr "身份參考號"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "剩餘時間"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "移除存款限額"
 
 msgid "Reports"
-msgstr ""
+msgstr "報告"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "您必須啟用瀏覽器的web存儲，才能正常工作。請啟用它或退出私人瀏覽模式。"
 
 msgid "Resale not offered"
 msgstr "不提供轉售"
@@ -1383,10 +1401,10 @@ msgid "Reset Time"
 msgstr "重設時間"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "重設障礙"
 
 msgid "Reset time"
-msgstr ""
+msgstr "重設時間"
 
 msgid "Reset to original settings"
 msgstr "重設為原始設定"
@@ -1430,6 +1448,9 @@ msgstr "選擇資產"
 msgid "Select Trade Type"
 msgstr "選擇交易類型"
 
+msgid "Select currency"
+msgstr ""
+
 msgid "Select date"
 msgstr "選擇日期"
 
@@ -1446,10 +1467,10 @@ msgid "Select your trade type"
 msgstr "選取交易類型"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "選定跳動點"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "自我禁止"
 
 msgid "Sell"
 msgstr "賣出"
@@ -1473,7 +1494,7 @@ msgid "Set Currency"
 msgstr "設定貨幣"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "設定帳戶幣種"
 
 msgid "Settles"
 msgstr "結算"
@@ -1503,7 +1524,7 @@ msgid "Sign up"
 msgstr "註冊"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "對不起，您的所在國內不可註冊帳戶。"
@@ -1517,20 +1538,26 @@ msgstr "對不起，在處理您的請求時發生錯誤。"
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "對不起，您的金融帳戶無法進行二元期權交易。"
 
+msgid "Sorry, deposits for this currency are currently disabled."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "對不起，此功能僅適用虛擬帳戶。"
 
 msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "對不起，您的管轄權內無法使用此功能。"
 
+msgid "Sorry, withdrawals for this currency are currently disabled."
+msgstr ""
+
 msgid "Spot"
 msgstr "現價"
 
 msgid "Spot time"
-msgstr ""
+msgstr "現貨時間"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "現貨時間 (GMT)"
 
 msgid "Stake"
 msgstr "投注資金"
@@ -1545,7 +1572,7 @@ msgid "State/Province"
 msgstr "州/省"
 
 msgid "Statements"
-msgstr ""
+msgstr "聲明"
 
 msgid "Status"
 msgstr "狀況"
@@ -1561,6 +1588,9 @@ msgstr "如果開始和結束期間價格跳動次數少於2，「保持在範�
 
 msgid "Step"
 msgstr "步驟"
+
+msgid "Stock Indices"
+msgstr ""
 
 msgid "Stocks"
 msgstr "股票"
@@ -1593,10 +1623,10 @@ msgid "Telephone"
 msgstr "電話"
 
 msgid "Term & conditions updated"
-msgstr ""
+msgstr "條款與條件已更新"
 
 msgid "Tether"
-msgstr ""
+msgstr "Tether"
 
 msgid "Th"
 msgstr "星期四"
@@ -1632,7 +1662,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "%1開盤時間%2即我們的伺服器開始處理合約的時間。"
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1開始時間%2就是我們的伺服器處理合約交易的時間，%1入市現價%2就是%1下一個價格%2。"
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "<strong>合約期限</strong>是在合約<strong>開始時間</strong> 之後的<strong>下一個跳動點</strong>和合約<strong>結束時間</strong>之間的期限。"
@@ -1676,9 +1706,6 @@ msgstr "已達代幣 (%1) 最大限數。"
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤。"
 
-msgid "The password you entered is one of the world's most commonly used passwords. You should not be using this password."
-msgstr ""
-
 msgid "The reason should be between 5 and 250 characters"
 msgstr "原因的長度必須是5-250個字元。"
 
@@ -1705,12 +1732,6 @@ msgstr "出現錯誤"
 
 msgid "There was some invalid character in an input field."
 msgstr "某字欄的輸入字元無效。"
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr ""
 
 msgid "This account is disabled"
 msgstr "此帳戶已禁用"
@@ -1800,13 +1821,13 @@ msgid "Total Profit/Loss"
 msgstr "利潤/虧損合計"
 
 msgid "Total assets"
-msgstr ""
+msgstr "總資產"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "您的 Deriv 帳戶中的總資產。"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "總損益"
 
 msgid "Touch/No Touch"
 msgstr "觸及/未觸及"
@@ -1823,13 +1844,13 @@ msgstr "城鎮/城市"
 msgid "Trade"
 msgstr "交易"
 
-msgid "Trading Contracts for Difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
-
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "已禁止交易和存款"
 
 msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgstr "您的帳戶已被禁交易和存款。請聯繫 %1客服部%2尋求幫助。"
+
+msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr ""
 
 msgid "Trading is unavailable at this time."
@@ -1916,6 +1937,9 @@ msgstr "星期三"
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "當您點選「OK」後，您將被禁止在此網站交易，直到選定期限結束為止。"
 
+msgid "Whoops!"
+msgstr ""
+
 msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
 msgstr "如果退市現價高於或等於高障礙, 可獲得最大賠付。"
 
@@ -1941,10 +1965,10 @@ msgid "Withdrawal"
 msgstr "提款"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "取款和交易限額"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "已被禁提款"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "您的帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
@@ -1968,7 +1992,7 @@ msgid "You are limited to one fiat account. You can change the currency of your 
 msgstr "您只能用一個法定帳戶。首次存款或開立 MT5 帳戶之前, 您可以隨時更改法定帳戶的幣種。"
 
 msgid "You are offline"
-msgstr ""
+msgstr "您已離線"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "首次存款或開立MT5 帳戶之前, 您可以%1設置新幣種%2。"
@@ -1988,19 +2012,19 @@ msgstr "如果您的餘額為 %2 或更低, 您可以在模擬帳戶內新增 %1
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr "如果您的餘額為 %2 或更低, 您可以在虛擬帳戶內新增 %1。"
 
+msgid "You cannot use your real money account with Deriv at this time."
+msgstr ""
+
 msgid "You did not change anything."
 msgstr "您沒做任何更改。"
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
 msgstr "此時您的帳戶還不需要驗證。%1我們會通知您何時必須通過帳戶驗證。"
 
-msgid "You have already withdrawn %1 %2."
+msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
-msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn the equivalent of %1 %2."
+msgid "You have already withdrawn %1%2."
 msgstr ""
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
@@ -2010,7 +2034,7 @@ msgid "You have not granted access to any applications."
 msgstr "您未獲權限存取任何應用程式。"
 
 msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr ""
+msgstr "您已選擇在%1前自我禁止在 Binary.com 交易。欲尋求幫助，請%2c聯繫我們%3。"
 
 msgid "You have reached the limit."
 msgstr "您已達到最高限額。"
@@ -2037,7 +2061,7 @@ msgid "You have to register and get App ID before you can use different OAuth se
 msgstr "使用各OAuth伺服器進行驗證前須先註冊並領取應用程式ID。欲知詳細資訊請前往https://developers.binary.com/參閱OAuth資料。"
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "您還未收到任何通知"
 
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "您可以為每種受支持的加密貨幣開立專用帳戶。"
@@ -2060,7 +2084,7 @@ msgstr "如果市價並未以您選取的數字結束，則您將贏得賠付額
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "如果市價以您選取的數字結束，則您將贏得賠付額。"
 
-msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
+msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
@@ -2095,6 +2119,9 @@ msgstr "您的法定帳戶的幣種設置為 %1。"
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
+
+msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "您申請成為專業客戶的請求%1不受批准%2。"
@@ -2132,10 +2159,7 @@ msgstr "您的虛擬帳戶餘額目前為 %1 或更低。您可以新增 %2補�
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "您的網絡瀏覽器 (%1) 已過時，並可能會影響您的交易操作。繼續操作須自行承擔風險。%2更新瀏覽器%3"
 
-msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr ""
-
-msgid "Your withdrawal limit is %1 %2."
+msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
@@ -2144,7 +2168,7 @@ msgstr "帳戶"
 msgid "accounts"
 msgstr "帳戶"
 
-msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr ""
 
 msgid "day"
@@ -2223,11 +2247,11 @@ msgid "years"
 msgstr "年"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for Difference and Forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
+msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 msgstr ""
 
