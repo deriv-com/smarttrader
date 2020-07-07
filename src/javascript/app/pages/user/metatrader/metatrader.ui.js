@@ -1,5 +1,6 @@
 const MetaTraderConfig = require('./metatrader.config');
 const Client           = require('../../../base/client');
+const BinarySocket     = require('../../../base/socket');
 const Dialog           = require('../../../common/attach_dom/dialog');
 const Currency         = require('../../../common/currency');
 const Validation       = require('../../../common/form_validation');
@@ -173,14 +174,17 @@ const MetaTraderUI = (() => {
         }
 
         if (accounts_info[acc_type].info) {
+            const is_demo = /demo/.test(accounts_info[acc_type].account_type);
             // Update account info
             $detail.find('.acc-info div[data]').map(function () {
                 const key     = $(this).attr('data');
                 const info    = accounts_info[acc_type].info[key];
                 const mapping = {
                     balance      : () => (isNaN(info) ? '' : Currency.formatMoney(MetaTraderConfig.getCurrency(acc_type), +info)),
-                    display_login: () => (`${info} (${/demo/.test(accounts_info[acc_type].account_type) ? localize('Demo Account') : localize('Real-Money Account')})`),
+                    broker       : () => 'Deriv Limited',
+                    display_login: () => (`${info} (${is_demo ? localize('Demo Account') : localize('Real-Money Account')})`),
                     leverage     : () => `1:${info}`,
+                    server       : () => `Deriv-${is_demo ? 'Demo' : 'Server'}`,
                 };
                 $(this).html(typeof mapping[key] === 'function' ? mapping[key]() : info);
             });
@@ -280,7 +284,7 @@ const MetaTraderUI = (() => {
             $form.find('.binary-balance').html(`${Currency.formatMoney(client_currency, Client.get('balance'))}`);
             $form.find('.mt5-account').text(`${localize('[_1] Account [_2]', [accounts_info[acc_type].title, accounts_info[acc_type].info.display_login])}`);
             $form.find('.mt5-balance').html(`${Currency.formatMoney(mt_currency, accounts_info[acc_type].info.balance)}`);
-            $form.find('label[for="txt_amount_deposit"]').append(` ${client_currency}`);
+            $form.find('label[for="txt_amount_deposit"]').append(` ${Currency.getCurrencyDisplayCode(client_currency)}`);
             $form.find('label[for="txt_amount_withdrawal"]').append(` ${mt_currency}`);
 
             const should_show_transfer_fee = client_currency !== mt_currency;
@@ -593,22 +597,24 @@ const MetaTraderUI = (() => {
             return;
         }
 
-        const mt_financial_company = State.getResponse('landing_company.mt_financial_company');
-        const mt_gaming_company = State.getResponse('landing_company.mt_gaming_company');
-        const account = accounts_info[acc_type];
-        let company;
+        BinarySocket.wait('landing_company').then((response) => {
+            const mt_financial_company = response.landing_company.mt_financial_company;
+            const mt_gaming_company = response.landing_company.mt_gaming_company;
+            const account = accounts_info[acc_type];
+            let company;
 
-        if (/standard/.test(account.mt5_account_type)) {
-            company = mt_financial_company.standard;
-        } else if (/advanced/.test(account.mt5_account_type)) {
-            company = mt_financial_company.advanced;
-        } else if (account.account_type === 'gaming' || (account.mt5_account_type === '' && account.account_type === 'demo')) {
-            company = mt_gaming_company.standard;
-        }
+            if (/standard/.test(account.mt5_account_type)) {
+                company = mt_financial_company.standard;
+            } else if (/advanced/.test(account.mt5_account_type)) {
+                company = mt_financial_company.advanced;
+            } else if (account.account_type === 'gaming' || (account.mt5_account_type === '' && account.account_type === 'demo')) {
+                company = mt_gaming_company.standard;
+            }
 
-        $el.attr({
-            'data-balloon'       : `${localize('Counterparty')}: ${company.name}, ${localize('Jurisdiction')}: ${company.country}`,
-            'data-balloon-length': 'large',
+            $el.attr({
+                'data-balloon'       : `${localize('Counterparty')}: ${company.name}, ${localize('Jurisdiction')}: ${company.country}`,
+                'data-balloon-length': 'large',
+            });
         });
     };
 
@@ -617,7 +623,7 @@ const MetaTraderUI = (() => {
         const el_loading         = getElementById('demo_topup_loading');
         const acc_type           = Client.get('mt5_account');
         const is_demo            = accounts_info[acc_type].is_demo;
-        const topup_btn_text     = localize('Get [_1]', `${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`);
+        const topup_btn_text     = localize('Get [_1]', `10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`);
 
         el_loading.setVisibility(0);
         el_demo_topup_btn.firstChild.innerText = topup_btn_text;
@@ -645,8 +651,8 @@ const MetaTraderUI = (() => {
         el_demo_topup_btn.classList.remove(is_enabled ? 'button-disabled' : 'button');
 
         el_demo_topup_info.innerText = is_enabled
-            ? localize('Your demo account balance is currently [_1] or less. You may top up your account with an additional [_2].', [`${MetaTraderConfig.getCurrency(acc_type)} 1,000.00`, `${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`])
-            : localize('You can top up your demo account with an additional [_1] if your balance is [_2] or less.', [`${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`, `${MetaTraderConfig.getCurrency(acc_type)} 1,000.00`]);
+            ? localize('Your demo account balance is currently [_1] or less. You may top up your account with an additional [_2].', [`1,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`, `10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`])
+            : localize('You can top up your demo account with an additional [_1] if your balance is [_2] or less.', [`10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`, `1,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`]);
     };
 
     const setTopupLoading = (is_loading) => {

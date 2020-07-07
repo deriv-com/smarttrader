@@ -175,7 +175,6 @@ const ClientBase = (() => {
         set('landing_company_shortcode', authorize.landing_company_name);
         set('user_id', authorize.user_id);
         set('local_currency_config', local_currency_config);
-
         updateAccountList(authorize.account_list);
     };
 
@@ -236,8 +235,8 @@ const ClientBase = (() => {
     const isAuthenticationAllowed = () => /allow_document_upload/.test(State.getResponse('get_account_status.status'));
 
     // remove manager id or master distinction from group
-    // remove EUR or GBP distinction from group
-    const getMT5AccountType = group => (group ? group.replace('\\', '_').replace(/_(\d+|master|EUR|GBP)/, '') : '');
+    // remove EUR or GBP or Bbook or HighRisk distinction from group
+    const getMT5AccountType = group => (group ? group.replace('\\', '_').replace(/_(\d+|master|EUR|GBP|Bbook|HighRisk)/i, '') : '');
 
     const getBasicUpgradeInfo = () => {
         const upgradeable_landing_companies = State.getResponse('authorize.upgradeable_landing_companies');

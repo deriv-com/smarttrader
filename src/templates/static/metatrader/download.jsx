@@ -65,7 +65,7 @@ const DownloadButton = ({
 }) => (
     <a
         className={!badge ? 'button' : undefined}
-        href={os ? `https://download.mql5.com/cdn/mobile/mt5/${os}?server=Binary.com-Server` : href}
+        href={os ? `https://download.mql5.com/cdn/mobile/mt5/${os}?server=Deriv-Demo,Deriv-Server` : href}
         download={download || undefined}
         target={target || undefined}
     >
@@ -119,7 +119,7 @@ const MT5DesktopApp = ({ is_first_child, has_desktop_app }) => {
                     <div className='gr-row'>
                         <DesktopDownloadBlock
                             id='windows'
-                            href='https://download.mql5.com/cdn/web/binary.limited/mt5/binarycom5setup.exe'
+                            href='https://download.mql5.com/cdn/web/deriv.limited/mt5/deriv5setup.exe'
                         />
                         <DesktopDownloadBlock
                             id='linux'
@@ -191,7 +191,7 @@ const MT5WebPlatform = ({ is_first_child }) => (
         <div className='center-text'>
             <a
                 className='button'
-                href='https://trade.mql5.com/trade?servers=Binary.com-Server&amp;trade_server=Binary.com-Server'
+                href='https://trade.mql5.com/trade?servers=Deriv-Server&trade_server=Deriv-Server'
                 target='_blank'
                 rel='noopener noreferrer'
             >
@@ -200,7 +200,7 @@ const MT5WebPlatform = ({ is_first_child }) => (
             <a
                 id='btn_trade_with_demo'
                 className='button button-secondary'
-                href='https://trade.mql5.com/trade?servers=Binary.com-Demo&amp;trade_server=Binary.com-Demo'
+                href='https://trade.mql5.com/trade?servers=Deriv-Demo&trade_server=Deriv-Demo'
                 target='_blank'
                 rel='noopener noreferrer'
             >

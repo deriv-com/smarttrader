@@ -4,7 +4,7 @@ const RiskDisclaimer = () => (
     <div>
         <h2 data-anchor='risk-disclaimer'>{it.L('Risk disclaimer')}</h2>
         <p>{it.L('This notice provides the client with information about the risks associated with the contracts the client may purchase through services provided by [_1] services.', it.website_name)}</p>
-        <p>{it.L('Binary Group members are sometimes referred to collectively as "[_1]" or "the Company".', it.website_name)}</p>
+        <p>{it.L('Deriv Group members are sometimes referred to collectively as "[_1]" or "the Company".', it.website_name)}</p>
         <p>{it.L('This notice does not explain all of the risks involved in investments or similar products or how such risks relate to the client\'s personal circumstances. It is important that the client fully understands the risks involved before making a decision to enter into a trade with the Company[_1]. If the client is in any doubt about the risks involved, the client should seek professional advice[_2].', '<span data-show="eucountry">','</span>')}</p>
         <p>{it.L('If the client chooses to enter into a contract with the Company, it is important that the client remains aware of the risks involved, that the client has adequate investment resources to bear such risks, and that the client monitors the client\'s positions carefully.')}</p>
 
@@ -16,8 +16,8 @@ const RiskDisclaimer = () => (
         <p>{it.L('The client is responsible for managing the client\'s tax and legal affairs, including making any regulatory filings and payments and complying with applicable laws and regulations. The Company does not provide any regulatory, tax, or legal advice. If the client is in any doubt as to the tax treatment or liabilities[_2] of Products available through [_1][_3], the client may wish to seek independent advice.', it.website_name, '<span data-show="eucountry">','</span>')}</p>
 
         <h4>{it.L('Appropriateness')}</h4>
-        <p data-show='eucountry'>{it.L('Investment Products to EEA residents are provided by Binary Investments (Europe) Ltd ("BIEL"), which is authorised and regulated by the Malta Financial Services Authority under the Malta Investment Services Act to deal on own account in Investment Products.')}</p>
-        <p data-show='eucountry'>{it.L('Before the Company opens an account for the client in which the client can trade or invest in Investment Products with BIEL, the Company is required to make an assessment of whether products or services that the client has chosen are appropriate for the client and to warn the client if, on the basis of the information that the client has provided to the Company, any such product or service is deemed not appropriate for the client. Any decision to open an account and to use the Company\'s products or services is the client\'s. It is the client\'s responsibility to understand the risks involved with the Company\'s products or services.')}</p>
+        <p data-show='eucountry'>{it.L('Investment Products to EEA residents are provided by Deriv Investments (Europe) Ltd ("DIEL"), which is authorised and regulated by the Malta Financial Services Authority under the Malta Investment Services Act to deal on own account in Investment Products.')}</p>
+        <p data-show='eucountry'>{it.L('Before the Company opens an account for the client in which the client can trade or invest in Investment Products with DIEL, the Company is required to make an assessment of whether products or services that the client has chosen are appropriate for the client and to warn the client if, on the basis of the information that the client has provided to the Company, any such product or service is deemed not appropriate for the client. Any decision to open an account and to use the Company\'s products or services is the client\'s. It is the client\'s responsibility to understand the risks involved with the Company\'s products or services.')}</p>
         <p>{it.L('During the application process, the Company may ask the client for information about the client\'s background, experience, and investment assets and earnings. The Company does not monitor on the client\'s behalf whether the amount of money that the client has sent to the Company or the client\'s profits or losses are consistent with that information. It is up to the client to assess whether the client\'s investment resources are adequate for the client\'s investment activity with the Company and the client\'s risk appetite in the products and services that the client uses.')}</p>
 
         <h4>{it.L('Need to monitor positions')}</h4>
@@ -25,7 +25,7 @@ const RiskDisclaimer = () => (
 
         <div data-show='eucountry'>
             <h4>{it.L('Default')}</h4>
-            <p>{it.L('Since BIEL is a member of the Malta Investor Compensation Scheme, the client is covered for the first €20,000 of any claim that the client may have in the unlikely event of BIEL suffering an investment default and not being able to meet its obligations. This protection is available only to retail clients. Neither professional clients nor eligible counterparties can benefit from this protection.')}</p>
+            <p>{it.L('Since DIEL is a member of the Malta Investor Compensation Scheme, the client is covered for the first €20,000 of any claim that the client may have in the unlikely event of DIEL suffering an investment default and not being able to meet its obligations. This protection is available only to retail clients. Neither professional clients nor eligible counterparties can benefit from this protection.')}</p>
         </div>
 
         <h2 data-anchor='contract-risks'>{it.L('Contract risks')}</h2>

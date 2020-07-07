@@ -773,6 +773,7 @@ const Header = (() => {
         BinarySocket.wait('get_account_status', 'authorize', 'landing_company').then(() => {
             let authentication,
                 get_account_status,
+                is_fully_authenticated,
                 status;
             const is_svg          = Client.get('landing_company_shortcode') === 'svg';
             const loginid         = Client.get('loginid') || {};
@@ -799,7 +800,8 @@ const Header = (() => {
                     ] : [];
 
                 const get_settings = State.getResponse('get_settings');
-                return required_fields.some(field => !get_settings[field]);
+                // date_of_birth can be 0 as a valid epoch, so we should only check missing values, '', null, or undefined
+                return required_fields.some(field => !(field in get_settings) || get_settings[field] === '' || get_settings[field] === null || get_settings[field] === undefined);
             };
 
             const buildMessage = (string, path) => template(string, [`<a class="header__notification-link" href="${path}">`, '</a>']);
@@ -894,26 +896,8 @@ const Header = (() => {
             };
 
             const messages = {
-                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
-                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
-                authenticate         : () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
-                withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
-                mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
-                document_needs_action: () => ({ key: 'document_needs_action', title: localize('Authentication failed'), message: buildMessage(localizeKeepPlaceholders('[_1]Your Proof of Identity or Proof of Address[_2] did not meet our requirements. Please check your email for further instructions.'), 'https://deriv.app/account/proof-of-identity'), type: 'warning' }),
-                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
-                mf_retail            : () => ({ key: 'mf_retail', title: localize('Digital options trading disabled'), message: buildMessage(localizeKeepPlaceholders('Digital Options Trading has been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
-                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
-                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/financial-assessment'), type: 'warning' }),
-                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/personal-details'), type: 'danger' }),
-                tnc                  : () => ({ key: 'tnc', title: localize('Term & conditions updated'), message: buildMessage(localizeKeepPlaceholders('Please accept our [_1]updated Terms and Conditions[_2] to proceed.'), 'https://www.deriv.com/terms-and-conditions/'), type: 'warning' }),
-                required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
-                needs_poi            : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
-                needs_poa            : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
-                poi_expired          : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
-                poa_expired          : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
-                // residence            : () => ({ key: 'residence', title: localize('Country of residence'), message: buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'), type: 'danger' }),
-                // poa_rejected         : () => ({ key: 'poa_expired', title: localize('Proff of address'), message: localize('Your documents for proof of address is expired. Please submit again.'), type: 'danger'}),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
                 // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
                 // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
                 // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
@@ -923,46 +907,61 @@ const Header = (() => {
                 // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
                 // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
                 // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
+                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('You have opted to be excluded from Binary.com until [_1]. Please [_2]contact us[_3] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
+                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
+                mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
+                // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
+                required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
+                // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'user/settings/detailsws'),
+                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/financial-assessment'), type: 'warning' }),
+                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/personal-details'), type: 'danger' }),
+                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly contact [_1]customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                // withdrawal_locked_review: () => localize('Withdrawals have been disabled on your account. Please wait until your uploaded documents are verified.'),
+                withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // tnc                  : () => buildMessage(has_no_tnc_limit
                 //     ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
-                //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'https://deriv.app'),
+                //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'user/tnc_approvalws'),
+
+                // Deriv specific below.
+                authenticate         : () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                needs_poi            : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
+                needs_poa            : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
+                poi_expired          : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
+                poa_expired          : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
             };
 
             const validations = {
-                currency             : () => !Client.get('currency'),
-                excluded_until       : () => Client.get('excluded_until'),
-                authenticate         : () => hasVerification('authenticate'),
-                cashier_locked       : () => hasStatus('cashier_locked'),
-                withdrawal_locked    : () => hasStatus('withdrawal_locked'),
-                mt5_withdrawal_locked: () => hasStatus('mt5_withdrawal_locked'),
-                document_needs_action: () => hasStatus('document_needs_action'),
-                unwelcome            : () => hasStatus('unwelcome'),
-                mf_retail            : () => Client.get('landing_company_shortcode') === 'maltainvest' && hasStatus('professional'),
-                financial_limit      : () => hasStatus('max_turnover_limit_not_set'),
-                risk                 : () => Client.getRiskAssessment(),
-                tax                  : () => Client.shouldCompleteTax(),
-                tnc                  : () => Client.shouldAcceptTnc(),
-                required_fields      : () => hasMissingRequiredField(),
-                needs_poi            : () => hasVerification('needs_poi'),
-                needs_poa            : () => hasVerification('needs_poa'),
-                poi_expired          : () => hasVerification('poi_expired'),
-                poa_expired          : () => hasVerification('poa_expired'),
-                /* residence            : () => !Client.get('residence'),
-                poa_rejected         : () => hasVerification('poa_rejected'),
-                unsubmitted          : () => hasVerification('unsubmitted'),
-                expired              : () => hasVerification('expired'),
-                expired_identity     : () => hasVerification('expired_identity'),
-                expired_document     : () => hasVerification('expired_document'),
-                rejected             : () => hasVerification('rejected'),
-                rejected_identity    : () => hasVerification('rejected_identity'),
-                rejected_document    : () => hasVerification('rejected_document'),
-                identity             : () => hasVerification('identity'),
-                document             : () => hasVerification('document'),
-                required_fields      : () => hasMissingRequiredField(),
-                residence            : () => !Client.get('residence'),
-                risk                 : () => Client.getRiskAssessment(),
-                tax                  : () => Client.shouldCompleteTax(),
-                tnc                  : () => Client.shouldAcceptTnc(), */
+                authenticate             : () => hasVerification('authenticate'), // Deriv specific.
+                cashier_locked           : () => hasStatus('cashier_locked'),
+                currency                 : () => !Client.get('currency'),
+                // unsubmitted             : () => hasVerification('unsubmitted'),
+                // expired                 : () => hasVerification('expired'),
+                // expired_identity        : () => hasVerification('expired_identity'),
+                // expired_document        : () => hasVerification('expired_document'),
+                // rejected                : () => hasVerification('rejected'),
+                // rejected_identity       : () => hasVerification('rejected_identity'),
+                // rejected_document       : () => hasVerification('rejected_document'),
+                // identity                : () => hasVerification('identity'),
+                // document                : () => hasVerification('document'),
+                document_needs_action   : () => hasStatus('document_needs_action'), // Deriv specific.
+                excluded_until          : () => Client.get('excluded_until'),
+                financial_limit         : () => hasStatus('max_turnover_limit_not_set'),
+                mt5_withdrawal_locked   : () => hasStatus('mt5_withdrawal_locked'),
+                no_withdrawal_or_trading: () => hasStatus('no_withdrawal_or_trading'),
+                required_fields         : () => hasMissingRequiredField(),
+                residence               : () => !Client.get('residence'),
+                risk                    : () => Client.getRiskAssessment(),
+                tax                     : () => Client.shouldCompleteTax(),
+                tnc                     : () => Client.shouldAcceptTnc(),
+                unwelcome               : () => hasStatus('unwelcome'),
+                withdrawal_locked_review: () => hasStatus('withdrawal_locked') && get_account_status.risk_classification === 'high' && !is_fully_authenticated && authentication.document.status === 'pending',
+                withdrawal_locked       : () => hasStatus('withdrawal_locked'),
+                mf_retail               : () => Client.get('landing_company_shortcode') === 'maltainvest' && hasStatus('professional'), // Deriv specific.
+                needs_poi               : () => hasVerification('needs_poi'), // Deriv specific.
+                needs_poa               : () => hasVerification('needs_poa'), // Deriv specific.
+                poi_expired             : () => hasVerification('poi_expired'), // Deriv specific.
+                poa_expired             : () => hasVerification('poa_expired'), // Deriv specific.
+                // poa_rejected            : () => hasVerification('poa_rejected'),
             };
 
             // real account checks in order
@@ -1016,6 +1015,7 @@ const Header = (() => {
                 'unwelcome',
                 'no_withdrawal_or_trading',
                 'cashier_locked',
+                'withdrawal_locked_review',
                 'withdrawal_locked',
                 'mt5_withdrawal_locked',
                 'authenticate',
@@ -1045,12 +1045,8 @@ const Header = (() => {
                     authentication = State.getResponse('get_account_status.authentication') || {};
                     get_account_status = State.getResponse('get_account_status') || {};
                     status             = get_account_status.status;
-                    /* if (Client.get('landing_company_shortcode') === 'maltainvest' || Client.get('landing_company_shortcode') === 'malta' || Client.get('landing_company_shortcode') === 'iom') {
-                        checkStatus(check_statuses_mf_mlt);
-                    /* } else { */
                     checkStatus(check_statuses_real);
-                    // }
-                    const is_fully_authenticated = hasStatus('authenticated') && !+get_account_status.prompt_client_to_authenticate;
+                    is_fully_authenticated = hasStatus('authenticated') && !+get_account_status.prompt_client_to_authenticate;
                     $('.account-id')[is_fully_authenticated ? 'append' : 'remove'](el_account_status);
                 });
             }
