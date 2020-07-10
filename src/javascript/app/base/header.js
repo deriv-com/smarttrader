@@ -923,17 +923,17 @@ const Header = (() => {
                 //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'user/tnc_approvalws'),
 
                 // Deriv specific below.
-                authenticate         : () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
-                needs_poi            : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
-                needs_poa            : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
-                poi_expired          : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
-                poa_expired          : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
+                authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                needs_poi   : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
+                needs_poa   : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
+                poi_expired : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),
+                poa_expired : () => ({ key: 'needs_poa', title: localize('Proof of address'), message: localize('Proof of address expired'), type: 'danger' }),
             };
 
             const validations = {
-                authenticate             : () => hasVerification('authenticate'), // Deriv specific.
-                cashier_locked           : () => hasStatus('cashier_locked'),
-                currency                 : () => !Client.get('currency'),
+                authenticate            : () => hasVerification('authenticate'), // Deriv specific.
+                cashier_locked          : () => hasStatus('cashier_locked'),
+                currency                : () => !Client.get('currency'),
                 // unsubmitted             : () => hasVerification('unsubmitted'),
                 // expired                 : () => hasVerification('expired'),
                 // expired_identity        : () => hasVerification('expired_identity'),
