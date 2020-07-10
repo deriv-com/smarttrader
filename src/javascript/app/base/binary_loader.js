@@ -47,7 +47,6 @@ const BinaryLoader = (() => {
         BinaryPjax.init(container, '#content');
 
         ThirdPartyLinks.init();
-        LiveChat.init();
     };
 
     const beforeContentChange = () => {
@@ -76,6 +75,7 @@ const BinaryLoader = (() => {
         ContentVisibility.init().then(() => {
             BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
                 GTM.pushDataLayer({ event: 'page_load' }); // we need website_status.clients_country
+                setTimeout(() => LiveChat.init(), 1500);
 
                 // first time load.
                 const last_image = $('#content img').last();
