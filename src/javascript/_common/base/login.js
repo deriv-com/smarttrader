@@ -26,7 +26,7 @@ const Login = (() => {
 
         return ((server_url && /qa/.test(server_url)) ?
             `https://${server_url}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}` :
-            urlForCurrentDomain(`https://oauth.deriv.app/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}`)
+            urlForCurrentDomain(`https://oauth.deriv.com/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}`)
         );
     };
 
