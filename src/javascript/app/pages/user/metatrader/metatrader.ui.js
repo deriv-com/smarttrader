@@ -1,5 +1,6 @@
 const MetaTraderConfig = require('./metatrader.config');
 const Client           = require('../../../base/client');
+const BinarySocket     = require('../../../base/socket');
 const Dialog           = require('../../../common/attach_dom/dialog');
 const Currency         = require('../../../common/currency');
 const Validation       = require('../../../common/form_validation');
@@ -58,7 +59,7 @@ const MetaTraderUI = (() => {
         let acc_group_demo_set = false;
         let acc_group_real_set = false;
         Object.keys(accounts_info)
-            .sort((a, b) => accounts_info[a].account_type > accounts_info[b].account_type ? 1 : -1)
+            .sort(sortMt5Accounts)
             .forEach((acc_type) => {
                 if ($list.find(`[value="${acc_type}"]`).length === 0) {
                     if (/^demo/.test(acc_type)) {
@@ -173,14 +174,17 @@ const MetaTraderUI = (() => {
         }
 
         if (accounts_info[acc_type].info) {
+            const is_demo = /demo/.test(accounts_info[acc_type].account_type);
             // Update account info
             $detail.find('.acc-info div[data]').map(function () {
                 const key     = $(this).attr('data');
                 const info    = accounts_info[acc_type].info[key];
                 const mapping = {
                     balance      : () => (isNaN(info) ? '' : Currency.formatMoney(MetaTraderConfig.getCurrency(acc_type), +info)),
-                    display_login: () => (`${info} (${/demo/.test(accounts_info[acc_type].account_type) ? localize('Demo Account') : localize('Real-Money Account')})`),
+                    broker       : () => 'Deriv Limited',
+                    display_login: () => (`${info} (${is_demo ? localize('Demo Account') : localize('Real-Money Account')})`),
                     leverage     : () => `1:${info}`,
+                    server       : () => `Deriv-${is_demo ? 'Demo' : 'Server'}`,
                 };
                 $(this).html(typeof mapping[key] === 'function' ? mapping[key]() : info);
             });
@@ -280,7 +284,7 @@ const MetaTraderUI = (() => {
             $form.find('.binary-balance').html(`${Currency.formatMoney(client_currency, Client.get('balance'))}`);
             $form.find('.mt5-account').text(`${localize('[_1] Account [_2]', [accounts_info[acc_type].title, accounts_info[acc_type].info.display_login])}`);
             $form.find('.mt5-balance').html(`${Currency.formatMoney(mt_currency, accounts_info[acc_type].info.balance)}`);
-            $form.find('label[for="txt_amount_deposit"]').append(` ${client_currency}`);
+            $form.find('label[for="txt_amount_deposit"]').append(` ${Currency.getCurrencyDisplayCode(client_currency)}`);
             $form.find('label[for="txt_amount_withdrawal"]').append(` ${mt_currency}`);
 
             const should_show_transfer_fee = client_currency !== mt_currency;
@@ -438,7 +442,8 @@ const MetaTraderUI = (() => {
                 $form.find('#view_1 #btn_cancel').removeClass('invisible');
             });
             // uncomment to show No Deposit Bonus note
-            // $form.find('#new_account_no_deposit_bonus_msg').setVisibility(/real_svg_standard/.test(new_acc_type));
+            // TODO: [remove-standard-advanced] remove standard when API groups are updated
+            // $form.find('#new_account_no_deposit_bonus_msg').setVisibility(/real_svg_(standard|financial)/.test(new_acc_type));
         }
     };
 
@@ -453,6 +458,22 @@ const MetaTraderUI = (() => {
             demo_btn.addClass('invisible');
             real_btn.removeClass('invisible');
         }
+    };
+
+    const sortMt5Accounts = (a, b) => {
+        if (/demo/.test(a) && !/demo/.test(b)) {
+            return -1;
+        }
+        if (/demo/.test(b) && !/demo/.test(a)) {
+            return 1;
+        }
+        if (/svg$/.test(a)) {
+            return -1;
+        }
+        if (/vanuatu|svg_standard/.test(a)) {
+            return /svg$/.test(b) ? 1 : -1;
+        }
+        return 1;
     };
 
     const updateAccountTypesUI = (type) => {
@@ -479,11 +500,13 @@ const MetaTraderUI = (() => {
 
         let count = 0;
         Object.keys(accounts_info)
-            .filter(acc_type => !/labuan_standard|svg_advanced|vanuatu_advanced|maltainvest_advanced/.test(acc_type))// toEnableVanuatuAdvanced: remove vanuatu_advanced from regex
+            // TODO: [remove-standard-advanced] remove standard and advanced when API groups are updated
+            .filter(acc_type => !/^(real|demo)_(labuan_(standard|financial)|svg_(advanced|financial_stp)|vanuatu_(advanced|financial_stp)|maltainvest_(advanced|financial_stp))$/.test(acc_type))// toEnableVanuatuFinancialSTP: remove vanuatu_financial_stp from regex
+            .sort(sortMt5Accounts)
             .forEach((acc_type) => {
                 const $acc  = accounts_info[acc_type].is_demo ? $acc_template_demo.clone() : $acc_template_real.clone();
                 const type  = acc_type.split('_').slice(1).join('_');
-                const image = accounts_info[acc_type].mt5_account_type || 'volatility_indices'; // image name can be (advanced|standard|volatility_indices)
+                const image = accounts_info[acc_type].mt5_account_type || 'synthetic'; // image name can be (financial_stp|financial|synthetic)
                 $acc.find('.mt5_type_box').attr({ id: `rbtn_${type}`, 'data-acc-type': type })
                     .find('img').attr('src', urlForStatic(`/images/pages/metatrader/icons/acc_${image}.svg`));
                 $acc.find('p').text(accounts_info[acc_type].short_title);
@@ -588,27 +611,31 @@ const MetaTraderUI = (() => {
             The code below is to stop the tooltip from showing wrong
             information.
         */
-        if (/(demo|real)_vanuatu_standard/.test(acc_type)) {
+        // TODO: [remove-standard-advanced] remove standard when API groups are updated
+        if (/^(demo|real)_vanuatu_(standard|financial)$/.test(acc_type)) {
             $el.removeAttr('data-balloon data-balloon-length');
             return;
         }
 
-        const mt_financial_company = State.getResponse('landing_company.mt_financial_company');
-        const mt_gaming_company = State.getResponse('landing_company.mt_gaming_company');
-        const account = accounts_info[acc_type];
-        let company;
+        BinarySocket.wait('landing_company').then((response) => {
+            const mt_financial_company = response.landing_company.mt_financial_company;
+            const mt_gaming_company = response.landing_company.mt_gaming_company;
+            const account = accounts_info[acc_type];
+            let company;
 
-        if (/standard/.test(account.mt5_account_type)) {
-            company = mt_financial_company.standard;
-        } else if (/advanced/.test(account.mt5_account_type)) {
-            company = mt_financial_company.advanced;
-        } else if (account.account_type === 'gaming' || (account.mt5_account_type === '' && account.account_type === 'demo')) {
-            company = mt_gaming_company.standard;
-        }
+            // TODO: [remove-standard-advanced] remove standard and advanced when API groups are updated
+            if (/advanced|financial_stp/.test(account.mt5_account_type)) {
+                company = mt_financial_company.financial_stp || mt_financial_company.advanced;
+            } else if (/standard|financial/.test(account.mt5_account_type)) {
+                company = mt_financial_company.financial || mt_financial_company.standard;
+            } else if (account.account_type === 'gaming' || (account.mt5_account_type === '' && account.account_type === 'demo')) {
+                company = mt_financial_company.financial || mt_gaming_company.standard;
+            }
 
-        $el.attr({
-            'data-balloon'       : `${localize('Counterparty')}: ${company.name}, ${localize('Jurisdiction')}: ${company.country}`,
-            'data-balloon-length': 'large',
+            $el.attr({
+                'data-balloon'       : `${localize('Counterparty')}: ${company.name}, ${localize('Jurisdiction')}: ${company.country}`,
+                'data-balloon-length': 'large',
+            });
         });
     };
 
@@ -617,7 +644,7 @@ const MetaTraderUI = (() => {
         const el_loading         = getElementById('demo_topup_loading');
         const acc_type           = Client.get('mt5_account');
         const is_demo            = accounts_info[acc_type].is_demo;
-        const topup_btn_text     = localize('Get [_1]', `${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`);
+        const topup_btn_text     = localize('Get [_1]', `10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`);
 
         el_loading.setVisibility(0);
         el_demo_topup_btn.firstChild.innerText = topup_btn_text;
@@ -645,8 +672,8 @@ const MetaTraderUI = (() => {
         el_demo_topup_btn.classList.remove(is_enabled ? 'button-disabled' : 'button');
 
         el_demo_topup_info.innerText = is_enabled
-            ? localize('Your demo account balance is currently [_1] or less. You may top up your account with an additional [_2].', [`${MetaTraderConfig.getCurrency(acc_type)} 1,000.00`, `${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`])
-            : localize('You can top up your demo account with an additional [_1] if your balance is [_2] or less.', [`${MetaTraderConfig.getCurrency(acc_type)} 10,000.00`, `${MetaTraderConfig.getCurrency(acc_type)} 1,000.00`]);
+            ? localize('Your demo account balance is currently [_1] or less. You may top up your account with an additional [_2].', [`1,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`, `10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`])
+            : localize('You can top up your demo account with an additional [_1] if your balance is [_2] or less.', [`10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`, `1,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`]);
     };
 
     const setTopupLoading = (is_loading) => {

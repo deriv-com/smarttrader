@@ -445,6 +445,9 @@
             ._elevio_module_icon_10 { // Call Us
                 display: none;
             }
+            ._elevio_module_icon_20 ._d9ggd { // Live chat
+                background: url('../images/pages/contact/chat-icon.svg') no-repeat center;
+            }
         }
     }
     .phone-container {
@@ -809,9 +812,6 @@ body #not_authenticated_financial ul.checked > li {
             max-width: 500px;
         }
     }
-}
-
-.set-currency-content {
     .currency_list > div {
         padding: 15px;
         background-image: url('../images/pages/set_currency/tick-normal.svg');
@@ -835,24 +835,30 @@ body #not_authenticated_financial ul.checked > li {
     }
 }
 
+.lightbox #set_currency {
+    padding: 25px;
+    width: 40em;
+
+    #set_currency_text {
+        margin-top: 0;
+    }
+    #fiat_currencies, #crypto_currencies {
+        + div {
+            max-width: 30em;
+        }
+    }
+    .section-divider {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #submit_section {
+        margin-top: 20px;
+    }
+}
+
 .platforms-content {
     h2 {
         line-height: 36px;
-    }
-    .beta {
-        position: relative;
-        top: -15px;
-        left: 5px;
-        background-color: rgb(42, 48, 82);
-        border-radius: 10px;
-        color: $COLOR_WHITE;
-        display: inline-block;
-        font-size: 10px;
-        font-weight: 400;
-        height: 16px;
-        line-height: 1.8;
-        text-align: center;
-        width: 34px;
     }
     .new:after {
         content: url('../images/pages/platforms/new_badge.svg');
