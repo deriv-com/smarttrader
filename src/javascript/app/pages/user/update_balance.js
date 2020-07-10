@@ -11,7 +11,7 @@ const updateBalance = (response) => {
     if (getPropertyValue(response, 'error')) {
         return;
     }
-    
+
     BinarySocket.wait('website_status').then(() => {
         const { accounts, balance, currency, loginid } = response.balance;
         if (!currency) return;
@@ -29,6 +29,7 @@ const updateBalance = (response) => {
 
             if (is_virtual) {
                 document.querySelector('.account__switcher-balance-virtual').innerHTML = display_balance;
+                TopUpVirtualPopup.init(updated_balance);
             } else {
                 document.querySelector(`.account__switcher-balance-${account_currency}`).innerHTML = display_balance;
             }
