@@ -40,9 +40,6 @@ msgstr ""
 msgid "%1Return to trading page%2"
 msgstr ""
 
-msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
-
 msgid "AM"
 msgstr ""
 
@@ -77,9 +74,6 @@ msgid "Adjust trade parameters"
 msgstr ""
 
 msgid "Admin"
-msgstr ""
-
-msgid "Advanced"
 msgstr ""
 
 msgid "All markets are closed now. Please try again later."
@@ -163,12 +157,6 @@ msgstr ""
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr ""
 
-msgid "Authentication failed"
-msgstr ""
-
-msgid "Available Currencies"
-msgstr ""
-
 msgid "Available Markets"
 msgstr ""
 
@@ -197,6 +185,9 @@ msgid "Bid"
 msgstr ""
 
 msgid "Binary Coin"
+msgstr ""
+
+msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
 msgstr ""
 
 msgid "Bitcoin"
@@ -238,13 +229,13 @@ msgstr ""
 msgid "Cashier disabled"
 msgstr ""
 
-msgid "Change"
-msgstr ""
-
 msgid "Change API Endpoint"
 msgstr ""
 
 msgid "Change Password"
+msgstr ""
+
+msgid "Change currency"
 msgstr ""
 
 msgid "Chart"
@@ -355,10 +346,10 @@ msgstr ""
 msgid "Country of Residence"
 msgstr ""
 
-msgid "Create"
+msgid "Create %1 account"
 msgstr ""
 
-msgid "Create %1 account"
+msgid "Create account"
 msgstr ""
 
 msgid "Credit/Debit"
@@ -406,13 +397,13 @@ msgstr ""
 msgid "Demo Accounts"
 msgstr ""
 
-msgid "Demo Advanced"
+msgid "Demo Financial"
 msgstr ""
 
-msgid "Demo Standard"
+msgid "Demo Financial STP"
 msgstr ""
 
-msgid "Demo Synthetic Indices"
+msgid "Demo Synthetic"
 msgstr ""
 
 msgid "Deposit"
@@ -452,12 +443,6 @@ msgid "Digit Under"
 msgstr ""
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
-
-msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr ""
-
-msgid "Digital options trading disabled"
 msgstr ""
 
 msgid "Digits"
@@ -577,7 +562,13 @@ msgstr ""
 msgid "Final price"
 msgstr ""
 
+msgid "Financial"
+msgstr ""
+
 msgid "Financial Account"
+msgstr ""
+
+msgid "Financial STP"
 msgstr ""
 
 msgid "Finish"
@@ -925,12 +916,6 @@ msgstr ""
 msgid "Matches/Differs"
 msgstr ""
 
-msgid "Maximum Payout"
-msgstr ""
-
-msgid "Maximum Profit"
-msgstr ""
-
 msgid "Maximum multiplier of 1000."
 msgstr ""
 
@@ -1007,12 +992,6 @@ msgid "No currency selected"
 msgstr ""
 
 msgid "No notifications"
-msgstr ""
-
-msgid "No payout if exit spot is above or equal to the upper barrier."
-msgstr ""
-
-msgid "No payout if exit spot is below or equal to the lower barrier."
 msgstr ""
 
 msgid "No thanks"
@@ -1165,9 +1144,6 @@ msgstr ""
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr ""
 
-msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr ""
-
 msgid "Please accept the terms and conditions."
 msgstr ""
 
@@ -1234,7 +1210,7 @@ msgstr ""
 msgid "Please select the currency for this account:"
 msgstr ""
 
-msgid "Please set the currency of your account to enable trading."
+msgid "Please set the currency of your account."
 msgstr ""
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
@@ -1333,13 +1309,13 @@ msgstr ""
 msgid "Real Account"
 msgstr ""
 
-msgid "Real Advanced"
+msgid "Real Financial"
 msgstr ""
 
-msgid "Real Standard"
+msgid "Real Financial STP"
 msgstr ""
 
-msgid "Real Synthetic Indices"
+msgid "Real Synthetic"
 msgstr ""
 
 msgid "Real-Money Account"
@@ -1477,10 +1453,10 @@ msgstr ""
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr ""
 
-msgid "Set Currency"
+msgid "Set account currency"
 msgstr ""
 
-msgid "Set account currency"
+msgid "Set currency"
 msgstr ""
 
 msgid "Settles"
@@ -1549,9 +1525,6 @@ msgstr ""
 msgid "Stake"
 msgstr ""
 
-msgid "Standard"
-msgstr ""
-
 msgid "Start time"
 msgstr ""
 
@@ -1600,6 +1573,9 @@ msgstr ""
 msgid "Sunday"
 msgstr ""
 
+msgid "Synthetic"
+msgstr ""
+
 msgid "Synthetic Indices"
 msgstr ""
 
@@ -1607,9 +1583,6 @@ msgid "Target"
 msgstr ""
 
 msgid "Telephone"
-msgstr ""
-
-msgid "Term & conditions updated"
 msgstr ""
 
 msgid "Tether"
@@ -1726,6 +1699,9 @@ msgstr ""
 msgid "This account is excluded until %1"
 msgstr ""
 
+msgid "This contract is only available on %1DTrader%2."
+msgstr ""
+
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr ""
 
@@ -1831,6 +1807,9 @@ msgstr ""
 msgid "Trade"
 msgstr ""
 
+msgid "Trading Information"
+msgstr ""
+
 msgid "Trading and deposit disabled"
 msgstr ""
 
@@ -1888,7 +1867,13 @@ msgstr ""
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr ""
 
+msgid "Verification required"
+msgstr ""
+
 msgid "Verify Reset Password"
+msgstr ""
+
+msgid "Verify identity"
 msgstr ""
 
 msgid "View"
@@ -1927,19 +1912,7 @@ msgstr ""
 msgid "Whoops!"
 msgstr ""
 
-msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
-msgstr ""
-
-msgid "Win maximum payout if the exit spot is lower than or equal to the lower barrier."
-msgstr ""
-
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr ""
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier."
-msgstr ""
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot."
 msgstr ""
 
 msgid "Winning the contract"
@@ -2042,6 +2015,9 @@ msgid "You have successfully disabled two-factor authentication for your account
 msgstr ""
 
 msgid "You have successfully enabled two-factor authentication for your account."
+msgstr ""
+
+msgid "You have successfully set your account currency to %1."
 msgstr ""
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
