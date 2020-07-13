@@ -34,15 +34,21 @@ const updateBalance = (response) => {
                 }
                 if (is_virtual) {
                     TopUpVirtualPopup.init(updated_balance);
-                }
-
-                const total_prop = is_virtual ? 'deriv_demo' : 'deriv';
-                if (total[total_prop]) {
                     updateTotal({
-                        amount  : total[total_prop].amount,
-                        currency: total[total_prop].currency,
-                        type    : is_virtual ? 'virtual' : 'real',
+                        amount: balance,
+                        currency,
+                        type  : 'virtual',
                     });
+                } else {
+                    const total_prop = is_virtual ? 'deriv_demo' : 'deriv';
+                    
+                    if (total[total_prop]) {
+                        updateTotal({
+                            amount  : total[total_prop].amount,
+                            currency: total[total_prop].currency,
+                            type    : is_virtual ? 'virtual' : 'real',
+                        });
+                    }
                 }
             }
         };
