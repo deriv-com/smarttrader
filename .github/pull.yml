@@ -1,6 +1,6 @@
 version: "1"
 rules:                          # Array of rules
-  - base: master                # Required. Target branch
+  - base: binary-static         # Required. Target branch
     upstream: binary-com:master # Required. Must be in the same fork network.
     mergeMethod: "none"         # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
     reviewers:
