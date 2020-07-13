@@ -17,21 +17,22 @@ const updateBalance = (response) => {
         if (!currency) return;
 
         const updateBalanceByAccountId = (account_id, updated_balance, account_currency) => {
+            const el_balance_span = document.querySelector(`.account__switcher-balance-${account_id}`);
             const display_balance = formatMoney(account_currency, updated_balance);
             const is_virtual = /^VRT/.test(account_id);
             const is_current = Client.get('loginid') === account_id;
+
+            if (el_balance_span) {
+                el_balance_span.innerHTML = display_balance;
+            }
 
             if (is_current) {
                 document.getElementById('header__acc-balance').innerHTML = display_balance;
                 Client.set('balance', updated_balance);
                 PortfolioInit.updateBalance();
             }
-
             if (is_virtual) {
-                document.querySelector('.account__switcher-balance-virtual').innerHTML = display_balance;
                 TopUpVirtualPopup.init(updated_balance);
-            } else {
-                document.querySelector(`.account__switcher-balance-${account_currency}`).innerHTML = display_balance;
             }
         };
 

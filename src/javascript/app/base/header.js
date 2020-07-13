@@ -496,7 +496,7 @@ const Header = (() => {
                     const account_icon      = createElement('img', { src: icon });
                     const account_detail    = createElement('span', { text: is_real ? (currency || localize('Real')) : localize('Demo') });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
-                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${is_real ? currency : 'virtual'}` });
+                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
                     
                     if (!currency) {
                         $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
