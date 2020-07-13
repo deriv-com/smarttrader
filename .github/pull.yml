@@ -3,9 +3,6 @@ rules:                          # Array of rules
   - base: master                # Required. Target branch
     upstream: binary-com:master # Required. Must be in the same fork network.
     mergeMethod: "none"         # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
-    assignees:
-      - negar-binary
-      - aaron-binary
     reviewers:
       - negar-binary
       - aaron-binary
