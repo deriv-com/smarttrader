@@ -32,12 +32,13 @@ const updateBalance = (response) => {
                     Client.set('balance', updated_balance);
                     PortfolioInit.updateBalance();
                 }
+
                 if (is_virtual) {
                     TopUpVirtualPopup.init(updated_balance);
                     updateTotal({
-                        amount: balance,
-                        currency,
-                        type  : 'virtual',
+                        amount  : updated_balance,
+                        currency: account_currency,
+                        type    : 'virtual',
                     });
                 } else {
                     const total_prop = is_virtual ? 'deriv_demo' : 'deriv';
