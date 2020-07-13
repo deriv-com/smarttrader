@@ -29,7 +29,7 @@ exports.sections_config = {
 // ---------- Languages ----------
 // TODO: add 'DE' after 'EN' in the array below to enable German language
 // TODO: add 'TH' after 'RU' in the array below to enable Thai language
-exports.languages = ['EN', 'ES', 'FR', 'ID', 'IT', 'KO', 'PL', 'PT', 'RU', 'VI', 'ZH_CN', 'ZH_TW'];
+exports.languages = ['EN', 'ES', 'FR', 'ID', 'IT', 'KO', 'PL', 'PT', 'RU', 'VI', 'ZH_CN', 'ZH_TW', 'ACH'];
 
 const affiliates_signup_language_map = { // object used instead of array to prevent accidental index changes
     EN   : 0,

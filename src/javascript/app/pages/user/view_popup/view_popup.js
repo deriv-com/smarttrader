@@ -370,19 +370,19 @@ const ViewPopup = (() => {
             el_live_date.parentNode.setVisibility(0);
         }
 
-        containerSetText('trade_details_current_title', localize('Contract Result'));
+        containerSetText('trade_details_current_title', localize('Contract result'));
         containerSetText('trade_details_indicative_label', localize('Payout'));
-        containerSetText('trade_details_profit_loss_label', localize('Profit/Loss'));
+        containerSetText('trade_details_profit_loss_label', localize('Profit/loss'));
         if (contract.status === 'sold') {
-            containerSetText('trade_details_end_label', localize('Exit Time'));
+            containerSetText('trade_details_end_label', localize('Exit time'));
             containerSetText('trade_details_end_date', epochToDateTime(contract.sell_time), '', true);
         }
         if (Lookback.isLookback(contract.contract_type)) {
             containerSetText('trade_details_spot_label', localize('Close'));
-            containerSetText('trade_details_spottime_label', localize('Close Time'));
+            containerSetText('trade_details_spottime_label', localize('Close time'));
         } else {
-            containerSetText('trade_details_spot_label', localize('Exit Spot'));
-            containerSetText('trade_details_spottime_label', localize('Exit Spot Time'));
+            containerSetText('trade_details_spot_label', localize('Exit spot'));
+            containerSetText('trade_details_spottime_label', localize('Exit spot time'));
         }
 
         // show validation error if contract is not settled yet
@@ -401,7 +401,7 @@ const ViewPopup = (() => {
     };
 
     const appendAuditLink = (element_id) => {
-        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit button-secondary' });
+        const link = Utility.createElement('a', { href: `${'javascript:;'}`, class: 'link-audit btn btn__small btn--secondary' });
         const span = Utility.createElement('span', { text: localize('Audit') });
         link.appendChild(span);
         link.addEventListener('click', () => { initAuditTable(1); });
@@ -446,7 +446,7 @@ const ViewPopup = (() => {
         th_previous.appendChild(link);
 
         tr.appendChild(th_previous);
-        tr.appendChild(Utility.createElement('th', { class: 'gr-8 gr-6-t gr-6-p gr-4-m', text: localize('Audit Page') }));
+        tr.appendChild(Utility.createElement('th', { class: 'gr-8 gr-6-t gr-6-p gr-4-m', text: localize('Audit page') }));
         tr.appendChild(Utility.createElement('th', { class: 'gr-2 gr-3-t gr-3-p gr-4-m' }));
         table.appendChild(tr);
         div.appendChild(table);
@@ -543,9 +543,15 @@ const ViewPopup = (() => {
     const createAuditHeader = (table) => {
         const tr = Utility.createElement('tr', { class: 'gr-row' });
 
+        const td_mid = Utility.createElement('td', { class: 'gr-3 audit-table-head no-margin' });
+        td_mid.appendChild(Utility.createElement('strong', { text: localize('Spot') }));
+
+        const td_last = Utility.createElement('td', { class: 'gr-4 audit-table-head no-margin' });
+        td_last.appendChild(Utility.createElement('strong', { text: localize('Spot time (GMT)') }));
+
         tr.appendChild(Utility.createElement('td', { class: 'gr-4' }));
-        tr.appendChild(Utility.createElement('td', { class: 'gr-3 no-margin secondary-color', text: localize('Spot') }));
-        tr.appendChild(Utility.createElement('td', { class: 'gr-4 no-margin secondary-color', text: localize('Spot Time (GMT)') }));
+        tr.appendChild(td_mid);
+        tr.appendChild(td_last);
 
         table.insertBefore(tr, table.childNodes[0]);
     };
@@ -578,7 +584,7 @@ const ViewPopup = (() => {
 
     const populateAuditTable = (show_audit_table) => {
         if (!contract.tick_count) {
-            const contract_starts = createAuditTable(localize('Contract Starts'));
+            const contract_starts = createAuditTable(localize('Contract starts'));
             parseAuditResponse(contract_starts.table, contract.audit_details.contract_start).then(() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
@@ -588,7 +594,7 @@ const ViewPopup = (() => {
                 }
                 // don't show exit tick information if missing or manual sold
                 if (contract.audit_details.contract_end && contract.status !== 'sold') {
-                    const contract_ends = createAuditTable(localize('Contract Ends'));
+                    const contract_ends = createAuditTable(localize('Contract ends'));
                     parseAuditResponse(contract_ends.table, contract.audit_details.contract_end).then(() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
@@ -603,7 +609,7 @@ const ViewPopup = (() => {
                 }
             });
         } else {
-            const contract_details = createAuditTable(localize('Contract Details'));
+            const contract_details = createAuditTable(localize('Contract details'));
             parseAuditResponse(contract_details.table, contract.audit_details.all_ticks).then(() => {
                 if (contract.audit_details.all_ticks) {
                     createAuditHeader(contract_details.table);
@@ -632,47 +638,47 @@ const ViewPopup = (() => {
 
         $container.prepend($('<div/>', { id: 'sell_bet_desc', class: 'popup_bet_desc drag-handle', text: longcode }));
         const $sections  = $('<div/>').append($('<div class="gr-row container"><div id="sell_details_chart_wrapper" class="gr-8 gr-12-p gr-12-m"></div><div id="sell_details_table" class="gr-4 gr-12-p gr-12-m"></div></div>'));
-        let [barrier_text, low_barrier_text] = localize(['Barrier', 'Low Barrier']);
+        let [barrier_text, low_barrier_text] = localize(['Barrier', 'Low barrier']);
         if (Lookback.isLookback(contract.contract_type)) {
             [barrier_text, low_barrier_text] =
                 Lookback.getBarrierLabel(contract.contract_type, contract.barrier_count);
         } else if (contract.barrier_count > 1) {
-            barrier_text = localize('High Barrier');
+            barrier_text = localize('High barrier');
         } else if (/^DIGIT(MATCH|DIFF)$/.test(contract.contract_type)) {
             barrier_text = localize('Target');
         } else if (/^(tickhigh|ticklow)$/i.test(contract.contract_type)) {
-            barrier_text = localize('Selected Tick');
+            barrier_text = localize('Selected tick');
         }
 
         const should_show_entry_spot = !Lookback.isLookback(contract.contract_type) && !/digit/i.test(contract.contract_type);
         const should_show_barrier = !/runhigh|runlow/i.test(contract.contract_type);
         $sections.find('#sell_details_table').append($(
             `<table>
-            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract Information')}</th></tr><tbody id="contract_information_content">
-            ${createRow(localize('Contract Type'), '', 'trade_details_contract_type')}
+            <tr id="contract_tabs"><th colspan="2" id="contract_information_tab">${localize('Contract information')}</th></tr><tbody id="contract_information_content">
+            ${createRow(localize('Contract type'), '', 'trade_details_contract_type')}
             ${createRow(localize('Transaction ID'), '', 'trade_details_ref_id')}
-            ${createRow(localize('Start Time'), '', 'trade_details_start_date', true)}
-            ${createRow(localize('Purchase Time'), '', 'trade_details_purchase_time', true)}
-            ${(!contract.tick_count && !is_multiplier_contract ? createRow(localize('Remaining Time'), '', 'trade_details_live_remaining') : '')}
-            ${should_show_entry_spot ? createRow(localize('Entry Spot'), '', 'trade_details_entry_spot', 0, '<span></span>') : ''}
+            ${createRow(localize('Start time'), '', 'trade_details_start_date', true)}
+            ${createRow(localize('Purchase time'), '', 'trade_details_purchase_time', true)}
+            ${(!contract.tick_count && !is_multiplier_contract ? createRow(localize('Remaining time'), '', 'trade_details_live_remaining') : '')}
+            ${should_show_entry_spot ? createRow(localize('Entry spot'), '', 'trade_details_entry_spot', 0, '<span></span>') : ''}
             ${should_show_barrier ? createRow(barrier_text, '', 'trade_details_barrier', true) : ''}
-            ${Reset.isReset(contract.contract_type) ? createRow(localize('Reset Barrier'), '', 'trade_details_reset_barrier', true) : ''}
+            ${Reset.isReset(contract.contract_type) ? createRow(localize('Reset barrier'), '', 'trade_details_reset_barrier', true) : ''}
             ${(contract.barrier_count > 1 ? createRow(low_barrier_text, '', 'trade_details_barrier_low', true) : '')}
-            ${createRow(Callputspread.isCallputspread(contract.contract_type) ? localize('Maximum payout') : localize('Potential Payout'), '', 'trade_details_payout')}
+            ${createRow(Callputspread.isCallputspread(contract.contract_type) ? localize('Maximum payout') : localize('Potential payout'), '', 'trade_details_payout')}
             ${multiplier && Lookback.isLookback(contract.contract_type) ? createRow(localize('Multiplier'), '', 'trade_details_multiplier') : ''}
-            ${createRow(localize('Purchase Price'), '', 'trade_details_purchase_price')}
+            ${createRow(localize('Purchase price'), '', 'trade_details_purchase_price')}
             </tbody>
-            <th colspan="2" id="barrier_change" class="invisible">${localize('Barrier Change')}</th>
+            <th colspan="2" id="barrier_change" class="invisible">${localize('Barrier change')}</th>
             <tbody id="barrier_change_content" class="invisible"></tbody>
             <tr><th colspan="2" id="trade_details_current_title">${localize('Current')}</th></tr>
             ${createRow(localize('Spot'), 'trade_details_spot_label', 'trade_details_current_spot', 0, '<span></span>')}
-            ${createRow(localize('Spot Time'), 'trade_details_spottime_label', 'trade_details_current_date')}
-            ${createRow(localize('Current Time'), '', 'trade_details_live_date')}
+            ${createRow(localize('Spot time'), 'trade_details_spottime_label', 'trade_details_current_date')}
+            ${createRow(localize('Current time'), '', 'trade_details_live_date')}
             ${!contract.tick_count ? createRow('', 'trade_details_end_label', 'trade_details_end_date', true) : ''}
             ${createRow(localize('Indicative'), 'trade_details_indicative_label', 'trade_details_indicative_price')}
-            ${createRow(localize('Potential Profit/Loss'), 'trade_details_profit_loss_label', 'trade_details_profit_loss')}
-            ${is_multiplier_contract ? createRow(localize('Deal Cancel. Fee'), 'trade_details_deal_cancellation_label', 'trade_details_deal_cancellation') : ''}
-            ${is_multiplier_contract ? createRow(localize('Total Profit/Loss'), 'trade_details_total_pnl_label', 'trade_details_total_pnl') : ''}
+            ${createRow(localize('Potential profit/loss'), 'trade_details_profit_loss_label', 'trade_details_profit_loss')}
+            ${is_multiplier_contract ? createRow(localize('Deal cancel. fee'), 'trade_details_deal_cancellation_label', 'trade_details_deal_cancellation') : ''}
+            ${is_multiplier_contract ? createRow(localize('Total profit/loss'), 'trade_details_total_pnl_label', 'trade_details_total_pnl') : ''}
             <tr><td colspan="2" class="last_cell" id="trade_details_message">&nbsp;</td></tr>
             </table>
             <div id="errMsg" class="notice-msg ${hidden_class}"></div>
@@ -758,7 +764,7 @@ const ViewPopup = (() => {
 
             $sell_wrapper.setVisibility(1)
                 .append($('<div/>', { id: sell_wrapper_id })
-                    .append($('<button/>', { id: sell_button_id, class: 'button', text: is_started ? localize('Sell at market') : localize('Sell') })));
+                    .append($('<button/>', { id: sell_button_id, class: 'btn btn__large btn--secondary', text: is_started ? localize('Sell at market') : localize('Sell') })));
             if (is_started) {
                 addSellNote($sell_wrapper);
             }

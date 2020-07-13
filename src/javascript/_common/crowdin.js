@@ -3,24 +3,21 @@ const createElement = require('./utility').createElement;
 
 const Crowdin = (() => {
     /**
-     * in-context translation provided at: https://staging.binary.com/translations/
+     * in-context translation provided at: https://domain.tld/ach/
      * and uses 'ach' as pseudo language code
      */
-    const isInContextEnvironment = () => (
-        /^https:\/\/staging\.binary\.com\/translations\//i.test(window.location.href) &&
-        /ach/i.test(urlLang())
-    );
+    const isInContextEnvironment = () => urlLang() === 'ach';
 
     /**
      * initialize Crowdin in-context environment
      */
     const init = () => {
         if (isInContextEnvironment()) {
-            const lang = document.querySelector('#topbar ul[id$="_language"]');
-            if (lang) lang.setVisibility(0);
+            const el_lang = document.getElementById('language-select');
+            if (el_lang) el_lang.style.display = 'none';
             /* eslint-disable no-underscore-dangle */
             window._jipt = [];
-            window._jipt.push(['project', 'binary-static']);
+            window._jipt.push(['project', 'dsmarttrader']);
             /* eslint-enable no-underscore-dangle */
             if (document.body) {
                 document.body.appendChild(createElement('script', { type: 'text/javascript', src: `${document.location.protocol}//cdn.crowdin.com/jipt/jipt.js` }));

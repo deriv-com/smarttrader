@@ -1,15 +1,17 @@
-const moment           = require('moment');
-const isCryptocurrency = require('./currency_base').isCryptocurrency;
-const SocketCache      = require('./socket_cache');
-const localize         = require('../localize').localize;
-const LocalStore       = require('../storage').LocalStore;
-const State            = require('../storage').State;
-const getPropertyValue = require('../utility').getPropertyValue;
-const isEmptyObject    = require('../utility').isEmptyObject;
+const moment                       = require('moment');
+const isCryptocurrency             = require('./currency_base').isCryptocurrency;
+const SocketCache                  = require('./socket_cache');
+const localize                     = require('../localize').localize;
+const LocalStore                   = require('../storage').LocalStore;
+const State                        = require('../storage').State;
+const getPropertyValue             = require('../utility').getPropertyValue;
+const isEmptyObject                = require('../utility').isEmptyObject;
+const getAllowedLocalStorageOrigin = require('../url').getAllowedLocalStorageOrigin;
 
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
     let client_object = {};
+    let total_balance = {};
     let current_loginid;
 
     const init = () => {
@@ -38,6 +40,7 @@ const ClientBase = (() => {
      */
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
+            syncWithDerivApp(value, client_object);
             LocalStore.set('active_loginid', value);
             current_loginid = value;
         } else {
@@ -45,6 +48,7 @@ const ClientBase = (() => {
                 client_object[loginid] = {};
             }
             client_object[loginid][key] = value;
+            syncWithDerivApp(loginid, client_object);
             LocalStore.setObject(storage_key, client_object);
         }
     };
@@ -69,6 +73,10 @@ const ClientBase = (() => {
         }
         return value;
     };
+
+    const setTotalBalance = (amount, currency) => total_balance = { amount, currency };
+
+    const getTotalBalance = () => total_balance;
 
     const getAllAccountsObject = () => LocalStore.getObject(storage_key);
 
@@ -361,12 +369,36 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    const syncWithDerivApp = (active_loginid, client_accounts) => {
+        const iframe_window = document.getElementById('localstorage-sync');
+        if (iframe_window) {
+            const origin = getAllowedLocalStorageOrigin();
+            if (!origin) {
+                return;
+            }
+
+            // Keep client.accounts in sync (in case user wasn't logged in).
+            if (iframe_window.src === `${origin}/localstorage-sync.html`) {
+                iframe_window.contentWindow.postMessage({
+                    key  : 'client.accounts',
+                    value: JSON.stringify(client_accounts),
+                }, origin);
+                iframe_window.contentWindow.postMessage({
+                    key  : 'active_loginid',
+                    value: active_loginid,
+                }, origin);
+            }
+        }
+    };
+
     return {
         init,
         isLoggedIn,
         isValidLoginid,
         set,
         get,
+        setTotalBalance,
+        getTotalBalance,
         getAllLoginids,
         getAccountType,
         isAccountOfType,

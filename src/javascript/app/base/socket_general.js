@@ -80,7 +80,7 @@ const BinarySocketGeneral = (() => {
                         Client.sendLogoutRequest(true);
                     } else {
                         Client.responseAuthorize(response);
-                        BinarySocket.send({ balance: 1, subscribe: 1 });
+                        BinarySocket.send({ balance: 1, account: 'all', subscribe: 1 });
                         BinarySocket.send({ get_settings: 1 });
                         BinarySocket.send({ get_account_status: 1 });
                         BinarySocket.send({ payout_currencies: 1 });
@@ -156,7 +156,8 @@ const BinarySocketGeneral = (() => {
                 Header.displayNotification(localize('You have reached the rate limit of requests per second. Please try later.'), true, 'RATE_LIMIT');
                 break;
             case 'InvalidAppID':
-                Header.displayNotification(response.error.message, true, 'INVALID_APP_ID');
+                //  Header.displayNotification(response.error.message, true, 'INVALID_APP_ID');
+                Header.displayNotification({ key: 'invalid_app_id', title: localize('Invalid app id'), message: response.error.message, type: 'danger' });
                 break;
             case 'DisabledClient':
                 showNoticeMessage(response.error.message);

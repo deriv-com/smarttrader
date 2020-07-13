@@ -32,8 +32,8 @@ const Guide = (() => {
         $.extend(true, opt, options);
 
         cookie_name = 'hide_guide';
-        btn_next    = { className: 'button', html: $('<span/>', { text: localize('Next') }) };
-        btn_finish  = { className: 'button btnFinish', html: $('<span/>', { text: localize('Finish') }) };
+        btn_next    = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Next') }) };
+        btn_finish  = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Finish') }) };
 
         if ($(opt.guideBtnID).length === 0 || opt.script.length === 0) {
             return;
@@ -74,7 +74,7 @@ const Guide = (() => {
         }
 
         $(opt.guideBtnID)
-            .addClass('gr-hide-m pulser')
+            .addClass('gr-hide-m')
             .append($('<span/>', { class: 'close', text: 'X' }))
             .append($('<strong/>'));
         $(`${opt.guideBtnID} strong`).html(`<span></span>${opt.btnText}`);

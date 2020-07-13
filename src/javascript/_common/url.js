@@ -55,7 +55,7 @@ const Url = (() => {
         if (should_change_to_legacy) {
             domain = domain.replace(/\/app/,'');
         }
-        const new_url = `${domain}${(normalizePath(path) || 'home')}.html${(pars ? `?${pars}` : '')}`;
+        const new_url = `${domain}${(normalizePath(path) || 'trading')}.html${(pars ? `?${pars}` : '')}`;
         // replace old lang with new lang
         return urlForLanguage(lang, new_url);
     };
@@ -106,6 +106,17 @@ const Url = (() => {
         return static_host + path.replace(/(^\/)/g, '');
     };
 
+    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || 'https://deriv.app')}/${path}${pars ? `?${pars}` : ''}`;
+
+    const getAllowedLocalStorageOrigin = () => {
+        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://staging.deriv.app';
+        } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://deriv.app';
+        }
+        return 'https://deriv.app';
+    };
+
     /**
      * @param {Object} new_params - Object with param-value pairs. To delete param, set value to null.
      * @param {boolean} should_preserve_old - Should existing query parameters be preserved.
@@ -141,6 +152,8 @@ const Url = (() => {
         urlFor,
         urlForCurrentDomain,
         urlForStatic,
+        urlForDeriv,
+        getAllowedLocalStorageOrigin,
         getSection,
         getHashValue,
         updateParamsWithoutReload,
