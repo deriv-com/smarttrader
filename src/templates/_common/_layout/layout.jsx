@@ -9,6 +9,7 @@ import Title from '../components/title.jsx';
 import DerivIFrame from '../includes/deriv-iframe.jsx';
 // import Elevio from '../includes/elevio.jsx';
 import Gtm from '../includes/gtm.jsx';
+import LiveChat from '../includes/livechat.jsx';
 import LanguageMenuModal from '../components/language-menu-modal.jsx';
 
 const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
@@ -76,6 +77,7 @@ const Layout = () => {
                     <Topbar />
                 </div>
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
+                <LiveChat />
                 <DerivIFrame />
                 {/* <Elevio /> */}
                 <LanguageMenuModal />
