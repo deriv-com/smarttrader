@@ -2,16 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-13 03:03\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-07-15 02:22\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: dsmarttrader\n"
+"X-Crowdin-Project-ID: 397380\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File-ID: 196\n"
 "Language: zh_CN\n"
 
 msgid "404"
@@ -33,7 +35,7 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "已完成从%2至账号%3的%1存款。交易编号: %4"
 
 msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr ""
+msgstr "%1让每个人都能轻松参与金融市场。您可交易各主要货币、股票指数、大宗商品和综合指数，投资门槛低至1美元。"
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 已记入您的MT5模拟账户: %2。"
@@ -52,9 +54,6 @@ msgstr "%1不，请立刻更改我的法定账户的币种%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1返回交易页面%2"
-
-msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr "%1您的身份证明或地址证明%2 不符合我们的要求。请检查您的电子邮件收取进一步指示。"
 
 msgid "AM"
 msgstr "上午"
@@ -91,9 +90,6 @@ msgstr "调整交易参数"
 
 msgid "Admin"
 msgstr "管理中心"
-
-msgid "Advanced"
-msgstr "高阶"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "所有市场现已关闭。请稍后重试。"
@@ -176,12 +172,6 @@ msgstr "八月"
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "立刻进行账户验证，以获得付款选项的所有优惠。"
 
-msgid "Authentication failed"
-msgstr "验证失败"
-
-msgid "Available Currencies"
-msgstr "可用的货币"
-
 msgid "Available Markets"
 msgstr "可用的市场"
 
@@ -189,7 +179,7 @@ msgid "Average"
 msgstr "平均"
 
 msgid "Back to main website"
-msgstr ""
+msgstr "返回主网站"
 
 msgid "Back to trading"
 msgstr "返回交易"
@@ -211,6 +201,9 @@ msgstr "出价"
 
 msgid "Binary Coin"
 msgstr "Binary 币"
+
+msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
+msgstr "Binary.com 当前支持泰达币（USDT）。您仅可从经启用 Omni Layer 的钱包将 USDT 存入Binary.com 账户。"
 
 msgid "Bitcoin"
 msgstr "比特币"
@@ -251,14 +244,14 @@ msgstr "收银台"
 msgid "Cashier disabled"
 msgstr "收银台已禁用"
 
-msgid "Change"
-msgstr "更改"
-
 msgid "Change API Endpoint"
 msgstr "更改 API 端点"
 
 msgid "Change Password"
 msgstr "更改密码"
+
+msgid "Change currency"
+msgstr "更改币种"
 
 msgid "Chart"
 msgstr "图表"
@@ -270,7 +263,7 @@ msgid "Charting for this underlying is delayed"
 msgstr "此标的资产的图表数据存在延迟"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "检查您的连接。"
 
 msgid "Checked"
 msgstr "已检查"
@@ -327,7 +320,7 @@ msgid "Continue trading"
 msgstr "继续交易"
 
 msgid "Continue with Demo Account"
-msgstr ""
+msgstr "继续以模拟账户交易"
 
 msgid "Contract"
 msgstr "合约"
@@ -368,11 +361,11 @@ msgstr "相对方"
 msgid "Country of Residence"
 msgstr "居住国"
 
-msgid "Create"
-msgstr "创建"
-
 msgid "Create %1 account"
 msgstr "开立%1账户"
+
+msgid "Create account"
+msgstr "开立账户"
 
 msgid "Credit/Debit"
 msgstr "借方/贷方"
@@ -419,14 +412,14 @@ msgstr "模拟账户"
 msgid "Demo Accounts"
 msgstr "模拟账户"
 
-msgid "Demo Advanced"
-msgstr "模拟高级账户"
+msgid "Demo Financial"
+msgstr "演示财务"
 
-msgid "Demo Standard"
-msgstr "模拟标准"
+msgid "Demo Financial STP"
+msgstr "演示财务 STP"
 
-msgid "Demo Synthetic Indices"
-msgstr "模拟综合指数"
+msgid "Demo Synthetic"
+msgstr "模拟综合"
 
 msgid "Deposit"
 msgstr "存款"
@@ -466,12 +459,6 @@ msgstr "数字小于"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "数字合约如果没在 5 分钟内结束，将退还购入价格。"
-
-msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "您的账户已被禁进行数字期权交易。请联系%1客服部%2寻求帮助。"
-
-msgid "Digital options trading disabled"
-msgstr "数字期权交易已禁用"
 
 msgid "Digits"
 msgstr "数字期权"
@@ -564,7 +551,7 @@ msgid "Exit spot time"
 msgstr "退市现价时间"
 
 msgid "Exit time"
-msgstr ""
+msgstr "退市时间"
 
 msgid "Expiry date is required for %1."
 msgstr "%1 需要有失效期日。"
@@ -590,8 +577,14 @@ msgstr "文件 (%1) 大小超过允许限额。允许的最大文件大小: %2"
 msgid "Final price"
 msgstr "最终价格"
 
+msgid "Financial"
+msgstr "财务"
+
 msgid "Financial Account"
 msgstr "金融账户"
+
+msgid "Financial STP"
+msgstr "财务 STP"
 
 msgid "Finish"
 msgstr "完成"
@@ -633,7 +626,7 @@ msgid "Guide"
 msgstr "指南"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr ""
+msgstr "因此，取决于您账户的可用资金，您的可支取余额最多为％1％2。"
 
 msgid "High"
 msgstr "最高值"
@@ -681,7 +674,7 @@ msgid "Higher/Lower contracts will be refunded at the purchase price if there ar
 msgstr "如果开始和结束期间价格跳动次数少于2，高于/低于合约购入价将全额退还。"
 
 msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr ""
+msgstr "提示： 破解密码需要大约 %1%2 。"
 
 msgid "Hour"
 msgstr "小时"
@@ -938,12 +931,6 @@ msgstr "三月"
 msgid "Matches/Differs"
 msgstr "相符/差异"
 
-msgid "Maximum Payout"
-msgstr "最大赔付"
-
-msgid "Maximum Profit"
-msgstr "最大利润"
-
 msgid "Maximum multiplier of 1000."
 msgstr "最大乘数为1000。"
 
@@ -1014,19 +1001,13 @@ msgid "No authentication required"
 msgstr "不需验证"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "未分配币种"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "未选择币种"
 
 msgid "No notifications"
 msgstr "没有通知"
-
-msgid "No payout if exit spot is above or equal to the upper barrier."
-msgstr "如果退市现价高于或等于高障碍, 不能获得赔付。"
-
-msgid "No payout if exit spot is below or equal to the lower barrier."
-msgstr "如果退市现价低于或等于低障碍, 不能获得赔付。"
 
 msgid "No thanks"
 msgstr "不，谢谢"
@@ -1178,9 +1159,6 @@ msgstr "请%1存入%2您的账户。"
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "请 %1登录%2 或 %3注册%4以查看此页 。"
 
-msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr "请接受%1更新条款和条件%2以继续操作。"
-
 msgid "Please accept the terms and conditions."
 msgstr "请接受条款和条件。"
 
@@ -1215,10 +1193,10 @@ msgid "Please enter a valid Login ID."
 msgstr "请输入有效的登录 ID。"
 
 msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr ""
+msgstr "请输入包括国家代码的有效电话号 (例如 +15417541234)."
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr ""
+msgstr "请注意，所选货币仅适用于受限制账户。"
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "一旦满足所需标准, 请重新申请。"
@@ -1247,8 +1225,8 @@ msgstr "请选择复选框。"
 msgid "Please select the currency for this account:"
 msgstr "请选择此账户的币种："
 
-msgid "Please set the currency of your account to enable trading."
-msgstr "请设置账户的币种以启用交易。"
+msgid "Please set the currency of your account."
+msgstr "请设置账户的币种。"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "请设置 %130 天交易额限制%2 以移除存款限额。"
@@ -1346,14 +1324,14 @@ msgstr "真实"
 msgid "Real Account"
 msgstr "真实账户"
 
-msgid "Real Advanced"
-msgstr "真实高级账户"
+msgid "Real Financial"
+msgstr "真实财务"
 
-msgid "Real Standard"
-msgstr "真实标准"
+msgid "Real Financial STP"
+msgstr "真实财务 STP"
 
-msgid "Real Synthetic Indices"
-msgstr "真实综合指数"
+msgid "Real Synthetic"
+msgstr "真实综合"
 
 msgid "Real-Money Account"
 msgstr "真实资金账户"
@@ -1449,7 +1427,7 @@ msgid "Select Trade Type"
 msgstr "选择交易类型"
 
 msgid "Select currency"
-msgstr ""
+msgstr "选择货币"
 
 msgid "Select date"
 msgstr "选择日期"
@@ -1490,11 +1468,11 @@ msgstr "服务器"
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "交易期持续时间限制不能大于6周。"
 
-msgid "Set Currency"
-msgstr "设置货币"
-
 msgid "Set account currency"
 msgstr "设置账户币种"
+
+msgid "Set currency"
+msgstr "设置货币"
 
 msgid "Settles"
 msgstr "结算"
@@ -1539,7 +1517,7 @@ msgid "Sorry, but binary options trading is not available in your financial acco
 msgstr "对不起，您的金融账户无法进行二元期权交易。"
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr ""
+msgstr "抱歉，此货币的存款目前被禁用。"
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "对不起，此功能仅适用虚拟账户。"
@@ -1548,7 +1526,7 @@ msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "对不起，您的管辖权内无法使用此功能。"
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr ""
+msgstr "抱歉，此货币的取款目前被禁用。"
 
 msgid "Spot"
 msgstr "现价"
@@ -1561,9 +1539,6 @@ msgstr "现货时间 (GMT)"
 
 msgid "Stake"
 msgstr "投注资金"
-
-msgid "Standard"
-msgstr "标准"
 
 msgid "Start time"
 msgstr "开始时间"
@@ -1590,7 +1565,7 @@ msgid "Step"
 msgstr "步骤"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "股票指数"
 
 msgid "Stocks"
 msgstr "股票"
@@ -1613,6 +1588,9 @@ msgstr "成功"
 msgid "Sunday"
 msgstr "周日"
 
+msgid "Synthetic"
+msgstr "综合"
+
 msgid "Synthetic Indices"
 msgstr "综合指数"
 
@@ -1621,9 +1599,6 @@ msgstr "目标"
 
 msgid "Telephone"
 msgstr "电话"
-
-msgid "Term & conditions updated"
-msgstr "条款与条件已更新"
 
 msgid "Tether"
 msgstr "Tether"
@@ -1739,6 +1714,9 @@ msgstr "此账户已禁用"
 msgid "This account is excluded until %1"
 msgstr "此账户已被隔离, 直到%1"
 
+msgid "This contract is only available on %1DTrader%2."
+msgstr "此合约仅适用于%1DTrader%2。"
+
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr "此合约只能通过DTrader运作。%1%2前往 Dtrader%3 终止或取消此合约。"
 
@@ -1844,14 +1822,17 @@ msgstr "城镇/城市"
 msgid "Trade"
 msgstr "交易"
 
+msgid "Trading Information"
+msgstr "交易信息"
+
 msgid "Trading and deposit disabled"
 msgstr "已禁止交易和存款"
 
-msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "您的账户已被禁交易和存款。请联系 %1 客服部 %2 寻求帮助。"
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
+msgstr ""
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "差价合约 (CFD) 的综合指数交易并不适合所有人。请确保您完全明白有关的风险。您的亏损可能会超越您 MT5 账户的所有资金。博彩活动可能会上瘾，请提醒自己要承担责任。"
 
 msgid "Trading is unavailable at this time."
 msgstr "此时无法交易。"
@@ -1901,8 +1882,14 @@ msgstr "立即升级"
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "验证码错误。请使用以下链接发送到您的电子邮件。"
 
+msgid "Verification required"
+msgstr "需要验证"
+
 msgid "Verify Reset Password"
 msgstr "重置密码验证"
+
+msgid "Verify identity"
+msgstr "身份验证"
 
 msgid "View"
 msgstr "查看"
@@ -1938,22 +1925,10 @@ msgid "When you click \"OK\" you will be excluded from trading on the site until
 msgstr "当您点选“OK”后，您将被禁止在此网站交易，直到选定期限结束为止。"
 
 msgid "Whoops!"
-msgstr ""
-
-msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
-msgstr "如果退市现价高于或等于高障碍, 可获得最大赔付。"
-
-msgid "Win maximum payout if the exit spot is lower than or equal to the lower barrier."
-msgstr "如果退市现价低于或等于低障碍, 可获得最大赔付。"
+msgstr "糟糕！"
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "如果退市现货价与入市现货价相同, 则将赢得赔付。"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier."
-msgstr "如果退市现价介于高、低障碍之间, 其比例与退市现价及低障碍之间的差异相等, 可获得最大赔付。"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot."
-msgstr "如果退市现价介于低、高障碍之间, 其比例与高障碍及退市现价之间的差异相等, 可获得最大赔付。"
 
 msgid "Winning the contract"
 msgstr "合约盈利"
@@ -2013,7 +1988,7 @@ msgid "You can top up your virtual account with an additional %1 if your balance
 msgstr "如果您的余额为 %2 或更低, 您可以在虚拟账户内添加 %1。"
 
 msgid "You cannot use your real money account with Deriv at this time."
-msgstr ""
+msgstr "此时您不可以在 Deriv 使用真实资金账户。"
 
 msgid "You did not change anything."
 msgstr "您没作任何更改。"
@@ -2022,19 +1997,16 @@ msgid "You do not need to authenticate your account at this time.%1We will infor
 msgstr "此时您的账户还不需要验证。%1我们将通知您何时需通过账户验证。"
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr ""
+msgstr "过去 %3 天里您已累计提取 %1%2 。"
 
 msgid "You have already withdrawn %1%2."
-msgstr ""
+msgstr "您已提取%1%2。"
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "您的Binary账户资金不足，请<a href=\"%1\">添加资金</a>。"
 
 msgid "You have not granted access to any applications."
 msgstr "您没有访问任何应用程序的权限。"
-
-msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr "您已选择在 %1 前自我禁止在 Binary.com交易。欲寻求帮助，请%2联系我们 %3。"
 
 msgid "You have reached the limit."
 msgstr "您已达到最高限额。"
@@ -2056,6 +2028,9 @@ msgstr "您已成功禁用账户的双因素身份验证。"
 
 msgid "You have successfully enabled two-factor authentication for your account."
 msgstr "您已成功启用账户的双因素身份验证。"
+
+msgid "You have successfully set your account currency to %1."
+msgstr "您已成功将账户币种设置为 %1 。"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "使用各OAuth服务器进行验证前须先注册并领取应用程序ID。欲知详情，请到https://developers.binary.com/参阅 OAuth信息。"
@@ -2085,7 +2060,7 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "如果市价以您选取的数字结束，您将赢得赔付额。"
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr ""
+msgstr "您当前的%1天取款限额是 %2%3。"
 
 msgid "Your account has no Login/Logout activity."
 msgstr "您的账户无交易活动。"
@@ -2095,6 +2070,9 @@ msgstr "您的账户无交易活动。"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "您的账户已经得到完全验证，且您的取款限额已经取消。"
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
+msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "您要求成为专业客户的申请正在处理中。"
@@ -2121,7 +2099,7 @@ msgid "Your password has been successfully reset. Please log into your account u
 msgstr "您的密码已成功重置。请用新密码登录您的账户。"
 
 msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr ""
+msgstr "您的密码是互联网上最常用的密码之一。请选择独特的密码。"
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "您申请成为专业客户的请求 %1不受批准%2。"
@@ -2160,7 +2138,7 @@ msgid "Your web browser (%1) is out of date and may affect your trading experien
 msgstr "您的网络浏览器 (%1) 已过时，并可能会影响您的交易操作。继续操作须自行承担风险。%2更新浏览器%3"
 
 msgid "Your withdrawal limit is %1%2."
-msgstr ""
+msgstr "您的取款限额是 %1%2。"
 
 msgid "account"
 msgstr "账户"
@@ -2169,7 +2147,7 @@ msgid "accounts"
 msgstr "账户"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "二元期权、外汇、外汇交易、在线交易、金融交易、二元交易、指数交易、交易股票指数、外汇交易、交易大宗商品、二元期权策略、二元经纪、二元投注、二元期权交易平台、二元策略、金融、投资、交易"
 
 msgid "day"
 msgstr "天"
@@ -2253,5 +2231,5 @@ msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that los
 msgstr "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 
 msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr ""
+msgstr "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 
