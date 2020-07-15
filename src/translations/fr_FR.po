@@ -2,16 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-13 03:03\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-07-15 02:22\n"
+"Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Crowdin-Project: dsmarttrader\n"
+"X-Crowdin-Project-ID: 397380\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File-ID: 196\n"
 "Language: fr_FR\n"
 
 msgid "404"
@@ -33,7 +35,7 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Le dépôt %1 à partir de %2 vers le numéro de compte %3 est effectué. Identifiant de transaction : %4"
 
 msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr ""
+msgstr "%1 offre une plateforme de trading simple, permettant à chacun de profiter des nombreuses opportunités qu'offrent les marchés financiers. Trading de devises, indices boursiers, matières premières et indices synthétiques à partir de 1$ USD seulement."
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 ont été crédités sur votre Compte Virtuel MT5: %2."
@@ -52,9 +54,6 @@ msgstr "%1Non, changer la devise de mon compte fiat maintenant%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1Retour à la page de trading%2"
-
-msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr "%1Votre preuve d’Identité ou Preuve de Domicile%2 ne satisfont pas nos exigences. Veuillez vérifier votre email pour obtenir des instructions supplémentaires."
 
 msgid "AM"
 msgstr " "
@@ -91,9 +90,6 @@ msgstr "Définir les paramètres de la transaction"
 
 msgid "Admin"
 msgstr "Administration"
-
-msgid "Advanced"
-msgstr "Avancé"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "Tous les marchés sont actuellement fermés. Veuillez réessayer ultérieurement."
@@ -176,12 +172,6 @@ msgstr "août"
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Authentifiez votre compte maintenant profiter pleinement de toutes les possibilités de retrait disponibles."
 
-msgid "Authentication failed"
-msgstr "Authentification non validé"
-
-msgid "Available Currencies"
-msgstr "Devises disponibles"
-
 msgid "Available Markets"
 msgstr "Marchés disponibles"
 
@@ -189,7 +179,7 @@ msgid "Average"
 msgstr "Moyenne"
 
 msgid "Back to main website"
-msgstr ""
+msgstr "Retour au site principal"
 
 msgid "Back to trading"
 msgstr "Retour au trade"
@@ -211,6 +201,9 @@ msgstr "Faire une mise"
 
 msgid "Binary Coin"
 msgstr "Binary Coin"
+
+msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
+msgstr "Binary.com accepte Tether (USDT). Vous pouvez faire un dépôt USDT uniquement à partir de votre porte-monnaie Omni Layer vers votre compte Binary.com."
 
 msgid "Bitcoin"
 msgstr "Bitcoin"
@@ -251,14 +244,14 @@ msgstr "Caisse"
 msgid "Cashier disabled"
 msgstr "Caisse désactivée"
 
-msgid "Change"
-msgstr "Changer"
-
 msgid "Change API Endpoint"
 msgstr "Modifier le point terminal de l'API"
 
 msgid "Change Password"
 msgstr "Modifier le mot de passe"
+
+msgid "Change currency"
+msgstr "Changer de devise"
 
 msgid "Chart"
 msgstr "Graphique"
@@ -270,7 +263,7 @@ msgid "Charting for this underlying is delayed"
 msgstr "Les graphiques sont retardés pour ce sous-jacent"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "Vérifier votre connection."
 
 msgid "Checked"
 msgstr "Vérifié"
@@ -327,7 +320,7 @@ msgid "Continue trading"
 msgstr "Poursuivre le trading"
 
 msgid "Continue with Demo Account"
-msgstr ""
+msgstr "Continuer avec un compte démo"
 
 msgid "Contract"
 msgstr "Contrat"
@@ -368,11 +361,11 @@ msgstr "Contrepartie"
 msgid "Country of Residence"
 msgstr "Pays de résidence"
 
-msgid "Create"
-msgstr "Créer"
-
 msgid "Create %1 account"
 msgstr "Créer un compte %1"
+
+msgid "Create account"
+msgstr "Créer un compte"
 
 msgid "Credit/Debit"
 msgstr "Crédit/débit"
@@ -419,14 +412,14 @@ msgstr "Compte Démo"
 msgid "Demo Accounts"
 msgstr "Compte Démo"
 
-msgid "Demo Advanced"
-msgstr "Démo Avancée"
+msgid "Demo Financial"
+msgstr "Demo Financier"
 
-msgid "Demo Standard"
-msgstr "Démo Standard"
+msgid "Demo Financial STP"
+msgstr "Demo Financier STP"
 
-msgid "Demo Synthetic Indices"
-msgstr "Indices Synthétiques de Démo"
+msgid "Demo Synthetic"
+msgstr "Demo Synthétique"
 
 msgid "Deposit"
 msgstr "Dépôt"
@@ -466,12 +459,6 @@ msgstr "Chiffre Inférieur"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "Les contrats « asiatiques » seront remboursés à leur prix d'achat si le contrat n'arrive pas à échéance dans un délai de 5 minutes."
-
-msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "Le Trading d'Options Numériques a été désactivé sur votre compte. Veuillez %1support client%2 pour vous assister."
-
-msgid "Digital options trading disabled"
-msgstr "Trading d'options numériques désactivé"
 
 msgid "Digits"
 msgstr "Chiffres"
@@ -564,7 +551,7 @@ msgid "Exit spot time"
 msgstr "Heure du Point de Sortie"
 
 msgid "Exit time"
-msgstr ""
+msgstr "Temps de sortie"
 
 msgid "Expiry date is required for %1."
 msgstr "La date d’expiration est requise pour %1."
@@ -590,8 +577,14 @@ msgstr "Taille du fichier (%1) dépasse la limite autorisée. La taille maximum 
 msgid "Final price"
 msgstr "Prix final"
 
+msgid "Financial"
+msgstr "Financier"
+
 msgid "Financial Account"
 msgstr "Compte Financier"
+
+msgid "Financial STP"
+msgstr "STP Financier"
 
 msgid "Finish"
 msgstr "Finnois"
@@ -633,7 +626,7 @@ msgid "Guide"
 msgstr "Guide"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr ""
+msgstr "Par conséquent, votre montant de retrait disponible est au plus de %1%2, concernant vos fonds disponibles  sur votre  compte. "
 
 msgid "High"
 msgstr "Haut"
@@ -681,7 +674,7 @@ msgid "Higher/Lower contracts will be refunded at the purchase price if there ar
 msgstr "Les contrats « Supérieur/Inférieur » seront remboursés à leur prix d'achat si moins de 2 ticks sont enregistrés entre le début et la fin de l'opération."
 
 msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr ""
+msgstr "Conseil : il faudrait environ %1%2 pour pouvoir craquer ce mot de passe."
 
 msgid "Hour"
 msgstr "Heure"
@@ -938,12 +931,6 @@ msgstr "mars"
 msgid "Matches/Differs"
 msgstr "Égal/Différent"
 
-msgid "Maximum Payout"
-msgstr "Paiement Maximum"
-
-msgid "Maximum Profit"
-msgstr "Profit Maximum"
-
 msgid "Maximum multiplier of 1000."
 msgstr "Multiplicateur maximal de 1000."
 
@@ -1014,19 +1001,13 @@ msgid "No authentication required"
 msgstr "Aucune authentification requise"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "Pas de devise attribuée"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "Pas de devise sélectionnée"
 
 msgid "No notifications"
 msgstr "Pas de notification"
-
-msgid "No payout if exit spot is above or equal to the upper barrier."
-msgstr "Aucun paiement si le spot de sortie est supérieur ou égal à la barrière supérieure."
-
-msgid "No payout if exit spot is below or equal to the lower barrier."
-msgstr "Aucun paiement si le spot de sortie est inférieur ou égal à la barrière la plus basse."
 
 msgid "No thanks"
 msgstr "Non merci"
@@ -1178,9 +1159,6 @@ msgstr "Veuillez %1faire un dépôt%2 sur votre compte."
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "S’il vous plaît %1connectez vous%2 ou %3inscrivez vous%4 pour afficher cette page."
 
-msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr "Veuillez accepter nos %1modalités mises à jour%2 pour continuer."
-
 msgid "Please accept the terms and conditions."
 msgstr "Veuillez accepter les conditions générales."
 
@@ -1215,10 +1193,10 @@ msgid "Please enter a valid Login ID."
 msgstr "Veuillez saisir un jeton d'authentification valide."
 
 msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr ""
+msgstr "Veuillez saisir un numéro de téléphone valide, y compris le code du pays (par exemple +15417541234)."
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr ""
+msgstr "Veuillez noter que la devise sélectionnée n'est autorisée que pour les comptes limités."
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "Veuillez réappliquer une fois que les critères requis ont été remplis."
@@ -1247,8 +1225,8 @@ msgstr "Veuillez cocher la case."
 msgid "Please select the currency for this account:"
 msgstr "Veuillez sélectionner la devise de ce compte :"
 
-msgid "Please set the currency of your account to enable trading."
-msgstr "Veuillez définir la devise de votre compte pour activer le trading."
+msgid "Please set the currency of your account."
+msgstr "Veuillez définir la devise de votre compte."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "Veuillez régler votre %1limite de 30 jours de chiffre d’affaires%2 pour supprimer les limites de dépôt."
@@ -1346,14 +1324,14 @@ msgstr "Réel"
 msgid "Real Account"
 msgstr "Compte réel"
 
-msgid "Real Advanced"
-msgstr "Réel Avancée"
+msgid "Real Financial"
+msgstr "Réel Financier"
 
-msgid "Real Standard"
-msgstr "Réel Standard"
+msgid "Real Financial STP"
+msgstr "Réel Financier STP"
 
-msgid "Real Synthetic Indices"
-msgstr "Indices Synthétiques Réels"
+msgid "Real Synthetic"
+msgstr "Réel Synthétique"
 
 msgid "Real-Money Account"
 msgstr "Compte d’Argent Réel"
@@ -1449,7 +1427,7 @@ msgid "Select Trade Type"
 msgstr "Sélectionnez le Type de Trade"
 
 msgid "Select currency"
-msgstr ""
+msgstr "Sélectionnez une devise"
 
 msgid "Select date"
 msgstr "Sélectionnez la date"
@@ -1490,11 +1468,11 @@ msgstr "Serveur"
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "La limite de durée de session ne peut excéder 6 semaines."
 
-msgid "Set Currency"
-msgstr "Définir la devise"
-
 msgid "Set account currency"
 msgstr "Choisissez la devise du compte"
+
+msgid "Set currency"
+msgstr "Définir la devise"
 
 msgid "Settles"
 msgstr "Règlements"
@@ -1539,7 +1517,7 @@ msgid "Sorry, but binary options trading is not available in your financial acco
 msgstr "Désolé, mais le trading d'options binaires n'est pas disponible sur votre compte financier."
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr ""
+msgstr "Désolé, les dépôts pour cette devise sont actuellement désactivés."
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Désolé, cette fonctionnalité est disponible uniquement pour les comptes virtuels."
@@ -1548,7 +1526,7 @@ msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "Désolé, cette fonctionnalité n’est pas disponible dans votre juridiction"
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr ""
+msgstr "Désolé, les dépôts pour cette devise sont actuellement désactivés."
 
 msgid "Spot"
 msgstr "Spot"
@@ -1561,9 +1539,6 @@ msgstr "Temps Spot (GMT)"
 
 msgid "Stake"
 msgstr "Investissement"
-
-msgid "Standard"
-msgstr "Standard"
 
 msgid "Start time"
 msgstr "Heure de début"
@@ -1590,7 +1565,7 @@ msgid "Step"
 msgstr "Étape"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "Indices Boursiers"
 
 msgid "Stocks"
 msgstr "Actions"
@@ -1613,6 +1588,9 @@ msgstr "Réussite"
 msgid "Sunday"
 msgstr "dimanche"
 
+msgid "Synthetic"
+msgstr "Synthétique"
+
 msgid "Synthetic Indices"
 msgstr "Indices Synthétiques"
 
@@ -1621,9 +1599,6 @@ msgstr "Cible"
 
 msgid "Telephone"
 msgstr "Téléphone"
-
-msgid "Term & conditions updated"
-msgstr "Conditions générales mises à jour"
 
 msgid "Tether"
 msgstr "Tether"
@@ -1739,6 +1714,9 @@ msgstr "Ce compte est désactivé"
 msgid "This account is excluded until %1"
 msgstr "Ce compte est exclu jusqu'à %1"
 
+msgid "This contract is only available on %1DTrader%2."
+msgstr "Ce contrat est uniquement disponible sur %1DTrader%2."
+
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr "Ce contrat est uniquement disponible sur DTrader.%1%2Allez sur Dtrader%3 pour fermer ou annuler ce contrat."
 
@@ -1844,14 +1822,17 @@ msgstr "Ville"
 msgid "Trade"
 msgstr "Trading"
 
+msgid "Trading Information"
+msgstr "Information de trading"
+
 msgid "Trading and deposit disabled"
 msgstr "Trading et dépôt désactivés"
 
-msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "Les transactions et les dépôts ont été désactivés sur votre compte. Veuillez contacter %1le support client%2 pour obtenir de l'aide."
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
+msgstr ""
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "Les Contrats de Trading pour Différence (CFDs) sur Indices Synthétiques peuvent ne pas convenir à tous. Veuillez vous assurer de bien comprendre les risques encourus, y compris la possibilité de perdre tous les fonds de votre compte MT5. Le jeu peut créer une dépendance - s'il vous plaît, jouez de façon responsable."
 
 msgid "Trading is unavailable at this time."
 msgstr "Le Trading n’est pas disponible en ce moment."
@@ -1901,8 +1882,14 @@ msgstr "Mettre à jour maintenant"
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "Le code de vérification est incorrect. Veuillez utiliser le lien envoyé à votre adresse email."
 
+msgid "Verification required"
+msgstr "Vérification requise"
+
 msgid "Verify Reset Password"
 msgstr "Vérifier le nouveau mot de passe"
+
+msgid "Verify identity"
+msgstr "Vérifier l'indentité"
 
 msgid "View"
 msgstr "Affichage"
@@ -1938,22 +1925,10 @@ msgid "When you click \"OK\" you will be excluded from trading on the site until
 msgstr "Lorsque vous cliquerez sur « Ok », vous serez exclu des opérations de trading du site jusqu'à la date sélectionnée."
 
 msgid "Whoops!"
-msgstr ""
-
-msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
-msgstr "Gagnez le paiement maximum si le spot de sortie est supérieur ou égal à la barrière supérieure."
-
-msgid "Win maximum payout if the exit spot is lower than or equal to the lower barrier."
-msgstr "Gagnez le paiement maximum si la sortie spot est inférieure ou égale à la barrière inférieure."
+msgstr "Oups!"
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "Remportez des gains si la sortie spot est aussi égale à l’entrée spot."
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier."
-msgstr "Gagnez jusqu'au paiement maximum si le spot de sortie est entre la barrière inférieure et supérieure, proportionnellement à la différence entre le spot de sortie et la barrière inférieure."
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot."
-msgstr "Gagnez jusqu'au gain maximum si le spot de sortie est entre la barrière inférieure et supérieure, proportionnellement à la différence entre la haute barrière et le spot de sortie."
 
 msgid "Winning the contract"
 msgstr "Remporter le contrat"
@@ -2013,7 +1988,7 @@ msgid "You can top up your virtual account with an additional %1 if your balance
 msgstr "Vous pouvez recharger votre compte virtuel avec %1 de plus si votre solde est inférieur ou égal à %2."
 
 msgid "You cannot use your real money account with Deriv at this time."
-msgstr ""
+msgstr "Vous ne pouvez pas utiliser votre compte en argent réel avec Deriv pour le moment."
 
 msgid "You did not change anything."
 msgstr "Vous n'avez effectué aucune modification."
@@ -2022,19 +1997,16 @@ msgid "You do not need to authenticate your account at this time.%1We will infor
 msgstr "Vous n'avez pas besoin d'authentifier votre compte pour le moment.%1Nous vous informerons lorsque votre compte devra être authentifié."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr ""
+msgstr "Vous avez déjà retiré l'équivalent de %1%2 au total au cours des %3 derniers jours."
 
 msgid "You have already withdrawn %1%2."
-msgstr ""
+msgstr "Vous avez déjà retiré %1%2."
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Vous n'avez pas assez de fonds dans votre compte Binary, s’il vous plaît <a href=\"%1\"> Ajouter des fonds</a>."
 
 msgid "You have not granted access to any applications."
 msgstr "Vous n'avez acheté aucun contrat."
-
-msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr "Vous avez choisi d'être exclu de Binary.com jusqu'au %1. Veuillez %2contactez-nous%3 pour obtenir de l'aide."
 
 msgid "You have reached the limit."
 msgstr "Vous avez atteint la limite."
@@ -2056,6 +2028,9 @@ msgstr "Vous avez désactivé l’authentification deux facteurs avec succès po
 
 msgid "You have successfully enabled two-factor authentication for your account."
 msgstr "Vous avez activé avec succès l’authentification deux facteurs pour votre compte."
+
+msgid "You have successfully set your account currency to %1."
+msgstr "Vous avez changé avec succès la devise de votre compte en %1."
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Vous devez enregistrer webtrader et obtenir un identifiant d'application avant de pouvoir utiliser un autre serveur OAuth pour l'authentification. Pour en savoir plus, consultez les informations concernant le protocole OAuth sur https://developers.binary.com/."
@@ -2085,7 +2060,7 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "Vous remportez le prix si le prix du marché se termine par le chiffre que vous avez sélectionné."
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr ""
+msgstr "Votre limite de retrait de %1 jour est actuellement %2%3."
 
 msgid "Your account has no Login/Logout activity."
 msgstr "Votre compte n'indique aucune activité de connexion/déconnexion."
@@ -2095,6 +2070,9 @@ msgstr "Votre compte n'indique aucune activité de trading."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Votre compte est entièrement authentifié et vos limites de retrait ont été levées."
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
+msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "Votre application doit être traitée comme un client professionnel est en cours de traitement."
@@ -2121,7 +2099,7 @@ msgid "Your password has been successfully reset. Please log into your account u
 msgstr "Votre mot de passe a été réinitialisé avec succès. Veuillez vous connecter à votre compte en utilisant votre nouveau mot de passe."
 
 msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr ""
+msgstr "Votre mot de passe est l'un des mots de passe les plus utilisés sur Internet. Veuillez choisir un mot de passe unique."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Votre demande de client professionnel %1n'est pas approuvée%2."
@@ -2160,7 +2138,7 @@ msgid "Your web browser (%1) is out of date and may affect your trading experien
 msgstr "Votre navigateur internet (%1) est obsolète et cela peut affecter votre expérience de trading. Procédez à vos risques et périls. %2Mise à jour de navigateur internet%3"
 
 msgid "Your withdrawal limit is %1%2."
-msgstr ""
+msgstr "Votre limite de retrait est de %1%2."
 
 msgid "account"
 msgstr "compte"
@@ -2169,7 +2147,7 @@ msgid "accounts"
 msgstr "comptes"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "options binaires, Forex, trading du Forex, trading en ligne, trading financier, trading binaire, trading d'indices, trading sur indices, trades forex, trading de matières premières, stratégie d'options binaires, courtier binaire, pari binaire, plateforme de trading d'options binaires, stratégie binaire, finance, investissement, trading"
 
 msgid "day"
 msgstr "jour"
@@ -2253,5 +2231,5 @@ msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that los
 msgstr "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
 
 msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr ""
+msgstr "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
 

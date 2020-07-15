@@ -2,20 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-13 03:03\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-07-15 02:22\n"
+"Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: dsmarttrader\n"
+"X-Crowdin-Project-ID: 397380\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File-ID: 196\n"
 "Language: th_TH\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 Account %2"
 msgstr "%1 บัญชี %2"
@@ -33,7 +35,7 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "%1 ได้ฝากเงินจาก %2 ไปยังเลขที่บัญชี %3 เรียบร้อยแล้ว หมายเลขอ้างอิงธุรกรรม: %4"
 
 msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr ""
+msgstr "%1 ช่วยให้ทุกคน สามารถเข้าร่วมในตลาดการเงินได้ง่ายขึ้น คุณสามารถเทรดด้วยเงินลงทุนขั้นต่ำเพียง 1 USD กับสกุลเงินหลัก ดัชนีหุ้น หุ้นโภคภัณฑ์ และดัชนีสังเคราะห์"
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 ได้ถูกเพิ่มเข้าในบัญชีทดลองบนแพลตฟอร์ม MT5 ของท่านแล้ว: %2"
@@ -53,9 +55,6 @@ msgstr "%1ไม่ เปลี่ยนสกุลเงินบัญชี
 msgid "%1Return to trading page%2"
 msgstr "%1กลับไปสู่หน้าซื้อขาย%2"
 
-msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr ""
-
 msgid "AM"
 msgstr "น."
 
@@ -69,7 +68,7 @@ msgid "Account access is temporarily limited. Please check your inbox for more d
 msgstr "การใช้งานบัญชีถูกจำกัดชั่วคราว โปรดตรวจสอบรายละเอียดจากกล่องข้อความของท่าน"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "การยืนยันบัญชี"
 
 msgid "Account balance:"
 msgstr "ยอดคงเหลือในบัญชี:"
@@ -84,16 +83,13 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "เพิ่ม +/ – เพื่อกำหนด Barrier Offset เช่น +0.005 หมายถึง อุปสรรคที่อยู่สูงกว่าสปอตเริ่มต้นอยู่ 0.005"
 
 msgid "Add Deriv account"
-msgstr ""
+msgstr "เพิ่มบัญชี Deriv"
 
 msgid "Adjust trade parameters"
 msgstr "ปรับแต่งตัวแปรของการเทรด"
 
 msgid "Admin"
 msgstr "แอดมิน"
-
-msgid "Advanced"
-msgstr "ขั้นสูง"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "ตลาดได้ปิดทำการแล้ว โปรดทำรายการใหม่ภายหลัง"
@@ -132,16 +128,16 @@ msgid "Are you sure you want to create your %1 account now?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ท่านต้องการสร้างบัญชี %1 ของท่านขณะนี้?"
 
 msgid "Are you sure you want to deposit in %1?"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ ว่าต้องการฝากเงินกับ %1? "
 
 msgid "Are you sure?"
 msgstr "ท่านแน่ใจแล้วหรือ?"
 
 msgid "Asian Down"
-msgstr ""
+msgstr "Asian Down"
 
 msgid "Asian Up"
-msgstr ""
+msgstr "Asian Up"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "สัญญา Asian จะถูกคืนมูลค่าที่ราคาซื้อ หากสัญญาไม่สิ้นสุดภายใน 5 นาที"
@@ -150,7 +146,7 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "ออปชั่นของ Asian ใช้การเปรียบเทียบ <strong>ช่วงราคาสุดท้าย</strong> กับค่าเฉลี่ยสปอตของช่วงเวลา"
 
 msgid "Asians"
-msgstr ""
+msgstr "Asians"
 
 msgid "Ask me later"
 msgstr "ถามภายหลัง"
@@ -165,7 +161,7 @@ msgid "Audit"
 msgstr "ตรวจสอบ"
 
 msgid "Audit page"
-msgstr ""
+msgstr "หน้าการตรวจสอบ"
 
 msgid "Aug"
 msgstr "ส.ค."
@@ -174,13 +170,7 @@ msgid "August"
 msgstr "สิงหาคม"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
-
-msgid "Authentication failed"
-msgstr ""
-
-msgid "Available Currencies"
-msgstr "สกุลเงินที่มีอยู่"
+msgstr "ยืนยันบัญชีของคุณเดี๋ยวนี้เพื่อใช้ประโยชน์จากวิธีการชำระเงินที่มีทั้งหมด"
 
 msgid "Available Markets"
 msgstr "ตลาดที่เปิดบริการ"
@@ -189,19 +179,19 @@ msgid "Average"
 msgstr "ค่าเฉลี่ย"
 
 msgid "Back to main website"
-msgstr ""
+msgstr "กลับไปยังหน้าหลัก"
 
 msgid "Back to trading"
-msgstr ""
+msgstr "กลับไปยังซื้อขาย"
 
 msgid "Balance"
 msgstr "คงเหลือ"
 
 msgid "Barrier"
-msgstr ""
+msgstr "Barrier"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "ค่า Barrier เปลี่ยนแปลง"
 
 msgid "Barrier offset"
 msgstr "การหักล้างของค่า Barrier"
@@ -211,6 +201,9 @@ msgstr "ประมูล"
 
 msgid "Binary Coin"
 msgstr "ไบนารีคอยน์"
+
+msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
+msgstr "ปัจจุบัน Binary.com รองรับ Tether (USDT) คุณสามารถฝาก USDT จาก Omni Layer ที่เปิดใช้งานของคุณ เข้าสู่บัญชี Binary.com ของคุณ"
 
 msgid "Bitcoin"
 msgstr "บิทคอยน์"
@@ -237,7 +230,7 @@ msgid "Call Spread"
 msgstr "คอลสเปรด"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Call Spread/Put Spread"
 
 msgid "Can you spare 15 minutes?"
 msgstr "ท่านพอมีเวลา 15 นาทีหรือไม่?"
@@ -249,16 +242,16 @@ msgid "Cashier"
 msgstr "แคชเชียร์"
 
 msgid "Cashier disabled"
-msgstr ""
-
-msgid "Change"
-msgstr "เปลี่ยนแปลง"
+msgstr "แคชเชียร์ถูกปิดการใช้งาน"
 
 msgid "Change API Endpoint"
 msgstr "เปลี่ยน API ปลายทาง"
 
 msgid "Change Password"
 msgstr "เปลี่ยนรหัสผ่าน"
+
+msgid "Change currency"
+msgstr "เปลี่ยนสกุลเงิน"
 
 msgid "Chart"
 msgstr "แผนภูมิ"
@@ -270,7 +263,7 @@ msgid "Charting for this underlying is delayed"
 msgstr "กราฟของผลิตภัณฑ์อ้างอิงนี้ล่าช้า"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "โปรดตรวจสอบการเชื่อมต่อของคุณ"
 
 msgid "Checked"
 msgstr "ตรวจสอบแล้ว"
@@ -294,7 +287,7 @@ msgid "Close"
 msgstr "ปิด"
 
 msgid "Close time"
-msgstr ""
+msgstr "เวลาปิด"
 
 msgid "Close-Low"
 msgstr "ปิด-ต่ำ"
@@ -315,7 +308,7 @@ msgid "Commodities"
 msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Complete details"
-msgstr ""
+msgstr "รายละเอียดที่สมบรูณ์"
 
 msgid "Compressing Image"
 msgstr "ภาพที่ถูกย่อขนาด"
@@ -327,7 +320,7 @@ msgid "Continue trading"
 msgstr "ซื้อขายต่อ"
 
 msgid "Continue with Demo Account"
-msgstr ""
+msgstr "ดำเนินการต่อด้วยบัญชีทดลอง"
 
 msgid "Contract"
 msgstr "สัญญา"
@@ -336,28 +329,28 @@ msgid "Contract Confirmation"
 msgstr "การยืนยันสัญญา"
 
 msgid "Contract details"
-msgstr ""
+msgstr "รายละเอียดของสัญญา"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "สิ้นสุดของสัญญา"
 
 msgid "Contract has not started yet"
 msgstr "สัญญายังไม่เริ่ม"
 
 msgid "Contract information"
-msgstr ""
+msgstr "ข้อมูลของสัญญา"
 
 msgid "Contract period"
 msgstr "ระยะเวลาสัญญา"
 
 msgid "Contract result"
-msgstr ""
+msgstr "ผลลัพธ์ของสัญญา"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "เริ่มต้นของสัญญา"
 
 msgid "Contract type"
-msgstr ""
+msgstr "ประเภทของสัญญา"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อระบบซื้อขายได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
@@ -368,11 +361,11 @@ msgstr "คู่สัญญา"
 msgid "Country of Residence"
 msgstr "ประเทศที่พำนัก"
 
-msgid "Create"
-msgstr "สร้าง"
-
 msgid "Create %1 account"
 msgstr "สร้างบัญชี %1"
+
+msgid "Create account"
+msgstr "สร้างบัญชี"
 
 msgid "Credit/Debit"
 msgstr "เครดิต/เดบิต"
@@ -390,7 +383,7 @@ msgid "Current password"
 msgstr "รหัสผ่านปัจจุบัน"
 
 msgid "Current time"
-msgstr ""
+msgstr "เวลาปัจจุบัน"
 
 msgid "Date"
 msgstr "วันที่"
@@ -399,7 +392,7 @@ msgid "Date and Time"
 msgstr "วันที่และเวลา"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "ค่าธรรมเนียมของการยกเลิกข้อตกลง"
 
 msgid "Dec"
 msgstr "ธ.ค."
@@ -419,14 +412,14 @@ msgstr "บัญชีทดลองใช้"
 msgid "Demo Accounts"
 msgstr "บัญชีทดลองใช้"
 
-msgid "Demo Advanced"
-msgstr "การสาธิตขั้นสูง"
+msgid "Demo Financial"
+msgstr "บัญชีทดลอง Financial"
 
-msgid "Demo Standard"
-msgstr "การสาธิตตามมาตรฐาน"
+msgid "Demo Financial STP"
+msgstr "บัญชีทดลอง Financial STP"
 
-msgid "Demo Synthetic Indices"
-msgstr "สาธิตดัชนีสังเคราะห์"
+msgid "Demo Synthetic"
+msgstr "บัญชีทดลอง ดัชนีสังเคราะห์"
 
 msgid "Deposit"
 msgstr "ฝาก"
@@ -435,7 +428,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "ได้มีการปิดการใช้งานการฝากและถอนเงินในบัญชีของท่าน โปรดตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
 
 msgid "Deriv Accounts"
-msgstr ""
+msgstr "บัญชี Deriv"
 
 msgid "Description"
 msgstr "รายละเอียด"
@@ -466,12 +459,6 @@ msgstr "ดิจิตต่ำกว่า (Digit Under)"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "สัญญา Digit จะถูกคืนมูลค่าที่ราคาซื้อ หากสัญญาไม่สิ้นสุดภายใน 5 นาที"
-
-msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr ""
-
-msgid "Digital options trading disabled"
-msgstr ""
 
 msgid "Digits"
 msgstr "ตัวเลข (Digits)"
@@ -507,7 +494,7 @@ msgid "End Time"
 msgstr "เวลาสิ้นสุด"
 
 msgid "End time"
-msgstr ""
+msgstr "เวลาสิ้นสุด"
 
 msgid "Endpoint"
 msgstr "จุดสิ้นสุด"
@@ -561,10 +548,10 @@ msgid "Exit spot"
 msgstr "สปอตสิ้นสุด"
 
 msgid "Exit spot time"
-msgstr ""
+msgstr "เวลาสิ้นสุดของ spot"
 
 msgid "Exit time"
-msgstr ""
+msgstr "เวลาสิ้นสุด"
 
 msgid "Expiry date is required for %1."
 msgstr "วันหมดอายุจำเป็นสำหรับ %1"
@@ -590,8 +577,14 @@ msgstr "ขนาดไฟล์ (%1) เกินกว่าที่อนุ
 msgid "Final price"
 msgstr "ราคาสุดท้าย"
 
+msgid "Financial"
+msgstr "บัญชี Financial"
+
 msgid "Financial Account"
 msgstr "บัญชีการเงิน"
+
+msgid "Financial STP"
+msgstr "บัญชี Financial STP"
 
 msgid "Finish"
 msgstr "เสร็จสิ้น"
@@ -633,7 +626,7 @@ msgid "Guide"
 msgstr "คำแนะนำ"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr ""
+msgstr "ดังนั้น จำนวณเงินที่คุณสามารถถอนได้ ขึ้นอยู่กับ %1%2 ยอดเงินที่มีอยู่ในบัญชีของคุณ"
 
 msgid "High"
 msgstr "สูง"
@@ -675,13 +668,13 @@ msgid "Higher or equal"
 msgstr "สูงกว่า หรือ เท่ากับ"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "สูงขึ้น/ต่ำลง"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "สัญญา Higher/Lower จะถูกคืนมูลค่าที่ราคาซื้อหาก มีจำนวนช่วงราคาน้อยกว่า 2 ช่วง ระหว่างเวลาเริ่มต้นกระทั่งเวลาสิ้นสุด"
 
 msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr ""
+msgstr "คำแนะนำ: จะใช้เวลาประมาณ %1%2 เพื่อถอดรหัสผ่านของคุณ"
 
 msgid "Hour"
 msgstr "ชั่วโมง"
@@ -726,7 +719,7 @@ msgid "If you select \"Differs\", you will win the payout if the <strong>last di
 msgstr "หากท่านเลือก \"Differs\" ท่านจะได้รับชำระเงินเมื่อ <strong>เลขหลักสุดท้าย</strong> ของช่วงราคาสุดท้ายมีค่า <strong>ต่าง</strong>จาก<strong>ค่าที่ท่านทำนาย</strong>"
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "หากท่านเลือก \"Does Not Touch\" ท่านจะได้รับชำระเงินเมื่อตลาดไม่แตะค่า <strong>Barrier</strong> เลย ณ เวลาใดๆ ใน <strong>ระยะเวลาของสัญญา</strong>"
+msgstr "หากท่านเลือก \"ไม่สัมผัส\" ท่านจะได้รับชำระเงินเมื่อตลาดไม่แตะค่า <strong>Barrier</strong> เลย ณ เวลาใดๆ ใน <strong>ระยะเวลาของสัญญา</strong>"
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
 msgstr "หากท่านเลือก \"Ends Between\" ท่านจะได้รับชำระเงินเมื่อ <strong>สปอตสุดท้าย</strong> มีค่าสูงกว่า <strong>ค่า Barrier ต่ำ</strong> และมีค่าต่ำกว่า <strong>ค่า Barrier สูง</strong>"
@@ -777,7 +770,7 @@ msgid "If you select \"Stays Between\", you win the payout if the market stays b
 msgstr "หากท่านเลือก \"Stay Between\" ท่านจะได้รับชำระเงินเมื่อตลาดมีค่าอยู่ระหว่าง (โดยไม่แตะ) <strong>ค่า Barrier สูง</strong> หรือ <strong>ค่า Barrier ต่ำ</strong> ณ เวลาใดๆ ใน <strong>ระยะเวลาของสัญญา</strong>"
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "หากท่านเลือก \"Touch\" ท่านจะได้รับชำระเงินเมื่อตลาดแตะ <strong>Barrier</strong> ณ เวลาใดๆ ระหว่าง <strong>ช่วงเวลาสัญญา</strong>"
+msgstr "หากเลือก \"สัมผัส\" จะได้รับชำระเงินเมื่อตลาดแตะ <strong>Barrier</strong> ณ เวลาใดๆ ระหว่าง <strong>ช่วงเวลาสัญญา</strong>"
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
 msgstr "หากท่านเลือก \"Under\" ท่านจะได้รับชำระเงินเมื่อ <strong>เลขหลักสุดท้าย</strong> ของช่วงราคาสุดท้ายมีค่า <strong>น้อยกว่าค่าที่ท่านทำนาย</strong>"
@@ -819,7 +812,7 @@ msgid "In the EU, financial binary options are only available to professional in
 msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินไบนารีออปชันมีให้ไว้สำหรับนักลงทุนผู้เชี่ยวชาญเท่านั้น"
 
 msgid "In/Out"
-msgstr ""
+msgstr "เข้า/ออก"
 
 msgid "Indicates required field"
 msgstr "ระบุฟิลด์ข้อมูลที่ต้องมีข้อมูล"
@@ -831,7 +824,7 @@ msgid "Insufficient balance."
 msgstr "ยอดคงเหลือไม่เพียงพอ"
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "รหัสผ่านแอพ ไม่ถูกต้อง"
 
 msgid "Invalid document format."
 msgstr "รูปแบบเอกสารไม่ถูกต้อง"
@@ -867,7 +860,7 @@ msgid "Jurisdiction"
 msgstr "เขตอำนาจศาล"
 
 msgid "Language settings"
-msgstr ""
+msgstr "ตั้งค่าภาษา"
 
 msgid "Last Digit Prediction"
 msgstr "การพยากรณ์ตัวเลขสุดท้าย"
@@ -897,7 +890,7 @@ msgid "Log out"
 msgstr "ออกจากระบบ"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Loss"
 msgstr "ขาดทุน"
@@ -924,7 +917,7 @@ msgid "Lower or equal"
 msgstr "ต่ำกว่า หรือ เท่ากับ"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "การถอนเงิน MT5 ถูกปิดการใช้งาน"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "ได้มีการปิดการใช้งานการถอนเงิน MT5 ในบัญชีของท่าน โปรดตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
@@ -936,13 +929,7 @@ msgid "March"
 msgstr "มีนาคม"
 
 msgid "Matches/Differs"
-msgstr ""
-
-msgid "Maximum Payout"
-msgstr "ยอดเงินที่ได้รับสูงสุด"
-
-msgid "Maximum Profit"
-msgstr "กำไรสูงสุด"
+msgstr "Matches/Differs"
 
 msgid "Maximum multiplier of 1000."
 msgstr "ตัวคูณสูงสุด 1000 เท่า"
@@ -954,7 +941,7 @@ msgid "May"
 msgstr "พฤษภาคม"
 
 msgid "Menu"
-msgstr ""
+msgstr "เมนู"
 
 msgid "Minimum of %1 characters required."
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ %1"
@@ -978,10 +965,10 @@ msgid "Multiplier"
 msgstr "ตัวคูณ"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "Multiplier Down"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "Multiplier Up"
 
 msgid "Name"
 msgstr "ชื่อ"
@@ -1011,22 +998,16 @@ msgid "Next"
 msgstr "ถัดไป"
 
 msgid "No authentication required"
-msgstr ""
+msgstr "ไม่จำเป็นต้องตรวจสอบการยืนยัน"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "ไม่ได้กำหนดสกุลเงิน"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "ไม่ได้เลือกสกุลเงิน"
 
 msgid "No notifications"
-msgstr ""
-
-msgid "No payout if exit spot is above or equal to the upper barrier."
-msgstr "ไม่มีการชำระเงิน หากสปอตสุดท้ายสูงกว่า หรือ เท่ากับแบร์ริเออร์บน"
-
-msgid "No payout if exit spot is below or equal to the lower barrier."
-msgstr "ไม่มีการชำระเงิน หากสปอตสุดท้ายต่ำกว่า หรือ เท่ากับแบร์ริเออร์ล่าง"
+msgstr "ไม่มีการแจ้งเตือน"
 
 msgid "No thanks"
 msgstr "ไม่ ขอบคุณ"
@@ -1047,7 +1028,7 @@ msgid "Note: You are limited to one fiat currency account. The currency of your 
 msgstr "หมายเหตุ: ท่านถูกจำกัดสิทธิ์ไว้ที่สกุลเงินกระดาษหนึ่งบัญชี สกุลเงินของบัญชีเงินกระดาษของท่านสามารถเปลี่ยนแปลงได้ก่อนที่ท่านจะฝากเข้าบัญชีเงินกระดาษของท่านเป็นครั้งแรก หรือ ก่อนเปิดบัญชี MT5 ท่านสามารถเปิดได้เพียงหนึ่งบัญชีสำหรับแต่ละสกุลเงินดิจิทัลที่รองรับ"
 
 msgid "Notifications"
-msgstr ""
+msgstr "การแจ้งเตือน"
 
 msgid "Nov"
 msgstr "พ.ย."
@@ -1062,7 +1043,7 @@ msgid "Number of ticks:"
 msgstr "จำนวนของช่วงราคา:"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "OAuth App ID"
 
 msgid "Oct"
 msgstr "ต.ค."
@@ -1080,13 +1061,13 @@ msgid "Only %1 are allowed."
 msgstr "มีเพียง %1 ที่อนุญาตให้ใช้"
 
 msgid "Only Downs"
-msgstr ""
+msgstr "Only Downs"
 
 msgid "Only Ups"
-msgstr ""
+msgstr "Only Ups"
 
 msgid "Only Ups/Only Downs"
-msgstr ""
+msgstr "Only Ups/Only Downs"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "ตัวอักษร ตัวเลข ช่องว่าง และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
@@ -1098,7 +1079,7 @@ msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed.
 msgstr "ตัวอักษร ตัวเลข ช่องว่าง ขีดกลาง จุด และ เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr ""
+msgstr "อนุญาตให้ใช้ ตัวอักษร ตัวเลข ช่องว่าง ขีดกลาง นขลิขิต จุลภาค และอัญประกาศ เท่านั้น"
 
 msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
 msgstr "เฉพาะตัวอักษร ตัวเลข เว้นวรรค ขีดล่าง และขีดกลางเท่านั้นที่อนุญาตให้ใช้ได้สำหรับหมายเลขประจำตัว (%1)"
@@ -1125,7 +1106,7 @@ msgid "Opens"
 msgstr "เปิด"
 
 msgid "Over/Under"
-msgstr ""
+msgstr "Over/Under"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "สัญญา Over/Under จะถูกคืนมูลค่าที่ราคาซื้อหากสัญญาไม่สิ้นสุดภายใน 5 นาที"
@@ -1152,10 +1133,10 @@ msgid "Payments"
 msgstr "การชำระเงิน"
 
 msgid "Payout"
-msgstr "การชำระเงิน"
+msgstr "ชำระเงิน"
 
 msgid "Payout range"
-msgstr ""
+msgstr "Payout range"
 
 msgid "Pending"
 msgstr "ค้างอยู่"
@@ -1178,9 +1159,6 @@ msgstr "โปรดฝาก% %2 ยังบัญชีของท่าน"
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "โปรด %1ลงชื่อเข้าใช้%2 หรือ %3ลงทะเบียน%4 เพื่อเข้าชมหน้านี้"
 
-msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr ""
-
 msgid "Please accept the terms and conditions."
 msgstr "โปรดยอมรับข้อตกลงและเงื่อนไข"
 
@@ -1200,7 +1178,7 @@ msgid "Please complete the %1financial assessment form%2 to lift your withdrawal
 msgstr "โปรดบันทึกผล %1แบบฟอร์มการประเมินทางการเงิน%2 เพื่อเพิ่มวงเงินการซื้อขายและการถอนเงินของท่าน"
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "โปรดกรอกรายละเอียดส่วนบุคคลของคุณให้เรียบร้อย ก่อนที่จะดำเนินการต่อ"
 
 msgid "Please confirm that all the information above is true and complete."
 msgstr "โปรดยืนยันว่า ข้อมูลทั้งหมดข้างต้นถูกต้อง และครบถ้วน"
@@ -1215,10 +1193,10 @@ msgid "Please enter a valid Login ID."
 msgstr "โปรดป้อนรหัสผู้ใช้งานที่ถูกต้อง"
 
 msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr ""
+msgstr "โปรดใส่หมายเลขโทรศัพท์ให้ถูกต้อง พร้อมกับรหัสประเทศ (เช่น +15417541234)"
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr ""
+msgstr "โปรดทราบว่าสกุลเงินที่เลือกได้รับอนุญาตสำหรับบัญชีที่ จำกัด เท่านั้น"
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "กรุณาสมัครอีกครั้ง เมื่อท่านมีคุณสมบัติตามเกณฑ์ที่กำหนด"
@@ -1233,7 +1211,7 @@ msgid "Please select a country"
 msgstr "โปรดระบุประเทศ"
 
 msgid "Please select a reason."
-msgstr ""
+msgstr "โปรดเลือกเหตุผล"
 
 msgid "Please select a valid time."
 msgstr "โปรดระบุเวลาที่ถูกต้อง"
@@ -1247,20 +1225,20 @@ msgstr "โปรดระบุค่าจากตัวเลือก"
 msgid "Please select the currency for this account:"
 msgstr "โปรดกำหนดสกุลเงินของบัญชีนี้"
 
-msgid "Please set the currency of your account to enable trading."
-msgstr ""
+msgid "Please set the currency of your account."
+msgstr "โปรดกำหนดสกุลเงินของบัญชีของคุณ"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "โปรดตั้งค่าวงเงินซื้อขายต่อวัน %130 ของท่าน %2 เพื่อลบวงเงินฝาก"
 
 msgid "Please specify the reasons for closing your accounts"
-msgstr ""
+msgstr "โปรดระบุเหตุผล ในการปิดบัญชีของคุณ"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "โปรดส่งเอกสาร หลักฐานที่อยู่ของคุณ"
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "โปรดส่งเอกสาร หลักฐานการยืนยันตัวตนของคุณ"
 
 msgid "Postal Code/ZIP"
 msgstr "รหัสไปรษณีย์"
@@ -1272,10 +1250,10 @@ msgid "Potential Profit"
 msgstr "ประมาณการกำไร"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "Potential payout"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "คาดการณ์ กำไร/ขาดทุน"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "พยากรณ์ทิศทาง<br />และซื้อ"
@@ -1287,31 +1265,31 @@ msgid "Profit"
 msgstr "กำไร"
 
 msgid "Profit table"
-msgstr ""
+msgstr "ตารางผลกำไร"
 
 msgid "Profit/Loss"
 msgstr "กำไร/ขาดทุน"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "กำไร/ขาดทุน"
 
 msgid "Proof of address"
 msgstr "หลักฐานแสดงที่อยู่"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "เอกสารการแสดงที่อยู่ของคุณ หมดอายุแล้ว"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "โปรดส่งเอกสาร การแสดงที่อยู่ของคุณ"
 
 msgid "Proof of identity"
 msgstr "หลักฐานแสดงตัวบุคคล"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "เอกสารการแสดงตัวตนของคุณ หมดอายุแล้ว"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "โปรดส่งเอกสาร การแสดงตัวตนของคุณ"
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -1323,13 +1301,13 @@ msgid "Purchase Time"
 msgstr "เวลาซื้อ"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "ราคาซื้อ"
 
 msgid "Purchase request sent"
 msgstr "คำขอสั่งซื้อได้ถูกส่งแล้ว"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "เวลาซื้อ"
 
 msgid "Put Spread"
 msgstr "พุทสเปรด"
@@ -1346,14 +1324,14 @@ msgstr "จริง"
 msgid "Real Account"
 msgstr "บัญชีจริง"
 
-msgid "Real Advanced"
-msgstr "จริงขั้นสูง"
+msgid "Real Financial"
+msgstr "บัญชีจริง Financial"
 
-msgid "Real Standard"
-msgstr "มาตรฐานจริง"
+msgid "Real Financial STP"
+msgstr "บัญชีจริง Financial STP"
 
-msgid "Real Synthetic Indices"
-msgstr "ดัชนีสังเคราะห์จริง"
+msgid "Real Synthetic"
+msgstr "บัญชีจริง ดัชนีสังเคราะห์"
 
 msgid "Real-Money Account"
 msgstr "บัญชีเงินจริง"
@@ -1365,46 +1343,46 @@ msgid "Ref."
 msgstr "อ้างอิง"
 
 msgid "Reference ID"
-msgstr ""
+msgstr "หมายเลขรหัส อ้างอิง"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "เวลาที่เหลืออยู่"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "ยกเลิกข้อจำกัดการฝากเงิน"
 
 msgid "Reports"
-msgstr ""
+msgstr "รายงาน"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "คุณต้องเปิดการใช้งาน ในการจัดเก็บข้อมูลบนเว็บเบราเซอร์ของคุณ เพื่อที่จะได้ทำงานได้อย่างถูกต้อง โปรดเปิดการใช้งาน หรือออกจากโหมดความเป็นส่วนตัว"
 
 msgid "Resale not offered"
 msgstr "การขายสัญญาไม่ได้ถูกนำเสนอ"
 
 msgid "Reset Barrier"
-msgstr ""
+msgstr "Reset Barrier"
 
 msgid "Reset Call"
-msgstr ""
+msgstr "Reset Call"
 
 msgid "Reset Call/Reset Put"
-msgstr ""
+msgstr "Reset Call/Reset Put"
 
 msgid "Reset Password"
 msgstr "ตั้งรหัสผ่านใหม่"
 
 msgid "Reset Put"
-msgstr ""
+msgstr "Reset Put"
 
 msgid "Reset Time"
-msgstr ""
+msgstr "รีเซ็ตเวลา"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "Reset barrier"
 
 msgid "Reset time"
-msgstr ""
+msgstr "รีเซ็ตเวลา"
 
 msgid "Reset to original settings"
 msgstr "ปรับการตั้งค่ากลับไปสู่ค่าเริ่มต้น"
@@ -1419,7 +1397,7 @@ msgid "Revoke access"
 msgstr "การเพิกถอนการเข้าถึง"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "เพิ่มชึ้น/ลดลง"
 
 msgid "Rise/Fall contracts will be refunded if:"
 msgstr "ดำเนินการคืนเงินในสัญญา Rise/Fall ในกรณี"
@@ -1449,7 +1427,7 @@ msgid "Select Trade Type"
 msgstr "เลือกประเภทของการซื้อขาย"
 
 msgid "Select currency"
-msgstr ""
+msgstr "เลือกสกุลเงิน"
 
 msgid "Select date"
 msgstr "ระบุวันที่"
@@ -1467,10 +1445,10 @@ msgid "Select your trade type"
 msgstr "กำหนด ประเภทการเทรดของท่าน"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "Selected tick"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "การยกเว้นตนเอง"
 
 msgid "Sell"
 msgstr "ขาย"
@@ -1490,11 +1468,11 @@ msgstr "เซิร์ฟเวอร์"
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "รอบระยะเวลาการซื้อขายไม่สามารถมากกว่า 6 สัปดาห์"
 
-msgid "Set Currency"
-msgstr "ตั้งค่าสกุลเงิน"
-
 msgid "Set account currency"
-msgstr ""
+msgstr "กำหนดสกุลเงินของบัญชี"
+
+msgid "Set currency"
+msgstr "กำหนดสกุลเงิน"
 
 msgid "Settles"
 msgstr "ชำระเงิน"
@@ -1524,7 +1502,7 @@ msgid "Sign up"
 msgstr "ลงทะเบียน"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "ขออภัย ไม่สามารถเปิดบัญชีในประเทศของท่าน"
@@ -1536,10 +1514,10 @@ msgid "Sorry, an error occurred while processing your request."
 msgstr "ขออภัย มีความผิดพลาดเกิดขึ้นขณะที่ประมวลผลความประสงค์ของท่าน"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr ""
+msgstr "ขออภัย การซื้อขาย binary options ไม่สามารถใช้งานได้ในบัญชี financial ของคุณ"
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr ""
+msgstr "ขออภัย การฝากเงินสำหรับสกุลเงินนี้ ขณะนี้ถูกปิดการใช้งาน"
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "ขออภัย ฟังก์ชันนี้มีให้ใช้งานเฉพาะบัญชีทดลองใช้เท่านั้น"
@@ -1548,22 +1526,19 @@ msgid "Sorry, this feature is not available in your jurisdiction."
 msgstr "ขออภัย ฟังก์ชันนี้ไม่พร้อมใช้งานในพื้นที่ของท่าน"
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr ""
+msgstr "ขออภัย การถอนเงินสำหรับสกุลเงินนี้ ขณะนี้ถูกปิดการใช้งาน"
 
 msgid "Spot"
 msgstr "สปอต"
 
 msgid "Spot time"
-msgstr ""
+msgstr "เวลา spot"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "เวลา spot (GMT)"
 
 msgid "Stake"
 msgstr "วางเงิน"
-
-msgid "Standard"
-msgstr "มาตรฐาน"
 
 msgid "Start time"
 msgstr "เวลาเริ่ม"
@@ -1572,7 +1547,7 @@ msgid "State/Province"
 msgstr "รัฐ/จังหวัด"
 
 msgid "Statements"
-msgstr ""
+msgstr "รายการธุรกรรม"
 
 msgid "Status"
 msgstr "สถานะ"
@@ -1590,7 +1565,7 @@ msgid "Step"
 msgstr "ขั้น"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "ดัชนีหุ้น"
 
 msgid "Stocks"
 msgstr "หลักทรัพย์"
@@ -1613,6 +1588,9 @@ msgstr "เรียบร้อยแล้ว"
 msgid "Sunday"
 msgstr "วันอาทิตย์"
 
+msgid "Synthetic"
+msgstr "บัญชี ดัชนีสังเคราะห์"
+
 msgid "Synthetic Indices"
 msgstr "ดัชนีสังเคราะห์"
 
@@ -1622,11 +1600,8 @@ msgstr "เป้าหมาย"
 msgid "Telephone"
 msgstr "โทรศัพท์"
 
-msgid "Term & conditions updated"
-msgstr ""
-
 msgid "Tether"
-msgstr ""
+msgstr "Tether"
 
 msgid "Th"
 msgstr "พฤ"
@@ -1662,7 +1637,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "%1 เวลาเริ่มต้น %2 เริ่มขึ้นเมื่อสัญญาได้ถูกนำเข้าประมวลผลในระบบของเรา"
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1เวลาเริ่มต้น%2 คือเมื่อสัญญาถูกประมวลผล โดยระบบของเราและ %1entry spot%2 คือ %1next tick%2 หลังจากนั้น"
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "<strong>ระยะเวลาของสัญญา</strong> คือ ช่วงเวลาระหว่าง <strong>ช่วงถัดไป</strong> หลังจาก <strong>เวลาเริ่มต้น</strong> และ <strong>เวลาสิ้นสุด</strong>"
@@ -1683,7 +1658,7 @@ msgid "The <strong>start time</strong> is when the contract is processed by our 
 msgstr "<strong>เวลาเริ่มต้น</strong>คือ เวลาเมื่อสัญญาถูกประมวลผลโดยเครื่องแม่ข่ายในระบบของเรา และ<strong>สปอตเริ่มต้น</strong> คือ <strong>ช่วงราคาถัดไป</strong> หลังจากนั้น"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr "<strong>เวลาเริ่มต้น</strong> คือ เวลาที่สัญญาถูกนำเข้าประมวลผลโดยระบบของเรา"
+msgstr "<strong>เวลาเริ่มต้น</strong> คือ เวลาที่สัญญาถูกนำเข้าประมวลผลโดยระบบ"
 
 msgid "The Average"
 msgstr "ค่าเฉลี่ย"
@@ -1707,7 +1682,7 @@ msgid "The page you requested could not be found. Either it no longer exists or 
 msgstr "ไม่พบหน้าที่ท่านเรียก หรือ หน้าดังกล่าวได้ถูกนำออกจากระบบ หรือ ท่านเรียกที่อยู่ไม่ถูกต้อง โปรดตรวจสอบตัวสะกด"
 
 msgid "The reason should be between 5 and 250 characters"
-msgstr ""
+msgstr "เหตุผลคือ ควรอยู่ระหว่าง 5 ถึง 250 ตัวอักษร"
 
 msgid "The reset time is %1"
 msgstr "เวลารีเซ็ตเป็น %1"
@@ -1739,8 +1714,11 @@ msgstr "บัญชีนี้ถูกปิดใช้งาน"
 msgid "This account is excluded until %1"
 msgstr "บัญชีนี้จะถูกพักการใช้งาน จนกระทั่ง %1"
 
+msgid "This contract is only available on %1DTrader%2."
+msgstr "สัญญานี้มีเฉพาะใน %1DTrader%2"
+
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr ""
+msgstr "สัญญานี้สามารถใช้งานได้กับ DTrader เท่านั้น %1%2ไปที่ Dtrader%3 เพื่อทำการปิด หรือยกเลิกสัญญานี้"
 
 msgid "This contract lost"
 msgstr "สัญญานี้ขาดทุน"
@@ -1821,19 +1799,19 @@ msgid "Total Profit/Loss"
 msgstr "รวมกำไร/ขาดทุน"
 
 msgid "Total assets"
-msgstr ""
+msgstr "สินทรัพย์ทั้งหมด"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "สินทรัพย์ทั้งหมดในบัญชี Deriv ของคุณ"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "ยอดรวม กำไร/ขาดทุน"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "สัมผัส/ไม่สัมผัส"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "สัญญา Touch/No Touch จะถูกคืนมูลค่าที่ราคาซื้อหากช่วงราคามีน้อยกว่า 2 ช่วง ระหว่างเวลาเริ่มต้นกระทั่งเวลาสิ้นสุด"
+msgstr "สัญญา สัมผัส/ไม่สัมผัส จะถูกคืนมูลค่าที่ราคาซื้อหากช่วงราคามีน้อยกว่า 2 ช่วง ระหว่างเวลาเริ่มต้นกระทั่งเวลาสิ้นสุด"
 
 msgid "Touches"
 msgstr "แตะ"
@@ -1844,26 +1822,29 @@ msgstr "เมือง"
 msgid "Trade"
 msgstr "เทรด"
 
-msgid "Trading and deposit disabled"
-msgstr ""
+msgid "Trading Information"
+msgstr "ข้อมูลการซื้อขาย"
 
-msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgid "Trading and deposit disabled"
+msgstr "การซื้อขายและการฝากเงิน ถูกปิดการใช้งาน"
+
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr ""
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "การซื้อขายสัญญาส่วนต่าง (CFD) ของดัชนีสังเคราะห์อาจไม่เหมาะสมสำหรับทุกคน โปรดแน่ใจว่า คุณเข้าใจถึงความเสี่ยงที่เกี่ยวข้องอย่างแท้จริง รวมถึงความเป็นไปได้ที่จะสูญเสียเงินทุนทั้งหมดในบัญชี MT5 ของคุณ การพนันสามารถเสพติดได้ โปรดดำเนินธุรกรรมซื้อขายด้วยความรับผิดชอบ"
 
 msgid "Trading is unavailable at this time."
 msgstr "ไม่สามารถทำการซื้อขายได้ในขณะนี้"
 
 msgid "Transaction ID"
-msgstr ""
+msgstr "รหัสธุรกรรม"
 
 msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "ดำเนินธุรกรรมโดย %1 (App ID: %2)"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "โปรดลอง %1ดัชนีสังเคราะห์%2"
 
 msgid "Try our other markets."
 msgstr "ลองตลาดอื่นๆ ของเรา"
@@ -1890,7 +1871,7 @@ msgid "Up to %1 decimal places are allowed."
 msgstr "ตำแหน่งทศนิยมถึง %1 หลักเท่านั้น"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "ขึ้น/ลง"
 
 msgid "Upcoming Events"
 msgstr "กิจกรรมในอนาคต"
@@ -1901,8 +1882,14 @@ msgstr "อัพเกรดเดี๋ยวนี้"
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "รหัสยืนยันไม่ถูกต้อง โปรดใช้ลิงค์ที่ส่งไปยังอีเมล์ของท่าน"
 
+msgid "Verification required"
+msgstr "ต้องมีการยืนยัน"
+
 msgid "Verify Reset Password"
 msgstr "ตรวจสอบรหัสผ่านใหม่"
+
+msgid "Verify identity"
+msgstr "ยืนยันตัวตน"
 
 msgid "View"
 msgstr "ดู"
@@ -1938,22 +1925,10 @@ msgid "When you click \"OK\" you will be excluded from trading on the site until
 msgstr "เมื่อท่านเลือก \"OK\" ท่านจะถูกพักจากระบบซื้อขายกระทั่งวันที่ที่ท่านระบุ"
 
 msgid "Whoops!"
-msgstr ""
-
-msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
-msgstr "ชนะและได้รับเงินสูงสุด หากสปอตสุดท้ายสูงกว่า หรือ เท่ากับแบร์ริเออร์บน"
-
-msgid "Win maximum payout if the exit spot is lower than or equal to the lower barrier."
-msgstr "ชนะและได้รับเงินสูงสุด หากสปอตสุดท้ายต่ำกว่า หรือ เท่ากับแบร์ริเออร์ล่าง"
+msgstr "Whoops!"
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "ชนะ เมื่อสปอตสิ้นสุดเท่ากับสปอตเริ่มต้น"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier."
-msgstr "ชนะและได้รับเงินถึงสูงสุด หากสปอตสุดท้ายอยู่ระหว่างแบร์ริเออร์ล่างและบน ในสัดส่วนความแตกต่างระหว่างสปอตสุดท้ายและค่าแบร์ริเออร์ล่าง"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot."
-msgstr "ชนะและได้รับเงินถึงสูงสุด หากสปอตสุดท้ายอยู่ระหว่างแบร์ริเออร์ล่างและบน ในสัดส่วนความแตกต่างระหว่างค่าแบร์ริเออร์บนและสปอตสุดท้าย"
 
 msgid "Winning the contract"
 msgstr "ชนะสัญญา"
@@ -1965,10 +1940,10 @@ msgid "Withdrawal"
 msgstr "ถอนเงิน"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "ขีดจํากัดของ การถอนเงินและการซื้อขาย"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "การถอนเงิน ถูกปิดการใช้งาน"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "ได้มีการปิดการใช้งานการถอนเงินในบัญชีของท่าน กรุณาตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
@@ -1992,7 +1967,7 @@ msgid "You are limited to one fiat account. You can change the currency of your 
 msgstr "ท่านถูกจำกัดให้มีบัญชีเงินกระดาษเพียงหนึ่งบัญชี ท่านสามารถแก้ไขสกุลเงินของบัญชีเงินกระดาษได้ตลอดเวลา ก่อนที่ท่านฝากเงินครั้งแรก หรือ ก่อนเปิดบัญชี MT5"
 
 msgid "You are offline"
-msgstr ""
+msgstr "คุณไม่สามารถติดต่อได้ใช่ไหม"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "ท่านสามารถ %1ตั้งค่าสกุลเงินใหม่%2 ก่อนท่านดำเนินการฝากเงินครั้งแรก หรือ ก่อนเปิดบัญชี MT5"
@@ -2013,28 +1988,25 @@ msgid "You can top up your virtual account with an additional %1 if your balance
 msgstr "ท่านสามารถเติมเงินในบัญชีเสมือน จำนวน %1 หากมียอดคงเหลือในบัญชี %2 หรือ น้อยกว่า"
 
 msgid "You cannot use your real money account with Deriv at this time."
-msgstr ""
+msgstr "คุณไม่สามารถใช้งานบัญชีจริงของ Deriv ได้ในขณะนี้"
 
 msgid "You did not change anything."
 msgstr "ท่านไม่ได้แก้ไขค่าใดๆ"
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr ""
+msgstr "คุณยังไม่จำเป็นต้องทำการตรวจสอบยืนยันบัญขีในขณะนี้ %1เราจะแจ้งให้คุณทราบ เมื่อบัญชีของคุณต้องได้รับการตรวจสอบยืนยัน"
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr ""
+msgstr "คุณได้ทำการถอน %1%2 หรือเทียบเท่า ในช่วง %3 วันที่ผ่านมา"
 
 msgid "You have already withdrawn %1%2."
-msgstr ""
+msgstr "คุณได้ทำการถอนแล้ว %1%2"
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "เงินทุนของท่านในบัญชี Binary ไม่เพียงพอ โปรด <a href=\"%1\">ฝากเงิน</a>"
 
 msgid "You have not granted access to any applications."
 msgstr "ท่านไม่ได้รับอนุญาตให้เข้าใช้งานระบบใดๆ"
-
-msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr ""
 
 msgid "You have reached the limit."
 msgstr "เกินวงเงินของท่าน"
@@ -2057,11 +2029,14 @@ msgstr "ระบบได้ปิดการใช้งานการรั
 msgid "You have successfully enabled two-factor authentication for your account."
 msgstr "ระบบได้เปิดการใช้งานการรับรองโดยใช้ 2 ตัวแปรผูกกับบัญชีของท่านเรียบร้อยแล้ว"
 
+msgid "You have successfully set your account currency to %1."
+msgstr "คุณได้กำหนดสกุลเงินบัญชีของคุณเป็น %1 เรียบร้อยแล้ว"
+
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "ท่านต้องลงทะเบียน และขอรหัส App ID ก่อนที่ท่านจะใช้เซิร์ฟเวอร์ OAuth ที่ต่างกันในการพิสูจน์ตัวตน สำหรับข้อมูลเพิ่มเติมสามารถอ้างอิงรายละเอียด OAuth จาก https://developers.binary.com"
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "คุณยังไม่ได้รับ การแจ้งเตื่อน"
 
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "ท่านอาจจะเปิดหนึ่งบัญชีเพื่อรอองรับเงินดิจิทัลแต่ละประเภท"
@@ -2085,7 +2060,7 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "ท่านได้กำไรเมื่อราคาตลาดสิ้นสุดด้วยตัวเลขที่ท่านเลือก"
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr ""
+msgstr "ของคุณ %1วงเงินการถอนขณะนี้%2%3"
 
 msgid "Your account has no Login/Logout activity."
 msgstr "บัญชีของท่านไม่มีประวัติ การเข้าใช้งานระบบ/การออกจากระบบ"
@@ -2095,6 +2070,9 @@ msgstr "บัญชีของท่านไม่มีประวัติ
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "บัญชีของท่านได้รับการยืนยันตัวตนอย่างสมบูรณ์แล้ว และวงเงินการถอนเงินของท่านได้รับการยกระดับโดยการเพิ่มวงเงินแล้ว"
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
+msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "ใบสมัครของท่านเพื่อปรับสถานะเป็นลูกค้าผู้เชี่ยวชาญ (Professional Client) กำลังถูกดำเนินการ"
@@ -2121,7 +2099,7 @@ msgid "Your password has been successfully reset. Please log into your account u
 msgstr "รหัสผ่านของท่านได้ถูกกำหนดใหม่เรียบร้อยแล้ว โปรดเข้าสู่ระบบโดยการใช้รหัสผ่านใหม่ของท่าน"
 
 msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr ""
+msgstr "รหัสผ่านของคุณเป็นหนึ่งในรหัสผ่านที่ใช้งานบ่อยที่สุดในอินเตอร์เน็ต โปรดเลือกใช้รหัสผ่านอื่น"
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "คำขอเป็นลูกค้าผู้เชี่ยวชาญของท่าน %1ไม่ได้รับการอนุมัติ%2"
@@ -2160,16 +2138,16 @@ msgid "Your web browser (%1) is out of date and may affect your trading experien
 msgstr "เว็บเบราเซอร์ของท่าน (%1) ไม่ได้ปรับปรุงให้ทันสมัย ซึ่งส่งผลต่อการใช้งานในการซื้อขายของท่าน โปรดดำเนินการเพื่อแก้ไขความเสี่ยงนี้โดยตัวท่านเองสามารถ %2 ปรับปรุงเบราเซอร์ให้เหมาะกับการใช้งาน %3"
 
 msgid "Your withdrawal limit is %1%2."
-msgstr ""
+msgstr "วงเงินการถอนของคุณ คือ %1%2"
 
 msgid "account"
-msgstr ""
+msgstr "บัญชี"
 
 msgid "accounts"
-msgstr ""
+msgstr "บัญชี"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "ไบนารีออปชั่น ฟอเร็กซ์ การซื้อขายฟอเร็กซ์ การซื้อขายออนไลน์ การซื้อขายทางการเงิน การซื้อขายแบบไบนารี ดัชนีการซื้อขาย ดัชนีการซื้อขายหุ้น การซื้อขายแลกเปลี่ยน หุ้นโภคภัณฑ์ กลยุทธ์การซื้อขายตัวเลือกไบนารี โบรกเกอร์ไบนารี เดิมพันไบนารี แพลตฟอร์มการซื้อขายไบนารีออปชั่น กลยุทธ์ไบนารี การเงิน การลงทุน การซื้อขาย"
 
 msgid "day"
 msgstr "วัน"
@@ -2193,7 +2171,7 @@ msgid "hours"
 msgstr "ชั่วโมง"
 
 msgid "including Deal Cancel. Fee"
-msgstr ""
+msgstr "รวมถึงค่าธรรมเนียมในการยกเลิกข้อตกลง"
 
 msgid "letters"
 msgstr "ตัวอักษร"
@@ -2247,11 +2225,11 @@ msgid "years"
 msgstr "ปี"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}อย่างไรก็ตาม Binary Investments (Europe) Ltd ได้ทำการประเมินความรู้และประสบการณ์ของคุณและเห็นว่าผลิตภัณฑ์เหมาะสมสำหรับคุณ"
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}นี่คือสินค้าที่มีเลเวอเรจ คุณควรทราบว่าอาจมีการสูญเสียที่สูงกว่าจำนวนเงินที่จ่ายไป เพื่อซื้อสินค้าในตอนแรก"
 
 msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr ""
+msgstr "{SPAIN ONLY}คุณกำลังจะซื้อสินค้าที่อาจเข้าใจค่อนข้างยาก สัญญาที่แตกต่างออกไปและการแลกเปลี่ยน ตามกฎทั่วไป CNMV เห็นว่าสินค้าดังกล่าวไม่เหมาะสมสำหรับลูกค้ารายย่อยเนื่องจากมีความซับซ้อน"
 

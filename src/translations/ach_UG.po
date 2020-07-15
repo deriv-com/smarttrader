@@ -2,16 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-13 03:03\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-07-15 02:22\n"
+"Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Crowdin-Project: dsmarttrader\n"
+"X-Crowdin-Project-ID: 397380\n"
 "X-Crowdin-Language: ach\n"
 "X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File-ID: 196\n"
 "Language: ach_UG\n"
 
 msgid "404"
@@ -53,9 +55,6 @@ msgstr "crwdns90532:0%1crwdnd90532:0%2crwdne90532:0"
 msgid "%1Return to trading page%2"
 msgstr "crwdns90536:0%1crwdnd90536:0%2crwdne90536:0"
 
-msgid "%1Your Proof of Identity or Proof of Address%2 did not meet our requirements. Please check your email for further instructions."
-msgstr "crwdns116922:0%1crwdnd116922:0%2crwdne116922:0"
-
 msgid "AM"
 msgstr "crwdns90772:0crwdne90772:0"
 
@@ -91,9 +90,6 @@ msgstr "crwdns90944:0crwdne90944:0"
 
 msgid "Admin"
 msgstr "crwdns90946:0crwdne90946:0"
-
-msgid "Advanced"
-msgstr "crwdns90952:0crwdne90952:0"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "crwdns91050:0crwdne91050:0"
@@ -176,12 +172,6 @@ msgstr "crwdns91382:0crwdne91382:0"
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "crwdns116930:0crwdne116930:0"
 
-msgid "Authentication failed"
-msgstr "crwdns116932:0crwdne116932:0"
-
-msgid "Available Currencies"
-msgstr "crwdns91418:0crwdne91418:0"
-
 msgid "Available Markets"
 msgstr "crwdns91420:0crwdne91420:0"
 
@@ -211,6 +201,9 @@ msgstr "crwdns91556:0crwdne91556:0"
 
 msgid "Binary Coin"
 msgstr "crwdns91612:0crwdne91612:0"
+
+msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
+msgstr "crwdns123124:0crwdne123124:0"
 
 msgid "Bitcoin"
 msgstr "crwdns91684:0crwdne91684:0"
@@ -251,14 +244,14 @@ msgstr "crwdns91880:0crwdne91880:0"
 msgid "Cashier disabled"
 msgstr "crwdns116936:0crwdne116936:0"
 
-msgid "Change"
-msgstr "crwdns91886:0crwdne91886:0"
-
 msgid "Change API Endpoint"
 msgstr "crwdns91888:0crwdne91888:0"
 
 msgid "Change Password"
 msgstr "crwdns91892:0crwdne91892:0"
+
+msgid "Change currency"
+msgstr "crwdns123126:0crwdne123126:0"
 
 msgid "Chart"
 msgstr "crwdns91902:0crwdne91902:0"
@@ -368,11 +361,11 @@ msgstr "crwdns92332:0crwdne92332:0"
 msgid "Country of Residence"
 msgstr "crwdns92338:0crwdne92338:0"
 
-msgid "Create"
-msgstr "crwdns92352:0crwdne92352:0"
-
 msgid "Create %1 account"
 msgstr "crwdns92354:0%1crwdne92354:0"
+
+msgid "Create account"
+msgstr "crwdns123128:0crwdne123128:0"
 
 msgid "Credit/Debit"
 msgstr "crwdns92402:0crwdne92402:0"
@@ -419,14 +412,14 @@ msgstr "crwdns92542:0crwdne92542:0"
 msgid "Demo Accounts"
 msgstr "crwdns92544:0crwdne92544:0"
 
-msgid "Demo Advanced"
-msgstr "crwdns92546:0crwdne92546:0"
+msgid "Demo Financial"
+msgstr "crwdns123130:0crwdne123130:0"
 
-msgid "Demo Standard"
-msgstr "crwdns92548:0crwdne92548:0"
+msgid "Demo Financial STP"
+msgstr "crwdns123132:0crwdne123132:0"
 
-msgid "Demo Synthetic Indices"
-msgstr "crwdns92550:0crwdne92550:0"
+msgid "Demo Synthetic"
+msgstr "crwdns123134:0crwdne123134:0"
 
 msgid "Deposit"
 msgstr "crwdns92562:0crwdne92562:0"
@@ -466,12 +459,6 @@ msgstr "crwdns92640:0crwdne92640:0"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "crwdns92642:0crwdne92642:0"
-
-msgid "Digital Options Trading has been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "crwdns116962:0%1ccrwdnd116962:0%2crwdne116962:0"
-
-msgid "Digital options trading disabled"
-msgstr "crwdns116964:0crwdne116964:0"
 
 msgid "Digits"
 msgstr "crwdns92644:0crwdne92644:0"
@@ -590,8 +577,14 @@ msgstr "crwdns93258:0%1crwdnd93258:0%2crwdne93258:0"
 msgid "Final price"
 msgstr "crwdns93266:0crwdne93266:0"
 
+msgid "Financial"
+msgstr "crwdns123136:0crwdne123136:0"
+
 msgid "Financial Account"
 msgstr "crwdns93270:0crwdne93270:0"
+
+msgid "Financial STP"
+msgstr "crwdns123138:0crwdne123138:0"
 
 msgid "Finish"
 msgstr "crwdns93300:0crwdne93300:0"
@@ -938,12 +931,6 @@ msgstr "crwdns94738:0crwdne94738:0"
 msgid "Matches/Differs"
 msgstr "crwdns94792:0crwdne94792:0"
 
-msgid "Maximum Payout"
-msgstr "crwdns94794:0crwdne94794:0"
-
-msgid "Maximum Profit"
-msgstr "crwdns94796:0crwdne94796:0"
-
 msgid "Maximum multiplier of 1000."
 msgstr "crwdns94820:0crwdne94820:0"
 
@@ -1021,12 +1008,6 @@ msgstr "crwdns118328:0crwdne118328:0"
 
 msgid "No notifications"
 msgstr "crwdns116978:0crwdne116978:0"
-
-msgid "No payout if exit spot is above or equal to the upper barrier."
-msgstr "crwdns95112:0crwdne95112:0"
-
-msgid "No payout if exit spot is below or equal to the lower barrier."
-msgstr "crwdns95114:0crwdne95114:0"
 
 msgid "No thanks"
 msgstr "crwdns95118:0crwdne95118:0"
@@ -1178,9 +1159,6 @@ msgstr "crwdns95616:0%1dcrwdnd95616:0%2crwdne95616:0"
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "crwdns95618:0%1locrwdnd95618:0%2crwdnd95618:0%3scrwdnd95618:0%4crwdne95618:0"
 
-msgid "Please accept our %1updated Terms and Conditions%2 to proceed."
-msgstr "crwdns116984:0%1ucrwdnd116984:0%2crwdne116984:0"
-
 msgid "Please accept the terms and conditions."
 msgstr "crwdns95620:0crwdne95620:0"
 
@@ -1247,8 +1225,8 @@ msgstr "crwdns95708:0crwdne95708:0"
 msgid "Please select the currency for this account:"
 msgstr "crwdns95712:0crwdne95712:0"
 
-msgid "Please set the currency of your account to enable trading."
-msgstr "crwdns116988:0crwdne116988:0"
+msgid "Please set the currency of your account."
+msgstr "crwdns123140:0crwdne123140:0"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "crwdns95722:0%13crwdnd95722:0%2crwdne95722:0"
@@ -1346,14 +1324,14 @@ msgstr "crwdns96046:0crwdne96046:0"
 msgid "Real Account"
 msgstr "crwdns96048:0crwdne96048:0"
 
-msgid "Real Advanced"
-msgstr "crwdns96050:0crwdne96050:0"
+msgid "Real Financial"
+msgstr "crwdns123142:0crwdne123142:0"
 
-msgid "Real Standard"
-msgstr "crwdns96056:0crwdne96056:0"
+msgid "Real Financial STP"
+msgstr "crwdns123144:0crwdne123144:0"
 
-msgid "Real Synthetic Indices"
-msgstr "crwdns96058:0crwdne96058:0"
+msgid "Real Synthetic"
+msgstr "crwdns123146:0crwdne123146:0"
 
 msgid "Real-Money Account"
 msgstr "crwdns96062:0crwdne96062:0"
@@ -1490,11 +1468,11 @@ msgstr "crwdns96424:0crwdne96424:0"
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "crwdns96428:0crwdne96428:0"
 
-msgid "Set Currency"
-msgstr "crwdns96434:0crwdne96434:0"
-
 msgid "Set account currency"
 msgstr "crwdns117030:0crwdne117030:0"
+
+msgid "Set currency"
+msgstr "crwdns123148:0crwdne123148:0"
 
 msgid "Settles"
 msgstr "crwdns96452:0crwdne96452:0"
@@ -1562,9 +1540,6 @@ msgstr "crwdns117034:0crwdne117034:0"
 msgid "Stake"
 msgstr "crwdns96596:0crwdne96596:0"
 
-msgid "Standard"
-msgstr "crwdns96598:0crwdne96598:0"
-
 msgid "Start time"
 msgstr "crwdns96610:0crwdne96610:0"
 
@@ -1613,6 +1588,9 @@ msgstr "crwdns96748:0crwdne96748:0"
 msgid "Sunday"
 msgstr "crwdns96764:0crwdne96764:0"
 
+msgid "Synthetic"
+msgstr "crwdns123150:0crwdne123150:0"
+
 msgid "Synthetic Indices"
 msgstr "crwdns96794:0crwdne96794:0"
 
@@ -1621,9 +1599,6 @@ msgstr "crwdns96828:0crwdne96828:0"
 
 msgid "Telephone"
 msgstr "crwdns96850:0crwdne96850:0"
-
-msgid "Term & conditions updated"
-msgstr "crwdns117038:0crwdne117038:0"
 
 msgid "Tether"
 msgstr "crwdns96884:0crwdne96884:0"
@@ -1739,6 +1714,9 @@ msgstr "crwdns97948:0crwdne97948:0"
 msgid "This account is excluded until %1"
 msgstr "crwdns97950:0%1crwdne97950:0"
 
+msgid "This contract is only available on %1DTrader%2."
+msgstr "crwdns123152:0%1crwdnd123152:0%2crwdne123152:0"
+
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr "crwdns97968:0%1crwdnd97968:0%2Gcrwdnd97968:0%3crwdne97968:0"
 
@@ -1844,11 +1822,14 @@ msgstr "crwdns98184:0crwdne98184:0"
 msgid "Trade"
 msgstr "crwdns98192:0crwdne98192:0"
 
+msgid "Trading Information"
+msgstr "crwdns123154:0crwdne123154:0"
+
 msgid "Trading and deposit disabled"
 msgstr "crwdns117048:0crwdne117048:0"
 
-msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
-msgstr "crwdns117050:0%1ccrwdnd117050:0%2crwdne117050:0"
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
+msgstr "crwdns123202:0%1ccrwdnd123202:0%2crwdne123202:0"
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr "crwdns118342:0crwdne118342:0"
@@ -1901,8 +1882,14 @@ msgstr "crwdns98504:0crwdne98504:0"
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "crwdns98572:0crwdne98572:0"
 
+msgid "Verification required"
+msgstr "crwdns123156:0crwdne123156:0"
+
 msgid "Verify Reset Password"
 msgstr "crwdns98574:0crwdne98574:0"
+
+msgid "Verify identity"
+msgstr "crwdns123158:0crwdne123158:0"
 
 msgid "View"
 msgstr "crwdns98590:0crwdne98590:0"
@@ -1940,20 +1927,8 @@ msgstr "crwdns98876:0crwdne98876:0"
 msgid "Whoops!"
 msgstr "crwdns118344:0crwdne118344:0"
 
-msgid "Win maximum payout if the exit spot is higher than or equal to the upper barrier."
-msgstr "crwdns98984:0crwdne98984:0"
-
-msgid "Win maximum payout if the exit spot is lower than or equal to the lower barrier."
-msgstr "crwdns98986:0crwdne98986:0"
-
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "crwdns98992:0crwdne98992:0"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between exit spot and lower barrier."
-msgstr "crwdns99000:0crwdne99000:0"
-
-msgid "Win up to maximum payout if exit spot is between lower and upper barrier, in proportion to the difference between upper barrier and exit spot."
-msgstr "crwdns99002:0crwdne99002:0"
 
 msgid "Winning the contract"
 msgstr "crwdns99006:0crwdne99006:0"
@@ -2033,9 +2008,6 @@ msgstr "crwdns99166:0%1crwdne99166:0"
 msgid "You have not granted access to any applications."
 msgstr "crwdns99168:0crwdne99168:0"
 
-msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr "crwdns117058:0%1crwdnd117058:0%2ccrwdnd117058:0%3crwdne117058:0"
-
 msgid "You have reached the limit."
 msgstr "crwdns99172:0crwdne99172:0"
 
@@ -2056,6 +2028,9 @@ msgstr "crwdns99188:0crwdne99188:0"
 
 msgid "You have successfully enabled two-factor authentication for your account."
 msgstr "crwdns99190:0crwdne99190:0"
+
+msgid "You have successfully set your account currency to %1."
+msgstr "crwdns123160:0%1crwdne123160:0"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "crwdns99192:0crwdne99192:0"
@@ -2095,6 +2070,9 @@ msgstr "crwdns99284:0crwdne99284:0"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "crwdns99286:0crwdne99286:0"
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
+msgstr "crwdns123204:0%1ccrwdnd123204:0%2crwdne123204:0"
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "crwdns99300:0crwdne99300:0"
