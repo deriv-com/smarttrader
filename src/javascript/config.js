@@ -17,7 +17,7 @@ const domain_app_ids = { // these domains also being used in '_common/url.js' as
 };
 
 const getCurrentBinaryDomain = () =>
-    Object.keys(domain_app_ids).find(domain => new RegExp(`.${domain}$`, 'i').test(window.location.hostname));
+    Object.keys(domain_app_ids).find(domain => domain === window.location.hostname || `www.${domain}` === window.location.hostname);
 
 const isProduction = () => {
     const all_domains = Object.keys(domain_app_ids).map(domain => {
