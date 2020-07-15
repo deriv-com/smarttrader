@@ -79,7 +79,8 @@ const ThirdPartyLinks = (() => {
         }
         return !!destination.host
             && !new RegExp(`^.*\\.${getCurrentBinaryDomain() || 'binary\\.com'}$`).test(destination.host) // destination host is not binary subdomain
-            && !new RegExp('deriv\\.app$').test(destination.host) // destination host is not deriv.app
+            // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
+            && !(new RegExp('deriv\\.app$').test(destination.host) || new RegExp('app\\.deriv\\.com$').test(destination.host)) // destination host is not deriv.app
             && !new RegExp('^.*\\.binary\\.bot$').test(destination.host) // destination host is not binary subdomain
             && !/www.(betonmarkets|xodds).com/.test(destination.host) // destination host is not binary old domain
             && !/deriv.(app|com)/.test(destination.host) // destination host is not deriv

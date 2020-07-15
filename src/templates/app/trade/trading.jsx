@@ -12,7 +12,7 @@ const Trading = () => (
             {/* <a
                 id='deposit_btn_trade'
                 className='client_real invisible gr-hide-m btn btn--primary'
-                href='https://deriv.app/cashier/deposit'
+                href='https://app.deriv.com/cashier/deposit'
                 target='_blank'
                 rel='noopener noreferrer'
             >
