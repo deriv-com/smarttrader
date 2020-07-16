@@ -187,3 +187,4 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
+          context: deriv-app-artifact-upload
