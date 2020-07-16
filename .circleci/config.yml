@@ -166,7 +166,7 @@ jobs:
           target_branch: "production"
       - docker_build_push
       - k8s_deploy:
-          k8s_svc_name: "production-binary-com"
+          k8s_svc_name: "production-smarttrader-deriv-app"
       - notify_slack
       
 workflows:
