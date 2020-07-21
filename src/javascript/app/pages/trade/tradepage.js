@@ -34,7 +34,7 @@ const TradePage = (() => {
     };
 
     const init = () => {
-        if (!Client.get('is_virtual')) {
+        if (Client.isLoggedIn() && !Client.get('is_virtual')) {
             BinarySocket.wait('landing_company').then(() => {
                 if (isEuCountry()) {
                     const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
