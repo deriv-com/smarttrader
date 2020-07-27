@@ -11,7 +11,6 @@ const ViewPopup                    = require('../user/view_popup/view_popup');
 const Client                       = require('../../base/client');
 const Header                       = require('../../base/header');
 const BinarySocket                 = require('../../base/socket');
-const isEuCountry                  = require('../../common/country_base').isEuCountry;
 const Guide                        = require('../../common/guide');
 const TopUpVirtualPopup            = require('../../pages/user/account/top_up_virtual/pop_up');
 const State                        = require('../../../_common/storage').State;
