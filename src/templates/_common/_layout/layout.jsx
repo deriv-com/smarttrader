@@ -3,7 +3,6 @@ import React from 'react';
 import Head from './head.jsx';
 import Header from './header.jsx';
 // import MobileMenu from './mobile_menu.jsx';
-import EuBlockedModal from '../components/eu-blocked-modal.jsx';
 import InterviewPopup from '../components/interview_popup.jsx';
 import Title from '../components/title.jsx';
 import DerivIFrame from '../includes/deriv-iframe.jsx';
@@ -81,7 +80,6 @@ const Layout = () => {
                 <DerivIFrame />
                 {/* <Elevio /> */}
                 <LanguageMenuModal />
-                <EuBlockedModal />
             </body>
         </html>
     );
