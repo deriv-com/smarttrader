@@ -1,7 +1,7 @@
 Binary-Static 
 =============
 
-This repository contains the static HTML, Javascript, CSS, and images content of the [Deriv SmartTrader](https://smarttrader.deriv.app) website.
+This repository contains the static HTML, Javascript, CSS, and images content of the [Deriv SmartTrader](https://smarttrader.deriv.com) website.
 
 ## Installation
 

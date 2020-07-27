@@ -144,21 +144,21 @@ const Header = (() => {
             dtrader: {
                 name     : 'DTrader',
                 desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
-                link     : 'https://deriv.app',
+                link     : 'https://app.deriv.com',
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
             dbot: {
                 name     : 'DBot',
                 desc     : 'Automated trading at your fingertips. No coding needed.',
-                link     : 'https://deriv.app/bot',
+                link     : 'https://app.deriv.com/bot',
                 icon     : 'ic-brand-dbot.svg',
                 on_mobile: false,
             },
             dmt5: {
                 name     : 'DMT5',
                 desc     : 'The platform of choice for professionals worldwide.',
-                link     : 'https://deriv.app/mt5',
+                link     : 'https://app.deriv.com/mt5',
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
 
@@ -497,12 +497,12 @@ const Header = (() => {
                     const account_detail    = createElement('span', { text: is_real ? (currency || localize('Real')) : localize('Demo') });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
-                    
+
                     if (!currency) {
                         $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
                         account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
                         $('.account__switcher-select_currencies').css('display', 'block');
-                        
+
                         const header_deposit = $('.header__deposit');
                         header_deposit.text('Set currency');
                         header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
@@ -756,7 +756,7 @@ const Header = (() => {
                 el.html(notifications.length);
             } else {
                 el.style.display = 'none';
-                
+
             }
         });
 
@@ -898,23 +898,23 @@ const Header = (() => {
             const messages = {
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
-                // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://deriv.app/account/proof-of-identity' }),
-                // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://deriv.app/account/proof-of-identity'),
-                // expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://deriv.app/account/proof-of-address'),
-                // rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://deriv.app/account/proof-of-identity\'>', '<a href=\'https://deriv.app/account/proof-of-address\'>', '</a>']),
-                // rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://deriv.app/account/proof-of-identity'),
-                // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://deriv.app/account/proof-of-address'),
-                // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://deriv.app/account/proof-of-identity'),
-                // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://deriv.app/account/proof-of-address'),
+                // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://app.deriv.com/account/proof-of-identity' }),
+                // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://app.deriv.com/account/proof-of-identity\'>', '<a href=\'https://app.deriv.com/account/proof-of-address\'>', '</a>']),
+                // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://app.deriv.com/account/proof-of-identity'),
+                // expired_document     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'https://app.deriv.com/account/proof-of-address'),
+                // rejected             : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'),    ['<a href=\'https://app.deriv.com/account/proof-of-identity\'>', '<a href=\'https://app.deriv.com/account/proof-of-address\'>', '</a>']),
+                // rejected_identity    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified. Please check your email for details.'),                                          'https://app.deriv.com/account/proof-of-identity'),
+                // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://app.deriv.com/account/proof-of-address'),
+                // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://app.deriv.com/account/proof-of-identity'),
+                // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://app.deriv.com/account/proof-of-address'),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
                 financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
                 required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
                 // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'user/settings/detailsws'),
-                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/financial-assessment'), type: 'warning' }),
-                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://deriv.app/account/personal-details'), type: 'danger' }),
+                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://app.deriv.com/account/financial-assessment'), type: 'warning' }),
+                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://app.deriv.com/account/personal-details'), type: 'danger' }),
                 unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
                 // withdrawal_locked_review: () => localize('Withdrawals have been disabled on your account. Please wait until your uploaded documents are verified.'),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
@@ -923,7 +923,7 @@ const Header = (() => {
                 //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'user/tnc_approvalws'),
 
                 // Deriv specific below.
-                authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://deriv.app/account/proof-of-identity' }),
+                authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://app.deriv.com/account/proof-of-identity' }),
                 needs_poi   : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
                 needs_poa   : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
                 poi_expired : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),

@@ -1813,7 +1813,7 @@ msgstr ""
 msgid "Trading and deposit disabled"
 msgstr ""
 
-msgid "Trading and deposits have been disabled on your account. Kindly contact %1customer support%2 for assistance."
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr ""
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
@@ -1993,9 +1993,6 @@ msgstr ""
 msgid "You have not granted access to any applications."
 msgstr ""
 
-msgid "You have opted to be excluded from Binary.com until %1. Please %2contact us%3 for assistance."
-msgstr ""
-
 msgid "You have reached the limit."
 msgstr ""
 
@@ -2057,6 +2054,9 @@ msgid "Your account has no trading activity."
 msgstr ""
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
+msgstr ""
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
 msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."

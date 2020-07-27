@@ -106,15 +106,16 @@ const Url = (() => {
         return static_host + path.replace(/(^\/)/g, '');
     };
 
-    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || 'https://deriv.app')}/${path}${pars ? `?${pars}` : ''}`;
+    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || 'https://app.deriv.com')}/${path}${pars ? `?${pars}` : ''}`;
 
     const getAllowedLocalStorageOrigin = () => {
-        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname)) {
-            return 'https://staging.deriv.app';
-        } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
-            return 'https://deriv.app';
+        // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
+        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) || /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) || /^staging-smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+            return 'https://staging-app.deriv.com';
+        } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname) || /^smarttrader\.deriv\.com$/i.test(window.location.hostname)) {
+            return 'https://app.deriv.com';
         }
-        return 'https://deriv.app';
+        return 'https://app.deriv.com';
     };
 
     /**
