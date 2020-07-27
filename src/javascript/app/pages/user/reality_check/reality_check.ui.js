@@ -3,6 +3,7 @@ const showLocalTimeOnHover = require('../../../base/clock').showLocalTimeOnHover
 const BinarySocket         = require('../../../base/socket');
 const FormManager          = require('../../../common/form_manager');
 const urlFor               = require('../../../../_common/url').urlFor;
+const urlForDeriv          = require('../../../../_common/url').urlForDeriv;
 require('../../../../_common/lib/polyfills/array.includes');
 require('../../../../_common/lib/polyfills/string.includes');
 
@@ -87,7 +88,7 @@ const RealityCheckUI = (() => {
     };
 
     const onStatementClick = () => {
-        const win = window.open(`${urlFor('user/statementws')}#no-reality-check`, '_blank');
+        const win = window.open(urlForDeriv('reports/statement', `ext_platform_url=${encodeURIComponent(window.location.href)}`), '_blank');
         if (win) {
             win.focus();
         }
