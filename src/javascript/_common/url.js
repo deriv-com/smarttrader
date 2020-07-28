@@ -110,7 +110,7 @@ const Url = (() => {
 
     const getAllowedLocalStorageOrigin = () => {
         // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
-        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) || /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) || /^staging-smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
+        if (/^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) || /^staging-smarttrader\.deriv\.app$/i.test(window.location.hostname) || /^staging-smarttrader\.deriv\.app$/i.test(window.location.hostname)) {
             return 'https://staging-app.deriv.com';
         } else if (/^smarttrader\.deriv\.app$/i.test(window.location.hostname) || /^smarttrader\.deriv\.com$/i.test(window.location.hostname)) {
             return 'https://app.deriv.com';

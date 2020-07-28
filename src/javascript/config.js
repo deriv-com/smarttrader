@@ -46,7 +46,7 @@ const getAppId = () => {
     } else if (/smarttrader-staging\.deriv\.app/i.test(window.location.hostname)) { // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
         window.localStorage.removeItem('config.default_app_id');
         app_id = 22169;
-    } else if (/smarttrader-staging\.deriv\.com/i.test(window.location.hostname)) {
+    } else if (/staging-smarttrader\.deriv\.com/i.test(window.location.hostname)) {
         window.localStorage.removeItem('config.default_app_id');
         app_id = 22169;
     } else if (/staging-smarttrader\.deriv\.app/i.test(window.location.hostname)) { // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
