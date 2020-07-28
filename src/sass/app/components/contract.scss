@@ -2,7 +2,7 @@
     position: relative;
 
     .contract_current {
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid var(--border-normal);
         border-radius: 4px;
         display: flex;
         flex-direction: column;
@@ -12,7 +12,7 @@
         cursor: pointer;
 
         &:hover {
-            border: 1px solid $COLOR_BLUE;
+            border: 1px solid $COLOR_DARK_GRAY_4;
 
             &.disabled {
                 border: 1px solid $COLOR_GRAY;
@@ -23,6 +23,7 @@
             font-size: 14px;
             font-weight: 400;
             margin: 5px 0;
+            color: $COLOR_DARK_GRAY_4;
         }
         .contract {
             font-size: 16px;
@@ -34,9 +35,9 @@
         position: absolute;
         top: 0;
         background: $COLOR_WHITE;
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid var(--border-normal);
         border-radius: 4px;
-        box-shadow: 0 0 2px 1px $COLOR_GRAY;
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.08), 0 0 16px 0 rgba(0, 0, 0, 0.08);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -112,15 +113,16 @@
             }
             .contract_type {
                 font-size: 12px;
-                font-weight: 300;
+                font-weight: bold;
                 padding: 0 0 10px;
-                color: $COLOR_ORANGE;
+                color: var(--text-prominent);
                 @media (max-width: 767px) {
                     font-size: 14px;
                 }
             }
             .contract_subtypes {
                 font-size: 14px;
+                // font-weight: 300;
                 @media (max-width: 767px) {
                     font-size: 16px;
                 }
@@ -129,19 +131,19 @@
                     padding: 5px 0 5px 5px;
                     margin-bottom: 10px;
                     cursor: pointer;
+                    line-height: normal;
 
                     &:hover {
-                        background: $COLOR_GRAY;
+                        background: var(--general-hover);
                     }
                     &.active {
-                        background: $COLOR_BLUE;
-                        color: $COLOR_WHITE;
+                        background: var(--general-active);
+                        font-weight: bold;
                         @media (min-width: 320px) and (max-width: 767px) {
-                            background: $COLOR_BLUE;
-                            color: $COLOR_WHITE;
+                            background: var(--general-active);
                             padding: 5px;
                             margin: 0 0 10px;
-                            font-weight: normal;
+                            font-weight: bold;
                         }
                     }
                 }

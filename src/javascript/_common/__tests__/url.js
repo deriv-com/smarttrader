@@ -23,7 +23,7 @@ function runTests(url) {
     const params_obj   = { market: 'forex', duration_amount: '5', no_value: '' };
     const url_no_qs    = `${website_url}${language}/trading.html`;
     const url_with_qs  = `${url_no_qs}?${query_string}`;
-    const home_url     = `${website_url}${language}/home.html`;
+    const trading_url  = `${website_url}${language}/trading.html`;
 
     describe('.paramsHash()', () => {
         it('returns correct object', () => {
@@ -58,9 +58,9 @@ function runTests(url) {
     });
 
     describe('.urlFor()', () => {
-        it('returns home as default', () => {
-            [undefined, null, '', '/', 'home'].forEach((path) => {
-                expect(Url.urlFor(path)).to.eq(home_url);
+        it('returns trading as default', () => {
+            [undefined, null, '', '/', 'trading'].forEach((path) => {
+                expect(Url.urlFor(path)).to.eq(trading_url);
             });
         });
         it('accepts params', () => {
@@ -70,7 +70,7 @@ function runTests(url) {
             expect(Url.urlFor('home', undefined, 'es')).to.eq(`${website_url}es/home.html`);
         });
         it('ignores invalid characters', () => {
-            expect(Url.urlFor('`~!@#$%^&*)(=+\[}{\]\\\"\';:\?><,|')).to.eq(home_url);
+            expect(Url.urlFor('`~!@#$%^&*)(=+\[}{\]\\\"\';:\?><,|')).to.eq(trading_url);
         });
         it('handles all valid characters', () => {
             expect(Url.urlFor('metatrader/comparison-4_vs_5'))

@@ -1,0 +1,16 @@
+version: "1"
+rules:                          # Array of rules
+# Auto-merge changes from "binary-com/binary-static:master" into "deriv-com/binary-static:binary-static"
+  - base: binary-static         # Required. Target branch
+    upstream: binary-com:master # Required. Must be in the same fork network.
+    mergeMethod: "hardreset"    # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
+# Create PR from "deriv-com/binary-static:binary-static" into "deriv-com/binary-static:master"
+  - base: master
+    upstream: deriv-com:binary-static
+    mergeMethod: "none"
+    reviewers: 
+      - negar-binary
+      - aaron-binary
+    conflictReviewers:
+      - negar-binary
+      - aaron-binary

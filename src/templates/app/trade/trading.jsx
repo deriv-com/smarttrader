@@ -1,26 +1,31 @@
 import React from 'react';
 import Analysis from './analysis.jsx';
-import Portfolio from '../user/portfolio.jsx';
 import Loading from '../../_common/components/loading.jsx';
-import DerivBanner from '../../_common/components/deriv_banner.jsx';
+// import DerivBanner from '../../_common/components/deriv_banner.jsx';
 
 const Trading = () => (
     <React.Fragment>
         <div id='trading_socket_container'>
-            <DerivBanner content_name='page-trading-banner' />
+            {/* <DerivBanner content_name='page-trading-banner' /> */}
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
-            <a id='deposit_btn_trade' className='client_real invisible gr-hide-m button' href={it.url_for('cashier/forwardws?action=deposit')}>
+            {/* <a
+                id='deposit_btn_trade'
+                className='client_real invisible gr-hide-m btn btn--primary'
+                href='https://app.deriv.com/cashier/deposit'
+                target='_blank'
+                rel='noopener noreferrer'
+            >
                 <span>
                     <img src={it.url_for('images/common/plus.svg')} />
                     {it.L('Deposit')}
                 </span>
-            </a>
-            <div className='client_virtual invisible'>
-                <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'>
-                    <a className='button' />
-                </div>
-            </div>
+            </a> */}
+            {/* <div className='client_virtual invisible'> */}
+            {/*    <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'> */}
+            {/*        <a className='button' /> */}
+            {/*    </div> */}
+            {/* </div> */}
             <div className='client_virtual client_logged_out invisible' id='guideBtn' />
             <div className='row' id='contract_symbol_container'>
                 <div id='contract_markets_container'>
@@ -35,7 +40,7 @@ const Trading = () => (
                     <span id='trading_worm_chart' />
                     <span id='spot' />
                 </div>
-                <a id='symbol_tip' target='_blank'>&#9432;</a>
+                {/* <a id='symbol_tip' target='_blank'>&#9432;</a> */}
             </div>
             <div className='row clear' id='contract_form_content_wrapper'>
                 <div className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
@@ -181,15 +186,12 @@ const Trading = () => (
                                     </div>
                                 </form>
                             </div>
-                            <div id='open_positions_container'>
-                                <Portfolio />
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div id='contract_prices_container' className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
                     <div id='contract_confirmation_container' className='overlay_container col'>
-                        <a className='close' id='close_confirmation_container' />
+                        <a className='close close--dark-bg' id='close_confirmation_container' />
                         <div id='confirmation_message_container'>
                             <div id='confirmation_message'>
                                 <h3 id='contract_purchase_heading' />
@@ -201,9 +203,7 @@ const Trading = () => (
                                 </div>
                                 <div id='contract_purchase_barrier' />
                                 <div id='contract_purchase_reference' />
-                                <div className='button'>
-                                    <span id='contract_purchase_button' className='button open_contract_details' />
-                                </div>
+                                <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
                                 <div id='contract_purchase_spots' />
                                 <div id='trade_tick_chart' />
                                 <div id='digit_ticker_table' className='digit-ticker invisible' />
@@ -213,11 +213,17 @@ const Trading = () => (
                             <div id='authorization_error_container' className='center-text invisible'>
                                 <div className='authorization_error'>
                                     <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                    <a className='button' href={it.url_for('new-account')}>
+                                    <a className='btn btn__large btn--primary' href='https://www.deriv.com/signup/'>
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
-                                    <a id='authorization_error_btn_login' href='javascript:;'>{it.L('Log in here')}</a>
+                                    <a
+                                        id='authorization_error_btn_login'
+                                        className='btn btn--link'
+                                        href='javascript:;'
+                                    >
+                                        {it.L('Log in here')}
+                                    </a>
                                 </div>
                             </div>
                         </div>

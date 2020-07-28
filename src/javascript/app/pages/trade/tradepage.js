@@ -1,25 +1,32 @@
-const Dropdown          = require('@binary-com/binary-style').selectDropdown;
-const TradingAnalysis   = require('./analysis');
-const commonTrading     = require('./common');
-const cleanupChart      = require('./charts/webtrader_chart').cleanupChart;
-const displayCurrencies = require('./currency');
-const Defaults          = require('./defaults');
-const TradingEvents     = require('./event');
-const Price             = require('./price');
-const Process           = require('./process');
-const ViewPopup         = require('../user/view_popup/view_popup');
-const Client            = require('../../base/client');
-const Header            = require('../../base/header');
-const BinarySocket      = require('../../base/socket');
-const Guide             = require('../../common/guide');
-const TopUpVirtualPopup = require('../../pages/user/account/top_up_virtual/pop_up');
-const State             = require('../../../_common/storage').State;
+const Dropdown                     = require('@binary-com/binary-style').selectDropdown;
+const TradingAnalysis              = require('./analysis');
+const commonTrading                = require('./common');
+const cleanupChart                 = require('./charts/webtrader_chart').cleanupChart;
+const displayCurrencies            = require('./currency');
+const Defaults                     = require('./defaults');
+const TradingEvents                = require('./event');
+const Price                        = require('./price');
+const Process                      = require('./process');
+const ViewPopup                    = require('../user/view_popup/view_popup');
+const Client                       = require('../../base/client');
+const Header                       = require('../../base/header');
+const BinarySocket                 = require('../../base/socket');
+const Guide                        = require('../../common/guide');
+const TopUpVirtualPopup            = require('../../pages/user/account/top_up_virtual/pop_up');
+const State                        = require('../../../_common/storage').State;
+const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
 
 const TradePage = (() => {
     let events_initialized = 0;
     State.remove('is_trading');
 
     const onLoad = () => {
+        const iframe_target_origin = getAllowedLocalStorageOrigin();
+        if (iframe_target_origin) {
+            const el_iframe  = document.getElementById('localstorage-sync');
+            el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
+        }
+
         BinarySocket.wait('authorize').then(() => {
             init();
         });
@@ -37,7 +44,6 @@ const TradePage = (() => {
             TradingEvents.init();
         }
         BinarySocket.wait('authorize').then(() => {
-            Header.displayAccountStatus();
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
                 // if not loaded by pjax, balance update function calls TopUpVirtualPopup
@@ -47,8 +53,9 @@ const TradePage = (() => {
                     });
                 }
             }
+            Header.displayAccountStatus();
             Client.activateByClientType('trading_socket_container');
-            BinarySocket.send({ payout_currencies: 1 }).then(() => {
+            BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
                 displayCurrencies();
                 Dropdown('#currency', true);
                 if (document.getElementById('multiplier_currency').tagName === 'SELECT') {

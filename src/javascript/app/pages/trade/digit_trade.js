@@ -34,7 +34,7 @@ const DigitDisplay = (() => {
                     }))
                     .append($('<strong />', {
                         class: 'gr-6',
-                        text : localize('Spot Time (GMT)'),
+                        text : localize('Spot time (GMT)'),
                     }))))
             .append($('<div />', {
                 class: 'digit-ticker invisible',
@@ -123,7 +123,7 @@ const DigitDisplay = (() => {
         spot.innerText = localize('Spot');
         spot.classList.add('gr-3');
 
-        spot_time.innerText = localize('Spot Time (GMT)');
+        spot_time.innerText = localize('Spot time (GMT)');
         spot_time.classList.add('gr-6');
 
         const fragment = document.createDocumentFragment();

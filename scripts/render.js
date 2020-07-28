@@ -72,7 +72,7 @@ const getConfig = () => (
         dist_path       : Path.join(common.root_path, 'dist', (program.branch || '')),
         languages       : program.branch === 'translations' ? ['ACH'] : common.languages,
         root_path       : common.root_path,
-        root_url        : `/${program.dev && !fs.existsSync(Path.join(common.root_path, 'scripts', 'CNAME')) ? 'binary-static/' : ''}${program.branch ? `${program.branch}/` : ''}`,
+        root_url        : `/${program.dev && !fs.existsSync(Path.join(common.root_path, 'scripts', 'CNAME')) ? 'smarttrader/' : ''}${program.branch ? `${program.branch}/` : ''}`,
     }
 );
 
@@ -131,7 +131,7 @@ const createUrlFinder = (default_lang, section_path, root_url = getConfig().root
 
         let new_url = url;
         if (new_url === '' || new_url === '/') {
-            new_url = '/home';
+            new_url = '/trading';
         }
 
         if (/(^\/?(images|js|css|scripts|download))|(manifest\.json)/.test(new_url)) {
@@ -200,7 +200,7 @@ const createContextBuilder = async (sections) => {
         ],
         css_files  : css_files_list[section],
         languages  : config.languages,
-        broker_name: 'Binary.com',
+        broker_name: 'Deriv',
         static_hash: static_hash[section],
     });
 
@@ -237,7 +237,7 @@ async function compile(page) {
     const tasks = languages.map(async lang => {
         const affiliate_language_code = common.getAffiliateSignupLanguage(lang);
         const model = {
-            website_name   : 'Binary.com',
+            website_name   : 'Deriv',
             title          : page.title,
             layout         : page.layout,
             language       : lang.toUpperCase(),

@@ -19,10 +19,9 @@ const TickDisplay = (() => {
         id_render,
         is_chart_init;
 
-    const winning_color = 'rgba(46, 136, 54, 0.2)';
-    const losing_color  = 'rgba(204, 0, 0, 0.1)';
-    const brand_color   = 'orange';
-
+    const winning_color = 'rgba(75, 180, 179, 0.16)';
+    const losing_color  = 'rgba(236, 63, 63, 0.16)';
+    const brand_color  = 'var(--brand-red-coral)';
     const marker = {
         fillColor: brand_color,
         lineColor: brand_color,

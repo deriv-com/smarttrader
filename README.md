@@ -1,11 +1,11 @@
 Binary-Static 
 =============
 
-This repository contains the static HTML, Javascript, CSS, and images content of the [Binary.com](http://www.binary.com) website.
+This repository contains the static HTML, Javascript, CSS, and images content of the [Deriv SmartTrader](https://smarttrader.deriv.com) website.
 
 ## Installation
 
-In order to work on your own version of the Binary.com Javascript and CSS, please **fork this project**.
+In order to work on your own version of the SmartTrader Javascript and CSS, please **fork this project**.
 
 You will also need to install the following on your development machine:
 
