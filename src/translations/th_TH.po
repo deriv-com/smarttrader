@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-07-15 02:22\n"
+"PO-Revision-Date: 2020-07-28 02:25\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -178,9 +178,6 @@ msgstr "ตลาดที่เปิดบริการ"
 msgid "Average"
 msgstr "ค่าเฉลี่ย"
 
-msgid "Back to main website"
-msgstr "กลับไปยังหน้าหลัก"
-
 msgid "Back to trading"
 msgstr "กลับไปยังซื้อขาย"
 
@@ -319,9 +316,6 @@ msgstr "กำลังเชื่อมต่อกับเซิร์ฟเ
 msgid "Continue trading"
 msgstr "ซื้อขายต่อ"
 
-msgid "Continue with Demo Account"
-msgstr "ดำเนินการต่อด้วยบัญชีทดลอง"
-
 msgid "Contract"
 msgstr "สัญญา"
 
@@ -355,6 +349,12 @@ msgstr "ประเภทของสัญญา"
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อระบบซื้อขายได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
 
+msgid "Contracts bought"
+msgstr ""
+
+msgid "Contracts sold"
+msgstr ""
+
 msgid "Counterparty"
 msgstr "คู่สัญญา"
 
@@ -384,6 +384,9 @@ msgstr "รหัสผ่านปัจจุบัน"
 
 msgid "Current time"
 msgstr "เวลาปัจจุบัน"
+
+msgid "Current time:"
+msgstr ""
 
 msgid "Date"
 msgstr "วันที่"
@@ -889,6 +892,12 @@ msgstr "เข้าสู่ระบบ เริ่มที่นี่"
 msgid "Log out"
 msgstr "ออกจากระบบ"
 
+msgid "Login ID"
+msgstr ""
+
+msgid "Login time:"
+msgstr ""
+
 msgid "Lookbacks"
 msgstr "Lookbacks"
 
@@ -1099,11 +1108,17 @@ msgstr "เปิดบัญชีจริง"
 msgid "Open a free account"
 msgstr "เปิดบัญชีฟรี 1 บัญชี"
 
+msgid "Open contracts"
+msgstr ""
+
 msgid "Open positions"
 msgstr "ตำแหน่งงานที่เปิดรับ"
 
 msgid "Opens"
 msgstr "เปิด"
+
+msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
+msgstr ""
 
 msgid "Over/Under"
 msgstr "Over/Under"
@@ -1234,6 +1249,9 @@ msgstr "โปรดตั้งค่าวงเงินซื้อขาย
 msgid "Please specify the reasons for closing your accounts"
 msgstr "โปรดระบุเหตุผล ในการปิดบัญชีของคุณ"
 
+msgid "Please specify your preferred reality-check interval in minutes"
+msgstr ""
+
 msgid "Please submit your proof of address."
 msgstr "โปรดส่งเอกสาร หลักฐานที่อยู่ของคุณ"
 
@@ -1252,6 +1270,9 @@ msgstr "ประมาณการกำไร"
 msgid "Potential payout"
 msgstr "Potential payout"
 
+msgid "Potential profit"
+msgstr ""
+
 msgid "Potential profit/loss"
 msgstr "คาดการณ์ กำไร/ขาดทุน"
 
@@ -1263,6 +1284,9 @@ msgstr "ก่อนหน้า"
 
 msgid "Profit"
 msgstr "กำไร"
+
+msgid "Profit / Loss"
+msgstr ""
 
 msgid "Profit table"
 msgstr "ตารางผลกำไร"
@@ -1338,6 +1362,9 @@ msgstr "บัญชีเงินจริง"
 
 msgid "Real-Money Accounts"
 msgstr "บัญชีเงินจริง"
+
+msgid "Reality Check"
+msgstr ""
 
 msgid "Ref."
 msgstr "อ้างอิง"
@@ -1467,6 +1494,9 @@ msgstr "เซิร์ฟเวอร์"
 
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "รอบระยะเวลาการซื้อขายไม่สามารถมากกว่า 6 สัปดาห์"
+
+msgid "Session duration:"
+msgstr ""
 
 msgid "Set account currency"
 msgstr "กำหนดสกุลเงินของบัญชี"
@@ -1829,7 +1859,7 @@ msgid "Trading and deposit disabled"
 msgstr "การซื้อขายและการฝากเงิน ถูกปิดการใช้งาน"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "การซื้อขายและการฝากเงินถูกปิดการใช้งานในบัญชีของคุณ โปรด %1ติดต่อฝ่ายบริการลูกค้า%2 เพื่อขอความช่วยเหลือ"
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
 msgstr "การซื้อขายสัญญาส่วนต่าง (CFD) ของดัชนีสังเคราะห์อาจไม่เหมาะสมสำหรับทุกคน โปรดแน่ใจว่า คุณเข้าใจถึงความเสี่ยงที่เกี่ยวข้องอย่างแท้จริง รวมถึงความเป็นไปได้ที่จะสูญเสียเงินทุนทั้งหมดในบัญชี MT5 ของคุณ การพนันสามารถเสพติดได้ โปรดดำเนินธุรกรรมซื้อขายด้วยความรับผิดชอบ"
@@ -1854,6 +1884,9 @@ msgstr "อัง"
 
 msgid "Tuesday"
 msgstr "วันอังคาร"
+
+msgid "Turnover"
+msgstr ""
 
 msgid "Type"
 msgstr "ประเภท"
@@ -1897,6 +1930,9 @@ msgstr "ดู"
 msgid "View chart"
 msgstr "ดูแผนภูมิ"
 
+msgid "View statement"
+msgstr ""
+
 msgid "Virtual"
 msgstr "เสมือน"
 
@@ -1923,9 +1959,6 @@ msgstr "วันพุธ"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "เมื่อท่านเลือก \"OK\" ท่านจะถูกพักจากระบบซื้อขายกระทั่งวันที่ที่ท่านระบุ"
-
-msgid "Whoops!"
-msgstr "Whoops!"
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "ชนะ เมื่อสปอตสิ้นสุดเท่ากับสปอตเริ่มต้น"
@@ -1986,9 +2019,6 @@ msgstr "ท่านสามารถเติมเงินในบัญช
 
 msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr "ท่านสามารถเติมเงินในบัญชีเสมือน จำนวน %1 หากมียอดคงเหลือในบัญชี %2 หรือ น้อยกว่า"
-
-msgid "You cannot use your real money account with Deriv at this time."
-msgstr "คุณไม่สามารถใช้งานบัญชีจริงของ Deriv ได้ในขณะนี้"
 
 msgid "You did not change anything."
 msgstr "ท่านไม่ได้แก้ไขค่าใดๆ"
@@ -2072,7 +2102,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "บัญชีของท่านได้รับการยืนยันตัวตนอย่างสมบูรณ์แล้ว และวงเงินการถอนเงินของท่านได้รับการยกระดับโดยการเพิ่มวงเงินแล้ว"
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "บัญชีของคุณถูกระงับ โปรด %1ติดต่อฝ่ายบริการลูกค้า%2 เพื่อขอความช่วยเหลือ"
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "ใบสมัครของท่านเพื่อปรับสถานะเป็นลูกค้าผู้เชี่ยวชาญ (Professional Client) กำลังถูกดำเนินการ"
