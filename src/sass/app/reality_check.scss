@@ -1,0 +1,56 @@
+.reality-check {
+    max-width: 720px !important;
+
+    &__header {
+        margin: 16px 24px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &__interval {
+        margin: 16px 24px 58px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__label {
+        margin: 24px;
+        font-size: 14px;
+        line-height: 20px;
+
+        &-link {
+            margin: unset;
+            color: var(--brand-red-coral);
+        }
+    }
+    &__button {
+        padding: 20px 16px;
+        margin-left: 8px;
+
+        &-logout {
+            padding: 18px 16px;
+            border: 2px solid var(--button-secondary-default);
+        }
+    }
+    &__button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0px 24px 16px 0px;
+    }
+    &__line {
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid $COLOR_GRAY;
+
+        &-short {
+            width: 90%;
+            margin-top: 40px;
+        }
+    }
+}
+
+input {
+    width: 320px;
+    padding: 10px 12px;
+    border: 1px solid $COLOR_GRAY;
+}
