@@ -11,7 +11,6 @@ const ViewPopup                    = require('../user/view_popup/view_popup');
 const Client                       = require('../../base/client');
 const Header                       = require('../../base/header');
 const BinarySocket                 = require('../../base/socket');
-const isEuCountry                  = require('../../common/country_base').isEuCountry;
 const Guide                        = require('../../common/guide');
 const TopUpVirtualPopup            = require('../../pages/user/account/top_up_virtual/pop_up');
 const State                        = require('../../../_common/storage').State;
@@ -34,28 +33,6 @@ const TradePage = (() => {
     };
 
     const init = () => {
-        if (Client.isLoggedIn() && !Client.get('is_virtual')) {
-            BinarySocket.wait('landing_company').then(() => {
-                if (isEuCountry()) {
-                    const eu_blocked_modal = document.getElementById('eu-client-blocked-modal');
-                    const el_switch_to_demo_button = document.getElementById('eu-client-blocked-switch-to-demo');
-                    const el_back_to_binary_button = document.getElementById('eu-client-blocked-back-to-binary');
-
-                    el_back_to_binary_button.onclick = () => {
-                        window.location.href = 'https://binary.com';
-                    };
-                    el_switch_to_demo_button.onclick = () => {
-                        const virtual_loginid = Client.getAllLoginids().find(loginid => /^VRTC/.test(loginid));
-                        Client.set('loginid', virtual_loginid);
-                        window.location.reload();
-                    };
-
-                    eu_blocked_modal.setVisibility(true);
-                    document.body.style.overflow = 'hidden';
-                }
-            });
-        }
-        
         if (Client.isAccountOfType('financial')) {
             return;
         }
