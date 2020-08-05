@@ -6,7 +6,9 @@ const Form = () => (
             <hr className = 'reality-check__line reality-check__line-short' />
             <div className='reality-check__interval'>
                 <div htmlFor='num_reality_duration' className='reality-check__label'>{it.L('Please specify your preferred interval reality check in minutes:')}</div>
-                <input placeholder= 'Time interval' id='num_reality_duration' className = 'reality-check__interval-input' step='1' min='1' size='6' type='number' />
+                <div>
+                    <input placeholder= 'Time interval' id='num_reality_duration' className = 'reality-check__interval-input' step='1' min='1' size='6' type='number' />
+                </div>
             </div>
             <hr className = 'reality-check__line' />
             <div className='center-text gr-padding-20 gr-child reality-check__button-wrapper'  id='reality_check_nav'>
