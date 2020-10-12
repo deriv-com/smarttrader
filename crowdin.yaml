@@ -1,5 +1,5 @@
-project_identifier: 'dsmarttrader'
-api_key_env: CROWDIN_API_KEY
+project_id: '397380'
+api_token_env: 'CROWDIN_API_KEY'
 
 files:
   - source: /src/translations/messages.pot
