@@ -3,15 +3,17 @@ import React from 'react';
 const Form = () => (
     <React.Fragment>
         <form id='frm_reality_check'>
-            <div className='gr-padding-10'>
-                <label htmlFor='num_reality_duration' className='gr-gutter-right'>{it.L('Please specify your preferred reality-check interval in minutes')}</label>
-                &nbsp;
-                <input id='num_reality_duration' step='1' min='1' size='6' type='number' />
+            <hr className = 'reality-check__line reality-check__line-short' />
+            <div className='reality-check__interval'>
+                <div htmlFor='num_reality_duration' className='reality-check__label'>{it.L('Please specify your preferred interval reality check in minutes:')}</div>
+                <div>
+                    <input placeholder= 'Time interval' id='num_reality_duration' className = 'reality-check__interval-input' step='1' min='1' size='6' type='number' />
+                </div>
             </div>
-            <div className='center-text gr-centered gr-padding-20 gr-child' id='reality_check_nav'>
-                <button className='button' type='submit'>{it.L('Continue trading')}</button>
-                <a className='button button-secondary' id='statement' href='javascript:;'><span>{it.L('View statement')}</span></a>
-                <a className='button button-secondary' id='logout' href='javascript:;'><span>{it.L('Log out')}</span></a>
+            <hr className = 'reality-check__line' />
+            <div className='center-text gr-padding-20 gr-child reality-check__button-wrapper'  id='reality_check_nav'>
+                <a className='btn btn--secondary reality-check__button reality-check__button-logout' id='logout' href='javascript:;'><span>{it.L('Log out')}</span></a>
+                <button className='btn btn--primary reality-check__button' type='submit'>{it.L('Continue trading')}</button>
             </div>
         </form>
     </React.Fragment>
