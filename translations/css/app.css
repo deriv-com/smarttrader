@@ -2416,6 +2416,121 @@ body .sp-container {
           body .sp-container .sp-picker-container .sp-button-container .sp-cancel.sp-cancel:last-child:hover, body .sp-container .sp-picker-container .sp-button-container .sp-choose.sp-choose:last-child:hover {
             background-color: var(--button-primary-hover); }
 
+.reality-check {
+  max-width: 720px !important;
+  width: 100%; }
+  .reality-check__header {
+    margin: 16px 24px;
+    font-size: 16px;
+    font-weight: bold; }
+  .reality-check__interval {
+    margin: 16px 24px 58px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .reality-check__interval-summary {
+      margin: unset;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: start; }
+  .reality-check__label {
+    margin: 24px;
+    font-size: 14px;
+    line-height: 20px; }
+    .reality-check__label-link {
+      margin: unset;
+      color: var(--brand-red-coral); }
+    .reality-check__label-summary {
+      margin: 24px 0px 25px; }
+  .reality-check__button {
+    padding: 20px 16px;
+    margin-left: 8px; }
+    .reality-check__button-logout {
+      padding: 18px 16px;
+      border: 2px solid var(--button-secondary-default); }
+    .reality-check__button-statement {
+      border: 2px solid var(--button-secondary-default);
+      margin-left: unset;
+      margin-top: 8px; }
+  .reality-check__button-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0px 24px 16px 0px; }
+  .reality-check__line {
+    border: 1px solid #dedede; }
+    .reality-check__line-short {
+      margin-right: auto;
+      margin-left: auto;
+      width: 90%;
+      margin-top: 40px; }
+    .reality-check__line-wrapperright {
+      margin-top: 24px; }
+  .reality-check__summary-wrapperright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 24px;
+    max-width: 372px;
+    font-size: 14px; }
+  .reality-check__summarysection-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 24px 8px 24px 24px; }
+  .reality-check__summary-wrapperleft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .reality-check__summary-info-bold {
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .reality-check ::-webkit-input-placeholder {
+    color: #999999; }
+  .reality-check ::-moz-placeholder {
+    color: #999999; }
+  .reality-check ::-ms-input-placeholder {
+    color: #999999; }
+  .reality-check ::placeholder {
+    color: #999999; }
+
+.reality-check .error-msg {
+  color: #999999;
+  font-style: unset;
+  margin-left: 12px !important;
+  font-size: 12px; }
+
+input {
+  width: 320px;
+  padding: 10px 12px;
+  border: 1px solid #999999;
+  font-size: 14px; }
+
 .markets {
   min-width: 120px;
   position: relative; }
