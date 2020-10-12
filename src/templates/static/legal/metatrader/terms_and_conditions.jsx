@@ -132,8 +132,9 @@ const TermsAndConditions = () => (
                 <ol>
                     <li>{it.L('If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company by contacting [_1] helpdesk [_2]. The client\'s MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled.', it.website_name, '<a href=\'mailto:support@binary.com\'>support@binary.com</a>')}</li>
                     <li>{it.L('If the client\'s [_1] account is closed, their MT5 Real Account will be automatically closed as well.', it.website_name)}</li>
-                    <li>{it.L('Client\'s demo accounts will be deleted after 30 days of inactivity.')}</li>
-                    <li>{it.L('Real accounts will be archived after 90 days of inactivity. To re-activate a real account, contact binary.com help desk at [_1]support@binary.com[_2]', '<a href="mailto:support@binary.com">', '</a>')}</li>
+                    <li>{it.L('Client\'s demo accounts will be deleted after [_1] days of inactivity.', '30')}</li>
+                    <li>{it.L('Real accounts will be archived after [_1] days of inactivity. To re-activate a real account, contact binary.com help desk at [_2]support@binary.com[_3]', '30', '<a href="mailto:support@binary.com">', '</a>')}</li>
+                    <li>{it.L('Any pending funds in your MT5 account will be transferred to your Binary account.')}</li>
                 </ol>
             </li>
         </ol>
@@ -160,7 +161,7 @@ const TermsAndConditions = () => (
                     <li>{it.L('The Company may, at its absolute discretion, accept a Stop Order, a Limit Order, or a Stop Limit Order from the client.')}</li>
                     <li>{it.L('The client may specify their instruction of a Stop Order or apply for a Limit Order for a limited duration or for an indefinite period (a "good till cancelled" or "GTC" Order).')}
                         <ol>
-                            <li>{it.L('In the case of a Stop Order, the client acknowledges that the Company will endeavour to fill the Order at a price equal to the one that the client has specified. However, if the specified price is unavailable, a less favourable price may be quoted. In other words, the Order is executed either at the price equal to the specified one or worse than that (slippage). The execution of Stop Orders is guaranteed.')}</li>
+                            <li>{it.L('In the case of a Stop Order, the client acknowledges that the Company will endeavour to fill the Order at a price equal to the one that the client has specified. However, if the price is unavailable, the next available price may be quoted. In other words, the Order is executed at either the price equal to the specified one or the next available price (slippage). The execution of Stop Orders is guaranteed.')}</li>
                             <li>{it.L('In the case of a Limit Order, the client acknowledges that the Company will endeavour to fill the Order at a level that is the same or better than the Limit the client has specified, subject to the availability of the Limit Price.')}</li>
                         </ol>
                     </li>

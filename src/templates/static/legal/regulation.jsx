@@ -144,7 +144,7 @@ const Regulation = () => {
                             center
                             border='border-dark-gray'
                             image='images/pages/regulation/pdf-icon.svg'
-                            href={it.url_for('/download/BIEL_Pillar_3_Report_20200421.pdf')}
+                            href={it.url_for('/download/DIEL_Pillar_3_Report_20200421.pdf')}
                             target='_blank'
                             text={it.L('Pillar 3 disclosure report')}
                         />
@@ -169,9 +169,9 @@ const Regulation = () => {
                                 border='border-dark-gray'
                                 className='margin-top-17 align-start'
                                 image='images/pages/regulation/pdf-icon.svg'
-                                href={it.url_for('/download/BIEL-RTS28-for-2018.pdf')}
+                                href={it.url_for('/download/DIEL-RTS28-for-2018.pdf')}
                                 target='_blank'
-                                text={it.L('BIEL RTS28 for 2018')}
+                                text={it.L('DIEL RTS28 for 2018')}
                             />
                         </div>
                         <div className='gr-6 gr-12-m'>
@@ -181,16 +181,16 @@ const Regulation = () => {
                                 border='border-dark-gray'
                                 className='margin-top-17 align-start'
                                 image='images/pages/regulation/pdf-icon.svg'
-                                href={it.url_for('/download/BIEL-RTS28-for-2019.pdf')}
+                                href={it.url_for('/download/DIEL_RTS28_for_2019.pdf')}
                                 target='_blank'
-                                text={it.L('BIEL RTS28 for 2019')}
+                                text={it.L('DIEL RTS28 for 2019')}
                             />
                         </div>
                     </div>
 
                     <h3>{it.L('RTS 27 2020')}</h3>
                     <div className='gr-row'>
-                        <div className='gr-6 gr-12-m gr-padding-30 gr-centered'>
+                        <div className='gr-6 gr-12-m gr-padding-30'>
                             <h3>{it.L('Q1 2020')}</h3>
                             <FillBox
                                 align_left
@@ -229,6 +229,49 @@ const Regulation = () => {
                                 className='margin-top-17 align-start'
                                 image='images/pages/regulation/xlsx-icon.svg'
                                 href={it.url_for('/download/rts27_2020/Q1/Table_6.xlsx')}
+                                target='_blank'
+                                text={it.L('Table 6 - Likelihood of execution information')}
+                            />
+                        </div>
+                        <div className='gr-6 gr-12-m gr-padding-30'>
+                            <h3>{it.L('Q2 2020')}</h3>
+                            <FillBox
+                                align_left
+                                center
+                                border='border-dark-gray'
+                                className='margin-top-17 align-start'
+                                image='images/pages/regulation/xlsx-icon.svg'
+                                href={it.url_for('/download/rts27_2020/Q2/Table_1.xlsx')}
+                                target='_blank'
+                                text={it.L('Table 1 - Type of execution venue')}
+                            />
+                            <FillBox
+                                align_left
+                                center
+                                border='border-dark-gray'
+                                className='margin-top-17 align-start'
+                                image='images/pages/regulation/xlsx-icon.svg'
+                                href={it.url_for('/download/rts27_2020/Q2/Table_3.xlsx')}
+                                target='_blank'
+                                text={it.L('Table 3 - Intra-Day Price information')}
+                            />
+                            <FillBox
+                                align_left
+                                center
+                                border='border-dark-gray'
+                                className='margin-top-17 align-start'
+                                image='images/pages/regulation/xlsx-icon.svg'
+                                href={it.url_for('/download/rts27_2020/Q2/Table_4.xlsx')}
+                                target='_blank'
+                                text={it.L('Table 4 - Daily Price information')}
+                            />
+                            <FillBox
+                                align_left
+                                center
+                                border='border-dark-gray'
+                                className='margin-top-17 align-start'
+                                image='images/pages/regulation/xlsx-icon.svg'
+                                href={it.url_for('/download/rts27_2020/Q2/Table_6.xlsx')}
                                 target='_blank'
                                 text={it.L('Table 6 - Likelihood of execution information')}
                             />
@@ -511,9 +554,9 @@ const Regulation = () => {
                     <RegulatorImage padding='4' padding_m='8' href='http://www.mga.org.mt/' image='images/pages/why-us/mga-logo2.svg' />
                 </Box>
 
-                <Box header={it.L('Deriv (MX) Limited')} >
-                    <p>{it.L('Deriv (MX) Limited, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licensed and regulated by the Gambling Supervision Commission in the Isle of Man (current online gambling licence granted on the 31 August 2017) - [_1]view licence[_2] and for UK clients by the UK Gambling Commission - [_3]view licence[_2].', `<a href=${it.url_for('download/regulation/IOMGSC_Licence.pdf')} target="_blank">`, '</a>', '<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39172" target="_blank">')}</p>
-                    <p>{it.L('UK and Manx residents who wish to trade gambling products will have their accounts opened with Deriv (MX) Limited.')}</p>
+                <Box header={it.L('Deriv (MX) Ltd')} >
+                    <p>{it.L('Deriv (MX) Ltd, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licensed and regulated by the Gambling Supervision Commission in the Isle of Man (current online gambling licence granted on the 31 August 2017) - [_1]view licence[_2] and for UK clients by the UK Gambling Commission - [_3]view licence[_2].', `<a href=${it.url_for('download/regulation/IOMGSC_Licence.pdf')} target="_blank">`, '</a>', '<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39172" target="_blank">')}</p>
+                    <p>{it.L('UK and Manx residents who wish to trade gambling products will have their accounts opened with Deriv (MX) Ltd.')}</p>
                     <RegulatorText />
                     <RegulatorImage href='https://www.gov.im/gambling/' image='images/pages/regulation/isle-of-man.png' />
                 </Box>
@@ -546,7 +589,7 @@ const Regulation = () => {
             </Box>
 
             <Box header={it.L('The Financial Commission')} last>
-                <p>{it.L('We are registered with the Financial Commission, an international independent organisation dedicated to resolving disputes within the financial services industry ([_1]view membership[_2]).', `<a href=${it.url_for('download/regulation/Binary_membership.pdf')} target="_blank">`, '</a>')}</p>
+                <p>{it.L('We are registered with the Financial Commission, an international independent organisation dedicated to resolving disputes within the financial services industry ([_1]view membership[_2]).', `<a href=${it.url_for('download/regulation/Deriv_membership.pdf')} target="_blank">`, '</a>')}</p>
                 <p>{it.L('The Financial Commission offers compensation up to 20,000 EUR on a case-to-case basis, unbiased assessment of disputes, and fast and effective dispute resolution free of charge.')}</p>
                 <RegulatorText />
                 <RegulatorImage padding='4' padding_m='8' href='https://financialcommission.org/' image='images/pages/regulation/financial-commission.svg' />
