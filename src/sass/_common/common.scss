@@ -220,6 +220,14 @@ button.full-width, .button.full-width {
 div.barspinner {
     & > div.barspinner__rect {
         background: var(--brand-red-coral) !important;
+button.button-disabled {
+    color: $COLOR_GRAY;
+    background: $COLOR_LIGHT_GRAY;
+    cursor: default;
+
+    &:hover {
+        color: $COLOR_GRAY;
+        background: $COLOR_LIGHT_GRAY;
     }
 }
 
@@ -730,6 +738,12 @@ ul.bullet.gr-row > li {
     }
 }
 
+#dashboard-wrapper #content, #dashboard-wrapper .container {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
 .foot-note {
     font-size: $FONT_SIZE_XS;
     color: $COLOR_GRAY_SHADE;
@@ -883,13 +897,10 @@ label + input {
 }
 
 @media (max-width: 768px) {
-    .show_mobile {
-        &[data-balloon]:before, &[data-balloon]:after {
+    .show-mobile {
+        &[data-balloon]:before {
             display: block !important;
             transform: translate(-15%, 0) !important;
-        }
-        &[data-balloon-length=medium]:before {
-            width: 120px;
         }
     }
 }
@@ -909,6 +920,14 @@ label + input {
                 width: 100%;
                 text-align: left !important;
             }
+        }
+    }
+    .show-mobile {
+        &[data-balloon]:before {
+            position: fixed;
+            width: 80vw;
+            left: 18vw;
+            bottom: 20vh;
         }
     }
 }
