@@ -220,6 +220,9 @@ button.full-width, .button.full-width {
 div.barspinner {
     & > div.barspinner__rect {
         background: var(--brand-red-coral) !important;
+    }
+}
+
 button.button-disabled {
     color: $COLOR_GRAY;
     background: $COLOR_LIGHT_GRAY;

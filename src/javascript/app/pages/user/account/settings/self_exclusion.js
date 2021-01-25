@@ -42,6 +42,7 @@ const SelfExclusion = (() => {
         $warning_ukgc = $('#self_exclusion_warning');
         $timeout_date = $(timeout_date_id);
         $exclude_until = $(exclude_until_id);
+
         fields = {};
         $form.find('input').each(function () {
             fields[this.name] = '';
@@ -59,10 +60,6 @@ const SelfExclusion = (() => {
         is_mlt = Client.get('landing_company_shortcode') === 'malta';
         is_mx = Client.get('landing_company_shortcode') === 'iom';
 
-        is_mlt = Client.get('landing_company_shortcode') === 'malta';
-        is_mx = Client.get('landing_company_shortcode') === 'iom';
-        is_gamstop_client = Client.get('residence') === 'gb' && (is_mx || is_mlt);
-        
         initDatePicker();
         getData(true);
     };
@@ -187,12 +184,6 @@ const SelfExclusion = (() => {
                 options.type     = 'float';
                 options.decimals = decimal_places;
             }
-            if (/max_open_bets/.test(id)) {
-                options.min = 1;
-            }
-            if (/max_balance/.test(id)) {
-                options.min = 0.01;
-            }
             checks.push(['number', options]);
 
             if (id === 'session_duration_limit') {
@@ -313,6 +304,7 @@ const SelfExclusion = (() => {
             const is_changed = Object.keys(data).some(key => ( // using != in next line since response types is inconsistent
                 key !== 'set_self_exclusion' && (self_exclusion_data[key] != data[key] && data[key] !== '') || (typeof self_exclusion_data[key] !== 'undefined' && data[key] === '') // eslint-disable-line eqeqeq
             ));
+
             if (!is_changed) {
                 showFormMessage(localize('You did not change anything.'), false);
                 resolve(false);
