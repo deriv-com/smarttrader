@@ -65,6 +65,11 @@ const StatementUI = (() => {
         $statement_row.children('.date').addClass('pre');
         $statement_row.children('.desc').html(`${statement_data.desc}<br>`);
 
+        // add processing time tooltip for withdrawal
+        if (transaction.action_type === 'withdrawal') {
+            $statement_row.children('.desc').find('span').attr('data-balloon', transaction.withdrawal_details);
+        }
+
         // create view button and append
         if (/^(buy|sell)$/i.test(statement_data.action_type)) {
             const $view_button = $('<button/>', { class: 'button open_contract_details', text: localize('View'), contract_id: statement_data.id });
