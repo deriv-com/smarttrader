@@ -483,16 +483,89 @@ button .barspinner.white {
     }
 }
 
-.days_to_crack {
-    width: fit-content;
-    padding: 5px;
-    margin-top: 5px;
-
-    &.red {
-        color: $COLOR_RED;
+#virtual-form {
+    .select2-container {
+        max-width: 220px;
     }
-    &.green {
-        color: $COLOR_GREEN;
+}
+
+.password {
+    &--field-wrapper {
+        position: relative;
+        max-width: 220px;
+
+        input {
+            width: 202px;
+        }
+        @media screen and (max-width: 480px) {
+            margin: 0 auto;
+
+            input {
+                width: 202px !important;
+            }
+            & + .error-msg {
+                text-align: center;
+            }
+        }
+    }
+    &--meter {
+        position: absolute;
+        pointer-events: none;
+        height: 3px;
+        top: 23px;
+        left: 1px;
+        border-radius: 0 0 3px 3px;
+        width: calc(100% - 2px);
+
+        &-bg {
+            background: $COLOR_LIGHT_GRAY;
+            z-index: 1;
+        }
+        &-fill {
+            transition: transform 0.25s linear;
+            transform-origin: left top;
+            z-index: 2;
+            transform: scale(0, 1);
+
+            &.red {
+                background-color: $COLOR_RED;
+            }
+            &.orange {
+                background-color: $COLOR_ORANGE;
+            }
+            &.green {
+                background-color: $COLOR_GREEN;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            top: 28px;
+        }
+    }
+    &--hint {
+        margin-top: 16px;
+        max-width: 380px;
+    }
+    &--message {
+        color: $COLOR_ORANGE;
+        font-size: 13px;
+        font-style: italic;
+        white-space: nowrap;
+        margin-top: 0.4em;
+
+        @media screen and (max-width: 480px) {
+            white-space: unset;
+        }
+    }
+    &--toggle {
+        display: flex;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        cursor: pointer;
+
+        @media screen and (max-width: 480px) {
+            top: 8px;
+        }
     }
 }
 

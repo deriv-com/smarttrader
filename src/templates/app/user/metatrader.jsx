@@ -314,8 +314,7 @@ const Metatrader = () => (
                             </div>
                             <div id='view_2' className='gr-row invisible'>
                                 <div className='container gr-8 gr-12-m'>
-                                    <FormRow is_two_rows type='password' id='txt_main_pass' label={it.L('Main password')} tooltip={it.L('Access your account with full trading permission.')} hint={it.L('Minimum of eight lower and uppercase English letters with numbers')} />
-                                    <FormRow is_two_rows type='password' id='txt_re_main_pass' label={it.L('Verify main password')} />
+                                    <FormRow is_two_rows has_password_meter type='password' id='txt_main_pass' label={it.L('Main password')} tooltip={it.L('Access your account with full trading permission.')} />
                                     <div id='view_2-buttons' className='gr-padding-10 center-text'>
                                         <a className='button button-secondary btn-back' href='javascript:;'>
                                             <span>{it.L('Back')}</span>
@@ -374,8 +373,7 @@ const Metatrader = () => (
                                         default_option='main'
                                     />
                                     <FormRow is_two_rows type='password' id='txt_old_password' label={it.L('Current MT5 password')} />
-                                    <FormRow is_two_rows type='password' id='txt_new_password' label={it.L('New MT5 password')} hint={it.L('Minimum of eight lower and uppercase English letters with numbers')} />
-                                    <FormRow is_two_rows type='password' id='txt_re_new_password' label={it.L('Verify new MT5 password')} />
+                                    <FormRow is_two_rows has_password_meter type='password' id='txt_new_password' label={it.L('New MT5 password')} />
                                     <SubmitButton
                                         no_wrapper
                                         type='submit'
@@ -430,8 +428,7 @@ const Metatrader = () => (
                                         ]}
                                         default_option='main'
                                     />
-                                    <FormRow is_two_rows type='password' id='txt_reset_new_password' label={it.L('New MT5 password')} hint={it.L('Minimum of eight lower and uppercase English letters with numbers')} />
-                                    <FormRow is_two_rows type='password' id='txt_reset_re_new_password' label={it.L('Verify new MT5 password')} />
+                                    <FormRow has_password_meter is_two_rows type='password' id='txt_reset_new_password' label={it.L('New MT5 password')} />
                                     <SubmitButton
                                         no_wrapper
                                         type='submit'

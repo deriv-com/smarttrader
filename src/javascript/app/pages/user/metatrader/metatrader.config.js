@@ -344,7 +344,6 @@ const MetaTraderConfig = (() => {
     const fields = {
         new_account: {
             txt_main_pass    : { id: '#txt_main_pass',     request_field: 'mainPassword' },
-            txt_re_main_pass : { id: '#txt_re_main_pass' },
             ddl_trade_server : { id: '#ddl_trade_server', is_radio: true },
             chk_tnc          : { id: '#chk_tnc' },
             additional_fields: acc_type => {
@@ -368,20 +367,18 @@ const MetaTraderConfig = (() => {
             },
         },
         password_change: {
-            ddl_password_type  : { id: '#ddl_password_type', request_field: 'password_type', is_radio: true },
-            txt_old_password   : { id: '#txt_old_password',  request_field: 'old_password' },
-            txt_new_password   : { id: '#txt_new_password',  request_field: 'new_password' },
-            txt_re_new_password: { id: '#txt_re_new_password' },
-            additional_fields  :
+            ddl_password_type: { id: '#ddl_password_type', request_field: 'password_type', is_radio: true },
+            txt_old_password : { id: '#txt_old_password',  request_field: 'old_password' },
+            txt_new_password : { id: '#txt_new_password',  request_field: 'new_password' },
+            additional_fields:
                 acc_type => ({
                     login: accounts_info[acc_type].info.login,
                 }),
         },
         password_reset: {
-            ddl_password_type  : { id: '#ddl_reset_password_type', request_field: 'password_type', is_radio: true },
-            txt_new_password   : { id: '#txt_reset_new_password',  request_field: 'new_password' },
-            txt_re_new_password: { id: '#txt_reset_re_new_password' },
-            additional_fields  :
+            ddl_password_type: { id: '#ddl_reset_password_type', request_field: 'password_type', is_radio: true },
+            txt_new_password : { id: '#txt_reset_new_password',  request_field: 'new_password' },
+            additional_fields:
                 (acc_type, token) => ({
                     login            : accounts_info[acc_type].info.login,
                     verification_code: token,
@@ -418,19 +415,16 @@ const MetaTraderConfig = (() => {
     const validations = () => ({
         new_account: [
             { selector: fields.new_account.txt_main_pass.id,     validations: [['req', { hide_asterisk: true }], 'password', 'compare_to_email'] },
-            { selector: fields.new_account.txt_re_main_pass.id,  validations: [['req', { hide_asterisk: true }], ['compare', { to: fields.new_account.txt_main_pass.id }]] },
             { selector: fields.new_account.ddl_trade_server.id,  validations: [['req', { hide_asterisk: true }]] },
         ],
         password_change: [
             { selector: fields.password_change.ddl_password_type.id,   validations: [['req', { hide_asterisk: true }]] },
             { selector: fields.password_change.txt_old_password.id,    validations: [['req', { hide_asterisk: true }]] },
-            { selector: fields.password_change.txt_new_password.id,    validations: [['req', { hide_asterisk: true }], 'password', ['not_equal', { to: fields.password_change.txt_old_password.id, name1: localize('Current password'), name2: localize('New password') }], 'compare_to_email'], re_check_field: fields.password_change.txt_re_new_password.id },
-            { selector: fields.password_change.txt_re_new_password.id, validations: [['req', { hide_asterisk: true }], ['compare', { to: fields.password_change.txt_new_password.id }]] },
+            { selector: fields.password_change.txt_new_password.id,    validations: [['req', { hide_asterisk: true }], 'password', ['not_equal', { to: fields.password_change.txt_old_password.id, name1: localize('Current password'), name2: localize('New password') }], 'compare_to_email'] },
         ],
         password_reset: [
             { selector: fields.password_reset.ddl_password_type.id,   validations: [['req', { hide_asterisk: true }]] },
-            { selector: fields.password_reset.txt_new_password.id,    validations: [['req', { hide_asterisk: true }], 'password', 'compare_to_email'], re_check_field: fields.password_reset.txt_re_new_password.id },
-            { selector: fields.password_reset.txt_re_new_password.id, validations: [['req', { hide_asterisk: true }], ['compare', { to: fields.password_reset.txt_new_password.id }]] },
+            { selector: fields.password_reset.txt_new_password.id,    validations: [['req', { hide_asterisk: true }], 'password', 'compare_to_email'] },
         ],
         verify_password_reset_token: [
             { selector: fields.verify_password_reset_token.txt_verification_code.id, validations: [['req', { hide_asterisk: true }], 'token'], exclude_request: 1 },
