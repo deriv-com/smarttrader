@@ -109,8 +109,7 @@ const ProfitTableInit = (() => {
 
         BinarySocket.send(req).then((response) => {
             profitTableHandler(response);
-            const tableTimeTooltip = true;
-            showLocalTimeOnHover('td.buy-time,td.sell-time', tableTimeTooltip);
+            showLocalTimeOnHover('td.buy-date,td.sell-date');
             $('.barspinner').setVisibility(0);
         });
     };

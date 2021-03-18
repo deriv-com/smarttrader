@@ -108,7 +108,7 @@ table {
             td {
                 overflow: initial;
             }
-            td.desc, td.contract {
+            td.desc {
                 max-width: 30em;
                 overflow-wrap: break-word;
             }
@@ -119,9 +119,6 @@ table {
                     .button {
                         padding: 8px 15px;
                     }
-                }
-                & > th.contract, & > td.contract {
-                    display: none !important;
                 }
                 th, td {
                     font-size: $FONT_SIZE_XS;
@@ -139,7 +136,7 @@ table {
             table-layout: auto;
         }
         #statement-table tr {
-            > th.desc, > td.desc, > th.contract > td.contract {
+            > th.desc, > td.desc {
                 display: none !important;
             }
         }

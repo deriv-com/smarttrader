@@ -8,7 +8,7 @@ const Statement = (() => {
     const getStatementData = (statement, currency) => {
         const date_obj   = new Date(statement.transaction_time * 1000);
         const moment_obj = moment.utc(date_obj);
-        const date_str   = moment_obj.format('DD MMM YYYY');
+        const date_str   = moment_obj.format('YYYY-MM-DD');
         const time_str   = `${moment_obj.format('HH:mm:ss')} GMT`;
         const payout     = parseFloat(statement.payout);
         const amount     = parseFloat(statement.amount);

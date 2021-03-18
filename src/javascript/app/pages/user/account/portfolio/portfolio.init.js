@@ -48,15 +48,13 @@ const PortfolioInit = (() => {
     };
 
     const createPortfolioRow = (data, is_first) => {
-        const exclude_currency = true;
         const new_class = is_first ? '' : 'new';
         const $div      = $('<div/>');
         $div.append($('<tr/>', { class: `tr-first ${new_class} ${data.contract_id}`, id: data.contract_id })
-            .append($('<td/>', { class: 'contract', text: data.longcode }))
             .append($('<td/>', { class: 'ref' }).append($(`<span ${GetAppDetails.showTooltip(data.app_id, oauth_apps[data.app_id])} data-balloon-position="right">${data.transaction_id}</span>`)))
-            .append($('<td/>', { class: 'currency', text: data.currency }))
-            .append($('<td/>', { class: 'purchase' }).append($('<strong/>', { html: formatMoney(data.currency, data.buy_price, exclude_currency) })))
-            .append($('<td/>', { class: 'payout' }).append($('<strong/>', { html: +data.payout ? formatMoney(data.currency, data.payout, exclude_currency) : '-' })))
+            .append($('<td/>', { class: 'payout' }).append($('<strong/>', { html: +data.payout ? formatMoney(data.currency, data.payout) : '-' })))
+            .append($('<td/>', { class: 'details', text: data.longcode }))
+            .append($('<td/>', { class: 'purchase' }).append($('<strong/>', { html: formatMoney(data.currency, data.buy_price) })))
             .append($('<td/>', { class: 'indicative' }).append($('<strong/>', { class: 'indicative_price', text: '--.--' })))
             .append($('<td/>', { class: 'button' }).append($('<button/>', { class: 'button open_contract_details nowrap', contract_id: data.contract_id, text: localize('View') }))))
             .append($('<tr/>', { class: `tr-desc ${new_class} ${data.contract_id}` }).append($('<td/>', { colspan: '6', text: data.longcode })));
@@ -152,7 +150,6 @@ const PortfolioInit = (() => {
         const old_indicative = values[proposal.contract_id].indicative || 0.00;
         values[proposal.contract_id].indicative = proposal.bid_price;
 
-        const exclude_currency = true;
         let status_class   = '';
         let no_resale_html = '';
         if (+proposal.is_sold === 1) {
@@ -167,7 +164,7 @@ const PortfolioInit = (() => {
                 }
                 $td.removeClass('no_resale');
             }
-            $td.html($('<strong/>', { class: `indicative_price ${status_class}`, html: formatMoney(proposal.currency, values[proposal.contract_id].indicative, exclude_currency) })
+            $td.html($('<strong/>', { class: `indicative_price ${status_class}`, html: formatMoney(proposal.currency, values[proposal.contract_id].indicative) })
                 .append(no_resale_html));
         }
 
@@ -196,9 +193,8 @@ const PortfolioInit = (() => {
     };
 
     const updateFooter = () => {
-        const exclude_currency = true;
-        $('#cost-of-open-positions').html(formatMoney(currency, Portfolio.getSumPurchase(values), exclude_currency));
-        $('#value-of-open-positions').html(formatMoney(currency, Portfolio.getIndicativeSum(values), exclude_currency));
+        $('#cost-of-open-positions').html(formatMoney(currency, Portfolio.getSumPurchase(values)));
+        $('#value-of-open-positions').html(formatMoney(currency, Portfolio.getIndicativeSum(values)));
     };
 
     const errorMessage = (msg) => {

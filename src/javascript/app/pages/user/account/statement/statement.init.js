@@ -104,9 +104,7 @@ const StatementInit = (() => {
                 //     .on('click', () => { StatementUI.exportCSV(); });
             }
         }
-
-        const tableTimeTooltip = true;
-        showLocalTimeOnHover('td.transaction-time',tableTimeTooltip);
+        showLocalTimeOnHover('td.date');
     };
 
     const loadStatementChunkWhenScroll = () => {

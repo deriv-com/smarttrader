@@ -11,11 +11,11 @@ const ProfitTable = (() => {
         const sell_price   = parseFloat(transaction.sell_price);
 
         return {
-            buyDate  : `${buy_moment.format('DD MMM YYYY')}\n${buy_moment.format('HH:mm:ss')} GMT`,
+            buyDate  : `${buy_moment.format('YYYY-MM-DD')}\n${buy_moment.format('HH:mm:ss')} GMT`,
             ref      : transaction.transaction_id,
             payout   : +transaction.payout ? formatMoney(currency, parseFloat(transaction.payout), true) : '-',
             buyPrice : formatMoney(currency, buy_price, true),
-            sellDate : `${sell_moment.format('DD MMM YYYY')}\n${sell_moment.format('HH:mm:ss')} GMT`,
+            sellDate : `${sell_moment.format('YYYY-MM-DD')}\n${sell_moment.format('HH:mm:ss')} GMT`,
             sellPrice: formatMoney(currency, sell_price, true),
             pl       : formatMoney(currency, Number(sell_price - buy_price), true),
             desc     : transaction.longcode,

@@ -11,19 +11,23 @@ const StatementUI = (() => {
     let oauth_apps = {};
 
     const table_id = 'statement-table';
-    const columns  = ['contract','ref', 'currency', 'transaction-time', 'transaction', 'credit', 'bal', 'details'];
+    const columns  = ['date', 'ref', 'payout', 'act', 'desc', 'credit', 'bal', 'details'];
 
     const createEmptyStatementTable = () => {
         const header = [
-            localize('Contract details'),
-            localize('Ref. ID'),
-            localize('Currency'),
-            localize('Transaction time'),
-            localize('Transaction'),
+            localize('Date'),
+            localize('Ref.'),
+            localize('Potential Payout'),
+            localize('Action'),
+            localize('Description'),
             localize('Credit/Debit'),
             localize('Balance'),
             localize('Details'),
         ];
+
+        const currency = Client.get('currency');
+
+        header[6] += currency ? ` (${Currency.getCurrencyDisplayCode(currency)})` : '';
 
         const metadata = {
             id  : table_id,
@@ -47,32 +51,29 @@ const StatementUI = (() => {
         }));
         const credit_debit_type = (parseFloat(transaction.amount) >= 0) ? 'profit' : 'loss';
 
-        const currency = Client.get('currency');
-
         const $statement_row = Table.createFlexTableRow([
-            '',
-            `<span ${showTooltip(statement_data.app_id, oauth_apps[statement_data.app_id])}>${statement_data.ref}</span>`,
-            currency,
             statement_data.date,
+            `<span ${showTooltip(statement_data.app_id, oauth_apps[statement_data.app_id])}>${statement_data.ref}</span>`,
+            statement_data.payout,
             statement_data.localized_action,
+            '',
             statement_data.amount,
             statement_data.balance,
             '',
         ], columns, 'data');
         $statement_row.children('.credit').addClass(credit_debit_type);
-        $statement_row.children('.transaction-time').addClass('pre');
-        $statement_row.children('.contract').html(`${statement_data.desc}<br>`);
-        $statement_row.children('.contract').css('width','200px');
+        $statement_row.children('.date').addClass('pre');
+        $statement_row.children('.desc').html(`<span>${statement_data.desc}</span>`);
 
         // add processing time tooltip for withdrawal
         if (transaction.action_type === 'withdrawal') {
-            $statement_row.children('.contract').find('span').attr('data-balloon', transaction.withdrawal_details);
+            $statement_row.children('.desc').find('span').attr('data-balloon', transaction.withdrawal_details);
         }
 
         // create view button and append
         if (/^(buy|sell)$/i.test(statement_data.action_type)) {
             const $view_button = $('<button/>', { class: 'button open_contract_details', text: localize('View'), contract_id: statement_data.id });
-            $statement_row.children('.contract,.details').append($view_button);
+            $statement_row.children('.desc,.details').append($view_button);
         }
 
         return $statement_row[0];        // return DOM instead of jquery object
