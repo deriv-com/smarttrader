@@ -20,6 +20,11 @@
         }
     }
     th {
+        &.temp-column {
+            @media ( max-width: 600px ) {
+                display: none;
+            }
+        }
         padding: 10px;
         @include BIDIR_VALUE(text-align, left, right);
 

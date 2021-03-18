@@ -75,6 +75,10 @@
 }
 
 @mixin portfolio_second_row_description {
+    .contract {
+        display: none;
+        width: 0 !important;
+    }
     .details {
         display: table-column;
         width: 0 !important;

@@ -28,10 +28,11 @@ const Clock = (() => {
         }
     };
 
-    const showLocalTimeOnHover = (selector) => {
+    const showLocalTimeOnHover = (selector, is_table) => {
         document.querySelectorAll(selector || '.date').forEach((el) => {
             const gmt_time_str = el.textContent.replace('\n', ' ');
-            const local_time   = moment.utc(gmt_time_str, 'YYYY-MM-DD HH:mm:ss').local();
+
+            const local_time   = !is_table ? moment.utc(gmt_time_str, 'YYYY-MM-DD HH:mm:ss').local() : moment.utc(gmt_time_str, 'DD MMM YYYY HH:mm:ss').local() ;
             if (local_time.isValid()) {
                 el.setAttribute('data-balloon', local_time.format('YYYY-MM-DD HH:mm:ss Z'));
             }

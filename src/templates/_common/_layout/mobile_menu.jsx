@@ -24,7 +24,7 @@ const MobileMenu = () => (
                     ]}
                 />
                 <Li text={it.L('Trade')}        href={it.url_for('user/metatrader')}     className={'ico-only-hide client_logged_in invisible'} dataShow='maltainvest' />
-                <Li text={it.L('Portfolio')}    href={it.url_for('user/portfoliows')}    className='ico-only-hide client_logged_in invisible' />
+                <Li text={it.L('Open Positions')}    href={it.url_for('user/portfoliows')}    className='ico-only-hide client_logged_in invisible' />
                 <Li text={it.L('Profit Table')} href={it.url_for('user/profit_tablews')} className='ico-only-hide client_logged_in invisible' />
                 <Li text={it.L('Statement')}    href={it.url_for('user/statementws')}    className='client_logged_in invisible' />
                 <Li text={it.L('Cashier')}      href={it.url_for('cashier')}             className='client_logged_in invisible' id='topMenuCashier' />
