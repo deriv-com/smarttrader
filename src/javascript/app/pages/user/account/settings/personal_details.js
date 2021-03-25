@@ -17,7 +17,7 @@ const PersonalDetails = (() => {
     const form_id                = '#frmPersonalDetails';
     const real_acc_elements      = '.RealAcc';
     const real_acc_auth_elements = '.RealAccAuth';
-    const name_fields            = ['salutation', 'first_name', 'last_name'];
+    const name_fields            = ['first_name', 'last_name'];
 
     let is_for_new_account = false;
 
@@ -76,13 +76,13 @@ const PersonalDetails = (() => {
      *
      * @param get_settings to prepopulate some of the values.
      */
+
     const displayChangeableFields = (get_settings) => {
         get_settings.immutable_fields.forEach(field => {
             CommonFunctions.getElementById(`row_${field}`).setVisibility(0);
             CommonFunctions.getElementById(`row_lbl_${field}`).setVisibility(1);
         });
 
-        // if salutation is missing, we want to show first and last name label but salutation selectable separately
         name_fields.forEach((field) => {
             if (get_settings.immutable_fields.includes(field)) {
                 CommonFunctions.getElementById('row_name').setVisibility(1);
@@ -182,7 +182,6 @@ const PersonalDetails = (() => {
             // If field is immutable and value was set by client, show label instead of input
             const has_label         = get_settings.immutable_fields.includes(key);
             const should_show_label = has_label && get_settings[key];
-
             const element_id  = `${should_show_label ? 'lbl_' : ''}${key}`;
             const element_key = document.getElementById(element_id);
             if (!element_key) return;
@@ -190,7 +189,10 @@ const PersonalDetails = (() => {
             editable_fields[key] = (get_settings[key] !== null ? get_settings[key] : '');
 
             const should_update_value = /select|text/i.test(element_key.type);
-            CommonFunctions.getElementById(`row_${element_id}`).setVisibility(1);
+            if (element_id !== 'salutation' || !get_settings_data.salutation){
+                CommonFunctions.getElementById(`row_${element_id}`).setVisibility(1);
+            }
+           
             if (element_key.type === 'checkbox') {
                 element_key.checked = !!get_settings[key];
             } else if (!should_update_value) { // for all non (checkbox|select|text) elements
@@ -237,6 +239,7 @@ const PersonalDetails = (() => {
             $('#residence').replaceWith($('<label/>').append($('<strong/>', { id: 'country' })));
             $('#country').text(get_settings.country);
         }
+
         if (is_virtual) {
             CommonFunctions.getElementById('row_date_of_birth').setVisibility(0);
         }
