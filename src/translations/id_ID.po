@@ -1981,6 +1981,15 @@ msgstr "Penarikan dinonaktifkan"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Fasilitas penarikan akun Anda dinonaktifkan. Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
 
+msgid "XMR vs US dollar"
+msgstr "XMR vs dolar AS"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Ya"
 
@@ -2126,10 +2135,7 @@ msgid "Your fiat account's currency is set to %1."
 msgstr "Mata uang akun fiat Anda diatur sebagai %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr "Kata sandi Anda sudah berhasil dibuat ulang. Silahkan akes akun Anda menggunakan kata sandi baru."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Kata sandi yang Anda gunakan merupakan kata sandi paling umum digunakan di internet. Silakan pilih kata sandi yang unik."
+msgstr "Kata sandi Anda sudah berhasil direset. Silahkan akes akun Anda menggunakan kata sandi baru."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Permohonan klien profesional Anda %1tidak disetujui%2."
@@ -2212,9 +2218,6 @@ msgstr "masuk"
 msgid "logout"
 msgstr "keluar"
 
-msgid "million"
-msgstr "juta"
-
 msgid "minute"
 msgstr "menit"
 
@@ -2250,9 +2253,6 @@ msgstr "hari ini, Jumat"
 
 msgid "virtual money credit to account"
 msgstr "dana virtual dikreditkan kedalam akun"
-
-msgid "years"
-msgstr "tahun"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

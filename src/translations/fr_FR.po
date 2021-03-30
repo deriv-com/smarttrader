@@ -1981,6 +1981,15 @@ msgstr "Retrait désactivé"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Les retraits ont été désactivés sur votre compte. Veuillez vérifier votre email pour plus de détails."
 
+msgid "XMR vs US dollar"
+msgstr "XMR vs US dollar"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Oui"
 
@@ -2128,9 +2137,6 @@ msgstr "La devise de votre compte fiat est en %1."
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Votre mot de passe a été réinitialisé avec succès. Veuillez vous connecter à votre compte en utilisant votre nouveau mot de passe."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Votre mot de passe est l'un des mots de passe les plus utilisés sur Internet. Veuillez choisir un mot de passe unique."
-
 msgid "Your professional client request is %1not approved%2."
 msgstr "Votre demande de client professionnel %1n'est pas approuvée%2."
 
@@ -2212,9 +2218,6 @@ msgstr "connexion"
 msgid "logout"
 msgstr "déconnexion"
 
-msgid "million"
-msgstr "million"
-
 msgid "minute"
 msgstr "minute"
 
@@ -2250,9 +2253,6 @@ msgstr "aujourd'hui, vendredis"
 
 msgid "virtual money credit to account"
 msgstr "crédit de fonds virtuels sur le compte"
-
-msgid "years"
-msgstr "années"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

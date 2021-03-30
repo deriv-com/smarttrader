@@ -1981,6 +1981,15 @@ msgstr "已被禁提款"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "您的帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
 
+msgid "XMR vs US dollar"
+msgstr "門羅幣兌美元"
+
+msgid "XMR/USD"
+msgstr "門羅幣/美元"
+
+msgid "XRP/USD"
+msgstr "瑞波幣/美元"
+
 msgid "Yes"
 msgstr "是的"
 
@@ -2128,9 +2137,6 @@ msgstr "您的法定帳戶的幣種設置為 %1。"
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "您的密碼是網上最常用的密碼之一。請另選一個獨特的密碼。"
-
 msgid "Your professional client request is %1not approved%2."
 msgstr "您申請成為專業客戶的請求%1不受批准%2。"
 
@@ -2212,9 +2218,6 @@ msgstr "登入"
 msgid "logout"
 msgstr "登出"
 
-msgid "million"
-msgstr "百萬"
-
 msgid "minute"
 msgstr "分鐘"
 
@@ -2250,9 +2253,6 @@ msgstr "今天，週五"
 
 msgid "virtual money credit to account"
 msgstr "虛擬資金存入帳戶"
-
-msgid "years"
-msgstr "年"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

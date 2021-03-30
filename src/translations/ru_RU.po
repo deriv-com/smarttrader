@@ -1981,6 +1981,15 @@ msgstr "Вывод средств отключен"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Вывод средств отключен на Вашем счету. Проверьте свою электронную почту для получения более подробной информации."
 
+msgid "XMR vs US dollar"
+msgstr "XMR против доллара США"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Да"
 
@@ -2128,9 +2137,6 @@ msgstr "Валютой Вашего фидуциарного счёта явля
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Ваш пароль был изменен. Пожалуйста, зайдите на счет, используя новый пароль."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Ваш пароль является одним из наиболее часто используемых паролей в Интернете. Пожалуйста, подберите уникальный пароль."
-
 msgid "Your professional client request is %1not approved%2."
 msgstr "Ваша заявка на статус профессионального клиента %1отклонена%2."
 
@@ -2212,9 +2218,6 @@ msgstr "вход"
 msgid "logout"
 msgstr "выход"
 
-msgid "million"
-msgstr "млн."
-
 msgid "minute"
 msgstr "мин."
 
@@ -2250,9 +2253,6 @@ msgstr "сегодня, по пятницам"
 
 msgid "virtual money credit to account"
 msgstr "виртуальных денег на счёт"
-
-msgid "years"
-msgstr "год(а)/лет"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

@@ -1981,6 +1981,15 @@ msgstr "Rút tiền đã bị vô hiệu hóa"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Rút tiền đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
 
+msgid "XMR vs US dollar"
+msgstr "XMR vs đô la Mỹ"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Có"
 
@@ -2128,9 +2137,6 @@ msgstr "Tài khoản fiat của bạn có đơn vị tiền tệ là %1."
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Mật khẩu của bạn đã được đổi thành công. Vui lòng dùng mật khẩu mới đăng nhập vào tài khoản của bạn."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Mật khẩu của bạn là một trong những mật khẩu được sử dụng phổ biến nhất trên internet. Vui lòng chọn một mật khẩu duy nhất."
-
 msgid "Your professional client request is %1not approved%2."
 msgstr "Yêu cầu trở thành khách hàng chuyên nghiệp của bạn %1nkhông được chấp thuận%2."
 
@@ -2212,9 +2218,6 @@ msgstr "đăng nhập"
 msgid "logout"
 msgstr "đăng xuất"
 
-msgid "million"
-msgstr "triệu"
-
 msgid "minute"
 msgstr "phút"
 
@@ -2250,9 +2253,6 @@ msgstr "hôm nay, Thứ Sáu"
 
 msgid "virtual money credit to account"
 msgstr "tín dụng tiền ảo vào tài khoản"
-
-msgid "years"
-msgstr "năm"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
