@@ -719,7 +719,7 @@ li strong.margin-right {
     justify-content: center;
     border-radius: 3px;
     height: 40px;
-    width: 200px;
+    width: 155px;
     border: 1px solid $COLOR_GRAY;
     background-position-x: 7px;
     background-position-y: center;
@@ -733,6 +733,9 @@ li strong.margin-right {
     &#button_facebook {
         background-image: url('../images/social/facebook.svg');
     }
+    &#button_apple {
+        background-image: url('../images/social/apple.svg');
+    }
     & + .button-social {
         margin-left: 10px;
     }
@@ -745,7 +748,12 @@ li strong.margin-right {
         font-weight: 400;
         padding-left: 1rem;
     }
-    @media screen and (max-width: 480px) {
+
+    @media screen and (max-width: 650px) {
+        width: 150px;
+    }
+
+    @media screen and (max-width: 650px) {
         width: 30%;
         background-position-x: center;
 

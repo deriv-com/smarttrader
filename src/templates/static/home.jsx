@@ -188,6 +188,7 @@ const Home = () => {
                             <div className='gr-row gr-row-align-center'>
                                 <SocialButton provider='google' />
                                 <SocialButton provider='facebook' />
+                                <SocialButton provider='apple' />
                             </div>
                         </div>
                     </div>
