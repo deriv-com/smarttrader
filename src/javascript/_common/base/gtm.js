@@ -13,6 +13,7 @@ const getAppId         = require('../../config').getAppId;
 
 const GTM = (() => {
     const isGtmApplicable = () => (/^(1|1098|14473|15284|16303|15265|16929)$/.test(getAppId()));
+    const isGtmAvailable = () => (window.dataLayer !== (null || undefined));
 
     const getCommonVariables = () => ({
         country_ip: State.getResponse('website_status.clients_country'),
@@ -28,11 +29,13 @@ const GTM = (() => {
     });
 
     const pushDataLayer = (data) => {
-        if (isGtmApplicable() && !isLoginPages()) {
-            dataLayer.push({
-                ...getCommonVariables(),
-                ...data,
-            });
+        if (isGtmAvailable()){
+            if (isGtmApplicable() && !isLoginPages()) {
+                dataLayer.push({
+                    ...getCommonVariables(),
+                    ...data,
+                });
+            }
         }
     };
 
@@ -81,23 +84,8 @@ const GTM = (() => {
 
         if (login_event) {
             data.event = login_event;
-            BinarySocket.wait('mt5_login_list').then((response) => {
-                (response.mt5_login_list || []).forEach((obj) => {
-                    const acc_type = (ClientBase.getMT5AccountType(obj.group) || '')
-                        .replace('real_vanuatu', 'financial')
-                        .replace('real_svg', 'financial')
-                        .replace('vanuatu_', '')
-                        .replace('svg_', '')
-                        .replace(/svg/, 'gaming'); // i.e. financial_cent, demo_cent, demo_gaming, real_gaming
-                    if (acc_type) {
-                        data[`mt5_${acc_type}_id`] = obj.login;
-                    }
-                });
-                pushDataLayer(data);
-            });
-        } else {
-            pushDataLayer(data);
         }
+        pushDataLayer(data);
 
         // check if there are any transactions in the last 30 days for UX interview selection
         BinarySocket.send({ statement: 1, limit: 1 }).then((response) => {

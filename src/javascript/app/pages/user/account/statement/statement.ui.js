@@ -40,7 +40,7 @@ const StatementUI = (() => {
     const clearTableContent = () => {
         Table.clearTableBody(table_id);
         all_data = [];
-        $(`#${table_id} > tfoot`).hide();
+        $(`#${table_id}`).remove();
     };
 
     const createStatementRow = (transaction) => {
@@ -63,7 +63,12 @@ const StatementUI = (() => {
         ], columns, 'data');
         $statement_row.children('.credit').addClass(credit_debit_type);
         $statement_row.children('.date').addClass('pre');
-        $statement_row.children('.desc').html(`${statement_data.desc}<br>`);
+        $statement_row.children('.desc').html(`<span>${statement_data.desc}</span>`);
+
+        // add processing time tooltip for withdrawal
+        if (transaction.action_type === 'withdrawal') {
+            $statement_row.children('.desc').find('span').attr('data-balloon', transaction.withdrawal_details);
+        }
 
         // create view button and append
         if (/^(buy|sell)$/i.test(statement_data.action_type)) {
@@ -109,7 +114,6 @@ const StatementUI = (() => {
         errorMessage,
         exportCSV,
         updateAccountStatistics,
-
         setOauthApps: values => (oauth_apps = values),
     };
 })();

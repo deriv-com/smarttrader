@@ -35,13 +35,13 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Вы успешно перевели средства %1 со счёта %2 на счёт %3. Номер транзакции: %4"
 
 msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 открывает Вам простой способ работы на финансовых рынках. Заключайте контракты на сумму от $1 USD на ведущих валютных парах, сырьевых рынках, а также фондовых и синтетических индексах."
+msgstr "%1 открывает вам простой способ работы на финансовых рынках. Заключайте контракты на сумму от $1 USD на ведущих валютных парах, сырьевых рынках, а также фондовых и синтетических индексах."
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "%1 зачислено на Ваш демо-счёт: %2."
+msgstr "%1 зачислено на ваш демо-счёт MT5: %2."
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr "%1 зачислено на Ваш демо-счет: %2."
+msgstr "%1 зачислено на ваш демо-счет: %2."
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
 msgstr "Вывод средств %1 со счёта %2 на счёт %3 завершен. Номер транзакции: %4"
@@ -1979,7 +1979,7 @@ msgid "Withdrawal disabled"
 msgstr "Вывод средств отключен"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Вывод средств отключен на Вашем счету. Проверьте свою электронную почту для получения более подробной информации."
+msgstr "На вашем счете отключен вывод средств. Проверьте свою электронную почту для получения более подробной информации."
 
 msgid "Yes"
 msgstr "Да"
@@ -1994,10 +1994,10 @@ msgid "You are categorised as a professional client."
 msgstr "Вы относитесь к категории профессиональных клиентов."
 
 msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr "Вы относитесь к категории индивидуальных клиентов. Станьте профессиональным клиентом."
+msgstr "Вы относитесь к категории индивидуальных клиентов. Подайте заявку, чтобы получить статус профессионального трейдера."
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "Вы можете владеть только одним фидуциарным счётом. Вы можете в любое время изменить валюту фидуциарного счёта, если Вы ещё не пополняли счёт или не открывали счёт MT5."
+msgstr "Вы можете владеть только одним фиатным счетом. Вы можете изменить валюту фиатного счета, если ещё не пополняли счет или не открывали счет MT5."
 
 msgid "You are offline"
 msgstr "Вы оффлайн"
@@ -2005,14 +2005,23 @@ msgstr "Вы оффлайн"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Вы можете %1установить новую валюту%2 перед первым пополнением счёта или открытием счёта MT5."
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Вы также можете полностью исключить себя с нашего веб-сайта на определенный срок. По окончании периода самоисключения вы можете либо продлить его, либо немедленно возобновить торговлю. Если вы хотите сократить или отменить период самоисключения, обратитесь в %1службу поддержки%2."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Вы также можете полностью исключить себя с нашего веб-сайта на определенный срок. Период самоисключения составляет минимум 6 месяцев, после чего у вас есть возможность продлить его до 5 лет или немедленно возобновить торговлю."
+
 msgid "You can close this window without interrupting your trade."
-msgstr "Вы можете закрыть данное окно без ущерба Вашей торговле."
+msgstr "Закрытие этого окна не повлияет на ваш трейдинг."
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "Вы не можете изменить валюту счёта, так как Вы открыли счёт MT5."
+msgstr "Вы не можете изменить валюту счёта, так как вы открыли счёт MT5."
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "Вы не можете изменить валюту счёта, так как Вы уже пополняли счёт."
+msgstr "Вы не можете изменить валюту счёта, так как вы уже пополняли счёт."
+
+msgid "You can now return to your computer to continue"
+msgstr "Теперь вы можете вернуться и продолжить со своего компьютера"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "Вы можете дополнительно внести на демо-счёт %1, если его баланс составит %2 или ниже."
@@ -2024,7 +2033,7 @@ msgid "You did not change anything."
 msgstr "Вы не внесли никаких изменений."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr "Вам не нужно аутентифицировать счёт в данное время.%1Мы сообщим, когда Вашему счёту потребуется аутентификация."
+msgstr "В настоящее время вам не нужно аутентифицировать свой счет.%1Мы сообщим вам, когда счету потребуется аутентификация."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr "Вы уже в сумме вывели %1%2 за последние %3 суток."
@@ -2033,10 +2042,13 @@ msgid "You have already withdrawn %1%2."
 msgstr "Вы уже вывели со счета %1%2."
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr "На Вашем счету Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счёт</a>."
+msgstr "На вашем счете Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счёт</a>."
+
+msgid "You have insufficient funds in your MT5 account."
+msgstr "На вашем счете MT5 недостаточно средств."
 
 msgid "You have not granted access to any applications."
-msgstr "У Вас нет доступа к приложениям."
+msgstr "Вы не предоставили доступ ни к каким приложениям."
 
 msgid "You have reached the limit."
 msgstr "Вы достигли лимита."
@@ -2054,16 +2066,19 @@ msgid "You have successfully changed your account currency from %1 to %2."
 msgstr "Вы успешно изменили валюту счёта с %1 на %2."
 
 msgid "You have successfully disabled two-factor authentication for your account."
-msgstr "Вы успешно отключили двухступенчатую аутентификацию на Вашем счету."
+msgstr "Вы успешно отключили двухступенчатую аутентификацию на вашем счете."
 
 msgid "You have successfully enabled two-factor authentication for your account."
-msgstr "Вы успешно включили двухступенчатую аутентификацию на Вашем счету."
+msgstr "Вы успешно включили двухступенчатую аутентификацию на вашем счете."
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Вы успешно установили валюту счёта: %1."
 
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Вы можете %1устанавливать и менять лимиты%2 на торговую деятельность на этом сайте. Доступные лимиты:"
+
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr "Чтобы использовать для авторизации другой сервер OAuth, Вы должны зарегистрироваться и получить ID приложения. Дополнительную информацию об OAuth можно узнать на странице https://developers.binary.com/."
+msgstr "Чтобы использовать для авторизации другой сервер OAuth, вы должны зарегистрироваться и получить ID приложения. Дополнительную информацию об OAuth можно узнать на странице https://developers.binary.com/."
 
 msgid "You have yet to receive any notifications"
 msgstr "У вас пока нет уведомлений"
@@ -2078,25 +2093,25 @@ msgid "You will be redirected to a third-party website which is not owned by Bin
 msgstr "Вы будете перенаправлены на сайт третьей стороны, который не принадлежит Binary.com."
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фидуциарного счёта после открытия данного счёта MT5. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счета после открытия этого счета MT5. Вы уверены, что хотите продолжить?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фидуциарного счёта после его пополнения. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счета после его пополнения. Вы уверены, что хотите продолжить?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr "Вы выигрываете, если рыночная цена при окончании не будет заканчиваться выбранной Вами цифрой."
+msgstr "Вы выигрываете, если рыночная цена по истечении срока действия контракта не будет заканчиваться выбранной вами цифрой."
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr "Контракт выиграет, если цена рынка закончится выбранной Вами цифрой."
+msgstr "Вы выигрываете, если рыночная цена по истечении срока действия контракта будет заканчиваться выбранной вами цифрой."
+
+msgid "You'll need to restart your verification on your computer"
+msgstr "Вам нужно будет перезапустить верификацию на вашем компьютере"
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "Ваш %1-дневный лимит на вывод средств составляет %2%3."
 
 msgid "Your account has no Login/Logout activity."
-msgstr "На Вашем счету нет активности входов/выходов."
-
-msgid "Your account has no trading activity."
-msgstr "На Вашем счету нет торговой деятельности."
+msgstr "На вашем счете нет активности входов/выходов."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Ваш счет полностью авторизован, и лимит на вывод был снят."
@@ -2117,19 +2132,22 @@ msgid "Your changes have been updated."
 msgstr "Ваши изменения внесены успешно."
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "В данный момент баланс Вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+msgstr "В данный момент баланс вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+
+msgid "Your document is being reviewed, please check back in 1-3 days."
+msgstr "Ваши документы проходят проверку. Пожалуйста, подождите от 1 до 3 дней."
+
+msgid "Your document is being reviewed, please check back in 1-3 days. You must also submit a proof of address."
+msgstr "Ваши документы проходят проверку. Пожалуйста, подождите от 1 до 3 дней. Вам также необходимо предоставить подтверждение адреса."
 
 msgid "Your fiat account's currency is currently set to %1."
-msgstr "Валютой Вашего фидуциарного счёта является %1."
+msgstr "Валютой вашего фиатного счета является %1."
 
 msgid "Your fiat account's currency is set to %1."
-msgstr "Валютой Вашего фидуциарного счёта является %1."
+msgstr "Валютой вашего фиатного счета является %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Ваш пароль был изменен. Пожалуйста, зайдите на счет, используя новый пароль."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Ваш пароль является одним из наиболее часто используемых паролей в Интернете. Пожалуйста, подберите уникальный пароль."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Ваша заявка на статус профессионального клиента %1отклонена%2."
@@ -2138,34 +2156,34 @@ msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully proces
 msgstr "Ваш запрос на перевод %1 %2 с %3 на %4 был выполнен успешно."
 
 msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr "Ваш запрос на вывод %1 %2 с Вашего счета %3 на счет платежного агента %4 был выполнен успешно."
+msgstr "Ваш запрос на вывод %1 %2 со счета %3 на счет платежного агента %4 был выполнен успешно."
 
 msgid "Your session duration limit will end in %1 seconds."
 msgstr "Ограничение на длительность сессии закончится через %1 сек."
 
 msgid "Your settings have been updated successfully."
-msgstr "Ваши настройки обновлены успешно."
+msgstr "Ваши настройки успешно обновлены."
 
 msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr "Срок действия Вашего ключа истёк. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего ключа истёк. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
 
 msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr "Срок действия Вашего ключа истёк. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего ключа истёк. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
 
 msgid "Your trading statistics since %1."
 msgstr "Ваша торговая статистика с %1."
 
 msgid "Your transaction reference is"
-msgstr "Ссылка на Вашу сделку"
+msgstr "Номер вашей транзакции:"
 
 msgid "Your transaction reference number is %1"
-msgstr "Номер Вашей сделки %1"
+msgstr "Номер вашей транзакции: %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "В данный момент баланс Вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+msgid "Your virtual balance has been reset."
+msgstr "Баланс вашего демо-счета был сброшен."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr "Ваш веб браузер (%1) устарел, что может повлиять на результаты Вашей торговли. Рекомендуем %2обновить браузер%3"
+msgstr "Ваш веб браузер (%1) устарел, что может повлиять на результаты вашей торговли. Рекомендуем %2обновить браузер%3"
 
 msgid "Your withdrawal limit is %1%2."
 msgstr "Ваш лимит на вывод составляет %1%2."
@@ -2177,7 +2195,10 @@ msgid "accounts"
 msgstr "счета"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr "бинарные опционы, форекс, торговля на форекс, онлайн торговля, бинарный трейдинг, торговля на фондовых индексах, трейдинг на фондовых индексах, контракты на форекс, торговля на сырье, стратегия бинарных опционов, бинарный брокер, бинарная ставка, платформа для торговли бинарными опционами, бинарная стратегия, финансы, инвестиции, трейдинг"
+msgstr "бинарные опционы, forex, форекс, forex трейдинг, торговля на форекс, онлайн торговля, онлайн-трейдинг бинарный трейдинг, торговля на фондовых индексах, трейдинг на фондовых индексах, контракты на форекс, торговля на сырье, стратегия бинарных опционов, бинарный брокер, бинарная ставка, платформа для торговли бинарными опционами, бинарная стратегия, финансы, инвестиции, трейдинг"
+
+msgid "close"
+msgstr "закрыть"
 
 msgid "day"
 msgstr "дн."
@@ -2187,6 +2208,9 @@ msgstr "дн."
 
 msgid "details"
 msgstr "подробности"
+
+msgid "e.g. United States"
+msgstr "например США"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "напр., frontend.binaryws.com"
@@ -2211,9 +2235,6 @@ msgstr "вход"
 
 msgid "logout"
 msgstr "выход"
-
-msgid "million"
-msgstr "млн."
 
 msgid "minute"
 msgstr "мин."
@@ -2250,9 +2271,6 @@ msgstr "сегодня, по пятницам"
 
 msgid "virtual money credit to account"
 msgstr "виртуальных денег на счёт"
-
-msgid "years"
-msgstr "год(а)/лет"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

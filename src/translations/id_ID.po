@@ -1981,6 +1981,15 @@ msgstr "Penarikan dinonaktifkan"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Fasilitas penarikan akun Anda dinonaktifkan. Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
 
+msgid "XMR vs US dollar"
+msgstr "XMR vs dolar AS"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Ya"
 
@@ -2004,6 +2013,12 @@ msgstr "Anda sedang offline"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Anda dapat %1memilih mata uang baru%2 jika belum melakukan deposit perdana atau mendaftar akun MT5."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Anda juga dapat memutuskan untuk mengecualikan diri Anda sepenuhnya dari situs web kami untuk durasi tertentu. Setelah periode pengecualian diri berakhir, Anda dapat memperpanjangnya lebih lanjut atau melanjutkan trading dengan segera. Jika Anda ingin mengurangi atau menghapus periode pengecualian diri, hubungi %1Customer Support%2 kami."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Anda juga dapat memutuskan untuk mengecualikan diri Anda sepenuhnya dari situs web kami dengan durasi tertentu. Periode pengecualian diri minimal adalah 6 bulan selanjutnya Anda memiliki opsi untuk memperpanjangnya hingga total 5 tahun atau melanjutkan trading dengan segera."
 
 msgid "You can close this window without interrupting your trade."
 msgstr "Anda dapat menutup window ini tanpa mengganggu trading Anda."
@@ -2035,6 +2050,9 @@ msgstr "Anda telah menarik dana sebesar %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Anda tidak memiliki dana yang cukup di akun Binary Anda, silahkan <a href=\"%1\">tambah dana</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "Dana tidak mencukupi pada akun MT5 Anda."
+
 msgid "You have not granted access to any applications."
 msgstr "Anda belum diberikan akses ke dalam aplikasi apapun."
 
@@ -2061,6 +2079,9 @@ msgstr "Anda telah berhasil mengaktifkan autentikasi dua faktor pada akun Anda."
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Anda telah berhasil memilih mata uang pada akun Anda dalam %1."
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Anda memiliki kesempatan untuk %1memasang dan mengubah batas%2 pada aktivitas trading Anda di situs web ini. Batas yang tersedia adalah:"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Anda perlu mendaftar dan memperoleh App ID sebelum dapat menggunakan server OAuth berbeda. Untuk informasi lebih lanjut mengenai OAuth lihat di https://developers.binary.com/."
@@ -2095,9 +2116,6 @@ msgstr "Batasan penarikan %1 hari Anda saat ini adalah %2%3."
 msgid "Your account has no Login/Logout activity."
 msgstr "Akun Anda tidak memiliki aktivitas Login/Logout."
 
-msgid "Your account has no trading activity."
-msgstr "Akun Anda tidak memiliki aktivitas trading."
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Akun Anda telah terbukti dan batasan penarikan Anda telah dihapuskan."
 
@@ -2126,10 +2144,7 @@ msgid "Your fiat account's currency is set to %1."
 msgstr "Mata uang akun fiat Anda diatur sebagai %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr "Kata sandi Anda sudah berhasil dibuat ulang. Silahkan akes akun Anda menggunakan kata sandi baru."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Kata sandi yang Anda gunakan merupakan kata sandi paling umum digunakan di internet. Silakan pilih kata sandi yang unik."
+msgstr "Kata sandi Anda sudah berhasil direset. Silahkan akes akun Anda menggunakan kata sandi baru."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Permohonan klien profesional Anda %1tidak disetujui%2."
@@ -2161,8 +2176,8 @@ msgstr "Referensi transaksi Anda adalah"
 msgid "Your transaction reference number is %1"
 msgstr "Nomor referensi transaksi Anda adalah %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Saldo akun virtual Anda saat ini adalah %1 atau kurang. Anda dapat mengisi ulang akun Anda dengan tambahan %2."
+msgid "Your virtual balance has been reset."
+msgstr "Saldo virtual Anda telah direset."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Browser web Anda (%1) sudah ketinggalan zaman yang dapat mempengaruhi pengalaman trading Anda. Lanjutkan dengan risiko sendiri. %2Perbarui browser%3"
@@ -2174,10 +2189,13 @@ msgid "account"
 msgstr "akun"
 
 msgid "accounts"
-msgstr "akun"
+msgstr "beberapa akun"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "opsi binary, forex, trading forex, online trading, trading finansial, trading binary, trading indeks, indeks trading, trading bursa saham, trading forex, trading komoditas, strategi opsi binary, broker binary, trading binary, platform trading opsi binary, strategi binary, finansial, investasi, trading"
+
+msgid "close"
+msgstr "tutup"
 
 msgid "day"
 msgstr "hari"
@@ -2187,6 +2205,9 @@ msgstr "hari"
 
 msgid "details"
 msgstr "perincian"
+
+msgid "e.g. United States"
+msgstr "contoh Amerika Serikat"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "misalnya frontend.binaryws.com"
@@ -2211,9 +2232,6 @@ msgstr "masuk"
 
 msgid "logout"
 msgstr "keluar"
-
-msgid "million"
-msgstr "juta"
 
 msgid "minute"
 msgstr "menit"
@@ -2250,9 +2268,6 @@ msgstr "hari ini, Jumat"
 
 msgid "virtual money credit to account"
 msgstr "dana virtual dikreditkan kedalam akun"
-
-msgid "years"
-msgstr "tahun"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

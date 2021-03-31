@@ -2005,6 +2005,12 @@ msgstr "您已離線"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "首次存款或開立MT5 帳戶之前, 您可以%1設置新幣種%2。"
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "您還可以決定在指定期限內完全禁止自己進入我們的網站。一旦禁止期限結束後，您可以進一步延長其期限或立即恢復交易。如果您希望縮短或刪除自我禁止期限，請與我們的％1客戶支援部％2聯繫。"
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "您還可以決定在指定期限內完全禁止自己進入我們的網站。自我禁止期至少為6個月，之後您可以選擇將其延長至5年或立即恢復交易。"
+
 msgid "You can close this window without interrupting your trade."
 msgstr "您可以在不中斷交易的情況下關閉此視窗。"
 
@@ -2035,6 +2041,9 @@ msgstr "您已提取 %1%2。"
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "您的Binary帳戶資金不足，請<a href=\"%1\">增加資金</a>。"
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "您的 MT5 帳戶資金不足。"
+
 msgid "You have not granted access to any applications."
 msgstr "您未獲權限存取任何應用程式。"
 
@@ -2061,6 +2070,9 @@ msgstr "您已成功啟用帳戶的雙因素身份驗證。"
 
 msgid "You have successfully set your account currency to %1."
 msgstr "您已成功將帳戶幣種 設定為 %1 。"
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "您有機會％1設定和修改限制％2自己在此網站交易。可用的限額為："
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "使用各OAuth伺服器進行驗證前須先註冊並領取應用程式ID。欲知詳細資訊請前往https://developers.binary.com/參閱OAuth資料。"
@@ -2095,9 +2107,6 @@ msgstr "您目前%1天的取款限額是%2%3。"
 msgid "Your account has no Login/Logout activity."
 msgstr "您的帳戶沒有登入/登出活動。"
 
-msgid "Your account has no trading activity."
-msgstr "您的帳號沒有交易活動。"
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "您的帳戶已經得到完全驗證，且您的取款限額已經取消。"
 
@@ -2127,9 +2136,6 @@ msgstr "您的法定帳戶的幣種設置為 %1。"
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "您的密碼是網上最常用的密碼之一。請另選一個獨特的密碼。"
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "您申請成為專業客戶的請求%1不受批准%2。"
@@ -2161,8 +2167,8 @@ msgstr "您的交易參考號是"
 msgid "Your transaction reference number is %1"
 msgstr "您的交易號是 %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "您的虛擬帳戶餘額目前為 %1 或更低。您可以新增 %2補充帳戶資金。"
+msgid "Your virtual balance has been reset."
+msgstr "您的虛擬餘額已重設。"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "您的網絡瀏覽器 (%1) 已過時，並可能會影響您的交易操作。繼續操作須自行承擔風險。%2更新瀏覽器%3"
@@ -2179,6 +2185,9 @@ msgstr "帳戶"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "二元期權、外匯、外匯交易、線上交易、金融交易、二元交易、指數交易、交易股票指數、外匯交易、交易商品、二元期權策略、二元經紀、二元投注、二元期權交易平台、二元策略、金融、投資、交易"
 
+msgid "close"
+msgstr "關閉"
+
 msgid "day"
 msgstr "天"
 
@@ -2187,6 +2196,9 @@ msgstr "天"
 
 msgid "details"
 msgstr "詳細資料"
+
+msgid "e.g. United States"
+msgstr "例如美國"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "例如 frontend.binaryws.com"
@@ -2211,9 +2223,6 @@ msgstr "登入"
 
 msgid "logout"
 msgstr "登出"
-
-msgid "million"
-msgstr "百萬"
 
 msgid "minute"
 msgstr "分鐘"
@@ -2250,9 +2259,6 @@ msgstr "今天，週五"
 
 msgid "virtual money credit to account"
 msgstr "虛擬資金存入帳戶"
-
-msgid "years"
-msgstr "年"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

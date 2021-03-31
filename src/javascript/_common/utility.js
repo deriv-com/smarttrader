@@ -105,6 +105,11 @@ const isEqualObject = (obj1, obj2) => (
     )
 );
 
+const removeObjProperties = (property_arr, obj) => {
+    property_arr.forEach(property => delete obj[property]);
+    return obj;
+};
+
 // Filters out duplicates in an array of objects by key
 const unique = (array, key) => array.filter((e, idx) =>
     array.findIndex((a, i) => a[key] ? a[key] === e[key] : i === idx) === idx);
@@ -213,6 +218,12 @@ const findParent = (el, selector) => {
     return null;
 };
 
+const isBinaryDomain = () => {
+    const url = new URL(window.location.href);
+    const domain = url.hostname.split('.').slice(-2).join('.');
+    return (domain === 'binary.com');
+};
+
 let static_hash;
 const getStaticHash = () => {
     static_hash = static_hash || (document.querySelector('script[src*="binary"]').getAttribute('src') || '').split('?')[1];
@@ -233,6 +244,7 @@ module.exports = {
     getHighestZIndex,
     downloadCSV,
     template,
+    isBinaryDomain,
     isEmptyObject,
     isLoginPages,
     cloneObject,
@@ -246,4 +258,5 @@ module.exports = {
     findParent,
     getStaticHash,
     PromiseClass,
+    removeObjProperties,
 };

@@ -1981,6 +1981,15 @@ msgstr "Prelievi disabilitati"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "La funzione di prelievo è stata disabilitata per il tuo conto. Ti invitiamo a controllare il tuo indirizzo e-mail per ulteriori indicazioni."
 
+msgid "XMR vs US dollar"
+msgstr "XMR vs dollaro statunitense"
+
+msgid "XMR/USD"
+msgstr "XMR/USD"
+
+msgid "XRP/USD"
+msgstr "XRP/USD"
+
 msgid "Yes"
 msgstr "Sì"
 
@@ -2004,6 +2013,12 @@ msgstr "Sei offline"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "È possibile %1impostare una nuova valuta%2 prima di effettuare il primo deposito o creare un conto MT5."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Inoltre puoi autoescluderti completamente dal trading tramite il nostro sito web per un periodo specifico. Una volta terminato il periodo di autoesclusione, puoi estenderlo ulteriormente o riprendere subito a fare trading. Se desideri ridurre o eliminare il periodo di autoesclusione, contatta %1l'assistenza clienti%2."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Puoi anche autoescluderti dal trading tramite il nostro sito web per un periodo specifico. Il periodo di autoesclusione dura minimo 6 mesi, al termine dei quali puoi scegliere di prolungarlo fino a 5 anni totali oppure di tornare subito a fare trading."
 
 msgid "You can close this window without interrupting your trade."
 msgstr "Puoi chiudere questa finestra senza interrompere il trade."
@@ -2035,6 +2050,9 @@ msgstr "Hai già prelevato %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "I fondi presenti sul conto Binary non sono sufficienti, ti invitiamo ad <a href=\"%1\">aggiungere fondi</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "Non hai fondi sufficienti sul conto MT5."
+
 msgid "You have not granted access to any applications."
 msgstr "Non è possibile accedere ad alcuna applicazione."
 
@@ -2061,6 +2079,9 @@ msgstr "L'autenticazione a due fattori per i tuo conto è stata abilitata."
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Hai modificato la valuta del conto: ora è %1."
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Da questo sito web puoi %1impostare e modificare i limiti%2 sulle attività di trading. I limiti disponibili sono i seguenti:"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Per utilizzare un server OAuth diverso per l'autenticazione, è necessario registrarsi e ottenere un ID dell'App. Per ulteriori informazioni, consulta la pagina relativa a OAuth su https://developers.binary.com/."
@@ -2095,9 +2116,6 @@ msgstr "Al momento, il limite giornaliero sui prelievi %1 corrisponde a %2%3."
 msgid "Your account has no Login/Logout activity."
 msgstr "Non è mai stata registrata alcuna attività di accesso/uscita dal conto."
 
-msgid "Your account has no trading activity."
-msgstr "Sul conto non è presente alcuna attività di trading."
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Il conto è stato completamente autenticato e sono stati rimossi i limiti di prelievo."
 
@@ -2127,9 +2145,6 @@ msgstr "La valuta del tuo conto fiat è impostata su %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "La tua password è stata ripristinata con successo. Effettua il login sul conto utilizzando la nuova password."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Questa password è una delle più utilizzate su Internet: scegli una password unica."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "La richiesta di classificazione come cliente professionista %1non è stata approvata%2."
@@ -2161,8 +2176,8 @@ msgstr "Il riferimento per le transazioni è"
 msgid "Your transaction reference number is %1"
 msgstr "Il numero di riferimento per le transazioni è %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Al momento, il saldo del tuo conto virtuale è inferiore o uguale a %1; puoi ricaricare il conto aggiungendo un importo pari a %2."
+msgid "Your virtual balance has been reset."
+msgstr "Il tuo saldo virtuale è stato ripristinato"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Il tuo browser per il web (%1) non è aggiornato e potrebbe incidere sulla tua esperienza di trading. Prosegui a tuo rischio. %2Aggiorna il browser%3"
@@ -2177,7 +2192,10 @@ msgid "accounts"
 msgstr "conti"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr "opzioni binarie, forex, trading su forex, trading online, trading finanziario, trading binario, trading su indici, effettuare trading di indici azionari, trade su Forex, effettuare trading su materie prime, strategia opzioni binarie, broker di opzioni binarie, scommesse su opzioni binarie, piattaforma di trading opzioni binarie, strategia per opzioni binarie, finanza, investimenti, trading"
+msgstr "opzioni binarie, forex, trading su forex, trading online, trading finanziario, trading binario, trading su indici, trading di indici azionari, trade su Forex, trading su materie prime, strategia opzioni binarie, broker di opzioni binarie, scommesse su opzioni binarie, piattaforma di trading opzioni binarie, strategia per opzioni binarie, finanza, investimenti, trading"
+
+msgid "close"
+msgstr "chiudi"
 
 msgid "day"
 msgstr "giorno"
@@ -2187,6 +2205,9 @@ msgstr "giorni"
 
 msgid "details"
 msgstr "dettagli"
+
+msgid "e.g. United States"
+msgstr "per es. Stati Uniti"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "ad es. frontend.binaryws.com"
@@ -2250,9 +2271,6 @@ msgstr "oggi, venerdì"
 
 msgid "virtual money credit to account"
 msgstr "credito denaro virtuale sul conto"
-
-msgid "years"
-msgstr "anni"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

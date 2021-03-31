@@ -1981,6 +1981,15 @@ msgstr "crwdns117054:0crwdne117054:0"
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "crwdns99050:0crwdne99050:0"
 
+msgid "XMR vs US dollar"
+msgstr "crwdns159348:0crwdne159348:0"
+
+msgid "XMR/USD"
+msgstr "crwdns159350:0crwdne159350:0"
+
+msgid "XRP/USD"
+msgstr "crwdns159352:0crwdne159352:0"
+
 msgid "Yes"
 msgstr "crwdns99084:0crwdne99084:0"
 
@@ -2004,6 +2013,12 @@ msgstr "crwdns117056:0crwdne117056:0"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "crwdns99114:0%1scrwdnd99114:0%2crwdne99114:0"
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "crwdns156220:0%1Ccrwdnd156220:0%2crwdne156220:0"
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "crwdns156222:0crwdne156222:0"
 
 msgid "You can close this window without interrupting your trade."
 msgstr "crwdns99116:0crwdne99116:0"
@@ -2032,8 +2047,17 @@ msgstr "crwdns118348:0%1crwdnd118348:0%2crwdnd118348:0%3crwdne118348:0"
 msgid "You have already withdrawn %1%2."
 msgstr "crwdns118350:0%1crwdnd118350:0%2crwdne118350:0"
 
+msgid "You have funds in these Binary accounts:"
+msgstr "crwdns124288:0crwdne124288:0"
+
+msgid "You have funds in these MT5 accounts:"
+msgstr "crwdns124290:0crwdne124290:0"
+
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "crwdns99166:0%1crwdne99166:0"
+
+msgid "You have insufficient funds in your MT5 account."
+msgstr "crwdns156224:0crwdne156224:0"
 
 msgid "You have not granted access to any applications."
 msgstr "crwdns99168:0crwdne99168:0"
@@ -2061,6 +2085,9 @@ msgstr "crwdns99190:0crwdne99190:0"
 
 msgid "You have successfully set your account currency to %1."
 msgstr "crwdns123160:0%1crwdne123160:0"
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "crwdns156226:0%1scrwdnd156226:0%2crwdne156226:0"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "crwdns99192:0crwdne99192:0"
@@ -2115,6 +2142,9 @@ msgstr "crwdns99308:0crwdne99308:0"
 
 msgid "Your changes have been updated."
 msgstr "crwdns99310:0crwdne99310:0"
+
+msgid "Your computer may take a few seconds to update"
+msgstr "crwdns158626:0crwdne158626:0"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "crwdns99314:0%1crwdnd99314:0%2crwdne99314:0"
@@ -2176,8 +2206,14 @@ msgstr "crwdns99410:0crwdne99410:0"
 msgid "accounts"
 msgstr "crwdns99412:0crwdne99412:0"
 
+msgid "back"
+msgstr "crwdns158634:0crwdne158634:0"
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "crwdns118358:0crwdne118358:0"
+
+msgid "close"
+msgstr "crwdns158636:0crwdne158636:0"
 
 msgid "day"
 msgstr "crwdns99426:0crwdne99426:0"
@@ -2187,6 +2223,9 @@ msgstr "crwdns99428:0crwdne99428:0"
 
 msgid "details"
 msgstr "crwdns99430:0crwdne99430:0"
+
+msgid "e.g. United States"
+msgstr "crwdns158638:0crwdne158638:0"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "crwdns99436:0crwdne99436:0"

@@ -4,6 +4,8 @@ const RealityCheckData   = require('../pages/user/reality_check/reality_check.da
 const ClientBase         = require('../../_common/base/client_base');
 const GTM                = require('../../_common/base/gtm');
 const SocketCache        = require('../../_common/base/socket_cache');
+const LiveChat           = require('../../_common/base/livechat');
+const { isBinaryDomain } = require('../../_common/utility');
 const getElementById     = require('../../_common/common_functions').getElementById;
 const removeCookies      = require('../../_common/storage').removeCookies;
 const urlFor             = require('../../_common/url').urlFor;
@@ -11,9 +13,10 @@ const applyToAllElements = require('../../_common/utility').applyToAllElements;
 const getPropertyValue   = require('../../_common/utility').getPropertyValue;
 
 const Client = (() => {
+    
     const processNewAccount = (options) => {
         if (ClientBase.setNewAccount(options)) {
-            window.location.href = options.redirect_url || defaultRedirectUrl(); // need to redirect not using pjax
+            setTimeout(() => { window.location.replace(options.redirect_url || defaultRedirectUrl()); }, 500); // need to redirect not using pjax
         }
     };
 
@@ -91,7 +94,17 @@ const Client = (() => {
         });
     };
 
+    const redirection = (response) => {
+        const redirect_to = getPropertyValue(response, ['echo_req', 'passthrough', 'redirect_to']);
+        if (redirect_to) {
+            window.location.href = redirect_to;
+        } else {
+            window.location.reload();
+        }
+    };
+
     const doLogout = (response) => {
+
         if (response.logout !== 1) return;
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
         removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token');
@@ -104,12 +117,14 @@ const Client = (() => {
         ClientBase.set('loginid', '');
         SocketCache.clear();
         RealityCheckData.clear();
-        const redirect_to = getPropertyValue(response, ['echo_req', 'passthrough', 'redirect_to']);
-        if (redirect_to) {
-            window.location.href = redirect_to;
+        if (isBinaryDomain()){
+            LiveChat.endLiveChat().then(() => {
+                redirection(response);
+            });
         } else {
-            window.location.reload();
+            redirection(response);
         }
+        
     };
 
     const getUpgradeInfo = () => {

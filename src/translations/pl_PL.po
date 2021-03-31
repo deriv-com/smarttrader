@@ -2005,6 +2005,12 @@ msgstr "Jesteś off-line"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Zanim dokonasz pierwszej wpłaty lub utworzysz konto MT5, możesz %1ustawić nową walutę%2."
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Możesz też wybrać samo-wykluczenie z całej naszej witryny internetowej na określony czas. Po zakończeniu okresu samo-wykluczenia możesz go przedłużyć lub natychmiast wznowić inwestowanie. Jeśli chcesz zmniejszyć lub usunąć okres samo-wykluczenia, skontaktuj się z %1działem obsługi klienta%2."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Możesz też wybrać samo-wykluczenie z całej naszej witryny internetowej na określony czas. Minimalny okres samo-wykluczenia to 6 miesięcy, po upływie których będziesz mieć opcję przedłużenia go na okres do 5 lat lub wznowić inwestowanie natychmiast. "
+
 msgid "You can close this window without interrupting your trade."
 msgstr "Możesz zamknąć te okno; nie będzie to miało żadnego wpływu na zakład."
 
@@ -2035,6 +2041,9 @@ msgstr "Wypłacono już %2 %1."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Masz niewystarczająco środków na swoim koncie Binary. <a href=\"%1\">Dodaj środki</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "Masz niewystarczające środki na koncie MT5."
+
 msgid "You have not granted access to any applications."
 msgstr "Nie przyznano Ci dostępu do żadnej aplikacji."
 
@@ -2061,6 +2070,9 @@ msgstr "Uwierzytelnianie dwuskładnikowe na Twoim koncie zostało włączone."
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Waluta konta została ustawiona jako %1."
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Masz możliwość %1ustawić i zmienić limity%2 swojej działalności inwestycyjnej na tej witrynie internetowej. Dostępne limity to:"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Musisz zarejestrować aplikację i uzyskać identyfikator App ID zanim możliwe będzie korzystanie z innego serwera OAuth w celach autoryzacyjnych. Aby uzyskać więcej informacji na temat OAuth , odwiedź: https://developers.binary.com/."
@@ -2095,9 +2107,6 @@ msgstr "Twój %1-dniowy limit wypłat wynosi obecnie %3%2."
 msgid "Your account has no Login/Logout activity."
 msgstr "Na Twoim koncie nie odnotowano żadnej aktywności związanej z logowaniem/wylogowywaniem."
 
-msgid "Your account has no trading activity."
-msgstr "NA Twoim koncie nie odnotowano żadnej aktywności handlowej."
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Twoje konto jest w pełni zweryfikowane, a Twój limit wypłat został zwiększony."
 
@@ -2127,9 +2136,6 @@ msgstr "Waluta Twojego konta fiducjarnego jest ustawiona na %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Twoje hasło zostało zresetowane. Zaloguj się na swoje konto, używając swojego nowego hasła."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Twoje hasło to jedno z najczęściej używanych haseł w internecie. Wybierz unikatowe hasło."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Twój wniosek o uznanie za klienta profesjonalnego %1nie został zatwierdzony%2."
@@ -2161,8 +2167,8 @@ msgstr "Kod referencyjny Twojej transakcji to"
 msgid "Your transaction reference number is %1"
 msgstr "Numer referencyjny Twojej transakcji to %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Saldo Twojego konta wirtualnego wynosi obecnie %1 lub mniej. Możesz zasilić swoje konto dodatkową kwotą %2."
+msgid "Your virtual balance has been reset."
+msgstr "Twoje wirtualne saldo zostało zresetowane."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Twoja przeglądarka internetowa (%1) jest nieaktualna, co może negatywnie wpływać na korzystanie z portalu handlowego. Przejdź dalej na własne ryzyko lub %2zaktualizuj przeglądarkę%3"
@@ -2179,6 +2185,9 @@ msgstr "konta"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "opcje binarne, forex, handel forex, handel online, obrót finansowy, handel opcjami binarnymi, handel indeksami, handlowe wskaźniki akcji, transakcje rynku forex, towary, strategie opcji binarnych, broker opcji binarnych, zakład na opcję binarną, platforma transakcyjna opcji binarnych, strategia binarna, finanse, inwestycje, handlowanie"
 
+msgid "close"
+msgstr "zamknij"
+
 msgid "day"
 msgstr "dzień"
 
@@ -2187,6 +2196,9 @@ msgstr "dni"
 
 msgid "details"
 msgstr "szczegóły"
+
+msgid "e.g. United States"
+msgstr "np. USA"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "np. frontend.binaryws.com"
@@ -2211,9 +2223,6 @@ msgstr "logowanie"
 
 msgid "logout"
 msgstr "Wyloguj"
-
-msgid "million"
-msgstr "milion"
 
 msgid "minute"
 msgstr "minuta"
@@ -2250,9 +2259,6 @@ msgstr "dziś, piątki"
 
 msgid "virtual money credit to account"
 msgstr "wirtualne pieniądze zostały zaksięgowane na koncie"
-
-msgid "years"
-msgstr "lat(a)"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

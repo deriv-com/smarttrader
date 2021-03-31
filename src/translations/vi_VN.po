@@ -2005,6 +2005,12 @@ msgstr "Bạn đang ngoại tuyến"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Bạn có thể đặt một đơn vị tiền tệ mới trước lần gửi tiền đầu tiên hoặc tạo một tài khoản MT5."
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Bạn cũng có thể quyết định tự loại trừ bản thân khỏi trang web của chúng tôi trong một khoảng thời gian nhất định. Sau khi giai đoạn tự loại trừ đã kết thúc, bạn có thể kéo dài thêm hoặc tiếp tục giao dịch ngay lập tức. Nếu bạn muốn giảm hoặc xóa khoảng thời gian tự loại trừ, hãy liên hệ với bên %1Hỗ trợ khách hàng% 2 của chúng tôi."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Bạn cũng có thể quyết định tự loại trừ khỏi trang web của chúng tôi trong một khoảng thời gian nhất định. Khoảng thời gian tự loại trừ là tối thiểu 6 tháng, sau đó bạn có tùy chọn gia hạn lên tổng cộng 5 năm hoặc tiếp tục giao dịch ngay lập tức."
+
 msgid "You can close this window without interrupting your trade."
 msgstr "Bạn có thể đóng cửa sổ này mà không gián đoạn giao dịch của bạn."
 
@@ -2035,6 +2041,9 @@ msgstr "Bạn đã rút %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Bạn không có đủ tiền trong tài khoản Binary, xin vui lòng <a href=\"%1\">thêm quỹ</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "Bạn có đủ vốn trong tài khoản MT5."
+
 msgid "You have not granted access to any applications."
 msgstr "Bạn không được phép truy cập bất kỳ một ứng dụng nào."
 
@@ -2061,6 +2070,9 @@ msgstr "Bạn đã kích hoạt thành công xác thực 2 yếu tố cho tài k
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Bạn đã đặt thành công tiền tệ tài khoản của mình thành %1."
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Bạn có cơ hội %1đặt và sửa đổi giới hạn%2 đối với các hoạt động giao dịch của mình trên trang web này. Các giới hạn khả dụng là:"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Bạn phải đăng ký và có ID Ứng Dụng trước khi bạn có thể sử dụng hệ thống máy chủ OAuth khác cho việc xác thực. Nhận thêm thông tin liên quan đến OAuth tại đây https://developers.binary.com/."
@@ -2095,9 +2107,6 @@ msgstr "Giới hạn rút tiền trong %1 ngày của bạn hiện là %2%3."
 msgid "Your account has no Login/Logout activity."
 msgstr "Không có hoạt động Đăng nhập/Đăng xuất nào trên tài khoản của bạn."
 
-msgid "Your account has no trading activity."
-msgstr "Không có hoạt động giao dịch nào trên tài khoản của bạn."
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Tài khoản của bạn được xác thực đầy đủ và mức giới hạn rút tiền của bạn đã được nâng lên."
 
@@ -2127,9 +2136,6 @@ msgstr "Tài khoản fiat của bạn có đơn vị tiền tệ là %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Mật khẩu của bạn đã được đổi thành công. Vui lòng dùng mật khẩu mới đăng nhập vào tài khoản của bạn."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Mật khẩu của bạn là một trong những mật khẩu được sử dụng phổ biến nhất trên internet. Vui lòng chọn một mật khẩu duy nhất."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Yêu cầu trở thành khách hàng chuyên nghiệp của bạn %1nkhông được chấp thuận%2."
@@ -2161,8 +2167,8 @@ msgstr "Tham chiếu giao dịch của bạn là"
 msgid "Your transaction reference number is %1"
 msgstr "Số tham chiếu giao dịch của bạn là %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Số dư tài khoản ảo của bạn hiện nay là %1 hoặc ít hơn. Bạn có thể nạp thêm vào tài khoản ảo %2."
+msgid "Your virtual balance has been reset."
+msgstr "Số dư ảo của bạn đã được đặt lại."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Trình duyệt web (%1) của bạn đã hết hạn và có thể ảnh hưởng đến trải nghiệm giao dịch của bạn. Nếu tiếp tục bạn sẽ có thể gặp một vài rắc rối. %2Nâng cấp trình duyệt%3"
@@ -2179,6 +2185,9 @@ msgstr "các tài khoản"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "quyền chọn nhị phân, ngoại hối, giao dịch ngoại hối, giao dịch trực tuyến, giao dịch tài chính, giao dịch nhị phân, giao dịch chỉ số, chỉ số chứng khoán, giao dịch ngoại hối, giao dịch hàng hóa, chiến lược quyền chọn nhị phân, môi giới nhị phân, đặt cược nhị phân, sàn giao dịch quyền chọn nhị phân, chiến lược nhị phân, tài chính, đầu tư, kinh doanh"
 
+msgid "close"
+msgstr "đóng"
+
 msgid "day"
 msgstr "ngày"
 
@@ -2187,6 +2196,9 @@ msgstr "ngày"
 
 msgid "details"
 msgstr "chi tiết"
+
+msgid "e.g. United States"
+msgstr "Ví dụ. Hợp chủng quốc Hoa kì"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "ví dụ: frontend.binaryws.com"
@@ -2211,9 +2223,6 @@ msgstr "đăng nhập"
 
 msgid "logout"
 msgstr "đăng xuất"
-
-msgid "million"
-msgstr "triệu"
 
 msgid "minute"
 msgstr "phút"
@@ -2250,9 +2259,6 @@ msgstr "hôm nay, Thứ Sáu"
 
 msgid "virtual money credit to account"
 msgstr "tín dụng tiền ảo vào tài khoản"
-
-msgid "years"
-msgstr "năm"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

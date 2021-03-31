@@ -2005,6 +2005,12 @@ msgstr "Vous êtes déconnecté"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "Vous pouvez %1choisir une nouvelle devise%2 avant de faire un premier dépôt ou de créer un compte MT5."
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "Vous pouvez également décider de vous exclure entièrement de notre site Web pour une durée déterminée. Une fois la période d'auto-exclusion terminée, vous pouvez soit la prolonger, soit reprendre le trading immédiatement. Si vous souhaitez réduire ou supprimer la période d'auto-exclusion, contactez notre %1Support client%2."
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "Vous pouvez également décider de vous exclure entièrement de notre site Web pour une durée déterminée. La période d'auto-exclusion est d'un minimum de 6 mois, après quoi vous avez la possibilité de l'étendre à un total de 5 ans ou de reprendre le trading immédiatement."
+
 msgid "You can close this window without interrupting your trade."
 msgstr "Vous pouvez aussi fermer cette fenêtre sans interrompre votre trade."
 
@@ -2035,6 +2041,9 @@ msgstr "Vous avez déjà retiré %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Vous n'avez pas assez de fonds dans votre compte Binary, s’il vous plaît <a href=\"%1\"> Ajouter des fonds</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "Vous n'avez pas assez de fonds dans votre compte MT5."
+
 msgid "You have not granted access to any applications."
 msgstr "Vous n'avez acheté aucun contrat."
 
@@ -2061,6 +2070,9 @@ msgstr "Vous avez activé avec succès l’authentification deux facteurs pour v
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Vous avez changé avec succès la devise de votre compte en %1."
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "Vous avez la possibilité de %1définir et de modifier les limites%2 de vos activités de trading sur ce site Web. Les limites disponibles sont:"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "Vous devez enregistrer webtrader et obtenir un identifiant d'application avant de pouvoir utiliser un autre serveur OAuth pour l'authentification. Pour en savoir plus, consultez les informations concernant le protocole OAuth sur https://developers.binary.com/."
@@ -2095,9 +2107,6 @@ msgstr "Votre limite de retrait de %1 jour est actuellement %2%3."
 msgid "Your account has no Login/Logout activity."
 msgstr "Votre compte n'indique aucune activité de connexion/déconnexion."
 
-msgid "Your account has no trading activity."
-msgstr "Votre compte n'indique aucune activité de trading."
-
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Votre compte est entièrement authentifié et vos limites de retrait ont été levées."
 
@@ -2127,9 +2136,6 @@ msgstr "La devise de votre compte fiat est en %1."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Votre mot de passe a été réinitialisé avec succès. Veuillez vous connecter à votre compte en utilisant votre nouveau mot de passe."
-
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Votre mot de passe est l'un des mots de passe les plus utilisés sur Internet. Veuillez choisir un mot de passe unique."
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Votre demande de client professionnel %1n'est pas approuvée%2."
@@ -2161,8 +2167,8 @@ msgstr "Votre référence de transaction est"
 msgid "Your transaction reference number is %1"
 msgstr "Le numéro de référence de votre transaction est %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Le solde de votre compte virtuel est actuellement inférieur ou égal à %1. Vous pouvez recharger votre compte avec %2 de plus."
+msgid "Your virtual balance has been reset."
+msgstr "Votre solde virtuel a été réinitialisé."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Votre navigateur internet (%1) est obsolète et cela peut affecter votre expérience de trading. Procédez à vos risques et périls. %2Mise à jour de navigateur internet%3"
@@ -2179,6 +2185,9 @@ msgstr "comptes"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "options binaires, Forex, trading du Forex, trading en ligne, trading financier, trading binaire, trading d'indices, trading sur indices, trades forex, trading de matières premières, stratégie d'options binaires, courtier binaire, pari binaire, plateforme de trading d'options binaires, stratégie binaire, finance, investissement, trading"
 
+msgid "close"
+msgstr "clôture"
+
 msgid "day"
 msgstr "jour"
 
@@ -2187,6 +2196,9 @@ msgstr "jours"
 
 msgid "details"
 msgstr "informations"
+
+msgid "e.g. United States"
+msgstr "exemple Etats Unis"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "par ex. frontend.binaryws.com"
@@ -2211,9 +2223,6 @@ msgstr "connexion"
 
 msgid "logout"
 msgstr "déconnexion"
-
-msgid "million"
-msgstr "million"
 
 msgid "minute"
 msgstr "minute"
@@ -2250,9 +2259,6 @@ msgstr "aujourd'hui, vendredis"
 
 msgid "virtual money credit to account"
 msgstr "crédit de fonds virtuels sur le compte"
-
-msgid "years"
-msgstr "années"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

@@ -2005,6 +2005,12 @@ msgstr "您已离线"
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr "首次存款或开立 MT5 账户之前, 您可以 %1设定新币种%2。"
 
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. Once the self-exclusion period has ended, you can either extend it further or resume trading immediately. If you wish to reduce or remove the self-exclusion period, contact our %1Customer Support%2."
+msgstr "您还可以决定在指定期限内完全禁止自己进入我们的网站。一旦禁止期限结束后，您可以进一步延长其期限或立即恢复交易。如果您希望缩短或删除自我禁止期限，请与我们的％1客户支持部％2联系。"
+
+msgid "You can also decide to exclude yourself entirely from our website for a specified duration. The self-exclusion period is a minimum of 6 months after which you have the option to extend it to a total of 5 years or resume trading immediately."
+msgstr "您还可以决定在指定期限内完全禁止自己进入我们的网站。自我禁止期至少为6个月，之后您可以选择将其延长至5年或立即恢复交易。"
+
 msgid "You can close this window without interrupting your trade."
 msgstr "您可以在不中断交易的情况下关闭此窗口。"
 
@@ -2035,6 +2041,9 @@ msgstr "您已提取%1%2。"
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "您的Binary账户资金不足，请<a href=\"%1\">添加资金</a>。"
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr "您的 MT5 账户资金不足。"
+
 msgid "You have not granted access to any applications."
 msgstr "您没有访问任何应用程序的权限。"
 
@@ -2061,6 +2070,9 @@ msgstr "您已成功启用账户的双因素身份验证。"
 
 msgid "You have successfully set your account currency to %1."
 msgstr "您已成功将账户币种设置为 %1 。"
+
+msgid "You have the opportunity to %1set and amend limits%2 on your trading activities on this website. Available limits are:"
+msgstr "您有机会％1设置和修改限制％2自己在此网站交易。可用的限额为："
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "使用各OAuth服务器进行验证前须先注册并领取应用程序ID。欲知详情，请到https://developers.binary.com/参阅 OAuth信息。"
@@ -2093,9 +2105,6 @@ msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "您当前的%1天取款限额是 %2%3。"
 
 msgid "Your account has no Login/Logout activity."
-msgstr "您的账户无交易活动。"
-
-msgid "Your account has no trading activity."
 msgstr "您的账户无交易活动。"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
@@ -2161,8 +2170,8 @@ msgstr "您的交易参考号是"
 msgid "Your transaction reference number is %1"
 msgstr "您的交易参考号是 %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "您的虚拟账户余额当前为 %1 或更低。您可以添加 %2补充账户资金。"
+msgid "Your virtual balance has been reset."
+msgstr "您的虚拟余额已重置。"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "您的网络浏览器 (%1) 已过时，并可能会影响您的交易操作。继续操作须自行承担风险。%2更新浏览器%3"
@@ -2179,6 +2188,9 @@ msgstr "账户"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "二元期权、外汇、外汇交易、在线交易、金融交易、二元交易、指数交易、交易股票指数、外汇交易、交易大宗商品、二元期权策略、二元经纪、二元投注、二元期权交易平台、二元策略、金融、投资、交易"
 
+msgid "close"
+msgstr "关闭"
+
 msgid "day"
 msgstr "天"
 
@@ -2187,6 +2199,9 @@ msgstr "天"
 
 msgid "details"
 msgstr "详情"
+
+msgid "e.g. United States"
+msgstr "例如美国"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "例如 frontend.binaryws.com"
@@ -2211,9 +2226,6 @@ msgstr "登录"
 
 msgid "logout"
 msgstr "注销"
-
-msgid "million"
-msgstr "百万"
 
 msgid "minute"
 msgstr "分钟"
@@ -2250,9 +2262,6 @@ msgstr "今天，周五"
 
 msgid "virtual money credit to account"
 msgstr "虚拟资金进入账户"
-
-msgid "years"
-msgstr "年"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
