@@ -30,7 +30,7 @@ const GTM = (() => {
 
     const pushDataLayer = (data) => {
         if (isGtmAvailable()){
-            if (isGtmApplicable() && !isLoginPages()) {
+            if (isGtmApplicable() && (!isLoginPages() || data.is_elevio)) {
                 dataLayer.push({
                     ...getCommonVariables(),
                     ...data,

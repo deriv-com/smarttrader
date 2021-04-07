@@ -33,10 +33,10 @@ require('../../_common/lib/polyfills/string.includes');
 const Page = (() => {
     const init = () => {
         State.set('is_loaded_by_pjax', false);
+        GTM.init();
         Url.init();
         Elevio.init();
         PushNotification.init();
-        GTM.init();
         onDocumentReady();
         Crowdin.init();
     };
