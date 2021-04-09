@@ -132,6 +132,13 @@ const Page = (() => {
             }
         }
         TrafficSource.setData();
+
+        BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
+            const is_uk_residence = (Client.get('residence') === 'gb');
+            if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
+                getElementById('gamstop_uk_display').setVisibility(1);
+            }
+        });
     };
 
     const recordAffiliateExposure = () => {
