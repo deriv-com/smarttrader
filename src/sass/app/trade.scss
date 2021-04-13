@@ -1883,9 +1883,13 @@ body #lean_overlay {
     .lean_overlay_buttonpane {
         border-top: 1px solid var(--border-normal);
         padding: 18px 16px;
+        display: flex;
 
         > div {
             @include deriv-btn('large', 'secondary');
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &:not(:first-child) {
                 @include deriv-btn('large', 'primary');
