@@ -160,7 +160,7 @@ const AccountClosure = () => (
                     <p className='account-closure-subtitle'>{it.L('To close your account, complete the following steps:')}</p>
                     <div className='gr-padding-10'>
                         <h3 className='secondary-color'>{it.L('Step 1: Close all open positions')}</h3>
-                        <p>{it.L('Go to the [_1]portfolio page[_2] to close all open positions from your Binary.com accounts.', `<a href="${it.url_for('user/portfoliows')}">`, '</a>')}</p>
+                        <p>{it.L('Go to the [_1]Portfolio[_2] to close all open positions from your Binary.com accounts.', `<a href="${it.url_for('user/portfoliows')}">`, '</a>')}</p>
                         <p className='invisible metatrader-link'>{it.L('If you have opened positions in your MT5 account, please close them too.')}</p>
 
                     </div>
