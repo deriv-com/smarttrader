@@ -50,7 +50,7 @@ const Footer = () => (
                                     { text: it.L('About Us'),               href: it.url_for('about-us') },
                                     { text: it.L('Group History'),          href: it.url_for('group-history') },
                                     { text: it.L('Binary.com in Numbers'),  href: it.url_for('binary-in-numbers') },
-                                    { text: it.L('Careers'),                href: it.url_for('careers') },
+                                    { text: it.L('Careers'),                href: it.deriv_career_url },
                                     { text: it.L('Patents'),                href: it.url_for('legal/us_patents') },
                                     { text: it.L('Contact Us'),             href: it.url_for('contact') },
                                 ]}
