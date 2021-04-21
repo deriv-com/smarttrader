@@ -2331,7 +2331,10 @@ body #lean_overlay .overlay-dialog div.category > div > span.remove {
 
 body #lean_overlay .lean_overlay_buttonpane {
   border-top: 1px solid var(--border-normal);
-  padding: 18px 16px; }
+  padding: 18px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   body #lean_overlay .lean_overlay_buttonpane > div {
     background: transparent;
     color: var(--text-prominent) !important;
@@ -2340,7 +2343,16 @@ body #lean_overlay .lean_overlay_buttonpane {
     border-width: 2px;
     font-size: 0.8695652174rem !important;
     padding: 0 16px;
-    min-width: 64px; }
+    min-width: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     body #lean_overlay .lean_overlay_buttonpane > div:disabled, body #lean_overlay .lean_overlay_buttonpane > div[disabled] {
       opacity: 0.32;
       cursor: not-allowed !important; }
