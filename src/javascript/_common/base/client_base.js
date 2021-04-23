@@ -395,6 +395,13 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    const isOptionsBlocked = () => {
+        const options_blocked_countries = ['au'];
+        const country = State.getResponse('authorize.country');
+
+        return options_blocked_countries.includes(country);
+    };
+
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
@@ -429,6 +436,7 @@ const ClientBase = (() => {
         getAccountType,
         isAccountOfType,
         isAuthenticationAllowed,
+        isOptionsBlocked,
         getAccountOfType,
         hasAccountType,
         hasCurrencyType,
