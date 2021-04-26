@@ -12,7 +12,7 @@ const makeCacheGroup = (name, priority, ...matches) => ({
 });
 
 const publicPathFactory = (grunt) => () => (
-    (global.is_release || grunt.file.exists(PATHS.ROOT, 'scripts/CNAME') ? '' : '/binary-static') +
+    (global.is_release || grunt.file.exists(PATHS.ROOT, 'scripts/CNAME') ? '' : '/smarttrader') +
     (global.branch ? `/${global.branch_prefix}${global.branch}` : '') +
     '/js/'
 );
