@@ -169,6 +169,7 @@ const ClientBase = (() => {
                 +authorize.local_currencies[local_currency_config.currency].fractional_digits;
         }
         set('email',      authorize.email);
+        set('country',   authorize.country);
         set('currency',   authorize.currency);
         set('is_virtual', +authorize.is_virtual);
         set('session_start', parseInt(moment().valueOf() / 1000));
@@ -397,8 +398,7 @@ const ClientBase = (() => {
 
     const isOptionsBlocked = () => {
         const options_blocked_countries = ['au'];
-        const country = State.getResponse('authorize.country');
-
+        const country = get('country') || State.getResponse('authorize.country');
         return options_blocked_countries.includes(country);
     };
 
