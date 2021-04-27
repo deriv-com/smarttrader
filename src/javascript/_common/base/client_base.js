@@ -169,6 +169,7 @@ const ClientBase = (() => {
                 +authorize.local_currencies[local_currency_config.currency].fractional_digits;
         }
         set('email',      authorize.email);
+        set('country',    authorize.country);
         set('currency',   authorize.currency);
         set('is_virtual', +authorize.is_virtual);
         set('session_start', parseInt(moment().valueOf() / 1000));
@@ -395,6 +396,12 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    const isOptionsBlocked = () => {
+        const options_blocked_countries = ['au'];
+        const country = get('country') || State.getResponse('authorize.country');
+        return options_blocked_countries.includes(country);
+    };
+
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
@@ -429,6 +436,7 @@ const ClientBase = (() => {
         getAccountType,
         isAccountOfType,
         isAuthenticationAllowed,
+        isOptionsBlocked,
         getAccountOfType,
         hasAccountType,
         hasCurrencyType,

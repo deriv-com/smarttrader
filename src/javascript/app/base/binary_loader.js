@@ -102,6 +102,7 @@ const BinaryLoader = (() => {
         only_real        : () => localize('This feature is not relevant to virtual-money accounts.'),
         not_authenticated: () => localize('This page is only available to logged out clients.'),
         no_mf            : () => localize('Sorry, but binary options trading is not available in your financial account.'),
+        options_blocked  : () => localize('Sorry, but binary options trading is not available in your country.'),
     };
 
     const loadHandler = (this_page) => {
@@ -136,6 +137,12 @@ const BinaryLoader = (() => {
         if (config.no_mf && Client.isLoggedIn() && Client.isAccountOfType('financial')) {
             BinarySocket.wait('authorize').then(() => displayMessage(error_messages.no_mf()));
         }
+        
+        BinarySocket.wait('authorize').then(() => {
+            if (config.no_blocked_country && Client.isLoggedIn() && Client.isOptionsBlocked()) {
+                displayMessage(error_messages.options_blocked());
+            }
+        });
 
         BinarySocket.setOnDisconnect(active_script.onDisconnect);
     };
@@ -159,7 +166,7 @@ const BinaryLoader = (() => {
             return;
         }
 
-        const div_container = createElement('div', { class: 'logged_out_title_container', html: Client.isAccountOfType('financial') ? '' : content.getElementsByTagName('h1')[0] || '' });
+        const div_container = createElement('div', { class: 'logged_out_title_container', html: Client.isAccountOfType('financial') || Client.isOptionsBlocked() ? '' : content.getElementsByTagName('h1')[0] || '' });
         const div_notice    = createElement('p', { class: 'center-text notice-msg', html: localized_message });
 
         div_container.appendChild(div_notice);
