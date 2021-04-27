@@ -12,7 +12,7 @@ You will also need to install the following on your development machine:
 - Ruby, RubyGems
 - Sass (`sudo gem install sass`)
 - Node.js (10.14.2 or higher is recommended) and NPM (see <https://nodejs.org/en/download/package-manager/>)
-- Go to project root, then run `npm ci`
+- Go to project root, then run `npm install`
 - Grunt (`sudo npm install -g grunt-cli`)
 
 ### Use a custom domain
@@ -71,7 +71,7 @@ In order to remove the created folders from your gh-pages, you can use either:
 - `grunt shell:remove_folder --keep --folder=br_branchname1,br_branchname2,...`: only keeps the specified folder(s) on your gh-pages and removes everything else. Just add the `--keep` flag.
 
 ### Preview on your local machine
-- To preview your changes locally, run `grunt start`
+- To preview your changes locally, run `sudo grunt serve`
 - It will watch for js/css changes and rebuild on every change you make.
 - To test changes made to templates, you need to re-compile them:
   - `grunt shell:compile_dev` to re-compile all templates.
