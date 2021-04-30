@@ -396,6 +396,7 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
+    // Restrict binary options display on australian residence clients
     const isOptionsBlocked = () => {
         const options_blocked_countries = ['au'];
         const country = get('country') || State.getResponse('authorize.country');
