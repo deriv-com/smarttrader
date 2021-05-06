@@ -21,7 +21,7 @@ const State                    = require('../../../_common/storage').State;
 const urlFor                   = require('../../../_common/url').urlFor;
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
-const getTopLevelDomain         = require('../../../_common/utility').getTopLevelDomain;
+const getTopLevelDomain        = require('../../../_common/utility').getTopLevelDomain;
 
 /*
  * Purchase object that handles all the functions related to
