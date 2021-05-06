@@ -1,8 +1,9 @@
-const BinarySocket   = require('../../app/base/socket');
-const isIndonesia    = require('../../app/common/country_base').isIndonesia;
-const getElementById = require('../../_common/common_functions').getElementById;
-const TabSelector    = require('../../_common/tab_selector');
-const isBinaryApp    = require('../../config').isBinaryApp;
+const BinarySocket      = require('../../app/base/socket');
+const isIndonesia       = require('../../app/common/country_base').isIndonesia;
+const getElementById    = require('../../_common/common_functions').getElementById;
+const TabSelector       = require('../../_common/tab_selector');
+const getTopLevelDomain = require('../../_common/utility').getTopLevelDomain;
+const isBinaryApp       = require('../../config').isBinaryApp;
 
 const os_list = [
     {
@@ -42,6 +43,9 @@ const Platforms = (() => {
                 el_button.setAttribute('href', os.download_url);
             });
         });
+        const deriv_interim_btn = getElementById('deriv_interim_btn');
+        const url = `https://deriv.${getTopLevelDomain()}/interim/deriv/?utm_source=binary&utm_medium=referral&utm_campaign=deriv-launch&utm_content=page-platforms-banner`;
+        deriv_interim_btn.href = url;
     };
 
     return {

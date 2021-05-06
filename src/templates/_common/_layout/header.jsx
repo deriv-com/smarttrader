@@ -239,7 +239,7 @@ const Header = () => (
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
                     <button id='btn__login' className='btn btn--tertiary header__btn-login'>{it.L('Log in')}</button>
-                    <a className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' href='https://deriv.com/signup/'>{it.L('Sign up')}</a>
+                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer'>{it.L('Sign up')}</a>
                 </div>
             </div>
         </div>
