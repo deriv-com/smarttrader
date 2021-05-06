@@ -2,6 +2,7 @@ const urlForLanguage         = require('./language').urlFor;
 const urlLang                = require('./language').urlLang;
 const createElement          = require('./utility').createElement;
 const isEmptyObject          = require('./utility').isEmptyObject;
+const getTopLevelDomain      = require('./utility').getTopLevelDomain;
 const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('url-polyfill');
 
@@ -106,7 +107,9 @@ const Url = (() => {
         return static_host + path.replace(/(^\/)/g, '');
     };
 
-    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || 'https://app.deriv.com')}/${path}${pars ? `?${pars}` : ''}`;
+    const deriv_app_domain = `https://app.deriv.${getTopLevelDomain()}`;
+
+    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || deriv_app_domain)}/${path}${pars ? `?${pars}` : ''}`;
 
     const getAllowedLocalStorageOrigin = () => {
         // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
@@ -119,9 +122,9 @@ const Url = (() => {
             /^smarttrader\.deriv\.app$/i.test(window.location.hostname) ||
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return 'https://app.deriv.com';
+            return deriv_app_domain;
         }
-        return 'https://app.deriv.com';
+        return deriv_app_domain;
     };
 
     /**
