@@ -85,6 +85,10 @@ commands:
           command: gh-pages -d dist --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push:
     description: "Build Docker image"
+    parameters:
+      docker_image_tag:
+        type: string
+        default: "latest-staging"
     steps:
       - setup_remote_docker
       - run: 
@@ -99,10 +103,6 @@ commands:
             docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >>
   k8s_deploy:
     description: "Deploy to k8s cluster"
-    parameters:
-      docker_image_tag:
-        type: string
-        default: "latest-staging"
     parameters:
       k8s_svc_name:
         type: string
