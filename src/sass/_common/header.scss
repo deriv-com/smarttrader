@@ -1,5 +1,6 @@
 body #topbar {
     @include BIDIR_VALUE(text-align, right, left);
+    z-index: 4;
 
     .container {
         max-width: 1200px;
@@ -24,6 +25,7 @@ body #topbar {
     }
     #select_language {
         top: -3px;
+        z-index: 4;
     }
     .nav-caret {
         margin-right: 0;
