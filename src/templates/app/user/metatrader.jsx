@@ -85,7 +85,7 @@ const Metatrader = () => (
                     <div className='gr-row'>
                         <div className='gr-9 gr-12-m gr-12-p'>
                             <div className='gr-row'>
-                                <div className='gr-grow'>
+                                <div className='gr-7 gr-12-m'>
                                     <div id='account_selector'>
                                         <h4 id='mt5_account' />
                                         <div id='accounts_list'>
