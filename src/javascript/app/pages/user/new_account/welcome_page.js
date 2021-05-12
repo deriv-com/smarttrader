@@ -31,12 +31,15 @@ const WelcomePage = (() => {
 
             const upgrade_url = upgrade_info.can_upgrade_to.length > 1
                 ? 'user/accounts'
-                : Object.values(upgrade_info.upgrade_links)[0];
+                : '/new_account/real_account';
+            const upgrade_url_params = upgrade_info.can_upgrade_to.length > 1
+                ? ''
+                : `account_type=${upgrade_info.can_upgrade_to[0]}`;
 
             if (upgrade_info.can_upgrade) {
                 const upgrade_btn = getElementById('upgrade_btn');
                 if (upgrade_btn) {
-                    upgrade_btn.html(createElement('span', { text: localize('Upgrade now') })).setAttribute('href', Url.urlFor(upgrade_url));
+                    upgrade_btn.html(createElement('span', { text: localize('Upgrade now') })).setAttribute('href', Url.urlFor(upgrade_url, upgrade_url_params));
                     upgrade_btn.classList.remove('button-disabled');
                 }
             }

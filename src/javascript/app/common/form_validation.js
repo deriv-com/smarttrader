@@ -41,6 +41,8 @@ const Validation = (() => {
             value = isChecked(field);
         } else if (field.type === 'radio') {
             value = field.$.find(`input[name=${field.selector.slice(1)}]:checked`).val();
+        } else if (field.type === 'span') {
+            value = field.$.data().value;
         } else {
             value = field.$.val();
         }
@@ -75,7 +77,9 @@ const Validation = (() => {
                         field.$error = $form.find(field.msg_element);
                     } else {
                         // for password type fields we need to go up one parent due to the password field wrapper
-                        const $parent = field.$.attr('type') === 'password' ? field.$.parent().parent() : field.$.parent();
+                        let $parent = field.$.attr('type') === 'password' ? field.$.parent().parent() : field.$.parent();
+                        // correct $parent for select fields (which not using select2)
+                        if ($parent.hasClass('select')) $parent = $parent.parent();
                         // Add indicator to required fields
                         if (field.validations.find(v => /^req$/.test(v) && (isEmptyObject(v[1]) || !v[1].hide_asterisk))) {
                             let $label = $parent.parent().find('label');
@@ -254,7 +258,7 @@ const Validation = (() => {
     };
 
     const getTaxRegex = (residence_list, tax_residence) => {
-        const tin_format = (residence_list.find(residence =>  residence.value === tax_residence) || {}).tin_format;
+        const tin_format = (residence_list.find(residence => residence.value === tax_residence) || {}).tin_format;
         return (tin_format || []).map((format) => new RegExp(format));
     };
 

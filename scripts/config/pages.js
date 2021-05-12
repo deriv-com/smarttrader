@@ -21,8 +21,7 @@ module.exports = [
 
     ['trading',                                 'app/trade/trading',                           'default',    'SmartTrader'],
 
-    ['new_account/maltainvestws',               'app/new_account/financial',                   'default',    'Financial Account Opening'],
-    ['new_account/realws',                      'app/new_account/real',                        'default',    'Real Money Account Opening'],
+    ['new_account/real_account',                'app/new_account/real_account',                'default',    'Real Account Opening'],
     ['new_account/virtualws',                   'app/new_account/virtual',                     'default',    'Create New Virtual-money Account'],
     ['new_account/welcome',                     'app/new_account/welcome_page',                'default',    'Welcome to Binary.com'],
 
