@@ -32,6 +32,10 @@
 
     .inpage_popup_content_box {
         border: 0;
+        @media screen and (max-width: 480px) {
+            max-height: 100vh;
+            overflow-y: scroll;
+        }
 
         #contract_win_status {
             line-height: 30px;
