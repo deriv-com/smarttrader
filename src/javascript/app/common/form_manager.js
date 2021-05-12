@@ -59,8 +59,6 @@ const FormManager = (() => {
                         value = field.$.attr('data-value');
                     } else if (/lbl_/.test(key)) {
                         value = field.value || field.$.text();
-                    } else if (key === '#currency') {
-                        value = $('.currency_wrapper.selected').attr('id') || '';
                     } else if (field.$.attr('class') === 'hide-product-checkbox') {
                         value = field.$.attr('class') === 'hide-product-checkbox' ? 1 : 0;
                     } else if (field.$.is(':checkbox')) {
@@ -139,9 +137,7 @@ const FormManager = (() => {
             if (!can_submit) return;
             if (Validation.validate(options.form_selector)) {
                 const req = $.extend({}, options.obj_request, getFormData(options.form_selector));
-                if (typeof options.get_submitted_data === 'function') {
-                    options.get_submitted_data(getFormData(options.form_selector));
-                } else if (typeof options.fnc_additional_check === 'function') {
+                if (typeof options.fnc_additional_check === 'function') {
                     Promise.resolve(options.fnc_additional_check(req)).then((result) => {
                         if (result) submit(req);
                     });
@@ -162,8 +158,6 @@ const FormManager = (() => {
     return {
         handleSubmit,
         init: initForm,
-        disableButton,
-        enableButton,
     };
 })();
 

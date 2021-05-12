@@ -72,7 +72,7 @@ const Accounts = (() => {
     const clearPopup = () => {
         SetCurrency.cleanupPopup();
     };
-
+    
     const doneLoading = (element_to_show) => {
         $(element_to_show).setVisibility(1);
         $('#accounts_loading').remove();
@@ -86,7 +86,7 @@ const Accounts = (() => {
     const populateNewAccounts = (upgrade_info) => {
         const table_headers = TableHeaders.get();
         upgrade_info.type.forEach((new_account_type, index) => {
-            const account = {
+            const account           = {
                 real     : new_account_type === 'real',
                 financial: new_account_type === 'financial',
             };
@@ -106,7 +106,7 @@ const Accounts = (() => {
                             '<a/>',
                             {
                                 class: 'button',
-                                href : urlFor('/new_account/real_account', `account_type=${upgrade_info.can_upgrade_to[index]}`),
+                                href : urlFor(upgrade_info.upgrade_links[upgrade_info.can_upgrade_to[index]]),
                             },
                         )
                             .html($('<span/>', { text: localize('Create account') })))));
@@ -251,7 +251,7 @@ const Accounts = (() => {
 
     const populateMultiAccount = () => {
         const table_headers = TableHeaders.get();
-        const account = { real: 1 };
+        const account       = { real: 1 };
         $(form_id).find('tbody')
             .append($('<tr/>', { id: 'new_account_opening' })
                 .append($('<td/>', { datath: table_headers.account }).html($('<span/>', {
@@ -267,10 +267,10 @@ const Accounts = (() => {
         doneLoading('#new_accounts_wrapper');
     };
 
-    const onUnload = () => {
+    const onUnload = () =>{
         clearPopup();
     };
-
+    
     return {
         onLoad,
         onUnload,

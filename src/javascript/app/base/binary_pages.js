@@ -40,7 +40,8 @@ const Accounts                = require('../pages/user/accounts');
 const LostPassword            = require('../pages/user/lost_password');
 const MetaTrader              = require('../pages/user/metatrader/metatrader');
 const TypesOfAccounts         = require('../pages/user/metatrader/types_of_accounts');
-const RealAccountOpening      = require('../pages/user/new_account/real_account_opening');
+const FinancialAccOpening     = require('../pages/user/new_account/financial_acc_opening');
+const RealAccOpening          = require('../pages/user/new_account/real_acc_opening');
 const VirtualAccOpening       = require('../pages/user/new_account/virtual_acc_opening');
 const WelcomePage             = require('../pages/user/new_account/welcome_page');
 const ResetPassword           = require('../pages/user/reset_password');
@@ -105,6 +106,7 @@ const pages_config = {
     logged_inws              : { module: LoggedInHandler },
     lost_passwordws          : { module: LostPassword,               not_authenticated: true },
     malta                    : { module: StaticPages.Locations },
+    maltainvestws            : { module: FinancialAccOpening,        is_authenticated: true },
     market_timesws           : { module: TradingTimesUI,             no_mf: true },
     metals                   : { module: GetStarted.Metals },
     metatrader               : { module: MetaTrader,                 is_authenticated: true, needs_currency: true },
@@ -115,7 +117,7 @@ const pages_config = {
     portfoliows              : { module: Portfolio,                  is_authenticated: true, needs_currency: true },
     professional             : { module: professionalClient,         is_authenticated: true, only_real: true },
     profit_tablews           : { module: ProfitTable,                is_authenticated: true, needs_currency: true },
-    real_account             : { module: RealAccountOpening,         is_authenticated: true },
+    realws                   : { module: RealAccOpening,             is_authenticated: true },
     redirect                 : { module: Redirect },
     regulation               : { module: Regulation },
     reset_passwordws         : { module: ResetPassword,              not_authenticated: true },

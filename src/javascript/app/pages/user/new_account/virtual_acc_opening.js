@@ -140,7 +140,7 @@ const VirtualAccOpening = (() => {
                             loginid     : new_account.client_id,
                             token       : new_account.oauth_token,
                             is_virtual  : true,
-                            redirect_url: is_unwelcome_uk ? urlFor('new_account/real_account','account_type=iom') : urlFor('new_account/welcome'),
+                            redirect_url: is_unwelcome_uk ? urlFor('new_account/realws') : urlFor('new_account/welcome'),
                         });
                     });
                 }
