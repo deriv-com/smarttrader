@@ -106,6 +106,11 @@ const isEqualObject = (obj1, obj2) => (
     )
 );
 
+const removeObjProperties = (property_arr, obj) => {
+    property_arr.forEach(property => delete obj[property]);
+    return obj;
+};
+
 // Filters out duplicates in an array of objects by key
 const unique = (array, key) => array.filter((e, idx) =>
     array.findIndex((a, i) => a[key] ? a[key] === e[key] : i === idx) === idx);
@@ -252,5 +257,6 @@ module.exports = {
     findParent,
     getStaticHash,
     PromiseClass,
+    removeObjProperties,
     getTopLevelDomain,
 };
