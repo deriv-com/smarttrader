@@ -106,7 +106,7 @@ const WebtraderChart = (() => {
                 candlestick: {
                     color    : '#f95454',
                     upColor  : '#4caf50',
-                    lineWidth: 0,
+                    lineWidth: 1,
                 },
                 ohlc: {
                     color  : '#f95454',
