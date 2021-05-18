@@ -17,6 +17,7 @@ const Url                      = require('../../_common/url');
 const applyToAllElements       = require('../../_common/utility').applyToAllElements;
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
+const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 
@@ -48,6 +49,10 @@ const Header = (() => {
     };
 
     const setHeaderUrls = () => {
+        const btn__signup = getElementById('btn__signup');
+        const signup_url = `https://deriv.${getTopLevelDomain()}/signup/`;
+        btn__signup.href = signup_url;
+
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
@@ -140,25 +145,26 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
+        const main_domain = `https://app.deriv.${getTopLevelDomain()}`;
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
                 desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
-                link     : 'https://app.deriv.com',
+                link     : main_domain,
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
             dbot: {
                 name     : 'DBot',
                 desc     : 'Automated trading at your fingertips. No coding needed.',
-                link     : 'https://app.deriv.com/bot',
+                link     : `${main_domain}/bot`,
                 icon     : 'ic-brand-dbot.svg',
                 on_mobile: false,
             },
             dmt5: {
                 name     : 'DMT5',
                 desc     : 'The platform of choice for professionals worldwide.',
-                link     : 'https://app.deriv.com/mt5',
+                link     : `${main_domain}/mt5`,
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
 
@@ -428,7 +434,7 @@ const Header = (() => {
 
         // Help center.
         const topbar_help_center = getElementById('topbar-help-centre');
-        topbar_help_center.addEventListener('click', () => window.location = 'https://www.deriv.com/help-centre/');
+        topbar_help_center.addEventListener('click', () => window.location = `https://www.deriv.${getTopLevelDomain()}/help-centre/`);
 
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
@@ -926,15 +932,15 @@ const Header = (() => {
                 // rejected_document    : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'),                                           'https://app.deriv.com/account/proof-of-address'),
                 // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://app.deriv.com/account/proof-of-identity'),
                 // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://app.deriv.com/account/proof-of-address'),
-                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, '<a class="header__notification-link" href="https://www.deriv.com/contact-us/">', '</a>']), type: 'danger' }),
+                excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, `<a class="header__notification-link" href="https://www.deriv.${getTopLevelDomain()}/contact-us/">`, '</a>']), type: 'danger' }),
                 financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
                 required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
                 // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'user/settings/detailsws'),
-                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), 'https://app.deriv.com/account/financial-assessment'), type: 'warning' }),
-                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), 'https://app.deriv.com/account/personal-details'), type: 'danger' }),
-                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'), 'https://www.deriv.com/contact-us/'), type: 'danger' }),
+                risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), `https://app.deriv.${getTopLevelDomain()}/account/financial-assessment`), type: 'warning' }),
+                tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), `https://app.deriv.${getTopLevelDomain()}/account/personal-details`), type: 'danger' }),
+                unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'), `https://www.deriv.${getTopLevelDomain()}/contact-us/`), type: 'danger' }),
                 // withdrawal_locked_review: () => localize('Withdrawals have been disabled on your account. Please wait until your uploaded documents are verified.'),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // tnc                  : () => buildMessage(has_no_tnc_limit
@@ -942,7 +948,7 @@ const Header = (() => {
                 //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'user/tnc_approvalws'),
 
                 // Deriv specific below.
-                authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: 'https://app.deriv.com/account/proof-of-identity' }),
+                authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: `https://app.deriv.${getTopLevelDomain()}/account/proof-of-identity` }),
                 needs_poi   : () => ({ key: 'needs_poi', title: localize('Proof of identity required'), message: localize('Please submit your proof of identity.'), type: 'warning' }),
                 needs_poa   : () => ({ key: 'needs_poa', title: localize('Proof of address required'), message: localize('Please submit your proof of address.'), type: 'warning' }),
                 poi_expired : () => ({ key: 'needs_poi', title: localize('Proof of identity'), message: localize('Proof of identity expired'), type: 'danger' }),

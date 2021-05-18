@@ -6,6 +6,7 @@ const isStorageSupported  = require('../storage').isStorageSupported;
 const LocalStore          = require('../storage').LocalStore;
 const urlForCurrentDomain = require('../url').urlForCurrentDomain;
 const isLoginPages        = require('../utility').isLoginPages;
+const getTopLevelDomain   = require('../utility').getTopLevelDomain;
 const TrafficSource       = require('../../app/common/traffic_source');
 const getAppId            = require('../../config').getAppId;
 
@@ -26,7 +27,7 @@ const Login = (() => {
 
         return ((server_url && /qa/.test(server_url)) ?
             `https://${server_url}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}` :
-            urlForCurrentDomain(`https://oauth.deriv.com/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}`)
+            urlForCurrentDomain(`https://oauth.deriv.${getTopLevelDomain()}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}`)
         );
     };
 

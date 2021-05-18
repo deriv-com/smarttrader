@@ -1,4 +1,5 @@
-const extend = require('extend');
+const extend                 = require('extend');
+const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('./lib/polyfills/element.matches');
 
 /**
@@ -224,6 +225,11 @@ const getStaticHash = () => {
     return static_hash;
 };
 
+const getTopLevelDomain = () => {
+    const current_domain = getCurrentBinaryDomain();
+    return current_domain ? current_domain.split('.').splice(-1) : 'com';
+};
+
 class PromiseClass {
     constructor() {
         this.promise = new Promise((resolve, reject) => {
@@ -252,4 +258,5 @@ module.exports = {
     getStaticHash,
     PromiseClass,
     removeObjProperties,
+    getTopLevelDomain,
 };

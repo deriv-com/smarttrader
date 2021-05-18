@@ -21,6 +21,7 @@ const State                    = require('../../../_common/storage').State;
 const urlFor                   = require('../../../_common/url').urlFor;
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
+const getTopLevelDomain        = require('../../../_common/utility').getTopLevelDomain;
 
 /*
  * Purchase object that handles all the functions related to
@@ -99,8 +100,12 @@ const Purchase = (() => {
                 if (/AuthorizationRequired/.test(error.code)) {
                     authorization_error.setVisibility(1);
                     const authorization_error_btn_login = CommonFunctions.getElementById('authorization_error_btn_login');
+                    const authorization_error_btn_signup = CommonFunctions.getElementById('authorization_error_btn_signup');
                     authorization_error_btn_login.removeEventListener('click', loginOnClick);
                     authorization_error_btn_login.addEventListener('click', loginOnClick);
+
+                    const signup_url = `https://deriv.${getTopLevelDomain()}/signup/`;
+                    authorization_error_btn_signup.href = signup_url;
                 } else {
                     BinarySocket.wait('get_account_status').then(response => {
                         confirmation_error.setVisibility(1);

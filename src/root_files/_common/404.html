@@ -83,10 +83,24 @@
             if (lang) redirect(lang);
         });
     }
+    function getTopLevelDomain() {
+        const current_domain = window.location.hostname;
+        return (current_domain && current_domain.indexOf('.') >= 0) ? current_domain.split('.').splice(-1) : 'com';
+    };
+    
+    function onLoad() {
+        var btn__home = document.getElementById('btn__home');
+        var home_url = `https://smarttrader.deriv.${getTopLevelDomain()}`;
+        btn__home.href = home_url;
+        btn__home.innerHTML = home_url;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        onLoad();
+    }, false);
     </script>
 </head>
 <body>
     <h1>404</h1>
-    <p style='font-size: 1.5em;'><a href='https://smarttrader.deriv.com'>https://smarttrader.deriv.com</a></p>
+    <p style='font-size: 1.5em;'><a id='btn__home'></a></p>
 </body>
 </html>

@@ -12,6 +12,7 @@ const domain_app_ids = { // these domains also being used in '_common/url.js' as
     'binary.com'           : 1,
     'smarttrader.deriv.app': 22168,
     'smarttrader.deriv.com': 22168,
+    'smarttrader.deriv.me' : 27315,
     'binary.me'            : 15284,
     'deriv.com'            : 16929,
 };
