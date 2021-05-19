@@ -144,6 +144,10 @@ jobs:
           target: 'translations'
       - deploy:
           target_branch: "staging"
+      - docker_build_push:
+          docker_image_tag: "latest-staging"
+      - k8s_deploy:
+          k8s_svc_name: "staging-smarttrader-deriv-app"
       - notify_slack
   release_production:
     docker:
