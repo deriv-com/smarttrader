@@ -73,11 +73,11 @@ const MetaTraderUI = (() => {
         $mt5_web_link.attr('href', `${mt5_url}${query_params}`);
     };
 
-    const populateTradingServers = () => {
+    const populateTradingServers = (acc_type) => {
         const $ddl_trade_server = $form.find('#ddl_trade_server');
 
         $ddl_trade_server.empty();
-        let account_type = newAccountGetType();
+        let account_type = acc_type || newAccountGetType();
         const num_servers = {
             disabled : 0,
             supported: 0,
@@ -784,10 +784,10 @@ const MetaTraderUI = (() => {
                 $form.find('#view_1 .btn-cancel').removeClass('invisible');
             });
         }
-        
+
         // disable next button and Synthetic option if all servers are used or unavailable
-        const num_servers = populateTradingServers();
-        if (num_servers.supported === num_servers.used + num_servers.disabled) {
+        const num_servers = populateTradingServers('real_gaming_financial');
+        if (/real/.test(selected_acc_type) && num_servers.supported === num_servers.used + num_servers.disabled) {
             disableButtonLink('.btn-next');
             $form.find('.step-2 #rbtn_gaming_financial').addClass('existed disabled');
         }
