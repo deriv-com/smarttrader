@@ -83,12 +83,31 @@ commands:
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages -d dist --branch << parameters.target_branch >> --message '[skip ci]'
-  docker_build_push:
+  docker_build_push_staging:
     description: "Build Docker image"
     parameters:
       docker_image_tag:
         type: string
         default: "latest-staging"
+    steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Building docker image
+          command: |
+            docker build -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_SHA1} -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >> .
+      - run: 
+          name: Pushing Image to docker hub
+          command: |
+            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_SHA1}
+            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >>
+  docker_build_push:
+    description: "Build Docker image"
+    parameters:
+      docker_image_tag:
+        type: string
+        default: "latest"
     steps:
       - setup_remote_docker
       - run: 
@@ -106,7 +125,7 @@ commands:
     parameters:
       k8s_svc_name:
         type: string
-        default: "staging-smarttrader-deriv-app"
+        default: "production-smarttrader-deriv-app"
     steps:
       - k8s/install-kubectl
       - run: 
@@ -114,6 +133,20 @@ commands:
           command: |
             echo $CA_CRT | base64 --decode > ca.crt
             kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/<< parameters.k8s_svc_name >> << parameters.k8s_svc_name >>=${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_TAG}
+            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN wait --for=condition=available --timeout=600s deployment/<< parameters.k8s_svc_name >>
+  k8s_deploy_staging:
+    description: "Deploy to k8s cluster"
+    parameters:
+      k8s_svc_name:
+        type: string
+        default: "staging-smarttrader-deriv-app"
+    steps:
+      - k8s/install-kubectl
+      - run: 
+          name: Deploying to k8s cluster for service << parameters.k8s_svc_name >>
+          command: |
+            echo $CA_CRT | base64 --decode > ca.crt
+            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/<< parameters.k8s_svc_name >> << parameters.k8s_svc_name >>=${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_SHA1}
             kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN wait --for=condition=available --timeout=600s deployment/<< parameters.k8s_svc_name >>
   notify_slack:
     description: "Notify slack"
@@ -144,9 +177,9 @@ jobs:
           target: 'translations'
       - deploy:
           target_branch: "staging"
-      - docker_build_push:
+      - docker_build_push_staging:
           docker_image_tag: "latest-staging"
-      - k8s_deploy:
+      - k8s_deploy_staging:
           k8s_svc_name: "staging-smarttrader-deriv-app"
       - notify_slack
   release_production:
