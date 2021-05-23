@@ -90,8 +90,6 @@ commands:
         type: string
         default: "latest-staging"
     steps:
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           name: Building docker image
           command: |
