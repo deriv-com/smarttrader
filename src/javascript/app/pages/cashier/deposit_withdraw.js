@@ -1,6 +1,7 @@
 const BinaryPjax             = require('../../base/binary_pjax');
 const Client                 = require('../../base/client');
 const BinarySocket           = require('../../base/socket');
+const Header                 = require('../../base/header');
 const Dialog                 = require('../../common/attach_dom/dialog');
 const Currency               = require('../../common/currency');
 const FormManager            = require('../../common/form_manager');
@@ -261,6 +262,15 @@ const DepositWithdraw = (() => {
         const response_get_account_status = State.get(['response', 'get_account_status']);
         if (!response_get_account_status.error) {
             if (/cashier_locked/.test(response_get_account_status.get_account_status.status)) {
+                if (/ASK_UK_FUNDS_PROTECTION/.test(response_get_account_status.get_account_status.cashier_validation)) {
+                    initUKGC();
+                    return;
+                }
+                if (/ASK_SELF_EXCLUSION_MAX_TURNOVER_SET/.test(response_get_account_status.get_account_status.cashier_validation)) {
+                    showError('limits_error');
+                    return;
+                }
+                    
                 showError('custom_error', localize('Your cashier is locked.')); // Locked from BO
                 return;
             }
@@ -303,7 +313,8 @@ const DepositWithdraw = (() => {
             if (cashier_type === 'withdraw') {
                 const limit = State.getResponse('get_limits.remainder');
                 if (typeof limit !== 'undefined' && +limit < Currency.getMinWithdrawal(Client.get('currency'))) {
-                    showError('custom_error', localize('You have reached the withdrawal limit.'));
+                    showError('custom_error', localize('You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal.'));
+                    BinarySocket.send({ get_account_status: 1 }).then(() => Header.displayAccountStatus());
                     return;
                 }
             }

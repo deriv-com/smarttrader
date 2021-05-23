@@ -1,4 +1,5 @@
-const { isEmptyObject, removeObjProperties } = require('../../_common/utility');
+const isEmptyObject = require('../../_common/utility').isEmptyObject;
+const removeObjProperties = require('../../_common/utility').removeObjProperties;
 
 const submarket_order = {
     forex          : 0,

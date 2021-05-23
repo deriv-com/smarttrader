@@ -69,9 +69,10 @@ class Markets extends React.Component {
     constructor (props) {
         super(props);
         let market_symbol = Defaults.get('market');
+        
         const market_list = Symbols.markets();
         this.markets = getAvailableUnderlyings(market_list);
-
+        
         this.underlyings = Symbols.getAllSymbols() || {};
         let underlying_symbol = Defaults.get('underlying');
         if (!underlying_symbol || !this.underlyings[underlying_symbol]) {

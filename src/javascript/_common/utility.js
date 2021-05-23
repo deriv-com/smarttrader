@@ -41,6 +41,41 @@ const getHighestZIndex = (selector = 'div,p,area,nav,section,header,canvas,aside
     return all.length ? Math.max(...all) : null;
 };
 
+const eu_countries = [
+    'it',
+    'de',
+    'fr',
+    'lu',
+    'gr',
+    'mf',
+    'es',
+    'sk',
+    'lt',
+    'nl',
+    'at',
+    'bg',
+    'si',
+    'cy',
+    'be',
+    'ro',
+    'hr',
+    'pt',
+    'pl',
+    'lv',
+    'ee',
+    'cz',
+    'fi',
+    'hu',
+    'dk',
+    'se',
+    'ie',
+    'im',
+    'gb',
+    'mt',
+];
+// check if client is from EU
+const isEuCountrySelected = selected_country => eu_countries.includes(selected_country);
+
 const downloadCSV = (csv_contents, filename = 'data.csv') => {
     if (navigator.msSaveBlob) { // IE 10+
         navigator.msSaveBlob(new Blob([csv_contents], { type: 'text/csv;charset=utf-8;' }), filename);
@@ -219,6 +254,12 @@ const findParent = (el, selector) => {
     return null;
 };
 
+const isBinaryDomain = () => {
+    const url = new URL(window.location.href);
+    const domain = url.hostname.split('.').slice(-2).join('.');
+    return (domain === 'binary.com');
+};
+
 let static_hash;
 const getStaticHash = () => {
     static_hash = static_hash || (document.querySelector('script[src*="binary"]').getAttribute('src') || '').split('?')[1];
@@ -239,12 +280,17 @@ class PromiseClass {
     }
 }
 
+const lc_licenseID = 12049137;
+const lc_clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
+
 module.exports = {
     showLoadingImage,
     getHighestZIndex,
     downloadCSV,
     template,
+    isBinaryDomain,
     isEmptyObject,
+    isEuCountrySelected,
     isLoginPages,
     cloneObject,
     isDeepEqual,
@@ -259,4 +305,6 @@ module.exports = {
     PromiseClass,
     removeObjProperties,
     getTopLevelDomain,
+    lc_licenseID,
+    lc_clientID,
 };

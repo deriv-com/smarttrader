@@ -63,7 +63,7 @@ const TermsAndConditions = () => (
                             <li>{it.L('The client has sufficient experience and knowledge about contracts for difference to be capable of evaluating the merits and risks of acquiring contracts via this site and have done so without relying on any information contained in this site.')}</li>
                         </ol>
                     </li>
-                    <li>{it.L('The Company reserves the right to refuse the client\'s request to open an MT5 Real Account for any reason, and any MT5 Real Account may be closed at the Company\'s discretion at any time.')}</li>
+                    <li>{it.L('The Company reserves the right to refuse the client\'s request to open an MT5 Real Account for any reason, and any MT5 Real Account may be closed at the Company\'s discretion at any time upon 7-day notice.')}</li>
                 </ol>
             </li>
             <li data-show='eucountry' >{it.L('Assessment of appropriateness')}
@@ -130,10 +130,10 @@ const TermsAndConditions = () => (
             </li>
             <li>{it.L('Closing an account')}
                 <ol>
-                    <li>{it.L('If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company by contacting [_1] helpdesk [_2]. The client\'s MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled.', it.website_name, '<a href=\'mailto:support@binary.com\'>support@binary.com</a>')}</li>
+                    <li>{it.L('If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via [_1]live chat[_2]. The client\'s MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled.', `<a href=${it.url_for('contact')} target="_blank">`, '</a>')}</li>
                     <li>{it.L('If the client\'s [_1] account is closed, their MT5 Real Account will be automatically closed as well.', it.website_name)}</li>
                     <li>{it.L('Client\'s demo accounts will be deleted after [_1] days of inactivity.', '30')}</li>
-                    <li>{it.L('Real accounts will be archived after [_1] days of inactivity. To re-activate a real account, contact binary.com help desk at [_2]support@binary.com[_3]', '30', '<a href="mailto:support@binary.com">', '</a>')}</li>
+                    <li>{it.L('Real accounts will be archived after [_1] days of inactivity. The client can request for the reactivation of a real account via [_2]live chat[_3].', '30', `<a href=${it.url_for('contact')} target="_blank">`, '</a>')}</li>
                     <li>{it.L('Any pending funds in your MT5 account will be transferred to your Binary account.')}</li>
                 </ol>
             </li>
@@ -205,7 +205,7 @@ const TermsAndConditions = () => (
             </li>
             <li>
                 {it.L('Negative Balance Protection')}
-                <p>{it.L('The Company has a Stop Out policy which prevents the client from losing more than they have deposited. However, in the event that the client\'s Open Positions are not closed when the Margin Level for their MT5 Real Account reaches the Stop Out Level, the Company, at its sole discretion, may waive the client\'s negative balance by crediting their account if their Account Balance goes into a negative balance. The negative balance is determined by aggregating all the negative balances incurred over a 24-hour period across all accounts held by the client. The client acknowledges that, unless they are a retail customer of Deriv Investments (Europe) Limited or a client of Deriv (Europe) Limited, the offer of the negative balance protection by the Company to the client is at the Company\'s sole discretion and the Company reserves the right to change the features and eligibility criteria of the negative balance protection at any time. The provisions of the negative balance protection do not apply in the following situations:')}
+                <p>{it.L('The Company has a Stop Out policy which prevents the client from losing more than they have deposited. However, in the event that the client\'s Open Positions are not closed when the Margin Level for their MT5 Real Account reaches the Stop Out Level, the Company, at its sole discretion, may waive the client\'s negative balance by crediting their account if their Account Balance goes into a negative balance. The negative balance is determined by aggregating all the negative balances incurred over a 24-hour period across all accounts held by the client. The client acknowledges that, unless they are a retail customer of Deriv Investments (Europe) Limited, a client of Deriv (Europe) Limited, or a retail customer residing in Australia, the offer of the negative balance protection by the Company to the client is at the Company\'s sole discretion and the Company reserves the right to change the features and eligibility criteria of the negative balance protection at any time. The provisions of the negative balance protection do not apply in the following situations:')}
                     <ol>
                         <li>{it.L('When a force majeure event occurs')}</li>
                         <li>{it.L('When the market conditions or market movements/volatility are abnormal')}</li>

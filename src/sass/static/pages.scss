@@ -186,8 +186,6 @@
             border-bottom: 1px solid $COLOR_DARK_GRAY;
         }
         tr {
-            position: relative;
-
             .data-anchor-link {
                 display: none;
             }
@@ -837,6 +835,7 @@ body #not_authenticated_financial ul.checked > li {
 
 .lightbox #set_currency {
     padding: 25px;
+    padding-bottom: 4px;
     width: 40em;
 
     #set_currency_text {
@@ -853,6 +852,7 @@ body #not_authenticated_financial ul.checked > li {
     }
     #submit_section {
         margin-top: 20px;
+        margin-bottom: 16px;
     }
 }
 
@@ -959,8 +959,11 @@ body #not_authenticated_financial ul.checked > li {
         .onfido-sdk-ui-NavigationBar-back {
             background: transparent;
         }
-        .onfido-sdk-ui-Button-button-primary:hover {
-            background: rgb(53, 63, 244); // Onfido's primary color
+        .onfido-sdk-ui-crossDevice-CrossDeviceLink-numberInputSection {
+            .ods-button.-action--primary {
+                height: 100%;
+                font-size: 0.875em;
+            }
         }
         .onfido-sdk-ui-Button-button-outline:hover {
             background-color: transparent;
@@ -970,13 +973,28 @@ body #not_authenticated_financial ul.checked > li {
             color: $COLOR_BLACK;
             border-radius: 0;
         }
+        .onfido-sdk-ui-Theme-textButton:hover {
+            color: $COLOR_BLACK;
+        }
+        .onfido-sdk-ui-CustomFileInput-container {
+            .onfido-sdk-ui-Theme-button-lg {
+                background: rgb(54, 64, 245);
+            }
+            button {
+                background: transparent;
+
+                &:hover {
+                    background: rgb(92, 108, 255);
+                }
+            }
+        }
         input, textarea {
             &:hover, &:focus {
                 outline: 0;
                 border: none;
             }
         }
-        button {
+        button:not(.onfido-sdk-ui-Theme-link):not(.ods-button) {
             &:hover, &:focus {
                 background-color: inherit;
             }
@@ -1035,6 +1053,11 @@ body #not_authenticated_financial ul.checked > li {
         margin: 0 auto;
     }
     .submit-status table {
+
+        @media screen and (max-width: 500px) {
+            font-size: 0.7rem;
+        }
+
         th:not(:last-child) {
             width: 25%;
         }
@@ -1051,6 +1074,32 @@ body #not_authenticated_financial ul.checked > li {
         height: 12px;
         display: inline-block;
         margin-left: 5px;
+    }
+    ul.rejected > li {
+        background: url('../images/pages/authenticate/error.svg') no-repeat left 0.3em;
+        width: fit-content;
+        text-align: left;
+        padding-left: 1.4em;
+        margin-top: 1em;
+        min-height: auto;
+    }
+    #last_rejection {
+        &_poi {
+            span {
+                cursor: pointer;
+                color: $COLOR_ORANGE;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &_button {
+            margin-top: 1.4em;
+        }
+        &_list {
+            margin-bottom: 0.9em;
+        }
     }
     #resolve_error {
         color: $COLOR_RED;
@@ -1705,4 +1754,29 @@ body #not_authenticated_financial ul.checked > li {
 
 #self_exclusion_dialog #dialog_content {
     max-width: 496px;
+}
+
+.affiliate-ib {
+    &-calculation {
+        border: 1px solid $COLOR_BLACK;
+        padding: 10px;
+
+        &-minimum {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.signal_provider {
+    &-container {
+        display: flex;
+        @media screen and (max-width: 480px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &-image {
+        border: 2px solid $COLOR_GRAY;
+    }
+
 }
