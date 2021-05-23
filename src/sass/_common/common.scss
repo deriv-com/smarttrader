@@ -252,9 +252,8 @@ label {
 
 /* global styles */
 .required_field_asterisk {
-    position: relative;
-    left: 3px;
-    top: -3px;
+    position: absolute;
+    margin: -3px 3px;
     font-size: $FONT_SIZE_S;
     color: $COLOR_RED;
 
