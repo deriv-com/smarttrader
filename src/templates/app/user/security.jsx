@@ -44,7 +44,7 @@ const Security = () => (
 
                 <Column className='real invisible' url='self_exclusionws' image='self-exclusion' header={it.L('Self Exclusion')} text={it.L('Facility that allows you to set limits on your account.')} />
 
-                <Column dataShow='-maltainvest' className='real invisible' url='limitsws' image='limits' header={it.L('Limits')} text={it.L('View your trading and withdrawal limits.')} />
+                <Column dataShow='-maltainvest, -optionsblocked' className='real invisible' url='limitsws' image='limits' header={it.L('Limits')} text={it.L('View your trading and withdrawal limits.')} />
 
                 <Column url='iphistoryws' image='iphistory' header={it.L('Login History')} text={it.L('View your login history.')} />
 
