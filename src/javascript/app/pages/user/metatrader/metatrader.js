@@ -239,13 +239,9 @@ const MetaTrader = (() => {
             }
         });
 
-        const deprecated_mt5_requests = ['password_change', 'password_reset'];
-        if (!['verify_password_reset', ...deprecated_mt5_requests].includes(action)) {
+        if (!/^(verify_password_reset)$/.test(action)) {
             // set main command
             req[`mt5_${action}`] = 1;
-        }
-        if (deprecated_mt5_requests.includes(action)) {
-            req[`trading_platform_investor_${action}`] = 1;
         }
 
         // add additional fields

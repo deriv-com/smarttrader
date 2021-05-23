@@ -29,7 +29,6 @@ export const FormRow = ({
     has_geovalidator,
     attributes = {},
     input_prefix,
-    required,
     children,
     options,
     default_option,
@@ -156,7 +155,7 @@ export const FormRow = ({
             id={row_id}
         >
             <div className={`${is_two_rows ? `gr-12 ${label_row_class}` : `gr-4 gr-12-m ${label_row_class}`}`}>
-                <label htmlFor={type !== 'label' ? id : undefined} className={required ? 'required_asterisk' : ''}>
+                <label htmlFor={type !== 'label' ? id : undefined}>
                     {tooltip ?
                         <span data-balloon-length='xlarge' data-balloon={tooltip}>
                             {label}

@@ -421,10 +421,6 @@ button .barspinner.white {
     z-index: 999;
 }
 
-.flex {
-    display: flex;
-}
-
 .inline-flex {
     display: inline-flex;
 }
@@ -587,11 +583,6 @@ button .barspinner.white {
     input[style*='background'] ~ &--toggle {
         right: 32px;
     }
-}
-
-.required_asterisk:after {
-    content: '*';
-    color: $COLOR_RED;
 }
 
 ul.bullet.gr-row > li {

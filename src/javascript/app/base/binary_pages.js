@@ -45,7 +45,6 @@ const RealAccOpening          = require('../pages/user/new_account/real_acc_open
 const VirtualAccOpening       = require('../pages/user/new_account/virtual_acc_opening');
 const WelcomePage             = require('../pages/user/new_account/welcome_page');
 const ResetPassword           = require('../pages/user/reset_password');
-const TradingResetPassword    = require('../pages/user/trading_reset_password');
 const SetCurrency             = require('../pages/user/set_currency');
 const TelegramBot             = require('../pages/user/telegram_bot');
 const TNCApproval             = require('../pages/user/tnc_approval');
@@ -121,7 +120,7 @@ const pages_config = {
     realws                   : { module: RealAccOpening,             is_authenticated: true },
     redirect                 : { module: Redirect },
     regulation               : { module: Regulation },
-    reset_passwordws         : { module: ResetPassword },
+    reset_passwordws         : { module: ResetPassword,              not_authenticated: true },
     resources                : { module: Dashboard },
     securityws               : { module: Settings,                   is_authenticated: true },
     self_exclusionws         : { module: SelfExclusion,              is_authenticated: true, only_real: true },
@@ -130,7 +129,6 @@ const pages_config = {
     tnc_approvalws           : { module: TNCApproval,                is_authenticated: true, only_real: true },
     top_up_virtualws         : { module: TopUpVirtual,               is_authenticated: true, only_virtual: true },
     trading                  : { module: TradePage,                  needs_currency: true,   no_mf: true, no_blocked_country: true },
-    trading_reset_passwordws : { module: TradingResetPassword },
     transferws               : { module: PaymentAgentTransfer,       is_authenticated: true, only_real: true },
     two_factor_authentication: { module: TwoFactorAuthentication,    is_authenticated: true },
     virtualws                : { module: VirtualAccOpening,          not_authenticated: true },

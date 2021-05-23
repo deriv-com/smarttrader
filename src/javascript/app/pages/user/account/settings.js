@@ -14,6 +14,10 @@ const Settings = (() => {
 
             const status = State.getResponse('get_account_status.status') || [];
 
+            if (!/social_signup/.test(status)) {
+                $('#change_password').setVisibility(1);
+            }
+
             if (!isAuthenticationAllowed()) {
                 $('#authenticate a')
                     .attr('href', '#')

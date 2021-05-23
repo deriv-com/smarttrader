@@ -7,18 +7,9 @@ const showLoadingImage = require('../../_common/utility').showLoadingImage;
 const FormManager = (() => {
     const forms = {};
 
-    const initForm = (form_selector, fields, needs_token, should_set_trading_password) => {
+    const initForm = (form_selector, fields, needs_token) => {
         const $form = $(`${form_selector}:visible`);
-        let $btn;
-        if (form_selector === '#frm_trading_password') {
-            if (should_set_trading_password) {
-                $btn = $form.find('#set_trading_btn');
-            } else {
-                $btn = $form.find('#change_trading_pw_btn');
-            }
-        } else {
-            $btn = $form.find('button[type="submit"]');
-        }
+        const $btn  = $form.find('button[type="submit"]');
         if ($form.length) {
             forms[form_selector] = {
                 $btn_submit: $btn,
