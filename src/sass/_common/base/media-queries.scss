@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1199px) {
     #header ul#menu-top.smaller-font a {
         font-size: $FONT_SIZE_XS;
     }
@@ -39,7 +39,7 @@
         max-height: 100%;
     }
     input:not([type='checkbox']), select {
-        width: 80%;
+        width: 75%;
         height: 26px;
     }
     .center-text-m {

@@ -50,7 +50,7 @@ const Footer = () => (
                                     { text: it.L('About Us'),               href: it.url_for('about-us') },
                                     { text: it.L('Group History'),          href: it.url_for('group-history') },
                                     { text: it.L('Binary.com in Numbers'),  href: it.url_for('binary-in-numbers') },
-                                    { text: it.L('Careers'),                href: it.url_for('careers') },
+                                    { text: it.L('Careers'),                href: it.deriv_career_url },
                                     { text: it.L('Patents'),                href: it.url_for('legal/us_patents') },
                                     { text: it.L('Contact Us'),             href: it.url_for('contact') },
                                 ]}
@@ -199,13 +199,13 @@ const Footer = () => (
                 <div className='gr-row'>
                     <div className='gr-12'>
                         <p>
-                            {it.L('In the EU, financial products are offered by Deriv Investments (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).', `<a href=${it.url_for('download/WS-Deriv-Investments-Europe-Limited.pdf')} target="_blank">`, '</a>')}
+                            {it.L('Deriv Investments (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara BKR 9033, Malta, is licensed in Malta and regulated by the Malta Financial Services Authority under the Investments Services Act to provide investment services in the European Union ([_1]licence no. IS/70156[_2]). It is also authorised and subject to limited regulation by the Financial Conduct Authority in the UK. Details about the extent of our authorisation and regulation by the Financial Conduct Authority are available from us on request.', `<a href=${it.url_for('download/WS-Deriv-Investments-Europe-Limited.pdf')} target="_blank">`, '</a>')}
                         </p>
                         <p>
-                            {it.L('In the Isle of Man and the UK, Synthetic Indices are offered by Deriv (MX) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2]).', '<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39172" target="_blank" rel="noopener noreferrer">', '</a>')}
+                            {it.L('In the Isle of Man and the UK, Synthetic indices are offered by Deriv (MX) Ltd, Millennium House, Level 1, Victoria Road, Douglas IM2 4RW, Isle of Man; licensed and regulated in Great Britain by (1) the Gambling Commission under [_1]account no. 39172[_3] and by (2) the Gambling Supervision Commission in the Isle of Man ([_2]view licence[_3]).', '<a href="https://beta.gamblingcommission.gov.uk/public-register/business/detail/39172" target="_blank" rel="noopener noreferrer">', '<a href="https://deriv.com/regulatory/Deriv_(MX)_Ltd.pdf" target="_blank" rel="noopener noreferrer">', '</a>')}
                         </p>
                         <p>
-                            {it.L('In the rest of the EU, Synthetic Indices are offered by Deriv (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta ([_1]licence no. MGA/B2C/102/2000[_4] issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_2]reference no: 39495[_4]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker\'s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].', `<a href=${it.url_for('download/regulation/MGA_licence.pdf')} target="_blank">`, '<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', `<a href="${it.url_for('regulation')}">`, '</a>')}
+                            {it.L('In the rest of the EU, Synthetic Indices are offered by Deriv (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority ([_1]licence no. MGA/B2C/102/2000[_4]), by (2) the Gambling Commission for clients in Great Britain under [_2]account no. 39495[_4], and by (3) the Revenue Commissioners for clients in Ireland (licence no. 1010285). View complete [_3]Regulatory Information[_4].', `<a href=${it.url_for('download/regulation/MGA_licence.pdf')} target="_blank">`, '<a href="https://beta.gamblingcommission.gov.uk/public-register/business/detail/39495" target="_blank" rel="noopener noreferrer">', `<a href="${it.url_for('regulation')}">`, '</a>')}
                         </p>
                     </div>
                 </div>
@@ -225,8 +225,18 @@ const Footer = () => (
                                 {it.L('Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.')}
                             </p>
                             <p className='eu-only invisible'>
-                                {it.L('CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. [_1] of retail investor accounts lose money when trading CFDs with Deriv Investments (Europe) Limited. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.', '74%')}
+                                {it.L('CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. [_1] of retail investor accounts lose money when trading CFDs with Deriv Investments (Europe) Limited. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.', '68%')}
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='container'>
+                <div className='gr-row'>
+                    <div className='gr-12'>
+                        <div className='copyright'>
+                            <img src={it.url_for('images/common/copyright.svg')} />
+                            <p>{it.L('2021 Binary | All rights reserved')}</p>
                         </div>
                     </div>
                 </div>

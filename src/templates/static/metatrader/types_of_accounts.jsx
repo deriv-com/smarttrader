@@ -91,8 +91,8 @@ const TypesOfAccounts = () => (
                                 [{ text: <Row number={3}  text={it.L('Spread')} /> },                 { text: it.L('Variable') },                                                                  { text: it.L('Variable') },                          { text: it.L('Variable/Fixed') }],
                                 [{ text: <Row number={4}  text={it.L('Commission')} /> },             { text: it.L('No') },                                                                        { text: it.L('No') },                                { text: it.L('No') }],
                                 [{ text: <Row             text={it.L('Minimum deposit')} /> },        { text: it.L('No') },                                                                        { text: it.L('No') },                                { text: it.L('No') }],
-                                [{ text: <Row number={5}  text={it.L('Margin call')} /> },            { text: '150%' },                                                                            { text: '150%' },                                    { text: '100%' }],
-                                [{ text: <Row number={6}  text={it.L('Stop out level')} /> },         { text: '75%' },                                                                             { text: '75%' },                                     { text: '50%' }],
+                                [{ text: <Row number={5}  text={it.L('Margin call')} /> },            { text: '100%' },                                                                            { text: '100%' },                                    { text: '100%' }],
+                                [{ text: <Row number={6}  text={it.L('Stop out level')} /> },         { text: '50%' },                                                                             { text: '50%' },                                     { text: '50%' }],
                                 [{ text: <Row             text={it.L('Number of assets')} /> },       { text: '50+' },                                                                             { text: '50+' },                                     { text: '10+' }],
                                 [{ text: <Row number={7}  text={it.L('Cryptocurrency trading')} /> }, { text: '24/7' },                                                                            { text: '24/7' },                                     { text: it.L('N/A') }],
                                 [{ text: <Row             text={it.L('Trading instruments')} /> },    { text: it.L('FX-majors (standard/micro lots), FX-minors, Commodities, Cryptocurrencies') }, { text: it.L('FX-majors, FX-minors, FX-exotics, Cryptocurrencies') },  { text: it.L('Synthetics') }],
@@ -151,7 +151,7 @@ const TypesOfAccounts = () => (
             <FootNote
                 number={4}
                 title={it.L('Commission')}
-                texts={[it.L('Most brokers typically charge a commission for each trade that you place. [_1] currently charges no commission across all account types, except for cryptocurrencies.', it.website_name)]}
+                texts={[it.L('Most brokers typically charge a commission for each trade that you place. [_1] currently charges no commission across all account types.', it.website_name)]}
             />
             <FootNote
                 number={5}

@@ -11,6 +11,7 @@ const getPropertyValue = require('../../../_common/utility').getPropertyValue;
 
 const Cashier = (() => {
     let href = '';
+    const default_virtual_balance = 10000;
 
     const showContent = () => {
         Client.activateByClientType();
@@ -61,28 +62,23 @@ const Cashier = (() => {
         resolve(getPropertyValue(offer_list_response, ['p2p_offer_list', 'list']).length);
     });
 
-    const displayTopUpButton = () => {
-        BinarySocket.wait('balance').then((response) => {
-            const el_virtual_topup_info = getElementById('virtual_topup_info');
-            const balance   = +response.balance.balance;
-            const can_topup = balance <= 1000;
-            const top_up_id = '#VRT_topup_link';
-            const $a        = $(top_up_id);
-            if (!$a) {
-                return;
-            }
-            const classes   = ['toggle', 'button-disabled'];
-            const new_el    = { class: $a.attr('class').replace(classes[+can_topup], classes[1 - +can_topup]), html: $a.html(), id: $a.attr('id') };
-            if (can_topup) {
-                href        = href || Url.urlFor('/cashier/top_up_virtualws');
-                new_el.href = href;
-            }
-            el_virtual_topup_info.innerText = can_topup
-                ? localize('Your virtual account balance is currently [_1] or less. You may top up your account with an additional [_2].', [`${Client.get('currency')} 1,000.00`, `${Client.get('currency')} 10,000.00`])
-                : localize('You can top up your virtual account with an additional [_1] if your balance is [_2] or less.', [`${Client.get('currency')} 10,000.00`, `${Client.get('currency')} 1,000.00`]);
-            $a.replaceWith($('<a/>', new_el));
-            $(top_up_id).parent().setVisibility(1);
-        });
+    const isDefaultVirtualBalance = () => +Client.get('balance') === default_virtual_balance;
+
+    const displayResetButton = () => {
+        const el_virtual_topup_info = getElementById('virtual_topup_info');
+        const top_up_id = '#VRT_topup_link';
+        const $a        = $(top_up_id);
+        if (!$a) return;
+        const new_el    = { class: 'toggle button', html: $a.html(), id: $a.attr('id') };
+        href            = href || Url.urlFor('/cashier/top_up_virtualws');
+        new_el.href     = href;
+        if (isDefaultVirtualBalance()) {
+            new_el.class = 'toggle button button-disabled';
+            new_el.href = '';
+        }
+        el_virtual_topup_info.innerText = localize('Reset the balance of your virtual account to [_1] anytime.', [`${Client.get('currency')} 10,000.00`]);
+        $a.replaceWith($('<a/>', new_el));
+        $(top_up_id).parent().setVisibility(1);
     };
 
     const showCurrentCurrency = (currency, statement, mt5_logins) => {
@@ -184,14 +180,16 @@ const Cashier = (() => {
     const setBtnDisable = selector => $(selector).addClass('button-disabled').click(false);
 
     const applyStateLockLogic = (status, deposit, withdraw) => {
+        const is_uk_client = Client.get('residence') === 'gb';
+
         // statuses to check with their corresponding selectors
         const statuses_to_check = [
-            { lock: 'cashier_locked', selectors: [deposit, withdraw] },
+            { lock: 'cashier_locked', selectors: is_uk_client ? [withdraw] : [deposit, withdraw] },
+            { lock: 'deposit_locked', selectors: [deposit] },
             { lock: 'withdrawal_locked', selectors: [withdraw] },
             { lock: 'no_withdrawal_or_trading', selectors: [withdraw] },
             { lock: 'unwelcome', selectors: [deposit] },
         ];
-
         statuses_to_check.forEach(item => {
             if (status.includes(item.lock)) {
                 item.selectors.forEach(selector => setBtnDisable(selector));
@@ -211,14 +209,18 @@ const Cashier = (() => {
     };
 
     const onLoad = () => {
+        const is_virtual = Client.get('is_virtual');
+        if (is_virtual && isDefaultVirtualBalance()) {
+            getElementById('VRT_topup_link').classList.add('button-disabled');
+        }
         if (Client.isLoggedIn()) {
             BinarySocket.send({ statement: 1, limit: 1 });
-            BinarySocket.wait('authorize', 'mt5_login_list', 'statement', 'get_account_status').then(() => {
+            BinarySocket.wait('authorize', 'mt5_login_list', 'statement', 'get_account_status', 'landing_company').then(() => {
                 checkStatusIsLocked(State.getResponse('get_account_status'));
                 const residence  = Client.get('residence');
                 const currency   = Client.get('currency');
-                if (Client.get('is_virtual')) {
-                    displayTopUpButton();
+                if (is_virtual) {
+                    displayResetButton();
                 } else if (currency) {
                     const is_p2p_allowed_currency = currency === 'USD';
                     const is_show_dp2p = /show_dp2p/.test(window.location.hash);

@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+const GTM = require('../_common/gtm');
+
 // Check view width, add navbar height as offset if on desktop
 function checkWidth() {
     const mq = window.matchMedia('(max-width: 1199px)');
@@ -92,7 +94,7 @@ function wsConnect() {
     const server_url    = config_server || 'frontend.binaryws.com';
     endpointNotification(config_server);
 
-    return new WebSocket(`wss://${server_url}/websockets/v3?app_id=${getAppId()}&l=${getLanguage()}`);
+    return new WebSocket(`wss://${server_url}/websockets/v3?app_id=${getAppId()}&l=${getLanguage()}&brand=binary`);
 }
 
 function isBinaryApp() {
@@ -172,7 +174,10 @@ function setupCrowdin() {
 
 function commonOnload() {
     setupCrowdin();
-    dataLayer.push({ event: 'page_load' });
+    GTM.init();
+    if (dataLayer) {
+        dataLayer.push({ event: 'page_load' });
+    }
 }
 
 // displays notification on outdated browsers

@@ -233,51 +233,61 @@ const ClientBase = (() => {
     const shouldCompleteTax = () => isAccountOfType('financial') &&
         !/crs_tin_information/.test((State.getResponse('get_account_status') || {}).status);
 
-    const isAuthenticationAllowed = () => /allow_document_upload/.test(State.getResponse('get_account_status.status'));
+    const isAuthenticationAllowed = () => {
+        const { status, authentication } = State.getResponse('get_account_status');
+        const has_allow_document_upload = /allow_document_upload/.test(status);
+        const has_verification_flags = authentication.needs_verification.length;
+        return has_allow_document_upload || has_verification_flags;
+    };
 
-    // remove manager id or master distinction from group
-    // remove EUR or GBP or Bbook or HighRisk distinction from group
-    const getMT5AccountType = group => (group ?
-        group
-            .replace('\\', '_')
-            .replace(/_(\d+|master|EUR|GBP|Bbook|HighRisk)/i, '')
-            // TODO: [remove-standard-advanced] remove standard and advanced when API groups are updated
-            .replace(/_standard$/, '_financial')
-            .replace(/_advanced$/, '_financial_stp')
-        :
-        ''
-    );
+    // * MT5 login list returns these:
+    // market_type: "financial" | "gaming"
+    // sub_account_type: "financial" | "financial_stp" | "swap_free"
+    // *
+    const getMT5AccountDisplays = (market_type, sub_account_type, is_demo) => {
+        // needs to be declared inside because of localize
+        // TODO: handle swap_free when ready
 
-    const getMT5AccountDisplay = (group) => {
-        let display_text = localize('MT5');
-        if (group) {
-            const value = getMT5AccountType(group);
-            if (/svg$/.test(value) || /malta$/.test(value)) {
-                display_text = localize('Synthetic');
-            } else if (
-                /vanuatu/.test(value) ||
-                /svg_(standard|financial)/.test(value) ||
-                /maltainvest_financial$/.test(value)
-            ) {
-                // TODO: [remove-standard-advanced] remove standard when API groups are updated
-                display_text = localize('Financial');
-            } else if (/labuan/.test(value)) {
-                display_text = localize('Financial STP');
-            }
-        }
+        const account_market_type = market_type === 'synthetic' ? 'gaming' : market_type;
+        const obj_display = {
+            gaming: {
+                financial: {
+                    short: localize('Synthetic'),
+                    full : is_demo ? localize('Demo Synthetic') : localize('Real Synthetic'),
+                },
+            },
+            financial: {
+                financial: {
+                    short: localize('Financial'),
+                    full : is_demo ? localize('Demo Financial') : localize('Real Financial'),
+                },
+                financial_stp: {
+                    short: localize('Financial STP'),
+                    full : is_demo ? localize('Demo Financial STP') : localize('Real Financial STP'),
+                },
+            },
+        };
 
-        return display_text;
+        // returns e.g. { short: 'Synthetic', full: 'Demo Synthetic' }
+        return obj_display[account_market_type][sub_account_type] || localize('MT5');
     };
 
     const getBasicUpgradeInfo = () => {
         const upgradeable_landing_companies = State.getResponse('authorize.upgradeable_landing_companies');
+        const landing_company_obj = State.getResponse('landing_company');
 
         let can_open_multi = false;
         let can_upgrade_to = [];
         let type;
         if ((upgradeable_landing_companies || []).length) {
             const current_landing_company = get('landing_company_shortcode');
-            can_open_multi = upgradeable_landing_companies.indexOf(current_landing_company) !== -1;
+            let allowed_currencies = [];
+            if (current_loginid) {
+                allowed_currencies = getLandingCompanyValue(current_loginid, landing_company_obj, 'legal_allowed_currencies');
+            }
+            // create multiple accounts only available for landing companies with legal_allowed_currencies
+            can_open_multi = !!(upgradeable_landing_companies.indexOf(current_landing_company) !== -1 &&
+            (allowed_currencies && allowed_currencies.length));
 
             // only show upgrade message to landing companies other than current
             const canUpgrade = (...landing_companies) => {
@@ -331,13 +341,12 @@ const ClientBase = (() => {
     };
 
     const getRiskAssessment = () => {
-        const status       = State.getResponse('get_account_status.status');
-        const is_high_risk = /high/.test(State.getResponse('get_account_status.risk_classification'));
+        const status = State.getResponse('get_account_status.status');
 
         return (
             isAccountOfType('financial') ?
                 /(financial_assessment|trading_experience)_not_complete/.test(status) :
-                (is_high_risk && /financial_assessment_not_complete/.test(status))
+                /financial_assessment_not_complete/.test(status)
         );
     };
 
@@ -450,8 +459,7 @@ const ClientBase = (() => {
         currentLandingCompany,
         shouldCompleteTax,
         getAllAccountsObject,
-        getMT5AccountType,
-        getMT5AccountDisplay,
+        getMT5AccountDisplays,
         getBasicUpgradeInfo,
         getLandingCompanyValue,
         getRiskAssessment,

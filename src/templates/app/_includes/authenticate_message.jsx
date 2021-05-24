@@ -51,7 +51,7 @@ const FileSelector = ({
                                                 <React.Fragment>
                                                     <div className='gr-row form-row center-text-m'>
                                                         <div className='gr-4 gr-12-m'>
-                                                            <label htmlFor={`id_number_${j}`}>{it.L('ID number')}:</label>
+                                                            <label htmlFor={`id_number_${j}`}>{it.L('ID number')}<span className='required_field_asterisk'>*</span>:</label>
                                                         </div>
                                                         <div className='gr-8 gr-12-m'>
                                                             <input id={`id_number_${j}`} type='text' maxLength='30' />
@@ -59,7 +59,7 @@ const FileSelector = ({
                                                     </div>
                                                     <div className='gr-row form-row center-text-m' id={`expiry_datepicker_${document.value}`}>
                                                         <div className='gr-4 gr-12-m'>
-                                                            <label htmlFor={`exp_date_${j}`}>{it.L('Expiry date')}:</label>
+                                                            <label htmlFor={`exp_date_${j}`}>{it.L('Expiry date')}<span className='required_field_asterisk'>*</span>:</label>
                                                         </div>
                                                         <div className='gr-8 gr-12-m'>
                                                             <input className='date-picker' id={`exp_date_${j}`} type='text' maxLength='200' readOnly='readonly' />
@@ -153,6 +153,7 @@ export const UnsupportedMessage = () => (
         <div className='submit-status-uns gr-centered gr-padding-30 invisible'>
             <h2 className='center-text'>{it.L('Document submission status')}</h2>
             <Table
+                scroll
                 data={{
                     thead: [
                         [
@@ -204,6 +205,7 @@ export const AuthenticateMessage = () => (
         <div className='submit-status gr-centered gr-padding-30 invisible'>
             <h2 className='center-text'>{it.L('Document submission status')}</h2>
             <Table
+                scroll
                 data={{
                     thead: [
                         [

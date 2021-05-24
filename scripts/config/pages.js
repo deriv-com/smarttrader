@@ -11,6 +11,11 @@ module.exports = [
     // ['cashier/session_expired',                 'app/cashier/session_expired',                 null,         'Cashier session expired'],
     // ['cashier/top_up_virtualws',                'app/user/top_up_virtual/top_up_virtual',      'default',    'Top Up Virtual Account'],
 
+    // ['dashboard/overview',                      'app/dashboard/index',                         'dashboard',  'Dashboard'],
+    // ['dashboard/explore',                       'app/dashboard/index',                         'dashboard',  'Dashboard'],
+    // ['dashboard/about-us',                      'app/dashboard/index',                         'dashboard',  'Dashboard'],
+    // ['dashboard/resources',                     'app/dashboard/index',                         'dashboard',  'Dashboard'],
+
     // ['paymentagent/transferws',                 'app/cashier/paymentagent_transfer',           'default',    'Payment Agent Transfer'],
     // ['paymentagent/withdrawws',                 'app/cashier/paymentagent_withdraw',           'default',    'Payment Agent Withdrawal'],
 
@@ -72,6 +77,7 @@ module.exports = [
     // ['why-us',                                  'static/why_us',                               'full_width', 'Why Us'],
     // ['platforms',                               'static/platforms',                            'full_width', 'Trading Platforms'],
 
+    // ['mt5-signals',                             'static/mt5_signals',                          'full_width', 'MT5 Signals'],
     // ['about-us',                                'static/about/index',                          'full_width', 'About Us'],
     // ['asuncion',                                'static/about/asuncion',                       'full_width', 'Careers - Asunción'],
     // ['binary-in-numbers',                       'static/about/binary_in_numbers',              'default',    'Binary.com in Numbers'],
