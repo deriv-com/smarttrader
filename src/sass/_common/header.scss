@@ -199,9 +199,9 @@ body .header {
             width: auto;
 
             a {
+                display: flex;
                 font-weight: normal;
                 vertical-align: middle;
-                display: table-cell;
                 height: 50px;
                 max-width: 150px;
                 text-decoration: none;
@@ -223,7 +223,6 @@ body .header {
                 text-align: left;
                 line-height: 1.75;
                 position: relative;
-                display: flex;
                 height: 100%;
 
                 &:hover {
