@@ -332,6 +332,10 @@ a.previous-wrapper {
   background-color: #ffffff; }
   .inpage_popup_container .inpage_popup_content_box {
     border: 0; }
+    @media screen and (max-width: 480px) {
+      .inpage_popup_container .inpage_popup_content_box {
+        max-height: 100vh;
+        overflow-y: scroll; } }
     .inpage_popup_container .inpage_popup_content_box #contract_win_status {
       line-height: 30px; }
       .inpage_popup_container .inpage_popup_content_box #contract_win_status.won {
