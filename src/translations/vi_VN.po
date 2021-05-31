@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-07-28 02:25\n"
+"PO-Revision-Date: 2021-05-31 09:36\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
+
+msgid " (Region added)"
+msgstr ""
+
+msgid " (Temporarily unavailable)"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 tài khoản %2"
@@ -55,6 +61,15 @@ msgstr "%1Không, thay đổi tài khoản tiền pháp định bây giờ%2"
 msgid "%1Return to trading page%2"
 msgstr "%1Trở về trang giao dịch%2"
 
+msgid "1. This link was sent by you"
+msgstr ""
+
+msgid "2. Your desktop window stays open"
+msgstr ""
+
+msgid "A word by itself is easy to guess"
+msgstr ""
+
 msgid "AM"
 msgstr "AM"
 
@@ -85,14 +100,29 @@ msgstr "Thêm +/- để xác định một rào cản bù. Ví dụ, +0.005 có 
 msgid "Add Deriv account"
 msgstr "Thêm tài khoản Deriv"
 
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
 msgid "Adjust trade parameters"
 msgstr "Điều chỉnh thông số giao dịch"
 
 msgid "Admin"
 msgstr "Quản trị viên"
 
+msgid "Agree and accept"
+msgstr ""
+
+msgid "All details must be clear — nothing blurry"
+msgstr ""
+
 msgid "All markets are closed now. Please try again later."
 msgstr "Tất cả các thị trường đều đã đóng cửa. Vui lòng thử lại sau."
+
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+msgid "Allow camera access"
+msgstr ""
 
 msgid "Allow equals"
 msgstr "Cho phép bằng nhau"
@@ -105,6 +135,9 @@ msgstr "Số tiền"
 
 msgid "Amount in"
 msgstr "Số tiền theo"
+
+msgid "An error occurred while loading the component"
+msgstr ""
 
 msgid "Apply now as a professional investor"
 msgstr "Đăng ký ngay để trở thành nhà đầu tư chuyên nghiệp"
@@ -160,8 +193,8 @@ msgstr "Tại thời điểm thiết lập lại, nếu điểm này nằm ở v
 msgid "Audit"
 msgstr "Kiểm toán"
 
-msgid "Audit page"
-msgstr "Kiểm tra trang"
+msgid "Audit Page"
+msgstr ""
 
 msgid "Aug"
 msgstr "Tháng 8"
@@ -177,6 +210,21 @@ msgstr "Những thị trường đang có sẵn"
 
 msgid "Average"
 msgstr "Trung bình"
+
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+msgid "Avoid recent years"
+msgstr ""
+
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+msgid "Avoid sequences"
+msgstr ""
+
+msgid "Avoid years that are associated with you"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "Tiếp tục giao dịch"
@@ -196,14 +244,17 @@ msgstr "Rào cản bù"
 msgid "Bid"
 msgstr "Giá thầu"
 
+msgid "Binance USD"
+msgstr ""
+
 msgid "Binary Coin"
 msgstr "Binary Coin"
 
-msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
-msgstr "Binary.com hiện hỗ trợ Tether (USDT). Bạn chỉ có thể gửi USDT từ ví kích hoạt Omni Layer vào tài khoản Binary.com của bạn."
-
 msgid "Bitcoin"
 msgstr "Bitcoin"
+
+msgid "Blurry photo detected"
+msgstr ""
 
 msgid "Browser"
 msgstr "Trình duyệt"
@@ -229,11 +280,26 @@ msgstr "Gọi biên"
 msgid "Call Spread/Put Spread"
 msgstr "Gọi Chênh Lệch/Đặt Chênh Lệch"
 
+msgid "Camera access is denied"
+msgstr ""
+
+msgid "Camera not detected"
+msgstr ""
+
+msgid "Camera not working"
+msgstr ""
+
+msgid "Camera not working?"
+msgstr ""
+
 msgid "Can you spare 15 minutes?"
 msgstr "Bạn có thể dành ra 15 phút không?"
 
 msgid "Cancel"
 msgstr "Hủy bỏ"
+
+msgid "Capitalization doesn't help very much"
+msgstr ""
 
 msgid "Cashier"
 msgstr "Thu Ngân"
@@ -259,14 +325,35 @@ msgstr "Biểu đồ không phải là có sẵn cho cơ sở này."
 msgid "Charting for this underlying is delayed"
 msgstr "Biểu đồ cho tài sản cơ sở này bị hoãn"
 
+msgid "Check back here to finish the submission"
+msgstr ""
+
+msgid "Check selfie"
+msgstr ""
+
+msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
+msgstr ""
+
+msgid "Check that your number is correct"
+msgstr ""
+
 msgid "Check your connection."
 msgstr "Kiểm tra kết nối của bạn."
+
+msgid "Check your image"
+msgstr ""
+
+msgid "Check your mobile"
+msgstr ""
 
 msgid "Checked"
 msgstr "Đã kiểm tra"
 
 msgid "Checking"
 msgstr "Đang kiểm tra"
+
+msgid "Choose document"
+msgstr ""
 
 msgid "Christmas Day"
 msgstr "Lễ Giáng Sinh"
@@ -277,11 +364,17 @@ msgstr "Nhấp vào OK để tiến tục."
 msgid "Click here to open a Financial Account"
 msgstr "Nhấp vào đây để mở một Tài Khoản Tài Chính"
 
+msgid "Click here to open a Gaming account"
+msgstr ""
+
 msgid "Click here to open a Real Account"
 msgstr "Nhấp vào đây để mở một Tài Khoản Thực"
 
 msgid "Close"
 msgstr "Đóng"
+
+msgid "Close identity verification screen"
+msgstr ""
 
 msgid "Close time"
 msgstr "Thời gian đóng"
@@ -304,17 +397,44 @@ msgstr "Kết thúc sớm (lúc 21:00)"
 msgid "Commodities"
 msgstr "Hàng hóa"
 
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
 msgid "Complete details"
 msgstr "Chi tiết đầy đủ"
 
 msgid "Compressing Image"
 msgstr "Nén hình ảnh"
 
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr ""
+
+msgid "Connected to your mobile"
+msgstr ""
+
 msgid "Connecting to server"
 msgstr "Đang kết nối với máy chủ"
 
+msgid "Connection lost"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Continue on phone"
+msgstr ""
+
+msgid "Continue on your phone"
+msgstr ""
+
 msgid "Continue trading"
 msgstr "Tiếp tục giao dịch"
+
+msgid "Continue with the verification"
+msgstr ""
 
 msgid "Contract"
 msgstr "Hợp đồng"
@@ -350,13 +470,31 @@ msgid "Contract will be sold at the prevailing market price when the request is 
 msgstr "Hợp đồng sẽ được bán ở giá thị trường hiện hành khi máy chủ nhận được yêu cầu. Giá này có thể khác với giá đã được chỉ định."
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "Hợp đồng đã được mua"
 
 msgid "Contracts sold"
+msgstr "Hợp đồng đã được bán"
+
+msgid "Copied"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy the link to your mobile browser"
+msgstr ""
+
+msgid "Copy the link to your phone"
 msgstr ""
 
 msgid "Counterparty"
 msgstr "Đối tác"
+
+msgid "Country not found"
+msgstr ""
 
 msgid "Country of Residence"
 msgstr "Quốc gia cư trú"
@@ -386,6 +524,9 @@ msgid "Current time"
 msgstr "Thời gian hiện tại"
 
 msgid "Current time:"
+msgstr "Thời gian hiện tại:"
+
+msgid "Cut-off image detected"
 msgstr ""
 
 msgid "Date"
@@ -393,6 +534,9 @@ msgstr "Ngày"
 
 msgid "Date and Time"
 msgstr "Ngày và Thời gian"
+
+msgid "Dates are often easy to guess"
+msgstr ""
 
 msgid "Deal cancel. fee"
 msgstr "Hủy giao dịch. Phí"
@@ -469,20 +613,47 @@ msgstr "Chữ số"
 msgid "Disable"
 msgstr "Vô hiệu hoá"
 
+msgid "Dismiss alert"
+msgstr ""
+
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
 msgstr "Bạn có muốn này là một tài khoản fiat hoặc tài khoản tiền crypto? Hãy chọn một trong hai:"
 
 msgid "Do you wish to continue?"
 msgstr "Bạn có muốn tiếp tục?"
 
+msgid "Document example"
+msgstr ""
+
+msgid "Document uploaded"
+msgstr ""
+
+msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
+msgstr ""
+
+msgid "Documents uploaded"
+msgstr ""
+
+msgid "Documents you can use to verify your identity"
+msgstr ""
+
 msgid "Does Not Touch"
 msgstr "Không Chạm"
+
+msgid "Don't refresh this page"
+msgstr ""
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "Không muốn giao dịch trong %1? Bạn có thể mở một tài khoản tiền ảo khác."
 
+msgid "Driver's license"
+msgstr ""
+
 msgid "Driving licence"
 msgstr "Giấy phép lái xe"
+
+msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
+msgstr ""
 
 msgid "Duration"
 msgstr "Khoảng thời gian"
@@ -492,6 +663,9 @@ msgstr "Địa chỉ Email"
 
 msgid "Enable"
 msgstr "Kích hoạt"
+
+msgid "Enable camera"
+msgstr ""
 
 msgid "End Time"
 msgstr "Thời Gian Kết Thúc"
@@ -514,6 +688,15 @@ msgstr "Hợp đồng Kết Thúc Giữa / Kết Thúc Ra Ngoài sẽ được h
 msgid "Ends Outside"
 msgstr "Kết Thúc Ra Ngoài"
 
+msgid "Enlarge image"
+msgstr ""
+
+msgid "Enter mobile number"
+msgstr ""
+
+msgid "Enter your mobile number:"
+msgstr ""
+
 msgid "Entry Spot"
 msgstr "Điểm khởi đầu"
 
@@ -523,17 +706,26 @@ msgstr "Điểm khởi đầu"
 msgid "Equals"
 msgstr "Bằng nhau"
 
-msgid "Ether"
-msgstr "Ether"
-
 msgid "Ether Classic"
 msgstr "Ether Classic"
+
+msgid "Ethereum"
+msgstr ""
 
 msgid "Even/Odd"
 msgstr "Hòa vốn/ Số dư"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "Các hợp đồng chẵn/ lẻ sẽ được hoàn tiền tại giá mua nếu hợp đồng không kết thúc trong vòng 5 phút."
+
+msgid "Example of a blurry document"
+msgstr ""
+
+msgid "Example of a cut-off document"
+msgstr ""
+
+msgid "Example of a document with glare"
+msgstr ""
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "Thời gian loại trừ không thể nhiều hơn 5 năm."
@@ -562,6 +754,12 @@ msgstr "Hạn sử dụng cần thiết cho %1."
 msgid "Explanation"
 msgstr "Giải thích"
 
+msgid "Face forward and make sure your eyes are clearly visible"
+msgstr ""
+
+msgid "Face photo page"
+msgstr ""
+
 msgid "Failed"
 msgstr "Thất bại"
 
@@ -576,6 +774,15 @@ msgstr "Tiền pháp định"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "Kích thước tập tin (%1) vượt quá giới hạn cho phép. Kích thước tập tin tối đa cho phép: %2"
+
+msgid "File not uploaded."
+msgstr ""
+
+msgid "File size exceeded."
+msgstr ""
+
+msgid "File type not supported"
+msgstr ""
 
 msgid "Final price"
 msgstr "Giá cuối cùng"
@@ -595,6 +802,9 @@ msgstr "Kết thúc"
 msgid "First line of home address"
 msgstr "Dòng đầu tiên của địa chỉ nhà"
 
+msgid "Follow these steps to recover camera access:"
+msgstr ""
+
 msgid "Forex"
 msgstr "Thị trường ngoại hối"
 
@@ -613,11 +823,35 @@ msgstr "Từ tài khoản: "
 msgid "Front Side"
 msgstr "Mặt trước"
 
+msgid "Front and back"
+msgstr ""
+
 msgid "Gaming"
 msgstr "Đặt cược"
 
+msgid "Gaming Account"
+msgstr ""
+
 msgid "Get %1"
 msgstr "Lấy %1"
+
+msgid "Get link via SMS"
+msgstr ""
+
+msgid "Get secure link"
+msgstr ""
+
+msgid "Get your secure link"
+msgstr ""
+
+msgid "Glare detected"
+msgstr ""
+
+msgid "Go To Reports"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
 
 msgid "Go to statement"
 msgstr "Xem sao kê"
@@ -625,11 +859,20 @@ msgstr "Xem sao kê"
 msgid "Goes Outside"
 msgstr "Ra Ngoài"
 
+msgid "Grant access to your camera from your browser settings"
+msgstr ""
+
+msgid "Great, that's everything we need"
+msgstr ""
+
 msgid "Guide"
 msgstr "Hướng dẫn"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr "Do đó, số dư có thể rút của bạn chỉ tối đa %1%2, tùy thuộc vào số tiền trong tài khoản của bạn."
+
+msgid "Here's how to do it:"
+msgstr ""
 
 msgid "High"
 msgstr "Cao"
@@ -676,11 +919,11 @@ msgstr "Cao Hơn/Thấp Hơn"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "Hợp đồng giá Cao hơn/Thấp hơn sẽ được hoàn lại bằng giá mua nếu có ít hơn 2 tick giữa thời điểm bắt đầu và kết thúc hợp đồng."
 
-msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr "Gợi ý: sẽ mất khoảng %1%2 để bẻ khóa mật khẩu của bạn."
-
 msgid "Hour"
 msgstr "Giờ"
+
+msgid "How to scan a QR code"
+msgstr ""
 
 msgid "I want to reapply"
 msgstr "Tôi muốn nộp đơn lại"
@@ -691,11 +934,17 @@ msgstr "Tôi quan tâm"
 msgid "ID number is required for %1."
 msgstr "Số ID là cần thiết cho %1."
 
+msgid "IDK"
+msgstr ""
+
 msgid "IP Address"
 msgstr "Địa chỉ IP"
 
 msgid "Identity card"
 msgstr "Thẻ nhận dạng"
+
+msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Nếu <strong>điểm chốt</strong> bằng với <strong>Rào cản thấp</strong> hoặc <strong>Rào cản cao</strong>, bạn không thắng khoản thanh toán."
@@ -841,6 +1090,21 @@ msgstr "Mã xác minh không hợp lệ."
 msgid "Investment"
 msgstr "Sự đầu tư"
 
+msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
+msgstr ""
+
+msgid "It may take a few minutes to arrive"
+msgstr ""
+
+msgid "It must be an official photo ID"
+msgstr ""
+
+msgid "It will only take a couple of minutes."
+msgstr ""
+
+msgid "It’ll take longer to verify you if we can’t read it"
+msgstr ""
+
 msgid "Jan"
 msgstr "Tháng Một"
 
@@ -862,6 +1126,9 @@ msgstr "Tháng Sáu"
 msgid "Jurisdiction"
 msgstr "Thẩm quyền"
 
+msgid "Keep this window open while using your mobile"
+msgstr ""
+
 msgid "Language settings"
 msgstr "Cài đặt ngôn ngữ"
 
@@ -880,8 +1147,17 @@ msgstr "Lần Sử Dụng Gần Đây"
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Chữ số cuối cùng cho tick %1 gần nhất trên %2"
 
+msgid "Linked to your computer"
+msgstr ""
+
 msgid "Litecoin"
 msgstr "Litecoin"
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
 
 msgid "Log in"
 msgstr "Đăng nhập"
@@ -893,13 +1169,16 @@ msgid "Log out"
 msgstr "Đăng xuất"
 
 msgid "Login ID"
-msgstr ""
+msgstr "ID Đăng Nhập"
 
-msgid "Login time:"
+msgid "Login at:"
 msgstr ""
 
 msgid "Lookbacks"
 msgstr "Lookbacks"
+
+msgid "Looks like you took too long"
+msgstr ""
 
 msgid "Loss"
 msgstr "Thua lỗ"
@@ -925,11 +1204,50 @@ msgstr "Thấp hơn"
 msgid "Lower or equal"
 msgstr "Thấp hơn hoặc bằng"
 
+msgid "MT5"
+msgstr ""
+
 msgid "MT5 withdrawal disabled"
 msgstr "Rút tiền MT5 đã bị vô hiệu hóa"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Rút tiền MT5 đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
+
+msgid "Make sure all of the document is in the photo"
+msgstr ""
+
+msgid "Make sure details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure everything is clear"
+msgstr ""
+
+msgid "Make sure full document is visible"
+msgstr ""
+
+msgid "Make sure your card details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your device has a working camera"
+msgstr ""
+
+msgid "Make sure your device's camera works"
+msgstr ""
+
+msgid "Make sure your license details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your passport details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your permit details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your selfie clearly shows your face"
+msgstr ""
+
+msgid "Make sure§"
+msgstr ""
 
 msgid "Mar"
 msgstr "Tháng Ba"
@@ -970,6 +1288,18 @@ msgstr "Thứ Hai"
 msgid "More information can be found in an email sent to you."
 msgstr "Thông tin thêm có thể được tìm thấy trong email gửi đến bạn."
 
+msgid "Move away from direct light"
+msgstr ""
+
+msgid "Move away from direct light — no glare"
+msgstr ""
+
+msgid "Multi-Collateral"
+msgstr ""
+
+msgid "Multiple faces found"
+msgstr ""
+
 msgid "Multiplier"
 msgstr "Số nhân"
 
@@ -979,8 +1309,14 @@ msgstr "Số nhân Giảm"
 msgid "Multiplier Up"
 msgstr "Số nhân Tăng"
 
+msgid "Must be under 10MB."
+msgstr ""
+
 msgid "Name"
 msgstr "Tên"
+
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
 
 msgid "Net profit"
 msgstr "Lợi nhuận ròng"
@@ -1014,6 +1350,15 @@ msgstr "Không có loại tiền nào được chỉ định"
 
 msgid "No currency selected"
 msgstr "Không có loại tiền nào được chọn"
+
+msgid "No document detected"
+msgstr ""
+
+msgid "No face found"
+msgstr ""
+
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
 
 msgid "No notifications"
 msgstr "Không có thông báo"
@@ -1063,6 +1408,9 @@ msgstr "Tháng Mười"
 msgid "Offline"
 msgstr "Ngoại tuyến"
 
+msgid "Once you've finished we'll take you to the next step"
+msgstr ""
+
 msgid "Online"
 msgstr "Trực tuyến"
 
@@ -1096,6 +1444,9 @@ msgstr "Chỉ chữ cái, số, space, gạch dưới và dấu nối được p
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Chỉ chữ cái, khoảng trắng, dấu nối, dấu chấm hết và dấu nháy đơn được cho phép."
 
+msgid "Only your face can be in the selfie"
+msgstr ""
+
 msgid "Oops... Page Not Available"
 msgstr "Rất tiếc... Trang không tồn tại"
 
@@ -1108,17 +1459,23 @@ msgstr "Mở một Tài Khoản Thực"
 msgid "Open a free account"
 msgstr "Mở tài khoản miễn phí"
 
-msgid "Open contracts"
-msgstr ""
-
 msgid "Open positions"
 msgstr "Tuyển Dụng"
+
+msgid "Open the link and complete the tasks"
+msgstr ""
+
+msgid "Open the link on your mobile"
+msgstr ""
+
+msgid "Open your new bank account"
+msgstr ""
 
 msgid "Opens"
 msgstr "Mở"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "Giao dịch Binary Option có thể gây nghiện thực sự, và có thể thúc đẩy bạn chơi tới mức tới giới hạn của mình. Để tránh sự nguy hiểm của trường hợp nghiện này, chúng tôi cung cấp cho bạn một công cụ kiểm tra thực tế tổng hợp các giao dịch và tài khoản của mình một cách thường xuyên."
 
 msgid "Over/Under"
 msgstr "Trên/Dưới"
@@ -1132,11 +1489,17 @@ msgstr "PM"
 msgid "Passport"
 msgstr "Hộ chiếu"
 
+msgid "Passport photo page"
+msgstr ""
+
 msgid "Password is not strong enough."
 msgstr "Mật khẩu không đủ mạnh."
 
-msgid "Password should have lower and uppercase letters with numbers."
-msgstr "Mật khẩu nên bao gồm cả chữ hoa, chữ thường và con số."
+msgid "Password should have lower and uppercase English letters with numbers."
+msgstr ""
+
+msgid "Paxos Standard"
+msgstr ""
 
 msgid "Pay-out"
 msgstr "Đóng tiền"
@@ -1161,6 +1524,12 @@ msgstr "Tỷ lệ phần trăm"
 
 msgid "Permissions"
 msgstr "Quyền hạn"
+
+msgid "Photo of your document"
+msgstr ""
+
+msgid "Photo of your face"
+msgstr ""
 
 msgid "Place of birth"
 msgstr "Nơi sinh"
@@ -1207,8 +1576,8 @@ msgstr "Hãy đảm bảo rằng bạn đã cài đặt ứng dụng Telegram tr
 msgid "Please enter a valid Login ID."
 msgstr "Vui lòng nhập một ID đăng kí hợp lệ."
 
-msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr "Vui lòng nhập số điện thoại hợp lệ, bao gồm mã quốc gia (ví dụ: +15417541234)."
+msgid "Please enter a valid phone number (e.g. +15417541234)."
+msgstr ""
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "Vui lòng chú ý rằng loại tiền tệ được chọn chỉ được sử dụng cho một số tài khoản nhất định."
@@ -1249,7 +1618,7 @@ msgstr "Xin vui lòng thiết lập %130 ngày giới hạn doanh thu%2 của b�
 msgid "Please specify the reasons for closing your accounts"
 msgstr "Vui lòng nêu rõ lý do bạn đóng các tài khoản của mình"
 
-msgid "Please specify your preferred reality-check interval in minutes"
+msgid "Please specify your preferred interval reality check in minutes:"
 msgstr ""
 
 msgid "Please submit your proof of address."
@@ -1257,6 +1626,12 @@ msgstr "Vui lòng nộp xác minh địa chỉ của bạn."
 
 msgid "Please submit your proof of identity."
 msgstr "Vui lòng nộp xác minh danh tính của bạn."
+
+msgid "Please try again"
+msgstr ""
+
+msgid "Point your phone’s camera at the QR code"
+msgstr ""
 
 msgid "Postal Code/ZIP"
 msgstr "Mã bưu chính/ Mã ZIP"
@@ -1271,13 +1646,16 @@ msgid "Potential payout"
 msgstr "Lợi nhuận tiềm năng"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Lợi nhuận tiềm năng"
 
 msgid "Potential profit/loss"
 msgstr "Lợi nhuận/thua lỗ tiềm năng"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Dự đoán khuynh hướng<br />và thu mua"
+
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
 
 msgid "Previous"
 msgstr "Trước"
@@ -1286,7 +1664,7 @@ msgid "Profit"
 msgstr "Lợi nhuận"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "Lợi Nhuận/Thua Lỗ"
 
 msgid "Profit table"
 msgstr "Bảng lợi nhuận"
@@ -1314,6 +1692,9 @@ msgstr "Giấy xác nhận danh tính đã hết hạn"
 
 msgid "Proof of identity required"
 msgstr "Yêu cầu bằng chứng xác nhận danh tính"
+
+msgid "Provide the whole document page for best results"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Mua"
@@ -1364,6 +1745,18 @@ msgid "Real-Money Accounts"
 msgstr "Tài khoản tiền thật"
 
 msgid "Reality Check"
+msgstr "Kiểm Tra Tính Xác Thực"
+
+msgid "Recent years are easy to guess"
+msgstr ""
+
+msgid "Recover camera access to continue face verification"
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
+msgid "Redo"
 msgstr ""
 
 msgid "Ref."
@@ -1372,11 +1765,29 @@ msgstr "Tham khảo."
 msgid "Reference ID"
 msgstr "ID tham khảo"
 
+msgid "Refresh"
+msgstr ""
+
+msgid "Refresh this page to restart the identity verification process"
+msgstr ""
+
 msgid "Remaining time"
 msgstr "Thời gian còn lại"
 
+msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
+msgstr ""
+
 msgid "Remove deposit limits"
 msgstr "Xóa giới hạn tiền gửi"
+
+msgid "Remove your glasses, if necessary"
+msgstr ""
+
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
 
 msgid "Reports"
 msgstr "Báo cáo"
@@ -1386,6 +1797,9 @@ msgstr "Yêu cầu lưu trữ trình duyệt web của bạn phải được kí
 
 msgid "Resale not offered"
 msgstr "Không được bán lại"
+
+msgid "Resend link"
+msgstr ""
 
 msgid "Reset Barrier"
 msgstr "Đặt lại Rào cản"
@@ -1408,17 +1822,35 @@ msgstr "Thời gian đặt lại"
 msgid "Reset barrier"
 msgstr "Đặt lại Rào cản"
 
+msgid "Reset the balance of your virtual account to %1 anytime."
+msgstr ""
+
 msgid "Reset time"
 msgstr "Thời gian đặt lại"
 
 msgid "Reset to original settings"
 msgstr "Thiết lập lại cài đặt gốc"
 
+msgid "Residence permit"
+msgstr ""
+
+msgid "Restart process on a different device"
+msgstr ""
+
+msgid "Restart the process on the latest version of Google Chrome"
+msgstr ""
+
+msgid "Restart the process on the latest version of Safari"
+msgstr ""
+
 msgid "Return"
 msgstr "Doanh thu"
 
 msgid "Reverse Side"
 msgstr "Mặt sau"
+
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
 
 msgid "Revoke access"
 msgstr "Hủy bỏ truy cập"
@@ -1428,6 +1860,9 @@ msgstr "Tăng/Giảm"
 
 msgid "Rise/Fall contracts will be refunded if:"
 msgstr "Các hợp đồng Lên/Xuống sẽ được hoàn trả trong trường hợp:"
+
+msgid "STASIS Euro"
+msgstr ""
 
 msgid "Sa"
 msgstr "Thứ 7"
@@ -1441,8 +1876,20 @@ msgstr "Giá bán"
 msgid "Saturday"
 msgstr "Thứ Bảy"
 
+msgid "Scan QR code"
+msgstr ""
+
+msgid "Scan the QR code with your phone"
+msgstr ""
+
+msgid "Scans and photocopies are not accepted"
+msgstr ""
+
 msgid "Scopes"
 msgstr "Phạm vi"
+
+msgid "Search for country"
+msgstr ""
 
 msgid "Search..."
 msgstr "Tìm kiếm..."
@@ -1453,11 +1900,20 @@ msgstr "Lựa chọn tài sản"
 msgid "Select Trade Type"
 msgstr "Chọn loại hình giao dịch"
 
+msgid "Select a %{country} document"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
+
 msgid "Select currency"
 msgstr "Chọn tiền tệ"
 
 msgid "Select date"
 msgstr "Chọn ngày"
+
+msgid "Select issuing country"
+msgstr ""
 
 msgid "Select market:"
 msgstr "Chọn thị trường:"
@@ -1477,17 +1933,38 @@ msgstr "Tick đã chọn"
 msgid "Self-exclusion"
 msgstr "Tự loại trừ"
 
+msgid "Selfie"
+msgstr ""
+
+msgid "Selfie uploaded"
+msgstr ""
+
 msgid "Sell"
 msgstr "Bán"
 
 msgid "Sell at market"
 msgstr "Bán tại thị trường"
 
+msgid "Send a secure link to your phone"
+msgstr ""
+
+msgid "Send link"
+msgstr ""
+
+msgid "Send this one-time link to your phone"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
 msgid "Sep"
 msgstr "Tháng Chín"
 
 msgid "September"
 msgstr "Tháng Chín"
+
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
 
 msgid "Server"
 msgstr "Máy chủ"
@@ -1496,7 +1973,7 @@ msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Giới hạn thời hạn phiên không thể nhiều hơn 6 tuần."
 
 msgid "Session duration:"
-msgstr ""
+msgstr "Thời hạn phiên:"
 
 msgid "Set account currency"
 msgstr "Đặt tiền tệ cho tài khoản"
@@ -1506,6 +1983,9 @@ msgstr "Thiết lập tiền tệ"
 
 msgid "Settles"
 msgstr "Quyết toán"
+
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
 
 msgid "Should be %1"
 msgstr "Nên là %1"
@@ -1525,6 +2005,9 @@ msgstr "Nên là nhiều hơn %1"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "Nên bắt đầu bằng chữ hoặc số, và có thể chứa các gạch nối và gạch ngang dưới."
 
+msgid "Show all details — including the bottom 2 lines"
+msgstr ""
+
 msgid "Sign out"
 msgstr "Đăng xuất"
 
@@ -1533,6 +2016,9 @@ msgstr "Đăng kí"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "Something's gone wrong"
+msgstr ""
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "Rất tiếc, không thể thực hiện đăng ký tài khoản ở quốc gia của bạn."
@@ -1543,11 +2029,17 @@ msgstr "Rất tiêt, Lỗi xảy ra trong khi đang xử lý tài khoản cu
 msgid "Sorry, an error occurred while processing your request."
 msgstr "Rất tiếc, đã xảy ra lỗi khi đang xử lý yêu cầu của bạn."
 
+msgid "Sorry, but binary options trading is not available in your country."
+msgstr ""
+
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "Rất tiếc, các quyền chọn giao dịch nhị phân không khả dụng cho tài khoản tài chính của bạn."
 
 msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "Xin lỗi, chức năng nạp cho loại tiền này hiện đang bị vô hiệu hóa."
+
+msgid "Sorry, no mobile phone bills"
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Rất tiếc, tính năng này chỉ khả dụng với tài khoản tiền ảo."
@@ -1594,17 +2086,50 @@ msgstr "Các hợp đồng Nằm Giữa/ Ra Ngoài sẽ được hoàn lại b
 msgid "Step"
 msgstr "Bước"
 
+msgid "Steps required to continue verification on your mobile"
+msgstr ""
+
 msgid "Stock Indices"
 msgstr "Chỉ số chứng khoán"
 
 msgid "Stocks"
 msgstr "Chứng khoáng"
 
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
 msgid "Su"
 msgstr "Chủ Nhật"
 
 msgid "Submit"
 msgstr "Gửi"
+
+msgid "Submit document"
+msgstr ""
+
+msgid "Submit identity card (back)"
+msgstr ""
+
+msgid "Submit identity card (front)"
+msgstr ""
+
+msgid "Submit license (back)"
+msgstr ""
+
+msgid "Submit license (front)"
+msgstr ""
+
+msgid "Submit passport photo page"
+msgstr ""
+
+msgid "Submit residence permit (back)"
+msgstr ""
+
+msgid "Submit residence permit (front)"
+msgstr ""
+
+msgid "Submit verification"
+msgstr ""
 
 msgid "Submitted"
 msgstr "Đã gửi"
@@ -1624,17 +2149,62 @@ msgstr "Tổng hợp"
 msgid "Synthetic Indices"
 msgstr "Các chỉ số tổng hợp"
 
+msgid "Take a photo"
+msgstr ""
+
+msgid "Take a photo of the back of your card"
+msgstr ""
+
+msgid "Take a photo of the back of your license"
+msgstr ""
+
+msgid "Take a photo of the front of your card"
+msgstr ""
+
+msgid "Take a photo of the front of your license"
+msgstr ""
+
+msgid "Take a photo of your passport photo page"
+msgstr ""
+
+msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
+msgstr ""
+
+msgid "Take a photo with your phone"
+msgstr ""
+
+msgid "Take a selfie"
+msgstr ""
+
+msgid "Take a selfie showing your face"
+msgstr ""
+
+msgid "Take photo"
+msgstr ""
+
 msgid "Target"
 msgstr "Mục tiêu"
 
 msgid "Telephone"
 msgstr "Điện thoại"
 
-msgid "Tether"
-msgstr "Tether"
+msgid "Tether ERC20"
+msgstr ""
+
+msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
+msgstr ""
+
+msgid "Tether Omni"
+msgstr ""
+
+msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
+msgstr ""
 
 msgid "Th"
 msgstr "Thứ 5"
+
+msgid "Thank you"
+msgstr ""
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "Cảm ơn bạn đã đăng ký! Vui lòng kiểm tra email của bạn để hoàn tất quá trình đăng ký."
@@ -1705,11 +2275,17 @@ msgstr "Địa chỉ email cung cấp đang đã được sử dụng. Nếu b�
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "Điểm khởi đầu là tick đầu tiên sau khi hợp đồng được xử lý bởi máy chủ của chúng tôi."
 
+msgid "The link only works on mobile devices"
+msgstr ""
+
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "Đã đạt đến độ dài tối đa của mã token (%1)."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "Không tìm thấy trang bạn yêu cầu. Nó hoặc không còn tồn tại hoặc địa chỉ bị sai. Xin vui lòng kiểm tra lỗi chính tả."
+
+msgid "The photo should clearly show your document"
+msgstr ""
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "Lý do nên được vết trong khoảng từ 5 đến 250 chữ"
@@ -1737,6 +2313,9 @@ msgstr "Đã có lỗi xảy ra"
 
 msgid "There was some invalid character in an input field."
 msgstr "Có một vài ký tự không hợp lệ trong dữ liệu nhập vào."
+
+msgid "These are the documents most likely to show your current home address"
+msgstr ""
 
 msgid "This account is disabled"
 msgstr "Tài khoản này bị vô hiệu hoá"
@@ -1768,14 +2347,29 @@ msgstr "Trường này là bắt buộc."
 msgid "This is a staging server - For testing purposes only"
 msgstr "Đây là một máy chủ dàn dựng - chỉ cho mục đích chỉ thử nghiệm"
 
+msgid "This is a top-10 common password"
+msgstr ""
+
+msgid "This is a top-100 common password"
+msgstr ""
+
+msgid "This is a very common password"
+msgstr ""
+
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Đây là rào cản được chỉ định. Rào cản thực sẽ là điểm khởi đầu cộng với độ bù của rào cản."
+
+msgid "This is similar to a commonly used password"
+msgstr ""
 
 msgid "This is your %1 account."
 msgstr "Đây là tài khoản %1 của bạn."
 
 msgid "This page is only available to logged out clients."
 msgstr "Trang này chỉ dành cho khách hàng đã đăng xuất."
+
+msgid "This password is on the blacklist"
+msgstr ""
 
 msgid "Thursday"
 msgstr "Thứ Năm"
@@ -1807,14 +2401,29 @@ msgstr "Thời hạn kết thúc phải sau hôm nay."
 msgid "Timed out until"
 msgstr "Tạm ngưng cho đến khi"
 
+msgid "Tips"
+msgstr ""
+
+msgid "Tips to take a good selfie"
+msgstr ""
+
 msgid "To account: "
 msgstr "Đến tài khoản: "
+
+msgid "To open a bank account, we will need to verify your identity."
+msgstr ""
+
+msgid "To smoothly verify you, we need a better photo"
+msgstr ""
 
 msgid "Today"
 msgstr "Hôm nay"
 
 msgid "Token"
 msgstr "Mã Token"
+
+msgid "Too many failed attempts"
+msgstr ""
 
 msgid "Top up error"
 msgstr "Lỗi nạp"
@@ -1867,17 +2476,29 @@ msgstr "Giao dịch hợp đồng chênh lệch (CFD) trên Chỉ số tổng h�
 msgid "Trading is unavailable at this time."
 msgstr "Giao dịch không khả dụng tại thời điểm này."
 
+msgid "Trading statictics report"
+msgstr ""
+
 msgid "Transaction ID"
 msgstr "ID Giao Dịch"
 
 msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "Giao dịch thực hiện bởi %1 (ID ứng dụng: %2)"
 
+msgid "True USD"
+msgstr ""
+
 msgid "Try our %1Synthetic Indices%2."
 msgstr "Thử %1Chỉ Số Tổng Hợp%2 của chúng tôi."
 
 msgid "Try our other markets."
 msgstr "Thử các thị trường khác."
+
+msgid "Try using a JPG or PNG file"
+msgstr ""
+
+msgid "Try using another file type."
+msgstr ""
 
 msgid "Tu"
 msgstr "Thứ 3"
@@ -1886,19 +2507,31 @@ msgid "Tuesday"
 msgstr "Thứ Ba"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Tỷ suất doanh thu"
 
 msgid "Type"
 msgstr "Loại"
 
+msgid "USD Coin"
+msgstr ""
+
+msgid "USDK"
+msgstr ""
+
 msgid "Unable to read file %1"
 msgstr "Không thể đọc tập tin %1"
+
+msgid "Unavailable"
+msgstr ""
 
 msgid "Understood"
 msgstr "Đã hiểu"
 
 msgid "Unknown OS"
 msgstr "Hệ điều hành không rõ"
+
+msgid "Unsupported browser"
+msgstr ""
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "Lên đến %1 chữ số thập phân sau dấu phẩy được cho phép."
@@ -1912,11 +2545,56 @@ msgstr "Sự kiện sắp diễn ra"
 msgid "Upgrade now"
 msgstr "Nâng cấp ngay bây giờ"
 
+msgid "Upload"
+msgstr ""
+
+msgid "Upload a selfie from your computer"
+msgstr ""
+
+msgid "Upload anyway"
+msgstr ""
+
+msgid "Upload back of card from your computer"
+msgstr ""
+
+msgid "Upload back of license from your computer"
+msgstr ""
+
+msgid "Upload front of card from your computer"
+msgstr ""
+
+msgid "Upload front of license from your computer"
+msgstr ""
+
+msgid "Upload passport photo page"
+msgstr ""
+
+msgid "Upload passport photo page from your computer"
+msgstr ""
+
+msgid "Upload photo"
+msgstr ""
+
+msgid "Uploads successful"
+msgstr ""
+
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "Mã xác minh sai rồi. Xin vui lòng sử dụng liên kết được gửi tới email của bạn."
 
+msgid "Verification complete"
+msgstr ""
+
 msgid "Verification required"
 msgstr "Cần được xác minh"
+
+msgid "Verify Identity"
+msgstr ""
 
 msgid "Verify Reset Password"
 msgstr "Xác minh thiết lập lại mật khẩu"
@@ -1930,7 +2608,7 @@ msgstr "Xem"
 msgid "View chart"
 msgstr "Xem biểu đồ"
 
-msgid "View statement"
+msgid "View from camera"
 msgstr ""
 
 msgid "Virtual"
@@ -1948,14 +2626,32 @@ msgstr "Vui lòng đợi dấu tick thoát."
 msgid "We"
 msgstr "Thứ 4"
 
+msgid "We cannot verify you without using your camera"
+msgstr ""
+
 msgid "We'd love to hear what you think."
 msgstr "Chúng tôi rất muốn nghe ý kiến của bạn."
+
+msgid "We'll compare it with your document"
+msgstr ""
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr "Chúng tôi luôn tìm kiếm cách thức để cải thiện sản phẩm và dịch vụ của chúng tôi, và chúng tôi muốn hiểu nhu cầu của bạn tốt hơn. Chúng tôi muốn phỏng vấn bạn qua điện thoại, để biết được những gì bạn thích về chúng tôi, những gì bạn không thích, và những điểm mà chúng tôi có thể làm tốt hơn."
 
+msgid "We're now ready to verify your identity"
+msgstr ""
+
+msgid "We've sent a secure link to %{number}"
+msgstr ""
+
 msgid "Wednesday"
 msgstr "Thứ Tư"
+
+msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "When prompted, you must enable camera access to continue"
+msgstr ""
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "Khi bạn nhấp vào \"OK\" bạn sẽ bị loại bỏ khỏi giao dịch trên trang web tới ngày được chọn."
@@ -1980,6 +2676,9 @@ msgstr "Rút tiền đã bị vô hiệu hóa"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Rút tiền đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
+
+msgid "Would you like to check your statement first? %1Check Statement%2"
+msgstr ""
 
 msgid "Yes"
 msgstr "Có"
@@ -2014,11 +2713,11 @@ msgstr "Bạn không còn có thể thay đổi đơn vị tiền tệ vi�
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr "Bạn không còn có thể thay đổi đơn vị tiền tệ vì lần gửi tiền đầu tiên đã được thực hiện."
 
+msgid "You can now return to your computer to continue"
+msgstr ""
+
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "Bạn có thể nạp %1 vào tài khoản demo nếu số dư của bạn là từ %2 trở xuống."
-
-msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
-msgstr "Bạn có thể nạp %1 vào tài khoản ảo nếu số dư của bạn là từ %2 trở xuống."
 
 msgid "You did not change anything."
 msgstr "Bạn chưa thay đổi bất cứ nội dung nào."
@@ -2035,17 +2734,17 @@ msgstr "Bạn đã rút %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Bạn không có đủ tiền trong tài khoản Binary, xin vui lòng <a href=\"%1\">thêm quỹ</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr ""
+
 msgid "You have not granted access to any applications."
 msgstr "Bạn không được phép truy cập bất kỳ một ứng dụng nào."
-
-msgid "You have reached the limit."
-msgstr "Bạn đã đạt đến giới hạn."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "Bạn đã đạt đến giới hạn số lượng lệnh có thể mỗi giây. Xin vui lòng thử lại sau."
 
-msgid "You have reached the withdrawal limit."
-msgstr "Bạn đã đạt đến giới hạn rút tiền."
+msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
+msgstr ""
 
 msgid "You have sold this contract at %1 %2"
 msgstr "Bạn đã bán hợp đồng này với mức %1 %2"
@@ -2089,14 +2788,17 @@ msgstr "Bạn sẽ lĩnh tiền thưởng nếu giá thị trường khôn
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "Bạn sẽ nhận được tiền thưởng nếu giá thị trường kết thúc trong con số bạn đã chọn."
 
+msgid "You'll need to restart your verification on your computer"
+msgstr ""
+
+msgid "You've made no transactions of this type up to this date."
+msgstr ""
+
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "Giới hạn rút tiền trong %1 ngày của bạn hiện là %2%3."
 
 msgid "Your account has no Login/Logout activity."
 msgstr "Không có hoạt động Đăng nhập/Đăng xuất nào trên tài khoản của bạn."
-
-msgid "Your account has no trading activity."
-msgstr "Không có hoạt động giao dịch nào trên tài khoản của bạn."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Tài khoản của bạn được xác thực đầy đủ và mức giới hạn rút tiền của bạn đã được nâng lên."
@@ -2116,8 +2818,14 @@ msgstr "Các thay đổi của bạn đã được cập nhật thành côn
 msgid "Your changes have been updated."
 msgstr "Những thay đổi của bạn đã được cập nhật."
 
+msgid "Your computer may take a few seconds to update"
+msgstr ""
+
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "Số dư tài khoản demo của bạn hiện nay là %1 hoặc ít hơn. Bạn có thể nạp thêm vào tài khoản demo %2."
+
+msgid "Your face is needed in the selfie"
+msgstr ""
 
 msgid "Your fiat account's currency is currently set to %1."
 msgstr "Tài khoản của bạn có đơn vị tiền tệ hiện tại đặt là %1."
@@ -2125,11 +2833,20 @@ msgstr "Tài khoản của bạn có đơn vị tiền tệ hiện tại đ
 msgid "Your fiat account's currency is set to %1."
 msgstr "Tài khoản fiat của bạn có đơn vị tiền tệ là %1."
 
+msgid "Your link will expire in one hour"
+msgstr ""
+
+msgid "Your mobile link will expire in one hour"
+msgstr ""
+
+msgid "Your password cannot be the same as your email address."
+msgstr ""
+
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Mật khẩu của bạn đã được đổi thành công. Vui lòng dùng mật khẩu mới đăng nhập vào tài khoản của bạn."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Mật khẩu của bạn là một trong những mật khẩu được sử dụng phổ biến nhất trên internet. Vui lòng chọn một mật khẩu duy nhất."
+msgid "Your preferred time interval between each report:"
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Yêu cầu trở thành khách hàng chuyên nghiệp của bạn %1nkhông được chấp thuận%2."
@@ -2161,8 +2878,8 @@ msgstr "Tham chiếu giao dịch của bạn là"
 msgid "Your transaction reference number is %1"
 msgstr "Số tham chiếu giao dịch của bạn là %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Số dư tài khoản ảo của bạn hiện nay là %1 hoặc ít hơn. Bạn có thể nạp thêm vào tài khoản ảo %2."
+msgid "Your virtual balance has been reset."
+msgstr ""
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Trình duyệt web (%1) của bạn đã hết hạn và có thể ảnh hưởng đến trải nghiệm giao dịch của bạn. Nếu tiếp tục bạn sẽ có thể gặp một vài rắc rối. %2Nâng cấp trình duyệt%3"
@@ -2176,8 +2893,14 @@ msgstr "tài khoản"
 msgid "accounts"
 msgstr "các tài khoản"
 
+msgid "back"
+msgstr ""
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "quyền chọn nhị phân, ngoại hối, giao dịch ngoại hối, giao dịch trực tuyến, giao dịch tài chính, giao dịch nhị phân, giao dịch chỉ số, chỉ số chứng khoán, giao dịch ngoại hối, giao dịch hàng hóa, chiến lược quyền chọn nhị phân, môi giới nhị phân, đặt cược nhị phân, sàn giao dịch quyền chọn nhị phân, chiến lược nhị phân, tài chính, đầu tư, kinh doanh"
+
+msgid "close"
+msgstr ""
 
 msgid "day"
 msgstr "ngày"
@@ -2187,6 +2910,9 @@ msgstr "ngày"
 
 msgid "details"
 msgstr "chi tiết"
+
+msgid "e.g. United States"
+msgstr ""
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "ví dụ: frontend.binaryws.com"
@@ -2212,9 +2938,6 @@ msgstr "đăng nhập"
 msgid "logout"
 msgstr "đăng xuất"
 
-msgid "million"
-msgstr "triệu"
-
 msgid "minute"
 msgstr "phút"
 
@@ -2224,6 +2947,12 @@ msgstr "phút"
 msgid "numbers"
 msgstr "số"
 
+msgid "or"
+msgstr ""
+
+msgid "or upload photo – no scans or photocopies"
+msgstr ""
+
 msgid "second"
 msgstr "giây"
 
@@ -2232,9 +2961,6 @@ msgstr "giây"
 
 msgid "space"
 msgstr "khoảng trắng"
-
-msgid "thousand"
-msgstr "nghìn"
 
 msgid "tick"
 msgstr "tick"
@@ -2250,9 +2976,6 @@ msgstr "hôm nay, Thứ Sáu"
 
 msgid "virtual money credit to account"
 msgstr "tín dụng tiền ảo vào tài khoản"
-
-msgid "years"
-msgstr "năm"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

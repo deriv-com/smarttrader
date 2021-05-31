@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-07-28 02:25\n"
+"PO-Revision-Date: 2021-05-31 09:36\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
+
+msgid " (Region added)"
+msgstr ""
+
+msgid " (Temporarily unavailable)"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 บัญชี %2"
@@ -50,10 +56,19 @@ msgid "%1Manage your accounts%2"
 msgstr "%1จัดการบัญชีของท่าน%2"
 
 msgid "%1No, change my fiat account's currency now%2"
-msgstr "%1ไม่ เปลี่ยนสกุลเงินบัญชีเงินกระดาษของฉัน ตอนนี้%2"
+msgstr "%1ไม่ เปลี่ยนสกุลเงินบัญชีเงิน fiat ของฉัน ตอนนี้%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1กลับไปสู่หน้าซื้อขาย%2"
+
+msgid "1. This link was sent by you"
+msgstr ""
+
+msgid "2. Your desktop window stays open"
+msgstr ""
+
+msgid "A word by itself is easy to guess"
+msgstr ""
 
 msgid "AM"
 msgstr "น."
@@ -85,14 +100,29 @@ msgstr "เพิ่ม +/ – เพื่อกำหนด Barrier Offset เ
 msgid "Add Deriv account"
 msgstr "เพิ่มบัญชี Deriv"
 
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
 msgid "Adjust trade parameters"
 msgstr "ปรับแต่งตัวแปรของการเทรด"
 
 msgid "Admin"
 msgstr "แอดมิน"
 
+msgid "Agree and accept"
+msgstr ""
+
+msgid "All details must be clear — nothing blurry"
+msgstr ""
+
 msgid "All markets are closed now. Please try again later."
 msgstr "ตลาดได้ปิดทำการแล้ว โปรดทำรายการใหม่ภายหลัง"
+
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+msgid "Allow camera access"
+msgstr ""
 
 msgid "Allow equals"
 msgstr "ให้เท่ากับ"
@@ -105,6 +135,9 @@ msgstr "จำนวน"
 
 msgid "Amount in"
 msgstr "ยอดเงินเข้า"
+
+msgid "An error occurred while loading the component"
+msgstr ""
 
 msgid "Apply now as a professional investor"
 msgstr "สมัครเป็นนักลงทุนผู้เชี่ยวชาญตอนนี้"
@@ -122,7 +155,7 @@ msgid "Are you sure that you want to permanently revoke access to the applicatio
 msgstr "ท่านแน่ใจใช่ไหมที่จะยกเลิกการเข้าใช้ระบบถาวร"
 
 msgid "Are you sure you want to create a fiat account in %1?"
-msgstr "ท่านแน่ใจหรือไม่ว่า ท่านต้องการสร้างบัญชีเงินกระดาษ %1 ของท่านขณะนี้?"
+msgstr "ท่านแน่ใจหรือไม่ว่า ท่านต้องการสร้างบัญชีเงิน fiat %1 ของท่านขณะนี้?"
 
 msgid "Are you sure you want to create your %1 account now?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ท่านต้องการสร้างบัญชี %1 ของท่านขณะนี้?"
@@ -160,8 +193,8 @@ msgstr "ในเวลารีเซ็ต หากสปอตอยู่�
 msgid "Audit"
 msgstr "ตรวจสอบ"
 
-msgid "Audit page"
-msgstr "หน้าการตรวจสอบ"
+msgid "Audit Page"
+msgstr ""
 
 msgid "Aug"
 msgstr "ส.ค."
@@ -177,6 +210,21 @@ msgstr "ตลาดที่เปิดบริการ"
 
 msgid "Average"
 msgstr "ค่าเฉลี่ย"
+
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+msgid "Avoid recent years"
+msgstr ""
+
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+msgid "Avoid sequences"
+msgstr ""
+
+msgid "Avoid years that are associated with you"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "กลับไปยังซื้อขาย"
@@ -196,14 +244,17 @@ msgstr "การหักล้างของค่า Barrier"
 msgid "Bid"
 msgstr "ประมูล"
 
+msgid "Binance USD"
+msgstr ""
+
 msgid "Binary Coin"
 msgstr "ไบนารีคอยน์"
 
-msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
-msgstr "ปัจจุบัน Binary.com รองรับ Tether (USDT) คุณสามารถฝาก USDT จาก Omni Layer ที่เปิดใช้งานของคุณ เข้าสู่บัญชี Binary.com ของคุณ"
-
 msgid "Bitcoin"
 msgstr "บิทคอยน์"
+
+msgid "Blurry photo detected"
+msgstr ""
 
 msgid "Browser"
 msgstr "เบราเซอร์"
@@ -229,11 +280,26 @@ msgstr "คอลสเปรด"
 msgid "Call Spread/Put Spread"
 msgstr "Call Spread/Put Spread"
 
+msgid "Camera access is denied"
+msgstr ""
+
+msgid "Camera not detected"
+msgstr ""
+
+msgid "Camera not working"
+msgstr ""
+
+msgid "Camera not working?"
+msgstr ""
+
 msgid "Can you spare 15 minutes?"
 msgstr "ท่านพอมีเวลา 15 นาทีหรือไม่?"
 
 msgid "Cancel"
 msgstr "ยกเลิก"
+
+msgid "Capitalization doesn't help very much"
+msgstr ""
 
 msgid "Cashier"
 msgstr "แคชเชียร์"
@@ -259,14 +325,35 @@ msgstr "ไม่มีแผนภูมิสำหรับผลิตภั
 msgid "Charting for this underlying is delayed"
 msgstr "กราฟของผลิตภัณฑ์อ้างอิงนี้ล่าช้า"
 
+msgid "Check back here to finish the submission"
+msgstr ""
+
+msgid "Check selfie"
+msgstr ""
+
+msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
+msgstr ""
+
+msgid "Check that your number is correct"
+msgstr ""
+
 msgid "Check your connection."
 msgstr "โปรดตรวจสอบการเชื่อมต่อของคุณ"
+
+msgid "Check your image"
+msgstr ""
+
+msgid "Check your mobile"
+msgstr ""
 
 msgid "Checked"
 msgstr "ตรวจสอบแล้ว"
 
 msgid "Checking"
 msgstr "กำลังตรวจสอบ"
+
+msgid "Choose document"
+msgstr ""
 
 msgid "Christmas Day"
 msgstr "วันคริสต์มาส"
@@ -277,11 +364,17 @@ msgstr "คลิก OK เพื่อดำเนินการต่อไ�
 msgid "Click here to open a Financial Account"
 msgstr "คลิกที่นี่ เพื่อเปิดบัญชีการเงิน"
 
+msgid "Click here to open a Gaming account"
+msgstr ""
+
 msgid "Click here to open a Real Account"
 msgstr "คลิกที่นี่ เพื่อเปิดบัญชีจริง"
 
 msgid "Close"
 msgstr "ปิด"
+
+msgid "Close identity verification screen"
+msgstr ""
 
 msgid "Close time"
 msgstr "เวลาปิด"
@@ -304,17 +397,44 @@ msgstr "ปิดก่อนเวลา (เมื่อเวลา 21:00 น
 msgid "Commodities"
 msgstr "สินค้าโภคภัณฑ์"
 
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
 msgid "Complete details"
 msgstr "รายละเอียดที่สมบรูณ์"
 
 msgid "Compressing Image"
 msgstr "ภาพที่ถูกย่อขนาด"
 
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr ""
+
+msgid "Connected to your mobile"
+msgstr ""
+
 msgid "Connecting to server"
 msgstr "กำลังเชื่อมต่อกับเซิร์ฟเวอร์"
 
+msgid "Connection lost"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Continue on phone"
+msgstr ""
+
+msgid "Continue on your phone"
+msgstr ""
+
 msgid "Continue trading"
 msgstr "ซื้อขายต่อ"
+
+msgid "Continue with the verification"
+msgstr ""
 
 msgid "Contract"
 msgstr "สัญญา"
@@ -350,13 +470,31 @@ msgid "Contract will be sold at the prevailing market price when the request is 
 msgstr "สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อระบบซื้อขายได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "สัญญาถูกซื้อ"
 
 msgid "Contracts sold"
+msgstr "สัญญาถูกจำหน่าย"
+
+msgid "Copied"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy the link to your mobile browser"
+msgstr ""
+
+msgid "Copy the link to your phone"
 msgstr ""
 
 msgid "Counterparty"
 msgstr "คู่สัญญา"
+
+msgid "Country not found"
+msgstr ""
 
 msgid "Country of Residence"
 msgstr "ประเทศที่พำนัก"
@@ -386,6 +524,9 @@ msgid "Current time"
 msgstr "เวลาปัจจุบัน"
 
 msgid "Current time:"
+msgstr "เวลาปัจจุบัน:"
+
+msgid "Cut-off image detected"
 msgstr ""
 
 msgid "Date"
@@ -393,6 +534,9 @@ msgstr "วันที่"
 
 msgid "Date and Time"
 msgstr "วันที่และเวลา"
+
+msgid "Dates are often easy to guess"
+msgstr ""
 
 msgid "Deal cancel. fee"
 msgstr "ค่าธรรมเนียมของการยกเลิกข้อตกลง"
@@ -469,20 +613,47 @@ msgstr "ตัวเลข (Digits)"
 msgid "Disable"
 msgstr "ปิดใช้งาน"
 
+msgid "Dismiss alert"
+msgstr ""
+
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr "ท่านต้องการใช้กับบัญชีเงินกระดาษ หรือ บัญชีเงินดิจิทัล? โปรดเลือกหนึ่งประเภทบัญชี"
+msgstr "ท่านต้องการใช้กับบัญชีเงิน fiat หรือ บัญชีเงินดิจิทัล? โปรดเลือกหนึ่งประเภทบัญชี"
 
 msgid "Do you wish to continue?"
 msgstr "ท่านต้องการดำเนินการต่อหรือไม่?"
 
+msgid "Document example"
+msgstr ""
+
+msgid "Document uploaded"
+msgstr ""
+
+msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
+msgstr ""
+
+msgid "Documents uploaded"
+msgstr ""
+
+msgid "Documents you can use to verify your identity"
+msgstr ""
+
 msgid "Does Not Touch"
 msgstr "ไม่แตะ"
+
+msgid "Don't refresh this page"
+msgstr ""
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "ไม่ต้องการเทรดกับ %1 เหรอ? ท่านสามารถเปิดบัญชีเงินดิจิทัลได้อีกบัญชีหนึ่ง"
 
+msgid "Driver's license"
+msgstr ""
+
 msgid "Driving licence"
 msgstr "ใบขับขี่"
+
+msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
+msgstr ""
 
 msgid "Duration"
 msgstr "ระยะเวลา"
@@ -492,6 +663,9 @@ msgstr "อีเมล์"
 
 msgid "Enable"
 msgstr "เปิดใช้งาน"
+
+msgid "Enable camera"
+msgstr ""
 
 msgid "End Time"
 msgstr "เวลาสิ้นสุด"
@@ -514,6 +688,15 @@ msgstr "สัญญาสิ้นสุดระหว่าง/สิ้น�
 msgid "Ends Outside"
 msgstr "สิ้นสุดภายนอก"
 
+msgid "Enlarge image"
+msgstr ""
+
+msgid "Enter mobile number"
+msgstr ""
+
+msgid "Enter your mobile number:"
+msgstr ""
+
 msgid "Entry Spot"
 msgstr "สปอตเริ่มต้น"
 
@@ -523,17 +706,26 @@ msgstr "สปอตเริ่มต้น"
 msgid "Equals"
 msgstr "เท่ากับ"
 
-msgid "Ether"
-msgstr "อีเธอร์"
-
 msgid "Ether Classic"
 msgstr "อีเธอร์คลาสสิก"
+
+msgid "Ethereum"
+msgstr ""
 
 msgid "Even/Odd"
 msgstr "ดิจิตคู่/ดิจิตคี่"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "สัญญา Even/Odd จะถูกคืนมูลค่าที่ราคาซื้อหากสัญญาไม่สิ้นสุดภายใน 5 นาที"
+
+msgid "Example of a blurry document"
+msgstr ""
+
+msgid "Example of a cut-off document"
+msgstr ""
+
+msgid "Example of a document with glare"
+msgstr ""
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "เวลาพักไม่เกิน 5 ปี"
@@ -562,6 +754,12 @@ msgstr "วันหมดอายุจำเป็นสำหรับ %1"
 msgid "Explanation"
 msgstr "คำอธิบาย"
 
+msgid "Face forward and make sure your eyes are clearly visible"
+msgstr ""
+
+msgid "Face photo page"
+msgstr ""
+
 msgid "Failed"
 msgstr "ล้มเหลว"
 
@@ -572,10 +770,19 @@ msgid "February"
 msgstr "กุมภาพันธ์"
 
 msgid "Fiat"
-msgstr "เงินกระดาษ"
+msgstr "เงิน fiat"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "ขนาดไฟล์ (%1) เกินกว่าที่อนุญาต ขนาดไฟล์ใหญ่สุดที่อนุญาต: %2"
+
+msgid "File not uploaded."
+msgstr ""
+
+msgid "File size exceeded."
+msgstr ""
+
+msgid "File type not supported"
+msgstr ""
 
 msgid "Final price"
 msgstr "ราคาสุดท้าย"
@@ -595,6 +802,9 @@ msgstr "เสร็จสิ้น"
 msgid "First line of home address"
 msgstr "บรรทัดแรกของที่อยู่"
 
+msgid "Follow these steps to recover camera access:"
+msgstr ""
+
 msgid "Forex"
 msgstr "ฟอเร็กซ์"
 
@@ -613,11 +823,35 @@ msgstr "จากบัญชี: "
 msgid "Front Side"
 msgstr "ด้านหน้า"
 
+msgid "Front and back"
+msgstr ""
+
 msgid "Gaming"
 msgstr "การพนัน"
 
+msgid "Gaming Account"
+msgstr ""
+
 msgid "Get %1"
 msgstr "รับเงิน %1"
+
+msgid "Get link via SMS"
+msgstr ""
+
+msgid "Get secure link"
+msgstr ""
+
+msgid "Get your secure link"
+msgstr ""
+
+msgid "Glare detected"
+msgstr ""
+
+msgid "Go To Reports"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
 
 msgid "Go to statement"
 msgstr "กลับไปที่รายงานเดินบัญชี"
@@ -625,11 +859,20 @@ msgstr "กลับไปที่รายงานเดินบัญชี
 msgid "Goes Outside"
 msgstr "ออกนอกขอบเขต"
 
+msgid "Grant access to your camera from your browser settings"
+msgstr ""
+
+msgid "Great, that's everything we need"
+msgstr ""
+
 msgid "Guide"
 msgstr "คำแนะนำ"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr "ดังนั้น จำนวณเงินที่คุณสามารถถอนได้ ขึ้นอยู่กับ %1%2 ยอดเงินที่มีอยู่ในบัญชีของคุณ"
+
+msgid "Here's how to do it:"
+msgstr ""
 
 msgid "High"
 msgstr "สูง"
@@ -676,11 +919,11 @@ msgstr "สูงขึ้น/ต่ำลง"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "สัญญา Higher/Lower จะถูกคืนมูลค่าที่ราคาซื้อหาก มีจำนวนช่วงราคาน้อยกว่า 2 ช่วง ระหว่างเวลาเริ่มต้นกระทั่งเวลาสิ้นสุด"
 
-msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr "คำแนะนำ: จะใช้เวลาประมาณ %1%2 เพื่อถอดรหัสผ่านของคุณ"
-
 msgid "Hour"
 msgstr "ชั่วโมง"
+
+msgid "How to scan a QR code"
+msgstr ""
 
 msgid "I want to reapply"
 msgstr "ฉันต้องการสมัครอีกครั้ง"
@@ -691,11 +934,17 @@ msgstr "ฉันสนใจ"
 msgid "ID number is required for %1."
 msgstr "เลขบัตรประชาชนจำเป็นสำหรับ %1"
 
+msgid "IDK"
+msgstr ""
+
 msgid "IP Address"
 msgstr "ไอพีแอดเดรส"
 
 msgid "Identity card"
 msgstr "บัตรแสดงตัวบุคคล"
+
+msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "ถ้า<strong>สปอตสิ้นสุด</strong>มีค่าเท่ากับ<strong>Barrier ต่ำ</strong>หรือ<strong>Barrier สูง</strong>แล้ว ท่านจะไม่ได้เงิน"
@@ -841,6 +1090,21 @@ msgstr "รหัสยืนยันไม่ถูกต้อง"
 msgid "Investment"
 msgstr "การลงทุน"
 
+msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
+msgstr ""
+
+msgid "It may take a few minutes to arrive"
+msgstr ""
+
+msgid "It must be an official photo ID"
+msgstr ""
+
+msgid "It will only take a couple of minutes."
+msgstr ""
+
+msgid "It’ll take longer to verify you if we can’t read it"
+msgstr ""
+
 msgid "Jan"
 msgstr "ม.ค."
 
@@ -862,6 +1126,9 @@ msgstr "มิถุนายน"
 msgid "Jurisdiction"
 msgstr "เขตอำนาจศาล"
 
+msgid "Keep this window open while using your mobile"
+msgstr ""
+
 msgid "Language settings"
 msgstr "ตั้งค่าภาษา"
 
@@ -880,8 +1147,17 @@ msgstr "ใช้ครั้งสุดท้าย"
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "สถิติตัวเลขสุดท้ายสำหรับ %1 ล่าสุด ช่วงราคาของ %2"
 
+msgid "Linked to your computer"
+msgstr ""
+
 msgid "Litecoin"
 msgstr "ไลท์คอยน์"
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
 
 msgid "Log in"
 msgstr "เข้าสู่ระบบ"
@@ -893,13 +1169,16 @@ msgid "Log out"
 msgstr "ออกจากระบบ"
 
 msgid "Login ID"
-msgstr ""
+msgstr "รหัสผู้ใช้งาน"
 
-msgid "Login time:"
+msgid "Login at:"
 msgstr ""
 
 msgid "Lookbacks"
 msgstr "Lookbacks"
+
+msgid "Looks like you took too long"
+msgstr ""
 
 msgid "Loss"
 msgstr "ขาดทุน"
@@ -925,11 +1204,50 @@ msgstr "ต่ำกว่า"
 msgid "Lower or equal"
 msgstr "ต่ำกว่า หรือ เท่ากับ"
 
+msgid "MT5"
+msgstr ""
+
 msgid "MT5 withdrawal disabled"
 msgstr "การถอนเงิน MT5 ถูกปิดการใช้งาน"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "ได้มีการปิดการใช้งานการถอนเงิน MT5 ในบัญชีของท่าน โปรดตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
+
+msgid "Make sure all of the document is in the photo"
+msgstr ""
+
+msgid "Make sure details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure everything is clear"
+msgstr ""
+
+msgid "Make sure full document is visible"
+msgstr ""
+
+msgid "Make sure your card details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your device has a working camera"
+msgstr ""
+
+msgid "Make sure your device's camera works"
+msgstr ""
+
+msgid "Make sure your license details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your passport details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your permit details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your selfie clearly shows your face"
+msgstr ""
+
+msgid "Make sure§"
+msgstr ""
 
 msgid "Mar"
 msgstr "มี.ค."
@@ -970,6 +1288,18 @@ msgstr "วันจันทร์"
 msgid "More information can be found in an email sent to you."
 msgstr "ท่านสามารถอ่านรายละเอียดเพิ่มเติมได้จากอีเมล์ที่ส่งถึงท่าน"
 
+msgid "Move away from direct light"
+msgstr ""
+
+msgid "Move away from direct light — no glare"
+msgstr ""
+
+msgid "Multi-Collateral"
+msgstr ""
+
+msgid "Multiple faces found"
+msgstr ""
+
 msgid "Multiplier"
 msgstr "ตัวคูณ"
 
@@ -979,8 +1309,14 @@ msgstr "Multiplier Down"
 msgid "Multiplier Up"
 msgstr "Multiplier Up"
 
+msgid "Must be under 10MB."
+msgstr ""
+
 msgid "Name"
 msgstr "ชื่อ"
+
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
 
 msgid "Net profit"
 msgstr "กำไรสุทธิ"
@@ -1015,6 +1351,15 @@ msgstr "ไม่ได้กำหนดสกุลเงิน"
 msgid "No currency selected"
 msgstr "ไม่ได้เลือกสกุลเงิน"
 
+msgid "No document detected"
+msgstr ""
+
+msgid "No face found"
+msgstr ""
+
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
+
 msgid "No notifications"
 msgstr "ไม่มีการแจ้งเตือน"
 
@@ -1034,7 +1379,7 @@ msgid "Note:"
 msgstr "หมายเหตุ"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "หมายเหตุ: ท่านถูกจำกัดสิทธิ์ไว้ที่สกุลเงินกระดาษหนึ่งบัญชี สกุลเงินของบัญชีเงินกระดาษของท่านสามารถเปลี่ยนแปลงได้ก่อนที่ท่านจะฝากเข้าบัญชีเงินกระดาษของท่านเป็นครั้งแรก หรือ ก่อนเปิดบัญชี MT5 ท่านสามารถเปิดได้เพียงหนึ่งบัญชีสำหรับแต่ละสกุลเงินดิจิทัลที่รองรับ"
+msgstr "หมายเหตุ: ท่านถูกจำกัดสิทธิ์ไว้ที่สกุลเงิน fiat หนึ่งบัญชี สกุลเงินของบัญชีเงิน fiat ของท่านสามารถเปลี่ยนแปลงได้ก่อนที่ท่านจะฝากเข้าบัญชีเงิน fiat ของท่านเป็นครั้งแรก หรือ ก่อนเปิดบัญชี MT5 ท่านสามารถเปิดได้เพียงหนึ่งบัญชีสำหรับแต่ละสกุลเงินดิจิทัลที่รองรับ"
 
 msgid "Notifications"
 msgstr "การแจ้งเตือน"
@@ -1062,6 +1407,9 @@ msgstr "ตุลาคม"
 
 msgid "Offline"
 msgstr "ออฟไลน์"
+
+msgid "Once you've finished we'll take you to the next step"
+msgstr ""
 
 msgid "Online"
 msgstr "ออนไลน์"
@@ -1096,6 +1444,9 @@ msgstr "เฉพาะตัวอักษร ตัวเลข เว้น�
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด และ เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
+msgid "Only your face can be in the selfie"
+msgstr ""
+
 msgid "Oops... Page Not Available"
 msgstr "ขออภัย...ไม่พบหน้าที่ท่านเรียก"
 
@@ -1108,17 +1459,23 @@ msgstr "เปิดบัญชีจริง"
 msgid "Open a free account"
 msgstr "เปิดบัญชีฟรี 1 บัญชี"
 
-msgid "Open contracts"
-msgstr ""
-
 msgid "Open positions"
 msgstr "ตำแหน่งงานที่เปิดรับ"
+
+msgid "Open the link and complete the tasks"
+msgstr ""
+
+msgid "Open the link on your mobile"
+msgstr ""
+
+msgid "Open your new bank account"
+msgstr ""
 
 msgid "Opens"
 msgstr "เปิด"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "การซื้อขายออปชั่นสามารถทำให้ท่านเสพติดได้จริง ราวกับกิจกรรมอื่น เพื่อหลีกเลี่ยงความไม่ปลอดภัยที่จะทำให้เสพติดกิจกรรมเหล่านั้น พวกเราได้มีบริการในการตรวจสอบการใช้งาน การซื้อขายของท่านตามปกติ เพื่อให้ท่านมีรายงานสรุปของการซื้อขายและบัญชีของท่าน"
 
 msgid "Over/Under"
 msgstr "Over/Under"
@@ -1132,11 +1489,17 @@ msgstr "น."
 msgid "Passport"
 msgstr "หนังสือเดินทาง"
 
+msgid "Passport photo page"
+msgstr ""
+
 msgid "Password is not strong enough."
 msgstr "รหัสผ่านไม่ปลอดภัยเท่าที่ควร"
 
-msgid "Password should have lower and uppercase letters with numbers."
-msgstr "รหัสผ่านควรประกอบด้วยอักษรตัวเล็ก อักษรตัวใหญ่ และตัวเลข"
+msgid "Password should have lower and uppercase English letters with numbers."
+msgstr ""
+
+msgid "Paxos Standard"
+msgstr ""
 
 msgid "Pay-out"
 msgstr "ชำระเงิน"
@@ -1161,6 +1524,12 @@ msgstr "ร้อยละ"
 
 msgid "Permissions"
 msgstr "สิทธิ์"
+
+msgid "Photo of your document"
+msgstr ""
+
+msgid "Photo of your face"
+msgstr ""
 
 msgid "Place of birth"
 msgstr "สถานที่เกิด"
@@ -1207,8 +1576,8 @@ msgstr "โปรดตรวจให้แน่ใจว่า ท่าน�
 msgid "Please enter a valid Login ID."
 msgstr "โปรดป้อนรหัสผู้ใช้งานที่ถูกต้อง"
 
-msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr "โปรดใส่หมายเลขโทรศัพท์ให้ถูกต้อง พร้อมกับรหัสประเทศ (เช่น +15417541234)"
+msgid "Please enter a valid phone number (e.g. +15417541234)."
+msgstr ""
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "โปรดทราบว่าสกุลเงินที่เลือกได้รับอนุญาตสำหรับบัญชีที่ จำกัด เท่านั้น"
@@ -1249,7 +1618,7 @@ msgstr "โปรดตั้งค่าวงเงินซื้อขาย
 msgid "Please specify the reasons for closing your accounts"
 msgstr "โปรดระบุเหตุผล ในการปิดบัญชีของคุณ"
 
-msgid "Please specify your preferred reality-check interval in minutes"
+msgid "Please specify your preferred interval reality check in minutes:"
 msgstr ""
 
 msgid "Please submit your proof of address."
@@ -1257,6 +1626,12 @@ msgstr "โปรดส่งเอกสาร หลักฐานที่�
 
 msgid "Please submit your proof of identity."
 msgstr "โปรดส่งเอกสาร หลักฐานการยืนยันตัวตนของคุณ"
+
+msgid "Please try again"
+msgstr ""
+
+msgid "Point your phone’s camera at the QR code"
+msgstr ""
 
 msgid "Postal Code/ZIP"
 msgstr "รหัสไปรษณีย์"
@@ -1271,13 +1646,16 @@ msgid "Potential payout"
 msgstr "Potential payout"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "ประมาณการกำไร"
 
 msgid "Potential profit/loss"
 msgstr "คาดการณ์ กำไร/ขาดทุน"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "พยากรณ์ทิศทาง<br />และซื้อ"
+
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
 
 msgid "Previous"
 msgstr "ก่อนหน้า"
@@ -1286,7 +1664,7 @@ msgid "Profit"
 msgstr "กำไร"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "กำไร / ขาดทุน"
 
 msgid "Profit table"
 msgstr "ตารางผลกำไร"
@@ -1314,6 +1692,9 @@ msgstr "เอกสารการแสดงตัวตนของคุณ
 
 msgid "Proof of identity required"
 msgstr "โปรดส่งเอกสาร การแสดงตัวตนของคุณ"
+
+msgid "Provide the whole document page for best results"
+msgstr ""
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -1364,6 +1745,18 @@ msgid "Real-Money Accounts"
 msgstr "บัญชีเงินจริง"
 
 msgid "Reality Check"
+msgstr "การตรวจสอบสภาพความเป็นจริง (Reality Check)"
+
+msgid "Recent years are easy to guess"
+msgstr ""
+
+msgid "Recover camera access to continue face verification"
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
+msgid "Redo"
 msgstr ""
 
 msgid "Ref."
@@ -1372,11 +1765,29 @@ msgstr "อ้างอิง"
 msgid "Reference ID"
 msgstr "หมายเลขรหัส อ้างอิง"
 
+msgid "Refresh"
+msgstr ""
+
+msgid "Refresh this page to restart the identity verification process"
+msgstr ""
+
 msgid "Remaining time"
 msgstr "เวลาที่เหลืออยู่"
 
+msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
+msgstr ""
+
 msgid "Remove deposit limits"
 msgstr "ยกเลิกข้อจำกัดการฝากเงิน"
+
+msgid "Remove your glasses, if necessary"
+msgstr ""
+
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
 
 msgid "Reports"
 msgstr "รายงาน"
@@ -1386,6 +1797,9 @@ msgstr "คุณต้องเปิดการใช้งาน ในก�
 
 msgid "Resale not offered"
 msgstr "การขายสัญญาไม่ได้ถูกนำเสนอ"
+
+msgid "Resend link"
+msgstr ""
 
 msgid "Reset Barrier"
 msgstr "Reset Barrier"
@@ -1408,17 +1822,35 @@ msgstr "รีเซ็ตเวลา"
 msgid "Reset barrier"
 msgstr "Reset barrier"
 
+msgid "Reset the balance of your virtual account to %1 anytime."
+msgstr ""
+
 msgid "Reset time"
 msgstr "รีเซ็ตเวลา"
 
 msgid "Reset to original settings"
 msgstr "ปรับการตั้งค่ากลับไปสู่ค่าเริ่มต้น"
 
+msgid "Residence permit"
+msgstr ""
+
+msgid "Restart process on a different device"
+msgstr ""
+
+msgid "Restart the process on the latest version of Google Chrome"
+msgstr ""
+
+msgid "Restart the process on the latest version of Safari"
+msgstr ""
+
 msgid "Return"
 msgstr "ผลตอบแทน"
 
 msgid "Reverse Side"
 msgstr "อีกด้านหนึ่ง"
+
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
 
 msgid "Revoke access"
 msgstr "การเพิกถอนการเข้าถึง"
@@ -1428,6 +1860,9 @@ msgstr "เพิ่มชึ้น/ลดลง"
 
 msgid "Rise/Fall contracts will be refunded if:"
 msgstr "ดำเนินการคืนเงินในสัญญา Rise/Fall ในกรณี"
+
+msgid "STASIS Euro"
+msgstr ""
 
 msgid "Sa"
 msgstr "ส"
@@ -1441,8 +1876,20 @@ msgstr "ราคาขาย"
 msgid "Saturday"
 msgstr "วันเสาร์"
 
+msgid "Scan QR code"
+msgstr ""
+
+msgid "Scan the QR code with your phone"
+msgstr ""
+
+msgid "Scans and photocopies are not accepted"
+msgstr ""
+
 msgid "Scopes"
 msgstr "ขอบเขต"
+
+msgid "Search for country"
+msgstr ""
 
 msgid "Search..."
 msgstr "ค้นหา..."
@@ -1453,11 +1900,20 @@ msgstr "เลือกสินทรัพย์"
 msgid "Select Trade Type"
 msgstr "เลือกประเภทของการซื้อขาย"
 
+msgid "Select a %{country} document"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
+
 msgid "Select currency"
 msgstr "เลือกสกุลเงิน"
 
 msgid "Select date"
 msgstr "ระบุวันที่"
+
+msgid "Select issuing country"
+msgstr ""
 
 msgid "Select market:"
 msgstr "กำหนดตลาด:"
@@ -1477,17 +1933,38 @@ msgstr "Selected tick"
 msgid "Self-exclusion"
 msgstr "การยกเว้นตนเอง"
 
+msgid "Selfie"
+msgstr ""
+
+msgid "Selfie uploaded"
+msgstr ""
+
 msgid "Sell"
 msgstr "ขาย"
 
 msgid "Sell at market"
 msgstr "ขายที่ราคาตลาด"
 
+msgid "Send a secure link to your phone"
+msgstr ""
+
+msgid "Send link"
+msgstr ""
+
+msgid "Send this one-time link to your phone"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
 msgid "Sep"
 msgstr "ก.ย."
 
 msgid "September"
 msgstr "กันยายน"
+
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
 
 msgid "Server"
 msgstr "เซิร์ฟเวอร์"
@@ -1496,7 +1973,7 @@ msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "รอบระยะเวลาการซื้อขายไม่สามารถมากกว่า 6 สัปดาห์"
 
 msgid "Session duration:"
-msgstr ""
+msgstr "รอบระยะเวลาการซื้อขาย:"
 
 msgid "Set account currency"
 msgstr "กำหนดสกุลเงินของบัญชี"
@@ -1506,6 +1983,9 @@ msgstr "กำหนดสกุลเงิน"
 
 msgid "Settles"
 msgstr "ชำระเงิน"
+
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
 
 msgid "Should be %1"
 msgstr "ควรเป็น %1"
@@ -1525,6 +2005,9 @@ msgstr "ควรมีค่ามากกว่า %1"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "ควรเริ่มต้นด้วยอักษร หรือ ตัวเลข และอาจประกอบด้วยเครื่องหมายขีดกลาง และขีดล่าง"
 
+msgid "Show all details — including the bottom 2 lines"
+msgstr ""
+
 msgid "Sign out"
 msgstr "ออกจากระบบ"
 
@@ -1533,6 +2016,9 @@ msgstr "ลงทะเบียน"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "Something's gone wrong"
+msgstr ""
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "ขออภัย ไม่สามารถเปิดบัญชีในประเทศของท่าน"
@@ -1543,11 +2029,17 @@ msgstr "ขออภัย มีความผิดพลาดเกิด�
 msgid "Sorry, an error occurred while processing your request."
 msgstr "ขออภัย มีความผิดพลาดเกิดขึ้นขณะที่ประมวลผลความประสงค์ของท่าน"
 
+msgid "Sorry, but binary options trading is not available in your country."
+msgstr ""
+
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "ขออภัย การซื้อขาย binary options ไม่สามารถใช้งานได้ในบัญชี financial ของคุณ"
 
 msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "ขออภัย การฝากเงินสำหรับสกุลเงินนี้ ขณะนี้ถูกปิดการใช้งาน"
+
+msgid "Sorry, no mobile phone bills"
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "ขออภัย ฟังก์ชันนี้มีให้ใช้งานเฉพาะบัญชีทดลองใช้เท่านั้น"
@@ -1594,17 +2086,50 @@ msgstr "สัญญาอยู่ใน/นอกขอบเขต จะไ�
 msgid "Step"
 msgstr "ขั้น"
 
+msgid "Steps required to continue verification on your mobile"
+msgstr ""
+
 msgid "Stock Indices"
 msgstr "ดัชนีหุ้น"
 
 msgid "Stocks"
 msgstr "หลักทรัพย์"
 
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
 msgid "Su"
 msgstr "อา"
 
 msgid "Submit"
 msgstr "ส่ง"
+
+msgid "Submit document"
+msgstr ""
+
+msgid "Submit identity card (back)"
+msgstr ""
+
+msgid "Submit identity card (front)"
+msgstr ""
+
+msgid "Submit license (back)"
+msgstr ""
+
+msgid "Submit license (front)"
+msgstr ""
+
+msgid "Submit passport photo page"
+msgstr ""
+
+msgid "Submit residence permit (back)"
+msgstr ""
+
+msgid "Submit residence permit (front)"
+msgstr ""
+
+msgid "Submit verification"
+msgstr ""
 
 msgid "Submitted"
 msgstr "ส่งแล้ว"
@@ -1624,17 +2149,62 @@ msgstr "บัญชี ดัชนีสังเคราะห์"
 msgid "Synthetic Indices"
 msgstr "ดัชนีสังเคราะห์"
 
+msgid "Take a photo"
+msgstr ""
+
+msgid "Take a photo of the back of your card"
+msgstr ""
+
+msgid "Take a photo of the back of your license"
+msgstr ""
+
+msgid "Take a photo of the front of your card"
+msgstr ""
+
+msgid "Take a photo of the front of your license"
+msgstr ""
+
+msgid "Take a photo of your passport photo page"
+msgstr ""
+
+msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
+msgstr ""
+
+msgid "Take a photo with your phone"
+msgstr ""
+
+msgid "Take a selfie"
+msgstr ""
+
+msgid "Take a selfie showing your face"
+msgstr ""
+
+msgid "Take photo"
+msgstr ""
+
 msgid "Target"
 msgstr "เป้าหมาย"
 
 msgid "Telephone"
 msgstr "โทรศัพท์"
 
-msgid "Tether"
-msgstr "Tether"
+msgid "Tether ERC20"
+msgstr ""
+
+msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
+msgstr ""
+
+msgid "Tether Omni"
+msgstr ""
+
+msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
+msgstr ""
 
 msgid "Th"
 msgstr "พฤ"
+
+msgid "Thank you"
+msgstr ""
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "ขอขอบคุณสำหรับการลงทะเบียน! โปรดตรวจสอบอีเมล์ของท่านเพื่อดำเนินการลงทะเบียนให้แล้วเสร็จ"
@@ -1705,11 +2275,17 @@ msgstr "อีเมล์ของท่านถูกลงทะเบีย
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "สปอตแรก คือ ช่วงราคาแรกที่เกิดขึ้นหลังจากสัญญาได้ถูกประมวลผลที่เซิร์ฟเวอร์ของเรา"
 
+msgid "The link only works on mobile devices"
+msgstr ""
+
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "จำนวนมากที่สุดของโทเค่น (%1) ถูกใช้หมดแล้ว"
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "ไม่พบหน้าที่ท่านเรียก หรือ หน้าดังกล่าวได้ถูกนำออกจากระบบ หรือ ท่านเรียกที่อยู่ไม่ถูกต้อง โปรดตรวจสอบตัวสะกด"
+
+msgid "The photo should clearly show your document"
+msgstr ""
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "เหตุผลคือ ควรอยู่ระหว่าง 5 ถึง 250 ตัวอักษร"
@@ -1737,6 +2313,9 @@ msgstr "มีความผิดพลาดเกิดขึ้น"
 
 msgid "There was some invalid character in an input field."
 msgstr "จากข้อมูลที่ป้อนเข้ามา มีบางอักขระไม่ถูกต้อง"
+
+msgid "These are the documents most likely to show your current home address"
+msgstr ""
 
 msgid "This account is disabled"
 msgstr "บัญชีนี้ถูกปิดใช้งาน"
@@ -1768,14 +2347,29 @@ msgstr "ข้อมูลในช่องนี้จำเป็นต้อ
 msgid "This is a staging server - For testing purposes only"
 msgstr "นี่คือ เครื่องแม่ข่ายสำหรับพักงานระหว่างพัฒนาระบบ ซึ่งใช้เพื่อในการทดสอบเท่านั้น"
 
+msgid "This is a top-10 common password"
+msgstr ""
+
+msgid "This is a top-100 common password"
+msgstr ""
+
+msgid "This is a very common password"
+msgstr ""
+
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "นี้คือ Indicative Barrier ส่วน Barrier จริงนั้น จะเป็นสปอตเริ่มต้นรวมกับ Barrier Offset"
+
+msgid "This is similar to a commonly used password"
+msgstr ""
 
 msgid "This is your %1 account."
 msgstr "นี่คือ บัญชี %1 ของท่าน"
 
 msgid "This page is only available to logged out clients."
 msgstr "หน้านี้สำหรับแสดงให้กับผู้ใช้งานที่ออกจากระบบแล้ว"
+
+msgid "This password is on the blacklist"
+msgstr ""
 
 msgid "Thursday"
 msgstr "วันพฤหัสบดี"
@@ -1807,14 +2401,29 @@ msgstr "ช่วงเวลาอ้างอิงต้องเริ่ม
 msgid "Timed out until"
 msgstr "หมดเวลากระทั่ง"
 
+msgid "Tips"
+msgstr ""
+
+msgid "Tips to take a good selfie"
+msgstr ""
+
 msgid "To account: "
 msgstr "ไปที่บัญชี: "
+
+msgid "To open a bank account, we will need to verify your identity."
+msgstr ""
+
+msgid "To smoothly verify you, we need a better photo"
+msgstr ""
 
 msgid "Today"
 msgstr "วันนี้"
 
 msgid "Token"
 msgstr "โทเค่น"
+
+msgid "Too many failed attempts"
+msgstr ""
 
 msgid "Top up error"
 msgstr "มีข้อผิดพลาดในการเติมเงิน"
@@ -1867,17 +2476,29 @@ msgstr "การซื้อขายสัญญาส่วนต่าง (C
 msgid "Trading is unavailable at this time."
 msgstr "ไม่สามารถทำการซื้อขายได้ในขณะนี้"
 
+msgid "Trading statictics report"
+msgstr ""
+
 msgid "Transaction ID"
 msgstr "รหัสธุรกรรม"
 
 msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "ดำเนินธุรกรรมโดย %1 (App ID: %2)"
 
+msgid "True USD"
+msgstr ""
+
 msgid "Try our %1Synthetic Indices%2."
 msgstr "โปรดลอง %1ดัชนีสังเคราะห์%2"
 
 msgid "Try our other markets."
 msgstr "ลองตลาดอื่นๆ ของเรา"
+
+msgid "Try using a JPG or PNG file"
+msgstr ""
+
+msgid "Try using another file type."
+msgstr ""
 
 msgid "Tu"
 msgstr "อัง"
@@ -1886,19 +2507,31 @@ msgid "Tuesday"
 msgstr "วันอังคาร"
 
 msgid "Turnover"
-msgstr ""
+msgstr "การหมุนเวียน"
 
 msgid "Type"
 msgstr "ประเภท"
 
+msgid "USD Coin"
+msgstr ""
+
+msgid "USDK"
+msgstr ""
+
 msgid "Unable to read file %1"
 msgstr "ไม่สามารถอ่านแฟ้ม %1"
+
+msgid "Unavailable"
+msgstr ""
 
 msgid "Understood"
 msgstr "เข้าใจ"
 
 msgid "Unknown OS"
 msgstr "ระบบปฏิบัติการที่ไม่รู้จัก"
+
+msgid "Unsupported browser"
+msgstr ""
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "ตำแหน่งทศนิยมถึง %1 หลักเท่านั้น"
@@ -1912,11 +2545,56 @@ msgstr "กิจกรรมในอนาคต"
 msgid "Upgrade now"
 msgstr "อัพเกรดเดี๋ยวนี้"
 
+msgid "Upload"
+msgstr ""
+
+msgid "Upload a selfie from your computer"
+msgstr ""
+
+msgid "Upload anyway"
+msgstr ""
+
+msgid "Upload back of card from your computer"
+msgstr ""
+
+msgid "Upload back of license from your computer"
+msgstr ""
+
+msgid "Upload front of card from your computer"
+msgstr ""
+
+msgid "Upload front of license from your computer"
+msgstr ""
+
+msgid "Upload passport photo page"
+msgstr ""
+
+msgid "Upload passport photo page from your computer"
+msgstr ""
+
+msgid "Upload photo"
+msgstr ""
+
+msgid "Uploads successful"
+msgstr ""
+
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "รหัสยืนยันไม่ถูกต้อง โปรดใช้ลิงค์ที่ส่งไปยังอีเมล์ของท่าน"
 
+msgid "Verification complete"
+msgstr ""
+
 msgid "Verification required"
 msgstr "ต้องมีการยืนยัน"
+
+msgid "Verify Identity"
+msgstr ""
 
 msgid "Verify Reset Password"
 msgstr "ตรวจสอบรหัสผ่านใหม่"
@@ -1930,7 +2608,7 @@ msgstr "ดู"
 msgid "View chart"
 msgstr "ดูแผนภูมิ"
 
-msgid "View statement"
+msgid "View from camera"
 msgstr ""
 
 msgid "Virtual"
@@ -1948,14 +2626,32 @@ msgstr "กำลังรอช่วงราคาสุดท้าย"
 msgid "We"
 msgstr "พวกเรา"
 
+msgid "We cannot verify you without using your camera"
+msgstr ""
+
 msgid "We'd love to hear what you think."
 msgstr "เราอยากทราบความคิดเห็นของท่าน"
+
+msgid "We'll compare it with your document"
+msgstr ""
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr "เรากำลังดำเนินการพัฒนาผลิตภัณฑ์และปรับปรุงการให้บริการของเรา และอยากทราบถึงความต้องการของท่านให้ดียิ่งขึ้น เราจึงขอสนทนากับท่านทางโทรศัพท์ เพื่อให้เข้าใจความคิดเห็นของท่าน ถึงสิ่งที่ท่านชอบและไม่ชอบเกี่ยวกับเรา และสิ่งที่เราสามารถพัฒนาให้ดีขึ้น"
 
+msgid "We're now ready to verify your identity"
+msgstr ""
+
+msgid "We've sent a secure link to %{number}"
+msgstr ""
+
 msgid "Wednesday"
 msgstr "วันพุธ"
+
+msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "When prompted, you must enable camera access to continue"
+msgstr ""
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "เมื่อท่านเลือก \"OK\" ท่านจะถูกพักจากระบบซื้อขายกระทั่งวันที่ที่ท่านระบุ"
@@ -1981,6 +2677,9 @@ msgstr "การถอนเงิน ถูกปิดการใช้ง�
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "ได้มีการปิดการใช้งานการถอนเงินในบัญชีของท่าน กรุณาตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
 
+msgid "Would you like to check your statement first? %1Check Statement%2"
+msgstr ""
+
 msgid "Yes"
 msgstr "ใช่"
 
@@ -1997,7 +2696,7 @@ msgid "You are categorised as a retail client. Apply to be treated as a professi
 msgstr "ท่านอยู่ในกลุ่มลูกค้ารายย่อย (Retail Client) สมัครเพื่อเลื่อนขั้นเป็นลูกค้าผู้มีความเชี่ยวชาญ (Professional Client)"
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "ท่านถูกจำกัดให้มีบัญชีเงินกระดาษเพียงหนึ่งบัญชี ท่านสามารถแก้ไขสกุลเงินของบัญชีเงินกระดาษได้ตลอดเวลา ก่อนที่ท่านฝากเงินครั้งแรก หรือ ก่อนเปิดบัญชี MT5"
+msgstr "ท่านถูกจำกัดให้มีบัญชีเงิน fiat เพียงหนึ่งบัญชี ท่านสามารถแก้ไขสกุลเงินของบัญชีเงิน fiat ได้ตลอดเวลา ก่อนที่ท่านฝากเงินครั้งแรก หรือ ก่อนเปิดบัญชี MT5"
 
 msgid "You are offline"
 msgstr "คุณไม่สามารถติดต่อได้ใช่ไหม"
@@ -2014,11 +2713,11 @@ msgstr "ท่านไม่สามารถแก้ไขสกุลเง
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr "ท่านไม่สามารถแก้ไขสกุลเงิน เนื่องจากท่านได้ฝากเงินครั้งแล้วไปแล้ว"
 
+msgid "You can now return to your computer to continue"
+msgstr ""
+
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "ท่านสามารถเติมเงินในบัญชีทดลอง จำนวน %1 หากมียอดคงเหลือในบัญชี %2 หรือน้อยกว่า"
-
-msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
-msgstr "ท่านสามารถเติมเงินในบัญชีเสมือน จำนวน %1 หากมียอดคงเหลือในบัญชี %2 หรือ น้อยกว่า"
 
 msgid "You did not change anything."
 msgstr "ท่านไม่ได้แก้ไขค่าใดๆ"
@@ -2035,17 +2734,17 @@ msgstr "คุณได้ทำการถอนแล้ว %1%2"
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "เงินทุนของท่านในบัญชี Binary ไม่เพียงพอ โปรด <a href=\"%1\">ฝากเงิน</a>"
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr ""
+
 msgid "You have not granted access to any applications."
 msgstr "ท่านไม่ได้รับอนุญาตให้เข้าใช้งานระบบใดๆ"
-
-msgid "You have reached the limit."
-msgstr "เกินวงเงินของท่าน"
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "ท่านได้ใช้อัตราการส่งคำสั่งต่อวินาทีเกินที่กำหนด โปรดลองใหม่ภายหลัง"
 
-msgid "You have reached the withdrawal limit."
-msgstr "ท่านถอนเกินวงเงิน"
+msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
+msgstr ""
 
 msgid "You have sold this contract at %1 %2"
 msgstr "ท่านได้ขายสัญญานี้ที่ %1 %2"
@@ -2078,10 +2777,10 @@ msgid "You will be redirected to a third-party website which is not owned by Bin
 msgstr "ท่านกำลังจะเปลี่ยนเส้นทางไปยังเว็บไซต์อื่นซึ่งไม่ใช่เป็นของ Binary.com"
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "ท่านจะไม่สามารถแก้ไขสกุลเงินของบัญชีเงินกระดาษได้หลังจากท่านเปิดบัญชี MT5 ท่านต้องการดำเนินการต่อหรือไม่?"
+msgstr "ท่านจะไม่สามารถแก้ไขสกุลเงินของบัญชีเงิน fiat ได้หลังจากท่านเปิดบัญชี MT5 ท่านต้องการดำเนินการต่อหรือไม่?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "ท่านจะไม่สามารถแก้ไขสกุลเงินของบัญชีเงินกระดาษได้หลังจากท่านฝากเงินครั้งนี้ ท่านต้องการดำเนินการต่อหรือไม่?"
+msgstr "ท่านจะไม่สามารถแก้ไขสกุลเงินของบัญชีเงิน fiat ได้หลังจากท่านฝากเงินครั้งนี้ ท่านต้องการดำเนินการต่อหรือไม่?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
 msgstr "ท่านได้กำไรเมื่อราคาตลาดไม่ได้สิ้นสุดด้วยตัวเลขที่ท่านเลือก"
@@ -2089,14 +2788,17 @@ msgstr "ท่านได้กำไรเมื่อราคาตลาด
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "ท่านได้กำไรเมื่อราคาตลาดสิ้นสุดด้วยตัวเลขที่ท่านเลือก"
 
+msgid "You'll need to restart your verification on your computer"
+msgstr ""
+
+msgid "You've made no transactions of this type up to this date."
+msgstr ""
+
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "ของคุณ %1วงเงินการถอนขณะนี้%2%3"
 
 msgid "Your account has no Login/Logout activity."
 msgstr "บัญชีของท่านไม่มีประวัติ การเข้าใช้งานระบบ/การออกจากระบบ"
-
-msgid "Your account has no trading activity."
-msgstr "บัญชีของท่านไม่มีประวัติการซื้อขาย"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "บัญชีของท่านได้รับการยืนยันตัวตนอย่างสมบูรณ์แล้ว และวงเงินการถอนเงินของท่านได้รับการยกระดับโดยการเพิ่มวงเงินแล้ว"
@@ -2116,20 +2818,35 @@ msgstr "การแก้ไขของท่านถูกดำเนิน
 msgid "Your changes have been updated."
 msgstr "การเปลี่ยนแปลงของท่านได้ถูกดำเนินการแล้ว"
 
+msgid "Your computer may take a few seconds to update"
+msgstr ""
+
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "ท่านมียอดเงินคงเหลือในบัญชีทดลอง %1 หรือน้อยกว่า กรุณาฝากเงินในบัญชีของท่านเพิ่ม %2"
 
+msgid "Your face is needed in the selfie"
+msgstr ""
+
 msgid "Your fiat account's currency is currently set to %1."
-msgstr "ขณะนี้ สกุลเงินในบัญชีของท่านถูกตั้งค่าเป็น %1"
+msgstr "ขณะนี้ สกุลเงิน fiat ในบัญชีของท่านถูกตั้งค่าเป็น %1"
 
 msgid "Your fiat account's currency is set to %1."
-msgstr "สกุลเงินในบัญชีของท่านถูกตั้งค่าเป็น %1"
+msgstr "สกุลเงิน fiat ในบัญชีของท่านถูกตั้งค่าเป็น %1"
+
+msgid "Your link will expire in one hour"
+msgstr ""
+
+msgid "Your mobile link will expire in one hour"
+msgstr ""
+
+msgid "Your password cannot be the same as your email address."
+msgstr ""
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "รหัสผ่านของท่านได้ถูกกำหนดใหม่เรียบร้อยแล้ว โปรดเข้าสู่ระบบโดยการใช้รหัสผ่านใหม่ของท่าน"
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "รหัสผ่านของคุณเป็นหนึ่งในรหัสผ่านที่ใช้งานบ่อยที่สุดในอินเตอร์เน็ต โปรดเลือกใช้รหัสผ่านอื่น"
+msgid "Your preferred time interval between each report:"
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "คำขอเป็นลูกค้าผู้เชี่ยวชาญของท่าน %1ไม่ได้รับการอนุมัติ%2"
@@ -2161,8 +2878,8 @@ msgstr "เลขที่อ้างอิงของธุรกรรมข
 msgid "Your transaction reference number is %1"
 msgstr "หมายเลขอ้างอิงของธุรกรรมของท่าน คือ %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "ท่านมียอดเงินในบัญชีทดลอง %1 หรือ น้อยกว่า กรุณาฝากเงินในบัญชีของท่านเพิ่ม%2"
+msgid "Your virtual balance has been reset."
+msgstr ""
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "เว็บเบราเซอร์ของท่าน (%1) ไม่ได้ปรับปรุงให้ทันสมัย ซึ่งส่งผลต่อการใช้งานในการซื้อขายของท่าน โปรดดำเนินการเพื่อแก้ไขความเสี่ยงนี้โดยตัวท่านเองสามารถ %2 ปรับปรุงเบราเซอร์ให้เหมาะกับการใช้งาน %3"
@@ -2176,8 +2893,14 @@ msgstr "บัญชี"
 msgid "accounts"
 msgstr "บัญชี"
 
+msgid "back"
+msgstr ""
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "ไบนารีออปชั่น ฟอเร็กซ์ การซื้อขายฟอเร็กซ์ การซื้อขายออนไลน์ การซื้อขายทางการเงิน การซื้อขายแบบไบนารี ดัชนีการซื้อขาย ดัชนีการซื้อขายหุ้น การซื้อขายแลกเปลี่ยน หุ้นโภคภัณฑ์ กลยุทธ์การซื้อขายตัวเลือกไบนารี โบรกเกอร์ไบนารี เดิมพันไบนารี แพลตฟอร์มการซื้อขายไบนารีออปชั่น กลยุทธ์ไบนารี การเงิน การลงทุน การซื้อขาย"
+
+msgid "close"
+msgstr ""
 
 msgid "day"
 msgstr "วัน"
@@ -2187,6 +2910,9 @@ msgstr "วัน"
 
 msgid "details"
 msgstr "รายละเอียด"
+
+msgid "e.g. United States"
+msgstr ""
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "เช่น frontend.binaryws.com"
@@ -2212,9 +2938,6 @@ msgstr "เข้าสู่ระบบ"
 msgid "logout"
 msgstr "ออกจากระบบ"
 
-msgid "million"
-msgstr "ล้าน"
-
 msgid "minute"
 msgstr "นาที"
 
@@ -2224,6 +2947,12 @@ msgstr "นาที"
 msgid "numbers"
 msgstr "Numbers"
 
+msgid "or"
+msgstr ""
+
+msgid "or upload photo – no scans or photocopies"
+msgstr ""
+
 msgid "second"
 msgstr "วินาที"
 
@@ -2232,9 +2961,6 @@ msgstr "วินาที"
 
 msgid "space"
 msgstr "ช่องว่าง"
-
-msgid "thousand"
-msgstr "พัน"
 
 msgid "tick"
 msgstr "ช่วงห่างของราคา"
@@ -2250,9 +2976,6 @@ msgstr "วันนี้วันศุกร์"
 
 msgid "virtual money credit to account"
 msgstr "เครดิตเงินเสมือนไปยังบัญชี"
-
-msgid "years"
-msgstr "ปี"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}อย่างไรก็ตาม Binary Investments (Europe) Ltd ได้ทำการประเมินความรู้และประสบการณ์ของคุณและเห็นว่าผลิตภัณฑ์เหมาะสมสำหรับคุณ"
