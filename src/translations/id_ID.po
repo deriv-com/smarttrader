@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-07-28 02:25\n"
+"PO-Revision-Date: 2021-05-31 09:36\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
+
+msgid " (Region added)"
+msgstr ""
+
+msgid " (Temporarily unavailable)"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 Akun %2"
@@ -55,6 +61,15 @@ msgstr "%1Tidak, rubah mata uang akun fiat saya sekarang%2"
 msgid "%1Return to trading page%2"
 msgstr "%1Kembali ke halaman trading%2"
 
+msgid "1. This link was sent by you"
+msgstr ""
+
+msgid "2. Your desktop window stays open"
+msgstr ""
+
+msgid "A word by itself is easy to guess"
+msgstr ""
+
 msgid "AM"
 msgstr "PAGI"
 
@@ -85,14 +100,29 @@ msgstr "Tambahkan +/– untuk menentukan barrier offset. Contoh, +0,005 berarti 
 msgid "Add Deriv account"
 msgstr "Tambahkan akun Deriv"
 
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
 msgid "Adjust trade parameters"
 msgstr "Menyesuaikan parameter trading"
 
 msgid "Admin"
 msgstr "Admin"
 
+msgid "Agree and accept"
+msgstr ""
+
+msgid "All details must be clear — nothing blurry"
+msgstr ""
+
 msgid "All markets are closed now. Please try again later."
 msgstr "Semua pasar ditutup saat ini. Coba kembali nanti."
+
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+msgid "Allow camera access"
+msgstr ""
 
 msgid "Allow equals"
 msgstr "Pilih equal"
@@ -105,6 +135,9 @@ msgstr "Jumlah"
 
 msgid "Amount in"
 msgstr "Jumlah dalam"
+
+msgid "An error occurred while loading the component"
+msgstr ""
 
 msgid "Apply now as a professional investor"
 msgstr "Ajukan permohonan sebagai investor profesional sekarang"
@@ -160,8 +193,8 @@ msgstr "Pada waktu reset, jika spot berlawanan dengan arah analisa Anda, maka ba
 msgid "Audit"
 msgstr "Audit"
 
-msgid "Audit page"
-msgstr "Halaman audit"
+msgid "Audit Page"
+msgstr ""
 
 msgid "Aug"
 msgstr "Agu"
@@ -177,6 +210,21 @@ msgstr "Pasar Yang Tersedia"
 
 msgid "Average"
 msgstr "Rata-rata"
+
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+msgid "Avoid recent years"
+msgstr ""
+
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+msgid "Avoid sequences"
+msgstr ""
+
+msgid "Avoid years that are associated with you"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "Kembali ke trading"
@@ -196,14 +244,17 @@ msgstr "Barrier offset"
 msgid "Bid"
 msgstr "Bid"
 
+msgid "Binance USD"
+msgstr ""
+
 msgid "Binary Coin"
 msgstr "Koin Binary"
 
-msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
-msgstr "Binary.com menyediakan Tether (USDT). Anda hanya dapat mendeposit dalam USDT dari wallet Omni Layer Anda ke dalam akun Binary.com Anda."
-
 msgid "Bitcoin"
 msgstr "Bitcoin"
+
+msgid "Blurry photo detected"
+msgstr ""
 
 msgid "Browser"
 msgstr "Browser"
@@ -229,11 +280,26 @@ msgstr "Call Spread"
 msgid "Call Spread/Put Spread"
 msgstr "Call Spread/Put Spread"
 
+msgid "Camera access is denied"
+msgstr ""
+
+msgid "Camera not detected"
+msgstr ""
+
+msgid "Camera not working"
+msgstr ""
+
+msgid "Camera not working?"
+msgstr ""
+
 msgid "Can you spare 15 minutes?"
 msgstr "Dapatkan Anda meluangkan 15 menit?"
 
 msgid "Cancel"
 msgstr "Batal"
+
+msgid "Capitalization doesn't help very much"
+msgstr ""
 
 msgid "Cashier"
 msgstr "Kasir"
@@ -259,14 +325,35 @@ msgstr "Chart tidak tersedia untuk pasar dasar ini."
 msgid "Charting for this underlying is delayed"
 msgstr "Charting untuk underlying ini tertunda"
 
+msgid "Check back here to finish the submission"
+msgstr ""
+
+msgid "Check selfie"
+msgstr ""
+
+msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
+msgstr ""
+
+msgid "Check that your number is correct"
+msgstr ""
+
 msgid "Check your connection."
 msgstr "Periksa koneksi Anda."
+
+msgid "Check your image"
+msgstr ""
+
+msgid "Check your mobile"
+msgstr ""
 
 msgid "Checked"
 msgstr "Diperiksa"
 
 msgid "Checking"
 msgstr "Memeriksa"
+
+msgid "Choose document"
+msgstr ""
 
 msgid "Christmas Day"
 msgstr "Hari Natal"
@@ -277,11 +364,17 @@ msgstr "Klik OK untuk melanjutkan."
 msgid "Click here to open a Financial Account"
 msgstr "Klik disini untuk mendaftar Akun Finansial"
 
+msgid "Click here to open a Gaming account"
+msgstr ""
+
 msgid "Click here to open a Real Account"
 msgstr "Klik disini untuk mendaftar Akun Riil"
 
 msgid "Close"
 msgstr "Tutup"
+
+msgid "Close identity verification screen"
+msgstr ""
 
 msgid "Close time"
 msgstr "Waktu close"
@@ -304,17 +397,44 @@ msgstr "Ditutup awal (pada 21:00)"
 msgid "Commodities"
 msgstr "Komoditas"
 
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
 msgid "Complete details"
 msgstr "Rincian lengkap"
 
 msgid "Compressing Image"
 msgstr "Mengompresi Gambar"
 
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr ""
+
+msgid "Connected to your mobile"
+msgstr ""
+
 msgid "Connecting to server"
 msgstr "Menghubungkan ke server"
 
+msgid "Connection lost"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Continue on phone"
+msgstr ""
+
+msgid "Continue on your phone"
+msgstr ""
+
 msgid "Continue trading"
 msgstr "Lanjutkan trading"
+
+msgid "Continue with the verification"
+msgstr ""
 
 msgid "Contract"
 msgstr "Kontrak"
@@ -350,13 +470,31 @@ msgid "Contract will be sold at the prevailing market price when the request is 
 msgstr "Kontrak akan dijual pada harga pasar terkini ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "Kontrak yang dibeli"
 
 msgid "Contracts sold"
+msgstr "Kontrak yang dijual"
+
+msgid "Copied"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy the link to your mobile browser"
+msgstr ""
+
+msgid "Copy the link to your phone"
 msgstr ""
 
 msgid "Counterparty"
 msgstr "Rekanan"
+
+msgid "Country not found"
+msgstr ""
 
 msgid "Country of Residence"
 msgstr "Negara Domisili"
@@ -386,6 +524,9 @@ msgid "Current time"
 msgstr "Waktu sekarang"
 
 msgid "Current time:"
+msgstr "Waktu saat ini:"
+
+msgid "Cut-off image detected"
 msgstr ""
 
 msgid "Date"
@@ -393,6 +534,9 @@ msgstr "Tanggal"
 
 msgid "Date and Time"
 msgstr "Tanggal dan Waktu"
+
+msgid "Dates are often easy to guess"
+msgstr ""
 
 msgid "Deal cancel. fee"
 msgstr "Transaksi dibatalkan. biaya"
@@ -469,20 +613,47 @@ msgstr "Digits"
 msgid "Disable"
 msgstr "Nonaktifkan"
 
+msgid "Dismiss alert"
+msgstr ""
+
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
 msgstr "Apakah Anda ingin akun ini terdaftar sebagai akun fiat atau akun kripto?. Silahkan pilih:"
 
 msgid "Do you wish to continue?"
 msgstr "Apakah Anda ingin melanjutkan?"
 
+msgid "Document example"
+msgstr ""
+
+msgid "Document uploaded"
+msgstr ""
+
+msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
+msgstr ""
+
+msgid "Documents uploaded"
+msgstr ""
+
+msgid "Documents you can use to verify your identity"
+msgstr ""
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
+
+msgid "Don't refresh this page"
+msgstr ""
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "Apakah Anda ingin bertrading dalam %1. Anda dapat mendaftar akun kripto lainnya."
 
+msgid "Driver's license"
+msgstr ""
+
 msgid "Driving licence"
 msgstr "Surat izin mengemudi"
+
+msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
+msgstr ""
 
 msgid "Duration"
 msgstr "Durasi"
@@ -492,6 +663,9 @@ msgstr "Alamat email"
 
 msgid "Enable"
 msgstr "Aktifkan"
+
+msgid "Enable camera"
+msgstr ""
 
 msgid "End Time"
 msgstr "Waktu berakhir"
@@ -514,6 +688,15 @@ msgstr "Kontrak Ends Between/Ends Outside akan mendapat pengembalian harga beli 
 msgid "Ends Outside"
 msgstr "Ends Outside"
 
+msgid "Enlarge image"
+msgstr ""
+
+msgid "Enter mobile number"
+msgstr ""
+
+msgid "Enter your mobile number:"
+msgstr ""
+
 msgid "Entry Spot"
 msgstr "Spot Masuk"
 
@@ -523,17 +706,26 @@ msgstr "Spot masuk"
 msgid "Equals"
 msgstr "Sama"
 
-msgid "Ether"
-msgstr "Ether"
-
 msgid "Ether Classic"
 msgstr "Ether Classic"
+
+msgid "Ethereum"
+msgstr ""
 
 msgid "Even/Odd"
 msgstr "Even/Odd"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "Kontrak Even/Odd akan memperoleh pengembalian harga beli jika kontrak tidak berakhir dalam waktu 5 menit."
+
+msgid "Example of a blurry document"
+msgstr ""
+
+msgid "Example of a cut-off document"
+msgstr ""
+
+msgid "Example of a document with glare"
+msgstr ""
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "Waktu pengecualian tidak dapat melebihi 5 tahun."
@@ -562,6 +754,12 @@ msgstr "Tanggal berakhir diperlukan untuk %1."
 msgid "Explanation"
 msgstr "Penjelasan"
 
+msgid "Face forward and make sure your eyes are clearly visible"
+msgstr ""
+
+msgid "Face photo page"
+msgstr ""
+
 msgid "Failed"
 msgstr "Gagal"
 
@@ -576,6 +774,15 @@ msgstr "Fiat"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "Ukuran file (%1) melebihi batas yang diijinkan. Ukuran file maksimum yang diizinkan: %2"
+
+msgid "File not uploaded."
+msgstr ""
+
+msgid "File size exceeded."
+msgstr ""
+
+msgid "File type not supported"
+msgstr ""
 
 msgid "Final price"
 msgstr "Harga akhir"
@@ -595,6 +802,9 @@ msgstr "Selesai"
 msgid "First line of home address"
 msgstr "Alamat Rumah"
 
+msgid "Follow these steps to recover camera access:"
+msgstr ""
+
 msgid "Forex"
 msgstr "Forex"
 
@@ -613,11 +823,35 @@ msgstr "Dari akun: "
 msgid "Front Side"
 msgstr "Bagian Depan"
 
+msgid "Front and back"
+msgstr ""
+
 msgid "Gaming"
 msgstr "Gaming"
 
+msgid "Gaming Account"
+msgstr ""
+
 msgid "Get %1"
 msgstr "Dapatkan %1"
+
+msgid "Get link via SMS"
+msgstr ""
+
+msgid "Get secure link"
+msgstr ""
+
+msgid "Get your secure link"
+msgstr ""
+
+msgid "Glare detected"
+msgstr ""
+
+msgid "Go To Reports"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
 
 msgid "Go to statement"
 msgstr "Kunjungi pernyataan"
@@ -625,11 +859,20 @@ msgstr "Kunjungi pernyataan"
 msgid "Goes Outside"
 msgstr "Goes Outside"
 
+msgid "Grant access to your camera from your browser settings"
+msgstr ""
+
+msgid "Great, that's everything we need"
+msgstr ""
+
 msgid "Guide"
 msgstr "Panduan"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr "Oleh karena itu, saldo yang dapat ditarik hanya hingga %1%2, tergantung pada saldo yang tersedia pada akun Anda."
+
+msgid "Here's how to do it:"
+msgstr ""
 
 msgid "High"
 msgstr "High"
@@ -676,11 +919,11 @@ msgstr "Higher/Lower"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "Kontrak Higher/Lower akan mendapat pengembalian harga beli jika terdapat kurang dari 2 tik penyelesaian dari waktu mulai hingga akhir."
 
-msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr "Petunjuk: akan memerlukan sekitar %1 %2 untuk memecahkan kata sandi Anda."
-
 msgid "Hour"
 msgstr "Jam"
+
+msgid "How to scan a QR code"
+msgstr ""
 
 msgid "I want to reapply"
 msgstr "Saya ingin mendaftar kembali"
@@ -691,11 +934,17 @@ msgstr "Saya tertarik"
 msgid "ID number is required for %1."
 msgstr "Nomor identitas diperlukan untuk %1."
 
+msgid "IDK"
+msgstr ""
+
 msgid "IP Address"
 msgstr "Alamat IP"
 
 msgid "Identity card"
 msgstr "Kartu identitas"
+
+msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Jika <strong>spot akhir</strong> sama dengan <strong>Batasan rendah</strong> atau <strong>Batasan tinggi</strong>, maka Anda tidak akan memperoleh hasil."
@@ -841,6 +1090,21 @@ msgstr "Kode verifikasi salah."
 msgid "Investment"
 msgstr "Investasi"
 
+msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
+msgstr ""
+
+msgid "It may take a few minutes to arrive"
+msgstr ""
+
+msgid "It must be an official photo ID"
+msgstr ""
+
+msgid "It will only take a couple of minutes."
+msgstr ""
+
+msgid "It’ll take longer to verify you if we can’t read it"
+msgstr ""
+
 msgid "Jan"
 msgstr "Jan"
 
@@ -862,6 +1126,9 @@ msgstr "Juni"
 msgid "Jurisdiction"
 msgstr "Yurisdiksi"
 
+msgid "Keep this window open while using your mobile"
+msgstr ""
+
 msgid "Language settings"
 msgstr "Pengaturan bahasa"
 
@@ -880,8 +1147,17 @@ msgstr "Terakhir digunakan"
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Statistik digit terakhir untuk %1 tik pada %2"
 
+msgid "Linked to your computer"
+msgstr ""
+
 msgid "Litecoin"
 msgstr "Litecoin"
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
 
 msgid "Log in"
 msgstr "Masuk"
@@ -893,13 +1169,16 @@ msgid "Log out"
 msgstr "Keluar"
 
 msgid "Login ID"
-msgstr ""
+msgstr "Login ID"
 
-msgid "Login time:"
+msgid "Login at:"
 msgstr ""
 
 msgid "Lookbacks"
 msgstr "Lookback"
+
+msgid "Looks like you took too long"
+msgstr ""
 
 msgid "Loss"
 msgstr "Rugi"
@@ -925,11 +1204,50 @@ msgstr "Lower"
 msgid "Lower or equal"
 msgstr "Lower atau equal"
 
+msgid "MT5"
+msgstr ""
+
 msgid "MT5 withdrawal disabled"
 msgstr "Penarikan MT5 dinonaktifkan"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Penarikan MT5 tidak tersedia pada akun Anda. Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
+
+msgid "Make sure all of the document is in the photo"
+msgstr ""
+
+msgid "Make sure details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure everything is clear"
+msgstr ""
+
+msgid "Make sure full document is visible"
+msgstr ""
+
+msgid "Make sure your card details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your device has a working camera"
+msgstr ""
+
+msgid "Make sure your device's camera works"
+msgstr ""
+
+msgid "Make sure your license details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your passport details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your permit details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your selfie clearly shows your face"
+msgstr ""
+
+msgid "Make sure§"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -970,6 +1288,18 @@ msgstr "Senin"
 msgid "More information can be found in an email sent to you."
 msgstr "Informasi lebih lanjut dapat ditemukan pada email yang dikirim pada Anda."
 
+msgid "Move away from direct light"
+msgstr ""
+
+msgid "Move away from direct light — no glare"
+msgstr ""
+
+msgid "Multi-Collateral"
+msgstr ""
+
+msgid "Multiple faces found"
+msgstr ""
+
 msgid "Multiplier"
 msgstr "Multiplier"
 
@@ -979,8 +1309,14 @@ msgstr "Multiplier Down"
 msgid "Multiplier Up"
 msgstr "Multiplier Up"
 
+msgid "Must be under 10MB."
+msgstr ""
+
 msgid "Name"
 msgstr "Nama"
+
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
 
 msgid "Net profit"
 msgstr "Laba bersih"
@@ -1014,6 +1350,15 @@ msgstr "Tidak ada mata uang yang ditugaskan"
 
 msgid "No currency selected"
 msgstr "Tidak ada mata uang yang dipilih"
+
+msgid "No document detected"
+msgstr ""
+
+msgid "No face found"
+msgstr ""
+
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
 
 msgid "No notifications"
 msgstr "Tidak terdapat pemberitahuan"
@@ -1063,6 +1408,9 @@ msgstr "Oktober"
 msgid "Offline"
 msgstr "Offline"
 
+msgid "Once you've finished we'll take you to the next step"
+msgstr ""
+
 msgid "Online"
 msgstr "Online"
 
@@ -1096,6 +1444,9 @@ msgstr "Hanya huruf, angka, spasi, garis bawah, dan tanda hubung yang diizinkan 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Hanya huruf, spasi, tanda hubung, periode, dan apostrof diperbolehkan."
 
+msgid "Only your face can be in the selfie"
+msgstr ""
+
 msgid "Oops... Page Not Available"
 msgstr "Maaf ... Halaman Tidak Tersedia"
 
@@ -1108,17 +1459,23 @@ msgstr "Daftar Akun Riil"
 msgid "Open a free account"
 msgstr "Daftar akun gratis"
 
-msgid "Open contracts"
-msgstr ""
-
 msgid "Open positions"
 msgstr "Lowongan pekerjaan"
+
+msgid "Open the link and complete the tasks"
+msgstr ""
+
+msgid "Open the link on your mobile"
+msgstr ""
+
+msgid "Open your new bank account"
+msgstr ""
 
 msgid "Opens"
 msgstr "Dibuka"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "Trading opsi dapat menyebabkan ketagihan, sebagaimana kegiatan lain yang dilakukan di luar batas. Untuk menghidari bahaya ketagihan tersebut, kami menyediakan pengecekan yang memberikan ringkasan trading Anda secara teratur."
 
 msgid "Over/Under"
 msgstr "Over/Under"
@@ -1132,11 +1489,17 @@ msgstr "SIANG"
 msgid "Passport"
 msgstr "Paspor"
 
+msgid "Passport photo page"
+msgstr ""
+
 msgid "Password is not strong enough."
 msgstr "Kata sandi tidak cukup kuat."
 
-msgid "Password should have lower and uppercase letters with numbers."
-msgstr "Kata sandi harus memiliki huruf kecil dan besar beserta angka."
+msgid "Password should have lower and uppercase English letters with numbers."
+msgstr ""
+
+msgid "Paxos Standard"
+msgstr ""
 
 msgid "Pay-out"
 msgstr "Hasil"
@@ -1161,6 +1524,12 @@ msgstr "Persentase"
 
 msgid "Permissions"
 msgstr "Izin"
+
+msgid "Photo of your document"
+msgstr ""
+
+msgid "Photo of your face"
+msgstr ""
 
 msgid "Place of birth"
 msgstr "Negara kelahiran"
@@ -1207,8 +1576,8 @@ msgstr "Pastikan bahwa Anda memiliki aplikasi Telegram yang diinstal pada perang
 msgid "Please enter a valid Login ID."
 msgstr "Masukkan Login ID yang berlaku."
 
-msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr "Masukkan nomor telepon yang berlaku, termasuk kode negara (mis., +62812391234)."
+msgid "Please enter a valid phone number (e.g. +15417541234)."
+msgstr ""
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "Harap dicatat bahwa mata uang yang Anda pilih hanya diperbolehkan untuk akun terbatas."
@@ -1249,7 +1618,7 @@ msgstr "Pilih %1batasan 30-hari total pembelian%2 untuk menghapus batasan deposi
 msgid "Please specify the reasons for closing your accounts"
 msgstr "Mohon tentukan alasan penutupan akun Anda"
 
-msgid "Please specify your preferred reality-check interval in minutes"
+msgid "Please specify your preferred interval reality check in minutes:"
 msgstr ""
 
 msgid "Please submit your proof of address."
@@ -1257,6 +1626,12 @@ msgstr "Mohon kirimkan bukti alamat Anda."
 
 msgid "Please submit your proof of identity."
 msgstr "Mohon kirimkan bukti identitas Anda."
+
+msgid "Please try again"
+msgstr ""
+
+msgid "Point your phone’s camera at the QR code"
+msgstr ""
 
 msgid "Postal Code/ZIP"
 msgstr "Kode Pos"
@@ -1271,13 +1646,16 @@ msgid "Potential payout"
 msgstr "Potensi hasil"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Potensi laba"
 
 msgid "Potential profit/loss"
 msgstr "Potensi untung/rugi"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Analisa arah<br />dan beli"
+
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
 
 msgid "Previous"
 msgstr "Sebelumnya"
@@ -1286,7 +1664,7 @@ msgid "Profit"
 msgstr "Keuntungan"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "Untung/Rugi"
 
 msgid "Profit table"
 msgstr "Tabel profit"
@@ -1314,6 +1692,9 @@ msgstr "Masa berlaku bukti identitas sudah berakhir"
 
 msgid "Proof of identity required"
 msgstr "Diperlukan bukti identitas"
+
+msgid "Provide the whole document page for best results"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1364,6 +1745,18 @@ msgid "Real-Money Accounts"
 msgstr "Akun Uang Riil"
 
 msgid "Reality Check"
+msgstr "Pemeriksaan Realitas"
+
+msgid "Recent years are easy to guess"
+msgstr ""
+
+msgid "Recover camera access to continue face verification"
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
+msgid "Redo"
 msgstr ""
 
 msgid "Ref."
@@ -1372,11 +1765,29 @@ msgstr "Ref."
 msgid "Reference ID"
 msgstr "ID referensi"
 
+msgid "Refresh"
+msgstr ""
+
+msgid "Refresh this page to restart the identity verification process"
+msgstr ""
+
 msgid "Remaining time"
 msgstr "Waktu yang tersisa"
 
+msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
+msgstr ""
+
 msgid "Remove deposit limits"
 msgstr "Hapus batas deposit"
+
+msgid "Remove your glasses, if necessary"
+msgstr ""
+
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
 
 msgid "Reports"
 msgstr "Laporan"
@@ -1386,6 +1797,9 @@ msgstr "Mengharuskan penyimpanan web browser Anda diaktifkan agar berfungsi deng
 
 msgid "Resale not offered"
 msgstr "Penjualan ulang tidak ditawarkan"
+
+msgid "Resend link"
+msgstr ""
 
 msgid "Reset Barrier"
 msgstr "Batasan Reset"
@@ -1408,17 +1822,35 @@ msgstr "Waktu Reset"
 msgid "Reset barrier"
 msgstr "Barrier reset"
 
+msgid "Reset the balance of your virtual account to %1 anytime."
+msgstr ""
+
 msgid "Reset time"
 msgstr "Waktu reset"
 
 msgid "Reset to original settings"
 msgstr "Reset ke pengaturan awal"
 
+msgid "Residence permit"
+msgstr ""
+
+msgid "Restart process on a different device"
+msgstr ""
+
+msgid "Restart the process on the latest version of Google Chrome"
+msgstr ""
+
+msgid "Restart the process on the latest version of Safari"
+msgstr ""
+
 msgid "Return"
 msgstr "Laba"
 
 msgid "Reverse Side"
 msgstr "Bagian Belakang"
+
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
 
 msgid "Revoke access"
 msgstr "Mencabut akses"
@@ -1428,6 +1860,9 @@ msgstr "Rise/Fall"
 
 msgid "Rise/Fall contracts will be refunded if:"
 msgstr "Kontrak Rise/Fall akan dibatalkan jika: "
+
+msgid "STASIS Euro"
+msgstr ""
 
 msgid "Sa"
 msgstr "Sab"
@@ -1441,8 +1876,20 @@ msgstr "Harga Jual"
 msgid "Saturday"
 msgstr "Sabtu"
 
+msgid "Scan QR code"
+msgstr ""
+
+msgid "Scan the QR code with your phone"
+msgstr ""
+
+msgid "Scans and photocopies are not accepted"
+msgstr ""
+
 msgid "Scopes"
 msgstr "Cakupan"
+
+msgid "Search for country"
+msgstr ""
 
 msgid "Search..."
 msgstr "Cari..."
@@ -1453,11 +1900,20 @@ msgstr "Pilih Aset"
 msgid "Select Trade Type"
 msgstr "Pilih Jenis Kontrak"
 
+msgid "Select a %{country} document"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
+
 msgid "Select currency"
 msgstr "Pilih mata uang"
 
 msgid "Select date"
 msgstr "Pilih tanggal"
+
+msgid "Select issuing country"
+msgstr ""
 
 msgid "Select market:"
 msgstr "Pilih pasar:"
@@ -1477,17 +1933,38 @@ msgstr "Tik yang dipilih"
 msgid "Self-exclusion"
 msgstr "Pengecualian diri"
 
+msgid "Selfie"
+msgstr ""
+
+msgid "Selfie uploaded"
+msgstr ""
+
 msgid "Sell"
 msgstr "Jual"
 
 msgid "Sell at market"
 msgstr "Jual pada pasar"
 
+msgid "Send a secure link to your phone"
+msgstr ""
+
+msgid "Send link"
+msgstr ""
+
+msgid "Send this one-time link to your phone"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
 msgid "Sep"
 msgstr "Sep"
 
 msgid "September"
 msgstr "September"
+
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
 
 msgid "Server"
 msgstr "Server"
@@ -1496,7 +1973,7 @@ msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Batas durasi sesi tidak dapat lebih dari 6 minggu."
 
 msgid "Session duration:"
-msgstr ""
+msgstr "Sesi durasi:"
 
 msgid "Set account currency"
 msgstr "Pilih mata uang akun "
@@ -1506,6 +1983,9 @@ msgstr "Pilih mata uang"
 
 msgid "Settles"
 msgstr "Diselesaikan"
+
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
 
 msgid "Should be %1"
 msgstr "Seharusnya %1"
@@ -1525,6 +2005,9 @@ msgstr "Harus lebih dari %1"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "Harus dimulai dengan huruf atau angka, dan mungkin mengandung tanda hubung dan garis bawah."
 
+msgid "Show all details — including the bottom 2 lines"
+msgstr ""
+
 msgid "Sign out"
 msgstr "Keluar"
 
@@ -1533,6 +2016,9 @@ msgstr "Daftar"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "Something's gone wrong"
+msgstr ""
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "Maaf, pendaftaran akun tidak tersedia di negara Anda."
@@ -1543,11 +2029,17 @@ msgstr "Maaf, error terjadi ketika memproses rekening Anda."
 msgid "Sorry, an error occurred while processing your request."
 msgstr "Maaf, error terjadi ketika memproses permohonan Anda."
 
+msgid "Sorry, but binary options trading is not available in your country."
+msgstr ""
+
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "Maaf, trading opsi binary tidak tersedia pada akun finansial Anda."
 
 msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "Maaf, deposit untuk mata uang ini sedang dinonaktifkan."
+
+msgid "Sorry, no mobile phone bills"
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Maaf, fasilitas ini hanya tersedia untuk rekening virtual saja."
@@ -1594,17 +2086,50 @@ msgstr "Kontrak Stays Between/Goes Outside akan mendapat pengembalian harga beli
 msgid "Step"
 msgstr "Langkah"
 
+msgid "Steps required to continue verification on your mobile"
+msgstr ""
+
 msgid "Stock Indices"
 msgstr "Indeks Saham"
 
 msgid "Stocks"
 msgstr "Saham"
 
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
 msgid "Su"
 msgstr "Mgg"
 
 msgid "Submit"
 msgstr "Mengajukan"
+
+msgid "Submit document"
+msgstr ""
+
+msgid "Submit identity card (back)"
+msgstr ""
+
+msgid "Submit identity card (front)"
+msgstr ""
+
+msgid "Submit license (back)"
+msgstr ""
+
+msgid "Submit license (front)"
+msgstr ""
+
+msgid "Submit passport photo page"
+msgstr ""
+
+msgid "Submit residence permit (back)"
+msgstr ""
+
+msgid "Submit residence permit (front)"
+msgstr ""
+
+msgid "Submit verification"
+msgstr ""
 
 msgid "Submitted"
 msgstr "Terkirim"
@@ -1624,17 +2149,62 @@ msgstr "Sintetis"
 msgid "Synthetic Indices"
 msgstr "Indeks Sintetis"
 
+msgid "Take a photo"
+msgstr ""
+
+msgid "Take a photo of the back of your card"
+msgstr ""
+
+msgid "Take a photo of the back of your license"
+msgstr ""
+
+msgid "Take a photo of the front of your card"
+msgstr ""
+
+msgid "Take a photo of the front of your license"
+msgstr ""
+
+msgid "Take a photo of your passport photo page"
+msgstr ""
+
+msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
+msgstr ""
+
+msgid "Take a photo with your phone"
+msgstr ""
+
+msgid "Take a selfie"
+msgstr ""
+
+msgid "Take a selfie showing your face"
+msgstr ""
+
+msgid "Take photo"
+msgstr ""
+
 msgid "Target"
 msgstr "Sasaran"
 
 msgid "Telephone"
 msgstr "Telepon"
 
-msgid "Tether"
-msgstr "Tether"
+msgid "Tether ERC20"
+msgstr ""
+
+msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
+msgstr ""
+
+msgid "Tether Omni"
+msgstr ""
+
+msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
+msgstr ""
 
 msgid "Th"
 msgstr "Kam"
+
+msgid "Thank you"
+msgstr ""
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "Terima kasih karena telah mendaftar! Silahkan cek email Anda untuk melengkapi proses pendaftaran."
@@ -1705,11 +2275,17 @@ msgstr "Alamat email yang Anda sediakan sudah pernah di daftarkan. Jika Anda lup
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "Spot masuk adalah tik pertama setelah kontrak diproses oleh server kami."
 
+msgid "The link only works on mobile devices"
+msgstr ""
+
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "Jumlah maksimum token (%1) telah tercapai."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "Halaman yang Anda minta tidak dapat ditemukan. Mungkin berhubung sudah tidak tersedia lagi atau alamat salah. Silakan periksa jika terdapat salah pengetikkan."
+
+msgid "The photo should clearly show your document"
+msgstr ""
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "Alasan harus antara 5 dan 250 karakter"
@@ -1737,6 +2313,9 @@ msgstr "Terdapat error"
 
 msgid "There was some invalid character in an input field."
 msgstr "Terdapat beberapa karakter yang tidak berlaku pada kolom input."
+
+msgid "These are the documents most likely to show your current home address"
+msgstr ""
 
 msgid "This account is disabled"
 msgstr "Akun ini dinonaktifkan"
@@ -1768,14 +2347,29 @@ msgstr "Bagian ini diperlukan."
 msgid "This is a staging server - For testing purposes only"
 msgstr "Ini adalah staging server - Untuk tujuan pengujian saja"
 
+msgid "This is a top-10 common password"
+msgstr ""
+
+msgid "This is a top-100 common password"
+msgstr ""
+
+msgid "This is a very common password"
+msgstr ""
+
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Ini adalah batasan indikatif. Batasan aktual adalah spot masuk ditambah batasan offset."
+
+msgid "This is similar to a commonly used password"
+msgstr ""
 
 msgid "This is your %1 account."
 msgstr "Berikut adalah akun %1 Anda."
 
 msgid "This page is only available to logged out clients."
 msgstr "Halaman ini hanya tersedia untuk akses keluar klien."
+
+msgid "This password is on the blacklist"
+msgstr ""
 
 msgid "Thursday"
 msgstr "Kamis"
@@ -1807,14 +2401,29 @@ msgstr "Time out harus setelah hari ini."
 msgid "Timed out until"
 msgstr "Waktu habis hingga"
 
+msgid "Tips"
+msgstr ""
+
+msgid "Tips to take a good selfie"
+msgstr ""
+
 msgid "To account: "
 msgstr "Ke akun: "
+
+msgid "To open a bank account, we will need to verify your identity."
+msgstr ""
+
+msgid "To smoothly verify you, we need a better photo"
+msgstr ""
 
 msgid "Today"
 msgstr "Hari ini"
 
 msgid "Token"
 msgstr "Token"
+
+msgid "Too many failed attempts"
+msgstr ""
 
 msgid "Top up error"
 msgstr "Isi ulang error"
@@ -1867,17 +2476,29 @@ msgstr "Trading contract for difference (CFDs) pada Indeks Sintetis mungkin tida
 msgid "Trading is unavailable at this time."
 msgstr "Trading tidak tersedia untuk saat ini."
 
+msgid "Trading statictics report"
+msgstr ""
+
 msgid "Transaction ID"
 msgstr "ID Transaksi"
 
 msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "Transaksi dilakukan oleh %1 (App ID: %2)"
 
+msgid "True USD"
+msgstr ""
+
 msgid "Try our %1Synthetic Indices%2."
 msgstr "Coba %1Indeks Sintetis%2 kami."
 
 msgid "Try our other markets."
 msgstr "Coba pasar kami lainnya."
+
+msgid "Try using a JPG or PNG file"
+msgstr ""
+
+msgid "Try using another file type."
+msgstr ""
 
 msgid "Tu"
 msgstr "Kam"
@@ -1886,19 +2507,31 @@ msgid "Tuesday"
 msgstr "Selasa"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Total pembelian"
 
 msgid "Type"
 msgstr "Jenis"
 
+msgid "USD Coin"
+msgstr ""
+
+msgid "USDK"
+msgstr ""
+
 msgid "Unable to read file %1"
 msgstr "Tidak dapat membaca file %1"
+
+msgid "Unavailable"
+msgstr ""
 
 msgid "Understood"
 msgstr "Dimengerti"
 
 msgid "Unknown OS"
 msgstr "OS tidak diketahui"
+
+msgid "Unsupported browser"
+msgstr ""
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "Hingga %1 desimal diperbolehkan."
@@ -1912,11 +2545,56 @@ msgstr "Acara Mendatang"
 msgid "Upgrade now"
 msgstr "Upgrade sekarang"
 
+msgid "Upload"
+msgstr ""
+
+msgid "Upload a selfie from your computer"
+msgstr ""
+
+msgid "Upload anyway"
+msgstr ""
+
+msgid "Upload back of card from your computer"
+msgstr ""
+
+msgid "Upload back of license from your computer"
+msgstr ""
+
+msgid "Upload front of card from your computer"
+msgstr ""
+
+msgid "Upload front of license from your computer"
+msgstr ""
+
+msgid "Upload passport photo page"
+msgstr ""
+
+msgid "Upload passport photo page from your computer"
+msgstr ""
+
+msgid "Upload photo"
+msgstr ""
+
+msgid "Uploads successful"
+msgstr ""
+
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "Kode verifikasi salah. Silahkan gunakan link yang dikirim ke email Anda."
 
+msgid "Verification complete"
+msgstr ""
+
 msgid "Verification required"
 msgstr "Verifikasi diperlukan"
+
+msgid "Verify Identity"
+msgstr ""
 
 msgid "Verify Reset Password"
 msgstr "Verifikasi Reset Kata Sandi"
@@ -1930,7 +2608,7 @@ msgstr "Lihat"
 msgid "View chart"
 msgstr "Lihat chart"
 
-msgid "View statement"
+msgid "View from camera"
 msgstr ""
 
 msgid "Virtual"
@@ -1948,14 +2626,32 @@ msgstr "Menunggu tik akhir."
 msgid "We"
 msgstr "Kami"
 
+msgid "We cannot verify you without using your camera"
+msgstr ""
+
 msgid "We'd love to hear what you think."
 msgstr "Kami ingin mendengar pendapat Anda."
+
+msgid "We'll compare it with your document"
+msgstr ""
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr "Untuk meningkatkan produk dan layanan kami, dan untuk memahami kebutuhan Anda dengan lebih baik, kami ingin mewawancarai Anda melalui telepon mengenai apa yang Anda sukai dan tidak mengenai kami dan dimana kami dapat melakukan perbaikan untuk menjadi lebih baik."
 
+msgid "We're now ready to verify your identity"
+msgstr ""
+
+msgid "We've sent a secure link to %{number}"
+msgstr ""
+
 msgid "Wednesday"
 msgstr "Rabu"
+
+msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "When prompted, you must enable camera access to continue"
+msgstr ""
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "Setelah mengklik \"OK\" Anda akan dikecualikan dari trading hingga tanggal yang dipilih."
@@ -1980,6 +2676,9 @@ msgstr "Penarikan dinonaktifkan"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Fasilitas penarikan akun Anda dinonaktifkan. Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
+
+msgid "Would you like to check your statement first? %1Check Statement%2"
+msgstr ""
 
 msgid "Yes"
 msgstr "Ya"
@@ -2014,11 +2713,11 @@ msgstr "Anda tidak dapat lagi mengubah mata uang karena Anda telah mendaftar aku
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr "Anda tidak dapat lagi mengubah mata uang karena sudah melakjukan deposit perdana."
 
+msgid "You can now return to your computer to continue"
+msgstr ""
+
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "Anda dapat mengisi ulang akun demo Anda dengan tambahan %1 jika saldo Anda %2 atau kurang."
-
-msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
-msgstr "Anda dapat mengisi ulang akun virtual Anda dengan tambahan %1 jika saldo Anda %2 atau kurang."
 
 msgid "You did not change anything."
 msgstr "Anda tidak melakukan perubahan."
@@ -2035,17 +2734,17 @@ msgstr "Anda telah menarik dana sebesar %1%2."
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
 msgstr "Anda tidak memiliki dana yang cukup di akun Binary Anda, silahkan <a href=\"%1\">tambah dana</a>."
 
+msgid "You have insufficient funds in your MT5 account."
+msgstr ""
+
 msgid "You have not granted access to any applications."
 msgstr "Anda belum diberikan akses ke dalam aplikasi apapun."
-
-msgid "You have reached the limit."
-msgstr "Anda telah mencapai batas."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "Anda telah mencapai batas tingkat permintaan per detik. Silakan coba lagi nanti."
 
-msgid "You have reached the withdrawal limit."
-msgstr "Anda telah mencapai batas penarikan."
+msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
+msgstr ""
 
 msgid "You have sold this contract at %1 %2"
 msgstr "Anda telah menjual kontrak pada %1 %2"
@@ -2089,14 +2788,17 @@ msgstr "Anda akan memperoleh hasil jika harga pasar tidak berakhir pada angka ya
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "Anda akan memperoleh hasil jika harga pasar berakhir pada angka yang Anda pilih."
 
+msgid "You'll need to restart your verification on your computer"
+msgstr ""
+
+msgid "You've made no transactions of this type up to this date."
+msgstr ""
+
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "Batasan penarikan %1 hari Anda saat ini adalah %2%3."
 
 msgid "Your account has no Login/Logout activity."
 msgstr "Akun Anda tidak memiliki aktivitas Login/Logout."
-
-msgid "Your account has no trading activity."
-msgstr "Akun Anda tidak memiliki aktivitas trading."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Akun Anda telah terbukti dan batasan penarikan Anda telah dihapuskan."
@@ -2116,8 +2818,14 @@ msgstr "Perubahan Anda telah berhasil diperbarui."
 msgid "Your changes have been updated."
 msgstr "Perubahan Anda telah diperbarui."
 
+msgid "Your computer may take a few seconds to update"
+msgstr ""
+
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "Saldo akun demo Anda saat ini adalah %1 atau kurang. Anda dapat mengisi ulang akun Anda dengan tambahan %2."
+
+msgid "Your face is needed in the selfie"
+msgstr ""
 
 msgid "Your fiat account's currency is currently set to %1."
 msgstr "Mata uang akun fiat Anda saat ini adalah %1."
@@ -2125,11 +2833,20 @@ msgstr "Mata uang akun fiat Anda saat ini adalah %1."
 msgid "Your fiat account's currency is set to %1."
 msgstr "Mata uang akun fiat Anda diatur sebagai %1."
 
+msgid "Your link will expire in one hour"
+msgstr ""
+
+msgid "Your mobile link will expire in one hour"
+msgstr ""
+
+msgid "Your password cannot be the same as your email address."
+msgstr ""
+
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Kata sandi Anda sudah berhasil dibuat ulang. Silahkan akes akun Anda menggunakan kata sandi baru."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Kata sandi yang Anda gunakan merupakan kata sandi paling umum digunakan di internet. Silakan pilih kata sandi yang unik."
+msgid "Your preferred time interval between each report:"
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Permohonan klien profesional Anda %1tidak disetujui%2."
@@ -2161,8 +2878,8 @@ msgstr "Referensi transaksi Anda adalah"
 msgid "Your transaction reference number is %1"
 msgstr "Nomor referensi transaksi Anda adalah %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "Saldo akun virtual Anda saat ini adalah %1 atau kurang. Anda dapat mengisi ulang akun Anda dengan tambahan %2."
+msgid "Your virtual balance has been reset."
+msgstr ""
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Browser web Anda (%1) sudah ketinggalan zaman yang dapat mempengaruhi pengalaman trading Anda. Lanjutkan dengan risiko sendiri. %2Perbarui browser%3"
@@ -2176,8 +2893,14 @@ msgstr "akun"
 msgid "accounts"
 msgstr "akun"
 
+msgid "back"
+msgstr ""
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "opsi binary, forex, trading forex, online trading, trading finansial, trading binary, trading indeks, indeks trading, trading bursa saham, trading forex, trading komoditas, strategi opsi binary, broker binary, trading binary, platform trading opsi binary, strategi binary, finansial, investasi, trading"
+
+msgid "close"
+msgstr ""
 
 msgid "day"
 msgstr "hari"
@@ -2187,6 +2910,9 @@ msgstr "hari"
 
 msgid "details"
 msgstr "perincian"
+
+msgid "e.g. United States"
+msgstr ""
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "misalnya frontend.binaryws.com"
@@ -2212,9 +2938,6 @@ msgstr "masuk"
 msgid "logout"
 msgstr "keluar"
 
-msgid "million"
-msgstr "juta"
-
 msgid "minute"
 msgstr "menit"
 
@@ -2224,6 +2947,12 @@ msgstr "menit"
 msgid "numbers"
 msgstr "nomor"
 
+msgid "or"
+msgstr ""
+
+msgid "or upload photo – no scans or photocopies"
+msgstr ""
+
 msgid "second"
 msgstr "detik"
 
@@ -2232,9 +2961,6 @@ msgstr "detik"
 
 msgid "space"
 msgstr "ruang"
-
-msgid "thousand"
-msgstr "ribu"
 
 msgid "tick"
 msgstr "tik"
@@ -2250,9 +2976,6 @@ msgstr "hari ini, Jumat"
 
 msgid "virtual money credit to account"
 msgstr "dana virtual dikreditkan kedalam akun"
-
-msgid "years"
-msgstr "tahun"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."

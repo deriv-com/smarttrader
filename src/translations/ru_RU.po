@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-07-28 02:25\n"
+"PO-Revision-Date: 2021-05-31 09:36\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
+
+msgid " (Region added)"
+msgstr ""
+
+msgid " (Temporarily unavailable)"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 Счёт %2"
@@ -35,13 +41,13 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Вы успешно перевели средства %1 со счёта %2 на счёт %3. Номер транзакции: %4"
 
 msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 открывает Вам простой способ работы на финансовых рынках. Заключайте контракты на сумму от $1 USD на ведущих валютных парах, сырьевых рынках, а также фондовых и синтетических индексах."
+msgstr "%1 открывает вам простой способ работы на финансовых рынках. Заключайте контракты на сумму от 1 USD на ведущих валютных парах, сырьевых рынках, а также фондовых и синтетических индексах."
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "%1 зачислено на Ваш демо-счёт: %2."
+msgstr "%1 зачислено на ваш демо-счёт MT5: %2."
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr "%1 зачислено на Ваш демо-счет: %2."
+msgstr "%1 зачислено на ваш демо-счет: %2."
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
 msgstr "Вывод средств %1 со счёта %2 на счёт %3 завершен. Номер транзакции: %4"
@@ -50,10 +56,19 @@ msgid "%1Manage your accounts%2"
 msgstr "%1Управление счетами%2"
 
 msgid "%1No, change my fiat account's currency now%2"
-msgstr "%1Нет, я хочу изменить валюту моего фидуциарного счёта%2"
+msgstr "%1Нет, я хочу изменить валюту моего фиатного счёта%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1Вернуться к торговле%2"
+
+msgid "1. This link was sent by you"
+msgstr ""
+
+msgid "2. Your desktop window stays open"
+msgstr ""
+
+msgid "A word by itself is easy to guess"
+msgstr ""
 
 msgid "AM"
 msgstr "утра"
@@ -77,7 +92,7 @@ msgid "Acknowledge"
 msgstr "Подтвердить"
 
 msgid "Action"
-msgstr "Акт"
+msgstr "Действие"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Добавьте +/–, чтобы определить оффсет барьера. Например, +0.005 означает, что барьер будет на 0.005 выше входной спот-котировки."
@@ -85,26 +100,44 @@ msgstr "Добавьте +/–, чтобы определить оффсет б�
 msgid "Add Deriv account"
 msgstr "Добавить счет Deriv"
 
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
 msgid "Adjust trade parameters"
 msgstr "Изменить параметры контракта"
 
 msgid "Admin"
 msgstr "Администратор"
 
+msgid "Agree and accept"
+msgstr ""
+
+msgid "All details must be clear — nothing blurry"
+msgstr ""
+
 msgid "All markets are closed now. Please try again later."
 msgstr "В данное время все рынки закрыты. Пожалуйста, попробуйте позже."
+
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+msgid "Allow camera access"
+msgstr ""
 
 msgid "Allow equals"
 msgstr "Разрешить равные значения"
 
 msgid "Already have an account?"
-msgstr "У Вас уже есть счёт?"
+msgstr "У вас уже есть счет?"
 
 msgid "Amount"
 msgstr "Количество"
 
 msgid "Amount in"
 msgstr "Сумма в"
+
+msgid "An error occurred while loading the component"
+msgstr ""
 
 msgid "Apply now as a professional investor"
 msgstr "Подайте заявку на статус профессионального инвестора"
@@ -119,10 +152,10 @@ msgid "Are you sure that you want to permanently delete the token"
 msgstr "Вы уверены, что хотите навсегда удалить ключ?"
 
 msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr "Вы уверены, что хотите навсегда отказаться от доступа к приложению"
+msgstr "Вы уверены, что хотите навсегда отказаться от доступа к приложению?"
 
 msgid "Are you sure you want to create a fiat account in %1?"
-msgstr "Вы уверены, что хотите открыть фидуциарный счёт на %1?"
+msgstr "Вы уверены, что хотите открыть фиатный счёт в %1?"
 
 msgid "Are you sure you want to create your %1 account now?"
 msgstr "Вы уверены, что хотите открыть счёт %1 сейчас?"
@@ -155,13 +188,13 @@ msgid "Asset"
 msgstr "Актив"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "Если спот-котировка движется в направлении, противоположном Вашему прогнозу, барьер на момент Reset будет изменён согласно котировке."
+msgstr "Если спот-котировка движется в направлении, противоположном вашему прогнозу, барьер на момент Reset будет изменён согласно котировке."
 
 msgid "Audit"
 msgstr "Аудит"
 
-msgid "Audit page"
-msgstr "Страница аудита"
+msgid "Audit Page"
+msgstr ""
 
 msgid "Aug"
 msgstr "Авг"
@@ -177,6 +210,21 @@ msgstr "Доступные рынки"
 
 msgid "Average"
 msgstr "Среднее"
+
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+msgid "Avoid recent years"
+msgstr ""
+
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+msgid "Avoid sequences"
+msgstr ""
+
+msgid "Avoid years that are associated with you"
+msgstr ""
 
 msgid "Back to trading"
 msgstr "Вернуться к трейдингу"
@@ -196,14 +244,17 @@ msgstr "Оффсет барьера"
 msgid "Bid"
 msgstr "Бид"
 
+msgid "Binance USD"
+msgstr ""
+
 msgid "Binary Coin"
 msgstr "Binary Coin"
 
-msgid "Binary.com currently supports Tether (USDT). You can only deposit USDT from your Omni Layer-enabled wallet into your Binary.com account."
-msgstr "В настоящее время Binary.com поддерживает Tether (USDT). Вы можете пополнять счет Binary.com в USDT только со своего кошелька с поддержкой Omni Layer."
-
 msgid "Bitcoin"
 msgstr "Bitcoin"
+
+msgid "Blurry photo detected"
+msgstr ""
 
 msgid "Browser"
 msgstr "Браузер"
@@ -215,13 +266,13 @@ msgid "Buy price"
 msgstr "Цена покупки"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr "Покупая контракт %1\"Закрытие-Мин.\"%2, Вы выиграете разницу между %1ценой закрытия%2 и %1минимальной ценой%2, достигнутой в период действия контракта, помноженную на мультипликатор."
+msgstr "Покупая контракт %1\"Закрытие-Мин.\"%2, вы выиграете разницу между %1ценой закрытия%2 и %1минимальной ценой%2, достигнутой в период действия контракта, умноженную на мультипликатор."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr "Покупая контракт %1\"Макс.-Закрытие\"%2, Вы выигрываете разницу между %1максимумом%2 и %1ценой закрытия%2, помноженную на размер множителя."
+msgstr "Покупая контракт %1\"Макс.-Закрытие\"%2, вы выигрываете разницу между %1максимумом%2 и %1ценой закрытия%2, умноженную на мультипликатор."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr "Покупая контракт %1\"Макс.-Мин.\"%2, Вы выигрываете разницу между %1максимумом%2 и %1минимумом%2, достигнутую в период действия контракта и помноженную на размер множителя."
+msgstr "Покупая контракт %1\"Макс.-Мин.\"%2, вы выигрываете разницу между %1максимумом%2 и %1минимумом%2, достигнутую в период действия контракта и умноженную на мультипликатор."
 
 msgid "Call Spread"
 msgstr "Колл спред"
@@ -229,11 +280,26 @@ msgstr "Колл спред"
 msgid "Call Spread/Put Spread"
 msgstr "Колл спред/Пут спред"
 
+msgid "Camera access is denied"
+msgstr ""
+
+msgid "Camera not detected"
+msgstr ""
+
+msgid "Camera not working"
+msgstr ""
+
+msgid "Camera not working?"
+msgstr ""
+
 msgid "Can you spare 15 minutes?"
-msgstr "Можете уделить 15 минут Вашего времени?"
+msgstr "Можете уделить 15 минут вашего времени?"
 
 msgid "Cancel"
 msgstr "Отмена"
+
+msgid "Capitalization doesn't help very much"
+msgstr ""
 
 msgid "Cashier"
 msgstr "Касса"
@@ -245,7 +311,7 @@ msgid "Change API Endpoint"
 msgstr "Изменить конечную точку API"
 
 msgid "Change Password"
-msgstr "Сменить пароль"
+msgstr "Изменить пароль"
 
 msgid "Change currency"
 msgstr "Изменить валюту"
@@ -254,19 +320,40 @@ msgid "Chart"
 msgstr "График"
 
 msgid "Chart is not available for this underlying."
-msgstr "График данного актива недоступен."
+msgstr "График этого актива недоступен."
 
 msgid "Charting for this underlying is delayed"
 msgstr "Графики для этого инструмента рисуются с задержкой"
 
+msgid "Check back here to finish the submission"
+msgstr ""
+
+msgid "Check selfie"
+msgstr ""
+
+msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
+msgstr ""
+
+msgid "Check that your number is correct"
+msgstr ""
+
 msgid "Check your connection."
 msgstr "Проверьте подключение к интернету."
+
+msgid "Check your image"
+msgstr ""
+
+msgid "Check your mobile"
+msgstr ""
 
 msgid "Checked"
 msgstr "Проверено"
 
 msgid "Checking"
 msgstr "Проверка"
+
+msgid "Choose document"
+msgstr ""
 
 msgid "Christmas Day"
 msgstr "Рождество"
@@ -277,11 +364,17 @@ msgstr "Нажмите OK, чтобы продолжить."
 msgid "Click here to open a Financial Account"
 msgstr "Нажмите здесь для открытия Финансового счёта"
 
+msgid "Click here to open a Gaming account"
+msgstr ""
+
 msgid "Click here to open a Real Account"
 msgstr "Нажмите здесь для открытия Реального счёта"
 
 msgid "Close"
 msgstr "Закрытие"
+
+msgid "Close identity verification screen"
+msgstr ""
 
 msgid "Close time"
 msgstr "Время закрытия"
@@ -304,17 +397,44 @@ msgstr "Закрывается рано (в 21:00)"
 msgid "Commodities"
 msgstr "Сырьевые товары"
 
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
 msgid "Complete details"
 msgstr "Заполните данные"
 
 msgid "Compressing Image"
 msgstr "Уменьшение изображения"
 
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr ""
+
+msgid "Connected to your mobile"
+msgstr ""
+
 msgid "Connecting to server"
 msgstr "Соединение с сервером"
 
+msgid "Connection lost"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Continue on phone"
+msgstr ""
+
+msgid "Continue on your phone"
+msgstr ""
+
 msgid "Continue trading"
 msgstr "Продолжить торговлю"
+
+msgid "Continue with the verification"
+msgstr ""
 
 msgid "Contract"
 msgstr "Контракт"
@@ -350,13 +470,31 @@ msgid "Contract will be sold at the prevailing market price when the request is 
 msgstr "Контракт будет продан по цене, действующей на момент получения запроса нашими серверами. Эта цена может отличаться от указанной в настоящее время."
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "Купленные контракты"
 
 msgid "Contracts sold"
+msgstr "Проданные контракты"
+
+msgid "Copied"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy the link to your mobile browser"
+msgstr ""
+
+msgid "Copy the link to your phone"
 msgstr ""
 
 msgid "Counterparty"
 msgstr "Контрагент"
+
+msgid "Country not found"
+msgstr ""
 
 msgid "Country of Residence"
 msgstr "Страна проживания"
@@ -386,6 +524,9 @@ msgid "Current time"
 msgstr "Текущее время"
 
 msgid "Current time:"
+msgstr "Текущее время:"
+
+msgid "Cut-off image detected"
 msgstr ""
 
 msgid "Date"
@@ -393,6 +534,9 @@ msgstr "Дата"
 
 msgid "Date and Time"
 msgstr "Дата и время"
+
+msgid "Dates are often easy to guess"
+msgstr ""
 
 msgid "Deal cancel. fee"
 msgstr "Комиссия за отмену"
@@ -428,7 +572,7 @@ msgid "Deposit"
 msgstr "Пополнение"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Пополнение счёта и вывод средств отключены на Вашем счету. Проверьте свою электронную почту для получения более подробной информации."
+msgstr "На вашем счете отключены пополнение и вывод средств. Проверьте свою электронную почту для получения более подробной информации."
 
 msgid "Deriv Accounts"
 msgstr "Счета Deriv"
@@ -469,20 +613,47 @@ msgstr "Цифровые"
 msgid "Disable"
 msgstr "Отключить"
 
+msgid "Dismiss alert"
+msgstr ""
+
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr "Вы хотите, чтобы данный счёт был фидуциарным или криптосчётом? Пожалуйста, выберите:"
+msgstr "Вы хотите, чтобы этот счёт был фиатным или крипто-счётом? Пожалуйста, выберите:"
 
 msgid "Do you wish to continue?"
 msgstr "Хотите продолжить?"
 
+msgid "Document example"
+msgstr ""
+
+msgid "Document uploaded"
+msgstr ""
+
+msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
+msgstr ""
+
+msgid "Documents uploaded"
+msgstr ""
+
+msgid "Documents you can use to verify your identity"
+msgstr ""
+
 msgid "Does Not Touch"
 msgstr "Нет касания"
+
+msgid "Don't refresh this page"
+msgstr ""
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "Не хотите торговать в %1? Вы можете открыть другой криптовалютный счёт."
 
+msgid "Driver's license"
+msgstr ""
+
 msgid "Driving licence"
 msgstr "Водительское удостоверение"
+
+msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
+msgstr ""
 
 msgid "Duration"
 msgstr "Длительность"
@@ -492,6 +663,9 @@ msgstr "Эл. адрес"
 
 msgid "Enable"
 msgstr "Активировать"
+
+msgid "Enable camera"
+msgstr ""
 
 msgid "End Time"
 msgstr "Окончание"
@@ -514,6 +688,15 @@ msgstr "Цена покупки контрактов Закончится вну
 msgid "Ends Outside"
 msgstr "Закончится вне"
 
+msgid "Enlarge image"
+msgstr ""
+
+msgid "Enter mobile number"
+msgstr ""
+
+msgid "Enter your mobile number:"
+msgstr ""
+
 msgid "Entry Spot"
 msgstr "Входная котировка"
 
@@ -523,17 +706,26 @@ msgstr "Входная котировка"
 msgid "Equals"
 msgstr "Равно"
 
-msgid "Ether"
-msgstr "Ether"
-
 msgid "Ether Classic"
 msgstr "Ether Classic"
+
+msgid "Ethereum"
+msgstr ""
 
 msgid "Even/Odd"
 msgstr "Чётное/Нечётное"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "Цена покупки контрактов Чётное/Нечётное будет возмещена, если контракт не закончится в течение 5 минут."
+
+msgid "Example of a blurry document"
+msgstr ""
+
+msgid "Example of a cut-off document"
+msgstr ""
+
+msgid "Example of a document with glare"
+msgstr ""
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "Период ограничения не может быть больше 5 лет."
@@ -562,8 +754,14 @@ msgstr "Срок истечения необходим для %1."
 msgid "Explanation"
 msgstr "Объяснение"
 
+msgid "Face forward and make sure your eyes are clearly visible"
+msgstr ""
+
+msgid "Face photo page"
+msgstr ""
+
 msgid "Failed"
-msgstr "Возникла ошибка"
+msgstr "Ошибка"
 
 msgid "Feb"
 msgstr "Фев"
@@ -572,10 +770,19 @@ msgid "February"
 msgstr "Февраль"
 
 msgid "Fiat"
-msgstr "Фидуциарные"
+msgstr "Фиатные"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "Размер файла (%1) превышает разрешенный лимит. Максимальный допустимый размер: %2"
+
+msgid "File not uploaded."
+msgstr ""
+
+msgid "File size exceeded."
+msgstr ""
+
+msgid "File type not supported"
+msgstr ""
 
 msgid "Final price"
 msgstr "Итоговая цена"
@@ -593,10 +800,13 @@ msgid "Finish"
 msgstr "Завершить"
 
 msgid "First line of home address"
-msgstr "Адрес (улица, дом, кв.)"
+msgstr "Первая строка адреса"
+
+msgid "Follow these steps to recover camera access:"
+msgstr ""
 
 msgid "Forex"
-msgstr "Форекс"
+msgstr "Forex"
 
 msgid "Fr"
 msgstr "Пт"
@@ -613,11 +823,35 @@ msgstr "Со счёта: "
 msgid "Front Side"
 msgstr "Лицевая сторона"
 
+msgid "Front and back"
+msgstr ""
+
 msgid "Gaming"
-msgstr "Игры"
+msgstr "Игровой"
+
+msgid "Gaming Account"
+msgstr ""
 
 msgid "Get %1"
 msgstr "Получить%1"
+
+msgid "Get link via SMS"
+msgstr ""
+
+msgid "Get secure link"
+msgstr ""
+
+msgid "Get your secure link"
+msgstr ""
+
+msgid "Glare detected"
+msgstr ""
+
+msgid "Go To Reports"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
 
 msgid "Go to statement"
 msgstr "Вернуться к выпискам"
@@ -625,11 +859,20 @@ msgstr "Вернуться к выпискам"
 msgid "Goes Outside"
 msgstr "Выйдет за пределы"
 
+msgid "Grant access to your camera from your browser settings"
+msgstr ""
+
+msgid "Great, that's everything we need"
+msgstr ""
+
 msgid "Guide"
 msgstr "Экскурс"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr "Соответственно, остаток средств, доступный для вывода, составляет всего %1%2, в зависимости от доступных средств на вашем счете."
+msgstr "Соответственно, остаток средств, доступный для вывода, составляет до %1%2, в зависимости от доступных средств на вашем счете."
+
+msgid "Here's how to do it:"
+msgstr ""
 
 msgid "High"
 msgstr "Макс."
@@ -676,11 +919,11 @@ msgstr "Выше/Ниже"
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "Цена покупки контрактов Выше/Ниже будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
 
-msgid "Hint: it would take approximately %1%2 to crack your password."
-msgstr "Подсказка: на взламывание вашего пароля уйдёт примерно %1%2."
-
 msgid "Hour"
 msgstr "Час."
+
+msgid "How to scan a QR code"
+msgstr ""
 
 msgid "I want to reapply"
 msgstr "Я хочу подать заявку повторно"
@@ -691,125 +934,131 @@ msgstr "Мне интересно"
 msgid "ID number is required for %1."
 msgstr "Номер ID необходим для %1."
 
+msgid "IDK"
+msgstr ""
+
 msgid "IP Address"
 msgstr "IP-адрес"
 
 msgid "Identity card"
 msgstr "Удостоверение личности"
 
+msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
+msgstr ""
+
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr "Если <strong>последняя котировка</strong> равна <strong>нижнему барьеру</strong> или <strong>верхнему барьеру</strong>, Вы не получаете прибыли."
+msgstr "Если <strong>последняя котировка</strong> равна <strong>нижнему барьеру</strong> или <strong>верхнему барьеру</strong>, вы не получите выплату."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "Если <strong>последняя котировка</strong> равна <strong>барьеру</strong> или <stronm g>новому барьеру (в случае его переустановки)</stronmg>, Вы не получаете прибыли."
+msgstr "Если <strong>последняя котировка</strong> равна <strong>барьеру</strong> или <stronm g>новому барьеру (в случае его переустановки)</stronmg>, вы не получите выплату."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
 msgstr "Вы не получите выплату, если <strong>котировка на выходе</strong> совпадёт с <strong>барьером</strong>."
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr "Если <strong>последний тик</strong> равен среднему значению тиков, Вы не получите прибыли."
+msgstr "Если <strong>последний тик</strong> равен среднему значению тиков, вы не получите выплату."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "Если Вы выберете \"Разрешить равные значения\", Вы получите выплату, если спот-котировка на выходе будет выше или равна входной спот-котировке в контрактах \"Выше\". Аналогичным образом, Вы получите выплату, если спот-котировка на выходе будет ниже или равна спот-котировке на входе в контрактах \"Ниже\"."
+msgstr "Если вы выберете \"Разрешить равные значения\", вы получите выплату, если спот-котировка на выходе будет выше или равна входной спот-котировке в контрактах \"Выше\". Аналогичным образом, вы получите выплату, если спот-котировка на выходе будет ниже или равна спот-котировке на входе в контрактах \"Ниже\"."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr "Если Вы выбираете \"Азиатские – Падение\", Вы выигрываете, если <strong>последняя котировка</strong> окажется <strong>ниже</strong>, чем <strong>общее среднее значение</strong> котировок."
+msgstr "Если вы выбираете \"Азиатские – Падение\", вы выигрываете, если <strong>последняя котировка</strong> окажется <strong>ниже</strong>, чем <strong>общее среднее значение</strong> котировок."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr "Если Вы выбираете \"Азиатские – Повышение\", Вы выигрываете, если <strong>последняя котировка</strong> окажется <strong>выше</strong>, чем <strong>общее среднее значение</strong> котировок."
+msgstr "Если вы выбираете \"Азиатские – Повышение\", вы выигрываете, если <strong>последняя котировка</strong> окажется <strong>выше</strong>, чем <strong>общее среднее значение</strong> котировок."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr "Если Вы выбираете \"Отличается\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки <strong>не соответствует</strong> Вашему <strong>прогнозу</strong>."
+msgstr "Если вы выбираете \"Отличается\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки <strong>не соответствует</strong> вашему <strong>прогнозу</strong>."
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Если Вы выбираете \"Нет касания\", Вы получаете прибыль, если рынок не коснется заданного <strong>барьера</strong> в течение <strong>действия контракта</strong>."
+msgstr "Если вы выбираете \"Нет касания\", вы получаете выплату, если рынок не коснется заданного <strong>барьера</strong> в течение <strong>срока действия контракта</strong>."
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr "Если Вы выбираете \"Закончится внутри\", Вы получите выплату, если <strong>выходная цена рынка</strong> окажется строго выше, чем <strong>Нижний барьер</strong> и строго ниже, чем <strong>Верхний барьер</strong>."
+msgstr "Если вы выбираете \"Закончится внутри\", вы получите выплату, если <strong>выходная цена рынка</strong> окажется строго выше, чем <strong>Нижний барьер</strong> и строго ниже, чем <strong>Верхний барьер</strong>."
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr "Если Вы выбираете \"Закончится вне\", Вы выиграете, если <strong>выходная цена рынка</strong> окажется ЛИБО строго выше, чем <strong>Верхний барьер</strong>, ЛИБО строго ниже, чем <strong>Нижний барьер</strong>."
+msgstr "Если вы выбираете \"Закончится вне\", вы выиграете, если <strong>выходная цена рынка</strong> окажется ЛИБО строго выше, чем <strong>Верхний барьер</strong>, ЛИБО строго ниже, чем <strong>Нижний барьер</strong>."
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr "Если Вы выбираете \"Чётная цифра\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>чётной (напр., 2, 4, 6, 8 или 0).</strong>"
+msgstr "Если вы выбираете \"Чётная цифра\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>чётной (напр., 2, 4, 6, 8 или 0).</strong>"
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"Ниже\", Вы выигрываете, если <strong>выходная котировка</strong> строго ниже, чем <strong>входная котировка</strong>."
+msgstr "Если вы выбираете \"Ниже\", вы выигрываете, если <strong>выходная котировка</strong> будет строго ниже, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Если Вы выбираете \"Выйдет за пределы\", Вы получите выплату, если рынок коснется либо <strong>верхнего</strong>, либо <strong>нижнего</strong> барьера в любое время в <strong>течение контракта</strong>."
+msgstr "Если вы выбираете \"Выйдет за пределы\", вы получите выплату, если рынок коснется либо <strong>верхнего</strong>, либо <strong>нижнего</strong> барьера в любое время в течение <strong>срока действия контракта</strong>."
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr "Если Вы выбираете \"Выше\", Вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>выбранный барьер</strong>."
+msgstr "Если вы выбираете \"Выше\", вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>выбранный барьер</strong>."
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"Выше\", Вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>спот-котировка на входе</strong>."
+msgstr "Если вы выбираете \"Выше\", вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>спот-котировка на входе</strong>."
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr "Если Вы выбираете \"Ниже\", Вы выигрываете, если <strong>выходная котировка</strong> строго ниже, чем <strong>выбранный барьер</strong>."
+msgstr "Если вы выбираете \"Ниже\", вы выигрываете, если <strong>выходная котировка</strong> строго ниже, чем <strong>выбранный барьер</strong>."
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"Ниже\", Вы выигрываете, если <strong>спот-котировка на выходе</strong> строго ниже, чем <strong>спот-котировка на входе</strong>."
+msgstr "Если вы выбираете \"Ниже\", вы выигрываете, если <strong>спот-котировка на выходе</strong> будет строго ниже, чем <strong>спот-котировка на входе</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr "Если Вы выбираете \"Совпадает\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки <strong>равна</strong> Вашему <strong>прогнозу.</strong>"
+msgstr "Если вы выбираете \"Совпадает\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки <strong>равна</strong> вашему <strong>прогнозу.</strong>"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr "Если Вы выбираете \"Нечётная цифра\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>нечётной (напр., 1, 3, 5, 7, или 9).</strong>"
+msgstr "Если вы выбираете \"Нечётная цифра\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>нечётной (напр., 1, 3, 5, 7, или 9).</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr "Если Вы выбираете \"Больше\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>больше Вашего прогноза.</strong>"
+msgstr "Если вы выбираете \"Больше\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>больше вашего прогноза.</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr "Если Вы выбираете \"Reset-Колл\", Вы получаете выплату, если спот-котировка на выходе будет строго выше входной спот-котировки или котировки на момент Reset."
+msgstr "Если вы выбираете \"Reset-Колл\", вы получаете выплату, если спот-котировка на выходе будет строго выше входной спот-котировки или котировки на момент Reset."
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr "Если Вы выбираете \"Reset-Пут\", Вы получаете выплату, если спот-котировка на выходе будет строго ниже входной спот-котировки или котировки на момент Reset."
+msgstr "Если вы выбираете \"Reset-Пут\", вы получаете выплату, если спот-котировка на выходе будет строго ниже входной спот-котировки или котировки на момент Reset."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"Выше\", Вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>входная котировка</strong>."
+msgstr "Если вы выбираете \"Выше\", вы выигрываете, если <strong>выходная котировка</strong> будет строго выше, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Если Вы выбираете \"Останется внутри\" (между), Вы получите выплату, если рынок останется между <strong>верхним</strong> и <strong>нижним</strong> барьером (не коснется ни одного из них) за все время <strong>действия контракта</strong>."
+msgstr "Если вы выбираете \"Останется внутри\" (между), вы получите выплату, если рынок останется между <strong>верхним</strong> и <strong>нижним</strong> барьером (не коснется ни одного из них) за все время <strong>действия контракта</strong>."
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Если Вы выбираете \"Касание\", Вы получаете прибыль, если рынок коснется заданного <strong>барьера</strong> в любое время в <strong>течение контракта</strong>."
+msgstr "Если вы выбираете \"Касание\", вы получаете выплату, если рынок коснется заданного <strong>барьера</strong> в любое время в течение <strong>срока действия контракта</strong>."
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr "Если Вы выбираете \"Меньше\", Вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>меньше Вашего прогноза.</strong>"
+msgstr "Если вы выбираете \"Меньше\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>меньше вашего прогноза.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"упадет\", Вы выигрываете, если рыночная цена ниже, чем <strong>входная котировка</strong>."
+msgstr "Если вы выбираете \"упадет\", вы выигрываете, если рыночная цена будет ниже, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr "Если Вы выбираете \"упадет\", Вы выигрываете, если рыночная цена ниже, чем входная котировка."
+msgstr "Если вы выбираете \"упадет\", вы выигрываете, если рыночная цена будет ниже, чем входная котировка."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr "Если Вы выбираете \"повысится\", Вы выигрываете, если рыночная цена выше, чем <strong>входная котировка</strong>."
+msgstr "Если вы выбираете \"повысится\", вы выигрываете, если рыночная цена будет выше, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr "Если Вы выбираете \"повысится\", Вы выигрываете, если рыночная цена выше, чем входная котировка."
+msgstr "Если вы выбираете \"повысится\", вы выигрываете, если рыночная цена будет выше, чем входная котировка."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr "Если Вы выбираете %1\"Высокой тик\"%2, Вы получите выплату, если выбранный тик будет %1наибольшим среди следующих пяти тиков%2."
+msgstr "Если вы выбираете %1\"Высокой тик\"%2, вы получите выплату, если выбранный тик будет %1наибольшим из следующих пяти тиков%2."
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr "Если Вы выбираете %1\"Низкий тик\"%2, Вы получите выплату, если выбранный тик будет %1наименьшим из следующих пяти тиков%2."
+msgstr "Если вы выбираете %1\"Низкий тик\"%2, вы получите выплату, если выбранный тик будет %1наименьшим из следующих пяти тиков%2."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "Выбрав %1\"Только вниз\"%2, Вы получите выплату, если несколько тиков подряд после %1входной котировки%2 будут последовательно снижаться.%3Если один из тиков покажет рост или будет равен одному из предыдущих тиков, Вы не получите выплату."
+msgstr "Выбрав %1\"Только вниз\"%2, вы получите выплату, если несколько тиков подряд после %1входной котировки%2 будут последовательно снижаться.%3Если один из тиков покажет рост или будет равен одному из предыдущих тиков, вы не получите выплату."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "Выбрав %1\"Только вверх\"%2, Вы получите выплату, если несколько тиков подряд после %1входной котировки%2 будут последовательно возрастать.%3Если любой тик покажет снижение или будет равен одному из предыдущих тиков, Вы не получите выплату."
+msgstr "Выбрав %1\"Только вверх\"%2, вы получите выплату, если несколько тиков подряд после %1входной котировки%2 будут последовательно возрастать.%3Если любой тик покажет снижение или будет равен одному из предыдущих тиков, вы не получите выплату."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "Если вы выбираете <strong>время начала</strong> контракта в будущем, он <strong>начнется</strong> в выбранное время, а <strong>входная котировка</strong> будет действительной на тот момент ценой."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "Если Вы выбираете <strong>время начала</strong> контракта \"Сейчас\", контракт <strong>закончится</strong> через выбранное количество минут/часов после <strong>времени начала</strong> контракта (если он длится менее дня), или в конце выбранного торгового дня (если контракт длится один день или более)."
+msgstr "Если вы выбираете <strong>время начала</strong> контракта \"Сейчас\", контракт <strong>закончится</strong> через выбранное количество минут/часов после <strong>времени начала</strong> контракта (если он длится менее дня), или в конце выбранного торгового дня (если контракт длится один день или более)."
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr "Если Вы выбираете определенное <strong>время окончания</strong>, <strong>временем окончания</strong> контракта будет выбранное Вами время."
+msgstr "Если вы выбираете определенное <strong>время окончания</strong>, <strong>временем окончания</strong> контракта будет выбранное вами время."
 
 msgid "In the EU, financial binary options are only available to professional investors."
 msgstr "Финансовые контракты на бинарных опционах в ЕС доступны только для профессиональных инвесторов."
@@ -841,6 +1090,21 @@ msgstr "Неправильный код подтверждения."
 msgid "Investment"
 msgstr "Инвестиции"
 
+msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
+msgstr ""
+
+msgid "It may take a few minutes to arrive"
+msgstr ""
+
+msgid "It must be an official photo ID"
+msgstr ""
+
+msgid "It will only take a couple of minutes."
+msgstr ""
+
+msgid "It’ll take longer to verify you if we can’t read it"
+msgstr ""
+
 msgid "Jan"
 msgstr "Янв"
 
@@ -862,6 +1126,9 @@ msgstr "Июнь"
 msgid "Jurisdiction"
 msgstr "Юрисдикция"
 
+msgid "Keep this window open while using your mobile"
+msgstr ""
+
 msgid "Language settings"
 msgstr "Настройки языка"
 
@@ -878,10 +1145,19 @@ msgid "Last Used"
 msgstr "Последние"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr "Статистика последних десятичных в последних %1 тиков для %2"
+msgstr "Статистика последних десятичных последних %1 тиков для %2"
+
+msgid "Linked to your computer"
+msgstr ""
 
 msgid "Litecoin"
 msgstr "Litecoin"
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
 
 msgid "Log in"
 msgstr "Вход"
@@ -893,16 +1169,19 @@ msgid "Log out"
 msgstr "Выход"
 
 msgid "Login ID"
-msgstr ""
+msgstr "Логин"
 
-msgid "Login time:"
+msgid "Login at:"
 msgstr ""
 
 msgid "Lookbacks"
 msgstr "Oпционы Lookback"
 
+msgid "Looks like you took too long"
+msgstr ""
+
 msgid "Loss"
-msgstr "Потери"
+msgstr "Убыток"
 
 msgid "Low"
 msgstr "Мин."
@@ -925,11 +1204,50 @@ msgstr "Ниже"
 msgid "Lower or equal"
 msgstr "Ниже или равно"
 
+msgid "MT5"
+msgstr ""
+
 msgid "MT5 withdrawal disabled"
 msgstr "Вывод средств MT5 отключен"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Вывод средств отключен на Вашем счету MT5. Проверьте свою электронную почту для получения более подробной информации."
+msgstr "На вашем счете MT5 отключен вывод средств. Проверьте свою электронную почту для получения более подробной информации."
+
+msgid "Make sure all of the document is in the photo"
+msgstr ""
+
+msgid "Make sure details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure everything is clear"
+msgstr ""
+
+msgid "Make sure full document is visible"
+msgstr ""
+
+msgid "Make sure your card details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your device has a working camera"
+msgstr ""
+
+msgid "Make sure your device's camera works"
+msgstr ""
+
+msgid "Make sure your license details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your passport details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your permit details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your selfie clearly shows your face"
+msgstr ""
+
+msgid "Make sure§"
+msgstr ""
 
 msgid "Mar"
 msgstr "Мар"
@@ -941,7 +1259,7 @@ msgid "Matches/Differs"
 msgstr "Совпадение/Отличие"
 
 msgid "Maximum multiplier of 1000."
-msgstr "Максимальный множитель 1000."
+msgstr "Максимальный мультипликатор 1000."
 
 msgid "Maximum payout"
 msgstr "Макс. выплата"
@@ -968,19 +1286,37 @@ msgid "Monday"
 msgstr "Понедельник"
 
 msgid "More information can be found in an email sent to you."
-msgstr "Дополнительная информация указана в отправленном Вам письме."
+msgstr "Дополнительная информация указана в отправленном вам письме."
+
+msgid "Move away from direct light"
+msgstr ""
+
+msgid "Move away from direct light — no glare"
+msgstr ""
+
+msgid "Multi-Collateral"
+msgstr ""
+
+msgid "Multiple faces found"
+msgstr ""
 
 msgid "Multiplier"
 msgstr "Мультипликатор"
 
 msgid "Multiplier Down"
-msgstr "Множитель Вниз"
+msgstr "Мультипликатор Вниз"
 
 msgid "Multiplier Up"
-msgstr "Множитель Вверх"
+msgstr "Мультипликатор Вверх"
+
+msgid "Must be under 10MB."
+msgstr ""
 
 msgid "Name"
 msgstr "Имя и фамилия"
+
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
 
 msgid "Net profit"
 msgstr "Чистая прибыль"
@@ -1015,6 +1351,15 @@ msgstr "Валюта не выбрана"
 msgid "No currency selected"
 msgstr "Валюта не выбрана"
 
+msgid "No document detected"
+msgstr ""
+
+msgid "No face found"
+msgstr ""
+
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
+
 msgid "No notifications"
 msgstr "Нет уведомлений"
 
@@ -1034,7 +1379,7 @@ msgid "Note:"
 msgstr "Примечание:"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "Примечание: Вы можете открыть только один счёт в фидуциарной валюте. Валюту фидуциарного счёта можно изменить до того, как Вы первый раз пополните данный счёт или откроете счёт MT5. Также Вы можете открыть по одному счёту в каждой доступной криптовалюте."
+msgstr "Примечание: вы можете открыть только один счёт в фиатной валюте. Валюту фиатного счёта можно изменить до того, как вы первый раз пополните этот счёт или откроете счёт MT5. Также вы можете открыть по одному счёту в каждой доступной криптовалюте."
 
 msgid "Notifications"
 msgstr "Уведомления"
@@ -1052,7 +1397,7 @@ msgid "Number of ticks:"
 msgstr "Кол-во тиков:"
 
 msgid "OAuth App ID"
-msgstr "Номер приложения OAuth"
+msgstr "ID приложения OAuth"
 
 msgid "Oct"
 msgstr "Окт"
@@ -1062,6 +1407,9 @@ msgstr "Октябрь"
 
 msgid "Offline"
 msgstr "Не в сети"
+
+msgid "Once you've finished we'll take you to the next step"
+msgstr ""
 
 msgid "Online"
 msgstr "Онлайн"
@@ -1094,10 +1442,13 @@ msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID n
 msgstr "Для номера ID разрешены только буквы, цифры, пробел, нижнее подчёркивание, и дефис (%1)."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr "Допускаются только буквы латинского алфавита, пробелы, дефисы, точки или апострофы."
+msgstr "Допускаются только буквы латинского алфавита, пробелы, дефисы, точки и апострофы."
+
+msgid "Only your face can be in the selfie"
+msgstr ""
 
 msgid "Oops... Page Not Available"
-msgstr "Страница недоступна"
+msgstr "Упс... Страница недоступна"
 
 msgid "Open a Financial Account"
 msgstr "Открыть Финансовый счёт"
@@ -1108,17 +1459,23 @@ msgstr "Открыть Реальный счёт"
 msgid "Open a free account"
 msgstr "Открыть бесплатный счет"
 
-msgid "Open contracts"
-msgstr ""
-
 msgid "Open positions"
 msgstr "Открытые позиции"
+
+msgid "Open the link and complete the tasks"
+msgstr ""
+
+msgid "Open the link on your mobile"
+msgstr ""
+
+msgid "Open your new bank account"
+msgstr ""
 
 msgid "Opens"
 msgstr "Открывается"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "Торговля опционами может вызвать зависимость, как и любая другая деятельность, доведенная до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчёт о ваших сделках и счетах."
 
 msgid "Over/Under"
 msgstr "Больше/Меньше"
@@ -1132,17 +1489,23 @@ msgstr "вечера"
 msgid "Passport"
 msgstr "Паспорт"
 
+msgid "Passport photo page"
+msgstr ""
+
 msgid "Password is not strong enough."
 msgstr "Пароль недостаточно надёжный."
 
-msgid "Password should have lower and uppercase letters with numbers."
-msgstr "Пароль должен содержать заглавные и строчные буквы и цифры."
+msgid "Password should have lower and uppercase English letters with numbers."
+msgstr ""
+
+msgid "Paxos Standard"
+msgstr ""
 
 msgid "Pay-out"
 msgstr "Выплата"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr "Услуги платёжного агента недоступны в Вашей стране или в выбранной Вами валюте."
+msgstr "Услуги платёжного агента недоступны в вашей стране или в выбранной вами валюте."
 
 msgid "Payments"
 msgstr "Платежи"
@@ -1154,7 +1517,7 @@ msgid "Payout range"
 msgstr "Диапазон выплат"
 
 msgid "Pending"
-msgstr "Ожидающ."
+msgstr "В ожидании"
 
 msgid "Percentage"
 msgstr "Проценты"
@@ -1162,11 +1525,17 @@ msgstr "Проценты"
 msgid "Permissions"
 msgstr "Разрешения"
 
+msgid "Photo of your document"
+msgstr ""
+
+msgid "Photo of your face"
+msgstr ""
+
 msgid "Place of birth"
 msgstr "Место рождения"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, %1заполните свой профайл,%2 чтобы снять торговые лимиты и ограничения на вывод."
+msgstr "Пожалуйста, %1заполните свой профайл,%2 чтобы снять лимиты на трейдинг и вывод средств."
 
 msgid "Please %1deposit%2 to your account."
 msgstr "Пожалуйста, %1пополните%2 счёт."
@@ -1187,28 +1556,28 @@ msgid "Please choose a currency"
 msgstr "Пожалуйста, выберите валюту"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr "Пожалуйста, заполните %1форму на открытие Реального счёта%2, чтобы подтвердить Ваш возраст, в соответствии с требованиями %3Комиссии по азартным играм%4 Великобритании (UKGC)."
+msgstr "Пожалуйста, заполните %1форму на открытие Реального счёта%2, чтобы подтвердить ваш возраст, в соответствии с требованиями %3Комиссии по азартным играм%4 Великобритании (UKGC)."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "Прежде, чем продолжить, пожалуйста, заполните следующую %1форму финансовой оценки%2."
+msgstr "Пожалуйста, заполните %1форму финансовой оценки%2, чтобы снять лимиты на трейдинг и вывод средств."
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr "Чтобы продолжить, введите Ваши личные данные."
+msgstr "Чтобы продолжить, введите ваши личные данные."
 
 msgid "Please confirm that all the information above is true and complete."
 msgstr "Пожалуйста, подтвердите, что вся информация, указанная выше, является точной и достоверной."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr "Пожалуйста подтвердите, что Вы не являетесь политически-значимым лицом."
+msgstr "Пожалуйста, подтвердите, что вы не являетесь политически значимым лицом."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "Пожалуйста, убелитесь, что Вы установили приложение Telegram на телефон."
+msgstr "Пожалуйста, убедитесь, что вы установили приложение Telegram на ваше устройство."
 
 msgid "Please enter a valid Login ID."
 msgstr "Пожалуйста, введите правильное имя пользователя."
 
-msgid "Please enter a valid phone number, including the country code (e.g. +15417541234)."
-msgstr "Пожалуйста, введите действительный номер телефона, с кодом страны (например +15417541234)."
+msgid "Please enter a valid phone number (e.g. +15417541234)."
+msgstr ""
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "Обратите внимание, что выбранная валюта доступна для ограниченного числа счетов."
@@ -1238,18 +1607,18 @@ msgid "Please select the checkbox."
 msgstr "Пожалуйста, выберите нужный ответ."
 
 msgid "Please select the currency for this account:"
-msgstr "Пожалуйста, выберите валюту данного счёта:"
+msgstr "Пожалуйста, выберите валюту этого счёта:"
 
 msgid "Please set the currency of your account."
 msgstr "Пожалуйста, установите валюту счёта."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr "Пожалуйста, установите %130-дневный лимит на объём покупок%2, чтобы устранить лимиты на пополнение."
+msgstr "Пожалуйста, установите %1лимит на 30-дневный оборот счета%2, чтобы устранить лимиты на пополнение."
 
 msgid "Please specify the reasons for closing your accounts"
 msgstr "Пожалуйста, укажите причину закрытия счетов"
 
-msgid "Please specify your preferred reality-check interval in minutes"
+msgid "Please specify your preferred interval reality check in minutes:"
 msgstr ""
 
 msgid "Please submit your proof of address."
@@ -1257,6 +1626,12 @@ msgstr "Пожалуйста, предоставьте подтверждени�
 
 msgid "Please submit your proof of identity."
 msgstr "Пожалуйста, предоставьте удостоверение личности."
+
+msgid "Please try again"
+msgstr ""
+
+msgid "Point your phone’s camera at the QR code"
+msgstr ""
 
 msgid "Postal Code/ZIP"
 msgstr "Почтовый код/индекс"
@@ -1271,13 +1646,16 @@ msgid "Potential payout"
 msgstr "Потенциальная выплата"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Потенциальная прибыль"
 
 msgid "Potential profit/loss"
 msgstr "Потенциальная прибыль/убыток"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Предскажите направление движения<br />и купите"
+
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
 
 msgid "Previous"
 msgstr "Предыдущ."
@@ -1286,7 +1664,7 @@ msgid "Profit"
 msgstr "Прибыль"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "Плюс/Минус"
 
 msgid "Profit table"
 msgstr "Анализ счёта"
@@ -1314,6 +1692,9 @@ msgstr "Истек срок действия документа, удостов�
 
 msgid "Proof of identity required"
 msgstr "Необходимо подтверждение личности"
+
+msgid "Provide the whole document page for best results"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Покупка"
@@ -1361,9 +1742,21 @@ msgid "Real-Money Account"
 msgstr "Реальный счёт"
 
 msgid "Real-Money Accounts"
-msgstr "Реальный–Валютные счета"
+msgstr "Реальные счета"
 
 msgid "Reality Check"
+msgstr "Проверка реальности"
+
+msgid "Recent years are easy to guess"
+msgstr ""
+
+msgid "Recover camera access to continue face verification"
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
+msgid "Redo"
 msgstr ""
 
 msgid "Ref."
@@ -1372,20 +1765,41 @@ msgstr "Ном."
 msgid "Reference ID"
 msgstr "Номер"
 
+msgid "Refresh"
+msgstr ""
+
+msgid "Refresh this page to restart the identity verification process"
+msgstr ""
+
 msgid "Remaining time"
 msgstr "Оставшееся время"
 
+msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
+msgstr ""
+
 msgid "Remove deposit limits"
 msgstr "Снять лимиты на пополнение счета"
+
+msgid "Remove your glasses, if necessary"
+msgstr ""
+
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
 
 msgid "Reports"
 msgstr "Отчеты"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr "Для полноценной работы необходимо разрешение использовать веб-хранилище Вашего браузера. Пожалуйста, включите данную функцию или отключите режим приватности."
+msgstr "Для полноценной работы необходимо разрешение использовать веб-хранилище вашего браузера. Пожалуйста, включите данную функцию или отключите режим приватности."
 
 msgid "Resale not offered"
 msgstr "Продажа не предлагается"
+
+msgid "Resend link"
+msgstr ""
 
 msgid "Reset Barrier"
 msgstr "Барьер Reset"
@@ -1408,17 +1822,35 @@ msgstr "Время Reset"
 msgid "Reset barrier"
 msgstr "Барьер Reset"
 
+msgid "Reset the balance of your virtual account to %1 anytime."
+msgstr ""
+
 msgid "Reset time"
 msgstr "Время Reset"
 
 msgid "Reset to original settings"
 msgstr "Восстановить исходные настройки"
 
+msgid "Residence permit"
+msgstr ""
+
+msgid "Restart process on a different device"
+msgstr ""
+
+msgid "Restart the process on the latest version of Google Chrome"
+msgstr ""
+
+msgid "Restart the process on the latest version of Safari"
+msgstr ""
+
 msgid "Return"
 msgstr "Доходность"
 
 msgid "Reverse Side"
 msgstr "Обратная сторона"
+
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
 
 msgid "Revoke access"
 msgstr "Отмена доступа"
@@ -1428,6 +1860,9 @@ msgstr "Повышение/Падение"
 
 msgid "Rise/Fall contracts will be refunded if:"
 msgstr "Контракты Повышение/Падение будут компенсированы в следующих случаях:"
+
+msgid "STASIS Euro"
+msgstr ""
 
 msgid "Sa"
 msgstr "Сб"
@@ -1441,8 +1876,20 @@ msgstr "Цена продажи"
 msgid "Saturday"
 msgstr "Суббота"
 
+msgid "Scan QR code"
+msgstr ""
+
+msgid "Scan the QR code with your phone"
+msgstr ""
+
+msgid "Scans and photocopies are not accepted"
+msgstr ""
+
 msgid "Scopes"
 msgstr "Сфера действия"
+
+msgid "Search for country"
+msgstr ""
 
 msgid "Search..."
 msgstr "Поиск..."
@@ -1451,13 +1898,22 @@ msgid "Select Asset"
 msgstr "Выберите актив"
 
 msgid "Select Trade Type"
-msgstr "Выберите вид контракта"
+msgstr "Выберите тип контракта"
+
+msgid "Select a %{country} document"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
 
 msgid "Select currency"
 msgstr "Выберите валюту"
 
 msgid "Select date"
 msgstr "Выберите дату"
+
+msgid "Select issuing country"
+msgstr ""
 
 msgid "Select market:"
 msgstr "Выберите рынок:"
@@ -1469,7 +1925,7 @@ msgid "Select your market and underlying asset"
 msgstr "Выберите рынок и основной актив"
 
 msgid "Select your trade type"
-msgstr "Выбрать тип контракта"
+msgstr "Выберите тип контракта"
 
 msgid "Selected tick"
 msgstr "Выбранный тик"
@@ -1477,17 +1933,38 @@ msgstr "Выбранный тик"
 msgid "Self-exclusion"
 msgstr "Самоисключение"
 
+msgid "Selfie"
+msgstr ""
+
+msgid "Selfie uploaded"
+msgstr ""
+
 msgid "Sell"
 msgstr "Продажа"
 
 msgid "Sell at market"
 msgstr "Продать по текущей цене"
 
+msgid "Send a secure link to your phone"
+msgstr ""
+
+msgid "Send link"
+msgstr ""
+
+msgid "Send this one-time link to your phone"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
 msgid "Sep"
 msgstr "Сен"
 
 msgid "September"
 msgstr "Сентябрь"
+
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
 
 msgid "Server"
 msgstr "Сервер"
@@ -1496,7 +1973,7 @@ msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Лимит на длительность сессии не может превышать 6 недель."
 
 msgid "Session duration:"
-msgstr ""
+msgstr "Длительность сессии:"
 
 msgid "Set account currency"
 msgstr "Выберите валюту счета"
@@ -1506,6 +1983,9 @@ msgstr "Укажите валюту"
 
 msgid "Settles"
 msgstr "Заканчивается"
+
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
 
 msgid "Should be %1"
 msgstr "Должно составлять %1"
@@ -1525,6 +2005,9 @@ msgstr "Значение должно быть больше %1"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "Должно начинаться с буквы или цифры; может содержать дефис и нижнее подчёркивание."
 
+msgid "Show all details — including the bottom 2 lines"
+msgstr ""
+
 msgid "Sign out"
 msgstr "Выход"
 
@@ -1534,26 +2017,35 @@ msgstr "Зарегистрируйтесь"
 msgid "SmartTrader"
 msgstr "SmartTrader"
 
+msgid "Something's gone wrong"
+msgstr ""
+
 msgid "Sorry, account signup is not available in your country."
-msgstr "Простите, регистрация счёта не доступна в Вашей стране."
+msgstr "Извините, регистрация счёта недоступна в вашей стране."
 
 msgid "Sorry, an error occurred while processing your account."
 msgstr "Извините, произошла ошибка."
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr "Извините, при обработке Вашего запроса произошла ошибка."
+msgstr "Извините, при обработке вашего запроса произошла ошибка."
+
+msgid "Sorry, but binary options trading is not available in your country."
+msgstr ""
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr "Извините, но торговля бинарными опционами не доступна на Вашем финансовом счёте."
+msgstr "Извините, но торговля бинарными опционами недоступна на вашем финансовом счёте."
 
 msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "Извините, пополнение счета в этой валюте временно недоступно."
+
+msgid "Sorry, no mobile phone bills"
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Извините, эта опция доступна только для демо-счетов."
 
 msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr "Извините, данная функция недоступна в Вашей юрисдикции."
+msgstr "Извините, эта функция недоступна в вашей юрисдикции."
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
 msgstr "Извините, вывод средств в этой валюте временно недоступен."
@@ -1594,17 +2086,50 @@ msgstr "Цена покупки контрактов Останется внут
 msgid "Step"
 msgstr "Шаг"
 
+msgid "Steps required to continue verification on your mobile"
+msgstr ""
+
 msgid "Stock Indices"
 msgstr "Фондовые индексы"
 
 msgid "Stocks"
 msgstr "Акции"
 
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
 msgid "Su"
 msgstr "Вс"
 
 msgid "Submit"
 msgstr "Подтвердить"
+
+msgid "Submit document"
+msgstr ""
+
+msgid "Submit identity card (back)"
+msgstr ""
+
+msgid "Submit identity card (front)"
+msgstr ""
+
+msgid "Submit license (back)"
+msgstr ""
+
+msgid "Submit license (front)"
+msgstr ""
+
+msgid "Submit passport photo page"
+msgstr ""
+
+msgid "Submit residence permit (back)"
+msgstr ""
+
+msgid "Submit residence permit (front)"
+msgstr ""
+
+msgid "Submit verification"
+msgstr ""
 
 msgid "Submitted"
 msgstr "Отправлено"
@@ -1624,29 +2149,74 @@ msgstr "Синтетический"
 msgid "Synthetic Indices"
 msgstr "Синтетические индексы"
 
+msgid "Take a photo"
+msgstr ""
+
+msgid "Take a photo of the back of your card"
+msgstr ""
+
+msgid "Take a photo of the back of your license"
+msgstr ""
+
+msgid "Take a photo of the front of your card"
+msgstr ""
+
+msgid "Take a photo of the front of your license"
+msgstr ""
+
+msgid "Take a photo of your passport photo page"
+msgstr ""
+
+msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
+msgstr ""
+
+msgid "Take a photo with your phone"
+msgstr ""
+
+msgid "Take a selfie"
+msgstr ""
+
+msgid "Take a selfie showing your face"
+msgstr ""
+
+msgid "Take photo"
+msgstr ""
+
 msgid "Target"
 msgstr "Цель"
 
 msgid "Telephone"
 msgstr "Номер телефона"
 
-msgid "Tether"
-msgstr "Tether"
+msgid "Tether ERC20"
+msgstr ""
+
+msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
+msgstr ""
+
+msgid "Tether Omni"
+msgstr ""
+
+msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
+msgstr ""
 
 msgid "Th"
 msgstr "Чт"
+
+msgid "Thank you"
+msgstr ""
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "Спасибо за регистрацию! Теперь проверьте электронную почту, чтобы завершить процесс."
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Спасибо! Мы свяжемся с Вами в течение 24 часов"
+msgstr "Спасибо! Мы свяжемся с вами в течение 24 часов"
 
 msgid "The %1 password of account number %2 has been changed."
 msgstr "Изменён пароль %1 для счёта %2."
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "%1Закрытие%2 ‒ это последний тик на момент или до %1времени окончания%2. Если Вы выбираете определённое %1время окончания,%2 %1временем окончания%2 будет указанный момент."
+msgstr "%1Закрытие%2 ‒ это последний тик на момент или до %1времени окончания%2. Если вы выбираете определённое %1время окончания,%2 %1временем окончания%2 будет указанный момент."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
 msgstr "%1Период действия контракта%2 ‒ это время между %1первым тиком%2 (после момента начала контракта) и %1временем его окончания%2."
@@ -1700,16 +2270,22 @@ msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
 msgstr "Контракт не оканчивается в течение 5 минут (для контрактов в тиках)"
 
 msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr "Указанный Вами электронный адрес уже используется для другого счёта. Если Вы забыли пароль к своему счету, пожалуйста, воспользуйтесь <a href=\"%1\">инструментом восстановления пароля</a> или свяжитесь с нашей службой поддержки."
+msgstr "Указанный вами электронный адрес уже используется для другого счёта. Если вы забыли пароль к своему счету, пожалуйста, воспользуйтесь <a href=\"%1\">инструментом восстановления пароля</a> или свяжитесь с нашей службой поддержки."
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "Спот-котировка на входе − это первый тик после обработки контракта нашим сервером."
+
+msgid "The link only works on mobile devices"
+msgstr ""
 
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "Достигнуто максимальное число ключей (%1)."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "Не удается найти запрашиваемую страницу. Либо она более не существует, либо введен неверный адрес. Пожалуйста, проверьте правильность адреса."
+
+msgid "The photo should clearly show your document"
+msgstr ""
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "Причина должна содержать от 5 до 250 знаков"
@@ -1738,11 +2314,14 @@ msgstr "Произошла ошибка"
 msgid "There was some invalid character in an input field."
 msgstr "Неразрешённый символ в поле ввода."
 
+msgid "These are the documents most likely to show your current home address"
+msgstr ""
+
 msgid "This account is disabled"
-msgstr "Данный счёт неактивен"
+msgstr "Этот счёт неактивен"
 
 msgid "This account is excluded until %1"
-msgstr "Данный счёт исключён до %1"
+msgstr "Этот счёт исключён до %1"
 
 msgid "This contract is only available on %1DTrader%2."
 msgstr "Этот контракт доступен только на %1DTrader%2."
@@ -1760,28 +2339,43 @@ msgid "This contract won"
 msgstr "Вы выиграли"
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr "Данная функция недоступна на демо-счетах."
+msgstr "Эта функция недоступна на демо-счетах."
 
 msgid "This field is required."
-msgstr "Данное поле является необходимым."
+msgstr "Это поле является обязательным."
 
 msgid "This is a staging server - For testing purposes only"
-msgstr "Это вспомогательный сервер, применяемый лишь для тестирования"
+msgstr "Это вспомогательный сервер, применяемый только для тестирования"
+
+msgid "This is a top-10 common password"
+msgstr ""
+
+msgid "This is a top-100 common password"
+msgstr ""
+
+msgid "This is a very common password"
+msgstr ""
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Это ориентировочный барьер. Настоящим барьером будет спот-котировка плюс оффсет барьера."
 
+msgid "This is similar to a commonly used password"
+msgstr ""
+
 msgid "This is your %1 account."
-msgstr "Это Ваш счёт %1."
+msgstr "Это ваш счёт %1."
 
 msgid "This page is only available to logged out clients."
-msgstr "Данная страница доступна лишь для клиентов, вошедших на сайт."
+msgstr "Эта страница доступна только для клиентов, вошедших на сайт."
+
+msgid "This password is on the blacklist"
+msgstr ""
 
 msgid "Thursday"
 msgstr "Четверг"
 
 msgid "Tick"
-msgstr "Тики"
+msgstr "Тик"
 
 msgid "Tick Prediction"
 msgstr "Прогноз тика"
@@ -1790,7 +2384,7 @@ msgid "Ticks"
 msgstr "Тики"
 
 msgid "Ticks history returned an empty array."
-msgstr "История тиков представляет пустой массив."
+msgstr "История тиков вернула пустой массив."
 
 msgid "Time is in the wrong format."
 msgstr "Неправильный формат времени."
@@ -1807,14 +2401,29 @@ msgstr "Перерыв должен быть позднее сегодняшне
 msgid "Timed out until"
 msgstr "Ограничение до"
 
+msgid "Tips"
+msgstr ""
+
+msgid "Tips to take a good selfie"
+msgstr ""
+
 msgid "To account: "
 msgstr "На счёт: "
 
+msgid "To open a bank account, we will need to verify your identity."
+msgstr ""
+
+msgid "To smoothly verify you, we need a better photo"
+msgstr ""
+
 msgid "Today"
-msgstr "Cегодня"
+msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
+
+msgid "Too many failed attempts"
+msgstr ""
 
 msgid "Top up error"
 msgstr "Ошибка при пополнении"
@@ -1859,13 +2468,16 @@ msgid "Trading and deposit disabled"
 msgstr "Торговля и пополнение счета отключены"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr "На Вашем счету заблокирована торговля и пополнение. Пожалуйста, свяжитесь со %1службой поддержки%2 для получения помощи."
+msgstr "На вашем счете заблокирована торговля и пополнение. Пожалуйста, свяжитесь со %1службой поддержки%2 для получения помощи."
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr "Торговля контрактами на разницу (CFD) на Синтетических индексах подходит далеко не для всех. Пожалуйста, убедитесь, что Вы хорошо осознаёте все сопряженные риски, включая возможность потерять все средства на счету MT5. Торговая деятельность может вызвать привыкание, поэтому, пожалуйста, торгуйте ответственно."
+msgstr "Торговля контрактами на разницу (CFD) на Синтетических индексах подходит далеко не для всех. Пожалуйста, убедитесь, что вы хорошо осознаёте все сопряженные риски, включая возможность потерять все средства на счете MT5. Торговая деятельность может вызвать привыкание, поэтому, пожалуйста, торгуйте ответственно."
 
 msgid "Trading is unavailable at this time."
 msgstr "В данное время торговля недоступна."
+
+msgid "Trading statictics report"
+msgstr ""
 
 msgid "Transaction ID"
 msgstr "Номер контракта"
@@ -1873,11 +2485,20 @@ msgstr "Номер контракта"
 msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "Транзакция проведена %1 (App ID: %2)"
 
+msgid "True USD"
+msgstr ""
+
 msgid "Try our %1Synthetic Indices%2."
-msgstr "Опробуйте наши %1Синтетические индексы%2."
+msgstr "Попробуйте наши %1Синтетические индексы%2."
 
 msgid "Try our other markets."
 msgstr "Вы можете торговать на других активах."
+
+msgid "Try using a JPG or PNG file"
+msgstr ""
+
+msgid "Try using another file type."
+msgstr ""
 
 msgid "Tu"
 msgstr "Вт"
@@ -1886,19 +2507,31 @@ msgid "Tuesday"
 msgstr "Вторник"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Оборот"
 
 msgid "Type"
 msgstr "Тип"
 
+msgid "USD Coin"
+msgstr ""
+
+msgid "USDK"
+msgstr ""
+
 msgid "Unable to read file %1"
 msgstr "Не удалось прочитать файл %1"
+
+msgid "Unavailable"
+msgstr ""
 
 msgid "Understood"
 msgstr "Понятно"
 
 msgid "Unknown OS"
 msgstr "Незнакомая операционная система"
+
+msgid "Unsupported browser"
+msgstr ""
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "Разрешенное количество десятичных: до %1."
@@ -1912,11 +2545,56 @@ msgstr "Ближайшие события"
 msgid "Upgrade now"
 msgstr "Обновить сейчас"
 
+msgid "Upload"
+msgstr ""
+
+msgid "Upload a selfie from your computer"
+msgstr ""
+
+msgid "Upload anyway"
+msgstr ""
+
+msgid "Upload back of card from your computer"
+msgstr ""
+
+msgid "Upload back of license from your computer"
+msgstr ""
+
+msgid "Upload front of card from your computer"
+msgstr ""
+
+msgid "Upload front of license from your computer"
+msgstr ""
+
+msgid "Upload passport photo page"
+msgstr ""
+
+msgid "Upload passport photo page from your computer"
+msgstr ""
+
+msgid "Upload photo"
+msgstr ""
+
+msgid "Uploads successful"
+msgstr ""
+
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr "Неправильный проверочный код. Пожалуйста, воспользуйтесь ссылкой, отправленной на Ваш email."
+msgstr "Неправильный проверочный код. Пожалуйста, воспользуйтесь ссылкой, отправленной на ваш email."
+
+msgid "Verification complete"
+msgstr ""
 
 msgid "Verification required"
 msgstr "Требуется проверка"
+
+msgid "Verify Identity"
+msgstr ""
 
 msgid "Verify Reset Password"
 msgstr "Подтвердите изменение пароля"
@@ -1930,7 +2608,7 @@ msgstr "Просмотр"
 msgid "View chart"
 msgstr "Обзор графика"
 
-msgid "View statement"
+msgid "View from camera"
 msgstr ""
 
 msgid "Virtual"
@@ -1948,17 +2626,35 @@ msgstr "В ожидании выходного тика."
 msgid "We"
 msgstr "Ср"
 
+msgid "We cannot verify you without using your camera"
+msgstr ""
+
 msgid "We'd love to hear what you think."
-msgstr "Будем рады узнать Ваше мнение."
+msgstr "Будем рады узнать ваше мнение."
+
+msgid "We'll compare it with your document"
+msgstr ""
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr "Мы всегда стремимся совершенствовать наши продукты и услуги, а также больше узнать о Ваших нуждах. Мы хотели бы провести телефонный опрос с целью выяснить, что Вам нравится в нашем сервисе, чем Вы недовольны, а также какие аспекты нашей работы мы могли бы улучшить."
+msgstr "Мы всегда стремимся совершенствовать наши продукты и услуги, а также лучше понимать ваши потребности. Мы хотели бы провести телефонный опрос с целью выяснить, что вам нравится в нашем сервисе, чем вы недовольны, а также какие аспекты нашей работы мы могли бы улучшить."
+
+msgid "We're now ready to verify your identity"
+msgstr ""
+
+msgid "We've sent a secure link to %{number}"
+msgstr ""
 
 msgid "Wednesday"
 msgstr "Среда"
 
+msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "When prompted, you must enable camera access to continue"
+msgstr ""
+
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr "Когда Вы нажмёте \"ОК\", Вы будете отстранены от работы на сайте до окончания выбранной даты."
+msgstr "Когда вы нажмёте \"ОК\", вы будете отстранены от работы на сайте до выбранной даты."
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "Получить выплату, если спот-котировка на выходе равна спот-котировке на входе."
@@ -1979,7 +2675,10 @@ msgid "Withdrawal disabled"
 msgstr "Вывод средств отключен"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Вывод средств отключен на Вашем счету. Проверьте свою электронную почту для получения более подробной информации."
+msgstr "На вашем счете отключен вывод средств. Проверьте свою электронную почту для получения более подробной информации."
+
+msgid "Would you like to check your statement first? %1Check Statement%2"
+msgstr ""
 
 msgid "Yes"
 msgstr "Да"
@@ -1994,10 +2693,10 @@ msgid "You are categorised as a professional client."
 msgstr "Вы относитесь к категории профессиональных клиентов."
 
 msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr "Вы относитесь к категории индивидуальных клиентов. Станьте профессиональным клиентом."
+msgstr "Вы относитесь к категории индивидуальных клиентов. Подайте заявку, чтобы вас рассматривали как профессионального трейдера."
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "Вы можете владеть только одним фидуциарным счётом. Вы можете в любое время изменить валюту фидуциарного счёта, если Вы ещё не пополняли счёт или не открывали счёт MT5."
+msgstr "Вы можете владеть только одним фиатным счётом. Вы можете изменить валюту фиатного счёта, если вы ещё не пополняли его или не открывали счёт MT5."
 
 msgid "You are offline"
 msgstr "Вы оффлайн"
@@ -2006,46 +2705,46 @@ msgid "You can %1set a new currency%2 before you deposit for the first time or c
 msgstr "Вы можете %1установить новую валюту%2 перед первым пополнением счёта или открытием счёта MT5."
 
 msgid "You can close this window without interrupting your trade."
-msgstr "Вы можете закрыть данное окно без ущерба Вашей торговле."
+msgstr "Закрытие этого окна не повлияет на ваш трейдинг."
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "Вы не можете изменить валюту счёта, так как Вы открыли счёт MT5."
+msgstr "Вы не можете изменить валюту счёта, так как вы открыли счёт MT5."
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "Вы не можете изменить валюту счёта, так как Вы уже пополняли счёт."
+msgstr "Вы не можете изменить валюту счёта, так как вы уже пополняли счёт."
+
+msgid "You can now return to your computer to continue"
+msgstr ""
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "Вы можете дополнительно внести на демо-счёт %1, если его баланс составит %2 или ниже."
-
-msgid "You can top up your virtual account with an additional %1 if your balance is %2 or less."
 msgstr "Вы можете дополнительно внести на демо-счёт %1, если его баланс составит %2 или ниже."
 
 msgid "You did not change anything."
 msgstr "Вы не внесли никаких изменений."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr "Вам не нужно аутентифицировать счёт в данное время.%1Мы сообщим, когда Вашему счёту потребуется аутентификация."
+msgstr "Вам не нужно аутентифицировать счёт в настоящее время.%1Мы сообщим, когда вашему счёту потребуется аутентификация."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr "Вы уже в сумме вывели %1%2 за последние %3 суток."
+msgstr "Вы уже вывели %1%2 в сумме за последние %3 суток."
 
 msgid "You have already withdrawn %1%2."
 msgstr "Вы уже вывели со счета %1%2."
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr "На Вашем счету Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счёт</a>."
+msgstr "На вашем счете Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счёт</a>."
+
+msgid "You have insufficient funds in your MT5 account."
+msgstr ""
 
 msgid "You have not granted access to any applications."
-msgstr "У Вас нет доступа к приложениям."
-
-msgid "You have reached the limit."
-msgstr "Вы достигли лимита."
+msgstr "Вы не предоставили доступ ни к каким приложениям."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "Вы достигли лимита на количество запросов в секунду. Пожалуйста, повторите попытку позже."
 
-msgid "You have reached the withdrawal limit."
-msgstr "Вы достигли лимита на вывод."
+msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
+msgstr ""
 
 msgid "You have sold this contract at %1 %2"
 msgstr "Вы продали данный контракт по цене %1 %2"
@@ -2054,16 +2753,16 @@ msgid "You have successfully changed your account currency from %1 to %2."
 msgstr "Вы успешно изменили валюту счёта с %1 на %2."
 
 msgid "You have successfully disabled two-factor authentication for your account."
-msgstr "Вы успешно отключили двухступенчатую аутентификацию на Вашем счету."
+msgstr "Вы успешно отключили двухступенчатую аутентификацию на вашем счете."
 
 msgid "You have successfully enabled two-factor authentication for your account."
-msgstr "Вы успешно включили двухступенчатую аутентификацию на Вашем счету."
+msgstr "Вы успешно включили двухступенчатую аутентификацию на вашем счете."
 
 msgid "You have successfully set your account currency to %1."
 msgstr "Вы успешно установили валюту счёта: %1."
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr "Чтобы использовать для авторизации другой сервер OAuth, Вы должны зарегистрироваться и получить ID приложения. Дополнительную информацию об OAuth можно узнать на странице https://developers.binary.com/."
+msgstr "Чтобы использовать для авторизации другой сервер OAuth, вы должны зарегистрироваться и получить ID приложения. Дополнительную информацию об OAuth можно узнать на странице https://developers.binary.com/."
 
 msgid "You have yet to receive any notifications"
 msgstr "У вас пока нет уведомлений"
@@ -2078,25 +2777,28 @@ msgid "You will be redirected to a third-party website which is not owned by Bin
 msgstr "Вы будете перенаправлены на сайт третьей стороны, который не принадлежит Binary.com."
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фидуциарного счёта после открытия данного счёта MT5. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счёта после открытия этого счёта MT5. Вы уверены, что хотите продолжить?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фидуциарного счёта после его пополнения. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счёта после его пополнения. Вы уверены, что хотите продолжить?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr "Вы выигрываете, если рыночная цена при окончании не будет заканчиваться выбранной Вами цифрой."
+msgstr "Вы выигрываете, если выходная рыночная цена не будет заканчиваться выбранной вами цифрой."
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr "Контракт выиграет, если цена рынка закончится выбранной Вами цифрой."
+msgstr "Контракт выиграет, если цена рынка закончится выбранной вами цифрой."
+
+msgid "You'll need to restart your verification on your computer"
+msgstr ""
+
+msgid "You've made no transactions of this type up to this date."
+msgstr ""
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "Ваш %1-дневный лимит на вывод средств составляет %2%3."
 
 msgid "Your account has no Login/Logout activity."
-msgstr "На Вашем счету нет активности входов/выходов."
-
-msgid "Your account has no trading activity."
-msgstr "На Вашем счету нет торговой деятельности."
+msgstr "На вашем счете нет активности входов/выходов."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Ваш счет полностью авторизован, и лимит на вывод был снят."
@@ -2105,67 +2807,82 @@ msgid "Your account is restricted. Kindly %1contact customer support%2 for assis
 msgstr "Ваш счёт заблокирован. Пожалуйста, свяжитесь с нашей %1службой поддержки%2 для получения дальнейшей помощи."
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr "Ваша заявка на квалификацию профессионального клиента находится на рассмотрении."
+msgstr "Ваша заявка на квалификацию в качестве профессионального клиента находится на рассмотрении."
 
 msgid "Your cashier is locked."
 msgstr "Ваша касса заблокирована."
 
 msgid "Your changes have been updated successfully."
-msgstr "Ваши изменения успешно обновлены."
+msgstr "Изменения успешно применены."
 
 msgid "Your changes have been updated."
-msgstr "Ваши изменения внесены успешно."
+msgstr "Изменения внесены успешно."
+
+msgid "Your computer may take a few seconds to update"
+msgstr ""
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "В данный момент баланс Вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+msgstr "В данный момент баланс вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+
+msgid "Your face is needed in the selfie"
+msgstr ""
 
 msgid "Your fiat account's currency is currently set to %1."
-msgstr "Валютой Вашего фидуциарного счёта является %1."
+msgstr "Валютой вашего фиатного счёта является %1."
 
 msgid "Your fiat account's currency is set to %1."
-msgstr "Валютой Вашего фидуциарного счёта является %1."
+msgstr "Валютой вашего фиатного счёта является %1."
+
+msgid "Your link will expire in one hour"
+msgstr ""
+
+msgid "Your mobile link will expire in one hour"
+msgstr ""
+
+msgid "Your password cannot be the same as your email address."
+msgstr ""
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Ваш пароль был изменен. Пожалуйста, зайдите на счет, используя новый пароль."
 
-msgid "Your password is one of the most commonly used passwords on the internet. Please choose a unique password."
-msgstr "Ваш пароль является одним из наиболее часто используемых паролей в Интернете. Пожалуйста, подберите уникальный пароль."
+msgid "Your preferred time interval between each report:"
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Ваша заявка на статус профессионального клиента %1отклонена%2."
 
 msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully processed."
-msgstr "Ваш запрос на перевод %1 %2 с %3 на %4 был выполнен успешно."
+msgstr "Ваш запрос на перевод %1 %2 с %3 на %4 был успешно выполнен."
 
 msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr "Ваш запрос на вывод %1 %2 с Вашего счета %3 на счет платежного агента %4 был выполнен успешно."
+msgstr "Ваш запрос на вывод %1 %2 с вашего счета %3 на счет платежного агента %4 был успешно выполнен."
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr "Ограничение на длительность сессии закончится через %1 сек."
+msgstr "Лимит на длительность сессии будет достигнут через %1 сек."
 
 msgid "Your settings have been updated successfully."
-msgstr "Ваши настройки обновлены успешно."
+msgstr "Ваши настройки успешно обновлены."
 
 msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr "Срок действия Вашего ключа истёк. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего ключа истек или он недействителен. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
 
 msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr "Срок действия Вашего ключа истёк. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего ключа истек или он недействителен. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
 
 msgid "Your trading statistics since %1."
 msgstr "Ваша торговая статистика с %1."
 
 msgid "Your transaction reference is"
-msgstr "Ссылка на Вашу сделку"
+msgstr "Ссылка на вашу транзакцию"
 
 msgid "Your transaction reference number is %1"
-msgstr "Номер Вашей сделки %1"
+msgstr "Номер вашей транзакции %1"
 
-msgid "Your virtual account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "В данный момент баланс Вашего демо-счёта составляет %1 или ниже. Вы можете пополнить счёт дополнительными %2."
+msgid "Your virtual balance has been reset."
+msgstr ""
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr "Ваш веб браузер (%1) устарел, что может повлиять на результаты Вашей торговли. Рекомендуем %2обновить браузер%3"
+msgstr "Ваш браузер (%1) устарел и может повлиять на результаты вашей торговли. Рекомендуем %2обновить браузер%3."
 
 msgid "Your withdrawal limit is %1%2."
 msgstr "Ваш лимит на вывод составляет %1%2."
@@ -2176,8 +2893,14 @@ msgstr "счёт"
 msgid "accounts"
 msgstr "счета"
 
+msgid "back"
+msgstr ""
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr "бинарные опционы, форекс, торговля на форекс, онлайн торговля, бинарный трейдинг, торговля на фондовых индексах, трейдинг на фондовых индексах, контракты на форекс, торговля на сырье, стратегия бинарных опционов, бинарный брокер, бинарная ставка, платформа для торговли бинарными опционами, бинарная стратегия, финансы, инвестиции, трейдинг"
+msgstr "бинарные опционы, forex, форекс, forex трейдинг, торговля на форекс, онлайн торговля, онлайн-трейдинг, бинарный трейдинг, торговля на фондовых индексах, трейдинг на фондовых индексах, контракты на форекс, торговля на сырье, стратегия бинарных опционов, бинарный брокер, бинарная ставка, платформа для торговли бинарными опционами, бинарная стратегия, финансы, инвестиции, трейдинг"
+
+msgid "close"
+msgstr ""
 
 msgid "day"
 msgstr "дн."
@@ -2187,6 +2910,9 @@ msgstr "дн."
 
 msgid "details"
 msgstr "подробности"
+
+msgid "e.g. United States"
+msgstr ""
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "напр., frontend.binaryws.com"
@@ -2212,9 +2938,6 @@ msgstr "вход"
 msgid "logout"
 msgstr "выход"
 
-msgid "million"
-msgstr "млн."
-
 msgid "minute"
 msgstr "мин."
 
@@ -2224,6 +2947,12 @@ msgstr "мин."
 msgid "numbers"
 msgstr "цифры"
 
+msgid "or"
+msgstr ""
+
+msgid "or upload photo – no scans or photocopies"
+msgstr ""
+
 msgid "second"
 msgstr "сек."
 
@@ -2232,9 +2961,6 @@ msgstr "сек."
 
 msgid "space"
 msgstr "пробел"
-
-msgid "thousand"
-msgstr "тыс."
 
 msgid "tick"
 msgstr "тик."
@@ -2250,9 +2976,6 @@ msgstr "сегодня, по пятницам"
 
 msgid "virtual money credit to account"
 msgstr "виртуальных денег на счёт"
-
-msgid "years"
-msgstr "год(а)/лет"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
 msgstr "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
