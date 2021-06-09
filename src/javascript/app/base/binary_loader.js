@@ -37,6 +37,8 @@ const BinaryLoader = (() => {
 
         localizeForLang(urlLang());
 
+        checkAppidAndQAserver();
+
         Page.showNotificationOutdatedBrowser();
 
         Client.init();
@@ -48,6 +50,16 @@ const BinaryLoader = (() => {
         BinaryPjax.init(container, '#content');
         ThirdPartyLinks.init();
 
+    };
+
+    const checkAppidAndQAserver = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const qa_server = urlParams.get('qa_server');
+        const app_id = urlParams.get('app_id');
+        if (qa_server && app_id) {
+            localStorage.setItem('config.server_url', qa_server);
+            localStorage.setItem('config.app_id', app_id);
+        }
     };
 
     const beforeContentChange = () => {
