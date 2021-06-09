@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:59\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "Đóng tài khoản"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "Hủy tài khoản"
 
 msgid "Account Deposit Currency"
 msgstr "Tài khoản tiền gửi tiền tệ"
@@ -2187,10 +2187,10 @@ msgid "Binary options trading frequency"
 msgstr "Tần xuất giao dịch các lựa chọn nhị phân"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "Quyền chọn giao dịch nhị phân không khả dụng tại quốc gia của bạn."
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Quyền chọn giao dịch nhị phân không khả dụng cho tài khoản tài chính của bạn."
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "Giao dịch lựa chọn nhị phân tương đối dễ dàng. Bạn có thể mua một hợp đồng trong chỉ ba bước:"
@@ -8446,6 +8446,9 @@ msgstr "Tuyên bố PEP"
 msgid "PM"
 msgstr "PM"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "Palladium vs đô-la Mỹ"
 
@@ -12579,7 +12582,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Tài liệu (\"Thỏa Thuận\") này đặt ra các điều khoản và điều kiện giữa \"Công Ty\" là Deriv Services Ltd và người đăng ký tham gia chương trình; (\"Bên liên kết\"), liên quan đến ứng dụng của Bên liên kết để thiết lập tài khoản liên kết (và là thành viên của chương trình liên kết nếu ứng dụng của Bên liên kết được coi là thành công)."
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "Tính năng này chỉ khả dụng với tài khoản tiền ảo."
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "Chức năng này này không liên quan tới tài khoản tiền ảo."
@@ -12648,7 +12651,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "Nghĩa vụ này bao gồm việc cấm thanh toán bất hợp pháp hoặc cấp bất kỳ hình thức lợi ích bất hợp pháp nào cho cán bộ công chức, đối tác kinh doanh, nhân viên, thành viên gia đình hoặc bất kỳ đối tác nào khác."
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "Trang này không khả dụng tại quốc gia của bạn."
 
 msgid "This page is only available to logged out clients."
 msgstr "Trang này chỉ dành cho khách hàng đã đăng xuất."
@@ -14757,7 +14760,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Tài khoản của bạn được xác thực đầy đủ và mức giới hạn rút tiền của bạn đã được nâng lên."
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "Tài khoản của bạn hiện đã bị vô hiệu hóa."
 
 msgid "Your account is now deactived."
 msgstr "Tài khoản của bạn đã được hủy."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:59\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "Cierre de la cuenta"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "Cuenta Desactivada"
 
 msgid "Account Deposit Currency"
 msgstr "Moneda de depósito de la cuenta"
@@ -2187,10 +2187,10 @@ msgid "Binary options trading frequency"
 msgstr "Frecuencia en operación con opciones binarias"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "El trading con opciones binarias no está disponible en su país."
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "El comercio de opciones binarias no está disponible en su cuenta financiera."
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "La operación de opciones binarias es relativamente fácil. Es posible comprar un contrato en solo tres pasos:"
@@ -8445,6 +8445,9 @@ msgstr "Declaración de PEP"
 msgid "PM"
 msgstr "PM"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "Paladio vs dólar estadounidense"
 
@@ -12577,7 +12580,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Este documento (el \"Acuerdo\") establece los términos y condiciones entre \"la Empresa\" en este caso Deriv Services Ltd y usted (la persona que solicitó participación en este programa (\"el Afiliado\"), en relación a su solicitud para establecer una cuenta de afiliado (y la inscripción al programa de afiliados si su solicitud se considera exitosa)."
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "Esta característica está disponible solo para cuentas virtuales."
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "Esta característica no es relevante para cuentas de dinero virtual."
@@ -12646,7 +12649,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "Esta obligación abarca la prohibición de pagos ilícitos o la concesión de cualquier forma de beneficios ilícitos a funcionarios públicos, socios comerciales, empleados, familiares, o cualquier otro socio."
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "Esta página no está disponible en su país de residencia."
 
 msgid "This page is only available to logged out clients."
 msgstr "Esta página sólo está disponible para clientes desconectados."
@@ -14755,7 +14758,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Su cuenta está totalmente autenticada y su límite de retirada ha sido aumentado."
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "Su cuenta ahora está desactivada."
 
 msgid "Your account is now deactived."
 msgstr "Su cuenta ahora está desactivada."

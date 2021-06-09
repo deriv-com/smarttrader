@@ -372,6 +372,7 @@ module.exports = [
     'Opens',
     'Over/Under',
     'PM',
+    'Page not available, you did not deactivate your account.',
     'Passport',
     'Passport photo page',
     'Password is not strong enough.',

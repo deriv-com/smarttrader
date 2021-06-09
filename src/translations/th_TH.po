@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:59\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "การปิดบัญชี"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "บัญชีถูกปิดใช้งาน"
 
 msgid "Account Deposit Currency"
 msgstr "สกุลเงินฝากของบัญชี"
@@ -2186,10 +2186,10 @@ msgid "Binary options trading frequency"
 msgstr "ความถี่ในการซื้อขายไบนารีออปชัน"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "การซื้อขายตัวเลือกไบนารีไม่สามารถใช้ได้ในประเทศของคุณ"
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "การซื้อขายตัวเลือกไบนารีไม่สามารถใช้ได้ในบัญชีทางการเงินของคุณ"
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "การซื้อขายไบนารีออปชันทำได้ง่ายๆ ท่านสามารถซื้อสัญญาได้ในสามขั้นตอน"
@@ -8445,6 +8445,9 @@ msgstr "การแสดงเจตนารมณ์ไม่เกี่ย
 msgid "PM"
 msgstr "น."
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "พาลาเดียม เทียบกับ ดอลลาร์สหรัฐ"
 
@@ -12579,7 +12582,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "เอกสารนี้ (\"ข้อตกลง\") กำหนดข้อกำหนดและเงื่อนไขระหว่าง \"บริษัท\" ซึ่งก็คือ Deriv Services Ltd และผู้ที่สมัครเข้าร่วมโปรแกรมนี้ (\"พันธมิตร\") ที่เกี่ยวข้องกับการสมัครของพันธมิตร เพื่อสร้างบัญชีพันธมิตร (และการเป็นสมาชิกของโปรแกรมพันธมิตรหากใบสมัครของพันธมิตร นั้นได้รับการอนุมัติ)"
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "ฟีเจอร์นี้พร้อมใช้งานสําหรับบัญชีเสมือนเท่านั้น"
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "ฟังก์ชันนี้ไม่สัมพันธ์กับบัญชีเงินเสมือน"
@@ -12648,7 +12651,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "หน้าที่ความรับผิดชอบนี้หมายรวมถึงการห้ามปฏิบัติขัดต่อกฎหมายการชำระเงิน หรือ การห้ามในการให้ผลประโยชน์ใดๆ ทุกรูปแบบที่ผิดกฎหมายต่อเจ้าหน้าที่ภาครัฐ พันธมิตรทางการค้า ลูกจ้าง สมาชิกในครอบครัว หรือ คู่ค้าต่างๆ"
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "หน้านี้ไม่มีให้บริการในประเทศที่คุณพํานัก"
 
 msgid "This page is only available to logged out clients."
 msgstr "หน้านี้สำหรับแสดงให้กับผู้ใช้งานที่ออกจากระบบแล้ว"
@@ -14757,7 +14760,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "บัญชีของท่านได้รับการยืนยันตัวตนอย่างสมบูรณ์แล้ว และวงเงินการถอนเงินของท่านได้รับการยกระดับโดยการเพิ่มวงเงินแล้ว"
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "บัญชีของคุณถูกปิดใช้งานในขณะนี้"
 
 msgid "Your account is now deactived."
 msgstr "บัญชีของคุณถูกปิดใช้งานในขณะนี้"

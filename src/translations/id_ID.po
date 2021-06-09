@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:58\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "Penutupan Akun"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "Akun Dinonaktifkan"
 
 msgid "Account Deposit Currency"
 msgstr "Mata Uang Akun Deposit"
@@ -2186,10 +2186,10 @@ msgid "Binary options trading frequency"
 msgstr "Frekuensi trading opsi binary"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "Trading opsi binary tidak tersedia di negara Anda."
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Trading opsi binary tidak tersedia pada akun finansial Anda."
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "Trading opsi binary relatif mudah. Anda bisa membeli kontrak hanya dalam tiga langkah:"
@@ -8444,6 +8444,9 @@ msgstr "Deklarasi PEP"
 msgid "PM"
 msgstr "PM"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "Palladium vs Dolar AS"
 
@@ -12577,7 +12580,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Dokumen ini (\"Perjanjian\") menetapkan syarat dan ketentuan antara \"Perusahaan\", yaitu Deriv Services Ltd, dengan pihak yang telah mengajukan permohonan pada program ini (\"Afiliasi\"), sehubungan dengan aplikasi Afiliasi untuk menyiapkan akun afiliasi (dan keanggotaan program afiliasi jika aplikasi afiliasi diluluskan)."
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "Fasilitas ini hanya tersedia untuk rekening virtual saja."
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "Fasilitas ini tidak tersedia untuk akun uang virtual."
@@ -12646,7 +12649,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "Kewajiban ini mencakup larangan pembayaran yang melanggar hukum atau pemberian segala bentuk manfaat yang melanggar hukum kepada pejabat publik, mitra bisnis, karyawan, anggota keluarga, atau mitra lainnya."
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "Halaman ini tidak tersedia pada negara domisili Anda."
 
 msgid "This page is only available to logged out clients."
 msgstr "Anda perlu keluar dari akun Anda terlebih dahulu untuk mengakses halaman ini."
@@ -14755,7 +14758,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Akun Anda telah terbukti dan batasan penarikan Anda telah dihapuskan."
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "Akun Anda sudah dinonaktifkan."
 
 msgid "Your account is now deactived."
 msgstr "Akun Anda sudah dinonaktifkan."

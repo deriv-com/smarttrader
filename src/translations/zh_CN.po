@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:58\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "账户关闭"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "账户已停用"
 
 msgid "Account Deposit Currency"
 msgstr "账户存款币种"
@@ -2186,10 +2186,10 @@ msgid "Binary options trading frequency"
 msgstr "二元期权交易频率"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "您的国家无法进行二元期权交易。"
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "您的金融账户无法进行二元期权交易。"
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "相对说来，二元期权交易是很容易的。 您可以通过三个简单步骤购买合约："
@@ -8445,6 +8445,9 @@ msgstr "PEP声明"
 msgid "PM"
 msgstr "下午"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "钯金兑美元"
 
@@ -12578,7 +12581,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "本文件（“协议”）规定了“公司”（即 Deriv Services Ltd.）与本项目申请人（“联盟会员”）之间关于联盟会员申请设立联盟会员账户（申请成功后还包括联盟项目的会员资格）以推广网站的条款和条件。"
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "此功能仅适用于虚拟账户。"
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "此功能不适用于虚拟资金账户。"
@@ -12647,7 +12650,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "这项义务包括禁止非法付款或向公职人员、业务伙伴、雇员、家庭成员或任何其他伙伴提供任何形式的非法利益。"
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "您的居住国无法使用此页面。"
 
 msgid "This page is only available to logged out clients."
 msgstr "此页面仅适用于已登出的客户。"
@@ -14756,7 +14759,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "您的账户已经得到完全验证，且您的取款限额已经取消。"
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "您的账户已停用。"
 
 msgid "Your account is now deactived."
 msgstr "您的账户已停用。"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:58\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1010,7 +1010,7 @@ msgid "Account Closure"
 msgstr "Закрытие счета"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "Счет деактивирован"
 
 msgid "Account Deposit Currency"
 msgstr "Валюта пополнения счёта"
@@ -2186,10 +2186,10 @@ msgid "Binary options trading frequency"
 msgstr "Частота торговли бинарными опционами"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "Торговля бинарными опционами недоступна в вашей стране."
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Торговля бинарными опционами недоступна на вашем финансовом счёте."
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "Торговать бинарными опционами достаточно просто. Вы можете купить контракт всего в три шага:"
@@ -8444,6 +8444,9 @@ msgstr "Декларация ПЗЛ"
 msgid "PM"
 msgstr "вечера"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "Палладий против доллара США"
 
@@ -12576,7 +12579,7 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Данный документ (далее именуемый \"Соглашением\") устанавливает правила и условия, распространяющиеся на \"Компанию,\" что означает Deriv Services Ltd, и лицо, подавшее заявку на участие в данной программе (\"Партнёр\") в отношении заявки на открытие партнёрского счёта (и участия в партнёрской программе, если таковая заявка на участие будет одобрена)."
 
 msgid "This feature is available to virtual accounts only."
-msgstr ""
+msgstr "Эта опция доступна только для демо-счетов."
 
 msgid "This feature is not relevant to virtual-money accounts."
 msgstr "Эта функция недоступна на демо-счетах."
@@ -12645,7 +12648,7 @@ msgid "This obligation encompasses the prohibition of unlawful payments or the g
 msgstr "Данное обязательство включает запрет на незаконные платежи, начисление любого вида незаконной прибыли лицам, занимающим гос. должности, бизнес партнёрам, сотрудникам, членам семьи или любым другим партнёрам."
 
 msgid "This page is not available in your country of residence."
-msgstr ""
+msgstr "Эта страница недоступна в вашей стране проживания."
 
 msgid "This page is only available to logged out clients."
 msgstr "Эта страница доступна только для клиентов, вошедших на сайт."
@@ -14754,7 +14757,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Ваш счет полностью авторизован, и лимит на вывод был снят."
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "Ваш счет успешно деактивирован."
 
 msgid "Your account is now deactived."
 msgstr "Ваш счет успешно деактивирован."

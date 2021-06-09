@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-02 07:58\n"
+"PO-Revision-Date: 2021-06-09 03:49\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -465,7 +465,7 @@ msgid "%1Note:%2 You need to upgrade your MQL5 account to seller status to be ab
 msgstr "%1Nota:%2 você precisa atualizar sua conta MQL5 para o status de vendedor para poder adicionar um sinal. Se você ainda não fez o upgrade, siga as etapas nesta página para se registrar como vendedor."
 
 msgid "%1Please note that if you live in the United Kingdom, self-exclusion cannot be removed until its period has expired. %2If you wish to resume trading after your self-exclusion period is over, please make your request by calling %3. Requests by chat or email shall not be entertained."
-msgstr "%1Por favor, note que se você mora no Reino Unido, auto-exclusão não pode ser removida até que o período tenha expirado.%2 Se desejar retomar a negociação após o término do período de auto-exclusão, faça sua solicitação ligando para %3. Solicitações por chat ou e-mail não serão atendidas."
+msgstr "%1Por favor, note que se você mora no Reino Unido, auto-exclusão não pode ser removida até que o período tenha expirado.%2Se desejar retomar a negociação após o término do período de auto-exclusão, faça sua solicitação ligando para %3. Solicitações por chat ou e-mail não serão atendidas."
 
 msgid "%1Please note%2: Commission payout for all assets will be converted to your deposit currency based on the latest exchange rate."
 msgstr "%1Por favor note que%2: O pagamento da comissão para todos os ativos será convertido para a moeda de depósito com base na última taxa de câmbio."
@@ -861,7 +861,7 @@ msgid "A trade is opened by either executing a \"Buy\" or a \"Sell\" Order based
 msgstr "Um negócio é aberto através da execução de uma ordem de \"Compra\" ou \"Venda\" com base num número especificado de lotes (volume) que constituem o Instrumento Subjacente do mercado relevante."
 
 msgid "A trading password is used to sign in to any of your MT5 accounts when using MT5 apps on your mobile or other devices. "
-msgstr ""
+msgstr "A senha de negociação é usada para entrar em qualquer uma de suas contas MT5 quando as acessando através do aplicativo MT5 em seu celular ou outros dispositivos."
 
 msgid "A university degree in Accounting/Finance or its equivalent"
 msgstr "Um diploma universitário em Contabilidade/Finanças ou equivalente"
@@ -1014,7 +1014,7 @@ msgid "Account Closure"
 msgstr "Encerramento da Conta"
 
 msgid "Account Deactivated"
-msgstr ""
+msgstr "Conta Desativada"
 
 msgid "Account Deposit Currency"
 msgstr "Moeda de depósito de conta"
@@ -1140,7 +1140,7 @@ msgid "Add a description and click %1Save%2 to complete the registration."
 msgstr "Adicione uma descrição e clique em %1Salvar%2 para concluir o registro."
 
 msgid "Add account"
-msgstr ""
+msgstr "Adicionar conta"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr "Adicione outra palavra ou duas. Palavras incomuns são melhores."
@@ -1593,7 +1593,7 @@ msgid "Appropriateness test"
 msgstr "Teste de adequação"
 
 msgid "Apps you have linked to this password:"
-msgstr ""
+msgstr "Aplicativos associados a esta senha:"
 
 msgid "Apr"
 msgstr "Abr"
@@ -1626,7 +1626,7 @@ msgid "Are you sure you want to deposit in %1?"
 msgstr "Tem certeza de que deseja depositar em %1?"
 
 msgid "Are you sure you want to unlink from %1?"
-msgstr ""
+msgstr "Tem certeza que deseja se desvincular de %1?"
 
 msgid "Are you sure?"
 msgstr "Tem certeza?"
@@ -2079,7 +2079,7 @@ msgid "Before using the trading robots or Expert Advisors and forward trade, the
 msgstr "Antes de usar os robôs de negociação ou os Expert Advisors e o forward trade, o cliente deve testá-lo em uma conta de demonstração."
 
 msgid "Before you deactivate your account, you need to do the following:"
-msgstr ""
+msgstr "Antes de desativar sua conta, você precisa fazer o seguinte:"
 
 msgid "Beginner"
 msgstr "Iniciante"
@@ -2160,10 +2160,10 @@ msgid "Binary Options"
 msgstr "Opções binárias"
 
 msgid "Binary Password"
-msgstr ""
+msgstr "Senha Binary "
 
 msgid "Binary Password Reset"
-msgstr ""
+msgstr "Redefinir Senha Binary "
 
 msgid "Binary WebTrader"
 msgstr "Binary Webtrader"
@@ -2193,16 +2193,16 @@ msgid "Binary options trading frequency"
 msgstr "Frequência de negociação de opções binárias"
 
 msgid "Binary options trading is not available in your country."
-msgstr ""
+msgstr "Desculpe, mas a negociação de opções binárias não está disponível em seu país."
 
 msgid "Binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Desculpe, mas a negociação de opções binárias não está disponível em sua conta financeira."
 
 msgid "Binary options trading is relatively easy. You can purchase a contract in just three steps:"
 msgstr "A negociação de opções binárias é relativamente fácil. É possível comprar um contrato em apenas 3 passos:"
 
 msgid "Binary password"
-msgstr ""
+msgstr "Senha Binary"
 
 msgid "Binary shall have the absolute discretionary power to accept or reject an application to open an Account by a client introduced by the Introducing Broker."
 msgstr "A Binary terá o poder discricionário absoluto de aceitar ou rejeitar um pedido para abrir uma Conta por um cliente apresentado pelo Corretor de Apresentação."
@@ -2569,7 +2569,7 @@ msgid "Change currency"
 msgstr "Trocar moeda"
 
 msgid "Change investor password"
-msgstr ""
+msgstr "Mudar senha do investidor"
 
 msgid "Change password"
 msgstr "Alterar senha"
@@ -2578,7 +2578,7 @@ msgid "Change the Margin rate in relation to both Open Positions and new Orders"
 msgstr "Alterar a taxa de margem em relação a posições abertas e novas ordens"
 
 msgid "Change your main login and trading password."
-msgstr ""
+msgstr "Altere a sua senha de acesso principal e a senha de negociação."
 
 msgid "Changes to this privacy policy"
 msgstr "Alterações a esta política de privacidade"
@@ -2617,7 +2617,7 @@ msgid "Check that your number is correct"
 msgstr "Verifique se o seu número está correto"
 
 msgid "Check the email account associated with your Apple ID and click the link in the email to proceed."
-msgstr ""
+msgstr "Verifique a conta de e-mail associada ao seu ID Apple e clique no link do e-mail para continuar."
 
 msgid "Check your Facebook account email and click the link in the email to proceed."
 msgstr ""
@@ -3152,7 +3152,7 @@ msgid "Continue on your phone"
 msgstr "Continue no telefone"
 
 msgid "Continue to account deactivation"
-msgstr ""
+msgstr "Continue para a desativação da conta"
 
 msgid "Continue trading"
 msgstr "Continue a negociar"
@@ -3492,7 +3492,7 @@ msgid "Current balance"
 msgstr "Saldo atual"
 
 msgid "Current investor password"
-msgstr ""
+msgstr "Senha atual do investidor"
 
 msgid "Current password"
 msgstr "Senha atual"
@@ -3513,7 +3513,7 @@ msgid "Customer funds"
 msgstr "Fundos de Clientes"
 
 msgid "Customer service was unsatisfactory."
-msgstr ""
+msgstr "O atendimento ao cliente foi insatisfatório."
 
 msgid "Customer-centric partnership"
 msgstr "Parceria centrada no cliente"
@@ -3646,7 +3646,7 @@ msgid "Deactivate Account"
 msgstr ""
 
 msgid "Deactivate account?"
-msgstr ""
+msgstr "Desativar conta?"
 
 msgid "Deactivating your account will automatically log you out. You can reactivate your account by logging in at any time."
 msgstr ""
@@ -4093,7 +4093,7 @@ msgid "Don't worry, you can simply %1reset your password%2."
 msgstr "Não se preocupe, %1basta redefinir a sua senha%2."
 
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 msgid "Dormant and inactive accounts"
 msgstr "Contas inativas"
@@ -4953,8 +4953,7 @@ msgid "February"
 msgstr "Fevereiro"
 
 msgid "Feel free to contact our friendly and helpful customer service experts. They're always available to answer your questions. You can contact us via live chat."
-msgstr "\n"
-"Sinta-se à vontade para entrar em contato com nossos simpáticos e prestativos especialistas em atendimento ao cliente. Eles estão sempre disponíveis para esclarecer suas dúvidas. Você pode nos contatar via chat ao vivo."
+msgstr "Sinta-se à vontade para entrar em contato com nossos simpáticos e prestativos especialistas em atendimento ao cliente. Eles estão sempre disponíveis para esclarecer suas dúvidas. Você pode nos contatar via chat ao vivo."
 
 msgid "Feel free to get in touch with us at %1. We'd love to hear from you."
 msgstr "Sinta-se à vontade para entrar em contato conosco na %1. Gostaríamos de ouvir a sua opinião."
@@ -5230,7 +5229,7 @@ msgid "Forex trading involves buying or selling these \"currency pairs\". When y
 msgstr "Negociações forex envolvem a compra ou a venda destes \"pares de moedas\". Quando você compra um par de moedas tal como o EUR/USD, significa que você está comprando o EUR e vendendo o USD ao mesmo tempo."
 
 msgid "Forgot password"
-msgstr ""
+msgstr "Esqueceu a senha"
 
 msgid "Founded in 1999, %1 is one of the oldest and most respected names in online binary trading."
 msgstr "Fundada em 1999, a %1 é um dos mais antigos e mais respeitados nomes na negociação de opções binárias."
@@ -5489,7 +5488,7 @@ msgid "Good understanding of payments functionality and a keen interest in crypt
 msgstr "Bom entendimento da funcionalidade de pagamentos e um grande interesse em criptomoedas"
 
 msgid "Got it"
-msgstr ""
+msgstr "Entendi"
 
 msgid "Governing law"
 msgstr "Lei regente"
@@ -5765,7 +5764,7 @@ msgid "I forgot my password, what should I do?"
 msgstr "Esqueci a minha senha, o que devo fazer?"
 
 msgid "I have other financial priorities."
-msgstr ""
+msgstr "Tenho outras prioridades financeiras."
 
 msgid "I have read and agree to the %1terms and conditions%2 of the site."
 msgstr "Li e aceito os %1termos e condições%2 do site."
@@ -5774,7 +5773,7 @@ msgid "I hereby confirm that the tax information I provided is true and complete
 msgstr "Confirmo, pela presente, que as informações fiscais que forneci são verdadeiras e completas. Também irei informar a Deriv Investments (Europe) Limited sobre quaisquer alterações a estas informações."
 
 msgid "I prefer another trading website."
-msgstr ""
+msgstr "Prefiro outro site de negociação."
 
 msgid "I want to reapply"
 msgstr "Desejo candidatar-me novamente"
@@ -5783,7 +5782,7 @@ msgid "I want to receive updates on %1 products, services, and events."
 msgstr "Desejo receber atualizações sobre %1 produtos, serviços e eventos."
 
 msgid "I want to stop myself from trading."
-msgstr ""
+msgstr "Eu quero me impedir de negociar."
 
 msgid "I would like to be treated as a professional client."
 msgstr "Eu gostaria de ser tratado como um cliente profissional."
@@ -5976,12 +5975,10 @@ msgid "If the client is an individual, they are over 18 years old and they have 
 msgstr "Se o cliente for um indivíduo, ele tem mais de 18 anos e tem capacidade total para celebrar este contrato."
 
 msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
-msgstr "\n"
-"Se o cliente deseja sacar fundos de sua conta real MT5 e encerrar sua conta real MT5, ele pode notificar a empresa através do% 1live chat% 2. A Conta Real MT5 do cliente pode ser encerrada caso este não tenha Posições em Aberto e todos os valores que eram devidos à Empresa tenham sido liquidados."
+msgstr "Se o cliente deseja sacar fundos de sua conta real MT5 e encerrar sua conta real MT5, ele pode notificar a empresa através do %1live chat%2. A Conta Real MT5 do cliente pode ser encerrada caso este não tenha Posições em Aberto e todos os valores que eram devidos à Empresa tenham sido liquidados."
 
 msgid "If the client wishes to withdraw funds from their MT5 Real Account and/or close their MT5 Real Account, the client may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if the client does not have any Open Positions and all amounts due to the Company have been settled."
-msgstr "\n"
-"Se o cliente deseja sacar fundos de sua conta real MT5 e/ou encerrar sua conta real MT5, o cliente pode notificar a empresa através do% 1live chat% 2. A conta real MT5 do cliente pode ser encerrada se o cliente não tiver posições em aberto e todos os valores devidos à empresa tiverem sido liquidados."
+msgstr "Se o cliente deseja sacar fundos de sua conta real MT5 e/ou encerrar sua conta real MT5, o cliente pode notificar a empresa através do %1live chat%2. A conta real MT5 do cliente pode ser encerrada se o cliente não tiver posições em aberto e todos os valores devidos à empresa tiverem sido liquidados."
 
 msgid "If the client would like to file a complaint with regards to the Company's service, the client can contact the Company at %1, providing any relevant details relating to the client's complaint. %2If you are registered with Deriv (Europe) Limited, you can also place a complaint by calling %3.%4 The Company will investigate each inquiry and provide a final response in the shortest time possible."
 msgstr "Se o cliente deseja registrar uma reclamação em relação ao serviço da empresa, o cliente pode entrar em contato com a empresa em %1, fornecendo todos os detalhes relevantes sobre a reclamação do cliente. %2Se você estiver registrado na Deriv (Europe) Limited, também poderá fazer uma reclamação ligando para %3.%4 A empresa investigará cada consulta e fornecerá uma resposta final no menor tempo possível."
@@ -6587,7 +6584,7 @@ msgid "Investor Compensation Scheme"
 msgstr "Regime de Compensação de Investidores"
 
 msgid "Investor password"
-msgstr ""
+msgstr "Senha de investidor"
 
 msgid "Is there a cost for joining?"
 msgstr "Existe algum custo de adesão?"
@@ -7320,7 +7317,7 @@ msgid "Making decisions about who to employ and what salary and benefits to offe
 msgstr "Tomar decisões sobre quem empregar e que salário e benefícios oferecer"
 
 msgid "Making deposits and withdrawals is difficult."
-msgstr ""
+msgstr "Fazer depósitos e retiradas é difícil."
 
 msgid "Making sure of having effective and updated antivirus/antispyware software and firewall in place before using public WiFi"
 msgstr "Certifique-se de ter um software antivírus/antispyware e um firewall eficazes e atualizados antes de usar um WiFi público"
@@ -7762,7 +7759,7 @@ msgid "Must be a clear, colour photo or scanned image"
 msgstr "Deve ser uma fotografia ou uma imagem digitalizada clara e colorida"
 
 msgid "Must be numbers, letters, and special characters . , ' -"
-msgstr ""
+msgstr "Devem ser números, letras e caracteres especiais. , '-"
 
 msgid "Must be under 10MB."
 msgstr "Deve ter menos de 10 MB."
@@ -7892,7 +7889,7 @@ msgid "New account"
 msgstr "Nova conta"
 
 msgid "New investor password"
-msgstr ""
+msgstr "Nova senha do investidor"
 
 msgid "New office in Asunción, Paraguay"
 msgstr "Novo escritório em Assunção, Paraguai"
@@ -8479,6 +8476,9 @@ msgstr "Declaração PPE"
 msgid "PM"
 msgstr "PM"
 
+msgid "Page not available, you did not deactivate your account."
+msgstr ""
+
 msgid "Palladium vs US dollar"
 msgstr "Paládio vs Dólar Americano"
 
@@ -8825,8 +8825,7 @@ msgid "Please confirm the transaction details in order to complete the transfer:
 msgstr "Confirme os detalhes da transação para concluir a transferência:"
 
 msgid "Please contact us via %1live chat%2."
-msgstr "\n"
-"Entre em contato conosco através do %1live chat%2."
+msgstr "Entre em contato conosco através do %1live chat%2."
 
 msgid "Please contact your payment agent to validate your withdrawal request."
 msgstr "Entre em contato com seu Agente de Pagamento para validar sua solicitação de retirada."
@@ -8919,7 +8918,7 @@ msgid "Please select a valid time."
 msgstr "Selecione uma hora válida."
 
 msgid "Please select at least one reason."
-msgstr ""
+msgstr "Por favor selecione pelo menos uma razão."
 
 msgid "Please select at least one scope"
 msgstr "Selecione pelo menos um escopo"
@@ -8970,7 +8969,7 @@ msgid "Please take note that our swap rate also depends on the time and days you
 msgstr "Note que a nossa taxa de swap também depende do tempo e dos dias em que você mantém as suas posições em aberto:"
 
 msgid "Please tell us why you’re leaving. (Select up to 3 reasons.)"
-msgstr ""
+msgstr "Conte-nos por que você está saindo. (Selecione até 3 motivos.)"
 
 msgid "Please try again"
 msgstr "Por favor, tente novamente"
@@ -9472,8 +9471,7 @@ msgid "Real Synthetic"
 msgstr "Real Sintéticos"
 
 msgid "Real accounts will be archived after %1 days of inactivity. The client can request for the reactivation of a real account via %2live chat%3."
-msgstr "\n"
-"As contas reais serão arquivadas após %1 dias de inatividade. O cliente pode solicitar a reativação de uma conta real através do % 2live chat% 3."
+msgstr "As contas reais serão arquivadas após %1 dias de inatividade. O cliente pode solicitar a reativação de uma conta real através do %2live chat%3."
 
 msgid "Real-Money Account"
 msgstr "Conta de dinheiro real"
@@ -9731,7 +9729,7 @@ msgid "Reset investor password"
 msgstr ""
 
 msgid "Reset my password"
-msgstr ""
+msgstr "Redefinir minha senha"
 
 msgid "Reset my virtual balance"
 msgstr "Reiniciar meu saldo virtual"
@@ -10675,7 +10673,7 @@ msgid "Submitting"
 msgstr "Enviando"
 
 msgid "Success!"
-msgstr ""
+msgstr "Sucesso!"
 
 msgid "Successful"
 msgstr "Bem-sucedido"
@@ -12259,7 +12257,7 @@ msgid "The platforms aren't user-friendly."
 msgstr ""
 
 msgid "The platforms lack key features or functionality."
-msgstr ""
+msgstr "As plataformas carecem de recursos ou funcionalidades principais."
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "A principal plataforma para a negociação de opções binárias nos mercados financeiros do mundo"
@@ -13266,7 +13264,7 @@ msgid "Try WebTrader"
 msgstr "Experimente o Webtrader"
 
 msgid "Try again"
-msgstr ""
+msgstr "Tentar novamente"
 
 msgid "Try now"
 msgstr "Experimente"
@@ -14786,7 +14784,7 @@ msgid "Your %1proof of identity%3 and %2proof of address%3 have not been verifie
 msgstr "Seu %1comprovante de identidade%3 e %2comprovante de endereço%3 não foi verificado."
 
 msgid "Your Binary account is unlinked from %1. Use %2your email and password for future log in."
-msgstr ""
+msgstr "Sua conta Binary foi desvinculada de %1. Use %2seu endereço de email e senha em seu próximo acesso."
 
 msgid "Your Client will receive an email notification informing him/her that the transfer has been processed."
 msgstr "O seu Cliente receberá uma notificação por e-mail com a informação de que a transferência foi processada."
@@ -14807,7 +14805,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "A sua conta está totalmente autenticada e os seus limites de retirada de fundos foram aumentados."
 
 msgid "Your account is now deactivated."
-msgstr ""
+msgstr "Sua conta agora está desativada."
 
 msgid "Your account is now deactived."
 msgstr ""
