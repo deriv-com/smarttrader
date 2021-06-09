@@ -122,9 +122,6 @@ commands:
   k8s_deploy:
     description: "Deploy to k8s cluster"
     parameters:
-      k8s_svc_name:
-        type: string
-        default: "staging-smarttrader-deriv-app"
       k8s_namespace:
         type: string
         default: "smarttrader-deriv-app-staging"
@@ -134,11 +131,8 @@ commands:
     steps:
       - k8s/install-kubectl
       - run: 
-          name: Deploying to k8s cluster for service << parameters.k8s_svc_name >>
+          name: Deploying to k8s cluster for service << parameters.k8s_namespace >>
           command: |
-            echo $CA_CRT | base64 --decode > ca.crt
-            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/<< parameters.k8s_svc_name >> << parameters.k8s_svc_name >>=${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.k8s_version >>
-
             export NAMESPACE=<< parameters.k8s_namespace >>
             git clone https://github.com/binary-com/devops-ci-scripts
             cd devops-ci-scripts/k8s-build_tools
@@ -192,7 +186,6 @@ jobs:
       - docker_build_push:
           docker_image_tag: latest
       - k8s_deploy:
-          k8s_svc_name: "production-smarttrader-deriv-app"
           k8s_namespace: "smarttrader-deriv-app-production"
           k8s_version: ${CIRCLE_TAG}
       - notify_slack
