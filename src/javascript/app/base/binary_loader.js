@@ -108,6 +108,7 @@ const BinaryLoader = (() => {
         no_mf            : () => localize('Binary options trading is not available in your financial account.'),
         options_blocked  : () => localize('Binary options trading is not available in your country.'),
         residence_blocked: () => localize('This page is not available in your country of residence.'),
+        not_deactivated  : () => localize('Page not available, you did not deactivate your account.'),
     };
 
     const loadHandler = (this_page) => {
