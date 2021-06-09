@@ -881,15 +881,9 @@ const Authenticate = (() => {
                                         country: country_code,
                                     } : false,
                                 },
-                                useLiveDocumentCapture: true,
                             },
                         },
-                        {
-                            type   : 'face',
-                            options: {
-                                useLiveDocumentCapture: true,
-                            },
-                        },
+                        'face',
                     ],
                 });
                 $('#authentication_loading').setVisibility(0);

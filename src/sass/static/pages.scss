@@ -959,11 +959,8 @@ body #not_authenticated_financial ul.checked > li {
         .onfido-sdk-ui-NavigationBar-back {
             background: transparent;
         }
-        .onfido-sdk-ui-crossDevice-CrossDeviceLink-numberInputSection {
-            .ods-button.-action--primary {
-                height: 100%;
-                font-size: 0.875em;
-            }
+        .onfido-sdk-ui-Button-button-primary:hover {
+            background: rgb(53, 63, 244); // Onfido's primary color
         }
         .onfido-sdk-ui-Button-button-outline:hover {
             background-color: transparent;
@@ -973,6 +970,7 @@ body #not_authenticated_financial ul.checked > li {
             color: $COLOR_BLACK;
             border-radius: 0;
         }
+        /** TODO: To re-implement style overrides when upgrading Onfido version
         .onfido-sdk-ui-Theme-textButton:hover {
             color: $COLOR_BLACK;
         }
@@ -987,14 +985,14 @@ body #not_authenticated_financial ul.checked > li {
                     background: rgb(92, 108, 255);
                 }
             }
-        }
+        } **/
         input, textarea {
             &:hover, &:focus {
                 outline: 0;
                 border: none;
             }
         }
-        button:not(.onfido-sdk-ui-Theme-link):not(.ods-button) {
+        button:not(.onfido-sdk-ui-Theme-link):not(.onfido-sdk-ui-Button-button-primary) {
             &:hover, &:focus {
                 background-color: inherit;
             }
