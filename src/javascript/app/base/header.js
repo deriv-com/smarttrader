@@ -169,6 +169,13 @@ const Header = (() => {
                 on_mobile: true,
 
             },
+            derivx: {
+                name     : 'Deriv X',
+                desc     : 'Trade FX and CFDs on a customisable, easy-to-use trading platform.',
+                link     : `${main_domain}/derivx`,
+                icon     : 'ic-brand-dxtrade.svg',
+                on_mobile: true,
+            },
             smarttrader: {
                 name     : 'SmartTrader',
                 desc     : 'Trade the world\'s markets on Binary.com\'s classic platform.',
