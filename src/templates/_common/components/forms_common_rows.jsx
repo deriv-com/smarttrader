@@ -72,7 +72,9 @@ export const Residence = ({ className, row_class, row_id }) => (
         className={className || ''}
         label={it.L('Country of residence')}
     >
-        <label id='lbl_residence' />
+        <div id='residence_container'>
+            <label id='lbl_residence' />
+        </div>
     </FormRow>
 );
 
@@ -158,7 +160,7 @@ export const Phone = ({ hint, row_class, row_id }) => (
 );
 
 export const SecretQuestion = () => (
-    <FormRow type='select' id='secret_question' label={it.L('Secret question')}>
+    <FormRow type='select' id='secret_question' className='center-select-m' label={it.L('Secret question')}>
         <option value='Favourite dish'>{it.L('Favourite dish')}</option>
         <option value="Mother's maiden name">{it.L('Mother\'s maiden name')}</option>
         <option value='Name of your pet'>{it.L('Name of your pet')}</option>
