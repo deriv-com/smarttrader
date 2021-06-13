@@ -6,6 +6,8 @@ import Defaults from './defaults';
 import { sortSubmarket, getAvailableUnderlyings } from '../../common/active_symbols';
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
+import Client from '../../base/client';
+import { State } from '../../../_common/storage';
 
 function scrollToPosition (element, to, duration) {
     const requestAnimationFrame = window.requestAnimationFrame ||
@@ -69,7 +71,8 @@ class Markets extends React.Component {
     constructor (props) {
         super(props);
         let market_symbol = Defaults.get('market');
-        
+        let final_markets_arr,
+            final_market_obj;
         const market_list = Symbols.markets();
         this.markets = getAvailableUnderlyings(market_list);
         
@@ -79,8 +82,20 @@ class Markets extends React.Component {
             const submarket = Object.keys(this.markets[market_symbol].submarkets).sort(sortSubmarket)[0];
             underlying_symbol = Object.keys(this.markets[market_symbol].submarkets[submarket].symbols).sort()[0];
         }
+        const is_synthetic = symbol => /^(synthetic)/i.test(symbol);
+        const is_uk = State.getResponse('authorize.country') === 'gb';
         const markets_arr = Object.entries(this.markets).sort((a, b) => sortSubmarket(a[0], b[0]));
-        this.markets_all = markets_arr.slice();
+        if ((Client.isMalta() || is_uk) && Client.getAccountOfType('virtual')) {
+            final_markets_arr = markets_arr.filter(market => is_synthetic(market));
+            final_market_obj = Object.fromEntries(final_markets_arr);
+            market_symbol = Object.keys(final_market_obj)[0];
+            const submarket = Object.keys(final_market_obj[market_symbol].submarkets).sort(sortSubmarket)[0];
+            underlying_symbol = Object.keys(final_market_obj[market_symbol].submarkets[submarket].symbols).sort()[0];
+        } else {
+            final_markets_arr = markets_arr;
+            final_market_obj = Object.fromEntries(final_markets_arr);
+        }
+        this.markets_all = final_markets_arr.slice();
         if (!(market_symbol in this.markets)) {
             market_symbol = Object.keys(this.markets).find(m => this.markets[m].submarkets[market_symbol]);
             Defaults.set('market', market_symbol);
@@ -91,13 +106,13 @@ class Markets extends React.Component {
             open  : false,
             market: {
                 symbol: market_symbol,
-                name  : this.markets[market_symbol].name,
+                name  : final_market_obj[market_symbol].name,
             },
             underlying: {
                 symbol: underlying_symbol,
                 name  : this.underlyings[underlying_symbol],
             },
-            markets                : markets_arr,
+            markets                : final_markets_arr,
             active_market          : market_symbol,
             query                  : '',
             open_dropdown_scroll_id: 0,
