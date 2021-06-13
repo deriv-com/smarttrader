@@ -229,7 +229,7 @@ export const TaxInformationForm = () => (
     <React.Fragment>
         <div id='tax_information_info' className='gr-12 gr-padding-10'>
             <label>{it.L('Deriv Investments (Europe) Limited is required to collect your tax information.')}&nbsp;
-                <a id='tax_information_note_toggle' className='toggle-arrow' href='javascript:;'>{it.L('Read more.')}</a>
+                <span id='tax_information_note_toggle' className='toggle-arrow'>{it.L('Read more.')}</span>
             </label>
             <span className='required_field_asterisk'>*</span>
 
