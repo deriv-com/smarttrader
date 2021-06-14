@@ -103,6 +103,8 @@ class Markets extends React.Component {
             open_dropdown_scroll_id: 0,
         };
         this.el_underlying.value = underlying_symbol;
+
+        
     }
 
     componentDidMount () {
