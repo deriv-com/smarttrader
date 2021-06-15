@@ -1103,7 +1103,6 @@ ul.bullet {
     #webtrader_chart {
         width: 100%;
         height: 630px;
-        overflow-y: hidden;
 
         .row {
             padding: unset;
@@ -1673,6 +1672,8 @@ ul.bullet {
             }
         }
         &.chart-dialog {
+            overflow-x: visible !important;
+
             .close {
                 background: var(--general-active);
                 border-color: var(--general-active);
