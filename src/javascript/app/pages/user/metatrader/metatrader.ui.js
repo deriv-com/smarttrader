@@ -633,9 +633,6 @@ const MetaTraderUI = (() => {
             $form.find('#view_3').find('#trading_password_new_user').setVisibility(1);
             if (has_mt5_account) {
                 $form.find('#trading_password_input').setVisibility(0);
-                $form.find('#new_user_cancel_button').on('click', () => {
-                    location.reload();
-                });
                 $form.find('#has_mt5_new_user_btn_submit_new_account').setVisibility(1);
             } else {
                 $form.find('#new_user_btn_submit_new_account').setVisibility(1);

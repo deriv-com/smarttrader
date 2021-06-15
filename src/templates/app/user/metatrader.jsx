@@ -323,7 +323,7 @@ const Metatrader = () => (
                                         </button>
                                     </div>
                                     <div id='view_3-buttons_new_user' className='gr-padding-10 center-text'>
-                                        <button className='button button-secondary btn-back' id='new_user_cancel_button'>
+                                        <button className='button button-secondary btn-cancel' id='new_user_cancel_button'>
                                             {it.L('Cancel')}
                                         </button>
                                         <a className='button button-primary invisible' id='has_mt5_new_user_btn_submit_new_account' href={it.url_for('user/security/change_passwordws')}>
@@ -352,7 +352,7 @@ const Metatrader = () => (
                                     <div id='ddl_trade_server' type='radio' />
                                     <div id='view_2-buttons' className='gr-padding-10 center-text'>
                                         <a className='button button-secondary btn-back' href='javascript:;'>
-                                            <span>{it.L('Back')}</span>
+                                            <span>{it.L('Cancel')}</span>
                                         </a>
                                         <a className='button btn-next' href='javascript:;'>
                                             <span>{it.L('Next')}</span>
@@ -508,7 +508,7 @@ const Metatrader = () => (
                                         <CashierDesc title={it.L('Transfer funds to your MT5 account')} arrow_direction='right' desc={it.L('Transfer funds from your binary options account into your MetaTrader 5 account.')} />
 
                                         <div className='form'>
-                                            <FormRow is_two_rows type='text' id='txt_amount_deposit' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<span id="transfer_fee_amount_to"></span>', '<span id="transfer_fee_minimum_to"></span>')} />
+                                            <FormRow is_two_rows type='text' id='txt_amount_deposit' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<strong id="transfer_fee_amount_to"></strong>', '<strong id="transfer_fee_minimum_to"></strong>')} />
                                             <SubmitButton
                                                 is_centered
                                                 is_full_width
@@ -527,7 +527,7 @@ const Metatrader = () => (
                                         <CashierDesc title={it.L('Withdraw funds from your MT5 account')} arrow_direction='left' desc={it.L('Transfer funds from your MetaTrader 5 account into your binary options account.')} />
 
                                         <div className='form'>
-                                            <FormRow is_two_rows type='text' id='txt_amount_withdrawal' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<span id="transfer_fee_amount_from"></span>', '<span id="transfer_fee_minimum_from"></span>')} />
+                                            <FormRow is_two_rows type='text' id='txt_amount_withdrawal' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<strong id="transfer_fee_amount_from"></strong>', '<strong id="transfer_fee_minimum_from"></strong>')} />
                                             <SubmitButton
                                                 is_centered
                                                 is_full_width

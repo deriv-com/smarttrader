@@ -72,7 +72,9 @@ export const Residence = ({ className, row_class, row_id }) => (
         className={className || ''}
         label={it.L('Country of residence')}
     >
-        <label id='lbl_residence' />
+        <div id='residence_container'>
+            <label id='lbl_residence' />
+        </div>
     </FormRow>
 );
 
@@ -158,7 +160,7 @@ export const Phone = ({ hint, row_class, row_id }) => (
 );
 
 export const SecretQuestion = () => (
-    <FormRow type='select' id='secret_question' label={it.L('Secret question')}>
+    <FormRow type='select' id='secret_question' className='center-select-m' label={it.L('Secret question')}>
         <option value='Favourite dish'>{it.L('Favourite dish')}</option>
         <option value="Mother's maiden name">{it.L('Mother\'s maiden name')}</option>
         <option value='Name of your pet'>{it.L('Name of your pet')}</option>
@@ -229,7 +231,7 @@ export const TaxInformationForm = () => (
     <React.Fragment>
         <div id='tax_information_info' className='gr-12 gr-padding-10'>
             <label>{it.L('Deriv Investments (Europe) Limited is required to collect your tax information.')}&nbsp;
-                <a id='tax_information_note_toggle' className='toggle-arrow' href='javascript:;'>{it.L('Read more.')}</a>
+                <span id='tax_information_note_toggle' className='toggle-arrow'>{it.L('Read more.')}</span>
             </label>
             <span className='required_field_asterisk'>*</span>
 
