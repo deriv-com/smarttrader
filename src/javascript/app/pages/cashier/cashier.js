@@ -94,7 +94,7 @@ const Cashier = (() => {
                                     || can_change;
         const account_action_text = has_upgrade ? `<br />${localize('[_1]Manage your accounts[_2]', [`<a href=${Url.urlFor('user/accounts')}>`, '</a>'])}` : '';
         const is_iom_client       = Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im';
-        const change_text_for_iom = is_iom_client ? 'time' : 'time or create an MT5 account';
+        const change_text_for_iom = is_iom_client ? localize('time') : localize('time or create an MT5 account');
         const url_user_account    = `<a href=${Url.urlFor('user/accounts')}>`;
 
         const missingCriteria = (has_mt5, has_transaction) => {
