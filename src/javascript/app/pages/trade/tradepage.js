@@ -28,7 +28,7 @@ const TradePage = (() => {
             el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
         }
 
-        BinarySocket.wait('authorize').then(() => {
+        BinarySocket.wait('authorize', 'landing_company').then(() => {
             init();
         });
     };

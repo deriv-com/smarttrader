@@ -84,8 +84,9 @@ class Markets extends React.Component {
         }
         const is_synthetic = symbol => /^(synthetic)/i.test(symbol);
         const is_uk = State.getResponse('authorize.country') === 'gb';
+        const is_malta = State.getResponse('landing_company.gaming_company.shortcode') === 'malta';
         const markets_arr = Object.entries(this.markets).sort((a, b) => sortSubmarket(a[0], b[0]));
-        if ((Client.isMalta() || is_uk) && Client.getAccountOfType('virtual')) {
+        if ((is_malta || is_uk) && Client.getAccountOfType('virtual')) {
             final_markets_arr = markets_arr.filter(market => is_synthetic(market));
             final_market_obj = Object.fromEntries(final_markets_arr);
             market_symbol = Object.keys(final_market_obj)[0];
