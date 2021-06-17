@@ -415,22 +415,24 @@ const ClientBase = (() => {
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         if (iframe_window) {
-            const origin = getAllowedLocalStorageOrigin();
-            if (!origin) {
-                return;
-            }
-
-            // Keep client.accounts in sync (in case user wasn't logged in).
-            if (iframe_window.src === `${origin}/localstorage-sync.html`) {
-                iframe_window.contentWindow.postMessage({
-                    key  : 'client.accounts',
-                    value: JSON.stringify(client_accounts),
-                }, origin);
-                iframe_window.contentWindow.postMessage({
-                    key  : 'active_loginid',
-                    value: active_loginid,
-                }, origin);
-            }
+            iframe_window.onload = () => {
+                const origin = getAllowedLocalStorageOrigin();
+                if (!origin) {
+                    return;
+                }
+    
+                // Keep client.accounts in sync (in case user wasn't logged in).
+                if (iframe_window.src === `${origin}/localstorage-sync.html`) {
+                    iframe_window.contentWindow.postMessage({
+                        key  : 'client.accounts',
+                        value: JSON.stringify(client_accounts),
+                    }, origin);
+                    iframe_window.contentWindow.postMessage({
+                        key  : 'active_loginid',
+                        value: active_loginid,
+                    }, origin);
+                }
+            };
         }
     };
 

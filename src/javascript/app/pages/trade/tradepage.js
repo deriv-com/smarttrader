@@ -23,12 +23,11 @@ const TradePage = (() => {
 
     const onLoad = () => {
         const iframe_target_origin = getAllowedLocalStorageOrigin();
-        if (iframe_target_origin) {
-            const el_iframe  = document.getElementById('localstorage-sync');
-            el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
-        }
-
         BinarySocket.wait('authorize').then(() => {
+            if (iframe_target_origin) {
+                const el_iframe  = document.getElementById('localstorage-sync');
+                el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
+            }
             init();
         });
     };
