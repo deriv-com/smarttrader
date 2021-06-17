@@ -818,7 +818,6 @@ a.previous-wrapper {
   font-size: 0.75rem;
   text-align: left;
   padding: 12px 8px;
-  max-width: 262px;
   border-radius: 4px;
   background: var(--general-active);
   color: var(--text-prominent);
