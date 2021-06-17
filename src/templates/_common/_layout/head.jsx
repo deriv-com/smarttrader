@@ -9,7 +9,7 @@ const Head = () => (
         <meta httpEquiv='Content-Type' content='text/html;charset=UTF-8' />
         <meta httpEquiv='Content-Language' content={it.language} />
         <meta name='description' content={` ${it.L('Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform.', it.broker_name)}`} />
-        <meta name='keywords' content={` ${it.L('online trading, trading platform, Online trading platform')}`} />
+        <meta name='keywords' content={` ${it.L('binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading')}`} />
         <meta name='author' content={it.broker_name} />
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
         <meta name='dcterms.rightsHolder' content={it.broker_name} />
