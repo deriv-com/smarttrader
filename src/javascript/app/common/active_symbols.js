@@ -172,11 +172,14 @@ const ActiveSymbols = (() => {
         return trade_markets_list;
     };
 
-    // The unavailable underlyings are only offered on deriv.com.
+    // The unavailable underlyings and markets are only offered on deriv.com.
     const unavailable_underlyings = ['BOOM500', 'BOOM1000', 'CRASH500', 'CRASH1000', 'stpRNG'];
+    const unavailable_markets = ['cryptocurrency'];
     
     const getAvailableUnderlyings = (markets_list) => {
         const markets_list_clone = clone(markets_list);
+
+        unavailable_markets.forEach(item => markets_list_clone[item] && delete markets_list_clone[item]);
 
         Object.keys(markets_list_clone).forEach(market_key => {
             Object.keys(markets_list_clone[market_key].submarkets).forEach(submarket_key => {
