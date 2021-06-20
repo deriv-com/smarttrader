@@ -1052,7 +1052,7 @@ const Header = (() => {
 
             const checkStatus = (check_statuses) => {
                 const notified = check_statuses.some((check_type) => {
-                    if (validations[check_type]()) {
+                    if (validations[check_type]() && messages[check_type]) {
                         displayNotification(messages[check_type]());
                         // return true;
                     }
