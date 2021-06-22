@@ -851,6 +851,9 @@ body .mobile {
             cursor: pointer;
         }
         &-dropdown {
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: calc(100% - 152px);
             display: none;
             position: absolute;
             background-color: var(--general-main-1);
