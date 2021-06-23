@@ -133,7 +133,7 @@ const ClientBase = (() => {
             default  : localize('Real'),
             financial: localize('Investment'),
             gaming   : localize('Gaming'),
-            virtual  : localize('Virtual'),
+            virtual  : localize('Demo'),
         });
 
         return {
