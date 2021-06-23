@@ -130,6 +130,13 @@ table {
                     font-size: $FONT_SIZE_XS;
                 }
             }
+            @media (max-width: 480px) {
+                & > th.details, & > td.details {
+                    .button {
+                        padding: 8px;
+                    }
+                }
+            }
         }
     }
     @media (max-width: $md) {
