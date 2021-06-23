@@ -60,10 +60,17 @@ const AccountClosure = (() => {
         BinarySocket.wait('landing_company').then(() => {
             if (!has_virtual_only) {
                 BinarySocket.send({ statement: 1, limit: 1 });
-                BinarySocket.wait('landing_company', 'get_account_status', 'statement').then(async () => {
+                BinarySocket.wait('landing_company', 'get_account_status', 'statement', 'website_status').then(async () => {
                     const is_eligible = await Metatrader.isEligible();
+                    // TODO: is_dxtrade_allowed should be populated based on `landing_company` response
+                    const is_dxtrade_allowed = Client.get('landing_company_shortcode') === 'svg';
+
                     if (is_eligible) {
-                        applyToAllElements('.metatrader-link', (element) => { element.setVisibility(1); });
+                        if (is_dxtrade_allowed) {
+                            applyToAllElements('.cfd-link', (element) => { element.setVisibility(1); });
+                        } else {
+                            applyToAllElements('.metatrader-link', (element) => { element.setVisibility(1); });
+                        }
                     }
                 });
             }
@@ -172,13 +179,13 @@ const AccountClosure = (() => {
         const data = { account_closure: 1, reason: getReason() };
         BinarySocket.send(data).then(async (response) => {
             if (response.error) {
-                el_submit_loading.setVisibility(0);
                 if (response.error.details) {
                     await showErrorPopUp(response);
                     el_account_closure_error.setVisibility(1);
                 } else {
                     showFormMessage(response.error.message || localize('Sorry, an error occurred while processing your request.'));
                 }
+                el_submit_loading.setVisibility(0);
                 el_step_2_submit.setAttribute('disabled', false);
             } else {
                 Client.sendLogoutRequest(false, Url.urlFor('deactivated-account'));
@@ -188,6 +195,8 @@ const AccountClosure = (() => {
 
     const showErrorPopUp = async (response) => {
         const mt5_login_list = (await BinarySocket.wait('mt5_login_list')).mt5_login_list;
+        const dxtrade_accounts_list = (await BinarySocket.send({ trading_platform_accounts: 1, platform: 'dxtrade' })).trading_platform_accounts;
+
         // clear all previously added details first
         const previous_parent = document.getElementsByClassName('account-closure-details');
         if (previous_parent) { Array.from(previous_parent).forEach(item => { item.parentNode.removeChild(item); }); }
@@ -219,12 +228,19 @@ const AccountClosure = (() => {
             const market_type = mt5_account.market_type === 'synthetic' ? 'gaming' : mt5_account.market_type;
             return Client.getMT5AccountDisplays(market_type, mt5_account.sub_account_type).short;
         };
+        const getDxtradeDisplay = (account) => {
+            const dxtrade_account = (dxtrade_accounts_list.find(acc => acc.account_id === account) || {});
+            return Client.getMT5AccountDisplays(dxtrade_account.market_type, 'financial').short;
+        };
         if (response.error.details.open_positions) {
             Object.keys(response.error.details.open_positions).forEach((account) => {
                 const txt_positions = `${response.error.details.open_positions[account]} position(s)`;
                 if (/^MT/.test(account)) {
                     section_id = 'account_closure_open_mt';
                     display_name = getMTDisplay(account);
+                } else if (/^DX/.test(account)) {
+                    section_id = 'account_closure_open_dxtrade';
+                    display_name = getDxtradeDisplay(account);
                 } else {
                     section_id = 'account_closure_open';
                     display_name = Currency.getCurrencyName(Client.get('currency', account));
@@ -238,6 +254,9 @@ const AccountClosure = (() => {
                 if (/^MT/.test(account)) {
                     section_id = 'account_closure_balance_mt';
                     display_name = getMTDisplay(account);
+                } else if (/^DX/.test(account)) {
+                    section_id = 'account_closure_balance_dxtrade';
+                    display_name = getDxtradeDisplay(account);
                 } else {
                     section_id = 'account_closure_balance';
                     display_name = Currency.getCurrencyName(response.error.details.balance[account].currency);
