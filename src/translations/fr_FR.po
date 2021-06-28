@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-05-31 09:36\n"
+"PO-Revision-Date: 2021-06-21 10:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +20,10 @@ msgid "404"
 msgstr "404"
 
 msgid " (Region added)"
-msgstr ""
+msgstr " (Région ajoutée)"
 
 msgid " (Temporarily unavailable)"
-msgstr ""
+msgstr " (Temporairement indisponible)"
 
 msgid "%1 Account %2"
 msgstr "%1 Compte %2"
@@ -62,13 +62,13 @@ msgid "%1Return to trading page%2"
 msgstr "%1Retour à la page de trading%2"
 
 msgid "1. This link was sent by you"
-msgstr ""
+msgstr "1. Ce lien a été envoyé par vous"
 
 msgid "2. Your desktop window stays open"
-msgstr ""
+msgstr "2. La fenêtre de votre bureau reste ouverte"
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "Un mot en soi est facile à deviner"
 
 msgid "AM"
 msgstr " "
@@ -101,7 +101,7 @@ msgid "Add Deriv account"
 msgstr "Ajouter un compte Deriv"
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "Ajoutez un ou deux mots supplémentaires. Les mots peu courants sont meilleurs."
 
 msgid "Adjust trade parameters"
 msgstr "Définir les paramètres de la transaction"
@@ -110,19 +110,19 @@ msgid "Admin"
 msgstr "Administration"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "Accepter"
 
 msgid "All details must be clear — nothing blurry"
-msgstr ""
+msgstr "Tous les détails doivent être clairs - rien de flou"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "Tous les marchés sont actuellement fermés. Veuillez réessayer ultérieurement."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "Tout en majuscules est presque aussi facile à deviner que tout en minuscules"
 
 msgid "Allow camera access"
-msgstr ""
+msgstr "Autoriser l'accès à la caméra"
 
 msgid "Allow equals"
 msgstr "Permettre l'égalité"
@@ -137,7 +137,7 @@ msgid "Amount in"
 msgstr "Montant en"
 
 msgid "An error occurred while loading the component"
-msgstr ""
+msgstr "Une erreur s'est produite lors du chargement du composant"
 
 msgid "Apply now as a professional investor"
 msgstr "Appliquer maintenant en tant qu'investisseur professionnel"
@@ -194,7 +194,7 @@ msgid "Audit"
 msgstr "Vérification"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "Page de vérification"
 
 msgid "Aug"
 msgstr "août"
@@ -212,19 +212,19 @@ msgid "Average"
 msgstr "Moyenne"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "Évitez les dates et les années qui vous sont associées"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "Évitez les dernières années"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "Évitez les mots et les caractères répétés"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "Évitez les séquences"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "Évitez les années qui vous sont associées"
 
 msgid "Back to trading"
 msgstr "Retour au trade"
@@ -245,7 +245,7 @@ msgid "Bid"
 msgstr "Faire une mise"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "Binance USD"
 
 msgid "Binary Coin"
 msgstr "Binary Coin"
@@ -254,7 +254,7 @@ msgid "Bitcoin"
 msgstr "Bitcoin"
 
 msgid "Blurry photo detected"
-msgstr ""
+msgstr "Photo floue détectée"
 
 msgid "Browser"
 msgstr "Navigateur"
@@ -281,16 +281,16 @@ msgid "Call Spread/Put Spread"
 msgstr "Call Spread/Put Spread"
 
 msgid "Camera access is denied"
-msgstr ""
+msgstr "L'accès à la caméra est refusé"
 
 msgid "Camera not detected"
-msgstr ""
+msgstr "Caméra non détectée"
 
 msgid "Camera not working"
-msgstr ""
+msgstr "La caméra ne fonctionne pas"
 
 msgid "Camera not working?"
-msgstr ""
+msgstr "La caméra ne fonctionne pas?"
 
 msgid "Can you spare 15 minutes?"
 msgstr "Pouvez-vous nous accorder 15 minutes ?"
@@ -299,7 +299,7 @@ msgid "Cancel"
 msgstr "Annuler"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "La capitalisation n'aide pas beaucoup"
 
 msgid "Cashier"
 msgstr "Caisse"
@@ -326,25 +326,25 @@ msgid "Charting for this underlying is delayed"
 msgstr "Les graphiques sont retardés pour ce sous-jacent"
 
 msgid "Check back here to finish the submission"
-msgstr ""
+msgstr "Revenez ici pour terminer la procédure"
 
 msgid "Check selfie"
-msgstr ""
+msgstr "Vérifier le selfie"
 
 msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr ""
+msgstr "Vérifiez qu'il est connecté et fonctionnel. Vous pouvez également <fallback>poursuivre la vérification sur votre téléphone</fallback>"
 
 msgid "Check that your number is correct"
-msgstr ""
+msgstr "Vérifiez que votre numéro est correct"
 
 msgid "Check your connection."
 msgstr "Vérifier votre connection."
 
 msgid "Check your image"
-msgstr ""
+msgstr "Vérifiez votre image"
 
 msgid "Check your mobile"
-msgstr ""
+msgstr "Vérifiez votre mobile"
 
 msgid "Checked"
 msgstr "Vérifié"
@@ -353,7 +353,7 @@ msgid "Checking"
 msgstr "Vérification en cours"
 
 msgid "Choose document"
-msgstr ""
+msgstr "Choisissez un document"
 
 msgid "Christmas Day"
 msgstr "Jour de Noël"
@@ -365,7 +365,7 @@ msgid "Click here to open a Financial Account"
 msgstr "Cliquez ici pour ouvrir un Compte Financier"
 
 msgid "Click here to open a Gaming account"
-msgstr ""
+msgstr "Cliquez ici pour ouvrir un Compte de Pari"
 
 msgid "Click here to open a Real Account"
 msgstr "Cliquez ici pour ouvrir un Compte Réel"
@@ -374,7 +374,7 @@ msgid "Close"
 msgstr "Clôture"
 
 msgid "Close identity verification screen"
-msgstr ""
+msgstr "Fermer l'écran de vérification d'identité"
 
 msgid "Close time"
 msgstr "Heure de Clôture"
@@ -398,7 +398,7 @@ msgid "Commodities"
 msgstr "Matières premières"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "Les noms et prénoms communs sont faciles à deviner"
 
 msgid "Complete details"
 msgstr "Détails complets"
@@ -407,34 +407,34 @@ msgid "Compressing Image"
 msgstr "Image en cours de compression"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmer"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "Confirmer les modifications"
 
 msgid "Connected to your mobile"
-msgstr ""
+msgstr "Connecté à votre mobile"
 
 msgid "Connecting to server"
 msgstr "Connexion au serveur"
 
 msgid "Connection lost"
-msgstr ""
+msgstr "Connexion perdue"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 msgid "Continue on phone"
-msgstr ""
+msgstr "Continuer sur téléphone"
 
 msgid "Continue on your phone"
-msgstr ""
+msgstr "Continuez sur votre téléphone"
 
 msgid "Continue trading"
 msgstr "Poursuivre le trading"
 
 msgid "Continue with the verification"
-msgstr ""
+msgstr "Continuer la vérification"
 
 msgid "Contract"
 msgstr "Contrat"
@@ -476,25 +476,25 @@ msgid "Contracts sold"
 msgstr "Contrats vendus"
 
 msgid "Copied"
-msgstr ""
+msgstr "Copié"
 
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 msgid "Copy link"
-msgstr ""
+msgstr "Copier le lien"
 
 msgid "Copy the link to your mobile browser"
-msgstr ""
+msgstr "Copiez le lien dans votre navigateur mobile"
 
 msgid "Copy the link to your phone"
-msgstr ""
+msgstr "Copiez le lien sur votre téléphone"
 
 msgid "Counterparty"
 msgstr "Contrepartie"
 
 msgid "Country not found"
-msgstr ""
+msgstr "Pays introuvable"
 
 msgid "Country of Residence"
 msgstr "Pays de résidence"
@@ -527,7 +527,7 @@ msgid "Current time:"
 msgstr "Heure actuelle:"
 
 msgid "Cut-off image detected"
-msgstr ""
+msgstr "Image coupée détectée"
 
 msgid "Date"
 msgstr "Date"
@@ -536,7 +536,7 @@ msgid "Date and Time"
 msgstr "Date et heure"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "Les dates sont souvent faciles à deviner"
 
 msgid "Deal cancel. fee"
 msgstr "Annulation inclue. coût"
@@ -614,7 +614,7 @@ msgid "Disable"
 msgstr "Désactivé"
 
 msgid "Dismiss alert"
-msgstr ""
+msgstr "Ignorer l'alerte"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
 msgstr "Voulez-vous que ce soit un compte de fiat ou de crypto ? Veuillez en choisir un :"
@@ -623,37 +623,37 @@ msgid "Do you wish to continue?"
 msgstr "Voulez-vous continuer ?"
 
 msgid "Document example"
-msgstr ""
+msgstr "Exemple de document"
 
 msgid "Document uploaded"
-msgstr ""
+msgstr "Document téléchargé"
 
 msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr ""
+msgstr "Les documents de ce pays ne sont actuellement pas pris en charge - <fallback>essayez un autre type de document</fallback>"
 
 msgid "Documents uploaded"
-msgstr ""
+msgstr "Documents téléchargés"
 
 msgid "Documents you can use to verify your identity"
-msgstr ""
+msgstr "Documents que vous pouvez utiliser pour vérifier votre identité"
 
 msgid "Does Not Touch"
 msgstr "Ne touche pas"
 
 msgid "Don't refresh this page"
-msgstr ""
+msgstr "N'actualisez pas cette page"
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "Vous ne voulez pas trader en %1 ? Vous pouvez ouvrir un autre compte en cryptodevise."
 
 msgid "Driver's license"
-msgstr ""
+msgstr "Permis de conduire"
 
 msgid "Driving licence"
 msgstr "Permis de conduire"
 
 msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr ""
+msgstr "En raison d'un problème sur notre serveur, certains de vos comptes MT5 ne sont pas disponibles pour le moment. %1Toutes nos excuses, merci de votre patience."
 
 msgid "Duration"
 msgstr "Durée"
@@ -665,7 +665,7 @@ msgid "Enable"
 msgstr "Activé"
 
 msgid "Enable camera"
-msgstr ""
+msgstr "Activer la caméra"
 
 msgid "End Time"
 msgstr "Heure de fin"
@@ -689,13 +689,13 @@ msgid "Ends Outside"
 msgstr "Termine hors de la zone"
 
 msgid "Enlarge image"
-msgstr ""
+msgstr "Agrandir l'image"
 
 msgid "Enter mobile number"
-msgstr ""
+msgstr "Entrez votre numéro de mobile"
 
 msgid "Enter your mobile number:"
-msgstr ""
+msgstr "Entrez votre numéro de mobile:"
 
 msgid "Entry Spot"
 msgstr "Point d'entrée"
@@ -710,7 +710,7 @@ msgid "Ether Classic"
 msgstr "Ether Classic"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "Ethereum"
 
 msgid "Even/Odd"
 msgstr "Pair/Impair"
@@ -719,13 +719,13 @@ msgid "Even/Odd contracts will be refunded at the purchase price if the contract
 msgstr "Les contrats « Pair/Impair » seront remboursés à leur prix d'achat si le contrat n'arrive pas à échéance dans un délai de 5 minutes."
 
 msgid "Example of a blurry document"
-msgstr ""
+msgstr "Exemple de document flou"
 
 msgid "Example of a cut-off document"
-msgstr ""
+msgstr "Exemple de document tronqué"
 
 msgid "Example of a document with glare"
-msgstr ""
+msgstr "Exemple de document avec reflets"
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "Le temps d'exclusion ne peut pas être supérieur à 5 ans."
@@ -755,10 +755,10 @@ msgid "Explanation"
 msgstr "Explication"
 
 msgid "Face forward and make sure your eyes are clearly visible"
-msgstr ""
+msgstr "Faites face vers l'avant et assurez-vous que vos yeux sont clairement visibles"
 
 msgid "Face photo page"
-msgstr ""
+msgstr "Page de photo de visage"
 
 msgid "Failed"
 msgstr "Échec"
@@ -776,13 +776,13 @@ msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2
 msgstr "Taille du fichier (%1) dépasse la limite autorisée. La taille maximum du fichier est de : %2"
 
 msgid "File not uploaded."
-msgstr ""
+msgstr "Fichier non téléchargé."
 
 msgid "File size exceeded."
-msgstr ""
+msgstr "Taille du fichier dépassée."
 
 msgid "File type not supported"
-msgstr ""
+msgstr "Type de fichier non pris en charge"
 
 msgid "Final price"
 msgstr "Prix final"
@@ -803,7 +803,7 @@ msgid "First line of home address"
 msgstr "Première ligne de l'adresse résidentielle"
 
 msgid "Follow these steps to recover camera access:"
-msgstr ""
+msgstr "Suivez ces étapes pour récupérer l'accès à la caméra:"
 
 msgid "Forex"
 msgstr "Forex"
@@ -824,34 +824,34 @@ msgid "Front Side"
 msgstr "Face Avant"
 
 msgid "Front and back"
-msgstr ""
+msgstr "Recto-Verso"
 
 msgid "Gaming"
 msgstr "Jeu"
 
 msgid "Gaming Account"
-msgstr ""
+msgstr "Compte de jeu"
 
 msgid "Get %1"
 msgstr "Obtenez %1"
 
 msgid "Get link via SMS"
-msgstr ""
+msgstr "Obtenir le lien par SMS"
 
 msgid "Get secure link"
-msgstr ""
+msgstr "Obtenez un lien sécurisé"
 
 msgid "Get your secure link"
-msgstr ""
+msgstr "Obtenez votre lien sécurisé"
 
 msgid "Glare detected"
-msgstr ""
+msgstr "Éblouissement détecté"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "Accéder Aux Rapports"
 
 msgid "Go back"
-msgstr ""
+msgstr "Retour"
 
 msgid "Go to statement"
 msgstr "Aller sur le relevé"
@@ -860,10 +860,10 @@ msgid "Goes Outside"
 msgstr "Sort de la zone"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr ""
+msgstr "Accordez l'accès à votre caméra à partir des paramètres de votre navigateur"
 
 msgid "Great, that's everything we need"
-msgstr ""
+msgstr "Parfait, c'est tout ce dont nous avons besoin"
 
 msgid "Guide"
 msgstr "Guide"
@@ -872,7 +872,7 @@ msgid "Hence, your withdrawable balance is only up to %1%2, subject to your acco
 msgstr "Par conséquent, votre montant de retrait disponible est au plus de %1%2, concernant vos fonds disponibles  sur votre  compte. "
 
 msgid "Here's how to do it:"
-msgstr ""
+msgstr "Voici comment procéder:"
 
 msgid "High"
 msgstr "Haut"
@@ -923,7 +923,7 @@ msgid "Hour"
 msgstr "Heure"
 
 msgid "How to scan a QR code"
-msgstr ""
+msgstr "Comment scanner un code QR"
 
 msgid "I want to reapply"
 msgstr "Je veux postuler à nouveau"
@@ -935,7 +935,7 @@ msgid "ID number is required for %1."
 msgstr "Un numéro d’identification est nécessaire pour %1."
 
 msgid "IDK"
-msgstr ""
+msgstr "IDK"
 
 msgid "IP Address"
 msgstr "Adresse IP"
@@ -944,7 +944,7 @@ msgid "Identity card"
 msgstr "Carte d’identité"
 
 msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr ""
+msgstr "Si cela ne fonctionne pas, téléchargez un scanner de code QR depuis Google Play ou l'App Store"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Si la <strong>sortie spot</strong> est égale soit à la <strong>barrière basse</strong> ou à la <strong>barrière haute</strong>, vous ne gagnez pas le paiement."
@@ -1091,19 +1091,19 @@ msgid "Investment"
 msgstr "Investissement"
 
 msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr ""
+msgstr "Il peut être déconnecté. <fallback>Essayez d'utiliser votre téléphone à la place</fallback>."
 
 msgid "It may take a few minutes to arrive"
-msgstr ""
+msgstr "Cela peut prendre quelques minutes pour arriver"
 
 msgid "It must be an official photo ID"
-msgstr ""
+msgstr "Il doit s'agir d'une pièce d'identité officielle avec photo"
 
 msgid "It will only take a couple of minutes."
-msgstr ""
+msgstr "Cela ne prendra que quelques minutes."
 
 msgid "It’ll take longer to verify you if we can’t read it"
-msgstr ""
+msgstr "Il faudra plus de temps pour vous vérifier si nous ne pouvons pas le lire"
 
 msgid "Jan"
 msgstr "jan."
@@ -1127,7 +1127,7 @@ msgid "Jurisdiction"
 msgstr "Jurisdiction"
 
 msgid "Keep this window open while using your mobile"
-msgstr ""
+msgstr "Gardez cette fenêtre ouverte lorsque vous utilisez votre mobile"
 
 msgid "Language settings"
 msgstr "Choix de langue"
@@ -1148,16 +1148,16 @@ msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Statistiques du dernier chiffre pour les %1 derniers ticks sur %2"
 
 msgid "Linked to your computer"
-msgstr ""
+msgstr "Lié à votre ordinateur"
 
 msgid "Litecoin"
 msgstr "Litecoin"
 
 msgid "Loading"
-msgstr ""
+msgstr "Chargement"
 
 msgid "Loading..."
-msgstr ""
+msgstr "Chargement..."
 
 msgid "Log in"
 msgstr "Connexion"
@@ -1172,13 +1172,13 @@ msgid "Login ID"
 msgstr "Identifiant de connexion"
 
 msgid "Login at:"
-msgstr ""
+msgstr "Identifiant à :"
 
 msgid "Lookbacks"
 msgstr "Lookbacks"
 
 msgid "Looks like you took too long"
-msgstr ""
+msgstr "On dirait que vous avez pris trop de temps"
 
 msgid "Loss"
 msgstr "Pertes"
@@ -1205,7 +1205,7 @@ msgid "Lower or equal"
 msgstr "Plus bas ou égal"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
 msgstr "Retrait MT5 désactivé"
@@ -1214,40 +1214,40 @@ msgid "MT5 withdrawals have been disabled on your account. Please check your ema
 msgstr "Les retraits MT5 ont été désactivés sur votre compte. Veuillez vérifier votre email pour plus de détails."
 
 msgid "Make sure all of the document is in the photo"
-msgstr ""
+msgstr "Assurez-vous que tout le document est sur la photo"
 
 msgid "Make sure details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Assurez-vous que les détails sont clairs à lire, sans flou ni éblouissement"
 
 msgid "Make sure everything is clear"
-msgstr ""
+msgstr "Assurez-vous que tout est clair"
 
 msgid "Make sure full document is visible"
-msgstr ""
+msgstr "Assurez-vous que le document complet est visible"
 
 msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Assurez-vous que les détails de votre carte sont lisibles, sans flou ni éblouissement"
 
 msgid "Make sure your device has a working camera"
-msgstr ""
+msgstr "Assurez-vous que votre appareil dispose d'une caméra fonctionnelle"
 
 msgid "Make sure your device's camera works"
-msgstr ""
+msgstr "Assurez-vous que la caméra de votre appareil fonctionne"
 
 msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Assurez-vous que les détails de votre licence sont lisibles, sans flou ni éblouissement"
 
 msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Assurez-vous que les détails de votre passeport sont clairs à lire, sans flou ni éblouissement"
 
 msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Assurez-vous que les détails de votre permis sont clairs à lire, sans flou ni éblouissement"
 
 msgid "Make sure your selfie clearly shows your face"
-msgstr ""
+msgstr "Assurez-vous que votre selfie montre clairement votre visage"
 
 msgid "Make sure§"
-msgstr ""
+msgstr "Soyes sur§"
 
 msgid "Mar"
 msgstr "mars"
@@ -1289,16 +1289,16 @@ msgid "More information can be found in an email sent to you."
 msgstr "Plus d'informations peuvent être trouvées dans un email qui vous a été envoyé."
 
 msgid "Move away from direct light"
-msgstr ""
+msgstr "Éloignez-vous de la lumière directe"
 
 msgid "Move away from direct light — no glare"
-msgstr ""
+msgstr "Éloignez-vous de la lumière directe - sans'éblouissement"
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "Multi-Collateral"
 
 msgid "Multiple faces found"
-msgstr ""
+msgstr "Plusieurs visages trouvés"
 
 msgid "Multiplier"
 msgstr "Multiplicateur"
@@ -1310,13 +1310,13 @@ msgid "Multiplier Up"
 msgstr "Multiplicateur Montée"
 
 msgid "Must be under 10MB."
-msgstr ""
+msgstr "Doit être inférieur à 10 Mo."
 
 msgid "Name"
 msgstr "Nom"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "Les noms et prénoms sont faciles à deviner"
 
 msgid "Net profit"
 msgstr "Bénéfice net"
@@ -1352,13 +1352,13 @@ msgid "No currency selected"
 msgstr "Pas de devise sélectionnée"
 
 msgid "No document detected"
-msgstr ""
+msgstr "Aucun document détecté"
 
 msgid "No face found"
-msgstr ""
+msgstr "Aucun visage trouvé"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "Pas besoin de symboles, de chiffres ou de lettres majuscules"
 
 msgid "No notifications"
 msgstr "Pas de notification"
@@ -1409,7 +1409,7 @@ msgid "Offline"
 msgstr "Hors connexion"
 
 msgid "Once you've finished we'll take you to the next step"
-msgstr ""
+msgstr "Une fois que vous avez terminé, nous vous emmènerons à l'étape suivante"
 
 msgid "Online"
 msgstr "En ligne"
@@ -1445,7 +1445,7 @@ msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Les lettres, les espaces, les traits d'union, la virgule et le point sont les seuls caractères autorisés."
 
 msgid "Only your face can be in the selfie"
-msgstr ""
+msgstr "Seul votre visage peut être dans le selfie"
 
 msgid "Oops... Page Not Available"
 msgstr "Oups... cette page est indisponible."
@@ -1463,13 +1463,13 @@ msgid "Open positions"
 msgstr "Postes vacants"
 
 msgid "Open the link and complete the tasks"
-msgstr ""
+msgstr "Ouvrez le lien et terminez les tâches"
 
 msgid "Open the link on your mobile"
-msgstr ""
+msgstr "Ouvrez le lien sur votre mobile"
 
 msgid "Open your new bank account"
-msgstr ""
+msgstr "Ouvrez votre nouveau compte bancaire"
 
 msgid "Opens"
 msgstr "Ouverture"
@@ -1490,16 +1490,16 @@ msgid "Passport"
 msgstr "Passeport"
 
 msgid "Passport photo page"
-msgstr ""
+msgstr "Page de photo de passeport"
 
 msgid "Password is not strong enough."
 msgstr "Le mot de passe n'est pas assez fiable."
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "Le mot de passe doit être composé de majuscules, de minuscules et de chiffres."
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "Paxos Standard"
 
 msgid "Pay-out"
 msgstr "Versement"
@@ -1526,10 +1526,10 @@ msgid "Permissions"
 msgstr "Permissions"
 
 msgid "Photo of your document"
-msgstr ""
+msgstr "Photo de votre document"
 
 msgid "Photo of your face"
-msgstr ""
+msgstr "Photo de votre visage"
 
 msgid "Place of birth"
 msgstr "Lieu de naissance"
@@ -1577,7 +1577,7 @@ msgid "Please enter a valid Login ID."
 msgstr "Veuillez saisir un jeton d'authentification valide."
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "Veuillez saisir un numéro de téléphone valide (par exemple +15417541234)."
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "Veuillez noter que la devise sélectionnée n'est autorisée que pour les comptes limités."
@@ -1619,7 +1619,7 @@ msgid "Please specify the reasons for closing your accounts"
 msgstr "Veuillez s'il vous plaît spécifier les raisons de la clôture de vos comptes"
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "Veuillez spécifier votre intervalle préféré de vérification de la réalité en minutes:"
 
 msgid "Please submit your proof of address."
 msgstr "Veuillez soumettre votre justificatif de domicile."
@@ -1628,10 +1628,10 @@ msgid "Please submit your proof of identity."
 msgstr "Veuillez soumettre votre pièce d'identité."
 
 msgid "Please try again"
-msgstr ""
+msgstr "Veuillez réessayer s'il vous plait"
 
 msgid "Point your phone’s camera at the QR code"
-msgstr ""
+msgstr "Dirigez la caméra de votre téléphone vers le code QR"
 
 msgid "Postal Code/ZIP"
 msgstr "Code postal"
@@ -1655,7 +1655,7 @@ msgid "Predict the direction<br />and purchase"
 msgstr "Prédire la direction<br />et acheter"
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "Les substitutions prévisibles comme '@' au lieu de 'a' n'aident pas beaucoup"
 
 msgid "Previous"
 msgstr "Précédent"
@@ -1694,7 +1694,7 @@ msgid "Proof of identity required"
 msgstr "Preuve d'identité requise"
 
 msgid "Provide the whole document page for best results"
-msgstr ""
+msgstr "Fournissez la page entière du document pour de meilleurs résultats"
 
 msgid "Purchase"
 msgstr "Achat"
@@ -1748,16 +1748,16 @@ msgid "Reality Check"
 msgstr "Relevé d'activité"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "Les dernières années sont faciles à deviner"
 
 msgid "Recover camera access to continue face verification"
-msgstr ""
+msgstr "Récupérer l'accès à la caméra pour continuer la vérification du visage"
 
 msgid "Recovery"
-msgstr ""
+msgstr "Récupération"
 
 msgid "Redo"
-msgstr ""
+msgstr "Refaire"
 
 msgid "Ref."
 msgstr "Réf."
@@ -1766,28 +1766,28 @@ msgid "Reference ID"
 msgstr "Identifiant de parrainage"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Rafraîchir"
 
 msgid "Refresh this page to restart the identity verification process"
-msgstr ""
+msgstr "Actualisez cette page pour redémarrer le processus de vérification d'identité"
 
 msgid "Remaining time"
 msgstr "Temps restant"
 
 msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr ""
+msgstr "N'oubliez pas d'appuyer sur stop lorsque vous avez terminé. <fallback>Refaire les actions vidéo</fallback>"
 
 msgid "Remove deposit limits"
 msgstr "Supprimer les limites de dépôt"
 
 msgid "Remove your glasses, if necessary"
-msgstr ""
+msgstr "Retirez vos lunettes, si nécessaire"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "Les répétitions telles que \"aaa\" sont faciles à deviner"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "Les répétitions comme \"abcabcabc\" ne sont que légèrement plus difficiles à deviner que \"abc\""
 
 msgid "Reports"
 msgstr "Rapports"
@@ -1799,7 +1799,7 @@ msgid "Resale not offered"
 msgstr "La revente n'est pas proposée"
 
 msgid "Resend link"
-msgstr ""
+msgstr "Renvoyer le lien"
 
 msgid "Reset Barrier"
 msgstr "Barrière de Réinitialisation"
@@ -1823,7 +1823,7 @@ msgid "Reset barrier"
 msgstr "Barrière de Réinitialisation"
 
 msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr ""
+msgstr "Réinitialisez le solde de votre compte virtuel à %1 à tout moment."
 
 msgid "Reset time"
 msgstr "Temps de réinitialisation"
@@ -1832,16 +1832,16 @@ msgid "Reset to original settings"
 msgstr "Réinitialiser les paramètres"
 
 msgid "Residence permit"
-msgstr ""
+msgstr "Permis de résidence"
 
 msgid "Restart process on a different device"
-msgstr ""
+msgstr "Redémarrez le processus sur un autre appareil"
 
 msgid "Restart the process on the latest version of Google Chrome"
-msgstr ""
+msgstr "Redémarrez le processus sur la dernière version de Google Chrome"
 
 msgid "Restart the process on the latest version of Safari"
-msgstr ""
+msgstr "Redémarrez le processus sur la dernière version de Safari"
 
 msgid "Return"
 msgstr "Retour sur investissement"
@@ -1850,7 +1850,7 @@ msgid "Reverse Side"
 msgstr "Verso"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "Les mots inversés ne sont pas beaucoup plus difficiles à deviner"
 
 msgid "Revoke access"
 msgstr "Révoquer l'accès"
@@ -1862,7 +1862,7 @@ msgid "Rise/Fall contracts will be refunded if:"
 msgstr "Les contrats de Hausse/Baisse seront remboursés si :"
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "STASIS Euro"
 
 msgid "Sa"
 msgstr "Sa"
@@ -1877,19 +1877,19 @@ msgid "Saturday"
 msgstr "samedi"
 
 msgid "Scan QR code"
-msgstr ""
+msgstr "Scanner le code QR"
 
 msgid "Scan the QR code with your phone"
-msgstr ""
+msgstr "Scannez le code QR avec votre téléphone"
 
 msgid "Scans and photocopies are not accepted"
-msgstr ""
+msgstr "Les scans et photocopies ne sont pas acceptés"
 
 msgid "Scopes"
 msgstr "Périmètre"
 
 msgid "Search for country"
-msgstr ""
+msgstr "Rechercher un pays"
 
 msgid "Search..."
 msgstr "Rechercher..."
@@ -1901,10 +1901,10 @@ msgid "Select Trade Type"
 msgstr "Sélectionnez le Type de Trade"
 
 msgid "Select a %{country} document"
-msgstr ""
+msgstr "Sélectionnez un document %{country}"
 
 msgid "Select country"
-msgstr ""
+msgstr "Sélectionner un pays"
 
 msgid "Select currency"
 msgstr "Sélectionnez une devise"
@@ -1913,7 +1913,7 @@ msgid "Select date"
 msgstr "Sélectionnez la date"
 
 msgid "Select issuing country"
-msgstr ""
+msgstr "Sélectionnez le pays émetteur"
 
 msgid "Select market:"
 msgstr "Sélectionnez un marché :"
@@ -1934,10 +1934,10 @@ msgid "Self-exclusion"
 msgstr "Auto-exclusion"
 
 msgid "Selfie"
-msgstr ""
+msgstr "Selfie"
 
 msgid "Selfie uploaded"
-msgstr ""
+msgstr "Selfie téléchargé"
 
 msgid "Sell"
 msgstr "Vente"
@@ -1946,16 +1946,16 @@ msgid "Sell at market"
 msgstr "Vendre au prix du marché"
 
 msgid "Send a secure link to your phone"
-msgstr ""
+msgstr "Envoyez un lien sécurisé sur votre téléphone"
 
 msgid "Send link"
-msgstr ""
+msgstr "Envoyer un lien"
 
 msgid "Send this one-time link to your phone"
-msgstr ""
+msgstr "Envoyez ce lien unique sur votre téléphone"
 
 msgid "Sending"
-msgstr ""
+msgstr "Envoi en cours"
 
 msgid "Sep"
 msgstr "sep."
@@ -1964,7 +1964,7 @@ msgid "September"
 msgstr "septembre"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "Les séquences comme abc ou 6543 sont faciles à deviner"
 
 msgid "Server"
 msgstr "Serveur"
@@ -1985,7 +1985,7 @@ msgid "Settles"
 msgstr "Règlements"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "Les motifs de clavier courts sont faciles à deviner"
 
 msgid "Should be %1"
 msgstr "Devrait être %1"
@@ -2006,7 +2006,7 @@ msgid "Should start with letter or number, and may contain hyphen and underscore
 msgstr "Devrait commencer par une lettre ou un chiffre et peut contenir un trait d’union et un tiret bas."
 
 msgid "Show all details — including the bottom 2 lines"
-msgstr ""
+msgstr "Afficher tous les détails - y compris les 2 lignes du bas"
 
 msgid "Sign out"
 msgstr "Désinscription"
@@ -2018,7 +2018,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "Something's gone wrong"
-msgstr ""
+msgstr "Un problème est survenu"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "Désolé, l'ouverture de compte n’est pas disponible dans votre pays."
@@ -2030,7 +2030,7 @@ msgid "Sorry, an error occurred while processing your request."
 msgstr "Désolé, une erreur s'est produite pendant le traitement de votre demande."
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "Désolé, mais le trading d'options binaires n'est pas disponible dans votre pays."
 
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "Désolé, mais le trading d'options binaires n'est pas disponible sur votre compte financier."
@@ -2039,7 +2039,7 @@ msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "Désolé, les dépôts pour cette devise sont actuellement désactivés."
 
 msgid "Sorry, no mobile phone bills"
-msgstr ""
+msgstr "Désolé, aucune facture de téléphone mobile"
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Désolé, cette fonctionnalité est disponible uniquement pour les comptes virtuels."
@@ -2087,7 +2087,7 @@ msgid "Step"
 msgstr "Étape"
 
 msgid "Steps required to continue verification on your mobile"
-msgstr ""
+msgstr "Étapes requises pour continuer la vérification sur votre mobile"
 
 msgid "Stock Indices"
 msgstr "Indices Boursiers"
@@ -2096,7 +2096,7 @@ msgid "Stocks"
 msgstr "Actions"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "Les rangées droites de clés sont faciles à deviner"
 
 msgid "Su"
 msgstr "Di"
@@ -2105,31 +2105,31 @@ msgid "Submit"
 msgstr "Envoyer"
 
 msgid "Submit document"
-msgstr ""
+msgstr "Soumettre le document"
 
 msgid "Submit identity card (back)"
-msgstr ""
+msgstr "Soumettre la carte d'identité (verso)"
 
 msgid "Submit identity card (front)"
-msgstr ""
+msgstr "Soumettre la carte d'identité (recto)"
 
 msgid "Submit license (back)"
-msgstr ""
+msgstr "Soumettre le permis (verso)"
 
 msgid "Submit license (front)"
-msgstr ""
+msgstr "Soumettre le permis (recto)"
 
 msgid "Submit passport photo page"
-msgstr ""
+msgstr "Soumettre la photo de votre passeport"
 
 msgid "Submit residence permit (back)"
-msgstr ""
+msgstr "Soumettre le permis de séjour (verso)"
 
 msgid "Submit residence permit (front)"
-msgstr ""
+msgstr "Submit residence permit (recto)"
 
 msgid "Submit verification"
-msgstr ""
+msgstr "Soumettre la demande de vérification"
 
 msgid "Submitted"
 msgstr "Soumis"
@@ -2150,37 +2150,37 @@ msgid "Synthetic Indices"
 msgstr "Indices Synthétiques"
 
 msgid "Take a photo"
-msgstr ""
+msgstr "Prendre une photo"
 
 msgid "Take a photo of the back of your card"
-msgstr ""
+msgstr "Prenez une photo du dos de votre carte"
 
 msgid "Take a photo of the back of your license"
-msgstr ""
+msgstr "Prenez une photo du dos de votre permis"
 
 msgid "Take a photo of the front of your card"
-msgstr ""
+msgstr "Prenez une photo de votre carte"
 
 msgid "Take a photo of the front of your license"
-msgstr ""
+msgstr "Prenez une photo de votre permis de conduire"
 
 msgid "Take a photo of your passport photo page"
-msgstr ""
+msgstr "Prenez une photo de votre page de photo de passeport"
 
 msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr ""
+msgstr "Prenez plutôt une photo en utilisant le <fallback>mode appareil photo de base</fallback>"
 
 msgid "Take a photo with your phone"
-msgstr ""
+msgstr "Prenez une photo avec votre téléphone"
 
 msgid "Take a selfie"
-msgstr ""
+msgstr "Prendre un selfie"
 
 msgid "Take a selfie showing your face"
-msgstr ""
+msgstr "Prenez un selfie montrant votre visage"
 
 msgid "Take photo"
-msgstr ""
+msgstr "Prendre une photo"
 
 msgid "Target"
 msgstr "Cible"
@@ -2189,22 +2189,22 @@ msgid "Telephone"
 msgstr "Téléphone"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "Tether ERC20"
 
 msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr ""
+msgstr "Tether ERC20 (eUSDT) est une version de Tether qui est indexée sur USD et est hébergée sur la plate-forme Ethereum."
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "Tether Omni"
 
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr ""
+msgstr "Tether Omni (USDT) est une version de Tether qui est rattachée à l'USD et est construite sur la blockchain Bitcoin."
 
 msgid "Th"
 msgstr "Je"
 
 msgid "Thank you"
-msgstr ""
+msgstr "Merci"
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "Nous vous remercions pour votre inscription ! Veuillez vérifier votre email pour compléter le processus d’inscription."
@@ -2276,7 +2276,7 @@ msgid "The entry spot is the first tick after the contract is processed by our s
 msgstr "Le spot d'entrée est le premier tick après le moment où le contrat est traité par nos serveurs."
 
 msgid "The link only works on mobile devices"
-msgstr ""
+msgstr "Le lien ne fonctionne que sur les appareils mobiles"
 
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "Le nombre maximum de jetons d'authentification (%1) est atteint."
@@ -2285,7 +2285,7 @@ msgid "The page you requested could not be found. Either it no longer exists or 
 msgstr "La page demandée est introuvable. Il est possible qu'elle n'existe plus ou que l'adresse soit erronée. Veuillez vérifier l'orthographe."
 
 msgid "The photo should clearly show your document"
-msgstr ""
+msgstr "La photo doit clairement montrer votre document"
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "La raison doit être comprise entre 5 et 250 caractères"
@@ -2315,7 +2315,7 @@ msgid "There was some invalid character in an input field."
 msgstr "Un caractère non valide a été saisi dans un champ."
 
 msgid "These are the documents most likely to show your current home address"
-msgstr ""
+msgstr "Ce sont les documents les plus susceptibles d'indiquer votre adresse personnelle actuelle"
 
 msgid "This account is disabled"
 msgstr "Ce compte est désactivé"
@@ -2348,19 +2348,19 @@ msgid "This is a staging server - For testing purposes only"
 msgstr "Il s'agit d'un serveur intermédiaire, utilisé uniquement à des fins de test"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "Ceci est un mot de passe commun parmi les 10 premiers"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "Ceci est un mot de passe commun parmi les 100 premiers"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "C'est un mot de passe très courant"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Ceci est une barrière indicative. La véritable barrière sera le point d'entrée plus la compensation de la barrière."
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "Ceci est similaire à un mot de passe couramment utilisé"
 
 msgid "This is your %1 account."
 msgstr "Ceci est votre compte %1."
@@ -2369,7 +2369,7 @@ msgid "This page is only available to logged out clients."
 msgstr "Cette page est uniquement disponible pour les clients connectés."
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "Ce mot de passe est sur la liste noire"
 
 msgid "Thursday"
 msgstr "jeudi"
@@ -2402,19 +2402,19 @@ msgid "Timed out until"
 msgstr "Expiration jusqu'à"
 
 msgid "Tips"
-msgstr ""
+msgstr "Conseils"
 
 msgid "Tips to take a good selfie"
-msgstr ""
+msgstr "Conseils pour prendre un bon selfie"
 
 msgid "To account: "
 msgstr "Au compte : "
 
 msgid "To open a bank account, we will need to verify your identity."
-msgstr ""
+msgstr "Pour ouvrir un compte bancaire, nous devrons vérifier votre identité."
 
 msgid "To smoothly verify you, we need a better photo"
-msgstr ""
+msgstr "Pour vérifier votre compte, nous avons besoin d'une meilleure photo"
 
 msgid "Today"
 msgstr "Aujourd'hui"
@@ -2423,7 +2423,7 @@ msgid "Token"
 msgstr "Jeton"
 
 msgid "Too many failed attempts"
-msgstr ""
+msgstr "Trop de tentatives échouées"
 
 msgid "Top up error"
 msgstr "Erreur de rechargement"
@@ -2476,8 +2476,8 @@ msgstr "Les Contrats de Trading pour Différence (CFDs) sur Indices Synthétique
 msgid "Trading is unavailable at this time."
 msgstr "Le Trading n’est pas disponible en ce moment."
 
-msgid "Trading statictics report"
-msgstr ""
+msgid "Trading statistics report"
+msgstr "Rapport de statistiques de trading"
 
 msgid "Transaction ID"
 msgstr "ID de Transaction"
@@ -2486,7 +2486,7 @@ msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "Transaction effectuée par %1 (identifiant d'application : %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "True USD"
 
 msgid "Try our %1Synthetic Indices%2."
 msgstr "Essayez nos %1Indices Synthétiques%2."
@@ -2495,10 +2495,10 @@ msgid "Try our other markets."
 msgstr "Essayez nos autres marchés."
 
 msgid "Try using a JPG or PNG file"
-msgstr ""
+msgstr "Essayez d'utiliser un fichier JPG ou PNG"
 
 msgid "Try using another file type."
-msgstr ""
+msgstr "Essayez d'utiliser un autre type de fichier."
 
 msgid "Tu"
 msgstr "mar."
@@ -2513,16 +2513,16 @@ msgid "Type"
 msgstr "Type"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "USD Coin"
 
 msgid "USDK"
-msgstr ""
+msgstr "USDK"
 
 msgid "Unable to read file %1"
 msgstr "Incapable de lire les fichiers %1"
 
 msgid "Unavailable"
-msgstr ""
+msgstr "Indisponible"
 
 msgid "Understood"
 msgstr "Compris"
@@ -2531,7 +2531,7 @@ msgid "Unknown OS"
 msgstr "Système d’exploitation inconnu"
 
 msgid "Unsupported browser"
-msgstr ""
+msgstr "Navigateur web non supporté"
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "Jusqu'à %1 décimales seulement sont autorisées."
@@ -2546,55 +2546,55 @@ msgid "Upgrade now"
 msgstr "Mettre à jour maintenant"
 
 msgid "Upload"
-msgstr ""
+msgstr "Télécharger"
 
 msgid "Upload a selfie from your computer"
-msgstr ""
+msgstr "Télécharger un selfie depuis votre ordinateur"
 
 msgid "Upload anyway"
-msgstr ""
+msgstr "Télécharger quand même"
 
 msgid "Upload back of card from your computer"
-msgstr ""
+msgstr "Télécharger le verso de la carte depuis votre ordinateur"
 
 msgid "Upload back of license from your computer"
-msgstr ""
+msgstr "Télécharger le dos du permis de conduire depuis votre ordinateur"
 
 msgid "Upload front of card from your computer"
-msgstr ""
+msgstr "Téléchargez le recto de la carte depuis votre ordinateur"
 
 msgid "Upload front of license from your computer"
-msgstr ""
+msgstr "Téléchargez le permis depuis votre ordinateur"
 
 msgid "Upload passport photo page"
-msgstr ""
+msgstr "Télécharger la photo de votre passeport"
 
 msgid "Upload passport photo page from your computer"
-msgstr ""
+msgstr "Téléchargez la photo de votre passeport depuis votre ordinateur"
 
 msgid "Upload photo"
-msgstr ""
+msgstr "Envoyer la photo"
 
 msgid "Uploads successful"
-msgstr ""
+msgstr "Téléchargements réussis"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "Utilisez quelques mots, évitez les phrases courantes"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "Utilisez un motif de clavier plus long avec plus de tours"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "Le code de vérification est incorrect. Veuillez utiliser le lien envoyé à votre adresse email."
 
 msgid "Verification complete"
-msgstr ""
+msgstr "Vérification terminée"
 
 msgid "Verification required"
 msgstr "Vérification requise"
 
 msgid "Verify Identity"
-msgstr ""
+msgstr "Vérifier l'identité"
 
 msgid "Verify Reset Password"
 msgstr "Vérifier le nouveau mot de passe"
@@ -2609,7 +2609,7 @@ msgid "View chart"
 msgstr "Afficher le graphique"
 
 msgid "View from camera"
-msgstr ""
+msgstr "Vue depuis la caméra"
 
 msgid "Virtual"
 msgstr "Virtuel"
@@ -2627,31 +2627,31 @@ msgid "We"
 msgstr "Me"
 
 msgid "We cannot verify you without using your camera"
-msgstr ""
+msgstr "Nous ne pouvons pas vous vérifier sans utiliser votre caméra"
 
 msgid "We'd love to hear what you think."
 msgstr "Nous aimerions savoir ce que vous pensez."
 
 msgid "We'll compare it with your document"
-msgstr ""
+msgstr "Nous le comparerons avec votre document"
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr "Nous cherchons à améliorer nos produits et services, et nous voulons mieux comprendre vos besoins. Nous aimerions vous interviewer par téléphone pour savoir ce que vous aimez de nous, ce que vous n'aimez pas, et où nous pouvons nous améliorer."
 
 msgid "We're now ready to verify your identity"
-msgstr ""
+msgstr "Nous sommes maintenant prêts à vérifier votre identité"
 
 msgid "We've sent a secure link to %{number}"
-msgstr ""
+msgstr "Nous avons envoyé un lien sécurisé vers %{number}"
 
 msgid "Wednesday"
 msgstr "mercredi"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "Nous mettrons à jour vos limites. Cliquez sur %1Accepter et acceptez%2 pour reconnaître que vous êtes entièrement responsable de vos actions et que nous ne sommes pas responsables de toute dépendance ou perte."
 
 msgid "When prompted, you must enable camera access to continue"
-msgstr ""
+msgstr "Lorsque vous y êtes invité, vous devez activer l'accès à la caméra pour continuer"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "Lorsque vous cliquerez sur « Ok », vous serez exclu des opérations de trading du site jusqu'à la date sélectionnée."
@@ -2678,7 +2678,7 @@ msgid "Withdrawals have been disabled on your account. Please check your email f
 msgstr "Les retraits ont été désactivés sur votre compte. Veuillez vérifier votre email pour plus de détails."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr ""
+msgstr "Souhaitez-vous d'abord vérifier votre relevé? %1Déclaration de contrôle%2"
 
 msgid "Yes"
 msgstr "Oui"
@@ -2714,7 +2714,7 @@ msgid "You can no longer change the currency because you've made a first-time de
 msgstr "Vous ne pouvez plus changer la devise parce que vous avez effectué un tout premier dépôt."
 
 msgid "You can now return to your computer to continue"
-msgstr ""
+msgstr "Vous pouvez maintenant revenir à votre ordinateur pour continuer"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "Vous pouvez recharger votre compte démo avec %1 de plus si votre solde est inférieur ou égal à %2."
@@ -2735,7 +2735,7 @@ msgid "You have insufficient funds in your Binary account, please <a href=\"%1\"
 msgstr "Vous n'avez pas assez de fonds dans votre compte Binary, s’il vous plaît <a href=\"%1\"> Ajouter des fonds</a>."
 
 msgid "You have insufficient funds in your MT5 account."
-msgstr ""
+msgstr "Vous n'avez pas assez de fonds dans votre compte MT5."
 
 msgid "You have not granted access to any applications."
 msgstr "Vous n'avez acheté aucun contrat."
@@ -2744,7 +2744,7 @@ msgid "You have reached the rate limit of requests per second. Please try later.
 msgstr "Vous avez atteint la limite de tentatives par seconde. Veuillez réessayer ultérieurement."
 
 msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr ""
+msgstr "Vous avez atteint la limite de retrait. Veuillez télécharger votre preuve d'identité et d'adresse pour lever votre limite de retrait et procéder à votre retrait."
 
 msgid "You have sold this contract at %1 %2"
 msgstr "Vous avez vendu ce contrat %2 %1"
@@ -2789,10 +2789,10 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "Vous remportez le prix si le prix du marché se termine par le chiffre que vous avez sélectionné."
 
 msgid "You'll need to restart your verification on your computer"
-msgstr ""
+msgstr "Vous devrez redémarrer votre vérification sur votre ordinateur"
 
 msgid "You've made no transactions of this type up to this date."
-msgstr ""
+msgstr "Vous n'avez effectué aucune transaction de ce type jusqu'à cette date."
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "Votre limite de retrait de %1 jour est actuellement %2%3."
@@ -2819,13 +2819,13 @@ msgid "Your changes have been updated."
 msgstr "Vos modifications ont été prises en compte."
 
 msgid "Your computer may take a few seconds to update"
-msgstr ""
+msgstr "La mise à jour de votre ordinateur peut prendre quelques secondes"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "Le solde de votre compte démo est actuellement inférieur ou égal à %1. Vous pouvez recharger votre compte avec %2 de plus."
 
 msgid "Your face is needed in the selfie"
-msgstr ""
+msgstr "Votre visage est nécessaire dans le selfie"
 
 msgid "Your fiat account's currency is currently set to %1."
 msgstr "La devise de votre compte fiat est actuellement en %1."
@@ -2834,19 +2834,19 @@ msgid "Your fiat account's currency is set to %1."
 msgstr "La devise de votre compte fiat est en %1."
 
 msgid "Your link will expire in one hour"
-msgstr ""
+msgstr "Votre lien expirera dans une heure"
 
 msgid "Your mobile link will expire in one hour"
-msgstr ""
+msgstr "Votre lien mobile expirera dans une heure"
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "Votre mot de passe ne peut pas être identique à votre adresse e-mail."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "Votre mot de passe a été réinitialisé avec succès. Veuillez vous connecter à votre compte en utilisant votre nouveau mot de passe."
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "Votre intervalle de temps préféré entre chaque rapport:"
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "Votre demande de client professionnel %1n'est pas approuvée%2."
@@ -2879,7 +2879,7 @@ msgid "Your transaction reference number is %1"
 msgstr "Le numéro de référence de votre transaction est %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "Votre solde virtuel a été réinitialisé."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "Votre navigateur internet (%1) est obsolète et cela peut affecter votre expérience de trading. Procédez à vos risques et périls. %2Mise à jour de navigateur internet%3"
@@ -2894,13 +2894,13 @@ msgid "accounts"
 msgstr "comptes"
 
 msgid "back"
-msgstr ""
+msgstr "retour"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "options binaires, Forex, trading du Forex, trading en ligne, trading financier, trading binaire, trading d'indices, trading sur indices, trades forex, trading de matières premières, stratégie d'options binaires, courtier binaire, pari binaire, plateforme de trading d'options binaires, stratégie binaire, finance, investissement, trading"
 
 msgid "close"
-msgstr ""
+msgstr "clôture"
 
 msgid "day"
 msgstr "jour"
@@ -2912,7 +2912,7 @@ msgid "details"
 msgstr "informations"
 
 msgid "e.g. United States"
-msgstr ""
+msgstr "exemple Etats Unis"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "par ex. frontend.binaryws.com"
@@ -2948,10 +2948,10 @@ msgid "numbers"
 msgstr "chiffres"
 
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 msgid "or upload photo – no scans or photocopies"
-msgstr ""
+msgstr "ou télécharger une photo - pas de numérisation ni de photocopie"
 
 msgid "second"
 msgstr "seconde"

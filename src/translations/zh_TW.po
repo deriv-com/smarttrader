@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-05-31 09:36\n"
+"PO-Revision-Date: 2021-06-21 10:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +20,10 @@ msgid "404"
 msgstr "404"
 
 msgid " (Region added)"
-msgstr ""
+msgstr " (已新增區域)"
 
 msgid " (Temporarily unavailable)"
-msgstr ""
+msgstr " (暫時不可用)"
 
 msgid "%1 Account %2"
 msgstr "%1帳戶%2"
@@ -62,13 +62,13 @@ msgid "%1Return to trading page%2"
 msgstr "%1返回交易頁面%2"
 
 msgid "1. This link was sent by you"
-msgstr ""
+msgstr "1. 此連結是您傳送的"
 
 msgid "2. Your desktop window stays open"
-msgstr ""
+msgstr "2. 您的桌面視窗保持打開狀態"
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "一個詞本身很容易猜到"
 
 msgid "AM"
 msgstr "上午"
@@ -101,7 +101,7 @@ msgid "Add Deriv account"
 msgstr "新增Deriv帳戶"
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "加上一兩個字。不常見的詞更好。"
 
 msgid "Adjust trade parameters"
 msgstr "調整交易參數"
@@ -110,19 +110,19 @@ msgid "Admin"
 msgstr "管理中心"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "同意和接受"
 
 msgid "All details must be clear — nothing blurry"
-msgstr ""
+msgstr "所有詳細資料必須清楚-不可模糊"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "所有市場現已關閉。請稍後重試。"
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "全大寫幾乎和全小寫一樣容易猜出"
 
 msgid "Allow camera access"
-msgstr ""
+msgstr "允許相機存取"
 
 msgid "Allow equals"
 msgstr "允許等值"
@@ -137,7 +137,7 @@ msgid "Amount in"
 msgstr "金額單位為"
 
 msgid "An error occurred while loading the component"
-msgstr ""
+msgstr "載入組件時出錯"
 
 msgid "Apply now as a professional investor"
 msgstr "立刻申請成為專業投資者"
@@ -194,7 +194,7 @@ msgid "Audit"
 msgstr "審計"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "審核頁面"
 
 msgid "Aug"
 msgstr "八月"
@@ -212,19 +212,19 @@ msgid "Average"
 msgstr "平均"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "避免與您相關的日期和年份"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "避免用最近數年的年份"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "避免重複的單詞和字元"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "避免序列式密碼"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "避免用與您相關的年份"
 
 msgid "Back to trading"
 msgstr "返回交易"
@@ -245,7 +245,7 @@ msgid "Bid"
 msgstr "出價"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "幣安美元"
 
 msgid "Binary Coin"
 msgstr "Binary 硬幣"
@@ -254,7 +254,7 @@ msgid "Bitcoin"
 msgstr "比特幣"
 
 msgid "Blurry photo detected"
-msgstr ""
+msgstr "偵測到模糊的照片"
 
 msgid "Browser"
 msgstr "瀏覽"
@@ -281,16 +281,16 @@ msgid "Call Spread/Put Spread"
 msgstr "看漲期權價差/看跌期權價差"
 
 msgid "Camera access is denied"
-msgstr ""
+msgstr "相機存取被拒"
 
 msgid "Camera not detected"
-msgstr ""
+msgstr "未偵測到相機"
 
 msgid "Camera not working"
-msgstr ""
+msgstr "相機不能用"
 
 msgid "Camera not working?"
-msgstr ""
+msgstr "相機不能用？"
 
 msgid "Can you spare 15 minutes?"
 msgstr "你能抽出15分鐘時間嗎？"
@@ -299,7 +299,7 @@ msgid "Cancel"
 msgstr "取消"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "大寫並不提供很大幫助"
 
 msgid "Cashier"
 msgstr "收銀台"
@@ -326,25 +326,25 @@ msgid "Charting for this underlying is delayed"
 msgstr "此標的資產的圖表資料已延遲"
 
 msgid "Check back here to finish the submission"
-msgstr ""
+msgstr "返回此處完成提交"
 
 msgid "Check selfie"
-msgstr ""
+msgstr "檢查自拍照"
 
 msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr ""
+msgstr "檢查它是否已連接並且功能正常。您還可以<fallback>在手機上繼續驗證</fallback>"
 
 msgid "Check that your number is correct"
-msgstr ""
+msgstr "檢查您的電話號碼是否正確"
 
 msgid "Check your connection."
 msgstr "檢查您的連接。"
 
 msgid "Check your image"
-msgstr ""
+msgstr "查看您的圖像"
 
 msgid "Check your mobile"
-msgstr ""
+msgstr "檢查手機"
 
 msgid "Checked"
 msgstr "已檢查"
@@ -353,7 +353,7 @@ msgid "Checking"
 msgstr "檢查中"
 
 msgid "Choose document"
-msgstr ""
+msgstr "選擇文件"
 
 msgid "Christmas Day"
 msgstr "聖誕節"
@@ -365,7 +365,7 @@ msgid "Click here to open a Financial Account"
 msgstr "按一下此處開立金融帳戶"
 
 msgid "Click here to open a Gaming account"
-msgstr ""
+msgstr "按一下此處開立博彩帳戶"
 
 msgid "Click here to open a Real Account"
 msgstr "按一下此處開立真實帳戶"
@@ -374,7 +374,7 @@ msgid "Close"
 msgstr "收盤"
 
 msgid "Close identity verification screen"
-msgstr ""
+msgstr "關閉身份驗證螢幕"
 
 msgid "Close time"
 msgstr "收盤時間"
@@ -398,7 +398,7 @@ msgid "Commodities"
 msgstr "商品"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "常用名稱和姓氏容易猜到"
 
 msgid "Complete details"
 msgstr "完整資料"
@@ -407,34 +407,34 @@ msgid "Compressing Image"
 msgstr "正在壓縮圖像"
 
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "確認更改"
 
 msgid "Connected to your mobile"
-msgstr ""
+msgstr "已連接到您的手機"
 
 msgid "Connecting to server"
 msgstr "連接伺服器"
 
 msgid "Connection lost"
-msgstr ""
+msgstr "連接中斷"
 
 msgid "Continue"
-msgstr ""
+msgstr "繼續"
 
 msgid "Continue on phone"
-msgstr ""
+msgstr "用電話繼續操作"
 
 msgid "Continue on your phone"
-msgstr ""
+msgstr "用您的電話繼續操作"
 
 msgid "Continue trading"
 msgstr "繼續交易"
 
 msgid "Continue with the verification"
-msgstr ""
+msgstr "繼續驗證操作"
 
 msgid "Contract"
 msgstr "合約"
@@ -476,25 +476,25 @@ msgid "Contracts sold"
 msgstr "已賣出合約"
 
 msgid "Copied"
-msgstr ""
+msgstr "已複製"
 
 msgid "Copy"
-msgstr ""
+msgstr "複製"
 
 msgid "Copy link"
-msgstr ""
+msgstr "複製連結"
 
 msgid "Copy the link to your mobile browser"
-msgstr ""
+msgstr "複製連結到您的手機瀏覽器"
 
 msgid "Copy the link to your phone"
-msgstr ""
+msgstr "複製連結到您的手機"
 
 msgid "Counterparty"
 msgstr "相對方"
 
 msgid "Country not found"
-msgstr ""
+msgstr "找不到國家名"
 
 msgid "Country of Residence"
 msgstr "居住國"
@@ -527,7 +527,7 @@ msgid "Current time:"
 msgstr "目前時間:"
 
 msgid "Cut-off image detected"
-msgstr ""
+msgstr "偵測到剪切圖像"
 
 msgid "Date"
 msgstr "日期"
@@ -536,7 +536,7 @@ msgid "Date and Time"
 msgstr "日期和時間"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "日期通常很容易猜到"
 
 msgid "Deal cancel. fee"
 msgstr "交易取消。費用"
@@ -614,7 +614,7 @@ msgid "Disable"
 msgstr "禁用"
 
 msgid "Dismiss alert"
-msgstr ""
+msgstr "消除警報"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
 msgstr "想要法定帳戶或加密帳戶？請選擇:"
@@ -623,37 +623,37 @@ msgid "Do you wish to continue?"
 msgstr "是否繼續？"
 
 msgid "Document example"
-msgstr ""
+msgstr "文檔示例"
 
 msgid "Document uploaded"
-msgstr ""
+msgstr "文檔已上傳"
 
 msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr ""
+msgstr "目前不支援該國家/地區的文檔-<fallback>嘗試其他文檔類型</fallback>"
 
 msgid "Documents uploaded"
-msgstr ""
+msgstr "文檔已上傳"
 
 msgid "Documents you can use to verify your identity"
-msgstr ""
+msgstr "可用於驗證身份的文件"
 
 msgid "Does Not Touch"
 msgstr "未觸及"
 
 msgid "Don't refresh this page"
-msgstr ""
+msgstr "不要刷新此頁面"
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
 msgstr "不想在%1交易？您可以另外開立加密貨幣帳戶。"
 
 msgid "Driver's license"
-msgstr ""
+msgstr "駕駛執照"
 
 msgid "Driving licence"
 msgstr "駕駛執照"
 
 msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr ""
+msgstr "由於伺服器發生問題，一些MT5帳戶目前無法使用。 ％1請耐心配合，非常感謝。"
 
 msgid "Duration"
 msgstr "期限"
@@ -665,7 +665,7 @@ msgid "Enable"
 msgstr "啟用"
 
 msgid "Enable camera"
-msgstr ""
+msgstr "啟用相機"
 
 msgid "End Time"
 msgstr "結束時間"
@@ -689,13 +689,13 @@ msgid "Ends Outside"
 msgstr "區間之外結束"
 
 msgid "Enlarge image"
-msgstr ""
+msgstr "放大圖像"
 
 msgid "Enter mobile number"
-msgstr ""
+msgstr "輸入行動電話號碼"
 
 msgid "Enter your mobile number:"
-msgstr ""
+msgstr "輸入行動電話號碼:"
 
 msgid "Entry Spot"
 msgstr "入市現價"
@@ -710,7 +710,7 @@ msgid "Ether Classic"
 msgstr "古典以太幣"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "以太坊"
 
 msgid "Even/Odd"
 msgstr "偶/奇"
@@ -719,13 +719,13 @@ msgid "Even/Odd contracts will be refunded at the purchase price if the contract
 msgstr "奇/偶合約如果沒在 5 分鐘內結束，將退還購入價格。"
 
 msgid "Example of a blurry document"
-msgstr ""
+msgstr "模糊不清文檔的示例"
 
 msgid "Example of a cut-off document"
-msgstr ""
+msgstr "剪切文件示例"
 
 msgid "Example of a document with glare"
-msgstr ""
+msgstr "帶有眩光的文檔示例"
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "禁止時間不能超過5年。"
@@ -755,10 +755,10 @@ msgid "Explanation"
 msgstr "說明"
 
 msgid "Face forward and make sure your eyes are clearly visible"
-msgstr ""
+msgstr "面向前方並確保您的眼睛清晰可見"
 
 msgid "Face photo page"
-msgstr ""
+msgstr "臉部相片頁面"
 
 msgid "Failed"
 msgstr "失敗"
@@ -776,13 +776,13 @@ msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2
 msgstr "檔案 (%1) 大小超過允許限額。允許的最大檔案大小: %2"
 
 msgid "File not uploaded."
-msgstr ""
+msgstr "文件未上傳。"
 
 msgid "File size exceeded."
-msgstr ""
+msgstr "超過了文件大小。"
 
 msgid "File type not supported"
-msgstr ""
+msgstr "不支援的文件類型"
 
 msgid "Final price"
 msgstr "最終價格"
@@ -803,7 +803,7 @@ msgid "First line of home address"
 msgstr "住家地址第一行"
 
 msgid "Follow these steps to recover camera access:"
-msgstr ""
+msgstr "請按照以下步驟復原相機存取權限："
 
 msgid "Forex"
 msgstr "外匯"
@@ -824,34 +824,34 @@ msgid "Front Side"
 msgstr "前側"
 
 msgid "Front and back"
-msgstr ""
+msgstr "前和後"
 
 msgid "Gaming"
 msgstr "遊戲"
 
 msgid "Gaming Account"
-msgstr ""
+msgstr "博彩帳戶"
 
 msgid "Get %1"
 msgstr "獲取 %1"
 
 msgid "Get link via SMS"
-msgstr ""
+msgstr "通過簡訊獲取連結"
 
 msgid "Get secure link"
-msgstr ""
+msgstr "獲取安全連結"
 
 msgid "Get your secure link"
-msgstr ""
+msgstr "獲取您的安全連結"
 
 msgid "Glare detected"
-msgstr ""
+msgstr "偵測到眩光"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "前往報表"
 
 msgid "Go back"
-msgstr ""
+msgstr "返回"
 
 msgid "Go to statement"
 msgstr "前往月結單"
@@ -860,10 +860,10 @@ msgid "Goes Outside"
 msgstr "處於區間之外"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr ""
+msgstr "通過瀏覽器設定給予相機的存取權限"
 
 msgid "Great, that's everything we need"
-msgstr ""
+msgstr "太好了，這就是我們需要的一切資訊"
 
 msgid "Guide"
 msgstr "指南"
@@ -872,7 +872,7 @@ msgid "Hence, your withdrawable balance is only up to %1%2, subject to your acco
 msgstr "因此，取決於您帳戶的可用資金，您的可支取餘額最多為％1％2。"
 
 msgid "Here's how to do it:"
-msgstr ""
+msgstr "這是做法:"
 
 msgid "High"
 msgstr "最高值"
@@ -923,7 +923,7 @@ msgid "Hour"
 msgstr "小時"
 
 msgid "How to scan a QR code"
-msgstr ""
+msgstr "如何掃描 QR 碼"
 
 msgid "I want to reapply"
 msgstr "我想重新申請"
@@ -935,7 +935,7 @@ msgid "ID number is required for %1."
 msgstr "%1 需要甚份證號。"
 
 msgid "IDK"
-msgstr ""
+msgstr "IDK"
 
 msgid "IP Address"
 msgstr "IP地址"
@@ -944,7 +944,7 @@ msgid "Identity card"
 msgstr "身分證"
 
 msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr ""
+msgstr "如果無法掃掃描，請從Google Play 或 App Store 下載 QR 碼掃描應用"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "如果 <strong>退市現價</strong> 等於 <strong>低障礙</strong> 或 <strong>高障礙</strong>, 您將不會贏得賠付。"
@@ -1091,19 +1091,19 @@ msgid "Investment"
 msgstr "投資"
 
 msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr ""
+msgstr "可能沒連接。 <fallback>試試用您的手機</fallback>。"
 
 msgid "It may take a few minutes to arrive"
-msgstr ""
+msgstr "可能要花數分鐘時間"
 
 msgid "It must be an official photo ID"
-msgstr ""
+msgstr "必須是帶照片的正式身份證"
 
 msgid "It will only take a couple of minutes."
-msgstr ""
+msgstr "只需數分鐘。"
 
 msgid "It’ll take longer to verify you if we can’t read it"
-msgstr ""
+msgstr "如果看不清楚，就需要更長的時間進行驗證"
 
 msgid "Jan"
 msgstr "一月"
@@ -1127,7 +1127,7 @@ msgid "Jurisdiction"
 msgstr "管轄"
 
 msgid "Keep this window open while using your mobile"
-msgstr ""
+msgstr "使用手機時保持打開此視窗"
 
 msgid "Language settings"
 msgstr "語言設定"
@@ -1148,16 +1148,16 @@ msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "顯示 %2 最新 %1 跳點之最後統計數字"
 
 msgid "Linked to your computer"
-msgstr ""
+msgstr "與您的電腦連接"
 
 msgid "Litecoin"
 msgstr "萊特幣"
 
 msgid "Loading"
-msgstr ""
+msgstr "載入"
 
 msgid "Loading..."
-msgstr ""
+msgstr "正在載入..."
 
 msgid "Log in"
 msgstr "登入"
@@ -1172,13 +1172,13 @@ msgid "Login ID"
 msgstr "登入ID"
 
 msgid "Login at:"
-msgstr ""
+msgstr "登入位置:"
 
 msgid "Lookbacks"
 msgstr "回顧"
 
 msgid "Looks like you took too long"
-msgstr ""
+msgstr "似乎時間過長"
 
 msgid "Loss"
 msgstr "虧損"
@@ -1205,7 +1205,7 @@ msgid "Lower or equal"
 msgstr "低於或等值"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
 msgstr "MT5已被禁提款"
@@ -1214,40 +1214,40 @@ msgid "MT5 withdrawals have been disabled on your account. Please check your ema
 msgstr "您的MT5帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
 
 msgid "Make sure all of the document is in the photo"
-msgstr ""
+msgstr "確保所有文檔都在照片中"
 
 msgid "Make sure details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "確保所有詳細資訊清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure everything is clear"
-msgstr ""
+msgstr "確保一切都很清楚"
 
 msgid "Make sure full document is visible"
-msgstr ""
+msgstr "確保整個文件都清晰可見"
 
 msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "確保您的卡細資料清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure your device has a working camera"
-msgstr ""
+msgstr "確保您的裝置具可正常使用的相機"
 
 msgid "Make sure your device's camera works"
-msgstr ""
+msgstr "確保您的裝置相機可正常使用"
 
 msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "確保您的執照詳細資訊清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "確保您的護照詳細資料清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "確保您的許可證資料清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure your selfie clearly shows your face"
-msgstr ""
+msgstr "確保自拍照清楚顯示您的臉部"
 
 msgid "Make sure§"
-msgstr ""
+msgstr "確保§"
 
 msgid "Mar"
 msgstr "三月"
@@ -1289,16 +1289,16 @@ msgid "More information can be found in an email sent to you."
 msgstr "您可以在發給您的電子郵件中找到更詳細的資訊。"
 
 msgid "Move away from direct light"
-msgstr ""
+msgstr "遠離直射光"
 
 msgid "Move away from direct light — no glare"
-msgstr ""
+msgstr "遠離直射光 - 無眩光現象"
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "多資產抵押"
 
 msgid "Multiple faces found"
-msgstr ""
+msgstr "發現多個面孔"
 
 msgid "Multiplier"
 msgstr "乘數期權"
@@ -1310,13 +1310,13 @@ msgid "Multiplier Up"
 msgstr "乘數上漲"
 
 msgid "Must be under 10MB."
-msgstr ""
+msgstr "必須小於10MB。"
 
 msgid "Name"
 msgstr "姓名"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "僅名字和姓氏本身很容易猜到"
 
 msgid "Net profit"
 msgstr "淨收益"
@@ -1352,13 +1352,13 @@ msgid "No currency selected"
 msgstr "未選擇幣種"
 
 msgid "No document detected"
-msgstr ""
+msgstr "未偵測到文件"
 
 msgid "No face found"
-msgstr ""
+msgstr "未找到人臉"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "不需要符號、數字或大寫字母"
 
 msgid "No notifications"
 msgstr "沒有通知"
@@ -1409,7 +1409,7 @@ msgid "Offline"
 msgstr "離線"
 
 msgid "Once you've finished we'll take you to the next step"
-msgstr ""
+msgstr "完成後，我們將帶您進入下一步"
 
 msgid "Online"
 msgstr "線上"
@@ -1445,7 +1445,7 @@ msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "只允許字母、空格、連字號、句號和所有格號。"
 
 msgid "Only your face can be in the selfie"
-msgstr ""
+msgstr "自拍照只能拍您的臉"
 
 msgid "Oops... Page Not Available"
 msgstr "抱歉!找不到頁面"
@@ -1463,13 +1463,13 @@ msgid "Open positions"
 msgstr "空缺"
 
 msgid "Open the link and complete the tasks"
-msgstr ""
+msgstr "打開連結並完成任務"
 
 msgid "Open the link on your mobile"
-msgstr ""
+msgstr "用手機打開連結"
 
 msgid "Open your new bank account"
-msgstr ""
+msgstr "開立新的銀行帳戶"
 
 msgid "Opens"
 msgstr "開盤"
@@ -1490,16 +1490,16 @@ msgid "Passport"
 msgstr "護照"
 
 msgid "Passport photo page"
-msgstr ""
+msgstr "含照片的護照頁面"
 
 msgid "Password is not strong enough."
 msgstr "密碼安全度不夠。"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "密碼必須有大小寫英文字母和數字。"
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "Paxos 標準"
 
 msgid "Pay-out"
 msgstr "回報"
@@ -1526,10 +1526,10 @@ msgid "Permissions"
 msgstr "權限"
 
 msgid "Photo of your document"
-msgstr ""
+msgstr "文件的相片"
 
 msgid "Photo of your face"
-msgstr ""
+msgstr "您臉部的照片"
 
 msgid "Place of birth"
 msgstr "出生地點"
@@ -1577,7 +1577,7 @@ msgid "Please enter a valid Login ID."
 msgstr "請輸入有效的登入識別碼。"
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "請輸入有效的電話號 (例如 +15417541234)。"
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
 msgstr "請注意，所選貨幣僅適用於受限制帳戶。"
@@ -1619,7 +1619,7 @@ msgid "Please specify the reasons for closing your accounts"
 msgstr "請指定您關閉帳戶的原因"
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "請指定您首選的實況調查間隔時間，以分鐘計："
 
 msgid "Please submit your proof of address."
 msgstr "請提交您的地址證明。"
@@ -1628,10 +1628,10 @@ msgid "Please submit your proof of identity."
 msgstr "請提交您的身份證明。"
 
 msgid "Please try again"
-msgstr ""
+msgstr "請重試"
 
 msgid "Point your phone’s camera at the QR code"
-msgstr ""
+msgstr "將手機的相機對準 QR 碼"
 
 msgid "Postal Code/ZIP"
 msgstr "郵遞區號"
@@ -1655,7 +1655,7 @@ msgid "Predict the direction<br />and purchase"
 msgstr "預測價格走向<br />並購入"
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "容易猜測的替換，例如用'@'代替'a'並沒有提供太大幫助"
 
 msgid "Previous"
 msgstr "之前"
@@ -1694,7 +1694,7 @@ msgid "Proof of identity required"
 msgstr "需要身份證明"
 
 msgid "Provide the whole document page for best results"
-msgstr ""
+msgstr "提供完整的文檔頁面以獲得最佳結果"
 
 msgid "Purchase"
 msgstr "買入"
@@ -1748,16 +1748,16 @@ msgid "Reality Check"
 msgstr "實況簡報"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "以最近年份作密碼很容易猜出"
 
 msgid "Recover camera access to continue face verification"
-msgstr ""
+msgstr "恢復相機存取權限以繼續面部驗證"
 
 msgid "Recovery"
-msgstr ""
+msgstr "復原"
 
 msgid "Redo"
-msgstr ""
+msgstr "取消復原"
 
 msgid "Ref."
 msgstr "參考"
@@ -1766,28 +1766,28 @@ msgid "Reference ID"
 msgstr "身份參考號"
 
 msgid "Refresh"
-msgstr ""
+msgstr "更新"
 
 msgid "Refresh this page to restart the identity verification process"
-msgstr ""
+msgstr "刷新此頁面以重啟身份驗證過程"
 
 msgid "Remaining time"
 msgstr "剩餘時間"
 
 msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr ""
+msgstr "完成後，請記得要按停止。 <fallback>恢復視訊操作</fallback>"
 
 msgid "Remove deposit limits"
 msgstr "移除存款限額"
 
 msgid "Remove your glasses, if necessary"
-msgstr ""
+msgstr "必要時摘下眼鏡"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "像“aaa”這樣的重複密碼很容易猜到"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "像“abcabcabc”這樣的重複詞比“abc”更難猜測"
 
 msgid "Reports"
 msgstr "報告"
@@ -1799,7 +1799,7 @@ msgid "Resale not offered"
 msgstr "不提供轉售"
 
 msgid "Resend link"
-msgstr ""
+msgstr "重新傳送連結"
 
 msgid "Reset Barrier"
 msgstr "重設障礙"
@@ -1823,7 +1823,7 @@ msgid "Reset barrier"
 msgstr "重設障礙"
 
 msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr ""
+msgstr "隨時將虛擬帳戶餘額重設為 %1 。"
 
 msgid "Reset time"
 msgstr "重設時間"
@@ -1832,16 +1832,16 @@ msgid "Reset to original settings"
 msgstr "重設為原始設定"
 
 msgid "Residence permit"
-msgstr ""
+msgstr "居留證"
 
 msgid "Restart process on a different device"
-msgstr ""
+msgstr "用其他裝置重啟進程"
 
 msgid "Restart the process on the latest version of Google Chrome"
-msgstr ""
+msgstr "用最新版本的Google Chrome重啟該過程"
 
 msgid "Restart the process on the latest version of Safari"
-msgstr ""
+msgstr "用最新版本的 Safari 重啟該過程"
 
 msgid "Return"
 msgstr "回報"
@@ -1850,7 +1850,7 @@ msgid "Reverse Side"
 msgstr "反面"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "倒寫單詞並不難猜"
 
 msgid "Revoke access"
 msgstr "撤銷存取權限"
@@ -1862,7 +1862,7 @@ msgid "Rise/Fall contracts will be refunded if:"
 msgstr "上漲/下跌合約將退款，如："
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "STASIS Euro"
 
 msgid "Sa"
 msgstr "星期六"
@@ -1877,19 +1877,19 @@ msgid "Saturday"
 msgstr "星期六"
 
 msgid "Scan QR code"
-msgstr ""
+msgstr "掃描 QR 碼"
 
 msgid "Scan the QR code with your phone"
-msgstr ""
+msgstr "用手機掃描QR碼"
 
 msgid "Scans and photocopies are not accepted"
-msgstr ""
+msgstr "不接受掃描件和影印件"
 
 msgid "Scopes"
 msgstr "範圍"
 
 msgid "Search for country"
-msgstr ""
+msgstr "搜尋國家"
 
 msgid "Search..."
 msgstr "搜索..."
@@ -1901,10 +1901,10 @@ msgid "Select Trade Type"
 msgstr "選擇交易類型"
 
 msgid "Select a %{country} document"
-msgstr ""
+msgstr "選擇 %{country} 文件"
 
 msgid "Select country"
-msgstr ""
+msgstr "選擇國家"
 
 msgid "Select currency"
 msgstr "選擇貨幣"
@@ -1913,7 +1913,7 @@ msgid "Select date"
 msgstr "選擇日期"
 
 msgid "Select issuing country"
-msgstr ""
+msgstr "選擇發證國家"
 
 msgid "Select market:"
 msgstr "選擇市場:"
@@ -1934,10 +1934,10 @@ msgid "Self-exclusion"
 msgstr "自我禁止"
 
 msgid "Selfie"
-msgstr ""
+msgstr "自拍"
 
 msgid "Selfie uploaded"
-msgstr ""
+msgstr "自拍照已上傳"
 
 msgid "Sell"
 msgstr "賣出"
@@ -1946,16 +1946,16 @@ msgid "Sell at market"
 msgstr "按市價賣出"
 
 msgid "Send a secure link to your phone"
-msgstr ""
+msgstr "傳送安全連結到您的手機"
 
 msgid "Send link"
-msgstr ""
+msgstr "傳送連結"
 
 msgid "Send this one-time link to your phone"
-msgstr ""
+msgstr "傳送此一次性安全連結到您的手機"
 
 msgid "Sending"
-msgstr ""
+msgstr "傳送中"
 
 msgid "Sep"
 msgstr "九月"
@@ -1964,7 +1964,7 @@ msgid "September"
 msgstr "九月"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "像abc或6543這樣的序列密碼很容易猜到"
 
 msgid "Server"
 msgstr "伺服器"
@@ -1985,7 +1985,7 @@ msgid "Settles"
 msgstr "結算"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "短鍵盤列式很容易猜到"
 
 msgid "Should be %1"
 msgstr "必須為%1"
@@ -2006,7 +2006,7 @@ msgid "Should start with letter or number, and may contain hyphen and underscore
 msgstr "應以字母或數位開始，可包含連字號和底線。"
 
 msgid "Show all details — including the bottom 2 lines"
-msgstr ""
+msgstr "顯示所有詳細資訊-包括最後2行"
 
 msgid "Sign out"
 msgstr "登出"
@@ -2018,7 +2018,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "Something's gone wrong"
-msgstr ""
+msgstr "出現錯誤"
 
 msgid "Sorry, account signup is not available in your country."
 msgstr "對不起，您的所在國內不可註冊帳戶。"
@@ -2030,7 +2030,7 @@ msgid "Sorry, an error occurred while processing your request."
 msgstr "對不起，在處理您的請求時發生錯誤。"
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "對不起，您的國家無法進行二元期權交易。"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "對不起，您的金融帳戶無法進行二元期權交易。"
@@ -2039,7 +2039,7 @@ msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "抱歉，此貨幣的存款目前被禁用。"
 
 msgid "Sorry, no mobile phone bills"
-msgstr ""
+msgstr "抱歉，不接受手機帳單"
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "對不起，此功能僅適用虛擬帳戶。"
@@ -2087,7 +2087,7 @@ msgid "Step"
 msgstr "步驟"
 
 msgid "Steps required to continue verification on your mobile"
-msgstr ""
+msgstr "手機繼續驗證所需的步驟"
 
 msgid "Stock Indices"
 msgstr "股票指數"
@@ -2096,7 +2096,7 @@ msgid "Stocks"
 msgstr "股票"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "直線排列鍵很容易猜到"
 
 msgid "Su"
 msgstr "星期日"
@@ -2105,31 +2105,31 @@ msgid "Submit"
 msgstr "送出"
 
 msgid "Submit document"
-msgstr ""
+msgstr "提交文件"
 
 msgid "Submit identity card (back)"
-msgstr ""
+msgstr "提交身份證（背面）"
 
 msgid "Submit identity card (front)"
-msgstr ""
+msgstr "提交身份證（正面）"
 
 msgid "Submit license (back)"
-msgstr ""
+msgstr "提交執照 （背面）"
 
 msgid "Submit license (front)"
-msgstr ""
+msgstr "提交執照 （正面）"
 
 msgid "Submit passport photo page"
-msgstr ""
+msgstr "提交含照片的護照頁面"
 
 msgid "Submit residence permit (back)"
-msgstr ""
+msgstr "提交居留證 （背面）"
 
 msgid "Submit residence permit (front)"
-msgstr ""
+msgstr "提交居留證 （正面）"
 
 msgid "Submit verification"
-msgstr ""
+msgstr "提交驗證"
 
 msgid "Submitted"
 msgstr "已提交"
@@ -2150,37 +2150,37 @@ msgid "Synthetic Indices"
 msgstr "綜合指數"
 
 msgid "Take a photo"
-msgstr ""
+msgstr "拍照"
 
 msgid "Take a photo of the back of your card"
-msgstr ""
+msgstr "卡背面拍照"
 
 msgid "Take a photo of the back of your license"
-msgstr ""
+msgstr "執照背面拍照"
 
 msgid "Take a photo of the front of your card"
-msgstr ""
+msgstr "卡正面拍照"
 
 msgid "Take a photo of the front of your license"
-msgstr ""
+msgstr "執照正面拍照"
 
 msgid "Take a photo of your passport photo page"
-msgstr ""
+msgstr "為含照片的護照頁面拍照"
 
 msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr ""
+msgstr "改為使用<fallback>基本相機模式</fallback>拍照"
 
 msgid "Take a photo with your phone"
-msgstr ""
+msgstr "用手機拍照"
 
 msgid "Take a selfie"
-msgstr ""
+msgstr "自拍"
 
 msgid "Take a selfie showing your face"
-msgstr ""
+msgstr "拍張臉部自拍照"
 
 msgid "Take photo"
-msgstr ""
+msgstr "拍照"
 
 msgid "Target"
 msgstr "目標"
@@ -2189,22 +2189,22 @@ msgid "Telephone"
 msgstr "電話"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "泰達 ERC20"
 
 msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr ""
+msgstr "泰達 ERC20（eUSDT）是與美元掛鉤的泰達幣版本，在以太坊平台上受託管。"
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "泰達 Omni"
 
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr ""
+msgstr "泰達 Omni (USDT) 是建立在比特幣區塊鏈上，與美元掛鉤的泰達幣版本。"
 
 msgid "Th"
 msgstr "星期四"
 
 msgid "Thank you"
-msgstr ""
+msgstr "謝謝"
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
 msgstr "謝謝您的註冊！請檢視郵件以完成註冊程序。"
@@ -2276,7 +2276,7 @@ msgid "The entry spot is the first tick after the contract is processed by our s
 msgstr "入市現價指我們伺服器處理合約後的第一個跳動點。"
 
 msgid "The link only works on mobile devices"
-msgstr ""
+msgstr "連結只能用於手機"
 
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "已達代幣 (%1) 最大限數。"
@@ -2285,7 +2285,7 @@ msgid "The page you requested could not be found. Either it no longer exists or 
 msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤。"
 
 msgid "The photo should clearly show your document"
-msgstr ""
+msgstr "照片須清楚顯示您的文件"
 
 msgid "The reason should be between 5 and 250 characters"
 msgstr "原因的長度必須是5-250個字元。"
@@ -2315,7 +2315,7 @@ msgid "There was some invalid character in an input field."
 msgstr "某字欄的輸入字元無效。"
 
 msgid "These are the documents most likely to show your current home address"
-msgstr ""
+msgstr "這些是最有可能顯示您目前家庭住址的文件"
 
 msgid "This account is disabled"
 msgstr "此帳戶已禁用"
@@ -2348,19 +2348,19 @@ msgid "This is a staging server - For testing purposes only"
 msgstr "這是分期伺服器，僅用於測試目的"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "這是10個最常用的密碼"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "這是100個最常用的密碼"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "這是很常用的密碼"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "這是一個指示性的障礙。實際障礙將是入市現價加上障礙距離。"
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "這類似於常用密碼"
 
 msgid "This is your %1 account."
 msgstr "這是您的 %1 帳戶。"
@@ -2369,7 +2369,7 @@ msgid "This page is only available to logged out clients."
 msgstr "此頁面僅適用於已登出的客戶。"
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "此密碼已列入黑名單"
 
 msgid "Thursday"
 msgstr "星期四"
@@ -2402,19 +2402,19 @@ msgid "Timed out until"
 msgstr "時間已過。下次開啟時間為"
 
 msgid "Tips"
-msgstr ""
+msgstr "提示"
 
 msgid "Tips to take a good selfie"
-msgstr ""
+msgstr "好的自拍技巧"
 
 msgid "To account: "
 msgstr "至帳戶: "
 
 msgid "To open a bank account, we will need to verify your identity."
-msgstr ""
+msgstr "要開設銀行帳戶，必須先驗證您的身份。"
 
 msgid "To smoothly verify you, we need a better photo"
-msgstr ""
+msgstr "為了順利驗證，我們需要更好的照片"
 
 msgid "Today"
 msgstr "今天"
@@ -2423,7 +2423,7 @@ msgid "Token"
 msgstr "代幣"
 
 msgid "Too many failed attempts"
-msgstr ""
+msgstr "失敗嘗試次數太多"
 
 msgid "Top up error"
 msgstr "充值錯誤"
@@ -2476,8 +2476,8 @@ msgstr "差價合約 (CFD) 的綜合指數交易並不適合所有人。請確�
 msgid "Trading is unavailable at this time."
 msgstr "此時無法交易。"
 
-msgid "Trading statictics report"
-msgstr ""
+msgid "Trading statistics report"
+msgstr "交易統計報告"
 
 msgid "Transaction ID"
 msgstr "交易ID"
@@ -2486,7 +2486,7 @@ msgid "Transaction performed by %1 (App ID: %2)"
 msgstr "交易執行者為%1 (應用程式 ID: %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "True USD"
 
 msgid "Try our %1Synthetic Indices%2."
 msgstr "請試試%1綜合指數%2。"
@@ -2495,10 +2495,10 @@ msgid "Try our other markets."
 msgstr "請嘗試我們其他的市場。"
 
 msgid "Try using a JPG or PNG file"
-msgstr ""
+msgstr "嘗試使用 JPG 或 PNG 文件"
 
 msgid "Try using another file type."
-msgstr ""
+msgstr "嘗試使用其他文件類型。"
 
 msgid "Tu"
 msgstr "星期二"
@@ -2513,16 +2513,16 @@ msgid "Type"
 msgstr "類型"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "USD Coin"
 
 msgid "USDK"
-msgstr ""
+msgstr "USDK"
 
 msgid "Unable to read file %1"
 msgstr "無法讀取文檔%1"
 
 msgid "Unavailable"
-msgstr ""
+msgstr "不可用"
 
 msgid "Understood"
 msgstr "理解"
@@ -2531,7 +2531,7 @@ msgid "Unknown OS"
 msgstr "未知 OS"
 
 msgid "Unsupported browser"
-msgstr ""
+msgstr "不受支援的瀏覽器"
 
 msgid "Up to %1 decimal places are allowed."
 msgstr "允許小數點后%位。"
@@ -2546,55 +2546,55 @@ msgid "Upgrade now"
 msgstr "立即升級"
 
 msgid "Upload"
-msgstr ""
+msgstr "上傳"
 
 msgid "Upload a selfie from your computer"
-msgstr ""
+msgstr "從電腦上傳自拍照片"
 
 msgid "Upload anyway"
-msgstr ""
+msgstr "仍要上傳"
 
 msgid "Upload back of card from your computer"
-msgstr ""
+msgstr "從電腦上傳卡的背面"
 
 msgid "Upload back of license from your computer"
-msgstr ""
+msgstr "從電腦上傳執照的背面"
 
 msgid "Upload front of card from your computer"
-msgstr ""
+msgstr "從電腦上傳卡的正面"
 
 msgid "Upload front of license from your computer"
-msgstr ""
+msgstr "從電腦上傳執照的正面"
 
 msgid "Upload passport photo page"
-msgstr ""
+msgstr "上傳含照片的護照頁面"
 
 msgid "Upload passport photo page from your computer"
-msgstr ""
+msgstr "從電腦上傳含照片的護照頁面"
 
 msgid "Upload photo"
-msgstr ""
+msgstr "上傳照片"
 
 msgid "Uploads successful"
-msgstr ""
+msgstr "上傳成功"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "用幾個詞，避免常用短語"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "使用更長的鍵盤列式並給予更多變化"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "驗證碼錯誤。請使用以下連結發送到您的電子郵件。"
 
 msgid "Verification complete"
-msgstr ""
+msgstr "驗證完畢"
 
 msgid "Verification required"
 msgstr "需要驗證"
 
 msgid "Verify Identity"
-msgstr ""
+msgstr "身份驗證"
 
 msgid "Verify Reset Password"
 msgstr "重設密碼驗證"
@@ -2609,7 +2609,7 @@ msgid "View chart"
 msgstr "檢視圖表"
 
 msgid "View from camera"
-msgstr ""
+msgstr "從相機觀看"
 
 msgid "Virtual"
 msgstr "虛擬"
@@ -2627,31 +2627,31 @@ msgid "We"
 msgstr "星期三"
 
 msgid "We cannot verify you without using your camera"
-msgstr ""
+msgstr "不使用相機，我們無法驗證您的身份"
 
 msgid "We'd love to hear what you think."
 msgstr "我們很想聽聽你的意見。"
 
 msgid "We'll compare it with your document"
-msgstr ""
+msgstr "我們將它與您的文檔比較"
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
 msgstr "我們希望改進產品和服務, 希望進一步瞭解您的需求。我們想通過電話與您交談, 瞭解您喜歡我們的原因, 您對我們有什麼不滿, 以及我們應該如何改善。"
 
 msgid "We're now ready to verify your identity"
-msgstr ""
+msgstr "我們現在準備驗證您的身份"
 
 msgid "We've sent a secure link to %{number}"
-msgstr ""
+msgstr "已傳送安全連結至%{number}"
 
 msgid "Wednesday"
 msgstr "星期三"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "我們將更新您的限額。點選％1同意和接受％2以確認您對自己的行為負全部責任，如果您因此而上癮或蒙受損失，我們將不承擔任何責任。"
 
 msgid "When prompted, you must enable camera access to continue"
-msgstr ""
+msgstr "出現提示時，須啟用相機存取權限以繼續操作"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "當您點選「OK」後，您將被禁止在此網站交易，直到選定期限結束為止。"
@@ -2678,7 +2678,7 @@ msgid "Withdrawals have been disabled on your account. Please check your email f
 msgstr "您的帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr ""
+msgstr "想先檢查一下您的月結單？%1檢查月結單%2"
 
 msgid "Yes"
 msgstr "是的"
@@ -2714,7 +2714,7 @@ msgid "You can no longer change the currency because you've made a first-time de
 msgstr "您已存入第一筆資金, 因此不能再更改幣種。"
 
 msgid "You can now return to your computer to continue"
-msgstr ""
+msgstr "您現在可以返回電腦繼續操作"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr "如果您的餘額為 %2 或更低, 您可以在模擬帳戶內新增 %1。"
@@ -2735,7 +2735,7 @@ msgid "You have insufficient funds in your Binary account, please <a href=\"%1\"
 msgstr "您的Binary帳戶資金不足，請<a href=\"%1\">增加資金</a>。"
 
 msgid "You have insufficient funds in your MT5 account."
-msgstr ""
+msgstr "您的 MT5 帳戶資金不足。"
 
 msgid "You have not granted access to any applications."
 msgstr "您未獲權限存取任何應用程式。"
@@ -2744,7 +2744,7 @@ msgid "You have reached the rate limit of requests per second. Please try later.
 msgstr "您已達每秒鐘提呈請求的最高限率。請稍後重試。"
 
 msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr ""
+msgstr "已達到提款限額。請上傳您的身份和地址證明，以提高提款限額，並繼續提款。"
 
 msgid "You have sold this contract at %1 %2"
 msgstr "您已經以 %1 %2 賣出此合約"
@@ -2789,10 +2789,10 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "如果市價以您選取的數字結束，則您將贏得賠付額。"
 
 msgid "You'll need to restart your verification on your computer"
-msgstr ""
+msgstr "需用電腦重啟驗證"
 
 msgid "You've made no transactions of this type up to this date."
-msgstr ""
+msgstr "您至今為止沒有進行過此類交易。"
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "您目前%1天的取款限額是%2%3。"
@@ -2819,13 +2819,13 @@ msgid "Your changes have been updated."
 msgstr "您的更改已成功更新。"
 
 msgid "Your computer may take a few seconds to update"
-msgstr ""
+msgstr "您的電腦更新可能需要數秒鐘"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "您的模擬帳戶餘額目前為 %1 或更低。您可以新增 %2補充帳戶資金。"
 
 msgid "Your face is needed in the selfie"
-msgstr ""
+msgstr "自拍照片必須包括臉部"
 
 msgid "Your fiat account's currency is currently set to %1."
 msgstr "您的法定帳戶的幣種目前設置為 %1。"
@@ -2834,19 +2834,19 @@ msgid "Your fiat account's currency is set to %1."
 msgstr "您的法定帳戶的幣種設置為 %1。"
 
 msgid "Your link will expire in one hour"
-msgstr ""
+msgstr "您的連結將於一小時後失效"
 
 msgid "Your mobile link will expire in one hour"
-msgstr ""
+msgstr "您的手機連結將於一小時後失效"
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "您的密碼不可與電子郵件地址相同。"
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "每個報告之間的首選時間間隔："
 
 msgid "Your professional client request is %1not approved%2."
 msgstr "您申請成為專業客戶的請求%1不受批准%2。"
@@ -2879,7 +2879,7 @@ msgid "Your transaction reference number is %1"
 msgstr "您的交易號是 %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "您的虛擬餘額已重設。"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr "您的網絡瀏覽器 (%1) 已過時，並可能會影響您的交易操作。繼續操作須自行承擔風險。%2更新瀏覽器%3"
@@ -2894,13 +2894,13 @@ msgid "accounts"
 msgstr "帳戶"
 
 msgid "back"
-msgstr ""
+msgstr "返回"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "二元期權、外匯、外匯交易、線上交易、金融交易、二元交易、指數交易、交易股票指數、外匯交易、交易商品、二元期權策略、二元經紀、二元投注、二元期權交易平台、二元策略、金融、投資、交易"
 
 msgid "close"
-msgstr ""
+msgstr "關閉"
 
 msgid "day"
 msgstr "天"
@@ -2912,7 +2912,7 @@ msgid "details"
 msgstr "詳細資料"
 
 msgid "e.g. United States"
-msgstr ""
+msgstr "例如美國"
 
 msgid "e.g. frontend.binaryws.com"
 msgstr "例如 frontend.binaryws.com"
@@ -2948,10 +2948,10 @@ msgid "numbers"
 msgstr "號碼"
 
 msgid "or"
-msgstr ""
+msgstr "或"
 
 msgid "or upload photo – no scans or photocopies"
-msgstr ""
+msgstr "或上傳照片 - 不接受掃描件或影印件"
 
 msgid "second"
 msgstr "秒"
