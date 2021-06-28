@@ -20,6 +20,7 @@ const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
+const isEuCountry              = require('../common/country_base').isEuCountry;
 
 const header_icon_base_path = '/images/pages/header/';
 
@@ -37,7 +38,9 @@ const Header = (() => {
     const onLoad = () => {
         populateAccountsList();
         setHeaderUrls();
-        bindPlatform();
+        BinarySocket.wait('authorize','landing_company').then(() => {
+            bindPlatform();
+        });
         bindClick();
         bindSvg();
         if (Client.isLoggedIn()) {
@@ -146,7 +149,9 @@ const Header = (() => {
             return;
         }
         const main_domain = `https://app.deriv.${getTopLevelDomain()}`;
-        const is_svg = Client.get('landing_company_shortcode') === 'svg';
+        const is_logged_in = Client.isLoggedIn();
+        const has_dxtrade = !!(State.getResponse('landing_company.dxtrade_gaming_company') || State.getResponse('landing_company.dxtrade_gaming_company'));
+        const should_show_xtrade = is_logged_in ? has_dxtrade : !isEuCountry();
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
@@ -170,7 +175,7 @@ const Header = (() => {
                 on_mobile: true,
 
             },
-            ...(is_svg ? {
+            ...(should_show_xtrade ? {
                 derivx: {
                     name     : 'Deriv X',
                     desc     : 'Trade FX and CFDs on a customisable, easy-to-use trading platform.',
