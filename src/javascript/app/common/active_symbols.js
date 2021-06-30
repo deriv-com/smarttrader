@@ -1,5 +1,4 @@
 const isEmptyObject = require('../../_common/utility').isEmptyObject;
-const removeObjProperties = require('../../_common/utility').removeObjProperties;
 
 const submarket_order = {
     forex          : 0,
@@ -171,21 +170,12 @@ const ActiveSymbols = (() => {
         extend(trade_markets_list, getSubmarkets(active_symbols));
         return trade_markets_list;
     };
-
-    // The unavailable underlyings and markets are only offered on deriv.com.
-    const unavailable_underlyings = ['BOOM500', 'BOOM1000', 'CRASH500', 'CRASH1000', 'stpRNG'];
-    const unavailable_markets = ['cryptocurrency'];
     
     const getAvailableUnderlyings = (markets_list) => {
         const markets_list_clone = clone(markets_list);
 
-        unavailable_markets.forEach(item => markets_list_clone[item] && delete markets_list_clone[item]);
-
         Object.keys(markets_list_clone).forEach(market_key => {
             Object.keys(markets_list_clone[market_key].submarkets).forEach(submarket_key => {
-                removeObjProperties(
-                    unavailable_underlyings,
-                    markets_list_clone[market_key].submarkets[submarket_key].symbols);
                 if (Object.keys(markets_list_clone[market_key].submarkets[submarket_key].symbols).length === 0) {
                     delete markets_list_clone[market_key].submarkets[submarket_key];
                 }
