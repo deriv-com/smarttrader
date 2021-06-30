@@ -18,6 +18,7 @@ const applyToAllElements       = require('../../_common/utility').applyToAllElem
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
+const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 
@@ -145,7 +146,7 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const main_domain = `https://app.deriv.${getTopLevelDomain()}`;
+        const main_domain = getHostname();
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
