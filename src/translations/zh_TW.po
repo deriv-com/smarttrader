@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-27 05:33\n"
+"PO-Revision-Date: 2021-06-30 07:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -2084,7 +2084,7 @@ msgid "Before using the trading robots or Expert Advisors and forward trade, the
 msgstr "客戶在使用交易機器人或專家顧問和遠期交易之前, 應透過模擬帳戶進行測試。"
 
 msgid "Before you deactivate your account, you need to do the following:"
-msgstr ""
+msgstr "在停用帳戶之前，您需要執行以下操作："
 
 msgid "Beginner"
 msgstr "初學者"
@@ -2852,7 +2852,7 @@ msgid "Close identity verification screen"
 msgstr "關閉身份驗證螢幕"
 
 msgid "Close open positions"
-msgstr ""
+msgstr "把持倉頭寸平倉"
 
 msgid "Close your %1 account."
 msgstr "關閉您的 %1 帳戶。"
@@ -6044,16 +6044,16 @@ msgid "If you find any vulnerabilities in our %1open-source code%2, feel free to
 msgstr "如您在我們的%1開源代碼%2中發現任何漏洞，請隨時在GitHub提交引入請求。"
 
 msgid "If you have a Binary real account, go to %1Cashier%2 to withdraw your funds"
-msgstr ""
+msgstr "如您有 Binary 真實帳戶，請前往%1C收銀台%2提取資金。"
 
 msgid "If you have a Binary real account, go to %1Portfolio%2 to close any open positions."
-msgstr ""
+msgstr "如您有 Binary 真實帳戶，請前往%1投資組合%2將全部持倉頭寸平倉。"
 
 msgid "If you have a MT5 real account, go to %1MT5 dashboard%2 to withdraw your funds."
-msgstr ""
+msgstr "如您有 MT5 真實帳戶，請前往%1MT5 儀表板%2提取資金。"
 
 msgid "If you have a MT5 real account, log into it to close any open positions."
-msgstr ""
+msgstr "如您有 MT5真實帳戶，請登入以便將全部持倉頭寸平倉。"
 
 msgid "If you have a payment reference (for example 122), you can enter it here."
 msgstr "如有付款參考編號（例如122），可在此處輸入。"
@@ -12602,7 +12602,7 @@ msgid "This feature is available to demo accounts only."
 msgstr "此功能僅適用於模擬帳戶。"
 
 msgid "This feature is not relevant to demo accounts."
-msgstr ""
+msgstr "此功能與模擬帳戶沒有關聯。"
 
 msgid "This feature is only relevant to payment agent accounts."
 msgstr "此功能僅適用於支付代理帳戶。"
@@ -14336,7 +14336,7 @@ msgid "Withdraw funds from your MT5 account"
 msgstr "從您的 MT5 帳戶中提取資金"
 
 msgid "Withdraw your funds"
-msgstr ""
+msgstr "提取資金"
 
 msgid "Withdrawal"
 msgstr "提款"
