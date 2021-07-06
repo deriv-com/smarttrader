@@ -231,12 +231,20 @@ const Validation = (() => {
             message = localize('Should be less than [_1]', addComma(options.max, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined));
         }
 
+        // Priority Validation
+        if ('balance' in options && isLessThanBalance(value, options)) {
+            is_ok   = false;
+            message = localize('Insufficient balance.');
+        }
+
         ValidatorsMap.get().number.message = message;
         return is_ok;
     };
 
     const isMoreThanMax = (value, options) =>
         (options.type === 'float' ? +value > +options.max : compareBigUnsignedInt(value, options.max) === 1);
+
+    const isLessThanBalance = (value,options) => options.balance < value;
 
     const validTaxID = (value, options, field) => {
         // input is valid in API regex but may not be valid for country regex
