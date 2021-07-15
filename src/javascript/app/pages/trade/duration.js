@@ -16,6 +16,7 @@ const toISOFormat        = require('../../../_common/string_util').toISOFormat;
 const toReadableFormat   = require('../../../_common/string_util').toReadableFormat;
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
+const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
 
 /*
  * Handles duration processing display
@@ -284,6 +285,7 @@ const Durations = (() => {
         if (selected_duration.amount && selected_duration.unit > unit_value) {
             unit_value = selected_duration.amount;
         }
+    
         CommonFunctions.getElementById('duration_amount').value = unit_value;
         Defaults.set('duration_amount', unit_value);
         displayExpiryType();
@@ -589,6 +591,7 @@ const Durations = (() => {
             return;
         }
 
+        const duration_tooltip_element = CommonFunctions.getElementById('duration_tooltip');
         const duration_min_element = CommonFunctions.getElementById('duration_minimum');
         const duration_max_element = CommonFunctions.getElementById('duration_maximum');
         duration_wrapper_element.setVisibility(1);
@@ -596,11 +599,17 @@ const Durations = (() => {
         if (+duration_amount_element.value < +duration_min_element.textContent) {
             duration_amount_element.classList.add('error-field');
             duration_wrapper_element.classList.add('error-msg');
+            duration_min_element.classList.remove('invisible');
+            duration_max_element.classList.add('invisible');
+            elementInnerHtml(duration_tooltip_element, 'Minimum:');
             Reset.hideResetTime();
         } else if (+duration_max_element.textContent &&
             +duration_amount_element.value > +duration_max_element.textContent) {
             duration_amount_element.classList.add('error-field');
-            duration_wrapper_element.classList.remove('error-msg');
+            duration_wrapper_element.classList.add('error-msg');
+            duration_min_element.classList.add('invisible');
+            duration_max_element.classList.remove('invisible');
+            elementInnerHtml(duration_tooltip_element, 'Maximum:');
             Reset.hideResetTime();
         } else {
             duration_amount_element.classList.remove('error-field');
@@ -608,6 +617,9 @@ const Durations = (() => {
             if (Reset.isReset(Contract.form())) {
                 Reset.displayResetTime(duration_amount_element.value, Defaults.get('duration_units'));
             } else {
+                duration_min_element.classList.remove('invisible');
+                duration_max_element.classList.add('invisible');
+                elementInnerHtml(duration_tooltip_element, 'Minimum:');
                 Reset.hideResetTime();
             }
         }
