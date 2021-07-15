@@ -174,7 +174,6 @@ const ActiveSymbols = (() => {
 
     // The unavailable underlyings are only offered on deriv.com.
     const unavailable_underlyings = ['BOOM500', 'BOOM1000', 'CRASH500', 'CRASH1000', 'stpRNG'];
-    const is_jd = symbol => /^(JD)/i.test(symbol);
 
     const getAvailableUnderlyings = (markets_list) => {
         const markets_list_clone = clone(markets_list);
@@ -186,12 +185,6 @@ const ActiveSymbols = (() => {
                     markets_list_clone[market_key].submarkets[submarket_key].symbols);
                 if (Object.keys(markets_list_clone[market_key].submarkets[submarket_key].symbols).length === 0) {
                     delete markets_list_clone[market_key].submarkets[submarket_key];
-                } else {
-                    Object.keys(markets_list_clone[market_key].submarkets[submarket_key].symbols).forEach(symbol => {
-                        if (is_jd(symbol)) {
-                            delete markets_list_clone[market_key].submarkets[submarket_key];
-                        }
-                    });
                 }
             });
             if (Object.keys(markets_list_clone[market_key].submarkets).length === 0){
