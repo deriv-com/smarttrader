@@ -164,7 +164,7 @@ const Header = (() => {
             },
             dmt5: {
                 name     : 'DMT5',
-                desc     : 'The platform of choice for professionals worldwide.',
+                desc     : 'Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.',
                 link     : `${main_domain}/mt5`,
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
