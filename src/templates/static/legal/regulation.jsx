@@ -60,7 +60,7 @@ const Area = ({ items }) => {
     const normalize = n => n.toFixed(2);
     return (
         <React.Fragment>
-            {items.map((item, idx) =>(
+            {items.map((item, idx) => (
                 <area
                     shape='rect'
                     coords={`${normalize(item.x * svg_scale)},${normalize(item.y * svg_scale)},${normalize((item.x + (item.width || default_width) + square_wh) * svg_scale)},${normalize((item.y + square_wh) * svg_scale)}`}
@@ -137,17 +137,17 @@ const Regulation = () => {
                         </map>
                     </div>
 
-                    <h3>{it.L('Pillar 3 Disclosures')}</h3>
+                    <h3>{it.L('Financial disclosure report')}</h3>
                     <div>
-                        <p>{it.L('The Pillar 3 disclosure report of Deriv Investments (Europe) Limited has been prepared in accordance with the Capital Requirements Directive IV and the Capital Requirements Regulation. Read our Pillar 3 disclosure report to understand how we comply with market discipline as a market participant.')}</p>
+                        <p>{it.L('Deriv Investments (Europe) Limited has prepared the Financial disclosures report in accordance with the Investment Firms Regulation and Directive. Read our report to understand how we comply with market discipline as a market participant.')}</p>
                         <FillBox
                             padding='5'
                             center
                             border='border-dark-gray'
                             image='images/pages/regulation/pdf-icon.svg'
-                            href={it.url_for('/download/DIEL_Pillar_3_2020.pdf')}
+                            href={it.url_for('/download/Financial-Disclosures-Report.pdf')}
                             target='_blank'
-                            text={it.L('Pillar 3 disclosure report')}
+                            text={it.L('Financial disclosure report')}
                         />
                     </div>
 
@@ -157,9 +157,9 @@ const Regulation = () => {
                         <div className='gr-row'>
                             <FillBox id='crypto_fillbox' padding='4' center border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Crypto.pdf`)} target='_blank' text={it.L('Cryptocurrencies')} />
                             <FillBox id='cfd_fillbox' padding='4' center className='margin-right-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Commodities.pdf`)} target='_blank' text={it.L('Commodities')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Forex.pdf`)} target='_blank' text={it.L('Forex')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-right-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stocks.pdf`)} target='_blank' text={it.L('Stocks')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stock-Indices.pdf`)} target='_blank' text={it.L('Stock Indices')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Forex.pdf`)} target='_blank' text={it.L('Forex')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-right-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stocks.pdf`)} target='_blank' text={it.L('Stocks')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stock-Indices.pdf`)} target='_blank' text={it.L('Stock Indices')} />
                         </div>
                     </div>
 
