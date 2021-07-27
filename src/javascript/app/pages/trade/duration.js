@@ -592,8 +592,8 @@ const Durations = (() => {
         }
 
         const duration_tooltip_element = CommonFunctions.getElementById('duration_tooltip');
-        const duration_min_element = CommonFunctions.getElementById('duration_minimum');
-        const duration_max_element = CommonFunctions.getElementById('duration_maximum');
+        const duration_min_element     = CommonFunctions.getElementById('duration_minimum');
+        const duration_max_element     = CommonFunctions.getElementById('duration_maximum');
         duration_wrapper_element.setVisibility(1);
 
         if (+duration_amount_element.value < +duration_min_element.textContent) {
