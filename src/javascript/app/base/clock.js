@@ -13,7 +13,7 @@ const Clock = (() => {
     const onTimeUpdated = () => {
         const server_time = ServerTime.get();
         window.time = server_time;
-        
+
         const time_str = `${server_time.format('YYYY-MM-DD HH:mm:ss')} GMT`;
         applyToAllElements(el_clock_selector, (el) => {
             elementInnerHtml(el, time_str);
