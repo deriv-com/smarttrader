@@ -5,6 +5,7 @@ This repository contains the static HTML, Javascript, CSS, and images content of
 ![build](https://img.shields.io/circleci/build/github/deriv-com/binary-static) ![node](https://img.shields.io/badge/node-%3E%3D12.22.3-blue.svg) ![npm](https://img.shields.io/badge/npm-%3E%3D6.14.13-blue.svg) ![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)
 
 **In this document**
+
 - [Other Documents](#other-documents)
 - [Pre-installation](#pre-installation)
 - [Quickstart](#quick-start)
@@ -31,58 +32,46 @@ Before running or contribute to this project, you need to have the setup of the 
 
 ## Quickstart
 
-1.  **Fork the project**
+1. **Create a new organization**
+   Create a new organization in [github.com](https://github.com/account/organizations/new?coupon=&plan=team_free)
 
-    In order to work on your own version of the SmartTrader application, please fork the project to your own repo.
+2. **Fork the project**
 
-2.  **Clone using SSH**
+   In order to work on your own version of the SmartTrader application, please fork the project in your newly created organization.
 
-    ```sh
-    git clone git@github.com:your-github-username/binary-com.git smart-trader
-    ```
+3. **Clone using SSH**
 
-3.  **Enter project directory**
+   ```sh
+   git clone git@github.com:<organization_name>/binary-static.git smart-trader
+   ```
 
-    ```sh
-    cd smart-trader
-    ```
+4. **Enter project directory**
 
+   ```sh
+   cd smart-trader
+   ```
 
-4. **Add Smarttrader upstream**
+5. **Add DSmartTrader project as your upstream**
 
-    ```sh
-      git remote add deriv git@github.com:deriv-com/binary-static.git 
-    ```
+   ```sh
+   git remote add upstream git@github.com:deriv-com/binary-static.git
+   ```
 
-5. **fetch upstream**
+6. **Install your dependencies:**
 
-    ```
-      git fetch deriv master
-    ```
+   ```sh
+     npm ci
+   ```
 
-6. **Checkout to smarttrader master**
+7. **To start developing:**
 
-    ```sh
-      git checkout deriv/master
-    ```
+   ```sh
+   npm run start
+   ```
 
-7.  **Install your dependencies:**
+8. **Open the source code and start editing!**
 
-    ```sh
-      npm ci
-    ```
-
-8.  **To start developing:**
-
-    ```sh
-    npm run start
-    ```
-
-9.  **Open the source code and start editing!**
-
-    Your site is now running at [https://localhost:443](https://localhost:443)
-
-
+   Your site is now running at [https://localhost:443](https://localhost:443)
 
 ## Preview on your local machine
 
@@ -99,10 +88,10 @@ You can manually deploy your test link using gh-pages with the following configu
 
 ### Deploy to your gh-pages for the first time
 
-1. Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your Github pages after login.
-Use `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/redirect.html` for the Verification URL.
+1.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your Github pages after login.
+    Use `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/redirect.html` for the Verification URL.
 
-    If you're using a custom domain, replace the Github URLs above with your domain.
+        If you're using a custom domain, replace the Github URLs above with your domain.
 
 2.  In `src/javascript/config.js`: Insert the `Application ID` of your registered application in `user_app_id`.
 
