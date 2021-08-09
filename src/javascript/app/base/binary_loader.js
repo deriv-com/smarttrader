@@ -51,7 +51,10 @@ const BinaryLoader = (() => {
 
     };
 
-    const beforeContentChange = () => {
+    const beforeContentChange = (e) => {
+        if (e) {
+            e.target.preventDefault();
+        }
         if (active_script) {
             BinarySocket.removeOnDisconnect();
             BinarySocket.removeOnReconnect();
