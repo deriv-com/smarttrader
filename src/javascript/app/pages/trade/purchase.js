@@ -18,10 +18,9 @@ const addComma                 = require('../../../_common/base/currency_base').
 const CommonFunctions          = require('../../../_common/common_functions');
 const localize                 = require('../../../_common/localize').localize;
 const State                    = require('../../../_common/storage').State;
-const urlFor                   = require('../../../_common/url').urlFor;
+const Url                      = require('../../../_common/url');
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
-const getTopLevelDomain        = require('../../../_common/utility').getTopLevelDomain;
 
 /*
  * Purchase object that handles all the functions related to
@@ -104,7 +103,7 @@ const Purchase = (() => {
                     authorization_error_btn_login.removeEventListener('click', loginOnClick);
                     authorization_error_btn_login.addEventListener('click', loginOnClick);
 
-                    const signup_url = `https://deriv.${getTopLevelDomain()}/signup/`;
+                    const signup_url = `${Url.getStaticUrl()}/signup/`;
                     authorization_error_btn_signup.href = signup_url;
                 } else {
                     BinarySocket.wait('get_account_status').then(response => {
@@ -130,7 +129,7 @@ const Purchase = (() => {
                         } else if (/RestrictedCountry/.test(error.code)) {
                             let additional_message = '';
                             if (/FinancialBinaries/.test(error.code)) {
-                                additional_message = localize('Try our [_1]Synthetic Indices[_2].', [`<a href="${urlFor('get-started/binary-options', 'anchor=synthetic-indices#range-of-markets')}" >`, '</a>']);
+                                additional_message = localize('Try our [_1]Synthetic Indices[_2].', [`<a href="${Url.urlFor('get-started/binary-options', 'anchor=synthetic-indices#range-of-markets')}" >`, '</a>']);
                             } else if (/Random/.test(error.code)) {
                                 additional_message = localize('Try our other markets.');
                             }
@@ -138,7 +137,7 @@ const Purchase = (() => {
                             message = `${error.message}. ${additional_message}`;
                         } else if (/ClientUnwelcome/.test(error.code) && /gb/.test(Client.get('residence'))) {
                             if (!Client.hasAccountType('real') && Client.get('is_virtual')) {
-                                message = localize('Please complete the [_1]Real Account form[_2] to verify your age as required by the [_3]UK Gambling[_4] Commission (UKGC).', [`<a href='${urlFor('new_account/realws')}'>`, '</a>', '<strong>', '</strong>']);
+                                message = localize('Please complete the [_1]Real Account form[_2] to verify your age as required by the [_3]UK Gambling[_4] Commission (UKGC).', [`<a href='${Url.urlFor('new_account/realws')}'>`, '</a>', '<strong>', '</strong>']);
                             } else if (Client.hasAccountType('real') && /^virtual|iom$/i.test(Client.get('landing_company_shortcode'))) {
                                 message = localize('Account access is temporarily limited. Please check your inbox for more details.');
                             } else {
@@ -262,7 +261,7 @@ const Purchase = (() => {
     const prepareConfirmationErrorCta = (message_text, button_text, has_html = false) => {
         const row_element = createElement('div', { class: 'gr-row font-style-normal' });
         const columnElement = (extra_attributes = {}) => createElement('div', { class: 'gr-12 gr-padding-20', ...extra_attributes });
-        const button_element = createElement('a', { class: 'button', href: urlFor('user/settings/professional') });
+        const button_element = createElement('a', { class: 'button', href: Url.urlFor('user/settings/professional') });
         const cta_element = columnElement();
         let message_element;
 
