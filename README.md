@@ -89,7 +89,7 @@ You can manually deploy your test link using gh-pages with the following configu
 ### Deploy to your gh-pages for the first time
 
 1.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your Github pages after login.
-    Use `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_GITHUB_USERNAME.github.io/binary-static/en/redirect.html` for the Verification URL.
+    Use `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/redirect.html` for the Verification URL.
 
         If you're using a custom domain, replace the Github URLs above with your domain.
 

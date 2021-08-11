@@ -117,12 +117,12 @@ const fields = {
 **[Align by equal:](#import-rules-align-by-equal)** Assignments are generally aligned by `=` for readability purposes.
 
 ```js
-const moment = require('moment'); // moment is an npm package
-const CookieStorage = require('./storage').CookieStorage; // our own function
+const moment             = require('moment');                       // moment is an npm package
+const CookieStorage      = require('./storage').CookieStorage;      // our own function
 const applyToAllElements = require('./utility').applyToAllElements; // our own function
-const createElement = require('./utility').createElement; // our own function
-require('../../_common/lib/polyfills/array.includes'); // polyfill from lib folder
-require('../../_common/lib/polyfills/string.includes'); // polyfill from lib folder
+const createElement      = require('./utility').createElement;      // our own function
+require('../../_common/lib/polyfills/array.includes');              // polyfill from lib folder
+require('../../_common/lib/polyfills/string.includes');             // polyfill from lib folder
 ```
 
 <a id="import-rules-alphabetical-ordering"></a>
