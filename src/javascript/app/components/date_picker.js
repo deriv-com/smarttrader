@@ -115,7 +115,7 @@ const DatePicker = (() => {
 
     const formatDate = (date, add) => padLeft(date + (add || 0), 2, '0');
 
-    const toDate = date => [date.getFullYear(), formatDate(date.getMonth(), 1), formatDate(date.getDate())].join('-');
+    // const toDate = date => [date.getFullYear(), formatDate(date.getMonth(), 1), formatDate(date.getDate())].join('-');
 
     const checkWidth = (selector) => {
         const $selector        = $(selector);
@@ -127,12 +127,14 @@ const DatePicker = (() => {
                 return;
             }
             if (checkInput('date', 'not-a-date') && $selector.attr('data-picker') !== 'native') {
-                hide(selector);
-                $selector.attr({ type: 'date', 'data-picker': 'native' }).val($selector.attr('data-value')).removeClass('clear');
-                if ($selector.attr('readonly')) $selector.attr('data-readonly', 'readonly').removeAttr('readonly');
-                if (date_picker_conf.minDate !== undefined) $selector.attr('min', toDate(date_picker_conf.minDate));
-                if (date_picker_conf.maxDate !== undefined) $selector.attr('max', toDate(date_picker_conf.maxDate));
-                return;
+                const value        = $selector.attr('data-value') || $selector.val();
+                const format_value = value && date_picker_conf.type !== 'diff' ? toReadableFormat(moment(value)) : $selector.val();
+                $selector.attr({ type: 'text', 'data-picker': 'jquery', 'data-value': value }).removeAttr('min max').val(format_value);
+                if ($selector.attr('data-readonly')) $selector.attr('readonly', 'readonly').removeAttr('data-readonly');
+                if ($selector.attr('data-value') && $selector.hasClass('clearable') && !$selector.attr('disabled')) {
+                    clearable($selector);
+                }
+                create(selector);
             }
         }
         if ((window.innerWidth > 769 && $selector.attr('data-picker') !== 'jquery') || (window.innerWidth < 770 && !checkInput('date', 'not-a-date'))) {

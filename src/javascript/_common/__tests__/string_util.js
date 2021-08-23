@@ -14,7 +14,7 @@ describe('StringUtil', () => {
         });
     });
 
-    const readable_date = '22 Jun, 2017';
+    const readable_date = '22 Jun 2017';
     const iso_date      = '2017-06-22';
     describe('.toISOFormat()', () => {
         it('works as expected', () => {
