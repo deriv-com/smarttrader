@@ -5,9 +5,8 @@ const applyToAllElements = require('../../_common/utility').applyToAllElements;
 
 const Clock = (() => {
     let fncExternalTimer;
-
+    const el_clock_selector = '.gmt-clock';
     const startClock = () => {
-
         ServerTime.init(onTimeUpdated);
     };
 
@@ -16,9 +15,10 @@ const Clock = (() => {
         window.time = server_time;
 
         const time_str = `${server_time.format('YYYY-MM-DD HH:mm:ss')} GMT`;
-        applyToAllElements('.gmt-clock', (el) => {
+        applyToAllElements(el_clock_selector, (el) => {
             elementInnerHtml(el, time_str);
         });
+        showLocalTimeOnHover(el_clock_selector);
 
         if (typeof fncExternalTimer === 'function') {
             fncExternalTimer();
@@ -38,7 +38,6 @@ const Clock = (() => {
     return {
         startClock,
         showLocalTimeOnHover,
-
         setExternalTimer: (func) => { fncExternalTimer = func; },
     };
 })();
