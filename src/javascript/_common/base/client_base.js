@@ -13,6 +13,7 @@ const ClientBase = (() => {
     let client_object = {};
     let total_balance = {};
     let current_loginid;
+    let has_readystate_listener = false;
 
     const init = () => {
         current_loginid = LocalStore.get('active_loginid');
@@ -414,14 +415,27 @@ const ClientBase = (() => {
 
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
-        if (iframe_window) {
-            const origin = getAllowedLocalStorageOrigin();
-            if (!origin) {
-                return;
-            }
+        const origin = getAllowedLocalStorageOrigin();
 
-            // Keep client.accounts in sync (in case user wasn't logged in).
-            if (iframe_window.src === `${origin}/localstorage-sync.html`) {
+        if (!iframe_window) return;
+
+        if (document.readyState === 'complete'){
+            iframe_window.contentWindow.postMessage({
+                key  : 'client.accounts',
+                value: JSON.stringify(client_accounts),
+            }, origin);
+            iframe_window.contentWindow.postMessage({
+                key  : 'active_loginid',
+                value: active_loginid,
+            }, origin);
+
+            return;
+        }
+
+        if (!has_readystate_listener){
+            has_readystate_listener = true;
+
+            document.addEventListener('readystatechange', () => {
                 iframe_window.contentWindow.postMessage({
                     key  : 'client.accounts',
                     value: JSON.stringify(client_accounts),
@@ -430,7 +444,7 @@ const ClientBase = (() => {
                     key  : 'active_loginid',
                     value: active_loginid,
                 }, origin);
-            }
+            });
         }
     };
 

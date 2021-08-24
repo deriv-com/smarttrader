@@ -34,6 +34,7 @@ body .topbar {
         }
         #network_status_wrapper {
             width: 42px;
+            cursor: default;
         }
         #topbar-help-centre, #topbar-fullscreen {
             height: inherit;
@@ -50,8 +51,6 @@ body .topbar {
             }
         }
         #topbar-help-centre {
-            margin-left: 0.8em;
-
             img {
                 border-left: 1px solid var(--general-section-1);
             }
@@ -101,8 +100,9 @@ body .topbar {
         font-weight: 100;
         padding: 0 0.8em;
         width: 147px;
+        cursor: default;
     }
-    #gmt-clock, #contact-us, .upgrademessage {
+    #contact-us, .upgrademessage {
         align-self: center;
     }
     a {

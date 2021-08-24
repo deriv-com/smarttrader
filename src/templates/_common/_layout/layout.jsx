@@ -44,7 +44,7 @@ const Topbar = () => (
                 <div className='network_status' />
             </div>
             <div id='language-select'><img id='language-select__logo' /></div>
-            <span className='no-underline nowrap gmt-clock' />
+            <span className='no-underline nowrap gmt-clock' data-balloon-pos='up' />
             <div id='topbar-help-centre'>
                 <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
             </div>
