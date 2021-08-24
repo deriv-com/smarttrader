@@ -18,6 +18,7 @@ const applyToAllElements       = require('../../_common/utility').applyToAllElem
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
+const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 
@@ -50,7 +51,8 @@ const Header = (() => {
 
     const setHeaderUrls = () => {
         const btn__signup = getElementById('btn__signup');
-        const signup_url = `https://deriv.${getTopLevelDomain()}/signup/`;
+        const static_url = Url.getStaticUrl();
+        const signup_url = `${static_url}/signup/`;
         btn__signup.href = signup_url;
 
         applyToAllElements('.url-reports-positions', (el) => {
@@ -145,7 +147,7 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const main_domain = `https://app.deriv.${getTopLevelDomain()}`;
+        const main_domain = getHostname();
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
@@ -163,7 +165,7 @@ const Header = (() => {
             },
             dmt5: {
                 name     : 'DMT5',
-                desc     : 'The platform of choice for professionals worldwide.',
+                desc     : 'Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.',
                 link     : `${main_domain}/mt5`,
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
@@ -171,7 +173,7 @@ const Header = (() => {
             },
             smarttrader: {
                 name     : 'SmartTrader',
-                desc     : 'Trade the world\'s markets on Binary.com\'s classic platform.',
+                desc     : 'Trade the world\'s markets with our popular user-friendly platform.',
                 link     : '#',
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
@@ -932,7 +934,7 @@ const Header = (() => {
                 // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://app.deriv.com/account/proof-of-identity'),
                 // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://app.deriv.com/account/proof-of-address'),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, `<a class="header__notification-link" href="https://www.deriv.${getTopLevelDomain()}/contact-us/">`, '</a>']), type: 'danger' }),
-                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), 'user/security/self_exclusionws'), type: 'warning' }), // TODO: handle this when self exclusion is available
+                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`)), type: 'warning' }), // TODO: handle this when self exclusion is available
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
                 required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
@@ -1052,7 +1054,7 @@ const Header = (() => {
 
             const checkStatus = (check_statuses) => {
                 const notified = check_statuses.some((check_type) => {
-                    if (validations[check_type]()) {
+                    if (validations[check_type]() && messages[check_type]) {
                         displayNotification(messages[check_type]());
                         // return true;
                     }

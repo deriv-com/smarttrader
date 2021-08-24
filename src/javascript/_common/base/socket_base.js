@@ -25,7 +25,7 @@ const BinarySocketBase = (() => {
     let is_disconnect_called = false;
     let is_connected_before  = false;
 
-    const socket_url = `${getSocketURL()}?app_id=${getAppId()}&l=${getLanguage()}&brand=binary`;
+    const socket_url = `${getSocketURL()}?app_id=${getAppId()}&l=${getLanguage()}&brand=Deriv`;
     const timeouts   = {};
     const promises   = {};
 

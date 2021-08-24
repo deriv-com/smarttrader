@@ -3,6 +3,7 @@ const urlLang                = require('./language').urlLang;
 const createElement          = require('./utility').createElement;
 const isEmptyObject          = require('./utility').isEmptyObject;
 const getTopLevelDomain      = require('./utility').getTopLevelDomain;
+const Language               = require('./language');
 const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('url-polyfill');
 
@@ -153,6 +154,25 @@ const Url = (() => {
         return new RegExp(name).test(hash) && value.length > 1 ? value[1] : '';
     };
 
+    const getStaticUrl = () => {
+        const host = 'https://deriv';
+        const domain = getTopLevelDomain();
+        let lang = Language.get().toLowerCase();
+    
+        if (lang && lang !== 'en') {
+            lang = `/${lang}`;
+        } else {
+            lang = '';
+        }
+        
+        if (lang.includes('_')) {
+            lang = lang.replace('_', '-');
+        }
+    
+        const url = `${host}.${domain}${lang}`;
+        return url;
+    };
+
     return {
         init,
         reset,
@@ -167,6 +187,7 @@ const Url = (() => {
         getSection,
         getHashValue,
         updateParamsWithoutReload,
+        getStaticUrl,
 
         param           : name => paramsHash()[name],
         websiteUrl      : () => `${location.protocol}//${location.hostname}/`,

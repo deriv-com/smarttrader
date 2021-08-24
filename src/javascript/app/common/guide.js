@@ -19,15 +19,17 @@ const Guide = (() => {
 
     const init = (options) => {
         opt = {
-            script        : '',      // the script name in scripts
-            autoStart     : false,   // false: start by button click
-            guideBtnID    : '#guideBtn',
-            btnText       : localize('Guide'),  // guide start button's text
-            blink_class   : 'highlight',
-            blink_inDelay : 1000,
-            blink_outDelay: 1000,
-            blink_interval: 3000,    // 0: continous blinking (blink_inDelay + blink_outDelay)
-            blink_count   : 0,        // 0: infinite
+            script           : '',      // the script name in scripts
+            autoStart        : false,   // false: start by button click
+            guideBtnID       : '#guideBtn',
+            btnText          : localize('Guide'),  // guide start button's text
+            blink_class      : 'highlight',
+            blink_inDelay    : 1000,
+            blink_outDelay   : 1000,
+            blink_interval   : 3000,    // 0: continous blinking (blink_inDelay + blink_outDelay)
+            blink_count      : 0,        // 0: infinite
+            contractList     : '#contracts_list',
+            closeConfirmation: '#close_confirmation_container',
         };
         $.extend(true, opt, options);
 
@@ -88,8 +90,13 @@ const Guide = (() => {
     const setEvents = () => {
         $(`${opt.guideBtnID} strong`).click(() => {
             const enjoyhint_instance = new EnjoyHint({});
+            const contractList = $(opt.contractList);
+            const closeConfirmation = $(opt.closeConfirmation);
             enjoyhint_instance.setScript(getScript(opt.script));
             enjoyhint_instance.runScript();
+            if (contractList.css('display') === 'none') {
+                closeConfirmation.click();
+            }
         });
 
         if (opt.autoStart) {

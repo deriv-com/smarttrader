@@ -114,7 +114,7 @@ const MobileMenu = () => (
             </div>
             <div className='mobile__menu-footer topbar'>
                 <span className='no-underline nowrap gmt-clock' />
-                <div className='no-underline' data-balloon-pos='up'>
+                <div className='no-underline'>
                     <div className='network_status' />
                 </div>
             </div>

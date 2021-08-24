@@ -271,6 +271,12 @@ const getTopLevelDomain = () => {
     return current_domain ? current_domain.split('.').splice(-1) : 'com';
 };
 
+const getHostname = () => {
+    const is_staging = window.location.hostname === 'staging-smarttrader.deriv.com';
+
+    return `https://${is_staging ? 'staging-app' : 'app'}.deriv.${getTopLevelDomain()}`;
+};
+
 class PromiseClass {
     constructor() {
         this.promise = new Promise((resolve, reject) => {
@@ -305,6 +311,7 @@ module.exports = {
     PromiseClass,
     removeObjProperties,
     getTopLevelDomain,
+    getHostname,
     lc_licenseID,
     lc_clientID,
 };
