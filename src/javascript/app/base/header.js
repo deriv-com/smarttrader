@@ -51,7 +51,8 @@ const Header = (() => {
 
     const setHeaderUrls = () => {
         const btn__signup = getElementById('btn__signup');
-        const signup_url = `https://deriv.${getTopLevelDomain()}/signup/`;
+        const static_url = Url.getStaticUrl();
+        const signup_url = `${static_url}/signup/`;
         btn__signup.href = signup_url;
 
         applyToAllElements('.url-reports-positions', (el) => {
