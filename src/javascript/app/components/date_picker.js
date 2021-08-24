@@ -115,8 +115,6 @@ const DatePicker = (() => {
 
     const formatDate = (date, add) => padLeft(date + (add || 0), 2, '0');
 
-    // const toDate = date => [date.getFullYear(), formatDate(date.getMonth(), 1), formatDate(date.getDate())].join('-');
-
     const checkWidth = (selector) => {
         const $selector        = $(selector);
         const date_picker_conf = date_pickers[selector].config_data;
