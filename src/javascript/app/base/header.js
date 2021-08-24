@@ -165,7 +165,7 @@ const Header = (() => {
             },
             dmt5: {
                 name     : 'DMT5',
-                desc     : 'The platform of choice for professionals worldwide.',
+                desc     : 'Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.',
                 link     : `${main_domain}/mt5`,
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
@@ -173,7 +173,7 @@ const Header = (() => {
             },
             smarttrader: {
                 name     : 'SmartTrader',
-                desc     : 'Trade the world\'s markets on Binary.com\'s classic platform.',
+                desc     : 'Trade the world\'s markets with our popular user-friendly platform.',
                 link     : '#',
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
