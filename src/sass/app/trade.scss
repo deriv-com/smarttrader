@@ -1214,6 +1214,11 @@ ul.bullet {
                     background-size: 100% auto;
                 }
             }
+            .cell:first-child span[data-balloon] {
+                &:before, &:after {
+                    left: 45px;
+                }
+            }
         }
         .chartOptions_button, .chartOptions_overlay.chartTypeOverlay {
             .line-icon, .line-w-icon {
