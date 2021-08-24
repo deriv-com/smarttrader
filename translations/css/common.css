@@ -1946,7 +1946,8 @@ body .topbar {
           -ms-flex-align: center;
               align-items: center; }
     body .topbar #topbar-info #network_status_wrapper {
-      width: 42px; }
+      width: 42px;
+      cursor: default; }
     body .topbar #topbar-info #topbar-help-centre, body .topbar #topbar-info #topbar-fullscreen {
       height: inherit;
       cursor: pointer; }
@@ -1958,12 +1959,10 @@ body .topbar {
         -ms-flex-item-align: center;
             align-self: center;
         padding: 0 0.8rem; }
-    body .topbar #topbar-info #topbar-help-centre {
-      margin-left: 0.8em; }
-      body .topbar #topbar-info #topbar-help-centre img {
-        border-left: 1px solid var(--general-section-1); }
-      body .topbar #topbar-info #topbar-help-centre:hover img {
-        border-left-color: var(--general-hover); }
+    body .topbar #topbar-info #topbar-help-centre img {
+      border-left: 1px solid var(--general-section-1); }
+    body .topbar #topbar-info #topbar-help-centre:hover img {
+      border-left-color: var(--general-hover); }
   body .topbar [data-balloon]:before {
     font-size: 0.75rem;
     text-align: center;
@@ -1999,8 +1998,9 @@ body .topbar {
     font-size: 0.75rem;
     font-weight: 100;
     padding: 0 0.8em;
-    width: 147px; }
-  body .topbar #gmt-clock, body .topbar #contact-us, body .topbar .upgrademessage {
+    width: 147px;
+    cursor: default; }
+  body .topbar #contact-us, body .topbar .upgrademessage {
     -ms-flex-item-align: center;
         align-self: center; }
   body .topbar a {
