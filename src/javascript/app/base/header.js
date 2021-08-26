@@ -441,7 +441,9 @@ const Header = (() => {
         applyToAllElements('.language-menu-item', (el) => {
             el.addEventListener('click', () => {
                 const item_language = el.getAttribute('id');
-                if (item_language === current_language) return;
+                if (item_language !== current_language) SocketCache.clear();
+                else return;
+
                 document.location = Language.urlFor(item_language);
             });
         }, '', getElementById('language-menu-list'));

@@ -158,6 +158,8 @@ const Contract = (() => {
                     } else {
                         trade_contract_forms.higherlower = localize('Higher/Lower');
                     }
+                } else if (contract_category === 'touchnotouch') {
+                    trade_contract_forms.touchnotouch = localize('Touch/No Touch');
                 } else {
                     trade_contract_forms[contract_category] =
                         localize(current_obj.contract_category_display /* localize-ignore */); // handled in static_strings_app.js: Asian
@@ -189,6 +191,10 @@ const Contract = (() => {
 
         if (trade_contract_forms.endsinout || trade_contract_forms.staysinout) {
             trade_contract_forms.inout = localize('In/Out');
+        }
+
+        if (trade_contract_forms.touchnotouch) {
+            trade_contract_forms.touchnotouch = localize('Touch/No Touch');
         }
 
         return trade_contract_forms;
