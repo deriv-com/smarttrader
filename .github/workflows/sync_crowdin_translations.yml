@@ -94,6 +94,6 @@ jobs:
             gh pr create --fill --base "master" --head "binary-com:$branch_name"
 
             echo "Attempting to merge the PR."
-            gh pr merge "$branch_name" --squash
+            gh pr merge "$branch_name" --admin  --squash
             echo "**The translation PR has beed merged successfully.**"
           fi
