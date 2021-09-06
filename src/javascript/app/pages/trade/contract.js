@@ -193,10 +193,6 @@ const Contract = (() => {
             trade_contract_forms.inout = localize('In/Out');
         }
 
-        if (trade_contract_forms.touchnotouch) {
-            trade_contract_forms.touchnotouch = localize('Touch/No Touch');
-        }
-
         return trade_contract_forms;
     };
 
