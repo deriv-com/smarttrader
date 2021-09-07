@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-07 10:01\n"
+"PO-Revision-Date: 2021-09-07 10:04\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -6360,7 +6360,7 @@ msgid "In providing IB services, the Introducing Broker shall"
 msgstr "При предоставлении услуг ПБ Представляющий брокер обязуется"
 
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
-msgstr ""
+msgstr "Перед предоставлением вам услуг нам необходимо получить от вас некоторую информацию с целью оценить, подходит ли вам определённый продукт или услуга (то есть обладаете ли вы опытом и знаниями, чтобы понимать связанные с этим риски)."
 
 msgid "In providing the Agent's services, the Agent shall do the following:"
 msgstr "При предоставлении услуг, Агент должен выполнить следующие действия:"
@@ -6615,7 +6615,7 @@ msgid "Investment Products to EEA residents are provided by Deriv Investments (E
 msgstr "Инвестиционные продукты для резидентов Европейской экономической зоны предоставляются компанией Deriv Investments (Europe) Limited (\"DIEL\"), которая авторизована и регулируется Мальтийским управлением финансовых услуг (Malta Financial Services Authority) в рамках акта об инвестиционных услугах Мальты (Malta Investment Services Act) для осуществления операций с инвестиционными продуктами на своем счете."
 
 msgid "Investments & Dividends"
-msgstr ""
+msgstr "Инвестиции и дивиденды"
 
 msgid "Investments &amp; Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -6777,7 +6777,7 @@ msgid "Jurisdiction"
 msgstr "Юрисдикция"
 
 msgid "Jurisdiction and choice of law"
-msgstr ""
+msgstr "Юрисдикция и законодательство"
 
 msgid "K. Event of Default"
 msgstr "K. Случаи невыполнения обязательств"
@@ -6918,7 +6918,7 @@ msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Статистика последних десятичных в последних %1 тиков для %2"
 
 msgid "Last name"
-msgstr ""
+msgstr "Фамилия"
 
 msgid "Latest bank statement or any government-issued letter which contains your name and address"
 msgstr "Последняя банковская выписка или любое правительственное письмо, в котором указаны ваше имя и адрес."
@@ -7323,7 +7323,7 @@ msgid "Make a Deposit"
 msgstr "Пополнить"
 
 msgid "Make a deposit now to start trading."
-msgstr ""
+msgstr "Пополните счет сейчас, чтобы начать торговать."
 
 msgid "Make a deposit or withdrawal on your account by buying and selling fiat currencies from anywhere in the world."
 msgstr "Пополняйте счет или выводите средства, покупая и продавая фиатные валюты из любой точки мира."
@@ -7581,7 +7581,7 @@ msgid "May"
 msgstr "Май"
 
 msgid "Maybe later"
-msgstr ""
+msgstr "Может быть позже"
 
 msgid "Memorable date"
 msgstr "Важная дата"
@@ -8286,7 +8286,7 @@ msgid "Only one account is allowed per person. No withdrawals and/or refunds may
 msgstr "Разрешается иметь только один счет на человека. Вывод средств или компенсация не может перечисляться на счета, открытые на вымышленное имя, или на множественные счета, открытые одним и тем же лицом."
 
 msgid "Only use an address for which you have proof of residence"
-msgstr ""
+msgstr "Указывайте только тот адрес, который можете подтвердить"
 
 msgid "Only your face can be in the selfie"
 msgstr "На селфи может быть только ваше лицо"
@@ -8400,7 +8400,7 @@ msgid "Other best execution factors, such as speed of execution, likelihood of e
 msgstr "Другие факторы политики лучшего исполнения включают скорость исполнения, вероятность исполнения и окончания, размер, природу или любые другие факторы, имеющие отношение к исполнению конкретного ордера, которые также могут применяться DIEL для предоставления клиенту наилучших результатов."
 
 msgid "Other details"
-msgstr ""
+msgstr "Другие данные"
 
 msgid "Other obligations"
 msgstr "Другие обязательства"
@@ -8748,7 +8748,7 @@ msgid "Personal details"
 msgstr "Личные данные"
 
 msgid "Phone number"
-msgstr ""
+msgstr "Номер телефона"
 
 msgid "Photo of your document"
 msgstr "Фото вашего документа"
@@ -9519,7 +9519,7 @@ msgid "Real Account"
 msgstr "Реальный счет"
 
 msgid "Real Account Opening"
-msgstr ""
+msgstr "Открытие реального счета"
 
 msgid "Real Estate"
 msgstr "Недвижимость"
@@ -9537,13 +9537,13 @@ msgid "Real Synthetic"
 msgstr "Реальный Синтетический"
 
 msgid "Real accounts are not available to politically exposed persons (PEPs)."
-msgstr ""
+msgstr "Реальные счета недоступны для политически значимых лиц (ПЗЛ)."
 
 msgid "Real accounts will be archived after %1 days of inactivity. The client can request for the reactivation of a real account via %2live chat%3."
 msgstr "Реальные счета будут архивированы через %1 дней бездействия. Клиент может запросить повторную активацию реального счета через %2чат%3."
 
 msgid "Real money account opening"
-msgstr ""
+msgstr "Открытие реального счета"
 
 msgid "Real-Money Account"
 msgstr "Реальный счёт"
@@ -9957,7 +9957,7 @@ msgid "Risk of stop order"
 msgstr "Риск стоп ордера"
 
 msgid "Risk warning"
-msgstr ""
+msgstr "Предупреждение о риске"
 
 msgid "Risk warnings and notices related to Transactions and investments in the proposed instruments"
 msgstr "Предупреждения и уведомления о риске, относящиеся к контрактам и инвестициям в предложенные инструменты"
@@ -10056,7 +10056,7 @@ msgid "Search..."
 msgstr "Поиск..."
 
 msgid "Second line of address"
-msgstr ""
+msgstr "Вторая строка адреса"
 
 msgid "Secondary"
 msgstr "Среднее"
@@ -10506,7 +10506,7 @@ msgid "State/Province"
 msgstr "Штат/провинция/область"
 
 msgid "State/province"
-msgstr ""
+msgstr "Область/регион"
 
 msgid "Stated limits are subject to change without prior notice."
 msgstr "Указанные лимиты могут быть изменены без предварительного уведомления."
