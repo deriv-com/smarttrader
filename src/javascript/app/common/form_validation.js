@@ -164,7 +164,8 @@ const Validation = (() => {
     // ----- Validation Methods -----
     // ------------------------------
 
-    const validEmail        = value => /^(([a-zA-Z0-9][^!@£$%^&*=/?§±~<>(){}[\]\\.,;:\s@"'`]+(\.[^!@£$%^&*=/?§±~<>(){}[\]\\.,;:\s@"'`]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+    const validEmail        = value => /^[a-zA-Z0-9]+(?:(?!.*([.+_-])\1+)[a-zA-Z0-9.+_-]+)*[a-zA-Z0-9]@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z](?:[a-zA-Z-]*[a-zA-Z]){1,}?$/.test(value);
+
     const validRequired     = (value, options, field) => {
         if (value.length) return true;
         // else
@@ -318,8 +319,8 @@ const Validation = (() => {
         }
 
         let all_is_ok = true;
-        let message   = '';
         const field_type = field.$.attr('type');
+        let message_template = '';
 
         field.validations.some((valid) => {
             if (!valid) return false; // check next validation
@@ -350,13 +351,13 @@ const Validation = (() => {
             }
 
             if (!field.is_ok) {
-                message = options.message || ValidatorsMap.get(type).message;
+                message_template = options.message || ValidatorsMap.get(type).message;
                 if (type === 'length') {
-                    message = template(message, [options.min === options.max ? options.min : `${options.min}-${options.max}`]);
+                    message_template = template(message_template, [options.min === options.max ? options.min : `${options.min}-${options.max}`]);
                 } else if (type === 'min') {
-                    message = template(message, [options.min]);
+                    message_template = template(message_template, [options.min]);
                 } else if (type === 'not_equal') {
-                    message = template(message, [options.name1, options.name2]);
+                    message_template = template(message_template, [options.name1, options.name2]);
                 }
                 all_is_ok = false;
                 return true; // break on the first error found
@@ -365,7 +366,7 @@ const Validation = (() => {
         });
 
         if (!all_is_ok) {
-            showError(field, message);
+            showError(field, message_template);
         } else {
             clearError(field);
         }
@@ -382,11 +383,10 @@ const Validation = (() => {
         }
     };
 
-    const showError = (field, localized_message) => {
-        if (field.$error.html() === localized_message && field.$error.is(':visible')) return;
-        clearError(field);
+    const showError = (field, message) => {
         Password.removeCheck(field.selector);
-        field.$error.html(localized_message).setVisibility(1);
+        field.$error.text(message);
+        field.$error.setVisibility(1);
     };
 
     const validate = (form_selector) => {
