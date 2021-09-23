@@ -157,21 +157,21 @@ const Header = (() => {
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
-                desc     : 'A whole new trading experience on a powerful yet easy to use platform.',
+                desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
                 link     : main_domain,
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
             dbot: {
                 name     : 'DBot',
-                desc     : 'Automated trading at your fingertips. No coding needed.',
+                desc     : localize('Automated trading at your fingertips. No coding needed.'),
                 link     : `${main_domain}/bot`,
                 icon     : 'ic-brand-dbot.svg',
                 on_mobile: false,
             },
             dmt5: {
                 name     : 'DMT5',
-                desc     : 'Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.',
+                desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
                 link     : `${main_domain}/mt5`,
                 icon     : 'ic-brand-dmt5.svg',
                 on_mobile: true,
@@ -180,7 +180,7 @@ const Header = (() => {
             ...(should_show_xtrade ? {
                 derivx: {
                     name     : 'Deriv X',
-                    desc     : 'Trade FX and CFDs on a customisable, easy-to-use trading platform.',
+                    desc     : localize('Trade FX and CFDs on a customisable, easy-to-use trading platform.'),
                     link     : `${main_domain}/derivx`,
                     icon     : 'ic-brand-dxtrade.svg',
                     on_mobile: true,
@@ -188,7 +188,7 @@ const Header = (() => {
             } : {}),
             smarttrader: {
                 name     : 'SmartTrader',
-                desc     : 'Trade the world\'s markets with our popular user-friendly platform.',
+                desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
                 link     : '#',
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
