@@ -64,8 +64,14 @@ const Page = (() => {
                         break;
                     case 'client.accounts':
                         if (evt.newValue !== evt.oldValue) {
-                            const removeSessionStart = (input) => input.replace(/"session_start":([0-9]+),/g, '');
-                            if (removeSessionStart(evt.newValue) !== removeSessionStart(evt.oldValue)) {
+                            const removedSessionAndBalnce = (input) => {
+                                const filtered_account = input
+                                    .replace(/"balance":[+-]?([0-9]*[.])?[0-9]+/g, '')
+                                    .replace(/"session_start":([0-9]+),/g, '');
+                                return filtered_account;
+                            };
+                            // reload the page when the client account values(except balance and startsession) is changed on other pages.
+                            if (removedSessionAndBalnce(evt.newValue) !== removedSessionAndBalnce(evt.oldValue)) {
                                 reload();
                             }
                         }
