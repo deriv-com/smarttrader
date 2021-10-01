@@ -401,7 +401,7 @@ const ClientBase = (() => {
     };
 
     const isOptionsBlocked = () => {
-        const options_blocked_countries = ['au'];
+        const options_blocked_countries = ['au', 'fr'];
         const country = State.getResponse('authorize.country');
 
         return options_blocked_countries.includes(country);

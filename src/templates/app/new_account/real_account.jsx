@@ -36,7 +36,7 @@ const RealAccount = () => (
             <form className='gr-padding-10 gr-10 auto-margin invisible' id='financial_risk_warning'>
                 <fieldset id={'Appropriateness'}>
                     <legend><strong>{it.L('WARNING')}</strong></legend>
-                    <p>{it.L('Our products and services may expose you to risks that can be substantial at times, including the risk of losing your entire investment. Please note that by clicking [_1]Continue[_2], you’ll be accepting these risks.', '<strong>', '</strong>')}</p>
+                    <p className='gr-gutter'>{it.L('Our products and services may expose you to risks that can be substantial at times, including the risk of losing your entire investment. Please note that by clicking [_1]Continue[_2], you’ll be accepting these risks.', '<strong>', '</strong>')}</p>
                 </fieldset>
                 <div className='align-end'>
                     <button id='financial_risk_accept' className='button margin-v-10' type='submit' action='financial_risk_accept'>{it.L('Continue')}</button>
