@@ -1,23 +1,24 @@
-const BinaryPjax = require('./binary_pjax');
-const pages_config = require('./binary_pages');
-const Client = require('./client');
-const Header = require('./header');
-const NetworkMonitor = require('./network_monitor');
-const Page = require('./page');
-const BinarySocket = require('./socket');
-const ContentVisibility = require('../common/content_visibility');
-const GTM = require('../../_common/base/gtm');
-const Login = require('../../_common/base/login');
-const LiveChat = require('../../_common/base/livechat');
-const getElementById = require('../../_common/common_functions').getElementById;
-const urlLang = require('../../_common/language').urlLang;
-const localizeForLang = require('../../_common/localize').forLang;
-const localize = require('../../_common/localize').localize;
-const ScrollToAnchor = require('../../_common/scroll_to_anchor');
-const isStorageSupported = require('../../_common/storage').isStorageSupported;
-const ThirdPartyLinks = require('../../_common/third_party_links');
-const urlFor = require('../../_common/url').urlFor;
-const createElement = require('../../_common/utility').createElement;
+const pages_config          = require('./binary_pages');
+const BinaryPjax            = require('./binary_pjax');
+const Client                = require('./client');
+const Header                = require('./header');
+const NetworkMonitor        = require('./network_monitor');
+const Page                  = require('./page');
+const BinarySocket          = require('./socket');
+const ContentVisibility     = require('../common/content_visibility');
+const getElementById        = require('../../_common/common_functions').getElementById;
+const urlLang               = require('../../_common/language').urlLang;
+const localize              = require('../../_common/localize').localize;
+const localizeForLang       = require('../../_common/localize').forLang;
+const ScrollToAnchor        = require('../../_common/scroll_to_anchor');
+const isStorageSupported    = require('../../_common/storage').isStorageSupported;
+const ThirdPartyLinks       = require('../../_common/third_party_links');
+const urlFor                = require('../../_common/url').urlFor;
+const createElement         = require('../../_common/utility').createElement;
+const ClientBase            = require('../../_common/base/client_base');
+const GTM                   = require('../../_common/base/gtm');
+const LiveChat              = require('../../_common/base/livechat');
+const Login                 = require('../../_common/base/login');
 
 const BinaryLoader = (() => {
     let container;
@@ -117,10 +118,15 @@ const BinaryLoader = (() => {
         only_virtual     : () => localize('This feature is available to demo accounts only.'),
         only_real        : () => localize('This feature is not relevant to demo accounts.'),
         not_authenticated: () => localize('This page is only available to logged out clients.'),
-        no_mf            : () => localize('Binary options trading is not available in your financial account.'),
+        no_mf            : () => localize('Binary options trading is not available via your Multipliers account.<br/>Please switch back to your Options account.'),
         options_blocked  : () => localize('Binary options trading is not available in your country.'),
         residence_blocked: () => localize('This page is not available in your country of residence.'),
         not_deactivated  : () => localize('Page not available, you did not deactivate your account.'),
+        only_deriv       : () => localize('Unfortunately, this service isn’t available in your country. If you’d like to trade multipliers, try DTrader on Deriv.'),
+    };
+
+    const error_actions = {
+        only_deriv: () => ({ localized_title: localize('Go to DTrader'), target_url: 'https://app.deriv.com' }),
     };
 
     const loadHandler = (this_page) => {
@@ -138,6 +144,8 @@ const BinaryLoader = (() => {
                             displayMessage(error_messages.only_virtual());
                         } else if (config.only_real && Client.get('is_virtual')) {
                             displayMessage(error_messages.only_real());
+                        } else if (response.authorize.country === 'fr') { // We don't offer service for France residence clients on Binary any more
+                            displayMessage(error_messages.only_deriv(), error_actions.only_deriv());
                         } else {
                             loadActiveScript(config);
                         }
@@ -191,7 +199,7 @@ const BinaryLoader = (() => {
         }
     };
 
-    const displayMessage = (localized_message) => {
+    const displayMessage = (localized_message, action) => {
         const content = container.querySelector('#content');
 
         if (!content) {
@@ -199,16 +207,30 @@ const BinaryLoader = (() => {
         }
         content.classList.add('container');
 
-        const div_container = createElement('div', { class: 'logged_out_title_container', html: Client.isAccountOfType('financial') || Client.isOptionsBlocked() ? '' : content.getElementsByTagName('h1')[0] || '' });
+        const base_html_elements =
+            Client.isAccountOfType('financial')
+                || Client.isOptionsBlocked()
+                || ClientBase.get('residence') === 'fr'
+                ? ''
+                : content.getElementsByTagName('h1')[0] || '';
+        const div_container = createElement('div', { class: 'logged_out_title_container', html: base_html_elements });
         const div_notice = createElement('p', { class: 'center-text notice-msg', html: localized_message });
-
         div_container.appendChild(div_notice);
+
+        if (action) {
+            const action_button = createElement('a', { class: 'button', href: action.target_url });
+            const action_button_title = createElement('span', { text: action.localized_title });
+            action_button.appendChild(action_button_title);
+            div_container.appendChild(action_button);
+        }
 
         content.html(div_container);
 
-        const link = content.getElementsByTagName('a')[0];
-        if (link) {
-            link.addEventListener('click', () => { Login.redirectToLogin(); });
+        if (!action) {
+            const link = content.getElementsByTagName('a')[0];
+            if (link) {
+                link.addEventListener('click', () => { Login.redirectToLogin(); });
+            }
         }
     };
 
