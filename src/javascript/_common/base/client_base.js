@@ -134,8 +134,8 @@ const ClientBase = (() => {
 
         const initTypesMap = () => ({
             default  : localize('Real'),
-            financial: localize('Multipliers'),
-            gaming   : localize('Options'),
+            financial: localize('Investment'),
+            gaming   : localize('Gaming'),
             virtual  : localize('Demo'),
         });
 
@@ -239,7 +239,7 @@ const ClientBase = (() => {
     // market_type: "financial" | "gaming"
     // sub_account_type: "financial" | "financial_stp" | "swap_free"
     // *
-    const getMT5AccountDisplays = (market_type, sub_account_type, is_demo, landing_company_short) => {
+    const getMT5AccountDisplays = (market_type, sub_account_type, is_demo) => {
         // needs to be declared inside because of localize
         // TODO: handle swap_free when ready
 
@@ -253,8 +253,8 @@ const ClientBase = (() => {
             },
             financial: {
                 financial: {
-                    short: landing_company_short === 'maltainvest' ? localize('CFDs') : localize('Financial'),
-                    full : is_demo ? localize('Demo CFDs') : localize('Real CFDs'),
+                    short: localize('Financial'),
+                    full : is_demo ? localize('Demo Financial') : localize('Real Financial'),
                 },
                 financial_stp: {
                     short: localize('Financial STP'),
@@ -401,7 +401,7 @@ const ClientBase = (() => {
     };
 
     const isOptionsBlocked = () => {
-        const options_blocked_countries = ['au', 'fr'];
+        const options_blocked_countries = ['au'];
         const country = State.getResponse('authorize.country');
 
         return options_blocked_countries.includes(country);

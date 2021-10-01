@@ -94,13 +94,6 @@ const getPersonalDetailsConfig = ({ account_settings, residence_list }) => {
             default_value: account_settings.account_opening_reason || '',
             rules        : ['req'],
         },
-        {
-            id           : 'accurate_answer_warning',
-            section      : '',
-            supported_in : ['maltainvest'],
-            default_value: '',
-            rules        : [],
-        },
     ];
     return config;
 };

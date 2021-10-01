@@ -248,10 +248,6 @@ label {
     width: 100%;
 }
 
-.strong {
-    font-weight: bold;
-}
-
 .errorfield {
     margin-top: 8px;
     color: $COLOR_RED;
@@ -393,20 +389,6 @@ input[type=checkbox] {
 .logged_out_title_container {
     margin-top: 40px;
     margin-bottom: 40px;
-    text-align: center;
-}
-
-.signup-warning-message {
-    padding-bottom: 40px;
-}
-
-.padding-2rem {
-    padding: 2rem;
-}
-
-.padding-x-30 {
-    padding-right: 30px !important;
-    padding-left: 30px !important;
 }
 
 button .barspinner.white {

@@ -25,7 +25,7 @@ const WelcomePage = (() => {
                 upgrade_btn_txt = localize('Real Account');
             } else if (upgrade_info.can_upgrade_to.length === 1) {
                 upgrade_btn_txt = upgrade_info.type[0] === 'financial'
-                    ? localize('Multipliers Account')
+                    ? localize('Financial Account')
                     : localize('Real Account');
             }
             el_upgrade_title.html(upgrade_btn_txt);
