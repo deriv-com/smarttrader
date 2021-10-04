@@ -95,7 +95,7 @@ const MetaTraderConfig = (() => {
                                 $('#authenticate_loading').setVisibility(1);
                                 await setMaltaInvestIntention();
                                 $('#authenticate_loading').setVisibility(0);
-                                $message.find('.authenticate').setVisibility(1);
+                                $message.find('.authenticate_msg').setVisibility(1);
                                 is_ok = false;
                             }
                             if (is_ok && !isAuthenticated() && sample_account.sub_account_type === 'financial_stp') {
@@ -104,7 +104,7 @@ const MetaTraderConfig = (() => {
                                 $('#authenticate_loading').setVisibility(1);
                                 await setLabuanFinancialSTPIntention();
                                 $('#authenticate_loading').setVisibility(0);
-                                $message.find('.authenticate').setVisibility(1);
+                                $message.find('.authenticate_msg').setVisibility(1);
                                 is_ok = false;
                             }
 
@@ -523,18 +523,22 @@ const MetaTraderConfig = (() => {
     // otherwise, use this function to format login into display login
     const getDisplayLogin = login => login.replace(/^MT[DR]?/i, '');
 
-    const isAuthenticated = () =>
-        State.getResponse('get_account_status').status.indexOf('authenticated') !== -1;
+    const isAuthenticated = () => {
+        const authentication = State.getResponse('get_account_status.authentication');
+        const { identity, document, needs_verification } = authentication;
+        return identity.status === 'verified' && document.status === 'verified' && needs_verification.length === 0;
+    };
 
     const isAuthenticationPromptNeeded = () => {
         const authentication = State.getResponse('get_account_status.authentication');
-        const { identity, needs_verification } = authentication;
+        const { identity, document, needs_verification } = authentication;
         const is_need_verification = needs_verification.length;
-        const has_been_authenticated = /^(rejected|expired|verified)$/.test(identity.status);
+        const is_identity_authenticated = /^(verified)$/.test(identity.status);
+        const is_document_authenticated = /^(verified)$/.test(document.status);
+        const has_been_authenticated = (is_identity_authenticated && is_document_authenticated)
+            && !is_need_verification;
 
-        if (has_been_authenticated) return false;
-
-        return is_need_verification;
+        return !has_been_authenticated;
     };
 
     // remove server from acc_type for cases where we don't need it
