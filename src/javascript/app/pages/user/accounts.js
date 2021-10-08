@@ -98,7 +98,7 @@ const Accounts = (() => {
                 if (new_account_type === 'financial') {
                     return localize('Multipliers Account');
                 }
-                if (upgrade_info.can_upgrade_to[index] === 'malta') {
+                if (['malta', 'iom'].includes(upgrade_info.can_upgrade_to[index])) {
                     return localize('Options Account');
                 }
                 if (residence === 'gb' && upgrade_info.can_upgrade_to[index] === 'iom'){
@@ -133,7 +133,7 @@ const Accounts = (() => {
                                 ),
                             },
                         )
-                            .html($('<span/>', { text: localize('Create account') })))));
+                            .html($('<span/>', { text: localize('Create account'), class: 'padding-x-30' })))));
         });
     };
 
