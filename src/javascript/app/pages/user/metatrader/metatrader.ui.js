@@ -981,11 +981,16 @@ const MetaTraderUI = (() => {
         Object.keys(accounts_info)
             .filter(acc_type => acc_type.indexOf(type) === 0)
             .forEach((acc_type) => {
-                let class_name = (type === 'real' && Client.get('is_virtual')) ? 'disabled' : '';
+                const clean_acc_type = MetaTraderConfig.getCleanAccType(acc_type, 2);
+                const landing_company_short = getAccountsInfo(acc_type).landing_company_short;
+
+                let class_name = (type === 'real' && Client.get('is_virtual')) ||
+                    (landing_company_short === 'malta' && /_gaming_/.test(clean_acc_type)) ? 'disabled' : '';
+
                 if (getAccountsInfo(acc_type).info && (getAvailableServers(false, acc_type).length === 0 || type === 'demo')) {
                     class_name = 'existed';
                 }
-                const clean_acc_type = MetaTraderConfig.getCleanAccType(acc_type, 2);
+
                 $form.find(`.step-2 #${clean_acc_type.replace(type, 'rbtn')}`)
                     .removeClass('existed disabled selected')
                     .addClass(class_name);
