@@ -96,10 +96,10 @@ const Accounts = (() => {
         upgrade_info.type.forEach((new_account_type, index) => {
             const getAccountTitle = () => {
                 if (new_account_type === 'financial') {
-                    return localize('Financial Account');
+                    return localize('Multipliers Account');
                 }
                 if (upgrade_info.can_upgrade_to[index] === 'malta') {
-                    return localize('Gaming Account');
+                    return localize('Options Account');
                 }
                 if (residence === 'gb' && upgrade_info.can_upgrade_to[index] === 'iom'){
                     return localize('Gaming Account');
