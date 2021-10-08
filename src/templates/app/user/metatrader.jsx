@@ -22,7 +22,7 @@ const AccountDesc = ({ title, description, account_type, landing_company_short, 
                     <li key={i}>{item}</li>
                 ))}
             </ul>
-            <p className='center-text-m'>
+            <p  data-show='-eucountry' className='center-text-m'>
                 <a className='button button-full-width-m' href={it.url_for('metatrader/types-of-accounts')} target='_blank'>
                     <span>{it.L('Find out more')}</span>
                 </a>
@@ -241,7 +241,7 @@ const Metatrader = () => (
                         ]}
                     />
 
-                    <AccountDesc
+                    {/* <AccountDesc
                         account_type={'financial_financial_stp'}
                         title={it.L('Financial STP Account')}
                         description={it.L('Our MetaTrader 5 Financial STP account provides you with tight spreads, higher ticket size and offers more products.')}
@@ -251,9 +251,9 @@ const Metatrader = () => (
                             it.L('Market execution'),
                             it.L('No commission'),
                         ]}
-                    />
+                    /> */}
 
-                    <AccountDesc
+                    {/* <AccountDesc
                         account_type={'gaming_financial'}
                         title={it.L('Synthetic Account')}
                         description={it.L('Our Synthetic account allows you to trade CFDs on Synthetic Indices - our proprietary synthetic assets that simulate market forces.')}
@@ -263,7 +263,7 @@ const Metatrader = () => (
                             it.L('Market execution'),
                             it.L('No commission'),
                         ]}
-                    />
+                    /> */}
                 </div>
                 <div id='frm_new_accounts'>
                     <form id='frm_new_account'>
@@ -287,7 +287,7 @@ const Metatrader = () => (
                                             { type: 'template_real', desc: 'financial' },
                                         ]}
                                     >
-                                        <a className='hint hl-types-of-accounts' href={it.url_for('metatrader/types-of-accounts')} target='_blank'>{it.L('Which account is right for me?')}</a>
+                                        <a data-show='-eucountry' className='hint hl-types-of-accounts' href={it.url_for('metatrader/types-of-accounts')} target='_blank'>{it.L('Which account is right for me?')}</a>
                                     </TypeGroup>
                                 </div>
                                 <div id='authenticate_loading' className='invisible'><Loading /></div>
