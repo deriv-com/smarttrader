@@ -126,9 +126,11 @@ const BinaryLoader = (() => {
         only_deriv             : () => localize('Unfortunately, this service isn’t available in your country. If you’d like to trade multipliers, try DTrader on Deriv.'),
     };
 
-    const error_actions = {
-        only_deriv: () => ({ localized_title: localize('Go to DTrader'), target_url: 'https://app.deriv.com' }),
-    };
+    // This variable related to if else condition below
+
+    // const error_actions = {
+    //     only_deriv: () => ({ localized_title: localize('Go to DTrader'), target_url: 'https://app.deriv.com' }),
+    // };
 
     const loadHandler = (this_page) => {
         const config = { ...pages_config[this_page] };
@@ -145,9 +147,13 @@ const BinaryLoader = (() => {
                             displayMessage(error_messages.only_virtual());
                         } else if (config.only_real && Client.get('is_virtual')) {
                             displayMessage(error_messages.only_real());
-                        } else if (response.authorize.country === 'fr') { // We don't offer service for France residence clients on Binary any more
-                            displayMessage(error_messages.only_deriv(), error_actions.only_deriv());
-                        } else {
+                        } // eslint-disable-line
+                        // The if else condition below, blocked the usage of portfolio/profile/settings on french accounts
+
+                        // else if (response.authorize.country === 'fr') { // We don't offer service for France residence clients on Binary any more
+                        //     displayMessage(error_messages.only_deriv(), error_actions.only_deriv());
+                        // }
+                        else {
                             loadActiveScript(config);
                         }
                     });
