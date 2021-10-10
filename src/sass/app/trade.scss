@@ -1275,10 +1275,14 @@ ul.bullet {
             }
         }
         .chartOptions_overlay {
-            margin-left: 0 !important;
+            @media (min-width: 480px) {
+                margin-left: 0 !important;
+            }
 
             &.exportOverlay {
-                margin-left: 0 !important;
+                @media (min-width: 480px) {
+                    margin-left: 0 !important;
+                }
 
                 .row .cell .table.download {
                     margin: 10px;
