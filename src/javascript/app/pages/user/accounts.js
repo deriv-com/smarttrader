@@ -98,11 +98,11 @@ const Accounts = (() => {
                 if (new_account_type === 'financial') {
                     return localize('Multipliers Account');
                 }
-                if (['malta', 'iom'].includes(upgrade_info.can_upgrade_to[index])) {
-                    return localize('Options Account');
-                }
                 if (residence === 'gb' && upgrade_info.can_upgrade_to[index] === 'iom'){
                     return localize('Gaming Account');
+                }
+                if (['malta', 'iom'].includes(upgrade_info.can_upgrade_to[index])) {
+                    return localize('Options Account');
                 }
 
                 return localize('Real Account');

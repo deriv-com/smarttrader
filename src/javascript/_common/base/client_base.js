@@ -132,17 +132,17 @@ const ClientBase = (() => {
     const TypesMapConfig = (() => {
         let types_map_config;
 
-        const initTypesMap = () => ({
+        const initTypesMap = (loginid) => ({
             default  : localize('Real'),
             financial: localize('Multipliers'),
-            gaming   : localize('Options'),
+            gaming   : get('residence', loginid) === 'gb' ? localize('Gaming') : localize('Options'),
             virtual  : localize('Demo'),
         });
 
         return {
-            get: () => {
+            get: (loginid) => {
                 if (!types_map_config) {
-                    types_map_config = initTypesMap();
+                    types_map_config = initTypesMap(loginid);
                 }
                 return types_map_config;
             },
@@ -150,7 +150,7 @@ const ClientBase = (() => {
     })();
 
     const getAccountTitle = loginid => {
-        const types_map = TypesMapConfig.get();
+        const types_map = TypesMapConfig.get(loginid);
         return (types_map[getAccountType(loginid)] || types_map.default);
     };
 
