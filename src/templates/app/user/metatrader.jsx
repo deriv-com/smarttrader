@@ -146,8 +146,8 @@ const Metatrader = () => (
                 <div className='mt-panel'>
                     <div className='acc-actions'>
                         <a href='javascript:;' className='act_new_account new-account center-text invisible'>
-                            <span className='client-general'>{it.L('Create a MetaTrader 5 account')}</span>
-                            <span className='client-eu invisible'>{it.L('Create a CFDs account')}</span>
+                            <span data-show='-eucountry'>{it.L('Create a MetaTrader 5 account')}</span>
+                            <span data-show='eucountry'>{it.L('Create a CFDs account')}</span>
                         </a>
                         <a href='javascript:;' className='act_cashier has-account center-text invisible'>
                             <span>{it.L('Manage funds')}</span>
@@ -305,8 +305,8 @@ const Metatrader = () => (
                             <div id='view_3' className='gr-row invisible'>
                                 <div className='container gr-12'>
                                     <p id='trading_password_new_user' className='center-text notice-msg invisible'>
-                                        <span className='client-general'>{it.L('Create an MT5 password. You can use this password for all your MT5 accounts.')}</span>
-                                        <span className='client-eu invisible'>{it.L('Create an MT5 password for logging in to your CFDs account.')}</span>
+                                        <span data-show='-eucountry'>{it.L('Create an MT5 password. You can use this password for all your MT5 accounts.')}</span>
+                                        <span data-show='eucountry'>{it.L('Create an MT5 password for logging in to your CFDs account.')}</span>
                                     </p>
                                     <p id='trading_password_new_user_confirm' className='center-text notice-msg invisible'>
                                         {it.L('Confirm to create your MT5 password')}
