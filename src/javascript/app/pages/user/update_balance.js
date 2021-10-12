@@ -55,6 +55,11 @@ const updateBalance = (response) => {
         };
 
         if (accounts) {
+            if (!(loginid in accounts)) {
+                updateBalanceByAccountId(loginid, balance, currency);
+                Client.setTotalBalance(balance, currency);
+                updateContractBalance(balance);
+            }
             Object.keys(accounts).forEach(account_id => {
                 const account = accounts[account_id];
                 updateBalanceByAccountId(account_id, account.balance, account.currency);
