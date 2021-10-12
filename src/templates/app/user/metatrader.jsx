@@ -403,7 +403,7 @@ const Metatrader = () => (
                                         <div className='step-1'>
                                             <h3 className='password_change_title secondary-color'>{it.L('You have a trading password for MT5')}</h3>
                                             <p className='notice-msg center-text font-n'>
-                                                {it.L('Use MT5 password to sign in to any of your MT5 accounts when using MT5 apps on your mobile or other devices.')}
+                                                {it.L('Use MT5 password to sign in to any of your CFDs accounts when using MT5 apps on your mobile or other devices.')}
                                             </p>
                                             {/* TODO: temporary invisible. refactor this when design is updated */}
                                             <div id='dummy_password' className='gr-row form-row center-text-m two-rows dummy-password invisible'>
