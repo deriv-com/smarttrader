@@ -474,6 +474,16 @@ const Metatrader = () => (
                                         attributes={{ action: 'password_change' }}
                                     />
                                 </form>
+                                <form className='invisible' id='frm_verify_password_reset'>
+                                    <p className='center-text notice-msg no-margin invisible' id='token_error'>{it.L('Verification code is wrong. Please use the link sent to your email.')}</p>
+                                    <button
+                                        type='submit'
+                                        className='button-secondary button-full-width'
+                                        action='verify_password_reset'
+                                    >
+                                        {it.L('Create or reset password')}
+                                    </button>
+                                </form>
                                 <form className='invisible' id='frm_verify_password_reset_token'>
                                     <div className='gr-padding-10'>
                                         <p className='no-margin'>{it.L('Please check your email for the verification code to complete the process.')}</p>
