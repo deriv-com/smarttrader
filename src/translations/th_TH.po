@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-12 09:24\n"
+"PO-Revision-Date: 2021-10-13 04:23\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -12849,7 +12849,7 @@ msgid "This website's services are not made available in certain countries such 
 msgstr "บริการของเว็บไซต์นี้ไม่มีให้บริการในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง หรือสำหรับผู้ที่มีอายุต่ำกว่า 18 ปี"
 
 msgid "This will change the password to all of your %1 accounts."
-msgstr ""
+msgstr "การดําเนินการนี้จะเปลี่ยนรหัสผ่านไปยังบัญชี %1 ของคุณทั้งหมด"
 
 msgid "Thorough knowledge of bash scripting, and experience with the Perl scripting language"
 msgstr "ตลอดจนทักษะความรู้ในการทำสคริปต์แบช (Bash) และประสบการณ์ในการใช้ภาษาเพิร์ล (Perl)"
@@ -13017,7 +13017,7 @@ msgid "To which it, at the time of execution of this Agreement was, or subsequen
 msgstr "เมื่อสัญญาได้มีการลงนามอย่างสมบูรณ์ ข้อมูลดังกล่าวเป็น หรือกลายเป็นวาระสาธารณะ ซึ่งไม่เกิดจากความผิดพลาดของคู่สัญญา"
 
 msgid "To withdraw from MetaTrader 5 %1 please %2Authenticate%3 your Binary account."
-msgstr ""
+msgstr "หากต้องการถอนออกจาก MetaTrader 5 %1 โปรด %2รับรองความถูกต้อง%3 บัญชีไบนารีของคุณ"
 
 msgid "Today"
 msgstr "วันนี้"
@@ -13707,7 +13707,7 @@ msgid "Usage limit"
 msgstr "วงเงินที่ใช้"
 
 msgid "Use MT5 password to sign in to any of your %1 accounts when using MT5 apps on your mobile or other devices."
-msgstr ""
+msgstr "ใช้รหัสผ่าน MT5 เพื่อลงชื่อเข้าใช้บัญชี %1 ใด ๆ ของคุณเมื่อใช้แอพ MT5 บนมือถือหรืออุปกรณ์อื่น ๆ ของคุณ"
 
 msgid "Use a few words, avoid common phrases"
 msgstr "ใช้คำไม่กี่คำ หลีกเลี่ยงคำวลีทั่วไป"
@@ -14751,7 +14751,7 @@ msgid "You have a new Binary password to log in to Binary.com."
 msgstr "คุณมีรหัสผ่านไบนารีใหม่เพื่อเข้าสู่ระบบ Binary.com ของคุณ"
 
 msgid "You have a new MT5 password to log in to your %1 accounts on the web and mobile apps."
-msgstr ""
+msgstr "คุณมีรหัสผ่าน MT5 ใหม่เพื่อเข้าสู่ระบบบัญชี %1 ของคุณบนเว็บและแอพมือถือ"
 
 msgid "You have a trading password for MT5"
 msgstr "คุณมีรหัสผ่านการซื้อขายสําหรับ MT5"

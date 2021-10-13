@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-12 09:24\n"
+"PO-Revision-Date: 2021-10-13 04:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -12848,7 +12848,7 @@ msgid "This website's services are not made available in certain countries such 
 msgstr "某些国家如美国、加拿大、香港或18岁以下人士无法使用本网站的服务。"
 
 msgid "This will change the password to all of your %1 accounts."
-msgstr ""
+msgstr "这将更改用在所有%1账户的密码。"
 
 msgid "Thorough knowledge of bash scripting, and experience with the Perl scripting language"
 msgstr "全面了解 bash 脚本编写, 并具有 Perl 脚本语言的编写经验"
@@ -13016,7 +13016,7 @@ msgid "To which it, at the time of execution of this Agreement was, or subsequen
 msgstr "执行本协议时，由于各方没有过错，该协议已经或随后已进入公共领域"
 
 msgid "To withdraw from MetaTrader 5 %1 please %2Authenticate%3 your Binary account."
-msgstr ""
+msgstr "如果您想从MetaTrader 5 %1账户提款，请先通过Binary账户的%2验证%3。"
 
 msgid "Today"
 msgstr "今天"
@@ -13706,7 +13706,7 @@ msgid "Usage limit"
 msgstr "使用限制"
 
 msgid "Use MT5 password to sign in to any of your %1 accounts when using MT5 apps on your mobile or other devices."
-msgstr ""
+msgstr "在手机或其他设备使用MT5应用时使用 MT5 密码登录任何%1账户。"
 
 msgid "Use a few words, avoid common phrases"
 msgstr "用几个词，避免常用短语"
@@ -14750,7 +14750,7 @@ msgid "You have a new Binary password to log in to Binary.com."
 msgstr "您有了新的 Binary 密码，可用以登录 Binary.com。"
 
 msgid "You have a new MT5 password to log in to your %1 accounts on the web and mobile apps."
-msgstr ""
+msgstr "您有了新的 MT5 密码，用于登录网络和手机应用上的 %1账户。"
 
 msgid "You have a trading password for MT5"
 msgstr "您有了MT5的交易密码"
