@@ -537,10 +537,13 @@ const MetaTraderUI = (() => {
         if ($target.prop('tagName').toLowerCase() !== 'a') {
             $target = $target.parents('a');
         }
-        $main_msg.setVisibility(0);
 
         const acc_type = Client.get('mt5_account');
         const action   = $target.attr('class').split(' ').find(c => /^act_/.test(c)).replace('act_', '');
+
+        if (!$action.find(`#frm_${action}`).length) {
+            $main_msg.setVisibility(0);
+        }
 
         const cloneForm = () => {
             $form = $templates.find(`#frm_${action}`).clone();
@@ -665,11 +668,6 @@ const MetaTraderUI = (() => {
                 $container.find(`[class~=act_${action}]`).addClass('selected');
                 return;
             }
-
-            if (!$action.find(`#frm_${action}`).length) {
-                $main_msg.setVisibility(0);
-            }
-
             cloneForm();
         });
     };
