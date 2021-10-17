@@ -216,15 +216,16 @@ const Cashier = (() => {
 
     const switchToAccount = (account_type, transaction_type, fiat_account) => {
         const ok_text = localize('Switch account');
+        const fiat_currency = Client.get('currency', fiat_account);
         let localized_title = '';
         let localized_message = '';
 
         if (account_type === 'fiat') {
             localized_title = localize('Switch account?');
             if (transaction_type === 'deposit') {
-                localized_message = localize('To deposit money, please switch to your [_1] account.', fiat_account);
+                localized_message = localize('To deposit money, please switch to your [_1] account.', fiat_currency);
             } else {
-                localized_message = localize('To withdraw money, please switch to your [_1] account.', fiat_account);
+                localized_message = localize('To withdraw money, please switch to your [_1] account.', fiat_currency);
             }
         } else {
             localized_title = localize('Switch to crypto account?');
