@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-14 13:29\n"
+"PO-Revision-Date: 2021-10-17 08:21\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -959,7 +959,7 @@ msgid "About the Company and these Terms"
 msgstr "เกี่ยวกับบริษัทฯ และเงื่อนไขเหล่านี้"
 
 msgid "Abusively or fraudulently use, for any purpose, the Application Program Interface (API) of %1."
-msgstr ""
+msgstr "การใช้ Application Program Interface (API) ของ %1อย่างไม่ถูกต้อง หรือ ผิดกฎหมาย"
 
 msgid "Accept"
 msgstr "ยอมรับ"
@@ -2675,7 +2675,7 @@ msgid "Chief Executives, Senior Officials and Legislators"
 msgstr "ผู้บริหารระดับสูง เจ้าหน้าที่อาวุโส และสมาชิกของสภานิติบัญญัติ"
 
 msgid "Choose a cryptocurrency account"
-msgstr ""
+msgstr "เลือกบัญชีคริปโตเคอเรนซี่"
 
 msgid "Choose a duration from 10 seconds to 365 days."
 msgstr "กำหนด ระยะเวลา จาก 10 วินาที ถึง 365 วัน"
@@ -2714,7 +2714,7 @@ msgid "Choose one of your accounts or add a new account"
 msgstr ""
 
 msgid "Choose one of your accounts or add a new cryptocurrency account"
-msgstr ""
+msgstr "เลือกบัญชีใดบัญชีหนึ่งของคุณหรือเพิ่มบัญชีสกุลเงินดิจิทัลใหม่"
 
 msgid "Choose scopes:"
 msgstr "กำหนดขอบเขต:"
@@ -2744,7 +2744,7 @@ msgid "Choose your own strike."
 msgstr "กำหนดราคาใช้สิทธิของท่าน"
 
 msgid "Choose your preferred cryptocurrency"
-msgstr ""
+msgstr "เลือกสกุลเงินดิจิทัลที่คุณต้องการ"
 
 msgid "Choose your preferred programme, complete the application form, and receive your affiliate link upon approval."
 msgstr "เลือกโปรแกรมที่ต้องการ กรอกใบสมัคร และรับลิงค์พันธมิตรฯ ของคุณ เมื่อได้รับการอนุมัติ"
@@ -3432,7 +3432,7 @@ msgid "Create a New Demo Account"
 msgstr "สร้างบัญชีทดลองใหม่"
 
 msgid "Create a cryptocurrency account"
-msgstr ""
+msgstr "สร้างบัญชีสกุลเงินดิจิทัล"
 
 msgid "Create a new Binary password."
 msgstr "สร้างรหัสผ่าน Binary ใหม่"
@@ -3819,10 +3819,10 @@ msgid "Deposit as little as 5 USD to start trading."
 msgstr "ฝากเงินแค่เพียง 5 USD เพื่อเริ่มการซื้อขาย"
 
 msgid "Deposit cryptocurrencies"
-msgstr ""
+msgstr "ฝากเงินคริปโตเคอเรนซี่"
 
 msgid "Deposit in your local currency via an authorised, independent payment agent in your country."
-msgstr ""
+msgstr "ฝากเงินในสกุลเงินท้องถิ่นของคุณผ่านตัวแทนการชำระเงินอิสระที่ได้รับอนุญาตในประเทศของคุณ"
 
 msgid "Deposit now"
 msgstr "ฝากเงินตอนนี้"
@@ -3831,13 +3831,13 @@ msgid "Deposit or withdraw below"
 msgstr "ฝากเงิน หรือ ถอนเงิน ด้านล่าง"
 
 msgid "Deposit via bank wire, credit card, and e-wallet"
-msgstr ""
+msgstr "ฝากเงินผ่านธนาคารบัตรเครดิตและ e-wallet"
 
 msgid "Deposit via bank wire, credit card, and e-wallet."
-msgstr ""
+msgstr "ฝากเงินผ่านธนาคารบัตรเครดิตและ e-wallet."
 
 msgid "Deposit via payment agents"
-msgstr ""
+msgstr "ฝากเงินผ่านตัวแทนชําระเงิน"
 
 msgid "Deposit: %1 blockchain confirmations"
 msgstr "ฝากเงิน: %1 การยืนยันจากบล็อกเชน"
@@ -4488,10 +4488,10 @@ msgid "Engage in misleading or deceptive conduct or illusory or deceptive advert
 msgstr "ทำให้เข้าใจผิด หรือ จงใจหลอกลวง หรือ จอมปลอม หรือเป็นโฆษณาหลอกลวง"
 
 msgid "Engage in misleading, illusory, or deceptive advertising or promises."
-msgstr ""
+msgstr "ทำให้เข้าใจผิด หรือ จอมปลอม หรือ เป็นโฆษณาหลอกลวง หรือ ให้คำมั่นสัญญา"
 
 msgid "Engage in misleading, illusory, or deceptive conduct."
-msgstr ""
+msgstr "ทำให้เข้าใจผิด หรือ จอมปลอม หรือชักชวนไปในทางหลอกลวง"
 
 msgid "Enhanced performance. Intuitively simple."
 msgstr "เพิ่มศักยภาพ ใช้งานง่าย"
@@ -14697,7 +14697,7 @@ msgid "XRP/USD"
 msgstr "XRP/USD"
 
 msgid "XTB International Limited"
-msgstr ""
+msgstr "XTB International Limited"
 
 msgid "Yes"
 msgstr "ใช่"
