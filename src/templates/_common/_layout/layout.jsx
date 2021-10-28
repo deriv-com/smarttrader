@@ -7,6 +7,8 @@ import InterviewPopup from '../components/interview_popup.jsx';
 import Title from '../components/title.jsx';
 import Elevio from '../includes/elevio.jsx';
 import LiveChat from '../includes/livechat.jsx';
+import GamingClosePopupIom from '../components/gaming_close_popup_iom.jsx';
+import GamingClosePopup from '../components/gaming_close_popup.jsx';
 
 export const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
@@ -56,6 +58,8 @@ const Layout = () => {
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                 <Elevio />
                 <LiveChat />
+                <GamingClosePopup />
+                <GamingClosePopupIom />
             </body>
         </html>
     );
