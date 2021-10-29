@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const GameCloseBannerIom = ({ has_margin }) => (
     <div
         id='close_banner_container_iom'
-        className={`invisible ${has_margin ? 'has_margin' : ''}`}
+        className={`container invisible ${has_margin ? 'has_margin' : ''}`}
     >
         <div className='close_banner_text'>
             <img
