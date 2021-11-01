@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-29 11:26\n"
+"PO-Revision-Date: 2021-11-01 05:48\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -596,7 +596,7 @@ msgid "1-2 years"
 msgstr "1-2 года"
 
 msgid "1. Ensure to close all your positions"
-msgstr ""
+msgstr "1. Убедитесь, что закрыли все позиции"
 
 msgid "1. Proof of identity"
 msgstr "1. Подтверждение личности"
@@ -635,7 +635,7 @@ msgid "2. Selfie with proof of ID"
 msgstr "2. Селфи с удостоверением личности"
 
 msgid "2. Withdraw your funds"
-msgstr ""
+msgstr "2. Выведите средства"
 
 msgid "2. Your desktop window stays open"
 msgstr "2. Окно программы остается открытым."
@@ -2105,7 +2105,7 @@ msgid "Before using the trading robots or Expert Advisors and forward trade, the
 msgstr "Перед тем, как использовать торговых роботов или Expert Advisors и форвардную торговлю, клиент должен протестировать их на демо-счете."
 
 msgid "Before you deactivate your account, you’ll need to:"
-msgstr ""
+msgstr "Прежде чем деактивировать счет, вам необходимо:"
 
 msgid "Beginner"
 msgstr "Для начинающих"
@@ -3725,7 +3725,7 @@ msgid "Deactivate Account"
 msgstr "Деактивировать счет"
 
 msgid "Deactivate account"
-msgstr ""
+msgstr "Деактивировать счет"
 
 msgid "Deactivate account?"
 msgstr "Деактивировать счет?"
@@ -6141,22 +6141,22 @@ msgid "If you find any vulnerabilities in our %1open-source code%2, feel free to
 msgstr "Если вы обнаружите какие-либо уязвимости в нашем %1проекте с открытым кодом%2, пожалуйста, отправьте pull-запрос на GitHub."
 
 msgid "If you have a Binary real account, go to %1Cashier%2 to withdraw your funds."
-msgstr ""
+msgstr "Если у вас есть реальный счет Binary, перейдите в %1Кассу%2, чтобы вывести средства."
 
 msgid "If you have a Binary real account, go to %1Portfolio%2 to close or sell any open positions."
-msgstr ""
+msgstr "Если у вас есть реальный счет Binary, перейдите в %1Портфель%2, чтобы закрыть или продать открытые позиции."
 
 msgid "If you have a DMT5 or Deriv X real account, go to your %1DMT5%2 or %3Deriv X%4 dashboard to withdraw your funds."
-msgstr ""
+msgstr "Если у вас есть реальный счет DMT5 или Deriv X, перейдите на панель %1DMT5%2 или %3Deriv X%4, чтобы вывести средства."
 
 msgid "If you have a DMT5 or Deriv X real account, log in to close any open positions."
-msgstr ""
+msgstr "Если у вас есть реальный счет DMT5 или Deriv X, войдите в него, чтобы закрыть открытые позиции."
 
 msgid "If you have a DMT5 real account, go to your %1DMT5%2 dashboard to withdraw your funds."
-msgstr ""
+msgstr "Если у вас есть реальный счет DMT5, перейдите на панель %1DMT5%2, чтобы вывести средства."
 
 msgid "If you have a DMT5 real account, log in to close any open positions."
-msgstr ""
+msgstr "Если у вас есть реальный счет DMT5, войдите на него, чтобы закрыть открытые позиции."
 
 msgid "If you have a payment reference (for example 122), you can enter it here."
 msgstr "Если у вас есть номер перевода (например, 122), укажите его здесь."
@@ -13644,7 +13644,7 @@ msgid "Unfortunately, you can only make deposits. Please contact us via live cha
 msgstr "К сожалению, вы можете только пополнять счет. Пожалуйста, свяжитесь с нами через чат, чтобы активировать вывод средств."
 
 msgid "Unfortunately, you can only make withdrawals. Please contact us via live chat."
-msgstr ""
+msgstr "К сожалению, вы можете только выводить средства. Пожалуйста, свяжитесь с нами через чат."
 
 msgid "University degree in Marketing, Mathematics, IT/Programming or any related field"
 msgstr "Высшее образование в области маркетинга, математики, IT/программирования или в смежной области"
@@ -14826,7 +14826,7 @@ msgid "You have funds in these Binary accounts:"
 msgstr "У вас есть средства на этих счетах Binary:"
 
 msgid "You have funds in these Deriv X accounts:"
-msgstr ""
+msgstr "У вас есть средства на этих счетах Deriv X:"
 
 msgid "You have funds in these MT5 accounts:"
 msgstr "У вас есть средства на этих счетах MT5:"
@@ -14847,7 +14847,7 @@ msgid "You have open positions in these Binary accounts:"
 msgstr "У вас есть открытые позиции на этих счетах Binary:"
 
 msgid "You have open positions in these Deriv X accounts:"
-msgstr ""
+msgstr "У вас есть открытые позиции на этих счетах Deriv X:"
 
 msgid "You have open positions in these MT5 accounts:"
 msgstr "У вас есть открытые позиции на этих счетах  MT5:"
