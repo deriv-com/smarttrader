@@ -1466,8 +1466,9 @@ const Authenticate = (() => {
             handleCountrySelector();
         } else if (is_fully_authenticated) {
             $('#authentication_verified').setVisibility(1);
-        // For statuses set from BO, last attempt will be null
-        } else if (!identity_last_attempt) {
+        } else if (!identity_last_attempt ||
+            // Prioritise verified status from back office. How we know this is if there is mismatch between current statuses (Should be refactored)
+            (identity_status === 'verified' && identity_status !== identity_last_attempt.status)) {
             $('#authentication_tab').setVisibility(1);
             switch (identity_status) {
                 case 'pending':
