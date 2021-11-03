@@ -28,7 +28,7 @@ const Process = (() => {
      * This function process the active symbols to get markets
      * and underlying list
      */
-    const processActiveSymbols = () => {
+    const processActiveSymbols = (country) => {
         BinarySocket.send({ active_symbols: 'brief' }).then((response) => {
             if (response.active_symbols && response.active_symbols.length) {
                 // populate the Symbols object
@@ -41,6 +41,8 @@ const Process = (() => {
 
                 commonTrading.displayMarkets();
                 processMarket();
+            } else if (country === 'gb' || country === 'im'){
+                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') })));
             } else {
                 $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Trading is unavailable at this time.') })));
             }

@@ -45,6 +45,8 @@ const TradePage = (() => {
             TradingEvents.init();
         }
         BinarySocket.wait('authorize').then(() => {
+            const country = State.getResponse('authorize.country') || State.getResponse('website_status.clients_country');
+
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
                 // if not loaded by pjax, balance update function calls TopUpVirtualPopup
@@ -62,7 +64,7 @@ const TradePage = (() => {
                 if (document.getElementById('multiplier_currency').tagName === 'SELECT') {
                     Dropdown('#multiplier_currency', true);
                 }
-                Process.processActiveSymbols();
+                Process.processActiveSymbols(country);
 
                 const $currency = $('.currency');
 
