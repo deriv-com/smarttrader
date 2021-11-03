@@ -39,7 +39,7 @@ const WelcomePageOnboarding = (() => {
             }
             not_sure.addEventListener('click', onClickNotSure);
 
-            cfd.removeEventListener('click', onClickCFD);
+            cfd.addEventListener('click', onClickCFD);
 
             d_options.addEventListener('click', onClickDigitalOptions);
         });
