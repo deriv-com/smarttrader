@@ -33,7 +33,7 @@ const TradePage = (() => {
     };
 
     const init = () => {
-        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked()) {
+        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked() ||  Client.isOfferingBlocked()) {
             return;
         }
 
@@ -45,7 +45,7 @@ const TradePage = (() => {
         }
         BinarySocket.wait('authorize').then(() => {
             const country = State.getResponse('authorize.country') || State.getResponse('website_status.clients_country');
-
+            
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
                 // if not loaded by pjax, balance update function calls TopUpVirtualPopup
