@@ -1,5 +1,4 @@
 const moment     = require('moment');
-const checkInput = require('./common_functions').checkInput;
 
 const toTitleCase = str => (
     (str || '').replace(/\w[^\s/\\]*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
@@ -9,10 +8,7 @@ const toISOFormat = date => (date instanceof moment ? date.format('YYYY-MM-DD') 
 
 const toReadableFormat = (date) => {
     if (date instanceof moment) {
-        if (window.innerWidth < 770 && checkInput('date', 'not-a-date')) {
-            return toISOFormat(date);
-        }
-        return date.format('DD MMM, YYYY');
+        return date.format('DD MMM YYYY');
     }
     return '';
 };

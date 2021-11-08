@@ -94,8 +94,6 @@ const TimePicker = (() => {
 
     const formatTime = time => padLeft(time, 2, '0');
 
-    const toTime = time => [formatTime(time.hour), formatTime(time.minute), '00'].join(':');
-
     const removeJqueryPicker = (selector, datepickerDate) => {
         $(selector).timepicker('destroy').removeAttr('data-picker').off('keydown keyup input');
         if (!datepickerDate) return;
@@ -122,17 +120,13 @@ const TimePicker = (() => {
 
     const updatePicker = (selector) => {
         const $selector        = $(selector);
-        const time_picker_conf = time_pickers[selector].config_data;
         if (window.innerWidth < 770 && checkInput('time', 'not-a-time') && $selector.attr('data-picker') !== 'native') {
-            removeJqueryPicker(selector);
-            $selector.attr({ type: 'time', 'data-picker': 'native' }).val($selector.attr('data-value')).removeAttr('readonly').removeClass('clear');
-
-            const minTime = time_picker_conf.minTime;
-            if (minTime) $selector.attr('min', toTime(minTime));
-
-            const maxTime = time_picker_conf.maxTime;
-            if (maxTime) $selector.attr('max', toTime(maxTime));
-            return;
+            $selector.attr({ type: 'text', 'data-picker': 'jquery', readonly: 'readonly' });
+            $selector.removeAttr('min max');
+            if ($selector.attr('data-value') && $selector.hasClass('clearable') && !$selector.attr('disabled')) {
+                clearable($selector);
+            }
+            addJqueryPicker(selector);
         }
         if ((window.innerWidth > 769 && $selector.attr('data-picker') !== 'jquery') || (window.innerWidth < 770 && !checkInput('time', 'not-a-time'))) {
             $selector.attr({ type: 'text', 'data-picker': 'jquery', readonly: 'readonly' });
