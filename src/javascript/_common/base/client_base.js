@@ -423,17 +423,22 @@ const ClientBase = (() => {
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
 
-        if (!iframe_window) return;
+        if (!iframe_window || !origin) return;
 
         if (document.readyState === 'complete'){
-            iframe_window.contentWindow.postMessage({
-                key  : 'client.accounts',
-                value: JSON.stringify(client_accounts),
-            }, origin);
-            iframe_window.contentWindow.postMessage({
-                key  : 'active_loginid',
-                value: active_loginid,
-            }, origin);
+            iframe_window.onload = () => {
+                // Keep client.accounts in sync (in case user wasn't logged in).
+                if (iframe_window.src === `${origin}/localstorage-sync.html`) {
+                    iframe_window.contentWindow.postMessage({
+                        key  : 'client.accounts',
+                        value: JSON.stringify(client_accounts),
+                    }, origin);
+                    iframe_window.contentWindow.postMessage({
+                        key  : 'active_loginid',
+                        value: active_loginid,
+                    }, origin);
+                }
+            };
 
             return;
         }
@@ -442,14 +447,19 @@ const ClientBase = (() => {
             has_readystate_listener = true;
 
             document.addEventListener('readystatechange', () => {
-                iframe_window.contentWindow.postMessage({
-                    key  : 'client.accounts',
-                    value: JSON.stringify(client_accounts),
-                }, origin);
-                iframe_window.contentWindow.postMessage({
-                    key  : 'active_loginid',
-                    value: active_loginid,
-                }, origin);
+                iframe_window.onload = () => {
+                    // Keep client.accounts in sync (in case user wasn't logged in).
+                    if (iframe_window.src === `${origin}/localstorage-sync.html`) {
+                        iframe_window.contentWindow.postMessage({
+                            key  : 'client.accounts',
+                            value: JSON.stringify(client_accounts),
+                        }, origin);
+                        iframe_window.contentWindow.postMessage({
+                            key  : 'active_loginid',
+                            value: active_loginid,
+                        }, origin);
+                    }
+                };
             });
         }
     };
