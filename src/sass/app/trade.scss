@@ -1275,10 +1275,14 @@ ul.bullet {
             }
         }
         .chartOptions_overlay {
-            margin-left: 0 !important;
+            @media (min-width: 480px) {
+                margin-left: 0 !important;
+            }
 
             &.exportOverlay {
-                margin-left: 0 !important;
+                @media (min-width: 480px) {
+                    margin-left: 0 !important;
+                }
 
                 .row .cell .table.download {
                     margin: 10px;
@@ -1637,6 +1641,7 @@ ul.bullet {
             }
             &.chartTypeOverlay {
                 width: 86px;
+                margin-left: 0 !important;
 
                 .row {
                     &.showborder, .chartOptions .chartTypeOverlay .row:nth-last-child(2), .chartOptions .chartTypeOverlay .row:nth-last-child(3) {
@@ -1651,8 +1656,14 @@ ul.bullet {
                 }
             }
             &.timePeriodOverlay {
+                margin-left: 0 !important;
+
                 .vertical-bottom {
                     &.button {
+                        @media (max-width: 480px) {
+                            width: 25px;
+                            height: 25px;
+                        }
                         width: 32px;
                         height: 32px;
                         margin: 4px 10px 4px 0;
@@ -1675,6 +1686,9 @@ ul.bullet {
                 .row:not(:last-child) {
                     border-color: var(--border-normal);
                 }
+            }
+            &.drawingToolOverlay {
+                margin-left: 0 !important;
             }
         }
         &.chart-dialog {
