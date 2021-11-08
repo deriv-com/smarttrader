@@ -107,6 +107,7 @@ const BinaryLoader = (() => {
         only_real        : () => localize('This feature is not relevant to virtual-money accounts.'),
         not_authenticated: () => localize('This page is only available to logged out clients.'),
         no_mf            : () => localize('Sorry, but binary options trading is not available in your financial account.'),
+        offerings_blocked: () => localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.'),
         options_blocked  : () => localize('Sorry, but binary options trading is not available in your country.'),
     };
 
@@ -140,7 +141,13 @@ const BinaryLoader = (() => {
             loadActiveScript(config);
         }
         if (config.no_mf && Client.isLoggedIn() && Client.isAccountOfType('financial')) {
-            BinarySocket.wait('authorize').then(() => displayMessage(error_messages.no_mf()));
+            BinarySocket.wait('authorize').then((res) => {
+                if (Client.isOfferingBlocked(res.authorize.country)) {
+                    displayMessage(error_messages.offerings_blocked());
+                } else {
+                    displayMessage(error_messages.no_mf());
+                }
+            });
         }
         
         BinarySocket.wait('authorize').then(() => {

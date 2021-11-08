@@ -413,6 +413,12 @@ const ClientBase = (() => {
         return options_blocked_countries.includes(country);
     };
 
+    const isOfferingBlocked = () => {
+        const options_blocked_countries = ['gb', 'im'];
+        const country = get('country') || State.getResponse('authorize.country');
+        return options_blocked_countries.includes(country);
+    };
+
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
@@ -461,6 +467,7 @@ const ClientBase = (() => {
         isAccountOfType,
         isAuthenticationAllowed,
         isOptionsBlocked,
+        isOfferingBlocked,
         getAccountOfType,
         hasAccountType,
         hasCurrencyType,
