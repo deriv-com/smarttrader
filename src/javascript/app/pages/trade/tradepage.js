@@ -33,7 +33,7 @@ const TradePage = (() => {
     };
 
     const init = () => {
-        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked()) {
+        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked() ||  Client.isOfferingBlocked()) {
             return;
         }
 
