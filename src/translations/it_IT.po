@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-03 06:15\n"
+"PO-Revision-Date: 2021-11-10 10:18\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgid " All calls are recorded for training and monitoring purposes."
 msgstr " Tutte le chiamate vengono registrate a fini formativi e di monitoraggio."
 
 msgid " The Company reserves the right to change the requirements of transactions between the Agent’s account and clients."
-msgstr ""
+msgstr "La Società si riserva il diritto di modificare i requisiti per le operazioni tra il conto dell'agente e i clienti."
 
 msgid " means %1."
 msgstr " indica %1."
@@ -329,7 +329,7 @@ msgid "%1 provides demo facilities to practise your trading strategy with virtua
 msgstr "%1 fornisce servizi di dimostrazione per sperimentare le tue strategie di trading con fondi virtuali. Passa al conto di prova utilizzando il riquadro a discesa nell'angolo superiore destro dello schermo."
 
 msgid "%1 provides institutional clients around the world with market quotes and trade execution across a wide range of assets, including major currency pairs, spot metals, stocks, stock indices, popular cryptocurrencies, and Synthetic indices."
-msgstr ""
+msgstr "%1 fornisce i clienti istituzionali di tutto il mondo con delle quotazioni di mercato e delle esecuzioni di trade in un'ampia gamma di asset, incluse le coppie di valute principali, metalli spot, azioni, indici azionari, indici sintetici e criptovalute popolari."
 
 msgid "%1 provides the client with best execution by utilising a smart aggregation method when managing incoming orders. The smart aggregation method works by"
 msgstr "%1 fornisce al cliente la migliore esecuzione utilizzando un metodo di aggregazione intelligente nella gestione degli ordini in entrata. Tale metodo funziona in questo modo:"
@@ -365,7 +365,7 @@ msgid "%1 takes home first prize in the Financial Trading Operator category at t
 msgstr "%1 ottiene il primo premio nella categoria Financial Trading Operator durante la prestigiosa cerimonia degli EGR Operator Awards 2015, tenutasi a Londra."
 
 msgid "%1 trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "Il trading %1 può diventare una vera e propria dipendenza, così come qualsiasi altra attività spinta al limite. Per evitare il pericolo di tale dipendenza, ti forniamo un controllo della situazione in grado di offrirti regolarmente la sintesi dei tuoi trade e dei tuoi account."
 
 msgid "%1 tries to maintain a reasonable relation between the quoted prices of each underlying asset that a Binary Option refers to and the actual market prices of such an asset. %1 makes no warranty, expressed or implied, that the quoted prices represent prevailing market prices."
 msgstr "%1 si impegna a mantenere una relazione ragionevole tra i prezzi quotati di ogni asset sottostante a cui si riferisce un'opzione binaria e gli effettivi prezzi di mercato di tale asset. %1 non garantisce, espressamente o implicitamente, che i prezzi quotati rappresentino i prezzi di mercato prevalenti."
@@ -758,10 +758,10 @@ msgid "A bachelor's degree in commerce or any business-related field, law, or ri
 msgstr "Una laurea breve in economia e commercio o un ambito legato al business, oppure in giurisprudenza o gestione del rischio"
 
 msgid "A binary option is a contract in which one party undertakes to pay the other party a specified amount if the value of a given asset changes in a specific direction within a predetermined period. The major underlying asset class for binary options offered by the Company is Synthetic Indices."
-msgstr ""
+msgstr "Un'opzione binaria è un contratto in cui una parte si impegna a versare a un'altra parte un importo prestabilito se il valore di un dato asset cambia in una direzione precisa entro un certo periodo di tempo. La principale categoria di asset sottostanti per le opzioni binarie offerta dalla Società sono gli indici sintetici."
 
 msgid "A binary option is a contract in which one party undertakes to pay the other party a specified amount if the value of a given asset changes in a specific direction within a predetermined period. The three major underlying asset classes for binary options offered by the Company are"
-msgstr ""
+msgstr "Un'opzione binaria è un contratto in cui una parte si impegna a versare a un'altra parte un importo prestabilito se il valore di un dato asset cambia in una direzione precisa entro un certo periodo di tempo. La Società offre tre principali categorie di asset sottostanti per le opzioni binarie:"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct."
 msgstr "Un'opzione binaria è un contratto acquistato da un trader, in base al quale viene pagato un importo prestabilito se la sua previsione è corretta."
@@ -968,7 +968,7 @@ msgid "About the Company and these Terms"
 msgstr "Informazioni su Società e Termini presenti"
 
 msgid "Abusively or fraudulently use, for any purpose, the Application Program Interface (API) of %1."
-msgstr ""
+msgstr "Utilizzare abusivamente o in maniera fraudolenta l'interfaccia di programmazione dell'applicazione (API) di %1."
 
 msgid "Accept"
 msgstr "Accetta"
@@ -1157,13 +1157,13 @@ msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier
 msgstr "Aggiungi +/– per definire una compensazione della barriera. Per esempio, +0,005 indica che una barriera è superiore di 0,005 rispetto al punto di entrata."
 
 msgid "Add a cryptocurrency account"
-msgstr ""
+msgstr "Aggiungi un conto per criptovalute"
 
 msgid "Add a description and click %1Save%2 to complete the registration."
 msgstr "Aggiungi una descrizione e clicca su %1Salva%2 per completare la registrazione."
 
 msgid "Add a fiat currency account"
-msgstr ""
+msgstr "Aggiungi un conto per valute fiat"
 
 msgid "Add account"
 msgstr "Aggiungi conto"
@@ -1175,10 +1175,10 @@ msgid "Add funds"
 msgstr "Aggiungi fondi"
 
 msgid "Add new account"
-msgstr ""
+msgstr "Aggiungi un nuovo conto"
 
 msgid "Add new crypto account"
-msgstr ""
+msgstr "Aggiungi un nuovo conto per criptovalute"
 
 msgid "Additional business exposure:"
 msgstr "Ulteriore esposizione commerciale:"
@@ -1532,7 +1532,7 @@ msgid "Any disputes, controversy, or claims that arise out of or relating to thi
 msgstr "Dispute, controversie e contenziosi relativi al presente Contratto sollevati contro la Società verranno arbitrati e infine risolti da una società di mediazione selezionata dalla Società. La lingua da usare nell'arbitrato è l'inglese. La sentenza dell'arbitro sul lodo arbitrale può essere impugnata presso qualsiasi tribunale della giurisdizione competente. Gli eventuali costi di tale mediazione saranno sostenuti dall'Associato."
 
 msgid "Any event capable of having a material adverse effect on the Agent's ability to perform any of their duties and obligations in accordance with this agreement"
-msgstr ""
+msgstr "Qualsiasi evento che potrebbe avere sostanziali ripercussioni negative sulla capacità dell'agente di onorare i propri doveri e obblighi ai sensi del presente contratto"
 
 msgid "Any failure on the Programmer's part to maintain the security of any security devices or procedures used in or in association with the %1 API"
 msgstr "Qualsiasi mancanza del Programmatore nel mantenere la sicurezza delle procedure e dei dispositivi di sicurezza utilizzati per l'API di %1 o insieme ad essa"
@@ -1544,7 +1544,7 @@ msgid "Any information given on these pages, and/or emails or newsletters sent b
 msgstr "Qualsiasi informazioni fornita su queste pagine e/o attraverso email o newsletter inviate dalla Società ad esse connesse non sono da intendersi come consiglio finanziario o di investimento. La Società non si riterrà in nessun modo responsabile a tal riguardo."
 
 msgid "Any information that the Agent has provided or will provide to the Company in relation to the Agent's financial position, domicile, or other matters is accurate and not misleading."
-msgstr ""
+msgstr "tutte le informazioni personali fornite alla Società dall'Agente circa situazione finanziaria, domicilio o altri aspetti sono accurate e non fuorvianti."
 
 msgid "Any information which the client provides or have provided to the Company in respect of their financial position, domicile, or other matters is accurate and not misleading in any material respect."
 msgstr "Tutte le informazioni fornite alla Società dal cliente riguardanti la propria posizione finanziaria, il domicilio o altri ambiti sono accurate e non fuorvianti in ogni aspetto sostanziale."
@@ -2459,7 +2459,7 @@ msgid "CFDs"
 msgstr "CFD"
 
 msgid "CFDs Account"
-msgstr ""
+msgstr "Conto per CFD"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. %1 of retail investor accounts lose money when trading CFDs with Deriv Investments (Europe) Limited. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
 msgstr "I CFD sono strumenti complessi che implicano un rischio elevato di perdite rapide di denaro a causa della leva finanziaria. %1 degli investitori al dettaglio subisce perdite effettuando trading su CFD con Deriv Investments (Europe) Limited. Ti invitiamo a valutare se sei effettivamente in grado di comprendere il funzionamento dei CFD e nelle condizioni di correre l'elevato rischio di perdere del denaro."
@@ -2471,7 +2471,7 @@ msgid "CFDs on commodities"
 msgstr "CFD sulle materie prime"
 
 msgid "CFDs on cryptocurrencies"
-msgstr ""
+msgstr "CFD su criptovalute"
 
 msgid "CFDs on stock indices"
 msgstr "CFD su indici azionari"
@@ -2717,10 +2717,10 @@ msgid "Choose from three main trade types:"
 msgstr "Scegli fra tre tipologie di trade principali:"
 
 msgid "Choose one of your accounts"
-msgstr ""
+msgstr "Scegli un conto"
 
 msgid "Choose one of your accounts or add a new account"
-msgstr ""
+msgstr "Scegli uno dei tuoi conti oppure aggiungine uno nuovo"
 
 msgid "Choose one of your accounts or add a new cryptocurrency account"
 msgstr "Scegli uno dei tuoi conti oppure aggiungi un conto per criptovalute"
@@ -2780,13 +2780,13 @@ msgid "Click OK to proceed."
 msgstr "Clicca OK per procedere."
 
 msgid "Click here to open a Multipliers Account"
-msgstr ""
+msgstr "Clicca qui per aprire un conto per moltiplicatori"
 
 msgid "Click here to open a Real Account"
 msgstr "Clicca qui per aprire un conto reale"
 
 msgid "Click here to open an Options account"
-msgstr ""
+msgstr "Clicca qui per aprire un conto per le opzioni"
 
 msgid "Click here to retry"
 msgstr "Clicca qui per riprovare"
@@ -2870,13 +2870,13 @@ msgid "Clients need to satisfy at least two of the following criteria in order t
 msgstr "I clienti devono soddisfare almeno due dei seguenti criteri al fine di ricevere lo status di cliente professionista:"
 
 msgid "Clients registered with Deriv (Europe) Limited can refer their complaints to the Malta Gaming Authority via the %1Player Support Unity%3. They can file their unresolved disputes with the European Commission’s %2Online Dispute Resolution (ODR)%3."
-msgstr "I clienti registrati con Deriv (Europe) Limited possono inviare i reclami alla Malta Gaming Authority tramite l'%1unità di supporto per i giocatori%3. È possibile archiviare le controversie irrisolte tramite la piattaforma %2Risoluzione online delle controversie (ODR)%3 della Commissione europea."
+msgstr "I clienti registrati con Deriv (Europe) Limited possono inviare reclami alla Malta Gaming Authority tramite l'%1unità di supporto per i giocatori%3. È possibile archiviare le controversie irrisolte tramite la piattaforma %2Risoluzione online delle controversie (ODR)%3 della Commissione europea."
 
 msgid "Clients registered with Deriv (MX) Ltd can formally submit a complaint to their local Supervisory Authority."
 msgstr "I clienti registrati con Deriv (MX) Ltd possono presentare un ricorso formale all'autorità di sorveglianza locale."
 
 msgid "Clients registered with Deriv (MX) Ltd can raise their unresolved disputes with the alternative dispute resolution entity IBAS by filing the adjudication form on the %1ADR entity's website%2."
-msgstr "I clienti registrati con Deriv (MX) Ltd possono sollevare eventuali controversie non risolte all'IBAS, organo alternativo per la risoluzione delle controversie (ADR), compilando il modulo di attribuzione presente sul %1sito web di ADR%2."
+msgstr "I clienti registrati con Deriv (MX) Ltd possono aprire eventuali controversie irrisolte presso IBAS, organo alternativo per la risoluzione delle controversie (ADR), compilando il modulo di attribuzione presente sul %1sito web di ADR%2."
 
 msgid "Clients registered with Deriv Investments (Europe) Limited can raise their unresolved disputes with the Office of the Arbiter for Financial Services. Contact details and guidance on making a complaint with the Arbiter's Office can be found %1here%2."
 msgstr "Clienti registrati con Deriv Investments (Europe) Limited possono presentare eventuali controversie non risolte rivolgendosi all'ufficio dell'Arbitro per i Servizi Finanziari. Contatti e linee guida su come presentare un reclamo all'ufficio dell'Arbitro possono essere trovati %1qui%2."
@@ -3428,13 +3428,13 @@ msgid "Create New Demo Account"
 msgstr "Crea un nuovo conto di prova"
 
 msgid "Create a CFDs account"
-msgstr ""
+msgstr "Crea un conto per CFD"
 
 msgid "Create a MetaTrader 5 account"
 msgstr "Crea un conto MetaTrader 5"
 
 msgid "Create a New Demo Account"
-msgstr ""
+msgstr "Crea un nuovo conto di prova"
 
 msgid "Create a cryptocurrency account"
 msgstr "Crea un conto per criptovalute"
@@ -3452,10 +3452,10 @@ msgid "Create an MT5 account now"
 msgstr "Crea ora un conto MT5"
 
 msgid "Create an MT5 password for logging in to your CFDs account."
-msgstr ""
+msgstr "Crea una nuova password MT5 per accedere al conto per CFD."
 
 msgid "Create an MT5 password. You can use this password for all your MT5 accounts."
-msgstr ""
+msgstr "Crea una password MT5, potrai usarla per tutti i conti MT5."
 
 msgid "Create and maintain wireframes and mockups for new and existing products"
 msgstr "Creare e mantenere wireframe e modelli per i prodotti esistenti e quelli nuovi"
@@ -3479,7 +3479,7 @@ msgid "Create mathematical/statistical models for pricing, analyse fat tails to 
 msgstr "Creare modelli matematici/statistici per i prezzi, analizzare il rischio di coda asimmetrica (fat tail) per valutare i requisiti di margine e gestire i rischi legati a opzioni esotiche, Forex e CFD"
 
 msgid "Create new Demo account"
-msgstr ""
+msgstr "Crea un nuovo conto di prova"
 
 msgid "Create new token"
 msgstr "Crea un nuovo token"
@@ -3632,7 +3632,7 @@ msgid "DIEL RTS28 for 2020"
 msgstr "DIEL RTS28 per 2020"
 
 msgid "DIEL forms part of %1the Investor Compensation Scheme%2 (the \"Scheme\"), which is a rescue fund for investors that are clients of failed investment firms licensed by the MFSA. The Scheme covers 90% of the Company's net liability to a client in respect of investments that qualify for compensation under the Investment Services Act subject to a maximum payment to any one person of €20,000. The Scheme is based on EC Directive 97/9."
-msgstr "DIEL fa parte dell'Investor Compensation Scheme (il \"sistema\") ossia un fondo di salvataggio per gli investitori che sono clienti di società d'investimento fallite, autorizzato dalla MFSA. Il sistema copre il 90% della responsabilità diretta della Società verso un cliente rispetto a investimenti per cui è previsto un indennizzo secondo l'Investment Services Act, soggetto al pagamento di un importo massimo pari a €20.000 per ciascun soggetto. Il sistema si basa sulla Direttiva 97/9/CE."
+msgstr "DIEL rientra nel%1sistema di indennizzo degli investitori%2 (il \"sistema\"): si tratta di un fondo di salvataggio per gli investitori che sono clienti di società d'investimento fallite, autorizzato dalla MFSA. Il sistema copre il 90% della responsabilità diretta della Società verso un cliente in relazione agli investimenti idonei a ricevere un indennizzo secondo l'Investment Services Act, soggetto al pagamento di un importo massimo pari a 20.000 € per ciascun individuo. Il sistema si basa sulla Direttiva 97/9/CE."
 
 msgid "DIEL has the duty to disclose all the circumstances that are material to the product or services that it provides to the clients before and during the provision of such product and/or service. DIEL is obliged to do so in accordance with its licensed activities."
 msgstr "DIEL è tenuta a diffondere tutte le circostanze rilevanti per i prodotti e i servizi forniti ai clienti prima e durante la fornitura degli stessi, in conformità alle attività autorizzate."
@@ -3644,13 +3644,13 @@ msgid "DIEL is authorised and regulated by the Malta Financial Services Authorit
 msgstr "DIEL è autorizzata e regolamentata dalla Malta Financial Services Authority (\"MFSA\") ai sensi della legge Investment Services Act (cap. 370, legislazione di Malta) (di seguito la \"Legge\") a effettuare attività di investimento. Inoltre è autorizzata e regolamentata in misura limitata dalla Financial Conduct Authority nel Regno Unito. Su richiesta, possiamo fornire i dettagli relativi all'autorizzazione e alle normative della Financial Conduct Authority. DIEL è autorizzata dalla MFSA a operare in autonomia (per esempio agendo come controparte nei trade) e a eseguire ordini per conto di altri clienti; entrambi i servizi riguardano prodotti finanziari derivati relativi a borsa, indici e prodotti finanziari o asset di altro tipo (\"prodotti finanziari\"). In nessuna circostanza, DIEL non è autorizzata a offrire né offre consulenze finanziarie, legali, fiscali, normative, sugli investimenti o di altro tipo, o alcun tipo di opinione rispetto alle operazioni. I clienti sono invitati a richiedere la consulenza di un professionista indipendente per qualsiasi dubbio circa il trade di prodotti finanziari."
 
 msgid "DIEL is authorised by the MFSA to deal on own account (i.e. offer and act as counterparty to trades) and to execute orders on behalf of other clients; both services are in relation to financial derivative products relating to foreign exchange, indices and other financial products or assets (\"Financial Products\"). DIEL is not authorised to and does not offer investment, financial, legal, tax, regulatory, and/or other types of advice or state an opinion in relation to a Transaction under any circumstances. Clients should get independent advice from an investment adviser if they have any doubts about dealing in financial products."
-msgstr "DIEL è autorizzata dalla MFSA a operare in autonomia (per esempio agendo come controparte nei trade) e a eseguire ordini per conto di altri clienti; entrambi i servizi riguardano prodotti finanziari derivati relativi alla borsa, indici e prodotti finanziari o asset di altro tipo (\"prodotti finanziari\"). DIEL non è autorizzata a offrire né offre consulenze finanziarie, legali, fiscali, normative, sugli investimenti o di altro tipo, o alcun tipo di opinione rispetto alle operazioni. I clienti sono invitati a richiedere la consulenza di un professionista indipendente per qualsiasi dubbio circa il trade di prodotti finanziari."
+msgstr "DIEL è autorizzata dalla MFSA a operare in autonomia (per esempio agendo come controparte nei trade) e a eseguire ordini per conto di altri clienti; entrambi i servizi riguardano prodotti finanziari derivati relativi alla borsa, indici e prodotti finanziari o asset di altro tipo (\"prodotti finanziari\"). DIEL non è autorizzata a offrire né offre consulenze finanziarie, legali, fiscali, normative e/o di altro tipo, o alcun tipo di opinione rispetto alle transazioni in alcuna circostanza. I clienti sono invitati a richiedere la consulenza di un consulente finanziario indipendente per qualsiasi dubbio circa il trade di prodotti finanziari."
 
 msgid "DIEL is entitled under the Rules to rely upon information provided by clients. Clients should ensure that they provide DIEL with accurate and complete information and notify DIEL in the event that any information supplied to DIEL changes. Clients should note that if they provide DIEL with inaccurate information, or if they fail to notify DIEL of any changes to information previously supplied by them, this may adversely affect the quality of the services that DIEL can provide."
-msgstr "Ai sensi dei regole, DIEL è autorizzata a fare affidamento sulle informazioni fornite dai clienti. Questi ultimi devono assicurare di fornire a DIEL informazioni complete e accurate e di comunicare eventuali modifiche alle stesse; nel caso in cui fornissero informazioni inesatte o non comunicassero a DIEL eventuali modifiche alle stesse, i servizi offerti da DIEL potrebbero esserne intaccati."
+msgstr "Secondo le regole, DIEL è autorizzata a fare affidamento sulle informazioni fornite dai clienti. Questi ultimi devono assicurare di fornire a DIEL informazioni complete e accurate e di comunicare eventuali modifiche alle stesse. Nel caso in cui fornissero informazioni inesatte o non comunicassero a DIEL eventuali modifiche a informazioni precedentemente fornite, la qualità servizi offerti da DIEL potrebbe riscontrare conseguenze negative."
 
 msgid "DIEL is required to do so in accordance with any relevant law or regulation."
-msgstr "DIEL è tenuta ad agire in tal senso ai sensi di eventuali leggi o regolamenti."
+msgstr "DIEL è tenuta ad agire in tal senso in base a eventuali leggi o regolamenti."
 
 msgid "DIEL reserves the right to accept or refuse any requests for change in classification."
 msgstr "DIEL si riserva il diritto di accettare o rifiutare eventuali richieste per modificare la categoria."
@@ -3803,7 +3803,7 @@ msgid "Depending on the jurisdiction to which a client's account has been attach
 msgstr "A seconda della giurisdizione a cui il conto di un cliente è stato associato, in conformità alle procedure di apertura del conto riportate sul sito, alla tipologia di prodotti offerti e come illustrato in dettaglio nella sezione Chi siamo del sito stesso, il termine \"la Società\" si riferisce a"
 
 msgid "Depending on the jurisdiction to which a client's account has been attached in accordance with the account opening procedures of the website, the terms 'the Company' and '%1' shall denote"
-msgstr "A seconda della giurisdizione a cui il conto del Cliente è stato associato e in conformità con le procedure di apertura del conto riportate sul sito web, i termini \"la Società\" e \"%1\" si riferiscono a:"
+msgstr "A seconda della giurisdizione a cui il conto del cliente è stato associato in conformità alle procedure di apertura del conto riportate sul sito web, i termini \"la Società\" e \"%1\" si riferiscono a:"
 
 msgid "Depending on the level of risk that the Company is exposed to while acting as the client's counterparty, the Company acts largely in a principal capacity of the client's trades. As such, the execution venue will usually be %1. However, the Company may transmit the client's order to third-party liquidity providers, in which case the Company will determine the execution venue on the basis described above."
 msgstr "In base al livello di rischio a cui è esposta agendo in qualità di controparte del Cliente, la Società agisce largamente in qualità di mandante dei trade del Cliente. In quanto tale, la sede di esecuzione sarà normalmente %1. Tuttavia, la Società può trasmettere l'ordine del Cliente a fornitori di liquidità terzi, nel qual caso stabilirà la sede di esecuzione sulla base dei criteri descritti sopra."
@@ -3833,13 +3833,13 @@ msgid "Deposit in your local currency via an authorised, independent payment age
 msgstr "Deposita fondi nella tua valuta locale tramite un agente di pagamento autorizzato e indipendente del tuo Paese."
 
 msgid "Deposit now"
-msgstr "Deposita adesso"
+msgstr "Deposita ora"
 
 msgid "Deposit or withdraw below"
 msgstr "Deposita o preleva qui sotto"
 
 msgid "Deposit via bank wire, credit card, and e-wallet"
-msgstr "Depositi tramite bonifico bancario, carta di credito e portafoglio elettronico"
+msgstr "Deposita tramite bonifico bancario, carta di credito e portafoglio elettronico"
 
 msgid "Deposit via bank wire, credit card, and e-wallet."
 msgstr "Depositi tramite bonifico bancario, carta di credito e portafoglio elettronico."
@@ -3863,7 +3863,7 @@ msgid "Deposits and/or payments due are to be made in the currency chosen by the
 msgstr "I depositi e/o i pagamenti devono essere effettuati nella valuta scelta dal cliente tra quelle specificate di volta in volta da DIEL."
 
 msgid "Deposits are temporarily unavailable due to system maintenance. You can make your deposits when the maintenance is complete."
-msgstr "I depositi non sono momentaneamente disponibili a causa della manutenzione del sistema; potrai effettuarli a manutenzione finita."
+msgstr "I depositi non sono momentaneamente disponibili a causa di lavori di manutenzione al sistema. Sarà possibile realizzare questa operazione non appena la manutenzione si sarà conclusa."
 
 msgid "Deriv"
 msgstr "Deriv"
@@ -3947,7 +3947,7 @@ msgid "Deriv Investments (Europe) Limited"
 msgstr "Deriv Investments (Europe) Limited"
 
 msgid "Deriv Investments (Europe) Limited aggregates the Bid and Ask prices from a pool of liquidity providers to determine and offer the client the best available price of the instrument. The Company is always the final counterparty to the client's Transactions. The Company may execute Orders on behalf of its client, wherein the Company will act as a broker and pass on the Order to the liquidity provider for execution. Alternatively, the Company may also keep the client's Order on its own account, wherein the Company will take the other side of the client's trade. It is further noted that the Company may make a profit as a result of the client's losses and vice-versa. Further details can be found under Conflicts of interest policy and Order execution policy."
-msgstr "Deriv Investments (Europe) Limited raccoglie i prezzi di acquisto e vendita da un pool di fornitori di liquidità per determinare e offrire il miglior prezzo disponibile per un dato strumento. La Società è sempre la controparte finale nelle operazioni del cliente; può eseguire ordini a nome dei clienti, agendo in qualità di broker e passando gli ordini al fornitore di liquidità perché li esegua. In alternativa, può tenere l'ordine del Cliente sul proprio conto, facendosi così carico dei suoi trade. Va inoltre considerato che la Società potrebbe realizzare profitti in conseguenza delle perdite del Cliente, e viceversa. Per ulteriori dettagli, ti invitiamo a prendere visione della policy sul conflitto di interessi e della policy sull'esecuzione degli ordini."
+msgstr "Deriv Investments (Europe) Limited raccoglie i prezzi di acquisto e vendita da un pool di fornitori di liquidità per determinare e offrire il miglior prezzo disponibile per un dato strumento. La Società è sempre la controparte finale nelle operazioni del cliente e può eseguire ordini a suo nome, agendo in qualità di broker e passando gli ordini al fornitore di liquidità perché li esegua. In alternativa, la Società può tenere l'ordine del cliente sul proprio conto, diventando in questo modo controparte nei trade. Va inoltre considerato che la Società potrebbe realizzare profitti dalle perdite del cliente, e viceversa. Per ulteriori dettagli, consultare la politica sul conflitto di interessi e sull'esecuzione degli ordini."
 
 msgid "Deriv Investments (Europe) Limited and Deriv (Europe) Limited: Malta"
 msgstr "Deriv Investments (Europe) Limited e Deriv (Europe) Limited: Malta"
@@ -3959,7 +3959,7 @@ msgid "Deriv Investments (Europe) Limited is a company established in Malta, at 
 msgstr "Deriv Investments (Europe) Limited è una società con sede a Malta, W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033; possiede una licenza per Malta ed è regolamentata dalla Malta Financial Services Authority, Triq l-Imdina, zona 1, Central Business District, Birkirkara CBD 1010, Malta ai sensi della legge Investments Services Act al fine di fornire servizi finanziari nell'Unione europea."
 
 msgid "Deriv Investments (Europe) Limited is entitled to provide services in another EU Member State through EU passporting rights. Refer to the map below for the list of EU countries that have access to %1 via EU passporting rights - freedom to provide cross border services."
-msgstr "Deriv Investments (Europe) Limited ha il diritto di fornire servizi in un altro Stato membro dell'UE in virtù dei diritti conferiti dal passaporto europeo. Fare riferimento alla mappa qui sotto per l'elenco dei paesi dell'UE che hanno accesso a %1 in virtù del passaporto europeo, libertà di fornire servizi transfrontalieri."
+msgstr "Deriv Investments (Europe) Limited ha il diritto di fornire servizi in un altro Stato membro dell'UE in virtù dei diritti conferiti dal passaporto europeo. Fare riferimento alla mappa qui sotto per l'elenco dei paesi dell'UE che hanno accesso a %1 in virtù dei diritti sopra menzionati, quali la libertà di fornire servizi transfrontalieri."
 
 msgid "Deriv Investments (Europe) Limited is required to collect your tax information."
 msgstr "Deriv Investments (Europe) Limited ha l'obbligo di richiedere i tuoi dati fiscali."
@@ -4379,7 +4379,7 @@ msgid "Earn additional income with us as you grow your community of potential an
 msgstr "Guadagna un reddito aggiuntivo con noi aumentando la tua rete di contatti di trader online, effettivi e potenziali, e offrendo loro mentoring e spunti utili relativi al trading."
 
 msgid "Earn daily commission on your referred clients' trades on the %1 MetaTrader 5 (MT5) platform. Your total commission will be credited into your account at the end of every day."
-msgstr "Ricevi commissioni giornaliere sui trade dei clienti introdotti da te sulla piattaforma MetaTrader 5 (MT5) di %1. Le commissioni totali verranno accreditate sul conto a fine giornata, ogni giorno."
+msgstr "Ricevi commissioni giornaliere sui trade dei clienti introdotti da te sulla piattaforma MetaTrader 5 (MT5) di %1. Le commissioni totali verranno accreditate sul conto alla fine di ogni giorno."
 
 msgid "Earn money for any verifiable errors that you find."
 msgstr "Guadagna denaro per ogni errore verificabile che riscontri."
@@ -4400,10 +4400,10 @@ msgid "Earn when your clients trade on an MT5 Financial account."
 msgstr "Guadagna quando i tuoi clienti fanno trading con un conto finanziario MT5."
 
 msgid "Earn when your clients trade on an MT5 Synthetics account."
-msgstr "Guadagna quando i tuoi clienti fanno trading con un conto per indici sintetici di MT5."
+msgstr "Guadagna quando i tuoi clienti fanno trading con un conto MT5 per indici sintetici."
 
 msgid "Easy to set up – no installation required."
-msgstr "Facile da configurare, senza obbligo d'installazione."
+msgstr "Facile da configurare, senza obbligo di installazione."
 
 msgid "Economic Calendar"
 msgstr "Calendario economico"
@@ -4463,7 +4463,7 @@ msgid "Enable %1two-factor authentication%2 on your account."
 msgstr "Attiva l'%1autenticazione a due fattori%2 sul tuo conto."
 
 msgid "Enable camera"
-msgstr "Abilita fotocamera"
+msgstr "Attiva fotocamera"
 
 msgid "Enable two-factor authentication for an extra layer of security."
 msgstr "Abilita l'autenticazione a due fattori per un ulteriore livello di sicurezza."
@@ -4517,7 +4517,7 @@ msgid "Enjoy our fastest type of trading with our Tick Trade app, wherever you a
 msgstr "Goditi la nostra tipologia di trading più veloce con la nostra app Tick Trade, ovunque ti trovi."
 
 msgid "Enlarge image"
-msgstr "Allarga l'immagine"
+msgstr "Ingrandisci l'immagine"
 
 msgid "Ensure that your original documents are ready when the video call starts"
 msgstr "Assicurati che i documenti originali siano pronti quando inizia la videochiamata"
@@ -4541,7 +4541,7 @@ msgid "Enter the authentication code generated by the app below:"
 msgstr "Inserisci il codice di autenticazione generato dalla app qui sotto:"
 
 msgid "Enter your MT5 password to add a %1 %2 account."
-msgstr ""
+msgstr "Inserisci la password MT5 per aggiungere un conto %1 %2."
 
 msgid "Enter your document number"
 msgstr "Inserisci il numero di documento"
@@ -4634,7 +4634,7 @@ msgid "Euro vs US dollar"
 msgstr "Euro vs dollaro statunitense"
 
 msgid "European Union residents who wish to trade investment products will have their accounts opened with Deriv Investments (Europe) Limited."
-msgstr "I soggetti residenti nell'Unione Europea che desiderano fare trading con i prodotti di investimento, apriranno il proprio account con Deriv Investments (Europe) Limited."
+msgstr "I soggetti residenti nell'Unione europea che desiderano fare trading con i prodotti di investimento, apriranno il proprio conto con Deriv Investments (Europe) Limited."
 
 msgid "Evaluate and improve the effectiveness of internal controls, risk management, regulatory compliance, financial and operational processes"
 msgstr "Valutare e migliorare l'efficacia di controlli interni, gestione del rischio, conformità normativa, processi operativi e finanziari"
@@ -4721,7 +4721,7 @@ msgid "Excluded from the website until"
 msgstr "Esclusione dal sito fino a"
 
 msgid "Exclusive Markets Ltd"
-msgstr ""
+msgstr "Exclusive Markets Ltd"
 
 msgid "Exclusive binary trading technology."
 msgstr "Tecnologia esclusiva per il trading binario."
@@ -4970,7 +4970,7 @@ msgid "FX-majors, FX-minors, FX-exotics, Cryptocurrencies"
 msgstr "FX-maggiori, FX-minori, FX-esotiche, criptovalute"
 
 msgid "Face forward and make sure your eyes are clearly visible"
-msgstr "Viso verso la camera e occhi ben visibili"
+msgstr "Volto verso la fotocamera e occhi ben visibili"
 
 msgid "Face photo page"
 msgstr "Pagina per fotografia del volto"
@@ -5054,7 +5054,7 @@ msgid "Fiat"
 msgstr "Fiat"
 
 msgid "Fiat currencies"
-msgstr "Moneta Fiat"
+msgstr "Valute Fiat"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public."
 msgstr "Dopo quindici anni continuiamo ancora a innovarci, a crescere e a lavorare sui nuovi metodi per servire meglio i nostri clienti. Per la prima volta, offriamo trade a breve termine touch/no touch e introduciamo una nuova applicazione di grafici. Riteniamo di avere la piattaforma in opzioni digitali più competitiva e completa oggi disponibile sul mercato."
@@ -5078,7 +5078,7 @@ msgid "File size exceeded."
 msgstr "Volume del file superato."
 
 msgid "File type not supported"
-msgstr "Il tipo di file non è supportato"
+msgstr "Tipo di file non supportato"
 
 msgid "Filtering Controls"
 msgstr "Filtro dei controlli"
@@ -5129,7 +5129,7 @@ msgid "Find a trading platform that suits your experience and preferred strategy
 msgstr "Trova la piattaforma di trading che più si adatta alla tua esperienza e strategia preferita, a prescindere dal tuo livello di conoscenza del trading."
 
 msgid "Find out more"
-msgstr ""
+msgstr "Scopri di più"
 
 msgid "Find out more about the costs and details of each CFD asset we offer."
 msgstr "Scopri di più sui costi e i dettagli di ogni asset CFD che offriamo."
@@ -5198,7 +5198,7 @@ msgid "Food Services"
 msgstr "Servizi di ristorazione"
 
 msgid "For cryptocurrency assets, a deal for 1 lot of BTC/USD (with a BTC to USD exchange rate of USD 50,000) will pay out USD 10 in commission based on the following formula:"
-msgstr "Per le criptovalute, 1 lotto di BTC/USD (con un tasso di cambio da BTC a USD di 50.000 USD) genera un guadagno di 10 USD in commissioni calcolato sulla base della formula seguente:"
+msgstr "Per gli asset delle criptovalute, 1 lotto di BTC/USD (con un tasso di cambio da BTC a USD di 50.000 USD) genera un guadagno di 10 USD in commissioni calcolato sulla base della formula seguente:"
 
 msgid "For details on submitting a complaint to the Company's lead supervisory authority on data processing practices, the client is encouraged to check %1's %2Complaints and disputes%3 section."
 msgstr "Per maggiori informazioni sulla presentazione di un reclamo all'autorità di vigilanza della Società circa le modalità di elaborazione dei dati, invitiamo il cliente a consultare la sezione %2Reclami e controversie%3 di %1."
@@ -5240,7 +5240,7 @@ msgid "For forex, a deal for 1 lot of EUR/USD will pay out EUR 2.5 in commission
 msgstr "Per il Forex, 1 lotto di EUR/USD rende 2,5 EUR in commissioni sulla base della formula seguente:"
 
 msgid "For forex, a deal for 1 lot will pay out USD 2 in commission based on the following formula (using EUR/USD as an example):"
-msgstr "Per il Forex, un lotto rende 2 USD di commissioni in bassa alla formula seguente (esempio in EUR/USD):"
+msgstr "Per il Forex, un lotto rende 2 USD di commissioni in base alla formula seguente (esempio in EUR/USD):"
 
 msgid "For forex, your commission is represented in the base currency (EUR in the above example)."
 msgstr "Per il Forex, la commissione è nella valuta di base (EUR nell'esempio sopra)."
@@ -5342,7 +5342,7 @@ msgid "From account: "
 msgstr "Dal conto: "
 
 msgid "From time to time, DIEL may decide to provide the client with written or video information, which DIEL may publish on its website or provide to the client in any other manner. DIEL will endeavour to ensure the accuracy and completeness of this information, but it will not constitute independent investment research or investment advice provided by DIEL to the client."
-msgstr "In nessun caso la DIEL fornirà consulenza legale, finanziaria, normativa, fiscale o di altro tipo sugli investimenti, né esprimerà un giudizio rispetto a un'operazione. DIEL potrebbe decidere, di volta in volta, di fornire al cliente informazioni in forma scritta o di video che possono essere pubblicate sul suo sito oppure trasmesse in altro modo; si impegnerà ad assicurare l'accuratezza e la completezza di tali informazioni, ma ciò non costituisce uno studio indipendente sugli investimenti o una consulenza finanziaria da parte sua verso il cliente."
+msgstr "DIEL potrebbe decidere, di volta in volta, di fornire al cliente informazioni per iscritto o sotto forma di video attraverso la pubblicazione sul sito web o in altro modo. DIEL si impegnerà ad assicurare l'accuratezza e la completezza di tali informazioni, che non costituiranno tuttavia una ricerca o una consulenza finanziaria sugli investimenti indipendente fornita da DIEL al cliente."
 
 msgid "From your MT5 trading terminal, click on the %1Signals%2 tab to view the list of signal providers."
 msgstr "Vai al terminale di trading MT5, quindi fai clic sulla scheda %1indicatori%2 per visualizzare l'elenco dei fornitori."
@@ -5399,7 +5399,7 @@ msgid "GAMSTOP is a free service that enables you to self-exclude from all onlin
 msgstr "GAMSTOP è un servizio gratuito che ti permette di autoescluderti da qualsiasi società di gioco d'azzardo online autorizzata in Gran Bretagna. Per scoprire di più e registrarti, vai su %1."
 
 msgid "GBE Brokers Ltd"
-msgstr ""
+msgstr "GBE Brokers Ltd;"
 
 msgid "GBP Index – Measures the value of the British Pound against a basket of five global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
 msgstr "Indice GBP: misura il valore della Sterlina britannica rispetto a un paniere di cinque valute globali (USD, EUR, AUD, JPY, CAD), ciascuna ponderata del 20%"
@@ -5408,7 +5408,7 @@ msgid "GBP/USD currency pair and its bid-ask price."
 msgstr "Coppia di valuta GBP/USD e il suo prezzo d'acquisto/vendita."
 
 msgid "GC Exchange Limited"
-msgstr ""
+msgstr "GC Exchange Limited"
 
 msgid "GDPR"
 msgstr "GDPR"
@@ -5480,7 +5480,7 @@ msgid "Get your price"
 msgstr "Ottieni il tuo prezzo"
 
 msgid "Get your secure link"
-msgstr "Ottieni il tuo link sicuro"
+msgstr "Ottieni il link sicuro"
 
 msgid "Getting Started"
 msgstr "Per iniziare"
@@ -5531,7 +5531,7 @@ msgid "Go short = sell"
 msgstr "Aprire una posizione short = vendere"
 
 msgid "Go to DTrader"
-msgstr "Vai su DTrader"
+msgstr "Vai a DTrader"
 
 msgid "Go to MT5 download page"
 msgstr "Vai alla pagina di download di MT5"
@@ -5573,7 +5573,7 @@ msgid "Good understanding of payments functionality and a keen interest in crypt
 msgstr "Buona comprensione del funzionamento dei pagamenti e forte interesse per le criprovalute"
 
 msgid "Got it"
-msgstr "Capito"
+msgstr "Ho capito"
 
 msgid "Governing law"
 msgstr "Legge applicabile"
@@ -5588,7 +5588,7 @@ msgid "Government Officers"
 msgstr "Funzionari governativi"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr "Consenti l'accesso alla fotocameta dalle impostazioni del browser"
+msgstr "Consenti l'accesso alla fotocamera dalle impostazioni del browser"
 
 msgid "Graphics Designer"
 msgstr "Graphic Designer"
@@ -5720,7 +5720,7 @@ msgid "Highlights"
 msgstr "In evidenza"
 
 msgid "Hint: You may have chosen a different MT5 password from your %1 log in password."
-msgstr "Suggerimento: forse hai scelto una password per MT5 diversa dalla password per accedere a %1."
+msgstr "Suggerimento: forse hai scelto una password per MT5 diversa dalla quella per accedere a %1."
 
 msgid "Historical Mediterranean island"
 msgstr "Isola mediterranea di interesse storico"
@@ -6146,16 +6146,16 @@ msgid "If you have a Binary real account, go to %1Cashier%2 to withdraw your fun
 msgstr "Se hai un conto reale Binary, vai su %1Cassa%2 per prelevare i fondi."
 
 msgid "If you have a Binary real account, go to %1Portfolio%2 to close or sell any open positions."
-msgstr ""
+msgstr "Se hai un conto Binary, vai su %1Portafoglio%2 per chiudere o vendere eventuali posizioni aperte."
 
 msgid "If you have a DMT5 or Deriv X real account, go to your %1DMT5%2 or %3Deriv X%4 dashboard to withdraw your funds."
-msgstr ""
+msgstr "Se hai un conto reale DMT5 o Deriv X, vai sulla dashboard di %1DMT5%2 o %3Deriv X%4 per prelevare i fondi."
 
 msgid "If you have a DMT5 or Deriv X real account, log in to close any open positions."
 msgstr "Se hai un conto reale DMT5 o Deriv X, accedi a questo e chiudi eventuali posizioni aperte."
 
 msgid "If you have a DMT5 real account, go to your %1DMT5%2 dashboard to withdraw your funds."
-msgstr ""
+msgstr "Se hai un conto reale DMT5, vai sulla Dashboard %1DMT5%2 per prelevare i fondi."
 
 msgid "If you have a DMT5 real account, log in to close any open positions."
 msgstr "Se hai un conto reale DMT5, accedi a questo e chiudi eventuali posizioni aperte."
@@ -6452,7 +6452,7 @@ msgid "In the EU, financial products are offered by Deriv Investments (Europe) L
 msgstr "Nell'UE, i prodotti finanziari sono offerti da Deriv Investments (Europe) Limited, W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority (%1licenza n. IS/70156%2)."
 
 msgid "In the Isle of Man and the UK, virtual-events-based bets on synthetic indices are offered by Deriv (MX) Ltd, Millennium House, Level 1, Victoria Road, Douglas IM2 4RW, Isle of Man; licensed and regulated in Great Britain by (1) the Gambling Commission under %1account no. 39172%3 and by (2) the Gambling Supervision Commission in the Isle of Man (%2view licence%3)."
-msgstr ""
+msgstr "Nell'Isola di Man e nel Regno Unito, le scommesse basate su eventi virtuali su indici sintetici sono fornite fornite da Deriv (MX) Ltd, Millennium House, primo piano, Victoria Road, Douglas IM2 4RW, Isola di Man è autorizzata e regolamentata in Gran Bretagna dalla (1) Gambling Commission tramite %1n. di conto 39172%3 e dalla (2) Gambling Supervision Commission nell'Isola di Man (%2vedere licenza%3)."
 
 msgid "In the UK, our clients trade through Deriv (MX) Ltd and Deriv Investments (Europe) Limited. In the Isle of Man, they trade through Deriv (MX) Ltd. In the European Union (except UK), they trade through Deriv (Europe) Limited and Deriv Investments (Europe) Limited. In the rest of the world, they trade through Deriv (SVG) LLC, Deriv (V) Ltd, Deriv (BVI) Ltd and Deriv (FX) Ltd."
 msgstr "Nel Regno Unito, i nostri clienti effettuano trading attraverso Deriv (MX) Ltd e Deriv Investments (Europe) Limited. Nell'Isola di Man attraverso Deriv (MX) Ltd. Nell'Unione Europea (fatta eccezione per il Regno Unito) attraverso Deriv (Europe) Limited e Deriv Investments (Europe) Limited. Nel resto del mondo attraverso Deriv (SVG) LLC, Deriv (V) Ltd, Deriv (BVI) Ltd e Deriv (FX) Ltd."
@@ -6509,7 +6509,7 @@ msgid "In/Out trades"
 msgstr "Trade Dentro/Fuori"
 
 msgid "Include a disclaimer and/or notice that any intellectual property rights — including any trademark or slogan whatsoever — belong to the Company, and any unauthorised use is strictly prohibited."
-msgstr ""
+msgstr "Includere una dichiarazione di non responsabilità e/o avviso per cui tutti i diritti di proprietà intellettuale — compresi qualsiasi marchio o slogan — appartengono alla Società e qualsiasi utilizzo non autorizzato è severamente proibito."
 
 msgid "Include a disclaimer or notice that the intellectual property rights of the Trademark solely belong to Binary and any use of it is strictly prohibited unless Binary has given such authorisation."
 msgstr "includere una dichiarazione di esclusione di responsabilità o una nota attestante che i diritti di proprietà intellettuale appartengono esclusivamente a Binary e qualsiasi loro uso è strettamente proibito salvo previa autorizzazione di Binary."
@@ -7865,7 +7865,7 @@ msgid "Multipliers"
 msgstr "Moltiplicatori"
 
 msgid "Multipliers Account"
-msgstr ""
+msgstr "Conto per moltiplicatori"
 
 msgid "Must be a clear, colour photo"
 msgstr "Deve essere una foto nitida e a colori"
@@ -8159,7 +8159,7 @@ msgid "Note: Payment Agent transfers are only available for accounts registered 
 msgstr "Nota: i trasferimenti tramite Agente di pagamento sono disponibili solo per i conti registrati con Deriv (SVG) LLC."
 
 msgid "Note: Please switch to your %1 account to change currencies."
-msgstr ""
+msgstr "Attenzione: passa al conto %1 per cambiare valuta."
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
 msgstr "Nota: è previsto un limite di una sola valuta per conto fiat. Puoi modificare la valuta del conto fiat prima di effettuare il primo deposito o di creare un conto MT5. Puoi anche aprire un conto per ogni criptovaluta supportata."
@@ -8372,7 +8372,7 @@ msgid "Open a %1 account through DIEL's website %2"
 msgstr "aprire un conto %1 tramite il sito web di DIEL %2;"
 
 msgid "Open a Multipliers Account"
-msgstr ""
+msgstr "Apri un conto per moltiplicatori"
 
 msgid "Open a Real Account"
 msgstr "Apri un conto reale"
@@ -8429,7 +8429,7 @@ msgid "Options"
 msgstr "Opzioni"
 
 msgid "Options Account"
-msgstr ""
+msgstr "Opzioni del conto"
 
 msgid "Options that let you “look back” on the optimum high or low achieved by the market to determine the payout."
 msgstr "Opzioni che ti permettono di “guardare indietro” al punto più alto o più basso raggiunto dal mercato, per determinare il pagamento."
@@ -10445,7 +10445,7 @@ msgid "Since DIEL exclusively deals on own account in Financial Products, this m
 msgstr "Poiché si occupa esclusivamente del trading di prodotti finanziari per proprio conto, DIEL agisce in qualità di sede esecutiva, e di conseguenza le operazione avviate con essa verranno eseguite al di fuori di un mercato regolamentato (borsa) o un sistema di trading multilaterale."
 
 msgid "Since DIEL is a member of the Malta Investor Compensation Scheme, the client is covered for the first €20,000 of any claim that the client may have in the unlikely event of DIEL suffering an investment default and not being able to meet its obligations. This protection is available only to retail clients. Neither professional clients nor eligible counterparties can benefit from this protection."
-msgstr "Poiché BIEL rientra nel sistema di indennizzo degli investitori, il Cliente è coperto per un totale di 20.000 Euro nell'improbabile circostanza in cui la DIEL risultasse inadempiente rispetto ai propri investimenti, e quindi ai propri obblighi contrattuali. Tale protezione è estesa esclusivamente ai clienti al dettaglio, pertanto né i clienti professionali né eventuali parti autorizzate ne possono beneficiare."
+msgstr "Poiché DIEL rientra nel sistema di indennizzo degli investitori di Malta, il cliente è coperto per i primi 20.000 € richiesti in un eventuale reclamo sollevato nell'improbabile circostanza in cui DIEL risultasse inadempiente rispetto ai propri investimenti, e quindi ai propri obblighi contrattuali. Tale protezione è estesa esclusivamente ai clienti al dettaglio, pertanto né i clienti professionali né eventuali parti autorizzate ne possono beneficiare."
 
 msgid "Since all transactions on the %1 website are fully automated, our pricing and risk management algorithms must fully consider critical factors such as real-time pricing parameters, data feed irregularities, and latencies."
 msgstr "Poiché tutte le operazioni sul sito web %1 sono completamente automatizzate, i nostri algoritmi di gestione dei prezzi e del rischio devono tenere pienamente conto di fattori critici come parametri di determinazione dei prezzi in tempo reale, irregolarità nei feed di dati e latenze."
