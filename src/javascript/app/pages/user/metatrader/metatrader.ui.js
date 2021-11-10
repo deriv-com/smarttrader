@@ -721,7 +721,8 @@ const MetaTraderUI = (() => {
                 getAccountsInfo(account).info.sub_account_type,
                 trading_server.supported_accounts
             ) &&
-            trading_server.id === getAccountsInfo(account).info.server
+            trading_server.id === getAccountsInfo(account).info.server &&
+            trading_server.account_type === getAccountsInfo(account).info.account_type
         );
 
     const shouldSetTradingPassword = () => {
