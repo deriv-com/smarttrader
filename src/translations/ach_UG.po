@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-17 07:22\n"
+"PO-Revision-Date: 2021-11-12 06:53\n"
 "Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "crwdns90356:0%1crwdnd90356:0%2crwdnd90356:0%3crwdne90356:0"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "crwdns90358:0%1crwdnd90358:0%2crwdnd90358:0%3crwdnd90358:0%4crwdne90358:0"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "crwdns118312:0%1crwdne118312:0"
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "crwdns90366:0%1crwdnd90366:0%2crwdne90366:0"
 
@@ -66,6 +63,9 @@ msgstr "crwdns162678:0crwdne162678:0"
 
 msgid "2. Your desktop window stays open"
 msgstr "crwdns162680:0crwdne162680:0"
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr "crwdns168613:0crwdne168613:0"
 
 msgid "A word by itself is easy to guess"
 msgstr "crwdns162682:0crwdne162682:0"
@@ -204,6 +204,9 @@ msgstr "crwdns91382:0crwdne91382:0"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "crwdns116930:0crwdne116930:0"
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr "crwdns168615:0crwdne168615:0"
 
 msgid "Available Markets"
 msgstr "crwdns91420:0crwdne91420:0"
@@ -1423,9 +1426,6 @@ msgstr "crwdns95246:0crwdne95246:0"
 msgid "Only Ups"
 msgstr "crwdns95252:0crwdne95252:0"
 
-msgid "Only Ups/Only Downs"
-msgstr "crwdns95254:0crwdne95254:0"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "crwdns95258:0crwdne95258:0"
 
@@ -2041,6 +2041,9 @@ msgstr "crwdns118336:0crwdne118336:0"
 msgid "Sorry, no mobile phone bills"
 msgstr "crwdns163018:0crwdne163018:0"
 
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr "crwdns168617:0crwdne168617:0"
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "crwdns96560:0crwdne96560:0"
 
@@ -2460,6 +2463,18 @@ msgstr "crwdns98184:0crwdne98184:0"
 
 msgid "Trade"
 msgstr "crwdns98192:0crwdne98192:0"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr "crwdns168619:0crwdne168619:0"
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr "crwdns168621:0crwdne168621:0"
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr "crwdns168623:0crwdne168623:0"
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr "crwdns168625:0crwdne168625:0"
 
 msgid "Trading Information"
 msgstr "crwdns123154:0crwdne123154:0"

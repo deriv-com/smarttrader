@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-21 10:11\n"
+"PO-Revision-Date: 2021-11-12 06:54\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "%1 ngày %2 giờ %3 phút"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "tiền nạp %1 từ %2 đến tài khoản số %3 đã hoàn tất. ID Giao dịch: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 giúp mọi người dễ dàng tham gia vào các thị trường tài chính. Giao dịch chỉ từ $ 1 USD vào các loại tiền tệ, chỉ số chứng khoán, hàng hóa và chỉ số tổng hợp."
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 đã được ghi vào tài khoản ảo MT5 của bạn: %2."
 
@@ -66,6 +63,9 @@ msgstr "1. Đường dẫn được gửi bởi bạn"
 
 msgid "2. Your desktop window stays open"
 msgstr "2. Desktop của bạn vẫn đang mở"
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
 
 msgid "A word by itself is easy to guess"
 msgstr "Một từ đơn lẻ rất dễ đoán"
@@ -204,6 +204,9 @@ msgstr "Tháng 8"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Xác thực tài khoản của bạn ngay để sử dụng đầy đủ tất cả các hình thức thanh toán có sẵn."
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
 
 msgid "Available Markets"
 msgstr "Những thị trường đang có sẵn"
@@ -1423,9 +1426,6 @@ msgstr "Chỉ Giảm"
 msgid "Only Ups"
 msgstr "Chỉ Tăng"
 
-msgid "Only Ups/Only Downs"
-msgstr "Chỉ Tăng/Chỉ Giảm"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "Chỉ các chữ cái, số, dấu cách và dấu nối là được phép."
 
@@ -2041,6 +2041,9 @@ msgstr "Xin lỗi, chức năng nạp cho loại tiền này hiện đang bị v
 msgid "Sorry, no mobile phone bills"
 msgstr "Rất tiếc, không có hóa đơn điện thoại di động"
 
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Rất tiếc, tính năng này chỉ khả dụng với tài khoản tiền ảo."
 
@@ -2460,6 +2463,18 @@ msgstr "Thành phố/Tỉnh thành"
 
 msgid "Trade"
 msgstr "Giao dịch"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
 
 msgid "Trading Information"
 msgstr "Thông tin giao dịch"

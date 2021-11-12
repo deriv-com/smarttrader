@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-21 10:11\n"
+"PO-Revision-Date: 2021-11-12 06:54\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "%1 dni %2 godz. %3 min"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Dokonano wpłaty %1 na konto o numerze %3. Identyfikator transakcji: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 umożliwia wszystkim łatwe działania na rynkach finansowych. Handlowanie głównymi walutami, wskaźnikami giełdowymi, towarami i wskaźnikami syntetycznymi można rozpocząć od zaledwie 1 $."
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "Zaksięgowano %1 na Twoim koncie demo MT5: %2."
 
@@ -66,6 +63,9 @@ msgstr "1. Ten link został wysłany przez Ciebie"
 
 msgid "2. Your desktop window stays open"
 msgstr "2. Okno na komputerze musi pozostać otwarte"
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
 
 msgid "A word by itself is easy to guess"
 msgstr "Samo słowo jest łatwe do przewidzenia"
@@ -204,6 +204,9 @@ msgstr "Sierpień"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Zweryfikuj swoje konto już teraz, aby w pełni korzystać ze wszystkich dostępnych metod płatności."
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
 
 msgid "Available Markets"
 msgstr "Dostępne rynki"
@@ -1423,9 +1426,6 @@ msgstr "Tylko spadki"
 msgid "Only Ups"
 msgstr "Tylko wzrosty"
 
-msgid "Only Ups/Only Downs"
-msgstr "Tylko wzrosty/ Tylko spadki"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "Dozwolone są tylko litery, cyfry, spacja i myślnik."
 
@@ -2041,6 +2041,9 @@ msgstr "Przepraszamy, wpłaty w tej walucie są obecnie niedostępne."
 msgid "Sorry, no mobile phone bills"
 msgstr "Przepraszamy, nie akceptujemy rachunków za telefon komórkowy"
 
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Przepraszamy, ta funkcja jest dostępna tylko dla kont wirtualnych."
 
@@ -2460,6 +2463,18 @@ msgstr "Miasto"
 
 msgid "Trade"
 msgstr "Handluj"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
 
 msgid "Trading Information"
 msgstr "Informacje o handlowaniu"

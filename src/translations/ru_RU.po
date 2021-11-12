@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-21 10:11\n"
+"PO-Revision-Date: 2021-11-12 06:54\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "%1 дн. %2 ч. %3 мин."
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "Вы успешно перевели средства %1 со счёта %2 на счёт %3. Номер транзакции: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 открывает вам простой способ работы на финансовых рынках. Заключайте контракты на сумму от 1 USD на ведущих валютных парах, сырьевых рынках, а также фондовых и синтетических индексах."
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 зачислено на ваш демо-счёт MT5: %2."
 
@@ -67,6 +64,9 @@ msgstr "1. Эта ссылка была отправлена вами"
 msgid "2. Your desktop window stays open"
 msgstr "2. Окно программы остается открытым"
 
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
+
 msgid "A word by itself is easy to guess"
 msgstr "Отдельное слово легко угадать"
 
@@ -80,7 +80,7 @@ msgid "Account Authenticated"
 msgstr "Аутентификация пройдена"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr "Доступ к счёту временно ограничен. Пожалуйста, проверьте почту для получения более подробной информации."
+msgstr "Доступ к счету временно ограничен. Пожалуйста, проверьте почту для получения более подробной информации."
 
 msgid "Account authentication"
 msgstr "Аутентификация счёта"
@@ -116,7 +116,7 @@ msgid "All details must be clear — nothing blurry"
 msgstr "Все данные должны быть четко видны — ничего размытого"
 
 msgid "All markets are closed now. Please try again later."
-msgstr "В данное время все рынки закрыты. Пожалуйста, попробуйте позже."
+msgstr "Сейчас все рынки закрыты. Пожалуйста, попробуйте позже."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
 msgstr "Пароль из только заглавных букв угадать почти так же легко, как и пароль из только строчных"
@@ -149,16 +149,16 @@ msgid "April"
 msgstr "Апрель"
 
 msgid "Are you sure that you want to permanently delete the token"
-msgstr "Вы уверены, что хотите навсегда удалить ключ?"
+msgstr "Вы уверены, что хотите навсегда удалить токен?"
 
 msgid "Are you sure that you want to permanently revoke access to the application"
 msgstr "Вы уверены, что хотите навсегда отказаться от доступа к приложению?"
 
 msgid "Are you sure you want to create a fiat account in %1?"
-msgstr "Вы уверены, что хотите открыть фиатный счёт в %1?"
+msgstr "Вы уверены, что хотите открыть фиатный счет в %1?"
 
 msgid "Are you sure you want to create your %1 account now?"
-msgstr "Вы уверены, что хотите открыть счёт %1 сейчас?"
+msgstr "Вы уверены, что хотите открыть счет %1 сейчас?"
 
 msgid "Are you sure you want to deposit in %1?"
 msgstr "Вы уверены, что хотите внести сумму в %1?"
@@ -188,7 +188,7 @@ msgid "Asset"
 msgstr "Актив"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "Если спот-котировка движется в направлении, противоположном вашему прогнозу, барьер на момент Reset будет изменён согласно котировке."
+msgstr "Если спот-котировка движется в направлении, противоположном вашему прогнозу, барьер на момент Reset будет изменен согласно котировке."
 
 msgid "Audit"
 msgstr "Аудит"
@@ -203,7 +203,10 @@ msgid "August"
 msgstr "Август"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr "Пройдите аутентификацию счёта сейчас, чтобы в полной мере воспользоваться всеми способами оплаты."
+msgstr "Пройдите аутентификацию счета сейчас, чтобы в полной мере воспользоваться всеми способами оплаты."
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
 
 msgid "Available Markets"
 msgstr "Доступные рынки"
@@ -365,7 +368,7 @@ msgid "Click here to open a Financial Account"
 msgstr "Нажмите здесь для открытия Финансового счёта"
 
 msgid "Click here to open a Gaming account"
-msgstr "Нажмите здесь для открытия Игрового счёта"
+msgstr "Нажмите здесь, чтобы открыть игровой счет"
 
 msgid "Click here to open a Real Account"
 msgstr "Нажмите здесь для открытия Реального счёта"
@@ -617,7 +620,7 @@ msgid "Dismiss alert"
 msgstr "Закрыть оповещение"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr "Вы хотите, чтобы этот счёт был фиатным или крипто-счётом? Пожалуйста, выберите:"
+msgstr "Вы хотите, чтобы этот счет был фиатным или крипто-счетом? Пожалуйста, выберите:"
 
 msgid "Do you wish to continue?"
 msgstr "Хотите продолжить?"
@@ -716,7 +719,7 @@ msgid "Even/Odd"
 msgstr "Чётное/Нечётное"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Цена покупки контрактов Чётное/Нечётное будет возмещена, если контракт не закончится в течение 5 минут."
+msgstr "Цена покупки контрактов четное/нечетное будет возмещена, если контракт не закончится в течение 5 минут."
 
 msgid "Example of a blurry document"
 msgstr "Пример нечеткого документа"
@@ -917,7 +920,7 @@ msgid "Higher/Lower"
 msgstr "Выше/Ниже"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Цена покупки контрактов Выше/Ниже будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
+msgstr "Цена покупки контрактов выше/ниже будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
 
 msgid "Hour"
 msgstr "Час."
@@ -1154,10 +1157,10 @@ msgid "Litecoin"
 msgstr "Litecoin"
 
 msgid "Loading"
-msgstr "Идёт загрузка"
+msgstr "Загрузка"
 
 msgid "Loading..."
-msgstr "Идёт загрузка..."
+msgstr "Загрузка..."
 
 msgid "Log in"
 msgstr "Вход"
@@ -1379,7 +1382,7 @@ msgid "Note:"
 msgstr "Примечание:"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "Примечание: вы можете открыть только один счёт в фиатной валюте. Валюту фиатного счёта можно изменить до того, как вы первый раз пополните этот счёт или откроете счёт MT5. Также вы можете открыть по одному счёту в каждой доступной криптовалюте."
+msgstr "Примечание: вы можете открыть только один счет в фиатной валюте. Валюту фиатного счета можно изменить до того, как вы первый раз пополните этот счет или откроете счет MT5. Также вы можете открыть по одному счету в каждой доступной криптовалюте."
 
 msgid "Notifications"
 msgstr "Уведомления"
@@ -1423,9 +1426,6 @@ msgstr "Только вниз"
 msgid "Only Ups"
 msgstr "Только вверх"
 
-msgid "Only Ups/Only Downs"
-msgstr "Только вверх/вниз"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "Разрешены только буквы, цифры, пробелы и дефисы."
 
@@ -1439,7 +1439,7 @@ msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are a
 msgstr "Разрешены только буквы, цифры, пробелы, дефисы, точки, запятые и апострофы."
 
 msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
-msgstr "Для номера ID разрешены только буквы, цифры, пробел, нижнее подчёркивание, и дефис (%1)."
+msgstr "Для номера ID разрешены только буквы, цифры, пробел, нижнее подчеркивание, и дефис (%1)."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Допускаются только буквы латинского алфавита, пробелы, дефисы, точки и апострофы."
@@ -1481,7 +1481,7 @@ msgid "Over/Under"
 msgstr "Больше/Меньше"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Цена покупки контрактов Больше/Меньше будет возмещена, если контракт не закончится в течение 5 минут."
+msgstr "Цена покупки контрактов больше/меньше будет возмещена, если контракт не закончится в течение 5 минут."
 
 msgid "PM"
 msgstr "вечера"
@@ -1535,10 +1535,10 @@ msgid "Place of birth"
 msgstr "Место рождения"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, %1заполните свой профайл,%2 чтобы снять лимиты на трейдинг и вывод средств."
+msgstr "Пожалуйста, %1заполните свой профиль%2, чтобы снять лимиты на трейдинг и вывод средств."
 
 msgid "Please %1deposit%2 to your account."
-msgstr "Пожалуйста, %1пополните%2 счёт."
+msgstr "Пожалуйста, %1пополните%2 счет."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "Чтобы просмотреть эту страницу, пожалуйста %1войдите на сайт%2 или %3зарегистрируйтесь%4."
@@ -1556,7 +1556,7 @@ msgid "Please choose a currency"
 msgstr "Пожалуйста, выберите валюту"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr "Пожалуйста, заполните %1форму на открытие Реального счёта%2, чтобы подтвердить ваш возраст, в соответствии с требованиями %3Комиссии по азартным играм%4 Великобритании (UKGC)."
+msgstr "Пожалуйста, заполните %1форму на открытие реального счета%2, чтобы подтвердить ваш возраст, в соответствии с требованиями %3комиссии по азартным играм Великобритании%4 (UKGC)."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
 msgstr "Пожалуйста, заполните %1форму финансовой оценки%2, чтобы снять лимиты на трейдинг и вывод средств."
@@ -1571,7 +1571,7 @@ msgid "Please confirm that you are not a politically exposed person."
 msgstr "Пожалуйста, подтвердите, что вы не являетесь политически значимым лицом."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "Пожалуйста, убедитесь, что вы установили приложение Telegram на ваше устройство."
+msgstr "Пожалуйста, убедитесь, что на вашем устройстве установлен Telegram."
 
 msgid "Please enter a valid Login ID."
 msgstr "Пожалуйста, введите правильное имя пользователя."
@@ -1610,7 +1610,7 @@ msgid "Please select the currency for this account:"
 msgstr "Пожалуйста, выберите валюту этого счёта:"
 
 msgid "Please set the currency of your account."
-msgstr "Пожалуйста, установите валюту счёта."
+msgstr "Пожалуйста, установите валюту счета."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "Пожалуйста, установите %1лимит на 30-дневный оборот счета%2, чтобы устранить лимиты на пополнение."
@@ -2021,7 +2021,7 @@ msgid "Something's gone wrong"
 msgstr "Что-то пошло не так"
 
 msgid "Sorry, account signup is not available in your country."
-msgstr "Извините, регистрация счёта недоступна в вашей стране."
+msgstr "К сожалению, регистрация счета недоступна в вашей стране."
 
 msgid "Sorry, an error occurred while processing your account."
 msgstr "Извините, произошла ошибка."
@@ -2033,22 +2033,25 @@ msgid "Sorry, but binary options trading is not available in your country."
 msgstr "К сожалению, торговля бинарными опционами недоступна в вашей стране."
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr "Извините, но торговля бинарными опционами недоступна на вашем финансовом счёте."
+msgstr "К сожалению, торговля бинарными опционами недоступна на вашем финансовом счете."
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr "Извините, пополнение счета в этой валюте временно недоступно."
+msgstr "К сожалению, пополнение счета в этой валюте временно недоступно."
 
 msgid "Sorry, no mobile phone bills"
-msgstr "Извините, никаких счетов за мобильный телефон"
+msgstr "К сожалению, мы не можем принять счет за мобильный телефон"
+
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr "Извините, эта опция доступна только для демо-счетов."
+msgstr "Эта опция доступна только для демо-счетов."
 
 msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr "Извините, эта функция недоступна в вашей юрисдикции."
+msgstr "К сожалению, эта функция недоступна в вашей юрисдикции."
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr "Извините, вывод средств в этой валюте временно недоступен."
+msgstr "К сожалению, вывод средств в этой валюте временно недоступен."
 
 msgid "Spot"
 msgstr "Спот-котировка"
@@ -2081,13 +2084,13 @@ msgid "Stays Between/Goes Outside"
 msgstr "Останется внутри/Выйдет за пределы"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Цена покупки контрактов Останется внутри/Выйдет за пределы будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
+msgstr "Цена покупки контрактов останется внутри/выйдет за пределы будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
 
 msgid "Step"
 msgstr "Шаг"
 
 msgid "Steps required to continue verification on your mobile"
-msgstr "Шаги, необходимые для продолжения верификации с мобильного телефона"
+msgstr "Шаги, необходимые для продолжения верификации с телефона"
 
 msgid "Stock Indices"
 msgstr "Фондовые индексы"
@@ -2270,7 +2273,7 @@ msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
 msgstr "Контракт не оканчивается в течение 5 минут (для контрактов в тиках)"
 
 msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr "Указанный вами электронный адрес уже используется для другого счёта. Если вы забыли пароль к своему счету, пожалуйста, воспользуйтесь <a href=\"%1\">инструментом восстановления пароля</a> или свяжитесь с нашей службой поддержки."
+msgstr "Указанный вами электронный адрес уже используется для другого счета. Если вы забыли пароль к своему счету, пожалуйста, воспользуйтесь <a href=\"%1\">инструментом восстановления пароля</a> или свяжитесь с нашей службой поддержки."
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "Спот-котировка на входе − это первый тик после обработки контракта нашим сервером."
@@ -2327,7 +2330,7 @@ msgid "This contract is only available on %1DTrader%2."
 msgstr "Этот контракт доступен только на %1DTrader%2."
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr "Этот контракт доступен только на DTrader. Чтобы продать или отменить данный контракт, %1%2Перейдите на DTrader%3."
+msgstr "Этот контракт доступен только на DTrader. Чтобы продать или отменить данный контракт, %1%2перейдите на DTrader%3."
 
 msgid "This contract lost"
 msgstr "Вы проиграли"
@@ -2354,7 +2357,7 @@ msgid "This is a top-100 common password"
 msgstr "Это один из 100 наиболее распространенных паролей"
 
 msgid "This is a very common password"
-msgstr "Это один из наиболее распространенных паролей"
+msgstr "Это очень распространенный пароль"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Это ориентировочный барьер. Настоящим барьером будет спот-котировка плюс оффсет барьера."
@@ -2450,7 +2453,7 @@ msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Цена покупки контрактов Касание/Нет касания будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
+msgstr "Цена покупки контрактов касание/нет касания будет возмещена трейдеру, если разница между временем начала и окончания контракта составляет менее двух тиков."
 
 msgid "Touches"
 msgstr "Касание"
@@ -2460,6 +2463,18 @@ msgstr "Город"
 
 msgid "Trade"
 msgstr "Торговля"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
 
 msgid "Trading Information"
 msgstr "Торговая информация"
@@ -2471,7 +2486,7 @@ msgid "Trading and deposits have been disabled on your account. Kindly %1contact
 msgstr "На вашем счете заблокирована торговля и пополнение. Пожалуйста, свяжитесь со %1службой поддержки%2 для получения помощи."
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr "Торговля контрактами на разницу (CFD) на Синтетических индексах подходит далеко не для всех. Пожалуйста, убедитесь, что вы хорошо осознаёте все сопряженные риски, включая возможность потерять все средства на счете MT5. Торговая деятельность может вызвать привыкание, поэтому, пожалуйста, торгуйте ответственно."
+msgstr "Торговля контрактами на разницу (CFD) на Синтетических индексах подходит далеко не для всех. Пожалуйста, убедитесь, что вы хорошо осознаете все сопряженные риски, включая возможность потерять все средства на счете MT5. Торговая деятельность может вызвать привыкание, поэтому, пожалуйста, торгуйте ответственно."
 
 msgid "Trading is unavailable at this time."
 msgstr "В данное время торговля недоступна."
@@ -2654,7 +2669,7 @@ msgid "When prompted, you must enable camera access to continue"
 msgstr "При появлении запроса вы должны разрешить доступ к камере, чтобы продолжить"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr "Когда вы нажмёте \"ОК\", вы будете отстранены от работы на сайте до выбранной даты."
+msgstr "После того, как вы нажмете \"ОК\", вы будете отстранены от работы на сайте до выбранной даты."
 
 msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "Получить выплату, если спот-котировка на выходе равна спот-котировке на входе."
@@ -2696,7 +2711,7 @@ msgid "You are categorised as a retail client. Apply to be treated as a professi
 msgstr "Вы относитесь к категории индивидуальных клиентов. Подайте заявку, чтобы вас рассматривали как профессионального трейдера."
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "Вы можете владеть только одним фиатным счётом. Вы можете изменить валюту фиатного счёта, если вы ещё не пополняли его или не открывали счёт MT5."
+msgstr "Вы можете владеть только одним фиатным счетом. Вы можете изменить валюту фиатного счета, если вы ещё не пополняли его или не открывали счет MT5."
 
 msgid "You are offline"
 msgstr "Вы оффлайн"
@@ -2708,22 +2723,22 @@ msgid "You can close this window without interrupting your trade."
 msgstr "Закрытие этого окна не повлияет на ваш трейдинг."
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "Вы не можете изменить валюту счёта, так как вы открыли счёт MT5."
+msgstr "Вы не можете изменить валюту счета, так как вы открыли счет MT5."
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "Вы не можете изменить валюту счёта, так как вы уже пополняли счёт."
+msgstr "Вы не можете изменить валюту счета, так как вы уже пополняли счет."
 
 msgid "You can now return to your computer to continue"
 msgstr "Теперь вы можете вернуться и продолжить со своего компьютера"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "Вы можете дополнительно внести на демо-счёт %1, если его баланс составит %2 или ниже."
+msgstr "Вы можете добавить на демо-счет %1, если его баланс составит %2 или ниже."
 
 msgid "You did not change anything."
 msgstr "Вы не внесли никаких изменений."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr "Вам не нужно аутентифицировать счёт в настоящее время.%1Мы сообщим, когда вашему счёту потребуется аутентификация."
+msgstr "Сейчас вам не нужно аутентифицировать счет.%1Мы сообщим, когда вашему счету потребуется аутентификация."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr "Вы уже вывели %1%2 в сумме за последние %3 суток."
@@ -2732,7 +2747,7 @@ msgid "You have already withdrawn %1%2."
 msgstr "Вы уже вывели со счета %1%2."
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr "На вашем счете Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счёт</a>."
+msgstr "На вашем счете Binary недостаточно средств. Пожалуйста, <a href=\"%1\">пополните счет</a>."
 
 msgid "You have insufficient funds in your MT5 account."
 msgstr "На вашем счете MT5 недостаточно средств."
@@ -2777,10 +2792,10 @@ msgid "You will be redirected to a third-party website which is not owned by Bin
 msgstr "Вы будете перенаправлены на сайт третьей стороны, который не принадлежит Binary.com."
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фиатного счёта после открытия этого счёта MT5. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счета после открытия этого счета MT5. Вы уверены, что хотите продолжить?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "Вы не сможете изменить валюту фиатного счёта после его пополнения. Вы уверены, что хотите продолжить?"
+msgstr "Вы не сможете изменить валюту фиатного счета после его пополнения. Вы уверены, что хотите продолжить?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
 msgstr "Вы выигрываете, если выходная рыночная цена не будет заканчиваться выбранной вами цифрой."
@@ -2804,7 +2819,7 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Ваш счет полностью авторизован, и лимит на вывод был снят."
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr "Ваш счёт заблокирован. Пожалуйста, свяжитесь с нашей %1службой поддержки%2 для получения дальнейшей помощи."
+msgstr "Ваш счет заблокирован. Пожалуйста, свяжитесь с нашей %1службой поддержки%2 для получения дальнейшей помощи."
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "Ваша заявка на квалификацию в качестве профессионального клиента находится на рассмотрении."
@@ -2864,10 +2879,10 @@ msgid "Your settings have been updated successfully."
 msgstr "Ваши настройки успешно обновлены."
 
 msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr "Срок действия вашего ключа истек или он недействителен. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего токена истек или он недействителен. Пожалуйста, нажмите %1здесь,%2 чтобы повторно запустить процесс проверки."
 
 msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr "Срок действия вашего ключа истек или он недействителен. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
+msgstr "Срок действия вашего токена истек или он недействителен. Пожалуйста, нажмите <a href=\"%1\">здесь,</a> чтобы повторно запустить процесс проверки."
 
 msgid "Your trading statistics since %1."
 msgstr "Ваша торговая статистика с %1."
