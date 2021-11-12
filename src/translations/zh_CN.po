@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-21 10:11\n"
+"PO-Revision-Date: 2021-11-12 06:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "%1 天 %2 小时 %3 分钟"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "已完成从%2至账号%3的%1存款。交易编号: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1让每个人都能轻松参与金融市场。您可交易各主要货币、股票指数、大宗商品和综合指数，投资门槛低至1美元。"
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 已记入您的MT5模拟账户: %2。"
 
@@ -66,6 +63,9 @@ msgstr "1. 此链接是您发送的"
 
 msgid "2. Your desktop window stays open"
 msgstr "2. 您的桌面窗口保持打开状态"
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
 
 msgid "A word by itself is easy to guess"
 msgstr "一个词本身很容易猜到"
@@ -204,6 +204,9 @@ msgstr "八月"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "立刻进行账户验证，以获得付款选项的所有优惠。"
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
 
 msgid "Available Markets"
 msgstr "可用的市场"
@@ -1423,9 +1426,6 @@ msgstr "只会持续下跌"
 msgid "Only Ups"
 msgstr "持续上涨"
 
-msgid "Only Ups/Only Downs"
-msgstr "持续上涨/持续下跌"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "只允许字母、数字、空格和连字符。"
 
@@ -2041,6 +2041,9 @@ msgstr "抱歉，此货币的存款目前被禁用。"
 msgid "Sorry, no mobile phone bills"
 msgstr "抱歉，不接受手机账单"
 
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "对不起，此功能仅适用虚拟账户。"
 
@@ -2460,6 +2463,18 @@ msgstr "城镇/城市"
 
 msgid "Trade"
 msgstr "交易"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
 
 msgid "Trading Information"
 msgstr "交易信息"

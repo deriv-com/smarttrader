@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-21 10:11\n"
+"PO-Revision-Date: 2021-11-12 06:54\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,6 @@ msgstr "%1 วัน %2 ชั่วโมง %3 นาที"
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "%1 ได้ฝากเงินจาก %2 ไปยังเลขที่บัญชี %3 เรียบร้อยแล้ว หมายเลขอ้างอิงธุรกรรม: %4"
 
-msgid "%1 gives everyone an easy way to participate in the financial markets. Trade with as little as $1 USD on major currencies, stock indices, commodities, and synthetic indices."
-msgstr "%1 ช่วยให้ทุกคน สามารถเข้าร่วมในตลาดการเงินได้ง่ายขึ้น คุณสามารถเทรดด้วยเงินลงทุนขั้นต่ำเพียง 1 USD กับสกุลเงินหลัก ดัชนีหุ้น หุ้นโภคภัณฑ์ และดัชนีสังเคราะห์"
-
 msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr "%1 ได้ถูกเพิ่มเข้าในบัญชีทดลองบนแพลตฟอร์ม MT5 ของท่านแล้ว: %2"
 
@@ -66,6 +63,9 @@ msgstr "1. ลิงก์นี้ถูกส่งโดยคุณ"
 
 msgid "2. Your desktop window stays open"
 msgstr "2. หน้าต่างเดสก์ท็อปของคุณยังคงเปิดอยู่"
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
 
 msgid "A word by itself is easy to guess"
 msgstr "คําด้วยตัวเองนั้นง่ายต่อการคาดเดา"
@@ -204,6 +204,9 @@ msgstr "สิงหาคม"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "ยืนยันบัญชีของคุณเดี๋ยวนี้เพื่อใช้ประโยชน์จากวิธีการชำระเงินที่มีทั้งหมด"
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
 
 msgid "Available Markets"
 msgstr "ตลาดที่เปิดบริการ"
@@ -1423,9 +1426,6 @@ msgstr "Only Downs"
 msgid "Only Ups"
 msgstr "Only Ups"
 
-msgid "Only Ups/Only Downs"
-msgstr "Only Ups/Only Downs"
-
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "ตัวอักษร ตัวเลข ช่องว่าง และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
 
@@ -2041,6 +2041,9 @@ msgstr "ขออภัย การฝากเงินสำหรับส�
 msgid "Sorry, no mobile phone bills"
 msgstr "ขออภัย ไม่มีค่าโทรศัพท์มือถือ"
 
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
+
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "ขออภัย ฟังก์ชันนี้มีให้ใช้งานเฉพาะบัญชีทดลองใช้เท่านั้น"
 
@@ -2460,6 +2463,18 @@ msgstr "เมือง"
 
 msgid "Trade"
 msgstr "เทรด"
+
+msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
 
 msgid "Trading Information"
 msgstr "ข้อมูลการซื้อขาย"
