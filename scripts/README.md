@@ -13,8 +13,8 @@
 - Install `Homebrew` by `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - Install and follow the instructions here: https://support.crowdin.com/cli-tool/#installation
 - **Important:** Please use version 3 of the crowdin cli-tool
-- Get [Crowdin API Key](https://crowdin.com/settings#api-key) and add this line to your _.bash_profile_ / _.zshrc_ using terminal: `export CROWDIN_API_KEY='put API Key here'`<br/>
-  **Improtant!** This key gives full access to all your Crowdin project data. Treat this just like a password and never push it to any public repo.
+- Get [Crowdin API Key](https://crowdin.com/settings#api-key) which is called a _Personal Access Token_ using _API v2 token_ and add this line to your _.bash_profile_ / _.zshrc_ using terminal: `export CROWDIN_API_KEY='put API Key here'`<br/>
+  **Important!** This key gives full access to all your Crowdin project data. Treat this just like a password and never push it to any public repo.
 
 ### To update the translations:
 
