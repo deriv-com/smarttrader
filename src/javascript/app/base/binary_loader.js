@@ -211,7 +211,7 @@ const BinaryLoader = (() => {
                 $(account_pass_page).setVisibility(0);
             }
         });
-        BinarySocket.setOnDisconnect(active_script.onDisconnect);
+        BinarySocket.setOnDisconnect(active_script && active_script.onDisconnect);
     };
 
     const loadActiveScript = (config) => {
