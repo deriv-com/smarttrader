@@ -28,6 +28,8 @@ const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
 const ClosePopup = require('../common/game_close_popup');
+const CloseBanner = require('../common/game_close_banner');
+const RedirectBanner = require('../common/redirect_banner');
 require('../../_common/lib/polyfills/array.includes');
 require('../../_common/lib/polyfills/string.includes');
 
@@ -123,17 +125,22 @@ const Page = (() => {
         if (Client.isLoggedIn()) {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
                 RealityCheck.onLoad();
+                RedirectBanner.loginOnLoad();
                 Menu.init();
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     ClosePopup.loginOnLoad();
+                    CloseBanner.onLoad();
                 } else if (is_iom_client && Client.hasAccountType('gaming')) {
                     ClosePopup.loginOnLoad();
+                    CloseBanner.onLoad();
                 }
+                
             });
         } else {
             Menu.init();
+            RedirectBanner.onLoad();
             if (!LocalStore.get('date_first_contact')) {
                 BinarySocket.wait('time').then((response) => {
                     LocalStore.set('date_first_contact', toISOFormat(moment(response.time * 1000).utc()));

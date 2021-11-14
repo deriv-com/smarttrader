@@ -11,18 +11,19 @@ const CloseBanner = (() => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
             const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
-            if (is_uk_residence) {
+            const client_account = Client.get('landing_company_shortcode') === 'maltainvest';
+
+            if (is_uk_residence && !client_account) {
                 el_gaming_popup = getElementById('gaming-close-popup');
                 el_close_banner_container = getElementById('close_banner_container');
                 el_close_banner_container.setVisibility(1);
                 el_learn_more = getElementById('close_banner_btn');
-            } else if (is_iom_client) {
+            } else if (is_iom_client && !client_account) {
                 el_gaming_popup = getElementById('gaming-close-popup-iom');
                 el_close_banner_container = getElementById('close_banner_container_iom');
                 el_close_banner_container.setVisibility(1);
                 el_learn_more = getElementById('close_banner_btn_iom');
             }
-            el_gaming_popup.setVisibility(0);
             el_learn_more.addEventListener('click', onShowPopup);
         });
 
