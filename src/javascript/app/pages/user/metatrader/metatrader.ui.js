@@ -1200,10 +1200,9 @@ const MetaTraderUI = (() => {
             The code below is to stop the tooltip from showing wrong
             information.
         */
-        if ((getAccountsInfo(acc_type).landing_company_short === 'vanuatu' &&
+        if (is_mobile || (getAccountsInfo(acc_type).landing_company_short === 'vanuatu' &&
             getAccountsInfo(acc_type).market_type === 'financial' &&
-            getAccountsInfo(acc_type).sub_account_type === 'financial') ||
-            is_mobile) {
+            getAccountsInfo(acc_type).sub_account_type === 'financial')) {
             $icon.remove();
             return;
         }
@@ -1227,7 +1226,9 @@ const MetaTraderUI = (() => {
         const topup_btn_text     = localize('Get [_1]', `10,000.00 ${MetaTraderConfig.getCurrency(acc_type)}`);
 
         el_loading.setVisibility(0);
-        el_demo_topup_btn.firstChild.innerText = topup_btn_text;
+        if (el_demo_topup_btn){
+            el_demo_topup_btn.firstChild.innerText = topup_btn_text;
+        }
 
         if (is_demo) {
             const balance     = +getAccountsInfo(acc_type).info.balance;
