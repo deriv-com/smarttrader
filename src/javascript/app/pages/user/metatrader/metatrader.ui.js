@@ -933,7 +933,8 @@ const MetaTraderUI = (() => {
     };
 
     const selectAccountTypeUI = (e) => {
-        const box_class = 'mt5_type_box';
+        const box_class                 = 'mt5_type_box';
+        const real_financial_acc_number = Object.values(accounts_info).filter(acc_type => !acc_type.is_demo && acc_type.market_type === 'financial').length;
         let $item = $(e.target);
         if (!$item.hasClass(box_class)) {
             $item = $item.parents(`.${box_class}`);
@@ -944,12 +945,12 @@ const MetaTraderUI = (() => {
         const selected_acc_type = $item.attr('data-acc-type');
         const action            = 'new_account';
         if (/(demo|real)/.test(selected_acc_type)) {
+            displayMessage('#new_account_msg', (selected_acc_type === 'real' && Client.get('is_virtual') && real_financial_acc_number > 0) ? MetaTraderConfig.needsRealMessage() : '', true);
             displayAccountDescription(selected_acc_type);
             updateAccountTypesUI(selected_acc_type);
             switchAccountTypesUI(selected_acc_type, $form);
             $form.find('#view_1 .btn-next').addClass('button-disabled');
             $form.find('#view_1 .step-2').setVisibility(1);
-            displayMessage('#new_account_msg', (selected_acc_type === 'real' && Client.get('is_virtual')) ? MetaTraderConfig.needsRealMessage() : '', true);
         } else {
             const new_acc_type = newAccountGetType();
             displayAccountDescription(new_acc_type);
