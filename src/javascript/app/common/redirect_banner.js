@@ -48,9 +48,6 @@ const RedirectBanner = (() => {
             const maltainvest = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'maltainvest').length;
             const iom = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'iom').length;
             const malta = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'malta').length;
-
-            // eslint-disable-next-line no-console
-            console.log(Client.get('residence'), State.getResponse('website_status.clients_country'));
             
             if (eu_country && State.getResponse('authorize.account_list').length === 1) {
                 showBanner();
