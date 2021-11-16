@@ -1,3 +1,4 @@
+const DerivBanner = require('./deriv_banner');
 const getElementById = require('../../_common/common_functions').getElementById;
 const BinarySocket = require('../base/socket');
 const getLanguage       = require('../../_common/language').get;
@@ -48,6 +49,7 @@ const RedirectBanner = (() => {
             const maltainvest = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'maltainvest').length;
             const iom = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'iom').length;
             const malta = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'malta').length;
+            const svg = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'svg').length;
             
             if (eu_country && State.getResponse('authorize.account_list').length === 1) {
                 showBanner();
@@ -55,6 +57,8 @@ const RedirectBanner = (() => {
                 showBanner();
             } else if (eu_country && client_account) {
                 showBanner();
+            } else if (svg && virtual_account) {
+                DerivBanner.redBanner();
             }
 
         });
