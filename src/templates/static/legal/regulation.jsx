@@ -89,7 +89,7 @@ const Regulation = () => {
             </div>
 
             <Box header={it.L('Deriv Limited')} first>
-                <p>{it.L('Deriv Limited, with registered office at 47 Esplanade, St Helier, Jersey JE1 0BD, Channel Islands, is the holding company for the subsidiaries listed below.')}</p>
+                <p>{it.L('Deriv Limited, with registered office at 13 Castle Street, St. Helier, JE2 3BT, Jersey, is the holding company for the subsidiaries listed below.')}</p>
             </Box>
 
             <Box header={it.L('Deriv Investments (Europe) Limited')} >
