@@ -18,13 +18,14 @@ const CloseBanner = (() => {
                 el_close_banner_container = getElementById('close_banner_container');
                 el_close_banner_container.setVisibility(1);
                 el_learn_more = getElementById('close_banner_btn');
+                el_learn_more.addEventListener('click', onShowPopup);
             } else if (is_iom_client && !client_account) {
                 el_gaming_popup = getElementById('gaming-close-popup-iom');
                 el_close_banner_container = getElementById('close_banner_container_iom');
                 el_close_banner_container.setVisibility(1);
                 el_learn_more = getElementById('close_banner_btn_iom');
+                el_learn_more.addEventListener('click', onShowPopup);
             }
-            el_learn_more.addEventListener('click', onShowPopup);
         });
 
     };

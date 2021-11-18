@@ -21,7 +21,6 @@ const State             = require('../../../_common/storage').State;
 const TradePage = (() => {
     let events_initialized = 0;
     State.remove('is_trading');
-
     const onLoad = () => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
             const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
