@@ -17,7 +17,7 @@ const EuClosePopup = () => (
                     You are no longer able to trade options on any of our platforms.
                     Also, you can’t make deposits into your Options Account.
                 </p>
-                <strong>Withdrawal all your funds</strong>
+                <strong>Withdraw all your funds</strong>
                 <p>You will lose access to your Options Account when it gets closed,
                     so be sure to withdraw all your funds. (If you have a CFDs Account,
                     you can also transfer the funds from your Options Account to your CFDs Account.)
