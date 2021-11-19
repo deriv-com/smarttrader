@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-18 08:15\n"
+"PO-Revision-Date: 2021-11-19 05:36\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgid " All calls are recorded for training and monitoring purposes."
 msgstr " Todas las llamadas se registran con fines de capacitación y supervisión."
 
 msgid " The Company reserves the right to change the requirements of transactions between the Agent’s account and clients."
-msgstr ""
+msgstr " La Empresa se reserva el derecho de cambiar los requisitos de las transacciones entre la cuenta del Agente y los clientes."
 
 msgid " means %1."
 msgstr " significa %1."
@@ -329,7 +329,7 @@ msgid "%1 provides demo facilities to practise your trading strategy with virtua
 msgstr "%1 le brinda la posibilidad utilizar dinero virtual para practicar su estrategia comercial. Cambie a su cuenta de dinero virtual utilizando al menú desplegable ubicado en la esquina superior derecha de la pantalla."
 
 msgid "%1 provides institutional clients around the world with market quotes and trade execution across a wide range of assets, including major currency pairs, spot metals, stocks, stock indices, popular cryptocurrencies, and Synthetic indices."
-msgstr ""
+msgstr "%1 proporciona a los clientes institucionales de todo el mundo cotizaciones de mercado y ejecución de operaciones en una amplia gama de activos, incluidos los principales pares de divisas, metales al contado, acciones, índices bursátiles, criptomonedas populares e índices sintéticos."
 
 msgid "%1 provides the client with best execution by utilising a smart aggregation method when managing incoming orders. The smart aggregation method works by"
 msgstr "%1 brinda a sus clientes la mejor ejecución mediante la utilización de un método de agregación inteligente a la hora de gestionar órdenes entrantes. El método de agregación inteligente funciona de la siguiente manera"
@@ -365,7 +365,7 @@ msgid "%1 takes home first prize in the Financial Trading Operator category at t
 msgstr "%1 gana el primer premio en la categoría de Operador de Apuestas Financieras en la prestigiosa ceremonia EGR Premios de Operador de 2015, organizada en Londres."
 
 msgid "%1 trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "El comercio de %1 puede convertirse en una verdadera adicción, al igual que cualquier otra actividad llevada al límite. Para evitar el peligro de tal adicción, proporcionamos una verificación realista que le brinda un resumen de sus operaciones y cuentas de manera regular."
 
 msgid "%1 tries to maintain a reasonable relation between the quoted prices of each underlying asset that a Binary Option refers to and the actual market prices of such an asset. %1 makes no warranty, expressed or implied, that the quoted prices represent prevailing market prices."
 msgstr "%1 intenta mantener una relación razonable entre los precios cotizados de cada activo subyacente al que se refiere una Opción Binaria y los precios de mercado reales de dicho activo. %1 no ofrece ninguna garantía, expresa o implícita, de que los precios cotizados representan los precios vigentes en el mercado."
@@ -758,10 +758,10 @@ msgid "A bachelor's degree in commerce or any business-related field, law, or ri
 msgstr "Una licenciatura en comercio o en cualquier campo relacionado con los negocios, leyes o administración de riesgos"
 
 msgid "A binary option is a contract in which one party undertakes to pay the other party a specified amount if the value of a given asset changes in a specific direction within a predetermined period. The major underlying asset class for binary options offered by the Company is Synthetic Indices."
-msgstr ""
+msgstr "Una opción binaria es un contrato en el que una de las partes se compromete a pagar a la otra parte una cantidad específica si el valor de un activo determinado cambia en una dirección específica dentro de un período predeterminado. La principal clase de activos subyacentes para las opciones binarias que ofrece la Empresa son los índices sintéticos."
 
 msgid "A binary option is a contract in which one party undertakes to pay the other party a specified amount if the value of a given asset changes in a specific direction within a predetermined period. The three major underlying asset classes for binary options offered by the Company are"
-msgstr ""
+msgstr "Una opción binaria es un contrato en el que una de las partes se compromete a pagar a la otra parte una cantidad específica si el valor de un activo determinado cambia en una dirección específica dentro de un período predeterminado. Las tres principales clases de activos subyacentes para opciones binarias ofrecidas por la Empresa son"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct."
 msgstr "Una opción binaria es un contrato comprado por un trader, que resultará en un pago predeterminado si la predicción hecha es correcta."
@@ -14161,7 +14161,7 @@ msgid "We'll compare it with your document"
 msgstr "Lo compararemos con su documento"
 
 msgid "We'll process your details within a few minutes and notify its status via email."
-msgstr ""
+msgstr "Procesaremos sus datos en unos minutos y le notificaremos sobre su estado por correo electrónico."
 
 msgid "We'll process your details within a few minutes and notify its status via email. Next, we'll need your proof of address"
 msgstr "Procesaremos sus datos en unos minutos y le notificaremos sobre su estado por correo electrónico. A continuación, necesitaremos su comprobante de domicilio."
@@ -14347,7 +14347,7 @@ msgid "When the client opens any transactions in relation to Prohibited Trades"
 msgstr "En el caso que un cliente abra una transacción relacionada con Operaciones Prohibidas"
 
 msgid "When the client requests a withdrawal from %1 Client Account, such request shall automatically proceed, and, as a result, the requested sum shall be transferred from the %1 Client Account to the %1 Agent Account. However, it is noted that when the client reaches the client's withdrawal limit, a withdrawal request shall not automatically proceed before the required authentication process is conducted."
-msgstr ""
+msgstr "Cuando el cliente solicite un retiro de la Cuenta del Cliente %1, dicha solicitud será procesada automáticamente y como resultado la cantidad solicitada será transferida de su Cuenta del Cliente %1 a la Cuenta de Agente %1. Sin embargo, cabe señalar que cuando el cliente alcanza sus límites de retiro, una solicitud de retiro no se tramitará automáticamente antes de que se lleve a cabo el proceso de autenticación requerido."
 
 msgid "When the client transfers their money to DIEL for trading purposes, the client's funds are deposited in their %1 account. If the client chooses to trade FX and CFDs, the client shall transfer funds from their %1 account to their MT5 Real Account. Such a transfer shall not be regarded as a transfer from two different accounts but as a transfer of funds from the client's centralised %1 account to the MT5 Real Account. No fund transfers shall be made to any other account in the name of any third party."
 msgstr "Cuando el cliente transfiere dinero a DIEL con el propósito de realizar transacciones, los fondos del cliente se depositan en su Cuenta Real de Opciones Binarias. Si el cliente elige operar FX y CFD, deberá transferir los fondos de su Cuenta Real de Opciones Binarias a su Cuenta Real MT5. Dicha transferencia, no se considerará una transferencia desde dos cuentas diferentes, sino una transferencia de fondos desde la Cuenta Real de Opciones Binarias centralizada a la Cuenta Real MT5. No se realizará ninguna otra transferencia de fondos a ninguna otra cuenta en nombre de ningún tercero."
@@ -14446,7 +14446,7 @@ msgid "Where the Agent acts in breach of any warranty, representation, or promis
 msgstr "Cuando el Agente actúa en violación de cualquier garantía, representación o promesa hecha bajo este Acuerdo, y cuando cualquier información proporcionada a la Empresa en relación con este Acuerdo es, o se vuelve, falsa o engañosa"
 
 msgid "Where the Agent becomes incapable of paying their debts as they fall due, or is bankrupt or insolvent, as defined under any and all applicable bankruptcy or insolvency law where the Agent is an individual"
-msgstr ""
+msgstr "Cuando el Agente se vuelve incapaz de pagar sus deudas pagaderas, se encuentra en bancarrota o es insolvente, de acuerdo con lo definido en cualquier ley aplicable relativa a la bancarrota o la insolvencia, y el Agente es una persona física"
 
 msgid "Where the Agent ceases to be competent, capable, adequate, or qualified to effectively perform all of the Agent's duties and obligations that are undertaken and agreed to under this agreement, for any reason, including but not limited to lack of knowledge, expertise, experience, skills, and time, the Agent shall notify the Company immediately and without any delay."
 msgstr "Cuando el Agente deje de ser competente, capaz, adecuado o calificado para desempeñar con eficacia todos los deberes y obligaciones del Agente asumidos y acordados en este acuerdo, por cualquier razón, incluyendo pero no limitándose a la falta de conocimiento, especialización, experiencia, habilidades y tiempo, lo notificará a la Compañía inmediatamente y sin demora."
@@ -14836,7 +14836,7 @@ msgid "You have already withdrawn %1%2."
 msgstr "Usted ya retiró %1%2."
 
 msgid "You have chosen to exclude yourself from trading on our website until %1. If you are unable to place a trade or deposit after your self-exclusion period, please contact us via live chat."
-msgstr ""
+msgstr "Ha elegido excluirse del comercio en nuestro sitio web hasta el %1. Si no puede realizar una transacción o depósito después de su período de autoexclusión, comuníquese con nosotros a través del chat en vivo."
 
 msgid "You have created all accounts available to you."
 msgstr "Usted ha creado todas las cuentas disponibles."
@@ -15088,7 +15088,7 @@ msgid "Your account has not been authenticated. Please submit your %1proof of id
 msgstr "Su cuenta no ha sido autenticada. Envíe su %1prueba de identidad y prueba de dirección%2 para autenticar su cuenta y acceder a su cajero."
 
 msgid "Your account has not been authenticated. Please submit your %1proof of identity and proof of address%2 to authenticate your account and request for withdrawals."
-msgstr ""
+msgstr "Su cuenta no ha sido autenticada. Envíe su %1prueba de identidad y prueba de dirección%2 para autenticar su cuenta y solicitar retiros."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "Su cuenta está totalmente autenticada y su límite de retirada ha sido aumentado."
@@ -15100,7 +15100,7 @@ msgid "Your account is now deactived."
 msgstr "Su cuenta ahora está desactivada."
 
 msgid "Your account is temporarily disabled. Please contact us via live chat to enable deposits and withdrawals again."
-msgstr ""
+msgstr "Su cuenta está temporalmente deshabilitada. Comuníquese con nosotros a través del chat en vivo para habilitar los depósitos y retiros nuevamente."
 
 msgid "Your account remains under the retail client category."
 msgstr "Su cuenta permanece bajo la categoría de cliente minorista."
@@ -15118,16 +15118,16 @@ msgid "Your application will then be reviewed by our compliance and marketing de
 msgstr "Su solicitud será revisada por nuestros departamentos de cumplimiento y de marketing. Una vez aprobada, vamos a poner su información en vivo en nuestra lista de %1Agentes de Pago%2."
 
 msgid "Your cashier is currently locked. Please contact us via live chat to find out how to unlock it."
-msgstr ""
+msgstr "Su cajero está bloqueado actualmente. Comuníquese con nosotros a través del chat en vivo para averiguar cómo desbloquearlo."
 
 msgid "Your cashier is locked."
 msgstr "Su cajero está bloqueado."
 
 msgid "Your cashier is locked. Please complete the %1financial assessment%2 to unlock it."
-msgstr ""
+msgstr "Su cajero está bloqueado. Complete la %1fevaluación financiera%2 para desbloquearlo."
 
 msgid "Your cashier is locked. See %1how we protect your funds%2 before you proceed."
-msgstr ""
+msgstr "Su cajero está bloqueado. Vea %1hcómo protegemos sus fondos%2 antes de continuar."
 
 msgid "Your cashier session has expired. Please try again."
 msgstr "Su sesión de cajero ha expirado. Por favor, inténtelo de nuevo."
@@ -15157,7 +15157,7 @@ msgid "Your document is being reviewed, please check back in 1-3 days. You must 
 msgstr "Su documento se está revisando. Vuelva a contactarnos en 1-3 días. También debe presentar un comprobante de identidad."
 
 msgid "Your document number has been verified"
-msgstr ""
+msgstr "El número de su documento ha sido verificado"
 
 msgid "Your face is needed in the selfie"
 msgstr "Se necesita su cara en la selfie"
@@ -15262,7 +15262,7 @@ msgid "You’ll need to fund your MQL5 account to subscribe to paid signals. Lea
 msgstr "Deberá ingresar fondos en su cuenta MQL5 para suscribirse a las señales de pago. Aprenda %1hocómo depositar fondos en su cuenta%2."
 
 msgid "You’ve not set your country of residence. To access Cashier, please update your %1country of residence%2 in the Personal details section in your account settings."
-msgstr ""
+msgstr "No ha ajustado el país de su residencia. Para acceder al Cajero, actualice el %1cpaís de su residencia%2 en la sección Datos personales en la configuración de su cuenta."
 
 msgid "ZEC vs US dollar"
 msgstr "ZEC vs dólar estadounidense"
@@ -15307,7 +15307,7 @@ msgid "a. Access the MT5 trading platform through the direct link %1 from DIEL's
 msgstr "a) Acceder a la plataforma de operaciones MT5 a través del enlace directo %1 de la interfaz web de DIEL o,"
 
 msgid "a. Account opened under a false name"
-msgstr ""
+msgstr "a. Cuenta abierta con un nombre falso"
 
 msgid "an Order to execute a transaction to close an Open Position when the price reaches the client's specified price"
 msgstr "una Orden que ejecute una transacción para cerrar una Posición Abierta cuando se alcanza el precio especificado por el cliente"
@@ -15367,7 +15367,7 @@ msgid "e.g. frontend.binaryws.com"
 msgstr "por ejemplo, frontend.binaryws.com"
 
 msgid "either"
-msgstr ""
+msgstr "  "
 
 msgid "for account %1"
 msgstr "para la cuenta %1"
@@ -15508,5 +15508,5 @@ msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and ma
 msgstr "{SPAIN ONLY}Está a punto de comprar un producto que no es sencillo y puede ser difícil de entender: contratos por diferencias y forex. Como una regla general, la CNMV considera que dichos productos no son apropiados para clientes minoristas, debido a su complejidad."
 
 msgid "“Deriv (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara BKR 9033, Malta, is licensed and regulated for digital options on synthetic indices by the Malta Gaming Authority in Malta (%1licence no. MGA/B2C/102/2000%2) and by Revenue Commissioners for clients in Ireland (licence no. 1010285)."
-msgstr ""
+msgstr "“Deriv (Europe) Limited, W Business Center, Nivel 3, Triq Dun Karm, Birkirkara BKR 9033, Malta, tiene licencia y está regulada para opciones digitales sobre índices sintéticos por la Autoridad de Juegos en Malta (%1licencia núm. MGA/ B2C/102/2000%2) y por los Comisarios de Ingresos para clientes en Irlanda (núm. de licencia 1010285)."
 
