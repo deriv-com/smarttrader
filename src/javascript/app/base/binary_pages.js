@@ -151,7 +151,7 @@ const pages_config = {
     // 'contact-2'              : { module: Contact2 },
     'contract-specifications': { module: TabSelector },
     'deactivated-account'    : { module: DeactivatedAccount },
-    'get-started'            : { module: TabSelector },
+    'get-started'            : { module: GetStarted.Index },
     'how-to-trade-mt5'       : { module: TabSelector },
     'ib-faq'                 : { module: StaticPages.IBProgrammeFAQ },
     'job-details'            : { module: JobDetails },
