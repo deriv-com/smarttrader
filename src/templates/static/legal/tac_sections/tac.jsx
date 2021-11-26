@@ -3,7 +3,7 @@ import React from 'react';
 const Tac = () => (
     <div>
         <h2 data-anchor='terms-and-conditions'>{it.L('Terms and conditions')}</h2>
-        <p><i>{it.L('Version 50. Last modified 06-10-2021.')}</i></p>
+        <p><i>{it.L('Version 51. Last modified 17-11-2021.')}</i></p>
         <p>{it.L('It is the responsibility of each client to read and understand this legal notice and the terms and conditions ("Terms") pursuant to which an acquisition of financial contracts via this site is governed.')}</p>
 
         <h2 data-anchor='interpretation'>A. {it.L('Interpretation')}</h2>
@@ -46,8 +46,8 @@ const Tac = () => (
             <li>{it.L('Deriv (BVI) Ltd: British Virgin Islands')}</li>
             <li>{it.L('Deriv (V) Ltd: Vanuatu')}</li>
             <li>{it.L('Deriv (SVG) LLC: St. Vincent and the Grenadines')}</li>
-            <li>{it.L('Champion Group Ltd: Vanuatu')}</li>
         </ul>
+        <p>{it.L('Deriv Limited — 13 Castle Street, St. Helier, JE2 3BT, Jersey — is the holding company for the above subsidiaries.')}</p>
 
         <h2 data-anchor='contracts'>E. {it.L('Contracts')}</h2>
         <p>{it.L('The Company does not provide a market amongst or between clients for investments, securities, derivatives, or speculations. Each financial contract purchased by a client via this site is an individual agreement between that client and the Company and is not a security, nor is it transferable, negotiable, or assignable to, or with, any third party.')}</p>
