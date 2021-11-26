@@ -615,7 +615,7 @@ const MetaTraderUI = (() => {
                 const insufficient_funds_error = $form.find('#insufficient_funds');
                 const is_balance_more_than_entered = balance >= txt_amount_deposit_element.val();
 
-                if (is_balance_more_than_entered) {
+                if (isNaN(txt_amount_deposit_element.val()) || is_balance_more_than_entered) {
                     return insufficient_funds_error.setVisibility(0);
                 }
                 return insufficient_funds_error.setVisibility(1);
