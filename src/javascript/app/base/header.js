@@ -154,6 +154,7 @@ const Header = (() => {
         const is_logged_in = Client.isLoggedIn();
         const has_dxtrade = !!(State.getResponse('landing_company.dxtrade_gaming_company') || State.getResponse('landing_company.dxtrade_gaming_company'));
         const should_show_xtrade = is_logged_in ? has_dxtrade : !isEuCountry();
+        const should_show_dbot = !is_logged_in ? !isEuCountry() : true;
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
@@ -162,13 +163,15 @@ const Header = (() => {
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
-            dbot: {
-                name     : 'DBot',
-                desc     : localize('Automated trading at your fingertips. No coding needed.'),
-                link     : `${main_domain}/bot`,
-                icon     : 'ic-brand-dbot.svg',
-                on_mobile: false,
-            },
+            ...(should_show_dbot ? {
+                dbot: {
+                    name     : 'DBot',
+                    desc     : localize('Automated trading at your fingertips. No coding needed.'),
+                    link     : `${main_domain}/bot`,
+                    icon     : 'ic-brand-dbot.svg',
+                    on_mobile: false,
+                },
+            } : {}),
             dmt5: {
                 name     : 'DMT5',
                 desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
