@@ -29,14 +29,8 @@ const RedirectBanner = (() => {
 
     };
 
-    const showBanner = () => {
-        el_redirect_banner_container = getElementById('redirect_banner_container');
-        el_redirect_link = getElementById('redirect-link');
-        el_redirect_banner_container.setVisibility(1);
-        const lang = getLanguage().toLowerCase();
-        const multiplier_href = `https://deriv.com/${lang}/`;
-
-        el_redirect_link.href = multiplier_href;
+    const handleRedirect = () => {
+        window.location.href = '/move-to-deriv/';
     };
 
     const loginOnLoad = () => {
@@ -52,11 +46,11 @@ const RedirectBanner = (() => {
             const svg = State.getResponse('authorize.account_list').filter(item => item.landing_company_name === 'svg').length;
             
             if (eu_country && State.getResponse('authorize.account_list').length === 1) {
-                showBanner();
+                handleRedirect();
             } else if (eu_country && virtual_account && maltainvest && !iom && !malta) {
-                showBanner();
+                handleRedirect();
             } else if (eu_country && client_account) {
-                showBanner();
+                handleRedirect();
             } else if (svg && virtual_account) {
                 DerivBanner.redBanner();
             }
