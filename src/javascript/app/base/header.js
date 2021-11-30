@@ -154,7 +154,7 @@ const Header = (() => {
         const is_logged_in = Client.isLoggedIn();
         const has_dxtrade = !!(State.getResponse('landing_company.dxtrade_gaming_company') || State.getResponse('landing_company.dxtrade_gaming_company'));
         const should_show_xtrade = is_logged_in ? has_dxtrade : !isEuCountry();
-        const should_show_dbot = !is_logged_in ? !isEuCountry() : true;
+        const should_show_dbot = !isEuCountry();
         const platforms = {
             dtrader: {
                 name     : 'DTrader',
