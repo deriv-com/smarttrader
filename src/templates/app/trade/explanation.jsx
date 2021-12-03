@@ -140,10 +140,10 @@ const Explanation = () => (
             <div className='gr-row'>
                 <div className='gr-2 hide-mobile' />
                 <div className='gr-4 gr-12-m padding-right' style={{ margin: 'auto' }}>
-                    <img id='explanation_image_1' className='responsive' />
+                    <img id='explanation_image_1' className='responsive' alt='Winning trading contract - Rise on Deriv.com' />
                 </div>
                 <div className='gr-4 gr-12-m padding-left'>
-                    <img id='explanation_image_2' className='responsive' />
+                    <img id='explanation_image_2' className='responsive' alt='Winning trading contract - Falls on Deriv.com'  />
                 </div>
                 <div className='gr-2 hide-mobile' />
             </div>
