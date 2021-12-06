@@ -109,7 +109,7 @@ const MetaTraderUI = (() => {
                     account_type += `_${trading_server.id}`;
                 }
                 const new_account_info = getAccountsInfo(account_type);
-                const { market_type, sub_account_type } = new_account_info;
+                const { market_type, sub_account_type } = new_account_info || {};
                 const { supported_accounts = [] } = trading_server;
                 const is_server_supported = isSupportedServer(market_type, sub_account_type, supported_accounts);
 
