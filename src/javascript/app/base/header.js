@@ -152,6 +152,7 @@ const Header = (() => {
         }
         const blocked_options_countries  = ['au', 'fr'];
         const client_country             = Client.get('residence') || State.getResponse('website_status.clients_country');
+        const is_logged_in               = Client.isLoggedIn();
         const landing_company            = State.getResponse('landing_company');
         const landing_company_shortcode  = Client.get('landing_company_shortcode') || landing_company.gaming_company.shortcode;
         const main_domain                = getHostname();
@@ -162,7 +163,6 @@ const Header = (() => {
                                             || !client_country
                                             || !landing_company
                                             || !Object.keys(landing_company).length);
-        const is_logged_in               = Client.isLoggedIn();
         const is_mf                      = landing_company_shortcode === 'maltainvest';
         const is_mt5_allowed             = !!(landing_company.mt_financial_company
                                             || landing_company.mt_gaming_company
@@ -171,8 +171,11 @@ const Header = (() => {
         const is_multipliers_only        = multipliers_only_countries.includes(client_country);
         const is_options_blocked         = blocked_options_countries.includes(client_country);
         const is_virtual                 = Client.get('is_virtual');
-        
+
         const should_show_xtrade         = is_logged_in ? is_dxtrade_allowed : !isEuCountry();
+        const should_show_dmt5           = !is_logged_in || is_mt5_allowed;
+        const should_show_bots           = is_virtual ? !is_multipliers_only : !is_mf && !is_options_blocked;
+
         const platforms                  = {
             dtrader: {
                 name     : 'DTrader',
@@ -181,7 +184,7 @@ const Header = (() => {
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
-            ...((is_virtual && !is_multipliers_only) || (!is_virtual && !is_mf && !is_options_blocked) ? {
+            ...(should_show_bots ? {
                 dbot: {
                     name     : 'DBot',
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
@@ -190,7 +193,7 @@ const Header = (() => {
                     on_mobile: true,
                 },
             } : {}),
-            ...(!is_logged_in || is_mt5_allowed ? {
+            ...(should_show_dmt5 ? {
                 dmt5: {
                     name     : 'DMT5',
                     desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
@@ -209,14 +212,14 @@ const Header = (() => {
                     on_mobile: true,
                 },
             } : {}),
-            ...((is_virtual && !is_multipliers_only) || (!is_virtual && !is_mf && !is_options_blocked) ? {
-                smarttrader: {
-                    name     : 'SmartTrader',
-                    desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
-                    link     : '#',
-                    icon     : 'logo_smart_trader.svg',
-                    on_mobile: true,
-                },
+            smarttrader: {
+                name     : 'SmartTrader',
+                desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
+                link     : '#',
+                icon     : 'logo_smart_trader.svg',
+                on_mobile: true,
+            },
+            ...(should_show_bots ? {
                 binarybot: {
                     name     : 'Binary Bot',
                     desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
