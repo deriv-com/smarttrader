@@ -150,11 +150,30 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const main_domain = getHostname();
-        const is_logged_in = Client.isLoggedIn();
-        const has_dxtrade = !!(State.getResponse('landing_company.dxtrade_gaming_company') || State.getResponse('landing_company.dxtrade_gaming_company'));
-        const should_show_xtrade = is_logged_in ? has_dxtrade : !isEuCountry();
-        const platforms = {
+        const blocked_options_countries  = ['au', 'fr'];
+        const client_country             = Client.get('residence') || State.getResponse('website_status.clients_country');
+        const landing_company            = State.getResponse('landing_company');
+        const landing_company_shortcode  = Client.get('landing_company_shortcode') || landing_company.gaming_company.shortcode;
+        const main_domain                = getHostname();
+        const multipliers_only_countries = ['de', 'es', 'it', 'lu', 'gr', 'au', 'fr'];
+
+        const is_dxtrade_allowed         = !!(landing_company.dxtrade_gaming_company
+                                            || landing_company.dxtrade_gaming_company
+                                            || !client_country
+                                            || !landing_company
+                                            || !Object.keys(landing_company).length);
+        const is_logged_in               = Client.isLoggedIn();
+        const is_mf                      = landing_company_shortcode === 'maltainvest';
+        const is_mt5_allowed             = !!(landing_company.mt_financial_company
+                                            || landing_company.mt_gaming_company
+                                            || !landing_company
+                                            || !Object.keys(landing_company).length);
+        const is_multipliers_only        = multipliers_only_countries.includes(client_country);
+        const is_options_blocked         = blocked_options_countries.includes(client_country);
+        const is_virtual                 = Client.get('is_virtual');
+        
+        const should_show_xtrade         = is_logged_in ? is_dxtrade_allowed : !isEuCountry();
+        const platforms                  = {
             dtrader: {
                 name     : 'DTrader',
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
@@ -162,21 +181,25 @@ const Header = (() => {
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
-            dbot: {
-                name     : 'DBot',
-                desc     : localize('Automated trading at your fingertips. No coding needed.'),
-                link     : `${main_domain}/bot`,
-                icon     : 'ic-brand-dbot.svg',
-                on_mobile: false,
-            },
-            dmt5: {
-                name     : 'DMT5',
-                desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
-                link     : `${main_domain}/mt5`,
-                icon     : 'ic-brand-dmt5.svg',
-                on_mobile: true,
-
-            },
+            ...((is_virtual && !is_multipliers_only) || (!is_virtual && !is_mf && !is_options_blocked) ? {
+                dbot: {
+                    name     : 'DBot',
+                    desc     : localize('Automated trading at your fingertips. No coding needed.'),
+                    link     : `${main_domain}/bot`,
+                    icon     : 'ic-brand-dbot.svg',
+                    on_mobile: true,
+                },
+            } : {}),
+            ...(!is_logged_in || is_mt5_allowed ? {
+                dmt5: {
+                    name     : 'DMT5',
+                    desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
+                    link     : `${main_domain}/mt5`,
+                    icon     : 'ic-brand-dmt5.svg',
+                    on_mobile: true,
+    
+                },
+            } : {}),
             ...(should_show_xtrade ? {
                 derivx: {
                     name     : 'Deriv X',
@@ -186,13 +209,22 @@ const Header = (() => {
                     on_mobile: true,
                 },
             } : {}),
-            smarttrader: {
-                name     : 'SmartTrader',
-                desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
-                link     : '#',
-                icon     : 'logo_smart_trader.svg',
-                on_mobile: true,
-            },
+            ...((is_virtual && !is_multipliers_only) || (!is_virtual && !is_mf && !is_options_blocked) ? {
+                smarttrader: {
+                    name     : 'SmartTrader',
+                    desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
+                    link     : '#',
+                    icon     : 'logo_smart_trader.svg',
+                    on_mobile: true,
+                },
+                binarybot: {
+                    name     : 'Binary Bot',
+                    desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
+                    link     : 'https://bot.deriv.com',
+                    icon     : 'ic-brand-binarybot.svg',
+                    on_mobile: true,
+                },
+            } : {}),
         };
 
         Object.keys(platforms).forEach(key => {
