@@ -3,7 +3,6 @@ const isCryptocurrency             = require('./currency_base').isCryptocurrency
 const SocketCache                  = require('./socket_cache');
 const localize                     = require('../localize').localize;
 const LocalStore                   = require('../storage').LocalStore;
-const MetaTrader                   = require('../../app/pages/user/metatrader/metatrader');
 const State                        = require('../storage').State;
 const getPropertyValue             = require('../utility').getPropertyValue;
 const isEmptyObject                = require('../utility').isEmptyObject;
@@ -412,13 +411,11 @@ const ClientBase = (() => {
         const landing_companies = State.getResponse('landing_company');
         const client_country    = get('residence') || State.getResponse('website_status.clients_country');
 
-        return (
-            'dxtrade_financial_company' in landing_companies ||
+        return !!('dxtrade_financial_company' in landing_companies ||
             'dxtrade_gaming_company' in landing_companies ||
             (!client_country
             || !landing_companies
-            || !Object.keys(landing_companies).length)
-        );
+            || !Object.keys(landing_companies).length));
     };
 
     const isMF = () => {
@@ -426,7 +423,15 @@ const ClientBase = (() => {
         return landing_company_shortcode === 'maltainvest';
     };
 
-    const isMT5Allowed = MetaTrader.isEligible();
+    const isMT5Allowed = () => {
+        // default allowing mt5 to true before landing_companies gets populated
+        // since most clients are allowed to use mt5
+        const landing_companies = State.getResponse('landing_company');
+
+        return !!('mt_financial_company' in landing_companies
+            || 'mt_gaming_company' in landing_companies
+            || (!landing_companies || !Object.keys(landing_companies).length));
+    };
 
     const isMultipliersOnly = () => {
         const multipliers_only_countries = ['de', 'es', 'it', 'lu', 'gr', 'au', 'fr'];
