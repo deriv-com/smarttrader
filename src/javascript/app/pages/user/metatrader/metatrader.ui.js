@@ -83,8 +83,8 @@ const MetaTraderUI = (() => {
         }
     };
 
-    const populateWebLinks = (server_info) => {
-        const query_params = `${server_info && `?servers=${server_info.environment}&trade_server=${server_info.environment}`}`;
+    const populateWebLinks = (server_info, login_id) => {
+        const query_params = `${server_info && `?servers=${server_info.environment}&trade_server=${server_info.environment}&login=${login_id}`}`;
         const $mt5_web_link = $('.mt5-web-link');
 
         $mt5_web_link.attr('href', `${mt5_url}${query_params}`);
@@ -100,7 +100,7 @@ const MetaTraderUI = (() => {
             supported: 0,
             used     : 0,
         };
-        
+
         try {
             const trading_servers = State.getResponse('trading_servers');
             trading_servers.forEach(trading_server => {
@@ -456,6 +456,7 @@ const MetaTraderUI = (() => {
             const is_demo      = getAccountsInfo(acc_type).is_demo;
             const is_synthetic = getAccountsInfo(acc_type).market_type === 'gaming' || getAccountsInfo(acc_type).market_type === 'synthetic';
             const server_info  = getAccountsInfo(acc_type).info.server_info;
+            const display_login = getAccountsInfo(acc_type).info.display_login;
             const region = server_info && server_info.geolocation.region;
             const sequence = server_info && server_info.geolocation.sequence;
             const label_text = server_info ? sequence > 1 ? `${region} ${sequence}` : region : getAccountsInfo(acc_type).info.display_server;
@@ -481,8 +482,7 @@ const MetaTraderUI = (() => {
                 $container.find('#mt-trade-server-container').setVisibility(!!mapping.trade_server);
                 $(this).html(typeof mapping[key] === 'function' ? mapping[key]() : info);
             });
-
-            populateWebLinks(server_info);
+            populateWebLinks(server_info, display_login);
             setCounterpartyAndJurisdictionTooltip($('.acc-info div[data="display_login"]'), acc_type);
 
             if (current_action_ui !== 'new_account') {
