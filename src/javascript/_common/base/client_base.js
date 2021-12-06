@@ -3,6 +3,7 @@ const isCryptocurrency             = require('./currency_base').isCryptocurrency
 const SocketCache                  = require('./socket_cache');
 const localize                     = require('../localize').localize;
 const LocalStore                   = require('../storage').LocalStore;
+const MetaTrader                   = require('../../app/pages/user/metatrader/metatrader');
 const State                        = require('../storage').State;
 const getPropertyValue             = require('../utility').getPropertyValue;
 const isEmptyObject                = require('../utility').isEmptyObject;
@@ -406,9 +407,35 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
-    // Restrict binary options display on australian residence clients
+    const isDXTradeAllowed = () => {
+        // Stop showing DerivX for non-logged in EU users
+        const landing_companies = State.getResponse('landing_company');
+        const client_country    = get('residence') || State.getResponse('website_status.clients_country');
+
+        return (
+            'dxtrade_financial_company' in landing_companies ||
+            'dxtrade_gaming_company' in landing_companies ||
+            (!client_country
+            || !landing_companies
+            || !Object.keys(landing_companies).length)
+        );
+    };
+
+    const isMF = () => {
+        const landing_company_shortcode  = get('landing_company_shortcode') || State.getResponse('landing_company.gaming_company.shortcode');
+        return landing_company_shortcode === 'maltainvest';
+    };
+
+    const isMT5Allowed = MetaTrader.isEligible();
+
+    const isMultipliersOnly = () => {
+        const multipliers_only_countries = ['de', 'es', 'it', 'lu', 'gr', 'au', 'fr'];
+        const country = get('country') || State.getResponse('authorize.country');
+        return multipliers_only_countries.includes(country);
+    };
+    // Restrict binary options display on clients with Australian and French residence
     const isOptionsBlocked = () => {
-        const options_blocked_countries = ['au'];
+        const options_blocked_countries = ['au', 'fr'];
         const country = get('country') || State.getResponse('authorize.country');
         return options_blocked_countries.includes(country);
     };
@@ -466,7 +493,11 @@ const ClientBase = (() => {
 
     return {
         init,
+        isDXTradeAllowed,
         isLoggedIn,
+        isMF,
+        isMT5Allowed,
+        isMultipliersOnly,
         isValidLoginid,
         set,
         get,

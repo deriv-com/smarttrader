@@ -21,7 +21,8 @@ const getTopLevelDomain        = require('../../_common/utility').getTopLevelDom
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
-const isEuCountry              = require('../common/country_base').isEuCountry;
+const isEuCountry              = require('../../app/common/country_base').isEuCountry;
+const isEuCountrySelected      = require('../../_common/utility').isEuCountrySelected;
 
 const header_icon_base_path = '/images/pages/header/';
 
@@ -150,33 +151,16 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const blocked_options_countries  = ['au', 'fr'];
-        const client_country             = Client.get('residence') || State.getResponse('website_status.clients_country');
-        const is_logged_in               = Client.isLoggedIn();
-        const landing_company            = State.getResponse('landing_company');
-        const landing_company_shortcode  = Client.get('landing_company_shortcode') || landing_company.gaming_company.shortcode;
-        const main_domain                = getHostname();
-        const multipliers_only_countries = ['de', 'es', 'it', 'lu', 'gr', 'au', 'fr'];
+        const client_country     = Client.get('residence') || State.getResponse('website_status.clients_country');
+        const is_logged_in       = Client.isLoggedIn();
+        const main_domain        = getHostname();
+        const should_show_bots   = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
+        const should_show_dmt5   = !is_logged_in || Client.isMT5Allowed();
+        const should_show_xtrade = is_logged_in
+            ? Client.isDXTradeAllowed()
+            : !isEuCountry() && !isEuCountrySelected(client_country);
 
-        const is_dxtrade_allowed         = !!(landing_company.dxtrade_gaming_company
-                                            || landing_company.dxtrade_gaming_company
-                                            || !client_country
-                                            || !landing_company
-                                            || !Object.keys(landing_company).length);
-        const is_mf                      = landing_company_shortcode === 'maltainvest';
-        const is_mt5_allowed             = !!(landing_company.mt_financial_company
-                                            || landing_company.mt_gaming_company
-                                            || !landing_company
-                                            || !Object.keys(landing_company).length);
-        const is_multipliers_only        = multipliers_only_countries.includes(client_country);
-        const is_options_blocked         = blocked_options_countries.includes(client_country);
-        const is_virtual                 = Client.get('is_virtual');
-
-        const should_show_xtrade         = is_logged_in ? is_dxtrade_allowed : !isEuCountry();
-        const should_show_dmt5           = !is_logged_in || is_mt5_allowed;
-        const should_show_bots           = is_virtual ? !is_multipliers_only : !is_mf && !is_options_blocked;
-
-        const platforms                  = {
+        const platforms          = {
             dtrader: {
                 name     : 'DTrader',
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
