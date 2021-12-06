@@ -21,7 +21,7 @@ const getTopLevelDomain        = require('../../_common/utility').getTopLevelDom
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
-const isEuCountry              = require('../../app/common/country_base').isEuCountry;
+const isEuCountry              = require('../common/country_base').isEuCountry;
 const isEuCountrySelected      = require('../../_common/utility').isEuCountrySelected;
 
 const header_icon_base_path = '/images/pages/header/';
