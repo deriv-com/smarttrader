@@ -128,7 +128,6 @@ const Page = (() => {
         if (Client.isLoggedIn()) {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
                 RealityCheck.onLoad();
-                RedirectBanner.loginOnLoad();
                 Menu.init();
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
@@ -136,11 +135,13 @@ const Page = (() => {
                 const is_at_client = (Client.get('residence') === 'at' || State.getResponse('website_status.clients_country') === 'at') && Client.hasAccountType('gaming');
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
                 const mf_check = ClientBase.get('landing_company_shortcode') === 'maltainvest';
+                const virtual_account = Client.get('landing_company_shortcode') === 'virtual';
+                if (!is_iom_client || is_uk_residence && !Client.hasAccountType('gaming') || mf_check || mlt_check) RedirectBanner.loginOnLoad();
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
                     CloseBanner.onLoad();
-                } else if (is_iom_client && Client.hasAccountType('gaming')) {
+                } else if (is_iom_client && Client.hasAccountType('gaming') || is_iom_client && virtual_account) {
                     CloseBanner.onLoad();
                     ClosePopup.loginOnLoad();
                 } else if (mlt_check && !mf_check || is_be_client && !mf_check || is_at_client && !mf_check) {
