@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-06 01:59\n"
+"PO-Revision-Date: 2021-12-08 10:34\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -710,7 +710,7 @@ msgid "<< Back to job descriptions"
 msgstr "<< Вернуться к вакансиям"
 
 msgid "<strong>Appropriateness Test: WARNING:</strong> In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
-msgstr "<strong>Тест на целесообразность: ПРЕДУПРЕЖДЕНИЕ:</strong> Предоставляя вам наши услуги, мы обязаны получить от вас определенную информацию, чтобы знать об уместности предоставления вам того или иного продукта (то есть, предоставление услуг в зависимости от того, обладаете ли вы опытом и знаниями, достаточными для понимания всех возможных рисков)."
+msgstr "<strong>Тест на соответствие: ПРЕДУПРЕЖДЕНИЕ:</strong> Предоставляя вам наши услуги, мы обязаны получить от вас определенную информацию, чтобы знать об уместности предоставления вам того или иного продукта (то есть, предоставление услуг в зависимости от того, обладаете ли вы опытом и знаниями, достаточными для понимания всех возможных рисков)."
 
 msgid "A Contract for difference (CFD) is a derivative contract that allows you to profit by speculating on the rise or fall of an underlying asset. Your profit and loss is calculated through the difference in the buy and sell prices of the underlying asset."
 msgstr "Контракт на разницу (CFD) – это производный финансовый контракт, позволяющий получить прибыль, делая прогноз на рост или снижение цены основного актива. Ваша прибыль или убыток рассчитывается в виде разницы между ценой покупки и продажи основного актива."
@@ -1616,10 +1616,10 @@ msgid "Approaching even the smallest task with an open mind and learning new ski
 msgstr "Здравый и непредвзятый подход к выполнению даже самых небольших задач, а также желание получить новые навыки."
 
 msgid "Appropriateness"
-msgstr "Целесообразность"
+msgstr "Соответствие"
 
 msgid "Appropriateness test"
-msgstr "Тест на целесообразность"
+msgstr "Тест на соответствие"
 
 msgid "Apps you have linked to this password:"
 msgstr "Приложения, которые вы связали с этим паролем:"
@@ -1793,7 +1793,7 @@ msgid "Aspects of a client order not affected by specific instructions are subje
 msgstr "Отдельные аспекты ордера клиента, относительно которых не было предоставлено конкретных инструкций, будут разрешены в рамках Политики исполнения ордеров %1. В отсутствие конкретных инструкций от клиентов, Компания на своё усмотрение определит факторы, которые необходимо учесть, чтобы предоставить клиентам наилучшее исполнение, согласно нижеперечисленным критериям исполнения:"
 
 msgid "Assessment of appropriateness"
-msgstr "Оценка целесообразности"
+msgstr "Оценка соответствия"
 
 msgid "Assessment of appropriateness of the requested service or product as DIEL assumes that the client appreciates the risks associated with such investment services and products offered by the Company"
 msgstr "Оценку на предмет соответствия запрошенным услугам или продуктам, так как DIEL полагает, что клиент в состоянии самостоятельно оценивать риски, сопряжённые с таковыми инвестиционными услугами и продуктами, предоставляемыми Компанией."
@@ -2096,7 +2096,7 @@ msgid "Become our partner"
 msgstr "Станьте нашим партнёром"
 
 msgid "Before the Company opens an account for the client in which the client can trade or invest in Investment Products with DIEL, the Company is required to make an assessment of whether products or services that the client has chosen are appropriate for the client and to warn the client if, on the basis of the information that the client has provided to the Company, any such product or service is deemed not appropriate for the client. Any decision to open an account and to use the Company's products or services is the client's. It is the client's responsibility to understand the risks involved with the Company's products or services."
-msgstr "Прежде, чем Компания откроет клиенту счёт для торговли или вложений в инвестиционные продукты DIEL, Компания обязана произвести оценку и выяснить, подходят ли клиенту выбранные инвестиционные продукты или услуги. Также, на основе предоставленной информации, Компания обязана предупредить клиента, если какой-то продукт или услуга не будут ему/ей подходить. Любое решение об открытии счета и использовании продуктов Компании остаётся за клиентом. Также клиент должен осознавать риски, связанные с продуктами или услугами Компании."
+msgstr "Прежде, чем Компания откроет клиенту счет для торговли или вложений в инвестиционные продукты DIEL, Компания обязана произвести оценку и выяснить, подходят ли клиенту выбранные инвестиционные продукты или услуги. Также, на основе предоставленной информации, Компания обязана предупредить клиента, если какой-то продукт или услуга не будут ему/ей подходить. Любое решение об открытии счета и использовании продуктов Компании остается за клиентом. Также клиент должен осознавать риски, связанные с продуктами или услугами Компании."
 
 msgid "Before uploading your document, please ensure that your %1personal details%2 are updated to match your proof of identity. This will help to avoid delays during the verification process."
 msgstr "Перед загрузкой документа убедитесь, что ваши %1личные данные%2 обновлены и соответствуют вашему удостоверению личности. Это поможет избежать задержек в процессе верификации."
@@ -2402,7 +2402,7 @@ msgid "By default, the intelligent order routing system ensures that the top of 
 msgstr "По умолчанию, система умного распределения поступающих ордеров гарантирует, что в верхней части стакана котировок всегда находится лучшая цена бид и цена аск, предоставленные конкурирующими поставщиками ликвидности. Тем не менее, при определённом уровне рыночной ликвидности данное положение может измениться и наиболее важным фактором станет сама возможность исполнения."
 
 msgid "By entering into an agreement with DIEL, the client understands that CFDs are highly speculative, complex products and carry a high degree of risk, especially those traded on Margin. Whilst the client may generate profit and increase their capital, they may also expose themselves to losing the entire sum invested, and their loss may exceed their deposit. The products referred to in this agreement are not appropriate for everyone. The client acknowledges that the trading services described in this agreement are designed for clients who are knowledgeable and experienced in the types of Transactions described in this agreement, and the client fully understands the associated risks before entering into this agreement with DIEL."
-msgstr "Заключая данное Соглашение c DIEL, клиент признаёт и соглашается с тем, что CFD (контракты на разницу) являются сложными, высоко спекулятивными продуктами и предполагают высокий уровень риска, особенно в случаях торговли с применением маржи. Несмотря на возможность получить прибыль и увеличить свой капитал, клиент может подвергнуть себя риску полной потери инвестиции, а его/её убыток может превысить размер первоначального депозита. Продукты, упомянутые в данном Соглашении, подходят далеко не для каждого трейдера. Настоящим клиент признаёт, что торговые услуги, перечисленные в данном соглашении, предназначены только для клиентов, обладающих достаточными знаниями и опытом в видах контрактов, перечисленных в данном соглашении. Клиент также признаёт, что осведомлен и полностью осознаёт все сопряжённые риски перед заключением данного соглашения с DIEL."
+msgstr "Заключая данное Соглашение c DIEL, клиент признает и соглашается с тем, что CFD (контракты на разницу) являются сложными, высоко спекулятивными продуктами и предполагают высокий уровень риска, особенно в случаях торговли с применением маржи. Несмотря на возможность получить прибыль и увеличить свой капитал, клиент может подвергнуть себя риску полной потери инвестиции, а его/ее убыток может превысить размер первоначального депозита. Продукты, упомянутые в данном Соглашении, подходят далеко не для каждого трейдера. Настоящим клиент признает, что торговые услуги, перечисленные в данном соглашении, предназначены только для клиентов, обладающих достаточными знаниями и опытом в видах контрактов, перечисленных в данном соглашении. Клиент также признает, что осведомлен и полностью осознает все сопряженные риски перед заключением данного соглашения с DIEL."
 
 msgid "By indicating acceptance of these terms and conditions and continuing with application to join the Company's Affiliate Programme, the Affiliate is agreeing to the terms and conditions set out in this Agreement. If the Affiliate does not agree with the terms and conditions (or is not authorised to do so), the Affiliate should not continue with the application."
 msgstr "Выразив своё согласие с данными правилами и продолжив регистрацию для участия в Партнёрской программе, Партнёр соглашается с правилами и условиями, перечисленными в данном Соглашении. Если Партнёр не согласен с условиями (или не имеет полномочий для выражения данного согласия), он не должен продолжать процесс подачи заявки."
@@ -6342,7 +6342,7 @@ msgid "In a nutshell, when you go long on the BTC/USD with %1, you are not purch
 msgstr "В целом, если вы занимаете длинную позицию на паре BTC/USD на %1, вы не покупаете биткойн. Вы просто делаете ставку на то, что BTC/USD вырастет, а вы таким образом получите прибыль за правильный прогноз. Если вы занимаете длинную позицию на паре BTC/USD, а её цена падает, вы понесёте убыток."
 
 msgid "In accordance with applicable regulatory requirements, if the Company does not manage to obtain sufficient information to assess the appropriateness of the product or service for the client, the Company will similarly inform the client that %1 is not in a position to assess appropriateness."
-msgstr "Согласно действующим нормативным требованиям, в ситуациях, когда Компания не смогла получить достаточно информации, чтобы оценить пригодность для клиента определённого продукта или услуг, Компания аналогичным образом проинформирует клиента о совей неспособности провести оценку целесообразности."
+msgstr "Согласно действующим нормативным требованиям, в ситуациях, когда Компания не смогла получить достаточно информации, чтобы оценить пригодность для клиента определенного продукта или услуг, Компания аналогичным образом проинформирует клиента о совей неспособности провести оценку соответствия."
 
 msgid "In all circumstances, the Company reserves the right to make changes to these terms and conditions. If the Company elects to make any material changes to these terms and conditions, clients will be notified in advance and shall either accept or decline to agree. Declining to agree shall result in a material breach of this agreement and the client's account may be frozen, suspended, or cancelled. However, the client shall be allowed to withdraw any pending balance on account subject to KYC verification."
 msgstr "Во всех ситуациях Компания оставляет за собой право вносить изменения в настоящие правила и условия. Если Компания решит внести какие-либо существенные изменения в настоящие условия, наши клиенты будут уведомлены заранее и смогут принять или отклонить их. Отклонение влечет существенное нарушение данного соглашения, и счет клиента может быть заморожен, приостановлен или закрыт. Тем не менее, клиенту должно быть позволено вывести со счета доступный баланс после прохождения процедуры подтверждения личности и предоставления документов в рамках политики Знай своего клиента."
