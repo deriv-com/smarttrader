@@ -30,11 +30,11 @@ const ClosePopup = (() => {
             if (is_uk_residence && client_account) {
                 el_gaming_popup = getElementById('gaming-close-popup');
                 el_accept_btn = getElementById('accept-btn');
-                el_gaming_popup.setVisibility(1);
+                el_gaming_popup.setVisibility(0);
             } else if (is_iom_client && client_account) {
                 el_gaming_popup = getElementById('gaming-close-popup-iom');
                 el_accept_btn = getElementById('accept-btn-iom');
-                el_gaming_popup.setVisibility(1);
+                el_gaming_popup.setVisibility(0);
             }
             
             el_accept_btn.addEventListener('click', onClosePopup);
