@@ -16,6 +16,7 @@ const Tick              = require('./tick');
 const BinarySocket      = require('../../base/socket');
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
+const isEuCountry       = require('../../common/country_base').isEuCountry;
 const elementInnerHtml  = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById    = require('../../../_common/common_functions').getElementById;
 const getVisibleElement = require('../../../_common/common_functions').getVisibleElement;
@@ -30,7 +31,7 @@ const Process = (() => {
      */
     const processActiveSymbols = (country) => {
         BinarySocket.send({ active_symbols: 'brief' }).then((response) => {
-            if (response.active_symbols && response.active_symbols.length) {
+            if (!isEuCountry() && response.active_symbols && response.active_symbols.length) {
                 // populate the Symbols object
                 Symbols.details(response);
 
