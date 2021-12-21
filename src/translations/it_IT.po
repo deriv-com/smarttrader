@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-12 06:54\n"
+"PO-Revision-Date: 2021-12-21 07:46\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgid "404"
 msgstr "404"
 
 msgid " (Region added)"
-msgstr " (zona aggiunta)"
+msgstr " (area geografica aggiunta)"
 
 msgid " (Temporarily unavailable)"
 msgstr " (Temporaneamente non disponibile)"
@@ -65,10 +65,10 @@ msgid "2. Your desktop window stays open"
 msgstr "2. La finestra del desktop resta aperta"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr ""
+msgstr "Un'esperienza di trading completamente nuova su una piattaforma semplice ed efficiente."
 
 msgid "A word by itself is easy to guess"
-msgstr "Una parola da sola è facile da indovinare"
+msgstr "Una singola parola si può indovinare facilmente"
 
 msgid "AM"
 msgstr "AM"
@@ -101,7 +101,7 @@ msgid "Add Deriv account"
 msgstr "Aggiungi conto Deriv"
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr "Aggiungi una o due parole. Sono preferibili parole non comuni."
+msgstr "Aggiungi una o due parole, preferibilmente non comuni."
 
 msgid "Adjust trade parameters"
 msgstr "Regola i parametri di trading"
@@ -119,7 +119,7 @@ msgid "All markets are closed now. Please try again later."
 msgstr "Al momento tutti i mercati sono chiusi. Si prega di riprovare più tardi."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr "Il maiuscolo per tutte le lettere è facile da indovinare così come il minuscolo"
+msgstr "Utilizzare il maiuscolo, così come il minuscolo, per tutte le lettere rende la combinazione facile da indovinare"
 
 msgid "Allow camera access"
 msgstr "Consenti accesso alla fotocamera"
@@ -206,7 +206,7 @@ msgid "Authenticate your account now to take full advantage of all payment metho
 msgstr "Autentica subito il tuo conto per sfruttare a pieno tutte le opzioni di pagamento disponibili."
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr ""
+msgstr "Trading automatizzato e a portata di mano, senza bisogno di codifiche."
 
 msgid "Available Markets"
 msgstr "Mercati disponibili"
@@ -329,7 +329,7 @@ msgid "Charting for this underlying is delayed"
 msgstr "I grafici per questo strumento sono differiti"
 
 msgid "Check back here to finish the submission"
-msgstr "Verifica anche qui per finalizzare l'invio"
+msgstr "Controlla anche qui per finalizzare l'invio"
 
 msgid "Check selfie"
 msgstr "Verifica foto"
@@ -347,7 +347,7 @@ msgid "Check your image"
 msgstr "Controlla la tua fotografia"
 
 msgid "Check your mobile"
-msgstr "Controlla sul tuo smartphone"
+msgstr "Controlla sul tuo dispositivo mobile"
 
 msgid "Checked"
 msgstr "Verifica effettuata"
@@ -416,7 +416,7 @@ msgid "Confirm changes"
 msgstr "Conferma modifiche"
 
 msgid "Connected to your mobile"
-msgstr "Connesso al tuo smartphone"
+msgstr "Connesso al tuo dispositivo mobile"
 
 msgid "Connecting to server"
 msgstr "Connessione al server in corso"
@@ -488,10 +488,10 @@ msgid "Copy link"
 msgstr "Copia link"
 
 msgid "Copy the link to your mobile browser"
-msgstr "Copia il link sul browser del tuo smartphone"
+msgstr "Copia il link sul browser del tuo dispositivo mobile"
 
 msgid "Copy the link to your phone"
-msgstr "Copia il link sul tuo telefono"
+msgstr "Copia il link sul tuo dispositivo mobile"
 
 msgid "Counterparty"
 msgstr "Controparte"
@@ -2042,7 +2042,7 @@ msgid "Sorry, no mobile phone bills"
 msgstr "No bollette del cellulare"
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr ""
+msgstr "Il trading su opzioni non è disponibile nel Regno Unito e sull'Isola di Man."
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "Siamo spiacenti, questa funzione è disponibile solo per i conti virtuali."
@@ -2465,16 +2465,16 @@ msgid "Trade"
 msgstr "Trade"
 
 msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr ""
+msgstr "Fai trading con FX e CFD su una piattaforma personalizzabile e facile da usare."
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr ""
+msgstr "Fai trading con le opzioni digitali sui mercati internazionali grazie a SmartTrader, la piattaforma di trading online facile da usare."
 
 msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
-msgstr ""
+msgstr "Fai trading su MetaTrader 5 (DMT5), la piattaforma di trading completa con Forex e CFD."
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr ""
+msgstr "Fai trading sui mercati internazionali con la nostra famosa piattaforma dal semplice utilizzo."
 
 msgid "Trading Information"
 msgstr "Informazioni sul trading"
