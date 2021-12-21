@@ -151,12 +151,13 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const client_country     = Client.get('residence') || State.getResponse('website_status.clients_country');
-        const is_logged_in       = Client.isLoggedIn();
-        const main_domain        = getHostname();
-        const should_show_bots   = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
-        const should_show_dmt5   = !is_logged_in || Client.isMT5Allowed();
-        const should_show_xtrade = is_logged_in
+        const client_country                  = Client.get('residence') || State.getResponse('website_status.clients_country');
+        const is_logged_in                    = Client.isLoggedIn();
+        const main_domain                     = getHostname();
+        const should_show_bots_when_logged_in = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
+        const should_show_bots                = is_logged_in ? should_show_bots_when_logged_in : !isEuCountry();
+        const should_show_dmt5                = !is_logged_in || Client.isMT5Allowed();
+        const should_show_xtrade              = is_logged_in
             ? Client.isDXTradeAllowed()
             : !isEuCountry() && !isEuCountrySelected(client_country);
 
