@@ -22,6 +22,7 @@ const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 const isEuCountry              = require('../common/country_base').isEuCountry;
+const isEuCountrySelected      = require('../../_common/utility').isEuCountrySelected;
 
 const header_icon_base_path = '/images/pages/header/';
 
@@ -150,12 +151,16 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const main_domain = getHostname();
-        const is_logged_in = Client.isLoggedIn();
-        const has_dxtrade = !!(State.getResponse('landing_company.dxtrade_gaming_company') || State.getResponse('landing_company.dxtrade_gaming_company'));
-        const should_show_xtrade = is_logged_in ? has_dxtrade : !isEuCountry();
-        const should_show_dbot = !isEuCountry();
-        const platforms = {
+        const client_country     = Client.get('residence') || State.getResponse('website_status.clients_country');
+        const is_logged_in       = Client.isLoggedIn();
+        const main_domain        = getHostname();
+        const should_show_bots   = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
+        const should_show_dmt5   = !is_logged_in || Client.isMT5Allowed();
+        const should_show_xtrade = is_logged_in
+            ? Client.isDXTradeAllowed()
+            : !isEuCountry() && !isEuCountrySelected(client_country);
+
+        const platforms          = {
             dtrader: {
                 name     : 'DTrader',
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
@@ -163,23 +168,25 @@ const Header = (() => {
                 icon     : 'ic-brand-dtrader.svg',
                 on_mobile: true,
             },
-            ...(should_show_dbot ? {
+            ...(should_show_bots ? {
                 dbot: {
                     name     : 'DBot',
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
                     link     : `${main_domain}/bot`,
                     icon     : 'ic-brand-dbot.svg',
-                    on_mobile: false,
+                    on_mobile: true,
                 },
             } : {}),
-            dmt5: {
-                name     : 'DMT5',
-                desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
-                link     : `${main_domain}/mt5`,
-                icon     : 'ic-brand-dmt5.svg',
-                on_mobile: true,
-
-            },
+            ...(should_show_dmt5 ? {
+                dmt5: {
+                    name     : 'DMT5',
+                    desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
+                    link     : `${main_domain}/mt5`,
+                    icon     : 'ic-brand-dmt5.svg',
+                    on_mobile: true,
+    
+                },
+            } : {}),
             ...(should_show_xtrade ? {
                 derivx: {
                     name     : 'Deriv X',
@@ -196,6 +203,15 @@ const Header = (() => {
                 icon     : 'logo_smart_trader.svg',
                 on_mobile: true,
             },
+            ...(should_show_bots ? {
+                binarybot: {
+                    name     : 'Binary Bot',
+                    desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
+                    link     : 'https://bot.deriv.com',
+                    icon     : 'ic-brand-binarybot.svg',
+                    on_mobile: true,
+                },
+            } : {}),
         };
 
         Object.keys(platforms).forEach(key => {
