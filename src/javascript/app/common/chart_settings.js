@@ -27,8 +27,8 @@ const ChartSettings = (() => {
             selected_tick: `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="margin-left: 10px; margin-right: 5px; display: inline-block; border-radius: 6px; background-color: var(--brand-red-coral); width:10px; height: 10px;"></span>${localize('Selected tick')}&nbsp;</div>`,
 
             // need to pass is_tick_trade params explicitly to return correct label when switching between ticks and non-ticks charts
-            getEndTime  : (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-orange-1); border-style: dashed;"></span>${is_tick_trade ? localize('Exit spot') : localize('End time')}&nbsp;</div>`,
-            getStartTime: (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} border-color: var(--brand-orange-1); border-style: solid;"></span>${is_tick_trade ? localize('Entry spot') : localize('Start time')}&nbsp;</div>`,
+            getEndTime  : (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} ${is_tick_trade ? 'border-color: var(--brand-orange-1);' : 'border-color: var(--brand-red-coral);'} border-style: dashed;"></span>${is_tick_trade ? localize('Exit spot') : localize('End time')}&nbsp;</div>`,
+            getStartTime: (is_tick_trade) => `<div class='nowrap gr-padding-10 gr-parent chart-legend-label'><span style="${common_vertical_line_style} ${is_tick_trade ? 'border-color: var(--brand-orange-1);' : 'border-color: var(--brand-red-coral);'} border-style: solid;"></span>${is_tick_trade ? localize('Entry spot') : localize('Start time')}&nbsp;</div>`,
         };
 
         const is_high_low_ticks = params.contract_type === 'highlowticks';
