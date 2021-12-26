@@ -42,7 +42,9 @@ const TradingAnalysis = (() => {
      * navigation
      */
     const bindAnalysisTabEvent = () => {
-        $('#trade_analysis').find('li a').on('click', (e) => {
+        const trade_analysis_items = $('#trade_analysis').find('li a');
+        trade_analysis_items.attr('hrefLang', getLanguage().toLowerCase());
+        trade_analysis_items.on('click', (e) => {
             e.preventDefault();
             const li = e.target.parentElement;
             sessionStorage.setItem('currentAnalysisTab', li.id);
