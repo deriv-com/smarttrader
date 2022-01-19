@@ -368,6 +368,7 @@ module.exports = [
     'Open the link on your mobile',
     'Open your new bank account',
     'Opens',
+    'Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.',
     'PM',
     'Passport',
     'Passport photo page',
