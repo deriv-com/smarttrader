@@ -202,6 +202,16 @@
                         //    background-size: contain;
                         //}
                     }
+                    &.basket_index {
+                        background: url('../images/pages/trade/assets/ic-basket_index-normal.svg') no-repeat;
+                        background-size: contain;
+                        transition: none;
+
+                        //&.active {
+                        //    background: url('../images/pages/trade/assets/ic-forex-active.svg') no-repeat;
+                        //    background-size: contain;
+                        //}
+                    }
                     &.indices {
                         background: url('../images/pages/trade/assets/ic-indices-normal.svg') no-repeat;
                         background-size: contain;

@@ -262,11 +262,12 @@ const commonTrading = (() => {
 
     // Order
     const market_order = {
-        forex          : 1,
-        synthetic_index: 2,
-        indices        : 3,
-        stocks         : 4,
-        commodities    : 5,
+        basket_index   : 1,
+        forex          : 2,
+        synthetic_index: 3,
+        indices        : 4,
+        stocks         : 5,
+        commodities    : 6,
     };
 
     const getMarketsOrder = market => market_order[market] || 100;
