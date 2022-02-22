@@ -148,7 +148,7 @@ const Platform = () => (
                 </div>
                 <div className='center-text'>
                     <p>{it.L('No sign up required. Easily log in with your [_1] credentials.', it.website_name)}</p>
-                    <p><a className='button' href='https://deriv.com/interim/faq/?utm_source=binary&utm_medium=referral&utm_campaign=deriv-launch&utm_content=page-platforms-banner' target='_blank' rel='noopener noreferrer'><span>{it.L('Learn more about Deriv.com')}</span></a></p>
+                    <p><a className='button' href={`https://${window.location.hostname.split('.').splice(1).join('.') || 'deriv.com'}/interim/faq/?utm_source=binary&utm_medium=referral&utm_campaign=deriv-launch&utm_content=page-platforms-banner`} target='_blank' rel='noopener noreferrer'><span>{it.L('Learn more about Deriv.com')}</span></a></p>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@ const Platform = () => (
                                 description={it.L('The next-gen online trading experience')}
                                 text={it.L('A whole new easy-to-use platform that\'s rich with features.')}
                                 buttons={[
-                                    { text: it.L('Try Deriv.com now'), url: 'https://app.deriv.com/?utm_source=binary&utm_medium=referral&utm_campaign=deriv-launch&utm_content=page-platforms-button-trade-now', target: '_blank' },
+                                    { text: it.L('Try Deriv.com now'), url: `https://app.${window.location.hostname.split('.').splice(1).join('.')}/?utm_source=binary&utm_medium=referral&utm_campaign=deriv-launch&utm_content=page-platforms-button-trade-now`, target: '_blank' },
                                 ]}
                             />
                             <Platforms
