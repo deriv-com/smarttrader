@@ -5,7 +5,6 @@ const urls = [
     'https://www.binary.com',
     'https://www.binary.me',
     'https://www.deriv.com',
-    'https://www.deriv.be',
 ];
 
 describe('Url', () => {
