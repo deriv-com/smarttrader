@@ -272,7 +272,7 @@ const getTopLevelDomain = () => {
 };
 
 const getHostname = () => {
-    const is_staging = window.location.hostname === 'staging-smarttrader.deriv.com';
+    const is_staging = /staging-smarttrader/.test(window.location.hostname);
 
     return `https://${is_staging ? 'staging-app' : 'app'}.deriv.${getTopLevelDomain()}`;
 };

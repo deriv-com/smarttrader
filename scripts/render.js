@@ -214,6 +214,7 @@ const createContextBuilder = async (sections) => {
                 },
                 url_for              : createUrlFinder(model.language, common.sections_config[model.section].path),
                 dangreouslyRenderHtml: RenderHTML,
+                derivDomainName      : () => window.location.hostname.split('.').splice(1).join('.') || 'deriv.com',
             });
         },
     };

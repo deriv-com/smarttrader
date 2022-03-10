@@ -208,7 +208,7 @@ const Header = (() => {
                 binarybot: {
                     name     : 'Binary Bot',
                     desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
-                    link     : 'https://bot.deriv.com',
+                    link     : `https://bot.deriv.${getTopLevelDomain()}`,
                     icon     : 'ic-brand-binarybot.svg',
                     on_mobile: true,
                 },
