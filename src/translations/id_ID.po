@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-03-15 02:56\n"
+"PO-Revision-Date: 2022-03-15 04:24\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -8072,8 +8072,8 @@ msgstr "Catatan: Transfer Agen Pembayaran hanya tersedia untuk akun yang terdaft
 msgid "Note: Please switch to your %1 account to change currencies."
 msgstr "Catatan: Pindah ke akun %1 Anda untuk merubah mata uang."
 
-msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "Catatan: Anda hanya dapat memiliki satu akun dalam mata uang fiat. Mata uang akun fiat Anda dapat dirubah jika Anda belum melakukan deposit perdana atau mendaftar akun MT5. Anda juga dapat mendaftar pada setiap akun mata uang kripto yang tersedia."
+msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create a real MT5 account (or a real Deriv X account at deriv.com). You may also open one account for each supported cryptocurrency."
+msgstr ""
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account."
 msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu setiap akun mata uang kripto."
@@ -14676,8 +14676,8 @@ msgstr "Anda dapat menentukan margin yang dibutuhkan untuk pasangan logam kami d
 msgid "You can generate all kinds of insightful reports, including the following:"
 msgstr "Anda dapat menghasilkan semua jenis laporan lengkap, termasuk:"
 
-msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "Anda tidak dapat lagi mengubah mata uang karena Anda telah mendaftar akun MT5."
+msgid "You can no longer change the currency because you've created a real MT5 account (or a real Deriv X account at deriv.com)."
+msgstr ""
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr "Anda tidak dapat merubah mata uang berhubung sudah melakukan deposit."
@@ -15393,8 +15393,8 @@ msgstr "tik"
 msgid "time"
 msgstr "kali"
 
-msgid "time or create an MT5 account"
-msgstr "kali atau mendaftar akun MT5"
+msgid "time or create a real MT5 account (or a real Deriv X account at deriv.com)"
+msgstr ""
 
 msgid "today"
 msgstr "hari ini"

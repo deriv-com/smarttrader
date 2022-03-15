@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-03-15 02:56\n"
+"PO-Revision-Date: 2022-03-15 04:25\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -8073,8 +8073,8 @@ msgstr "Chú ý: Chuyển tiền qua Đại lý Thanh toán chỉ có cho
 msgid "Note: Please switch to your %1 account to change currencies."
 msgstr "Ghi chú: Vui lòng đổi sang tài khoản %1 để thay đổi loại tiền tệ."
 
-msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "Lưu ý: Bạn chỉ được phép sở hữu 1 tài khoản tiền thật. Đơn vị tiền tệ của tài khoản tiền thật có thể được thay đổi trước lần gửi tiền đầu tiên hoặc khi bạn tạo tài khoản MT5. Bạn cũng có thể mở một tài khoản cho mỗi loại tiền ảo được hỗ trợ."
+msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create a real MT5 account (or a real Deriv X account at deriv.com). You may also open one account for each supported cryptocurrency."
+msgstr ""
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account."
 msgstr "Lưu ý: Bạn chỉ có thể có một tài khoản tiền tệ pháp định và một của mỗi tài khoản cryptocurrency."
@@ -14677,8 +14677,8 @@ msgstr "Bạn có thể xác định ký quỹ cần cho các cặp kim loại c
 msgid "You can generate all kinds of insightful reports, including the following:"
 msgstr "Bạn có thể tạo ra tất cả các loại báo cáo chi tiết, bao gồm những điều sau đây:"
 
-msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "Bạn không còn có thể thay đổi đơn vị tiền tệ vì bạn đã tạo một tài khoản MT5 từ trước."
+msgid "You can no longer change the currency because you've created a real MT5 account (or a real Deriv X account at deriv.com)."
+msgstr ""
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr "Bạn không còn có thể thay đổi đơn vị tiền tệ vì lần gửi tiền đầu tiên đã được thực hiện."
@@ -15394,8 +15394,8 @@ msgstr "tick"
 msgid "time"
 msgstr "đầu tiên"
 
-msgid "time or create an MT5 account"
-msgstr "đầu tiên hoặc tạo một tài khoản MT5"
+msgid "time or create a real MT5 account (or a real Deriv X account at deriv.com)"
+msgstr ""
 
 msgid "today"
 msgstr "hôm nay"
