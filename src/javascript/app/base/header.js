@@ -432,6 +432,15 @@ const Header = (() => {
             }
         });
 
+        // Livechat Logo
+        const livechat_img = getElementById('livechat__logo');
+        livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Livechat Launcher
+        const livechat = getElementById('livechat');
+        livechat.addEventListener('click', () => {window.LC_API.open_chat_window()});
+
+
         // Language Popup.
         const current_language = Language.get();
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));

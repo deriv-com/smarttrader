@@ -13,11 +13,7 @@ const LiveChat = () => (
             defer
         />
         
-        <div id='gtm-deriv-livechat'>
-            <span className='icon'>
-                <img src={it.url_for('images/common/livechat.svg')} />
-            </span>
-        </div>
+        <div id='livechat'><img id='livechat__logo' /></div>
         
     </React.Fragment>
 );

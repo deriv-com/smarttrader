@@ -150,6 +150,21 @@ body .topbar {
             background-color: var(--general-hover);
         }
     }
+    #livechat {
+        cursor: pointer;
+        height: inherit;
+
+        img {
+            padding: 0 0.8rem;
+            width: 18px;
+            height: 16px;
+            border-left: 1px solid var(--general-section-1);
+            border-right: 1px solid var(--general-section-1);
+        }
+        &:hover {
+            background-color: var(--general-hover);
+        }
+    }
 }
 
 body .header {
