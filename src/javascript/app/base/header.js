@@ -438,8 +438,7 @@ const Header = (() => {
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
-        livechat.addEventListener('click', () => {window.LC_API.open_chat_window()});
-
+        livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
         // Language Popup.
         const current_language = Language.get();
