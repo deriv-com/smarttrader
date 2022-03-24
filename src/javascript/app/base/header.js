@@ -246,11 +246,13 @@ const Header = (() => {
         });
 
         // Mobile menu
-        const mobile_menu_overlay = getElementById('mobile__container');
-        const mobile_menu         = getElementById('mobile__menu');
-        const mobile_menu_close   = getElementById('mobile__menu-close');
-        const hamburger_menu      = getElementById('header__hamburger');
-        const mobile_menu_active  = 'mobile__container--active';
+        const mobile_menu_overlay        = getElementById('mobile__container');
+        const mobile_menu                = getElementById('mobile__menu');
+        const mobile_menu_close          = getElementById('mobile__menu-close');
+        const hamburger_menu             = getElementById('header__hamburger');
+        const mobile_menu_livechat       = getElementById('mobile__menu-livechat');
+        const mobile_menu__livechat_logo = getElementById('mobile__menu-header-livechat__logo');
+        const mobile_menu_active   = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
             if (shouldShow) {
                 mobile_menu_overlay.classList.add(mobile_menu_active);
@@ -263,8 +265,12 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
+        mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
-        // Notificatiopn Event
+        // Mobile Menu Livechat Icon
+        mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Notification Event
         const notification_bell      = getElementById('header__notiifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
         const notification_close     = getElementById('header__notification-close');
@@ -431,6 +437,14 @@ const Header = (() => {
                 showNotification(false);
             }
         });
+
+        // Livechat Logo
+        const livechat_img = getElementById('livechat__logo');
+        livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Livechat Launcher
+        const livechat = getElementById('livechat');
+        livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
         // Language Popup.
         const current_language = Language.get();

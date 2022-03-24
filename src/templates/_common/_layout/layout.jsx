@@ -45,6 +45,7 @@ const Topbar = () => (
             </div>
             <div id='language-select'><img id='language-select__logo' /></div>
             <span className='no-underline nowrap gmt-clock' data-balloon-pos='up' />
+            <LiveChat />
             <div id='topbar-help-centre'>
                 <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
             </div>
@@ -77,7 +78,6 @@ const Layout = () => {
                     <Topbar />
                 </div>
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
-                <LiveChat />
                 <DerivIFrame />
                 {/* <Elevio /> */}
                 <LanguageMenuModal />
