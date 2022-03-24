@@ -252,7 +252,7 @@ const Header = (() => {
         const hamburger_menu             = getElementById('header__hamburger');
         const mobile_menu_livechat       = getElementById('mobile__menu-livechat');
         const mobile_menu__livechat_logo = getElementById('mobile__menu-header-livechat__logo');
-        const mobile_menu_active   = 'mobile__container--active';
+        const mobile_menu_active         = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
             if (shouldShow) {
                 mobile_menu_overlay.classList.add(mobile_menu_active);
