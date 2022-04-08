@@ -235,6 +235,7 @@ const Accounts = (() => {
             indices        : localize('Stock Indices'),
             stocks         : localize('Stocks'),
             synthetic_index: localize('Synthetic Indices'),
+            basket_index   : localize('Basket Indices'),
         });
 
         return {
