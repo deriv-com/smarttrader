@@ -2776,6 +2776,11 @@ input {
             background-size: contain;
             -webkit-transition: none;
             transition: none; }
+          .markets .markets_dropdown .markets_view .markets_column .icon.basket_index {
+            background: url("../images/pages/trade/assets/ic-basket_index-normal.svg") no-repeat;
+            background-size: contain;
+            -webkit-transition: none;
+            transition: none; }
           .markets .markets_dropdown .markets_view .markets_column .icon.indices {
             background: url("../images/pages/trade/assets/ic-indices-normal.svg") no-repeat;
             background-size: contain;
