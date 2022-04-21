@@ -11,9 +11,9 @@ import Gtm from '../includes/gtm.jsx';
 import LiveChat from '../includes/livechat.jsx';
 import LanguageMenuModal from '../components/language-menu-modal.jsx';
 
-export const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
+const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
 
-export const WithLayout = ({ children }) => {
+const WithLayout = ({ children }) => {
     const content_class = `${it.current_route || ''}-content`;
     return (
         <div id='content' className={it.current_route ? content_class : undefined}>
