@@ -33,10 +33,13 @@ const Elevio = (() => {
     const init = () => {
         if (isLoginPages()) return;
 
-        el_shell = document.getElementById(el_shell_id);
+        document.addEventListener('readystatechange', () => {
+            if (document.readyState === 'complete') {
+                el_shell = document.getElementById(el_shell_id);
 
-        el_shell.addEventListener('click', () => injectElevio(true));
-
+                el_shell.addEventListener('click', () => injectElevio(true));
+            }
+        });
         checkElevioAvailability(elevio_script);
     };
 
