@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Акт"
 
 msgid "Action required"
 msgstr "Требуется действие"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Активные клиенты"
@@ -5654,6 +5657,9 @@ msgstr "Подсказка: возможно, ваш пароль MT5 отлич
 msgid "Historical Mediterranean island"
 msgstr "Средиземноморский остров с богатой историей"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Отчёт об успехах: отображает процент кликов и переходов"
 
@@ -8422,6 +8428,9 @@ msgstr "Наш быстрый рост дополняется приобрете
 
 msgid "Our locations"
 msgstr "Наши офисы"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Наши пары с металлами, как правило, торгуются в лотах. Один стандартный лот равен 100 единицам, за исключением серебра, где один лот равен 5000 единиц. Каждый раз, когда вы открываете позицию по символу, вы можете начать с минимальной транзакции в 0,01 лота."
@@ -13951,6 +13960,9 @@ msgstr "Мы не можем подтвердить ваши личные дан
 
 msgid "We cannot verify you without using your camera"
 msgstr "Мы не можем верифицировать вас, не используя камеру"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Ордер с наибольшим маржинальным требованием будет удален."

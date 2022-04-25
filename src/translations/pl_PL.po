@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Czynności"
 
 msgid "Action required"
 msgstr "Wymagane działanie"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Aktywni handlujący klienci"
@@ -5653,6 +5656,9 @@ msgstr "Wskazówka: Być może wybrałeś inne hasło MT5 spośród haseł logow
 msgid "Historical Mediterranean island"
 msgstr "Historyczna wyspa śródziemnomorska"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Raport kliknięć i wyświetleń: przedstawia współczynnik klikalności"
 
@@ -8421,6 +8427,9 @@ msgstr "Nasz szybki wzrost zostaje poprawiony przez nabycie bazy klientów BetsF
 
 msgid "Our locations"
 msgstr "Nasze biura"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Nasze pary metali są zazwyczaj sprzedawane w partiach. Jedna standardowa partia odpowiada 100 jednostkom, z wyjątkiem srebra, w przypadku którego 1 partia odpowiada 5,000 jednostek. Za każdym razem, gdy otwierasz pozycję dla symbolu walutowego, możesz rozpocząć od transakcji minimalnej wo wielkości 0,01 partii."
@@ -13951,6 +13960,9 @@ msgstr "Nie możemy zweryfikować Twoich danych osobowych, gdyż niektóre infor
 
 msgid "We cannot verify you without using your camera"
 msgstr "Nie możemy przeprowadzić weryfikacji bez użycia aparatu"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Usuwamy zlecenia z największym zarezerwowanym depozytem zabezpieczającym."

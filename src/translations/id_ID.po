@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Aksi"
 
 msgid "Action required"
 msgstr "Tindakan diperlukan"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Klien trading aktif"
@@ -5653,6 +5656,9 @@ msgstr "Petunjuk: Anda mungkin memilih kata sandi berbeda untuk mengakses akun M
 msgid "Historical Mediterranean island"
 msgstr "Pulau Mediterania yang bersejarah"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Laporan kunjungan dan impresi: Menampilkan jumlah kunjungan dan klik"
 
@@ -8422,6 +8428,9 @@ msgstr "Pertumbuhan cepat kami dilengkapi dengan akuisisi dari klien BetsForTrad
 
 msgid "Our locations"
 msgstr "Lokasi kami"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Pasangan logam yang tersedia biasanya ditradingkan dalam jumlah lot. Secara standar, satu lot sama dengan 100 unit kecuali untuk perak dimana 1 lot setara dengan 5.000 unit. Setiap Anda membuka posisi pada simbol mata uang, Anda dapat bertrading mulai dari minimal transaksi berjumlah 0.01 lot."
@@ -13952,6 +13961,9 @@ msgstr "Kami tidak dapat memvalidasi data pribadi Anda karena ada beberapa infor
 
 msgid "We cannot verify you without using your camera"
 msgstr "Kami tidak dapat memverifikasi Anda tanpa menggunakan kamera"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Kami akan menghapus order dengan margin terbesar."

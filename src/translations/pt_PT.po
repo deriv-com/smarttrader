@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -1119,6 +1119,9 @@ msgstr "Ação"
 
 msgid "Action required"
 msgstr "Ação necessária"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Clientes de negociação ativos"
@@ -5669,6 +5672,9 @@ msgstr "Dica: você pode ter escolhido uma senha MT5 diferente da senha de login
 msgid "Historical Mediterranean island"
 msgstr "Ilha mediterrânica histórica"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Relatório de visitas e impressões: Exibe as suas taxas de visitas e de cliques"
 
@@ -8444,6 +8450,9 @@ msgstr "Nosso rápido e orgânico crescimento é complementado pela aquisição 
 
 msgid "Our locations"
 msgstr "As nossas instalações"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Forex é geralmente negociado em lotes. Um lote padrão equivale a 100 unidades, exceto com prata em que 1 lote equivale a 5.000 unidades. Cada vez que você abre uma posição num símbolo, é possível começar com uma transação mínima de 0,01 lotes."
@@ -13985,6 +13994,9 @@ msgstr "Não podemos validar seus dados pessoais porque faltam algumas informaç
 
 msgid "We cannot verify you without using your camera"
 msgstr "Não podemos verificar você sem usar sua câmera"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Excluímos uma ordem com a maior margem reservada."

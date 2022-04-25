@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Azione"
 
 msgid "Action required"
 msgstr "Azione richiesta"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Clienti di trading attivi"
@@ -5653,6 +5656,9 @@ msgstr "Suggerimento: forse hai scelto una password per MT5 diversa dalla quella
 msgid "Historical Mediterranean island"
 msgstr "Isola mediterranea di interesse storico"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Report risultati e impressioni: indica il tasso di successo e la percentuale di click (CTR)"
 
@@ -8421,6 +8427,9 @@ msgstr "La nostra rapida crescita organica è integrata dall'acquisizione della 
 
 msgid "Our locations"
 msgstr "Le nostre sedi"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Le nostre coppie di metalli sono solitamente scambiate in lotti. Un lotto standard equivale a 100 unità ad eccezione dell'argento dove 1 lotto equivale a 5.000 unità. Ogni volta che apri una posizione su un simbolo, puoi iniziare con una transazione minima di 0,01 lotti."
@@ -13950,6 +13959,9 @@ msgstr "Non è possibile convalidare le informazioni personali perché mancano a
 
 msgid "We cannot verify you without using your camera"
 msgstr "Non possiamo verificare la tua identità senza fotocamera"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Cancelliamo un ordine con il maggiore margine riservato."

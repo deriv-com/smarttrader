@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Acción"
 
 msgid "Action required"
 msgstr "Acción requerida"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Clientes de operación activos"
@@ -5654,6 +5657,9 @@ msgstr "Sugerencia: Es posible que haya elegido una contraseña MT5 diferente a 
 msgid "Historical Mediterranean island"
 msgstr "Isla mediterránea histórica"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Informe de éxito e impresiones: Muestra las tasas de éxito (hit rate) y de clics"
 
@@ -8423,6 +8429,9 @@ msgstr "Nuestro crecimiento rápido se complementa con la adquisición de la car
 
 msgid "Our locations"
 msgstr "Nuestras ubicaciones"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Nuestros pares de metales se operan generalmente en lotes. Un lote estándar equivale a 100 unidades, exceptuando la plata, cuyo lote equivale a 5.000 unidades. Cada vez que abre una posición en un símbolo específico, puede comenzar con una transacción mínima de 0,01 lotes."
@@ -13952,6 +13961,9 @@ msgstr "No podemos validar sus datos personales porque falta información."
 
 msgid "We cannot verify you without using your camera"
 msgstr "No podemos verificarle sin usar su cámara"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Eliminamos la orden con el mayor margen reservado."

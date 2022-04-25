@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 03:51\n"
+"PO-Revision-Date: 2022-04-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1116,6 +1116,9 @@ msgstr "Action"
 
 msgid "Action required"
 msgstr "Action requise"
+
+msgid "Action required!"
+msgstr ""
 
 msgid "Active trading clients"
 msgstr "Clients tradant activement"
@@ -5653,6 +5656,9 @@ msgstr "Astuce: Vous avez peut-ềtre choisi un mot de passe MT5 différent de v
 msgid "Historical Mediterranean island"
 msgstr "Île de la Méditerranée historique"
 
+msgid "Hit <strong>OK</strong> to edit your answer and try again"
+msgstr ""
+
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Rapport sur les succès & Impression : affiche votre taux de succès, et votre taux de clic"
 
@@ -8423,6 +8429,9 @@ msgstr "Notre croissance interne rapide est renforcée par l'acquisition de la c
 
 msgid "Our locations"
 msgstr "Nos bureaux"
+
+msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
+msgstr ""
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Nos paires métaux sont généralement tradés en lots. Un lot standard est équivalent à 100 unités sauf argent où 1 lot est égal à 5 000 unités. Chaque fois que vous ouvrez une position sur un symbole, vous pouvez commencer avec une transaction minimum de 0,01 lots."
@@ -13953,6 +13962,9 @@ msgstr "Nous ne pouvons pas valider vos données personnelles car il manque des 
 
 msgid "We cannot verify you without using your camera"
 msgstr "Nous ne pouvons pas vous vérifier sans utiliser votre caméra"
+
+msgid "We couldn’t read that!"
+msgstr ""
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Nous supprimons cet ordre avec la plus grande marge réservée."
