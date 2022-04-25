@@ -2347,7 +2347,7 @@ body #lean_overlay .overlay-dialog .current .overlay_symbol {
   font-weight: 500; }
 
 body #lean_overlay .overlay-dialog div.category > div > span.remove {
-  color: var(--text-general);
+  color: var(--button-primary-default);
   font-size: 12px; }
 
 body #lean_overlay .lean_overlay_buttonpane {
