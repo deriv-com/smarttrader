@@ -98,7 +98,7 @@ const DigitTicker = (() => {
 
     // adjust box sizes for mobile
     const adjustBoxSizes = () => {
-        if (el_container.offsetWidth < 360) {
+        if (el_container && el_container.offsetWidth < 360) {
             style_offset_correction = 6;
         }
     };
