@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Button } from '../../_common/components/elements.jsx';
 import { SeparatorLine } from '../../_common/components/separator_line.jsx';
 
@@ -64,7 +65,9 @@ const DepositWithdrawButtonCryptocurrencies = ({ is_cryptocurrencies_method }) =
                 </div>
                 <div className='gr-adapt client_real client_virtual invisible'>
                     <Button
-                        className='toggle button client_real client_virtual invisible withdraw_btn_cashier'
+                        className={classNames('toggle button client_real client_virtual invisible withdraw_btn_cashier', {
+                            'pa_withdraw': !is_cryptocurrencies_method,
+                        })}
                         id={is_cryptocurrencies_method ? 'crypto_withdraw_link' : 'payment_agent_withdraw_link'}
                         href={is_cryptocurrencies_method ? it.url_for('/cashier/forwardws?action=withdraw') : it.url_for('/paymentagent/withdrawws')}
                         text={it.L('Withdraw')}
