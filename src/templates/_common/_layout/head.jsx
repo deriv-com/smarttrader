@@ -29,11 +29,7 @@ const Head = () => (
 
         <Favicons />
 
-        { it.languages
-            .map((lang, inx) => (
-                <link key={inx} rel='alternate' href={it.url_for(it.current_path, lang.toLowerCase())} hrefLang={lang} />
-            ))
-        }
+        <link rel='alternate' href={it.url_for(it.current_path, it.language)} hrefLang={it.language.toLowerCase()} />
 
         { it.css_files.map((css_file, inx) => (
             <link key={inx} rel='stylesheet' href={css_file} />
