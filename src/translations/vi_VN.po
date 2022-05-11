@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 04:03\n"
+"PO-Revision-Date: 2022-05-11 03:32\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -988,6 +988,9 @@ msgstr "Truy cập vào các thị trường bất cứ lúc nào, bất cứ n�
 msgid "Access the markets anytime, anywhere using native apps for your iOS or Android devices."
 msgstr "Truy cập các thị trường bất cứ lúc nào, bất cứ nơi nào bằng cách sử dụng ứng dụng bản địa dành cho iOS hoặc thiết bị Android của bạn."
 
+msgid "Access to data"
+msgstr ""
+
 msgid "Access to personal data"
 msgstr "Truy cập vào dữ liệu cá nhân"
 
@@ -1118,7 +1121,7 @@ msgid "Action required"
 msgstr "Hành động cần làm"
 
 msgid "Action required!"
-msgstr ""
+msgstr "Hành động cần làm!"
 
 msgid "Active trading clients"
 msgstr "Các khách hàng tích cực giao dịch"
@@ -1558,6 +1561,9 @@ msgstr "Bất kỳ thông tin khác theo yêu cầu của công ty"
 
 msgid "Any pending funds in your MT5 account will be transferred to your Binary account."
 msgstr "Mọi khoản tiền đang được xử lý trong tài khoản MT5 của bạn sẽ được chuyển sang tài khoản Binary."
+
+msgid "Any processing of personal data undertaken by Deriv Investments (Europe) Limited will be in compliance with the Company's terms of service and these terms of security and privacy policy."
+msgstr ""
 
 msgid "Any request for a deposit refund for active accounts will be automatically rejected. If the Company has closed, blocked, or suspended the client’s account (see Section J. Fraud and money laundering), the client may request a refund of the client’s deposit. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. "
 msgstr "Mọi yêu cầu hoàn lại tiền ký quỹ cho các tài khoản đang hoạt động sẽ tự động bị từ chối. Nếu Công ty đã đóng, phong tỏa hoặc tạm ngưng tài khoản của khách hàng (xem Phần J. Gian lận và rửa tiền), khách hàng có thể yêu cầu hoàn lại tiền ký quỹ của khách hàng. Công ty có quyền chấp nhận hoặc từ chối yêu cầu của khách hàng sau khi điều tra khiếu nại của khách hàng."
@@ -2098,6 +2104,9 @@ msgstr "Người mới bắt đầu"
 
 msgid "Being in touch with the latest tools and technology related to your role."
 msgstr "Bắt kịp với các công cụ mới nhất và công nghệ liên quan đến vai trò của bạn."
+
+msgid "Below is a list of the client's legal rights regarding personal data, not all of which may be applicable to the client at any one time:"
+msgstr ""
 
 msgid "Benefits"
 msgstr "Các lợi nhuận"
@@ -2782,6 +2791,9 @@ msgstr "Các tài khoản dùng thử của khách hàng sẽ bị xóa s
 
 msgid "Client's liability"
 msgstr "Trách nhiệm của Khách hàng"
+
+msgid "Client's rights"
+msgstr ""
 
 msgid "Clients"
 msgstr "Khách hàng"
@@ -5889,6 +5901,9 @@ msgstr "Nếu DIEL quyết định để giới thiệu một nền tảng kinh 
 msgid "If a court or regulatory body of competent jurisdiction declares any provision of the Terms to be invalid or unenforceable, the rest of the Terms shall remain in full force and effect."
 msgstr "Nếu tòa án hoặc cơ quan quản lý có thẩm quyền tuyên bố bất kỳ điều khoản nào trong Điều khoản là không hợp lệ hoặc không thể thi hành, phần còn lại của Điều khoản sẽ vẫn có hiệu lực đầy đủ."
 
+msgid "If a law or regulation or the order of a court of a competent jurisdiction or a governmental or law enforcement agency requires the Company to disclose the client's personal or financial information, the Company shall promptly notify the client, as deemed appropriate, to give the client the opportunity to seek protection for the information for which disclosure is sought unless the Company are legally prohibited from doing so. Any such disclosure shall not be interpreted as a breach of these terms and conditions."
+msgstr ""
+
 msgid "If a trade becomes unavailable after the transaction is made but before the trade is executed, the client may request a refund of the charged price. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. If technical problems prevent the execution of a trade, for example, if a disruption occurs in the data feeds that the Company cannot readily fix, the Company reserves the right to refund or reverse the trade."
 msgstr "Nếu giao dịch không khả dụng sau khi tiền vốn đã bị trừ nhưng trước khi giao dịch được thực hiện, khách hàng có thể yêu cầu hoàn lại giá đã tính. Công ty có quyền chấp nhận hoặc từ chối yêu cầu hàng sau khi điều tra khiếu nại của khách hàng. Nếu các vấn đề kỹ thuật ngăn cản việc thực hiện giao dịch, chẳng hạn như nếu xảy ra gián đoạn trong nguồn cấp dữ liệu mà Công ty không thể sửa chữa dễ dàng, thì Công ty có quyền hoàn lại tiền hoặc đảo ngược giao dịch."
 
@@ -5985,9 +6000,6 @@ msgstr "Nếu giá thầu là 1.05229, bạn sẽ mua 1.05229 USD cho mỗi 1 EU
 msgid "If the client asks to be treated as a professional client, they need to meet certain specified quantitative and qualitative criteria. On the basis of the client's request to be categorised as professional, the Company undertakes an assessment of the client's expertise, knowledge, and experience to determine whether they fall within this category and whether they are able to make their own investment decisions and understand the risks involved. If the relevant criteria are not met, the Company reserves the right to choose whether to provide its services under this requested classification."
 msgstr "Nếu khách hàng yêu cầu được coi như là một Khách Hàng Chuyên Nghiệp, họ cần phải đáp ứng các tiêu chí quy định số lượng và chất lượng nhất định. Trên cơ sở yêu cầu của khách hàng để được phân loại như là chuyên nghiệp, công ty cam kết một đánh giá về chuyên môn, kiến thức và kinh nghiệm để xác định liệu khách hàng có nằm trong thể loại này và cho dù họ có thể đưa ra quyết định đầu tư của riêng mình và hiểu những rủi ro liên quan. Nếu không đáp ứng các tiêu chí có liên quan, Công ty có quyền chấp nhận hay từ chối cung cấp dịch vụ của họ theo yêu cầu phân loại trên."
 
-msgid "If the client chooses to close the client's %1 account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company will delete the client's data once the applicable retention period expires."
-msgstr "Nếu khách hàng chọn để đóng tài khoản %1, dữ liệu của họ sẽ được giữ trong thời gian cần thiết đối với để đáp ứng nghĩa vụ pháp luật và quy định về lưu giữ dữ liệu của Công Ty. Công Ty sẽ xóa dữ liệu của khách hàng sau khi hết hạn thời gian lưu giữ áp dụng."
-
 msgid "If the client chooses to enter into a contract with the Company, it is important that the client remains aware of the risks involved, that the client has adequate investment resources to bear such risks, and that the client monitors the client's positions carefully."
 msgstr "Nếu khách hàng chọn tham gia Hợp đồng giao dịch với chúng tôi, họ phải ý thức được những rủi rui có liên quan, đó là khách hàng cần phải có đủ nguồn lực đầu tư để có thể chịu được những rủi ro này và phải theo dõi vị thế của họ một cách cẩn thận."
 
@@ -6002,6 +6014,9 @@ msgstr "Nếu khách hàng có số dư dương trong Tài khoản Thực MT5, 
 
 msgid "If the client is an individual, they are over 18 years old and they have full capacity to enter into this agreement."
 msgstr "Nếu khách hàng là một cá nhân, họ phải trên 18 tuổi và phải có đầy đủ năng lực để tham gia vào thỏa thuận này."
+
+msgid "If the client is unhappy with how the Company handles the personal data, the client can file a complaint with the Company. If the client is not satisfied with the outcome of the Company's internal complaints procedure, or if the client considers that the client's complaint has not been handled correctly, the client may lodge a complaint to the Company's lead supervisory authority on data processing practices."
+msgstr ""
 
 msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
 msgstr "Nếu khách hàng muốn rút tiền từ Tài khoản thực MT5 của họ và đóng Tài khoản thực MT5 của họ, họ có thể thông báo cho Công ty qua %1live chat%2. Tài khoản Thực MT5 của khách hàng có thể bị đóng nếu họ không có bất kỳ Vị thế Mở nào và tất cả số tiền đến hạn của Công ty đã được thanh toán."
@@ -6305,6 +6320,9 @@ msgstr "Phù hợp với yêu cầu quy định áp dụng, khi mà Công Ty kh�
 
 msgid "In all circumstances, the Company reserves the right to make changes to these terms and conditions. If the Company elects to make any material changes to these terms and conditions, clients will be notified in advance and shall either accept or decline to agree. Declining to agree shall result in a material breach of this agreement and the client's account may be frozen, suspended, or cancelled. However, the client shall be allowed to withdraw any pending balance on account subject to KYC verification."
 msgstr "Trong tất cả các trường hợp, Công Ty có quyền thay đổi những Điều Khoản và Điều Kiện này. Nếu Công Ty đưa ra bất kì đề xuất nào về việc thay đổi những Điều Khoản và Điều Kiện này, khách hàng của chúng tôi sẽ được thông báo trước và sẽ chấp thuận hoặc không chấp thuận. Nếu không chấp thuận sẽ gây ra vi phạm nghiêm trọng Thỏa Thuận này và tài khoản của khách hàng có thể bị đóng băng, bị đình chỉ hoặc bị hủy bỏ. Tuy nhiên, khách hàng sẽ được phép rút bất kỳ số dư đang chờ xử lý nào trên tài khoản tuân theo xác minh KYC."
+
+msgid "In all instances, the Company takes all reasonably necessary steps to ensure the client's personal data is treated securely and in accordance with this privacy policy and in compliance with any applicable data protection laws. These steps may include placing a contractual obligation on third parties or ensuring that third parties receiving data are certified under an approved certification mechanism such as the one on the Privacy Shieldframework."
+msgstr ""
 
 msgid "In any event of an error in current prices, published odds, or trading software"
 msgstr "Trong trường hợp có lỗi sai trong giá hiện hành, tỉ lệ cược được công bố, hoặc phần mềm giao dịch"
@@ -9888,8 +9906,23 @@ msgstr "Sửa đổi vào %1 API"
 msgid "Revoke access"
 msgstr "Hủy bỏ truy cập"
 
+msgid "Right of access to the client's  personal data: the client has the right to request and receive a copy of all the personal data the company holds about the client."
+msgstr ""
+
+msgid "Right of rectification: the client has the right to request the correction of any personal data that the Company holds about the client and are either inaccurate or incomplete."
+msgstr ""
+
+msgid "Right to data portability: the client has the right to request a copy of the client's personal data in a digital format and, where possible, ask the Company to transfer it to another company."
+msgstr ""
+
+msgid "Right to erasure: the client has the right to obtain the erasure of the client's personal data, provided, among others, the personal data in question are no longer necessary in relation to the purpose for which they were collected."
+msgstr ""
+
 msgid "Right to object"
 msgstr "Quyền bác bỏ"
+
+msgid "Right to restriction and right to object: the client has the right to restrict the Company's processing activities or to object to the processing of the client's personal data."
+msgstr ""
 
 msgid "Right to terminate"
 msgstr "Quyền Chấm dứt"
@@ -11361,6 +11394,9 @@ msgstr "Công Ty được yêu cầu thông báo cho ứng viên thông tin có 
 msgid "The Company is the sole owner of all rights, titles, or interests whatsoever in and to all %1 electronic systems, including but not limited to any and all software, email, and email management software, along with any modifications."
 msgstr "Công ty là chủ sở hữu duy nhất của tất cả các quyền, chức danh hoặc lợi ích bất kỳ trong và đối với tất cả %1 hệ thống điện tử, bao gồm nhưng không giới hạn ở bất kỳ và tất cả phần mềm, email và phần mềm quản lý email, cùng với bất kỳ sửa đổi nào."
 
+msgid "The Company keeps the client's information for the whole duration of the client's subscription with the Company. If the Company chooses to close the client's Binary.com account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company shall delete the client's data when the applicable retention period expires. The criteria the Company uses for determining the retention period for the client's personal data will be any applicable regulatory requirements or legal obligations, including tax, financial, and anti-money laundering laws, or to establish or defend potential legal claims."
+msgstr ""
+
 msgid "The Company likewise reserves the right to cancel any request for a deposit, withdrawal, or refund of the client’s funds."
 msgstr "Công ty cũng có quyền hủy bỏ mọi yêu cầu gửi tiền, rút tiền hoặc hoàn trả tiền của khách hàng."
 
@@ -11382,11 +11418,17 @@ msgstr "Công Ty cũng có thể áp đặt giới hạn khối lượng giao d�
 msgid "The Company may also transfer relevant personal and financial data to any company within the Deriv Group companies. This includes any of the Company's business associates or payment providers within or outside of the EEA, including countries that might not offer an equivalent level of protection of personal data. In all instances, the Company places a contractual obligation on such third parties to offer the same level of rights and protection as stipulated in the GDPR."
 msgstr "Công ty cũng có thể chuyển dữ liệu cá nhân và tài chính liên quan đến bất kỳ công ty nào trong tập đoàn công ty Deriv. Điều này bao gồm một trong các đối tác kinh doanh của Công ty hoặc các nhà cung cấp thanh toán bên trong hoặc bên ngoài EEA, bao gồm các quốc gia mà có thể cung cấp một mức độ tương đương bảo vệ dữ liệu cá nhân. Trong mọi trường hợp, Công ty đặt một hợp đồng nghĩa vụ bên thứ ba để cung cấp cho cùng một mức độ quyền và bảo vệ theo quy định trong GDPR."
 
+msgid "The Company may also transfer the client's data to third parties outside the EEA for content delivery services, customer relationship management services, and communication and marketing services."
+msgstr ""
+
 msgid "The Company may change the commission structure at any time at its sole and absolute discretion. The Company will endeavour to ensure that Affiliates are notified when changes have been made to the commission structure."
 msgstr "Công ty có thể thay đổi chính sách chiết khấu tại bất kỳ thời điểm nào, tùy theo quyết định duy nhất và tuyệt đối của Công ty. Chúng tôi sẽ nỗ lực để đảm bảo rằng các Bên liên kết sẽ được thông báo khi chính sách chiết khấu được thay đổi."
 
 msgid "The Company may change, suspend, terminate, or discontinue any aspect of the %1 API, including the availability of any services, information, features, or functions accessible by means of the %1 API, on no less than seven days' advance notice to the Programmer."
 msgstr "Công ty có thể thay đổi, tạm ngừng, chấm dứt hoặc ngừng cung cấp bất kỳ lĩnh vực nào của %1 API, bao gồm cả sự sẵn có của bất kỳ dịch vụ, thông tin các tính năng hoặc chức năng có thể truy cập bằng công cụ của %1 API, và thông báo cho Lập trình viên trước 7 ngày."
+
+msgid "The Company may collect basic tax residence information for the purposes of Common Reporting Standard (CRS) compliance. The tax information that the client may provide will only be disclosed to the authorities who are legally charged with collecting this information for CRS reporting. The Company shall disclose the client's tax information to them only to the extent that the Company is legally obliged to. The Company does not use, disclose, or process this information in any other way at any time."
+msgstr ""
 
 msgid "The Company may collect this information in a variety of ways. Data is collected and contained in CVs or resumes, cover letters, and identity documents, via Self-Assessment Topgrading Questionnaires/Interview (SATI), or through interviews or other forms of assessment, including online tests."
 msgstr "Công Ty có thể thu thập thông tin này theo nhiều cách khác nhau. Dữ liệu được thu thập và chứa trong sơ yếu lý lịch hoặc hồ sơ, thư ứng tuyển, và giấy tờ tùy thân, thông qua Phiếu Đánh Giá / Phỏng Vấn Xếp Hạng (SATI), hoặc thông qua các cuộc phỏng vấn hoặc các hình thức đánh giá khác, bao gồm các bài kiểm tra trực tuyến."
@@ -11403,8 +11445,14 @@ msgstr "Công ty, với quyền quyết định tuyệt đối có thể s�
 msgid "The Company may modify any provisions or terms of this Agreement at any time. It is the responsibility of the Introducing Broker to consistently review all modifications in the Agreement made on the website."
 msgstr "Công ty có thể chỉnh sửa các điều khoản cũng như điều kiện của thỏa thuận này bất cứ lúc nào. Nhà môi giớ có trách nhiệm thường xuyên xem xét các điều chỉnh có trong Thỏa thuận được thực hiện trên trang web."
 
+msgid "The Company may need to transfer the client's personal data to any of its business associates or payment providers within or outside of the European Economic Area (EEA), including countries that might not offer an equivalent level of protection of personal data, for the purpose of processing by third parties."
+msgstr ""
+
 msgid "The Company may release subsequent versions of the %1 API and require that the Programmer use those subsequent versions. The Programmer's continued use of the APIs following a subsequent release will be deemed the Programmer's acceptance of modifications."
 msgstr "Công ty có thể tung ra các phiên bản tiếp theo của %1 API và yêu cầu Lập trình viên sử dụng những phiên bản cập nhật này. Việc Lập trình viên tiếp tục sử dụng các phiên bản cập nhật của API sẽ được coi là họ đã chấp thuận việc điều chỉnh."
+
+msgid "The Company may transfer relevant personal data to any company within Deriv Group Ltd where it is necessary for the performance of a contract with the client related to the Company services."
+msgstr ""
 
 msgid "The Company may use or disclose (or choose not to use or disclose) such Contributions for any purpose, in any way, in any media worldwide."
 msgstr "Công ty chúng tôi có thể sử dụng hay tiết lộ (hoặc lựa chọn không sử dụng hay tiết lộ) những phần Bồi thường như thế này cho mọi mục đích, mọi quy cách, trên mọi phương tiện thông tin toàn cầu."
@@ -11436,8 +11484,8 @@ msgstr "Công ty cung cấp các lựa chọn nhị phân thông qua nền tản
 msgid "The Company only accesses the client's cloud storage when the client's action initiates it. Clients can disconnect their storage service at any time."
 msgstr "Công ty chỉ truy cập vào bộ nhớ đám mây của khách hàng khi khách hàng cho phép khởi động nó. Khách hàng có thể ngắt kết nối dịch vụ lưu trữ của họ bất cứ lúc nào."
 
-msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures place obligations on users of personal data like the Company. They also lay down the principles for fair and lawful processing of all the information that the Company acquires."
-msgstr "Công ty hoạt động tuân thủ đầy đủ quy chế bảo vệ dữ liệu nói chung (GDPR) và các luật bảo vệ dữ liệu. Các biện pháp quy định này áp đặt các nghĩa vụ lên người sử dụng về các dữ liệu cá nhân như với Công ty. Họ cũng nêu rõ các nguyên tắc xử lý công bằng và hợp pháp của tất cả các thông tin mà Công ty có được."
+msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures oblige the Company to use the clients' personal data according to the principles of fair, lawful, and transparent information processing."
+msgstr ""
 
 msgid "The Company provides here a summary of the policy that the Company maintains in order to manage conflicts of interest in respect of the duties that the Company owes to clients."
 msgstr "Ở đây Công ty cung cấp bản tóm tắt chính sách mà Công ty duy trì để quản lý các xung đột lợi ích theo bổn phận mà Công ty phải làm cho khách hàng."
@@ -11983,6 +12031,9 @@ msgstr "Khách hàng cũng có quyền yêu cầu Công ty để thông báo c
 msgid "The client bears the responsibility of ensuring that payments made to DIEL are correctly received with the specified client's account details."
 msgstr "Khách hàng chịu trách nhiệm bảo đảm rằng các khoản thanh toán được thực hiện cho Công Ty một cách chính xác và đi kèm với các chi tiết tài khoản của khách hàng."
 
+msgid "The client can make any of the requests set out above by emailing the Company's data protection officer directly at dpo@deriv.com or by using the contact details on the %1Contact Us%2 page."
+msgstr ""
+
 msgid "The client has Open Positions on the account that show a loss."
 msgstr "Khách hàng có các Vị trí mở trên tài khoản hiển thị lỗ."
 
@@ -12009,6 +12060,9 @@ msgstr "Khách hàng có đủ kinh nghiệm và kiến thức trong các vấ
 
 msgid "The client has the right to object to the direct distribution of marketing materials. This can be done by either not providing the client's consent to any marketing material before the service is rendered or revoking it at any point during the service. In both cases, the Company will refrain from distributing marketing materials to the client."
 msgstr "Khách hàng có quyền được phản đối sự phân phối trực tiếp các tài liệu tiếp thị. Điều này có thể được thực hiện bằng cách không cung cấp sự đồng ý của khách hàng đến bất kỳ tài liệu tiếp thị trước khi thực hiện các dịch vụ hoặc thu hồi tại bất kỳ điểm nào trong dịch vụ. Trong bất kỳ trường hợp nào, Công ty sẽ dừng phân phối các tài liệu tiếp thị cho khách hàng."
+
+msgid "The client has the right to opt out of receiving marketing materials from the Company. This can be done by either not providing the client's consent to receiving marketing materials when opening an account with the Company or by revoking it at any point during the period that the client holds an account with the Company. In both cases, the Company shall not send any marketing materials to the client."
+msgstr ""
 
 msgid "The client has unrealised losses on their MT5 Real Account."
 msgstr "Khách hàng đã thua lỗ quá nhiều tiền trong Tài Khoản Thực MT5 của mình."
@@ -12402,6 +12456,9 @@ msgstr "Quyền được thông báo khi dữ liệu cá nhân của họ đư�
 
 msgid "The right to delete their personal information, subject to the data retention practice of the Company"
 msgstr "Quyền hủy thông tin cá nhân của họ, tuân theo luật lưu giữ dữ liệu của Công Ty"
+
+msgid "The right to erasure is not an absolute right. The Company has to comply with retention requirements set out on any applicable laws, including financial regulations and anti-money laundering laws."
+msgstr ""
 
 msgid "The right to rectify their personal data if the Company holds any information about the applicant that is incomplete or inaccurate"
 msgstr "Quyền sửa chữa dữ liệu cá nhân của ứng viên nếu Công Ty nắm giữ bất kỳ thông tin nào về họ là không đầy đủ hoặc không chính xác"
@@ -13798,8 +13855,8 @@ msgstr "Xác định danh tính"
 msgid "Verify your identity"
 msgstr "Xác minh danh tính của bạn"
 
-msgid "Version 53. Last modified 01-03-2022."
-msgstr "Phiên bản 53. Sửa đổi lần cuối 01-03-2022."
+msgid "Version 54. Last modified 10-05-2022."
+msgstr ""
 
 msgid "Video Room Facility"
 msgstr "Công cụ phòng Video"

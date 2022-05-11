@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 04:03\n"
+"PO-Revision-Date: 2022-05-11 03:32\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -991,6 +991,9 @@ msgstr "Acessar os mercados em qualquer momento, de qualquer lugar, a partir do 
 msgid "Access the markets anytime, anywhere using native apps for your iOS or Android devices."
 msgstr "Acesse os mercados em qualquer momento, de qualquer lugar, usando apicativos nativos para os seus dispositivos iOS e Android."
 
+msgid "Access to data"
+msgstr ""
+
 msgid "Access to personal data"
 msgstr "Acesso a dados pessoais"
 
@@ -1121,7 +1124,7 @@ msgid "Action required"
 msgstr "Ação necessária"
 
 msgid "Action required!"
-msgstr ""
+msgstr "Ação necessária!"
 
 msgid "Active trading clients"
 msgstr "Clientes de negociação ativos"
@@ -1563,6 +1566,9 @@ msgstr "Qualquer outra informação solicitada pela Empresa"
 
 msgid "Any pending funds in your MT5 account will be transferred to your Binary account."
 msgstr "Quaisquer fundos pendentes em sua conta MT5 serão transferidos para sua conta Binary."
+
+msgid "Any processing of personal data undertaken by Deriv Investments (Europe) Limited will be in compliance with the Company's terms of service and these terms of security and privacy policy."
+msgstr ""
 
 msgid "Any request for a deposit refund for active accounts will be automatically rejected. If the Company has closed, blocked, or suspended the client’s account (see Section J. Fraud and money laundering), the client may request a refund of the client’s deposit. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. "
 msgstr "Qualquer pedido de reembolso de depósito para contas ativas será rejeitado automaticamente. Se a Empresa fechou, bloqueou ou suspendeu a conta do cliente (consulte a Seção J. Fraude e lavagem de dinheiro), o cliente pode solicitar o reembolso do depósito do cliente. A Empresa reserva-se o direito de aceitar ou rejeitar a solicitação do cliente após investigar a reclamação do cliente."
@@ -2103,6 +2109,9 @@ msgstr "Iniciante"
 
 msgid "Being in touch with the latest tools and technology related to your role."
 msgstr "Estar em contato com as mais recentes ferramentas e tecnologias relacionadas ao seu papel."
+
+msgid "Below is a list of the client's legal rights regarding personal data, not all of which may be applicable to the client at any one time:"
+msgstr ""
 
 msgid "Benefits"
 msgstr "Benefícios"
@@ -2787,6 +2796,9 @@ msgstr "As contas de demonstração do cliente serão excluídas após %1 dias d
 
 msgid "Client's liability"
 msgstr "Responsabilidade do Cliente"
+
+msgid "Client's rights"
+msgstr ""
 
 msgid "Clients"
 msgstr "Clientes"
@@ -5673,7 +5685,7 @@ msgid "Historical Mediterranean island"
 msgstr "Ilha mediterrânica histórica"
 
 msgid "Hit <strong>OK</strong> to edit your answer and try again"
-msgstr ""
+msgstr "Pressione <strong>OK</strong> para editar sua resposta e tente novamente"
 
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "Relatório de visitas e impressões: Exibe as suas taxas de visitas e de cliques"
@@ -5904,6 +5916,9 @@ msgid "If a court or regulatory body of competent jurisdiction declares any prov
 msgstr "\n"
 "Se um tribunal ou órgão regulador de jurisdição competente declarar qualquer disposição dos Termos como inválida ou inexequível, o restante dos Termos permanecerá em pleno vigor e em efeito."
 
+msgid "If a law or regulation or the order of a court of a competent jurisdiction or a governmental or law enforcement agency requires the Company to disclose the client's personal or financial information, the Company shall promptly notify the client, as deemed appropriate, to give the client the opportunity to seek protection for the information for which disclosure is sought unless the Company are legally prohibited from doing so. Any such disclosure shall not be interpreted as a breach of these terms and conditions."
+msgstr ""
+
 msgid "If a trade becomes unavailable after the transaction is made but before the trade is executed, the client may request a refund of the charged price. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. If technical problems prevent the execution of a trade, for example, if a disruption occurs in the data feeds that the Company cannot readily fix, the Company reserves the right to refund or reverse the trade."
 msgstr "Se uma negociação ficar indisponível após a transação ser feita antes da negociação ser executada, o cliente pode solicitar o reembolso do preço cobrado. A Empresa reserva-se o direito de aceitar ou rejeitar a solicitação do cliente após investigar a reclamação do cliente. Se problemas técnicos impedirem a execução de uma negociação, por exemplo, se ocorrer uma interrupção nos feeds de dados que a Empresa não pode corrigir prontamente, a Empresa reserva-se o direito de reembolsar ou reverter a negociação."
 
@@ -6000,9 +6015,6 @@ msgstr "Se o preço do lance for 1,05229, você comprará 1,05229 USD por cada 1
 msgid "If the client asks to be treated as a professional client, they need to meet certain specified quantitative and qualitative criteria. On the basis of the client's request to be categorised as professional, the Company undertakes an assessment of the client's expertise, knowledge, and experience to determine whether they fall within this category and whether they are able to make their own investment decisions and understand the risks involved. If the relevant criteria are not met, the Company reserves the right to choose whether to provide its services under this requested classification."
 msgstr "Se o cliente pedir para ser tratado como um cliente profissional, ele precisará atender a determinados critérios quantitativos e qualitativos especificados. Com base na solicitação do cliente para ser categorizado como profissional, a Empresa realiza uma avaliação da experiência, conhecimento e experiência do cliente para determinar se se enquadram nessa categoria e se são capazes de tomar suas próprias decisões de investimento e entender os riscos envolvidos. Se os critérios relevantes não forem atendidos, a Empresa reserva-se o direito de escolher se vai fornecer seus serviços sob essa classificação solicitada."
 
-msgid "If the client chooses to close the client's %1 account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company will delete the client's data once the applicable retention period expires."
-msgstr "Se o cliente optar por fechar a conta %1 do cliente, os dados do cliente serão mantidos somente até que as obrigações legais e regulamentares da Empresa sobre a retenção de dados sejam cumpridas. A empresa excluirá os dados do cliente quando o período de retenção aplicável expirar."
-
 msgid "If the client chooses to enter into a contract with the Company, it is important that the client remains aware of the risks involved, that the client has adequate investment resources to bear such risks, and that the client monitors the client's positions carefully."
 msgstr "Se o cliente optar por celebrar um contrato com a Empresa, é importante que o cliente permaneça ciente dos riscos envolvidos, que o cliente tenha recursos de investimento adequados para assumir tais riscos e que o cliente monitore cuidadosamente as posições do cliente."
 
@@ -6017,6 +6029,9 @@ msgstr "Se o cliente tiver um saldo positivo em sua Conta Real MT5, ele poderá 
 
 msgid "If the client is an individual, they are over 18 years old and they have full capacity to enter into this agreement."
 msgstr "Se o cliente for um indivíduo, ele tem mais de 18 anos e tem capacidade total para celebrar este contrato."
+
+msgid "If the client is unhappy with how the Company handles the personal data, the client can file a complaint with the Company. If the client is not satisfied with the outcome of the Company's internal complaints procedure, or if the client considers that the client's complaint has not been handled correctly, the client may lodge a complaint to the Company's lead supervisory authority on data processing practices."
+msgstr ""
 
 msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
 msgstr "Se o cliente deseja sacar fundos de sua conta real MT5 e encerrar sua conta real MT5, ele pode notificar a empresa através do %1live chat%2. A Conta Real MT5 do cliente pode ser encerrada caso este não tenha Posições em Aberto e todos os valores que eram devidos à Empresa tenham sido liquidados."
@@ -6323,6 +6338,9 @@ msgstr "De acordo com os requisitos regulamentares aplicáveis, se a Empresa nã
 
 msgid "In all circumstances, the Company reserves the right to make changes to these terms and conditions. If the Company elects to make any material changes to these terms and conditions, clients will be notified in advance and shall either accept or decline to agree. Declining to agree shall result in a material breach of this agreement and the client's account may be frozen, suspended, or cancelled. However, the client shall be allowed to withdraw any pending balance on account subject to KYC verification."
 msgstr "Em todas as circunstâncias, a Empresa se reserva o direito de fazer alterações a estes Termos e Condições. Se a Empresa decidir realizar quaisquer alterações materiais a estes Termos e Condições, os nossos clientes serão previamente notificados e poderão aceitar ou recusar o novo contrato. A recusa resultará numa violação material deste contrato e a conta do cliente poderá ser congelada, suspensa ou cancelada. No entanto, será permitido ao cliente retirar qualquer saldo remanescente na conta, sujeito à verificação \"Conhecer o cliente\"."
+
+msgid "In all instances, the Company takes all reasonably necessary steps to ensure the client's personal data is treated securely and in accordance with this privacy policy and in compliance with any applicable data protection laws. These steps may include placing a contractual obligation on third parties or ensuring that third parties receiving data are certified under an approved certification mechanism such as the one on the Privacy Shieldframework."
+msgstr ""
 
 msgid "In any event of an error in current prices, published odds, or trading software"
 msgstr "Em qualquer evento envolvendo um erro nos preços atuais, nas probabilidades publicadas ou no software de negociação"
@@ -8452,7 +8470,7 @@ msgid "Our locations"
 msgstr "As nossas instalações"
 
 msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
-msgstr ""
+msgstr "Nossas máquinas não reconhecem alguns dos símbolos que você usou. Eles só entendem letras, números e estes símbolos . , ‘ - "
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "Forex é geralmente negociado em lotes. Um lote padrão equivale a 100 unidades, exceto com prata em que 1 lote equivale a 5.000 unidades. Cada vez que você abre uma posição num símbolo, é possível começar com uma transação mínima de 0,01 lotes."
@@ -9912,8 +9930,23 @@ msgstr "Revisões à API %1"
 msgid "Revoke access"
 msgstr "Revogar acesso"
 
+msgid "Right of access to the client's  personal data: the client has the right to request and receive a copy of all the personal data the company holds about the client."
+msgstr ""
+
+msgid "Right of rectification: the client has the right to request the correction of any personal data that the Company holds about the client and are either inaccurate or incomplete."
+msgstr ""
+
+msgid "Right to data portability: the client has the right to request a copy of the client's personal data in a digital format and, where possible, ask the Company to transfer it to another company."
+msgstr ""
+
+msgid "Right to erasure: the client has the right to obtain the erasure of the client's personal data, provided, among others, the personal data in question are no longer necessary in relation to the purpose for which they were collected."
+msgstr ""
+
 msgid "Right to object"
 msgstr "Direito de objeção"
+
+msgid "Right to restriction and right to object: the client has the right to restrict the Company's processing activities or to object to the processing of the client's personal data."
+msgstr ""
 
 msgid "Right to terminate"
 msgstr "Direito de Terminar"
@@ -11390,6 +11423,9 @@ msgstr "Nos termos da legislação de proteção de dados, a empresa é obrigada
 msgid "The Company is the sole owner of all rights, titles, or interests whatsoever in and to all %1 electronic systems, including but not limited to any and all software, email, and email management software, along with any modifications."
 msgstr "A Empresa é a única proprietária de todos os direitos, títulos ou interesses em todos os sistemas eletrônicos %1, incluindo, mas não se limitando a todo e qualquer software, e-mail e software de gerenciamento de e-mail, junto com quaisquer modificações."
 
+msgid "The Company keeps the client's information for the whole duration of the client's subscription with the Company. If the Company chooses to close the client's Binary.com account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company shall delete the client's data when the applicable retention period expires. The criteria the Company uses for determining the retention period for the client's personal data will be any applicable regulatory requirements or legal obligations, including tax, financial, and anti-money laundering laws, or to establish or defend potential legal claims."
+msgstr ""
+
 msgid "The Company likewise reserves the right to cancel any request for a deposit, withdrawal, or refund of the client’s funds."
 msgstr "A Empresa também se reserva o direito de cancelar qualquer solicitação de depósito, retirada ou reembolso dos fundos do cliente. "
 
@@ -11411,11 +11447,17 @@ msgstr "A Empresa pode também impor limites sobre volumes de negociação em co
 msgid "The Company may also transfer relevant personal and financial data to any company within the Deriv Group companies. This includes any of the Company's business associates or payment providers within or outside of the EEA, including countries that might not offer an equivalent level of protection of personal data. In all instances, the Company places a contractual obligation on such third parties to offer the same level of rights and protection as stipulated in the GDPR."
 msgstr "A Empresa também pode transferir dados pessoais e financeiros relevantes para qualquer empresa das empresas do Grupo Deriv. Isso inclui qualquer associado comercial ou fornecedor de pagamentos da Empresa dentro ou fora do EEA, incluindo países que podem não oferecer um nível equivalente de proteção de dados pessoais. Em todos os casos, a Empresa impõe uma obrigação contratual a esses terceiros para oferecer o mesmo nível de direitos e proteção estipulado no GDPR."
 
+msgid "The Company may also transfer the client's data to third parties outside the EEA for content delivery services, customer relationship management services, and communication and marketing services."
+msgstr ""
+
 msgid "The Company may change the commission structure at any time at its sole and absolute discretion. The Company will endeavour to ensure that Affiliates are notified when changes have been made to the commission structure."
 msgstr "A Empresa poderá alterar a estrutura da comissão a qualquer momento, a seu exclusivo e absoluto critério. A Empresa se esforçará para garantir que os Afiliados sejam notificados quando forem feitas alterações na estrutura da comissão."
 
 msgid "The Company may change, suspend, terminate, or discontinue any aspect of the %1 API, including the availability of any services, information, features, or functions accessible by means of the %1 API, on no less than seven days' advance notice to the Programmer."
 msgstr "A Empresa pode alterar, suspender, encerrar ou descontinuar qualquer aspecto da API %1, incluindo a disponibilidade de quaisquer serviços, recursos de informações ou funções acessíveis por meio da API %1, com antecedência mínima de sete dias de aviso para o Programador."
+
+msgid "The Company may collect basic tax residence information for the purposes of Common Reporting Standard (CRS) compliance. The tax information that the client may provide will only be disclosed to the authorities who are legally charged with collecting this information for CRS reporting. The Company shall disclose the client's tax information to them only to the extent that the Company is legally obliged to. The Company does not use, disclose, or process this information in any other way at any time."
+msgstr ""
 
 msgid "The Company may collect this information in a variety of ways. Data is collected and contained in CVs or resumes, cover letters, and identity documents, via Self-Assessment Topgrading Questionnaires/Interview (SATI), or through interviews or other forms of assessment, including online tests."
 msgstr "A empresa pode coletar essas informações de várias maneiras. Os dados são coletados e contidos em CVs ou currículos, cartas de apresentação e documentos de identidade, por meio de questionários de autoavaliação/entrevista (SATI) ou por meio de entrevistas ou outras formas de avaliação, incluindo testes online."
@@ -11432,8 +11474,14 @@ msgstr "A Empresa pode modificar os Requisitos de Margem para quaisquer Posiçõ
 msgid "The Company may modify any provisions or terms of this Agreement at any time. It is the responsibility of the Introducing Broker to consistently review all modifications in the Agreement made on the website."
 msgstr "A Empresa pode modificar quaisquer disposições ou termos deste Contrato a qualquer momento. É responsabilidade do Corretor de Apresentação revisar consistentemente todas as modificações no Acordo feitas no site."
 
+msgid "The Company may need to transfer the client's personal data to any of its business associates or payment providers within or outside of the European Economic Area (EEA), including countries that might not offer an equivalent level of protection of personal data, for the purpose of processing by third parties."
+msgstr ""
+
 msgid "The Company may release subsequent versions of the %1 API and require that the Programmer use those subsequent versions. The Programmer's continued use of the APIs following a subsequent release will be deemed the Programmer's acceptance of modifications."
 msgstr "A Empresa pode liberar versões subsequentes da API %1 e exigir que o Programador use essas versões subseqüentes. O uso continuado das APIs pelo Programador após uma versão subsequente será considerado a aceitação das modificações pelo Programador."
+
+msgid "The Company may transfer relevant personal data to any company within Deriv Group Ltd where it is necessary for the performance of a contract with the client related to the Company services."
+msgstr ""
 
 msgid "The Company may use or disclose (or choose not to use or disclose) such Contributions for any purpose, in any way, in any media worldwide."
 msgstr "A empresa pode usar ou divulgar (ou escolher não usar nem divulgar) tais contribuições por qualquer motivo, de qualquer forma, por qualquer meio de comunicação a nível mundial."
@@ -11465,8 +11513,8 @@ msgstr "A Empresa disponibiliza opções binárias através da sua plataforma on
 msgid "The Company only accesses the client's cloud storage when the client's action initiates it. Clients can disconnect their storage service at any time."
 msgstr "A Empresa só acessa o armazenamento em nuvem do cliente quando a ação é iniciada pelo cliente. Os clientes podem desconectar seu serviço de armazenamento a qualquer momento."
 
-msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures place obligations on users of personal data like the Company. They also lay down the principles for fair and lawful processing of all the information that the Company acquires."
-msgstr "A empresa opera em total conformidade com o Regulamento Geral de Proteção de Dados (GDPR) e outras leis de proteção de dados aplicáveis. Essas medidas regulatórias impõem obrigações aos usuários de dados pessoais, como a Empresa. Também estabelecem os princípios para o processamento justo e lícito de todas as informações que a empresa adquire."
+msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures oblige the Company to use the clients' personal data according to the principles of fair, lawful, and transparent information processing."
+msgstr ""
 
 msgid "The Company provides here a summary of the policy that the Company maintains in order to manage conflicts of interest in respect of the duties that the Company owes to clients."
 msgstr "A Empresa fornece aqui um resumo da política que a Empresa mantém para administrar conflitos de interesse em relação aos deveres que a Empresa deve aos clientes."
@@ -12012,6 +12060,9 @@ msgstr "O cliente também tem o direito de solicitar que a empresa informe o cli
 msgid "The client bears the responsibility of ensuring that payments made to DIEL are correctly received with the specified client's account details."
 msgstr "É sua responsabilidade garantir que os pagamentos efetuados à DIEL, com os dados da conta de cliente especificada, sejam corretamente recebidos."
 
+msgid "The client can make any of the requests set out above by emailing the Company's data protection officer directly at dpo@deriv.com or by using the contact details on the %1Contact Us%2 page."
+msgstr ""
+
 msgid "The client has Open Positions on the account that show a loss."
 msgstr "O cliente tem posições abertas na conta que mostram uma perda."
 
@@ -12038,6 +12089,9 @@ msgstr "O cliente tem experiência e conhecimentos suficientes em matéria de ne
 
 msgid "The client has the right to object to the direct distribution of marketing materials. This can be done by either not providing the client's consent to any marketing material before the service is rendered or revoking it at any point during the service. In both cases, the Company will refrain from distributing marketing materials to the client."
 msgstr "Você tem o direito de se opor à distribuição de materiais de marketing. Isso pode ser feito ao não fornecer a sua autorização para o envio de materiais de marketing antes de o serviço ser prestado ou ao revogar a sua autorização em qualquer momento durante o serviço. Em qualquer das formas, iremos deixar de lhe enviar materiais de marketing."
+
+msgid "The client has the right to opt out of receiving marketing materials from the Company. This can be done by either not providing the client's consent to receiving marketing materials when opening an account with the Company or by revoking it at any point during the period that the client holds an account with the Company. In both cases, the Company shall not send any marketing materials to the client."
+msgstr ""
 
 msgid "The client has unrealised losses on their MT5 Real Account."
 msgstr "O cliente tem perdas não realizadas em sua Conta Real MT5."
@@ -12431,6 +12485,9 @@ msgstr "O direito de ser informado sobre o uso de seus dados pessoais, conforme 
 
 msgid "The right to delete their personal information, subject to the data retention practice of the Company"
 msgstr "O direito de excluir suas informações pessoais, sujeito às práticas de retenção de dados da Empresa "
+
+msgid "The right to erasure is not an absolute right. The Company has to comply with retention requirements set out on any applicable laws, including financial regulations and anti-money laundering laws."
+msgstr ""
 
 msgid "The right to rectify their personal data if the Company holds any information about the applicant that is incomplete or inaccurate"
 msgstr "O direito de retificar seus dados pessoais se a Empresa possuir alguma informação incompleta ou imprecisa sobre o solicitante"
@@ -13830,8 +13887,8 @@ msgstr "Verificar identidade"
 msgid "Verify your identity"
 msgstr "Verifique sua identidade"
 
-msgid "Version 53. Last modified 01-03-2022."
-msgstr "Versão 53. Última modificação 01-03-2022."
+msgid "Version 54. Last modified 10-05-2022."
+msgstr ""
 
 msgid "Video Room Facility"
 msgstr "Recurso de sala de vídeo"
@@ -13996,7 +14053,7 @@ msgid "We cannot verify you without using your camera"
 msgstr "Não podemos verificar você sem usar sua câmera"
 
 msgid "We couldn’t read that!"
-msgstr ""
+msgstr "Não conseguimos ler isso!"
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "Excluímos uma ordem com a maior margem reservada."

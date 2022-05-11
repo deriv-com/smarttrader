@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-25 04:03\n"
+"PO-Revision-Date: 2022-05-11 03:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -988,6 +988,9 @@ msgstr "随时随地透过iOS设备访问市场。"
 msgid "Access the markets anytime, anywhere using native apps for your iOS or Android devices."
 msgstr "随时随地在iOS或Android设备上使用原装应用能够程序访问市场。"
 
+msgid "Access to data"
+msgstr ""
+
 msgid "Access to personal data"
 msgstr "个人数据访问"
 
@@ -1118,7 +1121,7 @@ msgid "Action required"
 msgstr "需要展开行动"
 
 msgid "Action required!"
-msgstr ""
+msgstr "需要展开行动!"
 
 msgid "Active trading clients"
 msgstr "活跃的交易客户"
@@ -1557,6 +1560,9 @@ msgstr "公司要求的任何其他信息"
 
 msgid "Any pending funds in your MT5 account will be transferred to your Binary account."
 msgstr "您 MT5 账户的任何待处理资金将转至您的 Binary 账户。"
+
+msgid "Any processing of personal data undertaken by Deriv Investments (Europe) Limited will be in compliance with the Company's terms of service and these terms of security and privacy policy."
+msgstr ""
 
 msgid "Any request for a deposit refund for active accounts will be automatically rejected. If the Company has closed, blocked, or suspended the client’s account (see Section J. Fraud and money laundering), the client may request a refund of the client’s deposit. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. "
 msgstr "有效账户的任何押金退款请求将自动被拒绝。如果公司关闭、冻结或暂停了客户的账户（请参阅第J节“欺诈和洗钱”），则客户可以要求退还其押金。在调查客户的索赔后，公司保留接受或拒绝客户请求的权利。"
@@ -2097,6 +2103,9 @@ msgstr "初学者"
 
 msgid "Being in touch with the latest tools and technology related to your role."
 msgstr "持续拥有与工作职务相关的最新工具和技术。"
+
+msgid "Below is a list of the client's legal rights regarding personal data, not all of which may be applicable to the client at any one time:"
+msgstr ""
 
 msgid "Benefits"
 msgstr "福利"
@@ -2781,6 +2790,9 @@ msgstr "如果连续%1天没有活动，客户的虚拟账户将被删除。"
 
 msgid "Client's liability"
 msgstr "客户的责任"
+
+msgid "Client's rights"
+msgstr ""
 
 msgid "Clients"
 msgstr "客户"
@@ -5658,7 +5670,7 @@ msgid "Historical Mediterranean island"
 msgstr "历史悠久的地中海岛屿"
 
 msgid "Hit <strong>OK</strong> to edit your answer and try again"
-msgstr ""
+msgstr "点击<strong>确认</strong>以编辑您的答案及重试"
 
 msgid "Hits & Impression report: Displays your hit rate and click through rates"
 msgstr "点击和印象报表: 显示您的命中率和点击率"
@@ -5888,6 +5900,9 @@ msgstr "如果DIEL决定引入新的交易平台, 其将在推出新交易平台
 msgid "If a court or regulatory body of competent jurisdiction declares any provision of the Terms to be invalid or unenforceable, the rest of the Terms shall remain in full force and effect."
 msgstr "如果具有管辖权的法院或监管机构宣布本条款中的任何条文无效或无法执行，则本条款中的其余条文须保持完全有效。"
 
+msgid "If a law or regulation or the order of a court of a competent jurisdiction or a governmental or law enforcement agency requires the Company to disclose the client's personal or financial information, the Company shall promptly notify the client, as deemed appropriate, to give the client the opportunity to seek protection for the information for which disclosure is sought unless the Company are legally prohibited from doing so. Any such disclosure shall not be interpreted as a breach of these terms and conditions."
+msgstr ""
+
 msgid "If a trade becomes unavailable after the transaction is made but before the trade is executed, the client may request a refund of the charged price. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. If technical problems prevent the execution of a trade, for example, if a disruption occurs in the data feeds that the Company cannot readily fix, the Company reserves the right to refund or reverse the trade."
 msgstr "如果在付款之后但在交易执行之前无法进行交易，则客户可以要求退回收费。在调查客户的索赔后，公司保留接受或拒绝客户请求的权利。如果因为技术问题的原因阻止交易执行，例如，如果发生数据馈送中断而公司无法迅速解决，公司保留退款或撤销交易的权利。"
 
@@ -5984,9 +5999,6 @@ msgstr "如果卖价是1.05229，那么您每卖出1欧元就会买入1.05229美
 msgid "If the client asks to be treated as a professional client, they need to meet certain specified quantitative and qualitative criteria. On the basis of the client's request to be categorised as professional, the Company undertakes an assessment of the client's expertise, knowledge, and experience to determine whether they fall within this category and whether they are able to make their own investment decisions and understand the risks involved. If the relevant criteria are not met, the Company reserves the right to choose whether to provide its services under this requested classification."
 msgstr "如果客户要求被视为专业客户, 客户需要满足某些特定的定量和定性标准。一旦客户要求分类成为专业客户, 公司会对其专业技能、知识和经验进行评估, 以确定客户是否属于此类别, 以及其是否能够作出自己的投资决定和了解所涉及的风险。如果不符合有关标准, 公司有权选择是否根据客户所要求的分类提供服务。"
 
-msgid "If the client chooses to close the client's %1 account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company will delete the client's data once the applicable retention period expires."
-msgstr "如果客户选择关闭其%1账户，公司将会保留客户的数据，直到已经完成履行数据保留方面的法律和监管义务。一旦适用的保留期限届满，公司将删除客户的数据。"
-
 msgid "If the client chooses to enter into a contract with the Company, it is important that the client remains aware of the risks involved, that the client has adequate investment resources to bear such risks, and that the client monitors the client's positions carefully."
 msgstr "如客户选择与公司共同修订合同，客户必须完全了解相关的风险，有足够投资资源能够承担这些风险，并确保将慎重地监管其头寸，这几点很重要。"
 
@@ -6001,6 +6013,9 @@ msgstr "如果客户的 MT5 真实账户有剩余款项, 客户可以将此余�
 
 msgid "If the client is an individual, they are over 18 years old and they have full capacity to enter into this agreement."
 msgstr "如果客户是个人，年满 18 岁，并有充分能力签订本协议。"
+
+msgid "If the client is unhappy with how the Company handles the personal data, the client can file a complaint with the Company. If the client is not satisfied with the outcome of the Company's internal complaints procedure, or if the client considers that the client's complaint has not been handled correctly, the client may lodge a complaint to the Company's lead supervisory authority on data processing practices."
+msgstr ""
 
 msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
 msgstr "如果客户想从MT5真实账户提款并关闭其MT5真实账户，客户可通过 %1实时聊天%2通知公司。如果客户没有任何未平仓头寸及所有款项都已结清，其MT5真实账户可以关闭。"
@@ -6304,6 +6319,9 @@ msgstr "根据适用的法规要求，当公司无法获取足够信息为客户
 
 msgid "In all circumstances, the Company reserves the right to make changes to these terms and conditions. If the Company elects to make any material changes to these terms and conditions, clients will be notified in advance and shall either accept or decline to agree. Declining to agree shall result in a material breach of this agreement and the client's account may be frozen, suspended, or cancelled. However, the client shall be allowed to withdraw any pending balance on account subject to KYC verification."
 msgstr "在任何情况下，公司保留对此条款和条件作出修改的权利。如公司选择对此条款和条件作出任何具体修改，客户将预先得到通知，并可选择接受或拒绝。如果拒绝，则会违反此协议，客户的账户可能会被冻结、暂停或吊销。但客户可取回任何未决余款，条件是必须经过KYC核实。"
+
+msgid "In all instances, the Company takes all reasonably necessary steps to ensure the client's personal data is treated securely and in accordance with this privacy policy and in compliance with any applicable data protection laws. These steps may include placing a contractual obligation on third parties or ensuring that third parties receiving data are certified under an approved certification mechanism such as the one on the Privacy Shieldframework."
+msgstr ""
 
 msgid "In any event of an error in current prices, published odds, or trading software"
 msgstr "如发生任何当前价格、公布赔率或交易软件错误的事件。"
@@ -8431,7 +8449,7 @@ msgid "Our locations"
 msgstr "我们的位置"
 
 msgid "Our machines don’t recognise some of the symbols you used. They only understand letters, numbers, and these symbols  . , ‘ - "
-msgstr ""
+msgstr "我们的机器无法识别您使用的某些符号。它只懂字母、数字和这些符号  . , ‘ - "
 
 msgid "Our metal pairs are typically traded in lots. One standard lot is equivalent to 100 units except silver where 1 lot equals 5,000 units. Each time you open a position on a symbol, you can start with a minimum transaction of 0.01 lots."
 msgstr "我们的金属对通常以手为交易单位。一个标准手数相当于100个单位，除了白银是一手等于5,000个单位。每次当您为某个符号开仓时，您可以从0.01手的最小交易量开始。"
@@ -9888,8 +9906,23 @@ msgstr "%1 API 修订版"
 msgid "Revoke access"
 msgstr "撤销访问权限"
 
+msgid "Right of access to the client's  personal data: the client has the right to request and receive a copy of all the personal data the company holds about the client."
+msgstr ""
+
+msgid "Right of rectification: the client has the right to request the correction of any personal data that the Company holds about the client and are either inaccurate or incomplete."
+msgstr ""
+
+msgid "Right to data portability: the client has the right to request a copy of the client's personal data in a digital format and, where possible, ask the Company to transfer it to another company."
+msgstr ""
+
+msgid "Right to erasure: the client has the right to obtain the erasure of the client's personal data, provided, among others, the personal data in question are no longer necessary in relation to the purpose for which they were collected."
+msgstr ""
+
 msgid "Right to object"
 msgstr "抗议权"
+
+msgid "Right to restriction and right to object: the client has the right to restrict the Company's processing activities or to object to the processing of the client's personal data."
+msgstr ""
 
 msgid "Right to terminate"
 msgstr "终止权利"
@@ -11361,6 +11394,9 @@ msgstr "根据数据保护法规要求，公司必须将本隐私权声明所载
 msgid "The Company is the sole owner of all rights, titles, or interests whatsoever in and to all %1 electronic systems, including but not limited to any and all software, email, and email management software, along with any modifications."
 msgstr "公司是所有 %1 电子系统，包括但不限于任何所有软件、电子邮件和电子邮件管理软件，包括任何修改的所有权利、所有权或利益的唯一拥有人。"
 
+msgid "The Company keeps the client's information for the whole duration of the client's subscription with the Company. If the Company chooses to close the client's Binary.com account, the client's data will be kept only until the Company's legal and regulatory obligations on data retention are met. The Company shall delete the client's data when the applicable retention period expires. The criteria the Company uses for determining the retention period for the client's personal data will be any applicable regulatory requirements or legal obligations, including tax, financial, and anti-money laundering laws, or to establish or defend potential legal claims."
+msgstr ""
+
 msgid "The Company likewise reserves the right to cancel any request for a deposit, withdrawal, or refund of the client’s funds."
 msgstr "同样，公司也保留取消任何存款、取款或退还客户资金的请求的权利。"
 
@@ -11382,11 +11418,17 @@ msgstr "公司还可自行决定对客户账户实行批量交易限制。交易
 msgid "The Company may also transfer relevant personal and financial data to any company within the Deriv Group companies. This includes any of the Company's business associates or payment providers within or outside of the EEA, including countries that might not offer an equivalent level of protection of personal data. In all instances, the Company places a contractual obligation on such third parties to offer the same level of rights and protection as stipulated in the GDPR."
 msgstr "公司也可能会将相关的个人和财务数据传输给 Deriv 集团内的任何公司。这包括公司在EEA内部或外部的任何商业伙伴或支付提供商，包括那些可能不提供同等级别的个人数据保护的国家。在所有情况下，公司与这些第三方签立合同义务，以提供与GDPR规定相同的权利和保护水平。"
 
+msgid "The Company may also transfer the client's data to third parties outside the EEA for content delivery services, customer relationship management services, and communication and marketing services."
+msgstr ""
+
 msgid "The Company may change the commission structure at any time at its sole and absolute discretion. The Company will endeavour to ensure that Affiliates are notified when changes have been made to the commission structure."
 msgstr "公司可能随时以其唯一、绝对自主权改变佣金结构。佣金结构发生更正时，公司将努力通知所有联盟会员。"
 
 msgid "The Company may change, suspend, terminate, or discontinue any aspect of the %1 API, including the availability of any services, information, features, or functions accessible by means of the %1 API, on no less than seven days' advance notice to the Programmer."
 msgstr "公司可能会预先7天通知程序员之后对%1 API服务，包括通过%1 API所提供的任何服务、信息、功能或可访问与可用性作出更改、暂停、终止或中断措施。"
+
+msgid "The Company may collect basic tax residence information for the purposes of Common Reporting Standard (CRS) compliance. The tax information that the client may provide will only be disclosed to the authorities who are legally charged with collecting this information for CRS reporting. The Company shall disclose the client's tax information to them only to the extent that the Company is legally obliged to. The Company does not use, disclose, or process this information in any other way at any time."
+msgstr ""
 
 msgid "The Company may collect this information in a variety of ways. Data is collected and contained in CVs or resumes, cover letters, and identity documents, via Self-Assessment Topgrading Questionnaires/Interview (SATI), or through interviews or other forms of assessment, including online tests."
 msgstr "公司可能会以多种方式收集这些信息。通过自我评估调查问卷 (SATI), 或通过访谈或其他评估方式, 包括在线测试收集资料并包含在简历、求职信和证件里。"
@@ -11403,8 +11445,14 @@ msgstr "公司可能会自行决定为任何未平仓头寸或新订单修改保
 msgid "The Company may modify any provisions or terms of this Agreement at any time. It is the responsibility of the Introducing Broker to consistently review all modifications in the Agreement made on the website."
 msgstr "公司可以随时修改本协议的任何条规或条款。推介经纪需负责不断审查透过网站签署的协议中所有修改。"
 
+msgid "The Company may need to transfer the client's personal data to any of its business associates or payment providers within or outside of the European Economic Area (EEA), including countries that might not offer an equivalent level of protection of personal data, for the purpose of processing by third parties."
+msgstr ""
+
 msgid "The Company may release subsequent versions of the %1 API and require that the Programmer use those subsequent versions. The Programmer's continued use of the APIs following a subsequent release will be deemed the Programmer's acceptance of modifications."
 msgstr "公司可能发布%1 API的后续版本，并要求程序员使用这些后续版本。程序员继续使用API后续版本将被视为其接受修定版本。"
+
+msgid "The Company may transfer relevant personal data to any company within Deriv Group Ltd where it is necessary for the performance of a contract with the client related to the Company services."
+msgstr ""
 
 msgid "The Company may use or disclose (or choose not to use or disclose) such Contributions for any purpose, in any way, in any media worldwide."
 msgstr "公司可基于任何用途通过世界各地任何媒体以任何方式使用或披露 （或选择不使用或披露）该贡献 。"
@@ -11436,8 +11484,8 @@ msgstr "公司通过其在线互动平台提供二元期权交易。"
 msgid "The Company only accesses the client's cloud storage when the client's action initiates it. Clients can disconnect their storage service at any time."
 msgstr "公司仅在客户的操作启动时访问客户的云存储。客户可以随时断开其存储服务。"
 
-msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures place obligations on users of personal data like the Company. They also lay down the principles for fair and lawful processing of all the information that the Company acquires."
-msgstr "公司的运营完全遵守“通用数据保护条例”（GDPR）和其他适用的数据保护法律。这些监管措施对像公司这样的个人数据用户制定承担义务。他们还制定了公平合法处理公司获得的所有信息的原则。"
+msgid "The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures oblige the Company to use the clients' personal data according to the principles of fair, lawful, and transparent information processing."
+msgstr ""
 
 msgid "The Company provides here a summary of the policy that the Company maintains in order to manage conflicts of interest in respect of the duties that the Company owes to clients."
 msgstr "公司有义务对客户利益冲突进行管理，并仅此向客户提供相关政策摘要。"
@@ -11983,6 +12031,9 @@ msgstr "客户也有权要求公司将处理过的关于客户的个人数据通
 msgid "The client bears the responsibility of ensuring that payments made to DIEL are correctly received with the specified client's account details."
 msgstr "客户承担确保DIEL将按照指定客户账户详细信息正确接收支付款项的责任。"
 
+msgid "The client can make any of the requests set out above by emailing the Company's data protection officer directly at dpo@deriv.com or by using the contact details on the %1Contact Us%2 page."
+msgstr ""
+
 msgid "The client has Open Positions on the account that show a loss."
 msgstr "客户在显示亏损的账户有未平仓头寸。"
 
@@ -12009,6 +12060,9 @@ msgstr "客户拥有足够的金融交易经验和知识，能够评估经由本
 
 msgid "The client has the right to object to the direct distribution of marketing materials. This can be done by either not providing the client's consent to any marketing material before the service is rendered or revoking it at any point during the service. In both cases, the Company will refrain from distributing marketing materials to the client."
 msgstr "客户有权反对直接分配营销材料。方法是在服务实施之前不同意公司提供任何营销材料，或在提供服务期间随时撤消。两种情况下，公司将停止向客户分发营销材料。"
+
+msgid "The client has the right to opt out of receiving marketing materials from the Company. This can be done by either not providing the client's consent to receiving marketing materials when opening an account with the Company or by revoking it at any point during the period that the client holds an account with the Company. In both cases, the Company shall not send any marketing materials to the client."
+msgstr ""
 
 msgid "The client has unrealised losses on their MT5 Real Account."
 msgstr "客户在其MT5真实账户有未实现损失。"
@@ -12402,6 +12456,9 @@ msgstr "被告知使用其个人资料的权利，如本隐私政策所示"
 
 msgid "The right to delete their personal information, subject to the data retention practice of the Company"
 msgstr "根据公司的资料保留惯例删除其个人信息的权利"
+
+msgid "The right to erasure is not an absolute right. The Company has to comply with retention requirements set out on any applicable laws, including financial regulations and anti-money laundering laws."
+msgstr ""
 
 msgid "The right to rectify their personal data if the Company holds any information about the applicant that is incomplete or inaccurate"
 msgstr "如果申请人提供任何不完整或不准确信息, 公司有权纠正其个人数据"
@@ -13798,8 +13855,8 @@ msgstr "身份验证"
 msgid "Verify your identity"
 msgstr "身份验证"
 
-msgid "Version 53. Last modified 01-03-2022."
-msgstr "版本53。最后修改时间01-03-2022。"
+msgid "Version 54. Last modified 10-05-2022."
+msgstr ""
 
 msgid "Video Room Facility"
 msgstr "视频室设施"
@@ -13964,7 +14021,7 @@ msgid "We cannot verify you without using your camera"
 msgstr "不使用相机，我们无法验证您的身份"
 
 msgid "We couldn’t read that!"
-msgstr ""
+msgstr "我们无法读取！"
 
 msgid "We delete an order with the largest margin reserved."
 msgstr "我们删除含最大储备保证金的订单。"
