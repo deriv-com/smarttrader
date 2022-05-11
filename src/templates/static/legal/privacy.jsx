@@ -8,7 +8,9 @@ const Privacy = () => (
         <p>{it.L('The Company has outlined the Company\'s privacy practices for the client as follows:')}</p>
 
         <h2 data-anchor='use-of-information'>{it.L('Use of information')}</h2>
-        <p>{it.L('The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures place obligations on users of personal data like the Company. They also lay down the principles for fair and lawful processing of all the information that the Company acquires.')}</p>
+        <p>{it.L('The Company operates in full compliance with the General Data Protection Regulation (GDPR) and other applicable Data Protection laws. These regulatory measures oblige the Company to use the clients\' personal data according to the principles of fair, lawful, and transparent information processing.')}</p>
+        <p>{it.L('Any processing of personal data undertaken by Deriv Investments (Europe) Limited will be in compliance with the Company\'s terms of service and these terms of security and privacy policy.')}</p>
+        <p>{it.L('The Company may collect basic tax residence information for the purposes of Common Reporting Standard (CRS) compliance. The tax information that the client may provide will only be disclosed to the authorities who are legally charged with collecting this information for CRS reporting. The Company shall disclose the client\'s tax information to them only to the extent that the Company is legally obliged to. The Company does not use, disclose, or process this information in any other way at any time.')}</p>
         <p>{it.L('It is the Company\'s commitment to safeguard the client\'s privacy online at all times. The Company only uses the client\'s personal information to help the Company service the client\'s account, to improve the Company\'s services to the client, and to provide the client with products that the client has requested. The Company does not sell the client\'s personal information to third parties, but the Company may provide it to payment providers to facilitate transactions on the client\'s account.')}</p>
         <p>{it.L('The client\'s personal information is used primarily as a way of validating the client as the legitimate account owner and proper recipient of withdrawal payments. The Company also uses this information to process the client\'s trades. The Company collects from the client all personal and financial data directly relating to the client when the client fills in the Company\'s account opening form. In all instances, the client has either a legal or a contractual obligation to provide the Company with the information. If such information is not provided, the Company will be unable to provide the client with its services.')}</p>
         <p>{it.L('The Company reserves the right to request further information from the client whenever deemed appropriate under the circumstances. For example, the Company may ask the client to send the Company additional acceptable documents to confirm the authenticity of the client\'s account details or of any withdrawal request.')}</p>
@@ -22,6 +24,15 @@ const Privacy = () => (
 
         <h2 data-anchor='profiling-and-categorisation'>{it.L('Profiling and categorisation')}</h2>
         <p>{it.L('The Company collects and assesses the client\'s data to profile the client in relation to the Company\'s products. The Company does this manually with the assistance of automated processing. By categorisation, the Company will be able to provide the most appropriate products and services to the client.')}</p>
+
+        <h2 data-anchor='transfer-of-data'>{it.L('Transfer of data')}</h2>
+        <p>{it.L('The Company may transfer relevant personal data to any company within Deriv Group Ltd where it is necessary for the performance of a contract with the client related to the Company services.')}</p>
+        <p>{it.L('The Company may need to transfer the client\'s personal data to any of its business associates or payment providers within or outside of the European Economic Area (EEA), including countries that might not offer an equivalent level of protection of personal data, for the purpose of processing by third parties.')}</p>
+        <p>{it.L('The Company may also transfer the client\'s data to third parties outside the EEA for content delivery services, customer relationship management services, and communication and marketing services.')}</p>
+        <p>{it.L('In all instances, the Company takes all reasonably necessary steps to ensure the client\'s personal data is treated securely and in accordance with this privacy policy and in compliance with any applicable data protection laws. These steps may include placing a contractual obligation on third parties or ensuring that third parties receiving data are certified under an approved certification mechanism such as the one on the Privacy Shieldframework.')}</p>
+
+        <h2 data-anchor='access-to-data'>{it.L('Access to data')}</h2>
+        <p>{it.L('If a law or regulation or the order of a court of a competent jurisdiction or a governmental or law enforcement agency requires the Company to disclose the client\'s personal or financial information, the Company shall promptly notify the client, as deemed appropriate, to give the client the opportunity to seek protection for the information for which disclosure is sought unless the Company are legally prohibited from doing so. Any such disclosure shall not be interpreted as a breach of these terms and conditions.')}</p>
 
         <h2 data-anchor='cookies-and-device-information'>{it.L('Cookies and device information')}</h2>
         <p>{it.L('Cookies are small text files stored on computer drives and are widely used in order to make websites work and to improve the user experience. All recent versions of browsers give the client a level of control over cookies. The client can delete all cookies that are already on the client\'s computer, and the browser can be set to prevent them from being placed. However, if the client chooses not to receive the Company\'s cookies, the full usability of the Company\'s website may be adversely affected.')}</p>
@@ -53,7 +64,7 @@ const Privacy = () => (
         </div>
 
         <h2 data-anchor='data-retention'>{it.L('Data retention')}</h2>
-        <p>{it.L('If the client chooses to close the client\'s [_1] account, the client\'s data will be kept only until the Company\'s legal and regulatory obligations on data retention are met. The Company will delete the client\'s data once the applicable retention period expires.', it.website_name)}</p>
+        <p>{it.L('The Company keeps the client\'s information for the whole duration of the client\'s subscription with the Company. If the Company chooses to close the client\'s Binary.com account, the client\'s data will be kept only until the Company\'s legal and regulatory obligations on data retention are met. The Company shall delete the client\'s data when the applicable retention period expires. The criteria the Company uses for determining the retention period for the client\'s personal data will be any applicable regulatory requirements or legal obligations, including tax, financial, and anti-money laundering laws, or to establish or defend potential legal claims.')}</p>
 
         <h2 data-anchor='security-statement'>{it.L('Security statement')}</h2>
         <p>{it.L('Taking the following measures, the Company is committed to making sure that the client\'s personal data and transactions are secure:')}</p>
@@ -81,6 +92,22 @@ const Privacy = () => (
 
         <h2 data-anchor='links'>{it.L('Links')}</h2>
         <p>{it.L('The Company\'s website contains links to other websites and may contain banner or icon advertisements related to third-party websites. These websites and their advertisements may submit cookies to the client\'s web browser, which is beyond the Company\'s control. The Company is not responsible for the privacy practices or the content of such websites. The Company encourages the client to read the privacy policies of these websites because their practices may differ from the Company\'s.')}</p>
+
+        <h2 data-anchor='clients-rights'>{it.L('Client\'s rights')}</h2>
+        <p>{it.L('Below is a list of the client\'s legal rights regarding personal data, not all of which may be applicable to the client at any one time:')}</p>
+        <ul className='bullet'>
+            <li>{it.L('Right of access to the client\'s  personal data: the client has the right to request and receive a copy of all the personal data the company holds about the client.')}</li>
+            <li>{it.L('Right of rectification: the client has the right to request the correction of any personal data that the Company holds about the client and are either inaccurate or incomplete.')}</li>
+            <li>{it.L('Right to erasure: the client has the right to obtain the erasure of the client\'s personal data, provided, among others, the personal data in question are no longer necessary in relation to the purpose for which they were collected.')}</li>
+            <li>{it.L('Right to restriction and right to object: the client has the right to restrict the Company\'s processing activities or to object to the processing of the client\'s personal data.')}</li>
+            <li>{it.L('Right to data portability: the client has the right to request a copy of the client\'s personal data in a digital format and, where possible, ask the Company to transfer it to another company.')}</li>
+        </ul>
+        <p>{it.L('The right to erasure is not an absolute right. The Company has to comply with retention requirements set out on any applicable laws, including financial regulations and anti-money laundering laws.')}</p>
+        <p>{it.L('The client can make any of the requests set out above by emailing the Company\'s data protection officer directly at dpo@deriv.com or by using the contact details on the [_1]Contact Us[_2] page.', `<a href=${it.url_for('contact')}>`, '</a>')}</p>
+        <p>{it.L('If the client is unhappy with how the Company handles the personal data, the client can file a complaint with the Company. If the client is not satisfied with the outcome of the Company\'s internal complaints procedure, or if the client considers that the client\'s complaint has not been handled correctly, the client may lodge a complaint to the Company\'s lead supervisory authority on data processing practices.')}</p>
+
+        <h2 data-anchor='marketing'>{it.L('Marketing')}</h2>
+        <p>{it.L('The client has the right to opt out of receiving marketing materials from the Company. This can be done by either not providing the client\'s consent to receiving marketing materials when opening an account with the Company or by revoking it at any point during the period that the client holds an account with the Company. In both cases, the Company shall not send any marketing materials to the client.')}</p>
 
         <h2 data-anchor='notification-of-changes'>{it.L('Notification of changes')}</h2>
         <p>{it.L('Any changes in the Company\'s privacy policy or security statement will be posted on this website. For any material changes that directly affect the economic use of the client\'s personal information, the Company will request the client\'s prior authorisation in writing before effecting such changes on the client\'s account.')}</p>
