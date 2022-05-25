@@ -25,7 +25,7 @@ Before running or contribute to this project, you need to have the setup of the 
 
 - Ruby, RubyGems
 - Sass (`sudo gem install sass`)
-- Node.js (12.22.3 is recommended)
+- Node.js (14.17.1 is recommended)
 - NPM (see <https://nodejs.org/en/download/package-manager/>)
 - Grunt (`sudo npm install -g grunt-cli`)
 
@@ -44,7 +44,7 @@ Before running or contribute to this project, you need to have the setup of the 
 3.  **Enter project directory**
 
     ```sh
-    cd binary-com
+    cd binary-static
     ```
 
 4.  **Install your dependencies:**
