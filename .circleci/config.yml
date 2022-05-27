@@ -152,14 +152,14 @@ commands:
 jobs:
   test:
     docker:
-      - image: circleci/node:12.22.12-stretch
+      - image: cimg/node:12.22.12
     steps:
       - git_checkout_from_cache
       - npm_install
       - test
   release_beta:
     docker:
-      - image: circleci/node:12.22.12-stretch
+      - image: cimg/node:12.22.12
     steps:
       - git_checkout_from_cache
       - npm_install
@@ -176,7 +176,7 @@ jobs:
       - notify_slack
   release_production:
     docker:
-      - image: circleci/node:12.22.12-stretch
+      - image: cimg/node:12.22.12
     steps:
       - git_checkout_from_cache
       - npm_install
