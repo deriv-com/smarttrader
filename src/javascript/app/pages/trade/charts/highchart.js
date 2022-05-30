@@ -128,12 +128,16 @@ const Highchart = (() => {
         // if we disable a symbol in API, it will be missing from active symbols so we can't retrieve its pip
         // so we should handle getting an undefined display_decimals
         const display_decimals = await getUnderlyingPipSize(contract.underlying);
+        const getExitTime = (() => {
+            if (exit_tick_time) return exit_tick_time * 1000;
+            return exit_time ? exit_time * 1000 : null;
+        });
         chart_options = {
             data,
             display_decimals,
             type,
             entry_time: (entry_tick_time || start_time) * 1000,
-            exit_time : exit_tick_time ? exit_tick_time * 1000 : exit_time ? exit_time * 1000 : null, // eslint-disable-line do-not-nest-ternary
+            exit_time : getExitTime(),
             has_zone  : true,
             height    : Math.max(el.parentElement.offsetHeight, 450),
             radius    : 2,
