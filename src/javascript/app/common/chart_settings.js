@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 const addComma        = require('./currency').addComma;
 const isCallputspread = require('../pages/trade/callputspread').isCallputspread;
 const isReset         = require('../pages/trade/reset').isReset;
@@ -38,15 +39,9 @@ const ChartSettings = (() => {
         txt_subtitle = (params.is_chart_delayed ? labels.delay : '') +
             (params.is_forward_starting ? labels.purchase_time : '') +
             (params.is_sold_before_start ? '' : start_time) +
-            (() => {
-                if (params.is_tick_type) return ((params.is_sold_before_start || params.is_tick_trade) ? '' : labels.entry_spot);
-                return '';
-            }) +
+            (params.is_tick_type ? ((params.is_sold_before_start || params.is_tick_trade) ? '' : labels.entry_spot) : '') +
             ((params.has_barrier && !params.is_sold_before_start) ? barrier : '') +
-            (() => {
-                if (params.is_tick_type) return ((params.is_user_sold || params.is_tick_trade) ? '' : labels.exit_spot);
-                return '';
-            }) +
+            (params.is_tick_type ? ((params.is_user_sold || params.is_tick_trade) ? '' : labels.exit_spot) : '') +
             (isReset(params.contract_type) ? labels.reset_time : '') +
             (is_high_low_ticks ? labels.selected_tick : '') +
             (params.show_end_time ? labels.getEndTime(params.is_tick_trade) : '') +
