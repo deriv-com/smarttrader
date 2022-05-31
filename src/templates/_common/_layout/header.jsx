@@ -1,4 +1,7 @@
 import React from 'react';
+import { getPlatformSettings } from '../brand.config';
+
+const platform_name = getPlatformSettings('smarttrader').name;
 
 const MobileMenu = () => (
     <div id='mobile__container' className='mobile__container mobile-show'>
@@ -18,7 +21,7 @@ const MobileMenu = () => (
                     <div id='mobile__platform-switcher-current' className='mobile__platform-switcher-current' >
                         <div className='mobile__platform-switcher-container'>
                             <img className='header__logo mobile__platform-switcher-logo' />
-                            <div className='mobile__platform-switcher-header platform__switcher-header'>{it.L('SmartTrader')}</div>
+                            <div className='mobile__platform-switcher-header platform__switcher-header'>{it.L('[_1]', platform_name)}</div>
                         </div>
                         <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
                     </div>
@@ -80,7 +83,7 @@ const Header = () => (
                 <img id='header__hamburger' className='header__hamburger mobile-show' />
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
-                    <div className='platform__switcher-header'>{it.L('SmartTrader')}</div>
+                    <div className='platform__switcher-header'>{it.L('[_1]', platform_name)}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
