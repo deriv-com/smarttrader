@@ -22,7 +22,7 @@ const brand_config_data = {
             name: 'Deriv X',
             icon: 'ic-brand-dxtrade.svg',
         },
-        binarybot: {
+        bbot: {
             name: 'Binary Bot',
             icon: 'ic-brand-binarybot.svg',
         },

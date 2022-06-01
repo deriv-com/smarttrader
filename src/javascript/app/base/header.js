@@ -208,10 +208,10 @@ const Header = (() => {
             },
             ...(should_show_bots ? {
                 binarybot: {
-                    name     : getPlatformSettings('binarybot').name,
+                    name     : getPlatformSettings('bbot').name,
                     desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
                     link     : `https://bot.deriv.${getTopLevelDomain()}`,
-                    icon     : getPlatformSettings('binarybot').icon,
+                    icon     : getPlatformSettings('bbot').icon,
                     on_mobile: true,
                 },
             } : {}),
