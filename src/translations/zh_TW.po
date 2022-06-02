@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -41,13 +41,13 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "已完成從%2至帳號%3的%1存款。交易編號: %4"
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "%1 已記入您的MT5模擬帳戶: %2。"
+msgstr "%1 已記入您的MT5示範帳戶: %2。"
 
 msgid "%1 has been credited into your Virtual Account: %2."
 msgstr "%1 已記入您的虛擬帳戶: %2。"
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
-msgstr "已完成從賬號%2至%3的%1提款。交易編號: %4"
+msgstr "已完成從帳號%2至%3的%1提款。交易編號: %4"
 
 msgid "%1Manage your accounts%2"
 msgstr "%1管理您的帳戶%2"
@@ -244,6 +244,9 @@ msgstr "障礙變更"
 msgid "Barrier offset"
 msgstr "障礙位移"
 
+msgid "Basket Indices"
+msgstr ""
+
 msgid "Bid"
 msgstr "出價"
 
@@ -398,7 +401,7 @@ msgid "Closes early (at 21:00)"
 msgstr "收盤提前（至21:00）"
 
 msgid "Commodities"
-msgstr "商品"
+msgstr "大宗商品"
 
 msgid "Common names and surnames are easy to guess"
 msgstr "常用名稱和姓氏容易猜到"
@@ -554,22 +557,22 @@ msgid "Delete"
 msgstr "刪除"
 
 msgid "Demo"
-msgstr "模擬"
+msgstr "示範"
 
 msgid "Demo Account"
-msgstr "模擬帳戶"
+msgstr "示範帳戶"
 
 msgid "Demo Accounts"
-msgstr "模擬帳戶"
+msgstr "示範帳戶"
 
 msgid "Demo Financial"
-msgstr "模擬金融"
+msgstr "示範財務"
 
 msgid "Demo Financial STP"
-msgstr "模擬金融 STP"
+msgstr "模擬財務 STP"
 
 msgid "Demo Synthetic"
-msgstr "模擬綜合"
+msgstr "示範綜合"
 
 msgid "Deposit"
 msgstr "存款"
@@ -791,13 +794,13 @@ msgid "Final price"
 msgstr "最終價格"
 
 msgid "Financial"
-msgstr "金融"
+msgstr "財務"
 
 msgid "Financial Account"
 msgstr "金融帳戶"
 
 msgid "Financial STP"
-msgstr "金融 STP"
+msgstr "財務 STP"
 
 msgid "Finish"
 msgstr "完成"
@@ -824,13 +827,13 @@ msgid "From account: "
 msgstr "從帳戶: "
 
 msgid "Front Side"
-msgstr "前側"
+msgstr "正面"
 
 msgid "Front and back"
-msgstr "前和後"
+msgstr "正面和背面"
 
 msgid "Gaming"
-msgstr "遊戲"
+msgstr "博彩"
 
 msgid "Gaming Account"
 msgstr "博彩帳戶"
@@ -935,7 +938,7 @@ msgid "I'm interested"
 msgstr "我很感興趣"
 
 msgid "ID number is required for %1."
-msgstr "%1 需要甚份證號。"
+msgstr "%1 需要身份證號。"
 
 msgid "IDK"
 msgstr "IDK"
@@ -947,13 +950,13 @@ msgid "Identity card"
 msgstr "身分證"
 
 msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr "如果無法掃掃描，請從Google Play 或 App Store 下載 QR 碼掃描應用"
+msgstr "如果無法掃描，請從Google Play 或 App Store 下載 QR 碼掃描應用"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "如果 <strong>退市現價</strong> 等於 <strong>低障礙</strong> 或 <strong>高障礙</strong>, 您將不會贏得賠付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙</strong> 或 <stronm g>重設後的新障礙</stronmg>, 您將不會贏得賠付。"
+msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙</strong> 或 <strong>重設後的新障礙</strong>, 您將不會贏得賠付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
 msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙價格</strong>, 您將不會贏得賠付。"
@@ -989,7 +992,7 @@ msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</str
 msgstr "如果您選擇「下跌」期權，只要<strong>退市現價</strong>嚴格低於<strong>入市現價</strong>，您將獲得賠付。"
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果您選擇「超出區間外」期權，只要市場在<strong>合約期限內的</strong>任何時候觸 及<strong>高障礙</strong>或<strong>低障礙</strong>，您將得獲得賠付。"
+msgstr "如果您選擇「超出區間外」期權，只要市場在<strong>合約期限內的</strong>任何時候觸及<strong>高障礙</strong>或<strong>低障礙</strong>，您將得獲得賠付。"
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "如果您選擇「高於」期權，只要<strong>退市現價</strong>嚴格高於<strong>障礙</strong>，您將獲得賠付。"
@@ -1025,7 +1028,7 @@ msgid "If you select \"Stays Between\", you win the payout if the market stays b
 msgstr "如果您選擇「保持區間內」期權，只要市場在<strong>合約期限內的</strong>任何時間位於<strong>高障礙</strong>和<strong>低障礙</strong>之間（但並不觸及），您將獲得賠付。"
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果您選擇「觸及」期權，只要市場在<strong>合約期限內的</strong>任何時間觸及<strong>障礙</strong>，您將獲得賠付。"
+msgstr "如果您選擇「觸及」期權，只要市場價格在<strong>合約期限內的</strong>任何時間觸及<strong>障礙</strong>，您將獲得賠付。"
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
 msgstr "如果您選擇「小於」期權，只要<strong>最新價格的</strong>最後一個數字<strong>小於您的預測，您將獲得賠付。</strong>"
@@ -1049,10 +1052,10 @@ msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick i
 msgstr "如果您選擇 %1\"低跳動點\"%2, 如果所選跳動點是接下來五個跳動點%2 中的 %1最低值, 可獲得賠付。"
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "如果您選擇%1「只會持續下跌」%2期權，只要%1入市現價%2後的價格持續下跌，您將獲得賠付。如果期間內的價格有任何上漲或相等於之前的價格， 您將不會獲得%3賠付。"
+msgstr "如果您選擇%1「只會持續下跌」%2期權，只要%1入市現價%2後的價格持續下跌，您將獲得賠付。如果期間內的價格有任何上漲或相等於之前的價格， 您將%3不會獲得賠付。"
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "如果您選擇%1「只會持續上漲」%2期權，只要%1入市現價%2後的價格持續上漲，您將獲得賠付。如果期間內的價格有任何下跌或相等於之前的價格， 您將不會獲得%3賠付。"
+msgstr "如果您選擇%1「只會持續上漲」%2期權，只要%1入市現價%2後的價格持續上漲，您將獲得賠付。如果期間內的價格有任何下跌或相等於之前的價格， 您將%3不會獲得賠付。"
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "如果您選擇的<strong>開始時間</strong>為未來的某個時間，交易的<strong>開始時間</strong>就是您選擇的時間，<strong>入市價格</strong>就是當時的實時價格。"
@@ -1156,6 +1159,9 @@ msgstr "與您的電腦連接"
 msgid "Litecoin"
 msgstr "萊特幣"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "載入"
 
@@ -1229,7 +1235,7 @@ msgid "Make sure full document is visible"
 msgstr "確保整個文件都清晰可見"
 
 msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr "確保您的卡細資料清晰易讀，沒有模糊字體或眩光現象"
+msgstr "確保您的卡詳細資料清晰易讀，沒有模糊字體或眩光現象"
 
 msgid "Make sure your device has a working camera"
 msgstr "確保您的裝置具可正常使用的相機"
@@ -1289,7 +1295,7 @@ msgid "Monday"
 msgstr "星期一"
 
 msgid "More information can be found in an email sent to you."
-msgstr "您可以在發給您的電子郵件中找到更詳細的資訊。"
+msgstr "您可以在傳給您的電子郵件中找到更詳細的資訊。"
 
 msgid "Move away from direct light"
 msgstr "遠離直射光"
@@ -1417,6 +1423,9 @@ msgstr "完成後，我們將帶您進入下一步"
 msgid "Online"
 msgstr "線上"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "只允許 %1 。"
 
@@ -1476,6 +1485,9 @@ msgstr "開盤"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免發生此種風險，我們定期向您提供交易和財務的實況簡報。"
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "我們的經典拖放工具為高級使用者建立含彈出式交易圖表的交易機器人。"
 
 msgid "Over/Under"
 msgstr "大於/小於"
@@ -1559,7 +1571,7 @@ msgid "Please complete the %1Real Account form%2 to verify your age as required 
 msgstr "請按照%3英國博彩%4委員會 (UKGC) 的需求完成%1真實帳戶表格%2以驗證您的年齡。"
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "請完成%1金融評估表格%2，以便提升您的取款和交易限額。"
+msgstr "請完成%1財務評估表格%2，以便提升您的取款和交易限額。"
 
 msgid "Please complete your Personal Details before you proceed."
 msgstr "繼續操作前請填寫您的個人資料。"
@@ -1571,7 +1583,7 @@ msgid "Please confirm that you are not a politically exposed person."
 msgstr "請確認您不是政治公眾人士。"
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "請確保您的設備已安裝了電報應用程式。"
+msgstr "請確保您的設備已安裝了Telegram應用程式。"
 
 msgid "Please enter a valid Login ID."
 msgstr "請輸入有效的登入識別碼。"
@@ -1613,7 +1625,7 @@ msgid "Please set the currency of your account."
 msgstr "請設定帳戶的幣種。"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr "請將 %130 天交易額限制%2 設置為刪除存款限額。"
+msgstr "請將 %130 天交易額限制%2 設定為刪除存款限額。"
 
 msgid "Please specify the reasons for closing your accounts"
 msgstr "請指定您關閉帳戶的原因"
@@ -1709,7 +1721,7 @@ msgid "Purchase price"
 msgstr "購入價格"
 
 msgid "Purchase request sent"
-msgstr "採購請求已發送"
+msgstr "採購請求已傳送"
 
 msgid "Purchase time"
 msgstr "買入時間"
@@ -1730,10 +1742,10 @@ msgid "Real Account"
 msgstr "真實帳戶"
 
 msgid "Real Financial"
-msgstr "真實金融"
+msgstr "真實財務"
 
 msgid "Real Financial STP"
-msgstr "真實金融 STP"
+msgstr "真實財務 STP"
 
 msgid "Real Synthetic"
 msgstr "真實綜合"
@@ -1808,7 +1820,7 @@ msgid "Reset Call"
 msgstr "重設買權"
 
 msgid "Reset Call/Reset Put"
-msgstr "重置看漲/重置看跌"
+msgstr "重設買/賣權"
 
 msgid "Reset Password"
 msgstr "重設密碼"
@@ -1847,7 +1859,7 @@ msgid "Return"
 msgstr "回報"
 
 msgid "Reverse Side"
-msgstr "反面"
+msgstr "背面"
 
 msgid "Reversed words aren't much harder to guess"
 msgstr "倒寫單詞並不難猜"
@@ -1892,7 +1904,7 @@ msgid "Search for country"
 msgstr "搜尋國家"
 
 msgid "Search..."
-msgstr "搜索..."
+msgstr "搜尋.."
 
 msgid "Select Asset"
 msgstr "選擇資產"
@@ -1979,7 +1991,7 @@ msgid "Set account currency"
 msgstr "設定帳戶幣種"
 
 msgid "Set currency"
-msgstr "設定貨幣"
+msgstr "設定幣種"
 
 msgid "Settles"
 msgstr "結算"
@@ -1997,7 +2009,7 @@ msgid "Should be between %1 and %2"
 msgstr "須在%1 與 %2之間"
 
 msgid "Should be less than %1"
-msgstr "必須大於%1"
+msgstr "必須小於%1"
 
 msgid "Should be more than %1"
 msgstr "必須大於%1"
@@ -2219,13 +2231,13 @@ msgid "The %1 password of account number %2 has been changed."
 msgstr "%2帳號的%1密碼已更改。"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "%1收盤值%2是%1收盤時間%2的最新或之前的跳動點。如您選擇指定的%1收盤時間，%2 那麼 %1收盤時間%2就是選定的時間。"
+msgstr "%1收盤值%2是%1結束時間%2的最新或之前的跳動點。如您選擇指定的%1結束時間，%2 那麼 %1結束時間%2就是選定的時間。"
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr "%1合約期限%2是在合約開始時間之後的%1第一個跳動點%2和%1收盤時間%2之間的期限。"
+msgstr "%1合約期限%2是在合約開始時間之後的%1第一個跳動點%2和%1結束時間%2之間的期限。"
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr "%1收盤時間%2是%1開盤時間%2後的選定分鐘/小時數。"
+msgstr "%1結束時間%2是%1開始時間%2後的選定分鐘/小時數。"
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
 msgstr "%1退市現價%2是合約結束時最後一個價格跳動點。當所有價格持續上漲或下跌，或當其中一個價格跳動點突破了預測的價格形態時，合約即結束。"
@@ -2237,10 +2249,10 @@ msgid "The %1low%2 is the lowest point ever reached by the market during the con
 msgstr "%1最低值%2是市場在合同期內達到的最低點。"
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr "%1開盤時間%2即我們的伺服器開始處理合約的時間。"
+msgstr "%1開始時間%2即我們的伺服器開始處理合約的時間。"
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr "%1開始時間%2就是我們的伺服器處理合約交易的時間，%1入市現價%2就是%1下一個價格%2。"
+msgstr "%1開始時間%2就是我們的伺服器處理合約交易的時間，%1入市現價%2就是%1下一個跳動價格%2。"
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "<strong>合約期限</strong>是在合約<strong>開始時間</strong> 之後的<strong>下一個跳動點</strong>和合約<strong>結束時間</strong>之間的期限。"
@@ -2267,7 +2279,7 @@ msgid "The Average"
 msgstr "平均"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr "平均價位是所有跳動點的平均值，包括入市現佳和最後跳動點。"
+msgstr "平均價位是所有跳動點的平均值，包括入市現價和最後跳動點。"
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
 msgstr "跳動期合約不會在五分鐘內終止"
@@ -2552,7 +2564,7 @@ msgid "Up to %1 decimal places are allowed."
 msgstr "允許小數點后%位。"
 
 msgid "Up/Down"
-msgstr "漲/跌"
+msgstr "上漲/下跌"
 
 msgid "Upcoming Events"
 msgstr "未來事件"
@@ -2600,7 +2612,7 @@ msgid "Use a longer keyboard pattern with more turns"
 msgstr "使用更長的鍵盤列式並給予更多變化"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr "驗證碼錯誤。請使用以下連結發送到您的電子郵件。"
+msgstr "驗證碼錯誤。請使用以下連結傳送到您的電子郵件。"
 
 msgid "Verification complete"
 msgstr "驗證完畢"
@@ -2717,7 +2729,7 @@ msgid "You are offline"
 msgstr "您已離線"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr "首次存款或開立MT5 帳戶之前, 您可以%1設置新幣種%2。"
+msgstr "首次存款或開立MT5 帳戶之前, 您可以%1設定新幣種%2。"
 
 msgid "You can close this window without interrupting your trade."
 msgstr "您可以在不中斷交易的情況下關閉此視窗。"
@@ -2732,7 +2744,7 @@ msgid "You can now return to your computer to continue"
 msgstr "您現在可以返回電腦繼續操作"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "如果您的餘額為 %2 或更低, 您可以在模擬帳戶內新增 %1。"
+msgstr "如果您的餘額為 %2 或更低, 您可以在示範帳戶內新增 %1。"
 
 msgid "You did not change anything."
 msgstr "您沒做任何更改。"
@@ -2774,7 +2786,7 @@ msgid "You have successfully enabled two-factor authentication for your account.
 msgstr "您已成功啟用帳戶的雙因素身份驗證。"
 
 msgid "You have successfully set your account currency to %1."
-msgstr "您已成功將帳戶幣種 設定為 %1 。"
+msgstr "您已成功將帳戶幣種設定為 %1 。"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
 msgstr "使用各OAuth伺服器進行驗證前須先註冊並領取應用程式ID。欲知詳細資訊請前往https://developers.binary.com/參閱OAuth資料。"
@@ -2837,16 +2849,16 @@ msgid "Your computer may take a few seconds to update"
 msgstr "您的電腦更新可能需要數秒鐘"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "您的模擬帳戶餘額目前為 %1 或更低。您可以新增 %2補充帳戶資金。"
+msgstr "您的示範帳戶餘額目前為 %1 或更低。您可以新增 %2補充帳戶資金。"
 
 msgid "Your face is needed in the selfie"
 msgstr "自拍照片必須包括臉部"
 
 msgid "Your fiat account's currency is currently set to %1."
-msgstr "您的法定帳戶的幣種目前設置為 %1。"
+msgstr "您的法定帳戶的幣種目前設定為 %1。"
 
 msgid "Your fiat account's currency is set to %1."
-msgstr "您的法定帳戶的幣種設置為 %1。"
+msgstr "您的法定帳戶的幣種設定為 %1。"
 
 msgid "Your link will expire in one hour"
 msgstr "您的連結將於一小時後失效"

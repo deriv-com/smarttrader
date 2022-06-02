@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-12 06:53\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "crwdns116934:0crwdne116934:0"
 
 msgid "Barrier offset"
 msgstr "crwdns91504:0crwdne91504:0"
+
+msgid "Basket Indices"
+msgstr "crwdns478258:0crwdne478258:0"
 
 msgid "Bid"
 msgstr "crwdns91556:0crwdne91556:0"
@@ -1156,6 +1159,9 @@ msgstr "crwdns162860:0crwdne162860:0"
 msgid "Litecoin"
 msgstr "crwdns94534:0crwdne94534:0"
 
+msgid "Live chat"
+msgstr "crwdns478260:0crwdne478260:0"
+
 msgid "Loading"
 msgstr "crwdns162862:0crwdne162862:0"
 
@@ -1417,6 +1423,9 @@ msgstr "crwdns162914:0crwdne162914:0"
 msgid "Online"
 msgstr "crwdns95232:0crwdne95232:0"
 
+msgid "Online trading platform"
+msgstr "crwdns478262:0crwdne478262:0"
+
 msgid "Only %1 are allowed."
 msgstr "crwdns95244:0%1crwdne95244:0"
 
@@ -1476,6 +1485,9 @@ msgstr "crwdns95310:0crwdne95310:0"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "crwdns123466:0crwdne123466:0"
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "crwdns169045:0crwdne169045:0"
 
 msgid "Over/Under"
 msgstr "crwdns95410:0crwdne95410:0"

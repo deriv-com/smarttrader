@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "Modifica della barriera"
 
 msgid "Barrier offset"
 msgstr "Correzione della barriera"
+
+msgid "Basket Indices"
+msgstr ""
 
 msgid "Bid"
 msgstr "Offerta"
@@ -692,7 +695,7 @@ msgid "Ends Outside"
 msgstr "Termina fuori"
 
 msgid "Enlarge image"
-msgstr "Allarga l'immagine"
+msgstr "Ingrandisci l'immagine"
 
 msgid "Enter mobile number"
 msgstr "Inserisci il numero di cellulare"
@@ -761,7 +764,7 @@ msgid "Face forward and make sure your eyes are clearly visible"
 msgstr "Viso verso la camera e occhi ben visibili"
 
 msgid "Face photo page"
-msgstr "Pagina per fotografia del volto"
+msgstr "Pagina di foto del viso"
 
 msgid "Failed"
 msgstr "Non riuscito"
@@ -833,7 +836,7 @@ msgid "Gaming"
 msgstr "Gioco online"
 
 msgid "Gaming Account"
-msgstr "Account di gioco"
+msgstr "Conto di Gioco"
 
 msgid "Get %1"
 msgstr "Ricevi %1"
@@ -863,7 +866,7 @@ msgid "Goes Outside"
 msgstr "Esce fuori"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr "Consenti l'accesso alla fotocameta dalle impostazioni del browser"
+msgstr "Consenti l'accesso alla fotocamera dalle impostazioni del browser"
 
 msgid "Great, that's everything we need"
 msgstr "Ottimo, abbiamo tutto ciò che ci serve"
@@ -1156,6 +1159,9 @@ msgstr "Collegato al tuo computer"
 msgid "Litecoin"
 msgstr "Litecoin"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "Caricamento"
 
@@ -1175,7 +1181,7 @@ msgid "Login ID"
 msgstr "ID di accesso"
 
 msgid "Login at:"
-msgstr "D'accesso a:"
+msgstr "Accesso a:"
 
 msgid "Lookbacks"
 msgstr "Opzioni retrospettive (lookbacks)"
@@ -1417,6 +1423,9 @@ msgstr "Quando avrai finito, potrai passare al passaggio successivo"
 msgid "Online"
 msgstr "Online"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "Sono consentiti solo %1."
 
@@ -1476,6 +1485,9 @@ msgstr "Apre"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Il trading di opzioni può causare una vera e propria dipendenza, proprio come accade con qualsiasi altra attività portata all'estremo. Per evitare le conseguenze di tale dipendenza, ti forniamo la possibilità di monitorare la situazione reale attraverso un riepilogo dei tuoi trade e conti su base regolare."
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "Lo strumento “trascina” per creare bot per il trading, con grafici a comparsa, per utenti esperti."
 
 msgid "Over/Under"
 msgstr "Sopra/Sotto"
@@ -1802,7 +1814,7 @@ msgid "Resend link"
 msgstr "Invia ancora link"
 
 msgid "Reset Barrier"
-msgstr "Reimpostare la barriera"
+msgstr "Barriera di reset"
 
 msgid "Reset Call"
 msgstr "Reimposta l'opzione Call"
@@ -2039,7 +2051,7 @@ msgid "Sorry, deposits for this currency are currently disabled."
 msgstr "Siamo spiacenti, al momento non è possibile effettuare depositi con questa valuta."
 
 msgid "Sorry, no mobile phone bills"
-msgstr "No bollette del cellulare"
+msgstr "Non si accettano bollette del cellulare"
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
 msgstr "Il trading su opzioni non è disponibile nel Regno Unito e sull'Isola di Man."
@@ -2120,7 +2132,7 @@ msgid "Submit license (back)"
 msgstr "Invia patente (retro)"
 
 msgid "Submit license (front)"
-msgstr "Invia patente (lato frontale)"
+msgstr "Invia patente (fronte)"
 
 msgid "Submit passport photo page"
 msgstr "Invia la pagina con foto del passaporto"
@@ -2147,7 +2159,7 @@ msgid "Sunday"
 msgstr "Domenica"
 
 msgid "Synthetic"
-msgstr "Indici sintetici"
+msgstr "Sintetici"
 
 msgid "Synthetic Indices"
 msgstr "Indici sintetici"
@@ -2405,7 +2417,7 @@ msgid "Timed out until"
 msgstr "Sessione sospesa fino a"
 
 msgid "Tips"
-msgstr "Suggerimento"
+msgstr "Suggerimenti"
 
 msgid "Tips to take a good selfie"
 msgstr "Consigli per scattare un selfie adeguato"

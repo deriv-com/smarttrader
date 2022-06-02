@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "Zmiana limitu"
 
 msgid "Barrier offset"
 msgstr "Wyrównanie limitu"
+
+msgid "Basket Indices"
+msgstr ""
 
 msgid "Bid"
 msgstr "Oferta kupna"
@@ -1156,6 +1159,9 @@ msgstr "Połączone z Twoim komputerem"
 msgid "Litecoin"
 msgstr "Litecoin"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "Ładowanie"
 
@@ -1417,6 +1423,9 @@ msgstr "Gdy skończysz, przekierujemy Cię do następnego kroku"
 msgid "Online"
 msgstr "Online"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "Dozwolone są tylko %1."
 
@@ -1476,6 +1485,9 @@ msgstr "Otwarcie"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Handel opcjami może stać się poważnym uzależnieniem, tak jak wszystkie inne czynności, którym poświęcamy zbyt wiele czasu. Aby zapobiec niebezpieczeństwu takiego uzależnienia, umożliwiamy sprawdzanie rzeczywistej sytuacji na bieżąco, co zapewnia Ci regularne zestawienie Twoich zakładów i kont."
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "Nasze klasyczne narzędzie „przeciągnij i upuść” do tworzenia botów handlowych z opcją wyskakujących okienek wykresów handlowych, dla zaawansowanych użytkowników."
 
 msgid "Over/Under"
 msgstr "Ponad/poniżej"

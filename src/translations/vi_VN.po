@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "Rào cản thay đổi"
 
 msgid "Barrier offset"
 msgstr "Rào cản bù"
+
+msgid "Basket Indices"
+msgstr ""
 
 msgid "Bid"
 msgstr "Giá thầu"
@@ -1156,6 +1159,9 @@ msgstr "Kết nối với máy tính của bạn"
 msgid "Litecoin"
 msgstr "Litecoin"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "Đang tải"
 
@@ -1417,6 +1423,9 @@ msgstr "Một khi bạn đã hoàn thành chúng tôi sẽ đưa bạn đến b�
 msgid "Online"
 msgstr "Trực tuyến"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "Chỉ có %1 được cho phép."
 
@@ -1476,6 +1485,9 @@ msgstr "Mở"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Giao dịch Binary Option có thể gây nghiện thực sự, và có thể thúc đẩy bạn chơi tới mức tới giới hạn của mình. Để tránh sự nguy hiểm của trường hợp nghiện này, chúng tôi cung cấp cho bạn một công cụ kiểm tra thực tế tổng hợp các giao dịch và tài khoản của mình một cách thường xuyên."
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "Công cụ “kéo và thả” cổ điển của chúng tôi để tạo bot giao dịch, có biểu đồ giao dịch dạng pop-up, dành cho người dùng nâng cao."
 
 msgid "Over/Under"
 msgstr "Trên/Dưới"
