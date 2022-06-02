@@ -246,11 +246,13 @@ const Header = (() => {
         });
 
         // Mobile menu
-        const mobile_menu_overlay = getElementById('mobile__container');
-        const mobile_menu         = getElementById('mobile__menu');
-        const mobile_menu_close   = getElementById('mobile__menu-close');
-        const hamburger_menu      = getElementById('header__hamburger');
-        const mobile_menu_active  = 'mobile__container--active';
+        const mobile_menu_overlay        = getElementById('mobile__container');
+        const mobile_menu                = getElementById('mobile__menu');
+        const mobile_menu_close          = getElementById('mobile__menu-close');
+        const hamburger_menu             = getElementById('header__hamburger');
+        const mobile_menu_livechat       = getElementById('mobile__menu-livechat');
+        const mobile_menu__livechat_logo = getElementById('mobile__menu-header-livechat__logo');
+        const mobile_menu_active         = 'mobile__container--active';
         const showMobileMenu = (shouldShow) => {
             if (shouldShow) {
                 mobile_menu_overlay.classList.add(mobile_menu_active);
@@ -263,8 +265,12 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
+        mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
-        // Notificatiopn Event
+        // Mobile Menu Livechat Icon
+        mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Notification Event
         const notification_bell      = getElementById('header__notiifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
         const notification_close     = getElementById('header__notification-close');
@@ -432,6 +438,14 @@ const Header = (() => {
             }
         });
 
+        // Livechat Logo
+        const livechat_img = getElementById('livechat__logo');
+        livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Livechat Launcher
+        const livechat = getElementById('livechat');
+        livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
+
         // Language Popup.
         const current_language = Language.get();
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
@@ -520,11 +534,13 @@ const Header = (() => {
             const loginid_demo_select = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
-                    // const account_title  = Client.getAccountTitle(loginid);
                     const is_real        = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency       = Client.get('currency', loginid);
-                    // const localized_type = localize('[_1] Account', is_real && currency ? currency : account_title);
-                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${is_real ? (currency ? currency.toLowerCase() : 'unknown') : 'virtual'}.svg`);
+                    const getIcon        = (() => {
+                        if (is_real) return currency ? currency.toLowerCase() : 'unknown';
+                        return 'virtual';
+                    });
+                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
                     const is_current     = loginid === Client.get('loginid');
 
                     if (is_current) { // default account
@@ -669,11 +685,12 @@ const Header = (() => {
                 upgrade_link_txt = localize('Click here to open a Real Account');
                 upgrade_btn_txt = localize('Open a Real Account');
             } else if (upgrade_info.can_upgrade_to.length === 1) {
-                upgrade_link_txt = upgrade_info.type[0] === 'financial'
-                    ? localize('Click here to open a Financial Account')
-                    : upgrade_info.can_upgrade_to[0] === 'malta' ?
+                upgrade_link_txt = (() => {
+                    if (upgrade_info.type[0] === 'financial') return localize('Click here to open a Financial Account');
+                    return upgrade_info.can_upgrade_to[0] === 'malta' ?
                         localize('Click here to open a Gaming account') :
                         localize('Click here to open a Real Account');
+                });
                 upgrade_btn_txt = upgrade_info.type[0] === 'financial'
                     ? localize('Open a Financial Account')
                     : localize('Open a Real Account');

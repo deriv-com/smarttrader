@@ -1,69 +1,17 @@
 import React from 'react';
-// import { List } from '../../_common/components/elements.jsx';
-
-// const LanguageUl = ({ type, color }) => {
-//     const id = `${type}_language`;
-//     const world_color = `world-${color}`;
-//     return (
-//         <ul id={id}>
-//             <li>
-//                 <span className={`world ${world_color}`} />
-//                 <div className='language-wrapper'>
-//                     <span className='language' />
-//                 </div>
-//                 <span className='nav-caret' />
-//             </li>
-//         </ul>
-//     );
-// };
-// const Account = () => (
-//     <a href='javascript:;'>
-//         <div className='main-account'>
-//             <div className='account-type nowrap' />
-//             <span className='account-id' />
-//             <div className='topMenuBalance'>0</div>
-//         </div>
-//         <div className='nav-caret' />
-//     </a>
-// );
-
-// const Topbar = () => (
-//     <div id='topbar' className='no-print primary-bg-color-dark'>
-//         <div className='container'>
-//             <div className='gr-row'>
-//                 <div id='topbar-msg' className='gr-6 gr-5-t gr-12-p gr-12-m invisible upgrademessage center-text'>
-//                     <span className='gr-hide-m invisible' id='virtual-wrapper'>
-//                         <span id='virtual-text'>{it.L('You\'re using a Virtual Account.')}</span>
-//                     </span>
-//                     <a className='pulser invisible' />
-//                 </div>
-//                 <div className='gr-6 gr-7-t gr-12-p gr-12-m' id='topbar-info'>
-//                     <div className='gr-row'>
-//                         <div className='gr-8 gr-6-m align-self-center'>
-//                             <span className='no-underline nowrap' id='gmt-clock' data-balloon-pos='down' />
-//                         </div>
-//                         <div className='gr-1 align-self-center no-underline' data-balloon-pos='down'>
-//                             <div id='network_status' />
-//                         </div>
-//                         <div className='gr-3 gr-5-m'>
-//                             <div className='languages invisible'>
-//                                 <LanguageUl type='display'  color='white' />
-//                                 <LanguageUl type='select'   color='black' />
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-// );
 
 const MobileMenu = () => (
     <div id='mobile__container' className='mobile__container mobile-show'>
         <div id='mobile__menu' className='mobile__menu'>
             <div className='mobile__menu-header'>
                 <img id='mobile__menu-close' className='btn__close' />
-                <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
+                <div className='mobile__menu-header-wrapper'>
+                    <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
+                    <div id='mobile__menu-livechat' className='mobile__menu-header-livechat'>
+                        <img id='mobile__menu-header-livechat__logo' />
+                        <p>{it.L('Live chat')}</p>
+                    </div>
+                </div>
             </div>
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
                 <div className='mobile__platform-switcher' >

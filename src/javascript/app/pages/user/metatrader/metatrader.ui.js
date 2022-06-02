@@ -234,7 +234,10 @@ const MetaTraderUI = (() => {
             const region = server_info && server_info.geolocation.region;
             const sequence = server_info && server_info.geolocation.sequence;
             const is_synthetic = getAccountsInfo(acc_type).market_type === 'gaming' || getAccountsInfo(acc_type).market_type === 'synthetic';
-            const label_text = server_info ? sequence > 1 ? `${region} ${sequence}` : region : getAccountsInfo(acc_type).info.display_server;
+            const label_text = (() => {
+                if (server_info) return sequence > 1 ? `${region} ${sequence}` : region;
+                return getAccountsInfo(acc_type).info.display_server;
+            });
             setMTAccountText();
             $acc_item.find('.mt-login').text(`(${getAccountsInfo(acc_type).info.display_login})`);
             if (
@@ -346,7 +349,10 @@ const MetaTraderUI = (() => {
             const server_info  = getAccountsInfo(acc_type).info.server_info;
             const region = server_info && server_info.geolocation.region;
             const sequence = server_info && server_info.geolocation.sequence;
-            const label_text = server_info ? sequence > 1 ? `${region} ${sequence}` : region : getAccountsInfo(acc_type).info.display_server;
+            const label_text = (() => {
+                if (server_info) return sequence > 1 ? `${region} ${sequence}` : region;
+                return getAccountsInfo(acc_type).info.display_server;
+            });
             $detail.find('.real-only').setVisibility(!is_demo);
             // Update account info
             $detail.find('.acc-info div[data]').map(function () {

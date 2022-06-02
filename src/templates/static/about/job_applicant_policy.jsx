@@ -33,7 +33,7 @@ const JobApplicantPrivacyPolicy = () =>  (
             <li>{it.L('Responding to and defending against legal claims')}</li>
         </ul>
         <p>{it.L('The Company also collects and processes the applicant’s data to decide whether to enter into a contract with the applicant.')}</p>
-        <p>{it.L('In some cases, the Company needs to process the applicant\’s personal data to comply with the Company\’s legal obligations, for example conducting necessary checks in relation to the right to work in a specific jurisdiction.')}</p>
+        <p>{it.L('In some cases, the Company needs to process the applicant’s personal data to comply with the Company’s legal obligations, for example conducting necessary checks in relation to the right to work in a specific jurisdiction.')}</p>
         <p>{it.L('The applicant is under no statutory or contractual obligation to provide data to the Company during the recruitment process. However, if the applicant chooses not to provide any necessary information, the Company may not be able to proceed with their application.')}</p>
 
         <h2 data-anchor='confidentiality'>{it.L('Confidentiality')}</h2>

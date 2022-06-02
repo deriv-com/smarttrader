@@ -104,18 +104,18 @@ const Cashier = (() => {
         // Set messages based on currency being crypto or fiat
         // If fiat, set message based on if they're allowed to change currency or not
         // Condition is to have no MT5 accounts *and* have no transactions
-        const currency_message = Currency.isCryptocurrency(currency)
-            ? localize('This is your [_1] account.', `${Currency.getCurrencyDisplayCode(currency)}`)
-            : has_no_mt5 && has_no_transaction
+        const currency_message = (() => {
+            if (Currency.isCryptocurrency(currency)) return localize('This is your [_1] account.', `${Currency.getCurrencyDisplayCode(currency)}`);
+            return has_no_mt5 && has_no_transaction
                 ? localize('Your fiat account\'s currency is currently set to [_1].', `${currency}`)
                 : localize('Your fiat account\'s currency is set to [_1].', `${currency}`);
-
-        const currency_hint = Currency.isCryptocurrency(currency)
-            ? localize('Don\'t want to trade in [_1]? You can open another cryptocurrency account.', `${Currency.getCurrencyDisplayCode(currency)}`) + account_action_text
-            : has_no_mt5 && has_no_transaction
+        });
+        const currency_hint = (() => {
+            if (Currency.isCryptocurrency(currency)) return localize('Don\'t want to trade in [_1]? You can open another cryptocurrency account.', `${Currency.getCurrencyDisplayCode(currency)}`) + account_action_text;
+            return has_no_mt5 && has_no_transaction
                 ? localize('You can [_1]set a new currency[_2] before you deposit for the first time or create an MT5 account.', can_change ? [`<a href=${Url.urlFor('user/accounts')}>`, '</a>'] : ['', ''])
                 : missingCriteria(!has_no_mt5, !has_no_transaction);
-
+        });
         elementInnerHtml(el_current_currency, currency_message);
         elementInnerHtml(el_current_hint, currency_hint);
         el_currency_image.src = Url.urlForStatic(`/images/pages/cashier/icons/icon-${currency}.svg`);

@@ -44,8 +44,10 @@ const AccountTransfer = (() => {
      * @returns {*}
      */
     const sortAccounts = (accounts) => {
-        const sortBy = (key) => (a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
-
+        const sortBy = (key) => (a, b) => {
+            if (a[key] > b[key]) return 1;
+            return b[key] > a[key] ? -1 : 0;
+        };
         return accounts.concat().sort(sortBy('currency'));
     };
 
