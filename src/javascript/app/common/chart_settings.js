@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 const addComma        = require('./currency').addComma;
 const isCallputspread = require('../pages/trade/callputspread').isCallputspread;
 const isReset         = require('../pages/trade/reset').isReset;
