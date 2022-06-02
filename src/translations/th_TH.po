@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "ค่า Barrier เปลี่ยนแปลง"
 
 msgid "Barrier offset"
 msgstr "การหักล้างของค่า Barrier"
+
+msgid "Basket Indices"
+msgstr ""
 
 msgid "Bid"
 msgstr "ประมูล"
@@ -1156,6 +1159,9 @@ msgstr "การเชื่อมโยงไปยังคอมพิวเ
 msgid "Litecoin"
 msgstr "ไลท์คอยน์"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "กำลังโหลด..."
 
@@ -1417,6 +1423,9 @@ msgstr "เมื่อคุณทำเสร็จเรียบร้อย
 msgid "Online"
 msgstr "ออนไลน์"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "มีเพียง %1 ที่อนุญาตให้ใช้"
 
@@ -1476,6 +1485,9 @@ msgstr "เปิด"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "การซื้อขายออปชั่นสามารถทำให้ท่านเสพติดได้จริง ราวกับกิจกรรมอื่น เพื่อหลีกเลี่ยงความไม่ปลอดภัยที่จะทำให้เสพติดกิจกรรมเหล่านั้น พวกเราได้มีบริการในการตรวจสอบการใช้งาน การซื้อขายของท่านตามปกติ เพื่อให้ท่านมีรายงานสรุปของการซื้อขายและบัญชีของท่าน"
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "เครื่องมือ \"ลากแล้ววาง\" แบบคลาสสิกของเราสำหรับการสร้างบอทซื้อขาย มีแผนภูมิการซื้อขายแบบป๊อปอัปสำหรับผู้ใช้ขั้นสูง"
 
 msgid "Over/Under"
 msgstr "Over/Under"

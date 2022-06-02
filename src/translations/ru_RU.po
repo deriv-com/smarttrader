@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -243,6 +243,9 @@ msgstr "Изменение барьера"
 
 msgid "Barrier offset"
 msgstr "Оффсет барьера"
+
+msgid "Basket Indices"
+msgstr ""
 
 msgid "Bid"
 msgstr "Бид"
@@ -1156,6 +1159,9 @@ msgstr "Подключено к вашему компьютеру"
 msgid "Litecoin"
 msgstr "Litecoin"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "Загрузка"
 
@@ -1417,6 +1423,9 @@ msgstr "Как только вы закончите, мы перейдем к с
 msgid "Online"
 msgstr "Онлайн"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "Разрешены только %1 и латинские буквы."
 
@@ -1476,6 +1485,9 @@ msgstr "Открывается"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Торговля опционами может вызвать зависимость, как и любая другая деятельность, доведенная до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчёт о ваших сделках и счетах."
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "Наш классический инструмент “drag-and-drop” для создания торговых ботов с всплывающими торговыми графиками для опытных пользователей."
 
 msgid "Over/Under"
 msgstr "Больше/Меньше"

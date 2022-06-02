@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-12-21 07:46\n"
+"PO-Revision-Date: 2022-06-02 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -41,13 +41,13 @@ msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr "已完成从%2至账号%3的%1存款。交易编号: %4"
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "%1 已记入您的MT5模拟账户: %2。"
+msgstr "%1 已记入您的MT5演示账户: %2。"
 
 msgid "%1 has been credited into your Virtual Account: %2."
 msgstr "%1 已记入您的虚拟账户: %2。"
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
-msgstr "已完成从账号%2至%3的%1提款。交易编号: %4交易编号：%4"
+msgstr "已完成从账号%2至%3的%1提款。交易编号: %4"
 
 msgid "%1Manage your accounts%2"
 msgstr "%1管理您的账户%2"
@@ -167,10 +167,10 @@ msgid "Are you sure?"
 msgstr "是否确定？"
 
 msgid "Asian Down"
-msgstr "亚洲下跌"
+msgstr "亚洲下跌期权"
 
 msgid "Asian Up"
-msgstr "亚洲上涨"
+msgstr "亚洲上涨期权"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "亚洲合约如果没在 5 分钟内结束，购入价格将退还。"
@@ -179,7 +179,7 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "通过把<strong>退出点</strong>与同期的平均点相比较来结算亚洲期权。"
 
 msgid "Asians"
-msgstr "亚式期权"
+msgstr "亚洲期权"
 
 msgid "Ask me later"
 msgstr "以后再问我"
@@ -188,7 +188,7 @@ msgid "Asset"
 msgstr "资产"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "重设时, 如果现货价与您的预测方向相反, 则障碍将重设至现货价的方向。"
+msgstr "重置时, 如果现货价与您的预测方向相反, 则障碍将重置至现货价的方向。"
 
 msgid "Audit"
 msgstr "审计"
@@ -244,6 +244,9 @@ msgstr "障碍变更"
 msgid "Barrier offset"
 msgstr "障碍位移"
 
+msgid "Basket Indices"
+msgstr ""
+
 msgid "Bid"
 msgstr "出价"
 
@@ -281,7 +284,7 @@ msgid "Call Spread"
 msgstr "买权价差"
 
 msgid "Call Spread/Put Spread"
-msgstr "看涨期权价差/看跌期权价差"
+msgstr "买权价差/卖权价差"
 
 msgid "Camera access is denied"
 msgstr "相机访问被拒"
@@ -386,7 +389,7 @@ msgid "Close-Low"
 msgstr "收盘-最低值"
 
 msgid "Closed Bid"
-msgstr "密封出价"
+msgstr "已收盘出价"
 
 msgid "Closes"
 msgstr "收盘"
@@ -449,7 +452,7 @@ msgid "Contract details"
 msgstr "合约细节"
 
 msgid "Contract ends"
-msgstr "合同结束"
+msgstr "合约结束"
 
 msgid "Contract has not started yet"
 msgstr "合约还未开始"
@@ -554,22 +557,22 @@ msgid "Delete"
 msgstr "删除"
 
 msgid "Demo"
-msgstr "模拟"
+msgstr "演示"
 
 msgid "Demo Account"
-msgstr "模拟账户"
+msgstr "演示账户"
 
 msgid "Demo Accounts"
-msgstr "模拟账户"
+msgstr "演示账户"
 
 msgid "Demo Financial"
-msgstr "模拟金融"
+msgstr "演示财务"
 
 msgid "Demo Financial STP"
-msgstr "模拟金融 STP"
+msgstr "演示财务 STP"
 
 msgid "Demo Synthetic"
-msgstr "模拟综合"
+msgstr "演示综合"
 
 msgid "Deposit"
 msgstr "存款"
@@ -680,16 +683,16 @@ msgid "Endpoint"
 msgstr "终结点"
 
 msgid "Ends Between"
-msgstr "到期在范围之内"
+msgstr "收于范围之内"
 
 msgid "Ends Between/Ends Outside"
-msgstr "到期在范围之内/之外"
+msgstr "收于范围之内/之外"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "如果开始和结束期间价格跳动次数少于2，“到期在范围之内/之外”合约购入价将全额退还。"
+msgstr "如果开始和结束期间价格跳动次数少于2，“收于范围之内/之外”合约购入价将全额退还。"
 
 msgid "Ends Outside"
-msgstr "到期在范围之外"
+msgstr "收于范围之外"
 
 msgid "Enlarge image"
 msgstr "放大图像"
@@ -791,13 +794,13 @@ msgid "Final price"
 msgstr "最终价格"
 
 msgid "Financial"
-msgstr "金融"
+msgstr "财务"
 
 msgid "Financial Account"
 msgstr "金融账户"
 
 msgid "Financial STP"
-msgstr "金融 STP"
+msgstr "财务 STP"
 
 msgid "Finish"
 msgstr "完成"
@@ -824,13 +827,13 @@ msgid "From account: "
 msgstr "从账户: "
 
 msgid "Front Side"
-msgstr "前侧"
+msgstr "正面"
 
 msgid "Front and back"
-msgstr "前和后"
+msgstr "正面和背面"
 
 msgid "Gaming"
-msgstr "游戏"
+msgstr "博彩"
 
 msgid "Gaming Account"
 msgstr "博彩账户"
@@ -860,7 +863,7 @@ msgid "Go to statement"
 msgstr "前往月结单"
 
 msgid "Goes Outside"
-msgstr "处于区间之外"
+msgstr "超出范围之外"
 
 msgid "Grant access to your camera from your browser settings"
 msgstr "通过浏览器设置给予相机的访问权限"
@@ -953,7 +956,7 @@ msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barr
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>低障碍</strong> 或 <strong>高障碍</strong>, 您将不会赢得赔付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "如果 <strong>退市现价</strong> 等于 <strong>障碍</strong> 或 <stronm g>重设后的新障碍</stronmg>, 您将不会赢得赔付。"
+msgstr "如果 <strong>退市现价</strong> 等于 <strong>障碍</strong> 或 <strong>重设后的新障碍</strong>, 您将不会赢得赔付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>障碍价格</strong>, 您将不会赢得赔付。"
@@ -1013,7 +1016,7 @@ msgid "If you select \"Over\", you will win the payout if the <strong>last digi
 msgstr "如果您选择“大于”期权，只要<strong>最新价格的</strong>最后一个数字<strong>大于您的预测，您将获得赔付。</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr "如果您选择“重设买权”，只要退市现价严格高于入市现价或重设时现货价，您将获得赔付。"
+msgstr "如果您选择“重置买权”，只要退市现价严格高于入市现价或重置时现货价，您将获得赔付。"
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
 msgstr "如果您选择“重置看跌”，只要退市现价严格低于入市现价或重设时现货价，您将获得赔付。"
@@ -1043,16 +1046,16 @@ msgid "If you select \"rises\", you win the payout if the market price is higher
 msgstr "如果您选择“上涨”期权，只要市场价格高于入市价格，您将获得赔付。"
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr "如果您选择 %1\"高跳动点\"%2, 如果所选跳动点是接下来下五个跳动点%2 中%1最高值, 可获得赔付。"
+msgstr "如果您选择 %1\"高跳动点\"%2, 如果所选跳动点是%1接下来下五个跳动点中最高值%2, 可获得赔付。"
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr "如果您选择 %1\"低跳动点\"%2, 如果所选跳动点是接下来下五个跳动点%2 中%1最低值, 可获得赔付。"
+msgstr "如果您选择 %1\"低跳动点\"%2, 如果所选跳动点是%1接下来下五个跳动点中最低值%2, 可获得赔付。"
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "如果您选择%1“持续下跌”%2期权，只要%1入市现价%2后的价格持续下跌，您将获得赔付。如果期间内的价格有任何上涨或相等于之前的价格， 您将不会获得%3赔付。"
+msgstr "如果您选择%1“持续下跌”%2期权，只要%1入市现价%2后的价格持续下跌，您将获得赔付。如果期间内的价格有任何上涨或相等于之前的价格， 您将%3不会获得赔付。"
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "如果您选择%1“持续上涨”%2期权，只要%1入市现价%2后的价格持续上涨，您将获得赔付。如果期间内的价格有任何下跌或相等于之前的价格， 您将不会获得%3赔付。"
+msgstr "如果您选择%1“持续上涨”%2期权，只要%1入市现价%2后的价格持续上涨，您将获得赔付。如果期间内的价格有任何下跌或相等于之前的价格， 您将%3不会获得赔付。"
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "如果您选择的 <strong>开始时间</strong> 为未来的某个时间，交易的 <strong>开始时间</strong> 就是您选择的时间，<strong>入市价格</strong> 就是当时的实时价格。"
@@ -1156,6 +1159,9 @@ msgstr "与您的电脑连接"
 msgid "Litecoin"
 msgstr "莱特币"
 
+msgid "Live chat"
+msgstr ""
+
 msgid "Loading"
 msgstr "加载"
 
@@ -1169,7 +1175,7 @@ msgid "Log in here"
 msgstr "此处登录"
 
 msgid "Log out"
-msgstr "退出"
+msgstr "注销"
 
 msgid "Login ID"
 msgstr "登录 ID"
@@ -1205,7 +1211,7 @@ msgid "Lower"
 msgstr "低于"
 
 msgid "Lower or equal"
-msgstr "低于或等值"
+msgstr "低于或等于"
 
 msgid "MT5"
 msgstr "MT5"
@@ -1304,7 +1310,7 @@ msgid "Multiple faces found"
 msgstr "发现多个面孔"
 
 msgid "Multiplier"
-msgstr "乘数值"
+msgstr "乘数"
 
 msgid "Multiplier Down"
 msgstr "乘数下跌"
@@ -1417,11 +1423,14 @@ msgstr "完成后，我们将带您进入下一步"
 msgid "Online"
 msgstr "在线"
 
+msgid "Online trading platform"
+msgstr ""
+
 msgid "Only %1 are allowed."
 msgstr "只允许 %1 。"
 
 msgid "Only Downs"
-msgstr "只会持续下跌"
+msgstr "持续下跌"
 
 msgid "Only Ups"
 msgstr "持续上涨"
@@ -1475,7 +1484,10 @@ msgid "Opens"
 msgstr "开盘"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr "二元期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会定期向您提供交易和财务的实况简报。"
+msgstr "期权交易和其他类似活动一样，过于沉迷可能会上瘾。为了避免这种风险，我们会定期向您提供交易和财务的实况简报。"
+
+msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
+msgstr "我们的经典拖放工具为高级用户创建含弹出式交易图表的交易机器人。"
 
 msgid "Over/Under"
 msgstr "大于/小于"
@@ -1502,7 +1514,7 @@ msgid "Paxos Standard"
 msgstr "Paxos 标准"
 
 msgid "Pay-out"
-msgstr "回报"
+msgstr "赔付"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
 msgstr "您的国家或您的首选币种不可使用付款代理服务。"
@@ -1550,7 +1562,7 @@ msgid "Please check your email for further instructions."
 msgstr "请检查您的电子邮件收取详细说明。"
 
 msgid "Please check your email for the password reset link."
-msgstr "请检查您的电子邮件领取密码重设链接."
+msgstr "请检查您的电子邮件领取密码重置链接."
 
 msgid "Please choose a currency"
 msgstr "请选择一种货币"
@@ -1559,7 +1571,7 @@ msgid "Please complete the %1Real Account form%2 to verify your age as required 
 msgstr "请按照%3英国博彩%4委员会 (UKGC) 的需求完成%1真实账户表格%2以验证您的年龄。"
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "请完成%1金融评估表格%2，以便提升您的取款和交易限额 。"
+msgstr "请完成%1财务评估表格%2，以便提升您的取款和交易限额 。"
 
 msgid "Please complete your Personal Details before you proceed."
 msgstr "继续操作前请填写您的个人资料。"
@@ -1571,7 +1583,7 @@ msgid "Please confirm that you are not a politically exposed person."
 msgstr "请确认您不是政治公众人士。"
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "请确保您的设备已安装了电报应用程序。"
+msgstr "请确保您的设备已安装了Telegram应用程序。"
 
 msgid "Please enter a valid Login ID."
 msgstr "请输入有效的登录 ID。"
@@ -1730,10 +1742,10 @@ msgid "Real Account"
 msgstr "真实账户"
 
 msgid "Real Financial"
-msgstr "真实金融"
+msgstr "真实财务"
 
 msgid "Real Financial STP"
-msgstr "真实金融 STP"
+msgstr "真实财务 STP"
 
 msgid "Real Synthetic"
 msgstr "真实综合"
@@ -1802,7 +1814,7 @@ msgid "Resend link"
 msgstr "重新发送链接"
 
 msgid "Reset Barrier"
-msgstr "重设障碍"
+msgstr "重置障碍"
 
 msgid "Reset Call"
 msgstr "重置看涨"
@@ -1811,25 +1823,25 @@ msgid "Reset Call/Reset Put"
 msgstr "重置看涨/重置看跌"
 
 msgid "Reset Password"
-msgstr "重设密码"
+msgstr "重置密码"
 
 msgid "Reset Put"
 msgstr "重置看跌"
 
 msgid "Reset Time"
-msgstr "重设时间"
+msgstr "重置时间"
 
 msgid "Reset barrier"
-msgstr "重设障碍"
+msgstr "重置障碍"
 
 msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr "随时将虚拟账户余额重设为 %1 。"
+msgstr "随时将虚拟账户余额重置为 %1 。"
 
 msgid "Reset time"
-msgstr "重设时间"
+msgstr "重置时间"
 
 msgid "Reset to original settings"
-msgstr "重设为原始设置"
+msgstr "重置为原始设置"
 
 msgid "Residence permit"
 msgstr "居留许可证"
@@ -2009,7 +2021,7 @@ msgid "Show all details — including the bottom 2 lines"
 msgstr "显示所有详细信息-包括最后2行"
 
 msgid "Sign out"
-msgstr "登出"
+msgstr "注销"
 
 msgid "Sign up"
 msgstr "注册"
@@ -2075,10 +2087,10 @@ msgid "Statements"
 msgstr "声明"
 
 msgid "Status"
-msgstr "统计"
+msgstr "状况"
 
 msgid "Stays Between"
-msgstr "位于区间之内"
+msgstr "保持在范围内"
 
 msgid "Stays Between/Goes Outside"
 msgstr "保持在范围之内/超出范围之外"
@@ -2258,7 +2270,7 @@ msgid "The <strong>exit spot</strong> is the latest tick at or before the <stron
 msgstr "<strong>退市现价</strong>是合约<strong>结束时或结束之前的</strong>最后跳动价点。"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr "<strong>开始时间</strong> 就是我们的服务器处理合约交易的时间，<strong>入市现价</strong> 就是 <strong>下一个价格</strong>。"
+msgstr "<strong>开始时间</strong> 就是我们的服务器处理合约交易的时间，<strong>入市现价</strong> 就是 <strong>下一个跳动价点</strong>。"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
 msgstr "合约<strong>开始时间</strong>即我们的服务器处理合约的时间。"
@@ -2294,7 +2306,7 @@ msgid "The reason should be between 5 and 250 characters"
 msgstr "原因长度须介于 5至250 个字符"
 
 msgid "The reset time is %1"
-msgstr "重设时间为 %1"
+msgstr "重置时间为 %1"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
 msgstr "服务器<a href=\"%1\">终端</a>是: %2"
@@ -2552,7 +2564,7 @@ msgid "Up to %1 decimal places are allowed."
 msgstr "允许 %1 个小数位。"
 
 msgid "Up/Down"
-msgstr "涨/跌"
+msgstr "上涨/下跌"
 
 msgid "Upcoming Events"
 msgstr "未来事件"
@@ -2693,7 +2705,7 @@ msgid "Withdrawals have been disabled on your account. Please check your email f
 msgstr "您的账户已被禁提款。请检查您的电子邮件, 以了解更多详情。"
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr "想先检查一下您的月结单？%1C检查月结单%2"
+msgstr "想先检查一下您的月结单？%1检查月结单%2"
 
 msgid "Yes"
 msgstr "是的"
@@ -2717,7 +2729,7 @@ msgid "You are offline"
 msgstr "您已离线"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr "首次存款或开立 MT5 账户之前, 您可以 %1设定新币种%2。"
+msgstr "首次存款或开立 MT5 账户之前, 您可以 %1设置新币种%2。"
 
 msgid "You can close this window without interrupting your trade."
 msgstr "您可以在不中断交易的情况下关闭此窗口。"
@@ -2732,7 +2744,7 @@ msgid "You can now return to your computer to continue"
 msgstr "您现在可以返回电脑继续操作"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "如果您的余额为 %2 或更低, 您可以在模拟账户内添加 %1。"
+msgstr "如果您的余额为 %2 或更低, 您可以在演示账户内添加 %1。"
 
 msgid "You did not change anything."
 msgstr "您没作任何更改。"
@@ -2813,7 +2825,7 @@ msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr "您当前的%1天取款限额是 %2%3。"
 
 msgid "Your account has no Login/Logout activity."
-msgstr "您的账户无交易活动。"
+msgstr "您的账户无登录/注销活动。"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
 msgstr "您的账户已经得到完全验证，且您的取款限额已经取消。"
@@ -2837,7 +2849,7 @@ msgid "Your computer may take a few seconds to update"
 msgstr "您的电脑更新可能需要数秒钟"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "您的模拟账户余额当前为 %1 或更低。您可以添加 %2补充账户资金。"
+msgstr "您的演示账户余额当前为 %1 或更低。您可以添加 %2补充账户资金。"
 
 msgid "Your face is needed in the selfie"
 msgstr "自拍照片必须包括脸部"
