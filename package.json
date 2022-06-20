@@ -2,6 +2,9 @@
   "name": "binary-static",
   "version": "3.8.0",
   "description": "Deriv SmartTrader static content",
+  "engines": {
+    "node": "^12.22.12"
+  },
   "scripts": {
     "test": "grunt test",
     "livereload": "sudo -p 'enter password for sudo:' grunt livereload",
