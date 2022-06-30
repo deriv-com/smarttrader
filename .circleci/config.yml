@@ -247,13 +247,13 @@ workflows:
       - release_beta:
           filters:
             branches:
-              only: /^master-deriv$/
+              only: /^master$/
       - publish_cloudflare_staging:
           requires:
             - release_beta
           filters:
             branches:
-              only: /^master-deriv$/
+              only: /^master$/
       - release_production:
           filters:
             branches:
