@@ -148,6 +148,26 @@ commands:
           failure_message: "Release failed for smarttrader.deriv.com with version *$(cat dist/version)*"
           success_message: "Release succeeded for smarttrader.deriv.com with version *$(cat dist/version)*"
           webhook: ${SLACK_WEBHOOK}
+  publish_to_pages_staging:
+    description: "Publish to cloudflare pages"
+    steps:
+      - run:
+          name: "Publish to cloudflare pages (staging)"
+          command: |
+            cd dist
+            npx wrangler pages publish . --project-name=deriv-binary-static-pages --branch=staging
+            echo "New staging website - http://staging.cf-pages-deriv-binary-static.deriv.com"
+
+  publish_to_pages_production:
+    description: "Publish to cloudflare pages"
+    steps:
+      - run:
+          name: "Publish to cloudflare pages (production)"
+          command: |
+            cd dist
+            npx wrangler pages publish . --project-name=deriv-binary-static-pages --branch=main
+            echo "New website - http://cf-pages-deriv-binary-static.deriv.com"
+
 jobs:
   test:
     docker:
@@ -167,6 +187,10 @@ jobs:
          target: 'staging'
       - build:
           target: 'translations'
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - .
       - deploy:
           target_branch: "staging"
       - docker_build_push_staging:
@@ -182,6 +206,10 @@ jobs:
       - test
       - build:
           target: 'production'
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - .
       - deploy:
           target_branch: "production"
       - docker_build_push:
@@ -190,6 +218,22 @@ jobs:
           k8s_namespace: "smarttrader-deriv-app-production"
           k8s_version: ${CIRCLE_TAG}
       - notify_slack
+
+  publish_cloudflare_staging:
+    docker:
+      - image: circleci/node:16.13.1-stretch
+    steps:
+      - attach_workspace:
+          at: dist
+      - publish_to_pages_staging
+
+  publish_cloudflare_production:
+    docker:
+      - image: circleci/node:16.13.1-stretch
+    steps:
+      - attach_workspace:
+          at: dist
+      - publish_to_pages_production
       
 workflows:
   test:
@@ -203,8 +247,22 @@ workflows:
       - release_beta:
           filters:
             branches:
-              only: /^master$/
+              only: /^master-deriv$/
+      - publish_cloudflare_staging:
+          requires:
+            - release_beta
+          filters:
+            branches:
+              only: /^master-deriv$/
       - release_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
+      - publish_cloudflare_production:
+          requires:
+            - release_production
           filters:
             branches:
               ignore: /.*/
