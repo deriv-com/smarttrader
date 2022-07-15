@@ -154,6 +154,7 @@ commands:
       - run:
           name: "Publish to cloudflare pages (staging)"
           command: |
+            npm i wrangler@2.0.19
             cd dist
             npx wrangler pages publish . --project-name=deriv-binary-static-pages --branch=staging
             echo "New staging website - http://staging.cf-pages-deriv-binary-static.deriv.com"
@@ -164,6 +165,7 @@ commands:
       - run:
           name: "Publish to cloudflare pages (production)"
           command: |
+            npm i wrangler@2.0.19
             cd dist
             npx wrangler pages publish . --project-name=deriv-binary-static-pages --branch=main
             echo "New website - http://cf-pages-deriv-binary-static.deriv.com"
