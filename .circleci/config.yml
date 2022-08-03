@@ -254,6 +254,7 @@ workflows:
           filters:
             branches:
               only: /^master$/
+          context: binary-frontend-artifact-upload
       - release_production:
           filters:
             branches:
@@ -268,3 +269,4 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
+          context: binary-frontend-artifact-upload
