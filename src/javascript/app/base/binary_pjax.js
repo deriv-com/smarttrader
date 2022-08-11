@@ -36,7 +36,7 @@ const BinaryPjax = (() => {
         // put current content to cache, so we won't need to load it again
         if (content) {
             window.history.replaceState({ url }, title, url);
-            setDataPage(content, url);
+            setDataPage(content, window.location.pathname);
             params.container.dispatchEvent(new CustomEvent('binarypjax:after', { detail: content }));
         }
 
@@ -50,8 +50,10 @@ const BinaryPjax = (() => {
         }
     };
 
-    const setDataPage = (content, url) => {
-        content.setAttribute('data-page', url.match(/.+\/(.+)\.html.*/)[1]);
+    const setDataPage = (content, pathname) => {
+        const filename = pathname.substr(pathname.lastIndexOf('/') + 1);
+        const page = filename.replace(/\.[^/.]+$/, '');
+        content.setAttribute('data-page', page);
     };
 
     const handleClick = (event) => {
@@ -143,7 +145,7 @@ const BinaryPjax = (() => {
                 return;
             }
 
-            setDataPage(result.content, url);
+            setDataPage(result.content, window.location.pathname);
             cachePut(url, result);
             replaceContent(url, result, replace);
         };
