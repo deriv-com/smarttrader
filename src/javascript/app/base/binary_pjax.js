@@ -51,7 +51,7 @@ const BinaryPjax = (() => {
     };
 
     const setDataPage = (content, url) => {
-        content.setAttribute('data-page', url.match(/.+\/(.+)\.html.*/)[1]);
+        content.setAttribute('data-page', 'trading');
     };
 
     const handleClick = (event) => {
