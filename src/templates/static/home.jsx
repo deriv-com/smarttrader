@@ -82,12 +82,15 @@ const AccountsTabContent = ({
     image_one,
     image_two,
     image_three,
+    image_four,
     list_header_one,
     list_header_two,
     list_header_three,
+    list_header_four,
     list_text_one,
     list_text_two,
     list_text_three,
+    list_text_four,
 }) => (
     <React.Fragment>
         <div className='gr-hide-m'>
@@ -126,6 +129,13 @@ const AccountsTabContent = ({
                                 image={image_three}
                                 list_header={list_header_three}
                                 list_text={list_text_three}
+                            />
+                        }
+                        { list_header_four &&
+                            <AccountsListItem
+                                image={image_four}
+                                list_header={list_header_four}
+                                list_text={list_text_four}
                             />
                         }
                     </div>
@@ -238,6 +248,9 @@ const Home = () => {
                                     image_three='images/pages/home/icons/mt5_synthetic.svg'
                                     list_header_three={it.L('MT5 Synthetic')}
                                     list_text_three={it.L('MT5 real-money account for Synthetic Indices only.')}
+                                    image_four='images/pages/home/icons/mt5_financial.svg'
+                                    list_header_four={it.L('MT5 Financial STP')}
+                                    list_text_four={it.L('MT5 real-money account for forex and cryptocurrencies.')}
                                 />
                             </TabContent>
                         </TabContentContainer>
