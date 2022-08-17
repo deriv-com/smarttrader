@@ -1231,6 +1231,10 @@ const Authenticate = (() => {
                 await BinarySocket.send(submit_data).then(response => {
                     if (response.error) {
                         // Show some error message to user
+                        $('#duplicate_idv_button').on('click', () => {window.location.reload(); }).css({ 'margin': '0 auto' ,'display': 'block' });
+                        $('#idv_document_submit').toggleClass('invisible');
+                        $('#duplicate_idv_container').toggleClass('invisible');
+                        $('#duplicate_idv_text').text(response.error.message);
                     } else {
                         // Success - Update authentication object with new status
                         BinarySocket.send({ get_account_status: 1 }, { forced: true }).then(res => {

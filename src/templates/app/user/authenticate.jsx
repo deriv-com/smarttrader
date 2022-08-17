@@ -48,6 +48,11 @@ const Authenticate = () => (
                 />
             </div>
 
+            <div id='duplicate_idv_container' className='container invisible'>
+                <p id='duplicate_idv_text' className='notice-msg center-text' />
+                <button id='duplicate_idv_button' className='button container'>{it.L('Try Again')}</button>
+            </div>
+
             <div id='idv_document_submit' className='idv-container invisible'>
                 <div className='document-submit center-text'>
                     <img className='idv-container__main-icon' src={it.url_for('images/pages/authenticate/verify_identity.svg')} />
