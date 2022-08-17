@@ -158,5 +158,6 @@
       "src/javascript/**/*.{js, jsx }",
       "scripts/**/*.{js, jsx}"
     ]
-  }
+  },
+  "engines":{ "node": "14.19.3" }
 }

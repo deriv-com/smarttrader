@@ -146,14 +146,14 @@ commands:
 jobs:
   test:
     docker:
-      - image: circleci/node:9.8.0-stretch
+      - image: circleci/node:14-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
       - test
   release_staging:
     docker:
-      - image: circleci/node:9.8.0-stretch
+      - image: circleci/node:14-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
@@ -173,7 +173,7 @@ jobs:
       - notify_slack
   release_production:
     docker:
-      - image: circleci/node:9.8.0-stretch
+      - image: circleci/node:14-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
@@ -189,7 +189,7 @@ jobs:
       - notify_slack
   release_aws_production:
     docker:
-      - image: circleci/node:9.8.0-stretch
+      - image: circleci/node:14-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
