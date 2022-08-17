@@ -247,15 +247,6 @@ const TickDisplay = (() => {
                     });
                 }
 
-                if (data.epoch === +contract.reset_barrier) {
-                    setIndicator({
-                        value: idx,
-                        label: localize('Reset barrier'),
-                        id   : 'tick-reset-barrier',
-                        color: '#000',
-                    });
-                }
-
                 // exit line
                 if (data.epoch === +contract.exit_tick_time) {
                     setIndicator({
