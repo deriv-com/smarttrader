@@ -570,7 +570,7 @@ const Regulation = () => {
 
             <Box header={it.L('Deriv (BVI) Ltd')} >
                 <p>{it.L('Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands. Licensed and regulated by the British Virgin Islands Financial Services Commission - [_1]view licence[_2].', `<a href=${it.url_for('download/regulation/BVI_license.pdf')} target="_blank">`, '</a>')}</p>
-                <p>{it.L('Clients in the rest of the world (except for certain countries such as the USA, Canada, and Hong Kong) who wish to trade CFDs on financial instruments (via MT5 Financial account), Financial STP (via MT5 Financial STP account), and synthetic indices (via MT5 Synthetic account) can have MetaTrader 5 accounts under Deriv (BVI) Ltd.', it.website_name)}</p>
+                <p>{it.L('Clients in the rest of the world (except for certain countries such as the USA, Canada, and Hong Kong) who wish to trade CFDs on financial instruments (via DMT5 Financial account or DMT5 Financial STP account) and synthetic indices (via DMT5 Synthetic account) can have MetaTrader 5 accounts under Deriv (BVI) Ltd.', it.website_name)}</p>
                 <RegulatorText />
                 <RegulatorImage href='http://www.bvifsc.vg/' image='images/pages/regulation/bvi.png' />
             </Box>
