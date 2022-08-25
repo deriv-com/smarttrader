@@ -342,7 +342,7 @@ const AccountOpening = (() => {
             { selector: '#date_of_birth',               validations: ['req'] },
             { selector: '#address_line_1',              validations: ['req', 'address', ['length', { min: 1, max: 70 }]] },
             { selector: '#address_line_2',              validations: ['address', ['length', { min: 0, max: 70 }]] },
-            { selector: '#address_city',                validations: ['req', 'letter_symbol', ['length', { min: 1, max: 35 }]] },
+            { selector: '#address_city',                validations: ['req', 'address_city', ['length', { min: 1, max: 35 }]] },
             { selector: '#address_state',               validations: [residence === 'au' ? 'req' : '', $('#address_state').prop('nodeName') === 'SELECT' ? '' : ['letter_symbol', ['length', { min: 0, max: 35 }]]] },
             { selector: '#address_postcode',            validations: [residence === 'gb' || State.getResponse('authorize.upgradeable_landing_companies').some(lc => lc === 'iom') ? 'req' : '', 'postcode', ['length', { min: 0, max: 20 }]] },
             { selector: '#phone',                       validations: ['req', 'phone', ['length', { min: 9, max: 35, value: () => $('#phone').val().replace(/\D/g,'') }]] },
