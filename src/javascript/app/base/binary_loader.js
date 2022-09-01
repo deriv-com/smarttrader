@@ -25,10 +25,6 @@ const BinaryLoader = (() => {
     let active_script = null;
 
     const init = () => {
-        if (!/\.html$/i.test(window.location.pathname)) {
-            window.location.pathname += '.html';
-            return;
-        }
 
         if (!isStorageSupported(localStorage) || !isStorageSupported(sessionStorage)) {
             Header.displayNotification({ key: 'storage_not_supported', title: 'Storage not supported', message: localize('Requires your browser\'s web storage to be enabled in order to function properly. Please enable it or exit private browsing mode.'), type: 'danger' });
