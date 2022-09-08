@@ -11,8 +11,6 @@ const RedirectBanner = (() => {
         BinarySocket.wait('authorize', 'website_status', 'landing_company').then(() => {
 
             const eu_country = isEuCountrySelected(Client.get('residence')) || isEuCountrySelected(State.getResponse('website_status.clients_country'));
-            // eslint-disable-next-line no-console
-            console.log(Cookies.get('row-lp-visited'), 'row-lp-visited');
             if (eu_country) {
                 handleRedirect();
             } else if (!Cookies.get('row-lp-visited')) {
