@@ -33,6 +33,7 @@ const EuCloseBanner = require('../common/eu_close_baner');
 const CloseBanner  = require('../common/game_close_banner');
 const RedirectBanner = require('../common/redirect_banner');
 const DerivBanner = require('../common/deriv_banner');
+const { removeLoadingImage } = require('../../_common/utility');
 require('../../_common/lib/polyfills/array.includes');
 require('../../_common/lib/polyfills/string.includes');
 
@@ -127,6 +128,9 @@ const Page = (() => {
         }
         if (Client.isLoggedIn()) {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
+                setTimeout(() => {
+                    removeLoadingImage();
+                }, 1000);
                 RealityCheck.onLoad();
                 Menu.init();
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');

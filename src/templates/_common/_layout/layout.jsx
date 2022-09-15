@@ -50,6 +50,7 @@ const Layout = () => {
         <html>
             <Head />
             <body className={it.language}>
+                <div id='redirect-loading' className='redirect-loader' />
                 <div id='msg_notification' className='notice-msg center-text' />
                 <div id='page-wrapper'>
                     <Header />
