@@ -8,7 +8,6 @@ const Menu             = require('./menu');
 const BinarySocket     = require('./socket');
 const TrafficSource    = require('../common/traffic_source');
 const RealityCheck     = require('../pages/user/reality_check/reality_check');
-const Elevio           = require('../../_common/base/elevio');
 const Login            = require('../../_common/base/login');
 const ClientBase       = require('../../_common/base/client_base');
 const elementInnerHtml = require('../../_common/common_functions').elementInnerHtml;
@@ -42,7 +41,6 @@ const Page = (() => {
         State.set('is_loaded_by_pjax', false);
         GTM.init();
         Url.init();
-        Elevio.init();
         PushNotification.init();
         onDocumentReady();
         Crowdin.init();
@@ -98,10 +96,7 @@ const Page = (() => {
                     // TODO: uncomment below to enable interview popup dialog
                     // InterviewPopup.onLoad();
                 }
-                if (url_query_strings['data-elevio-article']) {
-                    Elevio.injectElevio();
-                }
-
+                
                 // Handle opening livechat via URL
                 const is_livechat_open = url_query_strings.is_livechat_open === 'true';
 
