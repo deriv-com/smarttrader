@@ -2,7 +2,7 @@ import React from 'react';
 
 const WarningScamMessage = () => (
     <React.Fragment>
-        <div id='warning_scam_message' className='lightbox invisible'>
+        <div id='warning_scam_message' className='invisible'>
             <div className='warning-scam-message-content'>
                 <h1 className='warning-scam-message-title'>{it.L('Beware of the fake links.')}</h1>
                 <p className='warning-scam-message-subtitle'>{it.L('A link can contain the word "Binary" and still be fake.')}</p>

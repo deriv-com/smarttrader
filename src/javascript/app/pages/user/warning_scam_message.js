@@ -23,6 +23,7 @@ const WarningScamMessage = (()=>{
                 warning_scam_message = getElementById('warning_scam_message');
                 warning_scam_message_checkbox = getElementById('warning_scam_message_checkbox');
             }
+            warning_scam_message.classList.add('lightbox');
             warning_scam_message.setVisibility(1);
             warning_scam_message_checkbox.addEventListener('change', acknowledgeMessage);
         });
@@ -41,6 +42,7 @@ const WarningScamMessage = (()=>{
 
     const closePopup = () => {
         localStorage.setItem('read_scam_message', true);
+        warning_scam_message.classList.remove('lightbox');
         warning_scam_message.setVisibility(0);
     };
 
