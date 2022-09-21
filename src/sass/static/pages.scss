@@ -2321,6 +2321,8 @@ body #not_authenticated_financial ul.checked > li {
     }
     &-image {
         border: 2px solid $COLOR_GRAY;
+        width: 100%;
+        height: auto;
     }
 
 }
