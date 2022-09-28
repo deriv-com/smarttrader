@@ -1,3 +1,5 @@
+const getPlatformSettings = require('../../src/templates/_common/brand.config').getPlatformSettings;
+
 module.exports = [
     // url pathname,                           template file path,                             layout,       title,                               exclude languages, section (if differs from default)
     // ==================== Section: "app" ====================
@@ -14,7 +16,7 @@ module.exports = [
     // ['paymentagent/transferws',                 'app/cashier/paymentagent_transfer',           'default',    'Payment Agent Transfer'],
     // ['paymentagent/withdrawws',                 'app/cashier/paymentagent_withdraw',           'default',    'Payment Agent Withdrawal'],
 
-    ['trading',                                 'app/trade/trading',                           'default',    'SmartTrader'],
+    ['trading',                                 'app/trade/trading',                           'default',    getPlatformSettings('smarttrader').name],
 
     // ['new_account/maltainvestws',               'app/new_account/financial',                   'default',    'Financial Account Opening'],
     // ['new_account/realws',                      'app/new_account/real',                        'default',    'Real Money Account Opening'],

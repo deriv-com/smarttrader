@@ -18,6 +18,7 @@ const applyToAllElements       = require('../../_common/utility').applyToAllElem
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
+const getPlatformSettings      = require('../../../templates/_common/brand.config').getPlatformSettings;
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
@@ -112,7 +113,7 @@ const Header = (() => {
         });
 
         applyToAllElements('.header__logo', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}logo_smart_trader.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}${getPlatformSettings('smarttrader').icon}`);
         });
 
         applyToAllElements('.logout-icon', (el) => {
@@ -163,53 +164,54 @@ const Header = (() => {
 
         const platforms          = {
             dtrader: {
-                name     : 'DTrader',
+                name     : getPlatformSettings('dtrader').name,
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
                 link     : main_domain,
-                icon     : 'ic-brand-dtrader.svg',
+                icon     : getPlatformSettings('dtrader').icon,
                 on_mobile: true,
             },
             ...(should_show_bots ? {
                 dbot: {
-                    name     : 'DBot',
+                    name     : getPlatformSettings('dbot').name,
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
                     link     : `${main_domain}/bot`,
-                    icon     : 'ic-brand-dbot.svg',
+                    icon     : getPlatformSettings('dbot').icon,
                     on_mobile: true,
                 },
             } : {}),
             ...(should_show_dmt5 ? {
                 dmt5: {
-                    name     : 'DMT5',
-                    desc     : localize('Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform.'),
+                    name: getPlatformSettings('dmt5').name,
+                    desc: localize('Trade on [_1] ([_2]), the all-in-one FX and CFD trading platform.',
+                        [getPlatformSettings('dmt5').full_name, getPlatformSettings('dmt5').name]),
                     link     : `${main_domain}/mt5`,
-                    icon     : 'ic-brand-dmt5.svg',
+                    icon     : getPlatformSettings('dmt5').icon,
                     on_mobile: true,
     
                 },
             } : {}),
             ...(should_show_xtrade ? {
                 derivx: {
-                    name     : 'Deriv X',
+                    name     : getPlatformSettings('dxtrade').name,
                     desc     : localize('Trade FX and CFDs on a customisable, easy-to-use trading platform.'),
                     link     : `${main_domain}/derivx`,
-                    icon     : 'ic-brand-dxtrade.svg',
+                    icon     : getPlatformSettings('dxtrade').icon,
                     on_mobile: true,
                 },
             } : {}),
             smarttrader: {
-                name     : 'SmartTrader',
+                name     : getPlatformSettings('smarttrader').name,
                 desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
                 link     : '#',
-                icon     : 'logo_smart_trader.svg',
+                icon     : getPlatformSettings('smarttrader').icon,
                 on_mobile: true,
             },
             ...(should_show_bots ? {
                 binarybot: {
-                    name     : 'Binary Bot',
+                    name     : getPlatformSettings('bbot').name,
                     desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
                     link     : `https://bot.deriv.${getTopLevelDomain()}`,
-                    icon     : 'ic-brand-binarybot.svg',
+                    icon     : getPlatformSettings('bbot').icon,
                     on_mobile: true,
                 },
             } : {}),
