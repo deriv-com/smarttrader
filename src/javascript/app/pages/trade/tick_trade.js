@@ -110,7 +110,7 @@ const TickDisplay = (() => {
         chart.yAxis[0].addPlotLine({
             id    : config.id || 'tick-barrier',
             value : config.value || contract.barrier,
-            color : 'green',
+            color : config.color || 'green',
             label : config.label,
             width : 2,
             zIndex: 2,
@@ -136,6 +136,7 @@ const TickDisplay = (() => {
             setBarrier({
                 label: { text: `${localize('Reset Barrier')} (${addComma(contract.barrier, display_decimals)})`, align: 'right', x: -60, y: is_resetcall ? 15 : -5 },
                 id   : 'tick-reset-barrier',
+                color: '#000',
             });
             setBarrier({
                 value    : contract.entry_spot,
