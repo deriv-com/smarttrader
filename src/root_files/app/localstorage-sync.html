@@ -19,10 +19,15 @@
                 ];
 
                 if (allowed_origins.includes(message.origin)) {
+                    /* eslint-disable no-console */
+                    console.log(message.origin, 'message.origin');
                     switch (message.data.key) {
                         case 'active_loginid': 
                         case 'client.accounts': {
+                            console.log(message.data.key, 'message.data.key');
+                            console.log(message.data.value, 'message.data.value');
                             if (localStorage.getItem(message.data.key) !== message.data.value) {
+                                console.log('set message.data.key!');
                                 localStorage.setItem(message.data.key, message.data.value);
                             }
                             break;
