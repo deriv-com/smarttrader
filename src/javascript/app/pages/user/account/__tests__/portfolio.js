@@ -21,7 +21,7 @@ const values_mock_data                 = { 9324828148: { indicative: '4.33', buy
 describe('Portfolio', () => {
     let balance;
     before(function (done) {
-        this.timeout(10000);
+        this.timeout(12000);
         // this is a read token, even if other people take it, won't be able to do any harm
         api.authorize(getApiToken()).then(() => {
             api.subscribeToBalance().then((response) => {
