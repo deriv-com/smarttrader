@@ -124,6 +124,8 @@ const Url = (() => {
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
             return deriv_app_domain;
+        } else if (/^(.*)\.binary\.sx$/i.test(window.location.hostname)) {
+            return 'https://localhost.binary.sx';
         }
         return deriv_app_domain;
     };
