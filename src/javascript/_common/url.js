@@ -61,7 +61,7 @@ const Url = (() => {
         // replace old lang with new lang
         return urlForLanguage(lang, new_url);
     };
-
+ 
     const default_domain = 'binary.com';
     const host_map = { // the exceptions regarding updating the URLs
         'bot.binary.com'       : 'www.binary.bot',
