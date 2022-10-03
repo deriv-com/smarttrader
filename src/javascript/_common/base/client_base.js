@@ -452,6 +452,8 @@ const ClientBase = (() => {
     };
 
     const syncWithDerivApp = (active_loginid, client_accounts) => {
+        /* eslint-disable no-console */
+        console.log('syncWithDerivApp');
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
 
