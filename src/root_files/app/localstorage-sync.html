@@ -16,19 +16,14 @@
                     'https://staging-app.deriv.me',
                     'https://staging-app.deriv.be',
                     'https://localhost.binary.sx',
-                    'https://deriv-binary-static-5y9s2psj6.binary.sx',
                 ];
 
                 if (allowed_origins.includes(message.origin)) {
-                    /* eslint-disable no-console */
-                    console.log(message.origin, 'message.origin');
                     switch (message.data.key) {
                         case 'active_loginid': 
                         case 'client.accounts': {
-                            console.log(message.data.key, 'message.data.key');
-                            console.log(message.data.value, 'message.data.value');
+                            window.alert(message.data.key, 'received message.data.key');
                             if (localStorage.getItem(message.data.key) !== message.data.value) {
-                                console.log('set message.data.key!');
                                 localStorage.setItem(message.data.key, message.data.value);
                             }
                             break;
