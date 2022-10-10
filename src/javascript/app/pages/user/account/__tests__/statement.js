@@ -4,7 +4,7 @@ const { api, expect, getApiToken } = require('../../../../../_common/__tests__/t
 describe('Statement', () => {
     let statement_ws;
     before(function (done) {
-        this.timeout(10000);
+        this.timeout(12000);
         // this is a read token, even if other people take it, won't be able to do any harm
         api.authorize(getApiToken()).then(() => {
             api.getStatement({ limit: 1, description: 1, offset: 0 }).then((response) => {
