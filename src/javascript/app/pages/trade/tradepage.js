@@ -23,6 +23,7 @@ const TradePage = (() => {
 
     const onLoad = () => {
         const iframe_target_origin = getAllowedLocalStorageOrigin();
+        document.domain = 'binary.sx';
         BinarySocket.wait('authorize').then(() => {
             if (iframe_target_origin) {
                 const el_iframe  = document.getElementById('localstorage-sync');
