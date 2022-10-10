@@ -28,6 +28,8 @@ const LoggedInHandler = (() => {
 
                 storeClientAccounts(account_list);
             } else {
+                // eslint-disable-next-line no-console
+                console.log('LOGOUT');
                 Client.doLogout({ logout: 1 });
             }
 
