@@ -89,6 +89,8 @@ const Client = (() => {
         if (show_login_page) {
             sessionStorage.setItem('showLoginPage', 1);
         }
+        // eslint-disable-next-line no-console
+        console.log('sendLogoutRequest');
         BinarySocket.send({ logout: '1', passthrough: { redirect_to } }).then((response) => {
             if (response.logout === 1) {
                 GTM.pushDataLayer({ event: 'log_out' });
@@ -97,11 +99,15 @@ const Client = (() => {
     };
 
     const redirection = (response) => {
+        // eslint-disable-next-line no-console
+        console.log('redirection(response) with this logout response: ', response);
         const redirect_to = getPropertyValue(response, ['echo_req', 'passthrough', 'redirect_to']);
         if (redirect_to) {
             window.location.href = redirect_to;
         } else {
             window.location.reload();
+            // eslint-disable-next-line no-console
+            console.log('window.location.reload()');
         }
     };
 
@@ -151,6 +157,8 @@ const Client = (() => {
                 redirection(response);
             });
         } else {
+            // eslint-disable-next-line no-console
+            console.log('isBinaryDomain() === false, so redirection(response) is executed');
             redirection(response);
         }
     };

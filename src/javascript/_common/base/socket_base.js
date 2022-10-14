@@ -217,6 +217,10 @@ const BinarySocketBase = (() => {
             // check is not on login page in case client is logged in and now logging in with another account
             // without logging out first by going to the oauth login page directly
             if (ClientBase.isLoggedIn() && !isLoginPages()) {
+                // eslint-disable-next-line no-console
+                console.log('if ClientBase.isLoggedIn and !isLoginPages(), send({ authorize: ClientBase.get(token) }');
+                // eslint-disable-next-line no-console
+                console.log('ClientBase.get(token): ', ClientBase.get('token'));
                 send({ authorize: ClientBase.get('token') }, { forced: true });
             } else {
                 sendBufferedRequests();

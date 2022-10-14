@@ -84,6 +84,10 @@ const BinarySocketGeneral = (() => {
                         sessionStorage.removeItem('active_tab');
                         Dialog.alert({ id: 'authorize_error_alert', localized_message: response.error.message });
                     }
+                    // eslint-disable-next-line no-console
+                    console.log('response.error.code: ', response.error.code);
+                    // eslint-disable-next-line no-console
+                    console.log('response.error.message: ', response.error.message);
                     Client.sendLogoutRequest(is_active_tab);
                 } else if (!isLoginPages() && !/authorize/.test(State.get('skip_response'))) {
                     if (response.authorize.loginid !== Client.get('loginid')) {

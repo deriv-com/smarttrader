@@ -9,15 +9,15 @@ module.exports = function (grunt) {
     return {
         livereload: {
             options: {
-                hostname  : '0.0.0.0',
-                port      : 443,
+                hostname  : '127.0.0.1',
+                port      : 3000,
                 protocol  : 'https',
                 base      : 'dist',
                 open      : {
                     appName: {
                         app: 'Google\ Chrome'
                     },
-                    target : 'https://localhost',
+                    target : 'https://localhost.binary.sx',
                 },
                 middleware: (connect, options) => {
                     const middlewares = [

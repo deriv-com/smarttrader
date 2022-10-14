@@ -18,6 +18,8 @@ const ClientBase = (() => {
     const init = () => {
         current_loginid = LocalStore.get('active_loginid');
         client_object   = getAllAccountsObject();
+        // eslint-disable-next-line no-console
+        console.log('current_loginid inside ClientBase.init(): ', current_loginid);
     };
 
     const isLoggedIn = () => (

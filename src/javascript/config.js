@@ -110,6 +110,8 @@ const getSocketURL = () => {
         const loginid       = window.localStorage.getItem('active_loginid');
         const is_real       = loginid && !/^VRT/.test(loginid);
         const server        = isProduction() && is_real ? 'green' : 'blue';
+        // eslint-disable-next-line no-console
+        console.log('loginid inside getSocketURL(): ', loginid);
 
         server_url = `${server}.binaryws.com`;
     }
