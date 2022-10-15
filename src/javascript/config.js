@@ -57,7 +57,7 @@ const getAppId = () => {
         app_id = 22169;
     } else if (/staging-smarttrader\.deriv\.com/i.test(window.location.hostname)) {
         window.localStorage.removeItem('config.default_app_id');
-        app_id = 22169;
+        app_id = 16303; // should be the same as staging-app.deriv.com app_id
     } else if (user_app_id.length) {
         window.localStorage.setItem('config.default_app_id', user_app_id); // it's being used in endpoint chrome extension - please do not remove
         app_id = user_app_id;
