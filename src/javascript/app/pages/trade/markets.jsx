@@ -356,6 +356,17 @@ class Markets extends React.Component {
             if (found_for_market) {
                 const market_copy = JSON.parse(JSON.stringify(market));
                 market_copy.submarkets = filter_submarkets;
+                if (this.keys_arr.includes(key)) {
+                    this.setState({
+                        subgroup_active: true,
+                        open_accordion : true,
+                    });
+                } else {
+                    this.setState({
+                        subgroup_active: false,
+                        open_accordion : false,
+                    });
+                }
                 filter_markets.push([key, market_copy]);
             }
         });
