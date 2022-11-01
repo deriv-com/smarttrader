@@ -7,6 +7,7 @@ import Defaults from './defaults';
 import { sortSubmarket, getAvailableUnderlyings } from '../../common/active_symbols';
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
+import { isMobile } from '../../../_common/os_detect';
 
 function scrollToPosition (element, to, duration) {
     const requestAnimationFrame = window.requestAnimationFrame ||
@@ -31,40 +32,91 @@ const List = ({
     saveRef,
     underlying,
     onUnderlyingClick,
-}) => (
-    arr.map(([market_code, obj], idx) => (
-        <div
-            className='market'
-            key={idx}
-            id={`${market_code}_market`}
-            ref={saveRef.bind(null,market_code)}
-        >
-            <div className='market_name'>
-                {obj.name}
-            </div>
-            {Object.entries(obj.submarkets).sort((a, b) => sortSubmarket(a[0], b[0]))
-                .map(([key, submarket], idx_2) => ( // eslint-disable-line no-unused-vars
-                    <div className='submarket' key={idx_2}>
-                        <div className='submarket_name'>
-                            {submarket.name}
-                        </div>
-                        <div className='symbols'>
-                            {Object.entries(submarket.symbols).map(([u_code, symbol]) => (
-                                <div
-                                    className={`symbol_name ${u_code === underlying ? 'active' : ''}`}
-                                    key={u_code}
-                                    id={u_code}
-                                    onClick={onUnderlyingClick.bind(null, u_code, market_code)}
-                                >
-                                    {symbol.display}
+    groupMarkets,
+}) => {
+    const group_markets = groupMarkets(arr);
+    return (
+        <React.Fragment>
+            {
+                Object.keys(group_markets).map((item) => {
+                    const derived_category = group_markets[item].markets[0].key;
+                    return (
+                        group_markets[item].markets.map((obj, idx) => (
+                            item === 'none' ? (
+                                <div key={item}>
+                                    <div
+                                        className='market'
+                                        key={idx}
+                                        id={`${obj.key}_market`}
+                                        ref={saveRef.bind(null,obj.key)}
+                                    >
+                                        <div className='market_name'>
+                                            {obj.name}
+                                        </div>
+                                        {Object.entries(obj.submarket).sort((a, b) => sortSubmarket(a[0], b[0]))
+                                            .map(([key, submarket], idx_2) => ( // eslint-disable-line no-unused-vars
+                                                <div className='submarket' key={idx_2}>
+                                                    <div className='submarket_name'>
+                                                        {submarket.name}
+                                                    </div>
+                                                    <div className='symbols'>
+                                                        {Object.entries(submarket.symbols).map(([u_code, symbol]) => (
+                                                            <div
+                                                                className={`symbol_name ${u_code === underlying ? 'active' : ''}`}
+                                                                key={u_code}
+                                                                id={u_code}
+                                                                onClick={onUnderlyingClick.bind(null, u_code, obj.key)}
+                                                            >
+                                                                {symbol.display}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-        </div>
-    ))
-);
+                            ) : (
+                                <div key={item}>
+                                    <div
+                                        className='market'
+                                        key={idx}
+                                        id={`${obj.key}_market`}
+                                        ref={saveRef.bind(null,obj.key)}
+                                    >
+                                        {(obj.key === derived_category && isMobile()) && <div className='label'>{obj.subgroup_name}</div>}
+                                        <div className='market_name'>
+                                            {obj.name}
+                                        </div>
+                                        {Object.entries(obj.submarket).sort((a, b) => sortSubmarket(a[0], b[0]))
+                                            .map(([key, submarket], idx_2) => ( // eslint-disable-line no-unused-vars
+                                                <div className='submarket' key={idx_2}>
+                                                    <div className='submarket_name'>
+                                                        {submarket.name}
+                                                    </div>
+                                                    <div className='symbols'>
+                                                        {Object.entries(submarket.symbols).map(([u_code, symbol]) => (
+                                                            <div
+                                                                className={`symbol_name ${u_code === underlying ? 'active' : ''}`}
+                                                                key={u_code}
+                                                                id={u_code}
+                                                                onClick={onUnderlyingClick.bind(null, u_code, obj.key)}
+                                                            >
+                                                                {symbol.display}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                    </div>
+                                </div>
+                            )
+                        ))
+                    );
+                })
+            }
+        </React.Fragment>
+    );
+};
 
 class Markets extends React.Component {
     constructor (props) {
@@ -284,6 +336,7 @@ class Markets extends React.Component {
                 node.removeAttribute('style');
                 node.children[0].removeAttribute('style');
                 node.children[0].classList.remove(class_under, class_sticky);
+                node.children[1].classList.remove(class_under, class_sticky);
             });
             this.references.last_viewed_node = current_viewed_node;
         }
@@ -296,7 +349,11 @@ class Markets extends React.Component {
             current_viewed_node.children[0].removeAttribute('style');
             current_viewed_node.children[0].classList.remove(class_under);
         }
-        current_viewed_node.children[0].classList.add(class_sticky);
+        if (Object.values(current_viewed_node.children[0].classList).includes('label')) {
+            current_viewed_node.children[1].classList.add(class_sticky);
+        } else {
+            current_viewed_node.children[0].classList.add(class_sticky);
+        }
         current_viewed_node.style.paddingTop = `${TITLE_HEIGHT}px`;
     }
 
@@ -313,9 +370,13 @@ class Markets extends React.Component {
         const market_group = {};
         markets.forEach(([key, obj]) => {
             if (market_group[obj.subgroup]){
-                market_group[obj.subgroup].markets.push({ name: obj.name, key, subgroup_name: obj.subgroup_name });
+                market_group[obj.subgroup].markets.push(
+                    { name: obj.name, key, subgroup_name: obj.subgroup_name, submarket: obj.submarkets }
+                );
             } else {
-                market_group[obj.subgroup] = { markets: [{ name: obj.name, key, subgroup_name: obj.subgroup_name }] };
+                market_group[obj.subgroup] = { markets: [
+                    { name: obj.name, key, subgroup_name: obj.subgroup_name, submarket: obj.submarkets }],
+                };
             }
         });
         return market_group;
@@ -468,10 +529,10 @@ class Markets extends React.Component {
                                                 key={item}
                                             >
                                                 <div
-                                                    className={classNames('market accordion-label', {
-                                                        'accordion-label--active': open_accordion || subgroup_active,
+                                                    className={classNames('market', {
+                                                        'active': subgroup_active,
                                                     })}
-                                                    onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
+                                                    onClick={(toggleAccordion && scrollToMarket.bind(null, group_markets[item].markets[0].key)) || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
@@ -541,6 +602,7 @@ class Markets extends React.Component {
                                 saveRef={saveMarketRef}
                                 underlying={underlying.symbol}
                                 onUnderlyingClick={onUnderlyingClick}
+                                groupMarkets={groupMarkets}
                             />
                         </div>
                     </div>

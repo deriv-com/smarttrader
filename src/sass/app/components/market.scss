@@ -132,7 +132,6 @@
 
                 .desktop .market {
                     font-size: 12px;
-                    // font-weight: 300;
                     padding: 8px 10px;
                     cursor: pointer;
                     transition: background-color, border-left;
@@ -163,14 +162,6 @@
                     display: flex;
                     flex-direction: column;
 
-                    .accordion-label {
-                        font-weight: 400;
-
-                        &--active {
-                            text-decoration: none;
-                            font-weight: 600;
-                        }
-                    }
                     .accordion-content {
                         flex-direction: column;
                         display: none;
@@ -313,6 +304,11 @@
 
                     &:last-of-type {
                         padding-bottom: 80px;
+                    }
+                    .label {
+                        font-size: 20px;
+                        padding-bottom: 16px;
+                        font-weight: 700;
                     }
                     .market_name {
                         font-size: 18px;
