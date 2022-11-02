@@ -109,7 +109,7 @@ const ActiveSymbols = (() => {
                     symbol_type: symbol.symbol_type,
                     is_active  : !symbol.is_trading_suspended && symbol.exchange_is_open,
                     pip        : symbol.pip,
-                    market     : symbol.market,
+                    market     : symbol.market !== 'synthetic_index' ? symbol.market : symbol.subgroup,
                     submarket  : symbol.submarket,
                 };
             });
