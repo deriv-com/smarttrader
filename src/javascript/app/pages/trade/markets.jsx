@@ -177,10 +177,11 @@ class Markets extends React.Component {
     /* eslint-disable no-undef */
     closeDropdown = () => {
         this.setState({
-            open          : false,
-            query         : '',
-            markets       : this.markets_all,
-            open_accordion: false,
+            open           : false,
+            query          : '',
+            markets        : this.markets_all,
+            open_accordion : false,
+            subgroup_active: false,
         });
     };
 
@@ -387,7 +388,7 @@ class Markets extends React.Component {
         scrollToPosition(this.references.list, 0, 0);
         const markets_all = this.markets_all;
         if (!query) {
-            this.setState({ markets: markets_all });
+            this.setState({ markets: markets_all, subgroup_active: false, open_accordion: false });
             return;
         }
         const filter_markets = [];
@@ -422,11 +423,7 @@ class Markets extends React.Component {
                         subgroup_active: true,
                         open_accordion : true,
                     });
-                } else {
-                    this.setState({
-                        subgroup_active: false,
-                        open_accordion : false,
-                    });
+
                 }
                 filter_markets.push([key, market_copy]);
             }
@@ -532,13 +529,13 @@ class Markets extends React.Component {
                                                     className={classNames('market', {
                                                         'active': subgroup_active,
                                                     })}
-                                                    onClick={(toggleAccordion && scrollToMarket.bind(null, group_markets[item].markets[0].key)) || (subgroup_active ? toggleAccordion : '')}
+                                                    onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
                                                     <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
-                                                <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
+                                                <div className={classNames('accordion-content', { 'show': open_accordion, 'active': open_accordion && subgroup_active })}>
                                                     {group_markets[item].markets.map((m) => (
                                                         <div
                                                             className={`subgroup market ${active_market === m.key ? 'active' : ''}`}
@@ -580,7 +577,7 @@ class Markets extends React.Component {
                                                         key = {derived_category}
                                                         data-market = {derived_category}
                                                         className={classNames('', {
-                                                            'active': (active_market === derived_category || subgroup_active),
+                                                            'active': subgroup_active,
                                                         })}
                                                     >
                                                         <span className={`icon synthetic_index ${(active_market === derived_category || subgroup_active) ? 'active' : ''}`} />

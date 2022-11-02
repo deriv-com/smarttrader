@@ -166,8 +166,11 @@
                         flex-direction: column;
                         display: none;
 
-                        &--active {
+                        &.show {
                             display: block;
+                        }
+                        &.active {
+                            background-color: var(--general-main-1);
                         }
                     }
                 }
@@ -307,7 +310,7 @@
                     }
                     .label {
                         font-size: 20px;
-                        padding-bottom: 16px;
+                        padding: 16px 0px;
                         font-weight: 700;
                     }
                     .market_name {
