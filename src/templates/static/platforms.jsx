@@ -191,15 +191,7 @@ const Platform = () => (
                                         { text: it.L('Trade now'), url: it.url_for('trading') },
                                     ]}
                                 />
-                                <Platforms
-                                    image='tick-trade'
-                                    header={it.L('Tick Trade Android App')}
-                                    description={it.L('Ultra fast on-the-go trading')}
-                                    text={it.L('Enjoy our fastest type of trading with our Tick Trade app, wherever you are.')}
-                                    buttons={[
-                                        { text: it.L('Download Tick Trade App'), url: 'https://ticktrade.binary.com/download/ticktrade-app.apk', download: 'true' },
-                                    ]}
-                                />
+                               
                                 {/* TODO: Uncomment this when P2P Mobile app is ready */}
                                 {/* <Platforms
                                     image='dp2p-app'
