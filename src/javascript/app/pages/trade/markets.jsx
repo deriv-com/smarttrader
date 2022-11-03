@@ -43,7 +43,7 @@ const List = ({
                     return (
                         group_markets[item].markets.map((obj, idx) => (
                             item === 'none' ? (
-                                <div key={item}>
+                                <div key={`${item}_${idx}`}>
                                     <div
                                         className='market'
                                         key={idx}
@@ -76,7 +76,7 @@ const List = ({
                                     </div>
                                 </div>
                             ) : (
-                                <div key={item}>
+                                <div key={`${item}_${idx}`}>
                                     <div
                                         className='market'
                                         key={idx}
@@ -125,7 +125,7 @@ class Markets extends React.Component {
         
         const market_list = Symbols.markets();
         this.markets = getAvailableUnderlyings(market_list);
-        
+
         this.underlyings = Symbols.getAllSymbols() || {};
         let underlying_symbol = Defaults.get('underlying');
         if (!underlying_symbol || !this.underlyings[underlying_symbol]) {
@@ -418,14 +418,18 @@ class Markets extends React.Component {
             if (found_for_market) {
                 const market_copy = JSON.parse(JSON.stringify(market));
                 market_copy.submarkets = filter_submarkets;
-                if (this.keys_arr.includes(key)) {
+                filter_markets.push([key, market_copy]);
+                if (this.keys_arr.includes(filter_markets[0][0])) {
                     this.setState({
                         subgroup_active: true,
                         open_accordion : true,
                     });
-
+                } else {
+                    this.setState({
+                        subgroup_active: false,
+                        open_accordion : false,
+                    });
                 }
-                filter_markets.push([key, market_copy]);
             }
         });
 
@@ -506,8 +510,8 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-                                {Object.keys(group_markets).map((item) => (
-                                    <div key={item}>
+                                {Object.keys(group_markets).map((item, idx) => (
+                                    <div key={`${item}_${idx}`}>
                                         {item === 'none' ? (
                                             <div>
                                                 {group_markets[item].markets.map((m) => (
@@ -523,7 +527,7 @@ class Markets extends React.Component {
                                         ) : (
                                             <div
                                                 className='accordion'
-                                                key={item}
+                                                key={`${item}_${idx}`}
                                             >
                                                 <div
                                                     className={classNames('market', {
@@ -538,7 +542,7 @@ class Markets extends React.Component {
                                                 <div className={classNames('accordion-content', { 'show': open_accordion, 'active': open_accordion && subgroup_active })}>
                                                     {group_markets[item].markets.map((m) => (
                                                         <div
-                                                            className={`subgroup market ${active_market === m.key ? 'active' : ''}`}
+                                                            className={`subgroup market ${active_market === m.key ? 'subgroup-active' : ''}`}
                                                             key={m.key}
                                                             onClick={scrollToMarket.bind(null, `${m.key}`)}
                                                         >

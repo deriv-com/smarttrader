@@ -151,6 +151,11 @@
                         background-color: var(--general-main-1);
                         border-left: 2px solid var(--brand-red-coral);
                     }
+                    &.subgroup-active {
+                        text-decoration: none;
+                        font-weight: 600;
+                        background-color: var(--general-main-1);
+                    }
                     &.subgroup {
                         padding-left: 25px;
                     }
