@@ -53,13 +53,19 @@ const ActiveSymbols = (() => {
         }
 
         const all_markets = groupBy(all_symbols, 'market');
-        Object.keys(all_markets).forEach((key) => {
+        const derived_markets = groupBy(all_markets.synthetic_index, 'subgroup');
+        delete all_markets.synthetic_index;
+
+        const final_markets = { ...all_markets, ...derived_markets };
+        Object.keys(final_markets).forEach((key) => {
             const market_name    = key;
-            const market_symbols = all_markets[key];
+            const market_symbols = final_markets[key];
             const symbol         = market_symbols[0];
             markets[market_name] = {
-                name     : symbol.market_display_name,
-                is_active: !symbol.is_trading_suspended && symbol.exchange_is_open,
+                name         : symbol.market === 'synthetic_index' ? symbol.subgroup_display_name : symbol.market_display_name,
+                is_active    : !symbol.is_trading_suspended && symbol.exchange_is_open,
+                subgroup_name: symbol.subgroup !== 'none' ? symbol.market_display_name : symbol.subgroup_display_name,
+                subgroup     : symbol.subgroup !== 'none' ? symbol.market : symbol.subgroup,
             };
             getSubmarketsForMarket(market_symbols, markets[market_name]);
         });
@@ -104,7 +110,7 @@ const ActiveSymbols = (() => {
                     symbol_type: symbol.symbol_type,
                     is_active  : !symbol.is_trading_suspended && symbol.exchange_is_open,
                     pip        : symbol.pip,
-                    market     : symbol.market,
+                    market     : symbol.market !== 'synthetic_index' ? symbol.market : symbol.subgroup,
                     submarket  : symbol.submarket,
                 };
             });

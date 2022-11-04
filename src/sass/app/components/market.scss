@@ -136,8 +136,28 @@
                         font-weight: 600;
                         border-right: 2px solid $COLOR_BLUE;
                     }
+                    &.subgroup-active {
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                    &.subgroup {
+                        margin-left: 25px;
+                    }
                     span:nth-of-type(2) {
                         margin-left: 10px;
+                    }
+                }
+                .accordion {
+                    display: flex;
+                    flex-direction: column;
+
+                    .accordion-content {
+                        flex-direction: column;
+                        display: none;
+
+                        &--active {
+                            display: block;
+                        }
                     }
                 }
                 .mobile {
@@ -226,6 +246,16 @@
                             background-size: contain;
                         }
                     }
+                    &.accordion-icon {
+                        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($primaryBrandColor, 1)}" d="M8.59,16.59,13.17,12,8.59,7.41,10,6l6,6-6,6Z"/></svg>');
+                        background-size: contain;
+                        transform: rotate(90deg);
+                        margin-left: 8.5px;
+
+                        &.active {
+                            transform: rotate(270deg);
+                        }
+                    }
                 }
                 // For mobile devices
                 @media (min-width: 320px) and (max-width: 767px) {
@@ -253,6 +283,11 @@
 
                     &:last-of-type {
                         padding-bottom: 80px;
+                    }
+                    .label {
+                        font-size: 20px;
+                        padding: 16px 0px;
+                        font-weight: 700;
                     }
                     .market_name {
                         font-size: 18px;
