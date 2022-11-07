@@ -55,10 +55,20 @@ const LimitsUI = (() => {
                     appendRowTable(markets[market].name, '', 'auto', 'bold');
                     limits.market_specific[market].forEach((submarket) => {
                         // submarket name could be (Commodities|Minor Pairs|Major Pairs|Smart FX|Stock Indices|Synthetic Indices)
-                        appendRowTable(localize(submarket.name /* localize-ignore */), submarket.turnover_limit !== 'null' ? Currency.formatMoney(currency, submarket.turnover_limit, 1) : 0, '25px', 'normal');
+                        if (!(submarket.name === 'Forex' && submarket.level === 'market')) {
+                            appendRowTable(submarket.name, submarket.turnover_limit !== 'null' ? Currency.formatMoney(currency, submarket.turnover_limit, 1) : 0, '25px', 'normal');
+                        }
                     });
                 }
             });
+            if (limits.market_specific.synthetic_index) {
+                appendRowTable(localize('Derived'), '', 'auto', 'bold');
+                limits.market_specific.synthetic_index.forEach((submarket) => {
+                    if (submarket.level !== 'submarket') {
+                        appendRowTable(submarket.name, submarket.turnover_limit !== 'null' ? Currency.formatMoney(currency, submarket.turnover_limit, 1) : 0, '25px', 'normal');
+                    }
+                });
+            }
         } else {
             const tr = findParent(getElementById('market_specific'), 'tr');
             if (tr) {

@@ -286,7 +286,7 @@ const Accounts = (() => {
             forex          : localize('Forex'),
             indices        : localize('Stock Indices'),
             stocks         : localize('Stocks'),
-            synthetic_index: localize('Synthetic Indices'),
+            synthetic_index: localize('Derived'),
         });
 
         return {
