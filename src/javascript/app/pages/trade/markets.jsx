@@ -350,11 +350,7 @@ class Markets extends React.Component {
             current_viewed_node.children[0].removeAttribute('style');
             current_viewed_node.children[0].classList.remove(class_under);
         }
-        if (Object.values(current_viewed_node.children[0].classList).includes('label')) {
-            current_viewed_node.children[1].classList.add(class_sticky);
-        } else {
-            current_viewed_node.children[0].classList.add(class_sticky);
-        }
+        current_viewed_node.children[0].classList.add(class_sticky);
         current_viewed_node.style.paddingTop = `${TITLE_HEIGHT}px`;
     }
 

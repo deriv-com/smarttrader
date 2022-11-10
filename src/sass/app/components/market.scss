@@ -315,8 +315,26 @@
                     }
                     .label {
                         font-size: 20px;
-                        padding: 16px 0px;
-                        font-weight: 700;
+                        padding: 16px 0;
+                        font-weight: bold;
+                        flex: 1 0 auto;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            font-size: 20px;
+                        }
+
+                        &.sticky {
+                            position: absolute;
+                            width: 70%;
+                            top: 60px;
+                            background: $COLOR_WHITE;
+                            @media (max-width: 767px) {
+                                top: 123px;
+                                width: calc(100% - 20px);
+                            }
+                        }
+                        &.put_under {
+                            z-index: -1;
+                        }
                     }
                     .market_name {
                         font-size: 18px;
