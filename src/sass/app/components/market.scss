@@ -1,3 +1,20 @@
+@mixin market_name($FONT_SIZE) {
+    font-size: $FONT_SIZE;
+    padding: 10px 0;
+    font-weight: bold;
+    flex: 1 0 auto;
+}
+@mixin sticky($FONT_SIZE) {
+    position: absolute;
+    width: 70%;
+    top: 60px;
+    background: $COLOR_WHITE;
+    @media (max-width: 767px) {
+        top: 123px;
+        width: calc(100% - $FONT_SIZE);
+    }
+}
+
 .markets {
     min-width: 120px;
     position: relative;
@@ -219,61 +236,31 @@
                         background: url('../images/pages/trade/assets/ic-forex-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-forex-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.basket_index {
                         background: url('../images/pages/trade/assets/ic-basket_index-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-forex-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.indices {
                         background: url('../images/pages/trade/assets/ic-indices-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-indices-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.stocks {
                         background: url('../images/pages/trade/assets/ic-stocks-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-stocks-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.commodities {
                         background: url('../images/pages/trade/assets/ic-commodities-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-commodities-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.synthetic_index {
                         background: url('../images/pages/trade/assets/ic-synthetic_index-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
-
-                        //&.active {
-                        //    background: url('../images/pages/trade/assets/ic-synthetic_index-active.svg') no-repeat;
-                        //    background-size: contain;
-                        //}
                     }
                     &.accordion-icon {
                         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($primaryBrandColor, 1)}" d="M8.59,16.59,13.17,12,8.59,7.41,10,6l6,6-6,6Z"/></svg>');
@@ -313,45 +300,15 @@
                     &:last-of-type {
                         padding-bottom: 80px;
                     }
-                    .label {
-                        font-size: 18px;
-                        padding: 10px 0;
-                        font-weight: bold;
-                        flex: 1 0 auto;
-
-                        &.sticky {
-                            position: absolute;
-                            width: 70%;
-                            top: 60px;
-                            background: $COLOR_WHITE;
-                            @media (max-width: 767px) {
-                                top: 123px;
-                                width: calc(100% - 18px);
-                            }
-                        }
-                        &.put_under {
-                            z-index: -1;
-                        }
-                    }
                     .market_name {
-                        font-size: 18px;
-                        padding: 10px 0;
-                        font-weight: bold;
-                        flex: 1 0 auto;
+                        @include market_name(18px);
                         transition: none;
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 16px;
                         }
 
                         &.sticky {
-                            position: absolute;
-                            width: 70%;
-                            top: 60px;
-                            background: $COLOR_WHITE;
-                            @media (max-width: 767px) {
-                                top: 123px;
-                                width: calc(100% - 18px);
-                            }
+                            @include sticky(16px);
                         }
                         &.put_under {
                             z-index: -1;
@@ -364,10 +321,88 @@
                         margin-bottom: 10px;
 
                         .submarket_name {
-                            font-size: 12px;
-                            padding: 10px 0 0;
+                            @include market_name(12px);
+                            color: var(--text-prominent);
+                        }
+                        .symbols {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: row;
                             flex: 1 0 auto;
-                            font-weight: bold;
+
+                            .symbol_name {
+                                padding: 5px;
+                                margin: 10px 5px 5px 0;
+                                line-height: 18px;
+                                cursor: pointer;
+                                width: 162px;
+                                font-size: 14px;
+                                transition: all 0.2s;
+                                @media (min-width: 320px) and (max-width: 767px) {
+                                    width: 200px;
+                                }
+
+                                &:not(.active):hover {
+                                    background: var(--general-hover);
+                                }
+                                &.active {
+                                    background: var(--general-active);
+                                    font-weight: bold;
+                                    @media (min-width: 320px) and (max-width: 767px) {
+                                        background: var(--general-active);
+                                        font-weight: bold;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .subgroup {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 0 auto;
+                    padding-bottom: 40px;
+
+                    &:last-of-type {
+                        padding-bottom: 80px;
+                    }
+                    .label {
+                        @include market_name(18px);
+
+                        &.sticky {
+                            @include sticky(18px);
+                        }
+                        &.put_under {
+                            z-index: -1;
+                        }
+                    }
+                    .subgroup_name {
+                        font-size: 18px;
+                        padding: 10px 0;
+                        font-weight: bold;
+                        flex: 1 0 auto;
+                        transition: none;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            font-size: 16px;
+                        }
+                        @media (min-width: 767px) {
+                            &.sticky {
+                                @include sticky(16px);
+                            }
+                            &.put_under {
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    .submarket {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1 0 auto;
+                        margin-bottom: 10px;
+
+                        .submarket_name {
+                            @include market_name(12px);
                             color: var(--text-prominent);
                         }
                         .symbols {

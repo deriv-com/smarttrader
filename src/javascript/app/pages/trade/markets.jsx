@@ -78,13 +78,13 @@ const List = ({
                             ) : (
                                 <div key={`${item}_${idx}`}>
                                     <div
-                                        className='market'
+                                        className='subgroup'
                                         key={idx}
                                         id={`${obj.key}_market`}
                                         ref={saveRef.bind(null,obj.key)}
                                     >
                                         {(obj.key === derived_category && isMobile()) && <div className='label'>{obj.subgroup_name}</div>}
-                                        <div className='market_name'>
+                                        <div className='subgroup_name'>
                                             {obj.name}
                                         </div>
                                         {Object.entries(obj.submarket).sort((a, b) => sortSubmarket(a[0], b[0]))
@@ -324,6 +324,7 @@ class Markets extends React.Component {
         const class_under = 'put_under';
         const TITLE_HEIGHT = 40;
         const DEFAULT_TOP = this.references.list.offsetTop;
+        const SUBGROUP_LABEL = document.getElementsByClassName('label');
 
         const current_viewed_node = Object.values(market_nodes).find(node => (
             node.dataset.offsetTop <= position
@@ -349,6 +350,11 @@ class Markets extends React.Component {
         } else {
             current_viewed_node.children[0].removeAttribute('style');
             current_viewed_node.children[0].classList.remove(class_under);
+        }
+        if (isMobile() && (current_viewed_node.classList.contains('subgroup') && !current_viewed_node.classList.contains('label'))) {
+            SUBGROUP_LABEL[0].classList.add(class_sticky);
+            SUBGROUP_LABEL[0].removeAttribute('style');
+            SUBGROUP_LABEL[0].classList.remove(class_under);
         }
         current_viewed_node.children[0].classList.add(class_sticky);
         current_viewed_node.style.paddingTop = `${TITLE_HEIGHT}px`;
