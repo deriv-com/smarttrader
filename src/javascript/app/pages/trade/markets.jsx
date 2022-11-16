@@ -186,7 +186,10 @@ class Markets extends React.Component {
     };
 
     toggleAccordion = () => {
-        this.setState({ open_accordion: !this.state.open_accordion });
+        this.setState((prevState) => ({
+            ...prevState,
+            open_accordion: !prevState.open_accordion,
+        }));
     }
 
     getCurrentUnderlying = () => {
@@ -223,7 +226,6 @@ class Markets extends React.Component {
                 } else {
                     this.setState({
                         subgroup_active: false,
-                        open_accordion : false,
                     });
                 }
             }
@@ -533,7 +535,7 @@ class Markets extends React.Component {
                                                     className={classNames('market', {
                                                         'active': subgroup_active,
                                                     })}
-                                                    onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
+                                                    onClick={() => toggleAccordion()}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
