@@ -535,7 +535,7 @@ class Markets extends React.Component {
                                                     className={classNames('market', {
                                                         'active': subgroup_active,
                                                     })}
-                                                    onClick={() => toggleAccordion()}
+                                                    onClick={toggleAccordion}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
