@@ -124,6 +124,14 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         });
 
+        applyToAllElements('.whatsapp-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg`);
+        });
+
+        applyToAllElements('.livechat-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg`);
+        });
+
         applyToAllElements('.btn__close', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         });
