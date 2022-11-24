@@ -814,22 +814,6 @@ body .mobile {
                 font-size: $FONT_SIZE_N;
                 font-weight: 600;
             }
-            &-livechat {
-                align-items: center;
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 16px;
-                width: 100%;
-
-                > p {
-                    font-size: $FONT_SIZE_S;
-                }
-                > img {
-                    padding: 0 8px;
-                    width: 16px;
-                    height: 16px;
-                }
-            }
         }
         &-content {
             height: calc(100% - 77px);
