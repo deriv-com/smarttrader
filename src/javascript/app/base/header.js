@@ -491,6 +491,10 @@ const Header = (() => {
         const topbar_help_center = getElementById('topbar-help-centre');
         topbar_help_center.addEventListener('click', () => window.location = `https://www.deriv.${getTopLevelDomain()}/help-centre/`);
 
+        // WhatsApp.
+        const topbar_whatsapp = getElementById('topbar-whatsapp');
+        topbar_whatsapp.addEventListener('click', () => window.open('https://wa.me/35699578341', '_blank'));
+
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
         topbar_fullscreen.addEventListener('click', toggleFullscreen);
