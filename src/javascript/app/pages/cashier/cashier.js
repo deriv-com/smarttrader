@@ -14,6 +14,7 @@ const BinaryPjax             = require('../../base/binary_pjax');
 const Accounts               = require('../user/accounts');
 const Header                 = require('../../base/header');
 const isEuCountry            = require('../../common/country_base').isEuCountry;
+const getLanguage            = require('../../../_common/language').get;
 
 const Cashier = (() => {
     let href = '';
@@ -346,6 +347,11 @@ const Cashier = (() => {
                 }
             });
         }
+        const lang  = getLanguage();
+        const all_links = Array.from(document.getElementsByTagName('a'));
+        const payment_methods_link = all_links.filter(link => link.href.includes('payment_methods'));
+        payment_methods_link.map(a => a.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`);
+        
         showContent();
     };
 
@@ -353,7 +359,8 @@ const Cashier = (() => {
         onLoad,
         PaymentMethods: {
             onLoad: () => {
-                window.location.href = 'https://deriv.com/payment-methods/';
+                const lang  = getLanguage();
+                window.location.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`;
             },
         },
     };

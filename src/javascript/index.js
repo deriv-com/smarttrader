@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+const getLanguage            = require('./_common/language').get;
 
 require('babel-polyfill');
 require('promise-polyfill');
@@ -23,4 +24,9 @@ $(window).on('pageshow', (e) => { // Safari doesn't fire load event when using b
     if (e.originalEvent.persisted) {
         BinaryLoader.init();
     }
+
+    const lang  = getLanguage();
+    const all_links = Array.from(document.getElementsByTagName('a'));
+    const payment_methods_link = all_links.filter(link => link.href.includes('payment_methods'));
+    payment_methods_link.map(a => a.href = `https://deriv.com/${lang.toLowerCase().replace(/_/g, '-')}/payment-methods/`);
 });
