@@ -39,7 +39,7 @@ const MobileMenu = () => (
                     </div>
                     <div  id='mobile__menu-livechat' className='mobile__platform-switcher-item'>
                         <img className='mobile__platform-switcher-icon livechat-icon' />
-                        <div className='mobile__platform-switcher-text'>{it.L('LiveChat')}</div>
+                        <div className='mobile__platform-switcher-text'>{it.L('Live chat')}</div>
                     </div>
                     <div className='mobile__platform-switcher-item client_logged_in invisible logout'>
                         <img className='mobile__platform-switcher-icon logout-icon' />
