@@ -58,21 +58,6 @@ body .topbar {
                 border-left-color: var(--general-hover);
             }
         }
-        #topbar-whatsapp {
-            cursor: pointer;
-            height: inherit;
-
-            img {
-                padding: 0 0.4rem;
-                width: 16px;
-                height: 16px;
-                border-left: 1px solid var(--general-section-1);
-                border-right: 1px solid var(--general-section-1);
-            }
-            &:hover {
-                background-color: var(--general-hover);
-            }
-        }
     }
     [data-balloon] {
         &:before {
@@ -167,7 +152,7 @@ body .topbar {
     }
 }
 
-#livechat {
+#livechat #topbar-whatsapp {
     cursor: pointer;
     height: inherit;
 
