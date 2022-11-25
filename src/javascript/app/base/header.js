@@ -448,6 +448,10 @@ const Header = (() => {
             }
         });
 
+        // whatsapp mobile menu
+        const whatsapp_mobile_drawer = getElementById('whatsapp-mobile-drawer');
+        whatsapp_mobile_drawer.addEventListener('click', () => window.open('https://wa.me/35699578341', '_blank'));
+
         // Livechat Logo
         const livechat_img = getElementById('livechat__logo');
         livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
