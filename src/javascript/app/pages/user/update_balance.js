@@ -6,6 +6,8 @@ const BinarySocket          = require('../../base/socket');
 const formatMoney           = require('../../common/currency').formatMoney;
 const TopUpVirtualPopup     = require('../../pages/user/account/top_up_virtual/pop_up');
 const getPropertyValue      = require('../../../_common/utility').getPropertyValue;
+const createElement            = require('../../../_common/utility').createElement;
+const localize                 = require('../../../_common/localize').localize;
 
 const updateBalance = (response) => {
     if (getPropertyValue(response, 'error')) {
@@ -18,14 +20,23 @@ const updateBalance = (response) => {
 
         const updateBalanceByAccountId = (account_id, updated_balance, account_currency) => {
             const el_balance_span = document.querySelector(`.account__switcher-balance-${account_id}`);
+            const reset_button      = createElement('button', { text: localize('Reset balance'), class: 'account__switcher-balance btn btn--secondary btn__small reset_btn' });
+
+            const is_virtual = /^VRT/.test(account_id);
+            const is_current = Client.get('loginid') === account_id;
 
             if (el_balance_span) {
                 const display_balance = formatMoney(account_currency, updated_balance);
 
-                el_balance_span.innerHTML = display_balance;
-                
-                const is_virtual = /^VRT/.test(account_id);
-                const is_current = Client.get('loginid') === account_id;
+                if (balance !== 10000 && is_virtual && is_current) {
+                    el_balance_span.appendChild(reset_button);
+                    reset_button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        TopUpVirtualPopup.doTopUp();
+                    });
+                } else {
+                    el_balance_span.innerHTML = display_balance;
+                }
 
                 if (is_current) {
                     document.getElementById('header__acc-balance').innerHTML = display_balance;
