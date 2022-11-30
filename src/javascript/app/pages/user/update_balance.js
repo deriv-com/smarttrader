@@ -28,14 +28,16 @@ const updateBalance = (response) => {
             if (el_balance_span) {
                 const display_balance = formatMoney(account_currency, updated_balance);
 
-                if (balance !== 10000 && is_virtual && is_current) {
+                el_balance_span.innerHTML = display_balance;
+
+                // show reset button
+                if (updated_balance !== 10000 && is_virtual && is_current) {
+                    el_balance_span.innerHTML = null;
                     el_balance_span.appendChild(reset_button);
                     reset_button.addEventListener('click', (e) => {
                         e.preventDefault();
                         TopUpVirtualPopup.doTopUp();
                     });
-                } else {
-                    el_balance_span.innerHTML = display_balance;
                 }
 
                 if (is_current) {
