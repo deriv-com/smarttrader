@@ -10,10 +10,6 @@ const MobileMenu = () => (
                 <img id='mobile__menu-close' className='btn__close' />
                 <div className='mobile__menu-header-wrapper'>
                     <div className='mobile__menu-header-text'>{it.L('Menu')}</div>
-                    <div id='mobile__menu-livechat' className='mobile__menu-header-livechat'>
-                        <img id='mobile__menu-header-livechat__logo' />
-                        <p>{it.L('Live chat')}</p>
-                    </div>
                 </div>
             </div>
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
@@ -36,6 +32,14 @@ const MobileMenu = () => (
                         <img className='mobile__platform-switcher-icon reports-icon' />
                         <div className='mobile__platform-switcher-text'>{it.L('Reports')}</div>
                         <img id='mobile__platform-switcher-icon-arrowright' className='mobile__platform-switcher-icon-right' />
+                    </div>
+                    <div  id='whatsapp-mobile-drawer' className='mobile__platform-switcher-item whatsapp'>
+                        <img className='mobile__platform-switcher-icon whatsapp-icon' />
+                        <div className='mobile__platform-switcher-text'>{it.L('WhatsApp')}</div>
+                    </div>
+                    <div  id='mobile__menu-livechat' className='mobile__platform-switcher-item'>
+                        <img className='mobile__platform-switcher-icon livechat-icon' />
+                        <div className='mobile__platform-switcher-text'>{it.L('Live chat')}</div>
                     </div>
                     <div className='mobile__platform-switcher-item client_logged_in invisible logout'>
                         <img className='mobile__platform-switcher-icon logout-icon' />
