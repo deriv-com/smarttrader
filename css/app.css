@@ -2865,10 +2865,6 @@ input {
           padding-bottom: 40px; }
           .markets .markets_dropdown .markets_view .list .market:last-of-type {
             padding-bottom: 80px; }
-          .markets .markets_dropdown .markets_view .list .market .label {
-            font-size: 20px;
-            padding: 16px 0px;
-            font-weight: 700; }
           .markets .markets_dropdown .markets_view .list .market .market_name {
             font-size: 18px;
             padding: 10px 0;
@@ -2880,7 +2876,7 @@ input {
             transition: none; }
             @media (min-width: 320px) and (max-width: 767px) {
               .markets .markets_dropdown .markets_view .list .market .market_name {
-                font-size: 20px; } }
+                font-size: 16px; } }
             .markets .markets_dropdown .markets_view .list .market .market_name.sticky {
               position: absolute;
               width: 70%;
@@ -2889,7 +2885,7 @@ input {
               @media (max-width: 767px) {
                 .markets .markets_dropdown .markets_view .list .market .market_name.sticky {
                   top: 123px;
-                  width: calc(100% - 20px); } }
+                  width: calc(100% - $FONT_SIZE); } }
             .markets .markets_dropdown .markets_view .list .market .market_name.put_under {
               z-index: -1; }
           .markets .markets_dropdown .markets_view .list .market .submarket {
@@ -2906,15 +2902,12 @@ input {
             margin-bottom: 10px; }
             .markets .markets_dropdown .markets_view .list .market .submarket .submarket_name {
               font-size: 12px;
-              padding: 10px 0 0;
+              padding: 10px 0;
+              font-weight: bold;
               -webkit-box-flex: 1;
                   -ms-flex: 1 0 auto;
                       flex: 1 0 auto;
-              font-weight: bold;
               color: var(--text-prominent); }
-              @media (min-width: 320px) and (max-width: 767px) {
-                .markets .markets_dropdown .markets_view .list .market .submarket .submarket_name {
-                  font-size: 14px; } }
             .markets .markets_dropdown .markets_view .list .market .submarket .symbols {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -2939,8 +2932,7 @@ input {
                 transition: all 0.2s; }
                 @media (min-width: 320px) and (max-width: 767px) {
                   .markets .markets_dropdown .markets_view .list .market .submarket .symbols .symbol_name {
-                    width: 200px;
-                    font-size: 16px; } }
+                    width: 200px; } }
                 .markets .markets_dropdown .markets_view .list .market .submarket .symbols .symbol_name:not(.active):hover {
                   background: var(--general-hover); }
                 .markets .markets_dropdown .markets_view .list .market .submarket .symbols .symbol_name.active {
@@ -2948,6 +2940,118 @@ input {
                   font-weight: bold; }
                   @media (min-width: 320px) and (max-width: 767px) {
                     .markets .markets_dropdown .markets_view .list .market .submarket .symbols .symbol_name.active {
+                      background: var(--general-active);
+                      font-weight: bold;
+                      padding-left: 5px; } }
+        .markets .markets_dropdown .markets_view .list .subgroup {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 auto;
+                  flex: 0 0 auto;
+          padding-bottom: 40px; }
+          .markets .markets_dropdown .markets_view .list .subgroup:last-of-type {
+            padding-bottom: 80px; }
+          .markets .markets_dropdown .markets_view .list .subgroup .label {
+            font-size: 18px;
+            padding: 10px 0;
+            font-weight: bold;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 auto;
+                    flex: 1 0 auto; }
+            .markets .markets_dropdown .markets_view .list .subgroup .label.sticky {
+              position: absolute;
+              width: 70%;
+              top: 60px;
+              background: #ffffff; }
+              @media (max-width: 767px) {
+                .markets .markets_dropdown .markets_view .list .subgroup .label.sticky {
+                  top: 123px;
+                  width: calc(100% - $FONT_SIZE); } }
+            .markets .markets_dropdown .markets_view .list .subgroup .label.put_under {
+              z-index: -1; }
+          .markets .markets_dropdown .markets_view .list .subgroup .subgroup_name {
+            font-size: 18px;
+            padding: 10px 0;
+            font-weight: bold;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+            -webkit-transition: none;
+            transition: none; }
+            @media (min-width: 320px) and (max-width: 767px) {
+              .markets .markets_dropdown .markets_view .list .subgroup .subgroup_name {
+                font-size: 16px; } }
+            @media (min-width: 767px) {
+              .markets .markets_dropdown .markets_view .list .subgroup .subgroup_name.sticky {
+                position: absolute;
+                width: 70%;
+                top: 60px;
+                background: #ffffff; } }
+  @media (min-width: 767px) and (max-width: 767px) {
+    .markets .markets_dropdown .markets_view .list .subgroup .subgroup_name.sticky {
+      top: 123px;
+      width: calc(100% - $FONT_SIZE); } }
+            @media (min-width: 767px) {
+              .markets .markets_dropdown .markets_view .list .subgroup .subgroup_name.put_under {
+                z-index: -1; } }
+          .markets .markets_dropdown .markets_view .list .subgroup .submarket {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+            margin-bottom: 10px; }
+            .markets .markets_dropdown .markets_view .list .subgroup .submarket .submarket_name {
+              font-size: 12px;
+              padding: 10px 0;
+              font-weight: bold;
+              -webkit-box-flex: 1;
+                  -ms-flex: 1 0 auto;
+                      flex: 1 0 auto;
+              color: var(--text-prominent); }
+            .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: row;
+                      flex-direction: row;
+              -webkit-box-flex: 1;
+                  -ms-flex: 1 0 auto;
+                      flex: 1 0 auto; }
+              .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols .symbol_name {
+                padding: 5px;
+                margin: 10px 5px 5px 0;
+                line-height: 18px;
+                cursor: pointer;
+                width: 162px;
+                font-size: 14px;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s; }
+                @media (min-width: 320px) and (max-width: 767px) {
+                  .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols .symbol_name {
+                    width: 200px; } }
+                .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols .symbol_name:not(.active):hover {
+                  background: var(--general-hover); }
+                .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols .symbol_name.active {
+                  background: var(--general-active);
+                  font-weight: bold; }
+                  @media (min-width: 320px) and (max-width: 767px) {
+                    .markets .markets_dropdown .markets_view .list .subgroup .submarket .symbols .symbol_name.active {
                       background: var(--general-active);
                       font-weight: bold;
                       padding-left: 5px; } }
