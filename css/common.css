@@ -2034,16 +2034,16 @@ body .topbar {
     body .topbar #language-select:hover {
       background-color: var(--general-hover); }
 
-#livechat {
+#livechat, #topbar-whatsapp {
   cursor: pointer;
   height: inherit; }
-  #livechat img {
+  #livechat img, #topbar-whatsapp img {
     padding: 0 0.4rem;
     width: 16px;
     height: 16px;
     border-left: 1px solid var(--general-section-1);
     border-right: 1px solid var(--general-section-1); }
-  #livechat:hover {
+  #livechat:hover, #topbar-whatsapp:hover {
     background-color: var(--general-hover); }
 
 body .header {
@@ -2626,24 +2626,6 @@ body .mobile__menu {
       padding: 12px 16px;
       font-size: 1rem;
       font-weight: 600; }
-    body .mobile__menu-header-livechat {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-      padding-right: 16px;
-      width: 100%; }
-      body .mobile__menu-header-livechat > p {
-        font-size: 0.8695652174rem; }
-      body .mobile__menu-header-livechat > img {
-        padding: 0 8px;
-        width: 16px;
-        height: 16px; }
   body .mobile__menu-content {
     height: calc(100% - 77px);
     display: none; }
