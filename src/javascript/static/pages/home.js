@@ -12,6 +12,8 @@ const RedirectBanner    = require('../../app/common/redirect_banner');
 const FormManager    = require('../../app/common/form_manager');
 const getFormRequest = require('../../app/common/verify_email');
 const isBinaryApp    = require('../../config').isBinaryApp;
+const getElementById = require('../../_common/common_functions').getElementById;
+const getLanguage    = require('../../_common/language').get;
 
 const Home = (() => {
     let clients_country;
@@ -35,6 +37,13 @@ const Home = (() => {
                 fnc_additional_check: checkCountry,
             });
         });
+
+        const language = getLanguage().toLowerCase().replace(/_/g, '-');
+        const explore_deriv_btn = getElementById('explore-deriv');
+        const create_a_demo_account_btn = getElementById('create-a-demo-account');
+
+        explore_deriv_btn.addEventListener('click', () => window.open(`https://deriv.com/${language}/`,'_self'));
+        create_a_demo_account_btn.addEventListener('click', () => window.open(`https://deriv.com/${language}/signup/`,'_self'));
     };
 
     const checkCountry = (req) => {

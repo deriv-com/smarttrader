@@ -36,7 +36,7 @@ const PaymentAgents = () => (
                     <li>{it.L('The Agent shall thereinafter transfer the requested sum to the client. It is noted that these transactions fall out of the scope of this agreement, and, as a result, the Company shall not be liable against the Agent and the client or any other person, under contract, tort law, or any other applicable law, for any dispute or potential dispute arising out of or in connection with such transactions.')}</li>
                 </ul>
             </li>
-            <li>{it.L('The Agent is prohibited from offering the Agent\'s services, under this agreement, to the clients who reside in restricted countries outlined in the Company\'s terms and conditions (as amended from time to time), which are published on the Company\'s website, [_1]www.binary.com[_2].', `<a href="${it.url_for('new-account')}">`, '</a>')}</li>
+            <li>{it.L('The Agent is prohibited from offering the Agent\'s services, under this agreement, to the clients who reside in restricted countries outlined in the Company\'s terms and conditions (as amended from time to time), which are published on the Company\'s website, [_1]www.binary.com[_2].', `<a class="binary-to-deriv-link" href="${it.url_for('new-account')}">`, '</a>')}</li>
         </ol>
 
         <h2 data-anchor='agents-obligations'>E. {it.L('Agent\'s obligations')}</h2>
@@ -127,7 +127,7 @@ const PaymentAgents = () => (
             <li>{it.L('The information outlined in Paragraph 1 of this section shall be submitted to [_1]partners@binary.com[_2].', '<a href="mailto:partners@binary.com">', '</a>')}</li>
             <li>{it.L('The application shall be reviewed and assessed by the Company\'s Compliance and Marketing departments. It is noted that, following and implementing the anti-money laundering policy and conducting due diligence in accordance with the law and regulations, the Company\'s Compliance department shall request and collect all required information and documentation as per Section H.')}</li>
             <li>{it.L(' The Company reserves the right to change the requirements of transactions between the Agent’s account and clients.')}</li>
-            <li>{it.L('The Company reserves the right to accept or reject the Agent\'s application. Where the Agent\'s application is accepted, the Company shall include all relevant information, including but not limited to name, address, website URL (if available), email address, telephone number, commission rates, and payment methods used by the Agent, in the payment agent list which is disclosed on the Company\'s website, [_1]www.binary.com[_2].', `<a href="${it.url_for('new-account')}">`, '</a>')}</li>
+            <li>{it.L('The Company reserves the right to accept or reject the Agent\'s application. Where the Agent\'s application is accepted, the Company shall include all relevant information, including but not limited to name, address, website URL (if available), email address, telephone number, commission rates, and payment methods used by the Agent, in the payment agent list which is disclosed on the Company\'s website, [_1]www.binary.com[_2].', `<a class="binary-to-deriv-link" href="${it.url_for('new-account')}">`, '</a>')}</li>
         </ol>
 
         <h2 data-anchor='events-of-defaults'>K. {it.L('Events of Default')}</h2>

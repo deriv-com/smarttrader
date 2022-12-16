@@ -20,6 +20,7 @@ const GTM                   = require('../../_common/base/gtm');
 const LiveChat              = require('../../_common/base/livechat');
 const Login                 = require('../../_common/base/login');
 const toTitleCase           = require('../../_common/string_util').toTitleCase;
+const getLanguage           = require('../../_common/language').get;
 
 const BinaryLoader = (() => {
     let container;
@@ -109,10 +110,12 @@ const BinaryLoader = (() => {
         if (active_script) {
             BinarySocket.setOnReconnect(active_script.onReconnect);
         }
+
+        changeAllBinarySignupLinkToDeriv();
     };
 
     const error_messages = {
-        login                  : () => localize('Please [_1]log in[_2] or [_3]sign up[_4] to view this page.', [`<a href="${'javascript:;'}">`, '</a>', `<a href="${urlFor('new-account')}">`, '</a>']),
+        login                  : () => localize('Please [_1]log in[_2] or [_3]sign up[_4] to view this page.', [`<a href="${'javascript:;'}">`, '</a>', `<a class="binary-to-deriv-link" href="${urlFor('new-account')}">`, '</a>']),
         only_virtual           : () => localize('This feature is available to demo accounts only.'),
         only_real              : () => localize('You are using a demo account. Please switch to a real account or create one to access Cashier.'),
         not_authenticated      : () => localize('This page is only available to logged out clients.'),
@@ -149,6 +152,8 @@ const BinaryLoader = (() => {
                         } else {
                             loadActiveScript(config);
                         }
+
+                        changeAllBinarySignupLinkToDeriv();
                     });
             }
         } else if (config.not_authenticated && Client.isLoggedIn()) {
@@ -169,6 +174,8 @@ const BinaryLoader = (() => {
                 } else {
                     displayMessage(error_messages.no_mf());
                 }
+
+                changeAllBinarySignupLinkToDeriv();
             });
         }
 
@@ -178,6 +185,8 @@ const BinaryLoader = (() => {
                     displayMessage(error_messages.no_options_mf_mx());
                 }
             });
+
+            changeAllBinarySignupLinkToDeriv();
         }
 
         if (this_page === 'deactivated-account' && Client.isLoggedIn()) {
@@ -194,6 +203,8 @@ const BinaryLoader = (() => {
                     displayMessage(error_messages.options_blocked());
                 }
             }
+
+            changeAllBinarySignupLinkToDeriv();
         });
         // TODO: temporary condition; remove once BE Apple social signup is ready
         BinarySocket.wait('get_account_status').then((response) => {
@@ -293,5 +304,15 @@ const BinaryLoader = (() => {
         init,
     };
 })();
+
+const changeAllBinarySignupLinkToDeriv = () => {
+    const language = getLanguage().toLowerCase().replace(/_/g, '-');
+    const elements = document.getElementsByClassName('binary-to-deriv-link') || [];
+
+    for (let i = 0; i < elements.length; i++) {
+        elements.item(i).removeAttribute('href');
+        elements.item(i).addEventListener('click', () => window.location.href = `/binary-to-deriv/?l=${language}&source=binary`);
+    }
+};
 
 module.exports = BinaryLoader;

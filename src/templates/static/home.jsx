@@ -1,10 +1,6 @@
 import React                from 'react';
-import FormVerifyEmail      from '../_common/includes/form_verify_email.jsx';
-import { SocialButton }     from '../_common/components/elements.jsx';
 import PaymentLogo          from '../_common/components/payment_logo.jsx';
-import {
-    SeparatorLine,
-    SeparatorLineWithText } from '../_common/components/separator_line.jsx';
+import { SeparatorLine } from '../_common/components/separator_line.jsx';
 import {
     TabContainer,
     TabContentContainer,
@@ -180,32 +176,21 @@ const Home = () => {
             <div className='container'>
                 <DerivBanner has_margin />
             </div>
-            <div id='banner'>
-                <div className='container gr-padding-20'>
-                    <h1 className='dark center-text gr-padding-20 gr-child'>{it.L('Online Trading with [_1]', `<strong>${it.website_name}</strong>`)}</h1>
-                    <p className='center-text gr-padding-10'>{it.L('Trade 24/7, even on weekends.')}</p>
-
-                    <div className='gr-padding-30 gr-11-m gr-centered gr-child'>
-                        <FormVerifyEmail
-                            className='secondary-bg-color'
-                            dark_button
-                            email_padding_mobile={12}
-                            button_padding_mobile={12}
-                            text={it.L('Create free account')}
-                        />
-                        <div id='social-signup' className='gr-8 gr-10-p gr-12-m gr-no-gutter gr-centered'>
-                            <SeparatorLineWithText text={it.L('or')} className='gr-padding-20 no-margin full-width' />
-                            <p className='center-text no-margin gr-padding-10 gr-parent'>{it.L('Create free account with')}</p>
-                            <div className='gr-row gr-row-align-center'>
-                                <SocialButton provider='google' />
-                                <SocialButton provider='facebook' />
-                                <SocialButton provider='apple' />
-                            </div>
-                        </div>
+            <div id='signupbanner' className='banner-container'>
+                <div className='image-container' />
+                <div className='content-container'>
+                    <h2>{it.L('We have a new home: Deriv')}</h2>
+                    <p>{it.L('We’ve rebranded the online trading space by offering new innovative products, intuitive platforms, and outstanding services.')}</p>
+                    <div className='button-container'>
+                        <button id='explore-deriv'>
+                            {it.L('Explore Deriv')}
+                        </button>
+                        <button id='create-a-demo-account' className='create-account'>
+                            {it.L('Create a demo account')}
+                        </button>
                     </div>
                 </div>
             </div>
-
             <div className='container gr-padding-30'>
                 <h2 className='center-text'>{it.L('Diverse platforms and account types')}</h2>
                 <TabContainer className='gr-padding-30 gr-parent full-width' theme='light'>

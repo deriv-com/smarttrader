@@ -21,11 +21,6 @@
             width: 100%;
         }
     }
-    #banner {
-        background: url('../images/pages/home/home-banner.png') no-repeat;
-        background-position: left top;
-        background-size: 100% 70%;
-    }
     .small-image {
         width: 10%;
         margin: 0 1em;
@@ -184,6 +179,91 @@
         }
         .padding-top-20 {
             padding-top: 20px;
+        }
+    }
+}
+
+#signupbanner.banner-container {
+    display: flex;
+    justify-content: center;
+    background: url('../images/pages/home/home-banner.png') no-repeat;
+    background-position: right top;
+    background-size: contain;
+    background-color: $COLOR_NEW_LIGHT_GRAY;
+
+    .image-container {
+        display: flex;
+        flex: 1;
+        height: 35vw;
+        max-width: 508px;
+        max-height: 400px;
+        background: url('../images/deriv/deriv-signup.png') no-repeat;
+        background-position: right top;
+        background-size: contain;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 508px;
+        padding: 32px;
+
+        p, h2 {
+            line-height: 22px;
+        }
+        h2 {
+            font-weight: 300px;
+        }
+        p {
+            font-weight: 400;
+            color: $COLOR_NEW_DARK_GRAY;
+        }
+        .button-container {
+            display: flex;
+            gap: 16px;
+
+            .create-account {
+                color: $COLOR_BLACK;
+                background: $COLOR_WHITE;
+
+                &:hover {
+                    background-color: $COLOR_GRAY;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    #signupbanner.banner-container {
+        flex-direction: column;
+        height: unset;
+        background: unset;
+        background-color: $COLOR_NEW_LIGHT_GRAY;
+        align-items: center;
+
+        .image-container {
+            flex: unset;
+            max-width: unset;
+            max-height: unset;
+            width: 100%;
+            height: 80vw;
+            background: url('../images/deriv/deriv-signup-mobile.png') no-repeat;
+            background-size: contain;
+        }
+        .content-container {
+            align-items: center;
+            max-width: unset;
+            padding: 16px;
+
+            p, h2 {
+                text-align: center;
+            }
+            .button-container {
+                flex-direction: column;
+                width: 100%;
+            }
         }
     }
 }

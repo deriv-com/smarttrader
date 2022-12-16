@@ -213,7 +213,7 @@ const Trading = () => (
                             <div id='authorization_error_container' className='center-text invisible'>
                                 <div className='authorization_error'>
                                     <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                    <a className='button' href={it.url_for('new-account')}>
+                                    <a className='button binary-to-deriv-link' href={it.url_for('new-account')}>
                                         <span>{it.L('Open a free account')}</span>
                                     </a>
                                     <p>{it.L('Already have an account?')}</p>
