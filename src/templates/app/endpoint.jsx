@@ -19,7 +19,7 @@ const Endpoint = () => (
                         type='text'
                         label={it.L('OAuth App ID')}
                         attributes={{ maxLength: 5 }}
-                        hint={it.L('You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/.')}
+                        hint={it.L('You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/docs.')}
                     />
                 </Fieldset>
                 <div className='center-text'>

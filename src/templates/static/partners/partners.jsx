@@ -40,7 +40,7 @@ const Partners = () => (
                     text={it.L('Apply to become a Payment Agent')}
                 />
                 <Column
-                    url='https://developers.binary.com'
+                    url='https://api.deriv.com/docs'
                     target='_blank'
                     image='api'
                     header={it.L('API')}
