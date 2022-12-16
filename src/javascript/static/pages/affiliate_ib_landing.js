@@ -1,8 +1,11 @@
 const Url         = require('../../../javascript/_common/url.js');
 const TabSelector = require('../../_common/tab_selector');
+const getLanguage = require('../../_common/language.js').get;
 
 const AffiliateIBLanding = (() => {
+    const current_language = getLanguage().toLowerCase().replace(/_/g, '-');
     const onLoad = () => {
+        window.location.replace(`https://deriv.com/${current_language}/partners/affiliate-ib/`);
         initializeTypeOfPartnersTab();
     };
 
