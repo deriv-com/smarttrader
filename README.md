@@ -26,8 +26,9 @@ Before running or contribute to this project, you need to have the setup of the 
 
 - Ruby, RubyGems
 - Sass (`sudo gem install sass`)
-- Node.js (12.22.3 is recommended)
+- Node.js (14.19.3 is recommended)
 - NPM (see <https://nodejs.org/en/download/package-manager/>)
+- NVM (see <https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm/> and follow install NVM section)
 - Grunt (`sudo npm install -g grunt-cli`)
 
 ## Quickstart
@@ -57,36 +58,54 @@ Before running or contribute to this project, you need to have the setup of the 
    git remote add upstream git@github.com:deriv-com/binary-static.git
    ```
 
-6. **Install your dependencies:**
+6. **Ensure you are running node version 14**
+
+   - Check node version `node -v`
+   - Check list of available node versions `nvm ls`
+   - To install node 14 `nvm install 14`
+   - To change between different node versions `nvm use {version number}` 
+
+7. **Install your dependencies:**
 
    ```sh
      npm ci
    ```
 
-7. **To start developing:**
+8. **To start developing:**
 
    ```sh
    npm run start
    ```
 
-8. **Open the source code and start editing!**
+9. **Open the source code and start editing!**
 
    Your site is now running at [https://localhost:443](https://localhost:443)
 
 ## Preview on your local machine
 
-- To preview your changes locally, run `sudo grunt serve`
-- It will watch for Javascript or CSS changes and will rebuild on every change you make.
+- To preview your changes locally, run `npm run serve`
+   - It will watch for Javascript or CSS changes and will rebuild on every change you make.
+- Go to [https://localhost/en/endpoint.html](https://localhost/en/endpoint.html) and change App ID and Server
+- Login with test account
+
 - To test changes made to templates, you need to re-compile them:
   - `grunt shell:compile_dev` to re-compile all templates.
   - `grunt shell:compile_dev --path=about-us` to re-compile only template(s) which serve about-us path in URL.
 - To fix eslint errors run `npm run eslint`
 
 ## Test link deployment
+### Deploy your changes on Vercel (Recommended Option)
 
-You can manually deploy your test link using gh-pages with the following configurations:
+1. Commit, push your changes, and create pull request. Vercel will automatically deploy your application.
 
-### Deploy to your gh-pages for the first time
+2.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your deployed page after login.
+    Use `https://YOUR_VERCEL_LINK/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_VERCEL_LINK/binary-static/en/redirect.html` for the Verification URL.
+    - Have api key ready from deriv app account in order to register
+    - Make note of your App ID to update in redmine card
+
+Alternatively, you can manually deploy your test link using gh-pages with the following configurations:
+
+### Deploy to your gh-pages for the first time (Alternate Option)
 
 1.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your Github pages after login.
     Use `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/redirect.html` for the Verification URL.
