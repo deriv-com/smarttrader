@@ -146,6 +146,8 @@ const pages_config = {
     withdrawws               : { module: PaymentAgentWithdraw,       is_authenticated: true, only_real: true },
 
     'affiliate-ib'           : { module: AffiliatesIBLanding },
+    'partners'               : { module: StaticPages.Partners },
+    'security-testing'       : { module: StaticPages.SecurityTesting },
     'binary-in-numbers'      : { module: StaticPages.BinaryInNumbers },
     'binary-options'         : { module: GetStarted.BinaryOptions },
     // 'contact-2'              : { module: Contact2 },
