@@ -2,6 +2,7 @@ const moment                   = require('moment');
 const ViewPopupUI              = require('./view_popup.ui');
 const Highchart                = require('../../trade/charts/highchart');
 const Callputspread            = require('../../trade/callputspread');
+const Defaults                 = require('../../trade/defaults');
 const DigitDisplay             = require('../../trade/digit_trade');
 const Lookback                 = require('../../trade/lookback');
 const Reset                    = require('../../trade/reset');
@@ -88,7 +89,7 @@ const ViewPopup = (() => {
     };
 
     const ContractTypeDisplay = () => {
-        const form_name = sessionStorage.getItem('formname');
+        const form_name = Defaults.get('formname');
 
         return {
             ASIANU      : localize('Asian Up'),

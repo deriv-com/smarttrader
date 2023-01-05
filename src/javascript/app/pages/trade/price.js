@@ -196,7 +196,7 @@ const Price = (() => {
 
         if (!h4) return;
 
-        const form_name = sessionStorage.getItem('formname');
+        const form_name = Defaults.get('formname');
         let display_text = type && contract_type ? contract_type[type] : '';
 
         if (form_name === 'risefall' || form_name === 'callputequal') {
