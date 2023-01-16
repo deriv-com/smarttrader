@@ -43,9 +43,9 @@ const Header = (() => {
         setHeaderUrls();
         BinarySocket.wait('authorize','landing_company').then(() => {
             bindPlatform();
+            bindClick();
+            bindSvg();
         });
-        bindClick();
-        bindSvg();
         if (Client.isLoggedIn()) {
             displayAccountStatus();
         }
@@ -305,6 +305,7 @@ const Header = (() => {
         const platform_dropdown        = getElementById('platform__dropdown');
         const platform__list           = getElementById('platform__list');
         const platform_dropdown_active = 'platform__dropdown--show';
+        
         const showPlatformSwitcher     = (should_open) => {
             if (should_open) {
                 platform_dropdown.classList.add(platform_dropdown_active);
@@ -320,6 +321,7 @@ const Header = (() => {
         applyToAllElements('.platform__list-item', (el) => {
             el.addEventListener('click', () => {
                 showPlatformSwitcher(false);
+                showMobileMenu(false);
             });
         });
 
