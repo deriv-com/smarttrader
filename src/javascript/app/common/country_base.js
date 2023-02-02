@@ -10,10 +10,12 @@ const isEuCountry = () => {
     const eu_excluded_regex   = new RegExp('^mt$');
     const financial_shortcode = State.getResponse('landing_company.financial_company.shortcode');
     const gaming_shortcode    = State.getResponse('landing_company.gaming_company.shortcode');
+    const svg_shortcode       = gaming_shortcode === 'svg';
     const clients_country     = Client.get('residence') || State.getResponse('website_status.clients_country');
     return (
         (financial_shortcode || gaming_shortcode) ?
-            (eu_shortcode_regex.test(financial_shortcode) || eu_shortcode_regex.test(gaming_shortcode)) :
+            ((eu_shortcode_regex.test(financial_shortcode) && !svg_shortcode) 
+            || eu_shortcode_regex.test(gaming_shortcode)) :
             eu_excluded_regex.test(clients_country)
     );
 };
