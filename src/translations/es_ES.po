@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-06-02 06:20\n"
+"PO-Revision-Date: 2023-02-08 09:23\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -245,7 +245,7 @@ msgid "Barrier offset"
 msgstr "Desplazamiento de barrera"
 
 msgid "Basket Indices"
-msgstr ""
+msgstr "Cesta de Índices"
 
 msgid "Bid"
 msgstr "Oferta"
@@ -1160,7 +1160,7 @@ msgid "Litecoin"
 msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr ""
+msgstr "Chat en vivo"
 
 msgid "Loading"
 msgstr "Cargando"
@@ -1424,7 +1424,7 @@ msgid "Online"
 msgstr "En línea"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "Plataforma de operaciones en línea"
 
 msgid "Only %1 are allowed."
 msgstr "Se permiten solo %1."
@@ -1634,7 +1634,7 @@ msgid "Please specify your preferred interval reality check in minutes:"
 msgstr "Por favor, especifique su intervalo de comprobación de la realidad en minutos:"
 
 msgid "Please submit your proof of address."
-msgstr "Por favor, envíe su prueba de dirección."
+msgstr "Por favor, envíe su prueba de domicilio."
 
 msgid "Please submit your proof of identity."
 msgstr "Por favor, envíe su prueba de identidad."
@@ -1688,22 +1688,22 @@ msgid "Profit/loss"
 msgstr "Ganancias/pérdidas"
 
 msgid "Proof of address"
-msgstr "Comprobante de domicilio"
+msgstr "Prueba de dirección"
 
 msgid "Proof of address expired"
-msgstr "Comprobante de domicilio expirado"
+msgstr "Prueba de domicilio expirada"
 
 msgid "Proof of address required"
-msgstr "Se requiere comprobante de domicilio"
+msgstr "Se requiere prueba de domicilio"
 
 msgid "Proof of identity"
-msgstr "Comprobante de identidad"
+msgstr "Prueba de identidad"
 
 msgid "Proof of identity expired"
-msgstr "Comprobante de identidad expirado"
+msgstr "Prueba de identidad expirada"
 
 msgid "Proof of identity required"
-msgstr "Se requiere comprobante de identidad"
+msgstr "Se requiere prueba de identidad"
 
 msgid "Provide the whole document page for best results"
 msgstr "Proporcione toda la página del documento para obtener mejores resultados"
@@ -1994,7 +1994,7 @@ msgid "Set currency"
 msgstr "Definir moneda"
 
 msgid "Settles"
-msgstr "Establece"
+msgstr "Liquida"
 
 msgid "Short keyboard patterns are easy to guess"
 msgstr "Los patrones de teclado cortos son fáciles de adivinar"
@@ -2069,10 +2069,10 @@ msgid "Spot"
 msgstr "Spot"
 
 msgid "Spot time"
-msgstr "Tiempo Spot"
+msgstr "Hora Spot"
 
 msgid "Spot time (GMT)"
-msgstr "Hora del precio a la vista (GTM)"
+msgstr "Hora Spot (GTM)"
 
 msgid "Stake"
 msgstr "Inversión"
@@ -2771,7 +2771,7 @@ msgid "You have reached the rate limit of requests per second. Please try later.
 msgstr "Ha alcanzado el límite de solicitudes por segundo. Vuelva a intentarlo más tarde."
 
 msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr "Ha alcanzado el límite de retiro. Suba su comprobante de identidad y dirección para incrementar su límite y continuar con el retiro."
+msgstr "Ha alcanzado el límite de retiro. Suba su prueba de identidad y dirección para incrementar su límite y continuar con el retiro."
 
 msgid "You have sold this contract at %1 %2"
 msgstr "Ha vendido este contrato por %1 %2"
