@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-06-02 06:20\n"
+"PO-Revision-Date: 2023-02-08 09:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgid "%1Manage your accounts%2"
 msgstr "%1管理您的帳戶%2"
 
 msgid "%1No, change my fiat account's currency now%2"
-msgstr "%1不, 請立刻更改我的法定帳戶的幣種%2"
+msgstr "%1不，請立刻更改我的法定帳戶的幣種%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1返回交易頁面%2"
@@ -95,7 +95,7 @@ msgid "Action"
 msgstr "操作"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr "透過新增+/-給障礙偏移量定義。例如, +0.005 表示比入市現價高0.005 的障礙。"
+msgstr "透過新增+/-給障礙偏移量定義。例如，+0.005 表示比入市現價高0.005 的障礙。"
 
 msgid "Add Deriv account"
 msgstr "新增Deriv帳戶"
@@ -188,7 +188,7 @@ msgid "Asset"
 msgstr "資產"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "重設時, 如果現貨價與您的預測方向相反, 則障礙將重設至現貨價的方向。"
+msgstr "重設時，如果現貨價與您的預測方向相反，則障礙將重設至現貨價的方向。"
 
 msgid "Audit"
 msgstr "審計"
@@ -245,7 +245,7 @@ msgid "Barrier offset"
 msgstr "障礙位移"
 
 msgid "Basket Indices"
-msgstr ""
+msgstr "籃子指數"
 
 msgid "Bid"
 msgstr "出價"
@@ -578,7 +578,7 @@ msgid "Deposit"
 msgstr "存款"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的帳戶已被禁存款和提款。請檢查您的電子郵件, 以瞭解更多詳情。"
+msgstr "您的帳戶已被禁存款和提款。請檢查您的電子郵件，以瞭解更多詳情。"
 
 msgid "Deriv Accounts"
 msgstr "Deriv 帳戶"
@@ -953,19 +953,19 @@ msgid "If it doesn’t work, download a QR code scanner from Google Play or the 
 msgstr "如果無法掃描，請從Google Play 或 App Store 下載 QR 碼掃描應用"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>低障礙</strong> 或 <strong>高障礙</strong>, 您將不會贏得賠付。"
+msgstr "如果 <strong>退市現價</strong> 等於 <strong>低障礙</strong> 或 <strong>高障礙</strong>，您將不會贏得賠付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙</strong> 或 <strong>重設後的新障礙</strong>, 您將不會贏得賠付。"
+msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙</strong> 或 <strong>重設後的新障礙</strong>，您將不會贏得賠付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙價格</strong>, 您將不會贏得賠付。"
+msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙價格</strong>，您將不會贏得賠付。"
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr "如果 <strong>最後跳動點</strong> 等於平均跳動點, 您將不會贏得賠付。"
+msgstr "如果 <strong>最後跳動點</strong> 等於平均跳動點，您將不會贏得賠付。"
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "如果您選擇 「允許等值」, 如果退市現價高於或等於「高於」的入市現價, 您將獲得賠付。同樣, 如果退市現價低於或等於「低於」的入市現價, 您將獲得賠付。"
+msgstr "如果您選擇 「允許等值」，如果退市現價高於或等於「高於」的入市現價，您將獲得賠付。同樣，如果退市現價低於或等於「低於」的入市現價，您將獲得賠付。"
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "如果您選擇「亞洲下跌」期權，<strong>當</strong><strong>最新價格</strong>低於<strong>平均</strong>價格時，您將獲得賠付。"
@@ -1046,10 +1046,10 @@ msgid "If you select \"rises\", you win the payout if the market price is higher
 msgstr "如果您選擇「上漲」期權，只要市場價格高於入市價格，您將獲得賠付。"
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr "如果您選擇 %1\"高跳動點\"%2, 如果所選跳動點是接下來五個跳動點%2 中的 %1最高值, 可獲得賠付。"
+msgstr "如果您選擇 %1\"高跳動點\"%2，如果所選跳動點是接下來五個跳動點%2 中的 %1最高值，可獲得賠付。"
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr "如果您選擇 %1\"低跳動點\"%2, 如果所選跳動點是接下來五個跳動點%2 中的 %1最低值, 可獲得賠付。"
+msgstr "如果您選擇 %1\"低跳動點\"%2，如果所選跳動點是接下來五個跳動點%2 中的 %1最低值，可獲得賠付。"
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
 msgstr "如果您選擇%1「只會持續下跌」%2期權，只要%1入市現價%2後的價格持續下跌，您將獲得賠付。如果期間內的價格有任何上漲或相等於之前的價格， 您將%3不會獲得賠付。"
@@ -1160,7 +1160,7 @@ msgid "Litecoin"
 msgstr "萊特幣"
 
 msgid "Live chat"
-msgstr ""
+msgstr "即時聊天"
 
 msgid "Loading"
 msgstr "載入"
@@ -1220,7 +1220,7 @@ msgid "MT5 withdrawal disabled"
 msgstr "MT5已被禁提款"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的MT5帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
+msgstr "您的MT5帳戶已被禁提款。請檢查您的電子郵件，以瞭解更多詳情。"
 
 msgid "Make sure all of the document is in the photo"
 msgstr "確保所有文檔都在照片中"
@@ -1388,7 +1388,7 @@ msgid "Note:"
 msgstr "備註:"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "注意: 您只能使用一個法定貨幣帳戶。首次把資金存入法定帳戶或開立 MT5 帳戶之前, 可以更改 法定帳戶的幣種。您還可以為每種受支持的加密貨幣開立專用帳戶。"
+msgstr "注意: 您只能使用一個法定貨幣帳戶。首次把資金存入法定帳戶或開立 MT5 帳戶之前，可以更改 法定帳戶的幣種。您還可以為每種受支持的加密貨幣開立專用帳戶。"
 
 msgid "Notifications"
 msgstr "通知"
@@ -1424,7 +1424,7 @@ msgid "Online"
 msgstr "線上"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "線上交易平台"
 
 msgid "Only %1 are allowed."
 msgstr "只允許 %1 。"
@@ -1595,7 +1595,7 @@ msgid "Please note that the selected currency is allowed for limited accounts on
 msgstr "請注意，所選貨幣僅適用於受限制帳戶。"
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr "一旦滿足所需標準, 請重新申請。"
+msgstr "一旦滿足所需標準，請重新申請。"
 
 msgid "Please reload the page"
 msgstr "請重新載入頁面"
@@ -2225,7 +2225,7 @@ msgid "Thank you for signing up! Please check your email to complete the registr
 msgstr "謝謝您的註冊！請檢視郵件以完成註冊程序。"
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "謝謝, 我們會在24小時內回覆您"
+msgstr "謝謝，我們會在24小時內回覆您"
 
 msgid "The %1 password of account number %2 has been changed."
 msgstr "%2帳號的%1密碼已更改。"
@@ -2336,7 +2336,7 @@ msgid "This account is disabled"
 msgstr "此帳戶已禁用"
 
 msgid "This account is excluded until %1"
-msgstr "此帳戶已被隔離, 直到%1"
+msgstr "此帳戶已被隔離，直到%1"
 
 msgid "This contract is only available on %1DTrader%2."
 msgstr "此合約僅適用於%1DTrader%2。"
@@ -2663,7 +2663,7 @@ msgid "We'll compare it with your document"
 msgstr "我們將它與您的文檔比較"
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr "我們希望改進產品和服務, 希望進一步瞭解您的需求。我們想通過電話與您交談, 瞭解您喜歡我們的原因, 您對我們有什麼不滿, 以及我們應該如何改善。"
+msgstr "我們希望改進產品和服務，希望進一步瞭解您的需求。我們想通過電話與您交談，瞭解您喜歡我們的原因，您對我們有什麼不滿，以及我們應該如何改善。"
 
 msgid "We're now ready to verify your identity"
 msgstr "我們現在準備驗證您的身份"
@@ -2684,7 +2684,7 @@ msgid "When you click \"OK\" you will be excluded from trading on the site until
 msgstr "當您點選「OK」後，您將被禁止在此網站交易，直到選定期限結束為止。"
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr "如果退市現貨價與入市現貨價相同, 則將贏得賠付。"
+msgstr "如果退市現貨價與入市現貨價相同，則將贏得賠付。"
 
 msgid "Winning the contract"
 msgstr "合約盈利"
@@ -2702,7 +2702,7 @@ msgid "Withdrawal disabled"
 msgstr "已被禁提款"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的帳戶已被禁提款。請檢查您的電子郵件, 以瞭解更多詳情。"
+msgstr "您的帳戶已被禁提款。請檢查您的電子郵件，以瞭解更多詳情。"
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr "想先檢查一下您的月結單？%1檢查月結單%2"
@@ -2711,10 +2711,10 @@ msgid "Yes"
 msgstr "是的"
 
 msgid "Yes I'm sure"
-msgstr "是的, 我確認"
+msgstr "是的，我確認"
 
 msgid "Yes, I'm sure"
-msgstr "是的, 我確認"
+msgstr "是的，我確認"
 
 msgid "You are categorised as a professional client."
 msgstr "您被歸類為專業客戶。"
@@ -2723,28 +2723,28 @@ msgid "You are categorised as a retail client. Apply to be treated as a professi
 msgstr "您被歸類為零售客戶。申請成為專業交易者。"
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "您只能用一個法定帳戶。首次存款或開立 MT5 帳戶之前, 您可以隨時更改法定帳戶的幣種。"
+msgstr "您只能用一個法定帳戶。首次存款或開立 MT5 帳戶之前，您可以隨時更改法定帳戶的幣種。"
 
 msgid "You are offline"
 msgstr "您已離線"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr "首次存款或開立MT5 帳戶之前, 您可以%1設定新幣種%2。"
+msgstr "首次存款或開立MT5 帳戶之前，您可以%1設定新幣種%2。"
 
 msgid "You can close this window without interrupting your trade."
 msgstr "您可以在不中斷交易的情況下關閉此視窗。"
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "您已開立了 MT5 帳戶, 因此不能再更改幣種。"
+msgstr "您已開立了 MT5 帳戶，因此不能再更改幣種。"
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "您已存入第一筆資金, 因此不能再更改幣種。"
+msgstr "您已存入第一筆資金，因此不能再更改幣種。"
 
 msgid "You can now return to your computer to continue"
 msgstr "您現在可以返回電腦繼續操作"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "如果您的餘額為 %2 或更低, 您可以在示範帳戶內新增 %1。"
+msgstr "如果您的餘額為 %2 或更低，您可以在示範帳戶內新增 %1。"
 
 msgid "You did not change anything."
 msgstr "您沒做任何更改。"
@@ -2804,10 +2804,10 @@ msgid "You will be redirected to a third-party website which is not owned by Bin
 msgstr "您將被轉到不是Binary.com擁有的第三方網站。"
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "開立此 MT5 帳戶後, 將無法更改法定帳戶的幣種。確定要繼續嗎？"
+msgstr "開立此 MT5 帳戶後，將無法更改法定帳戶的幣種。確定要繼續嗎？"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "存入此款項後, 將無法更改法定帳戶的幣種。確定要繼續嗎？"
+msgstr "存入此款項後，將無法更改法定帳戶的幣種。確定要繼續嗎？"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
 msgstr "如果市價並未以您選取的數字結束，則您將贏得賠付額。"
