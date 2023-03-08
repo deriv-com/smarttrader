@@ -23,7 +23,6 @@ const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 const isEuCountry              = require('../common/country_base').isEuCountry;
-const isEuCountrySelected      = require('../../_common/utility').isEuCountrySelected;
 
 const header_icon_base_path = '/images/pages/header/';
 
@@ -160,15 +159,10 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const client_country                  = Client.get('residence') || State.getResponse('website_status.clients_country');
         const is_logged_in                    = Client.isLoggedIn();
         const main_domain                     = getHostname();
         const should_show_bots_when_logged_in = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
         const should_show_bots                = is_logged_in ? should_show_bots_when_logged_in : !isEuCountry();
-        const should_show_dmt5                = !is_logged_in || Client.isMT5Allowed();
-        const should_show_xtrade              = is_logged_in
-            ? Client.isDXTradeAllowed()
-            : !isEuCountry() && !isEuCountrySelected(client_country);
 
         const platforms          = {
             dtrader: {
@@ -184,26 +178,6 @@ const Header = (() => {
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
                     link     : `${main_domain}/bot`,
                     icon     : getPlatformSettings('dbot').icon,
-                    on_mobile: true,
-                },
-            } : {}),
-            ...(should_show_dmt5 ? {
-                dmt5: {
-                    name: getPlatformSettings('dmt5').name,
-                    desc: localize('Trade on [_1] ([_2]), the all-in-one FX and CFD trading platform.',
-                        [getPlatformSettings('dmt5').full_name, getPlatformSettings('dmt5').name]),
-                    link     : `${main_domain}/mt5`,
-                    icon     : getPlatformSettings('dmt5').icon,
-                    on_mobile: true,
-    
-                },
-            } : {}),
-            ...(should_show_xtrade ? {
-                derivx: {
-                    name     : getPlatformSettings('dxtrade').name,
-                    desc     : localize('Trade FX and CFDs on a customisable, easy-to-use trading platform.'),
-                    link     : `${main_domain}/derivx`,
-                    icon     : getPlatformSettings('dxtrade').icon,
                     on_mobile: true,
                 },
             } : {}),
