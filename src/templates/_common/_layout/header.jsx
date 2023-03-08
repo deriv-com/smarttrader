@@ -24,6 +24,12 @@ const MobileMenu = () => (
                     <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />
                 </div>
                 <div className='mobile__platform-switcher-lists'>
+                    <div id='mobile__platform-switcher-item-appstore' className='mobile__platform-switcher-item  client_logged_in invisible'>
+                        <a className='url-appstore'>
+                            <img id='appstore-icon' className='mobile__platform-switcher-icon appstore-icon' />
+                            <div className='mobile__platform-switcher-text'>{it.L('Trader\'s Hub')}</div>
+                        </a>
+                    </div>
                     <div className='mobile__platform-switcher-item'>
                         <img id='mobile__platform-switcher-icon-trade' className='mobile__platform-switcher-icon' />
                         <div className='mobile__platform-switcher-text mobile__platform-switcher-text-bold'>{it.L('Trade')}</div>
@@ -91,6 +97,12 @@ const Header = () => (
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
+                    <a className='url-appstore header__menu-links-item'>
+                        <span>
+                            <img className='header__icon-text appstore-icon' />
+                            {it.L('Trader\'s Hub')}
+                        </span>
+                    </a>
                     <a className='url-reports-positions header__menu-links-item'>
                         <span>
                             <img className='header__icon-text reports-icon' />
@@ -99,7 +111,7 @@ const Header = () => (
                     </a>
                     <a className='url-cashier-deposit header__menu-links-item'>
                         <span>
-                            <img id='cashier_icon' className='header__icon-text' />
+                            <img id='cashier-icon' className='header__icon-text' />
                             {it.L('Cashier')}
                         </span>
                     </a>

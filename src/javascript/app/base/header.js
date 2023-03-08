@@ -59,6 +59,9 @@ const Header = (() => {
         const signup_url = `${static_url}/signup/`;
         btn__signup.href = signup_url;
 
+        applyToAllElements('.url-appstore', (el) => {
+            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
@@ -91,7 +94,7 @@ const Header = (() => {
 
     const bindSvg = () => {
         const add       = getElementById('add_icon');
-        const cashier   = getElementById('cashier_icon');
+        const cashier   = getElementById('cashier-icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
         const empty     = getElementById('header__notification-empty-img');
@@ -102,6 +105,10 @@ const Header = (() => {
         const open      = getElementById('mobile__menu-content-submenu-icon-open');
         const profit    = getElementById('mobile__menu-content-submenu-icon-profit');
         const statement = getElementById('mobile__menu-content-submenu-icon-statement');
+
+        applyToAllElements('.appstore-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
+        });
 
         applyToAllElements('.header__expand', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
@@ -147,7 +154,6 @@ const Header = (() => {
         open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
         profit.src     = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
         statement.src  = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
-
     };
 
     const bindPlatform = () => {
@@ -368,6 +374,7 @@ const Header = (() => {
         });
 
         // Mobile reports menu
+        const appstore_menu     = getElementById('mobile__platform-switcher-item-appstore');
         const report_menu       = getElementById('mobile__platform-switcher-item-reports');
         const menu              = getElementById('mobile_menu-content');
         const submenu           = getElementById('mobile__menu-content-submenu');
@@ -383,6 +390,10 @@ const Header = (() => {
                 menu.classList.add(menu_active);
             }
         };
+
+        appstore_menu.addEventListener('click', () => {
+            showMobileSubmenu(false);
+        });
 
         report_menu.addEventListener('click', () => {
             showMobileSubmenu(true);

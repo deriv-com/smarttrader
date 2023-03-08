@@ -223,7 +223,7 @@ body .header {
                 text-decoration: none;
                 letter-spacing: 0;
                 text-transform: capitalize;
-                padding: 0 8px;
+                padding: 0 0.8rem;
                 word-wrap: break-word;
             }
             &-item {
@@ -1023,4 +1023,9 @@ body #topbar {
             top: 48px;
         }
     }
+}
+
+.url-appstore {
+    display: flex;
+    font-weight: normal;
 }
