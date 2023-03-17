@@ -12,13 +12,34 @@ const updateBalance = (response) => {
         return;
     }
 
+    function waitForReadyElement(selector) {
+        return new Promise(resolve => {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+    
+            const observer = new MutationObserver(() => {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+    
+            observer.observe(document.body, {
+                childList: true,
+                subtree  : true,
+            });
+            return null;
+        });
+    }
+
     BinarySocket.wait('website_status').then(() => {
         const { accounts, balance, currency, loginid, total } = response.balance;
         if (!currency) return;
 
-        const updateBalanceByAccountId = (account_id, updated_balance, account_currency) => {
-            const el_balance_span = document.querySelector(`.account__switcher-balance-${account_id}`);
-
+        const updateBalanceByAccountId = async (account_id, updated_balance, account_currency) => {
+            const el_balance_span = await waitForReadyElement(`.account__switcher-balance-${account_id}`);
+            
             if (el_balance_span) {
                 const display_balance = formatMoney(account_currency, updated_balance);
 

@@ -429,6 +429,42 @@ const ClientBase = (() => {
         return options_blocked_countries.includes(country);
     };
 
+    const isHighRisk = () => {
+        // For high risk financialCompany.shortcode = svg && gamingCompany.shortcode = svg
+        // For low risk financialCompany.shortcode = maltainvest && gamingCompany.shortcode = svg
+        // for EU financialCompany.
+        const landing_companies = State.getResponse('landing_company');
+        if (landing_companies) {
+            const financial_company_shortcode = landing_companies.financial_company.shortcode;
+            let gaming_company_shortcode;
+            if (landing_companies.gaming_company) {
+                gaming_company_shortcode = landing_companies.gaming_company.shortcode;
+            }
+            const restricted_countries =
+                financial_company_shortcode === 'svg' ||
+                (financial_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
+                
+            const high_risk = financial_company_shortcode === 'svg' && gaming_company_shortcode === 'svg';
+            return high_risk || restricted_countries;
+        }
+
+        return false;
+    };
+
+    const isLowRisk = () => {
+        const landing_companies = State.getResponse('landing_company');
+        if (landing_companies) {
+            const financial_company_shortcode = landing_companies.financial_company.shortcode;
+            let gaming_company_shortcode;
+            if (landing_companies.gaming_company) {
+                gaming_company_shortcode = landing_companies.gaming_company.shortcode;
+            }
+            const low_risk = financial_company_shortcode === 'maltainvest' && gaming_company_shortcode === 'svg';
+            return low_risk;
+        }
+        return false;
+    };
+
     const syncWithDerivApp = (active_loginid, client_accounts) => {
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
@@ -488,6 +524,8 @@ const ClientBase = (() => {
         getAccountType,
         isAccountOfType,
         isAuthenticationAllowed,
+        isHighRisk,
+        isLowRisk,
         isOptionsBlocked,
         isOfferingBlocked,
         getAccountOfType,
