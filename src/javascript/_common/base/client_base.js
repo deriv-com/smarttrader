@@ -433,8 +433,9 @@ const ClientBase = (() => {
         // For high risk financialCompany.shortcode = svg && gamingCompany.shortcode = svg
         // For low risk financialCompany.shortcode = maltainvest && gamingCompany.shortcode = svg
         // for EU financialCompany.
+        const risk_classification = State.getResponse('get_account_status').risk_classification;
         const landing_companies = State.getResponse('landing_company');
-        if (landing_companies) {
+        if (landing_companies || risk_classification) {
             const financial_company_shortcode = landing_companies.financial_company.shortcode;
             let gaming_company_shortcode;
             if (landing_companies.gaming_company) {
@@ -445,7 +446,7 @@ const ClientBase = (() => {
                 (financial_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
                 
             const high_risk = financial_company_shortcode === 'svg' && gaming_company_shortcode === 'svg';
-            return high_risk || restricted_countries;
+            return high_risk || restricted_countries || risk_classification === 'high';
         }
 
         return false;
@@ -453,14 +454,15 @@ const ClientBase = (() => {
 
     const isLowRisk = () => {
         const landing_companies = State.getResponse('landing_company');
-        if (landing_companies) {
+        const upgradeable_landing_companies = State.getResponse('authorize').upgradeable_landing_companies;
+        if (landing_companies || upgradeable_landing_companies) {
             const financial_company_shortcode = landing_companies.financial_company.shortcode;
             let gaming_company_shortcode;
             if (landing_companies.gaming_company) {
                 gaming_company_shortcode = landing_companies.gaming_company.shortcode;
             }
-            const low_risk = financial_company_shortcode === 'maltainvest' && gaming_company_shortcode === 'svg';
-            return low_risk;
+            const low_risk_landing_company = financial_company_shortcode === 'maltainvest' && gaming_company_shortcode === 'svg';
+            return low_risk_landing_company || (upgradeable_landing_companies.include('svg') && upgradeable_landing_companies.include('maltainvest'));
         }
         return false;
     };
