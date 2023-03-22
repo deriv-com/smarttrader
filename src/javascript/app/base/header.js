@@ -720,10 +720,10 @@ const Header = (() => {
         }
         if (has_real_account) showTradersHubLink(true);
         if (is_virtual || !has_real_account)  {
-            manage_acc_btn.style.visibility           = 'hidden';
+            manage_acc_btn.setVisibility(0);
         }
         if (has_real_account && !is_virtual) {
-            manage_acc_btn.style.visibility           = 'visible';
+            manage_acc_btn.setVisibility(1);
         }
         // Account adder logic
         if (!has_real_account) {
@@ -750,10 +750,10 @@ const Header = (() => {
                 updateTotal();
                 const currentTab = ui.currentTarget.hash;
                 if (currentTab === '#demo_tab') {
-                    manage_acc_btn.style.visibility   = 'hidden';
+                    manage_acc_btn.setVisibility(0);
                     showTradersHubLink(true);
                 } else if (currentTab === '#real_tab' && has_real_account && !is_virtual) {
-                    manage_acc_btn.style.visibility   = 'visible';
+                    manage_acc_btn.setVisibility(1);
                 } else if (currentTab === '#real_tab' && !has_real_account) {
                     showTradersHubLink(false);
                 }
