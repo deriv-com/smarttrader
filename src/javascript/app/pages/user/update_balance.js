@@ -36,7 +36,6 @@ const updateBalance = (response) => {
     BinarySocket.wait('website_status').then(() => {
         const { accounts, balance, currency, loginid, total } = response.balance;
         if (!currency) return;
-
         const updateBalanceByAccountId = async (account_id, updated_balance, account_currency) => {
             const el_balance_span = await waitForReadyElement(`.account__switcher-balance-${account_id}`);
             

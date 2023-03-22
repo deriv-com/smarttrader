@@ -591,24 +591,24 @@ const Header = (() => {
         if (!Client.isLoggedIn()) return;
         BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
-            const loginid_non_eu_real_select = createElement('div');
-            const loginid_eu_real_select     = createElement('div');
-            const loginid_demo_select        = createElement('div');
+            const loginid_non_eu_real_select   = createElement('div');
+            const loginid_eu_real_select       = createElement('div');
+            const loginid_demo_select          = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
-                    const is_eu          = loginid.startsWith('MF');
-                    const is_non_eu      = loginid.startsWith('CR');
-                    const is_real        = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
-                    const currency       = Client.get('currency', loginid);
-                    let currencyName = mapCurrencyName(currency);
+                    const is_eu                = loginid.startsWith('MF');
+                    const is_non_eu            = loginid.startsWith('CR');
+                    const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
+                    const currency             = Client.get('currency', loginid);
+                    let currencyName           = mapCurrencyName(currency);
                     
-                    const getIcon        = (() => {
+                    const getIcon              = (() => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
                         return 'virtual';
                     });
-                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
                     const current_active_login = Client.get('loginid');
-                    const is_current     = loginid === current_active_login;
+                    const is_current           = loginid === current_active_login;
 
                     if (is_current) { // default account
                         // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
@@ -697,7 +697,6 @@ const Header = (() => {
         const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
         const current_active_login        = Client.get('loginid');
         const is_virtual                  = current_active_login.startsWith('VRTC');
-
         const manage_acc_btn              = document.getElementById('account__switcher-manage');
         const new_account_adder_deriv     = document.getElementById('account__switcher-new-account-deriv');
         const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
