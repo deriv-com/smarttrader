@@ -706,6 +706,10 @@ const Header = (() => {
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
         const multiplier_text             = localize('Multipliers');
+        const showTradersHubLink = (show) => {
+            traders_hub_link.style.display            = show ? 'flex' : 'none';
+            account_switcher_seperator.style.display  = show ? 'block' : 'none';
+        };
 
         if (current_active_login.startsWith('MF')) {
             $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
@@ -715,22 +719,13 @@ const Header = (() => {
         } else {
             add_account_text_eu_country.style.display = 'none';
         }
-
-        const showTradersHubLink = (show) => {
-            traders_hub_link.style.display           = show ? 'flex' : 'none';
-            account_switcher_seperator.style.display = show ? 'block' : 'none';
-        };
-
-        const hideManageBtn = () => {
-            manage_acc_btn.style.visibility = 'hidden';
-        };
-
         if (has_real_account) showTradersHubLink(true);
-        if (is_virtual || !has_real_account) hideManageBtn();
-        if (has_real_account && !is_virtual) {
-            manage_acc_btn.style.visibility = 'visible';
+        if (is_virtual || !has_real_account)  {
+            manage_acc_btn.style.visibility           = 'hidden';
         }
-
+        if (has_real_account && !is_virtual) {
+            manage_acc_btn.style.visibility           = 'visible';
+        }
         // Account adder logic
         if (!has_real_account) {
             new_account_adder_deriv.style.display     = 'flex';
@@ -756,10 +751,10 @@ const Header = (() => {
                 updateTotal();
                 const currentTab = ui.currentTarget.hash;
                 if (currentTab === '#demo_tab') {
-                    hideManageBtn();
+                    manage_acc_btn.style.visibility   = 'hidden';
                     showTradersHubLink(true);
                 } else if (currentTab === '#real_tab' && has_real_account && !is_virtual) {
-                    manage_acc_btn.style.visibility = 'visible';
+                    manage_acc_btn.style.visibility   = 'visible';
                 } else if (currentTab === '#real_tab' && !has_real_account) {
                     showTradersHubLink(false);
                 }
