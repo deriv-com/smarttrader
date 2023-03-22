@@ -726,21 +726,16 @@ const Header = (() => {
             manage_acc_btn.style.visibility           = 'visible';
         }
         // Account adder logic
-        if (!has_real_account) {
-            new_account_adder_deriv.style.display     = 'flex';
-            new_account_adder_eu.style.display        = 'flex';
-        } else {
+        new_account_adder_deriv.style.display     = 'flex';
+        new_account_adder_eu.style.display        = 'flex';
+        if (has_real_account) {
             if (has_mf_account && has_non_eu_account) {
                 new_account_adder_deriv.style.display = 'none';
                 new_account_adder_eu.style.display    = 'none';
-            }
-            if (has_mf_account && !has_non_eu_account) {
+            } else if (has_mf_account && !has_non_eu_account) {
                 new_account_adder_eu.style.display    = 'none';
-                new_account_adder_deriv.style.display = 'flex';
-            }
-            if (has_non_eu_account && !has_mf_account) {
+            } else if (!has_mf_account && has_non_eu_account) {
                 new_account_adder_deriv.style.display = 'none';
-                new_account_adder_eu.style.display    = 'flex';
             }
         }
     
