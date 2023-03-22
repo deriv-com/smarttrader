@@ -726,8 +726,8 @@ const Header = (() => {
             manage_acc_btn.style.visibility           = 'visible';
         }
         // Account adder logic
-        new_account_adder_deriv.style.display     = 'flex';
-        new_account_adder_eu.style.display        = 'flex';
+        new_account_adder_deriv.style.display         = 'flex';
+        new_account_adder_eu.style.display            = 'flex';
         if (has_real_account) {
             if (has_mf_account && has_non_eu_account) {
                 new_account_adder_deriv.style.display = 'none';
