@@ -589,7 +589,7 @@ const Header = (() => {
 
     const populateAccountsList = () => {
         if (!Client.isLoggedIn()) return;
-        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company').then(() => {
+        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
             const loginid_non_eu_real_select = createElement('div');
             const loginid_eu_real_select = createElement('div');
@@ -754,7 +754,7 @@ const Header = (() => {
                 new_account_adder_eu.style.display = 'flex';
             }
         }
-      
+    
         $('#acc_tabs').tabs({
             event: 'click',
             activate(ui) {
