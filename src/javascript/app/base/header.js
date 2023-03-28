@@ -102,7 +102,6 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const appstore  = getElementById('appstore-icon');
         const cashier   = getElementById('cashier-icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
@@ -117,6 +116,10 @@ const Header = (() => {
 
         applyToAllElements('#add-account-icon', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg`);
+        });
+        
+        applyToAllElements('#appstore-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
         });
 
         applyToAllElements('.header__expand', (el) => {
@@ -151,7 +154,6 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         });
 
-        appstore.src   = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
         empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
