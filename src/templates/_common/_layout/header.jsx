@@ -100,7 +100,7 @@ const Header = () => (
                     <a className='url-appstore header__menu-links-item'>
                         <span>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
-                            {it.L('Trader\'s Hub')}
+                            {it.L('Trader\'s hub')}
                         </span>
                     </a>
                     <a className='url-reports-positions header__menu-links-item'>
