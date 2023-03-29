@@ -742,7 +742,8 @@ const Header = (() => {
         }
     
         $('#acc_tabs').tabs({
-            event: 'click',
+            active: is_virtual ? 1 : 0,
+            event : 'click',
             activate(ui) {
                 updateTotal();
                 const currentTab = ui.currentTarget.hash;
