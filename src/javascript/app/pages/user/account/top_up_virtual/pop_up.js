@@ -108,6 +108,7 @@ const TopUpVirtualPopup = (() => {
 
     return {
         init,
+        doTopUp,
         shouldShow: shouldShowPopup,
         show      : showTopUpPopup,
     };
