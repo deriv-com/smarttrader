@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-06-02 06:20\n"
+"PO-Revision-Date: 2023-02-08 09:23\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid " (Temporarily unavailable)"
 msgstr " (Временно недоступно)"
 
 msgid "%1 Account %2"
-msgstr "%1 Счёт %2"
+msgstr "%1 Счет %2"
 
 msgid "%1 Please click the link below to restart the password recovery process."
 msgstr "%1 Пожалуйста, нажмите на ссылку ниже для повторного восстановления пароля."
@@ -38,10 +38,10 @@ msgid "%1 days %2 hours %3 minutes"
 msgstr "%1 дн. %2 ч. %3 мин."
 
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
-msgstr "Вы успешно перевели средства %1 со счёта %2 на счёт %3. Номер транзакции: %4"
+msgstr "Вы успешно перевели средства %1 со счета %2 на счет %3. Номер транзакции: %4"
 
 msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "%1 зачислено на ваш демо-счёт MT5: %2."
+msgstr "%1 зачислено на ваш демо-счет MT5: %2."
 
 msgid "%1 has been credited into your Virtual Account: %2."
 msgstr "%1 зачислено на ваш демо-счет: %2."
@@ -245,7 +245,7 @@ msgid "Barrier offset"
 msgstr "Оффсет барьера"
 
 msgid "Basket Indices"
-msgstr ""
+msgstr "Валютные индексы"
 
 msgid "Bid"
 msgstr "Бид"
@@ -509,7 +509,7 @@ msgid "Create %1 account"
 msgstr "Открыть счет %1"
 
 msgid "Create account"
-msgstr "Открыть счёт"
+msgstr "Открыть счет"
 
 msgid "Credit/Debit"
 msgstr "Кредит/Дебет"
@@ -1088,7 +1088,7 @@ msgid "Invalid document format."
 msgstr "Недопустимый формат документа."
 
 msgid "Invalid email address."
-msgstr "Неправильный e-mail."
+msgstr "Неправильный эл. адрес."
 
 msgid "Invalid verification code."
 msgstr "Неправильный код подтверждения."
@@ -1160,7 +1160,7 @@ msgid "Litecoin"
 msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr ""
+msgstr "Чат"
 
 msgid "Loading"
 msgstr "Загрузка"
@@ -1424,7 +1424,7 @@ msgid "Online"
 msgstr "Онлайн"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "Торговая онлайн-платформа"
 
 msgid "Only %1 are allowed."
 msgstr "Разрешены только %1 и латинские буквы."
@@ -1460,10 +1460,10 @@ msgid "Oops... Page Not Available"
 msgstr "Упс... Страница недоступна"
 
 msgid "Open a Financial Account"
-msgstr "Открыть Финансовый счёт"
+msgstr "Открыть Финансовый счет"
 
 msgid "Open a Real Account"
-msgstr "Открыть Реальный счёт"
+msgstr "Открыть Реальный счет"
 
 msgid "Open a free account"
 msgstr "Открыть бесплатный счет"
@@ -1484,7 +1484,7 @@ msgid "Opens"
 msgstr "Открывается"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr "Торговля опционами может вызвать зависимость, как и любая другая деятельность, доведенная до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчёт о ваших сделках и счетах."
+msgstr "Торговля опционами может вызвать зависимость, как и любая другая деятельность, доведенная до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчет о ваших сделках и счетах."
 
 msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
 msgstr "Наш классический инструмент “drag-and-drop” для создания торговых ботов с всплывающими торговыми графиками для опытных пользователей."
@@ -1559,10 +1559,10 @@ msgid "Please accept the terms and conditions."
 msgstr "Пожалуйста, примите правила и условия."
 
 msgid "Please check your email for further instructions."
-msgstr "Проверьте свою электронную почту. Вам должны прийти инструкции."
+msgstr "Проверьте эл. почту. Вам должны прийти инструкции."
 
 msgid "Please check your email for the password reset link."
-msgstr "Пожалуйста, проверьте свой email. Вам должна прийти ссылка для восстановления пароля."
+msgstr "Проверьте эл. почту. Вам должна прийти ссылка для восстановления пароля."
 
 msgid "Please choose a currency"
 msgstr "Пожалуйста, выберите валюту"
@@ -2612,7 +2612,7 @@ msgid "Use a longer keyboard pattern with more turns"
 msgstr "Используйте более длинные комбинации клавиш с большим количеством поворотов"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr "Неправильный проверочный код. Пожалуйста, воспользуйтесь ссылкой, отправленной на ваш email."
+msgstr "Неправильный проверочный код. Воспользуйтесь ссылкой, отправленной на ваш эл. адрес."
 
 msgid "Verification complete"
 msgstr "Верификация завершена"
@@ -2702,7 +2702,7 @@ msgid "Withdrawal disabled"
 msgstr "Вывод средств отключен"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "На вашем счете отключен вывод средств. Проверьте свою электронную почту для получения более подробной информации."
+msgstr "На вашем счете отключен вывод средств. Проверьте эл. почту для получения более подробной информации."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr "Хотите сначала проверить выписку счета? %1Cмотреть выписку%2"
