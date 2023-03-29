@@ -33,30 +33,15 @@ commands:
       - run:
           name: Building dist for << parameters.target >>
           command: node_modules/grunt/bin/grunt releaseci --<< parameters.target >>
-  deploy:
-    description: "Deploy to static branches"
+  versioning:
+    description: "Add version to build"
     parameters:
       target_branch:
         type: string
     steps:
-      - checkout
-      - attach_workspace:
-          at: dist
       - run:
           name: Tag build
           command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version
-      - run:
-          name: Install and configure dependencies
-          command: |
-            sudo npm install -g gh-pages@2.0.1
-            git config user.email "ci-build@binary.com"
-            git config user.name "ci-build"
-      - add_ssh_keys:
-          fingerprints:
-            - "01:67:4a:6d:26:9c:70:c4:1a:60:91:88:d9:dd:f0:83"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages -d dist --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push_staging:
     description: "Build Docker image"
     parameters:
@@ -149,7 +134,7 @@ jobs:
       - checkout
       - npm_install
       - test
-  release_beta:
+  release_staging:
     docker:
       - image: circleci/node:9.8.0-stretch
     steps:
@@ -160,12 +145,12 @@ jobs:
          target: 'staging'
       - build:
           target: 'translations'
+      - versioning:
+          target_branch: "staging"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - deploy:
-          target_branch: "staging"
       - docker_build_push_staging:
           docker_image_tag: "latest-staging"
       - k8s_deploy
@@ -179,12 +164,12 @@ jobs:
       - test
       - build:
           target: 'production'
+      - versioning:
+          target_branch: "production"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - deploy:
-          target_branch: "production"
       - docker_build_push:
           docker_image_tag: latest
       - k8s_deploy:
@@ -217,14 +202,14 @@ workflows:
               ignore: /^master$/
   release:
     jobs:
-      - release_beta:
+      - release_staging:
           filters:
             branches:
               only: /^master$/
           context: binary-frontend-artifact-upload
       - publish_cloudflare_staging:
           requires:
-            - release_beta
+            - release_staging
           filters:
             branches:
               only: /^master$/
