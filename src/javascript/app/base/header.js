@@ -353,10 +353,13 @@ const Header = (() => {
         const account_switcher_dropdown = getElementById('account__switcher-dropdown');
         const acc_expand                = getElementById('header__acc-expand');
         const account_switcher_active   = 'account__switcher-dropdown--show';
+        const current_active_login      = Client.get('loginid');
+        const is_virtual                = current_active_login.startsWith('VRTC');
         const showAccountSwitcher       = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
+                $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
             } else {
                 account_switcher_dropdown.classList.remove(account_switcher_active);
                 acc_expand.classList.remove('rotated');
@@ -750,7 +753,6 @@ const Header = (() => {
         $('#acc_tabs').tabs({
             active: is_virtual ? 1 : 0,
             event : 'click',
-            cookie: false,
             activate(ui) {
                 updateTotal();
                 const currentTab = ui.currentTarget.hash;
