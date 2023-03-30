@@ -730,6 +730,7 @@ const Header = (() => {
             add_account_text_eu_country.style.display = 'none';
         }
         if (has_real_account) showTradersHubLink(true);
+        if (is_virtual) showTradersHubLink(true);
         if (is_virtual || !has_real_account)  {
             manage_acc_btn.style.visibility           = 'hidden';
         }
