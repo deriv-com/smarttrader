@@ -697,6 +697,7 @@ const Header = (() => {
         const has_real_account            = real_accounts.length > 0;
         const has_mf_account              = all_login_ids.some(loginid => loginid.startsWith('MF'));
         const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
+        const has_multiple_CR_accounts    = all_login_ids.filter(loginid => loginid.startsWith('CR')).length > 1;
         const current_active_login        = Client.get('loginid');
         const is_virtual                  = current_active_login.startsWith('VRTC');
         const manage_acc_btn              = document.getElementById('account__switcher-manage');
@@ -707,10 +708,15 @@ const Header = (() => {
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
         const multiplier_text             = localize('Multipliers');
+        const account_header              = document.querySelectorAll('.header__accounts-multiple');
         const showTradersHubLink = (show) => {
             traders_hub_link.style.display            = show ? 'flex' : 'none';
             account_switcher_seperator.style.display  = show ? 'block' : 'none';
         };
+
+        account_header.forEach(header => {
+            header.innerText += has_multiple_CR_accounts ? localize('accounts') : localize('account');
+        });
 
         if (current_active_login.startsWith('MF')) {
             $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
@@ -744,6 +750,7 @@ const Header = (() => {
         $('#acc_tabs').tabs({
             active: is_virtual ? 1 : 0,
             event : 'click',
+            cookie: false,
             activate(ui) {
                 updateTotal();
                 const currentTab = ui.currentTarget.hash;

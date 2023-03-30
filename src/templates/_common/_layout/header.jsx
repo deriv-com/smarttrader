@@ -160,11 +160,11 @@ const Header = () => (
                                     <div id='account__switcher-accordion-non-eu' className='account__switcher-accordion'>
                                         <h3>
                                             <div id='high_risk_accounts' className='account__switcher-accordion-header-text'>
-                                                <span>{it.L('Deriv accounts')}</span>
+                                                <span className='header__accounts-multiple'>{it.L('Deriv ')}</span>
                                                 <img className='header__expand-light' />
                                             </div>
                                             <div id='low_risk_accounts_non_eu'className='account__switcher-accordion-header-text'>
-                                                <span>{it.L('Non-EU Deriv Account')}</span>
+                                                <span className='header__accounts-multiple'>{it.L('Non-EU Deriv ')}</span>
                                                 <img className='header__expand-light' />
                                             </div>
                                         </h3>
@@ -180,7 +180,7 @@ const Header = () => (
                                     <div id='account__switcher-accordion-eu' className='account__switcher-accordion'>
                                         <h3>
                                             <div id='low_risk_accounts_eu' className='account__switcher-accordion-header-text'>
-                                                <span>{it.L('EU Deriv Account')}</span>
+                                                <span>{it.L('EU Deriv account')}</span>
                                                 <img className='header__expand-light' />
                                             </div>
                                         </h3>
