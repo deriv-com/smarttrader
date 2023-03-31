@@ -473,6 +473,7 @@ module.exports = [
     'Reset Password',
     'Reset Put',
     'Reset Time',
+    'Reset balance',
     'Reset barrier',
     'Reset the balance of your virtual account to [_1] anytime.',
     'Reset time',
