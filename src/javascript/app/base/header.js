@@ -724,11 +724,7 @@ const Header = (() => {
         if (current_active_login.startsWith('MF')) {
             $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
         }
-        if (isEuCountry()) {
-            add_account_text_normal.style.display     = 'none';
-        } else {
-            add_account_text_eu_country.style.display = 'none';
-        }
+        
         if (has_real_account) showTradersHubLink(true);
         if (is_virtual) showTradersHubLink(true);
         if (is_virtual || !has_real_account)  {
@@ -756,6 +752,12 @@ const Header = (() => {
             event : 'click',
             activate(ui) {
                 updateTotal();
+                console.log(isEuCountry());
+                if (isEuCountry()) {
+                    add_account_text_normal.style.display     = 'none';
+                } else {
+                    add_account_text_eu_country.style.display = 'none';
+                }
                 const currentTab = ui.currentTarget.hash;
                 if (currentTab === '#demo_tab') {
                     manage_acc_btn.style.visibility   = 'hidden';
