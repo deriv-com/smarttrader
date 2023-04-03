@@ -752,7 +752,6 @@ const Header = (() => {
             event : 'click',
             activate(ui) {
                 updateTotal();
-                console.log(isEuCountry());
                 if (isEuCountry()) {
                     add_account_text_normal.style.display     = 'none';
                 } else {
