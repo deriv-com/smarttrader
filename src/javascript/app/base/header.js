@@ -355,11 +355,18 @@ const Header = (() => {
         const account_switcher_active   = 'account__switcher-dropdown--show';
         const current_active_login      = Client.get('loginid');
         const is_virtual                = current_active_login.startsWith('VRTC');
+        const add_account_text_normal     = document.getElementById('add-account-text-normal');
+        const add_account_text_eu_country = document.getElementById('add-account-text-eu');
         const showAccountSwitcher       = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
                 $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
+                if (isEuCountry()) {
+                    add_account_text_normal.style.display     = 'none';
+                } else {
+                    add_account_text_eu_country.style.display = 'none';
+                }
             } else {
                 account_switcher_dropdown.classList.remove(account_switcher_active);
                 acc_expand.classList.remove('rotated');
@@ -708,8 +715,6 @@ const Header = (() => {
         const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
         const traders_hub_link            = document.getElementById('account__switcher-cfd');
         const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
-        const add_account_text_normal     = document.getElementById('add-account-text-normal');
-        const add_account_text_eu_country = document.getElementById('add-account-text-eu');
         const multiplier_text             = localize('Multipliers');
         const account_header              = document.querySelectorAll('.header__accounts-multiple');
         const showTradersHubLink = (show) => {
@@ -752,11 +757,6 @@ const Header = (() => {
             event : 'click',
             activate(ui) {
                 updateTotal();
-                if (isEuCountry()) {
-                    add_account_text_normal.style.display     = 'none';
-                } else {
-                    add_account_text_eu_country.style.display = 'none';
-                }
                 const currentTab = ui.currentTarget.hash;
                 if (currentTab === '#demo_tab') {
                     manage_acc_btn.style.visibility   = 'hidden';
