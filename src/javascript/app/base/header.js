@@ -39,11 +39,11 @@ const Header = (() => {
 
     const onLoad = () => {
         populateAccountsList();
+        bindSvg();
         BinarySocket.wait('authorize','landing_company').then(() => {
             setHeaderUrls();
             bindPlatform();
             bindClick();
-            bindSvg();
         });
         if (Client.isLoggedIn()) {
             displayAccountStatus();
