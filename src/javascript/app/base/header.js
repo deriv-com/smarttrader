@@ -89,6 +89,9 @@ const Header = (() => {
         applyToAllElements('.url-add-account-multiplier', el => {
             el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
+        applyToAllElements('.url-manage-account', el => {
+            el.href = Url.urlForDeriv('redirect', `action=manage_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
     };
 
     const onUnload = () => {
@@ -348,16 +351,17 @@ const Header = (() => {
         });
 
         // Account Switcher Event
-        const acc_switcher              = getElementById('acc_switcher');
-        const account_switcher          = getElementById('account__switcher');
-        const account_switcher_dropdown = getElementById('account__switcher-dropdown');
-        const acc_expand                = getElementById('header__acc-expand');
-        const account_switcher_active   = 'account__switcher-dropdown--show';
-        const current_active_login      = Client.get('loginid');
-        const is_virtual                = current_active_login.startsWith('VRTC');
-        const add_account_text_normal     = document.getElementById('add-account-text-normal');
-        const add_account_text_eu_country = document.getElementById('add-account-text-eu');
-        const showAccountSwitcher       = (should_open) => {
+        const acc_switcher                   = getElementById('acc_switcher');
+        const account_switcher               = getElementById('account__switcher');
+        const account_switcher_dropdown      = getElementById('account__switcher-dropdown');
+        const acc_expand                     = getElementById('header__acc-expand');
+        const account_switcher_active        = 'account__switcher-dropdown--show';
+        const current_active_login           = Client.get('loginid');
+        let is_virtual;
+        const add_account_text_normal        = document.getElementById('add-account-text-normal');
+        const add_account_text_eu_country    = document.getElementById('add-account-text-eu');
+        if (current_active_login) is_virtual = current_active_login.startsWith('VRTC');
+        const showAccountSwitcher            = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
