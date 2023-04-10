@@ -357,18 +357,24 @@ const Header = (() => {
         const acc_expand                  = getElementById('header__acc-expand');
         const account_switcher_active     = 'account__switcher-dropdown--show';
         const current_active_login        = Client.get('loginid');
+        const all_login_ids               = Client.getAllLoginids();
+        const has_real_account            = all_login_ids.some((loginid) => !/^VRT/.test(loginid));
         const is_virtual                  = current_active_login.startsWith('VRTC');
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
+        add_account_text_eu_country.parentElement.style.backgroundColor = 'blue';
         const showAccountSwitcher         = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
                 $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
                 if (isEuCountry()) {
-                    add_account_text_normal.style.display     = 'none';
+                    add_account_text_normal.style.display                   = 'none';
                 } else {
-                    add_account_text_eu_country.style.display = 'none';
+                    add_account_text_eu_country.style.display               = 'none';
+                }
+                if (isEuCountry() && has_real_account) {
+                    add_account_text_eu_country.parentElement.style.display = 'none';
                 }
             } else {
                 account_switcher_dropdown.classList.remove(account_switcher_active);
@@ -661,12 +667,13 @@ const Header = (() => {
 
                     if (is_non_eu) {
                         loginid_non_eu_real_select.appendChild(account);
-                    } else if (is_eu) {
+                    } else if (is_eu && !isEuCountry()) {
                         loginid_eu_real_select.appendChild(account);
+                    } else if (is_eu && isEuCountry()){
+                        loginid_non_eu_real_select.appendChild(account);
                     } else {
                         loginid_demo_select.appendChild(account);
                     }
-
                     // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
                     // const li_type = createElement('li', { text: localized_type });
 
