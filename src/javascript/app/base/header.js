@@ -362,7 +362,6 @@ const Header = (() => {
         const is_virtual                  = current_active_login.startsWith('VRTC');
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
-        add_account_text_eu_country.parentElement.style.backgroundColor = 'blue';
         const showAccountSwitcher         = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
