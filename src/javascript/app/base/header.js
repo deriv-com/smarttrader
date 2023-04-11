@@ -637,10 +637,8 @@ const Header = (() => {
                             el.src = icon;
                         });
                     }
-                    if (current_active_login.startsWith('MF')){
-                        if (currency === 'EUR') {
-                            currencyName = localize('Multipliers');
-                        }
+                    if (current_active_login.startsWith('MF') && currency === 'EUR'){
+                        currencyName = localize('Multipliers');
                     }
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
