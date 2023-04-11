@@ -26,7 +26,7 @@ const updateTotal = (total) => {
         }
     }
     if (more_than_one_real_account) total_currency_real = 'USD';
-    if (total_currency_real !== 'USD' && total_currency_real !== 'EUR' && total_currency_real !== 'GBP' && total_currency_real !== 'AUD') {
+    if (!['USD', 'EUR', 'GBP', 'AUD'].includes(total_currency_real)) {
         total_currency_real = 'USD';
     }
 

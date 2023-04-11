@@ -22,6 +22,7 @@ const getPlatformSettings      = require('../../../templates/_common/brand.confi
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
+const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 
 const header_icon_base_path = '/images/pages/header/';
@@ -577,34 +578,6 @@ const Header = (() => {
             low_risk_eu_accordion_header.style.display        = 'flex';
             $('<div class="account__switcher-seperator" />').insertBefore('#account__switcher-accordion-eu');
         }
-    };
-
-    const mapCurrencyName = (currency) => {
-        let currencyName;
-        if (currency === 'USD') {
-            currencyName = 'US Dollar';
-        } else if (currency === 'EUR') {
-            currencyName = 'Euro';
-        } else if (currency === 'GBP') {
-            currencyName = 'Pound Sterling';
-        } else if (currency === 'AUD'){
-            currencyName = 'Australian Dollar';
-        } else if (currency === 'BTC'){
-            currencyName = 'Bitcoin';
-        } else if (currency === 'ETH') {
-            currencyName = 'Ethereum';
-        } else if (currency === 'USDT') {
-            currencyName = 'Tether Omni';
-        } else if (currency === 'eUSDT') {
-            currencyName = 'Tether ERC20';
-        } else if (currency === 'USDC') {
-            currencyName = 'USD Coin';
-        } else if (currency === 'LTC'){
-            currencyName = 'Litecoin';
-        } else {
-            currencyName = currency;
-        }
-        return currencyName;
     };
 
     const populateAccountsList = () => {

@@ -440,7 +440,7 @@ const ClientBase = (() => {
             }
             const restricted_countries =
                 financial_company_shortcode === 'svg' ||
-                (financial_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
+                (gaming_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
                 
             const high_risk = financial_company_shortcode === 'svg' && gaming_company_shortcode === 'svg';
             return high_risk || restricted_countries || risk_classification === 'high';
