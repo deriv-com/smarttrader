@@ -4,6 +4,21 @@ const getPropertyValue = require('../utility').getPropertyValue;
 
 let currencies_config = {};
 
+const displayed_currencies = {
+    USD  : localize('US Dollar'),
+    EUR  : localize('Euro'),
+    GBP  : localize('Pound Sterling'),
+    AUD  : localize('Australian Dollar'),
+    BTC  : localize('Bitcoin'),
+    ETH  : localize('Ethereum'),
+    USDT : localize('Tether Omni'),
+    eUSDT: localize('Tether ERC20'),
+    USDC : localize('USD Coin'),
+    LTC  : localize('Litecoin'),
+};
+
+const mapCurrencyName = currency => displayed_currencies[currency];
+
 const getTextFormat = (number, currency) => `${addComma(number, getDecimalPlaces(currency), isCryptocurrency(currency))} ${getCurrencyDisplayCode(currency)}`;
 
 const getNumberFormat = (number, currency) => addComma(number, getDecimalPlaces(currency), isCryptocurrency(currency));
@@ -136,6 +151,7 @@ const getCurrencyName = currency => getPropertyValue(currencies_config, [currenc
 const getMinPayout = currency => getPropertyValue(currencies_config, [currency, 'stake_default']);
 
 module.exports = {
+    mapCurrencyName,
     formatMoney,
     formatCurrency,
     addComma,

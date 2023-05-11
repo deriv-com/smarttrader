@@ -24,6 +24,12 @@ const MobileMenu = () => (
                     <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />
                 </div>
                 <div className='mobile__platform-switcher-lists'>
+                    <div id='mobile__platform-switcher-item-appstore' className='mobile__platform-switcher-item  client_logged_in invisible'>
+                        <a id='url-appstore' className='url-appstore'>
+                            <img id='appstore-icon' className='mobile__platform-switcher-icon appstore-icon' />
+                            <div className='mobile__platform-switcher-text'>{it.L('Trader\'s hub')}</div>
+                        </a>
+                    </div>
                     <div className='mobile__platform-switcher-item'>
                         <img id='mobile__platform-switcher-icon-trade' className='mobile__platform-switcher-icon' />
                         <div className='mobile__platform-switcher-text mobile__platform-switcher-text-bold'>{it.L('Trade')}</div>
@@ -91,6 +97,12 @@ const Header = () => (
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
+                    <a className='url-appstore header__menu-links-item'>
+                        <span>
+                            <img id='appstore-icon' className='header__icon-text appstore-icon' />
+                            {it.L('Trader\'s hub')}
+                        </span>
+                    </a>
                     <a className='url-reports-positions header__menu-links-item'>
                         <span>
                             <img className='header__icon-text reports-icon' />
@@ -99,7 +111,7 @@ const Header = () => (
                     </a>
                     <a className='url-cashier-deposit header__menu-links-item'>
                         <span>
-                            <img id='cashier_icon' className='header__icon-text' />
+                            <img id='cashier-icon' className='header__icon-text' />
                             {it.L('Cashier')}
                         </span>
                     </a>
@@ -132,7 +144,9 @@ const Header = () => (
                 <div className='header__menu-item header__menu-acc' id='acc_switcher'>
                     <div className='header__acc-info'>
                         <img id='header__acc-icon' className='header__acc-icon' />
-                        <div id='header__acc-balance' className='header__acc-balance' />
+                        <span className='header__acc-display'>
+                            <div id='header__acc-balance' className='header__acc-balance' />
+                        </span>
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
                     <div id='account__switcher-dropdown' className='account__switcher-dropdown'>
@@ -143,21 +157,39 @@ const Header = () => (
                                     <li className='account__switcher-tab'><a href='#demo_tab'>{it.L('Demo')}</a></li>
                                 </ul>
                                 <div id='real_tab' className='account__switcher-tabs-content'>
-                                    <div id='account__switcher-accordion-real' className='account__switcher-accordion'>
+                                    <div id='account__switcher-accordion-non-eu' className='account__switcher-accordion'>
                                         <h3>
-                                            <div className='account__switcher-accordion-header-text'>
-                                                <span>{it.L('Deriv Accounts')}</span>
+                                            <div id='high_risk_accounts' className='account__switcher-accordion-header-text'>
+                                                <span className='header__accounts-multiple'>{it.L('Deriv ')}</span>
+                                                <img className='header__expand-light' />
+                                            </div>
+                                            <div id='low_risk_accounts_non_eu'className='account__switcher-accordion-header-text'>
+                                                <span className='header__accounts-multiple'>{it.L('Non-EU Deriv ')}</span>
                                                 <img className='header__expand-light' />
                                             </div>
                                         </h3>
-                                        <div className='account__switcher-list' id='account__switcher-real-list'>
-                                            <a id='account__switcher-select_currencies' rel='noopener noreferrer' className='url-add-account account__switcher-select_currencies'>
-                                                <span className='account__switcher-select_currencies-text'>{it.L('Select currency')}</span>
-                                            </a>
-                                            <a id='account__switcher-add' rel='noopener noreferrer' className='url-add-account account__switcher-add'>
-                                                <img id='add_icon' className='account__switcher-add-icon' />
-                                                <span className='account__switcher-add-text'>{it.L('Add Deriv account')}</span>
-                                            </a>
+                                        <div className='account__switcher-list' id='account__switcher-non-eu-list'>
+                                            <div id='account__switcher-new-account-deriv' className='account__switcher-new-account'>
+                                                <img id='add-account-icon' />
+                                                <span id='add-account-text-normal' className='account__switcher-new-account-text'>{it.L('Options & Multipliers')}</span>
+                                                <span id='add-account-text-eu' className='account__switcher-new-account-text'>{it.L('Multipliers')}</span>
+                                                <span className= 'account__switcher-new-account-btn'><a rel='noopener noreferrer' id='url-add-account-dynamic' className='url-add-account'>{it.L('Add')}</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id='account__switcher-accordion-eu' className='account__switcher-accordion'>
+                                        <h3>
+                                            <div id='low_risk_accounts_eu' className='account__switcher-accordion-header-text'>
+                                                <span>{it.L('EU Deriv account')}</span>
+                                                <img className='header__expand-light' />
+                                            </div>
+                                        </h3>
+                                        <div className='account__switcher-list' id='account__switcher-eu-list'>
+                                            <div id='account__switcher-new-account-eu' className='account__switcher-new-account'>
+                                                <img id='add-account-icon' />
+                                                <span className='account__switcher-new-account-text'>{it.L('Multipliers')}</span>
+                                                <span className= 'account__switcher-new-account-btn'><a rel='noopener noreferrer' className='url-add-account-multiplier'>{it.L('Add')}</a></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +197,7 @@ const Header = () => (
                                     <div id='account__switcher-accordion-demo' className='account__switcher-accordion'>
                                         <h3>
                                             <div className='account__switcher-accordion-header-text'>
-                                                <span>{it.L('Demo Accounts')}</span>
+                                                <span>{it.L('Demo account')}</span>
                                                 <img className='header__expand-light' />
                                             </div>
                                         </h3>
@@ -181,10 +213,22 @@ const Header = () => (
                                 </div>
                                 <div className='account__switcher-total-text'>{it.L('Total assets in your Deriv accounts')}</div>
                             </div>
+
+                            <div id='cfd-link-seperator' className='account__switcher-seperator' />
+                            <div id='account__switcher-cfd' className='account__switcher-cfd'>
+                                <a className='url-appstore account__switcher-cfd-link'>
+                                    <span className='account__switcher-cfd-text'>{it.L('Looking for CFD accounts? Go to Trader\'s hub')}</span>
+                                </a>
+                            </div>
                             <div className='account__switcher-seperator' />
-                            <div className='account__switcher-logout logout'>
-                                <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
-                                <img className='account__switcher-logout-icon logout-icon' />
+                            <div id='account__switcher-logout' className='account__switcher-logout logout'>
+                                <a id='account__switcher-manage' rel='noopener noreferrer' className='url-manage-account account__switcher-manage'>
+                                    <span className='account__switcher-manage-text'>{it.L('Manage accounts')}</span>
+                                </a>
+                                <div className='account__switcher-logout-btn'>
+                                    <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
+                                    <img className='account__switcher-logout-icon logout-icon' />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -520,6 +520,51 @@ input[type=checkbox] {
     overflow: hidden;
 }
 
+.platform-unavailable {
+    display: grid;
+    place-content: center;
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        max-width: 600px;
+        text-align: center;
+
+        &-title {
+            color: var(--text-general);
+            font-weight: 700;
+            line-height: 30px;
+            font-size: $FONT_SIZE_XL;
+            margin-bottom: 30px;
+        }
+        &-message {
+            font-size: $FONT_SIZE_S;
+            line-height: 20px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        &-button {
+            border-radius: 4px;
+            width: 205px;
+            height: 32px;
+            padding: 6px 16px;
+            background-color: var(--brand-red-coral);
+            color: var(--text-colored-background);
+            font-size: $FONT_SIZE_S;
+            font-weight: 700;
+            line-height: 20px;
+
+            &:hover {
+                box-shadow: inset 205px 32px rgba($COLOR_BLACK, 0.1);
+                background-color: var(--brand-red-coral);
+            }
+        }
+    }
+}
+
 .logged_out_title_container {
     margin-top: 40px;
     margin-bottom: 30px;

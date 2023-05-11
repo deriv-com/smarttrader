@@ -13,15 +13,6 @@ const brand_config_data = {
             name: 'DBot',
             icon: 'ic-brand-dbot.svg',
         },
-        dmt5: {
-            name     : 'DMT5',
-            full_name: 'Deriv MetaTrader 5',
-            icon     : 'ic-brand-dmt5.svg',
-        },
-        dxtrade: {
-            name: 'Deriv X',
-            icon: 'ic-brand-dxtrade.svg',
-        },
         bbot: {
             name: 'Binary Bot',
             icon: 'ic-brand-binarybot.svg',

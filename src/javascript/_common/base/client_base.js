@@ -406,31 +406,9 @@ const ClientBase = (() => {
         return is_current ? currency && !get('is_virtual') && has_account_criteria && !isCryptocurrency(currency) : has_account_criteria;
     };
 
-    const isDXTradeAllowed = () => {
-        // Stop showing DerivX for non-logged in EU users
-        const landing_companies = State.getResponse('landing_company');
-        const client_country    = get('residence') || State.getResponse('website_status.clients_country');
-
-        return !!('dxtrade_financial_company' in landing_companies ||
-            'dxtrade_gaming_company' in landing_companies ||
-            (!client_country
-            || !landing_companies
-            || !Object.keys(landing_companies).length));
-    };
-
     const isMF = () => {
         const landing_company_shortcode  = get('landing_company_shortcode') || State.getResponse('landing_company.gaming_company.shortcode');
         return landing_company_shortcode === 'maltainvest';
-    };
-
-    const isMT5Allowed = () => {
-        // default allowing mt5 to true before landing_companies gets populated
-        // since most clients are allowed to use mt5
-        const landing_companies = State.getResponse('landing_company');
-
-        return !!('mt_financial_company' in landing_companies
-            || 'mt_gaming_company' in landing_companies
-            || (!landing_companies || !Object.keys(landing_companies).length));
     };
 
     const isMultipliersOnly = () => {
@@ -449,6 +427,42 @@ const ClientBase = (() => {
         const options_blocked_countries = ['gb', 'im'];
         const country = get('country') || State.getResponse('authorize.country');
         return options_blocked_countries.includes(country);
+    };
+
+    const isHighRisk = () => {
+        const landing_companies = State.getResponse('landing_company');
+        const risk_classification = State.getResponse('get_account_status.risk_classification');
+        if (landing_companies) {
+            const financial_company_shortcode = landing_companies.financial_company.shortcode;
+            let gaming_company_shortcode;
+            if (landing_companies.gaming_company) {
+                gaming_company_shortcode = landing_companies.gaming_company.shortcode;
+            }
+            const restricted_countries =
+                financial_company_shortcode === 'svg' ||
+                (gaming_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
+                
+            const high_risk = financial_company_shortcode === 'svg' && gaming_company_shortcode === 'svg';
+            return high_risk || restricted_countries || risk_classification === 'high';
+        }
+
+        return false;
+    };
+
+    const isLowRisk = () => {
+        const landing_companies = State.getResponse('landing_company');
+        const upgradeable_landing_companies = State.getResponse('authorize.upgradeable_landing_companies');
+        if (landing_companies || upgradeable_landing_companies) {
+            const financial_company_shortcode = landing_companies.financial_company.shortcode;
+            let gaming_company_shortcode;
+            if (landing_companies.gaming_company) {
+                gaming_company_shortcode = landing_companies.gaming_company.shortcode;
+            }
+            const low_risk_landing_company = financial_company_shortcode === 'maltainvest' && gaming_company_shortcode === 'svg';
+            return low_risk_landing_company || (upgradeable_landing_companies.include('svg') && upgradeable_landing_companies.include('maltainvest'));
+        }
+
+        return false;
     };
 
     const syncWithDerivApp = (active_loginid, client_accounts) => {
@@ -498,10 +512,8 @@ const ClientBase = (() => {
 
     return {
         init,
-        isDXTradeAllowed,
         isLoggedIn,
         isMF,
-        isMT5Allowed,
         isMultipliersOnly,
         isValidLoginid,
         set,
@@ -512,6 +524,8 @@ const ClientBase = (() => {
         getAccountType,
         isAccountOfType,
         isAuthenticationAllowed,
+        isHighRisk,
+        isLowRisk,
         isOptionsBlocked,
         isOfferingBlocked,
         getAccountOfType,

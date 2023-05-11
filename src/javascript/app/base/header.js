@@ -22,8 +22,8 @@ const getPlatformSettings      = require('../../../templates/_common/brand.confi
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
+const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
-const isEuCountrySelected      = require('../../_common/utility').isEuCountrySelected;
 
 const header_icon_base_path = '/images/pages/header/';
 
@@ -40,11 +40,11 @@ const Header = (() => {
 
     const onLoad = () => {
         populateAccountsList();
-        setHeaderUrls();
+        bindSvg();
         BinarySocket.wait('authorize','landing_company').then(() => {
+            setHeaderUrls();
             bindPlatform();
             bindClick();
-            bindSvg();
         });
         if (Client.isLoggedIn()) {
             displayAccountStatus();
@@ -55,11 +55,20 @@ const Header = (() => {
     };
 
     const setHeaderUrls = () => {
+        const url_add_account_dynamic = document.getElementById('url-add-account-dynamic');
         const btn__signup = getElementById('btn__signup');
         const static_url = Url.getStaticUrl();
         const signup_url = `${static_url}/signup/`;
         btn__signup.href = signup_url;
 
+        if (isEuCountry()) {
+            url_add_account_dynamic.classList.remove('url-add-account');
+            url_add_account_dynamic.classList.add('url-add-account-multiplier');
+        }
+
+        applyToAllElements('.url-appstore', (el) => {
+            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
@@ -78,6 +87,12 @@ const Header = (() => {
         applyToAllElements('.url-add-account', el => {
             el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
+        applyToAllElements('.url-add-account-multiplier', el => {
+            el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
+        applyToAllElements('.url-manage-account', el => {
+            el.href = Url.urlForDeriv('redirect', `action=manage_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
     };
 
     const onUnload = () => {
@@ -91,8 +106,7 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const add       = getElementById('add_icon');
-        const cashier   = getElementById('cashier_icon');
+        const cashier   = getElementById('cashier-icon');
         const account   = getElementById('header__account-settings');
         const menu      = getElementById('header__hamburger');
         const empty     = getElementById('header__notification-empty-img');
@@ -103,6 +117,14 @@ const Header = (() => {
         const open      = getElementById('mobile__menu-content-submenu-icon-open');
         const profit    = getElementById('mobile__menu-content-submenu-icon-profit');
         const statement = getElementById('mobile__menu-content-submenu-icon-statement');
+
+        applyToAllElements('#add-account-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg`);
+        });
+        
+        applyToAllElements('#appstore-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
+        });
 
         applyToAllElements('.header__expand', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
@@ -138,7 +160,6 @@ const Header = (() => {
 
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
-        add.src        = Url.urlForStatic(`${header_icon_base_path}ic-add-circle.svg`);
         empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
         bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
@@ -148,7 +169,6 @@ const Header = (() => {
         open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
         profit.src     = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
         statement.src  = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
-
     };
 
     const bindPlatform = () => {
@@ -160,15 +180,10 @@ const Header = (() => {
         if (platform_list.hasChildNodes()) {
             return;
         }
-        const client_country                  = Client.get('residence') || State.getResponse('website_status.clients_country');
         const is_logged_in                    = Client.isLoggedIn();
         const main_domain                     = getHostname();
         const should_show_bots_when_logged_in = Client.isAccountOfType('virtual') ? !Client.isMultipliersOnly() : !Client.isMF() && !Client.isOptionsBlocked();
         const should_show_bots                = is_logged_in ? should_show_bots_when_logged_in : !isEuCountry();
-        const should_show_dmt5                = !is_logged_in || Client.isMT5Allowed();
-        const should_show_xtrade              = is_logged_in
-            ? Client.isDXTradeAllowed()
-            : !isEuCountry() && !isEuCountrySelected(client_country);
 
         const platforms          = {
             dtrader: {
@@ -184,26 +199,6 @@ const Header = (() => {
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
                     link     : `${main_domain}/bot`,
                     icon     : getPlatformSettings('dbot').icon,
-                    on_mobile: true,
-                },
-            } : {}),
-            ...(should_show_dmt5 ? {
-                dmt5: {
-                    name: getPlatformSettings('dmt5').name,
-                    desc: localize('Trade on [_1] ([_2]), the all-in-one FX and CFD trading platform.',
-                        [getPlatformSettings('dmt5').full_name, getPlatformSettings('dmt5').name]),
-                    link     : `${main_domain}/mt5`,
-                    icon     : getPlatformSettings('dmt5').icon,
-                    on_mobile: true,
-    
-                },
-            } : {}),
-            ...(should_show_xtrade ? {
-                derivx: {
-                    name     : getPlatformSettings('dxtrade').name,
-                    desc     : localize('Trade FX and CFDs on a customisable, easy-to-use trading platform.'),
-                    link     : `${main_domain}/derivx`,
-                    icon     : getPlatformSettings('dxtrade').icon,
                     on_mobile: true,
                 },
             } : {}),
@@ -357,15 +352,30 @@ const Header = (() => {
         });
 
         // Account Switcher Event
-        const acc_switcher              = getElementById('acc_switcher');
-        const account_switcher          = getElementById('account__switcher');
-        const account_switcher_dropdown = getElementById('account__switcher-dropdown');
-        const acc_expand                = getElementById('header__acc-expand');
-        const account_switcher_active   = 'account__switcher-dropdown--show';
-        const showAccountSwitcher       = (should_open) => {
+        const acc_switcher                = getElementById('acc_switcher');
+        const account_switcher            = getElementById('account__switcher');
+        const account_switcher_dropdown   = getElementById('account__switcher-dropdown');
+        const acc_expand                  = getElementById('header__acc-expand');
+        const account_switcher_active     = 'account__switcher-dropdown--show';
+        const current_active_login        = Client.get('loginid');
+        const all_login_ids               = Client.getAllLoginids();
+        const has_real_account            = all_login_ids.some((loginid) => !/^VRT/.test(loginid));
+        const is_virtual                  = current_active_login.startsWith('VRTC');
+        const add_account_text_normal     = document.getElementById('add-account-text-normal');
+        const add_account_text_eu_country = document.getElementById('add-account-text-eu');
+        const showAccountSwitcher         = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
+                $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
+                if (isEuCountry()) {
+                    add_account_text_normal.style.display                   = 'none';
+                } else {
+                    add_account_text_eu_country.style.display               = 'none';
+                }
+                if (isEuCountry() && has_real_account) {
+                    add_account_text_eu_country.parentElement.style.display = 'none';
+                }
             } else {
                 account_switcher_dropdown.classList.remove(account_switcher_active);
                 acc_expand.classList.remove('rotated');
@@ -394,6 +404,7 @@ const Header = (() => {
         });
 
         // Mobile reports menu
+        const appstore_menu     = getElementById('mobile__platform-switcher-item-appstore');
         const report_menu       = getElementById('mobile__platform-switcher-item-reports');
         const menu              = getElementById('mobile_menu-content');
         const submenu           = getElementById('mobile__menu-content-submenu');
@@ -409,6 +420,10 @@ const Header = (() => {
                 menu.classList.add(menu_active);
             }
         };
+
+        appstore_menu.addEventListener('click', () => {
+            showMobileSubmenu(false);
+        });
 
         report_menu.addEventListener('click', () => {
             showMobileSubmenu(true);
@@ -547,21 +562,46 @@ const Header = (() => {
         Client.sendLogoutRequest();
     };
 
+    const bindHeaders = () => {
+        const high_risk_accounts_accordion_header = document.getElementById('high_risk_accounts');
+        const low_risk_non_eu_accordion_header = document.getElementById('low_risk_accounts_non_eu');
+        const low_risk_eu_accordion_header = document.getElementById('low_risk_accounts_eu');
+        const low_risk_eu_container = document.getElementById('account__switcher-accordion-eu');
+        if (Client.isHighRisk() || isEuCountry()) {
+            high_risk_accounts_accordion_header.style.display = 'flex';
+            low_risk_non_eu_accordion_header.style.display    = 'none';
+            low_risk_eu_accordion_header.style.display        = 'none';
+            low_risk_eu_container.style.display               = 'none';
+        } else if (Client.isLowRisk()) {
+            high_risk_accounts_accordion_header.style.display = 'none';
+            low_risk_non_eu_accordion_header.style.display    = 'flex';
+            low_risk_eu_accordion_header.style.display        = 'flex';
+            $('<div class="account__switcher-seperator" />').insertBefore('#account__switcher-accordion-eu');
+        }
+    };
+
     const populateAccountsList = () => {
         if (!Client.isLoggedIn()) return;
-        BinarySocket.wait('authorize', 'website_status', 'balance').then(() => {
-            const loginid_real_select = createElement('div');
-            const loginid_demo_select = createElement('div');
+        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+            bindHeaders();
+            const loginid_non_eu_real_select   = createElement('div');
+            const loginid_eu_real_select       = createElement('div');
+            const loginid_demo_select          = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
-                    const is_real        = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
-                    const currency       = Client.get('currency', loginid);
-                    const getIcon        = (() => {
+                    const is_eu                = loginid.startsWith('MF');
+                    const is_non_eu            = loginid.startsWith('CR');
+                    const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
+                    const currency             = Client.get('currency', loginid);
+                    let currencyName           = mapCurrencyName(currency);
+                    
+                    const getIcon              = (() => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
                         return 'virtual';
                     });
-                    const icon           = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
-                    const is_current     = loginid === Client.get('loginid');
+                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
+                    const current_active_login = Client.get('loginid');
+                    const is_current           = loginid === current_active_login;
 
                     if (is_current) { // default account
                         // applyToAllElements('.account-type', (el) => { elementInnerHtml(el, localized_type); });
@@ -570,10 +610,13 @@ const Header = (() => {
                             el.src = icon;
                         });
                     }
+                    if (current_active_login.startsWith('MF') && currency === 'EUR'){
+                        currencyName = localize('Multipliers');
+                    }
 
                     const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
                     const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? (currency || localize('Real')) : localize('Demo') });
+                    const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
                     const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
                     const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
 
@@ -592,12 +635,15 @@ const Header = (() => {
                     account.appendChild(account_detail);
                     account.appendChild(account_balance);
 
-                    if (is_real) {
-                        loginid_real_select.appendChild(account);
+                    if (is_non_eu) {
+                        loginid_non_eu_real_select.appendChild(account);
+                    } else if (is_eu && !isEuCountry()) {
+                        loginid_eu_real_select.appendChild(account);
+                    } else if (is_eu && isEuCountry()){
+                        loginid_non_eu_real_select.appendChild(account);
                     } else {
                         loginid_demo_select.appendChild(account);
                     }
-
                     // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
                     // const li_type = createElement('li', { text: localized_type });
 
@@ -605,13 +651,22 @@ const Header = (() => {
                     // link.appendChild(li_type);
                     // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
                 }
-                applyToAllElements('#account__switcher-real-list', (el) => {
-                    el.insertBefore(loginid_real_select, el.firstChild);
+
+                applyToAllElements('#account__switcher-non-eu-list', (el) => {
+                    el.insertBefore(loginid_non_eu_real_select, el.firstChild);
                     applyToAllElements('div.account__switcher-acc', (ele) => {
                         ele.removeEventListener('click', loginIDOnClick);
                         ele.addEventListener('click', loginIDOnClick);
                     }, '', el);
-                    bindAccordion('#account__switcher-accordion-real');
+                    bindAccordion('#account__switcher-accordion-non-eu');
+                });
+                applyToAllElements('#account__switcher-eu-list', (el) => {
+                    el.insertBefore(loginid_eu_real_select, el.firstChild);
+                    applyToAllElements('div.account__switcher-acc', (ele) => {
+                        ele.removeEventListener('click', loginIDOnClick);
+                        ele.addEventListener('click', loginIDOnClick);
+                    }, '', el);
+                    bindAccordion('#account__switcher-accordion-eu');
                 });
                 applyToAllElements('#account__switcher-demo-list', (el) => {
                     el.insertBefore(loginid_demo_select, el.firstChild);
@@ -622,17 +677,75 @@ const Header = (() => {
                     bindAccordion('#account__switcher-accordion-demo');
                 });
             });
-            bindTabs();
         });
+        bindTabs();
     };
 
     const bindTabs = () => {
-        const is_virtual_tab = /^VRT/.test(Client.get('loginid'));
+        const all_login_ids               = Client.getAllLoginids();
+        const real_accounts               = all_login_ids.filter((loginid) => !/^VRT/.test(loginid));
+        const has_real_account            = real_accounts.length > 0;
+        const has_mf_account              = all_login_ids.some(loginid => loginid.startsWith('MF'));
+        const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
+        const has_multiple_CR_accounts    = all_login_ids.filter(loginid => loginid.startsWith('CR')).length > 1;
+        const current_active_login        = Client.get('loginid');
+        const is_virtual                  = current_active_login.startsWith('VRTC');
+        const manage_acc_btn              = document.getElementById('account__switcher-manage');
+        const new_account_adder_deriv     = document.getElementById('account__switcher-new-account-deriv');
+        const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
+        const traders_hub_link            = document.getElementById('account__switcher-cfd');
+        const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
+        const multiplier_text             = localize('Multipliers');
+        const account_header              = document.querySelectorAll('.header__accounts-multiple');
+        const showTradersHubLink = (show) => {
+            traders_hub_link.style.display            = show ? 'flex' : 'none';
+            account_switcher_seperator.style.display  = show ? 'block' : 'none';
+        };
 
+        account_header.forEach(header => {
+            header.innerText += has_multiple_CR_accounts ? localize('accounts') : localize('account');
+        });
+
+        if (current_active_login.startsWith('MF')) {
+            $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
+        }
+        
+        if (has_real_account) showTradersHubLink(true);
+        if (is_virtual) showTradersHubLink(true);
+        if (is_virtual || !has_real_account)  {
+            manage_acc_btn.style.visibility           = 'hidden';
+        }
+        if (has_real_account && !is_virtual) {
+            manage_acc_btn.style.visibility           = 'visible';
+        }
+        // Account adder logic
+        new_account_adder_deriv.style.display         = 'flex';
+        new_account_adder_eu.style.display            = 'flex';
+        if (has_real_account) {
+            if (has_mf_account && has_non_eu_account) {
+                new_account_adder_deriv.style.display = 'none';
+                new_account_adder_eu.style.display    = 'none';
+            } else if (has_mf_account && !has_non_eu_account) {
+                new_account_adder_eu.style.display    = 'none';
+            } else if (!has_mf_account && has_non_eu_account) {
+                new_account_adder_deriv.style.display = 'none';
+            }
+        }
+    
         $('#acc_tabs').tabs({
-            active: is_virtual_tab ? 1 : 0,
-            activate() {
+            active: is_virtual ? 1 : 0,
+            event : 'click',
+            activate(ui) {
                 updateTotal();
+                const currentTab = ui.currentTarget.hash;
+                if (currentTab === '#demo_tab') {
+                    manage_acc_btn.style.visibility   = 'hidden';
+                    showTradersHubLink(true);
+                } else if (currentTab === '#real_tab' && has_real_account && !is_virtual) {
+                    manage_acc_btn.style.visibility   = 'visible';
+                } else if (currentTab === '#real_tab' && !has_real_account) {
+                    showTradersHubLink(false);
+                }
             },
         });
     };

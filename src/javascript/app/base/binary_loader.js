@@ -143,7 +143,7 @@ const BinaryLoader = (() => {
             } else if (Client.isLoggedIn() && Client.isOfferingBlocked()) {
                 displayMessage(error_messages.offerings_blocked());
             } else if (config.no_mf && Client.isLoggedIn() && Client.isAccountOfType('financial')) {
-                displayMessage(error_messages.no_mf());
+                displayUnavailable();
             }
         });
 
@@ -180,6 +180,37 @@ const BinaryLoader = (() => {
         if (link) {
             link.addEventListener('click', () => { Login.redirectToLogin(); });
         }
+    };
+
+    const displayUnavailable = () => {
+        const content = container.querySelector('#content .container');
+        if (!content) {
+            return;
+        }
+
+        const div_container = createElement('div', { class: 'platform-unavailable' });
+        const inner_container = createElement('div', { class: 'platform-unavailable-inner' });
+        const h1_title = createElement('h1', { text: localize('SmartTrader is unavailable for this account'), class: 'platform-unavailable-inner-title' });
+        const message = createElement('div',
+            {
+                text: localize(
+                    'Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.'
+                ),
+                class: 'platform-unavailable-inner-message',
+            });
+        const button = createElement('button', { text: localize('Switch to another account'), class: 'platform-unavailable-inner-button' });
+        
+        div_container.appendChild(inner_container);
+        inner_container.appendChild(h1_title);
+        inner_container.appendChild(message);
+        inner_container.appendChild(button);
+
+        button.addEventListener('click', (event) => {
+            document.getElementById('acc_switcher').click();
+            event.stopPropagation();
+        });
+        
+        content.html(div_container);
     };
 
     const handleNotAuthenticated = () => {

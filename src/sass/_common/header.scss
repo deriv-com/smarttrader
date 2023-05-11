@@ -266,7 +266,6 @@ body .header {
             align-items: center;
             height: 100%;
             padding: 0 20px;
-            margin-right: 8px;
             cursor: pointer;
 
             &:hover {
@@ -274,7 +273,8 @@ body .header {
             }
         }
         &-balance {
-            padding: 0 8px;
+            margin-right: 8px;
+            line-height: 24px;
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
             font-weight: bold;
@@ -283,6 +283,17 @@ body .header {
             margin-right: 5px;
             height: 25px;
             width: 25px;
+        }
+        &-display {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10px 1px 0;
+            pointer-events: none;
+
+            &-text {
+                font-size: $FONT_SIZE_XXS;
+            }
         }
     }
     &__account {
@@ -307,6 +318,7 @@ body .header {
         }
     }
     &__deposit {
+        margin-left: 8px;
         margin-right: 16px;
     }
     &__divider {
@@ -587,6 +599,25 @@ body .header {
                     font-weight: normal;
                 }
             }
+            &-manage {
+                display: flex;
+                align-items: center;
+                background-color: transparent;
+                border-radius: 4px;
+                height: 32px;
+                color: var(--text-general);
+                font-size: $FONT_SIZE_S;
+                border: 1px solid var(--border-hover);
+                padding: 0 16px;
+                margin: 13px 11px 10px 10px;
+
+                &:hover {
+                    background-color: var(--state-hover) !important;
+                }
+                &-text {
+                    font-weight: bold;
+                }
+            }
             &-acc {
                 display: flex;
                 align-items: center;
@@ -594,10 +625,18 @@ body .header {
                 border-radius: 3px;
                 font-size: $FONT_SIZE_S;
                 cursor: pointer;
+                margin-bottom: 2px;
 
+                &:last-child {
+                    margin-bottom: 8px;
+                }
                 &--active {
                     background: var(--state-hover);
                     font-weight: 600;
+
+                    .account__switcher-loginid {
+                        color: var(--text-general);
+                    }
                 }
                 &:hover {
                     background: var(--state-hover);
@@ -606,6 +645,54 @@ body .header {
                     width: 24px;
                     height: 24px;
                     margin-right: 8px;
+                }
+            }
+            &-new-account {
+                display: flex;
+                font-size: $FONT_SIZE_S;
+                padding: 10px 16px;
+                align-items: center;
+
+                &-text {
+                    margin-left: 8px;
+                }
+                &-btn {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    margin-left: auto;
+                    padding: 0 16px;
+                    border-radius: 4px;
+                    background: transparent;
+                    height: 24px;
+                    border: 1px solid var(--border-hover);
+                    font-size: $FONT_SIZE_XS;
+
+                    a {
+                        color: var(--text-general);
+                    }
+                    a:visited {
+                        color: var(--text-general);
+                    }
+                }
+            }
+            &-cfd {
+                display: none;
+                padding: 8px 5px 6px 8px;
+
+                &-link {
+                    text-decoration: none;
+                    font-weight: normal;
+                    color: var(--brand-red-coral);
+
+                    &:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+                &-text {
+                    font-size: $FONT_SIZE_S;
+                    line-height: 1.5;
+                    padding: 8px;
                 }
             }
             &-loginid {
@@ -617,12 +704,15 @@ body .header {
             &-accordion {
                 padding: 4px 8px;
 
+                div.ui-helper-reset {
+                    line-height: 1;
+                }
                 h3.ui-state-default, h3.ui-state-active {
                     background-image: none;
                     background-color: var(--general-main-2);
                     color: var(--text-prominent);
                     font-weight: 600;
-                    font-size: $FONT_SIZE_N;
+                    font-size: $FONT_SIZE_S;
                     line-height: 1.75;
                     border: none;
                     padding: 0;
@@ -641,7 +731,7 @@ body .header {
                 }
                 &-header {
                     &-text {
-                        height: 40px;
+                        height: 36px;
                         margin: 0 8px;
                         display: flex;
                         align-items: center;
@@ -650,7 +740,7 @@ body .header {
                 }
             }
             &-container {
-                width: 278px;
+                width: 320px;
                 padding: 0;
             }
             &-tab {
@@ -733,17 +823,21 @@ body .header {
                 }
             }
             &-logout {
-                display: flex;
+                display: grid;
                 align-items: center;
-                justify-content: flex-end;
-                padding: 16px 13px;
-                float: right;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                padding: 5px 0 3px 13px;
                 cursor: pointer;
 
+                &-btn {
+                    display: flex;
+                    align-items: center;
+                    padding: 16px 13px;
+                }
                 &-text {
                     font-size: $FONT_SIZE_S;
                     text-align: left;
-                    line-height: 1.5;
                 }
                 &-icon {
                     height: 16px;
@@ -753,6 +847,10 @@ body .header {
             }
         }
     }
+}
+
+#cfd-link-seperator {
+    display: none;
 }
 
 body .mobile {
@@ -1023,4 +1121,10 @@ body #topbar {
             top: 48px;
         }
     }
+}
+
+.url-appstore {
+    display: flex;
+    font-weight: normal;
+    text-transform: none !important;
 }
