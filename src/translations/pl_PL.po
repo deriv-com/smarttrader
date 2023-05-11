@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-08 09:23\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgstr " (Dodano region)"
 
 msgid " (Temporarily unavailable)"
 msgstr " (Tymczasowo niedostępne)"
+
+msgid "%1"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 Konto %2"
@@ -94,11 +97,11 @@ msgstr "Rozumiem"
 msgid "Action"
 msgstr "Czynności"
 
+msgid "Add"
+msgstr ""
+
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Aby określić wyrównanie limitu, dodaj +/–. Na przykład, +0.005 oznacza limit 0,005 wyższy od punktu początkowego."
-
-msgid "Add Deriv account"
-msgstr "Dodaj konto Deriv"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr "Dodaj kolejne słowo lub dwa. Nietypowe słowa są lepsze."
@@ -201,6 +204,9 @@ msgstr "Sierpień"
 
 msgid "August"
 msgstr "Sierpień"
+
+msgid "Australian Dollar"
+msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Zweryfikuj swoje konto już teraz, aby w pełni korzystać ze wszystkich dostępnych metod płatności."
@@ -574,14 +580,17 @@ msgstr "Demo finansowe STP"
 msgid "Demo Synthetic"
 msgstr "Demo syntetyczne"
 
+msgid "Demo account"
+msgstr ""
+
 msgid "Deposit"
 msgstr "Wpłata"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Opcja dokonywania wpłat i wypłat została wyłączona na Twoim koncie. Sprawdź swoją skrzynkę e-mailową, aby uzyskać więcej informacji."
 
-msgid "Deriv Accounts"
-msgstr "Konta Deriv"
+msgid "Deriv "
+msgstr ""
 
 msgid "Description"
 msgstr "Opis"
@@ -664,6 +673,9 @@ msgstr "Z powodu problemów na naszym serwerze niektóre konta MT5 są w chwili 
 msgid "Duration"
 msgstr "Czas trwania"
 
+msgid "EU Deriv account"
+msgstr ""
+
 msgid "Email address"
 msgstr "Adres e-mail"
 
@@ -718,6 +730,9 @@ msgstr "Ether Classic"
 msgid "Ethereum"
 msgstr "Ethereum"
 
+msgid "Euro"
+msgstr ""
+
 msgid "Even/Odd"
 msgstr "Parzysta/nieparzysta"
 
@@ -768,6 +783,12 @@ msgstr "Strona ze zdjęciem twarzy"
 
 msgid "Failed"
 msgstr "Zakończone niepowodzeniem"
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
+msgstr ""
 
 msgid "Feb"
 msgstr "Luty"
@@ -916,9 +937,6 @@ msgstr "Duże/małe zmiany ceny"
 msgid "Higher"
 msgstr "Wyższe"
 
-msgid "Higher or equal"
-msgstr "Wyższe lub równe"
-
 msgid "Higher/Lower"
 msgstr "Wyższy/niższy"
 
@@ -964,8 +982,8 @@ msgstr "Jeśli <strong>punkt wyjściowy</strong> jest równy <strong>limitowi</s
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "Jeśli <strong>ostatnia najmniejsza zmiana ceny</strong> jest równa średniej ostatnich najmniejszych zmian cen, nie zdobywasz wypłaty."
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "Jeśli wybierzesz opcję „Zezwól na wartość równą”, zdobędziesz wypłatę, gdy punkt wyjściowy będzie wyższy niż punkt początkowy lub równy punktowi początkowemu, w przypadku opcji „Wyższy\". Adekwatnie, zdobędziesz wypłatę, gdy punkt wyjściowy będzie niższy niż punkt początkowy lub równy punktowi początkowemu, w przypadku opcji „Niższy\"."
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Jeśli wybierzesz zakład „Azjatycki - spadnie”, zdobędziesz wypłatę, gdy <strong>ostatni najmniejszy przyrost ceny</strong> będzie <strong>niższy</strong> niż <strong>średnia</strong> najmniejszych przyrostów ceny."
@@ -988,6 +1006,9 @@ msgstr "Jeśli wybierzesz „zakończy się poza”, zdobędziesz wypłatę, gdy
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr "Jeśli wybierzesz „parzysta”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>liczbą parzystą (np. 2, 4, 6, 8, 0).</strong>"
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Jeśli wybierzesz „Spadnie”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco niższy niż <strong>punkt wejściowy</strong>."
 
@@ -997,14 +1018,8 @@ msgstr "Jeśli wybierzesz „przekroczy”, zdobędziesz wypłatę, gdy cena ryn
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "Jeśli wybierzesz „wzrośnie”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco wyższy niż <strong>limit</strong>."
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Jeśli wybierzesz opcję „Wyższy”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco wyższy niż <strong>punkt wejściowy</strong>."
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
 msgstr "Jeśli wybierzesz „niższy”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco niższy niż <strong>limit</strong>."
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Jeśli wybierzesz opcję „Spadnie”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco niższy niż <strong>punkt wejściowy</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
@@ -1020,6 +1035,9 @@ msgstr "Jeśli wybierzesz „Reset-Call”, zdobędziesz wypłatę, gdy punkt wy
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
 msgstr "Jeśli wybierzesz „Reset-Put”, zdobędziesz wypłatę, gdy punkt wyjściowy będzie znacząco niższy niż punkt wejściowy lub punkt spot w momencie resetowania."
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "Jeśli wybierzesz „wzrośnie”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> będzie znacząco wyższy niż <strong>punkt wejściowy</strong>."
@@ -1186,6 +1204,9 @@ msgstr "Login na:"
 msgid "Lookbacks"
 msgstr "Opcje wsteczne"
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
 msgid "Looks like you took too long"
 msgstr "Zajęło Ci to zbyt długo"
 
@@ -1209,9 +1230,6 @@ msgstr "Wyrównanie dolnego limitu"
 
 msgid "Lower"
 msgstr "Niższe"
-
-msgid "Lower or equal"
-msgstr "Niższe lub równe"
 
 msgid "MT5"
 msgstr "MT5"
@@ -1257,6 +1275,9 @@ msgstr "Upewnij się, że selfie dobrze przedstawia twarz"
 
 msgid "Make sure§"
 msgstr "Upewnij się"
+
+msgid "Manage accounts"
+msgstr ""
 
 msgid "Mar"
 msgstr "Marzec"
@@ -1318,6 +1339,9 @@ msgstr "Mnożnik w dół"
 msgid "Multiplier Up"
 msgstr "Mnożnik w górę"
 
+msgid "Multipliers"
+msgstr ""
+
 msgid "Must be under 10MB."
 msgstr "Musi być mniejszy niż 10 MB."
 
@@ -1374,6 +1398,9 @@ msgstr "Brak powiadomień"
 
 msgid "No thanks"
 msgstr "Nie, dziękuję"
+
+msgid "Non-EU Deriv "
+msgstr ""
 
 msgid "Not"
 msgstr "Nie"
@@ -1482,6 +1509,9 @@ msgstr "Otwórz nowe konto bankowe"
 
 msgid "Opens"
 msgstr "Otwarcie"
+
+msgid "Options & Multipliers"
+msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Handel opcjami może stać się poważnym uzależnieniem, tak jak wszystkie inne czynności, którym poświęcamy zbyt wiele czasu. Aby zapobiec niebezpieczeństwu takiego uzależnienia, umożliwiamy sprawdzanie rzeczywistej sytuacji na bieżąco, co zapewnia Ci regularne zestawienie Twoich zakładów i kont."
@@ -1663,6 +1693,9 @@ msgstr "Możliwy zysk"
 msgid "Potential profit/loss"
 msgstr "Potencjalny zysk/strata"
 
+msgid "Pound Sterling"
+msgstr ""
+
 msgid "Predict the direction<br />and purchase"
 msgstr "Oszacuj kierunek zmian<br />i kup"
 
@@ -1831,6 +1864,9 @@ msgstr "Reset Put"
 msgid "Reset Time"
 msgstr "Moment resetowania"
 
+msgid "Reset balance"
+msgstr ""
+
 msgid "Reset barrier"
 msgstr "Limit resetowania"
 
@@ -1866,6 +1902,12 @@ msgstr "Słowa zapisane w odwrotnej kolejności nie są dużo trudniejsze do prz
 
 msgid "Revoke access"
 msgstr "Zablokowanie dostępu"
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
+msgstr ""
 
 msgid "Rise/Fall"
 msgstr "Wzrost/spadek"
@@ -1917,9 +1959,6 @@ msgstr "Wybierz dokument z kraju: %{country}"
 
 msgid "Select country"
 msgstr "Wybierz kraj"
-
-msgid "Select currency"
-msgstr "Wybierz walutę"
 
 msgid "Select date"
 msgstr "Wybierz datę"
@@ -2028,6 +2067,9 @@ msgstr "Zarejestruj się"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "SmartTrader is unavailable for this account"
+msgstr ""
 
 msgid "Something's gone wrong"
 msgstr "Coś poszło nie tak"
@@ -2157,6 +2199,9 @@ msgstr "Zakończono powodzeniem"
 
 msgid "Sunday"
 msgstr "Niedziela"
+
+msgid "Switch to another account"
+msgstr ""
 
 msgid "Synthetic"
 msgstr "Syntetyczne"
@@ -2476,17 +2521,14 @@ msgstr "Miasto"
 msgid "Trade"
 msgstr "Handluj"
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr "Handluj FX i kontraktami CFD na łatwej w użyciu platformie handlowej z możliwością dostosowania do Twoich potrzeb."
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr "Inwestuj w opcje cyfrowe na największych światowych rynkach w SmartTrader, zaawansowanej, ale prostej w obsłudze platformie on-line."
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
-msgstr "Inwestuj na Deriv MetaTrader 5 (DMT5), wszechstronnej platformie do handlowania kontraktami na różnice kursowe i forex."
-
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Handluj na światowych rynkach na naszej popularnej i przyjaznej platformie."
+
+msgid "Trader's hub"
+msgstr ""
 
 msgid "Trading Information"
 msgstr "Informacje o handlowaniu"
@@ -2539,6 +2581,9 @@ msgstr "Obrót"
 msgid "Type"
 msgstr "Typ"
 
+msgid "US Dollar"
+msgstr ""
+
 msgid "USD Coin"
 msgstr "USD Coin"
 
@@ -2553,6 +2598,9 @@ msgstr "Niedostępne"
 
 msgid "Understood"
 msgstr "Rozumiem"
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr ""
 
 msgid "Unknown OS"
 msgstr "Nieznany system operacyjny"
@@ -2676,6 +2724,9 @@ msgstr "Środa"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
 msgstr "Zaktualizujemy Twoje limity. Kliknij %1Zgadzam się i akceptuję%2, aby potwierdzić, że w pełni odpowiadasz za swoje działania i że nie ponosimy odpowiedzialności za uzależnienie ani straty."
+
+msgid "WhatsApp"
+msgstr ""
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "Gdy Cię poprosimy, włącz dostęp do aparatu, aby kontynuować"

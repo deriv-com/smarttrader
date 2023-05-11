@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-08 09:23\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgstr " (เพิ่มภูมิภาค)"
 
 msgid " (Temporarily unavailable)"
 msgstr " (ปิดให้บริการชั่วคราว)"
+
+msgid "%1"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 บัญชี %2"
@@ -94,11 +97,11 @@ msgstr "รับทราบ"
 msgid "Action"
 msgstr "การกระทำ"
 
+msgid "Add"
+msgstr ""
+
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "เพิ่ม +/ – เพื่อกำหนดส่วนชดเชยเส้นระดับราคาเป้าหมาย (Barrier Offset) เช่น +0.005 หมายถึงเส้นระดับราคาเป้าหมายที่อยู่สูงกว่าจุดเข้าไป 0.005"
-
-msgid "Add Deriv account"
-msgstr "เพิ่มบัญชี Deriv"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr "เพิ่มคำอื่นจำนวนหนึ่งหรือสองคำ ต้องไม่ใช่คำทั่วไปจะดีกว่า"
@@ -201,6 +204,9 @@ msgstr "ส.ค."
 
 msgid "August"
 msgstr "สิงหาคม"
+
+msgid "Australian Dollar"
+msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "โปรดพิสูจน์ยืนยันบัญชีของคุณตอนนี้เพื่อใช้ประโยชน์จากวิธีการชำระเงินที่มีให้ทั้งหมด"
@@ -574,14 +580,17 @@ msgstr "บัญชีทดลอง Financial STP"
 msgid "Demo Synthetic"
 msgstr "บัญชีทดลอง Synthetic"
 
+msgid "Demo account"
+msgstr ""
+
 msgid "Deposit"
 msgstr "ฝาก"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "ได้มีการปิดใช้งานการฝากและถอนเงินในบัญชีของคุณ โปรดตรวจสอบอีเมล์เพื่อศึกษารายละเอียดเพิ่มเติม"
 
-msgid "Deriv Accounts"
-msgstr "บัญชี Deriv"
+msgid "Deriv "
+msgstr ""
 
 msgid "Description"
 msgstr "คำบรรยาย"
@@ -664,6 +673,9 @@ msgstr "เนื่องจากปัญหาบนเซิร์ฟเว
 msgid "Duration"
 msgstr "ระยะเวลา"
 
+msgid "EU Deriv account"
+msgstr ""
+
 msgid "Email address"
 msgstr "อีเมล์แอดเดรส"
 
@@ -718,6 +730,9 @@ msgstr "Ether Classic"
 msgid "Ethereum"
 msgstr "Ethereum"
 
+msgid "Euro"
+msgstr ""
+
 msgid "Even/Odd"
 msgstr "เลขคู่/เลขคี่"
 
@@ -768,6 +783,12 @@ msgstr "หน้าที่มีรูปถ่ายใบหน้า"
 
 msgid "Failed"
 msgstr "ล้มเหลว"
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
+msgstr ""
 
 msgid "Feb"
 msgstr "ก.พ."
@@ -916,9 +937,6 @@ msgstr "ค่า tick สูง/ค่า tick ต่ำ"
 msgid "Higher"
 msgstr "สูงกว่า"
 
-msgid "Higher or equal"
-msgstr "สูงกว่า หรือ เท่ากับ"
-
 msgid "Higher/Lower"
 msgstr "สูงกว่า/ต่ำกว่า"
 
@@ -964,8 +982,8 @@ msgstr "ถ้า <strong>จุดออก</strong> มีค่าเท่�
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "หาก <strong>จุด Tick อันสุดท้าย</strong> นั้นเท่ากับค่าเฉลี่ยของจุด Tick ทั้งหมด คุณจะไม่ได้รับเงิน"
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "หากคุณเลือก \"อนุญาตค่าเท่ากับ\" ไปพร้อมกับการเลือก \"สูงกว่า\" คุณจะได้รับเงินผลตอบแทนก็ต่อเมื่อจุดออกมีค่าสูงกว่าหรือเท่ากับจุดเข้า และในทำนองเดียวกัน หากเลือกมันพร้อมกับการเลือก \"ต่ำกว่า\" คุณจะได้รับเงินต่อเมื่อจุดออกมีค่าต่ำกว่าหรือเท่ากับจุดเข้า"
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "หากคุณเลือก \"ภูมิภาคเอเชียขาลง\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุด Tick อันสุดท้าย</strong> มีค่า <strong>ต่ำ</strong> กว่า <strong>ค่าเฉลี่ย</strong> ของจำนวนจุด Tick ทั้งหมดในช่วงเวลาสัญญา"
@@ -988,6 +1006,9 @@ msgstr "หากคุณเลือก \"สิ้นสุดภายนอ
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr "หากคุณเลือก \"เลขคู่\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>เลขหลักสุดท้าย</strong> ของจุด Tick อันสุดท้ายมีค่าเป็น <strong>เลขคู่ (ได้แก่ 2 4 6 8 และ 0)</strong>"
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "หากคุณเลือก \"ลง\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าต่ำกว่า <strong>จุดเข้า</strong>"
 
@@ -997,14 +1018,8 @@ msgstr "หากคุณเลือก \"ออกข้างนอก\" ค
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "หากคุณเลือก \"สูงกว่า\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าสูงกว่า <strong>เส้นระดับราคาเป้าหมาย</strong>"
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "หากคุณเลือก \"สูงกว่า\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> สูงกว่า <strong>จุดเข้า</strong>"
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
 msgstr "หากคุณเลือก \"ต่ำกว่า\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าต่ำกว่า <strong>เส้นระดับราคาเป้าหมาย</strong>"
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "หากคุณเลือก \"ต่ำกว่า\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> ต่ำกว่า <strong>จุดเข้า</strong>"
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr "หากคุณเลือก \"ตรงกัน\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>เลขหลักสุดท้าย</strong> ของจุด Tick อันสุดท้ายมีค่า <strong>เหมือนกัน</strong> กับ <strong>ค่าที่คุณคาดการณ์ไว้</strong>"
@@ -1020,6 +1035,9 @@ msgstr "หากคุณเลือก \"รีเซ็ต-ซื้อ\" �
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
 msgstr "หากคุณเลือก \"รีเซ็ต-ขาย\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกมีค่าต่ำกว่าจุดเข้า หรือ จุด ณ เวลารีเซ็ต"
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "หากคุณเลือก \"ขึ้น\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าสูงกว่า<strong>จุดเข้า</strong>"
@@ -1186,6 +1204,9 @@ msgstr "เข้าสู่ระบบที่:"
 msgid "Lookbacks"
 msgstr "แบบการมองย้อนกลับ (Lookbacks)"
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
 msgid "Looks like you took too long"
 msgstr "ดูเหมือนว่าคุณใช้เวลานานเกินไป"
 
@@ -1209,9 +1230,6 @@ msgstr "ส่วนชดเชยหรือออฟเซ็ตเส้น
 
 msgid "Lower"
 msgstr "ต่ำกว่า"
-
-msgid "Lower or equal"
-msgstr "ต่ำกว่า หรือ เท่ากับ"
 
 msgid "MT5"
 msgstr "MT5"
@@ -1257,6 +1275,9 @@ msgstr "โปรดตรวจสอบให้แน่ใจว่า ภ�
 
 msgid "Make sure§"
 msgstr "โปรดตรวจสอบให้แน่ใจว่า§"
+
+msgid "Manage accounts"
+msgstr ""
 
 msgid "Mar"
 msgstr "มี.ค."
@@ -1318,6 +1339,9 @@ msgstr "ตัวคูณลง"
 msgid "Multiplier Up"
 msgstr "ตัวคูณขึ้น"
 
+msgid "Multipliers"
+msgstr ""
+
 msgid "Must be under 10MB."
 msgstr "ต้องมีขนาดไม่เกิน 10MB"
 
@@ -1374,6 +1398,9 @@ msgstr "ไม่มีการแจ้งเตือน"
 
 msgid "No thanks"
 msgstr "ไม่ ขอบคุณ"
+
+msgid "Non-EU Deriv "
+msgstr ""
 
 msgid "Not"
 msgstr "ไม่"
@@ -1482,6 +1509,9 @@ msgstr "เปิดบัญชีธนาคารอันใหม่ขอ
 
 msgid "Opens"
 msgstr "เปิด"
+
+msgid "Options & Multipliers"
+msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "การซื้อขายตราสารสิทธิสามารถนำสู่การเสพติดจริงๆ ได้เช่นเดียวกันกับการทำกิจกรรมอื่นๆ ที่มากเกินขีดจำกัด ดังนั้น เพื่อหลีกเลี่ยงอันตรายจากการเสพติดดังกล่าว เราจึงนำเสนอการตรวจสอบความเป็นจริงหรือ reality check ที่ส่งรายงานสรุปการซื้อขายของคุณในบัญชีต่างๆ ให้คุณดูอยู่เป็นประจำ"
@@ -1663,6 +1693,9 @@ msgstr "กำไรประมาณการ"
 msgid "Potential profit/loss"
 msgstr "กำไร/ขาดทุน ประมาณการ"
 
+msgid "Pound Sterling"
+msgstr ""
+
 msgid "Predict the direction<br />and purchase"
 msgstr "คาดการณ์ทิศทาง<br />และซื้อ"
 
@@ -1831,6 +1864,9 @@ msgstr "รีเซ็ตการขาย"
 msgid "Reset Time"
 msgstr "รีเซ็ตเวลา"
 
+msgid "Reset balance"
+msgstr ""
+
 msgid "Reset barrier"
 msgstr "รีเซ็ตค่าเส้นระดับราคาเป้าหมาย"
 
@@ -1866,6 +1902,12 @@ msgstr "การนำคำมาผวนสลับกันนั้นไ
 
 msgid "Revoke access"
 msgstr "เพิกถอนการเข้าถึง"
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
+msgstr ""
 
 msgid "Rise/Fall"
 msgstr "ขึ้น/ลง"
@@ -1917,9 +1959,6 @@ msgstr "เลือกเอกสาร %{country}"
 
 msgid "Select country"
 msgstr "เลือกประเทศ"
-
-msgid "Select currency"
-msgstr "เลือกสกุลเงิน"
 
 msgid "Select date"
 msgstr "ระบุวันที่"
@@ -2028,6 +2067,9 @@ msgstr "ลงทะเบียนสมัคร"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "SmartTrader is unavailable for this account"
+msgstr ""
 
 msgid "Something's gone wrong"
 msgstr "มีบางอย่างผิดปกติ"
@@ -2157,6 +2199,9 @@ msgstr "สำเร็จแล้ว"
 
 msgid "Sunday"
 msgstr "วันอาทิตย์"
+
+msgid "Switch to another account"
+msgstr ""
 
 msgid "Synthetic"
 msgstr "สินทรัพย์สังเคราะห์"
@@ -2476,17 +2521,14 @@ msgstr "เมือง"
 msgid "Trade"
 msgstr "เทรด"
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr "เทรดค่าเงิน Forex และสัญญาส่วนต่าง (CFD) บนแพลตฟอร์มการซื้อขายที่ปรับแต่งได้และใช้งานง่าย"
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr "เทรดตราสารสิทธิดิจิทัลในตลาดโลกไปกับ SmartTrader ซึ่งเป็นแพลตฟอร์มการซื้อขายออนไลน์ที่ทรงพลังและเป็นมิตรกับผู้ใช้"
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
-msgstr "ทำการซื้อขายบน Deriv MetaTrader 5 (DMT5) ซึ่งเป็นแพลตฟอร์มการซื้อขาย FX และ CFD แบบครบวงจร"
-
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "ทำการเทรดในตลาดโลกไปกับแพลตฟอร์มที่ใช้งานง่ายและเป็นที่นิยมของเรา"
+
+msgid "Trader's hub"
+msgstr ""
 
 msgid "Trading Information"
 msgstr "ข้อมูลการซื้อขาย"
@@ -2539,6 +2581,9 @@ msgstr "การหมุนเวียน"
 msgid "Type"
 msgstr "ประเภท"
 
+msgid "US Dollar"
+msgstr ""
+
 msgid "USD Coin"
 msgstr "USD Coin"
 
@@ -2553,6 +2598,9 @@ msgstr "ไม่มีให้ใช้งาน"
 
 msgid "Understood"
 msgstr "เข้าใจ"
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr ""
 
 msgid "Unknown OS"
 msgstr "ระบบปฏิบัติการที่ไม่รู้จัก"
@@ -2676,6 +2724,9 @@ msgstr "วันพุธ"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
 msgstr "เราจะอัปเดตขีดจำกัดของคุณ คลิก %1เห็นด้วยและยอมรับ%2 เพื่อรับทราบว่า คุณต้องรับผิดชอบอย่างเต็มที่ต่อการกระทำของคุณ และเราจะไม่รับผิดชอบต่อการเสพติดหรือการสูญเสียใดๆ"
+
+msgid "WhatsApp"
+msgstr ""
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "เมื่อได้รับแจ้งเตือน คุณต้องเปิดใช้งานการเข้าถึงกล้องเพื่อดําเนินการต่อ"

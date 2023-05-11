@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-03-31 03:56\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,9 @@ msgid " (Region added)"
 msgstr ""
 
 msgid " (Temporarily unavailable)"
+msgstr ""
+
+msgid "%1"
 msgstr ""
 
 msgid "%1 Account %2"
@@ -94,10 +97,10 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
+msgid "Add"
 msgstr ""
 
-msgid "Add Deriv account"
+msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr ""
 
 msgid "Add another word or two. Uncommon words are better."
@@ -200,6 +203,9 @@ msgid "Aug"
 msgstr ""
 
 msgid "August"
+msgstr ""
+
+msgid "Australian Dollar"
 msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
@@ -574,13 +580,16 @@ msgstr ""
 msgid "Demo Synthetic"
 msgstr ""
 
+msgid "Demo account"
+msgstr ""
+
 msgid "Deposit"
 msgstr ""
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr ""
 
-msgid "Deriv Accounts"
+msgid "Deriv "
 msgstr ""
 
 msgid "Description"
@@ -664,6 +673,9 @@ msgstr ""
 msgid "Duration"
 msgstr ""
 
+msgid "EU Deriv account"
+msgstr ""
+
 msgid "Email address"
 msgstr ""
 
@@ -718,6 +730,9 @@ msgstr ""
 msgid "Ethereum"
 msgstr ""
 
+msgid "Euro"
+msgstr ""
+
 msgid "Even/Odd"
 msgstr ""
 
@@ -767,6 +782,12 @@ msgid "Face photo page"
 msgstr ""
 
 msgid "Failed"
+msgstr ""
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
 msgstr ""
 
 msgid "Feb"
@@ -916,9 +937,6 @@ msgstr ""
 msgid "Higher"
 msgstr ""
 
-msgid "Higher or equal"
-msgstr ""
-
 msgid "Higher/Lower"
 msgstr ""
 
@@ -964,7 +982,7 @@ msgstr ""
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr ""
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
 msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
@@ -988,6 +1006,9 @@ msgstr ""
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr ""
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr ""
 
@@ -997,13 +1018,7 @@ msgstr ""
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr ""
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr ""
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
@@ -1019,6 +1034,9 @@ msgid "If you select \"Reset-Call\", you win the payout if the exit spot is stri
 msgstr ""
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
+msgstr ""
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
@@ -1186,6 +1204,9 @@ msgstr ""
 msgid "Lookbacks"
 msgstr ""
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
 msgid "Looks like you took too long"
 msgstr ""
 
@@ -1208,9 +1229,6 @@ msgid "Low barrier offset"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
-
-msgid "Lower or equal"
 msgstr ""
 
 msgid "MT5"
@@ -1256,6 +1274,9 @@ msgid "Make sure your selfie clearly shows your face"
 msgstr ""
 
 msgid "Make sure§"
+msgstr ""
+
+msgid "Manage accounts"
 msgstr ""
 
 msgid "Mar"
@@ -1318,6 +1339,9 @@ msgstr ""
 msgid "Multiplier Up"
 msgstr ""
 
+msgid "Multipliers"
+msgstr ""
+
 msgid "Must be under 10MB."
 msgstr ""
 
@@ -1373,6 +1397,9 @@ msgid "No notifications"
 msgstr ""
 
 msgid "No thanks"
+msgstr ""
+
+msgid "Non-EU Deriv "
 msgstr ""
 
 msgid "Not"
@@ -1481,6 +1508,9 @@ msgid "Open your new bank account"
 msgstr ""
 
 msgid "Opens"
+msgstr ""
+
+msgid "Options & Multipliers"
 msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
@@ -1663,6 +1693,9 @@ msgstr ""
 msgid "Potential profit/loss"
 msgstr ""
 
+msgid "Pound Sterling"
+msgstr ""
+
 msgid "Predict the direction<br />and purchase"
 msgstr ""
 
@@ -1831,6 +1864,9 @@ msgstr ""
 msgid "Reset Time"
 msgstr ""
 
+msgid "Reset balance"
+msgstr ""
+
 msgid "Reset barrier"
 msgstr ""
 
@@ -1865,6 +1901,12 @@ msgid "Reversed words aren't much harder to guess"
 msgstr ""
 
 msgid "Revoke access"
+msgstr ""
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
 msgstr ""
 
 msgid "Rise/Fall"
@@ -1916,9 +1958,6 @@ msgid "Select a %{country} document"
 msgstr ""
 
 msgid "Select country"
-msgstr ""
-
-msgid "Select currency"
 msgstr ""
 
 msgid "Select date"
@@ -2027,6 +2066,9 @@ msgid "Sign up"
 msgstr ""
 
 msgid "SmartTrader"
+msgstr ""
+
+msgid "SmartTrader is unavailable for this account"
 msgstr ""
 
 msgid "Something's gone wrong"
@@ -2156,6 +2198,9 @@ msgid "Successful"
 msgstr ""
 
 msgid "Sunday"
+msgstr ""
+
+msgid "Switch to another account"
 msgstr ""
 
 msgid "Synthetic"
@@ -2476,16 +2521,13 @@ msgstr ""
 msgid "Trade"
 msgstr ""
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr ""
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr ""
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr ""
 
-msgid "Trade the world's markets with our popular user-friendly platform."
+msgid "Trader's hub"
 msgstr ""
 
 msgid "Trading Information"
@@ -2539,6 +2581,9 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
+msgid "US Dollar"
+msgstr ""
+
 msgid "USD Coin"
 msgstr ""
 
@@ -2552,6 +2597,9 @@ msgid "Unavailable"
 msgstr ""
 
 msgid "Understood"
+msgstr ""
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
 msgstr ""
 
 msgid "Unknown OS"
@@ -2675,6 +2723,9 @@ msgid "Wednesday"
 msgstr ""
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "WhatsApp"
 msgstr ""
 
 msgid "When prompted, you must enable camera access to continue"

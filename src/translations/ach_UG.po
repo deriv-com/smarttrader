@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-06-02 06:20\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgstr "crwdns162674:0crwdne162674:0"
 
 msgid " (Temporarily unavailable)"
 msgstr "crwdns162676:0crwdne162676:0"
+
+msgid "%1"
+msgstr "crwdns1990063:0%1crwdne1990063:0"
 
 msgid "%1 Account %2"
 msgstr "crwdns90328:0%1crwdnd90328:0%2crwdne90328:0"
@@ -94,11 +97,11 @@ msgstr "crwdns90914:0crwdne90914:0"
 msgid "Action"
 msgstr "crwdns90920:0crwdne90920:0"
 
+msgid "Add"
+msgstr "crwdns1990065:0crwdne1990065:0"
+
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "crwdns90932:0crwdne90932:0"
-
-msgid "Add Deriv account"
-msgstr "crwdns116926:0crwdne116926:0"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr "crwdns162684:0crwdne162684:0"
@@ -201,6 +204,9 @@ msgstr "crwdns91380:0crwdne91380:0"
 
 msgid "August"
 msgstr "crwdns91382:0crwdne91382:0"
+
+msgid "Australian Dollar"
+msgstr "crwdns1990067:0crwdne1990067:0"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "crwdns116930:0crwdne116930:0"
@@ -574,14 +580,17 @@ msgstr "crwdns123132:0crwdne123132:0"
 msgid "Demo Synthetic"
 msgstr "crwdns123134:0crwdne123134:0"
 
+msgid "Demo account"
+msgstr "crwdns1990069:0crwdne1990069:0"
+
 msgid "Deposit"
 msgstr "crwdns92562:0crwdne92562:0"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "crwdns92582:0crwdne92582:0"
 
-msgid "Deriv Accounts"
-msgstr "crwdns116960:0crwdne116960:0"
+msgid "Deriv "
+msgstr "crwdns1990071:0crwdne1990071:0"
 
 msgid "Description"
 msgstr "crwdns92596:0crwdne92596:0"
@@ -664,6 +673,9 @@ msgstr "crwdns162790:0%1crwdne162790:0"
 msgid "Duration"
 msgstr "crwdns92764:0crwdne92764:0"
 
+msgid "EU Deriv account"
+msgstr "crwdns1990073:0crwdne1990073:0"
+
 msgid "Email address"
 msgstr "crwdns92862:0crwdne92862:0"
 
@@ -718,6 +730,9 @@ msgstr "crwdns92940:0crwdne92940:0"
 msgid "Ethereum"
 msgstr "crwdns162800:0crwdne162800:0"
 
+msgid "Euro"
+msgstr "crwdns1990075:0crwdne1990075:0"
+
 msgid "Even/Odd"
 msgstr "crwdns92986:0crwdne92986:0"
 
@@ -768,6 +783,12 @@ msgstr "crwdns162810:0crwdne162810:0"
 
 msgid "Failed"
 msgstr "crwdns93204:0crwdne93204:0"
+
+msgid "Fall"
+msgstr "crwdns1990077:0crwdne1990077:0"
+
+msgid "Fall or equal"
+msgstr "crwdns1990079:0crwdne1990079:0"
 
 msgid "Feb"
 msgstr "crwdns93238:0crwdne93238:0"
@@ -916,9 +937,6 @@ msgstr "crwdns93648:0crwdne93648:0"
 msgid "Higher"
 msgstr "crwdns93650:0crwdne93650:0"
 
-msgid "Higher or equal"
-msgstr "crwdns93652:0crwdne93652:0"
-
 msgid "Higher/Lower"
 msgstr "crwdns93654:0crwdne93654:0"
 
@@ -964,8 +982,8 @@ msgstr "crwdns93830:0crwdne93830:0"
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "crwdns93834:0crwdne93834:0"
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "crwdns93934:0crwdne93934:0"
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr "crwdns1990081:0crwdne1990081:0"
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "crwdns93936:0crwdne93936:0"
@@ -988,6 +1006,9 @@ msgstr "crwdns93946:0crwdne93946:0"
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr "crwdns93948:0crwdne93948:0"
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr "crwdns1990083:0crwdne1990083:0"
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "crwdns93950:0crwdne93950:0"
 
@@ -997,14 +1018,8 @@ msgstr "crwdns93952:0crwdne93952:0"
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "crwdns93956:0crwdne93956:0"
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "crwdns93958:0crwdne93958:0"
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
 msgstr "crwdns93960:0crwdne93960:0"
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "crwdns93962:0crwdne93962:0"
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr "crwdns93964:0crwdne93964:0"
@@ -1020,6 +1035,9 @@ msgstr "crwdns93970:0crwdne93970:0"
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
 msgstr "crwdns93972:0crwdne93972:0"
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr "crwdns1990085:0crwdne1990085:0"
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "crwdns93974:0crwdne93974:0"
@@ -1186,6 +1204,9 @@ msgstr "crwdns162866:0crwdne162866:0"
 msgid "Lookbacks"
 msgstr "crwdns94576:0crwdne94576:0"
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr "crwdns1990087:0crwdne1990087:0"
+
 msgid "Looks like you took too long"
 msgstr "crwdns162868:0crwdne162868:0"
 
@@ -1209,9 +1230,6 @@ msgstr "crwdns94602:0crwdne94602:0"
 
 msgid "Lower"
 msgstr "crwdns94606:0crwdne94606:0"
-
-msgid "Lower or equal"
-msgstr "crwdns94608:0crwdne94608:0"
 
 msgid "MT5"
 msgstr "crwdns162870:0crwdne162870:0"
@@ -1257,6 +1275,9 @@ msgstr "crwdns162892:0crwdne162892:0"
 
 msgid "Make sure§"
 msgstr "crwdns162894:0crwdne162894:0"
+
+msgid "Manage accounts"
+msgstr "crwdns1990089:0crwdne1990089:0"
 
 msgid "Mar"
 msgstr "crwdns94736:0crwdne94736:0"
@@ -1318,6 +1339,9 @@ msgstr "crwdns94970:0crwdne94970:0"
 msgid "Multiplier Up"
 msgstr "crwdns94972:0crwdne94972:0"
 
+msgid "Multipliers"
+msgstr "crwdns1990091:0crwdne1990091:0"
+
 msgid "Must be under 10MB."
 msgstr "crwdns162904:0crwdne162904:0"
 
@@ -1374,6 +1398,9 @@ msgstr "crwdns116978:0crwdne116978:0"
 
 msgid "No thanks"
 msgstr "crwdns95118:0crwdne95118:0"
+
+msgid "Non-EU Deriv "
+msgstr "crwdns1990093:0crwdne1990093:0"
 
 msgid "Not"
 msgstr "crwdns95126:0crwdne95126:0"
@@ -1482,6 +1509,9 @@ msgstr "crwdns162922:0crwdne162922:0"
 
 msgid "Opens"
 msgstr "crwdns95310:0crwdne95310:0"
+
+msgid "Options & Multipliers"
+msgstr "crwdns1990095:0crwdne1990095:0"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "crwdns123466:0crwdne123466:0"
@@ -1663,6 +1693,9 @@ msgstr "crwdns123470:0crwdne123470:0"
 msgid "Potential profit/loss"
 msgstr "crwdns116996:0crwdne116996:0"
 
+msgid "Pound Sterling"
+msgstr "crwdns1990097:0crwdne1990097:0"
+
 msgid "Predict the direction<br />and purchase"
 msgstr "crwdns95818:0crwdne95818:0"
 
@@ -1831,6 +1864,9 @@ msgstr "crwdns96204:0crwdne96204:0"
 msgid "Reset Time"
 msgstr "crwdns96206:0crwdne96206:0"
 
+msgid "Reset balance"
+msgstr "crwdns1990099:0crwdne1990099:0"
+
 msgid "Reset barrier"
 msgstr "crwdns117022:0crwdne117022:0"
 
@@ -1866,6 +1902,12 @@ msgstr "crwdns162978:0crwdne162978:0"
 
 msgid "Revoke access"
 msgstr "crwdns96260:0crwdne96260:0"
+
+msgid "Rise"
+msgstr "crwdns1990101:0crwdne1990101:0"
+
+msgid "Rise or equal"
+msgstr "crwdns1990103:0crwdne1990103:0"
 
 msgid "Rise/Fall"
 msgstr "crwdns96270:0crwdne96270:0"
@@ -1917,9 +1959,6 @@ msgstr "crwdns162990:0%{country}crwdne162990:0"
 
 msgid "Select country"
 msgstr "crwdns162992:0crwdne162992:0"
-
-msgid "Select currency"
-msgstr "crwdns118334:0crwdne118334:0"
 
 msgid "Select date"
 msgstr "crwdns96378:0crwdne96378:0"
@@ -2028,6 +2067,9 @@ msgstr "crwdns96498:0crwdne96498:0"
 
 msgid "SmartTrader"
 msgstr "crwdns96532:0crwdne96532:0"
+
+msgid "SmartTrader is unavailable for this account"
+msgstr "crwdns1990105:0crwdne1990105:0"
 
 msgid "Something's gone wrong"
 msgstr "crwdns163014:0crwdne163014:0"
@@ -2157,6 +2199,9 @@ msgstr "crwdns96748:0crwdne96748:0"
 
 msgid "Sunday"
 msgstr "crwdns96764:0crwdne96764:0"
+
+msgid "Switch to another account"
+msgstr "crwdns1990107:0crwdne1990107:0"
 
 msgid "Synthetic"
 msgstr "crwdns123150:0crwdne123150:0"
@@ -2476,17 +2521,14 @@ msgstr "crwdns98184:0crwdne98184:0"
 msgid "Trade"
 msgstr "crwdns98192:0crwdne98192:0"
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr "crwdns168619:0crwdne168619:0"
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr "crwdns168621:0crwdne168621:0"
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
-msgstr "crwdns168623:0crwdne168623:0"
-
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "crwdns168625:0crwdne168625:0"
+
+msgid "Trader's hub"
+msgstr "crwdns1990109:0crwdne1990109:0"
 
 msgid "Trading Information"
 msgstr "crwdns123154:0crwdne123154:0"
@@ -2539,6 +2581,9 @@ msgstr "crwdns123478:0crwdne123478:0"
 msgid "Type"
 msgstr "crwdns98396:0crwdne98396:0"
 
+msgid "US Dollar"
+msgstr "crwdns1990111:0crwdne1990111:0"
+
 msgid "USD Coin"
 msgstr "crwdns163108:0crwdne163108:0"
 
@@ -2553,6 +2598,9 @@ msgstr "crwdns163112:0crwdne163112:0"
 
 msgid "Understood"
 msgstr "crwdns98476:0crwdne98476:0"
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr "crwdns1990113:0crwdne1990113:0"
 
 msgid "Unknown OS"
 msgstr "crwdns98484:0crwdne98484:0"
@@ -2676,6 +2724,9 @@ msgstr "crwdns98774:0crwdne98774:0"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
 msgstr "crwdns163156:0%1crwdnd163156:0%2crwdne163156:0"
+
+msgid "WhatsApp"
+msgstr "crwdns1990115:0crwdne1990115:0"
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "crwdns163158:0crwdne163158:0"
