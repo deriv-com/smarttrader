@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-08 09:23\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgstr " (Khu vực đã được cập nhật)"
 
 msgid " (Temporarily unavailable)"
 msgstr " (Tạm thời không khả dụng)"
+
+msgid "%1"
+msgstr ""
 
 msgid "%1 Account %2"
 msgstr "%1 tài khoản %2"
@@ -94,11 +97,11 @@ msgstr "Sự thừa nhận"
 msgid "Action"
 msgstr "Hành động"
 
+msgid "Add"
+msgstr ""
+
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Thêm +/- để xác định một rào cản bù. Ví dụ, +0.005 có nghĩa là rào cản cao hơn 0,005 so với điểm khởi đầu."
-
-msgid "Add Deriv account"
-msgstr "Thêm tài khoản Deriv"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr "Thêm một hoặc hai từ khác. Những từ không phổ biến sẽ tốt hơn."
@@ -201,6 +204,9 @@ msgstr "Tháng 8"
 
 msgid "August"
 msgstr "Tháng 8"
+
+msgid "Australian Dollar"
+msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Xác thực tài khoản của bạn ngay để sử dụng đầy đủ tất cả các hình thức thanh toán có sẵn."
@@ -574,14 +580,17 @@ msgstr "Demo tài chính STP"
 msgid "Demo Synthetic"
 msgstr "Tổng hợp demo"
 
+msgid "Demo account"
+msgstr ""
+
 msgid "Deposit"
 msgstr "Nạp tiền"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "Nạp tiền và rút tiền đã bị vô hiệu hoá trên tài khoản của bạn. Vui lòng kiểm tra email của bạn để biết chi tiết."
 
-msgid "Deriv Accounts"
-msgstr "Tài khoản Deriv"
+msgid "Deriv "
+msgstr ""
 
 msgid "Description"
 msgstr "Mô tả"
@@ -664,6 +673,9 @@ msgstr "Do vấn đề với máy chủ, một số tài khoản MT5 của bạn
 msgid "Duration"
 msgstr "Khoảng thời gian"
 
+msgid "EU Deriv account"
+msgstr ""
+
 msgid "Email address"
 msgstr "Địa chỉ Email"
 
@@ -718,6 +730,9 @@ msgstr "Ether Classic"
 msgid "Ethereum"
 msgstr "Ethereum"
 
+msgid "Euro"
+msgstr ""
+
 msgid "Even/Odd"
 msgstr "Hòa vốn/ Số dư"
 
@@ -768,6 +783,12 @@ msgstr "Trang ảnh khuôn mặt"
 
 msgid "Failed"
 msgstr "Thất bại"
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
+msgstr ""
 
 msgid "Feb"
 msgstr "Tháng Hai"
@@ -916,9 +937,6 @@ msgstr "Tick Cao/Thấp"
 msgid "Higher"
 msgstr "Cao Hơn"
 
-msgid "Higher or equal"
-msgstr "Cao Hơn hoặc Bằng"
-
 msgid "Higher/Lower"
 msgstr "Cao Hơn/Thấp Hơn"
 
@@ -964,8 +982,8 @@ msgstr "Nếu</strong>điểm chốt<strong> bằng với <strong>rào cản</st
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "Nếu <strong>tick cuối</strong> bằng với trung bình các tick, bạn sẽ không thắng các thanh toán."
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "Nếu bạn chọn \"Cho phép bằng nhau\", bạn sẽ giành chiến thắng các thanh toán nếu điểm khởi đầu cao hơn hoặc bằng điểm chốt cho \"Cao Hơn\". Tương tự, bạn giành chiến thắng các thanh toán nếu điểm chốt thấp hơn hoặc bằng điểm khởi đầu cho \"Thấp Hơn\"."
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Nếu bạn chọn \"Châu Á Giảm\", bạn sẽ giành chiến thắng nếu <strong> giá ở tick cuối cùng </strong> là <strong>thấp hơn</strong> so với <strong>trung bình</strong> của giá trong suốt giao dịch."
@@ -988,6 +1006,9 @@ msgstr "Nếu bạn chọn \"Kết Thúc Bên Ngoài\", bạn sẽ thắng nê�
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr "Nếu bạn chọn \"Chẵn\", bạn sẽ chiến thắng nếu <strong>chữ số cuối cùng</strong> của tick cuối cùng là<strong>một số chẵn (ví dụ: 2, 4, 6, 8 hoặc 0)</strong>"
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Nếu bạn chọn \"Giảm\", bạn sẽ giành chiến thắng nếu <strong>điểm chốt</strong> thấp hơn <strong>điểm khởi đầu</strong>."
 
@@ -997,14 +1018,8 @@ msgstr "Nếu bạn chọn \"Ra Ngoài\", bạn sẽ giành chiến thắng n�
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "Nếu bạn chọn \"Cao hơn\", bạn sẽ giành chiến thắng nếu <strong>điểm chốt</strong> cao hơn <strong>rào cản</strong>."
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Nếu bạn chọn \"Cao Hơn\", bạn sẽ giành chiến thắng nếu <strong> điểm chốt</strong> cao hơn <strong>điểm khởi đầu</strong>."
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
 msgstr "Nếu bạn chọn \"Thấp hơn\", bạn sẽ giành chiến thắng nếu <strong>điểm chốt</strong> thấp hơn <strong>rào cản</strong>."
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Nếu bạn chọn \"Thấp Hơn\", bạn sẽ giành chiến thắng nếu <strong>điểm chốt</strong> thấp hơn <strong>điểm khởi đầu</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr "Nếu bạn chọn \"Khớp\", bạn sẽ giành chiến thắng nếu <strong>chữ số cuối cùng</strong> của giá tại thời điểm kết thúc giao dịch <strong>same</strong> giống với <strong>dự đoán của bạn</strong>"
@@ -1020,6 +1035,9 @@ msgstr "Nếu bạn chọn \"Đặt lại Gọi Biên\", bạn sẽ giành chi
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
 msgstr "Nếu bạn chọn \"Đặt lại Đặt Biên\", bạn sẽ giành chiến thắng nếu giá tại điểm chốt thấp hơn giá khởi điểm hoặc mốc tại thời điểm đặt lại."
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "Nếu bạn chọn \"Tăng\", bạn sẽ giành chiến thắng nếu <strong>điểm chốt</strong> cao hơn <strong>điểm khởi đầu </strong>."
@@ -1186,6 +1204,9 @@ msgstr "Đăng nhập tại:"
 msgid "Lookbacks"
 msgstr "Lookbacks"
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
 msgid "Looks like you took too long"
 msgstr "Có vẻ bạn đã mất quá nhiều thời gian"
 
@@ -1209,9 +1230,6 @@ msgstr "Rào cản thấp bù"
 
 msgid "Lower"
 msgstr "Thấp hơn"
-
-msgid "Lower or equal"
-msgstr "Thấp hơn hoặc bằng"
 
 msgid "MT5"
 msgstr "MT5"
@@ -1257,6 +1275,9 @@ msgstr "Đảm bảo ảnh tự chụp của bạn hiển thị rõ ràng khuôn
 
 msgid "Make sure§"
 msgstr "Hãy đảm bảo§"
+
+msgid "Manage accounts"
+msgstr ""
 
 msgid "Mar"
 msgstr "Tháng Ba"
@@ -1318,6 +1339,9 @@ msgstr "Số nhân Giảm"
 msgid "Multiplier Up"
 msgstr "Số nhân Tăng"
 
+msgid "Multipliers"
+msgstr ""
+
 msgid "Must be under 10MB."
 msgstr "Phải dưới 10MB."
 
@@ -1374,6 +1398,9 @@ msgstr "Không có thông báo"
 
 msgid "No thanks"
 msgstr "Không, cám ơn"
+
+msgid "Non-EU Deriv "
+msgstr ""
 
 msgid "Not"
 msgstr "Không"
@@ -1482,6 +1509,9 @@ msgstr "Mở mới tài khoản ngân hàng của bạn"
 
 msgid "Opens"
 msgstr "Mở"
+
+msgid "Options & Multipliers"
+msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Giao dịch Binary Option có thể gây nghiện thực sự, và có thể thúc đẩy bạn chơi tới mức tới giới hạn của mình. Để tránh sự nguy hiểm của trường hợp nghiện này, chúng tôi cung cấp cho bạn một công cụ kiểm tra thực tế tổng hợp các giao dịch và tài khoản của mình một cách thường xuyên."
@@ -1663,6 +1693,9 @@ msgstr "Lợi nhuận tiềm năng"
 msgid "Potential profit/loss"
 msgstr "Lợi nhuận/thua lỗ tiềm năng"
 
+msgid "Pound Sterling"
+msgstr ""
+
 msgid "Predict the direction<br />and purchase"
 msgstr "Dự đoán khuynh hướng<br />và thu mua"
 
@@ -1831,6 +1864,9 @@ msgstr "Đặt lại Put"
 msgid "Reset Time"
 msgstr "Thời gian đặt lại"
 
+msgid "Reset balance"
+msgstr ""
+
 msgid "Reset barrier"
 msgstr "Đặt lại Rào cản"
 
@@ -1866,6 +1902,12 @@ msgstr "Các từ đảo ngược không khó đoán"
 
 msgid "Revoke access"
 msgstr "Hủy bỏ truy cập"
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
+msgstr ""
 
 msgid "Rise/Fall"
 msgstr "Tăng/Giảm"
@@ -1917,9 +1959,6 @@ msgstr "Chọn một tài liệu %{country}"
 
 msgid "Select country"
 msgstr "Chọn quốc gia"
-
-msgid "Select currency"
-msgstr "Chọn tiền tệ"
 
 msgid "Select date"
 msgstr "Chọn ngày"
@@ -2028,6 +2067,9 @@ msgstr "Đăng kí"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "SmartTrader is unavailable for this account"
+msgstr ""
 
 msgid "Something's gone wrong"
 msgstr "Có vấn đề xảy ra"
@@ -2157,6 +2199,9 @@ msgstr "Thành công"
 
 msgid "Sunday"
 msgstr "Chủ nhật"
+
+msgid "Switch to another account"
+msgstr ""
 
 msgid "Synthetic"
 msgstr "Tổng hợp"
@@ -2476,17 +2521,14 @@ msgstr "Thành phố/Tỉnh thành"
 msgid "Trade"
 msgstr "Giao dịch"
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr "Giao dịch FX và CFD trên nền tảng giao dịch có thể tùy chỉnh, dễ sử dụng."
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr "Giao dịch quyền chọn kỹ thuật số trên thị trường thế giới với SmartTrader, một nền tảng giao dịch trực tuyến mạnh mẽ, thân thiện với người dùng."
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
-msgstr "Giao dịch trên Deriv MetaTrader 5 (DMT5), nền tảng tích hợp giao dịch FX và CFD trong một."
-
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Giao dịch trên các thị trường toàn cầu cùng nền tảng phổ biến và thân thiện với người dùng của chúng tôi."
+
+msgid "Trader's hub"
+msgstr ""
 
 msgid "Trading Information"
 msgstr "Thông tin giao dịch"
@@ -2539,6 +2581,9 @@ msgstr "Tỷ suất doanh thu"
 msgid "Type"
 msgstr "Loại"
 
+msgid "US Dollar"
+msgstr ""
+
 msgid "USD Coin"
 msgstr "USD Coin"
 
@@ -2553,6 +2598,9 @@ msgstr "Không khả dụng"
 
 msgid "Understood"
 msgstr "Đã hiểu"
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr ""
 
 msgid "Unknown OS"
 msgstr "Hệ điều hành không rõ"
@@ -2676,6 +2724,9 @@ msgstr "Thứ Tư"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
 msgstr "Chúng tôi sẽ cập nhật giới hạn của bạn. Chọn %1Đồng ý và chấp thuận%2 để xác nhận rằng bạn hoàn toàn chịu trách nhiệm cho các hành động của mình, và chúng tôi sẽ không chịu trách nhiệm cho bất kỳ ảnh hưởng gây nghiện hoặc mất mát nào."
+
+msgid "WhatsApp"
+msgstr ""
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "Khi được nhắc, bạn phải bật quyền truy cập máy ảnh để tiếp tục"

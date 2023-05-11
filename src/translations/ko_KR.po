@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-03-31 03:56\n"
+"PO-Revision-Date: 2023-05-11 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,9 @@ msgid " (Region added)"
 msgstr ""
 
 msgid " (Temporarily unavailable)"
+msgstr ""
+
+msgid "%1"
 msgstr ""
 
 msgid "%1 Account %2"
@@ -94,11 +97,11 @@ msgstr "인정합니다"
 msgid "Action"
 msgstr "활동"
 
+msgid "Add"
+msgstr ""
+
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "장벽 오프셋을 정의하기 위해 +/–를 추가하세요. 예를 들어서 +0.005는 엔트리 스팟보다 0.005가 더 높은 장벽을 의미합니다."
-
-msgid "Add Deriv account"
-msgstr "Deriv 계좌 추가하기"
 
 msgid "Add another word or two. Uncommon words are better."
 msgstr ""
@@ -201,6 +204,9 @@ msgstr "8월"
 
 msgid "August"
 msgstr "8월"
+
+msgid "Australian Dollar"
+msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "이용가능한 모든 지불 방식의 활용을 위해 지금 귀하의 계좌를 인증하세요."
@@ -574,14 +580,17 @@ msgstr ""
 msgid "Demo Synthetic"
 msgstr ""
 
+msgid "Demo account"
+msgstr ""
+
 msgid "Deposit"
 msgstr "예금"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "귀하의 계좌에서 예금과 인출이 중단되었습니다. 자세한 정보를 위해 귀하의 이메일을 확인하세요."
 
-msgid "Deriv Accounts"
-msgstr "Deriv 계좌"
+msgid "Deriv "
+msgstr ""
 
 msgid "Description"
 msgstr "설명"
@@ -664,6 +673,9 @@ msgstr ""
 msgid "Duration"
 msgstr "기간"
 
+msgid "EU Deriv account"
+msgstr ""
+
 msgid "Email address"
 msgstr "이메일 주소"
 
@@ -718,6 +730,9 @@ msgstr "이더 클래식"
 msgid "Ethereum"
 msgstr ""
 
+msgid "Euro"
+msgstr ""
+
 msgid "Even/Odd"
 msgstr "짝/홀"
 
@@ -768,6 +783,12 @@ msgstr ""
 
 msgid "Failed"
 msgstr "실패되었습니다"
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
+msgstr ""
 
 msgid "Feb"
 msgstr "2월"
@@ -916,9 +937,6 @@ msgstr "높은/낮은 틱"
 msgid "Higher"
 msgstr "상승"
 
-msgid "Higher or equal"
-msgstr "더 높음 또는 동등"
-
 msgid "Higher/Lower"
 msgstr "하이어/로우어"
 
@@ -964,8 +982,8 @@ msgstr "만약 <strong>엑싯 스팟</strong>이 <strong>장벽</strong>과 동�
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "만약 <strong>마지막 틱</strong>이 틱 병균과 동등할 경우, 귀하께서는 지불금을 받지 않습니다."
 
-msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Higher\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Lower\"."
-msgstr "귀하께서 만약 \"Allow equals\"을 선택하시면, \"Higher\"에 대하여 출구부가 진입부보다 더 높거나 동등할 때 귀하께서 지불금을 획득합니다. 비슷하게, \"Lower\"에 대하여 출구부가 진입부보다 더 낮거나 동등할 경우에 귀하께서 지불금을 획득합니다."
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "만약 귀하께서 \"Asian Fall\"를 선택하실 경우, 만약 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 더 <strong>낮은</strong>경우 지불금을 받게 되실 것입니다."
@@ -988,6 +1006,9 @@ msgstr "만약 귀하께서 \"Ends Outside\"를 선택하신다면, <strong>exit
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
 msgstr "귀하께서 만약 \"Even\"을 선택하실때에는, 가장 최근의 틱에서 <strong>가장 마지막의 숫자</strong>가 <strong>짝수 (예: 2, 4, 6, 8, or 0)</strong>인 경우 귀하께서는 지불금을 받게 됩니다."
 
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "만약 귀하께서 \"Falls\"를 선택하시면, <strong>exit spot</strong>이 <strong>entry spot</strong>보다 엄격히 더 낮은 경우 귀하께서 지불금을 획득합니다."
 
@@ -997,14 +1018,8 @@ msgstr "만약 귀하께서 \"Goes Outside\"를 선택하시는 경우, 시장�
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "귀하께서 \"Higher\"를 선택하시면, 만약 <strong>exit spot</strong>이 <strong>장벽</strong>보다 엄격히 높은 경우에 귀하께서 지불금을 획득합니다."
 
-msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "만약 귀하께서 \"Higher\"를 선택하시면, 만약 <strong>출구부</strong>가 엄격히 <strong>진입부</strong>보다 더 높을 시에 지불금을 획득합니다."
-
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
 msgstr ""
-
-msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "만약 귀하께서 \"Lower\"을 선택하시면, <strong>출구부</strong>가 엄격하게 <strong>진입부</strong>보다 더 낮을 시에 지불금을 획득합니다."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr ""
@@ -1019,6 +1034,9 @@ msgid "If you select \"Reset-Call\", you win the payout if the exit spot is stri
 msgstr ""
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
+msgstr ""
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
@@ -1186,6 +1204,9 @@ msgstr ""
 msgid "Lookbacks"
 msgstr "룩백"
 
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
 msgid "Looks like you took too long"
 msgstr ""
 
@@ -1209,9 +1230,6 @@ msgstr "낮은 장벽 오프셋"
 
 msgid "Lower"
 msgstr "하락"
-
-msgid "Lower or equal"
-msgstr "더 낮음 또는 동등"
 
 msgid "MT5"
 msgstr ""
@@ -1256,6 +1274,9 @@ msgid "Make sure your selfie clearly shows your face"
 msgstr ""
 
 msgid "Make sure§"
+msgstr ""
+
+msgid "Manage accounts"
 msgstr ""
 
 msgid "Mar"
@@ -1318,6 +1339,9 @@ msgstr "승수 다운"
 msgid "Multiplier Up"
 msgstr "승수 업"
 
+msgid "Multipliers"
+msgstr ""
+
 msgid "Must be under 10MB."
 msgstr ""
 
@@ -1374,6 +1398,9 @@ msgstr "공지 없음"
 
 msgid "No thanks"
 msgstr "아니오 괜찮습니다"
+
+msgid "Non-EU Deriv "
+msgstr ""
 
 msgid "Not"
 msgstr "아님"
@@ -1482,6 +1509,9 @@ msgstr ""
 
 msgid "Opens"
 msgstr "개장"
+
+msgid "Options & Multipliers"
+msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr ""
@@ -1663,6 +1693,9 @@ msgstr ""
 msgid "Potential profit/loss"
 msgstr "잠재적인 이익/손실"
 
+msgid "Pound Sterling"
+msgstr ""
+
 msgid "Predict the direction<br />and purchase"
 msgstr "방향<br />과 구매를 예측하세요"
 
@@ -1831,6 +1864,9 @@ msgstr "리셋 풋"
 msgid "Reset Time"
 msgstr "시간을 재설정하세요"
 
+msgid "Reset balance"
+msgstr ""
+
 msgid "Reset barrier"
 msgstr "장벽을 재설정하세요"
 
@@ -1866,6 +1902,12 @@ msgstr ""
 
 msgid "Revoke access"
 msgstr "접근 철회"
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
+msgstr ""
 
 msgid "Rise/Fall"
 msgstr "상승/하락"
@@ -1917,9 +1959,6 @@ msgstr ""
 
 msgid "Select country"
 msgstr ""
-
-msgid "Select currency"
-msgstr "통화를 선택하세요"
 
 msgid "Select date"
 msgstr "날을 선택하세요"
@@ -2028,6 +2067,9 @@ msgstr "가입"
 
 msgid "SmartTrader"
 msgstr "SmartTrader"
+
+msgid "SmartTrader is unavailable for this account"
+msgstr ""
 
 msgid "Something's gone wrong"
 msgstr ""
@@ -2157,6 +2199,9 @@ msgstr "성공적입니다"
 
 msgid "Sunday"
 msgstr "일요일"
+
+msgid "Switch to another account"
+msgstr ""
 
 msgid "Synthetic"
 msgstr ""
@@ -2476,16 +2521,13 @@ msgstr "타운/도시"
 msgid "Trade"
 msgstr "트레이드"
 
-msgid "Trade FX and CFDs on a customisable, easy-to-use trading platform."
-msgstr ""
-
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
 msgstr ""
 
-msgid "Trade on Deriv MetaTrader 5 (DMT5), the all-in-one FX and CFD trading platform."
+msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr ""
 
-msgid "Trade the world's markets with our popular user-friendly platform."
+msgid "Trader's hub"
 msgstr ""
 
 msgid "Trading Information"
@@ -2539,6 +2581,9 @@ msgstr ""
 msgid "Type"
 msgstr "종류"
 
+msgid "US Dollar"
+msgstr ""
+
 msgid "USD Coin"
 msgstr ""
 
@@ -2553,6 +2598,9 @@ msgstr ""
 
 msgid "Understood"
 msgstr "이해되었습니다"
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr ""
 
 msgid "Unknown OS"
 msgstr "알수없는 OS"
@@ -2675,6 +2723,9 @@ msgid "Wednesday"
 msgstr "수요일"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "WhatsApp"
 msgstr ""
 
 msgid "When prompted, you must enable camera access to continue"
