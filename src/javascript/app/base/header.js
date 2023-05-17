@@ -689,7 +689,6 @@ const Header = (() => {
         const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
         const has_multiple_CR_accounts    = all_login_ids.filter(loginid => loginid.startsWith('CR')).length > 1;
         const current_active_login        = Client.get('loginid');
-        const is_virtual                  = current_active_login.startsWith('VRTC');
         const manage_acc_btn              = document.getElementById('account__switcher-manage');
         const new_account_adder_deriv     = document.getElementById('account__switcher-new-account-deriv');
         const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
@@ -697,6 +696,10 @@ const Header = (() => {
         const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
         const multiplier_text             = localize('Multipliers');
         const account_header              = document.querySelectorAll('.header__accounts-multiple');
+        let is_virtual;
+        if (current_active_login) {
+            is_virtual                    = current_active_login.startsWith('VRTC');
+        }
         const showTradersHubLink = (show) => {
             traders_hub_link.style.display            = show ? 'flex' : 'none';
             account_switcher_seperator.style.display  = show ? 'block' : 'none';
