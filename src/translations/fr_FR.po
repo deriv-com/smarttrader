@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid " (Temporarily unavailable)"
 msgstr " (Temporairement indisponible)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
 msgstr "%1 Compte %2"
@@ -98,7 +98,7 @@ msgid "Action"
 msgstr "Action"
 
 msgid "Add"
-msgstr ""
+msgstr "Ajouter"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Ajouter + / – pour définir une compensation de barrière. Par exemple, +0.005 signifie une barrière qui est plus élevée que le point d’entrée de 0,005."
@@ -206,7 +206,7 @@ msgid "August"
 msgstr "août"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dollar australien"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Authentifiez votre compte maintenant profiter pleinement de toutes les possibilités de retrait disponibles."
@@ -581,7 +581,7 @@ msgid "Demo Synthetic"
 msgstr "Demo Synthétique"
 
 msgid "Demo account"
-msgstr ""
+msgstr "Compte Démo"
 
 msgid "Deposit"
 msgstr "Dépôt"
@@ -590,7 +590,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "Dépôts et retraits ont été désactivés sur votre compte. Veuillez vérifier votre email pour plus de détails."
 
 msgid "Deriv "
-msgstr ""
+msgstr "Dériv "
 
 msgid "Description"
 msgstr "Description"
@@ -674,7 +674,7 @@ msgid "Duration"
 msgstr "Durée"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "Compte EU Deriv"
 
 msgid "Email address"
 msgstr "Adresse e-mail"
@@ -731,7 +731,7 @@ msgid "Ethereum"
 msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 msgid "Even/Odd"
 msgstr "Pair/Impair"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "Échec"
 
 msgid "Fall"
-msgstr ""
+msgstr "Automne"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Chute ou équivalent"
 
 msgid "Feb"
 msgstr "fév."
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "Si le <strong>dernier tick</strong> est égal à la moyenne des ticks, vous ne gagnez pas le paiement."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "Si vous sélectionnez « Autoriser l'égalité », vous gagnez le paiement si le point de sortie est supérieur ou égal à la place d'entrée pour « Rise ». De même, vous gagnez le paiement si la place de sortie est inférieure ou égale à la place d'entrée pour « Fall »."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Si vous sélectionnez « Asiatique/baisse », vous gagnez si le <strong>dernier tick<strong> est <strong>inférieur<strong> à la <strong>moyenne<strong> des ticks."
@@ -1007,7 +1007,7 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "Si vous sélectionnez « Pair », vous gagnez si le <strong>dernier chiffre</strong> du dernier tick est un </strong>nombre pair (par ex. 2, 4, 6, 8, ou 0).</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Si vous sélectionnez \"Baisse\", vous gagnez le paiement si le <strong>point de sortie</strong> est strictement inférieur au <strong>point d'entrée</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Si vous sélectionnez « Baisse », vous gagnez si le <strong>point de sortie</strong> est strictement inférieur au </strong>point d'entrée</strong>."
@@ -1037,7 +1037,7 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "Si vous sélectionnez « Reset-Put », vous gagnez le paiement si le spot de sortie est strictement inférieur au spot d'entrée ou le spot au moment de la réinitialisation."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Si vous sélectionnez « Hausse », vous gagnez si le <strong>point de sortie</strong> est strictement supérieur au <strong>point d'entrée</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "Si vous sélectionnez « Hausse », vous gagnez si le <strong>point de sortie</strong> est strictement supérieur au </strong>point d'entrée</strong>."
@@ -1205,7 +1205,7 @@ msgid "Lookbacks"
 msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "Vous recherchez des comptes CFD ? Accédez au Trader's Hub"
 
 msgid "Looks like you took too long"
 msgstr "On dirait que vous avez pris trop de temps"
@@ -1277,7 +1277,7 @@ msgid "Make sure§"
 msgstr "Soyes sur§"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "Gérer les comptes"
 
 msgid "Mar"
 msgstr "mars"
@@ -1340,7 +1340,7 @@ msgid "Multiplier Up"
 msgstr "Multiplicateur Montée"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Multiplicateurs"
 
 msgid "Must be under 10MB."
 msgstr "Doit être inférieur à 10 Mo."
@@ -1400,7 +1400,7 @@ msgid "No thanks"
 msgstr "Non merci"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "Dériv non européen "
 
 msgid "Not"
 msgstr "Pas"
@@ -1511,7 +1511,7 @@ msgid "Opens"
 msgstr "Ouverture"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "Options et Multiplicateurs"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Le trading d'options binaires peut devenir une véritable addiction, au même titre que toute autre activité pratiquée de façon trop intensive. Pour éviter le danger d'une telle addiction, nous mettons en œuvre suivi réaliste de votre situation en vous fournissant régulièrement un relevé de vos opérations et de vos comptes."
@@ -1694,7 +1694,7 @@ msgid "Potential profit/loss"
 msgstr "Bénéfice/Perte Potentielle"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "livre sterling"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Prédire la direction<br />et acheter"
@@ -1865,7 +1865,7 @@ msgid "Reset Time"
 msgstr "Temps de réinitialisation"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "Réinitialiser le solde"
 
 msgid "Reset barrier"
 msgstr "Barrière de Réinitialisation"
@@ -1904,10 +1904,10 @@ msgid "Revoke access"
 msgstr "Révoquer l'accès"
 
 msgid "Rise"
-msgstr ""
+msgstr "Hausse"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Hausse ou égale"
 
 msgid "Rise/Fall"
 msgstr "Hausse/Baisse"
@@ -2069,7 +2069,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader n'est pas disponible pour ce compte"
 
 msgid "Something's gone wrong"
 msgstr "Un problème est survenu"
@@ -2201,7 +2201,7 @@ msgid "Sunday"
 msgstr "dimanche"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "Basculer vers un autre compte"
 
 msgid "Synthetic"
 msgstr "Synthétique"
@@ -2528,7 +2528,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Tradez sur les marchés mondiaux grâce à notre plateforme populaire et conviviale."
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Centre pour les traders"
 
 msgid "Trading Information"
 msgstr "Information de trading"
@@ -2582,7 +2582,7 @@ msgid "Type"
 msgstr "Type"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "Dollar américain"
 
 msgid "USD Coin"
 msgstr "USD Coin"
@@ -2600,7 +2600,7 @@ msgid "Understood"
 msgstr "Compris"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "Malheureusement, cette plateforme de trading n'est pas disponible pour le compte EU Deriv. Veuillez passer à un compte hors UE pour continuer à trader."
 
 msgid "Unknown OS"
 msgstr "Système d’exploitation inconnu"
@@ -2726,7 +2726,7 @@ msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge tha
 msgstr "Nous mettrons à jour vos limites. Cliquez sur %1Accepter et acceptez%2 pour reconnaître que vous êtes entièrement responsable de vos actions et que nous ne sommes pas responsables de toute dépendance ou perte."
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "Whatsapp"
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "Lorsque vous y êtes invité, vous devez activer l'accès à la caméra pour continuer"

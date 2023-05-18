@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid " (Temporarily unavailable)"
 msgstr " (暫時不可用)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
 msgstr "%1帳戶%2"
@@ -98,7 +98,7 @@ msgid "Action"
 msgstr "操作"
 
 msgid "Add"
-msgstr ""
+msgstr "新增"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "透過新增+/-給障礙偏移量定義。例如，+0.005 表示比入市現價高0.005 的障礙。"
@@ -206,7 +206,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "澳元"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "立刻進行帳戶驗證，以獲得付款選項的所有優惠。"
@@ -581,7 +581,7 @@ msgid "Demo Synthetic"
 msgstr "示範綜合"
 
 msgid "Demo account"
-msgstr ""
+msgstr "示範帳戶"
 
 msgid "Deposit"
 msgstr "存款"
@@ -590,7 +590,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "您的帳戶已被禁存款和提款。請檢查您的電子郵件，以瞭解更多詳情。"
 
 msgid "Deriv "
-msgstr ""
+msgstr "Deriv "
 
 msgid "Description"
 msgstr "描述"
@@ -674,7 +674,7 @@ msgid "Duration"
 msgstr "期限"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "歐盟 Deriv 帳戶"
 
 msgid "Email address"
 msgstr "電子郵件地址"
@@ -731,7 +731,7 @@ msgid "Ethereum"
 msgstr "以太坊"
 
 msgid "Euro"
-msgstr ""
+msgstr "歐元"
 
 msgid "Even/Odd"
 msgstr "偶/奇"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "失敗"
 
 msgid "Fall"
-msgstr ""
+msgstr "下跌"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "下跌或等於"
 
 msgid "Feb"
 msgstr "二月"
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "如果 <strong>最後跳動點</strong> 等於平均跳動點，您將不會贏得賠付。"
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "如果選擇 「允許等值」，如果退市現價高於或等於「上漲」的入市現價，將獲得賠付。同樣，如果退市現價低於或等於「下跌」的入市現價，將獲得賠付。"
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "如果您選擇「亞洲下跌」期權，<strong>當</strong><strong>最新價格</strong>低於<strong>平均</strong>價格時，您將獲得賠付。"
@@ -1007,7 +1007,7 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "如果您選擇「偶數」期權，只要<strong>最新價格的</strong>最後一個數字<strong>是偶數(如2、4、6、8或0)，您將獲得賠付。</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "如果選擇「下跌」期權，只要<strong>退市現價</strong>嚴格低於<strong>入市現價</strong>，您將獲得賠付。"
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "如果您選擇「下跌」期權，只要<strong>退市現價</strong>嚴格低於<strong>入市現價</strong>，您將獲得賠付。"
@@ -1037,7 +1037,7 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "如果您選擇「重設賣權」，只要退市現價嚴格低於入市現價或重設時現貨價，您將獲得賠付。"
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "如果選擇「上漲」期權，只要<strong>退市現價</strong>嚴格高於<strong>入市現價</strong>，您將獲得賠付。"
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "如果您選擇「上漲」期權，只要<strong>退市現價</strong>嚴格高於<strong>入市現價</strong>，您將獲得賠付。"
@@ -1205,7 +1205,7 @@ msgid "Lookbacks"
 msgstr "回顧"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "尋找差價合約帳戶？前往 Trader's hub"
 
 msgid "Looks like you took too long"
 msgstr "似乎時間過長"
@@ -1277,7 +1277,7 @@ msgid "Make sure§"
 msgstr "確保§"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "帳戶管理"
 
 msgid "Mar"
 msgstr "三月"
@@ -1340,7 +1340,7 @@ msgid "Multiplier Up"
 msgstr "乘數上漲"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "乘數期權"
 
 msgid "Must be under 10MB."
 msgstr "必須小於10MB。"
@@ -1400,7 +1400,7 @@ msgid "No thanks"
 msgstr "不，謝謝"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "非歐盟 Deriv "
 
 msgid "Not"
 msgstr "不"
@@ -1511,7 +1511,7 @@ msgid "Opens"
 msgstr "開盤"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "期權和乘數"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免發生此種風險，我們定期向您提供交易和財務的實況簡報。"
@@ -1694,7 +1694,7 @@ msgid "Potential profit/loss"
 msgstr "潛在利潤/虧損"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "英鎊"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "預測價格走向<br />並購入"
@@ -1865,7 +1865,7 @@ msgid "Reset Time"
 msgstr "重設時間"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "重設餘額"
 
 msgid "Reset barrier"
 msgstr "重設障礙"
@@ -1904,10 +1904,10 @@ msgid "Revoke access"
 msgstr "撤銷存取權限"
 
 msgid "Rise"
-msgstr ""
+msgstr "上漲"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "上漲或等於"
 
 msgid "Rise/Fall"
 msgstr "上漲/下跌"
@@ -2069,7 +2069,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "此帳戶不可用 SmartTrader"
 
 msgid "Something's gone wrong"
 msgstr "出現錯誤"
@@ -2201,7 +2201,7 @@ msgid "Sunday"
 msgstr "星期日"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "轉換到另一個帳戶"
 
 msgid "Synthetic"
 msgstr "綜合"
@@ -2528,7 +2528,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "在我們極受歡迎、人性化的平台進行全球市場交易。"
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Trader's hub"
 
 msgid "Trading Information"
 msgstr "交易資訊"
@@ -2582,7 +2582,7 @@ msgid "Type"
 msgstr "類型"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "美元"
 
 msgid "USD Coin"
 msgstr "USD Coin"
@@ -2600,7 +2600,7 @@ msgid "Understood"
 msgstr "理解"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "不幸的是，此交易平台不適用於歐盟 Deriv 帳戶。請切換到非歐盟帳戶以繼續交易。"
 
 msgid "Unknown OS"
 msgstr "未知 OS"
@@ -2726,7 +2726,7 @@ msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge tha
 msgstr "我們將更新您的限額。點選％1同意和接受％2以確認您對自己的行為負全部責任，如果您因此而上癮或蒙受損失，我們將不承擔任何責任。"
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "出現提示時，須啟用相機存取權限以繼續操作"

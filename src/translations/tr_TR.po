@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Language: tr_TR\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid " (Region added)"
-msgstr ""
+msgstr " (Bölge eklendi)"
 
 msgid " (Temporarily unavailable)"
-msgstr ""
+msgstr " (Geçici olarak kullanılamıyor)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
-msgstr ""
+msgstr "%1 Hesap %2"
 
 msgid "%1 Please click the link below to restart the password recovery process."
-msgstr ""
+msgstr "%1 Şifre kurtarma işlemini yeniden başlatmak için lütfen aşağıdaki bağlantıyı tıklayın."
 
 msgid "%1 and %2 cannot be the same."
-msgstr ""
+msgstr "%1 ve %2 aynı olamaz."
 
 msgid "%1 days %2 hours %3 minutes"
-msgstr ""
+msgstr "%1 günler %2 saatler %3 dakika"
 
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr ""
@@ -47,943 +47,943 @@ msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr ""
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr ""
+msgstr "%1 Sanal Hesabınıza yatırıldı: %2."
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
 msgstr ""
 
 msgid "%1Manage your accounts%2"
-msgstr ""
+msgstr "%1Hesaplarınızı yönetin%2"
 
 msgid "%1No, change my fiat account's currency now%2"
 msgstr ""
 
 msgid "%1Return to trading page%2"
-msgstr ""
+msgstr "%1İşlem sayfasına dön%2"
 
 msgid "1. This link was sent by you"
-msgstr ""
+msgstr "1. Bu bağlantı sizin tarafınızdan gönderildi"
 
 msgid "2. Your desktop window stays open"
-msgstr ""
+msgstr "2. Masaüstü pencereniz açık kalır"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr ""
+msgstr "Güçlü ancak kullanımı kolay bir platformda yepyeni bir ticaret deneyimi."
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "Tek başına bir kelime tahmin etmek kolaydır"
 
 msgid "AM"
-msgstr ""
+msgstr "BEN"
 
 msgid "Account"
-msgstr ""
+msgstr "Hesap"
 
 msgid "Account Authenticated"
-msgstr ""
+msgstr "Hesap Kimliği Doğrulanmış"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr ""
+msgstr "Hesap erişimi geçici olarak sınırlıdır. Daha fazla ayrıntı için lütfen gelen kutunuzu kontrol edin."
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Hesap kimlik doğrulaması"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Hesap bakiyesi:"
 
 msgid "Acknowledge"
-msgstr ""
+msgstr "Kabul et"
 
 msgid "Action"
-msgstr ""
+msgstr "Eylem"
 
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr ""
+msgstr "Bir bariyer ofseti tanımlamak için +/— ekleyin. Örneğin, +0.005, giriş noktasından 0,005 daha yüksek bir bariyer anlamına gelir."
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "Bir veya iki kelime daha ekleyin. Nadir kelimeler daha iyidir."
 
 msgid "Adjust trade parameters"
-msgstr ""
+msgstr "Ticaret parametrelerini ayarlayın"
 
 msgid "Admin"
-msgstr ""
+msgstr "Yönetici"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "Kabul et ve kabul et"
 
 msgid "All details must be clear — nothing blurry"
-msgstr ""
+msgstr "Tüm detaylar net olmalı - bulanık bir şey yok"
 
 msgid "All markets are closed now. Please try again later."
-msgstr ""
+msgstr "Şu anda tüm pazarlar kapalı. Lütfen daha sonra tekrar deneyin."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "Tamamen büyük harf, neredeyse küçük harf kadar tahmin etmek kolaydır"
 
 msgid "Allow camera access"
-msgstr ""
+msgstr "Kamera erişimine izin ver"
 
 msgid "Allow equals"
-msgstr ""
+msgstr "Eşitlere izin ver"
 
 msgid "Already have an account?"
-msgstr ""
+msgstr "Zaten bir hesabınız var?"
 
 msgid "Amount"
-msgstr ""
+msgstr "Miktar"
 
 msgid "Amount in"
-msgstr ""
+msgstr "Miktar"
 
 msgid "An error occurred while loading the component"
-msgstr ""
+msgstr "Bileşen yüklenirken bir hata oluştu"
 
 msgid "Apply now as a professional investor"
-msgstr ""
+msgstr "Profesyonel bir yatırımcı olarak şimdi başvurun"
 
 msgid "Apr"
-msgstr ""
+msgstr "Nisan"
 
 msgid "April"
-msgstr ""
+msgstr "Nisan"
 
 msgid "Are you sure that you want to permanently delete the token"
-msgstr ""
+msgstr "Jetonu kalıcı olarak silmek istediğinizden emin misiniz?"
 
 msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr ""
+msgstr "Uygulamaya erişimi kalıcı olarak iptal etmek istediğinizden emin misiniz?"
 
 msgid "Are you sure you want to create a fiat account in %1?"
 msgstr ""
 
 msgid "Are you sure you want to create your %1 account now?"
-msgstr ""
+msgstr "Şimdi %1 hesabınızı oluşturmak istediğinizden emin misiniz?"
 
 msgid "Are you sure you want to deposit in %1?"
-msgstr ""
+msgstr "%1olarak para yatırmak istediğinizden emin misiniz?"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Emin misin?"
 
 msgid "Asian Down"
-msgstr ""
+msgstr "Asya Aşağı"
 
 msgid "Asian Up"
-msgstr ""
+msgstr "Asya Yukarı"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Sözleşme 5 dakika içinde bitmezse Asya sözleşmeleri satın alma fiyatından iade edilecektir."
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr ""
+msgstr "Asya seçenekleri karşılaştırarak yerleşir <strong>son tik</strong> dönem boyunca ortalama nokta ile."
 
 msgid "Asians"
-msgstr ""
+msgstr "Asyalılar"
 
 msgid "Ask me later"
-msgstr ""
+msgstr "Bana daha sonra sor"
 
 msgid "Asset"
-msgstr ""
+msgstr "Varlık"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr ""
+msgstr "Sıfırlama zamanında, nokta tahmininizin ters yönünde ise, bariyer o noktaya sıfırlanır."
 
 msgid "Audit"
-msgstr ""
+msgstr "Denetim"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "Denetim Sayfası"
 
 msgid "Aug"
-msgstr ""
+msgstr "Ağu"
 
 msgid "August"
-msgstr ""
+msgstr "Ağustos"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Avustralya Doları"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "Mevcut tüm ödeme yöntemlerinden tam olarak yararlanmak için hesabınızı şimdi doğrulayın."
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr ""
+msgstr "Otomatik ticaret parmaklarınızın ucunda. Kodlamaya gerek yok."
 
 msgid "Available Markets"
-msgstr ""
+msgstr "Mevcut Pazarlar"
 
 msgid "Average"
-msgstr ""
+msgstr "Ortalama"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "Sizinle ilişkili tarih ve yıllardan kaçının"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "Son yıllardan kaçının"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "Tekrarlanan sözcüklerden ve karakterlerden kaçının"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "Dizilerden kaçının"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "Sizinle ilişkili yıllardan kaçının"
 
 msgid "Back to trading"
-msgstr ""
+msgstr "Ticarete geri dön"
 
 msgid "Balance"
-msgstr ""
+msgstr "Denge"
 
 msgid "Barrier"
-msgstr ""
+msgstr "Bariyer"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "Bariyer değişimi"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Bariyer ofset"
 
 msgid "Basket Indices"
-msgstr ""
+msgstr "Sepet Endeksleri"
 
 msgid "Bid"
-msgstr ""
+msgstr "Teklif"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "Binance USD"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "İkili Madeni Para"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 msgid "Blurry photo detected"
-msgstr ""
+msgstr "Bulanık fotoğraf algılandı"
 
 msgid "Browser"
-msgstr ""
+msgstr "Tarayıcı"
 
 msgid "Buy"
-msgstr ""
+msgstr "Satın al"
 
 msgid "Buy price"
-msgstr ""
+msgstr "Fiyat al"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "Satın alarak %1“Yakın Düşük”%2 sözleşme, çarpan çarpanı arasındaki farkın kazanacaksınız %1ckaybetmek%2 ve %1low%2 sözleşme süresi boyunca."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“Yüksek Kapat”%2 sözleşmesini satın alarak, çarpan arasındaki farkın çarpan katını kazanacaksınız %1high%2 ve %1ckaybetmek%2 sözleşme süresi boyunca."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "Satın alarak %1“Yüksek-Düşük”%2 sözleşme, çarpan çarpanı arasındaki farkın kazanacaksınız %1high%2 ve %1low%2 sözleşme süresi boyunca."
 
 msgid "Call Spread"
-msgstr ""
+msgstr "Çağrı Yayılması"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Çağrı Yayılması/Put Spread"
 
 msgid "Camera access is denied"
-msgstr ""
+msgstr "Kamera erişimi reddedildi"
 
 msgid "Camera not detected"
-msgstr ""
+msgstr "Kamera algılanmadı"
 
 msgid "Camera not working"
-msgstr ""
+msgstr "Kamera çalışmıyor"
 
 msgid "Camera not working?"
-msgstr ""
+msgstr "Kamera çalışmıyor mu?"
 
 msgid "Can you spare 15 minutes?"
-msgstr ""
+msgstr "15 dakika ayırabilir misin?"
 
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "Büyük harf kullanımı pek yardımcı olmuyor"
 
 msgid "Cashier"
-msgstr ""
+msgstr "Kasiyer"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "Kasiyer devre dışı"
 
 msgid "Change API Endpoint"
-msgstr ""
+msgstr "API Uç Noktasını Değiştir"
 
 msgid "Change Password"
-msgstr ""
+msgstr "Şifre Değiştir"
 
 msgid "Change currency"
-msgstr ""
+msgstr "Para birimini değiştir"
 
 msgid "Chart"
-msgstr ""
+msgstr "Grafik"
 
 msgid "Chart is not available for this underlying."
-msgstr ""
+msgstr "Bu temel için grafik mevcut değil."
 
 msgid "Charting for this underlying is delayed"
-msgstr ""
+msgstr "Bu temel için grafik ertelendi"
 
 msgid "Check back here to finish the submission"
-msgstr ""
+msgstr "Gönderimi bitirmek için burayı tekrar kontrol edin"
 
 msgid "Check selfie"
-msgstr ""
+msgstr "Selfie'yi kontrol"
 
 msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr ""
+msgstr "Bağlı ve işlevsel olup olmadığını kontrol edin. Ayrıca şunları da yapabilirsiniz <fallback>telefonunuzda doğrulamaya devam edin</fallback>"
 
 msgid "Check that your number is correct"
-msgstr ""
+msgstr "Numaranızın doğru olup olmadığını kontrol edin"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "Bağlantınızı kontrol edin."
 
 msgid "Check your image"
-msgstr ""
+msgstr "Resminizi kontrol edin"
 
 msgid "Check your mobile"
-msgstr ""
+msgstr "Cep telefonunuzu kontrol edin"
 
 msgid "Checked"
-msgstr ""
+msgstr "Kontrol"
 
 msgid "Checking"
-msgstr ""
+msgstr "Kontrol"
 
 msgid "Choose document"
-msgstr ""
+msgstr "Belge seçin"
 
 msgid "Christmas Day"
-msgstr ""
+msgstr "Noel günü"
 
 msgid "Click OK to proceed."
-msgstr ""
+msgstr "Devam etmek için Tamam'ı tıklayın."
 
 msgid "Click here to open a Financial Account"
-msgstr ""
+msgstr "Finansal Hesap açmak için burayı tıklayın"
 
 msgid "Click here to open a Gaming account"
-msgstr ""
+msgstr "Oyun hesabı açmak için burayı tıklayın"
 
 msgid "Click here to open a Real Account"
-msgstr ""
+msgstr "Gerçek Hesap açmak için buraya tıklayın"
 
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 msgid "Close identity verification screen"
-msgstr ""
+msgstr "Kimlik doğrulama ekranını kapat"
 
 msgid "Close time"
-msgstr ""
+msgstr "Yakın zaman"
 
 msgid "Close-Low"
-msgstr ""
+msgstr "Yakın Düşük"
 
 msgid "Closed Bid"
-msgstr ""
+msgstr "Kapalı Teklif"
 
 msgid "Closes"
-msgstr ""
+msgstr "Kapanır"
 
 msgid "Closes early (at 18:00)"
-msgstr ""
+msgstr "Erken kapanır (saat 18:00 'de)"
 
 msgid "Closes early (at 21:00)"
-msgstr ""
+msgstr "Erken kapanır (saat 21:00 'de)"
 
 msgid "Commodities"
-msgstr ""
+msgstr "Emtialar"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "Ortak isimler ve soyadları tahmin etmek kolaydır"
 
 msgid "Complete details"
-msgstr ""
+msgstr "Tüm detaylar"
 
 msgid "Compressing Image"
-msgstr ""
+msgstr "Görüntüyü Sıkıştırma"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Onayla"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "Değişiklikleri onaylayın"
 
 msgid "Connected to your mobile"
-msgstr ""
+msgstr "Cep telefonunuza bağlı"
 
 msgid "Connecting to server"
-msgstr ""
+msgstr "Sunucuya bağlanma"
 
 msgid "Connection lost"
-msgstr ""
+msgstr "Bağlantı kesildi"
 
 msgid "Continue"
-msgstr ""
+msgstr "Devam"
 
 msgid "Continue on phone"
-msgstr ""
+msgstr "Telefonda devam"
 
 msgid "Continue on your phone"
-msgstr ""
+msgstr "Telefonunuzda devam edin"
 
 msgid "Continue trading"
-msgstr ""
+msgstr "Ticarete devam et"
 
 msgid "Continue with the verification"
-msgstr ""
+msgstr "Doğrulamaya devam et"
 
 msgid "Contract"
-msgstr ""
+msgstr "Sözleşme"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Sözleşme Onayı"
 
 msgid "Contract details"
-msgstr ""
+msgstr "Sözleşme ayrıntıları"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "Sözleşme sona eriyor"
 
 msgid "Contract has not started yet"
-msgstr ""
+msgstr "Sözleşme henüz başlamadı"
 
 msgid "Contract information"
-msgstr ""
+msgstr "Sözleşme bilgileri"
 
 msgid "Contract period"
-msgstr ""
+msgstr "Sözleşme süresi"
 
 msgid "Contract result"
-msgstr ""
+msgstr "Sözleşme sonucu"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "Sözleşme başlar"
 
 msgid "Contract type"
-msgstr ""
+msgstr "Sözleşme türü"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Talep sunucularımız tarafından alındığında sözleşme geçerli piyasa fiyatından satılacaktır. Bu fiyat belirtilen fiyattan farklı olabilir."
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "Satın alınan sözleşmeler"
 
 msgid "Contracts sold"
-msgstr ""
+msgstr "Satılan sözleşmeler"
 
 msgid "Copied"
-msgstr ""
+msgstr "Kopyalandı"
 
 msgid "Copy"
-msgstr ""
+msgstr "Kopyala"
 
 msgid "Copy link"
-msgstr ""
+msgstr "Bağlantıyı kopyala"
 
 msgid "Copy the link to your mobile browser"
-msgstr ""
+msgstr "Bağlantıyı mobil tarayıcınıza kopyalayın"
 
 msgid "Copy the link to your phone"
-msgstr ""
+msgstr "Bağlantıyı telefonunuza kopyalayın"
 
 msgid "Counterparty"
-msgstr ""
+msgstr "Karşı taraf"
 
 msgid "Country not found"
-msgstr ""
+msgstr "Ülke bulunamadı"
 
 msgid "Country of Residence"
-msgstr ""
+msgstr "İkamet Ülkesi"
 
 msgid "Create %1 account"
-msgstr ""
+msgstr "%1 hesap oluştur"
 
 msgid "Create account"
-msgstr ""
+msgstr "Hesap oluştur"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "Kredi/Banka"
 
 msgid "Crypto"
-msgstr ""
+msgstr "Kripto"
 
 msgid "Currency"
-msgstr ""
+msgstr "Para birimi"
 
 msgid "Current"
-msgstr ""
+msgstr "Akım"
 
 msgid "Current password"
-msgstr ""
+msgstr "Geçerli şifre"
 
 msgid "Current time"
-msgstr ""
+msgstr "Şimdiki zaman"
 
 msgid "Current time:"
-msgstr ""
+msgstr "Şimdiki zaman:"
 
 msgid "Cut-off image detected"
-msgstr ""
+msgstr "Kesme görüntüsü algılandı"
 
 msgid "Date"
-msgstr ""
+msgstr "Tarih"
 
 msgid "Date and Time"
-msgstr ""
+msgstr "Tarih ve Saat"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "Tarihleri tahmin etmek genellikle kolaydır"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "Anlaşma iptal. ücret"
 
 msgid "Dec"
-msgstr ""
+msgstr "Ara"
 
 msgid "December"
-msgstr ""
+msgstr "Aralık"
 
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Demo Account"
-msgstr ""
+msgstr "Demo Hesabı"
 
 msgid "Demo Accounts"
-msgstr ""
+msgstr "Demo Hesapları"
 
 msgid "Demo Financial"
-msgstr ""
+msgstr "Demo Finansal"
 
 msgid "Demo Financial STP"
-msgstr ""
+msgstr "Finansal STP Demo"
 
 msgid "Demo Synthetic"
-msgstr ""
+msgstr "Demo Sentetik"
 
 msgid "Demo account"
-msgstr ""
+msgstr "Demo hesabı"
 
 msgid "Deposit"
-msgstr ""
+msgstr "Depozito"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "Hesabınızda para yatırma ve çekme işlemleri devre dışı bırakıldı. Daha fazla ayrıntı için lütfen e-postanızı kontrol edin."
 
 msgid "Deriv "
-msgstr ""
+msgstr "Türev "
 
 msgid "Description"
-msgstr ""
+msgstr "Tanım"
 
 msgid "Details"
-msgstr ""
+msgstr "Detaylar"
 
 msgid "Digit"
-msgstr ""
+msgstr "Rakamlı"
 
 msgid "Digit Differs"
-msgstr ""
+msgstr "Rakamlı Farklar"
 
 msgid "Digit Even"
-msgstr ""
+msgstr "Rakamlı Bile"
 
 msgid "Digit Matches"
-msgstr ""
+msgstr "Rakamlı Maçlar"
 
 msgid "Digit Odd"
-msgstr ""
+msgstr "Rakamlı Tek"
 
 msgid "Digit Over"
-msgstr ""
+msgstr "Rakamdan Fazla"
 
 msgid "Digit Under"
-msgstr ""
+msgstr "Rakamlı Altında"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Sözleşme 5 dakika içinde bitmezse haneli sözleşmeler satın alma fiyatından iade edilecektir."
 
 msgid "Digits"
-msgstr ""
+msgstr "Rakamlar"
 
 msgid "Disable"
-msgstr ""
+msgstr "Devre dışı"
 
 msgid "Dismiss alert"
-msgstr ""
+msgstr "Uyarıyı devre dışı bırakma"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr ""
+msgstr "Bunun bir fiat hesabı mı yoksa kripto hesabı mı olmasını istiyorsunuz? Lütfen birini seçin:"
 
 msgid "Do you wish to continue?"
-msgstr ""
+msgstr "Devam etmek ister misin?"
 
 msgid "Document example"
-msgstr ""
+msgstr "Belge örneği"
 
 msgid "Document uploaded"
-msgstr ""
+msgstr "Belge yüklendi"
 
 msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr ""
+msgstr "O ülkedeki belgeler şu anda desteklenmiyor — <fallback>başka bir belge türünü dene</fallback>"
 
 msgid "Documents uploaded"
-msgstr ""
+msgstr "Yüklenen belgeler"
 
 msgid "Documents you can use to verify your identity"
-msgstr ""
+msgstr "Kimliğinizi doğrulamak için kullanabileceğiniz belgeler"
 
 msgid "Does Not Touch"
-msgstr ""
+msgstr "Dokunmaz"
 
 msgid "Don't refresh this page"
-msgstr ""
+msgstr "Bu sayfayı yenileme"
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
-msgstr ""
+msgstr "%1ile ticaret yapmak istemiyor musunuz? Başka bir kripto para birimi hesabı açabilirsiniz."
 
 msgid "Driver's license"
-msgstr ""
+msgstr "Ehliyet"
 
 msgid "Driving licence"
-msgstr ""
+msgstr "Ehliyet"
 
 msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr ""
+msgstr "Sunucumuzdaki bir sorun nedeniyle, MT5 hesaplarınızdan bazıları şu anda kullanılamıyor. %1Pkira ayı bizimle ve sabrınız için teşekkür ederiz."
 
 msgid "Duration"
-msgstr ""
+msgstr "Süre"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "AB Türev hesabı"
 
 msgid "Email address"
-msgstr ""
+msgstr "E-Posta Adresi"
 
 msgid "Enable"
-msgstr ""
+msgstr "Etkinleştir"
 
 msgid "Enable camera"
-msgstr ""
+msgstr "Kamerayı etkinleştir"
 
 msgid "End Time"
-msgstr ""
+msgstr "Bitiş Zamanı"
 
 msgid "End time"
-msgstr ""
+msgstr "Bitiş zamanı"
 
 msgid "Endpoint"
-msgstr ""
+msgstr "Bitiş noktası"
 
 msgid "Ends Between"
-msgstr ""
+msgstr "Arasında Biter"
 
 msgid "Ends Between/Ends Outside"
-msgstr ""
+msgstr "Dışarıda Biter/Biter"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az tik varsa Dış sözleşmeler satın alma fiyatından iade edilecektir."
 
 msgid "Ends Outside"
-msgstr ""
+msgstr "Dışarıda Biter"
 
 msgid "Enlarge image"
-msgstr ""
+msgstr "Resmi büyütmek"
 
 msgid "Enter mobile number"
-msgstr ""
+msgstr "Cep telefonu numarasını girin"
 
 msgid "Enter your mobile number:"
-msgstr ""
+msgstr "Cep telefonu numaranızı girin:"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "Giriş Noktası"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "Giriş noktası"
 
 msgid "Equals"
-msgstr ""
+msgstr "Eşittir"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "Eter Klasik"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "avro"
 
 msgid "Even/Odd"
-msgstr ""
+msgstr "Eş/Tek"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Sözleşme 5 dakika içinde bitmezse, çift/Tek sözleşmeler satın alma fiyatından iade edilecektir."
 
 msgid "Example of a blurry document"
-msgstr ""
+msgstr "Bulanık bir belge örneği"
 
 msgid "Example of a cut-off document"
-msgstr ""
+msgstr "Kesme belgesi örneği"
 
 msgid "Example of a document with glare"
-msgstr ""
+msgstr "Parlama içeren bir belge örneği"
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr ""
+msgstr "Hariç tutma süresi 5 yıldan fazla olamaz."
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr ""
+msgstr "Hariç tutma süresi 6 aydan az olamaz."
 
 msgid "Excluded from the website until"
-msgstr ""
+msgstr "Web sitesinden şu tarihe kadar hariç tutuldu"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "Nokta Çık"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "Çıkış noktası"
 
 msgid "Exit spot time"
-msgstr ""
+msgstr "Spot zamanından çıkın"
 
 msgid "Exit time"
-msgstr ""
+msgstr "Çıkış zamanı"
 
 msgid "Expiry date is required for %1."
-msgstr ""
+msgstr "İçin son kullanma tarihi gereklidir %1."
 
 msgid "Explanation"
-msgstr ""
+msgstr "Açıklama"
 
 msgid "Face forward and make sure your eyes are clearly visible"
-msgstr ""
+msgstr "İleri yüzün ve gözlerinizin açıkça görülebildiğinden emin olun"
 
 msgid "Face photo page"
-msgstr ""
+msgstr "Yüz fotoğraf sayfası"
 
 msgid "Failed"
-msgstr ""
+msgstr "Başarısız"
 
 msgid "Fall"
-msgstr ""
+msgstr "Güz"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Güz veya eşit"
 
 msgid "Feb"
-msgstr ""
+msgstr "Şubat"
 
 msgid "February"
-msgstr ""
+msgstr "Şubat"
 
 msgid "Fiat"
-msgstr ""
+msgstr "Fiat"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
-msgstr ""
+msgstr "Dosya (%1) boyutu izin verilen sınırı aşıyor. İzin verilen maksimum dosya boyutu: %2"
 
 msgid "File not uploaded."
-msgstr ""
+msgstr "Dosya yüklenmedi."
 
 msgid "File size exceeded."
-msgstr ""
+msgstr "Dosya boyutu aşıldı."
 
 msgid "File type not supported"
-msgstr ""
+msgstr "Dosya türü desteklenmiyor"
 
 msgid "Final price"
-msgstr ""
+msgstr "Nihai fiyat"
 
 msgid "Financial"
-msgstr ""
+msgstr "Mali"
 
 msgid "Financial Account"
-msgstr ""
+msgstr "Finansal Hesap"
 
 msgid "Financial STP"
-msgstr ""
+msgstr "Finansal STP"
 
 msgid "Finish"
-msgstr ""
+msgstr "Bitiş"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "Ev adresinin ilk satırı"
 
 msgid "Follow these steps to recover camera access:"
-msgstr ""
+msgstr "Kamera erişimini kurtarmak için şu adımları izleyin:"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Fr"
-msgstr ""
+msgstr "Fr"
 
 msgid "Friday"
-msgstr ""
+msgstr "Cuma"
 
 msgid "Fridays"
-msgstr ""
+msgstr "Cumaları"
 
 msgid "From account: "
-msgstr ""
+msgstr "Hesabından: "
 
 msgid "Front Side"
-msgstr ""
+msgstr "Ön Taraf"
 
 msgid "Front and back"
-msgstr ""
+msgstr "Ön ve arka"
 
 msgid "Gaming"
-msgstr ""
+msgstr "Oyun"
 
 msgid "Gaming Account"
-msgstr ""
+msgstr "Oyun Hesabı"
 
 msgid "Get %1"
-msgstr ""
+msgstr "Almak %1"
 
 msgid "Get link via SMS"
-msgstr ""
+msgstr "SMS ile bağlantı alın"
 
 msgid "Get secure link"
-msgstr ""
+msgstr "Güvenli bağlantı alın"
 
 msgid "Get your secure link"
-msgstr ""
+msgstr "Güvenli bağlantınızı alın"
 
 msgid "Glare detected"
-msgstr ""
+msgstr "Parlama algılandı"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "Raporlara Git"
 
 msgid "Go back"
-msgstr ""
+msgstr "Geri dön"
 
 msgid "Go to statement"
-msgstr ""
+msgstr "İfadeye git"
 
 msgid "Goes Outside"
-msgstr ""
+msgstr "Dışarı çıkıyor"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr ""
+msgstr "Tarayıcı ayarlarınızdan kameranıza erişim izni verin"
 
 msgid "Great, that's everything we need"
-msgstr ""
+msgstr "Harika, ihtiyacımız olan her şey bu"
 
 msgid "Guide"
-msgstr ""
+msgstr "Rehber"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr ""
 
 msgid "Here's how to do it:"
-msgstr ""
+msgstr "Bunu nasıl yapacağınız aşağıda anlatılır:"
 
 msgid "High"
-msgstr ""
+msgstr "Yüksek"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Yüksek Bariyer"
 
 msgid "High Tick"
-msgstr ""
+msgstr "Yüksek Kene"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr ""
+msgstr "High Tick/Low Tick sözleşmelerinin katı bir süresi beş kene vardır."
 
 msgid "High barrier"
-msgstr ""
+msgstr "Yüksek bariyer"
 
 msgid "High barrier must be higher than low barrier"
-msgstr ""
+msgstr "Yüksek bariyer düşük bariyerden daha yüksek olmalıdır"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "Yüksek bariyer ofset"
 
 msgid "High, Low and Close"
-msgstr ""
+msgstr "Yüksek, Düşük ve Yakın"
 
 msgid "High-Close"
-msgstr ""
+msgstr "Yüksek-Yakın"
 
 msgid "High-Low"
-msgstr ""
+msgstr "Yüksek-Düşük"
 
 msgid "High/Low Ticks"
-msgstr ""
+msgstr "Yüksek/Düşük Keneler"
 
 msgid "Higher"
-msgstr ""
+msgstr "Daha yüksek"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Yüksek/Alt"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az tik varsa, daha yüksek/düşük sözleşmeler satın alma fiyatından iade edilecektir."
 
 msgid "Hour"
-msgstr ""
+msgstr "Saat"
 
 msgid "How to scan a QR code"
-msgstr ""
+msgstr "QR kodu nasıl taranır"
 
 msgid "I want to reapply"
-msgstr ""
+msgstr "Yeniden başvurmak istiyorum"
 
 msgid "I'm interested"
-msgstr ""
+msgstr "İlgileniyorum"
 
 msgid "ID number is required for %1."
-msgstr ""
+msgstr "Kimlik numarası için gereklidir %1."
 
 msgid "IDK"
-msgstr ""
+msgstr "İDK"
 
 msgid "IP Address"
-msgstr ""
+msgstr "IP Adresi"
 
 msgid "Identity card"
-msgstr ""
+msgstr "Kimlik kartı"
 
 msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr ""
+msgstr "Çalışmazsa, Google Play'den veya App Store'dan bir QR kod tarayıcı indirin"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "<strong>çıkış noktası</strong> , <strong>bariyer</strong> veya <stronm g>yeni bariyere eşitse (sıfırlama gerçekleşirse)</stronmg>, ödemeyi kazanmazsınız."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
 msgstr ""
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr ""
+msgstr "Son <strong>kene</strong> kenelerin ortalamasına eşitse, ödemeyi kazanmazsınız."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "“Eşitlere izin ver” i seçerseniz, çıkış noktası “Yükseliş” için giriş noktasından daha yüksek veya buna eşitse ödemeyi kazanırsınız. Benzer şekilde, çıkış noktası “Güz” için giriş noktasından daha düşük veya buna eşitse ödemeyi kazanırsınız."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr ""
@@ -1025,16 +1025,16 @@ msgid "If you select \"Matches\", you will win the payout if the <strong>last di
 msgstr ""
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "“Tek” seçeneğini seçerseniz, son işaretin<strong>son basamağı</strong> <strong>tek sayı ise (yani 1, 3, 5, 7 veya 9) ödemeyi kazanırsınız.</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr ""
+msgstr "“Bitti” i seçerseniz, son işaretin<strong>son basamağı</strong>tahmininizden <strong>büyükse ödemeyi kazanırsınız.</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "“Reset-Call” seçeneğini seçerseniz, çıkış noktası giriş noktasından veya sıfırlama zamanında spottan kesinlikle yüksekse ödemeyi kazanırsınız."
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "“Reset-Put” seçeneğini seçerseniz, çıkış noktası giriş noktasından veya sıfırlama zamanında spottan kesinlikle düşükse ödemeyi kazanırsınız."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr ""
@@ -1043,25 +1043,25 @@ msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</str
 msgstr ""
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "“Arasında Kalır” ı seçerseniz, piyasa <strong>sözleşme süresi</strong>boyunca herhangi bir zamanda <strong>Yüksek bariyer</strong> veya <strong>Düşük bariyer</strong> arasında kalırsa (dokunmazsa) ödemeyi kazanırsınız."
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr ""
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr ""
+msgstr "“Altında” seçeneğini seçerseniz, son işaretin<strong>son basamağı</strong>tahmininizden<strong>daha az ise ödemeyi kazanırsınız.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr ""
+msgstr "“Düşme” seçeneğini seçerseniz, piyasa fiyatı giriş noktasından düşükse ödemeyi kazanırsınız."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr ""
+msgstr "“Yükselir” i seçerseniz, piyasa fiyatı giriş noktasından yüksekse ödemeyi kazanırsınız."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
 msgstr ""
@@ -1076,526 +1076,526 @@ msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks r
 msgstr ""
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr ""
+msgstr "Gelecekte bir <strong>Başlangıç zamanı</strong> , the <strong>Başlangıç zamanı</strong> seçilen ve <strong>giriş noktası</strong> o sırada geçerli olan fiyattır."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
 msgstr ""
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr ""
+msgstr "Belirli bir <strong>bitiş zamanı</strong>seçerseniz, <strong>bitiş zamanı</strong> seçilen zamandır."
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr ""
+msgstr "AB'de finansal ikili opsiyonlar yalnızca profesyonel yatırımcılar tarafından kullanılabilir."
 
 msgid "In/Out"
-msgstr ""
+msgstr "Giriş/Çıkış"
 
 msgid "Indicates required field"
-msgstr ""
+msgstr "Zorunlu alanı gösterir"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Gösterge niteliğinde"
 
 msgid "Insufficient balance."
-msgstr ""
+msgstr "Yetersiz denge."
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "Geçersiz uygulama kimliği"
 
 msgid "Invalid document format."
-msgstr ""
+msgstr "Geçersiz belge biçimi."
 
 msgid "Invalid email address."
-msgstr ""
+msgstr "Geçersiz e-posta adresi."
 
 msgid "Invalid verification code."
-msgstr ""
+msgstr "Geçersiz doğrulama kodu."
 
 msgid "Investment"
-msgstr ""
+msgstr "Yatırım"
 
 msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr ""
+msgstr "Bağlantısı kesilebilir. <fallback>Bunun yerine telefonunuzu kullanmayı deneyin</fallback>."
 
 msgid "It may take a few minutes to arrive"
-msgstr ""
+msgstr "Gelmesi birkaç dakika sürebilir"
 
 msgid "It must be an official photo ID"
-msgstr ""
+msgstr "Resmi bir fotoğraflı kimlik olmalı"
 
 msgid "It will only take a couple of minutes."
-msgstr ""
+msgstr "Sadece birkaç dakika sürecek."
 
 msgid "It’ll take longer to verify you if we can’t read it"
-msgstr ""
+msgstr "Okuyamazsak sizi doğrulamamız daha uzun sürer"
 
 msgid "Jan"
-msgstr ""
+msgstr "Ocak"
 
 msgid "January"
-msgstr ""
+msgstr "Ocak"
 
 msgid "Jul"
-msgstr ""
+msgstr "Temmuz"
 
 msgid "July"
-msgstr ""
+msgstr "Temmuz"
 
 msgid "Jun"
-msgstr ""
+msgstr "Haz"
 
 msgid "June"
-msgstr ""
+msgstr "Haziran"
 
 msgid "Jurisdiction"
-msgstr ""
+msgstr "Yargı yetkisi"
 
 msgid "Keep this window open while using your mobile"
-msgstr ""
+msgstr "Cep telefonunuzu kullanırken bu pencereyi açık tutun"
 
 msgid "Language settings"
-msgstr ""
+msgstr "Dil ayarları"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Son Rakamlı Tahmin"
 
 msgid "Last Digit Stats"
-msgstr ""
+msgstr "Son Rakamlı İstatistikler"
 
 msgid "Last Login"
-msgstr ""
+msgstr "Son Giriş"
 
 msgid "Last Used"
-msgstr ""
+msgstr "Son Kullanılanlar"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr ""
 
 msgid "Linked to your computer"
-msgstr ""
+msgstr "Bilgisayarınıza bağlı"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr ""
+msgstr "Canlı sohbet"
 
 msgid "Loading"
-msgstr ""
+msgstr "Yükleniyor"
 
 msgid "Loading..."
-msgstr ""
+msgstr "Yükleniyor..."
 
 msgid "Log in"
-msgstr ""
+msgstr "Oturum aç"
 
 msgid "Log in here"
-msgstr ""
+msgstr "Buradan giriş yapın"
 
 msgid "Log out"
-msgstr ""
+msgstr "Oturumu Kapatın"
 
 msgid "Login ID"
-msgstr ""
+msgstr "Giriş Kimliği"
 
 msgid "Login at:"
-msgstr ""
+msgstr "Oturum aç:"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "CFD hesapları mı arıyorsunuz? Trader'ın merkezine git"
 
 msgid "Looks like you took too long"
-msgstr ""
+msgstr "Görünüşe göre çok uzun sürmüşün."
 
 msgid "Loss"
-msgstr ""
+msgstr "Kayıp"
 
 msgid "Low"
-msgstr ""
+msgstr "Düşük"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Düşük Bariyer"
 
 msgid "Low Tick"
-msgstr ""
+msgstr "Düşük kene"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Düşük bariyer"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Düşük bariyer ofset"
 
 msgid "Lower"
-msgstr ""
+msgstr "Daha düşük"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "MT5 para çekme işlemi devre dışı"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "MT5 para çekme işlemleri hesabınızda devre dışı bırakıldı. Daha fazla ayrıntı için lütfen e-postanızı kontrol edin."
 
 msgid "Make sure all of the document is in the photo"
-msgstr ""
+msgstr "Tüm belgenin fotoğrafta olduğundan emin olun"
 
 msgid "Make sure details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Ayrıntıların okunması için net olduğundan emin olun, bulanıklık veya parlama olmadan"
 
 msgid "Make sure everything is clear"
-msgstr ""
+msgstr "Her şeyin açık olduğundan emin olun"
 
 msgid "Make sure full document is visible"
-msgstr ""
+msgstr "Belgenin tamamının görünür olduğundan emin olun"
 
 msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Bulanıklık veya parlama olmadan kart bilgilerinizin okunması için net olduğundan emin olun"
 
 msgid "Make sure your device has a working camera"
-msgstr ""
+msgstr "Cihazınızın çalışan bir kamerası olduğundan emin olun"
 
 msgid "Make sure your device's camera works"
-msgstr ""
+msgstr "Cihazınızın kamerasının çalıştığından emin olun"
 
 msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Lisans bilgilerinizin okunması için net olduğundan emin olun, bulanıklık veya parlama olmadan"
 
 msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Pasaport bilgilerinizin okunması için net olduğundan emin olun, bulanıklık veya parlama olmadan"
 
 msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "Bulanıklık veya parlama olmadan izin ayrıntılarınızın okunması için net olduğundan emin olun"
 
 msgid "Make sure your selfie clearly shows your face"
-msgstr ""
+msgstr "Selfie'nizin yüzünüzü açıkça gösterdiğinden emin olun"
 
 msgid "Make sure§"
-msgstr ""
+msgstr "Eemin olun §"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "Hesapları yönet"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
-msgstr ""
+msgstr "Mart"
 
 msgid "Matches/Differs"
-msgstr ""
+msgstr "Maçlar/Differs"
 
 msgid "Maximum multiplier of 1000."
-msgstr ""
+msgstr "Maksimum 1000 çarpanı."
 
 msgid "Maximum payout"
-msgstr ""
+msgstr "Maksimum ödeme"
 
 msgid "May"
-msgstr ""
+msgstr "Mayıs"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "Minimum %1 karakter gerekli."
 
 msgid "Minimum:"
-msgstr ""
+msgstr "Minimum:"
 
 msgid "Minute"
-msgstr ""
+msgstr "Dakika"
 
 msgid "Mo"
-msgstr ""
+msgstr "Mo"
 
 msgid "Monday"
-msgstr ""
+msgstr "Pazartesi"
 
 msgid "More information can be found in an email sent to you."
-msgstr ""
+msgstr "Daha fazla bilgi size gönderilen bir e-postada bulunabilir."
 
 msgid "Move away from direct light"
-msgstr ""
+msgstr "Doğrudan ışıktan uzaklaşın"
 
 msgid "Move away from direct light — no glare"
-msgstr ""
+msgstr "Doğrudan ışıktan uzaklaşın - parlama yok"
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "Çok Teminat"
 
 msgid "Multiple faces found"
-msgstr ""
+msgstr "Birden çok yüz bulundu"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Çarpan"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "Çarpan Aşağı"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "Çarpan Yukarı"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Çarpanlar"
 
 msgid "Must be under 10MB."
-msgstr ""
+msgstr "10 MB'ın altında olmalıdır."
 
 msgid "Name"
-msgstr ""
+msgstr "İsim"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "İsimler ve soyadları kendi başlarına tahmin etmek kolaydır"
 
 msgid "Net profit"
-msgstr ""
+msgstr "Net kâr"
 
 msgid "Network status"
-msgstr ""
+msgstr "Ağ durumu"
 
 msgid "Never"
-msgstr ""
+msgstr "Asla"
 
 msgid "Never Used"
-msgstr ""
+msgstr "Hiç Kullanılmamış"
 
 msgid "New Year's Day"
-msgstr ""
+msgstr "Yılbaşı Günü"
 
 msgid "New password"
-msgstr ""
+msgstr "Yeni şifre"
 
 msgid "New token created."
-msgstr ""
+msgstr "Yeni belirteç oluşturuldu."
 
 msgid "Next"
-msgstr ""
+msgstr "Sonraki"
 
 msgid "No authentication required"
-msgstr ""
+msgstr "Kimlik doğrulaması gerekmez"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "Para birimi atanmamış"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "Para birimi seçilmedi"
 
 msgid "No document detected"
-msgstr ""
+msgstr "Belge algılanmadı"
 
 msgid "No face found"
-msgstr ""
+msgstr "Yüz bulunamadı"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "Sembollere, rakamlara veya büyük harflere gerek yok"
 
 msgid "No notifications"
-msgstr ""
+msgstr "Bildirim yok"
 
 msgid "No thanks"
-msgstr ""
+msgstr "Hayır, teşekkürler"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "AB Dışı Türev "
 
 msgid "Not"
-msgstr ""
+msgstr "Değil"
 
 msgid "Not announced for this currency."
-msgstr ""
+msgstr "Bu para birimi için açıklanmadı."
 
 msgid "Note"
-msgstr ""
+msgstr "Not"
 
 msgid "Note:"
-msgstr ""
+msgstr "Not:"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr ""
+msgstr "Not: Bir fiat para birimi hesabıyla sınırlısınız. Fiat hesabınızın para birimi, fiat hesabınıza ilk kez para yatırmadan veya bir MT5 hesabı oluşturmadan önce değiştirilebilir. Ayrıca desteklenen her kripto para birimi için bir hesap açabilirsiniz."
 
 msgid "Notifications"
-msgstr ""
+msgstr "Bildirimler"
 
 msgid "Nov"
-msgstr ""
+msgstr "Kas"
 
 msgid "November"
-msgstr ""
+msgstr "Kasım"
 
 msgid "Now"
-msgstr ""
+msgstr "Şimdi"
 
 msgid "Number of ticks:"
-msgstr ""
+msgstr "Kene sayısı:"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "OAuth Uygulama Kimliği"
 
 msgid "Oct"
-msgstr ""
+msgstr "Eki"
 
 msgid "October"
-msgstr ""
+msgstr "Ekim"
 
 msgid "Offline"
-msgstr ""
+msgstr "Çevrimdışı"
 
 msgid "Once you've finished we'll take you to the next step"
-msgstr ""
+msgstr "İşiniz bittiğinde sizi bir sonraki adıma taşıyacağız"
 
 msgid "Online"
-msgstr ""
+msgstr "Çevrimiçi"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "Online ticaret platformu"
 
 msgid "Only %1 are allowed."
-msgstr ""
+msgstr "Sadece %1 izin verilir."
 
 msgid "Only Downs"
-msgstr ""
+msgstr "Sadece Downs"
 
 msgid "Only Ups"
-msgstr ""
+msgstr "Sadece Ups"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr ""
+msgstr "Sadece harflere, sayılara, boşluğa ve kısa çizgiye izin verilir."
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr ""
+msgstr "Sadece harfler, sayılar, boşluk ve bu özel karakterlere izin verilir: %1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "Sadece harfler, sayılar, boşluk, kısa çizgi, nokta, ve kesme işaretine izin verilir."
 
 msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr ""
+msgstr "Sadece harfler, sayılar, boşluk, tire, nokta, virgül ve kesme işaretine izin verilir."
 
 msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
-msgstr ""
+msgstr "Kimlik numarası (%1) için yalnızca harfler, sayılar, boşluk, alt çizgi ve kısa çizgi izin verilir."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "Sadece harfler, boşluk, kısa çizgi, nokta, ve kesme işaretine izin verilir."
 
 msgid "Only your face can be in the selfie"
-msgstr ""
+msgstr "Selfie'de sadece yüzün olabilir"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "Hata... Sayfa Kullanılamıyor"
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "Finansal Hesap Açın"
 
 msgid "Open a Real Account"
-msgstr ""
+msgstr "Gerçek Hesap Açın"
 
 msgid "Open a free account"
-msgstr ""
+msgstr "Ücretsiz bir hesap açın"
 
 msgid "Open positions"
-msgstr ""
+msgstr "Açık pozisyonlar"
 
 msgid "Open the link and complete the tasks"
-msgstr ""
+msgstr "Bağlantıyı açın ve görevleri tamamlayın"
 
 msgid "Open the link on your mobile"
-msgstr ""
+msgstr "Cep telefonunuzdaki bağlantıyı açın"
 
 msgid "Open your new bank account"
-msgstr ""
+msgstr "Yeni banka hesabınızı açın"
 
 msgid "Opens"
-msgstr ""
+msgstr "Açılır"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "Seçenekler ve Çarpanlar"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "Opsiyon ticareti, sınırlarına itilen diğer faaliyetler gibi gerçek bir bağımlılık haline gelebilir. Böyle bir bağımlılık tehlikesinden kaçınmak için, size işlemlerinizin ve hesaplarınızın bir özetini düzenli olarak veren bir gerçeklik kontrolü sağlıyoruz."
 
 msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
-msgstr ""
+msgstr "Gelişmiş kullanıcılar için pop-up ticaret grafikleri içeren ticaret botları oluşturmak için klasik “sürükle ve bırak” aracımız."
 
 msgid "Over/Under"
-msgstr ""
+msgstr "Üstü/Altında"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Sözleşme 5 dakika içinde bitmezse, Over/Under sözleşmeleri satın alma fiyatından iade edilecektir."
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Passport"
-msgstr ""
+msgstr "Pasaport"
 
 msgid "Passport photo page"
-msgstr ""
+msgstr "Pasaport fotoğraf sayfası"
 
 msgid "Password is not strong enough."
-msgstr ""
+msgstr "Şifre yeterince güçlü değil."
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "Şifre, sayılarla birlikte daha düşük ve büyük harfli İngilizce harflere sahip olmalıdır."
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "Paxos Standardı"
 
 msgid "Pay-out"
-msgstr ""
+msgstr "Ödeme"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr ""
+msgstr "Ödeme Aracısı hizmetleri ülkenizde veya tercih ettiğiniz para biriminde kullanılamaz."
 
 msgid "Payments"
-msgstr ""
+msgstr "Ödemeler"
 
 msgid "Payout"
-msgstr ""
+msgstr "Ödeme"
 
 msgid "Payout range"
-msgstr ""
+msgstr "Ödeme aralığı"
 
 msgid "Pending"
-msgstr ""
+msgstr "Beklemede"
 
 msgid "Percentage"
-msgstr ""
+msgstr "Yüzde"
 
 msgid "Permissions"
-msgstr ""
+msgstr "İzinler"
 
 msgid "Photo of your document"
-msgstr ""
+msgstr "Belgenizin fotoğrafı"
 
 msgid "Photo of your face"
-msgstr ""
+msgstr "Yüzünüzün fotoğrafı"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "Doğum yeri"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Para çekme ve işlem limitlerinizi kaldırmak için lütfen %1chesap profilinizi%2 omplete edin."
 
 msgid "Please %1deposit%2 to your account."
-msgstr ""
+msgstr "Lütfen %1ddönem%2 hesabınıza."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr ""
+msgstr "Lütfen %1log in%2 veya %3sign up%4 bu sayfayı görüntülemek için."
 
 msgid "Please accept the terms and conditions."
-msgstr ""
+msgstr "Lütfen hüküm ve koşulları kabul edin."
 
 msgid "Please check your email for further instructions."
-msgstr ""
+msgstr "Daha fazla talimat için lütfen e-postanızı kontrol edin."
 
 msgid "Please check your email for the password reset link."
-msgstr ""
+msgstr "Şifre sıfırlama bağlantısı için lütfen e-postanızı kontrol edin."
 
 msgid "Please choose a currency"
-msgstr ""
+msgstr "Lütfen bir para birimi seçin"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
 msgstr ""
@@ -1604,448 +1604,448 @@ msgid "Please complete the %1financial assessment form%2 to lift your withdrawal
 msgstr ""
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "Lütfen devam etmeden önce Kişisel Bilgilerinizi doldurun."
 
 msgid "Please confirm that all the information above is true and complete."
-msgstr ""
+msgstr "Lütfen yukarıdaki tüm bilgilerin doğru ve eksiksiz olduğunu onaylayın."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr ""
+msgstr "Lütfen politik olarak maruz kalan bir kişi olmadığınızı onaylayın."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr ""
+msgstr "Lütfen cihazınızda Telegram uygulamasının yüklü olduğundan emin olun."
 
 msgid "Please enter a valid Login ID."
-msgstr ""
+msgstr "Lütfen geçerli bir Giriş Kimliği girin."
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "Lütfen geçerli bir telefon numarası girin (örn. +15417541234)."
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr ""
+msgstr "Seçilen para birimine yalnızca sınırlı hesaplar için izin verildiğini lütfen unutmayın."
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr ""
+msgstr "Lütfen gerekli kriterler yerine getirildikten sonra tekrar başvurun."
 
 msgid "Please reload the page"
-msgstr ""
+msgstr "Lütfen sayfayı yeniden yükleyin"
 
 msgid "Please select"
-msgstr ""
+msgstr "Lütfen seçiniz"
 
 msgid "Please select a country"
-msgstr ""
+msgstr "Lütfen bir ülke seçiniz"
 
 msgid "Please select a reason."
-msgstr ""
+msgstr "Lütfen bir neden seçin."
 
 msgid "Please select a valid time."
-msgstr ""
+msgstr "Lütfen geçerli bir zaman seçin."
 
 msgid "Please select at least one scope"
-msgstr ""
+msgstr "Lütfen en az bir kapsam seçin"
 
 msgid "Please select the checkbox."
-msgstr ""
+msgstr "Lütfen onay kutusunu seçin."
 
 msgid "Please select the currency for this account:"
-msgstr ""
+msgstr "Lütfen bu hesap için para birimini seçin:"
 
 msgid "Please set the currency of your account."
-msgstr ""
+msgstr "Lütfen hesabınızın para birimini ayarlayın."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr ""
+msgstr "Lütfen %130-günlük ciro limitinizi ayarlayın%2 depozito limitlerini kaldırmak için."
 
 msgid "Please specify the reasons for closing your accounts"
-msgstr ""
+msgstr "Lütfen hesaplarınızı kapatma nedenlerini belirtin"
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "Lütfen tercih ettiğiniz aralık gerçeklik kontrolünü dakikalar içinde belirtin:"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "Lütfen adres kanıtınızı gönderin."
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "Lütfen kimlik kanıtınızı gönderin."
 
 msgid "Please try again"
-msgstr ""
+msgstr "Lütfen tekrar deneyin"
 
 msgid "Point your phone’s camera at the QR code"
-msgstr ""
+msgstr "Telefonunuzun kamerasını QR koduna doğrultun"
 
 msgid "Postal Code/ZIP"
-msgstr ""
+msgstr "Posta Kodu/ZIP"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "Potansiyel Ödeme"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "Potansiyel Kar"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "Potansiyel ödeme"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Potansiyel kâr"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "Potansiyel kar/zarar"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "İngiliz Sterlini"
 
 msgid "Predict the direction<br />and purchase"
 msgstr ""
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "“A” yerine '@' gibi öngörülebilir ikameler pek yardımcı olmuyor"
 
 msgid "Previous"
-msgstr ""
+msgstr "Önceki"
 
 msgid "Profit"
-msgstr ""
+msgstr "Kâr"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "Kâr/Zarar"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Kar tablosu"
 
 msgid "Profit/Loss"
-msgstr ""
+msgstr "Kar/Zarar"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "Kâr/zarar"
 
 msgid "Proof of address"
-msgstr ""
+msgstr "Adres kanıtı"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "Adres belgesinin süresi doldu"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "Adres kanıtı gerekli"
 
 msgid "Proof of identity"
-msgstr ""
+msgstr "Kimlik kanıtı"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "Kimlik kanıtının süresi doldu"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "Kimlik kanıtı gerekli"
 
 msgid "Provide the whole document page for best results"
-msgstr ""
+msgstr "En iyi sonuçlar için tüm belge sayfasını sağlayın"
 
 msgid "Purchase"
-msgstr ""
+msgstr "Satınalma"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "Satın Alma Fiyatı"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Satın Alma Süresi"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "Satın alma fiyatı"
 
 msgid "Purchase request sent"
-msgstr ""
+msgstr "Satınalma talebi gönderildi"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "Satın alma süresi"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "Yayılmış Koymak"
 
 msgid "Read"
-msgstr ""
+msgstr "Oku"
 
 msgid "Ready to trade?"
-msgstr ""
+msgstr "Ticarete hazır mısınız?"
 
 msgid "Real"
-msgstr ""
+msgstr "Gerçek"
 
 msgid "Real Account"
-msgstr ""
+msgstr "Gerçek Hesap"
 
 msgid "Real Financial"
-msgstr ""
+msgstr "Gerçek Finansal"
 
 msgid "Real Financial STP"
-msgstr ""
+msgstr "Gerçek Finansal STP"
 
 msgid "Real Synthetic"
-msgstr ""
+msgstr "Gerçek Sentetik"
 
 msgid "Real-Money Account"
-msgstr ""
+msgstr "Gerçek Para Hesabı"
 
 msgid "Real-Money Accounts"
-msgstr ""
+msgstr "Gerçek Para Hesapları"
 
 msgid "Reality Check"
-msgstr ""
+msgstr "Gerçeklik Kontrolü"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "Son yılların tahmin edilmesi kolaydır"
 
 msgid "Recover camera access to continue face verification"
-msgstr ""
+msgstr "Yüz doğrulamaya devam etmek için kamera erişimini kurtarın"
 
 msgid "Recovery"
-msgstr ""
+msgstr "Kurtarma"
 
 msgid "Redo"
-msgstr ""
+msgstr "Yinelemek"
 
 msgid "Ref."
-msgstr ""
+msgstr "İlgi"
 
 msgid "Reference ID"
-msgstr ""
+msgstr "Referans Kimliği"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Yenile"
 
 msgid "Refresh this page to restart the identity verification process"
-msgstr ""
+msgstr "Kimlik doğrulama işlemini yeniden başlatmak için bu sayfayı yenileyin"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "Kalan süre"
 
 msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr ""
+msgstr "İşiniz bittiğinde stop düğmesine basmayı unutmayın. <fallback>Video eylemlerini yeniden yap</fallback>"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "Para yatırma limitlerini kaldırın"
 
 msgid "Remove your glasses, if necessary"
-msgstr ""
+msgstr "Gerekirse gözlüklerinizi çıkarın"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "“Aaa” gibi tekrarları tahmin etmek kolaydır"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "“Abcabcabc” gibi tekrarların tahmin edilmesi “abc” den biraz daha zordur"
 
 msgid "Reports"
-msgstr ""
+msgstr "Raporlar"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "Düzgün çalışması için tarayıcınızın web depolama alanının etkinleştirilmesini gerektirir. Lütfen etkinleştirin veya özel tarama modundan çıkın."
 
 msgid "Resale not offered"
-msgstr ""
+msgstr "Yeniden satış teklif edilmedi"
 
 msgid "Resend link"
-msgstr ""
+msgstr "Bağlantıyı yeniden gönderme"
 
 msgid "Reset Barrier"
-msgstr ""
+msgstr "Bariyeri sıfırla"
 
 msgid "Reset Call"
-msgstr ""
+msgstr "Arama Sıfırla"
 
 msgid "Reset Call/Reset Put"
-msgstr ""
+msgstr "Aramayı Sıfırla/Sıfırla"
 
 msgid "Reset Password"
-msgstr ""
+msgstr "Şifreyi sıfırla"
 
 msgid "Reset Put"
-msgstr ""
+msgstr "Sıfırla"
 
 msgid "Reset Time"
-msgstr ""
+msgstr "Sıfırlama Süresi"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "Dengeyi sıfırla"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "Bariyeri sıfırla"
 
 msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr ""
+msgstr "Sanal hesabınızın bakiyesini istediğiniz zaman %1 olarak sıfırlayın."
 
 msgid "Reset time"
-msgstr ""
+msgstr "Sıfırlama zamanı"
 
 msgid "Reset to original settings"
-msgstr ""
+msgstr "Orijinal ayarlara sıfırla"
 
 msgid "Residence permit"
-msgstr ""
+msgstr "İkamet izni"
 
 msgid "Restart process on a different device"
-msgstr ""
+msgstr "İşlemi farklı bir cihazda yeniden başlatma"
 
 msgid "Restart the process on the latest version of Google Chrome"
-msgstr ""
+msgstr "Google Chrome'un en son sürümünde işlemi yeniden başlatın"
 
 msgid "Restart the process on the latest version of Safari"
-msgstr ""
+msgstr "Safari'nin en son sürümünde işlemi yeniden başlatın"
 
 msgid "Return"
-msgstr ""
+msgstr "İade"
 
 msgid "Reverse Side"
-msgstr ""
+msgstr "Ters Taraf"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "Tersine çevrilmiş kelimeleri tahmin etmek çok daha zor değil"
 
 msgid "Revoke access"
-msgstr ""
+msgstr "Erişimi iptal etme"
 
 msgid "Rise"
-msgstr ""
+msgstr "Rise"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Yükseliş veya eşit"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Yükseliş/Düşüş"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr ""
+msgstr "Rise/Fall sözleşmeleri aşağıdaki takdirde iade edilecektir:"
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "STASIS Euro"
 
 msgid "Sa"
-msgstr ""
+msgstr "Sa"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "Satış Tarihi"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "Satış Fiyatı"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Cumartesi"
 
 msgid "Scan QR code"
-msgstr ""
+msgstr "QR kodunu tara"
 
 msgid "Scan the QR code with your phone"
-msgstr ""
+msgstr "QR kodunu telefonunuzla tarayın"
 
 msgid "Scans and photocopies are not accepted"
-msgstr ""
+msgstr "Taramalar ve fotokopiler kabul edilmez"
 
 msgid "Scopes"
-msgstr ""
+msgstr "Kapsamlar"
 
 msgid "Search for country"
-msgstr ""
+msgstr "Ülke için ara"
 
 msgid "Search..."
-msgstr ""
+msgstr "Ara..."
 
 msgid "Select Asset"
-msgstr ""
+msgstr "Varlık Seçiniz"
 
 msgid "Select Trade Type"
-msgstr ""
+msgstr "Ticaret Türünü Seçin"
 
 msgid "Select a %{country} document"
-msgstr ""
+msgstr "Bir %{country} belgesi seçin"
 
 msgid "Select country"
-msgstr ""
+msgstr "Ülke seç"
 
 msgid "Select date"
-msgstr ""
+msgstr "Tarih seç"
 
 msgid "Select issuing country"
-msgstr ""
+msgstr "Veren ülkeyi seçin"
 
 msgid "Select market:"
-msgstr ""
+msgstr "Pazar seç:"
 
 msgid "Select payment agent"
-msgstr ""
+msgstr "Ödeme aracısını seçin"
 
 msgid "Select your market and underlying asset"
-msgstr ""
+msgstr "Pazarınızı ve dayanak varlığınızı seçin"
 
 msgid "Select your trade type"
-msgstr ""
+msgstr "Ticaret türünüzü seçin"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "Seçilen kene"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "Kendini dışlama"
 
 msgid "Selfie"
-msgstr ""
+msgstr "Selfie"
 
 msgid "Selfie uploaded"
-msgstr ""
+msgstr "Selfie yüklendi"
 
 msgid "Sell"
-msgstr ""
+msgstr "Satmak"
 
 msgid "Sell at market"
-msgstr ""
+msgstr "Pazarda satış"
 
 msgid "Send a secure link to your phone"
-msgstr ""
+msgstr "Telefonunuza güvenli bir bağlantı gönderin"
 
 msgid "Send link"
-msgstr ""
+msgstr "Bağlantıyı gönder"
 
 msgid "Send this one-time link to your phone"
-msgstr ""
+msgstr "Bu tek seferlik bağlantıyı telefonunuza gönderin"
 
 msgid "Sending"
-msgstr ""
+msgstr "Gönderme"
 
 msgid "Sep"
-msgstr ""
+msgstr "Eyl"
 
 msgid "September"
-msgstr ""
+msgstr "Eylül"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "Abc veya 6543 gibi dizileri tahmin etmek kolaydır"
 
 msgid "Server"
-msgstr ""
+msgstr "Sunucu"
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr ""
+msgstr "Oturum süresi sınırı 6 haftadan fazla olamaz."
 
 msgid "Session duration:"
-msgstr ""
+msgstr "Oturum süresi:"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "Hesap para birimini ayarlama"
 
 msgid "Set currency"
-msgstr ""
+msgstr "Para birimini ayarla"
 
 msgid "Settles"
-msgstr ""
+msgstr "Yerleşir"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "Kısa klavye desenlerini tahmin etmek kolaydır"
 
 msgid "Should be %1"
-msgstr ""
+msgstr "%1olmalı"
 
 msgid "Should be a valid number."
-msgstr ""
+msgstr "Geçerli bir numara olmalı."
 
 msgid "Should be between %1 and %2"
-msgstr ""
+msgstr "%1 ile %2arasında olmalıdır"
 
 msgid "Should be less than %1"
 msgstr ""
@@ -2054,229 +2054,229 @@ msgid "Should be more than %1"
 msgstr ""
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr ""
+msgstr "Harf veya sayı ile başlamalı, kısa çizgi ve alt çizgi içerebilir."
 
 msgid "Show all details — including the bottom 2 lines"
-msgstr ""
+msgstr "Tüm ayrıntıları göster - alttaki 2 satır dahil"
 
 msgid "Sign out"
-msgstr ""
+msgstr "Oturumu Çık"
 
 msgid "Sign up"
-msgstr ""
+msgstr "Kaydolun"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader bu hesap için kullanılamıyor"
 
 msgid "Something's gone wrong"
-msgstr ""
+msgstr "Bir şeyler ters gitti"
 
 msgid "Sorry, account signup is not available in your country."
-msgstr ""
+msgstr "Üzgünüz, hesap kaydı ülkenizde mevcut değil."
 
 msgid "Sorry, an error occurred while processing your account."
-msgstr ""
+msgstr "Üzgünüz, hesabınız işlenirken bir hata oluştu."
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr ""
+msgstr "Üzgünüz, isteğiniz işlenirken bir hata oluştu."
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "Üzgünüz, ancak ikili opsiyon ticareti ülkenizde mevcut değildir."
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Üzgünüz, ancak ikili opsiyon ticareti finansal hesabınızda mevcut değildir."
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr ""
+msgstr "Üzgünüz, bu para birimi için para yatırma işlemleri şu anda devre dışı."
 
 msgid "Sorry, no mobile phone bills"
-msgstr ""
+msgstr "Üzgünüm, cep telefonu faturası yok"
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr ""
+msgstr "Üzgünüz, opsiyon ticareti Birleşik Krallık ve Man Adası\"nda mevcut değildir."
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr ""
+msgstr "Üzgünüz, bu özellik yalnızca sanal hesaplar tarafından kullanılabilir."
 
 msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr ""
+msgstr "Afedersiniz, bu özellik yetki alanınızda mevcut değil."
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr ""
+msgstr "Üzgünüz, bu para birimi için para çekme işlemleri şu anda devre dışı."
 
 msgid "Spot"
-msgstr ""
+msgstr "Nokta"
 
 msgid "Spot time"
-msgstr ""
+msgstr "Spot zamanı"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "Spot zamanı (GMT)"
 
 msgid "Stake"
-msgstr ""
+msgstr "Kazık"
 
 msgid "Start time"
-msgstr ""
+msgstr "Başlangıç zamanı"
 
 msgid "State/Province"
-msgstr ""
+msgstr "Eyalet/İl"
 
 msgid "Statements"
-msgstr ""
+msgstr "Deyimleri"
 
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 msgid "Stays Between"
-msgstr ""
+msgstr "Arasında Kalır"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Dışarıda Kalır/Dışarı Gider"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az tik varsa Sözleşmeler, satın alma fiyatından iade edilecektir."
 
 msgid "Step"
-msgstr ""
+msgstr "Adım"
 
 msgid "Steps required to continue verification on your mobile"
-msgstr ""
+msgstr "Cep telefonunuzda doğrulamaya devam etmek için gereken adımlar"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "Hisse Senedi Endeksleri"
 
 msgid "Stocks"
-msgstr ""
+msgstr "Hisse Senetleri"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "Düz tuş sıralarının tahmin edilmesi kolaydır"
 
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 msgid "Submit"
-msgstr ""
+msgstr "Gönder"
 
 msgid "Submit document"
-msgstr ""
+msgstr "Belgeyi gönder"
 
 msgid "Submit identity card (back)"
-msgstr ""
+msgstr "Kimlik kartı gönder (geri)"
 
 msgid "Submit identity card (front)"
-msgstr ""
+msgstr "Kimlik kartı gönder (ön)"
 
 msgid "Submit license (back)"
-msgstr ""
+msgstr "Lisans gönder (geri)"
 
 msgid "Submit license (front)"
-msgstr ""
+msgstr "Lisans gönder (ön)"
 
 msgid "Submit passport photo page"
-msgstr ""
+msgstr "Pasaport fotoğraf sayfasını gönder"
 
 msgid "Submit residence permit (back)"
-msgstr ""
+msgstr "Oturma iznini gönderin (geri)"
 
 msgid "Submit residence permit (front)"
-msgstr ""
+msgstr "Oturma iznini gönderin (ön)"
 
 msgid "Submit verification"
-msgstr ""
+msgstr "Doğrulamayı gönder"
 
 msgid "Submitted"
-msgstr ""
+msgstr "Gönderildi"
 
 msgid "Submitting"
-msgstr ""
+msgstr "Gönderme"
 
 msgid "Successful"
-msgstr ""
+msgstr "Başarılı"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Pazar"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "Başka bir hesaba geç"
 
 msgid "Synthetic"
-msgstr ""
+msgstr "Sentetik"
 
 msgid "Synthetic Indices"
-msgstr ""
+msgstr "Sentetik Endeksler"
 
 msgid "Take a photo"
-msgstr ""
+msgstr "Fotoğraf çekin"
 
 msgid "Take a photo of the back of your card"
-msgstr ""
+msgstr "Kartınızın arkasının fotoğrafını çekin"
 
 msgid "Take a photo of the back of your license"
-msgstr ""
+msgstr "Lisansınızın arkasının fotoğrafını çekin"
 
 msgid "Take a photo of the front of your card"
-msgstr ""
+msgstr "Kartınızın ön kısmının fotoğrafını çekin"
 
 msgid "Take a photo of the front of your license"
-msgstr ""
+msgstr "Lisansınızın ön kısmının fotoğrafını çekin"
 
 msgid "Take a photo of your passport photo page"
-msgstr ""
+msgstr "Pasaport fotoğraf sayfanızın fotoğrafını çekin"
 
 msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr ""
+msgstr "Bunun yerine <fallback> temel kamera modunu</fallback> kullanarak fotoğraf çekin"
 
 msgid "Take a photo with your phone"
-msgstr ""
+msgstr "Telefonunuzla fotoğraf çekin"
 
 msgid "Take a selfie"
-msgstr ""
+msgstr "Bir selfie çekin"
 
 msgid "Take a selfie showing your face"
-msgstr ""
+msgstr "Yüzünüzü gösteren bir selfie çekin"
 
 msgid "Take photo"
-msgstr ""
+msgstr "Fotoğraf çekmek"
 
 msgid "Target"
-msgstr ""
+msgstr "Hedef"
 
 msgid "Telephone"
-msgstr ""
+msgstr "Telefon"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "Urgan ERC20"
 
 msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr ""
+msgstr "Tether ERC20 (eUSDT), Tether'in USD'ye sabitlenmiş ve Ethereum platformunda barındırılan bir sürümüdür."
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "Urgan Omni"
 
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr ""
+msgstr "Tether Omni (USDT), Tether'in USD'ye sabitlenmiş ve Bitcoin blok zinciri üzerine kurulmuş bir sürümüdür."
 
 msgid "Th"
-msgstr ""
+msgstr "Th"
 
 msgid "Thank you"
-msgstr ""
+msgstr "Teşekkür ederim"
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
-msgstr ""
+msgstr "Kaydolduğunuz için teşekkür ederiz! Kayıt işlemini tamamlamak için lütfen e-postanızı kontrol edin."
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr ""
+msgstr "Teşekkür ederim, 24 saat içinde size geri döneceğiz"
 
 msgid "The %1 password of account number %2 has been changed."
-msgstr ""
+msgstr "%2 numaralı hesap numarasının %1 şifresi değiştirildi."
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr ""
+msgstr "The %1ckaybetmek%2 en son kene veya daha önce %1end zaman%2. Belirli bir seçtiyseniz %1end zaman,%2 the %1end zaman%2 seçilen zamandır."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
 msgstr ""
@@ -2285,782 +2285,782 @@ msgid "The %1end time%2 is the selected number of minutes/hours after the %1star
 msgstr ""
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
+msgstr "The %1exit spot%2 sözleşme sona erdiğinde son işarettir. Sözleşme, tüm keneler art arda yükseldiğinde veya düştüğünde sona erer, veya tek bir kene tahmin edilen deseni kırdığında."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "The %1high%2 sözleşme süresi boyunca piyasanın ulaştığı en yüksek noktadır."
 
 msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "The %1low%2 sözleşme süresi boyunca piyasanın ulaştığı en düşük noktadır."
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr ""
+msgstr "The %1start zamanı%2 sözleşme sunucularımız tarafından işlendiğinde başlar."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
 msgstr ""
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr ""
+msgstr "The <strong>sözleşme dönemi</strong> arasındaki dönemdir <strong>sonraki kene</strong> sonra <strong>Başlangıç saati</strong> ve <strong>bitiş zamanı</strong>."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "<strong>bitiş zamanı</strong> , <strong>başlangıç saatinden</strong> (süre olarak bir günden az ise) veya işlem gününün sonunda (eğer bir gün veya daha uzun süre) sonra seçilen dakika/saat sayısıdır."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
 msgstr ""
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "The <strong>giriş noktası</strong> sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk işarettir."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
+msgstr "The <strong>çıkış noktası</strong> veya önceki en son işarettir <strong>bitiş zamanı</strong>."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr ""
+msgstr "The <strong>Başlangıç saati</strong> sözleşmenin sunucularımız tarafından işlendiği ve <strong>giriş noktası</strong> ... <strong>sonraki kene</strong> ondan sonra."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr ""
+msgstr "The <strong>başlangıç zamanı</strong> , sözleşmenin sunucularımız tarafından işlendiği zamandır."
 
 msgid "The Average"
-msgstr ""
+msgstr "Ortalama"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr ""
+msgstr "Ortalama, giriş noktası ve son kene dahil olmak üzere kenelerin ortalamasıdır."
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr ""
+msgstr "Sözleşme 5 dakika içinde bitmez (kene süresi sözleşmeleri için)"
 
 msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr ""
+msgstr "Sağlanan e-posta adresi zaten kullanımda. Şifrenizi unuttuysanız, lütfen deneyin <a href=\"%1\">şifre kurtarma aracı</a> veya müşteri hizmetlerimizle iletişime geçin."
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "Giriş noktası, sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk işarettir."
 
 msgid "The link only works on mobile devices"
-msgstr ""
+msgstr "Bağlantı yalnızca mobil cihazlarda çalışır"
 
 msgid "The maximum number of tokens (%1) has been reached."
-msgstr ""
+msgstr "Maksimum jeton sayısına (%1) ulaşıldı."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
-msgstr ""
+msgstr "İstediğiniz sayfa bulunamadı. Ya artık yok ya da adres yanlış. Lütfen herhangi bir yazım hatası olup olmadığını kontrol edin."
 
 msgid "The photo should clearly show your document"
-msgstr ""
+msgstr "Fotoğraf belgenizi açıkça göstermelidir"
 
 msgid "The reason should be between 5 and 250 characters"
-msgstr ""
+msgstr "Sebep 5 ila 250 karakter arasında olmalıdır"
 
 msgid "The reset time is %1"
-msgstr ""
+msgstr "Sıfırlama süresi %1"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
 msgstr ""
 
 msgid "The two passwords that you entered do not match."
-msgstr ""
+msgstr "Girdiğiniz iki şifre eşleşmiyor."
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr ""
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az kene vardır"
 
 msgid "There was a problem accessing the server during purchase."
-msgstr ""
+msgstr "Satın alma sırasında sunucuya erişimde bir sorun oluştu."
 
 msgid "There was a problem accessing the server."
-msgstr ""
+msgstr "Sunucuya erişimde bir sorun oluştu."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Bir hata oluştu"
 
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "Giriş alanında bazı geçersiz karakterler vardı."
 
 msgid "These are the documents most likely to show your current home address"
-msgstr ""
+msgstr "Bunlar mevcut ev adresinizi gösterme olasılığı en yüksek belgelerdir"
 
 msgid "This account is disabled"
-msgstr ""
+msgstr "Bu hesap devre dışı"
 
 msgid "This account is excluded until %1"
 msgstr ""
 
 msgid "This contract is only available on %1DTrader%2."
-msgstr ""
+msgstr "Bu sözleşme yalnızca şu adreste mevcuttur: %1DTrader%2."
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr ""
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Bu sözleşme kayboldu"
 
 msgid "This contract type only offers 5 ticks"
-msgstr ""
+msgstr "Bu sözleşme türü yalnızca 5 kene sunar"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Bu sözleşme kazandı"
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr ""
+msgstr "Bu özellik sanal para hesaplarıyla ilgili değildir."
 
 msgid "This field is required."
-msgstr ""
+msgstr "Bu alan zorunludur."
 
 msgid "This is a staging server - For testing purposes only"
-msgstr ""
+msgstr "Bu bir hazırlama sunucusudur - Yalnızca test amaçlı"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "Bu bir ilk 10 ortak şifredir"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "Bu bir ilk 100 ortak şifredir"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "Bu çok yaygın bir şifredir"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr ""
+msgstr "Bu gösterge niteliğindeki bir engeldir. Gerçek bariyer giriş noktası artı bariyer ofseti olacaktır."
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "Bu, yaygın olarak kullanılan bir şifreye benzer"
 
 msgid "This is your %1 account."
-msgstr ""
+msgstr "Bu senin %1 hesap."
 
 msgid "This page is only available to logged out clients."
-msgstr ""
+msgstr "Bu sayfa yalnızca oturumu kapatmış müşteriler tarafından kullanılabilir."
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "Bu şifre kara listede"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Perşembe"
 
 msgid "Tick"
-msgstr ""
+msgstr "kene"
 
 msgid "Tick Prediction"
-msgstr ""
+msgstr "Kene Tahmini"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Keneler"
 
 msgid "Ticks history returned an empty array."
-msgstr ""
+msgstr "Keneler geçmişi boş bir dizi döndürdü."
 
 msgid "Time is in the wrong format."
-msgstr ""
+msgstr "Zaman yanlış formatta."
 
 msgid "Time out cannot be in the past."
-msgstr ""
+msgstr "Zaman aşım geçmişte olamaz."
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr ""
+msgstr "Zaman aşım 6 haftadan fazla olamaz."
 
 msgid "Time out must be after today."
-msgstr ""
+msgstr "Molama bugünden sonra olmalı."
 
 msgid "Timed out until"
-msgstr ""
+msgstr "Kadar zaman aşımına uğradı"
 
 msgid "Tips"
-msgstr ""
+msgstr "İpuçları"
 
 msgid "Tips to take a good selfie"
-msgstr ""
+msgstr "İyi bir selfie çekmek için ipuçları"
 
 msgid "To account: "
-msgstr ""
+msgstr "Hesaba: "
 
 msgid "To open a bank account, we will need to verify your identity."
-msgstr ""
+msgstr "Bir banka hesabı açmak için kimliğinizi doğrulamamız gerekecek."
 
 msgid "To smoothly verify you, we need a better photo"
-msgstr ""
+msgstr "Sizi sorunsuz bir şekilde doğrulamak için daha iyi bir fotoğrafa ihtiyacımız var"
 
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
 
 msgid "Token"
-msgstr ""
+msgstr "Jeton"
 
 msgid "Too many failed attempts"
-msgstr ""
+msgstr "Çok fazla başarısız girişim"
 
 msgid "Top up error"
-msgstr ""
+msgstr "Top up hatası"
 
 msgid "Top-up successful"
-msgstr ""
+msgstr "Top-up başarılı"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "Toplam Maliyet"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "Toplam Kar/Zarar"
 
 msgid "Total assets"
-msgstr ""
+msgstr "Toplam aktifler"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "Deriv hesaplarınızdaki toplam varlıklar"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "Toplam kar/zarar"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Dokunmatik/Dokunma Yok"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az tik varsa Touch/No Touch sözleşmeleri satın alma fiyatından iade edilecektir."
 
 msgid "Touches"
-msgstr ""
+msgstr "Dokunur"
 
 msgid "Town/City"
-msgstr ""
+msgstr "Kasaba/Şehir"
 
 msgid "Trade"
-msgstr ""
+msgstr "Ticaret"
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr ""
+msgstr "Güçlü, kullanıcı dostu bir çevrimiçi ticaret platformu olan SmartTrader ile dünya pazarlarında dijital opsiyon ticareti yapın."
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr ""
+msgstr "Popüler kullanıcı dostu platformumuzla dünya pazarlarında ticaret yapın."
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Tüccar merkezi"
 
 msgid "Trading Information"
-msgstr ""
+msgstr "Ticaret Bilgileri"
 
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "Ticaret ve mevduat devre dışı"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "Hesabınızda alım satım ve para yatırma işlemleri devre dışı bırakıldı. Lütfen %1contact müşteri desteği%2 yardım için."
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "Sentetik Endekslerdeki fark sözleşmeleri (CFD'ler) herkes için uygun olmayabilir. Lütfen ilgili riskleri tam olarak anladığınızdan emin olun, MT5 hesabınızdaki tüm fonları kaybetme olasılığı dahil. Kumar bağımlılık yapabilir - lütfen sorumlu bir şekilde oynayın."
 
 msgid "Trading is unavailable at this time."
-msgstr ""
+msgstr "Ticaret şu anda kullanılamıyor."
 
 msgid "Trading statistics report"
-msgstr ""
+msgstr "Alım satım istatistikleri raporu"
 
 msgid "Transaction ID"
-msgstr ""
+msgstr "İşlem Kimliği"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr ""
+msgstr "İşlem %1 tarafından gerçekleştirildi (Uygulama Kimliği: %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "Gerçek USD"
 
 msgid "Try our %1Synthetic Indices%2."
 msgstr ""
 
 msgid "Try our other markets."
-msgstr ""
+msgstr "Diğer pazarlarımızı deneyin."
 
 msgid "Try using a JPG or PNG file"
-msgstr ""
+msgstr "JPG veya PNG dosyası kullanmayı deneyin"
 
 msgid "Try using another file type."
-msgstr ""
+msgstr "Başka bir dosya türü kullanmayı deneyin."
 
 msgid "Tu"
-msgstr ""
+msgstr "Tu"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Salı"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Ciro"
 
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "ABD Doları"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "USD Madeni Para"
 
 msgid "USDK"
-msgstr ""
+msgstr "USDK"
 
 msgid "Unable to read file %1"
-msgstr ""
+msgstr "%1dosyası okunamıyor"
 
 msgid "Unavailable"
-msgstr ""
+msgstr "Kullanılamıyor"
 
 msgid "Understood"
-msgstr ""
+msgstr "Anlaşıldı"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "Ne yazık ki, bu işlem platformu EU Deriv hesabı için mevcut değildir. Ticarete devam etmek için lütfen AB üyesi olmayan bir hesaba geçin."
 
 msgid "Unknown OS"
-msgstr ""
+msgstr "Bilinmeyen İşletim Sistemi"
 
 msgid "Unsupported browser"
-msgstr ""
+msgstr "Desteklenmeyen tarayıcı"
 
 msgid "Up to %1 decimal places are allowed."
 msgstr ""
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Yukarı/Aşağı"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "Yaklaşan Etkinlikler"
 
 msgid "Upgrade now"
-msgstr ""
+msgstr "Şimdi yükseltin"
 
 msgid "Upload"
-msgstr ""
+msgstr "Yüklemek"
 
 msgid "Upload a selfie from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan bir selfie yükleyin"
 
 msgid "Upload anyway"
-msgstr ""
+msgstr "Yine de yükle"
 
 msgid "Upload back of card from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan kartın arkasına yükleyin"
 
 msgid "Upload back of license from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan lisans geri yükleyin"
 
 msgid "Upload front of card from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan kartın önünden yükleyin"
 
 msgid "Upload front of license from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan lisans önü yükleyin"
 
 msgid "Upload passport photo page"
-msgstr ""
+msgstr "Pasaport fotoğraf sayfasını yükle"
 
 msgid "Upload passport photo page from your computer"
-msgstr ""
+msgstr "Bilgisayarınızdan pasaport fotoğraf sayfası yükleyin"
 
 msgid "Upload photo"
-msgstr ""
+msgstr "Fotoğraf yükle"
 
 msgid "Uploads successful"
-msgstr ""
+msgstr "Yüklemeler başarılı"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "Birkaç kelime kullanın, yaygın ifadelerden kaçının"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "Daha fazla dönüşle daha uzun bir klavye deseni kullanın"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr ""
+msgstr "Doğrulama kodu yanlış. Lütfen e-postanıza gönderilen bağlantıyı kullanın."
 
 msgid "Verification complete"
-msgstr ""
+msgstr "Doğrulama tamamlandı"
 
 msgid "Verification required"
-msgstr ""
+msgstr "Doğrulama gerekli"
 
 msgid "Verify Identity"
-msgstr ""
+msgstr "Kimliği Doğrula"
 
 msgid "Verify Reset Password"
-msgstr ""
+msgstr "Parolayı Sıfırla"
 
 msgid "Verify identity"
-msgstr ""
+msgstr "Kimliği doğrulayın"
 
 msgid "View"
-msgstr ""
+msgstr "Görüntüle"
 
 msgid "View chart"
-msgstr ""
+msgstr "Grafiği görüntüle"
 
 msgid "View from camera"
-msgstr ""
+msgstr "Kameradan görüntüle"
 
 msgid "Virtual"
-msgstr ""
+msgstr "Sanal"
 
 msgid "Waiting for contract settlement."
-msgstr ""
+msgstr "Sözleşme anlaşmasını bekliyorum."
 
 msgid "Waiting for entry tick."
-msgstr ""
+msgstr "Giriş kene bekliyorum."
 
 msgid "Waiting for exit tick."
-msgstr ""
+msgstr "Çıkış kene bekliyorum."
 
 msgid "We"
-msgstr ""
+msgstr "Biz"
 
 msgid "We cannot verify you without using your camera"
-msgstr ""
+msgstr "Kameranızı kullanmadan sizi doğrulayamıyoruz"
 
 msgid "We'd love to hear what you think."
-msgstr ""
+msgstr "Ne düşündüğünüzü duymak isteriz."
 
 msgid "We'll compare it with your document"
-msgstr ""
+msgstr "Belgenizle karşılaştıracağız"
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr ""
+msgstr "Ürünlerimizi ve hizmetlerimizi geliştirmek istiyoruz, ve ihtiyaçlarınızı daha iyi anlamak istiyoruz. Sizinle telefonla röportaj yapmak istiyoruz, hakkımızda neyi sevdiğini bilmek, neyi sevmiyorsun, ve nerede daha iyisini yapabiliriz."
 
 msgid "We're now ready to verify your identity"
-msgstr ""
+msgstr "Artık kimliğinizi doğrulamaya hazırız"
 
 msgid "We've sent a secure link to %{number}"
-msgstr ""
+msgstr "%{number} adresine güvenli bir bağlantı gönderdik"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Çarşamba"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "Sınırlarınızı güncelleyeceğiz. Tıklayın %1Agree ve kabul et%2 eylemlerinizden tamamen sorumlu olduğunuzu kabul etmek, ve herhangi bir bağımlılık veya kayıptan sorumlu değiliz."
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 msgid "When prompted, you must enable camera access to continue"
-msgstr ""
+msgstr "İstendiğinde, devam etmek için kamera erişimini etkinleştirmeniz gerekir"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "“Tamam” ı tıkladığınızda, seçilen tarihe kadar sitede işlem yapmaktan çıkarılırsınız."
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr ""
+msgstr "Çıkış noktası da giriş noktasına eşitse ödeme kazanın."
 
 msgid "Winning the contract"
-msgstr ""
+msgstr "Sözleşmeyi kazanmak"
 
 msgid "Withdraw"
-msgstr ""
+msgstr "Çekilme"
 
 msgid "Withdrawal"
-msgstr ""
+msgstr "Çekilme"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "Para çekme ve işlem limitleri"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "Para çekme devre dışı"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "Hesabınızda para çekme işlemleri devre dışı bırakıldı. Daha fazla ayrıntı için lütfen e-postanızı kontrol edin."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr ""
 
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 msgid "Yes I'm sure"
-msgstr ""
+msgstr "Evet eminim"
 
 msgid "Yes, I'm sure"
-msgstr ""
+msgstr "Evet, eminim"
 
 msgid "You are categorised as a professional client."
-msgstr ""
+msgstr "Profesyonel bir müşteri olarak kategorize ediliyorsunuz."
 
 msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr ""
+msgstr "Perakende müşteri olarak kategorize ediliyorsunuz. Profesyonel bir tüccar olarak muamele görmek için başvurun."
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr ""
+msgstr "Bir fiat hesabıyla sınırlısınız. İlk kez para yatırmadan veya bir MT5 hesabı oluşturmadan önce fiat hesabınızın para birimini istediğiniz zaman değiştirebilirsiniz."
 
 msgid "You are offline"
-msgstr ""
+msgstr "Çevrimdışınız"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr ""
+msgstr "Yapabilirsin %1set yeni bir para birimi%2 İlk kez para yatırmadan veya bir MT5 hesabı oluşturmadan önce."
 
 msgid "You can close this window without interrupting your trade."
-msgstr ""
+msgstr "Ticaretinizi kesintiye uğratmadan bu pencereyi kapatabilirsiniz."
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr ""
+msgstr "MT5 hesabı oluşturduğunuz için artık para birimini değiştiremezsiniz."
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr ""
+msgstr "İlk kez para yatırma işlemi yaptığınız için artık para birimini değiştiremezsiniz."
 
 msgid "You can now return to your computer to continue"
-msgstr ""
+msgstr "Artık devam etmek için bilgisayarınıza dönebilirsiniz"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr ""
+msgstr "Bakiyeniz %2 veya daha az ise demo hesabınıza ek bir %1 ile para yatırabilirsiniz."
 
 msgid "You did not change anything."
-msgstr ""
+msgstr "Hiçbir şeyi değiştirmedin."
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr ""
+msgstr "Şu anda hesabınızın kimliğini doğrulamanıza gerek yoktur.%1Hesabınızın doğrulanması gerektiğinde sizi bilgilendireceğiz."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr ""
 
 msgid "You have already withdrawn %1%2."
-msgstr ""
+msgstr "Zaten çektiniz %1%2."
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr ""
+msgstr "İkili hesabınızda yetersiz para var, lütfen <a href=\"%1\">para ekle</a>."
 
 msgid "You have insufficient funds in your MT5 account."
-msgstr ""
+msgstr "MT5 hesabınızda yetersiz para var."
 
 msgid "You have not granted access to any applications."
-msgstr ""
+msgstr "Herhangi bir uygulamaya erişim izni vermediniz."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
-msgstr ""
+msgstr "Saniyede taleplerin oran sınırına ulaştınız. Lütfen daha sonra deneyin."
 
 msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr ""
+msgstr "Para çekme limitine ulaştınız. Para çekme limitinizi kaldırmak ve para çekme işleminize devam etmek için lütfen kimlik kanıtınızı ve adresinizi yükleyin."
 
 msgid "You have sold this contract at %1 %2"
-msgstr ""
+msgstr "Bu sözleşmeyi sattınız %1 %2"
 
 msgid "You have successfully changed your account currency from %1 to %2."
 msgstr ""
 
 msgid "You have successfully disabled two-factor authentication for your account."
-msgstr ""
+msgstr "Hesabınız için iki faktörlü kimlik doğrulamayı başarıyla devre dışı bıraktınız."
 
 msgid "You have successfully enabled two-factor authentication for your account."
-msgstr ""
+msgstr "Hesabınız için iki faktörlü kimlik doğrulamayı başarıyla etkinleştirdiniz."
 
 msgid "You have successfully set your account currency to %1."
-msgstr ""
+msgstr "Hesap para biriminizi başarıyla %1."
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr ""
+msgstr "Kimlik doğrulama için farklı OAuth sunucusunu kullanabilmeniz için önce kayıt olmanız ve Uygulama Kimliği almanız gerekir. Daha fazla bilgi için https://developers.binary.com/ adresindeki OAuth ayrıntılarına bakın."
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "Henüz herhangi bir bildirim almadınız"
 
 msgid "You may open one account for each supported cryptocurrency."
-msgstr ""
+msgstr "Desteklenen her kripto para birimi için bir hesap açabilirsiniz."
 
 msgid "You should enter %1 characters."
-msgstr ""
+msgstr "Girmelisiniz %1 karakterler."
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
-msgstr ""
+msgstr "Binary.com'a ait olmayan üçüncü taraf bir web sitesine yönlendirileceksiniz."
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr ""
+msgstr "Bu MT5 hesabını oluşturduktan sonra fiat hesabınızın para birimini değiştiremezsiniz. Devam etmek istediğinden emin misin?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr ""
+msgstr "Bu depozitoyu yaptıktan sonra fiat hesabınızın para birimini değiştiremezsiniz. Devam etmek istediğinden emin misin?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr ""
+msgstr "Piyasa fiyatı seçtiğiniz rakamla bitmezse ödemeyi kazanırsınız."
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr ""
+msgstr "Piyasa fiyatı seçtiğiniz rakamla biterse ödemeyi kazanırsınız."
 
 msgid "You'll need to restart your verification on your computer"
-msgstr ""
+msgstr "Doğrulamanızı bilgisayarınızda yeniden başlatmanız gerekir"
 
 msgid "You've made no transactions of this type up to this date."
-msgstr ""
+msgstr "Bu tarihe kadar bu türden hiçbir işlem yapmamışsınız."
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr ""
+msgstr "Sizin %1 günlük para çekme limiti şu anda %2%3."
 
 msgid "Your account has no Login/Logout activity."
-msgstr ""
+msgstr "Hesabınızda Oturum Açma/Çıkış etkinliği yok."
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
-msgstr ""
+msgstr "Hesabınız tamamen doğrulandı ve para çekme limitleriniz kaldırıldı."
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "Hesabınız kısıtlı. Lütfen %1contact müşteri desteği%2 yardım için."
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr ""
+msgstr "Profesyonel bir müşteri olarak değerlendirilecek başvurunuz işleme alınmaktadır."
 
 msgid "Your cashier is locked."
-msgstr ""
+msgstr "Kasiyeriniz kilitli."
 
 msgid "Your changes have been updated successfully."
-msgstr ""
+msgstr "Değişiklikleriniz başarıyla güncellendi."
 
 msgid "Your changes have been updated."
-msgstr ""
+msgstr "Değişiklikleriniz güncellendi."
 
 msgid "Your computer may take a few seconds to update"
-msgstr ""
+msgstr "Bilgisayarınızın güncellenmesi birkaç saniye sürebilir"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr ""
+msgstr "Demo hesap bakiyeniz şu anda %1 veya daha az. Hesabınıza ek bir %2."
 
 msgid "Your face is needed in the selfie"
-msgstr ""
+msgstr "Selfie'de yüzünüze ihtiyaç var"
 
 msgid "Your fiat account's currency is currently set to %1."
-msgstr ""
+msgstr "Fiat hesabınızın para birimi şu anda şu şekilde ayarlanmıştır: %1."
 
 msgid "Your fiat account's currency is set to %1."
-msgstr ""
+msgstr "Fiat hesabınızın para birimi şu şekilde ayarlanmıştır: %1."
 
 msgid "Your link will expire in one hour"
-msgstr ""
+msgstr "Bağlantınızın süresi bir saat içinde dolacak"
 
 msgid "Your mobile link will expire in one hour"
-msgstr ""
+msgstr "Mobil bağlantınızın süresi bir saat içinde dolacak"
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "Şifreniz e-posta adresinizle aynı olamaz."
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr ""
+msgstr "Şifreniz başarıyla sıfırlandı. Lütfen yeni şifrenizi kullanarak hesabınıza giriş yapın."
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "Her rapor arasında tercih ettiğiniz zaman aralığı:"
 
 msgid "Your professional client request is %1not approved%2."
-msgstr ""
+msgstr "Profesyonel müşteri isteğiniz %1not onaylandı%2."
 
 msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully processed."
 msgstr ""
 
 msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr ""
+msgstr "Para çekme talebiniz %1 %2 hesabınızdan %3 Ödeme Temsilcisine %4 hesap başarıyla işlendi."
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr ""
+msgstr "Oturum süresi sınırınız %1 saniye içinde sona erecek."
 
 msgid "Your settings have been updated successfully."
-msgstr ""
+msgstr "Ayarlarınız başarıyla güncellendi."
 
 msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
 msgstr ""
 
 msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr ""
+msgstr "Jetonunuzun süresi doldu veya geçersiz. Doğrulama işlemini yeniden başlatmak için lütfen <a href=\"%1\">buraya</a> tıklayınız."
 
 msgid "Your trading statistics since %1."
-msgstr ""
+msgstr "O zamandan beri ticaret istatistikleriniz %1."
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "İşlem referansınız"
 
 msgid "Your transaction reference number is %1"
-msgstr ""
+msgstr "İşlem referans numaranız %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "Sanal bakiyeniz sıfırlandı."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr ""
 
 msgid "Your withdrawal limit is %1%2."
-msgstr ""
+msgstr "Para çekme limitiniz %1%2."
 
 msgid "account"
-msgstr ""
+msgstr "hesap"
 
 msgid "accounts"
-msgstr ""
+msgstr "hesaplar"
 
 msgid "back"
-msgstr ""
+msgstr "geri"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "ikili opsiyonlar, forex, forex ticareti, online ticaret, finansal ticaret, ikili ticaret, endeks ticareti, ticaret hisse senedi endeksleri, forex işlemleri, ticaret emtiaları, ikili opsiyon stratejisi, ikili komisyoncu, ikili bahis, ikili opsiyon ticaret platformu, ikili strateji, finans, yatırım, ticaret"
 
 msgid "close"
-msgstr ""
+msgstr "kapat"
 
 msgid "day"
-msgstr ""
+msgstr "gün"
 
 msgid "days"
-msgstr ""
+msgstr "günler"
 
 msgid "details"
-msgstr ""
+msgstr "ayrıntılar"
 
 msgid "e.g. United States"
-msgstr ""
+msgstr "ör. Amerika Birleşik Devletleri"
 
 msgid "e.g. frontend.binaryws.com"
-msgstr ""
+msgstr "örn. frontend.binaryws.com"
 
 msgid "for account %1"
-msgstr ""
+msgstr "hesap için %1"
 
 msgid "hour"
-msgstr ""
+msgstr "saat"
 
 msgid "hours"
-msgstr ""
+msgstr "saatler"
 
 msgid "including Deal Cancel. Fee"
-msgstr ""
+msgstr "Anlaşma İptal dahil. Ücret"
 
 msgid "letters"
-msgstr ""
+msgstr "mektupları"
 
 msgid "login"
-msgstr ""
+msgstr "oturum aç"
 
 msgid "logout"
-msgstr ""
+msgstr "oturumu kapat"
 
 msgid "minute"
-msgstr ""
+msgstr "dakika"
 
 msgid "minutes"
-msgstr ""
+msgstr "dakikalar"
 
 msgid "numbers"
-msgstr ""
+msgstr "sayılar"
 
 msgid "or"
-msgstr ""
+msgstr "veya"
 
 msgid "or upload photo – no scans or photocopies"
-msgstr ""
+msgstr "veya fotoğraf yükleyin - tarama veya fotokopi yok"
 
 msgid "second"
-msgstr ""
+msgstr "ikinci"
 
 msgid "seconds"
-msgstr ""
+msgstr "saniyeler"
 
 msgid "space"
-msgstr ""
+msgstr "uzay"
 
 msgid "tick"
-msgstr ""
+msgstr "işlemek"
 
 msgid "ticks"
-msgstr ""
+msgstr "keneler"
 
 msgid "today"
-msgstr ""
+msgstr "bugün"
 
 msgid "today, Fridays"
-msgstr ""
+msgstr "bugün, cuma"
 
 msgid "virtual money credit to account"
-msgstr ""
+msgstr "hesaba sanal para kredisi"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}Ancak Binary Investments (Europe) Ltd bilgi ve deneyiminizi değerlendirmiş ve ürünü sizin için uygun görmektedir."
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}Bu kaldıraçlı bir üründür. Kayıpların, ürünü satın almak için başlangıçta ödenen miktardan daha yüksek olabileceğini bilmelisiniz."
 
 msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr ""
+msgstr "{SPAIN ONLY}Basit olmayan ve anlaşılması zor olabilecek bir ürün satın almak üzeresiniz: Fark ve forex sözleşmeleri. Genel bir kural olarak, CNMV, bu tür ürünlerin karmaşıklıkları nedeniyle perakende müşteriler için uygun olmadığını düşünmektedir."
 
