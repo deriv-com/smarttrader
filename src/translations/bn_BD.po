@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Bengali\n"
 "MIME-Version: 1.0\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Language: bn_BD\n"
 
 msgid "404"
-msgstr ""
+msgstr "৪০৪"
 
 msgid " (Region added)"
-msgstr ""
+msgstr " (অঞ্চল যোগ করা হয়েছে)"
 
 msgid " (Temporarily unavailable)"
-msgstr ""
+msgstr " (সাময়িকভাবে উপলব্ধ নয়)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
-msgstr ""
+msgstr "%1 অ্যাকাউন্ট %2"
 
 msgid "%1 Please click the link below to restart the password recovery process."
-msgstr ""
+msgstr "%1 পাসওয়ার্ড পুনরুদ্ধার প্রক্রিয়া পুনরায় আরম্ভ করতে নীচের লিঙ্কে ক্লিক করুন।"
 
 msgid "%1 and %2 cannot be the same."
-msgstr ""
+msgstr "%1 এবং %2 একই হতে পারে না।"
 
 msgid "%1 days %2 hours %3 minutes"
-msgstr ""
+msgstr "%1 দিন %2 ঘন্টা %3 মিনিট"
 
 msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
 msgstr ""
@@ -47,943 +47,943 @@ msgid "%1 has been credited into your MT5 Demo Account: %2."
 msgstr ""
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr ""
+msgstr "%1 আপনার ভার্চুয়াল অ্যাকাউন্টে জমা করা হয়েছে: %2।"
 
 msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
 msgstr ""
 
 msgid "%1Manage your accounts%2"
-msgstr ""
+msgstr "%1আপনার অ্যাকাউন্ট পরিচালনা করুন%2"
 
 msgid "%1No, change my fiat account's currency now%2"
-msgstr ""
+msgstr "%1No, আমার ফায়াত অ্যাকাউন্টের মুদ্রা এখন%2পরিবর্তন করুন"
 
 msgid "%1Return to trading page%2"
-msgstr ""
+msgstr "%1ট্রেডিং এ ফিরে যান পৃষ্ঠা%2"
 
 msgid "1. This link was sent by you"
-msgstr ""
+msgstr "1। এই লিঙ্কটি আপনার দ্বারা পাঠানো হয়েছে"
 
 msgid "2. Your desktop window stays open"
-msgstr ""
+msgstr "2। আপনার ডেস্কটপ উইন্ডো খোলা থাকবে"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr ""
+msgstr "একটি শক্তিশালী কিন্তু সহজে ব্যবহার করা প্ল্যাটফর্মের উপর একটি সম্পূর্ণ নতুন ট্রেডিং অভিজ্ঞতা।"
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "নিজেই একটি শব্দ অনুমান করা সহজ"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Account"
-msgstr ""
+msgstr "একাউন্ট"
 
 msgid "Account Authenticated"
-msgstr ""
+msgstr "অ্যাকাউন্ট প্রমাণীকৃত"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr ""
+msgstr "অ্যাকাউন্ট অ্যাক্সেস সাময়িকভাবে সীমিত। আরও বিস্তারিত জানার জন্য অনুগ্রহ করে আপনার ইনবক্স চেক করুন।"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "অ্যাকাউন্ট প্রমাণীকরণ"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "অ্যাকাউন্ট ব্যালেন্স:"
 
 msgid "Acknowledge"
-msgstr ""
+msgstr "স্বীকার"
 
 msgid "Action"
-msgstr ""
+msgstr "অ্যাকশন"
 
 msgid "Add"
-msgstr ""
+msgstr "যোগ করুন"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr ""
+msgstr "একটি বাধা অফসেট সংজ্ঞায়িত করতে +/— যোগ করুন। উদাহরণস্বরূপ, +0.005 মানে একটি বাধা যা এন্ট্রি স্পট থেকে 0.005 বেশি।"
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "অন্য একটি শব্দ বা দুটি যোগ করুন অস্বাভাবিক শব্দ ভাল।"
 
 msgid "Adjust trade parameters"
-msgstr ""
+msgstr "ট্রেড প্যারামিটারগুলি সামঞ্জস্য করুন"
 
 msgid "Admin"
-msgstr ""
+msgstr "অ্যাডমিন"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "সম্মত হন এবং গ্রহণ করুন"
 
 msgid "All details must be clear — nothing blurry"
-msgstr ""
+msgstr "সমস্ত বিবরণ স্পষ্ট হতে হবে - কিছুই ঝাপসা"
 
 msgid "All markets are closed now. Please try again later."
-msgstr ""
+msgstr "সব বাজার এখন বন্ধ হয়ে গেছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।"
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "সব-বড় হাতের সব-ছোট হাতের হিসাবে অনুমান করা প্রায় সহজ"
 
 msgid "Allow camera access"
-msgstr ""
+msgstr "ক্যামেরায় প্রবেশের অনুমতি দিন"
 
 msgid "Allow equals"
-msgstr ""
+msgstr "সমতুল্যকে অনুমতি দিন"
 
 msgid "Already have an account?"
-msgstr ""
+msgstr "ইতিমধ্যে একটি অ্যাকাউন্ট আছে?"
 
 msgid "Amount"
-msgstr ""
+msgstr "পরিমাণ"
 
 msgid "Amount in"
-msgstr ""
+msgstr "পরিমাণ"
 
 msgid "An error occurred while loading the component"
-msgstr ""
+msgstr "কম্পোনেন্ট লোড করার সময় একটি ত্রুটি ঘটেছে"
 
 msgid "Apply now as a professional investor"
-msgstr ""
+msgstr "পেশাদার বিনিয়োগকারী হিসাবে এখনই আবেদন করুন"
 
 msgid "Apr"
-msgstr ""
+msgstr "এপ্রিল"
 
 msgid "April"
-msgstr ""
+msgstr "এপ্রিল"
 
 msgid "Are you sure that you want to permanently delete the token"
-msgstr ""
+msgstr "আপনি কি নিশ্চিত যে আপনি স্থায়ীভাবে টোকেনটি মুছে ফেলতে চান?"
 
 msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr ""
+msgstr "আপনি কি নিশ্চিত যে আপনি স্থায়ীভাবে অ্যাপ্লিকেশনটির অ্যাক্সেস প্রত্যাহার করতে চান?"
 
 msgid "Are you sure you want to create a fiat account in %1?"
-msgstr ""
+msgstr "আপনি কি নিশ্চিত যে আপনি %1এ একটি ফায়াত অ্যাকাউন্ট তৈরি করতে চান?"
 
 msgid "Are you sure you want to create your %1 account now?"
-msgstr ""
+msgstr "আপনি কি নিশ্চিত যে আপনি এখন আপনার %1 অ্যাকাউন্ট তৈরি করতে চান?"
 
 msgid "Are you sure you want to deposit in %1?"
-msgstr ""
+msgstr "আপনি কি নিশ্চিতরূপে %1ডিপোজিট করতে চান?"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "তুমি শিওর?"
 
 msgid "Asian Down"
-msgstr ""
+msgstr "এশিয়ান ডাউন"
 
 msgid "Asian Up"
-msgstr ""
+msgstr "এশিয়ান আপ"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "এশিয়ান চুক্তি 5 মিনিটের মধ্যে শেষ না হলে ক্রয় মূল্যে ফেরত দেওয়া হবে।"
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr ""
+msgstr "এশিয়ান বিকল্পগুলি সময়ের মধ্যে গড় স্পট দিয়ে <strong>শেষ টিক</strong> তুলনা করে বসতি স্থাপন করে।"
 
 msgid "Asians"
-msgstr ""
+msgstr "এশিয়রা"
 
 msgid "Ask me later"
-msgstr ""
+msgstr "পরে জিজ্ঞেস করো"
 
 msgid "Asset"
-msgstr ""
+msgstr "অ্যাসেট"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr ""
+msgstr "রিসেট সময়, স্পট আপনার ভবিষ্যদ্বাণী বিপরীত দিক হয়, বাধা যে স্পট পুনরায় সেট করা হয়।"
 
 msgid "Audit"
-msgstr ""
+msgstr "অডিট"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "অডিট পৃষ্ঠা"
 
 msgid "Aug"
-msgstr ""
+msgstr "আগস্ট"
 
 msgid "August"
-msgstr ""
+msgstr "আগস্ট"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "অস্ট্রেলিয়ান ডলার"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "উপলব্ধ সমস্ত পেমেন্ট পদ্ধতি পূর্ণ সুবিধা গ্রহণ করতে এখন আপনার অ্যাকাউন্ট প্রমাণীকরণ।"
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr ""
+msgstr "আপনার নখদর্পণে অটোমেটেড ট্রেডিং। কোন কোডিং প্রয়োজন নেই।"
 
 msgid "Available Markets"
-msgstr ""
+msgstr "উপলভ্য বাজার"
 
 msgid "Average"
-msgstr ""
+msgstr "গড়"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "আপনার সাথে যুক্ত তারিখ এবং বছর এড়িয়ে চলুন"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "সাম্প্রতিক বছরগুলো এড়িয়ে চলুন"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "পুনরাবৃত্তি শব্দ এবং অক্ষর এড়িয়ে চলুন"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "সিকোয়েন্স এড়িয়ে চলুন"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "আপনার সাথে যুক্ত যে বছর এড়িয়ে চলুন"
 
 msgid "Back to trading"
-msgstr ""
+msgstr "ট্রেডিং এ ফিরে যান"
 
 msgid "Balance"
-msgstr ""
+msgstr "ব্যালেন্স"
 
 msgid "Barrier"
-msgstr ""
+msgstr "ব্যারিয়ার"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "ব্যারিয়ার পরিবর্তন"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "ব্যারিয়ার অফসেট"
 
 msgid "Basket Indices"
-msgstr ""
+msgstr "বাস্কেট ইনডেক্স"
 
 msgid "Bid"
-msgstr ""
+msgstr "বিড"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "বাইন্স ইউএসডি"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "বাইনারি মুদ্রা"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "বিটকয়েন"
 
 msgid "Blurry photo detected"
-msgstr ""
+msgstr "ঝাপসা ছবি সনাক্ত করা হয়েছে"
 
 msgid "Browser"
-msgstr ""
+msgstr "ব্রাউজার"
 
 msgid "Buy"
-msgstr ""
+msgstr "কিনুন"
 
 msgid "Buy price"
-msgstr ""
+msgstr "মূল্য কিনুন"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“ক্লোজ-লো”%2 চুক্তি ক্রয় করে, আপনি চুক্তির সময়কালের মধ্যে %1cহারান%2 এবং %1low%2 এর মধ্যে পার্থক্য গুণক বার জয় করবেন।"
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“হাই-ক্লোজ”%2 চুক্তি ক্রয় করে, আপনি চুক্তির সময়কালের মধ্যে %1hiঘ%2 এবং %1cহারান%2 এর মধ্যে পার্থক্য গুণক বার জয় করবেন।"
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“উচ্চ-নিম্ন”%2 চুক্তি ক্রয় করে, আপনি চুক্তির সময়কালের মধ্যে %1hiঘ%2 এবং %1low%2 এর মধ্যে পার্থক্য গুণক বার জয় করবেন।"
 
 msgid "Call Spread"
-msgstr ""
+msgstr "কল স্প্রেড"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "স্প্রেড/পুট স্প্রেড কল করুন"
 
 msgid "Camera access is denied"
-msgstr ""
+msgstr "ক্যামেরা অ্যাক্সেস অস্বীকার করা হয়েছে"
 
 msgid "Camera not detected"
-msgstr ""
+msgstr "ক্যামেরা সনাক্ত করা হয়নি"
 
 msgid "Camera not working"
-msgstr ""
+msgstr "ক্যামেরা কাজ করছে না"
 
 msgid "Camera not working?"
-msgstr ""
+msgstr "ক্যামেরা কাজ করছে না?"
 
 msgid "Can you spare 15 minutes?"
-msgstr ""
+msgstr "আপনি 15 মিনিট সময় কাটাতে পারেন?"
 
 msgid "Cancel"
-msgstr ""
+msgstr "বাতিল"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "মূলধন খুব বেশি সাহায্য করে না"
 
 msgid "Cashier"
-msgstr ""
+msgstr "ক্যাশিয়ার"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "ক্যাশিয়ার অক্ষম"
 
 msgid "Change API Endpoint"
-msgstr ""
+msgstr "API এন্ডপয়েন্ট পরিবর্তন করুন"
 
 msgid "Change Password"
-msgstr ""
+msgstr "পাসওয়ার্ড পরিবর্তন করুন"
 
 msgid "Change currency"
-msgstr ""
+msgstr "মুদ্রা পরিবর্তন করুন"
 
 msgid "Chart"
-msgstr ""
+msgstr "চার্ট"
 
 msgid "Chart is not available for this underlying."
-msgstr ""
+msgstr "এই অন্তর্নিহিত লেখচিত্রের জন্য উপলব্ধ নয়।"
 
 msgid "Charting for this underlying is delayed"
-msgstr ""
+msgstr "এই অন্তর্নিহিত জন্য চার্টিং বিলম্বিত হয়"
 
 msgid "Check back here to finish the submission"
-msgstr ""
+msgstr "জমা দেওয়ার জন্য এখানে ফিরে যান"
 
 msgid "Check selfie"
-msgstr ""
+msgstr "সেলফি চেক করুন"
 
 msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr ""
+msgstr "এটি সংযুক্ত এবং কার্যকরী কিনা তা পরীক্ষা করুন। এছাড়াও আপনি <fallback>আপনার ফোনে যাচাইকরণ চালিয়ে যেতে পারেন</fallback>"
 
 msgid "Check that your number is correct"
-msgstr ""
+msgstr "আপনার নম্বর সঠিক কিনা তা পরীক্ষা করুন"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "আপনার সংযোগ চেক করুন।"
 
 msgid "Check your image"
-msgstr ""
+msgstr "আপনার ছবি পরীক্ষা করুন"
 
 msgid "Check your mobile"
-msgstr ""
+msgstr "আপনার মোবাইল চেক করুন"
 
 msgid "Checked"
-msgstr ""
+msgstr "চেক করা হয়েছে"
 
 msgid "Checking"
-msgstr ""
+msgstr "চেক করা হচ্ছে"
 
 msgid "Choose document"
-msgstr ""
+msgstr "নথিটি বেছে নিন"
 
 msgid "Christmas Day"
-msgstr ""
+msgstr "ক্রিসমাস দিবস"
 
 msgid "Click OK to proceed."
-msgstr ""
+msgstr "এগিয়ে যাওয়ার জন্য ওকে ক্লিক করুন।"
 
 msgid "Click here to open a Financial Account"
-msgstr ""
+msgstr "একটি আর্থিক অ্যাকাউন্ট খুলতে এখানে ক্লিক করুন"
 
 msgid "Click here to open a Gaming account"
-msgstr ""
+msgstr "একটি গেমিং অ্যাকাউন্ট খুলতে এখানে ক্লিক করুন"
 
 msgid "Click here to open a Real Account"
-msgstr ""
+msgstr "একটি রিয়েল অ্যাকাউন্ট খুলতে এখানে ক্লিক করুন"
 
 msgid "Close"
-msgstr ""
+msgstr "বন্ধ করো"
 
 msgid "Close identity verification screen"
-msgstr ""
+msgstr "পরিচয় যাচাইকরণ পর্দা বন্ধ করো"
 
 msgid "Close time"
-msgstr ""
+msgstr "সময় বন্ধ করো"
 
 msgid "Close-Low"
-msgstr ""
+msgstr "ক্লোজ-লো"
 
 msgid "Closed Bid"
-msgstr ""
+msgstr "ক্লোজড বিড"
 
 msgid "Closes"
-msgstr ""
+msgstr "বন্ধ"
 
 msgid "Closes early (at 18:00)"
-msgstr ""
+msgstr "প্রথম দিকে বন্ধ হয়ে যায় (18:00 এ)"
 
 msgid "Closes early (at 21:00)"
-msgstr ""
+msgstr "প্রথম দিকে বন্ধ হয়ে যায় (২১:০০ এ)"
 
 msgid "Commodities"
-msgstr ""
+msgstr "পণ্যদ্রব্য"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "প্রচলিত নাম এবং উপাধি অনুমান করা সহজ"
 
 msgid "Complete details"
-msgstr ""
+msgstr "সম্পূর্ণ বিবরণ"
 
 msgid "Compressing Image"
-msgstr ""
+msgstr "ছবি সংকুচিত করা হচ্ছে"
 
 msgid "Confirm"
-msgstr ""
+msgstr "নিশ্চিত করুন"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "পরিবর্তনগুলি নিশ্চিত করুন"
 
 msgid "Connected to your mobile"
-msgstr ""
+msgstr "আপনার মোবাইলের সাথে সংযুক্ত"
 
 msgid "Connecting to server"
-msgstr ""
+msgstr "সার্ভারের সাথে সংযোগ স্থাপন করা হচ্ছে"
 
 msgid "Connection lost"
-msgstr ""
+msgstr "সংযোগ হারিয়ে গেছে"
 
 msgid "Continue"
-msgstr ""
+msgstr "চালিয়ে যান"
 
 msgid "Continue on phone"
-msgstr ""
+msgstr "ফোনে চালিয়ে যান"
 
 msgid "Continue on your phone"
-msgstr ""
+msgstr "আপনার ফোনে চালিয়ে যান"
 
 msgid "Continue trading"
-msgstr ""
+msgstr "ট্রেডিং চালিয়ে যান"
 
 msgid "Continue with the verification"
-msgstr ""
+msgstr "যাচাইকরণ চালিয়ে যান"
 
 msgid "Contract"
-msgstr ""
+msgstr "কন্ট্রাক্ট"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "চুক্তি নিশ্চিতকরণ"
 
 msgid "Contract details"
-msgstr ""
+msgstr "চুক্তির বিবরণ"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "চুক্তির সমাপ্তি"
 
 msgid "Contract has not started yet"
-msgstr ""
+msgstr "চুক্তি এখনো শুরু হয়নি"
 
 msgid "Contract information"
-msgstr ""
+msgstr "চুক্তির তথ্য"
 
 msgid "Contract period"
-msgstr ""
+msgstr "চুক্তির মেয়াদ"
 
 msgid "Contract result"
-msgstr ""
+msgstr "চুক্তির ফলাফল"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "চুক্তি শুরু"
 
 msgid "Contract type"
-msgstr ""
+msgstr "চুক্তির ধরন"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "আমাদের সার্ভারের অনুরোধটি প্রাপ্তিসাপেক্ষে বর্তমান মার্কেট প্রাইসে কন্ট্রাক্ট বিক্রি হবে। এই মূল্য নির্দেশিত মূল্য থেকে পৃথক হতে পারে।"
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "চুক্তি কেনা"
 
 msgid "Contracts sold"
-msgstr ""
+msgstr "বিক্রিত চুক্তি"
 
 msgid "Copied"
-msgstr ""
+msgstr "অনুলিপি করা হয়েছে"
 
 msgid "Copy"
-msgstr ""
+msgstr "কপি"
 
 msgid "Copy link"
-msgstr ""
+msgstr "লিংক কপি করো"
 
 msgid "Copy the link to your mobile browser"
-msgstr ""
+msgstr "আপনার মোবাইল ব্রাউজারে লিঙ্কটি অনুলিপি করুন"
 
 msgid "Copy the link to your phone"
-msgstr ""
+msgstr "আপনার ফোনে লিঙ্কটি অনুলিপি করুন"
 
 msgid "Counterparty"
-msgstr ""
+msgstr "কাউন্টারপার্টি"
 
 msgid "Country not found"
-msgstr ""
+msgstr "দেশ পাওয়া যায়নি"
 
 msgid "Country of Residence"
-msgstr ""
+msgstr "বসবাসের দেশ"
 
 msgid "Create %1 account"
-msgstr ""
+msgstr "%1 অ্যাকাউন্ট তৈরি করুন"
 
 msgid "Create account"
-msgstr ""
+msgstr "অ্যাকাউন্ট তৈরি করুন"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "ক্রেডিট/ডেবিট"
 
 msgid "Crypto"
-msgstr ""
+msgstr "ক্রিপ্টো"
 
 msgid "Currency"
-msgstr ""
+msgstr "কারেন্সি"
 
 msgid "Current"
-msgstr ""
+msgstr "বর্তমান"
 
 msgid "Current password"
-msgstr ""
+msgstr "বর্তমান পাসওয়ার্ড"
 
 msgid "Current time"
-msgstr ""
+msgstr "বর্তমান সময়"
 
 msgid "Current time:"
-msgstr ""
+msgstr "বর্তমান সময়:"
 
 msgid "Cut-off image detected"
-msgstr ""
+msgstr "কাট-অফ ছবি সনাক্ত করা হয়েছে"
 
 msgid "Date"
-msgstr ""
+msgstr "তারিখ"
 
 msgid "Date and Time"
-msgstr ""
+msgstr "তারিখ এবং সময়"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "তারিখগুলি প্রায়ই অনুমান করা সহজ হয়"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "চুক্তি বাতিল। ফি"
 
 msgid "Dec"
-msgstr ""
+msgstr "ডিসেম্বর"
 
 msgid "December"
-msgstr ""
+msgstr "ডিসেম্বর"
 
 msgid "Delete"
-msgstr ""
+msgstr "মুছে ফেলুন"
 
 msgid "Demo"
-msgstr ""
+msgstr "ডেমো"
 
 msgid "Demo Account"
-msgstr ""
+msgstr "ডেমো অ্যাকাউন্ট"
 
 msgid "Demo Accounts"
-msgstr ""
+msgstr "ডেমো অ্যাকাউন্ট"
 
 msgid "Demo Financial"
-msgstr ""
+msgstr "আর্থিক ডেমো"
 
 msgid "Demo Financial STP"
-msgstr ""
+msgstr "আর্থিক এসটিপি ডেমো"
 
 msgid "Demo Synthetic"
-msgstr ""
+msgstr "সিন্থেটিক ডেমো"
 
 msgid "Demo account"
-msgstr ""
+msgstr "ডেমো অ্যাকাউন্ট"
 
 msgid "Deposit"
-msgstr ""
+msgstr "ডিপোজিট"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্টে ডিপোজিট এবং উইথড্রয়াল নিষ্ক্রিয় করা হয়েছে। আরো বিস্তারিত জানার জন্য আপনার ইমেইল চেক করুন।"
 
 msgid "Deriv "
-msgstr ""
+msgstr "ডেরিভ "
 
 msgid "Description"
-msgstr ""
+msgstr "বিবরণ"
 
 msgid "Details"
-msgstr ""
+msgstr "বিস্তারিত"
 
 msgid "Digit"
-msgstr ""
+msgstr "ডিজিট"
 
 msgid "Digit Differs"
-msgstr ""
+msgstr "ডিজিট ডিফর"
 
 msgid "Digit Even"
-msgstr ""
+msgstr "ডিজিট এমনকি"
 
 msgid "Digit Matches"
-msgstr ""
+msgstr "অঙ্কের মিল"
 
 msgid "Digit Odd"
-msgstr ""
+msgstr "অডিট অডিট"
 
 msgid "Digit Over"
-msgstr ""
+msgstr "ডিজিট ওভার"
 
 msgid "Digit Under"
-msgstr ""
+msgstr "অঙ্ক অধীনে"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "চুক্তি 5 মিনিটের মধ্যে শেষ না হলে ডিজিট চুক্তি ক্রয় মূল্য ফেরত দেওয়া হবে।"
 
 msgid "Digits"
-msgstr ""
+msgstr "সংখ্যা"
 
 msgid "Disable"
-msgstr ""
+msgstr "নিষ্ক্রিয় করো"
 
 msgid "Dismiss alert"
-msgstr ""
+msgstr "সতর্কতা খারিজ"
 
 msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr ""
+msgstr "আপনি কি এটি একটি ফায়াত অ্যাকাউন্ট বা ক্রিপ্টো অ্যাকাউন্ট হতে চান? অনুগ্রহ করে একটি বেছে নিন:"
 
 msgid "Do you wish to continue?"
-msgstr ""
+msgstr "আপনি কি চালিয়ে যেতে চান?"
 
 msgid "Document example"
-msgstr ""
+msgstr "নথির উদাহরণ"
 
 msgid "Document uploaded"
-msgstr ""
+msgstr "ডকুমেন্ট আপলোড করা হয়েছে"
 
 msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr ""
+msgstr "সেই দেশের নথিগুলি বর্তমানে সমর্থিত নয় - <fallback>অন্য নথির ধরণ চেষ্টা করুন</fallback>"
 
 msgid "Documents uploaded"
-msgstr ""
+msgstr "ডকুমেন্টস আপলোড করা হয়েছে"
 
 msgid "Documents you can use to verify your identity"
-msgstr ""
+msgstr "আপনার পরিচয় যাচাই করতে আপনি যে ডকুমেন্টগুলি ব্যবহার করতে পারেন"
 
 msgid "Does Not Touch"
-msgstr ""
+msgstr "স্পর্শ করা হয় না"
 
 msgid "Don't refresh this page"
-msgstr ""
+msgstr "এই পৃষ্ঠাটি রিফ্রেশ করবেন না"
 
 msgid "Don't want to trade in %1? You can open another cryptocurrency account."
-msgstr ""
+msgstr "%1ট্রেড করতে চান না? আপনি অন্য ক্রিপ্টোকুরেন্স অ্যাকাউন্ট খুলতে পারেন।"
 
 msgid "Driver's license"
-msgstr ""
+msgstr "ড্রাইভারের লাইসেন্স"
 
 msgid "Driving licence"
-msgstr ""
+msgstr "ড্রাইভিং লাইসেন্স"
 
 msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr ""
+msgstr "আমাদের সার্ভারে একটি সমস্যা থাকার কারণে, আপনার কিছু MT5 অ্যাকাউন্ট এই মুহুর্তে অনুপলব্ধ। %1Pলিজ আমাদের সাথে বহন করুন এবং আপনার ধৈর্যের জন্য আপনাকে ধন্যবাদ।"
 
 msgid "Duration"
-msgstr ""
+msgstr "স্থিতিকাল"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "ইইউ ডেরিভ অ্যাকাউন্ট"
 
 msgid "Email address"
-msgstr ""
+msgstr "ই-মেইল ঠিকানা"
 
 msgid "Enable"
-msgstr ""
+msgstr "সক্রিয় করো"
 
 msgid "Enable camera"
-msgstr ""
+msgstr "ক্যামেরা সক্রিয় করো"
 
 msgid "End Time"
-msgstr ""
+msgstr "সমাপ্তির সময়"
 
 msgid "End time"
-msgstr ""
+msgstr "সমাপ্তির সময়"
 
 msgid "Endpoint"
-msgstr ""
+msgstr "শেষপ্রান্ত"
 
 msgid "Ends Between"
-msgstr ""
+msgstr "এর মধ্যে শেষ"
 
 msgid "Ends Between/Ends Outside"
-msgstr ""
+msgstr "মধ্যে/শেষ বিদেশে"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "শুরু এবং শেষ সময়ের মধ্যে 2 টিকটিরও কম থাকলে বাইরে চুক্তিগুলি ক্রয়ের মূল্যে ফেরত দেওয়া হবে।"
 
 msgid "Ends Outside"
-msgstr ""
+msgstr "বাইরে শেষ"
 
 msgid "Enlarge image"
-msgstr ""
+msgstr "ছবি বড় করো"
 
 msgid "Enter mobile number"
-msgstr ""
+msgstr "মোবাইল নম্বর লিখুন"
 
 msgid "Enter your mobile number:"
-msgstr ""
+msgstr "আপনার মোবাইল নম্বর লিখুন:"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "এন্ট্রি স্পট"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "এন্ট্রি স্পট"
 
 msgid "Equals"
-msgstr ""
+msgstr "সমান"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "ইথার ক্লাসিক"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "এথরিয়াম"
 
 msgid "Euro"
-msgstr ""
+msgstr "ইউরো"
 
 msgid "Even/Odd"
-msgstr ""
+msgstr "এমনকি বিজোড়"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "চুক্তি 5 মিনিটের মধ্যে শেষ না হলে এমনকি/অদ্ভুত চুক্তি ক্রয় মূল্য ফেরত দেওয়া হবে।"
 
 msgid "Example of a blurry document"
-msgstr ""
+msgstr "একটি ঝাপসা ডকুমেন্টের উদাহরণ"
 
 msgid "Example of a cut-off document"
-msgstr ""
+msgstr "একটি কাট বন্ধ নথি উদাহরণ"
 
 msgid "Example of a document with glare"
-msgstr ""
+msgstr "একদৃষ্টি সঙ্গে একটি নথি উদাহরণ"
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr ""
+msgstr "বর্জন সময় 5 বছরের বেশি হতে পারে না।"
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr ""
+msgstr "সময় বাদ দিন 6 মাসের কম হতে পারে না।"
 
 msgid "Excluded from the website until"
-msgstr ""
+msgstr "ওয়েবসাইট থেকে বাদ দেওয়া পর্যন্ত"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "প্রস্থান স্পট"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "প্রস্থান স্পট"
 
 msgid "Exit spot time"
-msgstr ""
+msgstr "স্পট টাইম প্রস্থান করুন"
 
 msgid "Exit time"
-msgstr ""
+msgstr "প্রস্থান করার সময়"
 
 msgid "Expiry date is required for %1."
-msgstr ""
+msgstr "মেয়াদ শেষের তারিখ %1এর জন্য প্রয়োজন।"
 
 msgid "Explanation"
-msgstr ""
+msgstr "ব্যাখ্যা"
 
 msgid "Face forward and make sure your eyes are clearly visible"
-msgstr ""
+msgstr "এগিয়ে মুখ এবং আপনার চোখ পরিষ্কারভাবে দৃশ্যমান হয় তা নিশ্চিত করুন।"
 
 msgid "Face photo page"
-msgstr ""
+msgstr "ফেস ফটো পেজ"
 
 msgid "Failed"
-msgstr ""
+msgstr "ব্যর্থ"
 
 msgid "Fall"
-msgstr ""
+msgstr "পতন"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "পতন বা সমান"
 
 msgid "Feb"
-msgstr ""
+msgstr "ফেব্রুয়ারি"
 
 msgid "February"
-msgstr ""
+msgstr "ফেব্রুয়ারি"
 
 msgid "Fiat"
-msgstr ""
+msgstr "ক্ষমতাপ্রদান"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
-msgstr ""
+msgstr "ফাইল (%1) আকার অনুমোদিত সীমা অতিক্রম করেছে। সর্বাধিক অনুমোদিত ফাইলের আকার: %2"
 
 msgid "File not uploaded."
-msgstr ""
+msgstr "ফাইল আপলোড করা হয়নি।"
 
 msgid "File size exceeded."
-msgstr ""
+msgstr "ফাইলের আকার ছাড়িয়ে গেছে।"
 
 msgid "File type not supported"
-msgstr ""
+msgstr "ফাইলের ধরন সমর্থিত নয়"
 
 msgid "Final price"
-msgstr ""
+msgstr "চূড়ান্ত মূল্য"
 
 msgid "Financial"
-msgstr ""
+msgstr "আর্থিক"
 
 msgid "Financial Account"
-msgstr ""
+msgstr "আর্থিক একাউন্ট"
 
 msgid "Financial STP"
-msgstr ""
+msgstr "আর্থিক এসটিপি"
 
 msgid "Finish"
-msgstr ""
+msgstr "শেষ"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "হোম অ্যাড্রেস প্রথম লাইন"
 
 msgid "Follow these steps to recover camera access:"
-msgstr ""
+msgstr "ক্যামেরা অ্যাক্সেস পুনরুদ্ধার করতে এই পদক্ষেপগুলি অনুসরণ করুন:"
 
 msgid "Forex"
-msgstr ""
+msgstr "ফরেক্স"
 
 msgid "Fr"
-msgstr ""
+msgstr "ফ্রেড"
 
 msgid "Friday"
-msgstr ""
+msgstr "শুক্রবার"
 
 msgid "Fridays"
-msgstr ""
+msgstr "শুক্রবার"
 
 msgid "From account: "
-msgstr ""
+msgstr "অ্যাকাউন্ট থেকে: "
 
 msgid "Front Side"
-msgstr ""
+msgstr "সামনের দিকে"
 
 msgid "Front and back"
-msgstr ""
+msgstr "সামনে এবং পিছনে"
 
 msgid "Gaming"
-msgstr ""
+msgstr "গেমিং"
 
 msgid "Gaming Account"
-msgstr ""
+msgstr "গেমিং অ্যাকাউন্ট"
 
 msgid "Get %1"
-msgstr ""
+msgstr "%1পান"
 
 msgid "Get link via SMS"
-msgstr ""
+msgstr "এসএমএস এর মাধ্যমে লিংক পান"
 
 msgid "Get secure link"
-msgstr ""
+msgstr "নিরাপদ লিংক পান"
 
 msgid "Get your secure link"
-msgstr ""
+msgstr "আপনার নিরাপদ লিংক পান"
 
 msgid "Glare detected"
-msgstr ""
+msgstr "গ্লাইয়ার সনাক্ত হয়েছে"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "প্রতিবেদনে যান"
 
 msgid "Go back"
-msgstr ""
+msgstr "ফিরে যাও"
 
 msgid "Go to statement"
-msgstr ""
+msgstr "বিবৃতিতে যান"
 
 msgid "Goes Outside"
-msgstr ""
+msgstr "বাইরে যায়"
 
 msgid "Grant access to your camera from your browser settings"
-msgstr ""
+msgstr "আপনার ব্রাউজার সেটিংস থেকে আপনার ক্যামেরাতে অ্যাক্সেস প্রদান করুন"
 
 msgid "Great, that's everything we need"
-msgstr ""
+msgstr "গ্রেট, এটাই আমাদের যা দরকার"
 
 msgid "Guide"
-msgstr ""
+msgstr "গাইড"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr ""
+msgstr "তাই, আপনার উত্তোলনযোগ্য ব্যালেন্স শুধুমাত্র %1%2পর্যন্ত, আপনার অ্যাকাউন্টের উপলব্ধ তহবিলের সাপেক্ষে।"
 
 msgid "Here's how to do it:"
-msgstr ""
+msgstr "এখানে কিভাবে এটি করতে হয়:"
 
 msgid "High"
-msgstr ""
+msgstr "উচ্চ"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "উচ্চ ব্যারিয়ার"
 
 msgid "High Tick"
-msgstr ""
+msgstr "উচ্চ টিক"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr ""
+msgstr "হাই টিক/লো টিক চুক্তির পাঁচটি টিকটিকের কঠোর সময়কাল রয়েছে।"
 
 msgid "High barrier"
-msgstr ""
+msgstr "উচ্চ বাধা"
 
 msgid "High barrier must be higher than low barrier"
-msgstr ""
+msgstr "উচ্চ বাধা কম বাধা বেশী হতে হবে"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "উচ্চ বাধা অফসেট"
 
 msgid "High, Low and Close"
-msgstr ""
+msgstr "উচ্চ, নিম্ন এবং বন্ধ"
 
 msgid "High-Close"
-msgstr ""
+msgstr "হাই-ক্লোজ"
 
 msgid "High-Low"
-msgstr ""
+msgstr "উচ্চ-নিম্ন"
 
 msgid "High/Low Ticks"
-msgstr ""
+msgstr "উচ্চ/নিম্ন টিকটিকি"
 
 msgid "Higher"
-msgstr ""
+msgstr "উচ্চতর"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "উচ্চ/নিম্ন"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "শুরু এবং শেষ সময়ের মধ্যে 2 টিকটিরও কম থাকলে উচ্চ/নিম্ন চুক্তিগুলি ক্রয় মূল্যে ফেরত দেওয়া হবে।"
 
 msgid "Hour"
-msgstr ""
+msgstr "ঘণ্টা"
 
 msgid "How to scan a QR code"
-msgstr ""
+msgstr "কিভাবে একটি QR কোড স্ক্যান"
 
 msgid "I want to reapply"
-msgstr ""
+msgstr "আমি পুনরায় আবেদন করতে চাই"
 
 msgid "I'm interested"
-msgstr ""
+msgstr "আমি আগ্রহী"
 
 msgid "ID number is required for %1."
-msgstr ""
+msgstr "%1এর জন্য আইডি নম্বর প্রয়োজন।"
 
 msgid "IDK"
-msgstr ""
+msgstr "আইডিকে"
 
 msgid "IP Address"
-msgstr ""
+msgstr "আইপি ঠিকানা"
 
 msgid "Identity card"
-msgstr ""
+msgstr "পরিচয়পত্র"
 
 msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr ""
+msgstr "যদি এটি কাজ না করে তবে গুগল প্লে বা অ্যাপ স্টোর থেকে একটি QR কোড স্ক্যানার ডাউনলোড করুন"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "যদি <strong>প্রস্থান স্পট</strong> হয় <strong>নিম্ন বাধা</strong> বা <strong>উচ্চ বাধা</strong>এর সমান হয়, আপনি পেআউট জিতবেন না।"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "যদি <strong>প্রস্থান স্পট</strong> <strong>বাধা</strong> বা <stronm g>নতুন বাধা (যদি একটি রিসেট ঘটে) সমান হয়</stronmg>, আপনি পেআউট জিতবেন না।"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "যদি <strong>প্রস্থান স্পট</strong> <strong>বাধা</strong>সমান হয়, আপনি পেআউট জিতবেন না।"
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr ""
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "আপনি যদি “সমান অনুমতি দিন” নির্বাচন করেন, তাহলে প্রস্থান স্পট “রাইজ” এর জন্য এন্ট্রি স্পটের চেয়ে বেশি বা সমান হলে আপনি অর্থ প্রদান জয় করেন। একইভাবে, যদি এক্সিট স্পট “পতনের” জন্য এন্ট্রি স্পটের চেয়ে কম বা সমান হয় তবে আপনি পেআউট জিতবেন।"
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr ""
@@ -992,19 +992,19 @@ msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last
 msgstr ""
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "আপনি যদি “পৃথক” নির্বাচন করেন, তাহলে আপনি পরিশোধ জিতবেন যদি শেষ টিকের <strong>শেষ সংখ্যা</strong> হয় <strong>আপনার <strong>ভবিষ্যদ্বাণী</strong>হিসাবে একই</strong> না।"
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr ""
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr ""
+msgstr "যদি আপনি “এন্ড বিটেইন” নির্বাচন করেন, তাহলে আপনি পেমেন্ট জিতবেন যদি <strong>প্রস্থান স্পট</strong> <strong>নিম্ন বাধা</strong> এর চেয়ে কঠোরভাবে উচ্চতর হয় এবং <strong>উচ্চ বাধা</strong>এর চেয়ে কঠোরভাবে কম।"
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr ""
+msgstr "যদি আপনি “এন্ড আউটসাইড” নির্বাচন করেন, তাহলে আপনি পেউটি জিতবেন যদি <strong>প্রস্থান স্পট</strong> হয় <strong>উচ্চ বাধা</strong>এর চেয়ে কঠোরভাবে উচ্চতর, অথবা <strong>নিম্ন বাধা</strong>এর চেয়ে কঠোরভাবে কম।"
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr ""
+msgstr "যদি আপনি “এমনকি” নির্বাচন করেন, তাহলে আপনি পরিশোধ জিতবেন যদি শেষ টিকের<strong>শেষ সংখ্যা</strong>একটি <strong>এমনকি সংখ্যা (অর্থাৎ, 2, 4, 6, 8, বা 0) হয়।</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr ""
@@ -1013,28 +1013,28 @@ msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</str
 msgstr ""
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "যদি আপনি “বাইরে যায়” নির্বাচন করেন, তাহলে আপনি পরিশোধটি জিতেছেন যদি মার্কেট <strong>উচ্চ বাধা</strong> বা <strong>নিম্ন বাধা</strong> স্পর্শ করে <strong>চুক্তির সময়কালে যে কোন সময়</strong>।"
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr ""
+msgstr "আপনি যদি “উচ্চতর” নির্বাচন করেন, তাহলে আপনি পেউটি জিতবেন যদি <strong>প্রস্থান স্পট</strong> কঠোরভাবে <strong>বাধা</strong>এর চেয়ে বেশি হয়।"
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr ""
+msgstr "যদি আপনি “লোয়ার” নির্বাচন করেন, তাহলে আপনি পেউটি জিতবেন যদি <strong>প্রস্থান স্পট</strong> কঠোরভাবে <strong>বাধা</strong>এর চেয়ে কম হয়।"
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgstr ""
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "যদি আপনি “অদ্ভুত” নির্বাচন করেন, তাহলে আপনি পরিশোধ জিতবেন যদি শেষ টিকের<strong>শেষ সংখ্যা</strong>একটি <strong>বিজোড় সংখ্যা (অর্থাৎ, 1, 3, 5, 7, অথবা 9) হয়।</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
 msgstr ""
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "আপনি যদি “রিসেট-কল” নির্বাচন করেন, তাহলে প্রস্থান স্পটটি এন্ট্রি স্পট বা রিসেট সময়ের স্পটের চেয়ে কঠোরভাবে উচ্চতর হলে আপনি অর্থ পরিশোধটি জিতবেন।"
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "আপনি যদি “রিসেট-পুট” নির্বাচন করেন, তাহলে এন্ট্রি স্পট বা রিসেট সময় স্পট থেকে প্রস্থান স্পট কঠোরভাবে কম হলে আপনি পরিশোধটি জিতবেন।"
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr ""
@@ -1046,7 +1046,7 @@ msgid "If you select \"Stays Between\", you win the payout if the market stays b
 msgstr ""
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "আপনি যদি “টাচস” নির্বাচন করেন, তাহলে আপনি পেউটি জিতেছেন যদি মার্কেট <strong>কন্ট্রাক্ট পিরিয়ড</strong>এর মধ্যে যেকোনো সময় <strong>বাধা</strong> স্পর্শ করে।"
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
 msgstr ""
@@ -1055,16 +1055,16 @@ msgid "If you select \"falls\", you win the payout if the market price is lower 
 msgstr ""
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr ""
+msgstr "আপনি যদি “ফলস” নির্বাচন করেন, তাহলে মার্কেট প্রাইস এন্ট্রি স্পটের চেয়ে কম হলে আপনি পেউটি জিতবেন।"
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
 msgstr ""
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr ""
+msgstr "আপনি যদি “rises” নির্বাচন করেন, তাহলে আপনি পেউটি জিতবেন যদি বাজার মূল্য এন্ট্রি স্পটের চেয়ে বেশি হয়।"
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr ""
+msgstr "যদি আপনি %1“উচ্চ টিক”%2নির্বাচন করেন, তাহলে আপনি পরিশোধটি জিতবেন যদি নির্বাচিত টিক পরবর্তী পাঁচটি টিকটিকের মধ্যে %1hiগেস্ট হয়%2।"
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
 msgstr ""
@@ -1076,505 +1076,505 @@ msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks r
 msgstr ""
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr ""
+msgstr "যদি আপনি ভবিষ্যতে <strong>প্রারম্ভিক সময়</strong> নির্বাচন করেন, তবে <strong>প্রারম্ভিক সময়</strong> হল যা নির্বাচিত এবং <strong>এন্ট্রি স্পট</strong> সেই সময়ে কার্যকর মূল্য।"
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "যদি আপনি “Now” এর <strong>প্রারম্ভিক সময়</strong> নির্বাচন করেন, তবে <strong>শেষের সময়</strong> হল <strong>প্রারম্ভিক সময়</strong> (যদি এক দিনের কম সময়ের মধ্যে), অথবা ট্রেডিং দিনের শেষে (যদি এক দিন বা তার বেশি সময়কাল) পরে নির্বাচিত মিনিট/ঘন্টা নির্বাচিত সংখ্যা।"
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr ""
+msgstr "যদি আপনি একটি নির্দিষ্ট <strong>শেষ সময়</strong>নির্বাচন করেন, তবে <strong>শেষ সময়</strong> হল নির্বাচিত সময়।"
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr ""
+msgstr "ইইউতে, আর্থিক বাইনারি বিকল্প শুধুমাত্র পেশাদার বিনিয়োগকারীদের জন্য উপলব্ধ।"
 
 msgid "In/Out"
-msgstr ""
+msgstr "ইন/আউট"
 
 msgid "Indicates required field"
-msgstr ""
+msgstr "প্রয়োজনীয় ক্ষেত্র নির্দেশ করে"
 
 msgid "Indicative"
-msgstr ""
+msgstr "ইঙ্গিতপূর্ণ"
 
 msgid "Insufficient balance."
-msgstr ""
+msgstr "অপর্যাপ্ত ভারসাম্য"
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "অকার্যকর অ্যাপ আইডি"
 
 msgid "Invalid document format."
-msgstr ""
+msgstr "অকার্যকর ডকুমেন্ট ফর্ম্যাট।"
 
 msgid "Invalid email address."
-msgstr ""
+msgstr "অকার্যকর ইমেইল ঠিকানা।"
 
 msgid "Invalid verification code."
-msgstr ""
+msgstr "বৈধ যাচাইকরণ কোড।"
 
 msgid "Investment"
-msgstr ""
+msgstr "ইনভেস্টমেন্ট"
 
 msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr ""
+msgstr "এটি সংযোগ বিচ্ছিন্ন হতে পারে। <fallback>পরিবর্তে আপনার ফোন ব্যবহার করে দেখুন</fallback>।"
 
 msgid "It may take a few minutes to arrive"
-msgstr ""
+msgstr "এটি আসতে কয়েক মিনিট সময় লাগতে পারে"
 
 msgid "It must be an official photo ID"
-msgstr ""
+msgstr "এটি একটি অফিসিয়াল ফটো আইডি হতে হবে"
 
 msgid "It will only take a couple of minutes."
-msgstr ""
+msgstr "এটি শুধুমাত্র কয়েক মিনিট সময় লাগবে।"
 
 msgid "It’ll take longer to verify you if we can’t read it"
-msgstr ""
+msgstr "আমরা এটা পড়তে না পারলে আপনাকে যাচাই করতে আরো সময় লাগবে।"
 
 msgid "Jan"
-msgstr ""
+msgstr "জানুয়ারী"
 
 msgid "January"
-msgstr ""
+msgstr "জানুয়ারী"
 
 msgid "Jul"
-msgstr ""
+msgstr "জুলাই"
 
 msgid "July"
-msgstr ""
+msgstr "জুলাই"
 
 msgid "Jun"
-msgstr ""
+msgstr "জুন"
 
 msgid "June"
-msgstr ""
+msgstr "জুন"
 
 msgid "Jurisdiction"
-msgstr ""
+msgstr "এখতিয়ার"
 
 msgid "Keep this window open while using your mobile"
-msgstr ""
+msgstr "আপনার মোবাইল ব্যবহার করার সময় এই উইন্ডোটি খোলা রাখুন"
 
 msgid "Language settings"
-msgstr ""
+msgstr "ভাষা সেটিংস"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "শেষ সংখ্যার ভবিষ্যদ্বাণী"
 
 msgid "Last Digit Stats"
-msgstr ""
+msgstr "শেষ সংখ্যার পরিসংখ্যান"
 
 msgid "Last Login"
-msgstr ""
+msgstr "সর্বশেষ লগইন"
 
 msgid "Last Used"
-msgstr ""
+msgstr "সর্বশেষ ব্যবহৃত"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr ""
 
 msgid "Linked to your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটারের সাথে সংযুক্ত"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "লাইটকয়েন"
 
 msgid "Live chat"
-msgstr ""
+msgstr "লাইভ চ্যাট"
 
 msgid "Loading"
-msgstr ""
+msgstr "লোড হচ্ছে"
 
 msgid "Loading..."
-msgstr ""
+msgstr "লোড হচ্ছে..."
 
 msgid "Log in"
-msgstr ""
+msgstr "লগ ইন"
 
 msgid "Log in here"
-msgstr ""
+msgstr "এখানে লগইন করুন"
 
 msgid "Log out"
-msgstr ""
+msgstr "লগ আউট"
 
 msgid "Login ID"
-msgstr ""
+msgstr "লগইন আইডি"
 
 msgid "Login at:"
-msgstr ""
+msgstr "লগইন করুন:"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "লুকব্যাক"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "CFD অ্যাকাউন্ট খুঁজছেন? ট্রেডারের হাব এ যান"
 
 msgid "Looks like you took too long"
-msgstr ""
+msgstr "দেখে মনে হচ্ছে তুমি অনেক বেশি সময় নিয়েছ"
 
 msgid "Loss"
-msgstr ""
+msgstr "ক্ষতি"
 
 msgid "Low"
-msgstr ""
+msgstr "নিচু"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "নিম্ন ব্যারিয়ার"
 
 msgid "Low Tick"
-msgstr ""
+msgstr "নিম্ন টিক"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "নিম্ন বাধা"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "নিম্ন বাধা অফসেট"
 
 msgid "Lower"
-msgstr ""
+msgstr "নিম্নতর"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "MT5 উইথড্রয়াল নিষ্ক্রিয়"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্টে MT5 উইথড্রয়াল নিষ্ক্রিয় করা হয়েছে। আরো বিস্তারিত জানার জন্য আপনার ইমেইল চেক করুন।"
 
 msgid "Make sure all of the document is in the photo"
-msgstr ""
+msgstr "নিশ্চিত করুন যে সমস্ত নথিটি ফটোতে আছে"
 
 msgid "Make sure details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "বিশদ বিবরণ পড়তে স্পষ্ট হয় তা নিশ্চিত করুন, কোন দাগ বা একদৃষ্টি সঙ্গে"
 
 msgid "Make sure everything is clear"
-msgstr ""
+msgstr "সবকিছু পরিষ্কার হয় তা নিশ্চিত করুন"
 
 msgid "Make sure full document is visible"
-msgstr ""
+msgstr "সম্পূর্ণ নথিটি দৃশ্যমান কিনা তা নিশ্চিত করুন"
 
 msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার কার্ডের বিবরণ পড়তে স্পষ্ট, কোন দাগ বা একদৃষ্টি সঙ্গে"
 
 msgid "Make sure your device has a working camera"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার ডিভাইসে একটি কার্যকরী ক্যামেরা আছে"
 
 msgid "Make sure your device's camera works"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার ডিভাইসের ক্যামেরা কাজ করে"
 
 msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার লাইসেন্স বিবরণ পড়তে স্পষ্ট, কোন দাগ বা একদৃষ্টি সঙ্গে"
 
 msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার পাসপোর্টের বিবরণ পড়তে স্পষ্ট, কোন দাগ বা একদৃষ্টি ছাড়াই"
 
 msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr ""
+msgstr "নিশ্চিত করুন যে আপনার পারমিট বিবরণ পড়তে স্পষ্ট, কোন দাগ বা একদৃষ্টি সঙ্গে"
 
 msgid "Make sure your selfie clearly shows your face"
-msgstr ""
+msgstr "আপনার সেলফি পরিষ্কারভাবে আপনার মুখ দেখায় তা নিশ্চিত করুন"
 
 msgid "Make sure§"
-msgstr ""
+msgstr "নিশ্চিত করুন §"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "অ্যাকাউন্ট পরিচালনা"
 
 msgid "Mar"
-msgstr ""
+msgstr "নষ্ট করা"
 
 msgid "March"
-msgstr ""
+msgstr "মার্চ"
 
 msgid "Matches/Differs"
-msgstr ""
+msgstr "মিল/পৃথক"
 
 msgid "Maximum multiplier of 1000."
-msgstr ""
+msgstr "১০০০ এর সর্বোচ্চ গুণক।"
 
 msgid "Maximum payout"
-msgstr ""
+msgstr "সর্বোচ্চ পরিশোধ"
 
 msgid "May"
-msgstr ""
+msgstr "মে"
 
 msgid "Menu"
-msgstr ""
+msgstr "মেনু"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "সর্বনিম্ন %1 অক্ষর প্রয়োজন।"
 
 msgid "Minimum:"
-msgstr ""
+msgstr "সর্বনিম্ন:"
 
 msgid "Minute"
-msgstr ""
+msgstr "মিনিট"
 
 msgid "Mo"
-msgstr ""
+msgstr "মো"
 
 msgid "Monday"
-msgstr ""
+msgstr "সোমবার"
 
 msgid "More information can be found in an email sent to you."
-msgstr ""
+msgstr "আপনার কাছে পাঠানো ইমেলে আরও তথ্য পাওয়া যাবে।"
 
 msgid "Move away from direct light"
-msgstr ""
+msgstr "সরাসরি আলো থেকে দূরে সরে যান"
 
 msgid "Move away from direct light — no glare"
-msgstr ""
+msgstr "সরাসরি আলো থেকে দূরে সরে যান - কোন একদৃষ্টি"
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "বহু-সমান্তরাল"
 
 msgid "Multiple faces found"
-msgstr ""
+msgstr "একাধিক মুখ পাওয়া গেছে"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "গুণক"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "গুণক নিচে"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "গুণক আপ"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "মাল্টিপ্লেয়ার"
 
 msgid "Must be under 10MB."
-msgstr ""
+msgstr "১০ মেগাবাইটের নিচে হতে হবে।"
 
 msgid "Name"
-msgstr ""
+msgstr "নাম"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "নাম এবং উপনামগুলি নিজেদের দ্বারা অনুমান করা সহজ"
 
 msgid "Net profit"
-msgstr ""
+msgstr "নিট মুনাফা"
 
 msgid "Network status"
-msgstr ""
+msgstr "নেটওয়ার্ক স্ট্যাটাস"
 
 msgid "Never"
-msgstr ""
+msgstr "কখনোই না"
 
 msgid "Never Used"
-msgstr ""
+msgstr "কখনো ব্যবহার করা হয়নি"
 
 msgid "New Year's Day"
-msgstr ""
+msgstr "নববর্ষের দিন"
 
 msgid "New password"
-msgstr ""
+msgstr "নতুন পাসওয়ার্ড"
 
 msgid "New token created."
-msgstr ""
+msgstr "নতুন টোকেন তৈরি করা হয়েছে।"
 
 msgid "Next"
-msgstr ""
+msgstr "পরবর্তী"
 
 msgid "No authentication required"
-msgstr ""
+msgstr "কোনো প্রমাণীকরণের প্রয়োজন নেই"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "কোন কারেন্সি বরাদ্দ করা হয়নি"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "কোন মুদ্রা নির্বাচন করা হয়নি"
 
 msgid "No document detected"
-msgstr ""
+msgstr "কোনো নথি সনাক্ত করা হয়নি"
 
 msgid "No face found"
-msgstr ""
+msgstr "কোন মুখ পাওয়া যায়নি"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "চিহ্ন, সংখ্যা, বা বড় হাতের অক্ষরের প্রয়োজন নেই"
 
 msgid "No notifications"
-msgstr ""
+msgstr "কোনো বিজ্ঞপ্তি নেই"
 
 msgid "No thanks"
-msgstr ""
+msgstr "না, ধন্যবাদ।"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "অ-ইইউ ডেরিভ "
 
 msgid "Not"
-msgstr ""
+msgstr "না"
 
 msgid "Not announced for this currency."
-msgstr ""
+msgstr "এই মুদ্রার জন্য ঘোষণা করা হয়নি।"
 
 msgid "Note"
-msgstr ""
+msgstr "নোট"
 
 msgid "Note:"
-msgstr ""
+msgstr "নোট:"
 
 msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr ""
+msgstr "দ্রষ্টব্য: আপনি এক ফায়াত মুদ্রা অ্যাকাউন্টে সীমাবদ্ধ। আপনি প্রথমবারের জন্য আপনার ফায়াত অ্যাকাউন্টে ডিপোজিট করার আগে বা MT5 অ্যাকাউন্ট তৈরি করার আগে আপনার ফায়াত অ্যাকাউন্টের মুদ্রা পরিবর্তন করা যেতে পারে। আপনি প্রতিটি সমর্থিত ক্রিপ্টোকুরেন্সের জন্য একটি অ্যাকাউন্ট খুলতে পারেন।"
 
 msgid "Notifications"
-msgstr ""
+msgstr "বিজ্ঞপ্তি"
 
 msgid "Nov"
-msgstr ""
+msgstr "নভেম্বর"
 
 msgid "November"
-msgstr ""
+msgstr "নভেম্বর"
 
 msgid "Now"
-msgstr ""
+msgstr "এখনই"
 
 msgid "Number of ticks:"
-msgstr ""
+msgstr "টিকটিকি সংখ্যা:"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "অথ অ্যাপ আইডি"
 
 msgid "Oct"
-msgstr ""
+msgstr "অক্টোবর"
 
 msgid "October"
-msgstr ""
+msgstr "অক্টোবর"
 
 msgid "Offline"
-msgstr ""
+msgstr "অফলাইন"
 
 msgid "Once you've finished we'll take you to the next step"
-msgstr ""
+msgstr "শেষ হলে আমরা আপনাকে পরবর্তী পদক্ষেপে নিয়ে যাব"
 
 msgid "Online"
-msgstr ""
+msgstr "অনলাইন"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "অনলাইন ট্রেডিং প্ল্যাটফর্ম"
 
 msgid "Only %1 are allowed."
-msgstr ""
+msgstr "শুধুমাত্র %1 অনুমোদিত।"
 
 msgid "Only Downs"
-msgstr ""
+msgstr "শুধুমাত্র ডাউনস"
 
 msgid "Only Ups"
-msgstr ""
+msgstr "শুধু আপগুলি"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr ""
+msgstr "শুধুমাত্র অক্ষর, সংখ্যা, স্থান, এবং হাইফেন অনুমোদিত।"
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr ""
+msgstr "শুধুমাত্র অক্ষর, সংখ্যা, স্থান, এবং এই বিশেষ অক্ষরগুলি অনুমোদিত: %1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "শুধুমাত্র অক্ষর, সংখ্যা, স্থান, হাইফেন, সময়কাল, এবং apostrophy অনুমোদিত হয়।"
 
 msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr ""
+msgstr "শুধুমাত্র অক্ষর, সংখ্যা, স্থান, হাইফেন, কাল, কমা, এবং apostrophy অনুমোদিত হয়।"
 
 msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
 msgstr ""
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "শুধুমাত্র অক্ষর, স্থান, হাইফেন, সময়কাল, এবং apostrophy অনুমোদিত হয়।"
 
 msgid "Only your face can be in the selfie"
-msgstr ""
+msgstr "শুধুমাত্র আপনার মুখ সেলফি হতে পারে"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "ওহো... পৃষ্ঠাটি উপলভ্য নয়"
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "একটি আর্থিক অ্যাকাউন্ট খুলুন"
 
 msgid "Open a Real Account"
-msgstr ""
+msgstr "একটি রিয়েল অ্যাকাউন্ট খুলুন"
 
 msgid "Open a free account"
-msgstr ""
+msgstr "একটি ফ্রি অ্যাকাউন্ট খুলুন"
 
 msgid "Open positions"
-msgstr ""
+msgstr "ওপেন পজিশন"
 
 msgid "Open the link and complete the tasks"
-msgstr ""
+msgstr "লিঙ্কটি খুলুন এবং কাজগুলি সম্পূর্ণ করুন"
 
 msgid "Open the link on your mobile"
-msgstr ""
+msgstr "আপনার মোবাইলে লিঙ্কটি খুলুন"
 
 msgid "Open your new bank account"
-msgstr ""
+msgstr "আপনার নতুন ব্যাংক অ্যাকাউন্ট খুলুন"
 
 msgid "Opens"
-msgstr ""
+msgstr "খোলে"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "অপশন এবং মাল্টিপ্লেয়ার"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "অপশন ট্রেডিং একটি বাস্তব আসক্তি হতে পারে, অন্য কোন কার্যকলাপ তার সীমা ধাক্কা পারেন হিসাবে। এই ধরনের আসক্তি বিপদ এড়ানোর জন্য, আমরা একটি বাস্তবতা-চেক প্রদান করি যা আপনাকে নিয়মিত ভিত্তিতে আপনার ট্রেড এবং অ্যাকাউন্টগুলির একটি সারসংক্ষেপ দেয়।"
 
 msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
-msgstr ""
+msgstr "উন্নত ব্যবহারকারীদের জন্য পপ-আপ ট্রেডিং চার্ট সমন্বিত ট্রেডিং বট তৈরির জন্য আমাদের ক্লাসিক “ড্র্যাগ-এন্ড-ড্রপ” টুল।"
 
 msgid "Over/Under"
-msgstr ""
+msgstr "উপরে/অধীন"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "চুক্তি 5 মিনিটের মধ্যে শেষ না হলে চুক্তিগুলি ক্রয়ের মূল্যে ফেরত দেওয়া হবে।"
 
 msgid "PM"
-msgstr ""
+msgstr "অপরাহ্ন"
 
 msgid "Passport"
-msgstr ""
+msgstr "পাসপোর্ট"
 
 msgid "Passport photo page"
-msgstr ""
+msgstr "পাসপোর্ট ফটো পেজ"
 
 msgid "Password is not strong enough."
-msgstr ""
+msgstr "পাসওয়ার্ড যথেষ্ট শক্তিশালী নয়।"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "পাসওয়ার্ডের সংখ্যা সহ নিম্ন এবং বড় হাতের ইংরেজি অক্ষর থাকতে হবে।"
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "প্যাক্সস স্ট্যান্ডার্ড"
 
 msgid "Pay-out"
-msgstr ""
+msgstr "পে-আউট"
 
 msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr ""
+msgstr "পেমেন্ট এজেন্ট পরিষেবা আপনার দেশে বা আপনার পছন্দের মুদ্রায় উপলব্ধ নয়।"
 
 msgid "Payments"
-msgstr ""
+msgstr "পেমেন্টস"
 
 msgid "Payout"
-msgstr ""
+msgstr "পরিশোধ"
 
 msgid "Payout range"
-msgstr ""
+msgstr "পরিশোধ পরিসীমা"
 
 msgid "Pending"
-msgstr ""
+msgstr "মুলতুবি"
 
 msgid "Percentage"
-msgstr ""
+msgstr "শতকরা হার"
 
 msgid "Permissions"
-msgstr ""
+msgstr "অনুমতি"
 
 msgid "Photo of your document"
-msgstr ""
+msgstr "আপনার নথির ছবি"
 
 msgid "Photo of your face"
-msgstr ""
+msgstr "আপনার মুখের ছবি"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "জন্ম স্থান"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
 msgstr ""
@@ -1583,700 +1583,700 @@ msgid "Please %1deposit%2 to your account."
 msgstr ""
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr ""
+msgstr "অনুগ্রহ করে %1log in%2 অথবা %3sসাইন আপ করুন%4 এই পৃষ্ঠাটি দেখতে।"
 
 msgid "Please accept the terms and conditions."
-msgstr ""
+msgstr "দয়া করে নিয়ম ও শর্তাবলী মেনে নিন।"
 
 msgid "Please check your email for further instructions."
-msgstr ""
+msgstr "আরও নির্দেশাবলীর জন্য আপনার ইমেইল চেক করুন।"
 
 msgid "Please check your email for the password reset link."
-msgstr ""
+msgstr "পাসওয়ার্ড রিসেট লিঙ্কের জন্য আপনার ইমেল চেক করুন।"
 
 msgid "Please choose a currency"
-msgstr ""
+msgstr "অনুগ্রহ করে একটি মুদ্রা নির্বাচন করুন"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
 msgstr ""
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "আপনার উইথড্রয়াল এবং ট্রেডিং লিমিট উত্তোলনের জন্য অনুগ্রহ করে %1fটি আর্থিক মূল্যায়ন ফর্ম%2 পূরণ করুন।"
 
 msgid "Please complete your Personal Details before you proceed."
-msgstr ""
+msgstr "আপনি এগিয়ে যাওয়ার আগে দয়া করে আপনার ব্যক্তিগত বিবরণ পূরণ করুন।"
 
 msgid "Please confirm that all the information above is true and complete."
-msgstr ""
+msgstr "অনুগ্রহ করে নিশ্চিত করুন যে উপরের সমস্ত তথ্য সত্য এবং সম্পূর্ণ।"
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr ""
+msgstr "অনুগ্রহ করে নিশ্চিত করুন যে আপনি রাজনৈতিকভাবে উন্মুক্ত ব্যক্তি নন।"
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr ""
+msgstr "অনুগ্রহ করে নিশ্চিত করুন যে আপনার ডিভাইসে Telegram অ্যাপ ইন্সটল আছে।"
 
 msgid "Please enter a valid Login ID."
-msgstr ""
+msgstr "অনুগ্রহ করে একটি বৈধ লগইন আইডি লিখুন।"
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "অনুগ্রহ করে একটি বৈধ ফোন নম্বর লিখুন (উদাঃ +15417541234)।"
 
 msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr ""
+msgstr "অনুগ্রহ করে মনে রাখবেন যে নির্বাচিত মুদ্রা শুধুমাত্র সীমিত অ্যাকাউন্টের জন্য অনুমোদিত।"
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr ""
+msgstr "প্রয়োজনীয় মানদণ্ড পূরণ হয়ে গেলে অনুগ্রহ করে পুনরায় আবেদন করুন।"
 
 msgid "Please reload the page"
-msgstr ""
+msgstr "অনুগ্রহ করে পৃষ্ঠাটি পুনরায় লোড করুন"
 
 msgid "Please select"
-msgstr ""
+msgstr "অনুগ্রহ করে নির্বাচন করুন"
 
 msgid "Please select a country"
-msgstr ""
+msgstr "অনুগ্রহ করে একটি দেশ নির্বাচন করুন"
 
 msgid "Please select a reason."
-msgstr ""
+msgstr "অনুগ্রহ করে একটি কারণ নির্বাচন করুন।"
 
 msgid "Please select a valid time."
-msgstr ""
+msgstr "অনুগ্রহ করে একটি বৈধ সময় নির্বাচন করুন।"
 
 msgid "Please select at least one scope"
-msgstr ""
+msgstr "অনুগ্রহ করে অন্তত একটি সুযোগ নির্বাচন করুন"
 
 msgid "Please select the checkbox."
-msgstr ""
+msgstr "অনুগ্রহ করে চেকবক্স নির্বাচন করুন।"
 
 msgid "Please select the currency for this account:"
-msgstr ""
+msgstr "অনুগ্রহ করে এই অ্যাকাউন্টের জন্য মুদ্রা নির্বাচন করুন:"
 
 msgid "Please set the currency of your account."
-msgstr ""
+msgstr "অনুগ্রহ করে আপনার অ্যাকাউন্টের মুদ্রা সেট করুন।"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr ""
 
 msgid "Please specify the reasons for closing your accounts"
-msgstr ""
+msgstr "অনুগ্রহ করে আপনার অ্যাকাউন্ট বন্ধ করার কারণ উল্লেখ করুন"
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "মিনিটের মধ্যে আপনার পছন্দের ব্যবধান বাস্তবতা চেক নির্দিষ্ট করুন:"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "অনুগ্রহ করে আপনার ঠিকানা প্রমাণ জমা দিন।"
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "দয়া করে আপনার পরিচয়ের প্রমাণ জমা দিন।"
 
 msgid "Please try again"
-msgstr ""
+msgstr "অনুগ্রহ করে আবার চেষ্টা করুন"
 
 msgid "Point your phone’s camera at the QR code"
-msgstr ""
+msgstr "আপনার ফোনের ক্যামেরা QR কোডে নির্দেশ করুন"
 
 msgid "Postal Code/ZIP"
-msgstr ""
+msgstr "পোস্টাল কোড/জিপ"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "সম্ভাব্য পরিশোধ"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "সম্ভাব্য মুনাফা"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "সম্ভাব্য পরিশোধ"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "সম্ভাব্য মুনাফা"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "সম্ভাব্য মুনাফা/ক্ষতি"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "পাউন্ড স্টার্লিং"
 
 msgid "Predict the direction<br />and purchase"
-msgstr ""
+msgstr "পূর্বাভাস দিক<br />এবং ক্রয়"
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "'ক' এর পরিবর্তে '@' মত পূর্বাভাসের প্রতিস্থাপনগুলি খুব বেশি সাহায্য করে না"
 
 msgid "Previous"
-msgstr ""
+msgstr "পূর্ববর্তী"
 
 msgid "Profit"
-msgstr ""
+msgstr "মুনাফা"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "মুনাফা/লস"
 
 msgid "Profit table"
-msgstr ""
+msgstr "মুনাফা টেবিল"
 
 msgid "Profit/Loss"
-msgstr ""
+msgstr "মুনাফা/ক্ষতি"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "মুনাফা/ক্ষতি"
 
 msgid "Proof of address"
-msgstr ""
+msgstr "ঠিকানার প্রমাণ"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "ঠিকানার প্রমাণের মেয়াদ শেষ"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "ঠিকানার প্রমাণ প্রয়োজন"
 
 msgid "Proof of identity"
-msgstr ""
+msgstr "পরিচয়ের প্রমাণ"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "পরিচয়ের প্রমাণ মেয়াদ শেষ হয়ে গেছে"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "পরিচয়ের প্রমাণ প্রয়োজন"
 
 msgid "Provide the whole document page for best results"
-msgstr ""
+msgstr "সেরা ফলাফলের জন্য পুরো ডকুমেন্ট পৃষ্ঠাটি প্রদান করুন"
 
 msgid "Purchase"
-msgstr ""
+msgstr "ক্রয়"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "ক্রয় মূল্য"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "ক্রয়ের সময়"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "ক্রয় মূল্য"
 
 msgid "Purchase request sent"
-msgstr ""
+msgstr "ক্রয়ের অনুরোধ পাঠানো হয়েছে"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "ক্রয় করার সময়"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "রাখুন স্প্রেড"
 
 msgid "Read"
-msgstr ""
+msgstr "পড়ুন"
 
 msgid "Ready to trade?"
-msgstr ""
+msgstr "ট্রেড করতে প্রস্তুত?"
 
 msgid "Real"
-msgstr ""
+msgstr "বাস্তব"
 
 msgid "Real Account"
-msgstr ""
+msgstr "রিয়েল অ্যাকাউন্ট"
 
 msgid "Real Financial"
-msgstr ""
+msgstr "প্রকৃত আর্থিক"
 
 msgid "Real Financial STP"
-msgstr ""
+msgstr "রিয়েল ফাইন্যান্সিয়াল এসটিপি"
 
 msgid "Real Synthetic"
-msgstr ""
+msgstr "বাস্তব সিন্থেটিক"
 
 msgid "Real-Money Account"
-msgstr ""
+msgstr "রিয়েল-মানি অ্যাকাউন্ট"
 
 msgid "Real-Money Accounts"
-msgstr ""
+msgstr "রিয়েল-মানি অ্যাকাউন্ট"
 
 msgid "Reality Check"
-msgstr ""
+msgstr "রিয়েলিটি চেক"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "সাম্প্রতিক বছরগুলি অনুমান করা সহজ"
 
 msgid "Recover camera access to continue face verification"
-msgstr ""
+msgstr "মুখ যাচাইকরণ চালিয়ে যেতে ক্যামেরা অ্যাক্সেস উদ্ধার করুন"
 
 msgid "Recovery"
-msgstr ""
+msgstr "রিকভারি"
 
 msgid "Redo"
-msgstr ""
+msgstr "পুনরায় করা"
 
 msgid "Ref."
-msgstr ""
+msgstr "সূত্র"
 
 msgid "Reference ID"
-msgstr ""
+msgstr "রেফারেন্স আইডি"
 
 msgid "Refresh"
-msgstr ""
+msgstr "রিফ্রেশ"
 
 msgid "Refresh this page to restart the identity verification process"
-msgstr ""
+msgstr "পরিচয় যাচাইকরণ প্রক্রিয়া পুনরায় আরম্ভ করতে এই পৃষ্ঠাটি রিফ্রেশ করুন"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "বাকি সময়"
 
 msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
 msgstr ""
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "ডিপোজিটের সীমা সরিয়ে ফেলুন"
 
 msgid "Remove your glasses, if necessary"
-msgstr ""
+msgstr "প্রয়োজন হলে আপনার চশমা সরান"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "“aaa” মত পুনরাবৃত্তি অনুমান করা সহজ"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "“abcabc” এর মত পুনরাবৃত্তি “abc” এর চেয়ে অনুমান করা সামান্য কঠিন"
 
 msgid "Reports"
-msgstr ""
+msgstr "প্রতিবেদন"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "সঠিকভাবে কাজ করার জন্য আপনার ব্রাউজারের ওয়েব স্টোরেজ সক্ষম করতে হবে। অনুগ্রহ করে এটি সক্রিয় করুন অথবা ব্যক্তিগত ব্রাউজিং মোড থেকে প্রস্থান করুন।"
 
 msgid "Resale not offered"
-msgstr ""
+msgstr "রিসেলিং দেওয়া হয়নি"
 
 msgid "Resend link"
-msgstr ""
+msgstr "লিংক পুনরায় পাঠান"
 
 msgid "Reset Barrier"
-msgstr ""
+msgstr "ব্যারিয়ার রিসেট করুন"
 
 msgid "Reset Call"
-msgstr ""
+msgstr "কল রিসেট করুন"
 
 msgid "Reset Call/Reset Put"
-msgstr ""
+msgstr "কল/রিসেট করা রিসেট করুন"
 
 msgid "Reset Password"
-msgstr ""
+msgstr "পাসওয়ার্ড রিসেট করুন"
 
 msgid "Reset Put"
-msgstr ""
+msgstr "পুট রিসেট করুন"
 
 msgid "Reset Time"
-msgstr ""
+msgstr "রিসেট করার সময়"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "ব্যালেন্স রিসেট করুন"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "বাধা রিসেট করুন"
 
 msgid "Reset the balance of your virtual account to %1 anytime."
 msgstr ""
 
 msgid "Reset time"
-msgstr ""
+msgstr "সময় রিসেট করুন"
 
 msgid "Reset to original settings"
-msgstr ""
+msgstr "মূল সেটিংসে রিসেট করুন"
 
 msgid "Residence permit"
-msgstr ""
+msgstr "রেসিডেন্স পারমিট"
 
 msgid "Restart process on a different device"
-msgstr ""
+msgstr "একটি ভিন্ন ডিভাইসে প্রক্রিয়া পুনরায় আরম্ভ করুন"
 
 msgid "Restart the process on the latest version of Google Chrome"
-msgstr ""
+msgstr "Google Chrome এর সর্বশেষ সংস্করণে প্রক্রিয়া পুনরায় চালু করুন"
 
 msgid "Restart the process on the latest version of Safari"
-msgstr ""
+msgstr "Safari এর সর্বশেষ সংস্করণে প্রক্রিয়া পুনরায় চালু করুন"
 
 msgid "Return"
-msgstr ""
+msgstr "রিটার্ন"
 
 msgid "Reverse Side"
-msgstr ""
+msgstr "বিপরীত দিকে"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "বিপরীত শব্দ অনুমান করা অনেক কঠিন নয়"
 
 msgid "Revoke access"
-msgstr ""
+msgstr "অ্যাক্সেস প্রত্যাহার করা হবে"
 
 msgid "Rise"
-msgstr ""
+msgstr "রাইজ"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "উত্থান বা সমান"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "উত্থান/পতন"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr ""
+msgstr "উত্থান/পতনের চুক্তি ফেরত দেওয়া হবে যদি:"
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "স্ট্যাসিস ইউরো"
 
 msgid "Sa"
-msgstr ""
+msgstr "সা"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "বিক্রয়ের তারিখ"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "বিক্রয় মূল্য"
 
 msgid "Saturday"
-msgstr ""
+msgstr "শনিবার"
 
 msgid "Scan QR code"
-msgstr ""
+msgstr "QR কোড স্ক্যান করুন"
 
 msgid "Scan the QR code with your phone"
-msgstr ""
+msgstr "আপনার ফোন দিয়ে QR কোড স্ক্যান করুন"
 
 msgid "Scans and photocopies are not accepted"
-msgstr ""
+msgstr "স্ক্যান এবং ফটোকপি গ্রহণ করা হয় না"
 
 msgid "Scopes"
-msgstr ""
+msgstr "স্কোপ"
 
 msgid "Search for country"
-msgstr ""
+msgstr "দেশের জন্য অনুসন্ধান করুন"
 
 msgid "Search..."
-msgstr ""
+msgstr "অনুসন্ধান করুন..."
 
 msgid "Select Asset"
-msgstr ""
+msgstr "অ্যাসেট সিলেক্ট করুন"
 
 msgid "Select Trade Type"
-msgstr ""
+msgstr "ট্রেডের ধরন নির্বাচন করুন"
 
 msgid "Select a %{country} document"
-msgstr ""
+msgstr "একটি %{country} নথি নির্বাচন করুন"
 
 msgid "Select country"
-msgstr ""
+msgstr "দেশ নির্বাচন করুন"
 
 msgid "Select date"
-msgstr ""
+msgstr "তারিখ নির্বাচন করুন"
 
 msgid "Select issuing country"
-msgstr ""
+msgstr "প্রদানকারী দেশ নির্বাচন করুন"
 
 msgid "Select market:"
-msgstr ""
+msgstr "মার্কেট নির্বাচন করুন:"
 
 msgid "Select payment agent"
-msgstr ""
+msgstr "পেমেন্ট এজেন্ট নির্বাচন করুন"
 
 msgid "Select your market and underlying asset"
-msgstr ""
+msgstr "আপনার বাজার এবং অন্তর্নিহিত সম্পদ নির্বাচন করুন"
 
 msgid "Select your trade type"
-msgstr ""
+msgstr "আপনার ট্রেড টাইপ নির্বাচন করুন"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "নির্বাচিত টিক"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "আত্ম বর্জন"
 
 msgid "Selfie"
-msgstr ""
+msgstr "প্রতিকৃতি"
 
 msgid "Selfie uploaded"
-msgstr ""
+msgstr "সেলফি আপলোড করা হয়েছে"
 
 msgid "Sell"
-msgstr ""
+msgstr "বিক্রয়"
 
 msgid "Sell at market"
-msgstr ""
+msgstr "বাজারে বিক্রি"
 
 msgid "Send a secure link to your phone"
-msgstr ""
+msgstr "আপনার ফোনে একটি নিরাপদ লিঙ্ক পাঠান"
 
 msgid "Send link"
-msgstr ""
+msgstr "লিংক পাঠাও"
 
 msgid "Send this one-time link to your phone"
-msgstr ""
+msgstr "আপনার ফোনে এই এক-বারের লিঙ্কটি পাঠান"
 
 msgid "Sending"
-msgstr ""
+msgstr "পাঠানো হচ্ছে"
 
 msgid "Sep"
-msgstr ""
+msgstr "সেপ্টেম্বর"
 
 msgid "September"
-msgstr ""
+msgstr "সেপ্টেম্বর"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "abc বা 6543 এর মত সিকোয়েন্স অনুমান করা সহজ।"
 
 msgid "Server"
-msgstr ""
+msgstr "সার্ভার"
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr ""
+msgstr "সেশনের সময়কাল সীমা ৬ সপ্তাহের বেশি হতে পারে না।"
 
 msgid "Session duration:"
-msgstr ""
+msgstr "সেশনের সময়কাল:"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "অ্যাকাউন্ট কারেন্সি সেট করুন"
 
 msgid "Set currency"
-msgstr ""
+msgstr "কারেন্সি সেট করো"
 
 msgid "Settles"
-msgstr ""
+msgstr "বসতি স্থাপন করা"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "ছোট কীবোর্ড নিদর্শন অনুমান করা সহজ"
 
 msgid "Should be %1"
-msgstr ""
+msgstr "%1হতে হবে"
 
 msgid "Should be a valid number."
-msgstr ""
+msgstr "একটি বৈধ সংখ্যা হতে হবে।"
 
 msgid "Should be between %1 and %2"
-msgstr ""
+msgstr "%1 এবং %2এর মধ্যে হওয়া উচিত"
 
 msgid "Should be less than %1"
-msgstr ""
+msgstr "%1এর কম হওয়া উচিত"
 
 msgid "Should be more than %1"
-msgstr ""
+msgstr "%1এর চেয়ে বেশি হওয়া উচিত"
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr ""
+msgstr "অক্ষর বা সংখ্যা দিয়ে শুরু করা উচিত, এবং হাইফেন এবং আন্ডারস্কোর থাকতে পারে।"
 
 msgid "Show all details — including the bottom 2 lines"
-msgstr ""
+msgstr "সমস্ত বিবরণ দেখান - নীচে 2 লাইন সহ"
 
 msgid "Sign out"
-msgstr ""
+msgstr "সাইন আউট"
 
 msgid "Sign up"
-msgstr ""
+msgstr "সাইন আপ"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "স্মার্টট্রেডার"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader এই অ্যাকাউন্টের জন্য অনুপলব্ধ"
 
 msgid "Something's gone wrong"
-msgstr ""
+msgstr "কিছু একটা ভুল হয়ে গেছে"
 
 msgid "Sorry, account signup is not available in your country."
-msgstr ""
+msgstr "দুঃখিত, আপনার দেশে অ্যাকাউন্ট সাইনআপ উপলব্ধ নয়।"
 
 msgid "Sorry, an error occurred while processing your account."
-msgstr ""
+msgstr "দুঃখিত, আপনার অ্যাকাউন্ট প্রসেস করার সময় একটি ত্রুটি ঘটেছে।"
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr ""
+msgstr "দুঃখিত, আপনার অনুরোধ প্রক্রিয়া করার সময় একটি ত্রুটি ঘটেছে।"
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "দুঃখিত, কিন্তু বাইনারি অপশন ট্রেডিং আপনার দেশে উপলব্ধ নয়।"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr ""
+msgstr "দুঃখিত, কিন্তু বাইনারি অপশন ট্রেডিং আপনার আর্থিক অ্যাকাউন্টে উপলব্ধ নয়।"
 
 msgid "Sorry, deposits for this currency are currently disabled."
-msgstr ""
+msgstr "দুঃখিত, এই মুদ্রার জন্য আমানত বর্তমানে নিষ্ক্রিয় করা আছে।"
 
 msgid "Sorry, no mobile phone bills"
-msgstr ""
+msgstr "দুঃখিত, কোন মোবাইল ফোন বিল"
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr ""
+msgstr "দুঃখিত, যুক্তরাজ্য এবং আইল অফ ম্যানে অপশন ট্রেডিং উপলব্ধ নয়।"
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr ""
+msgstr "দুঃখিত, এই বৈশিষ্ট্যটি শুধুমাত্র ভার্চুয়াল অ্যাকাউন্টের জন্য উপলব্ধ।"
 
 msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr ""
+msgstr "দুঃখিত, এই বৈশিষ্ট্যটি আপনার এখতিয়ারে উপলব্ধ নয়।"
 
 msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr ""
+msgstr "দুঃখিত, এই মুদ্রার জন্য অর্থ তোলার বর্তমানে নিষ্ক্রিয় করা আছে।"
 
 msgid "Spot"
-msgstr ""
+msgstr "স্পট"
 
 msgid "Spot time"
-msgstr ""
+msgstr "স্পট টাইম"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "স্পট টাইম (GMT)"
 
 msgid "Stake"
-msgstr ""
+msgstr "পণ"
 
 msgid "Start time"
-msgstr ""
+msgstr "আরম্ভের সময়"
 
 msgid "State/Province"
-msgstr ""
+msgstr "রাজ্য/প্রদেশ"
 
 msgid "Statements"
-msgstr ""
+msgstr "বিবৃতি"
 
 msgid "Status"
-msgstr ""
+msgstr "স্ট্যাটাস"
 
 msgid "Stays Between"
-msgstr ""
+msgstr "মাঝে অবস্থান করে"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "মধ্যে/বাইরে যায়"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "শুরু এবং শেষ সময়ের মধ্যে 2 টিকটিরও কম থাকলে ক্রয়ের মূল্যে/বাইরে বাইরে থাকা চুক্তিগুলি ফেরত দেওয়া হবে।"
 
 msgid "Step"
-msgstr ""
+msgstr "ধাপ"
 
 msgid "Steps required to continue verification on your mobile"
-msgstr ""
+msgstr "আপনার মোবাইলে যাচাইকরণ চালিয়ে যেতে প্রয়োজনীয় পদক্ষেপ"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "স্টক সূচক"
 
 msgid "Stocks"
-msgstr ""
+msgstr "স্টক"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "কী সোজা সারি অনুমান করা সহজ"
 
 msgid "Su"
-msgstr ""
+msgstr "সু"
 
 msgid "Submit"
-msgstr ""
+msgstr "জমা দিন"
 
 msgid "Submit document"
-msgstr ""
+msgstr "নথি জমা দিন"
 
 msgid "Submit identity card (back)"
-msgstr ""
+msgstr "পরিচয়পত্র জমা দিন (ফিরে)"
 
 msgid "Submit identity card (front)"
-msgstr ""
+msgstr "পরিচয়পত্র জমা দিন (সামনে)"
 
 msgid "Submit license (back)"
-msgstr ""
+msgstr "লাইসেন্স জমা দিন (ফেরত)"
 
 msgid "Submit license (front)"
-msgstr ""
+msgstr "লাইসেন্স জমা দিন"
 
 msgid "Submit passport photo page"
-msgstr ""
+msgstr "পাসপোর্ট ফটো পেজ জমা দিন"
 
 msgid "Submit residence permit (back)"
-msgstr ""
+msgstr "বসবাসের পারমিট জমা দিন (পিছনে)"
 
 msgid "Submit residence permit (front)"
-msgstr ""
+msgstr "বসবাসের পারমিট জমা দিন (সামনে)"
 
 msgid "Submit verification"
-msgstr ""
+msgstr "যাচাইকরণ জমা দিন"
 
 msgid "Submitted"
-msgstr ""
+msgstr "জমা"
 
 msgid "Submitting"
-msgstr ""
+msgstr "জমা দেয়া"
 
 msgid "Successful"
-msgstr ""
+msgstr "সফল"
 
 msgid "Sunday"
-msgstr ""
+msgstr "রবিবার"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "অন্য অ্যাকাউন্টে স্যুইচ করুন"
 
 msgid "Synthetic"
-msgstr ""
+msgstr "সিন্থেটিক"
 
 msgid "Synthetic Indices"
-msgstr ""
+msgstr "সিন্থেটিক সূচক"
 
 msgid "Take a photo"
-msgstr ""
+msgstr "একটি ছবি তুলুন"
 
 msgid "Take a photo of the back of your card"
-msgstr ""
+msgstr "আপনার কার্ডের পিছনের একটি ছবি তুলুন"
 
 msgid "Take a photo of the back of your license"
-msgstr ""
+msgstr "আপনার লাইসেন্সের পিছনের একটি ছবি তুলুন"
 
 msgid "Take a photo of the front of your card"
-msgstr ""
+msgstr "আপনার কার্ডের সামনের একটি ছবি তুলুন"
 
 msgid "Take a photo of the front of your license"
-msgstr ""
+msgstr "আপনার লাইসেন্সের সামনে একটি ছবি তুলুন"
 
 msgid "Take a photo of your passport photo page"
-msgstr ""
+msgstr "আপনার পাসপোর্ট ছবির পৃষ্ঠার একটি ছবি তুলুন"
 
 msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr ""
+msgstr "পরিবর্তে <fallback>মৌলিক ক্যামেরা মোড</fallback> ব্যবহার করে একটি ছবি তুলুন"
 
 msgid "Take a photo with your phone"
-msgstr ""
+msgstr "আপনার ফোন দিয়ে একটি ছবি তুলুন"
 
 msgid "Take a selfie"
-msgstr ""
+msgstr "একটি সেলফি নিন"
 
 msgid "Take a selfie showing your face"
-msgstr ""
+msgstr "আপনার মুখ দেখাচ্ছে একটি সেলফি নিন"
 
 msgid "Take photo"
-msgstr ""
+msgstr "ছবি তুলুন"
 
 msgid "Target"
-msgstr ""
+msgstr "টার্গেট"
 
 msgid "Telephone"
-msgstr ""
+msgstr "টেলিফোন"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "টিথার ইআরসি 20"
 
 msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr ""
+msgstr "Tether ERC20 (EUSDT) টিথারের একটি সংস্করণ যা USD এর সাথে সংযুক্ত এবং Ethereum প্ল্যাটফর্মে হোস্ট করা হয়।"
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "টিথার ওমনি"
 
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr ""
+msgstr "টিথার ওমনি (ইউএসডিটি) টিথারের একটি সংস্করণ যা ইউএসডি থেকে আটকে যায় এবং এটি বিটকয়েন ব্লকচাইনের উপর নির্মিত।"
 
 msgid "Th"
-msgstr ""
+msgstr "তম"
 
 msgid "Thank you"
-msgstr ""
+msgstr "আপনাকে ধন্যবাদ"
 
 msgid "Thank you for signing up! Please check your email to complete the registration process."
-msgstr ""
+msgstr "সাইন আপ করার জন্য আপনাকে ধন্যবাদ! রেজিস্ট্রেশন প্রক্রিয়া সম্পূর্ণ করার জন্য অনুগ্রহ করে আপনার ইমেল চেক করুন।"
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr ""
+msgstr "আপনাকে ধন্যবাদ, আমরা 24 ঘন্টার মধ্যে আপনার কাছে ফিরে পাবেন"
 
 msgid "The %1 password of account number %2 has been changed."
-msgstr ""
+msgstr "অ্যাকাউন্ট নম্বর %2 এর %1 পাসওয়ার্ড পরিবর্তন করা হয়েছে।"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr ""
+msgstr "%1cহারান%2 %1end সময়%2এর আগে সর্বশেষ টিক হয়। আপনি একটি নির্দিষ্ট নির্বাচন করা হলে %1eএবং সময়,%2 এবং %1eএবং সময়%2 নির্বাচিত সময় হয়।"
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
 msgstr ""
@@ -2285,679 +2285,679 @@ msgid "The %1end time%2 is the selected number of minutes/hours after the %1star
 msgstr ""
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
+msgstr "চুক্তি শেষ হলে %1eপ্রস্থান স্পট%2 শেষ টিক হয়। চুক্তি শেষ হয় যখন সমস্ত টিকটিকি ক্রমান্বয়ে বেড়ে যায় বা পড়ে যায়, অথবা যখন একটি একক টিক পূর্বাভাসের প্যাটার্ন ভেঙে যায়।"
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "%1hiঘ%2 চুক্তি সময়ের মধ্যে বাজার দ্বারা পৌঁছেছেন সর্বোচ্চ পয়েন্ট।"
 
 msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "চুক্তি সময়ের মধ্যে বাজার দ্বারা পৌঁছেছেন %1low%2 সর্বনিম্ন পয়েন্ট।"
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr ""
+msgstr "%1sটার্ট টাইম%2 শুরু হয় যখন চুক্তিটি আমাদের সার্ভার দ্বারা প্রক্রিয়া করা হয়।"
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
 msgstr ""
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>চুক্তি সময়কাল</strong> <strong>পরবর্তী টিক</strong> <strong>শুরুর সময়</strong> এবং <strong>শেষ সময়</strong>এর মধ্যে সময়কাল।"
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "<strong>শেষ সময়</strong> হল <strong>শুরুর সময়</strong> (যদি সময়কালের মধ্যে একদিনের কম), অথবা ট্রেডিং দিনের শেষে (যদি এক দিন বা তার বেশি সময়কাল) পরে মিনিট/ঘন্টা নির্বাচিত সংখ্যা।"
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
 msgstr ""
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "চুক্তি আমাদের সার্ভার দ্বারা প্রক্রিয়া করা হয় পরে <strong>এন্ট্রি স্পট</strong> প্রথম টিক।"
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>প্রস্থান স্পট</strong> হল <strong>শেষ সময়</strong>এর আগে বা তার আগে সর্বশেষ টিক।"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
 msgstr ""
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr ""
+msgstr "<strong>শুরু সময়</strong> যখন চুক্তি আমাদের সার্ভার দ্বারা প্রক্রিয়া করা হয়।"
 
 msgid "The Average"
-msgstr ""
+msgstr "দ্য এভারেজ"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr ""
+msgstr "গড় টিকটিকির গড়, এন্ট্রি স্পট এবং শেষ টিক সহ।"
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr ""
+msgstr "চুক্তি 5 মিনিটের মধ্যে শেষ হয় না (টিক সময়কাল চুক্তির জন্য)"
 
 msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr ""
+msgstr "প্রদত্ত ইমেল ঠিকানাটি ইতিমধ্যেই ব্যবহার করা হচ্ছে। আপনি যদি আপনার পাসওয়ার্ড ভুলে যান তবে দয়া করে আমাদের <a href=\"%1\">পাসওয়ার্ড পুনরুদ্ধার টুল</a> চেষ্টা করুন বা আমাদের গ্রাহক পরিষেবার সাথে যোগাযোগ করুন।"
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "চুক্তি আমাদের সার্ভার দ্বারা প্রক্রিয়া করা হয় পরে এন্ট্রি স্পট প্রথম টিক হয়।"
 
 msgid "The link only works on mobile devices"
-msgstr ""
+msgstr "লিঙ্কটি শুধুমাত্র মোবাইল ডিভাইসগুলিতে কাজ করে"
 
 msgid "The maximum number of tokens (%1) has been reached."
-msgstr ""
+msgstr "টোকেনের সর্বোচ্চ সংখ্যা (%1) পৌঁছেছে।"
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
-msgstr ""
+msgstr "আপনার অনুরোধ করা পৃষ্ঠাটি খুঁজে পাওয়া যায়নি। হয় এটি আর বিদ্যমান নেই অথবা ঠিকানাটি ভুল। দয়া করে যেকোনো টাইপসের জন্য চেক করুন।"
 
 msgid "The photo should clearly show your document"
-msgstr ""
+msgstr "ফটো পরিষ্কারভাবে আপনার নথি প্রদর্শন করা উচিত"
 
 msgid "The reason should be between 5 and 250 characters"
-msgstr ""
+msgstr "কারণ 5 এবং 250 অক্ষরের মধ্যে হওয়া উচিত"
 
 msgid "The reset time is %1"
-msgstr ""
+msgstr "রিসেট সময় %1"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
 msgstr ""
 
 msgid "The two passwords that you entered do not match."
-msgstr ""
+msgstr "আপনার প্রবেশ করা দুটি পাসওয়ার্ডগুলি মেলে না।"
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr ""
+msgstr "শুরু এবং শেষ সময়ের মধ্যে 2 টিকটিরও কম আছে"
 
 msgid "There was a problem accessing the server during purchase."
-msgstr ""
+msgstr "ক্রয়ের সময় সার্ভার অ্যাক্সেস করার সময় একটি সমস্যা ছিল।"
 
 msgid "There was a problem accessing the server."
-msgstr ""
+msgstr "সার্ভার অ্যাক্সেস করার একটি সমস্যা ছিল।"
 
 msgid "There was an error"
-msgstr ""
+msgstr "একটি ত্রুটি ছিল"
 
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "একটি ইনপুট ক্ষেত্রের মধ্যে কিছু অবৈধ অক্ষর ছিল।"
 
 msgid "These are the documents most likely to show your current home address"
-msgstr ""
+msgstr "এই দস্তাবেজগুলি সম্ভবত আপনার বর্তমান বাড়ির ঠিকানা দেখাতে পারে"
 
 msgid "This account is disabled"
-msgstr ""
+msgstr "এই অ্যাকাউন্টটি নিষ্ক্রিয় করা আছে"
 
 msgid "This account is excluded until %1"
-msgstr ""
+msgstr "এই অ্যাকাউন্টটি %1পর্যন্ত বাদ দেওয়া হয়"
 
 msgid "This contract is only available on %1DTrader%2."
-msgstr ""
+msgstr "এই চুক্তিটি শুধুমাত্র %1Dট্রেডার%2এ উপলব্ধ।"
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr ""
+msgstr "এই চুক্তিটি শুধুমাত্র dTrader এ উপলব্ধ। এই চুক্তিটি বন্ধ বা বাতিল করতে%1%2Gটি DTrader%3 এ যান।"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "এই চুক্তি হেরে গেছে"
 
 msgid "This contract type only offers 5 ticks"
-msgstr ""
+msgstr "এই কন্ট্রাক্ট টাইপ শুধুমাত্র 5 টি টিকটিকি অফার করে"
 
 msgid "This contract won"
-msgstr ""
+msgstr "এই চুক্তি জিতেছে"
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr ""
+msgstr "এই বৈশিষ্ট্যটি ভার্চুয়াল-অর্থ অ্যাকাউন্টের সাথে প্রাসঙ্গিক নয়।"
 
 msgid "This field is required."
-msgstr ""
+msgstr "এই ক্ষেত্রটি প্রয়োজন।"
 
 msgid "This is a staging server - For testing purposes only"
-msgstr ""
+msgstr "এটি একটি স্টেজিং সার্ভার - শুধুমাত্র পরীক্ষার উদ্দেশ্যে"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "এটি একটি টপ-১০ সাধারণ পাসওয়ার্ড"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "এটি একটি টপ-১০০ সাধারণ পাসওয়ার্ড"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "এটি একটি খুব সাধারণ পাসওয়ার্ড"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr ""
+msgstr "এটি একটি ইঙ্গিতপূর্ণ বাধা। প্রকৃত বাধা এন্ট্রি স্পট এবং বাধা অফসেট হবে।"
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "এটি একটি সাধারণ ব্যবহৃত পাসওয়ার্ডের অনুরূপ"
 
 msgid "This is your %1 account."
-msgstr ""
+msgstr "এটি আপনার %1 অ্যাকাউন্ট।"
 
 msgid "This page is only available to logged out clients."
-msgstr ""
+msgstr "এই পৃষ্ঠাটি শুধুমাত্র লগ-আউট ক্লায়েন্টদের জন্য উপলব্ধ।"
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "এই পাসওয়ার্ডটি ব্ল্যাকলিস্টে রয়েছে"
 
 msgid "Thursday"
-msgstr ""
+msgstr "বৃহস্পতিবার"
 
 msgid "Tick"
-msgstr ""
+msgstr "টিক"
 
 msgid "Tick Prediction"
-msgstr ""
+msgstr "টিক ভবিষ্যদ্বাণী"
 
 msgid "Ticks"
-msgstr ""
+msgstr "টিকটিক্স"
 
 msgid "Ticks history returned an empty array."
-msgstr ""
+msgstr "টিক ইতিহাস একটি ফাঁকা অ্যারে ফিরিয়ে দিয়েছে।"
 
 msgid "Time is in the wrong format."
-msgstr ""
+msgstr "সময় ভুল বিন্যাসে।"
 
 msgid "Time out cannot be in the past."
-msgstr ""
+msgstr "টাইম আউট অতীতে হতে পারে না।"
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr ""
+msgstr "টাইম আউট 6 সপ্তাহের বেশি হতে পারে না।"
 
 msgid "Time out must be after today."
-msgstr ""
+msgstr "টাইম আউট আজকের পরে হতে হবে।"
 
 msgid "Timed out until"
-msgstr ""
+msgstr "সময়সীমা শেষ হওয়া পর্যন্ত"
 
 msgid "Tips"
-msgstr ""
+msgstr "টিপস"
 
 msgid "Tips to take a good selfie"
-msgstr ""
+msgstr "একটি ভাল সেলফি নিতে টিপস"
 
 msgid "To account: "
-msgstr ""
+msgstr "অ্যাকাউন্টে: "
 
 msgid "To open a bank account, we will need to verify your identity."
-msgstr ""
+msgstr "একটি ব্যাংক অ্যাকাউন্ট খুলতে, আমাদের আপনার পরিচয় যাচাই করতে হবে।"
 
 msgid "To smoothly verify you, we need a better photo"
-msgstr ""
+msgstr "আপনাকে মসৃণভাবে যাচাই করতে, আমাদের আরও ভাল ফটো দরকার"
 
 msgid "Today"
-msgstr ""
+msgstr "আজ"
 
 msgid "Token"
-msgstr ""
+msgstr "টোকেন"
 
 msgid "Too many failed attempts"
-msgstr ""
+msgstr "অনেক ব্যর্থ প্রচেষ্টা"
 
 msgid "Top up error"
-msgstr ""
+msgstr "টপ-আপ ত্রুটি"
 
 msgid "Top-up successful"
-msgstr ""
+msgstr "টপ-আপ সফল"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "মোট খরচ"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "মোট মুনাফা/ক্ষতি"
 
 msgid "Total assets"
-msgstr ""
+msgstr "মোট সম্পদ"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "আপনার Deriv অ্যাকাউন্টে মোট সম্পদ"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "মোট মুনাফা/ক্ষতি"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "স্পর্শ/কোন স্পর্শ"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "শুরু এবং শেষ সময়ের মধ্যে 2 টিকটিরও কম থাকলে ক্রয় মূল্যে টাচ/নো টাচ চুক্তি ফেরত দেওয়া হবে।"
 
 msgid "Touches"
-msgstr ""
+msgstr "ছোঁয়া"
 
 msgid "Town/City"
-msgstr ""
+msgstr "শহর/শহর"
 
 msgid "Trade"
-msgstr ""
+msgstr "ট্রেড"
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr ""
+msgstr "স্মার্টট্রেডার, একটি শক্তিশালী, ব্যবহারকারী-বন্ধুত্বপূর্ণ অনলাইন ট্রেডিং প্ল্যাটফর্ম দিয়ে বিশ্বের বাজারে ডিজিটাল বিকল্পগুলি ট্রেড করুন।"
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr ""
+msgstr "আমাদের জনপ্রিয় ব্যবহারকারী-বন্ধুত্বপূর্ণ প্ল্যাটফর্মের সাথে বিশ্বের বাজারে ট্রেড করুন।"
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "ট্রেডারের হাব"
 
 msgid "Trading Information"
-msgstr ""
+msgstr "ট্রেডিং তথ্য"
 
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "ট্রেডিং এবং ডিপোজিট নিষ্ক্রিয়"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr ""
 
 msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr ""
+msgstr "সিন্থেটিক সূচকগুলিতে পার্থক্যের জন্য ট্রেডিং চুক্তি (CFD) সবার জন্য উপযুক্ত নাও হতে পারে। অনুগ্রহ করে নিশ্চিত করুন যে আপনি সম্পৃক্ত ঝুঁকিগুলি সম্পূর্ণরূপে বুঝতে পারেন, যার মধ্যে আপনার MT5 অ্যাকাউন্টের সমস্ত অর্থ হারানোর সম্ভাবনা রয়েছে। জুয়া খেলা আসক্তি হতে পারে - দয়া করে দায়িত্বপূর্ণভাবে খেলুন।"
 
 msgid "Trading is unavailable at this time."
-msgstr ""
+msgstr "এই সময়ে ট্রেডিং অনুপলব্ধ।"
 
 msgid "Trading statistics report"
-msgstr ""
+msgstr "ট্রেডিং পরিসংখ্যান রিপোর্ট"
 
 msgid "Transaction ID"
-msgstr ""
+msgstr "লেনদেনের আইডি"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr ""
+msgstr "%1 দ্বারা সঞ্চালিত লেনদেন (অ্যাপ আইডি: %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "সত্যিকারের ইউএসডি"
 
 msgid "Try our %1Synthetic Indices%2."
 msgstr ""
 
 msgid "Try our other markets."
-msgstr ""
+msgstr "আমাদের অন্যান্য বাজারের চেষ্টা করুন।"
 
 msgid "Try using a JPG or PNG file"
-msgstr ""
+msgstr "একটি JPG বা PNG ফাইল ব্যবহার করার চেষ্টা করুন"
 
 msgid "Try using another file type."
-msgstr ""
+msgstr "অন্য ফাইল টাইপ ব্যবহার করার চেষ্টা করুন।"
 
 msgid "Tu"
-msgstr ""
+msgstr "তু"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "মঙ্গলবার"
 
 msgid "Turnover"
-msgstr ""
+msgstr "টার্নওভার"
 
 msgid "Type"
-msgstr ""
+msgstr "ধরণ"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "মার্কিন ডলার"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "ইউএসডি মুদ্রা"
 
 msgid "USDK"
-msgstr ""
+msgstr "ইউএসডিকে"
 
 msgid "Unable to read file %1"
 msgstr ""
 
 msgid "Unavailable"
-msgstr ""
+msgstr "অনুপলব্ধ"
 
 msgid "Understood"
-msgstr ""
+msgstr "বোঝা"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "দুর্ভাগ্যবশত, এই ট্রেডিং প্ল্যাটফর্ম ইইউ Deriv অ্যাকাউন্টের জন্য উপলব্ধ নয়। ট্রেডিং চালিয়ে যেতে অনুগ্রহ করে একটি অ-ইইউ অ্যাকাউন্টে যান।"
 
 msgid "Unknown OS"
-msgstr ""
+msgstr "অজানা অপারেটিং সিস্টেম"
 
 msgid "Unsupported browser"
-msgstr ""
+msgstr "অসমর্থিত ব্রাউজার"
 
 msgid "Up to %1 decimal places are allowed."
 msgstr ""
 
 msgid "Up/Down"
-msgstr ""
+msgstr "উপরে/নিচে"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "আসন্ন ইভেন্টগুলি"
 
 msgid "Upgrade now"
-msgstr ""
+msgstr "এখন আপগ্রেড করুন"
 
 msgid "Upload"
-msgstr ""
+msgstr "আপলোড"
 
 msgid "Upload a selfie from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে একটি সেলফি আপলোড করুন"
 
 msgid "Upload anyway"
-msgstr ""
+msgstr "যাইহোক আপলোড"
 
 msgid "Upload back of card from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে কার্ড ফেরত আপলোড করুন"
 
 msgid "Upload back of license from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে লাইসেন্স ফেরত আপলোড করুন"
 
 msgid "Upload front of card from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে কার্ডের সামনে আপলোড করুন"
 
 msgid "Upload front of license from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে লাইসেন্সের সামনে আপলোড করুন"
 
 msgid "Upload passport photo page"
-msgstr ""
+msgstr "পাসপোর্ট ছবির পাতা আপলোড করুন"
 
 msgid "Upload passport photo page from your computer"
-msgstr ""
+msgstr "আপনার কম্পিউটার থেকে পাসপোর্ট ফটো পৃষ্ঠা আপলোড করুন"
 
 msgid "Upload photo"
-msgstr ""
+msgstr "ছবি আপলোড করুন"
 
 msgid "Uploads successful"
-msgstr ""
+msgstr "আপলোড সফল"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "কয়েকটি শব্দ ব্যবহার করুন, সাধারণ বাক্যাংশগুলি এড়িয়ে চলুন"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "আরো মোড় সহ একটি দীর্ঘ কীবোর্ড প্যাটার্ন ব্যবহার করুন"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr ""
+msgstr "যাচাইকরণ কোড ভুল। অনুগ্রহ করে আপনার ইমেইলে পাঠানো লিঙ্কটি ব্যবহার করুন।"
 
 msgid "Verification complete"
-msgstr ""
+msgstr "যাচাইকরণ সম্পূর্ণ"
 
 msgid "Verification required"
-msgstr ""
+msgstr "যাচাইকরণ প্রয়োজন"
 
 msgid "Verify Identity"
-msgstr ""
+msgstr "পরিচয় যাচাই করুন"
 
 msgid "Verify Reset Password"
-msgstr ""
+msgstr "পাসওয়ার্ড রিসেট করুন"
 
 msgid "Verify identity"
-msgstr ""
+msgstr "পরিচয় যাচাই করুন"
 
 msgid "View"
-msgstr ""
+msgstr "দেখুন"
 
 msgid "View chart"
-msgstr ""
+msgstr "চার্ট দেখুন"
 
 msgid "View from camera"
-msgstr ""
+msgstr "ক্যামেরা থেকে দেখুন"
 
 msgid "Virtual"
-msgstr ""
+msgstr "ভার্চুয়াল"
 
 msgid "Waiting for contract settlement."
-msgstr ""
+msgstr "চুক্তি নিষ্পত্তির জন্য অপেক্ষা করছি।"
 
 msgid "Waiting for entry tick."
-msgstr ""
+msgstr "এন্ট্রি টিক এর জন্য অপেক্ষা করছে।"
 
 msgid "Waiting for exit tick."
-msgstr ""
+msgstr "প্রস্থান টিক এর জন্য অপেক্ষা করছে।"
 
 msgid "We"
-msgstr ""
+msgstr "আমরা"
 
 msgid "We cannot verify you without using your camera"
-msgstr ""
+msgstr "আপনার ক্যামেরা ব্যবহার না করেই আমরা আপনাকে যাচাই করতে পারি না"
 
 msgid "We'd love to hear what you think."
-msgstr ""
+msgstr "আপনি কি মনে করেন আমরা শুনতে চাই।"
 
 msgid "We'll compare it with your document"
-msgstr ""
+msgstr "আমরা এটি আপনার নথির সাথে তুলনা করব"
 
 msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr ""
+msgstr "আমরা আমাদের পণ্য এবং পরিষেবাগুলি উন্নত করতে খুঁজছি, এবং আমরা আপনার প্রয়োজনগুলি আরও ভালভাবে বুঝতে চাই। আমরা আপনাকে ফোনের মাধ্যমে সাক্ষাৎকার দিতে চাই, জানতে চাই আপনি আমাদের সম্পর্কে কি পছন্দ করেন, আপনি কি পছন্দ করেন না, এবং কোথায় আমরা আরও ভাল করতে পারি।"
 
 msgid "We're now ready to verify your identity"
-msgstr ""
+msgstr "আমরা এখন আপনার পরিচয় যাচাই করতে প্রস্তুত"
 
 msgid "We've sent a secure link to %{number}"
-msgstr ""
+msgstr "আমরা %{number}এ একটি নিরাপদ লিঙ্ক পাঠিয়েছি"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "বুধবার"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "আমরা আপনার সীমা আপডেট করব। আপনি আপনার কর্মের জন্য সম্পূর্ণরূপে দায়ী তা স্বীকার করতে %1Aগ্রে ক্লিক করুন এবং স্বীকার করুন%2 , এবং আমরা কোন আসক্তি বা ক্ষতির জন্য দায়ী নই।"
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "হোয়াটসঅ্যাপ"
 
 msgid "When prompted, you must enable camera access to continue"
-msgstr ""
+msgstr "অনুরোধ জানানো হলে, চালিয়ে যাওয়ার জন্য আপনাকে অবশ্যই ক্যামেরা অ্যাক্সেস সক্রিয় করতে হবে"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "আপনি যখন “OK” ক্লিক করেন তখন আপনাকে নির্বাচিত তারিখ পর্যন্ত সাইটে ট্রেডিং থেকে বাদ দেওয়া হবে।"
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr ""
+msgstr "এক্সিট স্পট এন্ট্রি স্পট সমান হলে জয় পেআউট।"
 
 msgid "Winning the contract"
-msgstr ""
+msgstr "চুক্তি জিতেছে"
 
 msgid "Withdraw"
-msgstr ""
+msgstr "প্রত্যাহার"
 
 msgid "Withdrawal"
-msgstr ""
+msgstr "প্রত্যাহার"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "উইথড্রয়াল এবং ট্রেডিং লিমিট"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "উইথড্রয়াল অক্ষম"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্টে উইথড্রয়াল নিষ্ক্রিয় করা হয়েছে। আরো বিস্তারিত জানার জন্য আপনার ইমেইল চেক করুন।"
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr ""
 
 msgid "Yes"
-msgstr ""
+msgstr "হ্যাঁ"
 
 msgid "Yes I'm sure"
-msgstr ""
+msgstr "হ্যাঁ, আমি শিওর"
 
 msgid "Yes, I'm sure"
-msgstr ""
+msgstr "হ্যাঁ, আমি নিশ্চিত"
 
 msgid "You are categorised as a professional client."
-msgstr ""
+msgstr "আপনি একটি পেশাদারী ক্লায়েন্ট হিসাবে শ্রেণীবদ্ধ করা হয়।"
 
 msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr ""
+msgstr "আপনি একটি খুচরা ক্লায়েন্ট হিসাবে শ্রেণীবদ্ধ করা হয়। পেশাদারী ট্রেডার হিসেবে বিবেচনা করার জন্য আবেদন করুন।"
 
 msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr ""
+msgstr "আপনি এক ফায়াত অ্যাকাউন্টে সীমাবদ্ধ। আপনি প্রথমবার ডিপোজিট করার আগে বা MT5 অ্যাকাউন্ট তৈরি করার আগে যে কোনও সময় আপনার ফায়াত অ্যাকাউন্টের মুদ্রা পরিবর্তন করতে পারেন।"
 
 msgid "You are offline"
-msgstr ""
+msgstr "আপনি অফলাইনে আছেন"
 
 msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
 msgstr ""
 
 msgid "You can close this window without interrupting your trade."
-msgstr ""
+msgstr "আপনি আপনার ট্রেড বিঘ্নিত না করেই এই উইন্ডোটি বন্ধ করতে পারেন।"
 
 msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr ""
+msgstr "আপনি MT5 অ্যাকাউন্ট তৈরি করার কারণে কারেন্সি আর পরিবর্তন করতে পারবেন না।"
 
 msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr ""
+msgstr "আপনি আর মুদ্রা পরিবর্তন করতে পারবেন না কারণ আপনি প্রথমবার ডিপোজিট করেছেন।"
 
 msgid "You can now return to your computer to continue"
-msgstr ""
+msgstr "আপনি এখন আপনার কম্পিউটারে ফিরে যেতে পারেন"
 
 msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
 msgstr ""
 
 msgid "You did not change anything."
-msgstr ""
+msgstr "আপনি কিছু পরিবর্তন না।"
 
 msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr ""
+msgstr "এই মুহুর্তে আপনার অ্যাকাউন্ট প্রমাণীকরণ করার প্রয়োজন নেই।%1আপনার অ্যাকাউন্ট প্রমাণীকরণের প্রয়োজন হলে আমরা আপনাকে অবহিত করব।"
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr ""
+msgstr "আপনি ইতিমধ্যে গত %3 দিনে মোট %1%2 প্রত্যাহার করেছেন।"
 
 msgid "You have already withdrawn %1%2."
-msgstr ""
+msgstr "আপনি ইতিমধ্যে %1%2প্রত্যাহার করেছেন।"
 
 msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr ""
+msgstr "আপনার বাইনারি অ্যাকাউন্টে অপর্যাপ্ত তহবিল আছে, দয়া করে <a href=\"%1\">তহবিল যোগ করুন</a>।"
 
 msgid "You have insufficient funds in your MT5 account."
-msgstr ""
+msgstr "আপনার MT5 অ্যাকাউন্টে অপর্যাপ্ত অর্থ আছে।"
 
 msgid "You have not granted access to any applications."
-msgstr ""
+msgstr "আপনি কোন অ্যাপ্লিকেশন অ্যাক্সেস মঞ্জুর করেননি।"
 
 msgid "You have reached the rate limit of requests per second. Please try later."
-msgstr ""
+msgstr "আপনি প্রতি সেকেন্ডে অনুরোধের হার সীমা পৌঁছেছেন। অনুগ্রহ করে পরে চেষ্টা করুন।"
 
 msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr ""
+msgstr "আপনি প্রত্যাহার সীমা পৌঁছেছেন। অনুগ্রহ করে আপনার পরিচয়ের প্রমাণ এবং ঠিকানা আপলোড করুন যাতে আপনার উইথড্রয়াল লিমিট উত্তোলন করুন এবং আপনার উইথড্রয়াল নিয়ে এগিয়ে যান।"
 
 msgid "You have sold this contract at %1 %2"
-msgstr ""
+msgstr "আপনি এই চুক্তি %1 %2এ বিক্রি করেছেন"
 
 msgid "You have successfully changed your account currency from %1 to %2."
-msgstr ""
+msgstr "আপনি সফলভাবে আপনার অ্যাকাউন্টের মুদ্রা %1 থেকে %2এ পরিবর্তন করেছেন।"
 
 msgid "You have successfully disabled two-factor authentication for your account."
-msgstr ""
+msgstr "আপনি সফলভাবে আপনার অ্যাকাউন্টের জন্য দুই ফ্যাক্টর প্রমাণীকরণ নিষ্ক্রিয় করেছেন।"
 
 msgid "You have successfully enabled two-factor authentication for your account."
-msgstr ""
+msgstr "আপনি সফলভাবে আপনার অ্যাকাউন্টের জন্য দুই ফ্যাক্টর প্রমাণীকরণ সক্ষম করেছেন।"
 
 msgid "You have successfully set your account currency to %1."
-msgstr ""
+msgstr "আপনি সফলভাবে আপনার অ্যাকাউন্টের মুদ্রা %1এ সেট করেছেন।"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr ""
+msgstr "প্রমাণীকরণের জন্য বিভিন্ন OAuth সার্ভার ব্যবহার করার আগে আপনাকে রেজিস্টার করতে হবে এবং অ্যাপ আইডি পেতে হবে। আরও তথ্যের জন্য https://developers.binary.com/ এ OAuth বিশদ বিবরণ দেখুন।"
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "আপনি এখনও কোন বিজ্ঞপ্তি পাবেন"
 
 msgid "You may open one account for each supported cryptocurrency."
-msgstr ""
+msgstr "আপনি প্রতিটি সমর্থিত ক্রিপ্টোকুরেন্সের জন্য একটি অ্যাকাউন্ট খুলতে পারেন।"
 
 msgid "You should enter %1 characters."
-msgstr ""
+msgstr "আপনি %1 অক্ষর লিখতে হবে।"
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
-msgstr ""
+msgstr "আপনি একটি তৃতীয় পক্ষের ওয়েবসাইটে পুনঃনির্দেশিত করা হবে যা Binary.com এর মালিকানাধীন নয়।"
 
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr ""
+msgstr "আপনি এই MT5 অ্যাকাউন্টটি তৈরি করার পরে আপনার ফায়াত অ্যাকাউন্টের মুদ্রা পরিবর্তন করতে পারবেন না। আপনি কি নিশ্চিত যে আপনি এগিয়ে যেতে চান?"
 
 msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr ""
+msgstr "আপনি এই ডিপোজিট করার পরে আপনার ফায়াত অ্যাকাউন্টের মুদ্রা পরিবর্তন করতে পারবেন না। আপনি কি নিশ্চিত যে আপনি এগিয়ে যেতে চান?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr ""
+msgstr "আপনি অর্থ প্রদান জিতেছেন যদি মার্কেট মূল্য আপনার নির্বাচিত অঙ্কের মধ্যে শেষ না হয়।"
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr ""
+msgstr "আপনি পেআউট জিতেছেন যদি বাজার মূল্য আপনার নির্বাচিত অঙ্কের মধ্যে শেষ হয়।"
 
 msgid "You'll need to restart your verification on your computer"
-msgstr ""
+msgstr "আপনাকে আপনার কম্পিউটারে আপনার যাচাইকরণ পুনরায় চালু করতে হবে"
 
 msgid "You've made no transactions of this type up to this date."
-msgstr ""
+msgstr "আপনি এই তারিখ পর্যন্ত এই ধরনের কোন লেনদেন করেছেন।"
 
 msgid "Your %1 day withdrawal limit is currently %2%3."
 msgstr ""
 
 msgid "Your account has no Login/Logout activity."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্টে লগইন/লগআউট কার্যকলাপ নেই।"
 
 msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্ট পুরোপুরি প্রমাণীকৃত এবং আপনার উইথড্রয়াল লিমিট উঠিয়ে নেওয়া হয়েছে।"
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
 msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr ""
+msgstr "একটি পেশাদারী ক্লায়েন্ট হিসাবে গণ্য করা আপনার আবেদন প্রক্রিয়া করা হচ্ছে।"
 
 msgid "Your cashier is locked."
-msgstr ""
+msgstr "তোমার ক্যাশিয়ার লক হয়ে গেছে।"
 
 msgid "Your changes have been updated successfully."
-msgstr ""
+msgstr "আপনার পরিবর্তনগুলি সফলভাবে আপডেট করা হয়েছে।"
 
 msgid "Your changes have been updated."
-msgstr ""
+msgstr "আপনার পরিবর্তনগুলি আপডেট করা হয়েছে।"
 
 msgid "Your computer may take a few seconds to update"
-msgstr ""
+msgstr "আপনার কম্পিউটার হালনাগাদ করতে কয়েক সেকেন্ড সময় নিতে পারে"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr ""
+msgstr "আপনার ডেমো অ্যাকাউন্টের ব্যালেন্স বর্তমানে %1 বা তার কম। আপনি অতিরিক্ত %2এর সাথে আপনার অ্যাকাউন্টে টপ আপ করতে পারেন।"
 
 msgid "Your face is needed in the selfie"
-msgstr ""
+msgstr "আপনার মুখ সেলফি প্রয়োজন"
 
 msgid "Your fiat account's currency is currently set to %1."
 msgstr ""
 
 msgid "Your fiat account's currency is set to %1."
-msgstr ""
+msgstr "আপনার ফায়াত অ্যাকাউন্টের মুদ্রা %1এ সেট করা হয়।"
 
 msgid "Your link will expire in one hour"
-msgstr ""
+msgstr "আপনার লিঙ্কের মেয়াদ শেষ হবে এক ঘন্টার মধ্যে"
 
 msgid "Your mobile link will expire in one hour"
-msgstr ""
+msgstr "আপনার মোবাইল লিঙ্কের মেয়াদ শেষ হবে এক ঘন্টার মধ্যে"
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "আপনার পাসওয়ার্ড আপনার ইমেল ঠিকানা হিসাবে একই হতে পারে না।"
 
 msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr ""
+msgstr "আপনার পাসওয়ার্ড সফলভাবে রিসেট করা হয়েছে। আপনার নতুন পাসওয়ার্ড ব্যবহার করে আপনার অ্যাকাউন্টে লগ ইন করুন।"
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "প্রতিটি প্রতিবেদনের মধ্যে আপনার পছন্দের সময় ব্যবধান:"
 
 msgid "Your professional client request is %1not approved%2."
-msgstr ""
+msgstr "আপনার পেশাদার ক্লায়েন্ট অনুরোধ অনুমোদিত %1nথেকে%2।"
 
 msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully processed."
 msgstr ""
 
 msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr ""
+msgstr "আপনার অ্যাকাউন্ট %3 থেকে পেমেন্ট এজেন্ট %4 অ্যাকাউন্টে %1 %2 উত্তোলনের অনুরোধ সফলভাবে প্রক্রিয়া করা হয়েছে।"
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr ""
+msgstr "আপনার সেশনের সময়কাল সীমা %1 সেকেন্ডের মধ্যে শেষ হবে।"
 
 msgid "Your settings have been updated successfully."
-msgstr ""
+msgstr "আপনার সেটিংস সফলভাবে আপডেট করা হয়েছে।"
 
 msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr ""
+msgstr "আপনার টোকেনের মেয়াদ শেষ হয়ে গেছে অথবা অবৈধ। অনুগ্রহ করে ক্লিক করুন %1heএবং%2 যাচাই প্রক্রিয়া পুনরায় আরম্ভ করতে।"
 
 msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr ""
+msgstr "আপনার টোকেনের মেয়াদ শেষ হয়ে গেছে অথবা অবৈধ। যাচাইকরণ প্রক্রিয়া পুনরায় আরম্ভ করতে অনুগ্রহ করে <a href=\"%1\">এখানে</a> ক্লিক করুন।"
 
 msgid "Your trading statistics since %1."
-msgstr ""
+msgstr "আপনার ট্রেডিং পরিসংখ্যান %1।"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "আপনার লেনদেনের রেফারেন্স হল"
 
 msgid "Your transaction reference number is %1"
-msgstr ""
+msgstr "আপনার লেনদেনের রেফারেন্স নম্বর %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "আপনার ভার্চুয়াল ব্যালেন্স রিসেট করা হয়েছে।"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
 msgstr ""
@@ -2966,101 +2966,101 @@ msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
 msgid "account"
-msgstr ""
+msgstr "হিসাব"
 
 msgid "accounts"
-msgstr ""
+msgstr "হিসাব"
 
 msgid "back"
-msgstr ""
+msgstr "পিছনে"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "বাইনারি অপশন, ফরেক্স, ফরেক্স ট্রেডিং, অনলাইন ট্রেডিং, আর্থিক ট্রেডিং, বাইনারি ট্রেডিং, ইনডেক্স ট্রেডিং, ট্রেডিং স্টক সূচক, ফরেক্স ট্রেড, ট্রেডিং পণ্য, বাইনারি অপশন কৌশল, বাইনারি ব্রোকার, বাইনারি বিট, বাইনারি অপশন ট্রেডিং প্ল্যাটফর্ম, বাইনারি কৌশল, অর্থ, বিনিয়োগ, ট্রেডিং"
 
 msgid "close"
-msgstr ""
+msgstr "বন্ধ করা"
 
 msgid "day"
-msgstr ""
+msgstr "দিন"
 
 msgid "days"
-msgstr ""
+msgstr "দিনগুলো"
 
 msgid "details"
-msgstr ""
+msgstr "বিস্তারিত"
 
 msgid "e.g. United States"
-msgstr ""
+msgstr "যেমনঃ মার্কিন যুক্তরাষ্ট্র"
 
 msgid "e.g. frontend.binaryws.com"
-msgstr ""
+msgstr "যেমন frontend.binaryws।"
 
 msgid "for account %1"
-msgstr ""
+msgstr "অ্যাকাউন্টের জন্য %1"
 
 msgid "hour"
-msgstr ""
+msgstr "ঘন্টা"
 
 msgid "hours"
-msgstr ""
+msgstr "ঘণ্টা"
 
 msgid "including Deal Cancel. Fee"
-msgstr ""
+msgstr "যার মধ্যে রয়েছে চুক্তি বাতিল। ফি"
 
 msgid "letters"
-msgstr ""
+msgstr "অক্ষর"
 
 msgid "login"
-msgstr ""
+msgstr "লগ ইন করা"
 
 msgid "logout"
-msgstr ""
+msgstr "লগ আউট"
 
 msgid "minute"
-msgstr ""
+msgstr "মিনিট"
 
 msgid "minutes"
-msgstr ""
+msgstr "মিনিট"
 
 msgid "numbers"
-msgstr ""
+msgstr "সংখ্যাগুলো"
 
 msgid "or"
-msgstr ""
+msgstr "অথবা"
 
 msgid "or upload photo – no scans or photocopies"
-msgstr ""
+msgstr "অথবা ছবি আপলোড করুন — কোন স্ক্যান বা ফটোকপি"
 
 msgid "second"
-msgstr ""
+msgstr "দ্বিতীয়"
 
 msgid "seconds"
-msgstr ""
+msgstr "সেকেন্ড"
 
 msgid "space"
-msgstr ""
+msgstr "স্থান"
 
 msgid "tick"
-msgstr ""
+msgstr "টিক্ টিক্ শব্দ"
 
 msgid "ticks"
-msgstr ""
+msgstr "গদির খোল"
 
 msgid "today"
-msgstr ""
+msgstr "আজ"
 
 msgid "today, Fridays"
-msgstr ""
+msgstr "আজ, শুক্রবার"
 
 msgid "virtual money credit to account"
-msgstr ""
+msgstr "অ্যাকাউন্টে ভার্চুয়াল অর্থ ক্রেডিট"
 
 msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr ""
+msgstr "{SPAIN ONLY}যাইহোক, বাইনারি ইনভেস্টমেন্টস (ইউরোপ) লিমিটেড আপনার জ্ঞান এবং অভিজ্ঞতার মূল্যায়ন করেছে এবং আপনার জন্য উপযুক্ত পণ্যটি গণ্য করেছে।"
 
 msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr ""
+msgstr "{SPAIN ONLY}এটি লিভারেজ সহ একটি পণ্য। আপনার সচেতন হওয়া উচিত যে পণ্যটি ক্রয়ের জন্য প্রাথমিকভাবে প্রদত্ত পরিমাণের চেয়ে ক্ষতি বেশি হতে পারে।"
 
 msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr ""
+msgstr "{SPAIN ONLY}আপনি এমন একটি পণ্য ক্রয় করতে যাচ্ছেন যা সহজ নয় এবং বোঝা কঠিন হতে পারে: পার্থক্য এবং ফরেক্সের জন্য চুক্তি। একটি সাধারণ নিয়ম হিসাবে, সিএনএমভি বিবেচনা করে যে এই ধরনের পণ্যগুলি খুচরা ক্লায়েন্টদের জন্য উপযুক্ত নয়, তাদের জটিলতার কারণে।"
 

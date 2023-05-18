@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid " (Temporarily unavailable)"
 msgstr " (Временно недоступно)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
 msgstr "%1 Счет %2"
@@ -98,7 +98,7 @@ msgid "Action"
 msgstr "Действие"
 
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Добавьте +/–, чтобы определить оффсет барьера. Например, +0.005 означает, что барьер будет на 0.005 выше входной спот-котировки."
@@ -206,7 +206,7 @@ msgid "August"
 msgstr "Август"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Австралийский доллар"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Пройдите аутентификацию счета сейчас, чтобы в полной мере воспользоваться всеми способами оплаты."
@@ -581,7 +581,7 @@ msgid "Demo Synthetic"
 msgstr "Демо Синтетический"
 
 msgid "Demo account"
-msgstr ""
+msgstr "Демо-счет"
 
 msgid "Deposit"
 msgstr "Пополнение"
@@ -590,7 +590,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "На вашем счете отключены пополнение и вывод средств. Проверьте свою электронную почту для получения более подробной информации."
 
 msgid "Deriv "
-msgstr ""
+msgstr "Deriv "
 
 msgid "Description"
 msgstr "Описание"
@@ -674,7 +674,7 @@ msgid "Duration"
 msgstr "Длительность"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "Счет Deriv в ЕС"
 
 msgid "Email address"
 msgstr "Эл. адрес"
@@ -731,7 +731,7 @@ msgid "Ethereum"
 msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "Евро"
 
 msgid "Even/Odd"
 msgstr "Чётное/Нечётное"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "Ошибка"
 
 msgid "Fall"
-msgstr ""
+msgstr "Падение"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Ниже или равно"
 
 msgid "Feb"
 msgstr "Фев"
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "Если <strong>последний тик</strong> равен среднему значению тиков, вы не получите выплату."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "Если вы выберете \"Разрешить равные значения\", вы получите выплату, если спот-котировка на выходе будет выше или равна входной спот-котировке в контрактах \"Повышение\". Аналогичным образом, вы получите выплату, если спот-котировка на выходе будет ниже или равна спот-котировке на входе в контрактах \"Падение\"."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Если вы выбираете \"Азиатские – Падение\", вы выигрываете, если <strong>последняя котировка</strong> окажется <strong>ниже</strong>, чем <strong>общее среднее значение</strong> котировок."
@@ -1007,7 +1007,7 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "Если вы выбираете \"Чётная цифра\", вы выигрываете, если <strong>последняя десятичная</strong> последней котировки будет <strong>чётной (напр., 2, 4, 6, 8 или 0).</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Если вы выбираете \"Падение\", вы получаете выплату, если <strong>спот-котировка</strong> на выходе строго ниже, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Если вы выбираете \"Ниже\", вы выигрываете, если <strong>выходная котировка</strong> будет строго ниже, чем <strong>входная котировка</strong>."
@@ -1037,7 +1037,7 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "Если вы выбираете \"Reset-Пут\", вы получаете выплату, если спот-котировка на выходе будет строго ниже входной спот-котировки или котировки на момент Reset."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Если вы выбираете \"Выше\", вы выигрываете, если <strong>выходная котировка</strong> строго выше, чем <strong>входная котировка</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "Если вы выбираете \"Выше\", вы выигрываете, если <strong>выходная котировка</strong> будет строго выше, чем <strong>входная котировка</strong>."
@@ -1205,7 +1205,7 @@ msgid "Lookbacks"
 msgstr "Oпционы Lookback"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "Ищете счета CFD? Перейти в Trader's hub"
 
 msgid "Looks like you took too long"
 msgstr "Похоже, все заняло у вас слишком много времени"
@@ -1277,7 +1277,7 @@ msgid "Make sure§"
 msgstr "Убедитесь, что§"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "Управление счетами"
 
 msgid "Mar"
 msgstr "Мар"
@@ -1340,7 +1340,7 @@ msgid "Multiplier Up"
 msgstr "Мультипликатор Вверх"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Мультипликаторы"
 
 msgid "Must be under 10MB."
 msgstr "Файл должен быть меньше 10 МБ."
@@ -1400,7 +1400,7 @@ msgid "No thanks"
 msgstr "Нет, спасибо"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "Deriv вне ЕС "
 
 msgid "Not"
 msgstr "Не"
@@ -1511,7 +1511,7 @@ msgid "Opens"
 msgstr "Открывается"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "Опционы и мультипликаторы"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Торговля опционами может вызвать зависимость, как и любая другая деятельность, доведенная до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчет о ваших сделках и счетах."
@@ -1694,7 +1694,7 @@ msgid "Potential profit/loss"
 msgstr "Потенциальная прибыль/убыток"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "Фунт стерлингов"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Предскажите направление движения<br />и купите"
@@ -1865,7 +1865,7 @@ msgid "Reset Time"
 msgstr "Время Reset"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "Сбросить баланс"
 
 msgid "Reset barrier"
 msgstr "Барьер Reset"
@@ -1904,10 +1904,10 @@ msgid "Revoke access"
 msgstr "Отмена доступа"
 
 msgid "Rise"
-msgstr ""
+msgstr "Повышение"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Выше или равно"
 
 msgid "Rise/Fall"
 msgstr "Повышение/Падение"
@@ -2069,7 +2069,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader недоступен для этого счета"
 
 msgid "Something's gone wrong"
 msgstr "Что-то пошло не так"
@@ -2201,7 +2201,7 @@ msgid "Sunday"
 msgstr "Воскресенье"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "Перейти на другой счет"
 
 msgid "Synthetic"
 msgstr "Синтетический"
@@ -2528,7 +2528,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Торгуйте на мировых рынках с нашей популярной и удобной платформы."
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Trader's hub"
 
 msgid "Trading Information"
 msgstr "Торговая информация"
@@ -2582,7 +2582,7 @@ msgid "Type"
 msgstr "Тип"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "Доллар США"
 
 msgid "USD Coin"
 msgstr "USD Coin"
@@ -2600,7 +2600,7 @@ msgid "Understood"
 msgstr "Понятно"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "К сожалению, эта торговая платформа недоступна для счета Deriv в ЕС. Чтобы продолжить торговлю, перейдите на счет вне ЕС."
 
 msgid "Unknown OS"
 msgstr "Незнакомая операционная система"
@@ -2726,7 +2726,7 @@ msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge tha
 msgstr "Мы обновим ваши лимиты. Нажмите %1Согласиться и принять%2, чтобы подтвердить, что вы осознаете и полностью отвечаете за свои действия, и мы не несем ответственности за какие-либо убытки или зависимость."
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "При появлении запроса вы должны разрешить доступ к камере, чтобы продолжить"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-11 03:55\n"
+"PO-Revision-Date: 2023-05-18 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid " (Temporarily unavailable)"
 msgstr " (Tidak tersedia untuk sementara)"
 
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 msgid "%1 Account %2"
 msgstr "%1 Akun %2"
@@ -98,7 +98,7 @@ msgid "Action"
 msgstr "Aksi"
 
 msgid "Add"
-msgstr ""
+msgstr "Tambah"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Tambahkan +/– untuk menentukan barrier offset. Contoh, +0,005 berarti batasan lebih tinggi 0,005 dari spot masuk."
@@ -206,7 +206,7 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dolar Australia"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
 msgstr "Otentikasi akun Anda sekarang untuk memperoleh manfaat maksimal dari semua pilihan pembayaran yang tersedia."
@@ -581,7 +581,7 @@ msgid "Demo Synthetic"
 msgstr "Demo Sintetis"
 
 msgid "Demo account"
-msgstr ""
+msgstr "Akun demo"
 
 msgid "Deposit"
 msgstr "Deposit"
@@ -590,7 +590,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "Deposit dan penarikan telah dinonaktifkan pada akun Anda. Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
 
 msgid "Deriv "
-msgstr ""
+msgstr "Deriv "
 
 msgid "Description"
 msgstr "Deskripsi"
@@ -674,7 +674,7 @@ msgid "Duration"
 msgstr "Durasi"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "Akun Uni Eropa Deriv"
 
 msgid "Email address"
 msgstr "Alamat email"
@@ -731,7 +731,7 @@ msgid "Ethereum"
 msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 msgid "Even/Odd"
 msgstr "Even/Odd"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "Gagal"
 
 msgid "Fall"
-msgstr ""
+msgstr "Jatuh"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Jatuh atau sama"
 
 msgid "Feb"
 msgstr "Peb"
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "Jika <strong>tik akhir</strong> sama dengan tik rata-rata, Anda tidak akan memperoleh hasil."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "Jika Anda memilih “Allow equals”, Anda memenangkan pembayaran jika spot keluar lebih tinggi dari atau sama dengan spot masuk untuk “Naik”. Demikian pula, Anda memenangkan pembayaran jika spot keluar lebih rendah dari atau sama dengan spot masuk untuk “Jatuh”."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Pilih \"Asian Down\", untuk memperoleh hasil jika <strong>tik terakhir</strong> <strong>lebih rendah</strong> dari <strong>jumlah rata rata</strong> tik."
@@ -1007,7 +1007,7 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "Pilih \"Even\", Anda akan memperoleh hasil jika <strong>digit terakhir</strong> pada tik terakhir adalah <strong>angka genap (contoh: 2, 4, 6, 8, atau 0).</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Jika Anda memilih “Jatuh”, Anda memenangkan pembayaran jika <strong>exit spot</strong> benar-benar lebih rendah dari <strong>spot entri</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Pilih \"Fall\", maka anda akan memperoleh hasil jika <strong>spot akhir</strong> lebih rendah dari <strong>spot masuk</strong>."
@@ -1037,7 +1037,7 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "Jika Anda memilih \"Reset-Put\", Anda memperoleh hasil jika spot akhir pasti lebih rendah dari spot masuk atau spot pada waktu reset."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Jika Anda memilih “Naik”, Anda memenangkan pembayaran jika <strong>exit spot</strong> benar-benar lebih tinggi dari <strong>spot entri</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "Pilih \"Rise\", maka anda akan memperoleh hasil jika <strong>spot akhir</strong> lebih tinggi dari <strong>spot masuk</strong>."
@@ -1205,7 +1205,7 @@ msgid "Lookbacks"
 msgstr "Lookback"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "Mencari akun CFD? Pergi ke hub Trader"
 
 msgid "Looks like you took too long"
 msgstr "Sepertinya Anda mengambil waktu cukup lama"
@@ -1277,7 +1277,7 @@ msgid "Make sure§"
 msgstr "Pastikan§"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "Mengelola akun"
 
 msgid "Mar"
 msgstr "Mar"
@@ -1340,7 +1340,7 @@ msgid "Multiplier Up"
 msgstr "Multiplier Up"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Multiplier"
 
 msgid "Must be under 10MB."
 msgstr "Harus kurang dari 10MB."
@@ -1400,7 +1400,7 @@ msgid "No thanks"
 msgstr "Tidak terima kasih"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "Non-Uni Eropa Deriv "
 
 msgid "Not"
 msgstr "Bukan"
@@ -1511,7 +1511,7 @@ msgid "Opens"
 msgstr "Dibuka"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "Opsi & Multiplier"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "Trading opsi dapat menyebabkan ketagihan, sebagaimana kegiatan lain yang dilakukan di luar batas. Untuk menghidari bahaya ketagihan tersebut, kami menyediakan pengecekan yang memberikan ringkasan trading Anda secara teratur."
@@ -1694,7 +1694,7 @@ msgid "Potential profit/loss"
 msgstr "Potensi untung/rugi"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "Pound Sterling"
 
 msgid "Predict the direction<br />and purchase"
 msgstr "Analisa arah<br />dan beli"
@@ -1865,7 +1865,7 @@ msgid "Reset Time"
 msgstr "Waktu Reset"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "Setel ulang saldo"
 
 msgid "Reset barrier"
 msgstr "Barrier reset"
@@ -1904,10 +1904,10 @@ msgid "Revoke access"
 msgstr "Mencabut akses"
 
 msgid "Rise"
-msgstr ""
+msgstr "Naik"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Naik atau sama"
 
 msgid "Rise/Fall"
 msgstr "Rise/Fall"
@@ -2069,7 +2069,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader tidak tersedia untuk akun ini"
 
 msgid "Something's gone wrong"
 msgstr "Ada yang tidak beres"
@@ -2201,7 +2201,7 @@ msgid "Sunday"
 msgstr "Minggu"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "Beralih ke akun lain"
 
 msgid "Synthetic"
 msgstr "Sintetis"
@@ -2528,7 +2528,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Trading pada pasar dunia menggunakan platform kami yang mudah digunakan dan populer."
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Hub pedagang"
 
 msgid "Trading Information"
 msgstr "Informasi Trading"
@@ -2582,7 +2582,7 @@ msgid "Type"
 msgstr "Jenis"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "Dolar AS"
 
 msgid "USD Coin"
 msgstr "USD Coin"
@@ -2600,7 +2600,7 @@ msgid "Understood"
 msgstr "Dimengerti"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "Sayangnya, platform perdagangan ini tidak tersedia untuk akun EU Deriv. Silakan beralih ke akun non-UE untuk melanjutkan perdagangan."
 
 msgid "Unknown OS"
 msgstr "OS tidak diketahui"
@@ -2726,7 +2726,7 @@ msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge tha
 msgstr "Kami akan memperbarui batasan Anda. Klik %1Setuju dan terima%2 untuk mengakui bahwa Anda bertanggung jawab sepenuhnya atas tindakan Anda, dan kami tidak bertanggung jawab atas kecanduan atau kerugian apa pun."
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "Whatsapp"
 
 msgid "When prompted, you must enable camera access to continue"
 msgstr "Bila diminta, Anda harus mengaktifkan akses kamera untuk melanjutkan"
