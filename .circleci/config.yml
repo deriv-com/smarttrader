@@ -179,7 +179,7 @@ jobs:
 
   publish_cloudflare_staging:
     docker:
-      - image: circleci/node:16.13.1-stretch
+      - image: cimg/node:20.2.0
     steps:
       - attach_workspace:
           at: dist
@@ -187,7 +187,7 @@ jobs:
 
   publish_cloudflare_production:
     docker:
-      - image: circleci/node:16.13.1-stretch
+      - image: cimg/node:20.2.0
     steps:
       - attach_workspace:
           at: dist
