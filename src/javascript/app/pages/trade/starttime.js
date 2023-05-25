@@ -6,6 +6,8 @@ const Defaults          = require('./defaults');
 const Durations         = require('./duration');
 const getElementById    = require('../../../_common/common_functions').getElementById;
 const localize          = require('../../../_common/localize').localize;
+const localizeForLang = require('../../../_common/localize').forLang;
+const urlLang = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
 
@@ -28,7 +30,7 @@ const StartDates = (() => {
         }
         return sort;
     };
-
+    
     const displayStartDates = () => {
         const start_dates = Contract.startDates();
 
@@ -59,6 +61,7 @@ const StartDates = (() => {
             const default_start = Defaults.get('date_start') || 'now';
 
             const rounding = 5 * 60 * 1000;
+            localizeForLang(urlLang());
             const now      = moment.utc();
             start_dates.list.forEach((start_date) => {
                 let date_open    = moment.unix(start_date.open).utc();

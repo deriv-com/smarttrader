@@ -1,4 +1,5 @@
 const moment   = require('moment');
+require('moment/min/locales');
 const template = require('./utility').template;
 
 const Localize = (() => {
