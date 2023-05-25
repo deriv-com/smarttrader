@@ -6,8 +6,8 @@ const Defaults          = require('./defaults');
 const Durations         = require('./duration');
 const getElementById    = require('../../../_common/common_functions').getElementById;
 const localize          = require('../../../_common/localize').localize;
-const localizeForLang = require('../../../_common/localize').forLang;
-const urlLang = require('../../../_common/language').urlLang;
+const localizeForLang   = require('../../../_common/localize').forLang;
+const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
 
