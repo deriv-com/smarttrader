@@ -30,7 +30,7 @@ const StartDates = (() => {
         }
         return sort;
     };
-    
+
     const displayStartDates = () => {
         const start_dates = Contract.startDates();
 
