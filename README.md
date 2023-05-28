@@ -4,7 +4,7 @@ This repository contains the static HTML, Javascript, CSS, and images content of
 
 ![build](https://img.shields.io/circleci/build/github/deriv-com/binary-static) ![node](https://img.shields.io/badge/node-%3E%3D12.22.3-blue.svg) ![npm](https://img.shields.io/badge/npm-%3E%3D6.14.13-blue.svg) ![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)
 
-**In this document**
+**In this document** test
 
 - [Other Documents](#other-documents)
 - [Pre-installation](#pre-installation)
