@@ -601,7 +601,7 @@ const Durations = (() => {
             duration_wrapper_element.classList.add('error-msg');
             duration_min_element.classList.remove('invisible');
             duration_max_element.classList.add('invisible');
-            elementInnerHtml(duration_tooltip_element, 'Minimum:');
+            elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
             Reset.hideResetTime();
         } else if (+duration_max_element.textContent &&
             +duration_amount_element.value > +duration_max_element.textContent) {
@@ -609,7 +609,7 @@ const Durations = (() => {
             duration_wrapper_element.classList.add('error-msg');
             duration_min_element.classList.add('invisible');
             duration_max_element.classList.remove('invisible');
-            elementInnerHtml(duration_tooltip_element, 'Maximum:');
+            elementInnerHtml(duration_tooltip_element, localize('Maximum:'));
             Reset.hideResetTime();
         } else {
             duration_amount_element.classList.remove('error-field');
@@ -619,7 +619,7 @@ const Durations = (() => {
             } else {
                 duration_min_element.classList.remove('invisible');
                 duration_max_element.classList.add('invisible');
-                elementInnerHtml(duration_tooltip_element, 'Minimum:');
+                elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
                 Reset.hideResetTime();
             }
         }
