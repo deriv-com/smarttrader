@@ -91,7 +91,7 @@ const Header = (() => {
             el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
         applyToAllElements('.url-manage-account', el => {
-            el.href = Url.urlForDeriv('redirect', `action=manage_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
     };
 
