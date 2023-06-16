@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Deriv</title>
     <meta charset="utf-8" />
     <meta name='referrer' content='origin' />
     <script type="text/javascript">
-    function getCookieItem(sKey) {
-        'use strict';
-        return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
-    }
-
-    var langs = {
-        // TODO: uncomment if we enable de again
-        // 'de': 'de|at|li',
-        'es': 'ar|bo|cl|co|cr|cu|do|ec|sv|gt|hn|mx|ni|pa|py|pr|es|uy|ve',
-        'fr': 'fr|ad|bj|bf|cf|cg|ga|gn|ml|mc|ne|sn|tg',
-        'id': 'id',
-        'it': 'it',
-        'ko': 'kr',
-        'pl': 'po',
-        'pt': 'br|mz|ao|pt|gw|pg|cv|st',
-        'ru': 'ru|ua|by|kz',
-        // TODO: uncomment if we enable th again
-        // 'th': 'th',
-        'vi': 'vn',
-        'zh_tw': 'tw|mo',
-        'zh_cn': 'cn',
-    };
-    function getLanguage(country) {
-        var conLang = 'en';
-        if (country) {
-            var keys = Object.keys(langs);
-            for (var i = keys.length; i--; ) {
-                var l = keys[i];
-                if ((new RegExp(langs[l], 'i')).test(country)) {
-                    return l;
-                }
-            }
-        }
-        return conLang;
-    }
-
-    function redirect(lang) {
-        var base = /^(.+?).github.io$/.test(window.location.hostname) ? window.location.origin + '/binary-static' : window.location.origin;
-
-        // TODO: REMOVE/CHANGE this after addition of DE or TH languages
-        var unsupported_languages = ['de', 'th'];
-        if (unsupported_languages.indexOf(lang.toLowerCase()) >= 0) {
-            lang = 'en';
-            window.location.href = base + '/' + lang.toLowerCase() + '/' + 'trading.html';
-            return;
+        function getCookieItem(sKey) {
+            'use strict';
+            return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
         }
 
-        window.location.href = base + '/' + lang.toLowerCase() + '/' + '404.html';
-    }
-
-    function openWSAndGetLanguage(cb) {
-        var ws = new WebSocket('wss://frontend.binaryws.com/websockets/v3?app_id=1&brand=binary');
-
-        ws.onopen = function() {
-            ws.send(JSON.stringify({ website_status: 1 }));
+        var langs = {
+            // TODO: uncomment if we enable de again
+            // 'de': 'de|at|li',
+            'es': 'ar|bo|cl|co|cr|cu|do|ec|sv|gt|hn|mx|ni|pa|py|pr|es|uy|ve',
+            'fr': 'fr|ad|bj|bf|cf|cg|ga|gn|ml|mc|ne|sn|tg',
+            'id': 'id',
+            'it': 'it',
+            'ko': 'kr',
+            'pl': 'po',
+            'pt': 'br|mz|ao|pt|gw|pg|cv|st',
+            'ru': 'ru|ua|by|kz',
+            // TODO: uncomment if we enable th again
+            // 'th': 'th',
+            'vi': 'vn',
+            'zh_tw': 'tw|mo',
+            'zh_cn': 'cn',
         };
-
-        ws.onmessage = function(msg) {
-            var response = JSON.parse(msg.data);
-            if (response.msg_type === 'website_status') {
-                var lang;
-                if (!response.error && response.hasOwnProperty('website_status')) {
-                    lang = getLanguage(response.website_status.clients_country);
+        function getLanguage(country) {
+            var conLang = 'en';
+            if (country) {
+                var keys = Object.keys(langs);
+                for (var i = keys.length; i--;) {
+                    var l = keys[i];
+                    if ((new RegExp(langs[l], 'i')).test(country)) {
+                        return l;
+                    }
                 }
-                ws.close();
-                return cb(lang);
             }
-        };
-    }
+            return conLang;
+        }
 
-    var lang = getCookieItem('language');
-    if (lang) {
-        redirect(lang);
-    } else {
-        openWSAndGetLanguage(function(lang) {
-            if (lang) redirect(lang);
-        });
-    }
-    function getTopLevelDomain() {
-        const current_domain = window.location.hostname;
-        return (current_domain && current_domain.indexOf('.') >= 0) ? current_domain.split('.').splice(-1) : 'com';
-    };
-    
-    function onLoad() {
-        var btn__home = document.getElementById('btn__home');
-        var home_url = `https://smarttrader.deriv.${getTopLevelDomain()}`;
-        btn__home.href = home_url;
-        btn__home.innerHTML = home_url;
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        onLoad();
-    }, false);
+        function redirect(lang) {
+            var base = /^(.+?).github.io$/.test(window.location.hostname) ? window.location.origin + '/binary-static' : window.location.origin;
+
+            // TODO: REMOVE/CHANGE this after addition of DE or TH languages
+            var unsupported_languages = ['de', 'th', 'pt', 'id'];
+            if (unsupported_languages.indexOf(lang.toLowerCase()) >= 0) {
+                lang = 'en';
+                window.location.href = base + '/' + lang.toLowerCase() + '/' + 'trading.html';
+                return;
+            }
+
+            window.location.href = base + '/' + lang.toLowerCase() + '/' + '404.html';
+        }
+
+        function openWSAndGetLanguage(cb) {
+            var ws = new WebSocket('wss://frontend.binaryws.com/websockets/v3?app_id=1&brand=binary');
+
+            ws.onopen = function () {
+                ws.send(JSON.stringify({ website_status: 1 }));
+            };
+
+            ws.onmessage = function (msg) {
+                var response = JSON.parse(msg.data);
+                if (response.msg_type === 'website_status') {
+                    var lang;
+                    if (!response.error && response.hasOwnProperty('website_status')) {
+                        lang = getLanguage(response.website_status.clients_country);
+                    }
+                    ws.close();
+                    return cb(lang);
+                }
+            };
+        }
+
+        var lang = getCookieItem('language');
+        if (lang) {
+            redirect(lang);
+        } else {
+            openWSAndGetLanguage(function (lang) {
+                if (lang) redirect(lang);
+            });
+        }
+        function getTopLevelDomain() {
+            const current_domain = window.location.hostname;
+            return (current_domain && current_domain.indexOf('.') >= 0) ? current_domain.split('.').splice(-1) : 'com';
+        };
+
+        function onLoad() {
+            var btn__home = document.getElementById('btn__home');
+            var home_url = `https://smarttrader.deriv.${getTopLevelDomain()}`;
+            btn__home.href = home_url;
+            btn__home.innerHTML = home_url;
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            onLoad();
+        }, false);
     </script>
 </head>
+
 <body>
     <h1>404</h1>
     <p style='font-size: 1.5em;'><a id='btn__home'></a></p>
 </body>
+
 </html>
