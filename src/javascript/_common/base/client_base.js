@@ -432,18 +432,25 @@ const ClientBase = (() => {
     const isHighRisk = () => {
         const landing_companies = State.getResponse('landing_company');
         const risk_classification = State.getResponse('get_account_status.risk_classification');
+
         if (landing_companies) {
-            const financial_company_shortcode = landing_companies.financial_company.shortcode;
-            let gaming_company_shortcode;
+            let financial_company_shortcode, gaming_company_shortcode;
+            if (landing_companies.financial_company) {
+                financial_company_shortcode = landing_companies.financial_company.shortcode;
+            }
             if (landing_companies.gaming_company) {
                 gaming_company_shortcode = landing_companies.gaming_company.shortcode;
             }
+            const financial_restricted_countries = financial_company_shortcode === 'svg' && !gaming_company_shortcode;
+
+            const CFDs_restricted_countries = gaming_company_shortcode === 'svg' && !financial_company_shortcode;
+            
             const restricted_countries =
                 financial_company_shortcode === 'svg' ||
                 (gaming_company_shortcode === 'svg' && financial_company_shortcode !== 'maltainvest');
                 
             const high_risk = financial_company_shortcode === 'svg' && gaming_company_shortcode === 'svg';
-            return high_risk || restricted_countries || risk_classification === 'high';
+            return high_risk || restricted_countries || risk_classification === 'high' || financial_restricted_countries || CFDs_restricted_countries;
         }
 
         return false;
