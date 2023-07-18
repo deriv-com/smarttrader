@@ -221,11 +221,11 @@ const Header = () => (
                                 </a>
                             </div>
                             <div className='account__switcher-seperator' />
-                            <div id='account__switcher-logout' className='account__switcher-logout logout'>
+                            <div id='account__switcher-logout' className='account__switcher-logout'>
                                 <a id='account__switcher-manage' rel='noopener noreferrer' className='url-manage-account account__switcher-manage'>
                                     <span className='account__switcher-manage-text'>{it.L('Manage accounts')}</span>
                                 </a>
-                                <div className='account__switcher-logout-btn'>
+                                <div className='account__switcher-logout-btn logout'>
                                     <span className='account__switcher-logout-text'>{it.L('Log out')}</span>
                                     <img className='account__switcher-logout-icon logout-icon' />
                                 </div>
