@@ -242,6 +242,8 @@ const Header = (() => {
 
     const bindClick = () => {
         const btn_login = getElementById('btn__login');
+        const mng_acc = getElementById('account__switcher-manage');
+        mng_acc.addEventListener('click', e => e.stopPropagation());
         btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
