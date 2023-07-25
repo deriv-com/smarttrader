@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-18 02:49\n"
+"PO-Revision-Date: 2023-07-25 04:20\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -1294,6 +1294,9 @@ msgstr "Máximo multiplicador de 1000."
 msgid "Maximum payout"
 msgstr "Pago máximo"
 
+msgid "Maximum:"
+msgstr ""
+
 msgid "May"
 msgstr "Mayo"
 
@@ -1400,7 +1403,7 @@ msgid "No thanks"
 msgstr "No, gracias"
 
 msgid "Non-EU Deriv "
-msgstr "Deriv no perteneciente a la UE "
+msgstr "Deriv No-UE "
 
 msgid "Not"
 msgstr "No"
@@ -1865,7 +1868,7 @@ msgid "Reset Time"
 msgstr "Tiempo de reset"
 
 msgid "Reset balance"
-msgstr "Restablecer el equilibrio"
+msgstr "Restablecer el balance"
 
 msgid "Reset barrier"
 msgstr "Barrera de Reset"
@@ -2528,7 +2531,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Opere en los mercados mundiales con nuestra popular plataforma fácil de usar."
 
 msgid "Trader's hub"
-msgstr "Centro de comerciantes"
+msgstr "Trader's hub"
 
 msgid "Trading Information"
 msgstr "Información sobre operaciones"
@@ -2600,7 +2603,7 @@ msgid "Understood"
 msgstr "Entendido"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr "Lamentablemente, esta plataforma de negociación no está disponible para la cuenta EU Deriv. Cambie a una cuenta fuera de la UE para seguir operando."
+msgstr "Lamentablemente, esta plataforma de operaciones no está disponible para la cuenta Deriv EU. Cambie a una cuenta No-UE para seguir operando."
 
 msgid "Unknown OS"
 msgstr "Sistema Operativo Desconocido"

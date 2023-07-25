@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-05-18 02:49\n"
+"PO-Revision-Date: 2023-07-25 04:20\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgid "%1Manage your accounts%2"
 msgstr "%1Verwalte deine Konten%2"
 
 msgid "%1No, change my fiat account's currency now%2"
-msgstr "%1NNein, ändere jetzt die Währung meines Fiat-Kontos%2"
+msgstr "%1 Nein, ändere jetzt die Währung meines Fiat-Kontos%2"
 
 msgid "%1Return to trading page%2"
 msgstr "%1Zurück zur Handelsseite%2"
@@ -74,7 +74,7 @@ msgid "A word by itself is easy to guess"
 msgstr "Ein Wort an sich ist leicht zu erraten."
 
 msgid "AM"
-msgstr "BIN"
+msgstr "AM"
 
 msgid "Account"
 msgstr "Konto"
@@ -722,7 +722,7 @@ msgid "Entry spot"
 msgstr "Eintrittspunkt"
 
 msgid "Equals"
-msgstr "Entspricht"
+msgstr "Ist gleich"
 
 msgid "Ether Classic"
 msgstr "Ether-Klassiker"
@@ -1293,6 +1293,9 @@ msgstr "Maximaler Multiplikator von 1000."
 
 msgid "Maximum payout"
 msgstr "Maximale Auszahlung"
+
+msgid "Maximum:"
+msgstr ""
 
 msgid "May"
 msgstr "Mai"
@@ -2276,7 +2279,7 @@ msgid "The %1 password of account number %2 has been changed."
 msgstr "Das %1 Passwort der Kontonummer %2 wurde geändert."
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "Der %1Schluss%2 ist der letzte Tick zu oder vor der %1Endzeit%2. Wenn Sie eine bestimmte %1Endzeit%2 ausgewählt haben, ist die %1Endzeit%2 die ausgewählte Zeit."
+msgstr "Der %1 Schluss %2 ist der letzte Tick zu oder vor der %1 Endzeit %2. Wenn Sie eine bestimmte %1 Endzeit %2 ausgewählt haben, ist die %1 Endzeit %2 die ausgewählte Zeit."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
 msgstr "Der %1Kontraktzeitraum%2 ist die Zeitspanne zwischen dem %1ersten Tick%2 (nach der Startzeit) und der %1Endzeit%2."
