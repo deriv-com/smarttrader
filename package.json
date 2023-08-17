@@ -135,5 +135,8 @@
     "sinon": "7.2.2",
     "url-polyfill": "1.0.9",
     "web-push-notifications": "3.4.7"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
