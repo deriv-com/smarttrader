@@ -6,13 +6,14 @@ describe('Language', () => {
     const all_languages = {
         ACH  : 'Translations',
         EN   : 'English',
-        // DE   : 'Deutsch', // TODO: uncomment to enable German language
+        DE   : 'Deutsch',
         ES   : 'Español',
         FR   : 'Français',
         IT   : 'Italiano',
+        // KO   : '한국어', // TODO: Uncomment when translations are ready
         PL   : 'Polish',
         RU   : 'Русский',
-        // TH   : 'Thai', // TODO: uncomment to enable Thai language
+        TH   : 'Thai',
         VI   : 'Tiếng Việt',
         ZH_CN: '简体中文',
         ZH_TW: '繁體中文',
