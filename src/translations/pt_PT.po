@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-07-25 04:20\n"
+"PO-Revision-Date: 2023-08-17 02:43\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "Falhou"
 
 msgid "Fall"
-msgstr "Outono"
+msgstr "Desce"
 
 msgid "Fall or equal"
-msgstr "Queda ou igual"
+msgstr "Desce ou igual"
 
 msgid "Feb"
 msgstr "Fev"
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "Se o <strong>último tique-taque</strong> for igual à média dos tique-taques, você não receberá o prêmio"
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "Se você selecionar “Permitir iguais”, você ganha o pagamento se a vaga de saída for maior ou igual à vaga de entrada para “Rise”. Da mesma forma, você ganha o pagamento se a vaga de saída for menor ou igual à vaga de entrada para “Outono”."
+msgstr "Se você selecionar “Permitir iguais”, você ganha o pagamento se a vaga de saída for maior ou igual à vaga de entrada para “Sobe”. Da mesma forma, você ganha o pagamento se a vaga de saída for menor ou igual à vaga de entrada para “Desce”."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "Se selecionar \"Asiático Em Queda\", você ganha o pagamento se o <strong>último tique-taque</strong> for <strong>inferior</strong> à <strong>média</strong> dos tique-taques."
@@ -1007,7 +1007,7 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "Se você selecionar \"Par\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for um <strong>número par (i.e., 2, 4, 6, 8 ou 0).</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Se você selecionar “Queda”, você ganha o pagamento se o ponto de saída <strong></strong> for estritamente menor do que o ponto de entrada <strong></strong>."
+msgstr "Se você selecionar “Desce”, você ganha o pagamento se o ponto de saída <strong></strong> for estritamente menor do que o ponto de entrada <strong></strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "Se você selecionar \"Desce\", você ganha o prêmio se o <strong>preço de saída</strong> for estritamente inferior ao <strong>preço de entrada</strong>."
@@ -1907,7 +1907,7 @@ msgid "Revoke access"
 msgstr "Revogar acesso"
 
 msgid "Rise"
-msgstr "Ascensão"
+msgstr "Sobe"
 
 msgid "Rise or equal"
 msgstr "Aumentar ou igualar"

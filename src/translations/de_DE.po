@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-07-25 04:20\n"
+"PO-Revision-Date: 2023-08-17 02:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "Fehlgeschlagen"
 
 msgid "Fall"
-msgstr "Herbst"
+msgstr "Abfall"
 
 msgid "Fall or equal"
-msgstr "Fall oder gleich"
+msgstr "Abfall oder gleich"
 
 msgid "Feb"
 msgstr "Feb."
@@ -986,7 +986,7 @@ msgid "If you select \"Allow equals\", you win the payout if exit spot is higher
 msgstr "Wenn Sie „Gleichstände zulassen“ auswählen, gewinnen Sie die Auszahlung, wenn der Ausstiegsplatz höher oder gleich dem Startplatz für „Rise“ ist. In ähnlicher Weise gewinnen Sie die Auszahlung, wenn der Ausstiegsplatz niedriger oder gleich dem Startplatz für „Fall“ ist."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr "Wenn Sie „Asiatischer Fall\" auswählen, erhalten Sie eine Auszahlung, wenn der <strong>letzte Tick</strong> <strong>niedriger</strong> als der <strong>Durchschnitt</strong> der Ticks ist."
+msgstr "Wenn Sie „Asiatischer Abfall\" auswählen, erhalten Sie eine Auszahlung, wenn der <strong>letzte Tick</strong> <strong>niedriger</strong> als der <strong>Durchschnitt</strong> der Ticks ist."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
 msgstr "Wenn Sie „Asiatischer Anstieg\" auswählen, erhalten Sie eine Auszahlung, wenn der <strong>letzte Tick</strong> <strong>höher</strong> als der <strong>Durchschnitt</strong> der Ticks ist."
@@ -1007,10 +1007,10 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "Wenn Sie „Gerade\" auswählen, erhalten Sie eine Auszahlung, wenn die <strong>letzte Stelle</strong> des letzten Ticks <strong>eine gerade Zahl (z.B. 2, 4, 6, 8 oder 0) ist.</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Wenn Sie „Fall“ wählen, gewinnen Sie die Auszahlung, wenn der <strong>Ausstiegsplatz</strong> deutlich niedriger ist als der <strong>Einstiegsplatz</strong>."
+msgstr "Wenn Sie „Abfall“ wählen, gewinnen Sie die Auszahlung, wenn der <strong>Ausstiegsplatz</strong> deutlich niedriger ist als der <strong>Einstiegsplatz</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Wenn Sie „Fällt\" auswählen, erhalten Sie eine Auszahlung, wenn der <strong>Schlusskurs</strong> genau unter dem <strong>Anfangskurs</strong> liegt."
+msgstr "Wenn Sie „Abfall\" auswählen, erhalten Sie eine Auszahlung, wenn der <strong>Schlusskurs</strong> genau unter dem <strong>Anfangskurs</strong> liegt."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr "Wenn Sie „Geht außerhalb\" auswählen, erhalten Sie eine Auszahlung, wenn der Kurst während der <strong>Kontraktlaufzeit</strong> zu einem bestimmten Zeitpunkt entweder die <strong>ObereSchwelle</strong> oder die <strong>Untere Schwelle</strong> berührt."
@@ -1052,10 +1052,10 @@ msgid "If you select \"Under\", you will win the payout if the <strong>last dig
 msgstr "Wenn Sie „Unter“ wählen, gewinnen Sie die Auszahlung, wenn die<strong>letzte Ziffer</strong>des letzten Ticks<strong>weniger als Ihre Vorhersage ist.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr "Wenn Sie „fällt“ wählen, gewinnen Sie die Auszahlung, wenn der Marktpreis niedriger als der Startplatz</strong>von <strong>ist."
+msgstr "Wenn Sie „Abfall“ wählen, gewinnen Sie die Auszahlung, wenn der Marktpreis niedriger als der Startplatz</strong>von <strong>ist."
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr "Wenn Sie „fällt“ wählen, gewinnen Sie die Auszahlung, wenn der Marktpreis unter dem Einstiegspunkt liegt."
+msgstr "Wenn Sie „Abfall“ wählen, gewinnen Sie die Auszahlung, wenn der Marktpreis unter dem Einstiegspunkt liegt."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
 msgstr "Wenn Sie „Rises“ wählen, gewinnen Sie die Auszahlung, wenn der Marktpreis höher ist als der Einstiegsplatz</strong>von <strong>."
@@ -1070,10 +1070,10 @@ msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick i
 msgstr "Wenn Sie %1„Low Tick“%2auswählen, gewinnen Sie die Auszahlung, wenn der gewählte Tick die %1loWest unter den nächsten fünf Zecken%2ist."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "Wenn Sie %1 \"Only Downs\"%2 wählen, gewinnen Sie die Auszahlung, wenn aufeinanderfolgende Ticks nach dem %1Einstiegspunkt%2 fallen.%3Keine Auszahlung, wenn ein Tick steigt oder gleich einem der vorherigen Ticks ist."
+msgstr "Wenn Sie %1 \"Nur Unten\"%2 wählen, gewinnen Sie die Auszahlung, wenn aufeinanderfolgende Ticks nach dem %1 Einstiegspunkt %2 fallen.%3 Keine Auszahlung, wenn ein Tick steigt oder gleich einem der vorherigen Ticks ist."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "Wenn Sie %1 \"Nur Aufwärtsbewegungen\"%2 wählen, gewinnen Sie die Auszahlung, wenn aufeinanderfolgende Ticks nach dem %1Einstiegspunkt%2 nacheinander steigen.%3Keine Auszahlung, wenn ein Tick fällt oder gleich einem der vorherigen Ticks ist."
+msgstr "Wenn Sie %1 \"Nur Aufwärts\"%2 wählen, gewinnen Sie die Auszahlung, wenn aufeinanderfolgende Ticks nach dem %1Einstiegspunkt%2 nacheinander steigen.%3Keine Auszahlung, wenn ein Tick fällt oder gleich einem der vorherigen Ticks ist."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "Wenn Sie eine  <strong>Startzeit</strong> in der Zukunft auswählen, ist die <strong>Startzeit</strong> des Kontrakts die ausgewählte Zeit und der <strong>Einstiegskurs</strong> ist der Kurs, der zu dieser Zeit gültig ist."
@@ -1295,7 +1295,7 @@ msgid "Maximum payout"
 msgstr "Maximale Auszahlung"
 
 msgid "Maximum:"
-msgstr ""
+msgstr "Maximal:"
 
 msgid "May"
 msgstr "Mai"
@@ -1913,10 +1913,10 @@ msgid "Rise or equal"
 msgstr "Steigen oder gleich"
 
 msgid "Rise/Fall"
-msgstr "Aufstieg/Fall"
+msgstr "Aufstieg/Abfall"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr "Rise/Fall-Verträge werden zurückerstattet, wenn:"
+msgstr "Austieg/Abfall-Verträge werden zurückerstattet, wenn:"
 
 msgid "STASIS Euro"
 msgstr "STASIS Euro"
@@ -2288,7 +2288,7 @@ msgid "The %1end time%2 is the selected number of minutes/hours after the %1star
 msgstr "Die %1Endzeit%2 ist die ausgewählte Anzahl von Minuten bzw. Stunden nach der %1Startzeit%2."
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr "Die %1eAusstiegsstelle%2 ist das letzte Häkchen, wenn der Vertrag endet. Der Kontrakt endet, wenn alle Zecken nacheinander steigen oder fallen oder wenn eine einzelne Zecke das vorhergesagte Muster durchbricht."
+msgstr "Die %1eAusstiegsstelle%2 ist das letzte Häkchen, wenn der Vertrag endet. Der Vertrag endet, wenn alle Zecken nacheinander steigen oder fallen oder wenn eine einzelne Zecke das vorhergesagte Muster durchbricht."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
 msgstr "Der %1high%2 ist der höchste Punkt, den der Markt während der Vertragslaufzeit jemals erreicht hat."
