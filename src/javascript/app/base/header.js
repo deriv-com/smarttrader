@@ -360,7 +360,7 @@ const Header = (() => {
         const current_active_login        = Client.get('loginid');
         const all_login_ids               = Client.getAllLoginids();
         const has_real_account            = all_login_ids.some((loginid) => !/^VRT/.test(loginid));
-        const is_virtual                  = current_active_login.startsWith('VRTC');
+        const is_virtual                  = current_active_login && current_active_login.startsWith('VRTC');
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
         const showAccountSwitcher         = (should_open) => {
