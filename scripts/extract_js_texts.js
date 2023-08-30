@@ -54,9 +54,6 @@ const parse = (app_name, is_silent) => {
 
     walker(Path.resolve(config.base_folder, '_common')); // common for all 'supported_apps'
     walker(Path.resolve(config.base_folder, app_name));
-    if (app_name === 'app') {
-        walker(Path.resolve(config.base_folder, 'static'));
-    }
 
     if (!is_silent) {
         process.stdout.write(common.messageEnd(Date.now() - start_time));

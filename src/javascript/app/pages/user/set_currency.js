@@ -1,5 +1,4 @@
 const moment             = require('moment');
-const setIsForNewAccount = require('./account/settings/personal_details').setIsForNewAccount;
 const GetCurrency        = require('./get_currency');
 const BinaryPjax         = require('../../base/binary_pjax');
 const Client             = require('../../base/client');
@@ -202,7 +201,6 @@ const SetCurrency = (() => {
                 if (response_c.error) {
                     if (popup_action === 'multi_account' && /InsufficientAccountDetails|InputValidationFailed/.test(response_c.error.code)) {
                         cleanupPopup();
-                        setIsForNewAccount(true);
                         // ask client to set any missing information
                         BinaryPjax.load(Url.urlFor('user/settings/detailsws'));
                     } else {

@@ -4,46 +4,6 @@ const MetaTrader       = require('../pages/user/metatrader/metatrader');
 const State            = require('../../_common/storage').State;
 const updateTabDisplay = require('../../_common/tab_selector').updateTabDisplay;
 
-/*
-    data-show attribute controls element visibility based on
-        - current landing company
-        - metatrader availability
-        - logged in status
-
-    attribute value is a list of comma separated
-        - landing company shortcodes
-        - 'mtcompany' code that stands for metatrader availability
-        - 'default' code that describes logged out users
-        - mt5fin rules for mt5 financial company shortcodes
-            starts with 'mt5fin:'
-            e.g. 'mt5fin:vanuatu' will match if clients mt5 financial company shortcode is 'vanuatu'
-
-    Examples:
-        Show only for logged in clients with svg landing company:
-            data-show='svg'
-
-        Show for svg and malta:
-            data-show='svg, malta'
-
-        Hide for svg:
-            data-show='-svg'
-
-        Hide for malta and maltainvest:
-            data-show='-malta, -maltainvest'
-
-        Show for clients with 'vanuatu' mt5 financial company
-            data-show='mt5fin:vanuatu'
-
-        Show for clients either with  'vanuatu' or 'labuan' mt5 financial company
-            data-show='mt5fin:vanuatu, labuan'
-
-    Prohibited values:
-        Cannot mix includes and excludes:
-            data-show='svg, -malta' -> throws error
-        Shortcodes are case sensitive:
-            data-show='SVG'         -> throws error
-*/
-
 const visible_classname    = 'data-show-visible';
 const mt_company_rule      = 'mtcompany';
 const eu_country_rule      = 'eucountry';

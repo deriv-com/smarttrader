@@ -1,14 +1,12 @@
 // const BinaryPjax               = require('./binary_pjax');
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
-const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
 const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
-// const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
@@ -544,15 +542,6 @@ const Header = (() => {
         }
     };
 
-    // const logoOnClick = () => {
-    //     if (Client.isLoggedIn()) {
-    //         const url = Client.isAccountOfType('financial') ? Url.urlFor('user/metatrader') : Client.defaultRedirectUrl();
-    //         BinaryPjax.load(url);
-    //     } else {
-    //         BinaryPjax.load(Url.urlFor(''));
-    //     }
-    // };
-
     const loginOnClick = (e) => {
         e.preventDefault();
         Login.redirectToLogin();
@@ -855,9 +844,6 @@ const Header = (() => {
                         }, '', el);
                     });
                 }
-                if (/accounts/.test(window.location.href)) {
-                    showHidePulser(0);
-                }
             } else if (show_upgrade_msg) {
                 getElementById('virtual-wrapper').setVisibility(0);
                 const upgrade_url = upgrade_info.can_upgrade_to.length > 1
@@ -865,10 +851,6 @@ const Header = (() => {
                     : Object.values(upgrade_info.upgrade_links)[0];
                 showUpgrade(upgrade_url, upgrade_link_txt);
                 showUpgradeBtn(upgrade_url, upgrade_btn_txt);
-
-                if (/new_account/.test(window.location.href)) {
-                    showHidePulser(0);
-                }
             } else {
                 applyToAllElements(upgrade_msg, (el) => { el.setVisibility(0); });
             }
@@ -1061,42 +1043,6 @@ const Header = (() => {
                         result = document.status === 'expired';
                         break;
                     }
-                    /* case 'unsubmitted': {
-                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
-                        break;
-                    }
-                    case 'expired': {
-                        result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
-                        break;
-                    }
-                    case 'expired_identity': {
-                        result = verification_length && identity.status === 'expired';
-                        break;
-                    }
-                    case 'expired_document': {
-                        result = verification_length && document.status === 'expired';
-                        break;
-                    }
-                    case 'rejected': {
-                        result = verification_length === 2 && (identity.status !== 'none' || document.status !== 'none') && prompt_client_to_authenticate;
-                        break;
-                    }
-                    case 'rejected_identity': {
-                        result = verification_length && (identity.status === 'rejected' || identity.status === 'suspected');
-                        break;
-                    }
-                    case 'rejected_document': {
-                        result = verification_length && (document.status === 'rejected' || document.status === 'suspected');
-                        break;
-                    }
-                    case 'identity': {
-                        result = verification_length && identity.status === 'none';
-                        break;
-                    }
-                    case 'document': {
-                        result = verification_length && document.status === 'none';
-                        break;
-                    } */
                     default:
                         break;
                 }
@@ -1134,9 +1080,6 @@ const Header = (() => {
                 unwelcome            : () => ({ key: 'unwelcome', title: localize('Trading and deposit disabled'), message: buildMessage(localizeKeepPlaceholders('Trading and deposits have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'), `https://www.deriv.${getTopLevelDomain()}/contact-us/`), type: 'danger' }),
                 // withdrawal_locked_review: () => localize('Withdrawals have been disabled on your account. Please wait until your uploaded documents are verified.'),
                 withdrawal_locked    : () => ({ key: 'withdrawal_locked', title: localize('Withdrawal disabled'), message: localize('Withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
-                // tnc                  : () => buildMessage(has_no_tnc_limit
-                //     ? localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2].')
-                //     : localizeKeepPlaceholders('Please [_1]accept the updated Terms and Conditions[_2] to lift your deposit and trading limits.'), 'user/tnc_approvalws'),
 
                 // Deriv specific below.
                 authenticate: () => ({ key: 'authenticate', title: localize('Account authentication'), message: localize('Authenticate your account now to take full advantage of all payment methods available.'), type: 'info', button_text: 'Authenticate', button_link: `https://app.deriv.${getTopLevelDomain()}/account/proof-of-identity` }),

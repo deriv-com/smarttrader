@@ -1,4 +1,3 @@
-const PortfolioInit         = require('./account/portfolio/portfolio.init');
 const updateTotal           = require('./update_total');
 const updateContractBalance = require('../trade/update_values').updateContractBalance;
 const Client                = require('../../base/client');
@@ -63,7 +62,6 @@ const updateBalance = (response) => {
                 if (is_current) {
                     document.getElementById('header__acc-balance').innerHTML = display_balance;
                     Client.set('balance', updated_balance);
-                    PortfolioInit.updateBalance();
                 }
 
                 if (is_virtual) {
