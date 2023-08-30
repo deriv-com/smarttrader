@@ -4,13 +4,6 @@ const Note = ({ children, text }) => (
     <p className='hint'><strong>{it.L('Note')}: </strong>{text || children}</p>
 );
 
-// const Duration = ({ link }) => (
-//     <React.Fragment>
-//         <h3>{it.L('Contract duration')}</h3>
-//         <p>{it.L('Please refer to the [_1]asset index[_2] for each asset\'s minimum and maximum contract durations based on trade type.', `<a href='${it.url_for('resources/asset_indexws')}#${link}' target='_blank'>`, '</a>')}</p>
-//     </React.Fragment>
-// );
-
 const Explanation = () => (
     <div className='gr-parent'>
         {/* ========== Winning ========== */}
