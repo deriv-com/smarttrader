@@ -3,7 +3,6 @@
 **In this documents**
 
 - [Updating the Translations](#updating-the-translations)
-- [Updating the Sitemap](#updating-the-sitemap)
 
 ## Updating the Translations
 
@@ -62,7 +61,3 @@ js_texts:
 
 During the translation update process, the source file `messages.pot` will be updated with all texts from both the above files.
 
-## Updating the Sitemap
-
-- The list of paths to include in `sitemap.xml` is here: [config/sitemap_urls.js](config/sitemap_urls.js)
-- Once the paths are updated in the above file, run `./scripts/sitemap.js` or `grunt shell:sitemap` to generate new `sitemap.xml` files in `src/root_files` according to each section.

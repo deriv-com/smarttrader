@@ -40,7 +40,7 @@ const Menu = (() => {
     const makeMobileMenu = () => {
         // avoid creating mobile menu in desktop view as it duplicates menu items with the same id
         if (getElementById('mobile-menu-container').offsetParent) {
-            $('#mobile-menu').mmenu({
+            $('#mobile-menu').menu({
                 position       : 'right',
                 zposition      : 'front',
                 slidingSubmenus: false,

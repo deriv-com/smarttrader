@@ -1,11 +1,7 @@
 import React from 'react';
-// import Footer from './footer.jsx';
 import Head from './head.jsx';
 import Header from './header.jsx';
-// import MobileMenu from './mobile_menu.jsx';
-import InterviewPopup from '../components/interview_popup.jsx';
 import DerivIFrame from '../includes/deriv-iframe.jsx';
-// import Elevio from '../includes/elevio.jsx';
 import Gtm from '../includes/gtm.jsx';
 import LiveChat from '../includes/livechat.jsx';
 import LanguageMenuModal from '../components/language-menu-modal.jsx';
@@ -71,16 +67,11 @@ const Layout = () => {
                 <div id='page-wrapper'>
                     <Header />
                     <div id='content-holder'>
-                        {/* <MobileMenu /> */}
-                        {/* <a href='javascript:;' id='scrollup' /> */}
                         <InnerContent />
                     </div>
-                    {/* <Footer /> */}
                     <Topbar />
                 </div>
-                <InterviewPopup /> {/* TODO: remove when UX research is finished */}
                 <DerivIFrame />
-                {/* <Elevio /> */}
                 <LanguageMenuModal />
             </body>
         </html>

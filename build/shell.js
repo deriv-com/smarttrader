@@ -29,12 +29,6 @@ module.exports = function (grunt) {
                 stdout: true
             }
         },
-        sitemap: {
-            command: `cd ${process.cwd()} && ./scripts/sitemap.js`,
-            options: {
-                stdout: true
-            }
-        },
         trigger_tests: {
             command: grunt.option('staging') ? 'grunt gh-pages:trigger_tests --staging' : prompt('Tests are triggered only when releasing to Staging.', 'warn'),
             options: {
