@@ -1,6 +1,5 @@
 version: 2.1
 orbs:
-  k8s: circleci/kubernetes@0.7.0
   slack: circleci/slack@3.4.2
 commands:
   npm_install:
@@ -42,61 +41,6 @@ commands:
       - run:
           name: Tag build
           command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version
-  docker_build_push_staging:
-    description: "Build Docker image"
-    parameters:
-      docker_image_tag:
-        type: string
-        default: "latest-staging"
-    steps:
-      - setup_remote_docker
-      - run:
-          name: Building docker image
-          command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_SHA1} -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >> .
-      - run: 
-          name: Pushing Image to docker hub
-          command: |
-            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_SHA1}
-            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >>
-  docker_build_push:
-    description: "Build Docker image"
-    parameters:
-      docker_image_tag:
-        type: string
-        default: "latest"
-    steps:
-      - setup_remote_docker
-      - run: 
-          name: Building docker image
-          command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_TAG} -t ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >> .
-      - run: 
-          name: Pushing Image to docker hub
-          command: |
-            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:${CIRCLE_TAG}
-            docker push ${DOCKHUB_ORGANISATION}/smarttrader-deriv-app:<< parameters.docker_image_tag >>
-  k8s_deploy:
-    description: "Deploy to k8s cluster"
-    parameters:
-      k8s_namespace:
-        type: string
-        default: "smarttrader-deriv-app-staging"
-      k8s_version:
-        type: string
-        default: ${CIRCLE_SHA1}
-    steps:
-      - k8s/install-kubectl
-      - run: 
-          name: Deploying to k8s cluster for service << parameters.k8s_namespace >>
-          command: |
-            export NAMESPACE=<< parameters.k8s_namespace >>
-            git clone https://github.com/binary-com/devops-ci-scripts
-            cd devops-ci-scripts/k8s-build_tools
-            echo $CA_CRT | base64 --decode > ca.crt
-            ./release.sh smarttrader-deriv-app << parameters.k8s_version >>
 
   notify_slack:
     description: "Notify slack"
@@ -142,18 +86,15 @@ jobs:
       - npm_install
       - test
       - build:
-         target: 'staging'
+          target: "staging"
       - build:
-          target: 'translations'
+          target: "translations"
       - versioning:
           target_branch: "staging"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - docker_build_push_staging:
-          docker_image_tag: "latest-staging"
-      - k8s_deploy
       - notify_slack
   release_production:
     docker:
@@ -163,18 +104,13 @@ jobs:
       - npm_install
       - test
       - build:
-          target: 'production'
+          target: "production"
       - versioning:
           target_branch: "production"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - docker_build_push:
-          docker_image_tag: latest
-      - k8s_deploy:
-          k8s_namespace: "smarttrader-deriv-app-production"
-          k8s_version: ${CIRCLE_TAG}
       - notify_slack
 
   publish_cloudflare_staging:
@@ -192,7 +128,7 @@ jobs:
       - attach_workspace:
           at: dist
       - publish_to_pages_production
-      
+
 workflows:
   test:
     jobs:
