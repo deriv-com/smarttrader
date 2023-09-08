@@ -27,9 +27,8 @@ exports.sections_config = {
 };
 
 // ---------- Languages ----------
-// TODO: add 'DE' after 'EN' in the array below to enable German language
-// TODO: add 'TH' after 'RU' in the array below to enable Thai language
-exports.languages = ['EN', 'ES', 'FR', 'ID', 'IT', 'KO', 'PL', 'PT', 'RU', 'VI', 'ZH_CN', 'ZH_TW', 'ACH'];
+// TODO: add 'KO' after 'IT' in the array below to enable Korean language
+exports.languages = ['EN', 'DE', 'ES', 'FR', 'ID', 'IT', 'PL', 'PT', 'RU', 'TH', 'VI', 'ZH_CN', 'ZH_TW', 'ACH'];
 
 const affiliates_signup_language_map = { // object used instead of array to prevent accidental index changes
     EN   : 0,
@@ -39,12 +38,12 @@ const affiliates_signup_language_map = { // object used instead of array to prev
     ID   : 4,
     PL   : 5,
     VI   : 6,
-    // DE   : 7, // TODO: uncomment to enable German language
+    DE   : 7,
     ES   : 8,
     PT   : 9,
     ZH_CN: 10,
     ZH_TW: 11,
-    // TH   : 12, // TODO: uncomment to enable Thai language
+    TH   : 12,
 };
 exports.getAffiliateSignupLanguage = (lang = '') => (affiliates_signup_language_map[lang.toUpperCase()] || 0);
 

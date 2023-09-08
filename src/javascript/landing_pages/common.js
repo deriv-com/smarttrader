@@ -70,9 +70,8 @@ function getParamValue(url, key) {
 }
 
 function allLanguages() {
-    // TODO: add 'de' after 'en' in the array below to enable German language
-    // TODO: add 'th' after 'ru' in the array below to enable Thai language
-    return [ 'en', 'es', 'fr', 'id', 'it', 'ko', 'pl', 'pt', 'ru', 'vi', 'zh_cn', 'zh_tw', 'ach' ];
+    // TODO: add 'ko' after 'it' in the array below to enable Korean language
+    return [ 'en', 'de', 'es', 'fr', 'id', 'it', 'pl', 'pt', 'ru', 'th', 'vi', 'zh_cn', 'zh_tw', 'ach' ];
 }
 
 function getLanguage() {
