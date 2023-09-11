@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-08-17 02:43\n"
+"PO-Revision-Date: 2023-09-11 02:57\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgid "Action"
 msgstr "Azione"
 
 msgid "Add"
-msgstr "Inserisci"
+msgstr "Aggiungi"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
 msgstr "Aggiungi +/– per definire una compensazione della barriera. Per esempio, +0,005 indica che una barriera è superiore di 0,005 rispetto al punto di entrata."
@@ -590,7 +590,7 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "La funzione di deposito e prelievo è stata disabilitata per il tuo conto. Controlla il tuo indirizzo e-mail per ulteriori indicazioni."
 
 msgid "Deriv "
-msgstr "Derivare "
+msgstr "Deriv "
 
 msgid "Description"
 msgstr "Descrizione"
@@ -674,7 +674,7 @@ msgid "Duration"
 msgstr "Durata"
 
 msgid "EU Deriv account"
-msgstr "Conto EU Deriv"
+msgstr "Conto Deriv UE"
 
 msgid "Email address"
 msgstr "Indirizzo email"
@@ -1040,7 +1040,7 @@ msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</stro
 msgstr "Se selezioni «Rialzo», vinci la vincita se il punto di uscita <strong></strong> è strettamente superiore al punto <strong>di entrata</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Se selezioni \"Rialza\", vinci il payout se il <strong>prezzo di uscita</strong> è notevolmente superiore al <strong>prezzo di entrata</strong>."
+msgstr "Se selezioni \"Rialzo\", vinci il payout se il <strong>prezzo di uscita</strong> è notevolmente superiore al <strong>prezzo di entrata</strong>."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr "Se selezioni \"Resta dentro\", vinci il payout se il mercato rimane tra la <strong>barriera superiore</strong> e la <strong>barriera inferiore</strong> (non tocca) in qualsiasi momento della <strong>durata del contratto</strong>."
@@ -1058,10 +1058,10 @@ msgid "If you select \"falls\", you win the payout if the market price is lower 
 msgstr "Se selezioni \"ribassa\", vinci il payout se il prezzo del mercato è inferiore al prezzo di entrata."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr "Se selezioni \"rialza\", vinci il payout se il prezzo del mercato è superiore al <strong>prezzo di entrata</strong>."
+msgstr "Se selezioni \"Rialzo\", vinci il payout se il prezzo del mercato è superiore al <strong>prezzo di entrata</strong>."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr "Se selezioni \"rialza\", vinci il payout se il prezzo del mercato è superiore al prezzo di entrata."
+msgstr "Se selezioni \"Rialzo\", vinci il payout se il prezzo del mercato è superiore al prezzo di entrata."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
 msgstr "Selezionando %1\"Tick alto\"%2, vinci il payout se il tick selezionato è %1superiore ai cinque tick successivi%2."
@@ -1205,7 +1205,7 @@ msgid "Lookbacks"
 msgstr "Opzioni retrospettive (lookbacks)"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr "Cerchi conti CFD? Vai all'hub del trader"
+msgstr "Stai cercando conti per CFD? Vai al Trader's hub"
 
 msgid "Looks like you took too long"
 msgstr "L'operazione ha richiesto troppo tempo"
@@ -1277,7 +1277,7 @@ msgid "Make sure§"
 msgstr "Assicurati di§"
 
 msgid "Manage accounts"
-msgstr "Gestisci gli account"
+msgstr "Gestisci i conti"
 
 msgid "Mar"
 msgstr "Mar"
@@ -1403,7 +1403,7 @@ msgid "No thanks"
 msgstr "No, grazie"
 
 msgid "Non-EU Deriv "
-msgstr "Derivato non UE "
+msgstr "Deriv extra-UE "
 
 msgid "Not"
 msgstr "No"
@@ -2072,7 +2072,7 @@ msgid "SmartTrader"
 msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr "SmartTrader non è disponibile per questo account"
+msgstr "SmartTrader non è disponibile per questo conto"
 
 msgid "Something's gone wrong"
 msgstr "Qualcosa non ha funzionato"
@@ -2204,7 +2204,7 @@ msgid "Sunday"
 msgstr "Domenica"
 
 msgid "Switch to another account"
-msgstr "Passa a un altro account"
+msgstr "Passa a un altro conto"
 
 msgid "Synthetic"
 msgstr "Sintetici"
@@ -2531,7 +2531,7 @@ msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Fai trading sui mercati internazionali con la nostra famosa piattaforma dal semplice utilizzo."
 
 msgid "Trader's hub"
-msgstr "L'hub dei trader"
+msgstr "Trader's hub"
 
 msgid "Trading Information"
 msgstr "Informazioni sul trading"
@@ -2603,7 +2603,7 @@ msgid "Understood"
 msgstr "Ho capito"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr "Sfortunatamente, questa piattaforma di trading non è disponibile per l'account EU Deriv. Passa a un conto extra UE per continuare a fare trading."
+msgstr "Sfortunatamente, questa piattaforma di trading non è disponibile per l'account Deriv UE. Passa a un conto extra UE per continuare a fare trading."
 
 msgid "Unknown OS"
 msgstr "Sistema operativo sconosciuto"
