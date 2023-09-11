@@ -16,7 +16,7 @@ const Language = (() => {
         // KO   : '한국어', // TODO: Uncomment when translations are ready
         PL   : 'Polish',
         RU   : 'Русский',
-        TH   : 'Thai',
+        TH   : 'ไทย',
         VI   : 'Tiếng Việt',
         ZH_CN: '简体中文',
         ZH_TW: '繁體中文',
