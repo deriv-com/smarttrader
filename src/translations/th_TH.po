@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-08-17 02:43\n"
+"PO-Revision-Date: 2023-09-11 02:57\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -983,7 +983,7 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "หาก <strong>จุด Tick อันสุดท้าย</strong> นั้นเท่ากับค่าเฉลี่ยของจุด Tick ทั้งหมด คุณจะไม่ได้รับเงิน"
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "หากคุณเลือก \"ให้เท่ากันกับหรือ Allow equals\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกมีค่าสูงกว่าหรือเท่ากับจุดเข้าสำหรับ \"ขึ้นหรือ Rise\" และในทำนองเดียวกัน คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกต่ำกว่าหรือเท่ากับจุดเข้าสำหรับ \"ลงหรือ Fall\""
+msgstr "หากคุณเลือก \"Allow equals หรือให้เท่ากันกับ\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกมีค่าสูงกว่าหรือเท่ากับจุดเข้าสำหรับ \"Rise หรือ ขึ้น\" และในทำนองเดียวกัน คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกต่ำกว่าหรือเท่ากับจุดเข้าสำหรับ \"Fall หรือ ลง\""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "หากคุณเลือก \"ภูมิภาคเอเชียขาลง\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุด Tick อันสุดท้าย</strong> มีค่า <strong>ต่ำ</strong> กว่า <strong>ค่าเฉลี่ย</strong> ของจำนวนจุด Tick ทั้งหมดในช่วงเวลาสัญญา"
@@ -1037,7 +1037,7 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "หากคุณเลือก \"รีเซ็ต-ขาย\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อจุดออกมีค่าต่ำกว่าจุดเข้า หรือ จุด ณ เวลารีเซ็ต"
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "หากคุณเลือก \"ขึ้นหรือ Rise\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าสูงกว่า<strong>จุดเข้า</strong>"
+msgstr "หากคุณเลือก \"Rise หรือ ขึ้น\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าสูงกว่า<strong>จุดเข้า</strong>"
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
 msgstr "หากคุณเลือก \"ขึ้น\" คุณจะได้รับเงินผลตอบแทนต่อเมื่อ <strong>จุดออก</strong> มีค่าสูงกว่า<strong>จุดเข้า</strong>"
@@ -1079,7 +1079,7 @@ msgid "If you select a <strong>start time</strong> in the future, the <strong>st
 msgstr "หากคุณเลือก <strong>เวลาเริ่มต้น</strong> ในอนาคต <strong>เวลาเริ่มต้น</strong> ที่เลือกนั้นคือ <strong>จุดเข้า</strong> ซึ่งแสดงราคาที่มีผลอยู่ในเวลานั้นๆ"
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "หากคุณเลือก <strong>เวลาเริ่มต้น</strong> เป็น \"เวลาปัจจุบัน (Now)\" ดังนั้น <strong>เวลาสิ้นสุด</strong> จะเป็นตัวเลขของชั่วโมงและนาทีหลังจาก <strong>เวลาเริ่มต้น</strong> (หากระยะเวลาน้อยกว่า 1 วัน) หรือเมื่อสิ้นสุดการซื้อขายประจำวัน (หากระยะเวลาเป็น 1 วันหรือมากกว่า)"
+msgstr "หากคุณเลือก <strong>เวลาเริ่มต้น</strong> เป็น \"ขณะนี้\" ดังนั้น <strong>เวลาสิ้นสุด</strong> จะเป็นตัวเลขของชั่วโมงและนาทีหลังจาก <strong>เวลาเริ่มต้น</strong> (หากระยะเวลาน้อยกว่า 1 วัน) หรือเมื่อสิ้นสุดการซื้อขายประจำวัน (หากระยะเวลาเป็น 1 วันหรือมากกว่า)"
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
 msgstr "หากคุณกำหนดเจาะจง <strong>เวลาสิ้นสุด</strong> แล้ว <strong>เวลาสิ้นสุด</strong> คือเวลาที่ถูกเลือก"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-07-25 04:20\n"
+"PO-Revision-Date: 2023-09-11 02:57\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -344,7 +344,7 @@ msgid "Check selfie"
 msgstr "셀카 확인"
 
 msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr "연결되어 있고 작동하는지 확인하십시오.휴대폰에서 <fallback>인증을 계속할 수도 있습니다.</fallback>"
+msgstr "연결이 되어있고 작동이 되고 있는 상태인지 확인해 주세요. 귀하의 <fallback>휴대폰에서 인증을 진행하실 수도 있습니다</fallback>"
 
 msgid "Check that your number is correct"
 msgstr "번호가 올바른지 확인하세요"
@@ -644,7 +644,7 @@ msgid "Document uploaded"
 msgstr "문서 업로드됨"
 
 msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr "해당 국가의 문서는 현재 지원되지 않습니다. <fallback>다른 문서 유형을 시도해 보십시오.</fallback>"
+msgstr "해당 국가의 문서는 현재 지원되지 않습니다. <fallback>다른 종류의 문서로 시도해 보세요</fallback>"
 
 msgid "Documents uploaded"
 msgstr "업로드된 문서"
@@ -785,10 +785,10 @@ msgid "Failed"
 msgstr "실패되었습니다"
 
 msgid "Fall"
-msgstr "가을"
+msgstr "하락(Fall)"
 
 msgid "Fall or equal"
-msgstr "가을 또는 동등"
+msgstr "하락(Fall) 또는 동일(Equal)"
 
 msgid "Feb"
 msgstr "2월"
@@ -983,10 +983,10 @@ msgid "If the <strong>last tick</strong> is equal to the average of the ticks, y
 msgstr "만약 <strong>마지막 틱</strong>이 틱 병균과 동등할 경우, 귀하께서는 지불금을 받지 않습니다."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "“Allow Equals”를 선택한 경우, 출구 지점이 “Rise”의 진입 지점보다 높거나 같을 경우 배당금을 받게 됩니다.마찬가지로, 출구 지점이 “Fall”의 진입 지점보다 낮거나 같으면 배당금을 받게 됩니다."
+msgstr "\"동일 허용(Allow equals)\"을 선택하시면 \"상승(Rise)\"에 대하여 출구 가격이 진입 가격보다 높거나 또는 동일한 경우 지급금을 받습니다. 이와 비슷하게, \"하락(Fall)\"에 대하여 출구 가격이 진입 가격보다 낮거나 동일한 경우에 지급금을 받습니다."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr "만약 귀하께서 \"Asian Fall\"를 선택하실 경우, 만약 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 더 <strong>낮은</strong>경우 지불금을 받게 되실 것입니다."
+msgstr "\"아시안 하락(Asian Fall)\"을 선택하시면 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 <strong>낮을</strong> 경우에 지급금을 받습니다."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
 msgstr "만약 귀하께서 \"Asian Rise\"를 선택하실 경우, 귀하께서는 만약 <strong>마지막 틱</strong>이 틱들의 <strong>평균</strong>보다 더 <strong>높을</strong>경우 지불금을 받게 되실 것입니다."
@@ -1007,10 +1007,10 @@ msgid "If you select \"Even\", you will win the payout if the <strong>last digi
 msgstr "귀하께서 만약 \"Even\"을 선택하실때에는, 가장 최근의 틱에서 <strong>가장 마지막의 숫자</strong>가 <strong>짝수 (예: 2, 4, 6, 8, or 0)</strong>인 경우 귀하께서는 지불금을 받게 됩니다."
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "\"하락(Fall)\"을 선택하시면 <strong>출구 가격</strong>이 <strong>진입 가격</strong>보다 엄격히 낮은 경우에 지급금을 받습니다."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "만약 귀하께서 \"Falls\"를 선택하시면, <strong>exit spot</strong>이 <strong>entry spot</strong>보다 엄격히 더 낮은 경우 귀하께서 지불금을 획득합니다."
+msgstr "\"하락(Fall)\"을 선택하시면 <strong>출구 가격</strong>이 <strong>진입 가격</strong>보다 엄격히 낮을 경우에 지급금을 받습니다."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
 msgstr "만약 귀하께서 \"Goes Outside\"를 선택하시는 경우, 시장이 <strong>계약 기간</strong>에 그 어느때라도 <strong>높은 장벽</strong> 또는 <strong>낮은 장벽</strong>을 닿는 경우 귀하께서는 지불금을 획득하게 됩니다."
@@ -1052,10 +1052,10 @@ msgid "If you select \"Under\", you will win the payout if the <strong>last dig
 msgstr ""
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "\"하락(Fall)\"을 선택하시면, 시장 가격이 <strong>진입 가격</strong>보다 낮은 경우에 지급금을 받습니다."
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr "“폭락”을 선택하면 시장 가격이 진입 지점보다 낮을 경우 배당금을 받게 됩니다."
+msgstr "\"하락(Falls)\"을 선택하시면 시장 가격이 입구 가격보다 낮은 경우 지급금을 받습니다."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
 msgstr ""
@@ -1070,10 +1070,10 @@ msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick i
 msgstr "만약 귀하께서 %1\"낮은 틱\"%2을 선택하실 경우, 만약 선택하신 틱이 %1다음의 다섯 틱들중에서 가장 낮을 경우%2 귀하께서는 지불금을 받게 됩니다."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
+msgstr "%1\"온리 다운\"%2을 선택하시면 %1진입 현물%2 이후에 연속적인 틱이 연이어 하락하는 경우 지급금을 받습니다.%3만약 그 어떠한 틱이라도 상승하거나 이전의 틱과 동일하면 지급금은 없습니다."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
+msgstr "%1\"온리 업\"%2을 선택하시면 %1진입 현물%2 이후로 연속적인 틱이 연이어 상승하면 지급금을 받습니다.%3그 어떠한 틱이라도 하락하거나 또는 이전의 틱과 동일하면 지급금은 없습니다."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "귀하께서 추후 <strong>시작 시간</strong>을 선택하신다면, <strong>시작 시간</strong>이 선택된 것이며 <strong>진입부</strong>가 그 때의 유효한 가격입니다."
@@ -1115,7 +1115,7 @@ msgid "Investment"
 msgstr "투자"
 
 msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr "연결이 끊어질 수 있습니다. <fallback>대신 휴대폰을 사용해 보세요</fallback>."
+msgstr "연결이 해지되었을 수 있습니다. <fallback>대신에 귀하의 휴대폰으로 시도해 보세요</fallback>."
 
 msgid "It may take a few minutes to arrive"
 msgstr "도착하는 데 몇 분 정도 걸릴 수 있습니다."
@@ -1823,7 +1823,7 @@ msgid "Remaining time"
 msgstr "남은 시간"
 
 msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr "완료되시면 멈춤 버튼을 누르시는 것을 기억해주세요. <fallback>비디오 액션 다시 하기</fallback>"
+msgstr "완료 후에는 잊지 마시고 멈춤 버튼을 눌러 주세요. <fallback>동영상 촬영 다시 시도하기</fallback>"
 
 msgid "Remove deposit limits"
 msgstr "예금 한도를 제거하세요"
@@ -1913,10 +1913,10 @@ msgid "Rise or equal"
 msgstr "라이즈 또는 이퀄라이즈"
 
 msgid "Rise/Fall"
-msgstr "상승/하락"
+msgstr "상승(Rise)/하락(Fall)"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr "상승/하락 계약은 다음의 상황에 환불될 것입니다:"
+msgstr "상승(Rise)/하락(Fall) 계약은 상황이 다음과 같을 경우에 환불됩니다:"
 
 msgid "STASIS Euro"
 msgstr "스타시스 유로"
@@ -2231,7 +2231,7 @@ msgid "Take a photo of your passport photo page"
 msgstr "여권 사진 페이지 사진 찍기"
 
 msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr "대신에 <fallback>기본 카메라 모드</fallback>를 사용하여 사진을 찍으세요"
+msgstr "대신에 <fallback>기본 카메라 모드</fallback>를 사용하여 사진을 찍어보세요"
 
 msgid "Take a photo with your phone"
 msgstr "휴대폰으로 사진 찍기"
@@ -2288,7 +2288,7 @@ msgid "The %1end time%2 is the selected number of minutes/hours after the %1star
 msgstr ""
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
+msgstr "%1출구 현물%2은 해당 계약이 종료되는 시점에서의 마지막 틱입니다. 모든 틱이 연속으로 상승 또는 하락할 때, 또는 단일의 틱이 예측된 패턴에서 벗어날 때 계약은 종료됩니다."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
 msgstr ""
