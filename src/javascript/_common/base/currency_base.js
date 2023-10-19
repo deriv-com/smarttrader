@@ -13,6 +13,7 @@ const displayed_currencies = {
     ETH  : localize('Ethereum'),
     USDT : localize('Tether Omni'),
     eUSDT: localize('Tether ERC20'),
+    tUSDT: localize('Tether TRC20'),
     USDC : localize('USD Coin'),
     LTC  : localize('Litecoin'),
 };
