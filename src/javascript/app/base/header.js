@@ -146,10 +146,6 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
         });
 
-        applyToAllElements('.whatsapp-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg`);
-        });
-
         applyToAllElements('.livechat-icon', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg`);
         });
@@ -465,10 +461,6 @@ const Header = (() => {
             }
         });
 
-        // whatsapp mobile menu
-        const whatsapp_mobile_drawer = getElementById('whatsapp-mobile-drawer');
-        whatsapp_mobile_drawer.addEventListener('click', () => window.open('https://wa.me/35699578341', '_blank'));
-
         // Livechat Logo
         const livechat_img = getElementById('livechat__logo');
         livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
@@ -519,10 +511,6 @@ const Header = (() => {
         // Help center.
         const topbar_help_center = getElementById('topbar-help-centre');
         topbar_help_center.addEventListener('click', () => window.location = `https://www.deriv.${getTopLevelDomain()}/help-centre/`);
-
-        // WhatsApp.
-        const topbar_whatsapp = getElementById('topbar-whatsapp');
-        topbar_whatsapp.addEventListener('click', () => window.open('https://wa.me/35699578341', '_blank'));
 
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');

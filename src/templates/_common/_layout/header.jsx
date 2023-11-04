@@ -39,10 +39,6 @@ const MobileMenu = () => (
                         <div className='mobile__platform-switcher-text'>{it.L('Reports')}</div>
                         <img id='mobile__platform-switcher-icon-arrowright' className='mobile__platform-switcher-icon-right' />
                     </div>
-                    <div  id='whatsapp-mobile-drawer' className='mobile__platform-switcher-item whatsapp'>
-                        <img className='mobile__platform-switcher-icon whatsapp-icon' />
-                        <div className='mobile__platform-switcher-text'>{it.L('WhatsApp')}</div>
-                    </div>
                     <div  id='mobile__menu-livechat' className='mobile__platform-switcher-item'>
                         <img className='mobile__platform-switcher-icon livechat-icon' />
                         <div className='mobile__platform-switcher-text'>{it.L('Live chat')}</div>
