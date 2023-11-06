@@ -6,11 +6,13 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
-    container:
-      image: node:12.22.7
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.22
     - name: Install dependencies
       uses: "./.github/actions/npm_install"
     - name: Build
@@ -29,12 +31,15 @@ jobs:
         path: dist
   publish_cloudflare_production:
     runs-on: ubuntu-latest
-    container:
-      image: node:20.2.0
+
     needs: [build_and_test]
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
     - name: Download Artifacts
       uses: actions/download-artifact@v3.0.2
       with:
@@ -44,12 +49,15 @@ jobs:
   notify_on_slack:
     if: always()
     runs-on: ubuntu-latest
-    container:
-      image: node:20.2.0
+
     needs: [publish_cloudflare_production, build_and_test]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
       - name: Conclusion
         uses: technote-space/workflow-conclusion-action@v3
       - uses: actions/download-artifact@v3.0.2
