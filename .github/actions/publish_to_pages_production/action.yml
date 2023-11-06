@@ -1,0 +1,19 @@
+name: publish_to_pages_production
+description: Publish to cloudflare pages (Production)
+inputs:
+  CLOUDFLARE_ACCOUNT_ID:
+    description: 'Cloudflare account id'
+    required: true
+  CLOUDFLARE_API_TOKEN:
+    description: 'Cloudflare token'
+    required: true
+runs:
+  using: composite
+  steps:
+  - name: Publish to cloudflare pages (production)
+    run: |-
+      npm i wrangler@3.1.0
+      cd dist
+      npx wrangler pages deploy . --project-name=deriv-binary-static-pages --branch=main
+      echo "New website - http://cf-pages-deriv-binary-static.deriv.com"
+    shell: bash
