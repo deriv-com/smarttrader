@@ -1,0 +1,10 @@
+name: versioning
+inputs:
+  target_branch:
+    required: false
+runs:
+  using: composite
+  steps:
+  - name: Tag build
+    run: echo "${{ inputs.target_branch }} $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version
+    shell: bash
