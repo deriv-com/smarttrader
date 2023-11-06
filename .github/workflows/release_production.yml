@@ -56,7 +56,7 @@ jobs:
           release_type: Production 
           version: ${{ steps.extract_version.outputs.RELEASE_VERSION}}
 
-      - uses: .github/actions/notify_slack
+      - uses: ./.github/actions/notify_slack
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           status: ${{ env.WORKFLOW_CONCLUSION }}
