@@ -1,4 +1,4 @@
-name: deriv-com/binary-static/release_production
+name: DSmartTrader Staging Release
 on:
   push:
     branches:
