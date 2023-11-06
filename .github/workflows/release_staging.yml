@@ -1,0 +1,32 @@
+name: deriv-com/binary-static/release_production
+on:
+  push:
+    branches:
+    - master
+jobs:
+  release_production:
+    runs-on: ubuntu-latest
+    container:
+      image: node:12.22.7
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: "./.github/actions/npm_install"
+    - uses: "./.github/actions/build"
+      with:
+        target: production
+    - uses: "./.github/actions/versioning"
+      with:
+        target_branch: production
+    - name: "Run Tests"
+      run: npm run test
+  publish_cloudflare_production:
+    runs-on: ubuntu-latest
+    container:
+      image: node:20.2.0
+    needs: [release_production]
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v3.0.2
+      with:
+        path: dist
+    - uses: "./.github/actions/publish_to_pages_production"

@@ -1,0 +1,64 @@
+name: deriv-com/binary-static/release_production
+on:
+  push:
+    tags:
+    - production_*
+jobs:
+  release_production:
+    runs-on: ubuntu-latest
+    container:
+      image: node:12.22.7
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: "./.github/actions/npm_install"
+    - uses: "./.github/actions/build"
+      with:
+        target: production
+    - uses: "./.github/actions/versioning"
+      with:
+        target_branch: production
+    - name: "Run Tests"
+      run: npm run test
+  publish_cloudflare_production:
+    if: # GitHub does not currently support regular expressions inside if conditions
+    runs-on: ubuntu-latest
+    container:
+      image: node:20.2.0
+    needs: [release_production]
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - uses: actions/download-artifact@v3.0.2
+      with:
+        path: dist
+    - uses: "./.github/actions/publish_to_pages_production"
+
+  notify_on_slack:
+    if: always()
+    runs-on: ubuntu-latest
+    container:
+      image: node:20.2.0
+    needs: [publish_cloudflare_production, release_production]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Conclusion
+        uses: technote-space/workflow-conclusion-action@v3
+      - uses: actions/download-artifact@v3.0.2
+        with:
+          path: dist
+      - name: Grab Version Name
+        id: extract_version
+        run: echo "RELEASE_VERSION=${version}" >> $GITHUB_ENV
+      - uses: "./.github/actions/notify_slack"
+        with:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          status: ${{ env.WORKFLOW_CONCLUSION }}
+          release_type: Production 
+          version: ${{ steps.extract_version.outputs.RELEASE_VERSION}}
+
+      - uses: .github/actions/notify_slack
+        with:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          status: ${{ env.WORKFLOW_CONCLUSION }}
+          release_type: Production 
+          version: ${{ steps.extract_version.outputs.RELEASE_VERSION}}
