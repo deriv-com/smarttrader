@@ -1,10 +1,10 @@
-name: deriv-com/binary-static/release_production
+name: DSmartTrader Production Release
 on:
   push:
     tags:
     - production_*
 jobs:
-  release_production:
+  build_and_test:
     runs-on: ubuntu-latest
     container:
       image: node:12.22.7
@@ -20,11 +20,10 @@ jobs:
     - name: "Run Tests"
       run: npm run test
   publish_cloudflare_production:
-    if: # GitHub does not currently support regular expressions inside if conditions
     runs-on: ubuntu-latest
     container:
       image: node:20.2.0
-    needs: [release_production]
+    needs: [build_and_test]
     steps:
     - uses: actions/checkout@v4.1.0
     - uses: actions/download-artifact@v3.0.2
@@ -37,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: node:20.2.0
-    needs: [publish_cloudflare_production, release_production]
+    needs: [publish_cloudflare_production, build_and_test]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
