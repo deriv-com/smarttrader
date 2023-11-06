@@ -5,6 +5,7 @@ on:
     - master
 jobs:
   build_and_test:
+    name: Build and Test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -29,6 +30,7 @@ jobs:
         name: dist
         path: dist
   publish_cloudflare_production:
+    name: Publish to Cloudflare Pages Production
     runs-on: ubuntu-latest
     needs: [build_and_test]
     steps:
