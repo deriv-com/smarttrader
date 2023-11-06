@@ -4,7 +4,7 @@ on:
     branches:
     - master
 jobs:
-  release_production:
+  build_and_test:
     runs-on: ubuntu-latest
     container:
       image: node:12.22.7
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: node:20.2.0
-    needs: [release_production]
+    needs: [build_and_test]
     steps:
     - uses: actions/checkout@v4.1.0
     - uses: actions/download-artifact@v3.0.2
