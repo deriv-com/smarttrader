@@ -9,9 +9,12 @@ jobs:
     container:
       image: node:12.22.7
     steps:
-    - uses: actions/checkout@v4.1.0
-    - uses: "./.github/actions/npm_install"
-    - uses: "./.github/actions/build"
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Install dependencies
+      uses: "./.github/actions/npm_install"
+    - name: Build
+      uses: "./.github/actions/build"
       with:
         target: production
     - uses: "./.github/actions/versioning"
@@ -19,14 +22,21 @@ jobs:
         target_branch: production
     - name: "Run Tests"
       run: npm run test
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: dist
   publish_cloudflare_production:
     runs-on: ubuntu-latest
     container:
       image: node:20.2.0
     needs: [build_and_test]
     steps:
-    - uses: actions/checkout@v4.1.0
-    - uses: actions/download-artifact@v3.0.2
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Download Artifacts
+      uses: actions/download-artifact@v3.0.2
       with:
         path: dist
     - uses: "./.github/actions/publish_to_pages_production"
