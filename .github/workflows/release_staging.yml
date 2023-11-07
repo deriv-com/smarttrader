@@ -43,7 +43,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-        node-version: 12
+        node-version: 20
     - uses: actions/download-artifact@v3.0.2
       with:
         path: dist

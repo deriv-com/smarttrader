@@ -40,7 +40,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-        node-version: 12
+        node-version: 20
     - name: Download Artifacts
       uses: actions/download-artifact@v3.0.2
       with:
@@ -63,7 +63,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 20
       - name: Conclusion
         uses: technote-space/workflow-conclusion-action@v3
       - uses: actions/download-artifact@v3.0.2
