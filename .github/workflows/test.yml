@@ -1,0 +1,24 @@
+name: DSmartTrader Test
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.22
+    - name: Install dependencies
+      uses: "./.github/actions/npm_install"
+    - name: Build
+      uses: "./.github/actions/build"
+      with:
+        target: production
+    - name: "Run Tests"
+      run: npm run test

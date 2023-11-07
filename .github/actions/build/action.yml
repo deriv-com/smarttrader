@@ -1,0 +1,11 @@
+name: Build
+inputs:
+  target:
+    required: true
+    default: staging
+runs:
+  using: composite
+  steps:
+  - name: Building dist for ${{ inputs.target }}
+    run: node_modules/grunt/bin/grunt releaseci --${{ inputs.target }}
+    shell: bash

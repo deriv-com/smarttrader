@@ -1,0 +1,21 @@
+name: npm_install
+description: Install npm packages
+runs:
+  using: composite
+  steps:
+  - name: restore_cache
+    uses: actions/cache@v3.3.2
+    with:
+      key: node-{{ checksum "package-lock.json" }}
+      path: UPDATE_ME
+      restore-keys: |-
+        node-{{ checksum "package-lock.json" }}
+        node-
+  - name: Install npm packages
+    run: npm ci
+    shell: bash
+  - name: save_cache
+    uses: actions/cache@v3.3.2
+    with:
+      path: node_modules
+      key: node-{{ checksum "package-lock.json" }}
