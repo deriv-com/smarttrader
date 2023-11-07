@@ -16,10 +16,14 @@ jobs:
         node-version: 12.22
     - name: Install dependencies
       uses: "./.github/actions/npm_install"
-    - name: Build
+    - name: Build Staging
       uses: "./.github/actions/build"
       with:
-        target: production
+        target: staging
+    - name: Build Translations
+      uses: "./.github/actions/build"
+      with:
+        target: translations   
     - uses: "./.github/actions/versioning"
       with:
         target_branch: production
