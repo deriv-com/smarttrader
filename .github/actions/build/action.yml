@@ -1,7 +1,7 @@
 name: Build
 inputs:
   target:
-    required: false
+    required: true
     default: staging
 runs:
   using: composite
