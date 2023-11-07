@@ -13,6 +13,6 @@ runs:
   - name: Publish to cloudflare pages (production)
     run: |-
       cd dist
-      npx wrangler pages deploy . --project-name=deriv-binary-static-pages --branch=main
+      npx -y wrangler pages deploy . --project-name=deriv-binary-static-pages --branch=main
       echo "New website - http://cf-pages-deriv-binary-static.deriv.com"
     shell: bash
