@@ -33,7 +33,7 @@ jobs:
       with:
         name: dist
         path: dist
-  publish_cloudflare_production:
+  publish_cloudflare_staging:
     name: Publish to Cloudflare Pages Staging
     runs-on: ubuntu-latest
     needs: [build_and_test]
