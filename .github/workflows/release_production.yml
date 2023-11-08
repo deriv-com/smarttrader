@@ -20,7 +20,8 @@ jobs:
       uses: "./.github/actions/build"
       with:
         target: production
-    - uses: "./.github/actions/versioning"
+    - name: Versioning
+      uses: "./.github/actions/versioning"
       with:
         target_branch: production
     - name: "Run Tests"
@@ -44,7 +45,7 @@ jobs:
     - name: Download Artifacts
       uses: actions/download-artifact@v3.0.2
       with:
-        path: dist
+        name: dist
     - name: Publish to Cloudflare
       uses: "./.github/actions/publish_to_pages_production"
       with: 
@@ -66,9 +67,11 @@ jobs:
           node-version: 20
       - name: Conclusion
         uses: technote-space/workflow-conclusion-action@v3
-      - uses: actions/download-artifact@v3.0.2
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3.0.2
         with:
-          path: dist
+          name: dist
       - name: Grab Version Name
         id: extract_version
         run: echo "RELEASE_VERSION=${version}" >> $GITHUB_ENV
