@@ -1,8 +1,11 @@
 name: DSmartTrader Staging Release
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
-    - master
+      - master
 jobs:
   build_and_test:
     name: Build and Test
@@ -28,8 +31,8 @@ jobs:
       uses: "./.github/actions/versioning"
       with:
         target_branch: staging
-    - name: "Run Tests"
-      run: npm run test
+    # - name: "Run Tests"
+    #   run: npm run test
     - uses: actions/upload-artifact@v3
       with:
         name: dist

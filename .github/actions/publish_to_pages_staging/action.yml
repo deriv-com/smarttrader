@@ -11,11 +11,11 @@ runs:
   using: composite
   steps:
   - name: Publish to cloudflare pages (staging)
-    env:
-      CLOUDFLARE_ACCOUNT_ID: ${{ inputs.CLOUDFLARE_ACCOUNT_ID }}
-      CLOUDFLARE_API_TOKEN: ${{ inputs.CLOUDFLARE_API_TOKEN }}
+    # env:
+    #   CLOUDFLARE_ACCOUNT_ID: ${{ inputs.CLOUDFLARE_ACCOUNT_ID }}
+    #   CLOUDFLARE_API_TOKEN: ${{ inputs.CLOUDFLARE_API_TOKEN }}
     run: |-
-      cd dist
+      ls -la
       npx -y wrangler pages deploy . --project-name=deriv-binary-static-pages --branch=staging
       echo "New staging website - http://staging.cf-pages-deriv-binary-static.deriv.com"
     shell: bash
