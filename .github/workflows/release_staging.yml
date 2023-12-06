@@ -49,6 +49,7 @@ jobs:
     - uses: actions/download-artifact@v3.0.2
       with:
         name: dist
+        path: dist
     - name: Publish to Cloudflare
       uses: "./.github/actions/publish_to_pages_staging"
       with: 

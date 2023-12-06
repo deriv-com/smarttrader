@@ -44,6 +44,7 @@ jobs:
       uses: actions/download-artifact@v3.0.2
       with:
         name: dist
+        path: dist
     - name: Publish to Cloudflare
       uses: "./.github/actions/publish_to_pages_production"
       with: 
@@ -57,8 +58,6 @@ jobs:
 
     needs: [publish_cloudflare_production, build_and_test]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -70,13 +69,14 @@ jobs:
         uses: actions/download-artifact@v3.0.2
         with:
           name: dist
+          path: dist
       - name: Grab Version Name
         id: extract_version
-        run: echo "RELEASE_VERSION=${version}" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=$(cat dist/version.txt)" >> $GITHUB_ENV
       - name: Send Slack Notification
         uses: "./.github/actions/notify_slack"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           status: ${{ env.WORKFLOW_CONCLUSION }}
           release_type: Production 
-          version: ${{ steps.extract_version.outputs.RELEASE_VERSION}}
+          version: ${{ steps.extract_version.outputs.RELEASE_VERSION }}
