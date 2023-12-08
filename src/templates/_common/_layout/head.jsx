@@ -12,6 +12,7 @@ const Head = () => (
         <meta name='keywords' content={` ${it.L('binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading')}`} />
         <meta name='author' content={it.broker_name} />
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+        <meta name='version' content='1.0' />
         <meta name='dcterms.rightsHolder' content={it.broker_name} />
         <meta name='dcterms.rights' content={it.broker_name} />
         <meta name='google-site-verification' content='roReCEK-wNa1EMA6ZM9a4zCOQOMqxfJjvfsZMC9qh_k' />
