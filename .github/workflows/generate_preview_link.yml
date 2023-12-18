@@ -14,18 +14,17 @@ on:
     types:
       - completed
 
+env:
+  HEAD_REF: ${{ github.head_ref }}
+
 concurrency:
-  group: cloudflare-pages-build-${{ github.event.workflow_run.head_branch }}
+  group: cloudflare-pages-build-"$HEAD_REF"
   cancel-in-progress: true
 
 jobs:
   build_and_deploy_preview_link:
     runs-on: Ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.workflow_run.head_sha }}
       - name: Download artifact
         id: download-artifact
         uses: dawidd6/action-download-artifact@v2
@@ -39,7 +38,18 @@ jobs:
         id: pr_information
         run: |
           echo "username=$(cat .pr/USERNAME)" >> $GITHUB_OUTPUT
-          echo "issue_number=$(cat .pr/NR)" >> $GITHUB_OUTPUT
+          echo "issue_number=$(cat .pr/ISSUE_NUMBER)" >> $GITHUB_OUTPUT
+
+      - name: Verify user
+        uses: "deriv-com/shared-actions/.github/actions/verify_user_in_organization@v1"
+        with:
+          username: ${{steps.pr_information.outputs.username}}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: Post preview build comment
         id: post_preview_build_comment
@@ -47,12 +57,6 @@ jobs:
         with:
           issue_number: ${{steps.pr_information.outputs.issue_number}}
           head_sha: ${{github.event.workflow_run.head_sha}}
-
-      - name: Verify user
-        uses: "deriv-com/shared-actions/.github/actions/verify_user_in_organization@v1"
-        with:
-          username: ${{steps.pr_information.outputs.username}}
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v1
