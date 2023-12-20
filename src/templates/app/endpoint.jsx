@@ -12,14 +12,14 @@ const Endpoint = () => (
                         type='text'
                         label={it.L('Server')}
                         attributes={{ maxLength: 30 }}
-                        hint={it.L('e.g. frontend.binaryws.com')}
+                        hint={it.L('e.g. frontend.derivws.com')}
                     />
                     <FormRow
                         id='app_id'
                         type='text'
                         label={it.L('OAuth App ID')}
                         attributes={{ maxLength: 5 }}
-                        hint={it.L('You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/.')}
+                        hint={it.L('You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/.')}
                     />
                 </Fieldset>
                 <div className='center-text'>

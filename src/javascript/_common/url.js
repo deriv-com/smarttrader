@@ -65,7 +65,7 @@ const Url = (() => {
     const default_domain = 'binary.com';
     const host_map = { // the exceptions regarding updating the URLs
         'bot.binary.com'       : 'www.binary.bot',
-        'developers.binary.com': 'developers.binary.com', // same, shouldn't change
+        'api.deriv.com': 'api.deriv.com', // same, shouldn't change
         'academy.binary.com'   : 'academy.binary.com',
         'blog.binary.com'      : 'blog.binary.com',
     };

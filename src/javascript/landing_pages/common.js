@@ -90,7 +90,7 @@ function urlFor(path) {
 
 function wsConnect() {
     const config_server = localStorage.getItem('config.server_url');
-    const server_url    = config_server || 'frontend.binaryws.com';
+    const server_url    = config_server || 'frontend.derivws.com';
     endpointNotification(config_server);
 
     return new WebSocket(`wss://${server_url}/websockets/v3?app_id=${getAppId()}&l=${getLanguage()}&brand=binary`);
