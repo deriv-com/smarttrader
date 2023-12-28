@@ -111,7 +111,7 @@ const getSocketURL = () => {
         const is_real       = loginid && !/^VRT/.test(loginid);
         const server        = isProduction() && is_real ? 'green' : 'blue';
 
-        server_url = `${server}.binaryws.com`;
+        server_url = `${server}.derivws.com`;
     }
     return `wss://${server_url}/websockets/v3`;
 };
