@@ -37,72 +37,8 @@
     height: 800px;
 }
 
-.detailsws-content {
-    div.select-dropdown {
-        width: 100%;
-    }
-    #address_form {
-        select.select-hidden {
-            min-width: 205px;
-        }
-        @media all and (max-width: 480px) {
-            div.select {
-                width: 85%;
-
-                select.select-hidden {
-                    min-width: unset;
-                }
-            }
-        }
-    }
-    #frmPersonalDetails {
-        @media all and (max-width: 480px) {
-            div.select {
-                width: 280px !important;
-            }
-            .error-msg {
-                text-align: center;
-            }
-        }
-    }
-}
-
 #limits-container thead {
     @include BIDIR_VALUE(text-align, left, right);
-}
-
-#frm_assessment, #financial-form {
-    div.select {
-        min-width: 150px;
-    }
-    #source_of_wealth {
-        min-width: 300px;
-    }
-    @media screen and (max-width: 480px) {
-        label {
-            text-align: left;
-            margin-bottom: 0.5rem;
-        }
-    }
-}
-
-#financial-form {
-    @media screen and (max-width: 480px) {
-        div.select {
-            width: calc(100% - 3rem);
-        }
-    }
-}
-
-#frm_account_transfer {
-    div.select {
-        select.select-hidden {
-            min-width: 200px;
-        }
-        @media screen and (max-width: 480px) {
-            width: calc(100% - 1rem);
-        }
-    }
 }
 
 #profit-table-container {
@@ -227,15 +163,6 @@
 #profit-table-container, #statement-container {
     #date_to {
         box-sizing: border-box;
-    }
-}
-
-#settings_container {
-    .round-box {
-        border-radius: $BORDER_RADIUS;
-    }
-    .notice-circle {
-        margin: auto 15px;
     }
 }
 

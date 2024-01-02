@@ -1,10 +1,7 @@
-const Cookies                = require('js-cookie');
 const Client                 = require('./client');
 const Clock                  = require('./clock');
-const Footer                 = require('./footer');
 const Header                 = require('./header');
 const BinarySocket           = require('./socket');
-const MetaTrader             = require('../pages/user/metatrader/metatrader');
 const Dialog                 = require('../common/attach_dom/dialog');
 const createLanguageDropDown = require('../common/attach_dom/language_dropdown');
 const setCurrencies          = require('../common/currency').setCurrencies;
@@ -59,21 +56,11 @@ const BinarySocketGeneral = (() => {
                     if (!Crowdin.isInContext()) {
                         createLanguageDropDown(response.website_status);
                     }
-                    if (response.website_status.message) {
-                        Footer.displayNotification(response.website_status.message);
-                    } else {
-                        Footer.clearNotification();
-                    }
                     BinarySocket.setAvailability(response.website_status.site_status);
                     setCurrencies(response.website_status);
                     // for logged out clients send landing company with IP address as residence
                     if (!Client.isLoggedIn() && !State.getResponse('landing_company')) {
                         BinarySocket.send({ landing_company: response.website_status.clients_country });
-                    }
-                    if (!Client.isLoggedIn() && !Cookies.get('CookieConsent')) {
-                        Footer.displayDialogMessage();
-                    } else {
-                        Footer.clearDialogMessage();
                     }
                 }
                 break;
@@ -119,9 +106,6 @@ const BinarySocketGeneral = (() => {
                 break;
             case 'landing_company':
                 Header.upgradeMessageVisibility();
-                if (!response.error) {
-                    MetaTrader.metatraderMenuItemVisibility();
-                }
                 break;
             case 'get_self_exclusion':
                 SessionDurationLimit.exclusionResponseHandler(response);

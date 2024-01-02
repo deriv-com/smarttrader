@@ -3,7 +3,6 @@ const moment           = require('moment');
 const Client           = require('./client');
 const Contents         = require('./contents');
 const Header           = require('./header');
-const Footer           = require('./footer');
 const Menu             = require('./menu');
 const BinarySocket     = require('./socket');
 const TrafficSource    = require('../common/traffic_source');
@@ -121,7 +120,6 @@ const Page = (() => {
                 }
             }
             Header.onLoad();
-            Footer.onLoad();
             Language.setCookie();
             Menu.makeMobileMenu();
             Menu.makeMobileMenuOnResize();
@@ -209,8 +207,6 @@ const Page = (() => {
             const end_note = getElementById('end-note');
             elementInnerHtml(end_note, message);
             end_note.setVisibility(1);
-
-            getElementById('footer').style['padding-bottom'] = end_note.offsetHeight;
         }
     };
 

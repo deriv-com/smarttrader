@@ -1,5 +1,4 @@
 import React from 'react';
-// import Footer from './footer.jsx';
 import Head from './head.jsx';
 import Header from './header.jsx';
 // import MobileMenu from './mobile_menu.jsx';
@@ -75,7 +74,6 @@ const Layout = () => {
                         {/* <a href='javascript:;' id='scrollup' /> */}
                         <InnerContent />
                     </div>
-                    {/* <Footer /> */}
                     <Topbar />
                 </div>
                 <InterviewPopup /> {/* TODO: remove when UX research is finished */}
