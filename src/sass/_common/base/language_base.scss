@@ -93,9 +93,6 @@ body.ES {
 }
 
 body.RU {
-    #frm_verify_email button {
-        font-size: $FONT_SIZE_XS;
-    }
     #trading_socket_container {
         #contract_form_name_nav {
             font-size: $FONT_SIZE_N;
@@ -154,12 +151,6 @@ body.ZH_TW {
         &, > li a.tm-a {
             font-size: $FONT_SIZE_N;
         }
-    }
-}
-
-body.ZH_CN, body.ZH_TW {
-    .contact-content .border-bottom {
-        min-height: 215px;
     }
 }
 

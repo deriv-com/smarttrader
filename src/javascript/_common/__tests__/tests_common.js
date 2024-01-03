@@ -18,4 +18,4 @@ module.exports = {
     setURL,
     getApiToken: () => 'hhh9bfrbq0G3dRf',
     api        : new LiveApi({ websocket, appId: 1 }),
-};
+}; 
