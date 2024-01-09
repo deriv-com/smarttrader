@@ -102,10 +102,6 @@ const Page = (() => {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
 
-                if (!ClientBase.get('is_virtual')) {
-                    // TODO: uncomment below to enable interview popup dialog
-                    // InterviewPopup.onLoad();
-                }
                 if (url_query_strings['data-elevio-article']) {
                     Elevio.injectElevio();
                 }
