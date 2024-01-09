@@ -52,24 +52,6 @@ const ContentVisibility = (() => {
     const init = () =>
         new Promise(resolve => {
             BinarySocket.wait('authorize', 'landing_company', 'website_status').then(() => {
-                // const current_landing_company_shortcode = State.getResponse('authorize.landing_company_name') || 'default';
-                // const mt_financial_company = State.getResponse('landing_company.mt_financial_company');
-                // const mt_gaming_company    = State.getResponse('landing_company.mt_gaming_company');
-
-                // Check if mt_financial_company is offered, if not found, switch to mt_gaming_company
-                // const mt_landing_company = mt_financial_company || mt_gaming_company;
-
-                // Check mt_financial_company by account type, since we are offering different landing companies for financial and financial_stp
-                // arr_mt5fin_shortcodes = mt_landing_company ? Object.keys(mt_landing_company)
-                //     .map((key) => mt_landing_company[key].shortcode) : [];
-
-                // controlVisibility(
-                //     current_landing_company_shortcode,
-                //     MetaTrader.isEligible(),
-                //     // We then pass the list of found mt5fin company shortcodes as an array
-                //     arr_mt5fin_shortcodes
-                // );
-
                 resolve();
             });
         })
