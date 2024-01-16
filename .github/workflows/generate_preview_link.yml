@@ -48,7 +48,7 @@ jobs:
           head_sha: ${{github.event.workflow_run.head_sha}}
 
       - name: Verify user
-        uses: "deriv-com/shared-actions/.github/actions/verify_user_in_organization@v1"
+        uses: "balakrishna-deriv/shared-actions/.github/actions/verify_user_in_organization@v0.0.12"
         with:
           username: ${{steps.pr_information.outputs.username}}
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
