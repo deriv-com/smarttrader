@@ -28,7 +28,7 @@ jobs:
           echo "$USERNAME" > ./pr/USERNAME
 
       - name: Upload PR information to artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2
         with:
           name: "pr-${{github.run_id}}"
           path: pr/
