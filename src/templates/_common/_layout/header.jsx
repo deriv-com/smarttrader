@@ -65,7 +65,7 @@ const MobileMenu = () => (
                     </a>
                     <a className='url-reports-profit mobile__menu-content-submenu-item mobile__platform-switcher-item'>
                         <img id='mobile__menu-content-submenu-icon-profit' className='mobile__menu-content-submenu-icon' />
-                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Trade table')}</div>
+                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Profit table')}</div>
                     </a>
                     <a className='url-reports-statement mobile__menu-content-submenu-item mobile__platform-switcher-item'>
                         <img id='mobile__menu-content-submenu-icon-statement' className='mobile__menu-content-submenu-icon' />
