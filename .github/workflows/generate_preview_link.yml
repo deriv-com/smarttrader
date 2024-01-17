@@ -1,13 +1,5 @@
 name: Generate preview link
 
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  pull-requests: write
-  statuses: write
-
 on:
   workflow_run:
     workflows: ["Pre-generate preview link"]
@@ -24,6 +16,9 @@ concurrency:
 jobs:
   build_and_deploy_preview_link:
     runs-on: Ubuntu-latest
+    permissions:
+      checks: write
+      pull-requests: write
     steps:
       - name: Download artifact
         id: download-artifact

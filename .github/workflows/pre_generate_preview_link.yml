@@ -1,8 +1,5 @@
 name: Pre-generate preview link
 
-permissions:
-  pull-requests: write
-
 on:
   pull_request:
     types: [opened, synchronize]
