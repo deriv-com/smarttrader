@@ -8,17 +8,17 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.22
-    - name: Install dependencies
-      uses: "./.github/actions/npm_install"
-    - name: Build
-      uses: "./.github/actions/build"
-      with:
-        target: production
-    - name: "Run Tests"
-      run: npm run test
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Setup Node
+        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
+        with:
+          node-version: 12.22
+      - name: Install dependencies
+        uses: "./.github/actions/npm_install"
+      - name: Build
+        uses: "./.github/actions/build"
+        with:
+          target: production
+      - name: "Run Tests"
+        run: npm run test
