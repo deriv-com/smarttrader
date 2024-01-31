@@ -3,7 +3,6 @@ const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
-const getLandingCompanyValue   = require('../../_common/base/client_base').getLandingCompanyValue;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
@@ -990,34 +989,6 @@ const Header = (() => {
                 get_account_status,
                 is_fully_authenticated,
                 status;
-            const is_svg          = Client.get('landing_company_shortcode') === 'svg';
-            const loginid         = Client.get('loginid') || {};
-            const landing_company = State.getResponse('landing_company');
-            const requirements    = getLandingCompanyValue(loginid, landing_company, 'requirements');
-            const necessary_withdrawal_fields = is_svg
-                ? requirements.withdrawal
-                : [];
-            const necessary_signup_fields = is_svg
-                ? requirements.signup.map(field => (field === 'residence' ? 'country' : field))
-                : [];
-
-            const hasMissingRequiredField = () => {
-                // eslint-disable-next-line no-nested-ternary
-                const required_fields = is_svg ? [ ...necessary_signup_fields, ...necessary_withdrawal_fields ]
-                    : Client.isAccountOfType('financial') ? [
-                        'account_opening_reason',
-                        'address_line_1',
-                        'address_city',
-                        'phone',
-                        'tax_identification_number',
-                        'tax_residence',
-                        ...(Client.get('residence') === 'gb' || Client.get('landing_company_shortcode') === 'iom' ? ['address_postcode'] : []),
-                    ] : [];
-
-                const get_settings = State.getResponse('get_settings');
-                // date_of_birth can be 0 as a valid epoch, so we should only check missing values, '', null, or undefined
-                return required_fields.some(field => !(field in get_settings) || get_settings[field] === '' || get_settings[field] === null || get_settings[field] === undefined);
-            };
 
             const buildMessage = (string, path) => template(string, [`<a class="header__notification-link" href="${path}">`, '</a>']);
             const buildSpecificMessage = (string, additional) => template(string, [...additional]);
@@ -1127,7 +1098,6 @@ const Header = (() => {
                 financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`)), type: 'warning' }), // TODO: handle this when self exclusion is available
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
-                required_fields      : () => ({ key: 'requried_fields', title: localize('Complete details'), message: localize('Please complete your Personal Details before you proceed.'), type: 'danger' }),
                 // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'user/settings/detailsws'),
                 risk                 : () => ({ key: 'risk', title: localize('Withdrawal and trading limits'), message: buildMessage(localizeKeepPlaceholders('Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits.'), `https://app.deriv.${getTopLevelDomain()}/account/financial-assessment`), type: 'warning' }),
                 tax                  : () => ({ key: 'tax', title: localize('Complete details'), message: buildMessage(localizeKeepPlaceholders('Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits.'), `https://app.deriv.${getTopLevelDomain()}/account/personal-details`), type: 'danger' }),
@@ -1164,7 +1134,6 @@ const Header = (() => {
                 financial_limit         : () => hasStatus('max_turnover_limit_not_set'),
                 mt5_withdrawal_locked   : () => hasStatus('mt5_withdrawal_locked'),
                 no_withdrawal_or_trading: () => hasStatus('no_withdrawal_or_trading'),
-                required_fields         : () => hasMissingRequiredField(),
                 residence               : () => !Client.get('residence'),
                 risk                    : () => Client.getRiskAssessment(),
                 tax                     : () => Client.shouldCompleteTax(),
@@ -1195,7 +1164,6 @@ const Header = (() => {
                 'risk',
                 'tax',
                 'tnc',
-                'required_fields',
                 'needs_poi',
                 'needs_poa',
                 'poi_expired',

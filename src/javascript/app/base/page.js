@@ -3,14 +3,12 @@ const moment           = require('moment');
 const Client           = require('./client');
 const Contents         = require('./contents');
 const Header           = require('./header');
-const Footer           = require('./footer');
 const Menu             = require('./menu');
 const BinarySocket     = require('./socket');
 const TrafficSource    = require('../common/traffic_source');
 const RealityCheck     = require('../pages/user/reality_check/reality_check');
 const Elevio           = require('../../_common/base/elevio');
 const Login            = require('../../_common/base/login');
-const ClientBase       = require('../../_common/base/client_base');
 const elementInnerHtml = require('../../_common/common_functions').elementInnerHtml;
 const getElementById   = require('../../_common/common_functions').getElementById;
 const Crowdin          = require('../../_common/crowdin');
@@ -103,10 +101,6 @@ const Page = (() => {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
 
-                if (!ClientBase.get('is_virtual')) {
-                    // TODO: uncomment below to enable interview popup dialog
-                    // InterviewPopup.onLoad();
-                }
                 if (url_query_strings['data-elevio-article']) {
                     Elevio.injectElevio();
                 }
@@ -121,7 +115,6 @@ const Page = (() => {
                 }
             }
             Header.onLoad();
-            Footer.onLoad();
             Language.setCookie();
             Menu.makeMobileMenu();
             Menu.makeMobileMenuOnResize();
@@ -209,8 +202,6 @@ const Page = (() => {
             const end_note = getElementById('end-note');
             elementInnerHtml(end_note, message);
             end_note.setVisibility(1);
-
-            getElementById('footer').style['padding-bottom'] = end_note.offsetHeight;
         }
     };
 
