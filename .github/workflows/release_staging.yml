@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Setup Node
-        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
         with:
           node-version: 12
       - name: Install dependencies
@@ -42,7 +42,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Setup Node
-        uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
         with:
           node-version: 20
       - uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
