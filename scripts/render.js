@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 /* eslint-disable no-console */
 require('babel-register')({
     plugins: [
@@ -29,7 +28,6 @@ const renderComponent = (context, path) => {
 const color          = require('cli-color');
 const Spinner        = require('cli-spinner').Spinner;
 const program        = require('commander');
-const Crypto         = require('crypto');
 const fs             = require('fs');
 const Path           = require('path');
 const Url            = require('url');
@@ -100,20 +98,20 @@ const createDirectories = (section = '', idx) => {
     });
 };
 
-const fileHash = (path) => (
-    new Promise((resolve) => {
-        const fd   = fs.createReadStream(path);
-        const hash = Crypto.createHash('sha1');
-        hash.setEncoding('hex');
+// const fileHash = (path) => (
+//     new Promise((resolve) => {
+//         const fd   = fs.createReadStream(path);
+//         const hash = Crypto.createHash('sha1');
+//         hash.setEncoding('hex');
 
-        fd.on('end', () => {
-            hash.end();
-            resolve(hash.read());
-        });
+//         fd.on('end', () => {
+//             hash.end();
+//             resolve(hash.read());
+//         });
 
-        fd.pipe(hash);
-    })
-);
+//         fd.pipe(hash);
+//     })
+// );
 
 /** **************************************
  * Factory functions
@@ -150,13 +148,18 @@ const createUrlFinder = (default_lang, section_path, root_url = getConfig().root
     }
 );
 
-const generateJSFilesList = async (config, section, section_static_hash) => Promise.all(
-    common.sections_config[section].js_files
-        .map(js => Path.join(common.sections_config[section].path, 'js', `${js}${program.dev && js === 'binary' ? '' : '.min'}.js`))
-        .map(async js =>
-            `${config.root_url}${js}?${/binary/.test(js) ? section_static_hash : await fileHash(Path.join(config.dist_path, js))}`
-        )
-);
+// const generateJSFilesList = async (config, section, section_static_hash) => Promise.all(
+//     common.sections_config[section].js_files
+//         .map(js => Path.join(common.sections_config[section].path, 'js', `${js}${program.dev && js === 'binary' ? '' : '.min'}.js`))
+//         .map(async js =>
+//             `${config.root_url}${js}?${/binary/.test(js) ? section_static_hash : await fileHash(Path.join(config.dist_path, js))}`
+//         )
+// );
+
+const generateJSFilesList = async () => fs.readdirSync('dist/js');
+
+// const generateCSSFilesList = () => fs.readdirSync('dist/css')
+
 
 const generateCSSFilesList = (config, sections, static_hash) => (
     sections.reduce((acc, section) => ({
@@ -185,9 +188,22 @@ const createContextBuilder = async (sections) => {
         if (!is_translation) {
             await common.writeFile(version_path, static_hash[section], 'utf8');
         }
+        let sect=await generateJSFilesList(config, section, static_hash[section]);
+   
+        // ``sect=sect.map(item=>item=`/js/${item}`);``
+
+        sect = sect.map(item => {
+            if (item === 'landing_pages') {
+                return [`/js/${item}/hackathon.js`, `/js/${item}/graduate_program.js` , `/js/${item}/common.js`,`/js/${item}/usb_page.js`];
+            } else {
+                return `/js/${item}`;
+            }
+        }).flat();
+        
+
 
         // prepare js files list for all applicable sections
-        js_files_list[section] = await generateJSFilesList(config, section, static_hash[section]);
+        js_files_list[section] = sect;
     }));
 
     // prepare css files list for all applicable sections

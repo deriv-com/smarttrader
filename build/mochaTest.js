@@ -11,9 +11,12 @@ module.exports = {
                 'mock-local-storage',
             ],
         },
-        src: [
+        spec: [
             'src/javascript/**/__tests__/*.js',
             'scripts/__tests__/*.js',
         ],
     },
 };
+
+
+// NODE_ENV=test ./node_modules/mocha/bin/mocha '*/**/__tests__/**/*.js' --reporter spec --exclude 'node_modules/**/*

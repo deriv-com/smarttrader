@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         livereload: {
             options: {
                 hostname  : '0.0.0.0',
-                port      : 443,
+                port      : 8090,
                 protocol  : 'https',
                 base      : 'dist',
                 open      : {
@@ -46,10 +46,10 @@ module.exports = function (grunt) {
 
                     middlewares.push((req, res) => {
                         const path_404 = `${options.base[0]}/404.html`;
-                        if (grunt.file.exists(path_404)) {
-                            require('fs').createReadStream(path_404).pipe(res);
-                            return;
-                        }
+                        // if (grunt.file.exists(path_404)) {
+                        //     require('fs').createReadStream(path_404).pipe(res);
+                        //     return;
+                        // }
                         res.statusCode(404); // 404.html not found
                         res.end();
                     });

@@ -1,3 +1,8 @@
+
+
+$COLOR_BLUE: #1c5ae3;
+
+
 body {
     overflow-x: hidden;
     width: 100%;
@@ -115,7 +120,7 @@ a.link {
         float: left;
     }
     .logo {
-        background: url('../images/logo/binary_logo_light.svg') no-repeat;
+        // background: url('images/logo/binary_logo_light.svg') no-repeat;
         width: 180px !important;
         height: 40px;
         margin: 15px 0;
@@ -152,7 +157,7 @@ a.link {
     .navbar-toggle {
         position: relative;
         float: right;
-        background: url('../images/common/nav/main_menu.svg') no-repeat;
+        // background: url('../../images/common/nav/main_menu.svg') no-repeat;
         border: 1px solid transparent;
         border-radius: 4px;
         width: 36px;
@@ -239,7 +244,7 @@ a.link {
     text-align: center;
     color: $COLOR_WHITE;
     padding-top: 70px;
-    background: url('../images/graduate_program/intro-bg.png') no-repeat bottom center scroll;
+    // background: url('../../images/graduate_program/intro-bg.png') no-repeat bottom center scroll;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -330,35 +335,35 @@ a.link {
 }
 
 .one_icon {
-    background-image: url('../images/graduate_program/one_icon.svg');
+    // background-image: url('../../images/graduate_program/one_icon.svg');
 }
 
 .two_icon {
-    background-image: url('../images/graduate_program/two_icon.svg');
+    // background-image: url('../../images/graduate_program/two_icon.svg');
 }
 
 .three_icon {
-    background-image: url('../images/graduate_program/three_icon.svg');
+    // background-image: url('../../images/graduate_program/three_icon.svg');
 }
 
 .four_icon {
-    background-image: url('../images/graduate_program/four_icon.svg');
+    // background-image: url('../../images/graduate_program/four_icon.svg');
 }
 
 .five_icon {
-    background-image: url('../images/graduate_program/five_icon.svg');
+    // background-image: url('../../images/graduate_program/five_icon.svg');
 }
 
 .six_icon {
-    background-image: url('../images/graduate_program/six_icon.svg');
+    // background-image: url('../../images/graduate_program/six_icon.svg');
 }
 
 .ic_chevron_left {
-    background-image: url('../images/graduate_program/ic_chevron_left.svg');
+    // background-image: url('../../images/graduate_program/ic_chevron_left.svg');
 }
 
 .ic_chevron_right {
-    background-image: url('../images/graduate_program/ic_chevron_right.svg');
+    // background-image: url('../../images/graduate_program/ic_chevron_right.svg');
 }
 
 .quotes {
@@ -368,7 +373,7 @@ a.link {
         position: absolute;
         top: 0;
         left: -50px;
-        content: url('../images/graduate_program/opening_quote_icon.svg');
+        // content: url('../../images/graduate_program/opening_quote_icon.svg');
     }
     h3 {
         line-height: 1.4;

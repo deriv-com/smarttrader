@@ -84,9 +84,6 @@ ul.bullet {
 
 #trading_init_progress {
     cursor: pointer;
-    /*background-image: url('../images/pages/binary-symbol-logo.png');
-    background-image: url('../images/pages/binary-symbol-logo.svg'), none;
-    background-size: contain;*/
     width: 10rem;
     height: 10rem;
     position: absolute;
@@ -1082,6 +1079,7 @@ ul.bullet {
         margin: 0 auto;
     }
     #trade_analysis {
+        position: relative;
         a.tm-a.a-active, .tm-li.active a {
             display: block;
             pointer-events: none;

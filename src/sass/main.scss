@@ -1,0 +1,43 @@
+@import './_common/common_import';
+@import './_common/common';
+
+
+
+/* common styles */
+@import './_common/base/reset';
+
+@import './app/components/account_transfer.scss';
+@import './app/components/contract.scss';
+@import './app/components/market.scss';
+@import './app/components/peek_box.scss';
+@import './app/reality_check.scss';
+@import './app/sell_popup.scss';
+@import './app/trade.scss';
+@import './app/trading.scss';
+@import './app/websocket_pages.scss';
+
+
+@import '@binary-com/binary-style/binary.css';
+@import '@binary-com/binary-style/binary.more.css';
+
+@import './_common/external/grid.scss';
+@import './_common/external/third-party.scss';
+@import './_common/external/mmenu/jquery.mmenu.all.scss';
+
+
+@import './static/guide.enjoyhint';
+@import './static/guide';
+@import './static/pages';
+
+
+/* main style */
+@import './_common/components';
+@import './_common/header';
+@import './_common/jquery_elements';
+
+/* language based rules */
+@import './_common/base/language_base';
+
+/* media queries */
+@import './_common/base/media-queries';
+
