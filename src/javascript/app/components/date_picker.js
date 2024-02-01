@@ -29,30 +29,30 @@ const DatePicker = (() => {
         $(window).resize(() => { checkWidth(options.selector); });
     };
 
-    const hide = (selector) => { $(selector).datepicker('destroy').removeAttr('data-picker').off('keydown'); };
-
+    const hide = (selector) => { };
+    // $(selector).datepicker('destroy').removeAttr('data-picker').off('keydown'); 
     const create = (selector) => {
-        let $this;
-        const date_picker = date_pickers[selector];
-        $(selector).keydown(function (e) {
-            if (e.which === 13) {
-                $this = $(this);
-                e.preventDefault();
-                e.stopPropagation();
-                if (date_picker.config_data.type === 'date') {
-                    $this.datepicker('setDate', $this.val());
-                }
-                $this.datepicker('hide');
-                $this.blur();
-                return false;
-            }
-            return true;
-        }).datepicker(date_picker.config_data);
+        // let $this;
+        // const date_picker = date_pickers[selector];
+        // $(selector).keydown(function (e) {
+        //     if (e.which === 13) {
+        //         $this = $(this);
+        //         e.preventDefault();
+        //         e.stopPropagation();
+        //         if (date_picker.config_data.type === 'date') {
+        //             $this.datepicker('setDate', $this.val());
+        //         }
+        //         $this.datepicker('hide');
+        //         $this.blur();
+        //         return false;
+        //     }
+        //     return true;
+        // }).datepicker(date_picker.config_data);
 
-        // Not possible to tell datepicker where to put it's
-        // trigger calendar icon on the page, so we remove it
-        // from the DOM and use our own one.
-        $('button.ui-datepicker-trigger').remove();
+        // // Not possible to tell datepicker where to put it's
+        // // trigger calendar icon on the page, so we remove it
+        // // from the DOM and use our own one.
+        // $('button.ui-datepicker-trigger').remove();
     };
 
     const config = (options) => {

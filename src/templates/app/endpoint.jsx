@@ -23,7 +23,9 @@ const Endpoint = () => (
                     />
                 </Fieldset>
                 <div className='center-text'>
-                    <button className='button' id='new_endpoint' type='submit'>{it.L('Submit')}</button>
+                    <button className='button' id='new_endpoint' type='submit'>
+                        {it.L('Submit')}
+                        </button>
                     <a className='button' id='reset_endpoint'>
                         <span className='button'>{it.L('Reset to original settings')}</span>
                     </a>

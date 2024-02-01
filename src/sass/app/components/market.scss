@@ -84,7 +84,7 @@
                 width: 16px;
                 height: 16px;
                 float: right;
-                background: url('../images/pages/trade/assets/ic-close-normal.svg') 100% 100%;
+                background: url('/src/images/pages/trade/assets/ic-close-normal.svg') 100% 100%;
             }
         }
         .search {
@@ -124,7 +124,7 @@
                 position: relative;
                 top: -22px;
                 right: 7px;
-                background: url('../images/pages/trade/assets/ic-search-normal.svg') 100% 100%;
+                background: url('/src/images/pages/trade/assets/ic-search-normal.svg') 100% 100%;
             }
         }
         .markets_view {
@@ -233,32 +233,32 @@
                     background-size: 100%;
 
                     &.forex {
-                        background: url('../images/pages/trade/assets/ic-forex-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-forex-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }
                     &.basket_index {
-                        background: url('../images/pages/trade/assets/ic-basket_index-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-basket_index-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }
                     &.indices {
-                        background: url('../images/pages/trade/assets/ic-indices-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-indices-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }
                     &.stocks {
-                        background: url('../images/pages/trade/assets/ic-stocks-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-stocks-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }
                     &.commodities {
-                        background: url('../images/pages/trade/assets/ic-commodities-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-commodities-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }
                     &.synthetic_index {
-                        background: url('../images/pages/trade/assets/ic-synthetic_index-normal.svg') no-repeat;
+                        background: url('/src/images/pages/trade/assets/ic-synthetic_index-normal.svg') no-repeat;
                         background-size: contain;
                         transition: none;
                     }

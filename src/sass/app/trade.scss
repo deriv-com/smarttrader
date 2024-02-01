@@ -1079,6 +1079,7 @@ ul.bullet {
         margin: 0 auto;
     }
     #trade_analysis {
+        position: relative;
         a.tm-a.a-active, .tm-li.active a {
             display: block;
             pointer-events: none;

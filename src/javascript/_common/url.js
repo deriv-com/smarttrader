@@ -91,18 +91,18 @@ const Url = (() => {
     };
 
     const urlForStatic = (path = '') => {
-        if (!static_host || static_host.length === 0) {
-            static_host = document.querySelector('script[src*="vendor.min.js"]');
-            if (static_host) {
-                static_host = static_host.getAttribute('src');
-            }
+        // if (!static_host || static_host.length === 0) {
+        //     static_host = document.querySelector('script[src*="vendor.min.js"]');
+        //     if (static_host) {
+        //         static_host = static_host.getAttribute('src');
+        //     }
 
-            if (static_host && static_host.length > 0) {
-                static_host = static_host.substr(0, static_host.indexOf('/js/') + 1);
-            } else {
-                static_host = Url.websiteUrl();
-            }
-        }
+        //     if (static_host && static_host.length > 0) {
+        //         static_host = static_host.substr(0, static_host.indexOf('/js/') + 1);
+        //     } else {
+                static_host = '/';
+            // }
+        // }
 
         return static_host + path.replace(/(^\/)/g, '');
     };

@@ -181,10 +181,10 @@ $list:
 @each $language, $image in $list {
     body.#{$language} {
         .app-store-badge {
-            background-image: url('../images/pages/applications/appstore_#{$image}.svg');
+            // background-image: url('../images/pages/applications/appstore_#{$image}.svg');
         }
         .google-play-badge {
-            background-image: url('../images/pages/applications/googleplay_#{$image}.svg');
+            // background-image: url('../images/pages/applications/googleplay_#{$image}.svg');
         }
     }
 }

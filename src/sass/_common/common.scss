@@ -235,7 +235,7 @@ button.button-disabled {
 }
 
 span.checked {
-    background: url('../images/pages/authenticate/checked.svg') no-repeat;
+    // background: url('../../images/pages/authenticate/checked.svg') no-repeat;
     width: 16px;
     height: 12px;
     display: inline-block;
@@ -913,13 +913,13 @@ li strong.margin-right {
     box-sizing: border-box;
 
     &#button_google {
-        background-image: url('../images/social/google.svg');
+        // background-image: url('../../images/social/google.svg');
     }
     &#button_facebook {
-        background-image: url('../images/social/facebook.svg');
+        // background-image: url('../../images/social/facebook.svg');
     }
     &#button_apple {
-        background-image: url('../images/social/apple.svg');
+        // background-image: url('../../images/social/apple.svg');
     }
     & + .button-social {
         margin-left: 10px;

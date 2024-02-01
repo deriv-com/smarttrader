@@ -81,7 +81,7 @@
                 width: 16px;
                 height: 16px;
                 float: right;
-                background: url('../images/pages/trade/assets/ic-close-normal.svg') 100% 100%;
+                background: url('/src/images/pages/trade/assets/ic-close-normal.svg') 100% 100%;
             }
         }
         .list {
@@ -122,7 +122,6 @@
             }
             .contract_subtypes {
                 font-size: 14px;
-                // font-weight: 300;
                 @media (max-width: 767px) {
                     font-size: 16px;
                 }

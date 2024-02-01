@@ -262,8 +262,8 @@ const isBinaryDomain = () => {
 
 let static_hash;
 const getStaticHash = () => {
-    static_hash = static_hash || (document.querySelector('script[src*="binary"]').getAttribute('src') || '').split('?')[1];
-    return static_hash;
+    // static_hash = static_hash || (document.querySelector('script[src*="binary"]').getAttribute('src') || '').split('?')[1];
+    // return static_hash;
 };
 
 const getTopLevelDomain = () => {

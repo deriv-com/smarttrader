@@ -1,13 +1,13 @@
-@import '_common/common_import';
+@import 'app/components/account_transfer.scss';
+@import 'app/components/contract.scss';
+@import 'app/components/market.scss';
+@import 'app/components/peek_box.scss';
 
-@import 'app/trading';
-//@import 'app/metatrader';
-//@import 'app/portfolio';
-//@import 'app/resources';
-@import 'app/sell_popup';
-@import 'app/trade';
-@import 'app/reality_check';
-//@import 'app/websocket_pages';
-@import 'app/components/market';
-@import 'app/components/contract';
-//@import 'app/components/account_transfer';
+@import 'app/reality_check.scss';
+
+
+@import 'app/sell_popup.scss';
+
+@import 'app/trade.scss';
+@import 'app/trading.scss';
+@import 'app/websocket_pages.scss';

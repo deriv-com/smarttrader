@@ -21,7 +21,7 @@ exports.sections_config = {
     '': { // '' is the default section when no 'section' specified in pages.js (to avoid adding 'app' as section for all)
         path     : '',
         js_files : ['vendor', 'binary'],
-        css_files: ['common.min', 'app.min', 'static.min'],
+        css_files: ['common','main'],
         has_pjax : true,
     },
 };

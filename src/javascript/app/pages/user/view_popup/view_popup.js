@@ -15,6 +15,7 @@ const getElementById           = require('../../../../_common/common_functions')
 const localize                 = require('../../../../_common/localize').localize;
 const urlFor                   = require('../../../../_common/url').urlFor;
 const Utility                  = require('../../../../_common/utility');
+ 
 
 const ViewPopup = (() => {
     let contract_id,
