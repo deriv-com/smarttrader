@@ -1,0 +1,41 @@
+.wallet__header {
+    box-sizing: border-box;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--general-main-1);
+    border-bottom: 1px solid var(--general-section-2);
+
+    &-menu {
+        &-left {
+            display: inline-flex;
+            flex: 1;
+            height: 47px;
+            justify-content: flex-start;
+            order: -1;
+
+            & > * {
+                align-self: center;
+                cursor: pointer;
+            }
+        }
+        &-items {
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        &-right {
+            display: inline-flex;
+            height: 47px;
+            justify-content: flex-end;
+            order: 1;
+            position: relative;
+        }
+    }
+}

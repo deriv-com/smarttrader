@@ -84,7 +84,7 @@ const MobileMenu = () => (
 );
 
 const Header = () => (
-    <div className='header'>
+    <div className='header' id='regular__header'>
         <div id='platform__dropdown' className='platform__dropdown'>
             <div id='platform__list' className='platform__dropdown-list' />
         </div>
@@ -119,7 +119,7 @@ const Header = () => (
             </div>
             <div className='header__menu-right client_logged_in invisible'>
                 <div id='header__notification' className='header__notification header__menu-item'>
-                    <div id='header__notiifcation-icon-container' className='header__notification-icon-container'>
+                    <div id='header__notifcation-icon-container' className='header__notification-icon-container'>
                         <img id='header__notification-icon' className='header__notification-icon header__icon-button' />
                         <div id='header__notification-count' className='header__notification-count' />
                     </div>

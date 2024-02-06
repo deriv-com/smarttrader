@@ -168,7 +168,7 @@ body .topbar {
     }
 }
 
-body .header {
+body .header, .wallet__header {
     position: fixed;
     background-color: var(--general-main-1);
     height: 48px;

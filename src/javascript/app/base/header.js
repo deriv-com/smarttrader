@@ -25,6 +25,7 @@ const mapCurrencyName          = require('../../_common/base/currency_base').map
 const isEuCountry              = require('../common/country_base').isEuCountry;
 
 const header_icon_base_path = '/images/pages/header/';
+const wallets_header_icon_base_path = '/images/pages/header/wallets/';
 
 const Header = (() => {
     const notifications = [];
@@ -41,6 +42,7 @@ const Header = (() => {
         populateAccountsList();
         bindSvg();
         BinarySocket.wait('authorize','landing_company').then(() => {
+            switchHeaders();
             setHeaderUrls();
             bindPlatform();
             bindClick();
@@ -51,6 +53,16 @@ const Header = (() => {
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
+    };
+    
+    const switchHeaders = () => {
+        const regular_header = getElementById('regular__header');
+        const wallet_header = getElementById('wallet__header');
+        if (Client.hasWalletsAccount()) {
+            regular_header.remove();
+        } else {
+            wallet_header.remove();
+        }
     };
 
     const setHeaderUrls = () => {
@@ -65,6 +77,9 @@ const Header = (() => {
             url_add_account_dynamic.classList.add('url-add-account-multiplier');
         }
 
+        applyToAllElements('.url-wallet-apps', (el) => {
+            el.href = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        });
         applyToAllElements('.url-appstore', (el) => {
             el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         });
@@ -106,10 +121,6 @@ const Header = (() => {
 
     const bindSvg = () => {
         const cashier   = getElementById('cashier-icon');
-        const account   = getElementById('header__account-settings');
-        const menu      = getElementById('header__hamburger');
-        const empty     = getElementById('header__notification-empty-img');
-        const bell      = getElementById('header__notification-icon');
         const trade     = getElementById('mobile__platform-switcher-icon-trade');
         const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
         const back      = getElementById('mobile__menu-content-submenu-icon-back');
@@ -157,11 +168,31 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
         });
 
+        applyToAllElements('#header__notification-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
+        });
+
+        applyToAllElements('#header__notification-empty', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
+        });
+
+        applyToAllElements('#header__account-settings', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+        });
+
+        applyToAllElements('#header__hamburger', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
+        });
+
+        applyToAllElements('.wallets-apps-logo', (el) => {
+            el.src = Url.urlForStatic(`${wallets_header_icon_base_path}wallets-apps-logo.svg`);
+        });
+
+        applyToAllElements('.deriv-com-logo', (el) => {
+            el.src = Url.urlForStatic(`${wallets_header_icon_base_path}wallets-deriv-logo.svg`);
+        });
+
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
-        account.src    = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
-        empty.src      = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
-        bell.src       = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
-        menu.src       = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
         trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
@@ -275,7 +306,7 @@ const Header = (() => {
         mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
 
         // Notification Event
-        const notification_bell      = getElementById('header__notiifcation-icon-container');
+        const notification_bell      = getElementById('header__notifcation-icon-container');
         const notification_container = getElementById('header__notification-container');
         const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
@@ -291,6 +322,7 @@ const Header = (() => {
                 showNotification(true);
             }
         });
+
         notification_close.addEventListener('click', () => showNotification(false));
 
         // Platform Switcher Event
@@ -580,14 +612,15 @@ const Header = (() => {
     };
 
     const populateAccountsList = () => {
-        if (!Client.isLoggedIn()) return;
+        if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return;
         BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
             const loginid_non_eu_real_select   = createElement('div');
             const loginid_eu_real_select       = createElement('div');
             const loginid_demo_select          = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
-                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
+                const wallets_account = Client.isWalletsAccount(loginid);
+                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !wallets_account) {
                     const is_eu                = loginid.startsWith('MF');
                     const is_non_eu            = loginid.startsWith('CR');
                     const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types

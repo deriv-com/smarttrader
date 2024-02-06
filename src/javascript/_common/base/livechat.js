@@ -46,10 +46,11 @@ const LiveChat = (() => {
 
         setSessionVariables();
         setNameEmail();
-
-        window.LC_API.on_chat_ended = () => {
-            setNameEmail();
-        };
+        if (window.LC_API && window.LC_API.on_chat_ended) {
+            window.LC_API.on_chat_ended = () => {
+                setNameEmail();
+            };
+        }
     });
 
     const initialize = () => {
