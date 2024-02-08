@@ -10,17 +10,25 @@
     border-bottom: 1px solid var(--general-section-2);
 
     &-menu {
-        &-left {
+        cursor: pointer;
+
+        &-left, &-right {
             display: inline-flex;
-            flex: 1;
             height: 47px;
-            justify-content: flex-start;
-            order: -1;
+            position: relative;
 
             & > * {
                 align-self: center;
-                cursor: pointer;
             }
+        }
+        &-left {
+            flex: 1;
+            justify-content: flex-start;
+            order: -1;
+        }
+        &-right {
+            justify-content: flex-end;
+            order: 1;
         }
         &-items {
             align-items: center;
@@ -29,13 +37,6 @@
             height: 100%;
             position: relative;
             width: 100%;
-        }
-        &-right {
-            display: inline-flex;
-            height: 47px;
-            justify-content: flex-end;
-            order: 1;
-            position: relative;
         }
     }
 }

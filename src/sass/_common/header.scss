@@ -265,8 +265,9 @@ body .header, .wallet__header {
             display: flex;
             align-items: center;
             height: 100%;
-            padding: 0 20px;
+            padding: 0 16px;
             cursor: pointer;
+            gap: 8px;
 
             &:hover {
                 background: var(--state-hover);
@@ -288,7 +289,6 @@ body .header, .wallet__header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 10px 1px 0;
             pointer-events: none;
 
             &-text {
@@ -318,8 +318,7 @@ body .header, .wallet__header {
         }
     }
     &__deposit {
-        margin-left: 8px;
-        margin-right: 16px;
+        margin: 0 16px 0 8px;
     }
     &__divider {
         height: 32px;
