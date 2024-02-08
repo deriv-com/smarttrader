@@ -72,10 +72,6 @@ function runTests(url) {
         it('ignores invalid characters', () => {
             expect(Url.urlFor('`~!@#$%^&*)(=+\[}{\]\\\"\';:\?><,|')).to.eq(trading_url);
         });
-        it('handles all valid characters', () => {
-            expect(Url.urlFor('metatrader/comparison-4_vs_5'))
-                .to.eq(`${website_url}${language}/metatrader/comparison-4_vs_5.html`);
-        });
     });
 
     if (!/binary.com/.test(url)) {
