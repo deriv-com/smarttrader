@@ -1,42 +1,150 @@
-.wallet__header {
-    box-sizing: border-box;
-    height: 48px;
-    position: fixed;
-    top: 0;
-    transition: opacity 0.3s;
-    width: 100%;
-    z-index: 99;
-    background-color: var(--general-main-1);
-    border-bottom: 1px solid var(--general-section-2);
+.wallet {
+    &__header {
+        box-sizing: border-box;
+        height: 48px;
+        position: fixed;
+        top: 0;
+        transition: opacity 0.3s;
+        width: 100%;
+        z-index: 99;
+        background-color: var(--general-main-1);
+        border-bottom: 1px solid var(--general-section-2);
 
-    &-menu {
-        cursor: pointer;
-
-        &-left, &-right {
+        &-demo-batch {
             display: inline-flex;
-            height: 47px;
-            position: relative;
+            font-size: $FONT_SIZE_XXS;
+            background-color: var(--status-info);
+            border-radius: 2px;
+            height: 14px;
+            padding-inline: 4px;
+            font-weight: bold;
+            color: var(--general-main-1);
+            align-items: center;
+            justify-content: center;
+            line-height: 1.5;
+        }
+        &-menu {
+            cursor: pointer;
 
-            & > * {
-                align-self: center;
+            &-left, &-right {
+                display: inline-flex;
+                height: 47px;
+                position: relative;
+
+                & > * {
+                    align-self: center;
+                }
+            }
+            &-left {
+                flex: 1;
+                justify-content: flex-start;
+                order: -1;
+            }
+            &-right {
+                justify-content: flex-end;
+                order: 1;
+            }
+            &-items {
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                height: 100%;
+                position: relative;
+                width: 100%;
             }
         }
-        &-left {
-            flex: 1;
-            justify-content: flex-start;
-            order: -1;
-        }
-        &-right {
-            justify-content: flex-end;
-            order: 1;
-        }
-        &-items {
-            align-items: center;
-            box-sizing: border-box;
+    }
+    &__switcher {
+        &-acc {
             display: flex;
-            height: 100%;
-            position: relative;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+            gap: 16px;
+            justify-content: space-between;
+            padding: 13.5px 16px;
+
+            &:hover {
+                background: var(--state-hover);
+            }
+            &--active {
+                background: var(--state-hover);
+            }
+        }
+        &-accounts {
+            &-list {
+                max-height: 450px;
+                border-bottom: 1px solid var(--general-hover);
+                padding: 4px 8px;
+                overflow-y: scroll;
+            }
+        }
+        &-balance {
+            line-height: 20px;
+            font-size: $FONT_SIZE_S;
+            font-weight: bold;
+        }
+        &--content {
+            display: flex;
+            flex-direction: column;
             width: 100%;
+            font-weight: normal;
+            line-height: 14px;
+            font-size: $FONT_SIZE_XXS;
+        }
+        &-dropdown {
+            display: none;
+            position: absolute;
+            background-color: var(--general-main-1);
+            box-shadow: 0 8px 16px 0 $COLOR_LIGHT_BLACK_3;
+            top: calc(100% + 4px);
+            right: -32px;
+            width: 320px;
+            border-radius: 4px;
+            transition: transform 0.3s ease, opacity 0.25s linear;
+
+            &--show {
+                display: block;
+            }
+        }
+        &-header {
+            border-bottom: 1px solid var(--general-hover);
+            padding: 10px;
+            font-size: $FONT_SIZE_S;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        &-footer {
+            display: flex;
+            font-size: $FONT_SIZE_S;
+            justify-content: space-between;
+            padding: 16px;
+            line-height: 27px;
+        }
+        &-icon {
+            &--container {
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                justify-content: center;
+                overflow: hidden;
+                position: relative;
+                height: 40px;
+                width: 64px;
+            }
+            &--app {
+                left: 2px;
+                top: 2px;
+                position: absolute;
+                z-index: 1;
+            }
+            &--currency {
+                width: 40px !important;
+                bottom: 2px;
+                right: 2px;
+                position: absolute;
+                margin-right: 0px !important;
+            }
         }
     }
 }

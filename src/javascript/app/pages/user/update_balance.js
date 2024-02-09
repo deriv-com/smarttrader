@@ -51,7 +51,7 @@ const updateBalance = (response) => {
                 const is_current = Client.get('loginid') === account_id;
 
                 // show reset button
-                if (updated_balance !== 10000 && is_virtual && is_current) {
+                if (updated_balance !== 10000 && is_virtual && is_current && !Client.hasWalletsAccount()) {
                     el_balance_span.innerHTML = null;
                     el_balance_span.appendChild(reset_button);
                     reset_button.addEventListener('click', (e) => {

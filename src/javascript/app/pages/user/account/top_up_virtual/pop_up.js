@@ -14,7 +14,7 @@ const TopUpVirtualPopup = (() => {
     const popup_id = 'top_up_virtual_pop_up';
 
     const init = (balance) => {
-        if (shouldShowPopup(balance)) {
+        if (shouldShowPopup(balance) && !Client.hasWalletsAccount()) {
             showTopUpPopup();
         }
     };

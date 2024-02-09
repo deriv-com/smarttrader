@@ -25,7 +25,7 @@ const mapCurrencyName          = require('../../_common/base/currency_base').map
 const isEuCountry              = require('../common/country_base').isEuCountry;
 
 const header_icon_base_path = '/images/pages/header/';
-const wallets_header_icon_base_path = '/images/pages/header/wallets/';
+const wallet_header_icon_base_path = '/images/pages/header/wallets/';
 
 const Header = (() => {
     const notifications = [];
@@ -185,12 +185,12 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
         });
 
-        applyToAllElements('.wallets-apps-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallets_header_icon_base_path}wallets-apps-logo.svg`);
+        applyToAllElements('.wallet-apps-logo', (el) => {
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-apps-logo.svg`);
         });
 
         applyToAllElements('.deriv-com-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallets_header_icon_base_path}wallets-deriv-logo.svg`);
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg`);
         });
 
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
@@ -384,29 +384,32 @@ const Header = (() => {
         });
 
         // Account Switcher Event
-        const acc_switcher                = getElementById('acc_switcher');
-        const account_switcher            = getElementById('account__switcher');
-        const account_switcher_dropdown   = getElementById('account__switcher-dropdown');
+        const acc_switcher                = Client.hasWalletsAccount() ? getElementById('wallet_switcher') : getElementById('acc_switcher');
+        const account_switcher            = Client.hasWalletsAccount() ? getElementById('wallet__switcher') : getElementById('account__switcher');
+        const account_switcher_dropdown   = Client.hasWalletsAccount() ? getElementById('wallet__switcher-dropdown') : getElementById('account__switcher-dropdown');
+        const account_switcher_active     = Client.hasWalletsAccount() ? 'wallet__switcher-dropdown--show' : 'account__switcher-dropdown--show';
         const acc_expand                  = getElementById('header__acc-expand');
-        const account_switcher_active     = 'account__switcher-dropdown--show';
         const current_active_login        = Client.get('loginid');
         const all_login_ids               = Client.getAllLoginids();
         const has_real_account            = all_login_ids.some((loginid) => !/^VRT/.test(loginid));
         const is_virtual                  = current_active_login && current_active_login.startsWith('VRTC');
         const add_account_text_normal     = document.getElementById('add-account-text-normal');
         const add_account_text_eu_country = document.getElementById('add-account-text-eu');
-        const showAccountSwitcher         = (should_open) => {
+        const showAccDropdown         = (should_open) => {
             if (should_open) {
                 account_switcher_dropdown.classList.add(account_switcher_active);
                 acc_expand.classList.add('rotated');
-                $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
-                if (isEuCountry()) {
-                    add_account_text_normal.style.display                   = 'none';
-                } else {
-                    add_account_text_eu_country.style.display               = 'none';
-                }
-                if (isEuCountry() && has_real_account) {
-                    add_account_text_eu_country.parentElement.style.display = 'none';
+
+                if (!Client.hasWalletsAccount()) {
+                    $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
+                    if (isEuCountry()) {
+                        add_account_text_normal.style.display                   = 'none';
+                    } else {
+                        add_account_text_eu_country.style.display               = 'none';
+                    }
+                    if (isEuCountry() && has_real_account) {
+                        add_account_text_eu_country.parentElement.style.display = 'none';
+                    }
                 }
             } else {
                 account_switcher_dropdown.classList.remove(account_switcher_active);
@@ -417,9 +420,9 @@ const Header = (() => {
         acc_switcher.addEventListener('click', (event) => {
             if (!account_switcher_dropdown.contains(event.target)) {
                 if (account_switcher_dropdown.classList.contains(account_switcher_active)) {
-                    showAccountSwitcher(false);
+                    showAccDropdown(false);
                 } else {
-                    showAccountSwitcher(true);
+                    showAccDropdown(true);
                 }
 
                 if (platform_dropdown.classList.contains(platform_dropdown_active)) {
@@ -431,7 +434,7 @@ const Header = (() => {
         // Mobile account switcher click outside
         account_switcher_dropdown.addEventListener('click', (event) => {
             if (!account_switcher.contains(event.target)) {
-                showAccountSwitcher(false);
+                showAccDropdown(false);
             }
         });
 
@@ -478,7 +481,7 @@ const Header = (() => {
             if (!account_switcher_dropdown.contains(event.target)
                 && !acc_switcher.contains(event.target)
                 && account_switcher_dropdown.classList.contains(account_switcher_active)) {
-                showAccountSwitcher(false);
+                showAccDropdown(false);
             }
 
             // Mobile Menu
@@ -609,7 +612,7 @@ const Header = (() => {
                         return 'virtual';
                     });
 
-                    const icon                 = Url.urlForStatic(`${wallets_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -618,13 +621,18 @@ const Header = (() => {
                             el.src = icon;
                         });
                     }
-
-                    const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
-                    const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
-                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
+                    // start of wallet switcher dropdown
+                    const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
+                    const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
+                    const account_app       = createElement('img', { src: `${wallet_header_icon_base_path}ic-wallets-deriv-apps.svg`, class: 'wallet__switcher-icon--app' });
+                    const account_icon      = createElement('img', { src: icon, class: 'wallet__switcher-icon--currency' });
+                    const account_content   = createElement('div', { class: 'wallet__switcher--content' });
+                    const account_text      = createElement('span', { text: localize('Deriv Apps') });
+                    const account_currency  = createElement('span', { text: is_real ? currencyName : localize('Demo') });
+                    const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
                     const account_list      = getElementById('wallet__switcher-accounts-list');
+                    const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
+                    const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
 
                     if (!currency) {
                         $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
@@ -636,54 +644,47 @@ const Header = (() => {
                         header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
                     }
 
-                    account_detail.appendChild(account_loginid);
-                    account.appendChild(account_icon);
-                    account.appendChild(account_detail);
-                    account.appendChild(account_balance);
+                    if (is_current && !is_real) {
+                        $(demo_batch1).insertAfter('.header__acc-display');
+                    }
+
+                    // append icons
+                    icon_container.appendChild(account_app);
+                    icon_container.appendChild(account_icon);
+                    // append content
+                    account_content.appendChild(account_text);
+                    account_content.appendChild(account_currency);
+                    account_content.appendChild(account_balance);
+                    // append icons and content
+                    account.appendChild(icon_container);
+                    account.appendChild(account_content);
+                    
+                    if (!is_real) account.appendChild(demo_batch2);
+
                     account_list.appendChild(account);
-
-                    // if (is_non_eu) {
-                    //     loginid_non_eu_real_select.appendChild(account);
-                    // } else if (is_eu && !isEuCountry()) {
-                    //     loginid_eu_real_select.appendChild(account);
-                    // } else if (is_eu && isEuCountry()){
-                    //     loginid_non_eu_real_select.appendChild(account);
-                    // } else {
-                    //     loginid_demo_select.appendChild(account);
-                    // }
-                    // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
-                    // const li_type = createElement('li', { text: localized_type });
-
-                    // li_type.appendChild(createElement('div', { text: loginid }));
-                    // link.appendChild(li_type);
-                    // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
                 }
 
-                // applyToAllElements('#account__switcher-non-eu-list', (el) => {
-                //     el.insertBefore(loginid_non_eu_real_select, el.firstChild);
-                //     applyToAllElements('div.account__switcher-acc', (ele) => {
-                //         ele.removeEventListener('click', loginIDOnClick);
-                //         ele.addEventListener('click', loginIDOnClick);
-                //     }, '', el);
-                //     bindAccordion('#account__switcher-accordion-non-eu');
-                // });
-                // applyToAllElements('#account__switcher-eu-list', (el) => {
-                //     el.insertBefore(loginid_eu_real_select, el.firstChild);
-                //     applyToAllElements('div.account__switcher-acc', (ele) => {
-                //         ele.removeEventListener('click', loginIDOnClick);
-                //         ele.addEventListener('click', loginIDOnClick);
-                //     }, '', el);
-                //     bindAccordion('#account__switcher-accordion-eu');
-                // });
-                // applyToAllElements('#account__switcher-demo-list', (el) => {
-                //     el.insertBefore(loginid_demo_select, el.firstChild);
-                //     applyToAllElements('div.account__switcher-acc', (ele) => {
-                //         ele.removeEventListener('click', loginIDOnClick);
-                //         ele.addEventListener('click', loginIDOnClick);
-                //     }, '', el);
-                //     bindAccordion('#account__switcher-accordion-demo');
-                // });
+                applyToAllElements('.wallet__switcher-acc', (el) => {
+                    el.removeEventListener('click', loginIDOnClick);
+                    el.addEventListener('click', loginIDOnClick);
+                });
             });
+            // applyToAllElements('#account__switcher-eu-list', (el) => {
+            //     el.insertBefore(loginid_eu_real_select, el.firstChild);
+            //     applyToAllElements('div.account__switcher-acc', (ele) => {
+            //         ele.removeEventListener('click', loginIDOnClick);
+            //         ele.addEventListener('click', loginIDOnClick);
+            //     }, '', el);
+            //     bindAccordion('#account__switcher-accordion-eu');
+            // });
+            // applyToAllElements('#account__switcher-demo-list', (el) => {
+        //     el.insertBefore(loginid_demo_select, el.firstChild);
+            //     applyToAllElements('div.account__switcher-acc', (ele) => {
+            //         ele.removeEventListener('click', loginIDOnClick);
+            //         ele.addEventListener('click', loginIDOnClick);
+            //     }, '', el);
+            //     bindAccordion('#account__switcher-accordion-demo');
+            // });
         });
     };
 
@@ -888,7 +889,7 @@ const Header = (() => {
 
     const loginIDOnClick =  (e) => {
         e.preventDefault();
-        const el_loginid = findParent(e.target, 'div.account__switcher-acc');
+        const el_loginid = findParent(e.target, Client.hasWalletsAccount() ? 'div.wallet__switcher-acc' : 'div.account__switcher-acc');
         if (el_loginid) {
             el_loginid.setAttribute('disabled', 'disabled');
             switchLoginid(el_loginid.getAttribute('data-value'));

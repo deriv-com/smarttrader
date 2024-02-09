@@ -18,7 +18,7 @@ const WalletHeader = () => (
                 </div>
                 <div className='wallet__header-menu-item wallet__header-menu-links mobile-hide'>
                     <a className='url-wallet-apps'>
-                        <img className='wallets-apps-logo' />
+                        <img className='wallet-apps-logo' />
                     </a>
                 </div>
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
@@ -68,15 +68,13 @@ const WalletHeader = () => (
                         </span>
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
-                    <div id='wallets__switcher-dropdown' className='wallets__switcher-dropdown'>
+                    <div id='wallet__switcher-dropdown' className='wallet__switcher-dropdown'>
                         <div className='wallet__switcher' id='wallet__switcher'>
-                            <div className='wallet__switcher-header'>
+                            <h4 className='wallet__switcher-header'>
                                 {it.L('Deriv Apps accounts')}
-                            </div>
-                            <div className='account__switcher-seperator' />
-                            <div id='wallet__switcher-accounts-list' />
-                            <div className='account__switcher-seperator' />
-                            <div className='wallets__switcher-footer'>
+                            </h4>
+                            <div id='wallet__switcher-accounts-list' className='wallet__switcher-accounts-list' />
+                            <div className='wallet__switcher-footer'>
                                 <div>
                                     {it.L('Looking for CFDs? Go to Trader\'s hub')}
                                 </div>
