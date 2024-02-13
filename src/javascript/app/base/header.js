@@ -613,6 +613,7 @@ const Header = (() => {
                     });
 
                     const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
+                    const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -624,8 +625,7 @@ const Header = (() => {
                     // start of wallet switcher dropdown
                     const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
                     const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
-                    const account_app       = createElement('img', { src: `${wallet_header_icon_base_path}ic-wallets-deriv-apps.svg`, class: 'wallet__switcher-icon--app' });
-                    const account_icon      = createElement('img', { src: icon, class: 'wallet__switcher-icon--currency' });
+                    const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
                     const account_content   = createElement('div', { class: 'wallet__switcher--content' });
                     const account_text      = createElement('span', { text: localize('Deriv Apps') });
                     const account_currency  = createElement('span', { text: is_real ? currencyName : localize('Demo') });
@@ -649,7 +649,6 @@ const Header = (() => {
                     }
 
                     // append icons
-                    icon_container.appendChild(account_app);
                     icon_container.appendChild(account_icon);
                     // append content
                     account_content.appendChild(account_text);

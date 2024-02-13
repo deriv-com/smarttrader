@@ -123,27 +123,11 @@
         }
         &-icon {
             &--container {
-                display: flex;
                 align-items: center;
                 border-radius: 4px;
                 justify-content: center;
-                overflow: hidden;
-                position: relative;
                 height: 40px;
                 width: 64px;
-            }
-            &--app {
-                left: 2px;
-                top: 2px;
-                position: absolute;
-                z-index: 1;
-            }
-            &--currency {
-                width: 40px !important;
-                bottom: 2px;
-                right: 2px;
-                position: absolute;
-                margin-right: 0px !important;
             }
         }
     }
