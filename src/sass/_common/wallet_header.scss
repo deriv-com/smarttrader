@@ -29,7 +29,6 @@
             &-left, &-right {
                 display: inline-flex;
                 height: 47px;
-                position: relative;
 
                 & > * {
                     align-self: center;
@@ -133,6 +132,30 @@
                 height: 40px;
                 width: 64px;
             }
+        }
+    }
+}
+
+.mobile {
+    &__wallet-platform-switcher {
+        &-current {
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--general-section-2);
+            align-items: center;
+            padding: 0 32px;
+            cursor: pointer;
+        }
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        &-logo {
+            width: 148px !important;
+            height: 32px !important;
         }
     }
 }

@@ -122,7 +122,6 @@ const Header = (() => {
 
     const bindSvg = () => {
         const cashier   = getElementById('cashier-icon');
-        const trade     = getElementById('mobile__platform-switcher-icon-trade');
         const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
         const back      = getElementById('mobile__menu-content-submenu-icon-back');
         const open      = getElementById('mobile__menu-content-submenu-icon-open');
@@ -192,9 +191,11 @@ const Header = (() => {
         applyToAllElements('.deriv-com-logo', (el) => {
             el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg`);
         });
+        applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
+        });
 
         cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
-        trade.src      = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
         open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
@@ -266,6 +267,7 @@ const Header = (() => {
             platform_list.appendChild(platform_div);
         });
 
+        // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
         const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
@@ -273,6 +275,8 @@ const Header = (() => {
         
         platform_dropdown_cta_container.appendChild(platform_dropdown_cta_link);
         platform_list.appendChild(platform_dropdown_cta_container);
+        // Add traders hub cta link to mobile platform switcher dropdown as well
+        mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
     const bindClick = () => {
@@ -309,6 +313,16 @@ const Header = (() => {
 
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
+
+        // Dynamically switch location of notification for wallets mobile header before attaching event handler
+        const dynamic_notification      = getElementById('dynamic_notification');
+        const is_mobile                 = window.innerWidth <= 767;
+        if (is_mobile && Client.hasWalletsAccount()) {
+            const cloned_notification   = dynamic_notification.cloneNode(true);
+            const wallet_header_right   = getElementById('wallet__header-menu-right');
+            wallet_header_right.appendChild(cloned_notification);
+            dynamic_notification.remove();
+        }
 
         // Notification Event
         const notification_bell      = getElementById('header__notifcation-icon-container');
@@ -386,6 +400,12 @@ const Header = (() => {
                 showMobilePlatformSwitcher(true);
             }
         });
+
+        // Dynamic link for trader's hub cta for mobile menu
+        const mobile_platform_appstore_link     = getElementById('url-appstore');
+        const wallets_hub_link                  = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        const traders_hub_link                  = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        mobile_platform_appstore_link.href      = Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link;
 
         // Account Switcher Event
         const acc_switcher                = Client.hasWalletsAccount() ? getElementById('wallet_switcher') : getElementById('acc_switcher');
