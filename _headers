@@ -1,5 +1,5 @@
 /*
-    Cache-Control: public, max-age=86401
+    Cache-Control: public, max-age=86402
 
-**/*.html
+*.html
     Cache-Control: public, max-age=0, must-revalidate
