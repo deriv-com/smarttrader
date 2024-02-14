@@ -692,22 +692,6 @@ const Header = (() => {
                     el.addEventListener('click', loginIDOnClick);
                 });
             });
-            // applyToAllElements('#account__switcher-eu-list', (el) => {
-            //     el.insertBefore(loginid_eu_real_select, el.firstChild);
-            //     applyToAllElements('div.account__switcher-acc', (ele) => {
-            //         ele.removeEventListener('click', loginIDOnClick);
-            //         ele.addEventListener('click', loginIDOnClick);
-            //     }, '', el);
-            //     bindAccordion('#account__switcher-accordion-eu');
-            // });
-            // applyToAllElements('#account__switcher-demo-list', (el) => {
-        //     el.insertBefore(loginid_demo_select, el.firstChild);
-            //     applyToAllElements('div.account__switcher-acc', (ele) => {
-            //         ele.removeEventListener('click', loginIDOnClick);
-            //         ele.addEventListener('click', loginIDOnClick);
-            //     }, '', el);
-            //     bindAccordion('#account__switcher-accordion-demo');
-            // });
         });
     };
 
