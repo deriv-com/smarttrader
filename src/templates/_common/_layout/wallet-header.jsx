@@ -1,8 +1,5 @@
 import React from 'react';
-import { getPlatformSettings } from '../brand.config';
 import Notification from '../components/notification.jsx';
-
-const platform_name = getPlatformSettings('smarttrader').name;
 
 const WalletHeader = () => (
     <div className='wallet__header' id='wallet__header'>
@@ -24,7 +21,6 @@ const WalletHeader = () => (
                 </div>
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
-                    <div className='platform__switcher-header'>{it.L('[_1]', platform_name)}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-links client_logged_in invisible mobile-hide'>
@@ -61,9 +57,9 @@ const WalletHeader = () => (
                                 <div>
                                     {it.L('Looking for CFDs? Go to Trader\'s hub')}
                                 </div>
-                                <span>
+                                <a className='url-wallet-apps'>
                                     <img src='/images/pages/header/ic-chevron-right.svg' />
-                                </span>
+                                </a>
                             </div>
                         </div>
                     </div>

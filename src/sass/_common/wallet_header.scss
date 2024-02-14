@@ -120,6 +120,10 @@
             justify-content: space-between;
             padding: 16px;
             line-height: 27px;
+
+            & > span {
+                cursor: pointer;
+            }
         }
         &-icon {
             &--container {

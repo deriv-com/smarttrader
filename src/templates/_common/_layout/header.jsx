@@ -94,7 +94,6 @@ const Header = () => (
                 <img id='header__hamburger' className='header__hamburger mobile-show' />
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
-                    <div className='platform__switcher-header'>{it.L('[_1]', platform_name)}</div>
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>

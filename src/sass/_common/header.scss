@@ -456,6 +456,7 @@ body .header, .wallet__header {
             display: flex;
             justify-content: center;
             padding: 0 16px;
+            gap: 8px;
             cursor: pointer;
 
             > * {
@@ -469,7 +470,7 @@ body .header, .wallet__header {
                 line-height: 24px;
                 font-weight: bold;
                 color: var(--text-general);
-                margin: 0 8px;
+                margin: 0 0 0 8px;
             }
             &-label {
                 font-size: $FONT_SIZE_S;
@@ -501,6 +502,20 @@ body .header, .wallet__header {
                 background: var(--general-main-1);
                 justify-content: space-evenly;
             }
+            &-cta {
+                display: flex;
+                padding: 20px;
+                align-items: center;
+                justify-content: center;
+                font-size: $FONT_SIZE_S;
+                line-height: 1.5;
+                font-weight: bold;
+
+                &--link {
+                    cursor: pointer;
+                    color: var(--brand-red-coral);
+                }
+            }
         }
         &__list {
             &-item {
@@ -513,7 +528,8 @@ body .header, .wallet__header {
                 margin: 24px 16px;
                 padding: 24px 16px;
                 flex-basis: 100%;
-                width: 288px;
+                width: 320px;
+                flex-direction: column;
 
                 &:not(.platform__list-item--active):hover {
                     background: var(--state-hover);
@@ -522,11 +538,10 @@ body .header, .wallet__header {
                     border: solid 2px var(--border-active);
                 }
                 &-icon {
-                    width: 35px;
-                    height: 35px;
+                    width: 150px;
+                    height: 42px;
                 }
                 &-text {
-                    margin-left: 15px;
                     font-weight: normal;
                 }
                 &-name {
@@ -537,6 +552,7 @@ body .header, .wallet__header {
                 &-desc {
                     font-size: $FONT_SIZE_S;
                     line-height: 20px;
+                    margin-top: 8px;
                 }
             }
         }

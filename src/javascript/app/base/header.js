@@ -218,7 +218,6 @@ const Header = (() => {
 
         const platforms          = {
             dtrader: {
-                name     : getPlatformSettings('dtrader').name,
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
                 link     : main_domain,
                 icon     : getPlatformSettings('dtrader').icon,
@@ -226,7 +225,6 @@ const Header = (() => {
             },
             ...(should_show_bots ? {
                 dbot: {
-                    name     : getPlatformSettings('dbot').name,
                     desc     : localize('Automated trading at your fingertips. No coding needed.'),
                     link     : `${main_domain}/bot`,
                     icon     : getPlatformSettings('dbot').icon,
@@ -234,7 +232,6 @@ const Header = (() => {
                 },
             } : {}),
             smarttrader: {
-                name     : getPlatformSettings('smarttrader').name,
                 desc     : localize('Trade the world\'s markets with our popular user-friendly platform.'),
                 link     : '#',
                 icon     : getPlatformSettings('smarttrader').icon,
@@ -242,7 +239,6 @@ const Header = (() => {
             },
             ...(should_show_bots ? {
                 binarybot: {
-                    name     : getPlatformSettings('bbot').name,
                     desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
                     link     : `https://bot.deriv.${getTopLevelDomain()}`,
                     icon     : getPlatformSettings('bbot').icon,
@@ -269,6 +265,14 @@ const Header = (() => {
             }
             platform_list.appendChild(platform_div);
         });
+
+        const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
+        const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.hasWalletsAccount ? wallets_hub_link : traders_hub_link}` });
+        
+        platform_dropdown_cta_container.appendChild(platform_dropdown_cta_link);
+        platform_list.appendChild(platform_dropdown_cta_container);
     };
 
     const bindClick = () => {
