@@ -32,7 +32,9 @@ const showPopup = (options) => {
 const callback = (options) => {
     const div      = createElement('div', { html: cache[options.url] });
     const lightbox = createElement('div', { id: options.popup_id, class: 'lightbox' });
-    lightbox.appendChild(div.querySelector(options.content_id));
+    const content = div.querySelector(options.content_id);
+    if (!content) return;
+    lightbox.appendChild(content);
     lightbox.addEventListener('DOMNodeRemoved', (e) => {
         if (!popup_queue.length || e.target.className !== 'lightbox') return;
         document.body.appendChild(popup_queue.pop()); // show popup in queue
