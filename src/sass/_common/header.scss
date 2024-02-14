@@ -278,6 +278,10 @@ body .header, .wallet__header {
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
             font-weight: bold;
+
+            &-wallet {
+                color: var(--text-general);
+            }
         }
         &-icon {
             margin-right: 5px;
@@ -300,7 +304,8 @@ body .header, .wallet__header {
         height: min-content;
     }
     &__logo {
-        height: 35px;
+        width: 111px;
+        height: 24px;
     }
     &__icon {
         height: 16px;
@@ -538,8 +543,8 @@ body .header, .wallet__header {
                     border: solid 2px var(--border-active);
                 }
                 &-icon {
-                    width: 150px;
-                    height: 42px;
+                    width: 148px;
+                    height: 32px;
                 }
                 &-text {
                     font-weight: normal;

@@ -43,7 +43,7 @@ const WalletHeader = () => (
                         <img src='/images/pages/header/wallets/ic-wallets-deriv-apps.svg' />
                         <img id='header__acc-icon--currency' className='header__acc-icon--currency' />
                         <span className='header__acc-display'>
-                            <div id='header__acc-balance' className='header__acc-balance' />
+                            <div id='header__acc-balance' className='header__acc-balance header__acc-balance-wallet' />
                         </span>
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
