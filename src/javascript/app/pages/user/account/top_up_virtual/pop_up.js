@@ -1,13 +1,12 @@
-const moment         = require('moment');
-const BinaryPjax     = require('../../../../base/binary_pjax');
-const Client         = require('../../../../base/client');
-const BinarySocket   = require('../../../../base/socket');
-const Dialog         = require('../../../../common/attach_dom/dialog');
-const showPopup      = require('../../../../common/attach_dom/popup');
-const getElementById = require('../../../../../_common/common_functions').getElementById;
-const localize       = require('../../../../../_common/localize').localize;
-const urlFor         = require('../../../../../_common/url').urlFor;
-const State          = require('../../../../../_common/storage').State;
+const moment                  = require('moment');
+const Client                  = require('../../../../base/client');
+const BinarySocket            = require('../../../../base/socket');
+const Dialog                  = require('../../../../common/attach_dom/dialog');
+const showPopup               = require('../../../../common/attach_dom/popup');
+const getElementById          = require('../../../../../_common/common_functions').getElementById;
+const localize                = require('../../../../../_common/localize').localize;
+const { urlFor, urlForDeriv } = require('../../../../../_common/url');
+const State                   = require('../../../../../_common/storage').State;
 
 const TopUpVirtualPopup = (() => {
     const form_id  = '#frm_confirm';
@@ -56,7 +55,7 @@ const TopUpVirtualPopup = (() => {
                     cancel_text      : localize('Go to statement'),
                     ok_text          : localize('Continue trading'),
                     onAbort          : () => {
-                        BinaryPjax.load(urlFor('user/statementws'));
+                        window.location.href = urlForDeriv('reports/statement');
                     },
                 });
             }

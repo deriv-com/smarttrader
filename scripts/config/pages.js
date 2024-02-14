@@ -54,14 +54,14 @@ module.exports = [
     // ['user/settings/professional',              'app/user/settings/professional',              'default',    'Professional Client'],
     // ['user/statementws',                        'app/user/statement',                          'default',    'Statement'],
     // ['user/telegram-bot',                       'app/user/telegram_bot',                       'default',    'Telegram Bot'],
-    // ['user/top_up_virtual_pop_up',              'app/user/top_up_virtual/pop_up',              'default',    'Top Up Virtual Account'],
+    ['user/top_up_virtual_pop_up',              'app/user/top_up_virtual/pop_up',              'default',    'Top Up Virtual Account'],
     // ['user/tnc_approvalws',                     'app/user/tnc_approval',                       'default',    'Terms and Conditions Approval'],
     // ['user/video-facility',                     'app/user/video_facility',                     'default',    'Video Room Facility'],
 
     ['endpoint',                                'app/endpoint',                                'default',    'Endpoint'],
     // ['new-account',                             'app/new_account',                             'default',    'Signup'],
 
-    // ['dialog',                                  'app/dialog',                                  null],
+    ['dialog',                                  'app/dialog',                                  null],
     ['explanation',                             'app/trade/explanation',                       null],
     ['logged_inws',                             'app/logged_in',                               null],
     // ['redirect',                                'app/logged_in',                               null,         'Redirecting...'],
