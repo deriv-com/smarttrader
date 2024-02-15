@@ -314,15 +314,6 @@ const Header = (() => {
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
 
-        // Dynamically switch location of notification for wallets mobile header before attaching event handler
-        // const dynamic_notification      = getElementById('dynamic_notification');
-        // if (is_mobile && Client.hasWalletsAccount()) {
-        //     const cloned_notification   = dynamic_notification.cloneNode(true);
-        //     const wallet_header_right   = getElementById('wallet__header-menu-right');
-        //     wallet_header_right.appendChild(cloned_notification);
-        //     dynamic_notification.remove();
-        // }
-
         // Notification Event
         const notification_bell      = getElementById('header__notifcation-icon-container');
         const notification_container = getElementById('header__notification-container');

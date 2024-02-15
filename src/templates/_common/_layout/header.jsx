@@ -1,8 +1,5 @@
 import React from 'react';
-import { getPlatformSettings } from '../brand.config';
 import Notification from '../components/notification.jsx';
-
-const platform_name = getPlatformSettings('smarttrader').name;
 
 const MobileMenu = () => (
     <div id='mobile__container' className='mobile__container mobile-show'>
@@ -15,12 +12,11 @@ const MobileMenu = () => (
             </div>
             <div id='mobile_menu-content' className='mobile__menu-content mobile__menu-content--active'>
                 <div className='mobile__platform-switcher' >
-                    <div id='mobile__platform-switcher-current' className='mobile__platform-switcher-current' >
-                        <div className='mobile__platform-switcher-container'>
-                            <img className='header__logo mobile__platform-switcher-logo' />
-                            <div className='mobile__platform-switcher-header platform__switcher-header'>{it.L('[_1]', platform_name)}</div>
+                    <div id='mobile__platform-switcher-current' className='mobile__wallet-platform-switcher-current' >
+                        <div className='mobile__wallet-platform-switcher-container'>
+                            <img className='header__logo mobile__wallet-platform-switcher-logo' />
+                            <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
                         </div>
-                        <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
                     </div>
                     <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />
                 </div>
