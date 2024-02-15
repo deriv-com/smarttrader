@@ -112,9 +112,7 @@ const WalletHeader = () => (
                 </div>
             </div>
             <div id='wallet__header-menu-right' className='wallet__header-menu-right client_logged_in invisible'>
-                <div id='dynamic_notification'>
-                    <Notification />
-                </div>
+                <Notification />
                 <a className='url-account-details header__account header__menu-item mobile-hide'>
                     <img className='header__icon-button' id='header__account-settings' />
                 </a>
@@ -128,12 +126,22 @@ const WalletHeader = () => (
                         </span>
                         <img id='header__acc-expand' className='header__icon header__expand' />
                     </div>
-                    <div id='wallet__switcher-dropdown' className='wallet__switcher-dropdown'>
-                        <div className='wallet__switcher' id='wallet__switcher'>
-                            <h4 className='wallet__switcher-header'>
-                                {it.L('Deriv Apps accounts')}
-                            </h4>
-                            <div id='wallet__switcher-accounts-list' className='wallet__switcher-accounts-list' />
+                    <div className='wallet__switcher' id='wallet__switcher'>
+                        <div id='wallet__switcher-dropdown' className='wallet__switcher-dropdown'>
+                            <div className='wallet__switcher-header'>
+                                <h4 className='wallet__switcher-header--text'>
+                                    {it.L('Deriv Apps accounts')}
+                                </h4>
+                                <img id='wallet__switcher-close' className='btn__close mobile-show' />
+                            </div>
+                            <div className='wallet__switcher-accounts-container'>
+                                <div id='wallet__switcher-accounts-list' className='wallet__switcher-accounts-list' />
+                                <div className='wallet__switcher-accounts-btn-container'>
+                                    <a id='wallet__switcher-accounts-btn' className='url-casher-deposit btn btn--primary wallet__switcher-accounts-btn mobile-show'>
+                                        {it.L('Manage funds')}
+                                    </a>
+                                </div>
+                            </div>
                             <div className='wallet__switcher-footer'>
                                 <div>
                                     {it.L('Looking for CFDs? Go to Trader\'s hub')}

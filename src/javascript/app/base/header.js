@@ -315,14 +315,13 @@ const Header = (() => {
         mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
 
         // Dynamically switch location of notification for wallets mobile header before attaching event handler
-        const dynamic_notification      = getElementById('dynamic_notification');
-        const is_mobile                 = window.innerWidth <= 767;
-        if (is_mobile && Client.hasWalletsAccount()) {
-            const cloned_notification   = dynamic_notification.cloneNode(true);
-            const wallet_header_right   = getElementById('wallet__header-menu-right');
-            wallet_header_right.appendChild(cloned_notification);
-            dynamic_notification.remove();
-        }
+        // const dynamic_notification      = getElementById('dynamic_notification');
+        // if (is_mobile && Client.hasWalletsAccount()) {
+        //     const cloned_notification   = dynamic_notification.cloneNode(true);
+        //     const wallet_header_right   = getElementById('wallet__header-menu-right');
+        //     wallet_header_right.appendChild(cloned_notification);
+        //     dynamic_notification.remove();
+        // }
 
         // Notification Event
         const notification_bell      = getElementById('header__notifcation-icon-container');
@@ -412,6 +411,7 @@ const Header = (() => {
         const account_switcher            = Client.hasWalletsAccount() ? getElementById('wallet__switcher') : getElementById('account__switcher');
         const account_switcher_dropdown   = Client.hasWalletsAccount() ? getElementById('wallet__switcher-dropdown') : getElementById('account__switcher-dropdown');
         const account_switcher_active     = Client.hasWalletsAccount() ? 'wallet__switcher-dropdown--show' : 'account__switcher-dropdown--show';
+        const wallet_switcher_close       = getElementById('wallet__switcher-close');
         const acc_expand                  = getElementById('header__acc-expand');
         const current_active_login        = Client.get('loginid');
         const all_login_ids               = Client.getAllLoginids();
@@ -454,6 +454,8 @@ const Header = (() => {
                 }
             }
         });
+
+        wallet_switcher_close.addEventListener('click', () => showAccDropdown(false));
 
         // Mobile account switcher click outside
         account_switcher_dropdown.addEventListener('click', (event) => {
@@ -623,6 +625,7 @@ const Header = (() => {
 
     const populateWalletAccounts = () => {
         if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return;
+        const account_list      = getElementById('wallet__switcher-accounts-list');
         BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             Client.getAllLoginids().forEach((loginid) => {
                 const is_wallet_account        = Client.isWalletsAccount(loginid);
@@ -654,7 +657,6 @@ const Header = (() => {
                     const account_text      = createElement('span', { text: localize('Deriv Apps') });
                     const account_currency  = createElement('span', { text: is_real ? currencyName : localize('Demo') });
                     const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
-                    const account_list      = getElementById('wallet__switcher-accounts-list');
                     const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
                     const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
 
