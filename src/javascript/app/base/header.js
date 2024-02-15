@@ -274,7 +274,7 @@ const Header = (() => {
         const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.hasWalletsAccount ? wallets_hub_link : traders_hub_link}` });
         
         platform_dropdown_cta_container.appendChild(platform_dropdown_cta_link);
-        platform_list.appendChild(platform_dropdown_cta_container);
+        platform_list.appendChild(platform_dropdown_cta_container.cloneNode(true));
         // Add traders hub cta link to mobile platform switcher dropdown as well
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
@@ -647,6 +647,9 @@ const Header = (() => {
                     if (is_current) { // default account
                         applyToAllElements('#header__acc-icon--currency', (el) => {
                             el.src = icon;
+                        });
+                        applyToAllElements('#header__acc-icon-mobile-currency', (el) => {
+                            el.src = combined_icon;
                         });
                     }
                     // start of wallet switcher dropdown

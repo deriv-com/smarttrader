@@ -119,8 +119,9 @@ const WalletHeader = () => (
                 <div className='header__divider mobile-hide' />
                 <div className='header__menu-item header__menu-acc' id='wallet_switcher'>
                     <div className='header__acc-info'>
-                        <img src='/images/pages/header/wallets/ic-wallets-deriv-apps.svg' />
-                        <img id='header__acc-icon--currency' className='header__acc-icon--currency' />
+                        <img src='/images/pages/header/wallets/ic-wallets-deriv-apps.svg' className='mobile-hide' />
+                        <img id='header__acc-icon-mobile-currency' className='mobile-show header__acc-icon-mobile-currency' />
+                        <img id='header__acc-icon--currency' className='header__acc-icon--currency mobile-hide' />
                         <span className='header__acc-display'>
                             <div id='header__acc-balance' className='header__acc-balance header__acc-balance-wallet' />
                         </span>
