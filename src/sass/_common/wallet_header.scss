@@ -57,7 +57,7 @@
         &-acc {
             display: flex;
             align-items: center;
-            border-radius: 4px;
+            border-radius: $BORDER_RADIUS;
             cursor: pointer;
             gap: 16px;
             justify-content: space-between;
@@ -67,7 +67,7 @@
                 background: var(--state-hover);
             }
             &--active {
-                background: var(--state-hover);
+                background: var(--state-active);
             }
         }
         &-accounts {
@@ -100,7 +100,6 @@
             right: -32px;
             width: 320px;
             border-radius: 4px;
-            transition: transform 0.3s ease, opacity 0.25s linear;
 
             &--show {
                 display: block;
