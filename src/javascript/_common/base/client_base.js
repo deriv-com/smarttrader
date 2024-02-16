@@ -135,7 +135,17 @@ const ClientBase = (() => {
         return only_real_loginids.every(loginid => get('currency', loginid) && !isCryptocurrency(get('currency', loginid)));
     };
 
-    const isWalletsAccount = (loginid) => getAllAccountsObject()[loginid].account_category === 'wallet';
+    const isWalletsAccount = (loginid) => {
+        if (typeof loginid === 'undefined') {
+            return false;
+        }
+        const account_object = getAllAccountsObject()[loginid];
+        if (!account_object) {
+            return false;
+        }
+        return account_object.account_category === 'wallet';
+    };
+    
     const hasWalletsAccount = () => Object.values(getAllAccountsObject()).some(account => account.account_category === 'wallet');
 
     const TypesMapConfig = (() => {
