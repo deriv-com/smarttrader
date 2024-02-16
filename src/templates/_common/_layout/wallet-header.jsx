@@ -88,12 +88,12 @@ const WalletHeader = () => (
         <div className='wallet__header-menu-items'>
             <div className='wallet__header-menu-left'>
                 <img id='header__hamburger' className='header__hamburger mobile-show' />
-                <div className='wallet__header-menu-item wallet__header-menu-links mobile-hide'>
+                <div className='wallet__header-menu-item wallet__header-menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
                         <img className='deriv-com-logo' />
                     </a>
                 </div>
-                <div className='wallet__header-menu-item wallet__header-menu-links mobile-hide'>
+                <div className='wallet__header-menu-item wallet__header-menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-wallet-apps'>
                         <img className='wallet-apps-logo' />
                     </a>
