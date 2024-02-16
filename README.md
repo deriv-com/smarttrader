@@ -33,51 +33,48 @@ Before running or contribute to this project, you need to have the setup of the 
 
 ## Quickstart
 
-1. **Create a new organization**
-   Create a new organization in [github.com](https://github.com/account/organizations/new?coupon=&plan=team_free)
+1. **Fork the project**
 
-2. **Fork the project**
+   In order to work on your own version of the SmartTrader application, please fork the project.
 
-   In order to work on your own version of the SmartTrader application, please fork the project in your newly created organization.
-
-3. **Clone using SSH**
+2. **Clone using SSH**
 
    ```sh
-   git clone git@github.com:<organization_name>/smarttrader.git
+   git clone git@github.com:deriv-com/smarttrader.git
    ```
 
-4. **Enter project directory**
+3. **Enter project directory**
 
    ```sh
-   cd smart-trader
+   cd smarttrader
    ```
 
-5. **Add DSmartTrader project as your upstream**
+4. **Add DSmartTrader project as your upstream**
 
    ```sh
    git remote add upstream git@github.com:deriv-com/smarttrader.git
    ```
 
-6. **Ensure you are running node version 14**
+5. **Ensure you are running node version 14**
 
    - Check node version `node -v`
    - Check list of available node versions `nvm ls`
    - To install node 14 `nvm install 14`
    - To change between different node versions `nvm use {version number}` 
 
-7. **Install your dependencies:**
+6. **Install your dependencies:**
 
    ```sh
      npm ci
    ```
 
-8. **To start developing:**
+7. **To start developing:**
 
    ```sh
    npm run start
    ```
 
-9. **Open the source code and start editing!**
+8. **Open the source code and start editing!**
 
    Your site is now running at [https://localhost:443](https://localhost:443)
 
