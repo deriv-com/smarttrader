@@ -273,8 +273,8 @@ const Header = (() => {
         // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
         const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
         const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
-        const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta client_logged_in invisible' });
-        const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.hasWalletsAccount ? wallets_hub_link : traders_hub_link}` });
+        const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
+        const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.isLoggedIn() && Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link}` });
         
         platform_dropdown_cta_container.appendChild(platform_dropdown_cta_link);
         platform_list.appendChild(platform_dropdown_cta_container.cloneNode(true));
