@@ -692,11 +692,17 @@ const Header = (() => {
     };
 
     const bindHeaders = () => {
-        const high_risk_accounts_accordion_header = document.getElementById('high_risk_accounts');
-        const low_risk_non_eu_accordion_header = document.getElementById('low_risk_accounts_non_eu');
-        const low_risk_eu_accordion_header = document.getElementById('low_risk_accounts_eu');
-        const low_risk_eu_container = document.getElementById('account__switcher-accordion-eu');
-        if (Client.isHighRisk() || isEuCountry()) {
+        const high_risk_accounts_accordion_header = getElementById('high_risk_accounts');
+        const low_risk_non_eu_accordion_header    = getElementById('low_risk_accounts_non_eu');
+        const low_risk_eu_accordion_header        = getElementById('low_risk_accounts_eu');
+        const low_risk_eu_container               = getElementById('account__switcher-accordion-eu');
+        const is_eu                               = Client.get('loginid').startsWith('MF');
+        if (Client.isHighRisk() && is_eu) {
+            high_risk_accounts_accordion_header.style.display = 'none';
+            low_risk_eu_accordion_header.style.display        = 'flex';
+            low_risk_eu_container.style.display               = 'block';
+            $('<div class="account__switcher-seperator" />').insertBefore('#account__switcher-accordion-eu');
+        } else if (Client.isHighRisk() || isEuCountry()) {
             high_risk_accounts_accordion_header.style.display = 'flex';
             low_risk_non_eu_accordion_header.style.display    = 'none';
             low_risk_eu_accordion_header.style.display        = 'none';
