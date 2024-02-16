@@ -319,7 +319,7 @@ const Header = (() => {
         mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
 
         // Notification Event
-        const notification_bell      = getElementById('header__notifcation-icon-container');
+        const notification_bell      = getElementById('header__notification-icon-container');
         const notification_container = getElementById('header__notification-container');
         const notification_close     = getElementById('header__notification-close');
         const notification_active    = 'header__notification-container--show';
