@@ -49,7 +49,7 @@ Before running or contribute to this project, you need to have the setup of the 
    cd smarttrader
    ```
 
-4. **Add DSmartTrader project as your upstream**
+4. **Add SmartTrader project as your upstream**
 
    ```sh
    git remote add upstream git@github.com:deriv-com/smarttrader.git
@@ -60,7 +60,7 @@ Before running or contribute to this project, you need to have the setup of the 
    - Check node version `node -v`
    - Check list of available node versions `nvm ls`
    - To install node 14 `nvm install 14`
-   - To change between different node versions `nvm use {version number}` 
+   - To switch to a different node version in the current terminal `nvm use {version number}` 
 
 6. **Install your dependencies:**
 
@@ -76,7 +76,7 @@ Before running or contribute to this project, you need to have the setup of the 
 
 8. **Open the source code and start editing!**
 
-   Your site is now running at [https://localhost:443](https://localhost:443)
+   Your site is now running at [https://localhost](https://localhost)
 
 ## Preview on your local machine
 
@@ -98,14 +98,14 @@ Before running or contribute to this project, you need to have the setup of the 
 2.  Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your deployed page after login.
     Use `<GENERATED_TEST_LINK_URL>/en/logged_inws.html` for the Redirect URL and `<GENERATED_TEST_LINK_URL>/en/redirect.html` for the Verification URL.
     - Have your API token ready from app.deriv.com account in order to register
-    - Make note of your App ID in order to add it to your ClickUp card
+    - Make note of your App ID to use at `<GENERATED_TEST_LINK_URL>/en/endpoint.html`
 
 Alternatively, you can manually deploy your test link using gh-pages with the following configurations:
 
 ### Deploy to your gh-pages for the first time (Alternate Option)
 
 1.  Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your Github pages after login.
-    Use `https://YOUR_ORGANMIZATION_NAME.github.io/smarttrader/en/logged_inws.html` for the Redirect URL and `https://YOUR_ORGANMIZATION_NAME.github.io/smarttrader/en/redirect.html` for the Verification URL.
+    Use `https://YOUR_GITHUB_NAME.github.io/smarttrader/en/logged_inws.html` for the Redirect URL and `https://YOUR_GITHUB_NAME.github.io/smarttrader/en/redirect.html` for the Verification URL.
 
         If you're using a custom domain, replace the Github URLs above with your domain.
 
@@ -154,7 +154,7 @@ In order to remove the created folders from your gh-pages, you can use either:
 
 ### Use a custom domain
 
-In order to use your custom domain, please put it in a file named `CNAME` inside `scripts` folder of your local clone of smarttrader.
+In order to use your custom domain, please put it in a file named `CNAME` inside `scripts` folder of your local clone of the smarttrader repo.
 
 ## Manage releases
 
