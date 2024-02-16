@@ -2,7 +2,7 @@
 
 This repository contains the static HTML, Javascript, CSS, and images content of the [Deriv SmartTrader](https://smarttrader.deriv.com) website.
 
-![build](https://img.shields.io/circleci/build/github/deriv-com/binary-static) ![node](https://img.shields.io/badge/node-%3E%3D12.22.3-blue.svg) ![npm](https://img.shields.io/badge/npm-%3E%3D6.14.13-blue.svg) ![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)
+![build](https://img.shields.io/github/actions/workflow/status/deriv-com/smarttrader/release_production.yml) ![node](https://img.shields.io/badge/node-%3E%3D12.22.3-blue.svg) ![npm](https://img.shields.io/badge/npm-%3E%3D6.14.13-blue.svg) ![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)
 
 **In this document**
 
@@ -33,53 +33,50 @@ Before running or contribute to this project, you need to have the setup of the 
 
 ## Quickstart
 
-1. **Create a new organization**
-   Create a new organization in [github.com](https://github.com/account/organizations/new?coupon=&plan=team_free)
+1. **Fork the project**
 
-2. **Fork the project**
+   In order to work on your own version of the SmartTrader application, please fork the project.
 
-   In order to work on your own version of the SmartTrader application, please fork the project in your newly created organization.
-
-3. **Clone using SSH**
+2. **Clone using SSH**
 
    ```sh
-   git clone git@github.com:<organization_name>/binary-static.git smart-trader
+   git clone git@github.com:deriv-com/smarttrader.git
    ```
 
-4. **Enter project directory**
+3. **Enter project directory**
 
    ```sh
-   cd smart-trader
+   cd smarttrader
    ```
 
-5. **Add DSmartTrader project as your upstream**
+4. **Add SmartTrader project as your upstream**
 
    ```sh
-   git remote add upstream git@github.com:deriv-com/binary-static.git
+   git remote add upstream git@github.com:deriv-com/smarttrader.git
    ```
 
-6. **Ensure you are running node version 14**
+5. **Ensure you are running node version 14**
 
    - Check node version `node -v`
    - Check list of available node versions `nvm ls`
    - To install node 14 `nvm install 14`
-   - To change between different node versions `nvm use {version number}` 
+   - To switch to a different node version in the current terminal `nvm use {version number}` 
 
-7. **Install your dependencies:**
+6. **Install your dependencies:**
 
    ```sh
      npm ci
    ```
 
-8. **To start developing:**
+7. **To start developing:**
 
    ```sh
    npm run start
    ```
 
-9. **Open the source code and start editing!**
+8. **Open the source code and start editing!**
 
-   Your site is now running at [https://localhost:443](https://localhost:443)
+   Your site is now running at [https://localhost](https://localhost)
 
 ## Preview on your local machine
 
@@ -96,19 +93,19 @@ Before running or contribute to this project, you need to have the setup of the 
 ## Test link deployment
 ### Deploy your changes on Vercel (Recommended Option)
 
-1. Commit, push your changes, and create pull request. Vercel will automatically deploy your application.
+1. Commit, push your changes, and create a pull request. GitHub Actions will automatically deploy your application and generate a test link.
 
-2.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your deployed page after login.
-    Use `https://YOUR_VERCEL_LINK/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_VERCEL_LINK/binary-static/en/redirect.html` for the Verification URL.
-    - Have api key ready from deriv app account in order to register
-    - Make note of your App ID to update in redmine card
+2.  Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your deployed page after login.
+    Use `<GENERATED_TEST_LINK_URL>/en/logged_inws.html` for the Redirect URL and `<GENERATED_TEST_LINK_URL>/en/redirect.html` for the Verification URL.
+    - Have your API token ready from app.deriv.com account in order to register
+    - Make note of your App ID to use at `<GENERATED_TEST_LINK_URL>/en/endpoint.html`
 
 Alternatively, you can manually deploy your test link using gh-pages with the following configurations:
 
 ### Deploy to your gh-pages for the first time (Alternate Option)
 
-1.  Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your Github pages after login.
-    Use `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/logged_inws.html` for the Redirect URL and `https://YOUR_ORGANMIZATION_NAME.github.io/binary-static/en/redirect.html` for the Verification URL.
+1.  Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your Github pages after login.
+    Use `https://YOUR_GITHUB_NAME.github.io/smarttrader/en/logged_inws.html` for the Redirect URL and `https://YOUR_GITHUB_NAME.github.io/smarttrader/en/redirect.html` for the Verification URL.
 
         If you're using a custom domain, replace the Github URLs above with your domain.
 
@@ -141,7 +138,7 @@ grunt dev --path=about-us
 There are times that you are working on various branches at the same time, and you want to deploy/test each branch separately on your gh-pages, you can simply use `--branch=branchname` for grunt commands:
 
 - `grunt dev --branch=branchname`
-  This will deploy your changes to a sub-folder named: `br_branchname` and it can be browsed at: https://YOUR_GITHUB_USERNAME.github.io/binary-static/br_branchname/
+  This will deploy your changes to a sub-folder named: `br_branchname` and it can be browsed at: https://YOUR_GITHUB_USERNAME.github.io/smarttrader/br_branchname/
 
 In order to remove the created folders from your gh-pages, you can use either:
 
@@ -157,7 +154,7 @@ In order to remove the created folders from your gh-pages, you can use either:
 
 ### Use a custom domain
 
-In order to use your custom domain, please put it in a file named `CNAME` inside `scripts` folder of your local clone of binary-static.
+In order to use your custom domain, please put it in a file named `CNAME` inside `scripts` folder of your local clone of the smarttrader repo.
 
 ## Manage releases
 
