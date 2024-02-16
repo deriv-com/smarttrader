@@ -629,10 +629,10 @@ const Header = (() => {
                     const currency             = Client.get('currency', loginid);
                     const currencyName         = mapCurrencyName(currency);
                     
-                    const getIcon              = (() => {
+                    const getIcon              = () => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
                         return 'virtual';
-                    });
+                    };
 
                     const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
                     const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg`);
