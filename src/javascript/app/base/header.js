@@ -31,6 +31,7 @@ const Header = (() => {
     const notifications = [];
     let is_language_popup_on = false;
     let is_full_screen = false;
+    const ext_platform_url = encodeURIComponent(window.location.href);
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
         element  : ['fullscreenElement', 'webkitFullscreenElement', 'mozFullScreenElement', 'msFullscreenElement'],
@@ -79,37 +80,37 @@ const Header = (() => {
         }
 
         applyToAllElements('.url-wallet-apps', (el) => {
-            el.href = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
-            el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-profit', (el) => {
-            el.href = Url.urlForDeriv('reports/profit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('reports/profit', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-statement', el => {
-            el.href = Url.urlForDeriv('reports/statement', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('reports/statement', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-cashier-deposit', el => {
-            el.href = Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('cashier/deposit', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-account-details', el => {
-            el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-add-account', el => {
-            el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-add-account-multiplier', el => {
-            el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-manage-account', el => {
-            el.href = Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-wallets-deposit', el => {
-            el.href = Url.urlForDeriv('wallets/cashier/transfer', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+            el.href = Url.urlForDeriv('wallets/cashier/transfer', `ext_platform_url=${ext_platform_url}`);
         });
     };
 
@@ -175,7 +176,7 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
         });
 
-        applyToAllElements('#header__notification-empty', (el) => {
+        applyToAllElements('#header__notification-empty-img', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
         });
 
@@ -271,8 +272,8 @@ const Header = (() => {
         });
 
         // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
-        const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
-        const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
+        const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
         const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
         const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.isLoggedIn() && Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link}` });
         
@@ -396,8 +397,8 @@ const Header = (() => {
 
         // Dynamic link for trader's hub cta for mobile menu
         const mobile_platform_appstore_link     = getElementById('url-appstore');
-        const wallets_hub_link                  = Url.urlForDeriv('wallets', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
-        const traders_hub_link                  = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${encodeURIComponent(window.location.href)}`);
+        const wallets_hub_link                  = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
+        const traders_hub_link                  = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
         mobile_platform_appstore_link.href      = Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link;
 
         // Account Switcher Event
@@ -664,7 +665,7 @@ const Header = (() => {
 
                         const header_deposit = $('.header__deposit');
                         header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
+                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                     }
 
                     if (is_current && !is_real) {
@@ -765,7 +766,7 @@ const Header = (() => {
 
                         const header_deposit = $('.header__deposit');
                         header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`));
+                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                     }
 
                     account_detail.appendChild(account_loginid);
@@ -1113,7 +1114,7 @@ const Header = (() => {
             }
         });
 
-        applyToAllElements('#header__notification-empty', (el) => {
+        applyToAllElements('#header__notification-empty-img', (el) => {
             if (notifications.length) {
                 el.style.display = 'none';
             } else {
@@ -1223,7 +1224,7 @@ const Header = (() => {
 
             const messages = {
                 cashier_locked       : () => ({ key: 'cashier_locked', title: localize('Cashier disabled'), message: localize('Deposits and withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
-                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${encodeURIComponent(window.location.href)}`) }),
+                currency             : () => ({ key: 'currency', title: localize('Set account currency'), message: localize('Please set the currency of your account.'), type: 'danger', button_text: 'Set currency', button_link: Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`) }),
                 // unsubmitted          : () => ({ title: localize('Set account currency'), message: localize('Please set the currency of your account to enable trading.'), type: 'danger', button_text: 'Click test', button_link: 'https://app.deriv.com/account/proof-of-identity' }),
                 // expired              : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have expired.'),                                                   ['<a href=\'https://app.deriv.com/account/proof-of-identity\'>', '<a href=\'https://app.deriv.com/account/proof-of-address\'>', '</a>']),
                 // expired_identity     : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'https://app.deriv.com/account/proof-of-identity'),
@@ -1234,7 +1235,7 @@ const Header = (() => {
                 // identity             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'https://app.deriv.com/account/proof-of-identity'),
                 // document             : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'https://app.deriv.com/account/proof-of-address'),
                 excluded_until       : () => ({ key: 'exluded_until', title: localize('Self-exclusion'), message: buildSpecificMessage(localizeKeepPlaceholders('Your account is restricted. Kindly [_1]contact customer support[_2] for assistance.'), [`${formatDate(Client.get('excluded_until') || new Date())}`, `<a class="header__notification-link" href="https://www.deriv.${getTopLevelDomain()}/contact-us/">`, '</a>']), type: 'danger' }),
-                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), Url.urlForDeriv('cashier/deposit', `ext_platform_url=${encodeURIComponent(window.location.href)}`)), type: 'warning' }), // TODO: handle this when self exclusion is available
+                financial_limit      : () => ({ key: 'financial_limit', title: localize('Remove deposit limits'), message: buildMessage(localizeKeepPlaceholders('Please set your [_1]30-day turnover limit[_2] to remove deposit limits.'), Url.urlForDeriv('cashier/deposit', `ext_platform_url=${ext_platform_url}`)), type: 'warning' }), // TODO: handle this when self exclusion is available
                 mt5_withdrawal_locked: () => ({ key: 'mt5_withdrawal_locked', title: localize('MT5 withdrawal disabled'), message: localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'), type: 'warning' }),
                 // no_withdrawal_or_trading: () => buildMessage(localizeKeepPlaceholders('Trading and withdrawals have been disabled on your account. Kindly [_1]contact customer support[_2] for assistance.'),                 'contact'),                  'user/settings/detailsws'),
                 // residence            : () => buildMessage(localizeKeepPlaceholders('Please set [_1]country of residence[_2] before upgrading to a real-money account.'),                                                   'user/settings/detailsws'),

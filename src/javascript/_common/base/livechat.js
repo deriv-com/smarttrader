@@ -46,7 +46,7 @@ const LiveChat = (() => {
 
         setSessionVariables();
         setNameEmail();
-        if (window.LC_API && window.LC_API.on_chat_ended) {
+        if (window.LC_API) {
             window.LC_API.on_chat_ended = () => {
                 setNameEmail();
             };
