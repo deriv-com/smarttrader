@@ -7,7 +7,8 @@ const Dialog = (() => {
     const baseDialog = (options, is_alert = false) => (
         new Promise((resolve) => {
             showPopup({
-                // url               : urlFor('dialog'), // TODO: Unused in pages.js. Uncomment/update popup logic if you restore Dialog feature
+                // url               : urlFor('dialog'), // Unused in pages.js.
+                // TODO: Uncomment/update popup logic when restoring Dialog feature.
                 popup_id          : options.id,
                 form_id           : '#frm_confirm',
                 content_id        : '#dialog_content',

@@ -1,12 +1,13 @@
-const moment                  = require('moment');
-const Client                  = require('../../../../base/client');
-const BinarySocket            = require('../../../../base/socket');
-const Dialog                  = require('../../../../common/attach_dom/dialog');
-const showPopup               = require('../../../../common/attach_dom/popup');
-const getElementById          = require('../../../../../_common/common_functions').getElementById;
-const localize                = require('../../../../../_common/localize').localize;
-const { urlForDeriv } = require('../../../../../_common/url');
-const State                   = require('../../../../../_common/storage').State;
+const moment         = require('moment');
+const BinaryPjax     = require('../../../../base/binary_pjax');
+const Client         = require('../../../../base/client');
+const BinarySocket   = require('../../../../base/socket');
+const Dialog         = require('../../../../common/attach_dom/dialog');
+const showPopup      = require('../../../../common/attach_dom/popup');
+const getElementById = require('../../../../../_common/common_functions').getElementById;
+const localize       = require('../../../../../_common/localize').localize;
+const urlFor         = require('../../../../../_common/url').urlFor;
+const State          = require('../../../../../_common/storage').State;
 
 const TopUpVirtualPopup = (() => {
     const form_id  = '#frm_confirm';
@@ -55,7 +56,7 @@ const TopUpVirtualPopup = (() => {
                     cancel_text      : localize('Go to statement'),
                     ok_text          : localize('Continue trading'),
                     onAbort          : () => {
-                        window.location.href = urlForDeriv('reports/statement');
+                        BinaryPjax.load(urlFor('user/statementws'));
                     },
                 });
             }
@@ -67,7 +68,8 @@ const TopUpVirtualPopup = (() => {
         showPopup({
             form_id,
             popup_id,
-            // url               : urlFor('user/top_up_virtual_pop_up'), // TODO: Unused in pages.js. Uncomment/update popup logic if you restore TopUpVirtualPopup feature
+            // url               : urlFor('user/top_up_virtual_pop_up'), // Unused in pages.js.
+            // TODO: Uncomment/update popup logic when restoring TopUpVirtualPopup. Removed JSX can be found in PR#592 (4f8e0ff)
             content_id        : '#top_up',
             additionalFunction: () => {
                 if (message) {
