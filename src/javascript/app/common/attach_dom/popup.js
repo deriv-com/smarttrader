@@ -15,7 +15,7 @@ const showPopup = (options) => {
     }
     if (cache[options.url]) {
         callback(options);
-    } else {
+    } else if (options.url) {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState !== 4 || this.status !== 200) {
