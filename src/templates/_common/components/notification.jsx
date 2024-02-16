@@ -2,7 +2,7 @@ import React from 'react';
 
 const Notification = () => (
     <div id='header__notification' className='header__notification header__menu-item'>
-        <div id='header__notifcation-icon-container' className='header__notification-icon-container'>
+        <div id='header__notification-icon-container' className='header__notification-icon-container'>
             <img id='header__notification-icon' className='header__notification-icon header__icon-button' />
             <div id='header__notification-count' className='header__notification-count' />
         </div>

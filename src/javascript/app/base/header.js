@@ -700,8 +700,8 @@ const Header = (() => {
         const low_risk_non_eu_accordion_header    = getElementById('low_risk_accounts_non_eu');
         const low_risk_eu_accordion_header        = getElementById('low_risk_accounts_eu');
         const low_risk_eu_container               = getElementById('account__switcher-accordion-eu');
-        const is_eu                               = Client.get('loginid').startsWith('MF');
-        if (Client.isHighRisk() && is_eu) {
+        const is_mf_account                       = Client.get('loginid').startsWith('MF');
+        if (Client.isHighRisk() && is_mf_account) {
             high_risk_accounts_accordion_header.style.display = 'none';
             low_risk_eu_accordion_header.style.display        = 'flex';
             low_risk_eu_container.style.display               = 'block';
@@ -728,7 +728,7 @@ const Header = (() => {
             const loginid_demo_select          = createElement('div');
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
-                    const is_eu                = loginid.startsWith('MF');
+                    const is_mf_account        = loginid.startsWith('MF');
                     const is_non_eu            = loginid.startsWith('CR');
                     const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency             = Client.get('currency', loginid);
@@ -776,9 +776,9 @@ const Header = (() => {
 
                     if (is_non_eu) {
                         loginid_non_eu_real_select.appendChild(account);
-                    } else if (is_eu && !isEuCountry()) {
+                    } else if (is_mf_account && !isEuCountry()) {
                         loginid_eu_real_select.appendChild(account);
-                    } else if (is_eu && isEuCountry()){
+                    } else if (is_mf_account && isEuCountry()){
                         loginid_non_eu_real_select.appendChild(account);
                     } else {
                         loginid_demo_select.appendChild(account);
