@@ -46,7 +46,7 @@ $COLOR_LIGHT_BLACK_1: rgba(0, 0, 0, 0.8);
 $COLOR_DARK_BLUE_1: #0b0e18;
 ```
 
-Keep all common variables in the [constants.scss](https://github.com/binary-com/binary-static/blob/master/src/sass/_common/base/constants.scss) file.
+Keep all common variables in the [constants.scss](https://github.com/deriv-com/smarttrader/blob/master/src/sass/_common/base/constants.scss) file.
 
 ---
 
