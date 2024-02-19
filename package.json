@@ -1,7 +1,7 @@
 {
-  "name": "binary-static",
+  "name": "smarttrader",
   "version": "3.8.0",
-  "description": "Deriv SmartTrader static content",
+  "description": "Deriv SmartTrader",
   "scripts": {
     "test": "grunt test",
     "livereload": "grunt livereload",
@@ -11,18 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/binary-com/binary-static.git"
+    "url": "https://github.com/deriv-com/smarttrader.git"
   },
-  "keywords": [
-    "binary",
-    "static"
-  ],
-  "author": "Binary.com",
+  "author": "Deriv.com",
   "license": "Apache License 2.0",
   "bugs": {
-    "url": "https://github.com/binary-com/binary-static/issues"
+    "url": "https://github.com/deriv-com/smarttrader/issues"
   },
-  "homepage": "https://github.com/binary-com/binary-static",
+  "homepage": "https://github.com/deriv-com/smarttrader",
   "devDependencies": {
     "@babel/parser": "7.1.2",
     "app-root-path": "2.0.1",

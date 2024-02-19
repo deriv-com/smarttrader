@@ -18,11 +18,11 @@
 
 - Use `it.L('...')` for translations.
 - Use `it.url_for('...')` to build URLs.
-- Use `it.website_name` instead of `Binary.com`.
+- Use `it.website_name` instead of `Deriv`.
 - There are cases where you do not want your strings to be escaped (i.g. when you place `<a/>` tags inside a `<Table />`). To bypass HTML escape, you can use `it.dangreouslyRenderHtml()` (under normal circumstances do NOT use this.):
 
 ```js
-it.dangreouslyRenderHtml('<a href="https://binary.com"></a>');
+it.dangreouslyRenderHtml('<a href="https://deriv.com"></a>');
 ```
 
 ## Props, arguments
