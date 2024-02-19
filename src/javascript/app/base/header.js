@@ -1114,7 +1114,7 @@ const Header = (() => {
             }
         });
 
-        applyToAllElements('#header__notification-empty-img', (el) => {
+        applyToAllElements('#header__notification-empty', (el) => {
             if (notifications.length) {
                 el.style.display = 'none';
             } else {
