@@ -1102,6 +1102,10 @@ body .mobile {
                 transform: unset;
             }
         }
+        &__logo {
+            height: 32px;
+            width: 148px;
+        }
         .account {
             &__switcher {
                 border-radius: $BORDER_RADIUS;

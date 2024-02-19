@@ -13,7 +13,7 @@ const MobileMenu = () => (
                 <div className='mobile__platform-switcher' >
                     <div id='mobile__platform-switcher-current' className='mobile__wallet-platform-switcher-current' >
                         <div className='mobile__wallet-platform-switcher-container'>
-                            <img className='header__logo mobile__wallet-platform-switcher-logo' />
+                            <img className='header__logo' />
                             <img id='mobile__platform-switcher-expand' className='mobile__platform-switcher-expand header__expand' />
                         </div>
                     </div>
