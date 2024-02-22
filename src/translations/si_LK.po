@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-07-25 04:20\n"
+"PO-Revision-Date: 2024-02-22 09:08\n"
 "Last-Translator: \n"
 "Language-Team: Sinhala\n"
 "MIME-Version: 1.0\n"
@@ -19,20 +19,8 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-msgid " (Region added)"
-msgstr " (කලාපය එකතු කරන ලදි)"
-
-msgid " (Temporarily unavailable)"
-msgstr " (තාවකාලිකව නොමැත)"
-
 msgid "%1"
 msgstr "%1"
-
-msgid "%1 Account %2"
-msgstr "%1 ගිණුම %2"
-
-msgid "%1 Please click the link below to restart the password recovery process."
-msgstr "%1 මුරපදය ප්රතිසාධන ක්රියාවලිය නැවත ආරම්භ කිරීම සඳහා කරුණාකර පහත සබැඳිය ක්ලික් කරන්න."
 
 msgid "%1 and %2 cannot be the same."
 msgstr "%1 සහ %2 සමාන විය නොහැක."
@@ -40,32 +28,11 @@ msgstr "%1 සහ %2 සමාන විය නොහැක."
 msgid "%1 days %2 hours %3 minutes"
 msgstr "%1 දින %2 පැය %3 විනාඩි"
 
-msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
-msgstr ""
-
-msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr ""
-
 msgid "%1 has been credited into your Virtual Account: %2."
 msgstr "%1 ඔබගේ අතථ්ය ගිණුමට බැර කර ඇත: %2."
 
-msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
-msgstr "%1 ගිණුම් අංක %2 සිට %3 දක්වා මුදල් ආපසු ගැනීම සිදු කෙරේ. ගනුදෙනු හැඳුනුම්පත: %4"
-
-msgid "%1Manage your accounts%2"
-msgstr "%1ඔබගේ ගිණුම් කළමනාකරණය කරන්න%2"
-
-msgid "%1No, change my fiat account's currency now%2"
-msgstr ""
-
 msgid "%1Return to trading page%2"
 msgstr "%1වෙළඳ පිටුවට ආපසු යන්න%2"
-
-msgid "1. This link was sent by you"
-msgstr "1. මෙම සබැඳිය ඔබ විසින් එවන ලදී"
-
-msgid "2. Your desktop window stays open"
-msgstr "2. ඔබගේ ඩෙස්ක්ටොප් කවුළුව විවෘතව පවතී"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
 msgstr "බලවත් නමුත් භාවිතයට පහසු වේදිකාවක් මත නව වෙළඳ අත්දැකීමක්."
@@ -75,9 +42,6 @@ msgstr "තනිවම වචනයක් අනුමාන කිරීම �
 
 msgid "AM"
 msgstr "AM"
-
-msgid "Account"
-msgstr "ගිණුම"
 
 msgid "Account Authenticated"
 msgstr "ගිණුම සත්යාපනය"
@@ -91,12 +55,6 @@ msgstr "ගිණුම් සත්යාපනය"
 msgid "Account balance:"
 msgstr "ගිණුමේ ශේෂය:"
 
-msgid "Acknowledge"
-msgstr "පිළිගන්න"
-
-msgid "Action"
-msgstr "ක්රියාව"
-
 msgid "Add"
 msgstr "එකතු කරන්න"
 
@@ -109,14 +67,8 @@ msgstr "තවත් වචනයක් හෝ දෙකක් එකතු ක�
 msgid "Adjust trade parameters"
 msgstr "වෙළඳ පරාමිතීන් සකසන්න"
 
-msgid "Admin"
-msgstr "පරිපාලක"
-
 msgid "Agree and accept"
 msgstr "එකඟ වී පිළිගන්න"
-
-msgid "All details must be clear — nothing blurry"
-msgstr "සියලු විස්තර පැහැදිලි විය යුතුය - කිසිවක් නොපැහැදිලි"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "සියලුම වෙළඳපල දැන් වසා ඇත. කරුණාකර පසුව නැවත උත්සාහ කරන්න."
@@ -124,23 +76,11 @@ msgstr "සියලුම වෙළඳපල දැන් වසා ඇත. ක
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
 msgstr "සියලු ලොකු අකුරු සියලු සිම්පල් ලෙස අනුමාන කිරීම පහසුය"
 
-msgid "Allow camera access"
-msgstr "කැමරාවට ප්රවේශ වීමට ඉඩ දෙන්න"
-
 msgid "Allow equals"
 msgstr "සමානකම් වලට ඉඩ දෙන්න"
 
 msgid "Already have an account?"
 msgstr "දැනටමත් ගිණුමක් තිබේද?"
-
-msgid "Amount"
-msgstr "මුදල"
-
-msgid "Amount in"
-msgstr "මුදල"
-
-msgid "An error occurred while loading the component"
-msgstr "සංරචකය පූරණය කිරීමේදී දෝෂයක් සිදුවිය"
 
 msgid "Apply now as a professional investor"
 msgstr "වෘත්තීය ආයෝජකයෙකු ලෙස දැන්ම අයදුම් කරන්න"
@@ -150,24 +90,6 @@ msgstr "අප්රේල්"
 
 msgid "April"
 msgstr "අප්රේල්"
-
-msgid "Are you sure that you want to permanently delete the token"
-msgstr "ඔබට ටෝකනය ස්ථිරවම මකා දැමීමට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr "යෙදුමට ප්රවේශය ස්ථිරවම අවලංගු කිරීමට ඔබට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "Are you sure you want to create a fiat account in %1?"
-msgstr "%1හි ෆියට් ගිණුමක් නිර්මාණය කිරීමට ඔබට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "Are you sure you want to create your %1 account now?"
-msgstr "ඔබට දැන් ඔබගේ %1 ගිණුම නිර්මාණය කිරීමට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "Are you sure you want to deposit in %1?"
-msgstr "ඔබට %1හි තැන්පත් කිරීමට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "Are you sure?"
-msgstr "ඔබට විශ්වාසද?"
 
 msgid "Asian Down"
 msgstr "ආසියානු පහළට"
@@ -183,12 +105,6 @@ msgstr "ආසියානු විකල්පයන් <strong>අවසා�
 
 msgid "Asians"
 msgstr "ආසියානුවන්"
-
-msgid "Ask me later"
-msgstr "පසුව මගෙන් විමසන්න"
-
-msgid "Asset"
-msgstr "වත්කම"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
 msgstr "යළි පිහිටුවීමේ වේලාවේදී, එම ස්ථානයේදීම ඔබගේ අනාවැකිය ප්රතිවිරුද්ධ දිශාවට නම්, බාධකය එම ස්ථානයේදීම නැවත සකස් කර ඇත."
@@ -214,9 +130,6 @@ msgstr "ලබා ගත හැකි සියලුම ගෙවීම් ක�
 msgid "Automated trading at your fingertips. No coding needed."
 msgstr "ඔබේ ඇඟිලි තුඩුවල ස්වයංක්රීය වෙළඳාම. කේතීකරණ අවශ්ය නොවේ."
 
-msgid "Available Markets"
-msgstr "පවතින වෙළඳපල"
-
 msgid "Average"
 msgstr "සාමාන්යය"
 
@@ -235,12 +148,6 @@ msgstr "අනුපිළිවෙලවල් වළකින්න"
 msgid "Avoid years that are associated with you"
 msgstr "ඔබ සමඟ සම්බන්ධ වී ඇති වසර වලින් වළකින්න"
 
-msgid "Back to trading"
-msgstr "වෙළඳාමට ආපසු යන්න"
-
-msgid "Balance"
-msgstr "ශේෂය"
-
 msgid "Barrier"
 msgstr "බාධකයක්"
 
@@ -249,12 +156,6 @@ msgstr "බාධක වෙනස්"
 
 msgid "Barrier offset"
 msgstr "ඕෆ්සෙට් බාධකයක්"
-
-msgid "Basket Indices"
-msgstr "බාස්කට් දර්ශක"
-
-msgid "Bid"
-msgstr "ලංසු"
 
 msgid "Binance USD"
 msgstr "බිනෑන්ස් ඇ. ඩො."
@@ -265,12 +166,6 @@ msgstr "ද්විමය කාසිය"
 msgid "Bitcoin"
 msgstr "බිට්කොයින්"
 
-msgid "Blurry photo detected"
-msgstr "බොඳ ඡායාරූපය අනාවරණය විය"
-
-msgid "Browser"
-msgstr "බ්රව්සරය"
-
 msgid "Buy"
 msgstr "මිලදී ගන්න"
 
@@ -278,37 +173,19 @@ msgid "Buy price"
 msgstr "මිල මිලදී ගන්න"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr "%1“සමීප-අඩු”%2 කොන්ත්රාත්තුව මිලදී ගැනීමෙන්, කොන්ත්රාත්තුවේ කාල සීමාව තුළ %1cඅහිමි%2 සහ %1low%2 අතර වෙනස ගුණකය ඔබට දිනා ගත හැකිය."
+msgstr "%1\"Close-Low\"%2 කොන්ත්රාත්තුව මිලදී ගැනීමෙන්, කොන්ත්රාත්තුවේ කාල සීමාව තුළ %1close%2 සහ %1low%2 අතර වෙනස Multiplier ඔබට දිනා ගත හැකිය."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr "%1“අධි-වසන්න”%2 කොන්ත්රාත්තුව මිලදී ගැනීම මගින්, ඔබ ගුණකය වරක් අතර වෙනස දිනා කරන්නම් %1high%2 සහ %1cඅහිමි%2 කොන්ත්රාත්තුවේ කාල සීමාව පුරා."
+msgstr "%1\"High-Close\"%2 කොන්ත්රාත්තුව මිලදී ගැනීම මගින්, ඔබ Multiplier වරක් අතර වෙනස දිනා කරන්නම් %1high%2 සහ %1close%2 කොන්ත්රාත්තුවේ කාල සීමාව පුරා."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr "%1“ඉහළ-අඩු”%2 කොන්ත්රාත්තුව මිලදී ගැනීමෙන්, කොන්ත්රාත්තුවේ කාල සීමාව තුළ %1high%2 සහ %1low%2 අතර වෙනස ගුණකය ඔබ දිනා ගනු ඇත."
+msgstr "%1\"High-Low\"%2 කොන්ත්රාත්තුව මිලදී ගැනීමෙන්, කොන්ත්රාත්තුවේ කාල සීමාව තුළ %1high%2 සහ %1low%2 අතර වෙනස Multiplier ඔබ දිනා ගනු ඇත."
 
 msgid "Call Spread"
 msgstr "ඇමතුම් පැතිරීම"
 
 msgid "Call Spread/Put Spread"
 msgstr "අමතන්න පැතිරුම/පැතිරීම තබන්න"
-
-msgid "Camera access is denied"
-msgstr "කැමරා ප්රවේශය ප්රතික්ෂේප කෙරේ"
-
-msgid "Camera not detected"
-msgstr "කැමරාව අනාවරණය කර නැත"
-
-msgid "Camera not working"
-msgstr "කැමරාව ක්රියා නොකරයි"
-
-msgid "Camera not working?"
-msgstr "කැමරාව ක්රියා නොකරයි?"
-
-msgid "Can you spare 15 minutes?"
-msgstr "ඔබට විනාඩි 15 ක් ඉතිරිව තිබිය හැකිද?"
-
-msgid "Cancel"
-msgstr "අවලංගු කරන්න"
 
 msgid "Capitalization doesn't help very much"
 msgstr "ප්රාග්ධනීකරණය එතරම් උපකාරී නොවේ"
@@ -322,12 +199,6 @@ msgstr "මුදල් අයකැමි ආබාධිතයි"
 msgid "Change API Endpoint"
 msgstr "API එන්ඩ්පොයින්ට් වෙනස් කරන්න"
 
-msgid "Change Password"
-msgstr "මුරපදය වෙනස් කරන්න"
-
-msgid "Change currency"
-msgstr "මුදල් වෙනස් කරන්න"
-
 msgid "Chart"
 msgstr "සටහන"
 
@@ -337,35 +208,8 @@ msgstr "මෙම යටින් පවතින සටහන සඳහා ල�
 msgid "Charting for this underlying is delayed"
 msgstr "මෙම යටින් සටහන් කිරීම ප්රමාද වේ"
 
-msgid "Check back here to finish the submission"
-msgstr "ඉදිරිපත් කිරීම අවසන් කිරීමට මෙහි නැවත පරීක්ෂා කරන්න"
-
-msgid "Check selfie"
-msgstr "සෙල්ෆි පරීක්ෂා කරන්න"
-
-msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr ""
-
-msgid "Check that your number is correct"
-msgstr "ඔබගේ අංකය නිවැරදි දැයි පරීක්ෂා කරන්න"
-
 msgid "Check your connection."
 msgstr "ඔබගේ සම්බන්ධතාවය පරීක්ෂා කරන්න."
-
-msgid "Check your image"
-msgstr "ඔබේ රූපය පරීක්ෂා කරන්න"
-
-msgid "Check your mobile"
-msgstr "ඔබගේ ජංගම දුරකථනය පරීක්ෂා කරන්න"
-
-msgid "Checked"
-msgstr "පරීක්ෂා කර ඇත"
-
-msgid "Checking"
-msgstr "පරීක්ෂා කිරීම"
-
-msgid "Choose document"
-msgstr "ලේඛනය තෝරන්න"
 
 msgid "Christmas Day"
 msgstr "නත්තල් දිනය"
@@ -385,20 +229,11 @@ msgstr "සැබෑ ගිණුමක් විවෘත කිරීමට �
 msgid "Close"
 msgstr "වසන්න"
 
-msgid "Close identity verification screen"
-msgstr "අනන්යතා සත්යාපන තිරය වසා දමන්න"
-
 msgid "Close time"
 msgstr "සමීප කාලය"
 
 msgid "Close-Low"
 msgstr "සමීප-අඩු"
-
-msgid "Closed Bid"
-msgstr "සංවෘත ලංසුව"
-
-msgid "Closes"
-msgstr "වසා දමයි"
 
 msgid "Closes early (at 18:00)"
 msgstr "වේලාසනින් වැසෙයි (18:00 ට)"
@@ -406,50 +241,20 @@ msgstr "වේලාසනින් වැසෙයි (18:00 ට)"
 msgid "Closes early (at 21:00)"
 msgstr "වේලාසනින් වැසෙයි (21:00 ට)"
 
-msgid "Commodities"
-msgstr "වෙළඳ භාණ්ඩ"
-
 msgid "Common names and surnames are easy to guess"
 msgstr "පොදු නම් සහ වාසගම අනුමාන කිරීම පහසුය"
 
 msgid "Complete details"
 msgstr "සම්පූර්ණ විස්තර"
 
-msgid "Compressing Image"
-msgstr "රූප සම්පීඩනය"
-
-msgid "Confirm"
-msgstr "තහවුරු කරන්න"
-
 msgid "Confirm changes"
 msgstr "වෙනස්කම් තහවුරු කරන්න"
-
-msgid "Connected to your mobile"
-msgstr "ඔබගේ ජංගම දුරකථනයට සම්බන්ධ"
 
 msgid "Connecting to server"
 msgstr "සේවාදායකයට සම්බන්ධ වීම"
 
-msgid "Connection lost"
-msgstr "සම්බන්ධතාවය නැති විය"
-
-msgid "Continue"
-msgstr "දිගටම කරගෙන යන්න"
-
-msgid "Continue on phone"
-msgstr "දුරකථනයෙන් ඉදිරියට යන්න"
-
-msgid "Continue on your phone"
-msgstr "ඔබගේ දුරකථනයෙන් ඉදිරියට යන්න"
-
 msgid "Continue trading"
 msgstr "වෙළඳාම දිගටම කරගෙන යන්න"
-
-msgid "Continue with the verification"
-msgstr "සත්යාපනය සමඟ ඉදිරියට යන්න"
-
-msgid "Contract"
-msgstr "කොන්ත්රාත්තුව"
 
 msgid "Contract Confirmation"
 msgstr "කොන්ත්රාත් තහවුරු කිරීම"
@@ -487,39 +292,6 @@ msgstr "මිලදී ගත් කොන්ත්රාත්තු"
 msgid "Contracts sold"
 msgstr "විකුණනු ලබන කොන්ත්රාත්තු"
 
-msgid "Copied"
-msgstr "පිටපත් කරන ලදි"
-
-msgid "Copy"
-msgstr "පිටපත් කරන්න"
-
-msgid "Copy link"
-msgstr "සබැඳිය පිටපත් කරන්න"
-
-msgid "Copy the link to your mobile browser"
-msgstr "ඔබගේ ජංගම බ්රව්සරයට සබැඳිය පිටපත් කරන්න"
-
-msgid "Copy the link to your phone"
-msgstr "සබැඳිය ඔබගේ දුරකථනයට පිටපත් කරන්න"
-
-msgid "Counterparty"
-msgstr "කවුන්ටරය"
-
-msgid "Country not found"
-msgstr "රට සොයාගත නොහැකි"
-
-msgid "Country of Residence"
-msgstr "පදිංචි රට"
-
-msgid "Create %1 account"
-msgstr "%1 ගිණුමක් සාදන්න"
-
-msgid "Create account"
-msgstr "ගිණුමක් සාදන්න"
-
-msgid "Credit/Debit"
-msgstr "ණය/හර"
-
 msgid "Crypto"
 msgstr "ක්රිප්ටෝ"
 
@@ -529,23 +301,11 @@ msgstr "ව්යවහාර මුදල්"
 msgid "Current"
 msgstr "වත්මන්"
 
-msgid "Current password"
-msgstr "වත්මන් මුරපදය"
-
 msgid "Current time"
 msgstr "වත්මන් කාලය"
 
 msgid "Current time:"
 msgstr "වත්මන් කාලය:"
-
-msgid "Cut-off image detected"
-msgstr "කපා හැරීමේ රූපය අනාවරණය විය"
-
-msgid "Date"
-msgstr "දිනය"
-
-msgid "Date and Time"
-msgstr "දිනය සහ වේලාව"
 
 msgid "Dates are often easy to guess"
 msgstr "දිනයන් බොහෝ විට අනුමාන කිරීම පහසුය"
@@ -559,17 +319,8 @@ msgstr "දෙසැ"
 msgid "December"
 msgstr "දෙසැම්බර්"
 
-msgid "Delete"
-msgstr "මකන්න"
-
 msgid "Demo"
 msgstr "ආදර්ශන"
-
-msgid "Demo Account"
-msgstr "ආදර්ශන ගිණුම"
-
-msgid "Demo Accounts"
-msgstr "ආදර්ශන ගිණුම්"
 
 msgid "Demo Financial"
 msgstr "මූල්ය ආදර්ශන"
@@ -591,9 +342,6 @@ msgstr "ඔබගේ ගිණුමේ තැන්පතු සහ මුද�
 
 msgid "Deriv "
 msgstr "ඩෙරිව් "
-
-msgid "Description"
-msgstr "විස්තරය"
 
 msgid "Details"
 msgstr "විස්තර"
@@ -625,65 +373,14 @@ msgstr "මිනිත්තු 5 ක් ඇතුළත කොන්ත්ර�
 msgid "Digits"
 msgstr "ඉලක්කම්"
 
-msgid "Disable"
-msgstr "අක්‍රමවත් කරන්න"
-
-msgid "Dismiss alert"
-msgstr "අනතුරු ඇඟවීම බැහැර කරන්න"
-
-msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr "මෙය ෆියට් ගිණුමක් හෝ ක්රිප්ටෝ ගිණුමක් වීමට ඔබට අවශ්යද? කරුණාකර එකක් තෝරන්න:"
-
-msgid "Do you wish to continue?"
-msgstr "ඔබ දිගටම කරගෙන යාමට කැමතිද?"
-
-msgid "Document example"
-msgstr "ලේඛන උදාහරණය"
-
-msgid "Document uploaded"
-msgstr "උඩුගත කරන ලද ලේඛනය"
-
-msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr "එම රටේ ලේඛන දැනට සහය නොදක්වයි - <fallback>වෙනත් ලේඛන වර්ගයක් උත්සාහ කරන්න</fallback>"
-
-msgid "Documents uploaded"
-msgstr "උඩුගත කරන ලද ලේඛන"
-
-msgid "Documents you can use to verify your identity"
-msgstr "ඔබගේ අනන්යතාවය තහවුරු කර ගැනීමට ඔබට භාවිතා කළ හැකි ලේඛන"
-
 msgid "Does Not Touch"
 msgstr "ස්පර්ශ නොකරයි"
-
-msgid "Don't refresh this page"
-msgstr "මෙම පිටුව නැවුම් නොකරන්න"
-
-msgid "Don't want to trade in %1? You can open another cryptocurrency account."
-msgstr "%1හි වෙළඳාම් කිරීමට අවශ්ය නැද්ද? ඔබට තවත් cryptocurrency ගිණුමක් විවෘත කළ හැකිය."
-
-msgid "Driver's license"
-msgstr "රියදුරු බලපත්රය"
-
-msgid "Driving licence"
-msgstr "රියදුරු බලපත්රය"
-
-msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr "අපගේ සේවාදායකයේ ඇති ගැටළුවක් හේතුවෙන්, ඔබගේ සමහර MT5 ගිණුම් මේ මොහොතේ ලබා ගත නොහැක. %1Pඅප සමඟ බදු වලස් සහ ඔබේ ඉවසීමට ස්තූතියි."
 
 msgid "Duration"
 msgstr "කාල සීමාව"
 
 msgid "EU Deriv account"
 msgstr "යුරෝපා සංගමයේ ගිණුම"
-
-msgid "Email address"
-msgstr "විද්යුත් තැපැල් ලිපිනය"
-
-msgid "Enable"
-msgstr "සක්රීය කරන්න"
-
-msgid "Enable camera"
-msgstr "කැමරාව සක්රීය කරන්න"
 
 msgid "End Time"
 msgstr "අවසන් වේලාව"
@@ -695,25 +392,16 @@ msgid "Endpoint"
 msgstr "එන්ඩ්පොයින්ට්"
 
 msgid "Ends Between"
-msgstr "අතර අවසන් වේ"
+msgstr "Ends Between"
 
 msgid "Ends Between/Ends Outside"
-msgstr "අවසානය/පිටත අවසන් වේ"
+msgstr "Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "ආරම්භක හා අවසාන වේලාවන් අතර කිනිතුල්ලන් 2 කට වඩා අඩු නම් පිටත කොන්ත්රාත්තු මිලදී ගැනීමේ මිලට ආපසු ගෙවනු ලැබේ."
+msgstr "Ends Between/Ends Outside සම්බන්ධතා ආරම්භක සහ අවසාන වේලාවන් අතර tick 2කට අඩු වේ නම් මිලදී ගත් මිලට ආපසු ගෙවීම් කෙරේ."
 
 msgid "Ends Outside"
-msgstr "පිටත අවසන් වේ"
-
-msgid "Enlarge image"
-msgstr "රූපය විශාල කරන්න"
-
-msgid "Enter mobile number"
-msgstr "ජංගම දුරකථන අංකය ඇතුළත් කරන්න"
-
-msgid "Enter your mobile number:"
-msgstr "ඔබගේ ජංගම දුරකථන අංකය ඇතුලත් කරන්න:"
+msgstr "Ends Outside"
 
 msgid "Entry Spot"
 msgstr "පිවිසුම් ස්ථානය"
@@ -739,15 +427,6 @@ msgstr "සන්ධ්යාව/අමුතු"
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "මිනිත්තු 5 ක් ඇතුළත කොන්ත්රාත්තුව අවසන් නොවන්නේ නම් සවස් යාම/අමුතු කොන්ත්රාත්තු මිලදී ගැනීමේ මිලට ආපසු ගෙවනු ලැබේ."
 
-msgid "Example of a blurry document"
-msgstr "නොපැහැදිලි ලියවිල්ලක උදාහරණය"
-
-msgid "Example of a cut-off document"
-msgstr "කඩඉම් ලේඛනයක උදාහරණය"
-
-msgid "Example of a document with glare"
-msgstr "දිදුලන ලියවිල්ලක උදාහරණය"
-
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "බැහැර කාලය අවුරුදු 5 කට වඩා වැඩි කාලයක් විය නොහැක."
 
@@ -769,20 +448,8 @@ msgstr "පිටවීමේ ස්ථානයේදීම කාලය"
 msgid "Exit time"
 msgstr "පිටවීමේ කාලය"
 
-msgid "Expiry date is required for %1."
-msgstr "කල් ඉකුත් වීමේ දිනය %1සඳහා අවශ්ය වේ."
-
 msgid "Explanation"
 msgstr "පැහැදිලි කිරීම"
-
-msgid "Face forward and make sure your eyes are clearly visible"
-msgstr "ඉදිරියට මුහුණ දී ඔබේ ඇස් පැහැදිලිව පෙනෙන බවට වග බලා ගන්න"
-
-msgid "Face photo page"
-msgstr "මුහුණු ඡායාරූප පිටුව"
-
-msgid "Failed"
-msgstr "අසාර්ථකයි"
 
 msgid "Fall"
 msgstr "වැටීම"
@@ -799,41 +466,17 @@ msgstr "පෙබරවාරි"
 msgid "Fiat"
 msgstr "ෆියට්"
 
-msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
-msgstr "ගොනු (%1) ප්රමාණය අවසර සීමාව ඉක්මවා යයි. උපරිම අවසර ලත් ගොනු ප්රමාණය: %2"
-
-msgid "File not uploaded."
-msgstr "ගොනුව උඩුගත කර නැත."
-
-msgid "File size exceeded."
-msgstr "ගොනු ප්රමාණය ඉක්මවා ඇත."
-
-msgid "File type not supported"
-msgstr "ගොනු වර්ගය සහය නොදක්වයි"
-
 msgid "Final price"
 msgstr "අවසාන මිල"
 
 msgid "Financial"
 msgstr "මූල්ය"
 
-msgid "Financial Account"
-msgstr "මූල්ය ගිණුම"
-
 msgid "Financial STP"
 msgstr "මූල්ය STP"
 
 msgid "Finish"
 msgstr "අවසානයි"
-
-msgid "First line of home address"
-msgstr "නිවසේ ලිපිනයේ පළමු පේළිය"
-
-msgid "Follow these steps to recover camera access:"
-msgstr "කැමරා ප්රවේශය නැවත ලබා ගැනීමට මෙම පියවර අනුගමනය කරන්න:"
-
-msgid "Forex"
-msgstr "ෆොරෙක්ස්"
 
 msgid "Fr"
 msgstr "පියතුමා"
@@ -844,35 +487,8 @@ msgstr "සිකුරාදා"
 msgid "Fridays"
 msgstr "සිකුරාදා"
 
-msgid "From account: "
-msgstr "ගිණුමෙන්: "
-
-msgid "Front Side"
-msgstr "ඉදිරිපස පැත්ත"
-
-msgid "Front and back"
-msgstr "ඉදිරිපස සහ පසුපස"
-
 msgid "Gaming"
 msgstr "සූදු"
-
-msgid "Gaming Account"
-msgstr "සූදු ගිණුම"
-
-msgid "Get %1"
-msgstr "%1ලබා ගන්න"
-
-msgid "Get link via SMS"
-msgstr "SMS හරහා සබැඳිය ලබා ගන්න"
-
-msgid "Get secure link"
-msgstr "ආරක්ෂිත සබැඳියක් ලබා ගන්න"
-
-msgid "Get your secure link"
-msgstr "ඔබගේ ආරක්ෂිත සබැඳිය ලබා ගන්න"
-
-msgid "Glare detected"
-msgstr "මෙයින් නවත්වමි අනාවරණය"
 
 msgid "Go To Reports"
 msgstr "වාර්තා වෙත යන්න"
@@ -886,20 +502,8 @@ msgstr "ප්රකාශය වෙත යන්න"
 msgid "Goes Outside"
 msgstr "පිටතට යයි"
 
-msgid "Grant access to your camera from your browser settings"
-msgstr "ඔබගේ බ්රවුසරයේ සැකසුම් වලින් ඔබගේ කැමරාවට ප්රවේශය ලබා දෙන්න"
-
-msgid "Great, that's everything we need"
-msgstr "නියමයි, එය අපට අවශ්ය සෑම දෙයක්ම"
-
 msgid "Guide"
 msgstr "මාර්ගෝපදේශය"
-
-msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr "එබැවින්, ඔබගේ මුදල් ආපසු ගත හැකි ශේෂය %1%2දක්වා පමණි, ඔබගේ ගිණුමේ පවතින අරමුදල් වලට යටත්ව."
-
-msgid "Here's how to do it:"
-msgstr "මෙන්න එය කරන්නේ කෙසේද:"
 
 msgid "High"
 msgstr "ඉහළ"
@@ -946,29 +550,11 @@ msgstr "ආරම්භක හා අවසාන වේලාවන් අත�
 msgid "Hour"
 msgstr "පැය"
 
-msgid "How to scan a QR code"
-msgstr "QR කේතයක් පරිලෝකනය කරන්නේ කෙසේද"
-
 msgid "I want to reapply"
 msgstr "මට නැවත අයදුම් කිරීමට අවශ්යයි"
 
-msgid "I'm interested"
-msgstr "මම උනන්දු"
-
-msgid "ID number is required for %1."
-msgstr "%1සඳහා හැඳුනුම්පත් අංකය අවශ්ය වේ."
-
 msgid "IDK"
 msgstr "IDK"
-
-msgid "IP Address"
-msgstr "IP ලිපිනය"
-
-msgid "Identity card"
-msgstr "හැඳුනුම්පත"
-
-msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr "එය ක්රියා නොකරන්නේ නම්, ගූගල් ප්ලේ හෝ යෙදුම් වෙළඳසැලෙන් QR කේත ස්කෑනරයක් බාගන්න"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "මෙම <strong>පිටවීමේ ස්ථානයේදීම</strong> <strong>අඩු බාධකයක්</strong> හෝ <strong>මහ බාධකයක්</strong>එක්කෝ සමාන වේ නම්, ඔබ ගෙවීම් දිනා නැහැ."
@@ -986,34 +572,34 @@ msgid "If you select \"Allow equals\", you win the payout if exit spot is higher
 msgstr "ඔබ “සමාන කිරීමට ඉඩ දෙන්න” තෝරා ගන්නේ නම්, පිටවීමේ ස්ථානය “නැගීම” සඳහා පිවිසුම් ස්ථානයට වඩා වැඩි හෝ සමාන නම් ඔබ ගෙවීම දිනා ගනී. ඒ හා සමානව, පිටවීමේ ස්ථානය “වැටීම” සඳහා ඇතුල්වීමේ ස්ථානයට වඩා අඩු හෝ සමාන නම් ඔබ ගෙවීම දිනා ගනී."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "ඔබ “ආසියානු වැටීම” තෝරා ගන්නේ නම්, <strong>අවසාන ටික්</strong> කිනිතුල්ලන්ගේ <strong>සාමාන්යයට</strong> වඩා <strong>අඩු</strong> නම් ඔබ ගෙවීම දිනා ගනු ඇත."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "ඔබ “ආසියානු නැගීම” තෝරා ගන්නේ නම්, <strong>අවසාන ටික්</strong> කිනිතුල්ලන්ගේ <strong>සාමාන්යයට</strong> වඩා <strong>වැඩි</strong> නම් ඔබ ගෙවීම දිනා ගනු ඇත."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "ඔබ “වෙනස්” තෝරා ගන්නේ නම්, අවසාන ටික්හි <strong>අවසාන ඉලක්කම්</strong> ඔබේ අනාවැකියට සමාන <strong></strong> නොවේ නම්, ඔබ ගෙවීම දිනා ගනු ඇත. <strong></strong>"
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ඔබ “ස්පර්ශ නොකරයි” තෝරා ගන්නේ නම්, <strong>ගිවිසුම් කාලය තුළ වෙළඳපල කිසි විටෙකත් <strong>බාධකයට</strong> ස්පර්ශ නොකරන්නේ නම් ඔබ ගෙවීම දිනා ගනී.</strong>"
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr "ඔබ “අතර අවසානයි” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> <strong>අඩු බාධකයට වඩා දැඩි ලෙස වැඩි නම්</strong> සහ <strong>ඉහළ බාධකයට වඩා දැඩි ලෙස අඩු නම් ඔබ ගෙවීම් දිනා ගනී</strong>."
+msgstr "ඔබ “Ends Between” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> <strong>අඩු බාධකයට වඩා දැඩි ලෙස වැඩි නම්</strong> සහ <strong>ඉහළ බාධකයට වඩා දැඩි ලෙස අඩු නම් ඔබ ගෙවීම් දිනා ගනී</strong>."
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
 msgstr "ඔබ “පිටත අවසානය” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> එක්කෝ <strong>අධි බාධකයට වඩා දැඩි ලෙස ඉහළ නම්</strong>හෝ <strong>අඩු බාධකයට වඩා දැඩි ලෙස අඩු නම් ඔබ ගෙවීම දිනා ගනී</strong>."
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr ""
+msgstr "ඔබ “පවා” තෝරා ගන්නේ නම්, අවසාන ටික්හි<strong>අවසාන ඉලක්කම්</strong> <strong>ඊටත් වඩා අංකයක් නම් (එනම්, 2, 4, 6, 8, හෝ 0) ඔබ ගෙවීම දිනා ගනු ඇත.</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
 msgstr "ඔබ “වැටීම” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> <strong>පිවිසුම් ස්ථානයට වඩා දැඩි ලෙස අඩු නම් ඔබ ගෙවීම දිනා ගනී</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ඔබ “ඇල්ල” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය <strong>පිවිසුම් ස්ථානයට</strong></strong>වඩා තදින් අඩු නම් ඔබ ගෙවීම දිනා ගනී."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ඔබ “පිටතට යන්න” තෝරා ගන්නේ නම්, <strong>ගිවිසුම් කාලය තුළ ඕනෑම</strong> වේලාවක වෙළඳපල <strong>ඉහළ බාධකයක්</strong> හෝ <strong>අඩු බාධකයක් ස්පර්ශ කළහොත් ඔබ ගෙවීම දිනා ගනී.</strong>"
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
 msgstr "ඔබ “උසස්” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> බාධක <strong></strong>ට වඩා දැඩි ලෙස වැඩි නම් ඔබ ගෙවීම දිනා ගනී."
@@ -1022,10 +608,10 @@ msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</str
 msgstr "ඔබ “පහළ” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> <strong>බාධකයට වඩා දැඩි ලෙස අඩු නම් ඔබ ගෙවීම දිනා ගනී</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr ""
+msgstr "ඔබ “තරඟ” තෝරා ගන්නේ නම්, අවසාන ටික්හි <strong>අවසාන ඉලක්කම්</strong> ඔබේ අනාවැකියට <strong>සමාන</strong> නම්, ඔබ ගෙවීම දිනා ගනු ඇත. <strong></strong>"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "ඔබ “අමුතු” තෝරා ගන්නේ නම්, අවසාන ටික්හි<strong>අවසාන ඉලක්කම්</strong> <strong>ඔත්තේ අංකයක් නම් (එනම්, 1, 3, 5, 7, හෝ 9) ඔබ ගෙවීම දිනා ගනු ඇත.</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
 msgstr "ඔබ “Over” තෝරා ගන්නේ නම්, අවසාන ටික්හි<strong>අවසාන ඉලක්කම්</strong>ඔබේ අනාවැකියට වඩා <strong>වැඩි නම් ඔබ ගෙවීම දිනා ගනු ඇත.</strong>"
@@ -1043,10 +629,10 @@ msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</str
 msgstr "ඔබ “නැගීම්” තෝරා ගන්නේ නම්, <strong>පිටවීමේ ස්ථානය</strong> <strong>පිවිසුම් ස්ථානයට වඩා දැඩි ලෙස වැඩි නම් ඔබ ගෙවීම දිනා ගනී</strong>."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ඔබ “අතර රැඳී සිටින්න” තෝරා ගන්නේ නම්, ගිවිසුම් කාලය තුළ ඕනෑම</strong> වේලාවක වෙළඳපල <strong>ඉහළ බාධකයක්</strong> හෝ <strong>අඩු බාධකයක් අතර රැඳී සිටියහොත් (ස්පර්ශ නොවේ) ඔබ ගෙවීම දිනා ගනී. <strong></strong>"
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ඔබ “ස්පර්ශ” තෝරා ගන්නේ නම්, ගිවිසුම් කාලය තුළ ඕනෑම</strong> වේලාවක වෙළඳපල <strong>බාධකයට ස්පර්ශ වුවහොත් ඔබ ගෙවීම දිනා ගනී. <strong></strong>"
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
 msgstr "ඔබ “යටතේ” තෝරා ගන්නේ නම්, අවසාන ටික්හි<strong>අවසාන ඉලක්කම්</strong>ඔබේ අනාවැකියට වඩා<strong>අඩු නම් ඔබ ගෙවීම දිනා ගනු ඇත.</strong>"
@@ -1064,16 +650,16 @@ msgid "If you select \"rises\", you win the payout if the market price is higher
 msgstr "ඔබ “ඉහළ යාම” තෝරා ගන්නේ නම්, වෙළඳපල මිල පිවිසුම් ස්ථානයට වඩා වැඩි නම් ඔබ ගෙවීම දිනා ගනී."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr ""
+msgstr "ඔබ %1“හයි ටික්” තෝරා ගන්නේ නම්%2, තෝරාගත් ටික් ඊළඟ කිනිතුල්ලන් පහ අතර %1hiඅළුත්ම නම් ඔබ ගෙවීම දිනා ගනී.%2"
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr ""
+msgstr "ඔබ %1“අඩු ටික්” තෝරා ගන්නේ නම්%2, තෝරාගත් ටික් ඊළඟ කිනිතුල්ලන් පහ අතර %1loබටහිර නම් ඔබ ගෙවීම දිනා ගනී.%2"
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
+msgstr "ඔබ %1“ඩවුන්ස් පමණක්” තෝරා ගන්නේ නම්%2, එන්ට්රි ස්ථානයට පසුව අඛණ්ඩව කිනිතුල්ලන් අනුක්රමයෙන් වැටුණහොත් ඔබ ගෙවීම දිනා ගනී. %1e%2%3No ගෙවීම් ඕනෑම ටික් ඉහළ හෝ පෙර කිනිතුල්ලන් ඕනෑම සමාන වේ නම්."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
+msgstr "ඔබ %1“Ups පමණක්” තෝරා ගන්නේ නම්%2, එන්ට්රි ස්ථානයෙන් පසු අඛණ්ඩව කිනිතුල්ලන් අනුක්රමයෙන් ඉහළ ගියහොත් ඔබ ගෙවීම දිනා ගනී. %1e%2%3No ගෙවීම් කිසියම් ටික් එකක් වැටුණහොත් හෝ පෙර කිනිතුල්ලන්ට සමාන වේ."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr "ඔබ අනාගතයේදී <strong>ආරම්භක වේලාව</strong> තෝරා ගන්නේ නම්, <strong>ආරම්භක වේලාව</strong> තෝරාගෙන ඇති අතර <strong>පිවිසුම් ස්ථානය</strong> යනු එම අවස්ථාවේ ක්රියාත්මක වන මිල වේ."
@@ -1096,14 +682,8 @@ msgstr "අවශ්ය ක්ෂේත්රය දක්වයි"
 msgid "Indicative"
 msgstr "ඇඟවුම්"
 
-msgid "Insufficient balance."
-msgstr "ප්රමාණවත් ශේෂය."
-
 msgid "Invalid app id"
 msgstr "වලංගු නොවන යෙදුම හැඳුනුම්පත"
-
-msgid "Invalid document format."
-msgstr "වලංගු නොවන ලේඛන ආකෘතිය."
 
 msgid "Invalid email address."
 msgstr "වලංගු නොවන විද්යුත් තැපැල් ලිපිනය."
@@ -1113,21 +693,6 @@ msgstr "වලංගු නොවන සත්යාපන කේතය."
 
 msgid "Investment"
 msgstr "ආයෝජන"
-
-msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr "එය විසන්ධි විය හැකිය. <fallback>ඒ වෙනුවට ඔබගේ දුරකථනය භාවිතා කිරීමට උත්සාහ කරන්න</fallback>."
-
-msgid "It may take a few minutes to arrive"
-msgstr "පැමිණීමට මිනිත්තු කිහිපයක් ගතවනු ඇත"
-
-msgid "It must be an official photo ID"
-msgstr "එය නිල ඡායාරූප හැඳුනුම්පතක් විය යුතුය"
-
-msgid "It will only take a couple of minutes."
-msgstr "එය ගත වන්නේ මිනිත්තු කිහිපයක් පමණි."
-
-msgid "It’ll take longer to verify you if we can’t read it"
-msgstr "අපට එය කියවිය නොහැකි නම් ඔබව සත්යාපනය කිරීමට වැඩි කාලයක් ගතවනු ඇත"
 
 msgid "Jan"
 msgstr "ජෑන්"
@@ -1147,12 +712,6 @@ msgstr "ජුන්"
 msgid "June"
 msgstr "ජූනි"
 
-msgid "Jurisdiction"
-msgstr "අධිකරණ බලය"
-
-msgid "Keep this window open while using your mobile"
-msgstr "ඔබගේ ජංගම දුරකථනය භාවිතා කරන අතරතුර මෙම කවුළුව විවෘතව තබා ගන්න"
-
 msgid "Language settings"
 msgstr "භාෂා සැකසුම්"
 
@@ -1162,29 +721,14 @@ msgstr "අවසාන ඉලක්කම් පුරෝකථනය"
 msgid "Last Digit Stats"
 msgstr "අවසාන ඉලක්කම් සංඛ්යාන"
 
-msgid "Last Login"
-msgstr "අවසන් පිවිසුම"
-
-msgid "Last Used"
-msgstr "පසුගිය භාවිතා"
-
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr ""
-
-msgid "Linked to your computer"
-msgstr "ඔබේ පරිගණකයට සම්බන්ධ කර ඇත"
+msgstr "නවතම %1 කිනිතුල්ලන් සඳහා අවසාන ඉලක්කම් සංඛ්යාන %2"
 
 msgid "Litecoin"
 msgstr "ලයිට්කොයින්"
 
 msgid "Live chat"
 msgstr "සජීවී කතාබස්"
-
-msgid "Loading"
-msgstr "පූරණය"
-
-msgid "Loading..."
-msgstr "පැටවීම..."
 
 msgid "Log in"
 msgstr "ලොග් වන්න"
@@ -1206,9 +750,6 @@ msgstr "ලිහිල් බැක්"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "CFD ගිණුම් සොයනවාද? වෙළෙන්දාගේ කේන්ද්රස්ථානය වෙත යන්න"
-
-msgid "Looks like you took too long"
-msgstr "ඔබ වැඩි කාලයක් ගත වූ බවක් පෙනේ"
 
 msgid "Loss"
 msgstr "පාඩුව"
@@ -1240,42 +781,6 @@ msgstr "MT5 ඉවත් කිරීම අක්රීයයි"
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "MT5 මුදල් ආපසු ඔබගේ ගිණුමේ අක්රීය කර ඇත. වැඩි විස්තර සඳහා කරුණාකර ඔබගේ විද්යුත් තැපෑල පරීක්ෂා කරන්න."
 
-msgid "Make sure all of the document is in the photo"
-msgstr "සියලුම ලේඛනය ඡායාරූපයේ ඇති බවට වග බලා ගන්න"
-
-msgid "Make sure details are clear to read, with no blur or glare"
-msgstr "නොපැහැදිලි හෝ දිදුලන නොමැතිව විස්තර කියවීමට පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure everything is clear"
-msgstr "සෑම දෙයක්ම පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure full document is visible"
-msgstr "සම්පූර්ණ ලේඛනය දෘශ්යමාන වන බවට වග බලා ගන්න"
-
-msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr "නොපැහැදිලි හෝ දිදුලන නොමැතිව ඔබගේ කාඩ්පත් විස්තර කියවීමට පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure your device has a working camera"
-msgstr "ඔබගේ උපාංගයට වැඩ කරන කැමරාවක් ඇති බවට වග බලා ගන්න"
-
-msgid "Make sure your device's camera works"
-msgstr "ඔබගේ උපාංගයේ කැමරාව ක්රියා කරන බවට වග බලා ගන්න"
-
-msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr "නොපැහැදිලි හෝ දිදුලන නොමැතිව ඔබේ බලපත්ර විස්තර කියවීමට පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr "නොපැහැදිලි හෝ දිදුලන නොමැතිව ඔබගේ විදේශ ගමන් බලපත්ර විස්තර කියවීමට පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr "නොපැහැදිලි හෝ දිදුලන නොමැතිව ඔබගේ අවසර පත්ර විස්තර කියවීමට පැහැදිලි බවට වග බලා ගන්න"
-
-msgid "Make sure your selfie clearly shows your face"
-msgstr "ඔබේ සෙල්ෆි ඔබේ මුහුණ පැහැදිලිව පෙන්වන බවට වග බලා ගන්න"
-
-msgid "Make sure§"
-msgstr "වග බලා ගන්න§"
-
 msgid "Manage accounts"
 msgstr "ගිණුම් කළමනාකරණය කරන්න"
 
@@ -1289,13 +794,13 @@ msgid "Matches/Differs"
 msgstr "ගැලපුම්/වෙනස්"
 
 msgid "Maximum multiplier of 1000."
-msgstr "උපරිම ගුණකය 1000."
+msgstr "උපරිම Multiplier 1000."
 
 msgid "Maximum payout"
 msgstr "උපරිම ගෙවීම"
 
 msgid "Maximum:"
-msgstr ""
+msgstr "උපරිම:"
 
 msgid "May"
 msgstr "මැයි"
@@ -1304,7 +809,7 @@ msgid "Menu"
 msgstr "මෙනු"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "අවම %1 අක්ෂර අවශ්ය වේ."
 
 msgid "Minimum:"
 msgstr "අවම:"
@@ -1321,35 +826,20 @@ msgstr "සඳුදා"
 msgid "More information can be found in an email sent to you."
 msgstr "වැඩි විස්තර ඔබට එවන ලද විද්යුත් තැපෑලෙන් සොයාගත හැකිය."
 
-msgid "Move away from direct light"
-msgstr "සෘජු ආලෝකයෙන් away ත් වන්න"
-
-msgid "Move away from direct light — no glare"
-msgstr "සෘජු ආලෝකයෙන් ඉවතට ගෙන යන්න - දිලිසීමක් නැත"
-
 msgid "Multi-Collateral"
 msgstr "බහු-සම පාර්ශවික"
 
-msgid "Multiple faces found"
-msgstr "මුහුණු කිහිපයක් හමු විය"
-
 msgid "Multiplier"
-msgstr "ගුණකය"
+msgstr "Multiplier"
 
 msgid "Multiplier Down"
-msgstr "ගුණකය පහළට"
+msgstr "Multiplier Down"
 
 msgid "Multiplier Up"
-msgstr "ගුණකය ඉහළට"
+msgstr "Multiplier Up"
 
 msgid "Multipliers"
-msgstr "ගුණකයන්"
-
-msgid "Must be under 10MB."
-msgstr "10MB ට අඩු විය යුතුය."
-
-msgid "Name"
-msgstr "නම"
+msgstr "Multipliers"
 
 msgid "Names and surnames by themselves are easy to guess"
 msgstr "තමන් විසින්ම නම් සහ වාසගම අනුමාන කිරීම පහසුය"
@@ -1360,26 +850,11 @@ msgstr "ශුද්ධ ලාභය"
 msgid "Network status"
 msgstr "ජාල තත්ත්වය"
 
-msgid "Never"
-msgstr "කිසි විටෙකත්"
-
-msgid "Never Used"
-msgstr "කිසි විටෙකත් භාවිතා නොකළ"
-
 msgid "New Year's Day"
 msgstr "අලුත් අවුරුදු දිනය"
 
-msgid "New password"
-msgstr "නව මුරපදයක්"
-
-msgid "New token created."
-msgstr "නව ටෝකනය නිර්මාණය කරන ලදි."
-
 msgid "Next"
 msgstr "ඊළඟ"
-
-msgid "No authentication required"
-msgstr "සත්යාපනය අවශ්ය නොවේ"
 
 msgid "No currency assigned"
 msgstr "මුදල් පවරා නැත"
@@ -1387,20 +862,11 @@ msgstr "මුදල් පවරා නැත"
 msgid "No currency selected"
 msgstr "මුදල් තෝරා නැත"
 
-msgid "No document detected"
-msgstr "කිසිදු ලේඛනයක් අනාවරණය කර නොමැත"
-
-msgid "No face found"
-msgstr "මුහුණක් හමු නොවීය"
-
 msgid "No need for symbols, digits, or uppercase letters"
 msgstr "සංකේත, ඉලක්කම් හෝ ලොකු අකුරු අවශ්ය නොවේ"
 
 msgid "No notifications"
 msgstr "දැනුම්දීම් නොමැත"
-
-msgid "No thanks"
-msgstr "ස්තූතියි"
 
 msgid "Non-EU Deriv "
 msgstr "යුරෝපා සංගමය නොවන ව්යුත්පන්න "
@@ -1408,17 +874,8 @@ msgstr "යුරෝපා සංගමය නොවන ව්යුත්පන
 msgid "Not"
 msgstr "නැත"
 
-msgid "Not announced for this currency."
-msgstr "මෙම මුදල් සඳහා නිවේදනය කර නැත."
-
 msgid "Note"
 msgstr "සටහන"
-
-msgid "Note:"
-msgstr "සටහන:"
-
-msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "සටහන: ඔබ එක් ෆියට් මුදල් ගිණුමකට සීමා වේ. ඔබ පළමු වරට ඔබේ ෆියට් ගිණුමට තැන්පත් කිරීමට පෙර හෝ MT5 ගිණුමක් නිර්මාණය කිරීමට පෙර ඔබේ ෆියට් ගිණුමේ මුදල් වෙනස් කළ හැකිය. සහාය දක්වන සෑම ගුප්තකේතන මුදල් සඳහාම ඔබට එක් ගිණුමක් විවෘත කළ හැකිය."
 
 msgid "Notifications"
 msgstr "දැනුම්දීම්"
@@ -1447,17 +904,11 @@ msgstr "ඔක්තෝබර්"
 msgid "Offline"
 msgstr "නොබැඳි"
 
-msgid "Once you've finished we'll take you to the next step"
-msgstr "ඔබ අවසන් වූ පසු අපි ඔබව ඊළඟ පියවරට ගෙන යන්නෙමු"
-
 msgid "Online"
 msgstr "ඔන්ලයින්"
 
 msgid "Online trading platform"
 msgstr "මාර්ගගත වෙළඳ වේදිකාව"
-
-msgid "Only %1 are allowed."
-msgstr ""
 
 msgid "Only Downs"
 msgstr "ඩවුන්ස් පමණි"
@@ -1474,17 +925,8 @@ msgstr "අකුරු, අංක, අවකාශය සහ මෙම වි�
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
 msgstr "අකුරු, අංක, අවකාශය, හයිෆන්, කාල පරිච්ඡේදය සහ ප්රේරප්ට පමණක් අවසර ඇත."
 
-msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr "අකුරු, අංක, අවකාශය, හයිෆන්, කාල පරිච්ඡේදය, කොමාව සහ ප්රේරප්ට පමණක් අවසර ඇත."
-
-msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
-msgstr "හැඳුනුම්පත් අංකය (%1) සඳහා අවසර ඇත්තේ අකුරු, අංක, අවකාශය, යටි ලකුණු සහ හයිෆන් පමණි."
-
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "අකුරු, අවකාශය, හයිෆන්, කාල පරිච්ඡේදය සහ අපෝට්රොප් පමණක් අවසර ඇත."
-
-msgid "Only your face can be in the selfie"
-msgstr "සෙල්ෆි තුළ සිටිය හැක්කේ ඔබේ මුහුණ පමණි"
 
 msgid "Oops... Page Not Available"
 msgstr "අපොයි... පිටුව ලබාගත නොහැක"
@@ -1501,20 +943,8 @@ msgstr "නොමිලේ ගිණුමක් විවෘත කරන්න
 msgid "Open positions"
 msgstr "විවෘත තනතුරු"
 
-msgid "Open the link and complete the tasks"
-msgstr "සබැඳිය විවෘත කර කාර්යයන් සම්පූර්ණ කරන්න"
-
-msgid "Open the link on your mobile"
-msgstr "ඔබගේ ජංගම දුරකථනයේ සබැඳිය විවෘත කරන්න"
-
-msgid "Open your new bank account"
-msgstr "ඔබගේ නව බැංකු ගිණුම විවෘත කරන්න"
-
-msgid "Opens"
-msgstr "විවෘත වේ"
-
 msgid "Options & Multipliers"
-msgstr "විකල්ප සහ ගුණකය"
+msgstr "විකල්ප සහ Multiplier"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "විකල්ප වෙළඳාම සැබෑ ඇබ්බැහි වීමක් බවට පත්විය හැකිය, වෙනත් ඕනෑම ක්රියාකාරකමක් එහි සීමාවන්ට තල්ලු කළ හැකිය. එවැනි ඇබ්බැහි වීමේ අන්තරාය වළක්වා ගැනීම සඳහා, අපි නිතිපතා ඔබේ ගනුදෙනු සහ ගිණුම් පිළිබඳ සාරාංශයක් ලබා දෙන යථාර්ත-චෙක්පතක් ලබා දෙන්නෙමු."
@@ -1531,15 +961,6 @@ msgstr "කොන්ත්රාත්තුව මිනිත්තු 5 ක�
 msgid "PM"
 msgstr "PM"
 
-msgid "Passport"
-msgstr "විදේශ ගමන් බලපත්රය"
-
-msgid "Passport photo page"
-msgstr "විදේශ ගමන් බලපත්ර ඡායාරූප පිටුව"
-
-msgid "Password is not strong enough."
-msgstr "මුරපදය ප්රමාණවත් තරම් ශක්තිමත් නොවේ."
-
 msgid "Password should have lower and uppercase English letters with numbers."
 msgstr "මුරපදයට අංක සහිත අඩු හා ලොකු අකුරු ඉංග්රීසි අකුරු තිබිය යුතුය."
 
@@ -1549,41 +970,17 @@ msgstr "පැක්සෝස් සම්මත"
 msgid "Pay-out"
 msgstr "ගෙවීම-ඉවත්"
 
-msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr "ගෙවීම් නියෝජිත සේවා ඔබගේ රටේ හෝ ඔබ කැමති මුදලින් ලබා ගත නොහැක."
-
-msgid "Payments"
-msgstr "ගෙවීම්"
-
 msgid "Payout"
 msgstr "ගෙවීම්"
 
 msgid "Payout range"
 msgstr "ගෙවීම් පරාසය"
 
-msgid "Pending"
-msgstr "ඉතිරිව ඇත"
-
 msgid "Percentage"
 msgstr "ප්රතිශතය"
 
-msgid "Permissions"
-msgstr "අවසර"
-
-msgid "Photo of your document"
-msgstr "ඔබේ ලේඛනයේ ඡායාරූපය"
-
-msgid "Photo of your face"
-msgstr "ඔබේ මුහුණේ ඡායාරූපය"
-
-msgid "Place of birth"
-msgstr "උපන් ස්ථානය"
-
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
 msgstr "ඔබගේ මුදල් ආපසු ගැනීම සහ වෙළඳ සීමාවන් ඉවත් කිරීම සඳහා කරුණාකර %1cඔබගේ ගිණුම් පැතිකඩ%2 ඔම්ලට් කරන්න."
-
-msgid "Please %1deposit%2 to your account."
-msgstr "කරුණාකර %1dඑපොසිට්ට්%2 ඔබගේ ගිණුමට."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
 msgstr "කරුණාකර %1log in%2 හෝ %3sgin%4 මෙම පිටුව බැලීම සඳහා."
@@ -1591,26 +988,11 @@ msgstr "කරුණාකර %1log in%2 හෝ %3sgin%4 මෙම පිටු�
 msgid "Please accept the terms and conditions."
 msgstr "කරුණාකර නියමයන් සහ කොන්දේසි පිළිගන්න."
 
-msgid "Please check your email for further instructions."
-msgstr "වැඩිදුර උපදෙස් සඳහා කරුණාකර ඔබගේ විද්යුත් තැපෑල පරීක්ෂා කරන්න."
-
-msgid "Please check your email for the password reset link."
-msgstr "මුරපදය යළි පිහිටුවීමේ සබැඳිය සඳහා කරුණාකර ඔබගේ විද්යුත් තැපෑල පරීක්ෂා කරන්න."
-
-msgid "Please choose a currency"
-msgstr "කරුණාකර මුදල් වර්ගයක් තෝරන්න"
-
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
 msgstr "කරුණාකර %1සැබෑ ගිණුම් පෝරමය සම්පූර්ණ කරන්න%2 අවශ්ය පරිදි ඔබේ වයස තහවුරු කර ගැනීම සඳහා %3UK සූදුව%4 කොමිසම (UKGC)."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
 msgstr "ඔබේ මුදල් ආපසු ගැනීම සහ වෙළඳ සීමාවන් ඉවත් කිරීම සඳහා කරුණාකර %1fනොමිල තක්සේරු පෝරමය%2 සම්පූර්ණ කරන්න."
-
-msgid "Please complete your Personal Details before you proceed."
-msgstr "ඔබ ඉදිරියට යාමට පෙර කරුණාකර ඔබේ පුද්ගලික තොරතුරු සම්පූර්ණ කරන්න."
-
-msgid "Please confirm that all the information above is true and complete."
-msgstr "ඉහත සියලු තොරතුරු සත්ය හා සම්පූර්ණ බව කරුණාකර තහවුරු කරන්න."
 
 msgid "Please confirm that you are not a politically exposed person."
 msgstr "ඔබ දේශපාලනිකව නිරාවරණය වූ පුද්ගලයෙකු නොවන බව කරුණාකර තහවුරු කරන්න."
@@ -1618,14 +1000,8 @@ msgstr "ඔබ දේශපාලනිකව නිරාවරණය වූ �
 msgid "Please ensure that you have the Telegram app installed on your device."
 msgstr "ඔබගේ උපාංගයේ ටෙලිග්රාම් යෙදුම ස්ථාපනය කර ඇති බවට කරුණාකර සහතික වන්න."
 
-msgid "Please enter a valid Login ID."
-msgstr "කරුණාකර වලංගු පිවිසුම් හැඳුනුම්පතක් ඇතුළත් කරන්න."
-
 msgid "Please enter a valid phone number (e.g. +15417541234)."
 msgstr "කරුණාකර වලංගු දුරකථන අංකයක් ඇතුළත් කරන්න (උදා: +15417541234)."
-
-msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr "තෝරාගත් මුදල් සීමිත ගිණුම් සඳහා පමණක් අවසර දී ඇති බව කරුණාවෙන් සලකන්න."
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "අවශ්ය නිර්ණායක සම්පූර්ණ වූ පසු කරුණාකර නැවත අයදුම් කරන්න."
@@ -1636,32 +1012,17 @@ msgstr "කරුණාකර පිටුව නැවත පූරණය ක�
 msgid "Please select"
 msgstr "කරුණාකර තෝරන්න"
 
-msgid "Please select a country"
-msgstr "කරුණාකර රටක් තෝරන්න"
-
-msgid "Please select a reason."
-msgstr "කරුණාකර හේතුවක් තෝරන්න."
-
 msgid "Please select a valid time."
 msgstr "කරුණාකර වලංගු කාලයක් තෝරන්න."
 
-msgid "Please select at least one scope"
-msgstr "කරුණාකර අවම වශයෙන් එක් විෂය පථයක් තෝරන්න"
-
 msgid "Please select the checkbox."
 msgstr "කරුණාකර පිරික්සුම් කොටුව තෝරන්න."
-
-msgid "Please select the currency for this account:"
-msgstr "කරුණාකර මෙම ගිණුම සඳහා මුදල් තෝරන්න:"
 
 msgid "Please set the currency of your account."
 msgstr "කරුණාකර ඔබේ ගිණුමේ මුදල් සකසන්න."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr ""
-
-msgid "Please specify the reasons for closing your accounts"
-msgstr "කරුණාකර ඔබගේ ගිණුම් වසා දැමීමට හේතු සඳහන් කරන්න"
+msgstr "තැන්පතු සීමාවන් ඉවත් කිරීම සඳහා කරුණාකර ඔබේ %13දින 0 ක පිරිවැටුම් සීමාව%2 සකසන්න."
 
 msgid "Please specify your preferred interval reality check in minutes:"
 msgstr "කරුණාකර ඔබ කැමති පරතර රියලිටි පරීක්ෂාව මිනිත්තු කිහිපයකින් සඳහන් කරන්න:"
@@ -1671,15 +1032,6 @@ msgstr "කරුණාකර ඔබේ ලිපිනය පිළිබඳ �
 
 msgid "Please submit your proof of identity."
 msgstr "කරුණාකර ඔබේ අනන්යතාවය පිළිබඳ සාක්ෂි ඉදිරිපත් කරන්න."
-
-msgid "Please try again"
-msgstr "කරුණාකර නැවත උත්සාහ කරන්න"
-
-msgid "Point your phone’s camera at the QR code"
-msgstr "ඔබගේ දුරකථනයේ කැමරාව QR කේතයට යොමු කරන්න"
-
-msgid "Postal Code/ZIP"
-msgstr "තැපැල් කේතය/සිප්"
 
 msgid "Potential Payout"
 msgstr "විභව ගෙවීම්"
@@ -1717,9 +1069,6 @@ msgstr "ලාභය/අලාභය"
 msgid "Profit table"
 msgstr "ලාභ වගුව"
 
-msgid "Profit/Loss"
-msgstr "ලාභය/අලාභය"
-
 msgid "Profit/loss"
 msgstr "ලාභය/අලාභය"
 
@@ -1741,14 +1090,8 @@ msgstr "අනන්යතාවය කල් ඉකුත් වූ බවට �
 msgid "Proof of identity required"
 msgstr "අනන්යතාවය සනාථ කිරීම අවශ්ය වේ"
 
-msgid "Provide the whole document page for best results"
-msgstr "හොඳම ප්රති. ල සඳහා සම්පූර්ණ ලේඛන පිටුව සපයන්න"
-
 msgid "Purchase"
 msgstr "මිලදී ගැනීම"
-
-msgid "Purchase Price"
-msgstr "මිලදී ගැනීමේ මිල"
 
 msgid "Purchase Time"
 msgstr "මිලදී ගැනීමේ කාලය"
@@ -1765,17 +1108,11 @@ msgstr "මිලදී ගැනීමේ කාලය"
 msgid "Put Spread"
 msgstr "පැතිරෙන්න දාන්න"
 
-msgid "Read"
-msgstr "කියවන්න"
-
 msgid "Ready to trade?"
 msgstr "වෙළඳාම් කිරීමට සූදානම්ද?"
 
 msgid "Real"
 msgstr "සැබෑ"
-
-msgid "Real Account"
-msgstr "සැබෑ ගිණුම"
 
 msgid "Real Financial"
 msgstr "සැබෑ මූල්ය"
@@ -1786,50 +1123,17 @@ msgstr "සැබෑ මූල්ය STP"
 msgid "Real Synthetic"
 msgstr "සැබෑ කෘතිම"
 
-msgid "Real-Money Account"
-msgstr "සැබෑ මුදල් ගිණුම"
-
-msgid "Real-Money Accounts"
-msgstr "සැබෑ මුදල් ගිණුම්"
-
 msgid "Reality Check"
 msgstr "යථාර්ථය පරීක්ෂා"
 
 msgid "Recent years are easy to guess"
 msgstr "මෑත වසරවල අනුමාන කිරීම පහසුය"
 
-msgid "Recover camera access to continue face verification"
-msgstr "මුහුණු සත්යාපනය දිගටම කරගෙන යාම සඳහා කැමරා ප්රවේශය නැවත ලබා ගන්න"
-
-msgid "Recovery"
-msgstr "ප්රතිසාධනය"
-
-msgid "Redo"
-msgstr "රෙඩෝ"
-
-msgid "Ref."
-msgstr "රෙෆ්."
-
-msgid "Reference ID"
-msgstr "යොමු හැඳුනුම්පත"
-
-msgid "Refresh"
-msgstr "නැවුම් කරන්න"
-
-msgid "Refresh this page to restart the identity verification process"
-msgstr "අනන්යතා සත්යාපන ක්රියාවලිය නැවත ආරම්භ කිරීම සඳහා මෙම පිටුව නැවුම් කරන්න"
-
 msgid "Remaining time"
 msgstr "ඉතිරි කාලය"
 
-msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr ""
-
 msgid "Remove deposit limits"
 msgstr "තැන්පතු සීමාවන් ඉවත් කරන්න"
-
-msgid "Remove your glasses, if necessary"
-msgstr "අවශ්ය නම් ඔබේ කණ්නාඩි ඉවත් කරන්න"
 
 msgid "Repeats like \"aaa\" are easy to guess"
 msgstr "“aaa” වැනි පුනරාවර්තන අනුමාන කිරීම පහසුය"
@@ -1846,9 +1150,6 @@ msgstr "නිසි ලෙස ක්රියා කිරීම සඳහා �
 msgid "Resale not offered"
 msgstr "නැවත විකිණීම ඉදිරිපත් කර නැත"
 
-msgid "Resend link"
-msgstr "සබැඳිය නැවත ලබා ගන්න"
-
 msgid "Reset Barrier"
 msgstr "බාධකයක් යළි පිහිටුවන්න"
 
@@ -1857,9 +1158,6 @@ msgstr "ඇමතුම යළි පිහිටුවන්න"
 
 msgid "Reset Call/Reset Put"
 msgstr "ඇමතුම යළි පිහිටුවන්න/නැවත සකසන්න දමන්න"
-
-msgid "Reset Password"
-msgstr "මුරපදය යළි පිහිටුවන්න"
 
 msgid "Reset Put"
 msgstr "නැවත සකසන්න"
@@ -1873,38 +1171,17 @@ msgstr "ශේෂය යළි පිහිටුවන්න"
 msgid "Reset barrier"
 msgstr "බාධකයක් යළි පිහිටුවන්න"
 
-msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr "ඔබගේ අතථ්ය ගිණුමේ ශේෂය ඕනෑම වේලාවක %1 ලෙස සකසන්න."
-
 msgid "Reset time"
 msgstr "කාලය නැවත සකසන්න"
 
 msgid "Reset to original settings"
 msgstr "මුල් සැකසුම් වෙත යළි පිහිටුවන්න"
 
-msgid "Residence permit"
-msgstr "පදිංචිය සඳහා අවසර පත්රය"
-
-msgid "Restart process on a different device"
-msgstr "වෙනත් උපාංගයක ක්රියාවලිය නැවත ආරම්භ කරන්න"
-
-msgid "Restart the process on the latest version of Google Chrome"
-msgstr "ගූගල් ක්රෝම් හි නවතම අනුවාදයේ ක්රියාවලිය නැවත ආරම්භ කරන්න"
-
-msgid "Restart the process on the latest version of Safari"
-msgstr "සෆාරි හි නවතම අනුවාදයේ ක්රියාවලිය නැවත ආරම්භ කරන්න"
-
 msgid "Return"
 msgstr "ආපසු"
 
-msgid "Reverse Side"
-msgstr "ප්රතිලෝම පැත්ත"
-
 msgid "Reversed words aren't much harder to guess"
 msgstr "ආපසු හැරවූ වචන අනුමාන කිරීමට වඩා අපහසු නැත"
-
-msgid "Revoke access"
-msgstr "ප්රවේශ අවලංගු"
 
 msgid "Rise"
 msgstr "නැඟිටින්න"
@@ -1924,29 +1201,8 @@ msgstr "ස්ටාසිස් යුරෝ"
 msgid "Sa"
 msgstr "සා"
 
-msgid "Sale Date"
-msgstr "විකිණීමේ දිනය"
-
-msgid "Sale Price"
-msgstr "විකුණුම් මිල"
-
 msgid "Saturday"
 msgstr "සෙනසුරාදා"
-
-msgid "Scan QR code"
-msgstr "QR කේතය පරිලෝකනය කරන්න"
-
-msgid "Scan the QR code with your phone"
-msgstr "ඔබගේ දුරකථනය සමඟ QR කේතය පරිලෝකනය කරන්න"
-
-msgid "Scans and photocopies are not accepted"
-msgstr "ස්කෑන් සහ ඡායා පිටපත් පිළිගනු නොලැබේ"
-
-msgid "Scopes"
-msgstr "විෂය පථ"
-
-msgid "Search for country"
-msgstr "රට සොයන්න"
 
 msgid "Search..."
 msgstr "සොයන්න..."
@@ -1957,23 +1213,11 @@ msgstr "වත්කම් තෝරන්න"
 msgid "Select Trade Type"
 msgstr "වෙළඳ වර්ගය තෝරන්න"
 
-msgid "Select a %{country} document"
-msgstr "%{country} ලේඛනයක් තෝරන්න"
-
-msgid "Select country"
-msgstr "රට තෝරන්න"
-
 msgid "Select date"
 msgstr "දිනය තෝරන්න"
 
-msgid "Select issuing country"
-msgstr "නිකුත් කරන රට තෝරන්න"
-
 msgid "Select market:"
 msgstr "වෙළඳපොළ තෝරන්න:"
-
-msgid "Select payment agent"
-msgstr "ගෙවීම් නියෝජිතයා තෝරන්න"
 
 msgid "Select your market and underlying asset"
 msgstr "ඔබේ වෙළඳපල සහ යටින් පවතින වත්කම තෝරන්න"
@@ -1987,29 +1231,11 @@ msgstr "තෝරාගත් ටික්"
 msgid "Self-exclusion"
 msgstr "ස්වයං බැහැර"
 
-msgid "Selfie"
-msgstr "සෙල්ෆි"
-
-msgid "Selfie uploaded"
-msgstr "සෙල්ෆි උඩුගත කරන ලදි"
-
 msgid "Sell"
 msgstr "විකුණන්න"
 
 msgid "Sell at market"
 msgstr "වෙළඳපොලේ විකුණන්න"
-
-msgid "Send a secure link to your phone"
-msgstr "ඔබගේ දුරකථනයට ආරක්ෂිත සබැඳියක් යවන්න"
-
-msgid "Send link"
-msgstr "සබැඳිය යවන්න"
-
-msgid "Send this one-time link to your phone"
-msgstr "මෙම එක් වරක් සබැඳිය ඔබගේ දුරකථනයට යවන්න"
-
-msgid "Sending"
-msgstr "යැවීම"
 
 msgid "Sep"
 msgstr "සැප්තැම්බර්"
@@ -2032,12 +1258,6 @@ msgstr "සැසි කාලය:"
 msgid "Set account currency"
 msgstr "ගිණුම් මුදල් සකසන්න"
 
-msgid "Set currency"
-msgstr "මුදල් සකසන්න"
-
-msgid "Settles"
-msgstr "පදිංචි කරයි"
-
 msgid "Short keyboard patterns are easy to guess"
 msgstr "කෙටි යතුරුපුවරු රටා අනුමාන කිරීම පහසුය"
 
@@ -2059,9 +1279,6 @@ msgstr "%1ට වඩා වැඩි විය යුතුය"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "අකුරින් හෝ අංකයෙන් ආරම්භ කළ යුතු අතර හයිෆන් සහ යටි ලකුණු අඩංගු විය හැකිය."
 
-msgid "Show all details — including the bottom 2 lines"
-msgstr "සියලු විස්තර පෙන්වන්න - පහළ පේළි 2 ඇතුළුව"
-
 msgid "Sign out"
 msgstr "පුරනය වන්න"
 
@@ -2074,15 +1291,6 @@ msgstr "ස්මාර්ට් ට්රේඩර්"
 msgid "SmartTrader is unavailable for this account"
 msgstr "SmartTrader මෙම ගිණුම සඳහා ලබා ගත නොහැක"
 
-msgid "Something's gone wrong"
-msgstr "යමක් වැරදී ඇත"
-
-msgid "Sorry, account signup is not available in your country."
-msgstr "කණගාටුයි, ගිණුම් ලියාපදිංචි වීම ඔබගේ රටේ නොමැත."
-
-msgid "Sorry, an error occurred while processing your account."
-msgstr "කණගාටුයි, ඔබගේ ගිණුම සැකසීමේදී දෝෂයක් සිදුවිය."
-
 msgid "Sorry, an error occurred while processing your request."
 msgstr "කණගාටුයි, ඔබගේ ඉල්ලීම සැකසීමේදී දෝෂයක් සිදුවිය."
 
@@ -2092,23 +1300,11 @@ msgstr "කණගාටුයි, නමුත් ද්විමය වික�
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "කණගාටුයි, නමුත් ද්විමය විකල්ප වෙළඳාම ඔබේ මූල්ය ගිණුමේ නොමැත."
 
-msgid "Sorry, deposits for this currency are currently disabled."
-msgstr "කණගාටුයි, මෙම මුදල් සඳහා තැන්පතු දැනට අක්රීය කර ඇත."
-
-msgid "Sorry, no mobile phone bills"
-msgstr "කණගාටුයි, ජංගම දුරකථන බිල්පත් නොමැත"
-
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
 msgstr "කණගාටුයි, විකල්ප වෙළඳාම එක්සත් රාජධානියේ සහ අයිල් ඔෆ් මෑන් හි නොමැත."
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "කණගාටුයි, මෙම අංගය අථත්ය ගිණුම් වලට පමණක් ලබා ගත හැකිය."
-
-msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr "කණගාටුයි, මෙම අංගය ඔබේ අධිකරණ බලය තුළ නොමැත."
-
-msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr "කණගාටුයි, මෙම මුදල් සඳහා මුදල් ආපසු ගැනීම දැනට අක්රීය කර ඇත."
 
 msgid "Spot"
 msgstr "ස්ථානයේදීම"
@@ -2125,14 +1321,8 @@ msgstr "කණුවක්"
 msgid "Start time"
 msgstr "ආරම්භක වේලාව"
 
-msgid "State/Province"
-msgstr "රාජ්ය/පළාත"
-
 msgid "Statements"
 msgstr "ප්රකාශයන්"
-
-msgid "Status"
-msgstr "තත්ත්වය"
 
 msgid "Stays Between"
 msgstr "අතර රැඳී සිටියි"
@@ -2146,15 +1336,6 @@ msgstr "ආරම්භක හා අවසාන වේලාවන් අත�
 msgid "Step"
 msgstr "පියවර"
 
-msgid "Steps required to continue verification on your mobile"
-msgstr "ඔබගේ ජංගම දුරකථනයේ සත්යාපනය දිගටම කරගෙන යාමට අවශ්ය පියවර"
-
-msgid "Stock Indices"
-msgstr "කොටස් දර්ශක"
-
-msgid "Stocks"
-msgstr "තොග"
-
 msgid "Straight rows of keys are easy to guess"
 msgstr "යතුරු කෙළින්ම පේළි අනුමාන කිරීම පහසුය"
 
@@ -2163,42 +1344,6 @@ msgstr "සු"
 
 msgid "Submit"
 msgstr "ඉදිරිපත් කරන්න"
-
-msgid "Submit document"
-msgstr "ලේඛනය ඉදිරිපත් කරන්න"
-
-msgid "Submit identity card (back)"
-msgstr "හැඳුනුම්පත ඉදිරිපත් කරන්න (ආපසු)"
-
-msgid "Submit identity card (front)"
-msgstr "හැදුනුම්පත ඉදිරිපත් කරන්න (ඉදිරිපස)"
-
-msgid "Submit license (back)"
-msgstr "බලපත්රය ඉදිරිපත් කරන්න (ආපසු)"
-
-msgid "Submit license (front)"
-msgstr "බලපත්රය ඉදිරිපත් කරන්න (ඉදිරිපස)"
-
-msgid "Submit passport photo page"
-msgstr "විදේශ ගමන් බලපත්රයේ ඡායාරූප පිටුව ඉදිරිපත් කරන්න"
-
-msgid "Submit residence permit (back)"
-msgstr "පදිංචිය සඳහා අවසර පත්රය ඉදිරිපත් කරන්න (ආපසු)"
-
-msgid "Submit residence permit (front)"
-msgstr "පදිංචිය සඳහා අවසර පත්රය ඉදිරිපත් කරන්න (ඉදිරිපස)"
-
-msgid "Submit verification"
-msgstr "සත්යාපනය ඉදිරිපත් කරන්න"
-
-msgid "Submitted"
-msgstr "ඉදිරිපත් කරන ලද"
-
-msgid "Submitting"
-msgstr "ඉදිරිපත් කිරීම"
-
-msgid "Successful"
-msgstr "සාර්ථකයි"
 
 msgid "Sunday"
 msgstr "ඉරිදා"
@@ -2209,83 +1354,32 @@ msgstr "වෙනත් ගිණුමකට මාරු වන්න"
 msgid "Synthetic"
 msgstr "කෘතිම"
 
-msgid "Synthetic Indices"
-msgstr "කෘතිම දර්ශක"
-
-msgid "Take a photo"
-msgstr "ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo of the back of your card"
-msgstr "ඔබගේ කාඩ්පතේ පිටුපස ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo of the back of your license"
-msgstr "ඔබගේ බලපත්රයේ පිටුපස ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo of the front of your card"
-msgstr "ඔබගේ කාඩ්පතේ ඉදිරිපස ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo of the front of your license"
-msgstr "ඔබගේ බලපත්රයේ ඉදිරිපස ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo of your passport photo page"
-msgstr "ඔබගේ විදේශ ගමන් බලපත්රයේ ඡායාරූප පිටුවේ ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr "ඒ වෙනුවට <fallback>මූලික කැමරා මාදිලිය</fallback> භාවිතා කර ඡායාරූපයක් ගන්න"
-
-msgid "Take a photo with your phone"
-msgstr "ඔබගේ දුරකථනය සමඟ ඡායාරූපයක් ගන්න"
-
-msgid "Take a selfie"
-msgstr "සෙල්ෆි ගන්න"
-
-msgid "Take a selfie showing your face"
-msgstr "ඔබේ මුහුණ පෙන්වන සෙල්ෆි එකක් ගන්න"
-
-msgid "Take photo"
-msgstr "ඡායාරූප ගන්න"
-
 msgid "Target"
 msgstr "ඉලක්කය"
-
-msgid "Telephone"
-msgstr "දුරකථන අංකය"
 
 msgid "Tether ERC20"
 msgstr "ටෙතර් ERC20"
 
-msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr "ටෙතර් ERC20 (EUSDT) යනු ටෙතර් අනුවාදයක් වන අතර එය ඇමරිකානු ඩොලර් වලට සම්බන්ධ වී ඇති අතර එය Ethereum වේදිකාවේ සත්කාරකත්වය දරයි."
-
 msgid "Tether Omni"
 msgstr "ටෙතර් ඔම්නි"
 
-msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr "ටෙතර් ඔම්නි (යූඑස්ඩීටී) යනු ටෙතර්ගේ අනුවාදයක් වන අතර එය ඇමරිකානු ඩොලර් වලට සම්බන්ධ කර ඇති අතර එය බිට්කොයින් බ්ලොක්චේන් මත ගොඩනගා ඇත."
+msgid "Tether TRC20"
+msgstr "Tether TRC20"
 
 msgid "Th"
 msgstr "Th"
 
-msgid "Thank you"
-msgstr "ඔබට ස්තුතියි"
-
-msgid "Thank you for signing up! Please check your email to complete the registration process."
-msgstr "ලියාපදිංචි වීම ගැන ඔබට ස්තූතියි! ලියාපදිංචි කිරීමේ ක්රියාවලිය සම්පූර්ණ කිරීම සඳහා කරුණාකර ඔබගේ විද්යුත් තැපෑල පරීක්ෂා කරන්න."
-
 msgid "Thank you, we'll get back to you within 24 hours"
 msgstr "ස්තූතියි, අපි පැය 24 ක් ඇතුළත ඔබ වෙත නැවත එන්නෙමු"
-
-msgid "The %1 password of account number %2 has been changed."
-msgstr "ගිණුම් අංක %1 හි %2 මුරපදය වෙනස් කර ඇත."
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
 msgstr "මෙම %1cඅහිමි%2 වන විට හෝ ඊට පෙර නවතම ටික් වේ %1end කාලය%2. ඔබ නිශ්චිත %1end වේලාවක් තෝරා ගත්තේ නම්,%2 %1end කාලය%2 යනු තෝරාගත් වේලාවයි."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr ""
+msgstr "ආරම්භක කාලය %1c%2 යනු %1first tick%2 (ආරම්භක වේලාවෙන් පසු) සහ nd කාලය අතර කාල පරිච්ඡේදයයි %1e.%2"
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr ""
+msgstr "%1end කාලය%2 යනු ටාට් වේලාවෙන් පසු තෝරාගත් විනාඩි/පැය ගණන වේ. %1s%2"
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
 msgstr "%1exit ස්ථානයේදීම%2 කොන්ත්රාත්තුව අවසන් වූ විට අවසාන ටික් වේ. කොන්ත්රාත්තුව අවසන් වන්නේ සියලු කිනිතුල්ලන් ඉහළ යන විට හෝ අනුක්රමයෙන් වැටෙන විට හෝ තනි ටික් එකක් පුරෝකථනය කළ රටාව බිඳ දැමූ විටය."
@@ -2300,7 +1394,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "%1sටාට් කාලය%2 ආරම්භ වන්නේ අපගේ සේවාදායකයන් විසින් කොන්ත්රාත්තුව සැකසූ විටය."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1sටාට් කාලය%2 යනු අපගේ සේවාදායකයන් විසින් කොන්ත්රාත්තුව සකස් කර ඇති විට සහ %1entry ස්ථානය පසුව %1next ටික්%2%2 වේ."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "<strong>කොන්ත්රාත් කාලය</strong> යනු <strong>ඊළඟ ටික්</strong> <strong>ආරම්භක කාලයෙන් පසු</strong> සහ <strong>අවසන් කාලය</strong>අතර කාලයයි."
@@ -2309,7 +1403,7 @@ msgid "The <strong>end time</strong> is the selected number of minutes/hours aft
 msgstr "<strong>අවසන් කාලය</strong> යනු <strong>ආරම්භක වේලාවෙන් පසු තෝරාගත් විනාඩි/පැය ගණන</strong> (කාල පරිච්ඡේදයේ එක් දිනකට වඩා අඩු නම්) හෝ වෙළඳ දිනය අවසානයේ (කාල සීමාව තුළ එක් දිනක් හෝ ඊට වැඩි නම්)."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr ""
+msgstr "<strong>අවසාන කාලය</strong> යනු ආරම්භක වේලාවෙන් පසු තෝරාගත් විනාඩි/පැය ගණන වේ. <strong></strong>"
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
 msgstr "<strong>පිවිසුම් ස්ථානය</strong> යනු අපගේ සේවාදායකයන් විසින් කොන්ත්රාත්තුව සැකසූ පසු පළමු ටික් වේ."
@@ -2332,32 +1426,17 @@ msgstr "ප්රවේශ ස්ථානය සහ අවසාන ටික�
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
 msgstr "කොන්ත්රාත්තුව මිනිත්තු 5 ක් ඇතුළත අවසන් නොවේ (ටික් කාල කොන්ත්රාත්තු සඳහා)"
 
-msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr "ලබා දී ඇති විද්යුත් තැපැල් ලිපිනය දැනටමත් භාවිතයේ පවතී. ඔබගේ මුරපදය ඔබට අමතක වූවා නම්, කරුණාකර අපගේ <a href=\"%1\">මුරපද ප්රතිසාධන මෙවලම</a> උත්සාහ කරන්න හෝ අපගේ පාරිභෝගික සේවය අමතන්න."
-
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "අපගේ සේවාදායකයන් විසින් කොන්ත්රාත්තුව සැකසූ පසු පිවිසුම් ස්ථානය පළමු ටික් වේ."
 
-msgid "The link only works on mobile devices"
-msgstr "සබැඳිය ක්රියාත්මක වන්නේ ජංගම උපාංගවල පමණි"
-
-msgid "The maximum number of tokens (%1) has been reached."
-msgstr ""
-
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "ඔබ ඉල්ලූ පිටුව සොයාගත නොහැකි විය. එක්කෝ එය තවදුරටත් නොපවතී හෝ ලිපිනය වැරදියි. කරුණාකර ඕනෑම යතුරු ලියනයක් සඳහා පරීක්ෂා කරන්න."
-
-msgid "The photo should clearly show your document"
-msgstr "ඡායාරූපය ඔබේ ලේඛනය පැහැදිලිව පෙන්විය යුතුය"
-
-msgid "The reason should be between 5 and 250 characters"
-msgstr "හේතුව අක්ෂර 5 ත් 250 ත් අතර විය යුතුය"
 
 msgid "The reset time is %1"
 msgstr "යළි පිහිටුවීමේ කාලය %1වේ"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
-msgstr ""
+msgstr "සේවාදායකය <a href=\"%1\">අන්ත ලක්ෂ්යය</a> වේ: %2"
 
 msgid "The two passwords that you entered do not match."
 msgstr "ඔබ ඇතුළු කළ මුරපද දෙක නොගැලපේ."
@@ -2377,17 +1456,8 @@ msgstr "දෝෂයක් ඇති විය"
 msgid "There was some invalid character in an input field."
 msgstr "ආදාන ක්ෂේත්රයක යම් අවලංගු චරිතයක් තිබුණි."
 
-msgid "These are the documents most likely to show your current home address"
-msgstr "ඔබගේ වර්තමාන නිවසේ ලිපිනය පෙන්වීමට බොහෝ දුරට ඉඩ ඇති ලේඛන මේවනි"
-
-msgid "This account is disabled"
-msgstr "මෙම ගිණුම අක්රීය කර ඇත"
-
-msgid "This account is excluded until %1"
-msgstr "%1තෙක් මෙම ගිණුම බැහැර කරනු ලැබේ"
-
 msgid "This contract is only available on %1DTrader%2."
-msgstr ""
+msgstr "මෙම කොන්ත්රාත්තුව ලබා ගත හැක්කේ %1Dවෙළෙන්දාට පමණි%2."
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
 msgstr "මෙම කොන්ත්රාත්තුව ලබා ගත හැක්කේ DTrader මත පමණි.%1%2Go Dtrader%3 මෙම කොන්ත්රාත්තුව වසා දැමීමට හෝ අවලංගු කිරීමට."
@@ -2425,9 +1495,6 @@ msgstr "මෙය ඇඟවුම් බාධකයකි. තථ්ය බා�
 msgid "This is similar to a commonly used password"
 msgstr "මෙය බහුලව භාවිතා වන මුරපදයකට සමාන වේ"
 
-msgid "This is your %1 account."
-msgstr "මෙය ඔබගේ %1 ගිණුමයි."
-
 msgid "This page is only available to logged out clients."
 msgstr "මෙම පිටුව ලබා ගත හැක්කේ පුරනය වී ඇති සේවාදායකයින්ට පමණි."
 
@@ -2464,29 +1531,8 @@ msgstr "කාලය අද පසු විය යුතුය."
 msgid "Timed out until"
 msgstr "තෙක් කාලය ගත කර ඇත"
 
-msgid "Tips"
-msgstr "ඉඟි"
-
-msgid "Tips to take a good selfie"
-msgstr "හොඳ සෙල්ෆියක් ගැනීමට උපදෙස්"
-
-msgid "To account: "
-msgstr "ගිණුමට: "
-
-msgid "To open a bank account, we will need to verify your identity."
-msgstr "බැංකු ගිණුමක් විවෘත කිරීම සඳහා, ඔබගේ අනන්යතාවය සත්යාපනය කිරීමට අපට අවශ්ය වනු ඇත."
-
-msgid "To smoothly verify you, we need a better photo"
-msgstr "ඔබව සුමටව සත්යාපනය කිරීම සඳහා අපට වඩා හොඳ ඡායාරූපයක් අවශ්ය වේ"
-
 msgid "Today"
 msgstr "අද"
-
-msgid "Token"
-msgstr "ටෝකන්"
-
-msgid "Too many failed attempts"
-msgstr "බොහෝ අසාර්ථක උත්සාහයන්"
 
 msgid "Top up error"
 msgstr "ඉහළට දෝෂය"
@@ -2496,9 +1542,6 @@ msgstr "ඉහළට සාර්ථකයි"
 
 msgid "Total Cost"
 msgstr "මුළු පිරිවැය"
-
-msgid "Total Profit/Loss"
-msgstr "මුළු ලාභය/අලාභය"
 
 msgid "Total assets"
 msgstr "මුළු වත්කම්"
@@ -2518,9 +1561,6 @@ msgstr "ආරම්භක සහ අවසාන වේලාවන් අත�
 msgid "Touches"
 msgstr "ස්පර්ශ"
 
-msgid "Town/City"
-msgstr "නගරය/නගරය"
-
 msgid "Trade"
 msgstr "වෙළඳ"
 
@@ -2533,17 +1573,11 @@ msgstr "අපගේ ජනප්රිය පරිශීලක-හිතකා
 msgid "Trader's hub"
 msgstr "වෙළෙන්දාගේ කේන්ද්රස්ථානය"
 
-msgid "Trading Information"
-msgstr "වෙළඳ තොරතුරු"
-
 msgid "Trading and deposit disabled"
 msgstr "වෙළඳාම සහ තැන්පතු අක්රීයයි"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "ඔබේ ගිණුමේ වෙළඳ සහ තැන්පතු අක්රීය කර ඇත. සහාය සඳහා කරුණාකර %1cඔන්ටාක් පාරිභෝගික සහාය%2 ."
-
-msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr "සින්තටික් දර්ශකවල වෙනස සඳහා වෙළඳ ගිවිසුම් (CFDs) සෑම කෙනෙකුටම සුදුසු නොවේ. ඔබේ MT5 ගිණුමේ ඇති සියලුම අරමුදල් අහිමි වීමේ හැකියාව ඇතුළුව අවදානම් ඔබ සම්පූර්ණයෙන් වටහාගෙන ඇති බවට කරුණාකර සහතික වන්න. සූදුවට ඇබ්බැහි විය හැකිය - කරුණාකර වගකීමෙන් යුතුව සෙල්ලම් කරන්න."
 
 msgid "Trading is unavailable at this time."
 msgstr "මෙම අවස්ථාවේදී වෙළඳාම ලබා ගත නොහැක."
@@ -2561,16 +1595,10 @@ msgid "True USD"
 msgstr "True USD"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "අපගේ %1Sකෘතිම දර්ශක%2උත්සාහ කරන්න."
 
 msgid "Try our other markets."
 msgstr "අපගේ වෙනත් වෙළඳපොලවල් උත්සාහ කරන්න."
-
-msgid "Try using a JPG or PNG file"
-msgstr "JPG හෝ PNG ගොනුවක් භාවිතා කිරීමට උත්සාහ කරන්න"
-
-msgid "Try using another file type."
-msgstr "වෙනත් ගොනු වර්ගයක් භාවිතා කිරීමට උත්සාහ කරන්න."
 
 msgid "Tu"
 msgstr "Tu"
@@ -2581,9 +1609,6 @@ msgstr "අඟහරුවාදා"
 msgid "Turnover"
 msgstr "පිරිවැටුම"
 
-msgid "Type"
-msgstr "වර්ගය"
-
 msgid "US Dollar"
 msgstr "එක්සත් ජනපද ඩොලරය"
 
@@ -2592,12 +1617,6 @@ msgstr "ඇමරිකානු ඩොලර් කාසිය"
 
 msgid "USDK"
 msgstr "USDK"
-
-msgid "Unable to read file %1"
-msgstr "ගොනුව කියවීමට නොහැකි විය %1"
-
-msgid "Unavailable"
-msgstr "ලබාගත නොහැක"
 
 msgid "Understood"
 msgstr "තේරුම් ගෙන ඇත"
@@ -2608,53 +1627,11 @@ msgstr "අවාසනාවකට මෙන්, මෙම වෙළඳ වේ�
 msgid "Unknown OS"
 msgstr "නොදන්නා මෙහෙයුම් පද්ධතිය"
 
-msgid "Unsupported browser"
-msgstr "සහාය නොදක්වන බ්රව්සරය"
-
 msgid "Up to %1 decimal places are allowed."
 msgstr "දශම ස්ථාන %1 ක් දක්වා අවසර ඇත."
 
 msgid "Up/Down"
 msgstr "ඉහළ/පහළ"
-
-msgid "Upcoming Events"
-msgstr "ඉදිරියට එන සිදුවීම්"
-
-msgid "Upgrade now"
-msgstr "දැන් උත්ශ්රේණි කරන්න"
-
-msgid "Upload"
-msgstr "උඩුගත කරන්න"
-
-msgid "Upload a selfie from your computer"
-msgstr "ඔබේ පරිගණකයෙන් සෙල්ෆි එකක් උඩුගත කරන්න"
-
-msgid "Upload anyway"
-msgstr "කෙසේ හෝ උඩුගත කරන්න"
-
-msgid "Upload back of card from your computer"
-msgstr "ඔබේ පරිගණකයෙන් කාඩ්පත නැවත උඩුගත කරන්න"
-
-msgid "Upload back of license from your computer"
-msgstr "ඔබේ පරිගණකයෙන් බලපත්රය නැවත උඩුගත කරන්න"
-
-msgid "Upload front of card from your computer"
-msgstr "ඔබේ පරිගණකයෙන් කාඩ්පතේ ඉදිරිපස උඩුගත කරන්න"
-
-msgid "Upload front of license from your computer"
-msgstr "ඔබේ පරිගණකයෙන් බලපත්රය ඉදිරිපිට උඩුගත කරන්න"
-
-msgid "Upload passport photo page"
-msgstr "විදේශ ගමන් බලපත්ර ඡායාරූප පිටුව උඩුගත කරන්න"
-
-msgid "Upload passport photo page from your computer"
-msgstr "ඔබගේ පරිගණකයෙන් විදේශ ගමන් බලපත්ර ඡායාරූප පිටුව උඩුගත කරන්න"
-
-msgid "Upload photo"
-msgstr "ඡායාරූපය උඩුගත කරන්න"
-
-msgid "Uploads successful"
-msgstr "උඩුගත කිරීම් සාර්ථකයි"
 
 msgid "Use a few words, avoid common phrases"
 msgstr "වචන කිහිපයක් භාවිතා කරන්න, පොදු වාක්ය ඛණ්ඩ වලින් වළකින්න"
@@ -2665,29 +1642,11 @@ msgstr "වැඩි හැරීම් සහිත දිගු යතුර�
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "සත්යාපන කේතය වැරදියි. කරුණාකර ඔබගේ විද්යුත් තැපෑලට යවන ලද සබැඳිය භාවිතා කරන්න."
 
-msgid "Verification complete"
-msgstr "සත්යාපනය සම්පූර්ණයි"
-
-msgid "Verification required"
-msgstr "සත්යාපනය අවශ්යයි"
-
-msgid "Verify Identity"
-msgstr "අනන්යතාවය තහවුරු කරන්න"
-
-msgid "Verify Reset Password"
-msgstr "මුරපදය යළි පිහිටුවන්න සත්යාපනය"
-
-msgid "Verify identity"
-msgstr "අනන්යතාවය තහවුරු කරන්න"
-
 msgid "View"
 msgstr "දැක්ම"
 
 msgid "View chart"
 msgstr "සටහන බලන්න"
-
-msgid "View from camera"
-msgstr "කැමරාවෙන් බලන්න"
 
 msgid "Virtual"
 msgstr "අතථ්ය"
@@ -2704,24 +1663,6 @@ msgstr "පිටවීමේ ටික් සඳහා බලා සිටී�
 msgid "We"
 msgstr "අපි"
 
-msgid "We cannot verify you without using your camera"
-msgstr "ඔබගේ කැමරාව භාවිතා නොකර අපට ඔබව සත්යාපනය කළ නොහැක"
-
-msgid "We'd love to hear what you think."
-msgstr "ඔබ සිතන දේ ඇසීමට අපි කැමතියි."
-
-msgid "We'll compare it with your document"
-msgstr "අපි එය ඔබගේ ලේඛනය සමඟ සංසන්දනය කරන්නෙමු"
-
-msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr "අපි අපගේ නිෂ්පාදන සහ සේවාවන් වැඩි දියුණු කිරීමට බලාපොරොත්තු වන අතර, ඔබගේ අවශ්යතා වඩා හොඳින් තේරුම් ගැනීමට අපට අවශ්යය. අපි ඔබට දුරකථනයෙන් සම්මුඛ සාකච්ඡා කිරීමට කැමතියි, ඔබ අප ගැන කැමති දේ, ඔබ අකමැති දේ සහ අපට වඩා හොඳින් කළ හැකි ස්ථාන දැන ගැනීමට."
-
-msgid "We're now ready to verify your identity"
-msgstr "ඔබගේ අනන්යතාවය තහවුරු කිරීමට අපි දැන් සූදානම්"
-
-msgid "We've sent a secure link to %{number}"
-msgstr "අපි %{number}වෙත ආරක්ෂිත සබැඳියක් යවා ඇත්තෙමු"
-
 msgid "Wednesday"
 msgstr "බදාදා"
 
@@ -2731,9 +1672,6 @@ msgstr "අපි ඔබේ සීමාවන් යාවත්කාලීන
 msgid "WhatsApp"
 msgstr "වට්ස්ඇප්"
 
-msgid "When prompted, you must enable camera access to continue"
-msgstr "විමසූ විට, ඔබ දිගටම කැමරා ප්රවේශය සක්රීය කළ යුතුය"
-
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "ඔබ “හරි” ක්ලික් කළ විට තෝරාගත් දිනය දක්වා වෙබ් අඩවියේ වෙළඳාම් කිරීමෙන් ඔබව බැහැර කරනු ඇත."
 
@@ -2742,9 +1680,6 @@ msgstr "පිටවීමේ ස්ථානය ද පිවිසුම් �
 
 msgid "Winning the contract"
 msgstr "කොන්ත්රාත්තුව දිනා ගැනීම"
-
-msgid "Withdraw"
-msgstr "ආපසු ගන්න"
 
 msgid "Withdrawal"
 msgstr "ආපසු ගැනීම"
@@ -2759,109 +1694,34 @@ msgid "Withdrawals have been disabled on your account. Please check your email f
 msgstr "ඔබගේ ගිණුමේ මුදල් ආපසු ගැනීම අක්රීය කර ඇත. වැඩි විස්තර සඳහා කරුණාකර ඔබගේ විද්යුත් තැපෑල පරීක්ෂා කරන්න."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr ""
-
-msgid "Yes"
-msgstr "ඔව්"
-
-msgid "Yes I'm sure"
-msgstr "ඔව් මට විශ්වාසයි"
-
-msgid "Yes, I'm sure"
-msgstr "ඔව්, මට විශ්වාසයි"
-
-msgid "You are categorised as a professional client."
-msgstr "ඔබ වෘත්තීය සේවාදායකයෙකු ලෙස වර්ගීකරණය කර ඇත."
-
-msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr "ඔබ සිල්ලර සේවාදායකයෙකු ලෙස වර්ගීකරණය කර ඇත. වෘත්තීය වෙළෙන්දෙකු ලෙස සැලකීමට අයදුම් කරන්න."
-
-msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "ඔබ එක් ෆියට් ගිණුමකට සීමා වේ. ඔබ පළමු වරට තැන්පතුවක් කිරීමට හෝ MT5 ගිණුමක් සෑදීමට පෙර ඕනෑම වේලාවක ඔබේ ෆියට් ගිණුමේ මුදල් වෙනස් කළ හැකිය."
+msgstr "ඔබේ ප්රකාශය පළමුව පරීක්ෂා කිරීමට ඔබ කැමතිද? %1Cහෙක් ප්රකාශය%2"
 
 msgid "You are offline"
 msgstr "ඔබ නොබැඳි ය"
 
-msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr "ඔබට පුළුවන් %1set නව මුදල්%2 ඔබ පළමු වරට තැන්පත් කිරීමට පෙර හෝ MT5 ගිණුමක් නිර්මාණය කිරීමට පෙර."
-
 msgid "You can close this window without interrupting your trade."
 msgstr "ඔබේ වෙළඳාමට බාධා නොකර ඔබට මෙම කවුළුව වසා දැමිය හැකිය."
-
-msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "ඔබ MT5 ගිණුමක් නිර්මාණය කර ඇති නිසා ඔබට තවදුරටත් මුදල් වෙනස් කළ නොහැක."
-
-msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "ඔබ පළමු වරට තැන්පතුවක් කළ නිසා ඔබට තවදුරටත් මුදල් වෙනස් කළ නොහැක."
-
-msgid "You can now return to your computer to continue"
-msgstr "ඉදිරියට යාමට ඔබට දැන් ඔබේ පරිගණකයට ආපසු යා හැකිය"
-
-msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "ඔබේ ශේෂය %2 හෝ ඊට අඩු නම් අමතර %1 ක් සමඟ ඔබේ ආදර්ශන ගිණුම ඉහළට ඔසවා තැබිය හැකිය."
 
 msgid "You did not change anything."
 msgstr "ඔබ කිසිවක් වෙනස් කළේ නැත."
 
-msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr "මෙම අවස්ථාවේදී ඔබගේ ගිණුම සත්යාපනය කිරීමට ඔබට අවශ්ය නොවේ.%1ඔබගේ ගිණුම සත්යාපනය කිරීමට අවශ්ය වූ විට අපි ඔබට දන්වන්නෙමු."
-
-msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr "ඔබ දැනටමත් පසුගිය දින %3 තුළ සමස්තයක් වශයෙන් %1%2 ඉවත් කර ඇත."
-
-msgid "You have already withdrawn %1%2."
-msgstr "ඔබ දැනටමත් ඉවත් කර ඇත %1%2."
-
-msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr ""
-
-msgid "You have insufficient funds in your MT5 account."
-msgstr "ඔබේ MT5 ගිණුමේ ප්රමාණවත් අරමුදල් නොමැත."
-
-msgid "You have not granted access to any applications."
-msgstr "ඔබ කිසිදු යෙදුමකට ප්රවේශය ලබා දී නොමැත."
-
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "ඔබ තත්පරයට ඉල්ලීම්වල අනුපාත සීමාවට ළඟා වී ඇත. කරුණාකර පසුව උත්සාහ කරන්න."
-
-msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr "ඔබ මුදල් ආපසු ගැනීමේ සීමාවට පැමිණ ඇත. ඔබගේ මුදල් ආපසු ගැනීමේ සීමාව ඉහළ නැංවීමට කරුණාකර ඔබේ අනන්යතාවය සහ ලිපිනය පිළිබඳ සාක්ෂි උඩුගත කර ඔබේ මුදල් ආපසු ගැනීම ඉදිරියට යන්න."
 
 msgid "You have sold this contract at %1 %2"
 msgstr "ඔබ මෙම කොන්ත්රාත්තුව %1 %2ට විකුණා ඇත"
 
-msgid "You have successfully changed your account currency from %1 to %2."
-msgstr "ඔබ ඔබේ ගිණුමේ මුදල් %1 සිට %2දක්වා සාර්ථකව වෙනස් කර ඇත."
-
-msgid "You have successfully disabled two-factor authentication for your account."
-msgstr "ඔබගේ ගිණුම සඳහා ද්වි-සාධක සත්යාපනය ඔබ සාර්ථකව අක්රීය කර ඇත."
-
-msgid "You have successfully enabled two-factor authentication for your account."
-msgstr "ඔබගේ ගිණුම සඳහා ද්වි-සාධක සත්යාපනය ඔබ සාර්ථකව සක්රීය කර ඇත."
-
-msgid "You have successfully set your account currency to %1."
-msgstr "ඔබ සාර්ථකව ඔබගේ ගිණුමේ මුදල් %1ලෙස සකසා ඇත."
-
-msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr "සත්යාපනය සඳහා ඔබට විවිධ OAUth සේවාදායකය භාවිතා කිරීමට පෙර යෙදුම් හැඳුනුම්පත ලියාපදිංචි කර ලබා ගත යුතුය. වැඩි විස්තර සඳහා https://developers.binary.com/ හි OAUth විස්තර වෙත යොමු වන්න."
+msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
+msgstr "සත්යාපනය සඳහා විවිධ OAuth සේවාදායකය භාවිතා කිරීමට පෙර ඔබ ලියාපදිංචි වී App හැඳුනුම්පත ලබා ගත යුතුය. වැඩි විස්තර සඳහා https://api.deriv.com/ හි OAuth විස්තර වෙත යොමු වන්න."
 
 msgid "You have yet to receive any notifications"
 msgstr "ඔබට තවමත් කිසිදු දැනුම්දීමක් ලැබී නොමැත"
 
-msgid "You may open one account for each supported cryptocurrency."
-msgstr "සහාය දක්වන එක් එක් cryptocurrency සඳහා ඔබට එක් ගිණුමක් විවෘත කළ හැකිය."
-
 msgid "You should enter %1 characters."
-msgstr ""
+msgstr "ඔබ %1 අක්ෂර ඇතුළත් කළ යුතුය."
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
 msgstr "ද්විමය. කොම් සතු නොවන තෙවන පාර්ශවීය වෙබ් අඩවියකට ඔබව හරවා යවනු ලැබේ."
-
-msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "මෙම MT5 ගිණුම නිර්මාණය කිරීමෙන් පසු ඔබේ ෆියට් ගිණුමේ මුදල් වෙනස් කිරීමට ඔබට නොහැකි වනු ඇත. ඔබට ඉදිරියට යාමට අවශ්ය බව ඔබට විශ්වාසද?"
-
-msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "මෙම තැන්පතුව සිදු කිරීමෙන් පසු ඔබේ ෆියට් ගිණුමේ මුදල් වෙනස් කිරීමට ඔබට නොහැකි වනු ඇත. ඔබට ඉදිරියට යාමට අවශ්ය බව ඔබට විශ්වාසද?"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
 msgstr "ඔබ තෝරාගත් ඉලක්කම් වලින් වෙළඳපල මිල අවසන් නොවන්නේ නම් ඔබ ගෙවීම දිනා ගනී."
@@ -2869,62 +1729,17 @@ msgstr "ඔබ තෝරාගත් ඉලක්කම් වලින් ව�
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "ඔබ තෝරාගත් ඉලක්කම් වලින් වෙළඳපල මිල අවසන් වුවහොත් ඔබ ගෙවීම දිනා ගනී."
 
-msgid "You'll need to restart your verification on your computer"
-msgstr "ඔබේ පරිගණකයේ සත්යාපනය නැවත ආරම්භ කිරීමට ඔබට අවශ්ය වනු ඇත"
-
-msgid "You've made no transactions of this type up to this date."
-msgstr "ඔබ මේ දක්වා මෙම වර්ගයේ කිසිදු ගනුදෙනුවක් කර නොමැත."
-
-msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr "ඔබගේ දින %1 ආපසු ගැනීමේ සීමාව දැනට %2%3වේ."
-
-msgid "Your account has no Login/Logout activity."
-msgstr "ඔබගේ ගිණුමට පුරනය වීම/පුරනය වීමේ ක්රියාකාරකම් නොමැත."
-
-msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
-msgstr "ඔබගේ ගිණුම සම්පූර්ණයෙන්ම සත්යාපනය කර ඇති අතර ඔබගේ මුදල් ආපසු ගැනීමේ සීමාවන් ඉවත් කර ඇත."
-
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
 msgstr "ඔබගේ ගිණුම සීමා කර ඇත. සහාය සඳහා කරුණාකර %1cඔන්ටාක් පාරිභෝගික සහාය%2 ."
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "වෘත්තීය සේවාදායකයෙකු ලෙස සැලකිය යුතු ඔබගේ අයදුම්පත සැකසෙමින් පවතී."
 
-msgid "Your cashier is locked."
-msgstr "ඔබේ මුදල් අයකැමි අගුළු දමා ඇත."
-
-msgid "Your changes have been updated successfully."
-msgstr "ඔබගේ වෙනස්කම් සාර්ථකව යාවත්කාලීන කර ඇත."
-
 msgid "Your changes have been updated."
 msgstr "ඔබගේ වෙනස්කම් යාවත්කාලීන කර ඇත."
 
-msgid "Your computer may take a few seconds to update"
-msgstr "ඔබේ පරිගණකය යාවත්කාලීන කිරීමට තත්පර කිහිපයක් ගතවනු ඇත"
-
-msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "ඔබගේ ආදර්ශන ගිණුමේ ශේෂය දැනට %1 හෝ ඊට අඩු වේ. අමතර %2ක් සමඟ ඔබට ඔබගේ ගිණුම ඉහළට ඔසවා ගත හැකිය."
-
-msgid "Your face is needed in the selfie"
-msgstr "සෙල්ෆි වලදී ඔබේ මුහුණ අවශ්ය වේ"
-
-msgid "Your fiat account's currency is currently set to %1."
-msgstr "ඔබගේ ෆියට් ගිණුමේ මුදල් දැනට %1ලෙස සකසා ඇත."
-
-msgid "Your fiat account's currency is set to %1."
-msgstr "ඔබගේ ෆියට් ගිණුමේ මුදල් %1ලෙස සකසා ඇත."
-
-msgid "Your link will expire in one hour"
-msgstr "ඔබගේ සබැඳිය පැයකින් කල් ඉකුත් වේ"
-
-msgid "Your mobile link will expire in one hour"
-msgstr "ඔබගේ ජංගම සබැඳිය පැයකින් කල් ඉකුත් වේ"
-
 msgid "Your password cannot be the same as your email address."
 msgstr "ඔබගේ මුරපදය ඔබගේ විද්යුත් තැපැල් ලිපිනයට සමාන විය නොහැක."
-
-msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr "ඔබගේ මුරපදය සාර්ථකව නැවත සකස් කර ඇත. ඔබගේ නව මුරපදය භාවිතා කර කරුණාකර ඔබගේ ගිණුමට පිවිසෙන්න."
 
 msgid "Your preferred time interval between each report:"
 msgstr "එක් එක් වාර්තාව අතර ඔබ කැමති කාල පරතරය:"
@@ -2932,23 +1747,8 @@ msgstr "එක් එක් වාර්තාව අතර ඔබ කැමත�
 msgid "Your professional client request is %1not approved%2."
 msgstr "ඔබේ වෘත්තීය සේවාදායක ඉල්ලීම අනුමත කර ඇත %1not%2."
 
-msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully processed."
-msgstr "%1 %2 %3 සිට %4 දක්වා මාරු කිරීමට ඔබගේ ඉල්ලීම සාර්ථකව සකසා ඇත."
-
-msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr "%1 %2 ඔබගේ ගිණුමෙන් %3 ගෙවීම් නියෝජිත %4 ගිණුමෙන් ඉවත් කර ගැනීමට ඔබ කළ ඉල්ලීම සාර්ථකව සකසා ඇත."
-
 msgid "Your session duration limit will end in %1 seconds."
 msgstr "ඔබගේ සැසි කාල සීමාව තත්පර %1 කින් අවසන් වේ."
-
-msgid "Your settings have been updated successfully."
-msgstr "ඔබගේ සැකසුම් සාර්ථකව යාවත්කාලීන කර ඇත."
-
-msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr "ඔබේ ටෝකනය කල් ඉකුත් වී හෝ අවලංගු වී ඇත. කරුණාකර ක්ලික් කරන්න %1heදක්වා%2 සත්යාපන ක්රියාවලිය නැවත ආරම්භ කිරීමට."
-
-msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr "ඔබේ ටෝකනය කල් ඉකුත් වී හෝ අවලංගු වී ඇත. කරුණාකර ක්ලික් කරන්න <a href=\"%1\">මෙහි</a> සත්යාපන ක්රියාවලිය නැවත ආරම්භ කිරීමට."
 
 msgid "Your trading statistics since %1."
 msgstr "%1සිට ඔබේ වෙළඳ සංඛ්යාලේඛන."
@@ -2963,10 +1763,7 @@ msgid "Your virtual balance has been reset."
 msgstr "ඔබගේ අතථ්ය ශේෂය නැවත සකස් කර ඇත."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr ""
-
-msgid "Your withdrawal limit is %1%2."
-msgstr "ඔබගේ මුදල් ආපසු ගැනීමේ සීමාව %1%2වේ."
+msgstr "ඔබගේ වෙබ් බ්රව්සරය (%1) යාවත්කාලීනව නොමැති අතර එය ඔබේ වෙළඳ අත්දැකීමට බලපායි. ඔබේම අවදානමකින් ඉදිරියට යන්න. %2Update බ්රව්සරය%3"
 
 msgid "account"
 msgstr "ගිණුම"
@@ -2974,14 +1771,8 @@ msgstr "ගිණුම"
 msgid "accounts"
 msgstr "ගිණුම්"
 
-msgid "back"
-msgstr "ආපසු"
-
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "ද්විමය විකල්ප, විදේශ විනිමය, විදේශ විනිමය වෙළඳාම, මාර්ගගත වෙළඳාම, මූල්ය වෙළඳාම, ද්විමය වෙළඳාම, දර්ශක වෙළඳාම, වෙළඳ කොටස් දර්ශක, විදේශ විනිමය ගනුදෙනු, වෙළඳ භාණ්ඩ, ද්විමය විකල්ප උපාය, ද්විමය තැරැව්කරු, ද්විමය ඔට්ටු ඇල්ලීම, ද්විමය විකල්ප වෙළඳ වේදිකාව, ද්විමය උපාය, මූල්ය, ආයෝජන, වෙළඳාම"
-
-msgid "close"
-msgstr "සමීප"
 
 msgid "day"
 msgstr "දින"
@@ -2989,17 +1780,8 @@ msgstr "දින"
 msgid "days"
 msgstr "දින"
 
-msgid "details"
-msgstr "විස්තර"
-
-msgid "e.g. United States"
-msgstr "උදා: එක්සත් ජනපදය"
-
-msgid "e.g. frontend.binaryws.com"
-msgstr "උදා: frontend.binaryws.com"
-
-msgid "for account %1"
-msgstr "ගිණුම සඳහා %1"
+msgid "e.g. frontend.derivws.com"
+msgstr "උදා: frontend.deriws.com"
 
 msgid "hour"
 msgstr "පැය"
@@ -3009,9 +1791,6 @@ msgstr "පැය"
 
 msgid "including Deal Cancel. Fee"
 msgstr "ගනුදෙනුව අවලංගු කිරීම ඇතුළුව. ගාස්තු"
-
-msgid "letters"
-msgstr "ලිපි"
 
 msgid "login"
 msgstr "පුරනය වන්න"
@@ -3025,23 +1804,11 @@ msgstr "විනාඩි"
 msgid "minutes"
 msgstr "විනාඩි"
 
-msgid "numbers"
-msgstr "අංක"
-
-msgid "or"
-msgstr "හෝ"
-
-msgid "or upload photo – no scans or photocopies"
-msgstr "හෝ ඡායාරූපය උඩුගත කරන්න - ස්කෑන් හෝ ඡායා පිටපත් නොමැත"
-
 msgid "second"
 msgstr "දෙවන"
 
 msgid "seconds"
 msgstr "තත්පර"
-
-msgid "space"
-msgstr "අවකාශය"
 
 msgid "tick"
 msgstr "ටික්"
@@ -3057,13 +1824,4 @@ msgstr "අද, සිකුරාදා"
 
 msgid "virtual money credit to account"
 msgstr "අතථ්ය මුදල් ගිණුමට බැර කිරීම"
-
-msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr "{SPAIN ONLY}කෙසේ වෙතත්, ද්විමය ඉන්වෙස්ට්මන්ට්ස් (යුරෝපය) ලිමිටඩ් ඔබේ දැනුම හා පළපුරුද්ද තක්සේරු කර ඇති අතර නිෂ්පාදිතය ඔබට සුදුසු යැයි සිතමි."
-
-msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr "{SPAIN ONLY}මෙය ලීවරය සහිත නිෂ්පාදනයක්. භාණ්ඩය මිලදී ගැනීම සඳහා මුලින් ගෙවන ලද මුදලට වඩා පාඩු වැඩි විය හැකි බව ඔබ දැන සිටිය යුතුය."
-
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr "{SPAIN ONLY}ඔබ සරල නොවන නිෂ්පාදනයක් මිලදී ගැනීමට ආසන්නව සිටින අතර තේරුම් ගැනීමට අපහසු විය හැකිය: වෙනස සහ විදේශ විනිමය සඳහා ගිවිසුම්. සාමාන්ය රීතියක් ලෙස, සීඑන්එම්වී එවැනි නිෂ්පාදන සිල්ලර සේවාදායකයින් සඳහා සුදුසු නොවන බව සලකයි."
 
