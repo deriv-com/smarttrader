@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-08-17 02:43\n"
+"PO-Revision-Date: 2024-02-22 09:08\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
@@ -19,20 +19,8 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-msgid " (Region added)"
-msgstr " (تمت إضافة المنطقة)"
-
-msgid " (Temporarily unavailable)"
-msgstr " (غير متاح مؤقتًا)"
-
 msgid "%1"
 msgstr "%1"
-
-msgid "%1 Account %2"
-msgstr "%1 الحساب %2"
-
-msgid "%1 Please click the link below to restart the password recovery process."
-msgstr "%1 الرجاء النقر فوق الارتباط أدناه لإعادة تشغيل عملية استعادة كلمة المرور."
 
 msgid "%1 and %2 cannot be the same."
 msgstr "لا يمكن أن يكون %1 و %2 هو نفسه."
@@ -40,32 +28,11 @@ msgstr "لا يمكن أن يكون %1 و %2 هو نفسه."
 msgid "%1 days %2 hours %3 minutes"
 msgstr "%1 يوم %2 ساعة %3 دقيقة"
 
-msgid "%1 deposit from %2 to account number %3 is done. Transaction ID: %4"
-msgstr "يتم إجراء %1 إيداع من %2 إلى الحساب رقم %3 . معرف المعاملة: %4"
-
-msgid "%1 has been credited into your MT5 Demo Account: %2."
-msgstr "تمت إضافة %1 إلى حساب MT5 التجريبي الخاص بك: %2."
-
 msgid "%1 has been credited into your Virtual Account: %2."
 msgstr "تمت إضافة %1 إلى حسابك الافتراضي: %2."
 
-msgid "%1 withdrawal from account number %2 to %3 is done. Transaction ID: %4"
-msgstr "يتم إجراء %1 عملية سحب من الحساب رقم %2 إلى %3 . معرف المعاملة: %4"
-
-msgid "%1Manage your accounts%2"
-msgstr "%1إدارة حساباتك%2"
-
-msgid "%1No, change my fiat account's currency now%2"
-msgstr "%1Nلذا، قم بتغيير عملة حساب العملات الورقية الخاص بي الآن%2"
-
 msgid "%1Return to trading page%2"
 msgstr "%1العودة إلى صفحة التداول%2"
-
-msgid "1. This link was sent by you"
-msgstr "1. تم إرسال هذا الرابط من قبلك"
-
-msgid "2. Your desktop window stays open"
-msgstr "2. تظل نافذة سطح المكتب مفتوحة"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
 msgstr "تجربة تداول جديدة بالكامل على منصة قوية وسهلة الاستخدام."
@@ -75,9 +42,6 @@ msgstr "من السهل تخمين الكلمة في حد ذاتها."
 
 msgid "AM"
 msgstr "أنا"
-
-msgid "Account"
-msgstr "الحساب"
 
 msgid "Account Authenticated"
 msgstr "تمت المصادقة على الحساب"
@@ -91,12 +55,6 @@ msgstr "مصادقة الحساب"
 msgid "Account balance:"
 msgstr "رصيد الحساب:"
 
-msgid "Acknowledge"
-msgstr "اعترف"
-
-msgid "Action"
-msgstr "إجراء"
-
 msgid "Add"
 msgstr "إضافة"
 
@@ -109,14 +67,8 @@ msgstr "أضف كلمة أخرى أو كلمتين. الكلمات غير الش
 msgid "Adjust trade parameters"
 msgstr "ضبط معايير التجارة"
 
-msgid "Admin"
-msgstr "المشرف"
-
 msgid "Agree and accept"
 msgstr "أوافق وأقبل"
-
-msgid "All details must be clear — nothing blurry"
-msgstr "يجب أن تكون جميع التفاصيل واضحة - لا شيء ضبابي"
 
 msgid "All markets are closed now. Please try again later."
 msgstr "جميع الأسواق مغلقة الآن. يرجى المحاولة مرة أخرى لاحقًا."
@@ -124,23 +76,11 @@ msgstr "جميع الأسواق مغلقة الآن. يرجى المحاولة �
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
 msgstr "من السهل تخمين الأحرف الكبيرة بالكامل تقريبًا مثل جميع الأحرف الصغيرة"
 
-msgid "Allow camera access"
-msgstr "السماح بالوصول إلى الكاميرا"
-
 msgid "Allow equals"
 msgstr "السماح بالمساواة"
 
 msgid "Already have an account?"
 msgstr "هل لديك حساب بالفعل؟"
-
-msgid "Amount"
-msgstr "المبلغ"
-
-msgid "Amount in"
-msgstr "المبلغ في"
-
-msgid "An error occurred while loading the component"
-msgstr "حدث خطأ أثناء تحميل المكون"
 
 msgid "Apply now as a professional investor"
 msgstr "تقدم بطلبك الآن كمستثمر محترف"
@@ -150,24 +90,6 @@ msgstr "أبريل"
 
 msgid "April"
 msgstr "أبريل"
-
-msgid "Are you sure that you want to permanently delete the token"
-msgstr "هل تريد بالتأكيد حذف الرمز المميز نهائيًا؟"
-
-msgid "Are you sure that you want to permanently revoke access to the application"
-msgstr "هل أنت متأكد من أنك تريد إلغاء الوصول إلى التطبيق بشكل دائم"
-
-msgid "Are you sure you want to create a fiat account in %1?"
-msgstr "هل أنت متأكد أنك تريد إنشاء حساب فيات في %1؟"
-
-msgid "Are you sure you want to create your %1 account now?"
-msgstr "هل تريد بالتأكيد إنشاء حساب %1 الخاص بك الآن؟"
-
-msgid "Are you sure you want to deposit in %1?"
-msgstr "هل أنت متأكد أنك تريد الإيداع في %1؟"
-
-msgid "Are you sure?"
-msgstr "هل أنت متأكد؟"
 
 msgid "Asian Down"
 msgstr "آسيان داون"
@@ -183,12 +105,6 @@ msgstr "تستقر الخيارات الآسيوية من خلال مقارنة 
 
 msgid "Asians"
 msgstr "الآسيويين"
-
-msgid "Ask me later"
-msgstr "اسألني لاحقًا"
-
-msgid "Asset"
-msgstr "الأصول"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
 msgstr "في وقت إعادة الضبط، إذا كانت البقعة في الاتجاه المعاكس لتوقعك، تتم إعادة تعيين الحاجز إلى تلك النقطة."
@@ -214,9 +130,6 @@ msgstr "قم بمصادقة حسابك الآن للاستفادة الكامل�
 msgid "Automated trading at your fingertips. No coding needed."
 msgstr "التداول الآلي في متناول يدك. لا حاجة للترميز."
 
-msgid "Available Markets"
-msgstr "الأسواق المتاحة"
-
 msgid "Average"
 msgstr "متوسط"
 
@@ -235,12 +148,6 @@ msgstr "تجنب التسلسلات"
 msgid "Avoid years that are associated with you"
 msgstr "تجنب السنوات المرتبطة بك"
 
-msgid "Back to trading"
-msgstr "العودة إلى التداول"
-
-msgid "Balance"
-msgstr "الرصيد"
-
 msgid "Barrier"
 msgstr "الحاجز"
 
@@ -249,12 +156,6 @@ msgstr "تغيير الحاجز"
 
 msgid "Barrier offset"
 msgstr "تعويض الحاجز"
-
-msgid "Basket Indices"
-msgstr "مؤشرات السلة"
-
-msgid "Bid"
-msgstr "المزايدة"
 
 msgid "Binance USD"
 msgstr "بينانس بالدولار الأمريكي"
@@ -265,12 +166,6 @@ msgstr "عملة ثنائية"
 msgid "Bitcoin"
 msgstr "بيتكوين"
 
-msgid "Blurry photo detected"
-msgstr "تم اكتشاف صورة ضبابية"
-
-msgid "Browser"
-msgstr "المتصفح"
-
 msgid "Buy"
 msgstr "يشترى"
 
@@ -278,37 +173,19 @@ msgid "Buy price"
 msgstr "سعر الشراء"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr "من خلال شراء عقد %1«Close-Low»%2 ، ستربح المضاعف مضروبًا في الفرق بين %1cخسارة%2 و %1low%2 خلال مدة العقد."
+msgstr "من خلال شراء عقد %1«Close-Low»%2 ، ستربح multiplier مضروبًا في الفرق بين %1close%2 و %1low%2 خلال مدة العقد."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "من خلال شراء عقد %1«High-Close»2%، ستربح multiplier مضروبًا في الفرق بين %1high%2 و %1close%2 والخسارة على مدار مدة العقد."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr "من خلال شراء عقد %1«High-Low»%2 ، ستربح المضاعف مضروبًا في الفرق بين %1high%2 و %1low%2 خلال مدة العقد."
+msgstr "من خلال شراء عقد %1«High-Low»%2 ، ستربح multiplier مضروبًا في الفرق بين %1high%2 و %1low%2 خلال مدة العقد."
 
 msgid "Call Spread"
 msgstr "انتشار المكالمات"
 
 msgid "Call Spread/Put Spread"
 msgstr "فروق أسعار المكالمات/فروق البيع"
-
-msgid "Camera access is denied"
-msgstr "تم رفض الوصول إلى الكاميرا"
-
-msgid "Camera not detected"
-msgstr "لم يتم اكتشاف الكاميرا"
-
-msgid "Camera not working"
-msgstr "الكاميرا لا تعمل"
-
-msgid "Camera not working?"
-msgstr "الكاميرا لا تعمل؟"
-
-msgid "Can you spare 15 minutes?"
-msgstr "هل يمكنك تخصيص 15 دقيقة؟"
-
-msgid "Cancel"
-msgstr "إلغاء"
 
 msgid "Capitalization doesn't help very much"
 msgstr "الكتابة بالأحرف الكبيرة لا تساعد كثيرًا"
@@ -322,12 +199,6 @@ msgstr "تم تعطيل الصراف"
 msgid "Change API Endpoint"
 msgstr "تغيير نقطة نهاية API"
 
-msgid "Change Password"
-msgstr "تغيير كلمة المرور"
-
-msgid "Change currency"
-msgstr "تغيير العملة"
-
 msgid "Chart"
 msgstr "رسم بياني"
 
@@ -337,35 +208,8 @@ msgstr "الرسم البياني غير متاح لهذا الأساسي."
 msgid "Charting for this underlying is delayed"
 msgstr "تم تأجيل الرسم البياني لهذا الأساس"
 
-msgid "Check back here to finish the submission"
-msgstr "تحقق مرة أخرى هنا لإنهاء التقديم"
-
-msgid "Check selfie"
-msgstr "تحقق من صورة شخصية"
-
-msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
-msgstr "تأكد من أنها متصلة وعملية. يمكنك أيضًا <fallback>متابعة التحقق على هاتفك</fallback>"
-
-msgid "Check that your number is correct"
-msgstr "تحقق من صحة رقمك"
-
 msgid "Check your connection."
 msgstr "تحقق من الاتصال الخاص بك."
-
-msgid "Check your image"
-msgstr "تحقق من صورتك"
-
-msgid "Check your mobile"
-msgstr "تحقق من هاتفك المحمول"
-
-msgid "Checked"
-msgstr "تم التحقق"
-
-msgid "Checking"
-msgstr "التحقق"
-
-msgid "Choose document"
-msgstr "اختر المستند"
 
 msgid "Christmas Day"
 msgstr "يوم عيد الميلاد"
@@ -385,20 +229,11 @@ msgstr "انقر هنا لفتح حساب حقيقي"
 msgid "Close"
 msgstr "أغلق"
 
-msgid "Close identity verification screen"
-msgstr "أغلق شاشة التحقق من الهوية"
-
 msgid "Close time"
 msgstr "وقت الإغلاق"
 
 msgid "Close-Low"
 msgstr "قريب من المستوى المنخفض"
-
-msgid "Closed Bid"
-msgstr "مزايدة مغلقة"
-
-msgid "Closes"
-msgstr "يغلق"
 
 msgid "Closes early (at 18:00)"
 msgstr "يغلق مبكرًا (الساعة 18:00)"
@@ -406,50 +241,20 @@ msgstr "يغلق مبكرًا (الساعة 18:00)"
 msgid "Closes early (at 21:00)"
 msgstr "يغلق مبكرًا (الساعة 21:00)"
 
-msgid "Commodities"
-msgstr "السلع"
-
 msgid "Common names and surnames are easy to guess"
 msgstr "من السهل تخمين الأسماء والألقاب الشائعة"
 
 msgid "Complete details"
 msgstr "تفاصيل كاملة"
 
-msgid "Compressing Image"
-msgstr "ضغط الصورة"
-
-msgid "Confirm"
-msgstr "قم بتأكيد"
-
 msgid "Confirm changes"
 msgstr "تأكيد التغييرات"
-
-msgid "Connected to your mobile"
-msgstr "متصل بجوالك"
 
 msgid "Connecting to server"
 msgstr "الاتصال بالخادم"
 
-msgid "Connection lost"
-msgstr "تم فقد الاتصال"
-
-msgid "Continue"
-msgstr "استمر"
-
-msgid "Continue on phone"
-msgstr "استمر على الهاتف"
-
-msgid "Continue on your phone"
-msgstr "استمر على هاتفك"
-
 msgid "Continue trading"
 msgstr "استمر في التداول"
-
-msgid "Continue with the verification"
-msgstr "استمر في التحقق"
-
-msgid "Contract"
-msgstr "عقد"
 
 msgid "Contract Confirmation"
 msgstr "تأكيد العقد"
@@ -487,39 +292,6 @@ msgstr "عقود تم شراؤها"
 msgid "Contracts sold"
 msgstr "تم بيع العقود"
 
-msgid "Copied"
-msgstr "تم نسخها"
-
-msgid "Copy"
-msgstr "نسخ"
-
-msgid "Copy link"
-msgstr "انسخ الرابط"
-
-msgid "Copy the link to your mobile browser"
-msgstr "انسخ الرابط إلى متصفح الجوال الخاص بك"
-
-msgid "Copy the link to your phone"
-msgstr "انسخ الرابط إلى هاتفك"
-
-msgid "Counterparty"
-msgstr "الطرف المقابل"
-
-msgid "Country not found"
-msgstr "لم يتم العثور على البلد"
-
-msgid "Country of Residence"
-msgstr "بلد الإقامة"
-
-msgid "Create %1 account"
-msgstr "إنشاء حساب %1"
-
-msgid "Create account"
-msgstr "إنشاء حساب"
-
-msgid "Credit/Debit"
-msgstr "الائتمان/الخصم"
-
 msgid "Crypto"
 msgstr "التشفير"
 
@@ -529,23 +301,11 @@ msgstr "العملة"
 msgid "Current"
 msgstr "تيار"
 
-msgid "Current password"
-msgstr "كلمة المرور الحالية"
-
 msgid "Current time"
 msgstr "الوقت الحالي"
 
 msgid "Current time:"
 msgstr "الوقت الحالي:"
-
-msgid "Cut-off image detected"
-msgstr "تم اكتشاف صورة مقطوعة"
-
-msgid "Date"
-msgstr "التاريخ"
-
-msgid "Date and Time"
-msgstr "التاريخ والوقت"
 
 msgid "Dates are often easy to guess"
 msgstr "غالبًا ما يكون من السهل تخمين التواريخ"
@@ -559,17 +319,8 @@ msgstr "ديسمبر"
 msgid "December"
 msgstr "ديسمبر"
 
-msgid "Delete"
-msgstr "حذف"
-
 msgid "Demo"
 msgstr "عرض تجريبي"
-
-msgid "Demo Account"
-msgstr "حساب تجريبي"
-
-msgid "Demo Accounts"
-msgstr "الحسابات التجريبية"
 
 msgid "Demo Financial"
 msgstr "الحساب المالي التجريبي"
@@ -592,9 +343,6 @@ msgstr "تم تعطيل عمليات الإيداع والسحب في حسابك
 msgid "Deriv "
 msgstr "ديريف "
 
-msgid "Description"
-msgstr "وصف"
-
 msgid "Details"
 msgstr "التفاصيل"
 
@@ -602,88 +350,37 @@ msgid "Digit"
 msgstr "رقم"
 
 msgid "Digit Differs"
-msgstr "يختلف الرقم"
+msgstr "Digit Differs"
 
 msgid "Digit Even"
-msgstr "حدث رقمي"
+msgstr "Digit Even"
 
 msgid "Digit Matches"
-msgstr "مباريات رقمية"
+msgstr "Digit Matches"
 
 msgid "Digit Odd"
-msgstr "رقم فردي"
+msgstr "Digit Odd"
 
 msgid "Digit Over"
-msgstr "ديجيت أوفر"
+msgstr "Digit Over"
 
 msgid "Digit Under"
-msgstr "ديجيت أندر"
+msgstr "Digit Under"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "سيتم استرداد العقود الرقمية بسعر الشراء إذا لم ينتهي العقد في غضون 5 دقائق."
 
 msgid "Digits"
-msgstr "أرقام"
-
-msgid "Disable"
-msgstr "تعطيل"
-
-msgid "Dismiss alert"
-msgstr "تجاهل التنبيه"
-
-msgid "Do you want this to be a fiat account or crypto account? Please choose one:"
-msgstr "هل تريد أن يكون هذا حسابًا بالعملة المحلية أو حسابًا مشفرًا؟ يرجى اختيار واحدة:"
-
-msgid "Do you wish to continue?"
-msgstr "هل ترغب في الاستمرار؟"
-
-msgid "Document example"
-msgstr "مثال المستند"
-
-msgid "Document uploaded"
-msgstr "تم تحميل المستند"
-
-msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
-msgstr "المستندات من هذا البلد غير مدعومة حاليًا - <fallback>جرب نوع مستند آخر</fallback>"
-
-msgid "Documents uploaded"
-msgstr "المستندات التي تم تحميلها"
-
-msgid "Documents you can use to verify your identity"
-msgstr "المستندات التي يمكنك استخدامها للتحقق من هويتك"
+msgstr "Digits"
 
 msgid "Does Not Touch"
-msgstr "لا تلمس"
-
-msgid "Don't refresh this page"
-msgstr "لا تقم بتحديث هذه الصفحة"
-
-msgid "Don't want to trade in %1? You can open another cryptocurrency account."
-msgstr "لا تريد التداول بـ %1؟ يمكنك فتح حساب عملة مشفرة آخر."
-
-msgid "Driver's license"
-msgstr "رخصة قيادة"
-
-msgid "Driving licence"
-msgstr "رخصة قيادة"
-
-msgid "Due to an issue on our server, some of your MT5 accounts are unavailable at the moment. %1Please bear with us and thank you for your patience."
-msgstr "نظرًا لوجود مشكلة على خادمنا، فإن بعض حسابات MT5 الخاصة بك غير متوفرة في الوقت الحالي. %1Pيرجى التحمل معنا وشكرًا لك على سعة صدرك."
+msgstr "Does Not Touch"
 
 msgid "Duration"
 msgstr "المدّة"
 
 msgid "EU Deriv account"
 msgstr "حساب ديريف الأوروبي"
-
-msgid "Email address"
-msgstr "عنوان البريد الإلكتروني"
-
-msgid "Enable"
-msgstr "تمكين"
-
-msgid "Enable camera"
-msgstr "تمكين الكاميرا"
 
 msgid "End Time"
 msgstr "وقت النهاية"
@@ -695,25 +392,16 @@ msgid "Endpoint"
 msgstr "نقطة النهاية"
 
 msgid "Ends Between"
-msgstr "ينتهي بين"
+msgstr "Ends Between"
 
 msgid "Ends Between/Ends Outside"
-msgstr "ينتهي بين/ينتهي بالخارج"
+msgstr "Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "سيتم استرداد عقود النهايات بين/النهايات الخارجية بسعر الشراء إذا كان هناك أقل من نقطتين بين أوقات البدء والانتهاء."
+msgstr "Ends Between/Ends Outside سيتم رد عقود بسعر الشراء إذا كان هناك أقل من tickين بين وقت البداية ووقت النهاية."
 
 msgid "Ends Outside"
-msgstr "ينتهي في الخارج"
-
-msgid "Enlarge image"
-msgstr "تكبير الصورة"
-
-msgid "Enter mobile number"
-msgstr "أدخل رقم الهاتف المحمول"
-
-msgid "Enter your mobile number:"
-msgstr "أدخل رقم هاتفك المحمول:"
+msgstr "Ends Outside"
 
 msgid "Entry Spot"
 msgstr "نقطة الدخول"
@@ -734,19 +422,10 @@ msgid "Euro"
 msgstr "يورو"
 
 msgid "Even/Odd"
-msgstr "زوجي/فردي"
+msgstr "Even/Odd"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "سيتم استرداد العقود الزوجية/الفردية بسعر الشراء إذا لم ينتهي العقد في غضون 5 دقائق."
-
-msgid "Example of a blurry document"
-msgstr "مثال على مستند ضبابي"
-
-msgid "Example of a cut-off document"
-msgstr "مثال على مستند نهائي"
-
-msgid "Example of a document with glare"
-msgstr "مثال على وثيقة ذات وهج"
+msgstr "سيتم استرداد العقود Even/Odd بسعر الشراء إذا لم ينتهي العقد في غضون 5 دقائق."
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "لا يمكن أن يكون وقت الاستبعاد لأكثر من 5 سنوات."
@@ -769,23 +448,11 @@ msgstr "وقت الخروج"
 msgid "Exit time"
 msgstr "وقت الخروج"
 
-msgid "Expiry date is required for %1."
-msgstr "تاريخ انتهاء الصلاحية مطلوب لـ %1."
-
 msgid "Explanation"
 msgstr "الشرح"
 
-msgid "Face forward and make sure your eyes are clearly visible"
-msgstr "وجه للأمام وتأكد من رؤية عينيك بوضوح"
-
-msgid "Face photo page"
-msgstr "صفحة صور الوجه"
-
-msgid "Failed"
-msgstr "فشلت"
-
 msgid "Fall"
-msgstr "هبوط"
+msgstr "Fall"
 
 msgid "Fall or equal"
 msgstr "هبوط أو مساو"
@@ -799,41 +466,17 @@ msgstr "فبراير"
 msgid "Fiat"
 msgstr "فيات"
 
-msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
-msgstr "يتجاوز حجم الملف (%1) الحد المسموح به. الحد الأقصى لحجم الملف المسموح به: %2"
-
-msgid "File not uploaded."
-msgstr "لم يتم تحميل الملف."
-
-msgid "File size exceeded."
-msgstr "تم تجاوز حجم الملف."
-
-msgid "File type not supported"
-msgstr "نوع الملف غير مدعوم"
-
 msgid "Final price"
 msgstr "السعر النهائي"
 
 msgid "Financial"
 msgstr "المالية"
 
-msgid "Financial Account"
-msgstr "الحساب المالي"
-
 msgid "Financial STP"
 msgstr "الخطوة المالية"
 
 msgid "Finish"
 msgstr "إنهاء"
-
-msgid "First line of home address"
-msgstr "السطر الأول من عنوان المنزل"
-
-msgid "Follow these steps to recover camera access:"
-msgstr "اتبع هذه الخطوات لاستعادة الوصول إلى الكاميرا:"
-
-msgid "Forex"
-msgstr "الفوركس"
 
 msgid "Fr"
 msgstr "الاب"
@@ -844,35 +487,8 @@ msgstr "الجمعة"
 msgid "Fridays"
 msgstr "الجمعة"
 
-msgid "From account: "
-msgstr "من الحساب: "
-
-msgid "Front Side"
-msgstr "الجانب الأمامي"
-
-msgid "Front and back"
-msgstr "أمامي وخلفي"
-
 msgid "Gaming"
 msgstr "الألعاب"
-
-msgid "Gaming Account"
-msgstr "حساب الألعاب"
-
-msgid "Get %1"
-msgstr "احصل على %1"
-
-msgid "Get link via SMS"
-msgstr "احصل على رابط عبر الرسائل القصيرة"
-
-msgid "Get secure link"
-msgstr "احصل على رابط آمن"
-
-msgid "Get your secure link"
-msgstr "احصل على رابطك الآمن"
-
-msgid "Glare detected"
-msgstr "تم اكتشاف الوهج"
 
 msgid "Go To Reports"
 msgstr "انتقل إلى التقارير"
@@ -884,22 +500,10 @@ msgid "Go to statement"
 msgstr "انتقل إلى البيان"
 
 msgid "Goes Outside"
-msgstr "يذهب للخارج"
-
-msgid "Grant access to your camera from your browser settings"
-msgstr "منح حق الوصول إلى الكاميرا من إعدادات المتصفح"
-
-msgid "Great, that's everything we need"
-msgstr "رائع، هذا كل ما نحتاجه"
+msgstr "Goes Outside"
 
 msgid "Guide"
 msgstr "دليل"
-
-msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
-msgstr "وبالتالي، فإن رصيدك القابل للسحب يصل إلى %1%2فقط، وفقًا للأموال المتاحة في حسابك."
-
-msgid "Here's how to do it:"
-msgstr "إليك كيفية القيام بذلك:"
 
 msgid "High"
 msgstr "مرتفع"
@@ -935,100 +539,82 @@ msgid "High/Low Ticks"
 msgstr "علامات عالية/منخفضة"
 
 msgid "Higher"
-msgstr "أعلى"
+msgstr "Higher"
 
 msgid "Higher/Lower"
-msgstr "أعلى/أقل"
+msgstr "Higher/Lower"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "سيتم استرداد العقود الأعلى/المنخفضة بسعر الشراء إذا كان هناك أقل من نقطتين بين أوقات البداية والنهاية."
+msgstr "سيتم استرداد العقود Higher/Lower بسعر الشراء إذا كان هناك أقل من نقطتين بين أوقات البداية والنهاية."
 
 msgid "Hour"
 msgstr "ساعة"
 
-msgid "How to scan a QR code"
-msgstr "كيفية مسح رمز QR"
-
 msgid "I want to reapply"
 msgstr "أريد إعادة التقديم"
-
-msgid "I'm interested"
-msgstr "أنا مهتم"
-
-msgid "ID number is required for %1."
-msgstr "رقم الهوية مطلوب لـ %1."
 
 msgid "IDK"
 msgstr "أتساءل"
 
-msgid "IP Address"
-msgstr "عنوان IP"
-
-msgid "Identity card"
-msgstr "بطاقة الهوية"
-
-msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
-msgstr "إذا لم يعمل، فقم بتنزيل ماسح رمز QR من Google Play أو App Store"
-
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "إذا كانت نقطة <strong></strong> الخروج مساوية للحاجز <strong>المنخفض</strong> أو الحاجز <strong>العالي</strong>، فلن تربح العائد."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "إذا كانت نقطة <strong></strong> الخروج مساوية <strong>للحاجز</strong> أو الحاجز <stronm g>الجديد (في حالة حدوث إعادة تعيين)</stronmg>، فلن تربح العائد."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "إذا كانت نقطة <strong></strong> الخروج مساوية <strong>للحاجز</strong>، فلن تربح العائد."
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
 msgstr "إذا كانت علامة <strong>الأخيرة</strong> تساوي متوسط العلامات، فلن تربح العائد."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "إذا اخترت «Allow equals»، فستفوز بالعائد إذا كانت نقطة الخروج أعلى من أو تساوي نقطة الدخول لـ «Rise». وبالمثل، يمكنك الفوز بالدفع إذا كانت نقطة الخروج أقل من أو تساوي نقطة الدخول لـ «الخريف»."
+msgstr "إذا اخترت \"Allow equals\"، فستفوز بالعائد إذا كانت نقطة الخروج أعلى من أو تساوي نقطة الدخول لـ \"Rise\". وبالمثل، يمكنك الفوز بالدفع إذا كانت نقطة الخروج أقل من أو تساوي نقطة الدخول لـ \"Fall\"."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
 msgstr "إذا اخترت «الخريف الآسيوي»، فسوف تفوز بالعائد إذا كانت علامة <strong>الأخيرة</strong> أقل بـ <strong>من</strong> من متوسط <strong>نقاط في</strong> من العلامات."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "إذا اخترت «Asian Rise»، فستفوز بالعائد إذا كانت العلامة <strong></strong> الأخيرة <strong></strong> أعلى</strong> من <strong>متوسط العلامات."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "إذا قمت بتحديد \"Differs\"، فستفوز بالدفع إذا كان الرقم <strong>الأخير</strong> من العلامة الأخيرة <strong>ليس هو نفسه</strong> <strong>توقعك</strong>."
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "إذا اخترت «Does Not Touch»، فستفوز بالدفع إذا لم يلمس السوق أبدًا حاجز <strong></strong> في أي وقت خلال فترة العقد <strong></strong>."
+msgstr "إذا اخترت \"Does Not Touch\"، فستفوز بالدفع إذا لم يلمس السوق أبدًا حاجز <strong></strong> في أي وقت خلال فترة العقد <strong></strong>."
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr ""
+msgstr "إذا قمت بتحديد \"Ends Between\"، فستفوز بالدفع إذا كانت نقطة <strong>exit spot</strong> الخروج أعلى تمامًا من الحاجز <strong>المنخفض</strong> وأقل تمامًا من الحاجز <strong>المرتفع</strong>."
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr ""
+msgstr "إذا قمت بتحديد \"Ends Outside\"، فستفوز بالدفع إذا كانت نقطة <strong></strong> الخروج إما أعلى بشكل صارم من الحاجز <strong>المرتفع</strong>، أو أقل بشكل صارم من الحاجز <strong>المنخفض</strong>."
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr ""
+msgstr "إذا قمت بتحديد \"Even\"، فستفوز بالدفع إذا كان الرقم الأخير</strong>من العلامة الأخيرة رقمًا <strong>زوجيًا (أي 2 أو 4 أو 6 أو 8 أو 0).<strong></strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "إذا اخترت «Fall»، فستفوز بالعائد إذا كانت نقطة الخروج <strong></strong> أقل تمامًا من نقطة الدخول <strong></strong>."
+msgstr "إذا اخترت \"Fall\"، فستفوز بالعائد إذا كانت نقطة الخروج <strong></strong> أقل تمامًا من نقطة الدخول <strong></strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "إذا قمت بتحديد «Falls»، فستفوز بالدفع إذا كانت نقطة <strong></strong> الخروج أقل بكثير من نقطة <strong>الدخول</strong>."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "إذا اخترت «Goes Outside»، فستفوز بالعائد إذا لامس السوق إما الحاجز <strong>المرتفع</strong> أو الحاجز <strong>المنخفض</strong> في أي وقت خلال فترة العقد <strong></strong>."
+msgstr "إذا اخترت \"Goes Outside\"، فستفوز بالعائد إذا لامس السوق إما الحاجز <strong>المرتفع</strong> أو الحاجز <strong>المنخفض</strong> في أي وقت خلال فترة العقد <strong></strong>."
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr ""
+msgstr "إذا اخترت \"Higher\"، فستفوز بالدفع إذا كانت نقطة <strong>الخروج أعلى</strong> تمامًا من <strong>الحاجز</strong>."
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr ""
+msgstr "إذا اخترت \"Lower\"، فستفوز بالدفع إذا كانت نقطة <strong>الخروج أقل</strong> بكثير من <strong>الحاجز</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr ""
+msgstr "إذا قمت بتحديد \"Matches\"، فستفوز بالدفع إذا كان الرقم <strong>الأخير</strong> من العلامة الأخيرة هو <strong>نفسه</strong> <strong>توقعك.</strong>"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "إذا قمت بتحديد \"Odd\"، فستفوز بالدفع إذا كان الرقم الأخير</strong>من العلامة الأخيرة رقمًا <strong>فرديًا (أي 1 أو 3 أو 5 أو 7 أو 9).<strong></strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr ""
+msgstr "إذا قمت بتحديد \"Over\"، فستفوز بالدفع إذا كان الرقم<strong>الأخير</strong>من العلامة الأخيرة <strong>أكبر من توقعاتك.</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
 msgstr "إذا اخترت «إعادة تعيين المكالمة»، فستفوز بالدفع إذا كانت نقطة الخروج أعلى تمامًا من نقطة الدخول أو البقعة في وقت إعادة الضبط."
@@ -1037,19 +623,19 @@ msgid "If you select \"Reset-Put\", you win the payout if the exit spot is stric
 msgstr "إذا اخترت «Reset-Put»، فستفوز بالدفع إذا كانت نقطة الخروج أقل تمامًا من نقطة الدخول أو البقعة في وقت إعادة الضبط."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "إذا اخترت \"Rise\"، فستفوز بالدفع إذا كانت نقطة <strong>الخروج أعلى</strong> تمامًا من نقطة <strong>الدخول</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "إذا قمت بتحديد «Rises»، فستفوز بالدفع إذا كانت نقطة <strong></strong> الخروج أعلى تمامًا من نقطة <strong>الدخول</strong>."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "إذا اخترت «Stays Between»، فستفوز بالعائد إذا بقي السوق بين (لا يلمس) إما الحاجز <strong>المرتفع</strong> أو الحاجز <strong>المنخفض</strong> في أي وقت خلال فترة العقد <strong></strong>."
+msgstr "إذا اخترت \"Stays Between\"، فستفوز بالعائد إذا بقي السوق بين (لا يلمس) إما الحاجز <strong>المرتفع</strong> أو الحاجز <strong>المنخفض</strong> في أي وقت خلال فترة العقد <strong></strong>."
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "إذا اخترت \"Touches\"، فستفوز بالعوائد إذا لامس السوق <strong>الحاجز</strong> في أي وقت خلال فترة <strong>العقد</strong>."
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr ""
+msgstr "إذا قمت بتحديد \"Under\"، فستفوز بالدفع إذا كان الرقم<strong>الأخير</strong>من العلامة الأخيرة<strong>أقل من توقعاتك.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
 msgstr "إذا اخترت «السقوط»، فستفوز بالعائد إذا كان سعر السوق أقل من نقطة الدخول <strong></strong>."
@@ -1064,31 +650,31 @@ msgid "If you select \"rises\", you win the payout if the market price is higher
 msgstr "إذا اخترت «الارتفاعات»، فستفوز بالعائد إذا كان سعر السوق أعلى من نقطة الدخول."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr ""
+msgstr "إذا قمت بتحديد %1«High Tick»%2، فستفوز بالعائد إذا كانت العلامة المحددة %1hiهي الضيف بين العلامات%2الخمس التالية."
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
 msgstr "إذا قمت بتحديد %1«Low Tick»%2، فستفوز بالدفع إذا كانت العلامة المحددة هي %1loغربًا بين العلامات الخمس التالية%2."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
+msgstr "إذا اخترت %1«Only Downs»%2، فستفوز بالعوائد إذا انخفضت العلامات المتتالية على التوالي بعد %1eنقطة%2الدخول.%3Nلا يوجد دفع في حالة ارتفاع أي علامة أو تساويها مع أي من العلامات السابقة."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
+msgstr "إذا اخترت %1«Only Ups»%2، فستفوز بالعوائد إذا ارتفعت العلامات المتتالية على التوالي بعد %1eنقطة%2الدخول.%3Nلا يوجد دفع في حالة سقوط أي علامة أو تساويها مع أي من العلامات السابقة."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr ""
+msgstr "إذا قمت بتحديد وقت <strong>البدء</strong> في المستقبل، فإن وقت <strong></strong> البدء هو الوقت المحدد ونقطة <strong>الدخول</strong> هي السعر الساري في ذلك الوقت."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "إذا قمت بتحديد وقت <strong></strong> بدء «الآن»، فإن وقت <strong>الانتهاء</strong> هو عدد الدقائق/الساعات المحدد بعد وقت <strong>البدء</strong> (إذا كانت المدة أقل من يوم واحد)، أو في نهاية يوم التداول (إذا كانت المدة يومًا واحدًا أو أكثر)."
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr ""
+msgstr "إذا قمت بتحديد وقت <strong>نهاية محدد</strong>، فإن وقت <strong>الانتهاء</strong> هو الوقت المحدد."
 
 msgid "In the EU, financial binary options are only available to professional investors."
 msgstr "في الاتحاد الأوروبي، الخيارات الثنائية المالية متاحة فقط للمستثمرين المحترفين."
 
 msgid "In/Out"
-msgstr "داخل/خارج"
+msgstr "In/Out"
 
 msgid "Indicates required field"
 msgstr "يشير إلى الحقل المطلوب"
@@ -1096,14 +682,8 @@ msgstr "يشير إلى الحقل المطلوب"
 msgid "Indicative"
 msgstr "إرشادي"
 
-msgid "Insufficient balance."
-msgstr "رصيد غير كافٍ."
-
 msgid "Invalid app id"
 msgstr "معرف تطبيق غير صالح"
-
-msgid "Invalid document format."
-msgstr "تنسيق مستند غير صالح."
 
 msgid "Invalid email address."
 msgstr "عنوان بريد إلكتروني غير صالح."
@@ -1113,21 +693,6 @@ msgstr "رمز التحقق غير صالح."
 
 msgid "Investment"
 msgstr "الاستثمار"
-
-msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
-msgstr "قد يتم قطع الاتصال. <fallback>حاول استخدام هاتفك بدلاً من ذلك</fallback>."
-
-msgid "It may take a few minutes to arrive"
-msgstr "قد يستغرق الأمر بضع دقائق للوصول"
-
-msgid "It must be an official photo ID"
-msgstr "يجب أن تكون بطاقة هوية رسمية تحمل صورة"
-
-msgid "It will only take a couple of minutes."
-msgstr "سوف يستغرق الأمر بضع دقائق فقط."
-
-msgid "It’ll take longer to verify you if we can’t read it"
-msgstr "سيستغرق الأمر وقتًا أطول للتحقق منك إذا لم نتمكن من قراءته"
 
 msgid "Jan"
 msgstr "يناير"
@@ -1147,12 +712,6 @@ msgstr "يونيو"
 msgid "June"
 msgstr "يونيو"
 
-msgid "Jurisdiction"
-msgstr "الولاية القضائية"
-
-msgid "Keep this window open while using your mobile"
-msgstr "حافظ على هذه النافذة مفتوحة أثناء استخدام هاتفك المحمول"
-
 msgid "Language settings"
 msgstr "إعدادات اللغة"
 
@@ -1162,29 +721,14 @@ msgstr "توقع الرقم الأخير"
 msgid "Last Digit Stats"
 msgstr "إحصائيات الرقم الأخير"
 
-msgid "Last Login"
-msgstr "تسجيل الدخول الأخير"
-
-msgid "Last Used"
-msgstr "آخر استخدام"
-
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "إحصائيات الأرقام الأخيرة لأحدث %1 علامة على %2"
-
-msgid "Linked to your computer"
-msgstr "مرتبط بجهاز الكمبيوتر الخاص بك"
 
 msgid "Litecoin"
 msgstr "لايتكوين"
 
 msgid "Live chat"
 msgstr "دردشة حية"
-
-msgid "Loading"
-msgstr "جار التحميل"
-
-msgid "Loading..."
-msgstr "جاري التحميل..."
 
 msgid "Log in"
 msgstr "تسجيل الدخول"
@@ -1207,9 +751,6 @@ msgstr "نظرة إلى الوراء"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "هل تبحث عن حسابات CFD؟ انتقل إلى مركز التاجر"
 
-msgid "Looks like you took too long"
-msgstr "يبدو أنك استغرقت وقتًا طويلاً"
-
 msgid "Loss"
 msgstr "خسارة"
 
@@ -1229,7 +770,7 @@ msgid "Low barrier offset"
 msgstr "تعويض الحاجز المنخفض"
 
 msgid "Lower"
-msgstr "أقل"
+msgstr "Lower"
 
 msgid "MT5"
 msgstr "MT5"
@@ -1239,42 +780,6 @@ msgstr "تم تعطيل سحب MT5"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
 msgstr "تم تعطيل عمليات سحب MT5 على حسابك. يرجى التحقق من بريدك الإلكتروني لمزيد من التفاصيل."
-
-msgid "Make sure all of the document is in the photo"
-msgstr "تأكد من وجود كل المستند في الصورة"
-
-msgid "Make sure details are clear to read, with no blur or glare"
-msgstr "تأكد من أن التفاصيل واضحة للقراءة، دون أي تشويش أو وهج"
-
-msgid "Make sure everything is clear"
-msgstr "تأكد من أن كل شيء واضح"
-
-msgid "Make sure full document is visible"
-msgstr "تأكد من أن المستند الكامل مرئي"
-
-msgid "Make sure your card details are clear to read, with no blur or glare"
-msgstr "تأكد من أن تفاصيل بطاقتك واضحة للقراءة، دون أي تشويش أو وهج"
-
-msgid "Make sure your device has a working camera"
-msgstr "تأكد من أن جهازك يحتوي على كاميرا تعمل"
-
-msgid "Make sure your device's camera works"
-msgstr "تأكد من عمل كاميرا جهازك"
-
-msgid "Make sure your license details are clear to read, with no blur or glare"
-msgstr "تأكد من أن تفاصيل الترخيص الخاصة بك واضحة للقراءة، دون أي تشويش أو وهج"
-
-msgid "Make sure your passport details are clear to read, with no blur or glare"
-msgstr "تأكد من أن تفاصيل جواز سفرك واضحة للقراءة، دون أي تشويش أو وهج"
-
-msgid "Make sure your permit details are clear to read, with no blur or glare"
-msgstr "تأكد من أن تفاصيل التصريح واضحة للقراءة، دون أي تشويش أو وهج"
-
-msgid "Make sure your selfie clearly shows your face"
-msgstr "تأكد من أن صورتك الذاتية تظهر وجهك بوضوح"
-
-msgid "Make sure§"
-msgstr "تأكد من §"
 
 msgid "Manage accounts"
 msgstr "إدارة الحسابات"
@@ -1286,16 +791,16 @@ msgid "March"
 msgstr "مارس"
 
 msgid "Matches/Differs"
-msgstr "المطابقات/الاختلافات"
+msgstr "Matches/Differs"
 
 msgid "Maximum multiplier of 1000."
-msgstr "الحد الأقصى للمضاعف 1000."
+msgstr "الحد الأقصى multiplier 1000."
 
 msgid "Maximum payout"
 msgstr "الحد الأقصى للدفع"
 
 msgid "Maximum:"
-msgstr ""
+msgstr "الحد الأقصى:"
 
 msgid "May"
 msgstr "مايو"
@@ -1321,35 +826,20 @@ msgstr "الإثنين"
 msgid "More information can be found in an email sent to you."
 msgstr "يمكن العثور على مزيد من المعلومات في رسالة بريد إلكتروني مرسلة إليك."
 
-msgid "Move away from direct light"
-msgstr "ابتعد عن الضوء المباشر"
-
-msgid "Move away from direct light — no glare"
-msgstr "ابتعد عن الضوء المباشر - بدون وهج"
-
 msgid "Multi-Collateral"
 msgstr "ضمانات متعددة"
 
-msgid "Multiple faces found"
-msgstr "تم العثور على وجوه متعددة"
-
 msgid "Multiplier"
-msgstr "المضاعف"
+msgstr "Multiplier"
 
 msgid "Multiplier Down"
-msgstr "خفض المضاعف"
+msgstr "Multiplier Down"
 
 msgid "Multiplier Up"
-msgstr "رفع المضاعف"
+msgstr "Multiplier Up"
 
 msgid "Multipliers"
-msgstr "مضاعفات"
-
-msgid "Must be under 10MB."
-msgstr "يجب أن يكون أقل من 10 ميغابايت."
-
-msgid "Name"
-msgstr "اسم"
+msgstr "Multipliers"
 
 msgid "Names and surnames by themselves are easy to guess"
 msgstr "من السهل تخمين الأسماء والألقاب في حد ذاتها."
@@ -1360,26 +850,11 @@ msgstr "صافي الربح"
 msgid "Network status"
 msgstr "حالة الشبكة"
 
-msgid "Never"
-msgstr "أبداً"
-
-msgid "Never Used"
-msgstr "لم تستخدم من قبل"
-
 msgid "New Year's Day"
 msgstr "يوم رأس السنة"
 
-msgid "New password"
-msgstr "كلمة مرور جديدة"
-
-msgid "New token created."
-msgstr "تم إنشاء رمز جديد."
-
 msgid "Next"
 msgstr "التالي"
-
-msgid "No authentication required"
-msgstr "لا حاجة للمصادقة"
 
 msgid "No currency assigned"
 msgstr "لم يتم تعيين أي عملة"
@@ -1387,20 +862,11 @@ msgstr "لم يتم تعيين أي عملة"
 msgid "No currency selected"
 msgstr "لم يتم اختيار أي عملة"
 
-msgid "No document detected"
-msgstr "لم يتم اكتشاف أي مستند"
-
-msgid "No face found"
-msgstr "لم يتم العثور على وجه"
-
 msgid "No need for symbols, digits, or uppercase letters"
 msgstr "لا حاجة للرموز أو الأرقام أو الأحرف الكبيرة"
 
 msgid "No notifications"
 msgstr "لا توجد إشعارات"
-
-msgid "No thanks"
-msgstr "لا، شكرًا"
 
 msgid "Non-EU Deriv "
 msgstr "مشتق من خارج الاتحاد الأوروبي "
@@ -1408,17 +874,8 @@ msgstr "مشتق من خارج الاتحاد الأوروبي "
 msgid "Not"
 msgstr "ليس"
 
-msgid "Not announced for this currency."
-msgstr "لم يتم الإعلان عن هذه العملة."
-
 msgid "Note"
 msgstr "ملاحظة"
-
-msgid "Note:"
-msgstr "ملاحظة:"
-
-msgid "Note: You are limited to one fiat currency account. The currency of your fiat account can be changed before you deposit into your fiat account for the first time or create an MT5 account. You may also open one account for each supported cryptocurrency."
-msgstr "ملاحظة: أنت مقيد بحساب واحد بالعملة الورقية. يمكن تغيير عملة حساب العملات الورقية الخاص بك قبل الإيداع في حساب العملات الورقية الخاص بك لأول مرة أو إنشاء حساب MT5. يمكنك أيضًا فتح حساب واحد لكل عملة مشفرة مدعومة."
 
 msgid "Notifications"
 msgstr "الإشعارات"
@@ -1447,17 +904,11 @@ msgstr "شهر اكتوبر"
 msgid "Offline"
 msgstr "غير متصل"
 
-msgid "Once you've finished we'll take you to the next step"
-msgstr "بمجرد الانتهاء، سنأخذك إلى الخطوة التالية."
-
 msgid "Online"
 msgstr "عبر الإنترنت"
 
 msgid "Online trading platform"
 msgstr "منصة تداول عبر الإنترنت"
-
-msgid "Only %1 are allowed."
-msgstr ""
 
 msgid "Only Downs"
 msgstr "أونلي داونز"
@@ -1474,17 +925,8 @@ msgstr "يُسمح فقط بالأحرف والأرقام والمسافة وه�
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
 msgstr "يُسمح فقط بالأحرف والأرقام والمسافة والواصلة والنقطة والفاصلة العليا."
 
-msgid "Only letters, numbers, space, hyphen, period, comma, and apostrophe are allowed."
-msgstr "يُسمح فقط بالأحرف والأرقام والمسافة والواصلة والنقطة والفاصلة والفاصلة العليا."
-
-msgid "Only letters, numbers, space, underscore, and hyphen are allowed for ID number (%1)."
-msgstr "يُسمح فقط بالأحرف والأرقام والمسافة والتسطير السفلي والواصلة لرقم الهوية (%1)."
-
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "يُسمح فقط بالأحرف والمسافة والواصلة والنقطة والفاصلة العليا."
-
-msgid "Only your face can be in the selfie"
-msgstr "يمكن أن يكون وجهك فقط في الصورة الذاتية"
 
 msgid "Oops... Page Not Available"
 msgstr "عفوًا... الصفحة غير متوفرة"
@@ -1501,20 +943,8 @@ msgstr "افتح حساب مجاني"
 msgid "Open positions"
 msgstr "المراكز المفتوحة"
 
-msgid "Open the link and complete the tasks"
-msgstr "افتح الرابط وأكمل المهام"
-
-msgid "Open the link on your mobile"
-msgstr "افتح الرابط على هاتفك المحمول"
-
-msgid "Open your new bank account"
-msgstr "افتح حسابك المصرفي الجديد"
-
-msgid "Opens"
-msgstr "يفتح"
-
 msgid "Options & Multipliers"
-msgstr "الخيارات والمضاعفات"
+msgstr "الخيارات وMultipliers"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
 msgstr "يمكن أن يصبح تداول الخيارات إدمانًا حقيقيًا، كما يمكن دفع أي نشاط آخر إلى أقصى حدوده. لتجنب خطر مثل هذا الإدمان، نقدم فحصًا واقعيًا يمنحك ملخصًا لتداولاتك وحساباتك على أساس منتظم."
@@ -1523,22 +953,13 @@ msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring
 msgstr "أداة «السحب والإسقاط» الكلاسيكية الخاصة بنا لإنشاء روبوتات التداول، والتي تتميز بمخططات التداول المنبثقة، للمستخدمين المتقدمين."
 
 msgid "Over/Under"
-msgstr "أكثر أو أقل"
+msgstr "Over/Under"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
 msgstr "سيتم استرداد العقود الزائدة/الأقل بسعر الشراء إذا لم ينتهي العقد في غضون 5 دقائق."
 
 msgid "PM"
 msgstr "مساء"
-
-msgid "Passport"
-msgstr "جواز سفر"
-
-msgid "Passport photo page"
-msgstr "صفحة صور جواز السفر"
-
-msgid "Password is not strong enough."
-msgstr "كلمة المرور ليست قوية بما فيه الكفاية."
 
 msgid "Password should have lower and uppercase English letters with numbers."
 msgstr "يجب أن تحتوي كلمة المرور على أحرف إنجليزية صغيرة وكبيرة مع أرقام."
@@ -1549,56 +970,23 @@ msgstr "معيار باكسوس"
 msgid "Pay-out"
 msgstr "الدفع"
 
-msgid "Payment Agent services are not available in your country or in your preferred currency."
-msgstr "لا تتوفر خدمات وكيل الدفع في بلدك أو بعملتك المفضلة."
-
-msgid "Payments"
-msgstr "الدفعات"
-
 msgid "Payout"
 msgstr "دفع تعويضات"
 
 msgid "Payout range"
 msgstr "نطاق الدفع"
 
-msgid "Pending"
-msgstr "قيد الانتظار"
-
 msgid "Percentage"
 msgstr "النسبة المئوية"
-
-msgid "Permissions"
-msgstr "الأذونات"
-
-msgid "Photo of your document"
-msgstr "صورة للمستند الخاص بك"
-
-msgid "Photo of your face"
-msgstr "صورة لوجهك"
-
-msgid "Place of birth"
-msgstr "مكان الميلاد"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
 msgstr "يرجى %1cإكمال ملف تعريف حسابك%2 لرفع حدود السحب والتداول الخاصة بك."
 
-msgid "Please %1deposit%2 to your account."
-msgstr ""
-
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr ""
+msgstr "%1loيرجى %3sالدخول%2 أو الاشتراك%4 لعرض هذه الصفحة."
 
 msgid "Please accept the terms and conditions."
 msgstr "يرجى قبول الشروط والأحكام."
-
-msgid "Please check your email for further instructions."
-msgstr "يرجى التحقق من بريدك الإلكتروني لمزيد من التعليمات."
-
-msgid "Please check your email for the password reset link."
-msgstr "يرجى التحقق من بريدك الإلكتروني للحصول على رابط إعادة تعيين كلمة المرور."
-
-msgid "Please choose a currency"
-msgstr "يرجى اختيار عملة"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
 msgstr "يرجى إكمال نموذج %1للحساب الحقيقي%2 للتحقق من عمرك كما هو مطلوب من قبل لجنة %3UK Gambling%4 (UKGC)."
@@ -1606,26 +994,14 @@ msgstr "يرجى إكمال نموذج %1للحساب الحقيقي%2 للتح�
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
 msgstr "يرجى إكمال نموذج التقييم المالي %1f%2 لرفع حدود السحب والتداول الخاصة بك."
 
-msgid "Please complete your Personal Details before you proceed."
-msgstr "يرجى إكمال التفاصيل الشخصية الخاصة بك قبل المتابعة."
-
-msgid "Please confirm that all the information above is true and complete."
-msgstr "يرجى التأكد من أن جميع المعلومات الواردة أعلاه صحيحة وكاملة."
-
 msgid "Please confirm that you are not a politically exposed person."
 msgstr "يرجى تأكيد أنك لست شخصًا معرضًا سياسيًا."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
 msgstr "يرجى التأكد من تثبيت تطبيق Telegram على جهازك."
 
-msgid "Please enter a valid Login ID."
-msgstr "يرجى إدخال معرف تسجيل دخول صالح."
-
 msgid "Please enter a valid phone number (e.g. +15417541234)."
 msgstr "يرجى إدخال رقم هاتف صالح (على سبيل المثال +15417541234)."
-
-msgid "Please note that the selected currency is allowed for limited accounts only."
-msgstr "يرجى ملاحظة أن العملة المحددة مسموح بها للحسابات المحدودة فقط."
 
 msgid "Please reapply once the required criteria has been fulfilled."
 msgstr "يرجى إعادة التقديم بمجرد استيفاء المعايير المطلوبة."
@@ -1636,32 +1012,17 @@ msgstr "يرجى إعادة تحميل الصفحة"
 msgid "Please select"
 msgstr "يرجى الاختيار"
 
-msgid "Please select a country"
-msgstr "يرجى اختيار بلد"
-
-msgid "Please select a reason."
-msgstr "يرجى تحديد سبب."
-
 msgid "Please select a valid time."
 msgstr "يرجى تحديد وقت صالح."
 
-msgid "Please select at least one scope"
-msgstr "يرجى تحديد نطاق واحد على الأقل"
-
 msgid "Please select the checkbox."
 msgstr "يرجى تحديد مربع الاختيار."
-
-msgid "Please select the currency for this account:"
-msgstr "يرجى تحديد العملة لهذا الحساب:"
 
 msgid "Please set the currency of your account."
 msgstr "يرجى تعيين عملة حسابك."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
 msgstr "يرجى تعيين حد دوران %13يوم%2 لإزالة حدود الإيداع."
-
-msgid "Please specify the reasons for closing your accounts"
-msgstr "يرجى تحديد أسباب إغلاق حساباتك"
 
 msgid "Please specify your preferred interval reality check in minutes:"
 msgstr "يرجى تحديد الفاصل الزمني المفضل للتحقق من الواقع بالدقائق:"
@@ -1671,15 +1032,6 @@ msgstr "يرجى تقديم إثبات العنوان الخاص بك."
 
 msgid "Please submit your proof of identity."
 msgstr "يرجى تقديم إثبات الهوية الخاص بك."
-
-msgid "Please try again"
-msgstr "يرجى المحاولة مرة أخرى"
-
-msgid "Point your phone’s camera at the QR code"
-msgstr "وجّه كاميرا هاتفك نحو رمز QR"
-
-msgid "Postal Code/ZIP"
-msgstr "الرمز البريدي/ZIP"
 
 msgid "Potential Payout"
 msgstr "الدفع المحتمل"
@@ -1717,9 +1069,6 @@ msgstr "الربح/الخسارة"
 msgid "Profit table"
 msgstr "جدول الأرباح"
 
-msgid "Profit/Loss"
-msgstr "الربح/الخسارة"
-
 msgid "Profit/loss"
 msgstr "الربح/الخسارة"
 
@@ -1741,14 +1090,8 @@ msgstr "انتهت صلاحية إثبات الهوية"
 msgid "Proof of identity required"
 msgstr "إثبات الهوية مطلوب"
 
-msgid "Provide the whole document page for best results"
-msgstr "قم بتوفير صفحة المستند بأكملها للحصول على أفضل النتائج"
-
 msgid "Purchase"
 msgstr "شراء"
-
-msgid "Purchase Price"
-msgstr "سعر الشراء"
 
 msgid "Purchase Time"
 msgstr "وقت الشراء"
@@ -1765,17 +1108,11 @@ msgstr "وقت الشراء"
 msgid "Put Spread"
 msgstr "ضع الفارق"
 
-msgid "Read"
-msgstr "اقرأ"
-
 msgid "Ready to trade?"
 msgstr "هل أنت مستعد للتداول؟"
 
 msgid "Real"
 msgstr "حقيقي"
-
-msgid "Real Account"
-msgstr "حساب حقيقي"
 
 msgid "Real Financial"
 msgstr "ريال فاينانشال"
@@ -1786,50 +1123,17 @@ msgstr "ريال فاينانشال STP"
 msgid "Real Synthetic"
 msgstr "مادة اصطناعية حقيقية"
 
-msgid "Real-Money Account"
-msgstr "حساب المال الحقيقي"
-
-msgid "Real-Money Accounts"
-msgstr "حسابات الأموال الحقيقية"
-
 msgid "Reality Check"
 msgstr "التحقق من الواقع"
 
 msgid "Recent years are easy to guess"
 msgstr "من السهل تخمين السنوات الأخيرة."
 
-msgid "Recover camera access to continue face verification"
-msgstr "استرجع الوصول إلى الكاميرا لمتابعة التحقق من الوجه"
-
-msgid "Recovery"
-msgstr "الاسترداد"
-
-msgid "Redo"
-msgstr "إعادة"
-
-msgid "Ref."
-msgstr "المرجع."
-
-msgid "Reference ID"
-msgstr "معرف المرجع"
-
-msgid "Refresh"
-msgstr "تحديث"
-
-msgid "Refresh this page to restart the identity verification process"
-msgstr "قم بتحديث هذه الصفحة لإعادة تشغيل عملية التحقق من الهوية"
-
 msgid "Remaining time"
 msgstr "الوقت المتبقي"
 
-msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
-msgstr "تذكر أن تضغط على زر الإيقاف عند الانتهاء. <fallback>إعادة إجراءات الفيديو</fallback>"
-
 msgid "Remove deposit limits"
 msgstr "إزالة حدود الإيداع"
-
-msgid "Remove your glasses, if necessary"
-msgstr "قم بإزالة النظارات الخاصة بك، إذا لزم الأمر"
 
 msgid "Repeats like \"aaa\" are easy to guess"
 msgstr "من السهل تخمين التكرارات مثل «aaa»"
@@ -1846,9 +1150,6 @@ msgstr "يتطلب تمكين تخزين الويب في متصفحك حتى ي�
 msgid "Resale not offered"
 msgstr "إعادة البيع غير معروضة"
 
-msgid "Resend link"
-msgstr "إعادة إرسال الرابط"
-
 msgid "Reset Barrier"
 msgstr "إعادة تعيين الحاجز"
 
@@ -1857,9 +1158,6 @@ msgstr "إعادة تعيين المكالمة"
 
 msgid "Reset Call/Reset Put"
 msgstr "إعادة تعيين المكالمة/إعادة ضبط الوضع"
-
-msgid "Reset Password"
-msgstr "إعادة تعيين كلمة المرور"
 
 msgid "Reset Put"
 msgstr "وضع إعادة الضبط"
@@ -1873,50 +1171,29 @@ msgstr "إعادة ضبط الرصيد"
 msgid "Reset barrier"
 msgstr "إعادة تعيين الحاجز"
 
-msgid "Reset the balance of your virtual account to %1 anytime."
-msgstr "أعد تعيين رصيد حسابك الافتراضي إلى %1 في أي وقت."
-
 msgid "Reset time"
 msgstr "وقت إعادة الضبط"
 
 msgid "Reset to original settings"
 msgstr "إعادة الضبط إلى الإعدادات الأصلية"
 
-msgid "Residence permit"
-msgstr "تصريح الإقامة"
-
-msgid "Restart process on a different device"
-msgstr "عملية إعادة التشغيل على جهاز مختلف"
-
-msgid "Restart the process on the latest version of Google Chrome"
-msgstr "أعد تشغيل العملية على أحدث إصدار من Google Chrome"
-
-msgid "Restart the process on the latest version of Safari"
-msgstr "أعد تشغيل العملية على أحدث إصدار من Safari"
-
 msgid "Return"
 msgstr "إرجاع"
-
-msgid "Reverse Side"
-msgstr "الجانب العكسي"
 
 msgid "Reversed words aren't much harder to guess"
 msgstr "ليس من الصعب تخمين الكلمات المعكوسة."
 
-msgid "Revoke access"
-msgstr "إلغاء الوصول"
-
 msgid "Rise"
-msgstr "إرتفع"
+msgstr "Rise"
 
 msgid "Rise or equal"
 msgstr "ترتفع أو تساوي"
 
 msgid "Rise/Fall"
-msgstr "ارتفاع/هبوط"
+msgstr "Rise/Fall"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr "سيتم استرداد عقود الارتفاع/الاهبوط في الحالات التالية:"
+msgstr "سيتم استرداد عقود Rise/Fall في الحالات التالية:"
 
 msgid "STASIS Euro"
 msgstr "ستاسيس يورو"
@@ -1924,29 +1201,8 @@ msgstr "ستاسيس يورو"
 msgid "Sa"
 msgstr "سبا"
 
-msgid "Sale Date"
-msgstr "تاريخ البيع"
-
-msgid "Sale Price"
-msgstr "سعر البيع"
-
 msgid "Saturday"
 msgstr "يوم السبت"
-
-msgid "Scan QR code"
-msgstr "مسح رمز QR"
-
-msgid "Scan the QR code with your phone"
-msgstr "امسح رمز QR بهاتفك"
-
-msgid "Scans and photocopies are not accepted"
-msgstr "لا يتم قبول عمليات المسح والنسخ"
-
-msgid "Scopes"
-msgstr "النطاقات"
-
-msgid "Search for country"
-msgstr "ابحث عن البلد"
 
 msgid "Search..."
 msgstr "ابحث..."
@@ -1957,23 +1213,11 @@ msgstr "حدد الأصل"
 msgid "Select Trade Type"
 msgstr "حدد نوع التجارة"
 
-msgid "Select a %{country} document"
-msgstr "حدد وثيقة %{country}"
-
-msgid "Select country"
-msgstr "حدد البلد"
-
 msgid "Select date"
 msgstr "حدد التاريخ"
 
-msgid "Select issuing country"
-msgstr "حدد بلد الإصدار"
-
 msgid "Select market:"
 msgstr "حدد السوق:"
-
-msgid "Select payment agent"
-msgstr "حدد وكيل الدفع"
 
 msgid "Select your market and underlying asset"
 msgstr "حدد السوق والأصول الأساسية"
@@ -1987,29 +1231,11 @@ msgstr "علامة مختارة"
 msgid "Self-exclusion"
 msgstr "الاستبعاد الذاتي"
 
-msgid "Selfie"
-msgstr "سيلفي"
-
-msgid "Selfie uploaded"
-msgstr "تم تحميل صورة شخصية"
-
 msgid "Sell"
 msgstr "قم بالبيع"
 
 msgid "Sell at market"
 msgstr "قم بالبيع في السوق"
-
-msgid "Send a secure link to your phone"
-msgstr "أرسل رابطًا آمنًا إلى هاتفك"
-
-msgid "Send link"
-msgstr "أرسل الرابط"
-
-msgid "Send this one-time link to your phone"
-msgstr "أرسل هذا الرابط لمرة واحدة إلى هاتفك"
-
-msgid "Sending"
-msgstr "إرسال"
 
 msgid "Sep"
 msgstr "سبتمبر"
@@ -2032,12 +1258,6 @@ msgstr "مدة الجلسة:"
 msgid "Set account currency"
 msgstr "تعيين عملة الحساب"
 
-msgid "Set currency"
-msgstr "حدد العملة"
-
-msgid "Settles"
-msgstr "يستقر"
-
 msgid "Short keyboard patterns are easy to guess"
 msgstr "من السهل تخمين أنماط لوحة المفاتيح القصيرة"
 
@@ -2059,9 +1279,6 @@ msgstr "يجب أن يكون أكثر من %1"
 msgid "Should start with letter or number, and may contain hyphen and underscore."
 msgstr "يجب أن تبدأ بحرف أو رقم، وقد تحتوي على واصلة وشرطة سفلية."
 
-msgid "Show all details — including the bottom 2 lines"
-msgstr "عرض جميع التفاصيل - بما في ذلك السطرين السفليين"
-
 msgid "Sign out"
 msgstr "تسجيل الخروج"
 
@@ -2074,15 +1291,6 @@ msgstr "سمارت تريدر"
 msgid "SmartTrader is unavailable for this account"
 msgstr "SmartTrader غير متاح لهذا الحساب"
 
-msgid "Something's gone wrong"
-msgstr "حدث خطأ ما"
-
-msgid "Sorry, account signup is not available in your country."
-msgstr "عذرًا، تسجيل الحساب غير متاح في بلدك."
-
-msgid "Sorry, an error occurred while processing your account."
-msgstr "عذرًا، حدث خطأ أثناء معالجة حسابك."
-
 msgid "Sorry, an error occurred while processing your request."
 msgstr "عذرًا، حدث خطأ أثناء معالجة طلبك."
 
@@ -2092,23 +1300,11 @@ msgstr "عذرًا، ولكن تداول الخيارات الثنائية غي�
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "عذرًا، ولكن تداول الخيارات الثنائية غير متاح في حسابك المالي."
 
-msgid "Sorry, deposits for this currency are currently disabled."
-msgstr "عذرًا، الإيداعات لهذه العملة معطلة حاليًا."
-
-msgid "Sorry, no mobile phone bills"
-msgstr "عذرًا، لا توجد فواتير للهاتف المحمول"
-
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
 msgstr "عذرًا، تداول الخيارات غير متاح في المملكة المتحدة وجزيرة مان."
 
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "عذرًا، هذه الميزة متاحة للحسابات الافتراضية فقط."
-
-msgid "Sorry, this feature is not available in your jurisdiction."
-msgstr "عذرًا، هذه الميزة غير متوفرة في ولايتك القضائية."
-
-msgid "Sorry, withdrawals for this currency are currently disabled."
-msgstr "عذرًا، عمليات السحب لهذه العملة معطلة حاليًا."
 
 msgid "Spot"
 msgstr "بقعة"
@@ -2125,35 +1321,20 @@ msgstr "حصة"
 msgid "Start time"
 msgstr "وقت البدء"
 
-msgid "State/Province"
-msgstr "الولاية/المقاطعة"
-
 msgid "Statements"
 msgstr "بيانات"
 
-msgid "Status"
-msgstr "الحالة"
-
 msgid "Stays Between"
-msgstr "الإقامات بين"
+msgstr "Stays Between"
 
 msgid "Stays Between/Goes Outside"
-msgstr "يُقيم بين/يخرج"
+msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "سيتم رد قيمة عقود الإقامة بين فترات الإقامة أو الذهاب إلى الخارج بسعر الشراء إذا كان هناك أقل من نقطتين بين أوقات البدء والانتهاء."
+msgstr "سيتم استرداد عقود Stays Between/Goes Outside بسعر الشراء إذا كان هناك أقل من علامتين بين وقتي البداية والنهاية."
 
 msgid "Step"
 msgstr "الخطوة"
-
-msgid "Steps required to continue verification on your mobile"
-msgstr "الخطوات المطلوبة لمتابعة التحقق على هاتفك المحمول"
-
-msgid "Stock Indices"
-msgstr "مؤشرات الأسهم"
-
-msgid "Stocks"
-msgstr "الأسهم"
 
 msgid "Straight rows of keys are easy to guess"
 msgstr "من السهل تخمين صفوف المفاتيح المستقيمة"
@@ -2164,42 +1345,6 @@ msgstr "سو"
 msgid "Submit"
 msgstr "إرسال"
 
-msgid "Submit document"
-msgstr "إرسال المستند"
-
-msgid "Submit identity card (back)"
-msgstr "إرسال بطاقة الهوية (الخلفية)"
-
-msgid "Submit identity card (front)"
-msgstr "إرسال بطاقة الهوية (الأمامية)"
-
-msgid "Submit license (back)"
-msgstr "إرسال الترخيص (مرة أخرى)"
-
-msgid "Submit license (front)"
-msgstr "إرسال الترخيص (الأمامي)"
-
-msgid "Submit passport photo page"
-msgstr "إرسال صفحة صورة جواز السفر"
-
-msgid "Submit residence permit (back)"
-msgstr "تقديم تصريح الإقامة (للخلف)"
-
-msgid "Submit residence permit (front)"
-msgstr "تقديم تصريح الإقامة (الأمامي)"
-
-msgid "Submit verification"
-msgstr "إرسال التحقق"
-
-msgid "Submitted"
-msgstr "تم الإرسال"
-
-msgid "Submitting"
-msgstr "تقديم"
-
-msgid "Successful"
-msgstr "ناجح"
-
 msgid "Sunday"
 msgstr "الأحد"
 
@@ -2209,83 +1354,32 @@ msgstr "قم بالتبديل إلى حساب آخر"
 msgid "Synthetic"
 msgstr "اصطناعي"
 
-msgid "Synthetic Indices"
-msgstr "مؤشرات تركيبية"
-
-msgid "Take a photo"
-msgstr "التقط صورة"
-
-msgid "Take a photo of the back of your card"
-msgstr "التقط صورة للجزء الخلفي من بطاقتك"
-
-msgid "Take a photo of the back of your license"
-msgstr "التقط صورة للجزء الخلفي من الترخيص الخاص بك"
-
-msgid "Take a photo of the front of your card"
-msgstr "التقط صورة للجزء الأمامي من بطاقتك"
-
-msgid "Take a photo of the front of your license"
-msgstr "التقط صورة للجزء الأمامي من الترخيص الخاص بك"
-
-msgid "Take a photo of your passport photo page"
-msgstr "التقط صورة لصفحة صور جواز السفر"
-
-msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
-msgstr ""
-
-msgid "Take a photo with your phone"
-msgstr "التقط صورة بهاتفك"
-
-msgid "Take a selfie"
-msgstr "التقط صورة ذاتية"
-
-msgid "Take a selfie showing your face"
-msgstr "التقط صورة ذاتية تظهر وجهك"
-
-msgid "Take photo"
-msgstr "التقط صورة"
-
 msgid "Target"
 msgstr "الهدف"
-
-msgid "Telephone"
-msgstr "هاتف"
 
 msgid "Tether ERC20"
 msgstr "حبل ERC20"
 
-msgid "Tether ERC20 (eUSDT) is a version of Tether that's pegged to USD and is hosted on the Ethereum platform."
-msgstr "Tether ERC20 (eUSDT) هو إصدار من Tether مرتبط بالدولار الأمريكي ويتم استضافته على منصة إيثريوم."
-
 msgid "Tether Omni"
 msgstr "تيثر أومني"
 
-msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
-msgstr "تيثر أومني (USDT) هي نسخة من تيثر مرتبطة بالدولار الأمريكي ومبنية على بلوكشين بيتكوين."
+msgid "Tether TRC20"
+msgstr "Tether TRC20"
 
 msgid "Th"
 msgstr "ال"
 
-msgid "Thank you"
-msgstr "شكرًا لك"
-
-msgid "Thank you for signing up! Please check your email to complete the registration process."
-msgstr "شكرًا لك على التسجيل! يرجى التحقق من بريدك الإلكتروني لإكمال عملية التسجيل."
-
 msgid "Thank you, we'll get back to you within 24 hours"
 msgstr "شكرًا لك، سنعود إليك في غضون 24 ساعة"
 
-msgid "The %1 password of account number %2 has been changed."
-msgstr "تم تغيير كلمة المرور %1 للحساب رقم %2 ."
-
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr ""
+msgstr "الإغلاق %1c%2 هو أحدث علامة في وقت %1eالنهاية أو قبله%2. إذا قمت بتحديد وقت %1eنهاية محدد،%2 فإن %1eالوقت النهائي%2 هو الوقت المحدد."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr ""
+msgstr "فترة %1cالعقد%2 هي الفترة بين العلامة %1fالأولى%2 (بعد وقت البدء) ووقت %1e%2النهاية."
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr ""
+msgstr "وقت %1eالانتهاء%2 هو عدد الدقائق/الساعات المحدد بعد وقت %1sالبدء.%2"
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
 msgstr "النقطة %1exit%2 هي العلامة الأخيرة عند انتهاء العقد. ينتهي العقد عندما ترتفع أو تنخفض جميع العلامات على التوالي، أو عندما تكسر علامة واحدة النمط المتوقع."
@@ -2297,31 +1391,31 @@ msgid "The %1low%2 is the lowest point ever reached by the market during the con
 msgstr "%1low%2 هي أدنى نقطة وصل إليها السوق على الإطلاق خلال فترة العقد."
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr ""
+msgstr "%2 يبدأ %1sوقت البدء عندما تتم معالجة العقد بواسطة خوادمنا."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "وقت %1sالبدء%2 هو عندما تتم معالجة العقد بواسطة خوادمنا ونقطة الدخول %1e%2 هي العلامة %1nالتالية%2 بعد ذلك."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr ""
+msgstr "فترة <strong>العقد</strong> هي الفترة بين العلامة <strong>التالية</strong> بعد وقت <strong></strong> البدء ووقت <strong>الانتهاء</strong>."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "وقت <strong>الانتهاء</strong> هو عدد الدقائق/الساعات المحدد بعد وقت <strong>البدء</strong> (إذا كانت المدة أقل من يوم واحد)، أو في نهاية يوم التداول (إذا كانت المدة يومًا واحدًا أو أكثر)."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr ""
+msgstr "وقت <strong>الانتهاء</strong> هو عدد الدقائق/الساعات المحدد بعد وقت <strong>البدء.</strong>"
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
 msgstr "نقطة الدخول <strong></strong> هي العلامة الأولى بعد معالجة العقد من قبل خوادمنا."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
+msgstr "نقطة <strong>الخروج</strong> هي أحدث علامة في وقت <strong>الانتهاء أو قبله</strong>."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr ""
+msgstr "وقت <strong>البدء</strong> هو عندما تتم معالجة العقد بواسطة خوادمنا ونقطة <strong>الدخول</strong> هي العلامة <strong>التالية بعد</strong> ذلك."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr ""
+msgstr "وقت <strong>البدء</strong> هو عندما تتم معالجة العقد بواسطة خوادمنا."
 
 msgid "The Average"
 msgstr "المتوسط"
@@ -2332,26 +1426,11 @@ msgstr "المتوسط هو متوسط القراد، بما في ذلك نقط�
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
 msgstr "لا ينتهي العقد في غضون 5 دقائق (للعقود ذات المدة المحددة)"
 
-msgid "The email address provided is already in use. If you forgot your password, please try our <a href=\"%1\">password recovery tool</a> or contact our customer service."
-msgstr "عنوان البريد الإلكتروني المقدم قيد الاستخدام بالفعل. إذا نسيت كلمة المرور الخاصة بك، يرجى تجربة أداة استعادة كلمة المرور <a href=\"%1\">الخاصة بنا</a> أو الاتصال بخدمة العملاء."
-
 msgid "The entry spot is the first tick after the contract is processed by our servers."
 msgstr "نقطة الدخول هي العلامة الأولى بعد معالجة العقد من قبل خوادمنا."
 
-msgid "The link only works on mobile devices"
-msgstr "يعمل الرابط فقط على الأجهزة المحمولة"
-
-msgid "The maximum number of tokens (%1) has been reached."
-msgstr "تم الوصول إلى الحد الأقصى لعدد الرموز (%1)."
-
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "لم يتم العثور على الصفحة التي طلبتها. إما أنه لم يعد موجودًا أو أن العنوان خاطئ. يرجى التحقق من وجود أي أخطاء إملائية."
-
-msgid "The photo should clearly show your document"
-msgstr "يجب أن تعرض الصورة وثيقتك بوضوح"
-
-msgid "The reason should be between 5 and 250 characters"
-msgstr "يجب أن يتراوح السبب بين 5 و 250 حرفًا"
 
 msgid "The reset time is %1"
 msgstr "وقت إعادة الضبط هو %1"
@@ -2376,15 +1455,6 @@ msgstr "حدث خطأ"
 
 msgid "There was some invalid character in an input field."
 msgstr "كان هناك بعض الأحرف غير الصالحة في حقل الإدخال."
-
-msgid "These are the documents most likely to show your current home address"
-msgstr "هذه هي المستندات التي من المرجح أن تعرض عنوان منزلك الحالي"
-
-msgid "This account is disabled"
-msgstr "تم تعطيل هذا الحساب"
-
-msgid "This account is excluded until %1"
-msgstr "يتم استبعاد هذا الحساب حتى %1"
 
 msgid "This contract is only available on %1DTrader%2."
 msgstr "هذا العقد متاح فقط على %1DTrader%2."
@@ -2425,9 +1495,6 @@ msgstr "هذا حاجز إرشادي. سيكون الحاجز الفعلي هو 
 msgid "This is similar to a commonly used password"
 msgstr "هذا مشابه لكلمة مرور شائعة الاستخدام."
 
-msgid "This is your %1 account."
-msgstr "هذا هو حساب %1 الخاص بك."
-
 msgid "This page is only available to logged out clients."
 msgstr "هذه الصفحة متاحة فقط للعملاء الذين تم تسجيل خروجهم."
 
@@ -2464,29 +1531,8 @@ msgstr "يجب أن تكون المهلة بعد اليوم."
 msgid "Timed out until"
 msgstr "انتهت المهلة حتى"
 
-msgid "Tips"
-msgstr "نصائح"
-
-msgid "Tips to take a good selfie"
-msgstr "نصائح لالتقاط صورة سيلفي جيدة"
-
-msgid "To account: "
-msgstr "إلى الحساب: "
-
-msgid "To open a bank account, we will need to verify your identity."
-msgstr "لفتح حساب مصرفي، سنحتاج إلى التحقق من هويتك."
-
-msgid "To smoothly verify you, we need a better photo"
-msgstr "للتحقق من هويتك بسلاسة، نحتاج إلى صورة أفضل"
-
 msgid "Today"
 msgstr "اليوم"
-
-msgid "Token"
-msgstr "الرمز"
-
-msgid "Too many failed attempts"
-msgstr "عدد كبير جدًا من المحاولات الفاشلة"
 
 msgid "Top up error"
 msgstr "خطأ في إعادة التعبئة"
@@ -2496,9 +1542,6 @@ msgstr "تمت عملية إعادة التعبئة بنجاح"
 
 msgid "Total Cost"
 msgstr "التكلفة الإجمالية"
-
-msgid "Total Profit/Loss"
-msgstr "إجمالي الربح/الخسارة"
 
 msgid "Total assets"
 msgstr "إجمالي الأصول"
@@ -2510,16 +1553,13 @@ msgid "Total profit/loss"
 msgstr "إجمالي الربح/الخسارة"
 
 msgid "Touch/No Touch"
-msgstr "اللمس/عدم اللمس"
+msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
 msgstr "سيتم استرداد عقود Touch/No Touch بسعر الشراء إذا كان هناك أقل من نقطتين بين أوقات البداية والنهاية."
 
 msgid "Touches"
-msgstr "اللمسات"
-
-msgid "Town/City"
-msgstr "المدينة/المدينة"
+msgstr "Touches"
 
 msgid "Trade"
 msgstr "التجارة"
@@ -2533,17 +1573,11 @@ msgstr "تداول في الأسواق العالمية من خلال منصتن
 msgid "Trader's hub"
 msgstr "مركز التاجر"
 
-msgid "Trading Information"
-msgstr "معلومات التداول"
-
 msgid "Trading and deposit disabled"
 msgstr "تم تعطيل التداول والإيداع"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr ""
-
-msgid "Trading contracts for difference (CFDs) on Synthetic Indices may not be suitable for everyone. Please ensure that you fully understand the risks involved, including the possibility of losing all the funds in your MT5 account. Gambling can be addictive – please play responsibly."
-msgstr "قد لا تكون عقود التداول مقابل الفروقات (CFDs) على المؤشرات الاصطناعية مناسبة للجميع. يرجى التأكد من أنك تفهم تمامًا المخاطر التي تنطوي عليها، بما في ذلك إمكانية خسارة جميع الأموال في حساب MT5 الخاص بك. يمكن أن تسبب المقامرة الإدمان - يرجى اللعب بمسؤولية."
+msgstr "تم تعطيل التداول والودائع في حسابك. يرجى %1cالاتصال بدعم العملاء%2 للحصول على المساعدة."
 
 msgid "Trading is unavailable at this time."
 msgstr "التداول غير متاح في الوقت الحالي."
@@ -2561,16 +1595,10 @@ msgid "True USD"
 msgstr "الدولار الأمريكي الحقيقي"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "جرب المؤشرات %1S%2الاصطناعية الخاصة بنا."
 
 msgid "Try our other markets."
 msgstr "جرب أسواقنا الأخرى."
-
-msgid "Try using a JPG or PNG file"
-msgstr "حاول استخدام ملف JPG أو PNG"
-
-msgid "Try using another file type."
-msgstr "حاول استخدام نوع ملف آخر."
 
 msgid "Tu"
 msgstr "تو"
@@ -2581,9 +1609,6 @@ msgstr "الثلاثاء"
 msgid "Turnover"
 msgstr "معدل الدوران"
 
-msgid "Type"
-msgstr "النوع"
-
 msgid "US Dollar"
 msgstr "الدولار الأمريكي"
 
@@ -2592,12 +1617,6 @@ msgstr "عملة الدولار"
 
 msgid "USDK"
 msgstr "USDK"
-
-msgid "Unable to read file %1"
-msgstr "غير قادر على قراءة الملف %1"
-
-msgid "Unavailable"
-msgstr "غير متاح"
 
 msgid "Understood"
 msgstr "فهمت"
@@ -2608,53 +1627,11 @@ msgstr "لسوء الحظ، منصة التداول هذه غير متاحة ل�
 msgid "Unknown OS"
 msgstr "نظام تشغيل غير معروف"
 
-msgid "Unsupported browser"
-msgstr "متصفح غير معتمد"
-
 msgid "Up to %1 decimal places are allowed."
-msgstr ""
+msgstr "يُسمح بما يصل إلى %1 منازل عشرية."
 
 msgid "Up/Down"
-msgstr "أعلى/أسفل"
-
-msgid "Upcoming Events"
-msgstr "الأحداث القادمة"
-
-msgid "Upgrade now"
-msgstr "قم بالترقية الآن"
-
-msgid "Upload"
-msgstr "رفع"
-
-msgid "Upload a selfie from your computer"
-msgstr "قم بتحميل صورة شخصية من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload anyway"
-msgstr "تحميل على أي حال"
-
-msgid "Upload back of card from your computer"
-msgstr "قم بتحميل الجزء الخلفي من البطاقة من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload back of license from your computer"
-msgstr "قم بتحميل الترخيص مرة أخرى من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload front of card from your computer"
-msgstr "قم بتحميل الجزء الأمامي من البطاقة من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload front of license from your computer"
-msgstr "قم بتحميل واجهة الترخيص من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload passport photo page"
-msgstr "تحميل صفحة صورة جواز السفر"
-
-msgid "Upload passport photo page from your computer"
-msgstr "قم بتحميل صفحة صورة جواز السفر من جهاز الكمبيوتر الخاص بك"
-
-msgid "Upload photo"
-msgstr "تحميل صورة"
-
-msgid "Uploads successful"
-msgstr "تمت التحميلات بنجاح"
+msgstr "Up/Down"
 
 msgid "Use a few words, avoid common phrases"
 msgstr "استخدم بضع كلمات، وتجنب العبارات الشائعة"
@@ -2665,29 +1642,11 @@ msgstr "استخدم نمط لوحة مفاتيح أطول مع المزيد م�
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr "رمز التحقق خاطئ. يرجى استخدام الرابط المرسل إلى بريدك الإلكتروني."
 
-msgid "Verification complete"
-msgstr "اكتمل التحقق"
-
-msgid "Verification required"
-msgstr "التحقق مطلوب"
-
-msgid "Verify Identity"
-msgstr "تحقق من الهوية"
-
-msgid "Verify Reset Password"
-msgstr "تحقق من إعادة تعيين كلمة المرور"
-
-msgid "Verify identity"
-msgstr "تحقق من الهوية"
-
 msgid "View"
 msgstr "عرض"
 
 msgid "View chart"
 msgstr "عرض الرسم البياني"
-
-msgid "View from camera"
-msgstr "عرض من الكاميرا"
 
 msgid "Virtual"
 msgstr "افتراضية"
@@ -2704,24 +1663,6 @@ msgstr "في انتظار علامة الخروج."
 msgid "We"
 msgstr "نحن"
 
-msgid "We cannot verify you without using your camera"
-msgstr "لا يمكننا التحقق منك دون استخدام الكاميرا"
-
-msgid "We'd love to hear what you think."
-msgstr "نود أن نسمع رأيك."
-
-msgid "We'll compare it with your document"
-msgstr "سنقوم بمقارنتها مع المستند الخاص بك"
-
-msgid "We're looking to improve our products and services, and we want to understand your needs better. We'd like to interview you via phone, to know what you like about us, what you don't like, and where we can do better."
-msgstr "نحن نتطلع إلى تحسين منتجاتنا وخدماتنا، ونريد أن نفهم احتياجاتك بشكل أفضل. نود إجراء مقابلة معك عبر الهاتف، لمعرفة ما يعجبك فينا، وما لا يعجبك، وأين يمكننا القيام بعمل أفضل."
-
-msgid "We're now ready to verify your identity"
-msgstr "نحن الآن جاهزون للتحقق من هويتك"
-
-msgid "We've sent a secure link to %{number}"
-msgstr "لقد أرسلنا رابطًا آمنًا إلى %{number}"
-
 msgid "Wednesday"
 msgstr "الأربعاء"
 
@@ -2731,9 +1672,6 @@ msgstr "سنقوم بتحديث حدودك. انقر فوق %1Agree واقبل%2
 msgid "WhatsApp"
 msgstr "واتساب"
 
-msgid "When prompted, you must enable camera access to continue"
-msgstr "عند المطالبة بذلك، يجب تمكين الوصول إلى الكاميرا للمتابعة"
-
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
 msgstr "عند النقر فوق «موافق»، سيتم استبعادك من التداول على الموقع حتى التاريخ المحدد."
 
@@ -2742,9 +1680,6 @@ msgstr "اربح العائد إذا كان مكان الخروج يساوي أ�
 
 msgid "Winning the contract"
 msgstr "الفوز بالعقد"
-
-msgid "Withdraw"
-msgstr "سحب"
 
 msgid "Withdrawal"
 msgstr "سحب"
@@ -2761,95 +1696,26 @@ msgstr "تم تعطيل عمليات السحب على حسابك. يرجى ال
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr "هل ترغب في التحقق من بيانك أولاً؟ %1Cتحقق من البيان%2"
 
-msgid "Yes"
-msgstr "نعم"
-
-msgid "Yes I'm sure"
-msgstr "نعم، أنا متأكد"
-
-msgid "Yes, I'm sure"
-msgstr "نعم، أنا متأكد"
-
-msgid "You are categorised as a professional client."
-msgstr "يتم تصنيفك كعميل محترف."
-
-msgid "You are categorised as a retail client. Apply to be treated as a professional trader."
-msgstr "يتم تصنيفك كعميل بيع بالتجزئة. تقدم بطلب ليتم التعامل معك كمتداول محترف."
-
-msgid "You are limited to one fiat account. You can change the currency of your fiat account anytime before you make a first-time deposit or create an MT5 account."
-msgstr "أنت مقيد بحساب فيات واحد. يمكنك تغيير عملة حساب العملات الورقية الخاص بك في أي وقت قبل إجراء الإيداع لأول مرة أو إنشاء حساب MT5."
-
 msgid "You are offline"
 msgstr "أنت غير متصل"
-
-msgid "You can %1set a new currency%2 before you deposit for the first time or create an MT5 account."
-msgstr "يمكنك %1sالحصول على عملة جديدة%2 قبل الإيداع لأول مرة أو إنشاء حساب MT5."
 
 msgid "You can close this window without interrupting your trade."
 msgstr "يمكنك إغلاق هذه النافذة دون مقاطعة تجارتك."
 
-msgid "You can no longer change the currency because you've created an MT5 account."
-msgstr "لم يعد بإمكانك تغيير العملة لأنك أنشأت حساب MT5."
-
-msgid "You can no longer change the currency because you've made a first-time deposit."
-msgstr "لم يعد بإمكانك تغيير العملة لأنك قمت بالإيداع لأول مرة."
-
-msgid "You can now return to your computer to continue"
-msgstr "يمكنك الآن العودة إلى جهاز الكمبيوتر الخاص بك للمتابعة"
-
-msgid "You can top up your demo account with an additional %1 if your balance is %2 or less."
-msgstr "يمكنك تعبئة حسابك التجريبي بـ %1 إضافي إذا كان رصيدك %2 أو أقل."
-
 msgid "You did not change anything."
 msgstr "لم تغير أي شيء."
-
-msgid "You do not need to authenticate your account at this time.%1We will inform you when your account needs to be authenticated."
-msgstr "لا تحتاج إلى مصادقة حسابك في هذا الوقت.%1سنبلغك عندما يحتاج حسابك إلى المصادقة."
-
-msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
-msgstr ""
-
-msgid "You have already withdrawn %1%2."
-msgstr "لقد قمت بالفعل بسحب %1%2."
-
-msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr "ليس لديك أموال كافية في حساب Binary الخاص بك، يرجى إضافة <a href=\"%1\">أموال</a>."
-
-msgid "You have insufficient funds in your MT5 account."
-msgstr "ليس لديك أموال كافية في حساب MT5 الخاص بك."
-
-msgid "You have not granted access to any applications."
-msgstr "لم تمنح حق الوصول إلى أي تطبيقات."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
 msgstr "لقد وصلت إلى حد معدل الطلبات في الثانية. يرجى المحاولة لاحقًا."
 
-msgid "You have reached the withdrawal limit. Please upload your proof of identity and address to lift your withdrawal limit and proceed with your withdrawal."
-msgstr "لقد وصلت إلى حد السحب. يرجى تحميل إثبات الهوية والعنوان لرفع حد السحب والمضي قدمًا في السحب."
-
 msgid "You have sold this contract at %1 %2"
 msgstr "لقد قمت ببيع هذا العقد بسعر %1 %2"
 
-msgid "You have successfully changed your account currency from %1 to %2."
-msgstr "لقد نجحت في تغيير عملة حسابك من %1 إلى %2."
-
-msgid "You have successfully disabled two-factor authentication for your account."
-msgstr "لقد نجحت في تعطيل المصادقة الثنائية لحسابك."
-
-msgid "You have successfully enabled two-factor authentication for your account."
-msgstr "لقد نجحت في تمكين المصادقة الثنائية لحسابك."
-
-msgid "You have successfully set your account currency to %1."
-msgstr "لقد قمت بتعيين عملة حسابك بنجاح إلى %1."
-
-msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://developers.binary.com/."
-msgstr "يجب عليك التسجيل والحصول على معرف التطبيق قبل أن تتمكن من استخدام خادم OAuth مختلف للمصادقة. لمزيد من المعلومات، راجع تفاصيل OAuth على https://developers.binary.com/."
+msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
+msgstr "يجب عليك التسجيل والحصول على معرف التطبيق قبل أن تتمكن من استخدام خادم OAuth مختلف للمصادقة. لمزيد من المعلومات، راجع تفاصيل OAuth على /https://api.deriv.com"
 
 msgid "You have yet to receive any notifications"
 msgstr "لم تتلق أي إشعارات حتى الآن"
-
-msgid "You may open one account for each supported cryptocurrency."
-msgstr "يمكنك فتح حساب واحد لكل عملة مشفرة مدعومة."
 
 msgid "You should enter %1 characters."
 msgstr "يجب إدخال %1 حرفًا."
@@ -2857,74 +1723,23 @@ msgstr "يجب إدخال %1 حرفًا."
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
 msgstr "ستتم إعادة توجيهك إلى موقع ويب تابع لجهة خارجية لا تملكه Binary.com."
 
-msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
-msgstr "لن تتمكن من تغيير عملة حساب العملات الورقية الخاص بك بعد إنشاء حساب MT5 هذا. هل أنت متأكد أنك تريد المتابعة؟"
-
-msgid "You will not be able to change your fiat account's currency after making this deposit. Are you sure you want to proceed?"
-msgstr "لن تتمكن من تغيير عملة حساب العملات الورقية الخاص بك بعد إجراء هذا الإيداع. هل أنت متأكد أنك تريد المتابعة؟"
-
 msgid "You win the payout if the market price does not end in the digit you have selected."
 msgstr "يمكنك الفوز بالدفع إذا لم ينتهي سعر السوق بالرقم الذي حددته."
 
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr "يمكنك الفوز بالدفع إذا انتهى سعر السوق بالرقم الذي حددته."
 
-msgid "You'll need to restart your verification on your computer"
-msgstr "ستحتاج إلى إعادة تشغيل التحقق على جهاز الكمبيوتر الخاص بك"
-
-msgid "You've made no transactions of this type up to this date."
-msgstr "لم تقم بإجراء أي معاملات من هذا النوع حتى هذا التاريخ."
-
-msgid "Your %1 day withdrawal limit is currently %2%3."
-msgstr "الحد الأقصى للسحب لمدة %1 يومًا هو حاليًا %2%3."
-
-msgid "Your account has no Login/Logout activity."
-msgstr "لا يحتوي حسابك على نشاط تسجيل الدخول/تسجيل الخروج."
-
-msgid "Your account is fully authenticated and your withdrawal limits have been lifted."
-msgstr "تمت مصادقة حسابك بالكامل وتم رفع حدود السحب الخاصة بك."
-
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "حسابك مقيد. يرجى %1cالاتصال بدعم العملاء%2 للحصول على المساعدة."
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "تتم معالجة طلبك ليتم التعامل معه كعميل محترف."
 
-msgid "Your cashier is locked."
-msgstr "أمين الصندوق الخاص بك مغلق."
-
-msgid "Your changes have been updated successfully."
-msgstr "تم تحديث التغييرات بنجاح."
-
 msgid "Your changes have been updated."
 msgstr "تم تحديث التغييرات الخاصة بك."
 
-msgid "Your computer may take a few seconds to update"
-msgstr "قد يستغرق الكمبيوتر بضع ثوانٍ للتحديث"
-
-msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
-msgstr "رصيد حسابك التجريبي حاليًا هو %1 أو أقل. يمكنك تعبئة حسابك بمبلغ إضافي %2."
-
-msgid "Your face is needed in the selfie"
-msgstr "وجهك مطلوب في الصورة الذاتية"
-
-msgid "Your fiat account's currency is currently set to %1."
-msgstr "تم ضبط عملة حساب فيات الخاص بك حاليًا على %1."
-
-msgid "Your fiat account's currency is set to %1."
-msgstr "تم تعيين عملة حساب فيات الخاص بك على %1."
-
-msgid "Your link will expire in one hour"
-msgstr "ستنتهي صلاحية الرابط الخاص بك في غضون ساعة واحدة"
-
-msgid "Your mobile link will expire in one hour"
-msgstr "ستنتهي صلاحية رابط الهاتف المحمول الخاص بك في غضون ساعة واحدة"
-
 msgid "Your password cannot be the same as your email address."
 msgstr "لا يمكن أن تكون كلمة المرور الخاصة بك هي نفس عنوان بريدك الإلكتروني."
-
-msgid "Your password has been successfully reset. Please log into your account using your new password."
-msgstr "تمت إعادة تعيين كلمة المرور الخاصة بك بنجاح. يرجى تسجيل الدخول إلى حسابك باستخدام كلمة المرور الجديدة."
 
 msgid "Your preferred time interval between each report:"
 msgstr "الفاصل الزمني المفضل لديك بين كل تقرير:"
@@ -2932,23 +1747,8 @@ msgstr "الفاصل الزمني المفضل لديك بين كل تقرير:"
 msgid "Your professional client request is %1not approved%2."
 msgstr "طلب العميل المحترف الخاص بك هو %1nأو تمت الموافقة عليه%2."
 
-msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully processed."
-msgstr "تمت معالجة طلبك لنقل %1 %2 من %3 إلى %4 بنجاح."
-
-msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
-msgstr "تمت معالجة طلبك بسحب %1 %2 من حسابك %3 إلى حساب وكيل الدفع %4 بنجاح."
-
 msgid "Your session duration limit will end in %1 seconds."
 msgstr "سينتهي الحد الأقصى لمدة الجلسة في %1 ثانية."
-
-msgid "Your settings have been updated successfully."
-msgstr "تم تحديث إعداداتك بنجاح."
-
-msgid "Your token has expired or is invalid. Please click %1here%2 to restart the verification process."
-msgstr ""
-
-msgid "Your token has expired or is invalid. Please click <a href=\"%1\">here</a> to restart the verification process."
-msgstr "انتهت صلاحية الرمز المميز الخاص بك أو أصبح غير صالح. الرجاء النقر فوق <a href=\"%1\">هنا</a> لإعادة تشغيل عملية التحقق."
 
 msgid "Your trading statistics since %1."
 msgstr "إحصائيات التداول الخاصة بك منذ %1."
@@ -2963,10 +1763,7 @@ msgid "Your virtual balance has been reset."
 msgstr "تمت إعادة ضبط رصيدك الافتراضي."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr ""
-
-msgid "Your withdrawal limit is %1%2."
-msgstr "حد السحب الخاص بك هو %1%2."
+msgstr "متصفح الويب الخاص بك (%1) قديم وقد يؤثر على تجربة التداول الخاصة بك. تابع على مسؤوليتك الخاصة. %2Uتحديث المتصفح%3"
 
 msgid "account"
 msgstr "اعتبار"
@@ -2974,14 +1771,8 @@ msgstr "اعتبار"
 msgid "accounts"
 msgstr "حسابات"
 
-msgid "back"
-msgstr "تراجع"
-
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
 msgstr "الخيارات الثنائية، الفوركس، تداول العملات الأجنبية، التداول عبر الإنترنت، التداول المالي، التداول الثنائي، تداول المؤشرات، تداول مؤشرات الأسهم، صفقات الفوركس، تداول السلع، استراتيجية الخيارات الثنائية، الوسيط الثنائي، الرهان الثنائي، منصة تداول الخيارات الثنائية، الإستراتيجية الثنائية، التمويل، الاستثمار، التداول"
-
-msgid "close"
-msgstr "مجاور"
 
 msgid "day"
 msgstr "يوم"
@@ -2989,17 +1780,8 @@ msgstr "يوم"
 msgid "days"
 msgstr "أيام"
 
-msgid "details"
-msgstr "تفاصيل"
-
-msgid "e.g. United States"
-msgstr "على سبيل المثال الولايات المتحدة"
-
-msgid "e.g. frontend.binaryws.com"
-msgstr "على سبيل المثال frontend.binaryws.com"
-
-msgid "for account %1"
-msgstr "للحساب %1"
+msgid "e.g. frontend.derivws.com"
+msgstr "على سبيل المثال frontend.derivws.com"
 
 msgid "hour"
 msgstr "ساعة"
@@ -3009,9 +1791,6 @@ msgstr "ساعات"
 
 msgid "including Deal Cancel. Fee"
 msgstr "بما في ذلك إلغاء الصفقة. الرسوم"
-
-msgid "letters"
-msgstr "الحروف"
 
 msgid "login"
 msgstr "تسجيل الدخول"
@@ -3025,23 +1804,11 @@ msgstr "دقيقة"
 msgid "minutes"
 msgstr "الدقائق"
 
-msgid "numbers"
-msgstr "أرقام"
-
-msgid "or"
-msgstr "أو"
-
-msgid "or upload photo – no scans or photocopies"
-msgstr "أو تحميل صورة - بدون مسح ضوئي أو نسخ"
-
 msgid "second"
 msgstr "ثانيا"
 
 msgid "seconds"
 msgstr "ثواني"
-
-msgid "space"
-msgstr "الفراغ"
 
 msgid "tick"
 msgstr "علامة"
@@ -3057,13 +1824,4 @@ msgstr "اليوم، الجمعة"
 
 msgid "virtual money credit to account"
 msgstr "رصيد نقدي افتراضي للحساب"
-
-msgid "{SPAIN ONLY}However, Binary Investments (Europe) Ltd has assessed your knowledge and experience and deems the product appropriate for you."
-msgstr "{SPAIN ONLY}ومع ذلك، قامت شركة Binary Investments (Europe) Ltd بتقييم معرفتك وخبرتك وترى أن المنتج مناسب لك."
-
-msgid "{SPAIN ONLY}This is a product with leverage. You should be aware that losses may be higher than the amount initially paid to purchase the product."
-msgstr "{SPAIN ONLY}هذا منتج ذو رافعة مالية. يجب أن تدرك أن الخسائر قد تكون أعلى من المبلغ المدفوع في البداية لشراء المنتج."
-
-msgid "{SPAIN ONLY}You are about to purchase a product that is not simple and may be difficult to understand: Contracts for difference and forex. As a general rule, the CNMV considers that such products are not appropriate for retail clients, due to their complexity."
-msgstr "{SPAIN ONLY}أنت على وشك شراء منتج ليس بسيطًا وقد يكون من الصعب فهمه: عقود الفرق والعملات الأجنبية. كقاعدة عامة، تعتبر CNMV أن هذه المنتجات ليست مناسبة لعملاء التجزئة، بسبب تعقيدها."
 
