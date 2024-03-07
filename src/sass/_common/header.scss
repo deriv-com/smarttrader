@@ -304,8 +304,8 @@ body .header, .wallet__header {
         height: min-content;
     }
     &__logo {
-        width: 111px;
-        height: 24px;
+        width: 120px;
+        height: 25px;
     }
     &__icon {
         height: 16px;
@@ -509,7 +509,7 @@ body .header, .wallet__header {
             }
             &-cta {
                 display: flex;
-                padding: 20px;
+                padding: 0 0 20px;
                 align-items: center;
                 justify-content: center;
                 font-size: $FONT_SIZE_S;
@@ -533,7 +533,7 @@ body .header, .wallet__header {
                 margin: 24px 16px;
                 padding: 24px 16px;
                 flex-basis: 100%;
-                width: 320px;
+                width: 284px;
                 flex-direction: column;
 
                 &:not(.platform__list-item--active):hover {
@@ -543,8 +543,11 @@ body .header, .wallet__header {
                     border: solid 2px var(--border-active);
                 }
                 &-icon {
-                    width: 148px;
                     height: 32px;
+
+                    &-container {
+                        height: 42px;
+                    }
                 }
                 &-text {
                     font-weight: normal;

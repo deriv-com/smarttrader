@@ -257,10 +257,12 @@ const Header = (() => {
             const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform.link });
             const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
-            const platform_name = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
-            const platform_desc = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
-
-            platform_div.appendChild(platform_icon);
+            const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
+            const platform_desc  = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
+            const icon_container = createElement('span', { class: 'platform__list-item-icon-container' });
+            
+            icon_container.appendChild(platform_icon);
+            platform_div.appendChild(icon_container);
             platform_text_container.appendChild(platform_name);
             platform_text_container.appendChild(platform_desc);
             platform_div.appendChild(platform_text_container);
