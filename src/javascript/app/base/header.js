@@ -902,10 +902,18 @@ const Header = (() => {
 
     const loginIDOnClick =  (e) => {
         e.preventDefault();
-        const el_loginid = findParent(e.target, Client.hasWalletsAccount() ? 'div.wallet__switcher-acc' : 'div.account__switcher-acc');
-        if (el_loginid) {
+        const el_loginid                    = findParent(e.target, Client.hasWalletsAccount() ? 'div.wallet__switcher-acc' : 'div.account__switcher-acc');
+        const acc_switcher_active           = el_loginid.classList.contains('account__switcher-acc--active');
+        const wallet_switcher_active        = el_loginid.classList.contains('wallet__switcher-acc--active');
+
+        if (el_loginid && !(acc_switcher_active || wallet_switcher_active)) {
             el_loginid.setAttribute('disabled', 'disabled');
             switchLoginid(el_loginid.getAttribute('data-value'));
+        } else {
+            const wallet_switcher_dropdown  = getElementById('wallet__switcher-dropdown');
+            const account_switcher_dropdown = getElementById('account__switcher-dropdown');
+            wallet_switcher_dropdown.classList.remove('wallet__switcher-dropdown--show');
+            account_switcher_dropdown.classList.remove('account__switcher-dropdown--show');
         }
     };
 
