@@ -629,7 +629,6 @@ const Header = (() => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !is_wallet_account) {
                     const is_real              = loginid.startsWith('CR');
                     const currency             = Client.get('currency', loginid);
-                    const currencyName         = mapCurrencyName(currency);
                     
                     const getIcon              = () => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
@@ -655,7 +654,7 @@ const Header = (() => {
                     const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
                     const account_content   = createElement('div', { class: 'wallet__switcher--content' });
                     const account_text      = createElement('span', { text: localize('Deriv Apps') });
-                    const account_currency  = createElement('span', { text: is_real ? currencyName : localize('Demo') });
+                    const account_currency  = createElement('span', { text: `${is_real ? currency : localize('Demo')} Wallet` });
                     const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
                     const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
                     const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
