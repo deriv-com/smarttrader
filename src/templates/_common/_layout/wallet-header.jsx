@@ -60,7 +60,7 @@ const WalletHeader = () => (
                             <div className='wallet__switcher-accounts-container'>
                                 <div id='wallet__switcher-accounts-list' className='wallet__switcher-accounts-list' />
                             </div>
-                            <div className='wallet__footer-wrapper'>
+                            <div className='wallet__footer--wrapper'>
                                 <div className='wallet__switcher-accounts-btn-container'>
                                     <a id='wallet__switcher-accounts-btn' className='url-wallets-deposit btn btn--primary wallet__switcher-accounts-btn mobile-show'>
                                         {it.L('Manage funds')}
