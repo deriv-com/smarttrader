@@ -198,7 +198,7 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
         });
 
-        applyToAllElements('mobile__platform-switcher-icon-arrowright', (el) => {
+        applyToAllElements('#mobile__platform-switcher-icon-arrowright', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
         });
 
