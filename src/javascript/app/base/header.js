@@ -125,12 +125,6 @@ const Header = (() => {
     };
 
     const bindSvg = () => {
-        const cashier   = getElementById('cashier-icon');
-        const arrow     = getElementById('mobile__platform-switcher-icon-arrowright');
-        const back      = getElementById('mobile__menu-content-submenu-icon-back');
-        const open      = getElementById('mobile__menu-content-submenu-icon-open');
-        const profit    = getElementById('mobile__menu-content-submenu-icon-profit');
-        const statement = getElementById('mobile__menu-content-submenu-icon-statement');
 
         applyToAllElements('#add-account-icon', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg`);
@@ -195,16 +189,34 @@ const Header = (() => {
         applyToAllElements('.deriv-com-logo', (el) => {
             el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg`);
         });
+
         applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
         });
 
-        cashier.src    = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
-        arrow.src      = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
-        back.src       = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
-        open.src       = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
-        profit.src     = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
-        statement.src  = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+        applyToAllElements('#cashier-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+        });
+
+        applyToAllElements('mobile__platform-switcher-icon-arrowright', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-icon-back', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-icon-open', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-icon-profit', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-icon-statement', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+        });
     };
 
     const bindPlatform = () => {
