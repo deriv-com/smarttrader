@@ -52,6 +52,7 @@ const Header = (() => {
         if (Client.isLoggedIn()) {
             displayAccountStatus();
         }
+        disablePageScrollMobile();
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
@@ -64,6 +65,15 @@ const Header = (() => {
             regular_header.remove();
         } else {
             wallet_header.remove();
+        }
+    };
+    
+    const disablePageScrollMobile = () => {
+        const wallet_account_switcher_active = 'wallet__switcher-dropdown--show';
+        if (wallet_account_switcher_active) {
+            $('body').addClass('disable-scroll');
+        } else {
+            $('body').removeClass('disable-scroll');
         }
     };
 
