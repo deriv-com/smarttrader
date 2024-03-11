@@ -59,19 +59,21 @@ const WalletHeader = () => (
                             </div>
                             <div className='wallet__switcher-accounts-container'>
                                 <div id='wallet__switcher-accounts-list' className='wallet__switcher-accounts-list' />
+                            </div>
+                            <div className='wallet__footer-wrapper'>
                                 <div className='wallet__switcher-accounts-btn-container'>
                                     <a id='wallet__switcher-accounts-btn' className='url-wallets-deposit btn btn--primary wallet__switcher-accounts-btn mobile-show'>
                                         {it.L('Manage funds')}
                                     </a>
                                 </div>
-                            </div>
-                            <div className='wallet__switcher-footer'>
-                                <div>
-                                    {it.L('Looking for CFDs? Go to Trader\'s hub')}
+                                <div className='wallet__switcher-footer'>
+                                    <div>
+                                        {it.L('Looking for CFDs? Go to Trader\'s hub')}
+                                    </div>
+                                    <a className='url-wallet-apps'>
+                                        <img src='/images/pages/header/ic-chevron-right.svg' />
+                                    </a>
                                 </div>
-                                <a className='url-wallet-apps'>
-                                    <img src='/images/pages/header/ic-chevron-right.svg' />
-                                </a>
                             </div>
                         </div>
                     </div>

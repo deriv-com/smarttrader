@@ -172,6 +172,13 @@
                 order: 2;
             }
         }
+        &__footer {
+            &--wrapper {
+                position: fixed;
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
         &__switcher {
             background: var(--general-main-2);
             box-shadow: 0 8px 16px 0 var(--shadow-menu);
@@ -187,14 +194,10 @@
 
                     &-container {
                         margin: 10px 16px;
-                        display: flex;
                     }
                 }
                 &-container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: calc(100% - 167px);
+                    height: calc(100% - 182px);
                 }
             }
             &-dropdown {
@@ -212,8 +215,6 @@
             }
             &-footer {
                 border-top: 1px solid var(--general-hover);
-                bottom: 0;
-                position: fixed;
                 width: stretch;
             }
         }
