@@ -10,14 +10,14 @@ module.exports = function (grunt) {
         livereload: {
             options: {
                 hostname  : '0.0.0.0',
-                port      : 443,
+                port      : 8090,
                 protocol  : 'https',
                 base      : 'dist',
                 open      : {
                     appName: {
                         app: 'Google\ Chrome'
                     },
-                    target : 'https://localhost',
+                    target : 'https://localhost:8090',
                 },
                 middleware: (connect, options) => {
                     const middlewares = [
