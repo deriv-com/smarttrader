@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
-
-msgid "%1"
-msgstr "%1"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "%1 和 %2 不可相同。"
@@ -342,6 +339,12 @@ msgstr "您的账户已被禁存款和提款。请检查您的电子邮件, 以�
 
 msgid "Deriv "
 msgstr "Deriv "
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
 
 msgid "Details"
 msgstr "详情"
@@ -751,6 +754,9 @@ msgstr "Lookbacks"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "正在寻找差价合约账户？前往交易者中心"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr "亏损"
 
@@ -783,6 +789,9 @@ msgstr "您的MT5账户已被禁提款。请检查您的电子邮件, 以了解�
 
 msgid "Manage accounts"
 msgstr "账户管理"
+
+msgid "Manage funds"
+msgstr ""
 
 msgid "Mar"
 msgstr "三月"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
-
-msgid "%1"
-msgstr "%1"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "%1 และ %2 ไม่สามารถเป็นค่าเดียวกันได้"
@@ -342,6 +339,12 @@ msgstr "ได้มีการปิดใช้งานการฝากแ
 
 msgid "Deriv "
 msgstr "Deriv "
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
 
 msgid "Details"
 msgstr "รายละเอียด"
@@ -751,6 +754,9 @@ msgstr "Lookbacks"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "กำลังมองหาบัญชี CFD อยู่ใช่ไหมไปที่ Trader's hub"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr "ขาดทุน"
 
@@ -783,6 +789,9 @@ msgstr "ได้มีการปิดการใช้งานการถ
 
 msgid "Manage accounts"
 msgstr "จัดการบัญชี"
+
+msgid "Manage funds"
+msgstr ""
 
 msgid "Mar"
 msgstr "มี.ค."

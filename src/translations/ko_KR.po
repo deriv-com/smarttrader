@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
-
-msgid "%1"
-msgstr "%1"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "%1과 %2는 같을 수 없습니다."
@@ -342,6 +339,12 @@ msgstr "귀하의 계정에서 입금 및 출금이 비활성화되었습니다.
 
 msgid "Deriv "
 msgstr "Deriv "
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
 
 msgid "Details"
 msgstr "세부 정보"
@@ -751,6 +754,9 @@ msgstr "Lookbacks"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "CFD 계정을 찾고 계신가요? 트레이더 허브로 이동하세요"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr "손실"
 
@@ -783,6 +789,9 @@ msgstr "귀하의 계정에서 MT5 출금이 비활성화되었습니다. 자세
 
 msgid "Manage accounts"
 msgstr "계정 관리"
+
+msgid "Manage funds"
+msgstr ""
 
 msgid "Mar"
 msgstr "3월"
