@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Sinhala\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
-
-msgid "%1"
-msgstr "%1"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "%1 සහ %2 සමාන විය නොහැක."
@@ -342,6 +339,12 @@ msgstr "ඔබගේ ගිණුමේ තැන්පතු සහ මුද�
 
 msgid "Deriv "
 msgstr "ඩෙරිව් "
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
 
 msgid "Details"
 msgstr "විස්තර"
@@ -751,6 +754,9 @@ msgstr "ලිහිල් බැක්"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "CFD ගිණුම් සොයනවාද? වෙළෙන්දාගේ කේන්ද්රස්ථානය වෙත යන්න"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr "පාඩුව"
 
@@ -783,6 +789,9 @@ msgstr "MT5 මුදල් ආපසු ඔබගේ ගිණුමේ අක�
 
 msgid "Manage accounts"
 msgstr "ගිණුම් කළමනාකරණය කරන්න"
+
+msgid "Manage funds"
+msgstr ""
 
 msgid "Mar"
 msgstr "මාර්"

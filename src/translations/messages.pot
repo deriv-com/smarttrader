@@ -4,9 +4,6 @@ msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: YEAR-MO-DA HO:MI
 msgid "404"
 msgstr ""
 
-msgid "%1"
-msgstr ""
-
 msgid "%1 and %2 cannot be the same."
 msgstr ""
 
@@ -326,6 +323,12 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr ""
 
 msgid "Deriv "
+msgstr ""
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
 msgstr ""
 
 msgid "Details"
@@ -736,6 +739,9 @@ msgstr ""
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr ""
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr ""
 
@@ -767,6 +773,9 @@ msgid "MT5 withdrawals have been disabled on your account. Please check your ema
 msgstr ""
 
 msgid "Manage accounts"
+msgstr ""
+
+msgid "Manage funds"
 msgstr ""
 
 msgid "Mar"
