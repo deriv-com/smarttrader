@@ -3,6 +3,7 @@ import Head from './head.jsx';
 import Header from './header.jsx';
 // import MobileMenu from './mobile_menu.jsx';
 import WalletHeader from './wallet-header.jsx';
+import TemplateHeader from './templateHeader.jsx';
 import DerivIFrame from '../includes/deriv-iframe.jsx';
 // import Elevio from '../includes/elevio.jsx';
 import Gtm from '../includes/gtm.jsx';
@@ -68,6 +69,7 @@ const Layout = () => {
                 <Gtm />
                 <div id='msg_notification' className='notice-msg center-text' />
                 <div id='page-wrapper'>
+                    <TemplateHeader />
                     <Header />
                     <WalletHeader />
                     <div id='content-holder'>

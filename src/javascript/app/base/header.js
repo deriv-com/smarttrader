@@ -40,6 +40,7 @@ const Header = (() => {
     };
 
     const onLoad = () => {
+        const shadow_header = getElementById('template_header');
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
@@ -51,6 +52,7 @@ const Header = (() => {
         });
         if (Client.isLoggedIn()) {
             displayAccountStatus();
+            shadow_header.remove();
         }
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
