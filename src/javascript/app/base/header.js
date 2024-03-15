@@ -43,8 +43,8 @@ const Header = (() => {
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
+        switchHeaders();
         BinarySocket.wait('authorize','landing_company').then(() => {
-            switchHeaders();
             setHeaderUrls();
             bindPlatform();
             bindClick();
