@@ -25,7 +25,7 @@ const Lookback = (() => {
         }
     };
 
-    const getFormula = (type = '', mul) => {
+    const getFormula = (type = '', mul = '') => {
         const formulaMapping = {
             LBFLOATPUT : `${mul} x (${localize('High')} - ${localize('Close')})`,
             LBFLOATCALL: `${mul} x (${localize('Close')} - ${localize('Low')})`,

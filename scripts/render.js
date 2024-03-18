@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 /* eslint-disable no-console */
-require('babel-register')({
+require('@babel/register')({
     plugins: [
         'babel-plugin-transform-es2015-modules-commonjs',
-        'babel-plugin-transform-object-rest-spread',
         'babel-plugin-transform-react-jsx',
     ],
     extensions: ['.jsx'],
@@ -76,11 +75,11 @@ const getConfig = () => (
     }
 );
 
-const createDirectories = (section = '', idx) => {
+const createDirectories = (section, idx) => {
     if (is_translation) return;
 
     const config = getConfig();
-    const base_path = Path.join(config.dist_path, common.sections_config[section].path);
+    const base_path = Path.join(config.dist_path, common.sections_config[section || ''].path);
 
     if (idx === 0) { // display once only
         console.log(color.cyan('Target:'), color.yellow(config.dist_path));
@@ -94,7 +93,7 @@ const createDirectories = (section = '', idx) => {
     config.languages.forEach(lang => {
         language = lang.toLowerCase();
         mkdir(Path.join(base_path, language));
-        if (common.sections_config[section].has_pjax) {
+        if (common.sections_config[section || ''].has_pjax) {
             mkdir(Path.join(base_path, `${language}/pjax`));
         }
     });
@@ -126,7 +125,7 @@ const createTranslator = lang => {
 };
 
 const createUrlFinder = (default_lang, section_path, root_url = getConfig().root_url) => (
-    (url, lang = default_lang.toLowerCase(), section) => { // use section to create url for a different section. If missing, uses the current pages's section as default
+    (url, lang, section) => { // use section to create url for a different section. If missing, uses the current pages's section as default
         const section_final_path = typeof section !== 'undefined' ? common.sections_config[section === 'app' ? '' : section].path : section_path;
 
         let new_url = url;
@@ -140,9 +139,10 @@ const createUrlFinder = (default_lang, section_path, root_url = getConfig().root
 
         const url_object = Url.parse(new_url, true);
         const pathname   = Path.join(url_object.pathname.replace(/^\//, '')); // convert a/b/../c to a/c
+        const language   = lang || default_lang.toLowerCase();
 
         if (common.pages.filter(page => page.save_as === pathname).length) {
-            url_object.pathname = Path.join(root_url, section_final_path, `${lang}/${pathname}.html`);
+            url_object.pathname = Path.join(root_url, section_final_path, `${language}/${pathname}.html`);
             return Url.format(url_object);
         }
 

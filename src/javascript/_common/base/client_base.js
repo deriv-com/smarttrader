@@ -28,7 +28,7 @@ const ClientBase = (() => {
 
     const isValidLoginid = () => {
         if (!isLoggedIn()) return true;
-        const valid_login_ids = new RegExp('^(MX|MF|VRTC|MLT|CR|FOG)[0-9]+$', 'i');
+        const valid_login_ids = /^(MX|MF|VRTC|MLT|CR|FOG)[0-9]+$/i;
         return getAllLoginids().every(loginid => valid_login_ids.test(loginid));
     };
 
@@ -123,7 +123,7 @@ const ClientBase = (() => {
 
     const hasOnlyCurrencyType = (type = 'fiat') => {
         const loginids = getAllLoginids();
-        const real_loginid = new RegExp('^(MX|MF|MLT|CR|FOG)[0-9]+$', 'i');
+        const real_loginid = /^(MX|MF|MLT|CR|FOG)[0-9]+$/i;
         const only_real_loginids = loginids.filter((loginid) => real_loginid.test(loginid));
         if (type === 'crypto') {
             return only_real_loginids.every(loginid => isCryptocurrency(get('currency', loginid)));

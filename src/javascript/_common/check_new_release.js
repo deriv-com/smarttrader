@@ -1,7 +1,7 @@
 const moment        = require('moment');
 const urlForStatic  = require('./url').urlForStatic;
 const getStaticHash = require('./utility').getStaticHash;
-const LocalStore    = require('../_common/storage').LocalStore;
+const LocalStore    = require('./storage').LocalStore;
 
 // only reload if it's more than 10 minutes since the last reload
 const shouldForceReload = last_reload => !last_reload || +last_reload + (10 * 60 * 1000) < moment().valueOf();

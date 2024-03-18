@@ -15,10 +15,10 @@ const Summary = () => {
         <React.Fragment>
             <div id='reality_check_content' className='reality-check'>
                 <form id='frm_reality_check'>
-                    <div className = 'reality-check__header' id ='start_time' />
-                    <hr className = 'reality-check__line' />
-                    <div className = 'reality-check__summarysection-wrapper'>
-                        <div className = 'reality-check__summary-wrapperleft'>
+                    <div className='reality-check__header' id='start_time' />
+                    <hr className='reality-check__line' />
+                    <div className='reality-check__summarysection-wrapper'>
+                        <div className='reality-check__summary-wrapperleft'>
                             <div className='table-container'>
                                 <Table
                                     className='table-vertical'
@@ -53,7 +53,7 @@ const Summary = () => {
                             <RcRow string={it.L('Login at:')} id='login_time' />
                             <RcRow string={it.L('Current time:')} id='current_time' />
         
-                            <hr className = 'reality-check__line reality-check__line-wrapperright' />
+                            <hr className='reality-check__line reality-check__line-wrapperright' />
                             <div className='reality-check__interval reality-check__interval-summary'>
                                 <div htmlFor='num_reality_duration' className='reality-check__label reality-check__label-summary'>{it.L('Your preferred time interval between each report:')}</div>
                                 <div>
@@ -63,7 +63,7 @@ const Summary = () => {
                             </div>
                         </div>
                     </div>
-                    <hr className = 'reality-check__line' />
+                    <hr className='reality-check__line' />
                     <div className='center-text gr-padding-20 gr-child reality-check__button-wrapper'  id='reality_check_nav'>
                         <a className='btn btn--secondary reality-check__button reality-check__button-logout' id='logout' href='javascript:;'><span>{it.L('Log out')}</span></a>
                         <button className='btn btn--primary reality-check__button' type='submit'>{it.L('Continue trading')}</button>
