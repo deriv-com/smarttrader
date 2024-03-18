@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "404"
-
-msgid "%1"
-msgstr "%1"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "Wartości %1 i %2 nie mogą być takie same."
@@ -342,6 +339,12 @@ msgstr "Opcja dokonywania wpłat i wypłat została wyłączona na Twoim koncie.
 
 msgid "Deriv "
 msgstr "Deriv "
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
 
 msgid "Details"
 msgstr "Szczegóły"
@@ -751,6 +754,9 @@ msgstr "Lookbacks"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "Szukasz kont CFD? Przejdź do centrum inwestora"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
 msgid "Loss"
 msgstr "Strata"
 
@@ -783,6 +789,9 @@ msgstr "Opcja dokonywania wypłat z MT5 została wyłączona na Twoim koncie. Sp
 
 msgid "Manage accounts"
 msgstr "Zarządzaj kontami"
+
+msgid "Manage funds"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"

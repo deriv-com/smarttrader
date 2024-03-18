@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-02-22 09:08\n"
+"PO-Revision-Date: 2024-03-13 05:28\n"
 "Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 
 msgid "404"
 msgstr "crwdns90258:0crwdne90258:0"
-
-msgid "%1"
-msgstr "crwdns1990063:0%1crwdne1990063:0"
 
 msgid "%1 and %2 cannot be the same."
 msgstr "crwdns90346:0%1crwdnd90346:0%2crwdne90346:0"
@@ -342,6 +339,12 @@ msgstr "crwdns92582:0crwdne92582:0"
 
 msgid "Deriv "
 msgstr "crwdns1990071:0crwdne1990071:0"
+
+msgid "Deriv Apps"
+msgstr "crwdns4740420:0crwdne4740420:0"
+
+msgid "Deriv Apps accounts"
+msgstr "crwdns4740422:0crwdne4740422:0"
 
 msgid "Details"
 msgstr "crwdns92602:0crwdne92602:0"
@@ -751,6 +754,9 @@ msgstr "crwdns94576:0crwdne94576:0"
 msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "crwdns1990087:0crwdne1990087:0"
 
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr "crwdns4740424:0crwdne4740424:0"
+
 msgid "Loss"
 msgstr "crwdns94586:0crwdne94586:0"
 
@@ -783,6 +789,9 @@ msgstr "crwdns94646:0crwdne94646:0"
 
 msgid "Manage accounts"
 msgstr "crwdns1990089:0crwdne1990089:0"
+
+msgid "Manage funds"
+msgstr "crwdns4740426:0crwdne4740426:0"
 
 msgid "Mar"
 msgstr "crwdns94736:0crwdne94736:0"

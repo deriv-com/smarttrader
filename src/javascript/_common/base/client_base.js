@@ -28,7 +28,7 @@ const ClientBase = (() => {
 
     const isValidLoginid = () => {
         if (!isLoggedIn()) return true;
-        const valid_login_ids = /^(MX|MF|VRTC|MLT|CR|FOG)[0-9]+$/i;
+        const valid_login_ids = /^(MX|MF|VRTC|MLT|CR|FOG|VRW|CRW)[0-9]+$/i;
         return getAllLoginids().every(loginid => valid_login_ids.test(loginid));
     };
 
@@ -134,6 +134,19 @@ const ClientBase = (() => {
 
         return only_real_loginids.every(loginid => get('currency', loginid) && !isCryptocurrency(get('currency', loginid)));
     };
+
+    const isWalletsAccount = (loginid) => {
+        if (typeof loginid === 'undefined') {
+            return false;
+        }
+        const account_object = getAllAccountsObject()[loginid];
+        if (!account_object) {
+            return false;
+        }
+        return account_object.account_category === 'wallet';
+    };
+    
+    const hasWalletsAccount = () => Object.values(getAllAccountsObject()).some(account => account.account_category === 'wallet');
 
     const TypesMapConfig = (() => {
         let types_map_config;
@@ -535,10 +548,12 @@ const ClientBase = (() => {
         isLowRisk,
         isOptionsBlocked,
         isOfferingBlocked,
+        isWalletsAccount,
         getAccountOfType,
         hasAccountType,
         hasCurrencyType,
         hasOnlyCurrencyType,
+        hasWalletsAccount,
         getAccountTitle,
         responseAuthorize,
         shouldAcceptTnc,

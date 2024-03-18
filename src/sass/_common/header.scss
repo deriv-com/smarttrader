@@ -168,7 +168,7 @@ body .topbar {
     }
 }
 
-body .header {
+body .header, .wallet__header {
     position: fixed;
     background-color: var(--general-main-1);
     height: 48px;
@@ -265,19 +265,23 @@ body .header {
             display: flex;
             align-items: center;
             height: 100%;
-            padding: 0 20px;
+            padding: 0 16px;
             cursor: pointer;
+            gap: 8px;
 
             &:hover {
                 background: var(--state-hover);
             }
         }
         &-balance {
-            margin-right: 8px;
             line-height: 24px;
             color: var(--text-profit-success);
             font-size: $FONT_SIZE_N;
             font-weight: bold;
+
+            &-wallet {
+                color: var(--text-general);
+            }
         }
         &-icon {
             margin-right: 5px;
@@ -288,7 +292,6 @@ body .header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 10px 1px 0;
             pointer-events: none;
 
             &-text {
@@ -301,7 +304,8 @@ body .header {
         height: min-content;
     }
     &__logo {
-        height: 35px;
+        width: 120px;
+        height: 25px;
     }
     &__icon {
         height: 16px;
@@ -318,8 +322,7 @@ body .header {
         }
     }
     &__deposit {
-        margin-left: 8px;
-        margin-right: 16px;
+        margin: 0 16px 0 8px;
     }
     &__divider {
         height: 32px;
@@ -458,6 +461,7 @@ body .header {
             display: flex;
             justify-content: center;
             padding: 0 16px;
+            gap: 8px;
             cursor: pointer;
 
             > * {
@@ -471,7 +475,7 @@ body .header {
                 line-height: 24px;
                 font-weight: bold;
                 color: var(--text-general);
-                margin: 0 8px;
+                margin: 0 0 0 8px;
             }
             &-label {
                 font-size: $FONT_SIZE_S;
@@ -503,6 +507,20 @@ body .header {
                 background: var(--general-main-1);
                 justify-content: space-evenly;
             }
+            &-cta {
+                display: flex;
+                padding: 0 0 20px;
+                align-items: center;
+                justify-content: center;
+                font-size: $FONT_SIZE_S;
+                line-height: 1.5;
+                font-weight: bold;
+
+                &--link {
+                    cursor: pointer;
+                    color: var(--brand-red-coral);
+                }
+            }
         }
         &__list {
             &-item {
@@ -515,7 +533,8 @@ body .header {
                 margin: 24px 16px;
                 padding: 24px 16px;
                 flex-basis: 100%;
-                width: 288px;
+                width: 284px;
+                flex-direction: column;
 
                 &:not(.platform__list-item--active):hover {
                     background: var(--state-hover);
@@ -524,11 +543,13 @@ body .header {
                     border: solid 2px var(--border-active);
                 }
                 &-icon {
-                    width: 35px;
-                    height: 35px;
+                    height: 32px;
+
+                    &-container {
+                        height: 42px;
+                    }
                 }
                 &-text {
-                    margin-left: 15px;
                     font-weight: normal;
                 }
                 &-name {
@@ -539,6 +560,7 @@ body .header {
                 &-desc {
                     font-size: $FONT_SIZE_S;
                     line-height: 20px;
+                    margin-top: 8px;
                 }
             }
         }
@@ -1047,6 +1069,10 @@ body .mobile {
             &-info {
                 margin: 0;
             }
+            &-icon-mobile-currency {
+                width: 40px;
+                height: 24px;
+            }
         }
         &__notification {
             margin-right: 0;
@@ -1078,6 +1104,10 @@ body .mobile {
                 left: 0;
                 transform: unset;
             }
+        }
+        &__logo {
+            height: 32px;
+            width: 148px;
         }
         .account {
             &__switcher {
