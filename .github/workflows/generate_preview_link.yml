@@ -32,12 +32,12 @@ jobs:
           head_sha: ${{github.event.pull_request.head.sha}}
 
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@v4
         with:
           ref: ${{github.event.pull_request.head.sha}}
 
       - name: Setup Node
-        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
+        uses: actions/setup-node@v4
         with:
           node-version: 18.x
 
