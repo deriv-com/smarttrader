@@ -15,7 +15,7 @@ const commonConfig = (grunt) => ({
     },
     optimization: {
         chunkIds : 'named',
-        minimize : false,
+        minimize : true,
         minimizer: [
             new TerserPlugin({
                 test         : /\.min\.js/,
