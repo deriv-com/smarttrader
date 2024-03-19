@@ -44,7 +44,7 @@ const ClientBase = (() => {
             syncWithDerivApp(value, client_object);
             LocalStore.set('active_loginid', value);
             current_loginid = value;
-        } else {
+        } else if (key !== '__proto__') {
             if (!(loginid in client_object)) {
                 client_object[loginid] = {};
             }
