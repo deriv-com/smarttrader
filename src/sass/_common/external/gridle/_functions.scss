@@ -161,7 +161,7 @@
 	$stateMap-or-stateName : current
 ) {
 	$context : gridle_get_state_var(context, $stateMap-or-stateName);
-	@return percentage(1 / $context * $columns);
+	@return percentage(calc(1 / $context * $columns));
 }
 
 
