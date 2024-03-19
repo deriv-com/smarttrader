@@ -2,7 +2,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const publicPathFactory = require('./helpers').publicPathFactory;
 
 const commonConfig = (grunt) => ({
-    devtool: 'source-map', // handled by SourceMapDevToolPlugin
+    devtool: false, // handled by SourceMapDevToolPlugin
     mode   : global.is_release ? 'production' : 'development',
     stats  : {
         chunks  : false,
