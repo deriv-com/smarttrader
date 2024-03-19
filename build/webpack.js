@@ -10,6 +10,7 @@ module.exports = function (grunt) {
     const section = [webpackMerge.smart(commonConfig(grunt), appConfig(grunt))];
 
     const watch_config = {
+        watch: true,
         optimization: {
             minimize: false,
         },

@@ -10,7 +10,7 @@ class WatchRunPlugin {
     }
 
     apply(compiler) {
-        compiler.hooks.watchRun.tap('WatchRun', (comp) => {
+        compiler.hooks.watchRun.tap('WatchRunPlugin', (comp) => {
             // eslint-disable-next-line no-console
             console.log('\n');
             this.grunt.log.ok('Build started at:', new Date().toString().grey);
