@@ -18,8 +18,8 @@ const commonConfig = (grunt) => ({
         minimize : true,
         minimizer: [
             new TerserPlugin({
-                parallel: 2,
-                test    : /\.js$/,
+                parallel: true,
+                test    : /\.min\.js/,
             }),
         ],
     },
