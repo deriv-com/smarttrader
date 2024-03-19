@@ -133,7 +133,7 @@ const Process = (() => {
             const confirmation_error = getElementById('confirmation_error');
             confirmation_error.setVisibility(1);
             handleNotOfferedSymbol();
-            elementInnerHtml(confirmation_error, `${contracts.error.message} <a href="javascript:;" onclick="sessionStorage.removeItem('underlying'); window.location.reload();">${localize('Please reload the page')}</a>`);
+            elementInnerHtml(confirmation_error, `${contracts.error.message} <a onclick="sessionStorage.removeItem('underlying'); window.location.reload();">${localize('Please reload the page')}</a>`);
             hideLoading();
 
             return;

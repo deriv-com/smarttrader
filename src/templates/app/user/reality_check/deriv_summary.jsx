@@ -46,7 +46,7 @@ const Summary = () => {
                                     }}
                                 />
                             </div>
-                            <a className='btn btn--secondary reality-check__button reality-check__button-statement' id='statement' href='javascript:;'><span>{it.L('Go To Reports')}</span></a>
+                            <a className='btn btn--secondary reality-check__button reality-check__button-statement' id='statement'><span>{it.L('Go To Reports')}</span></a>
                         </div>
                         <div className='reality-check__summary-wrapperright'>
                             <RcRow string={it.L('Session duration:')} id='session_duration' />
@@ -65,7 +65,7 @@ const Summary = () => {
                     </div>
                     <hr className='reality-check__line' />
                     <div className='center-text gr-padding-20 gr-child reality-check__button-wrapper'  id='reality_check_nav'>
-                        <a className='btn btn--secondary reality-check__button reality-check__button-logout' id='logout' href='javascript:;'><span>{it.L('Log out')}</span></a>
+                        <a className='btn btn--secondary reality-check__button reality-check__button-logout' id='logout'><span>{it.L('Log out')}</span></a>
                         <button className='btn btn--primary reality-check__button' type='submit'>{it.L('Continue trading')}</button>
                     </div>
                 </form>
