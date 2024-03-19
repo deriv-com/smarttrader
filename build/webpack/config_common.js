@@ -50,9 +50,9 @@ const commonConfig = (grunt) => ({
                 use : [
                     'babel-loader',
                     {
-                        loader : 'react-svg-loader',
+                        loader : '@svgr/webpack',
                         options: {
-                            svgo: {
+                            svgoConfig: {
                                 plugins: [
                                     { removeTitle: false },
                                 ],
