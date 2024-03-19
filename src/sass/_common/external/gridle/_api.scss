@@ -40,7 +40,7 @@
 			@content;
 		}
 
-	} @else if type-of($states) == list
+	} @elseif type-of($states) == list
 		or type-of($states) == string {
 
 		// loop on each states :
@@ -55,7 +55,7 @@
 			}
 		}
 
-	} @else if type-of($states) == map {
+	} @elseif type-of($states) == map {
 
 		// get a state from the passed one
 		$state : gridle_get_state($states);
@@ -348,9 +348,9 @@
 		// vars :
 		$width : 0;
 		@if $column-width {
-			$width : $column-width * calc($columns / $name-multiplicator);
+			$width : $column-width * ($columns / $name-multiplicator);
 		} @else {
-			$width : percentage(calc(1 / $context)) * calc($columns / $name-multiplicator);
+			$width : percentage(1 / $context) * ($columns / $name-multiplicator);
 		}
 		// @if $direction == rtl { $width : $width*-1; }
 		// left:$width;
@@ -410,9 +410,9 @@
 		// vars :
 		$width : 0;
 		@if $column-width {
-			$width : $column-width * calc($columns / $name-multiplicator);
+			$width : $column-width * ($columns / $name-multiplicator);
 		} @else {
-			$width : percentage(calc(1 / $context)) * calc($columns / $name-multiplicator);
+			$width : percentage(1 / $context) * ($columns / $name-multiplicator);
 		}
 		// @if $direction == rtl { $width : $width*-1; }
 		// right:$width;
@@ -470,9 +470,9 @@
 		// vars :
 		$width : 0;
 		@if $column-width {
-			$width : $column-width * calc($columns / $name-multiplicator);
+			$width : $column-width * ($columns / $name-multiplicator);
 		} @else {
-			$width : percentage(calc(1 / $context)) * calc($columns / $name-multiplicator);
+			$width : percentage(1 / $context) * ($columns / $name-multiplicator);
 		}
 
 		// set value :
@@ -522,9 +522,9 @@
 		// vars :
 		$width : 0;
 		@if $column-width {
-			$width : $column-width * calc($columns / $name-multiplicator);
+			$width : $column-width * ($columns / $name-multiplicator);
 		} @else {
-			$width : percentage(calc(1 / $context)) * calc($columns / $name-multiplicator);
+			$width : percentage(1 / $context) * ($columns / $name-multiplicator);
 		}
 
 		// set value :
@@ -569,7 +569,7 @@
 			top:0; left:0;
 			width:100%; height:99999px;
 			// vars :
-			$width : percentage(calc(1 / $context));
+			$width : percentage(1 / $context);
 			background: linear-gradient(to right, rgba(0,0,0,0) 50% , rgba(0,0,0,.02) 50%); // Standard syntax
 			background-size:($width*2) 100%;
 			z-index:99999;

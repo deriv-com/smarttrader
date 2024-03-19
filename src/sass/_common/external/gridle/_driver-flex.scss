@@ -164,9 +164,9 @@
 			} @else if type-of($columns) == number {
 				// check if we have a ratio
 				@if $columns < 1 {
-					$columns : calc($context / 100 * ($columns * 100));
+					$columns : $context / 100 * ($columns * 100);
 				}
-				$columns : calc($columns / $name-multiplicator);
+				$columns : $columns / $name-multiplicator;
 			} @else {
 				@error "the column #{$columns} does not exist...";
 			}
@@ -176,7 +176,7 @@
 			@if $column-width {
 				$width : $column-width * $columns;
 			} @else {
-				$width : percentage(calc(1 / $context * $columns));
+				$width : percentage(1 / $context * $columns);
 			}
 
 			// if flex
