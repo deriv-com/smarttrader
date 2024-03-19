@@ -37,7 +37,7 @@ jobs:
           ref: ${{github.event.pull_request.head.sha}}
 
       - name: Setup Node
-        uses: actions/setup-node@0373f620cef45d0bae376c393a35f21326aa62a4
+        uses: actions/setup-node@latest
         with:
           node-version: 18.x
 
