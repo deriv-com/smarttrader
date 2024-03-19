@@ -1,7 +1,7 @@
 module.exports = {
     all: {
         options: {
-            install  : false,
+            install  : true,
             verbose  : true,
             scopeList: ['dependencies', 'devDependencies'],
         },
