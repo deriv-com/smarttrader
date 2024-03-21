@@ -21,6 +21,8 @@ const createElement     = require('../../../_common/utility').createElement;
 
 const StartDates = (() => {
     let has_now = 0;
+    const { DATE_START } = Defaults.PARAM_NAMES;
+
     State.remove('is_start_dates_displayed');
 
     const compareStartDate = (a, b) => {
@@ -58,7 +60,7 @@ const StartDates = (() => {
             }
 
             start_dates.list.sort(compareStartDate);
-            const default_start = Defaults.get('date_start') || 'now';
+            const default_start = Defaults.get(DATE_START) || 'now';
 
             const rounding = 5 * 60 * 1000;
             localizeForLang(urlLang());
@@ -95,7 +97,7 @@ const StartDates = (() => {
             if (target) {
                 target.appendChild(fragment);
                 Dropdown('#date_start');
-                Defaults.set('date_start', target.value);
+                Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
             }
             State.set('is_start_dates_displayed', true);
@@ -111,7 +113,7 @@ const StartDates = (() => {
             State.remove('is_start_dates_displayed');
             getElementById('date_start_row').style.display = 'none';
             getElementById('date_start').value = 'now';
-            Defaults.remove('date_start');
+            Defaults.remove(DATE_START);
         }
     };
 

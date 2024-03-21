@@ -23,11 +23,12 @@ const TradingAnalysis = (() => {
     // tabListener();
     const hidden_class    = 'invisible';
     const tab_selector_id = 'trade_analysis';
+    const { FORM_NAME, MARKET } = Defaults.PARAM_NAMES;
 
     let form_name, current_tab;
 
     const requestTradeAnalysis = () => {
-        form_name = Defaults.get('formname') || 'risefall';
+        form_name = Defaults.get(FORM_NAME) || 'risefall';
 
         const map_obj = { matchdiff: 'digits', callputequal: 'risefall', callput: 'higherlower' };
         form_name     = map_obj[form_name] || form_name;
@@ -166,11 +167,11 @@ const TradingAnalysis = (() => {
     const showExplanation = () => {
         const $container = $('#tab_explanation-content');
         $container.find('#explanation_winning > div, #explanation_explain > div, #explanation_image, #explanation_note, #explanation_note > div, #explanation_duration > div').setVisibility(0);
-        $container.find(`#explanation_winning, #winning_${form_name}, #explanation_explain, #explain_${form_name}, #duration_${Defaults.get('market')}`).setVisibility(1);
+        $container.find(`#explanation_winning, #winning_${form_name}, #explanation_explain, #explain_${form_name}, #duration_${Defaults.get(MARKET)}`).setVisibility(1);
         const market_duration = $container.find(`#duration_${form_name}`);
         if (market_duration.length) {
             market_duration.setVisibility(1);
-            $(`#duration_${Defaults.get('market')}`).setVisibility(0);
+            $(`#duration_${Defaults.get(MARKET)}`).setVisibility(0);
         }
 
         if ($container.find(`#note_${form_name}`).length) {

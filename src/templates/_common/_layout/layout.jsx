@@ -72,7 +72,7 @@ const Layout = () => {
                     <WalletHeader />
                     <div id='content-holder'>
                         {/* <MobileMenu /> */}
-                        {/* <a href='javascript:;' id='scrollup' /> */}
+                        {/* <a id='scrollup' /> */}
                         <InnerContent />
                     </div>
                     <Topbar />

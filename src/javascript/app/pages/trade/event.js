@@ -31,6 +31,25 @@ const localize              = require('../../../_common/localize').localize;
  *
  */
 const TradingEvents = (() => {
+    const {
+        AMOUNT,
+        AMOUNT_TYPE,
+        BARRIER,
+        BARRIER_HIGH,
+        BARRIER_LOW,
+        DATE_START,
+        DURATION_AMOUNT,
+        CURRENCY,
+        EXPIRY_DATE,
+        EXPIRY_TYPE,
+        IS_EQUAL,
+        MULTIPLIER,
+        PREDICTION,
+        SELECTED_TICK,
+        TIME_START,
+        UNDERLYING,
+    } = Defaults.PARAM_NAMES;
+
     const initiate = () => {
         const attachTimePicker = (selector, check_end_time) => {
             let min_time,
@@ -72,7 +91,7 @@ const TradingEvents = (() => {
 
         const el_equal = getElementById('callputequal');
         el_equal.addEventListener('change', (e) => {
-            Defaults.set('is_equal', +e.target.checked);
+            Defaults.set(IS_EQUAL, +e.target.checked);
             Process.processContractForm();
             TradingAnalysis.request();
         });
@@ -85,8 +104,8 @@ const TradingEvents = (() => {
                 CommonTrading.showFormOverlay();
                 CommonTrading.showPriceOverlay();
                 const underlying = e.target.value;
-                Defaults.remove('barrier', 'barrier_high', 'barrier_low');
-                Defaults.set('underlying', underlying);
+                Defaults.remove(BARRIER, BARRIER_HIGH, BARRIER_LOW);
+                Defaults.set(UNDERLYING, underlying);
 
                 Tick.clean();
 
@@ -115,7 +134,7 @@ const TradingEvents = (() => {
             if (e.target.value % 1 !== 0) {
                 e.target.value = Math.floor(e.target.value);
             }
-            Defaults.set('duration_amount', e.target.value);
+            Defaults.set(DURATION_AMOUNT, e.target.value);
             Durations.selectAmount(e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
@@ -134,7 +153,7 @@ const TradingEvents = (() => {
                 .on('change', CommonTrading.debounce((e) => {
                     // using Defaults, to update the value by datepicker if it was emptied by keyboard (delete)
                     Durations.validateMinDurationAmount();
-                    if (input_event_triggered === false || !Defaults.get('duration_amount')) {
+                    if (input_event_triggered === false || !Defaults.get(DURATION_AMOUNT)) {
                         triggerOnDurationChange(e);
                     } else {
                         input_event_triggered = false;
@@ -147,7 +166,7 @@ const TradingEvents = (() => {
          * and request new price
          */
         getElementById('expiry_type').addEventListener('change', (e) => {
-            Defaults.set('expiry_type', e.target.value);
+            Defaults.set(EXPIRY_TYPE, e.target.value);
             if (Process.onExpiryTypeChange(e.target.value)) Price.processPriceRequest();
         });
 
@@ -155,7 +174,7 @@ const TradingEvents = (() => {
          * bind event to change in duration units, populate duration and request price
          */
         getElementById('duration_units').addEventListener('change', (e) => {
-            Defaults.remove('barrier', 'barrier_high', 'barrier_low');
+            Defaults.remove(BARRIER, BARRIER_HIGH, BARRIER_LOW);
             Process.onDurationUnitChange(e.target.value);
             Process.processContractForm();
         });
@@ -190,11 +209,11 @@ const TradingEvents = (() => {
         amount_element.addEventListener('keypress', onlyNumericOnKeypress);
         amount_element.addEventListener('input', CommonTrading.debounce((e) => {
             e.target.value = e.target.value.replace(/[^0-9.]/g, '');
-            const currency = Defaults.get('currency');
+            const currency = Defaults.get(CURRENCY);
             if (isStandardFloat(e.target.value)) {
                 e.target.value = parseFloat(e.target.value).toFixed(getDecimalPlaces(currency));
             }
-            Defaults.set(`amount${isCryptocurrency(currency) ? '_crypto' : ''}`, e.target.value);
+            Defaults.set(`${AMOUNT}${isCryptocurrency(currency) ? '_crypto' : ''}`, e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
         }));
@@ -208,7 +227,7 @@ const TradingEvents = (() => {
 
             multiplier_element.addEventListener('input', CommonTrading.debounce((e) => {
                 e.target.value = e.target.value.replace(/^0*(\d\.?)/, '$1');
-                Defaults.set('multiplier', e.target.value);
+                Defaults.set(MULTIPLIER, e.target.value);
                 Price.processPriceRequest();
                 CommonTrading.submitForm(document.getElementById('websocket_form'));
             }));
@@ -225,11 +244,11 @@ const TradingEvents = (() => {
                     if (!dateValueChanged(this, 'time')) {
                         return false;
                     }
-                    Defaults.set('time_start', time_start_element.value);
+                    Defaults.set(TIME_START, time_start_element.value);
                     let make_price_request = 1;
-                    if (Defaults.get('expiry_date')) {
+                    if (Defaults.get(EXPIRY_DATE)) {
                         // if time changed, proposal will be sent there if not we should send it here
-                        make_price_request = Durations.selectEndDate(moment(Defaults.get('expiry_date'))) ? -1 : 1;
+                        make_price_request = Durations.selectEndDate(moment(Defaults.get(EXPIRY_DATE))) ? -1 : 1;
                     }
                     if (make_price_request > 0) {
                         Price.processPriceRequest();
@@ -246,7 +265,7 @@ const TradingEvents = (() => {
         const date_start_element = CommonIndependent.getStartDateNode();
         if (date_start_element) {
             date_start_element.addEventListener('change', (e) => {
-                Defaults.set('date_start', e.target.value);
+                Defaults.set(DATE_START, e.target.value);
                 initTimePicker();
                 const r = Durations.onStartDateChange(e.target.value);
                 Process.displayEquals();
@@ -268,7 +287,7 @@ const TradingEvents = (() => {
          * payout or stake and request new price
          */
         getElementById('amount_type').addEventListener('change', (e) => {
-            Defaults.set('amount_type', e.target.value);
+            Defaults.set(AMOUNT_TYPE, e.target.value);
             Price.processPriceRequest();
         });
 
@@ -298,8 +317,8 @@ const TradingEvents = (() => {
          */
         $('.currency').on('change', (e) => {
             const currency = e.target.value;
-            Defaults.set('currency', currency);
-            const amount = isCryptocurrency(currency) ? 'amount_crypto' : 'amount';
+            Defaults.set(CURRENCY, currency);
+            const amount = isCryptocurrency(currency) ? 'amount_crypto' : AMOUNT;
             if (Defaults.get(amount)) $('#amount').val(Defaults.get(amount));
             Price.processPriceRequest();
         });
@@ -372,7 +391,7 @@ const TradingEvents = (() => {
             .on('keypress', (ev) => { onlyNumericOnKeypress(ev, [43, 45, 46]); })
             .on('input', CommonTrading.debounce((e) => {
                 Barriers.validateBarrier();
-                Defaults.set('barrier', e.target.value);
+                Defaults.set(BARRIER, e.target.value);
                 Price.processPriceRequest();
                 CommonTrading.submitForm(getElementById('websocket_form'));
             }, 1000));
@@ -383,7 +402,7 @@ const TradingEvents = (() => {
         const low_barrier_element = getElementById('barrier_low');
         low_barrier_element.addEventListener('input', CommonTrading.debounce((e) => {
             Barriers.validateBarrier();
-            Defaults.set('barrier_low', e.target.value);
+            Defaults.set(BARRIER_LOW, e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
         }));
@@ -397,7 +416,7 @@ const TradingEvents = (() => {
         const high_barrier_element = getElementById('barrier_high');
         high_barrier_element.addEventListener('input', CommonTrading.debounce((e) => {
             Barriers.validateBarrier();
-            Defaults.set('barrier_high', e.target.value);
+            Defaults.set(BARRIER_HIGH, e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
         }));
@@ -409,13 +428,13 @@ const TradingEvents = (() => {
          * attach an event to change in digit prediction input
          */
         getElementById('prediction').addEventListener('change', CommonTrading.debounce((e) => {
-            Defaults.set('prediction', e.target.value);
+            Defaults.set(PREDICTION, e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
         }));
 
         getElementById('selected_tick').addEventListener('change', CommonTrading.debounce((e) => {
-            Defaults.set('selected_tick', e.target.value);
+            Defaults.set(SELECTED_TICK, e.target.value);
             Price.processPriceRequest();
             CommonTrading.submitForm(getElementById('websocket_form'));
         }));
@@ -424,7 +443,7 @@ const TradingEvents = (() => {
         const isStandardFloat = value => (
             !isNaN(value) &&
             value % 1 !== 0 &&
-            ((+parseFloat(value)).toFixed(10)).replace(/^-?\d*\.?|0+$/g, '').length > getDecimalPlaces(Defaults.get('currency'))
+            ((+parseFloat(value)).toFixed(10)).replace(/^-?\d*\.?|0+$/g, '').length > getDecimalPlaces(Defaults.get(CURRENCY))
         );
 
         getElementById('trading_init_progress').addEventListener('click', CommonTrading.debounce(() => {

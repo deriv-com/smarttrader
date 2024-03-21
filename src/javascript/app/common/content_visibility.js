@@ -91,8 +91,8 @@ const ContentVisibility = (() => {
     };
 
     const isEuCountry = () => {
-        const eu_shortcode_regex  = new RegExp('^(maltainvest|malta|iom)$');
-        const eu_excluded_regex   = new RegExp('^mt$');
+        const eu_shortcode_regex  = /^(maltainvest|malta|iom)$/;
+        const eu_excluded_regex   = /^mt$/;
         const financial_shortcode = State.getResponse('landing_company.financial_company.shortcode');
         const gaming_shortcode    = State.getResponse('landing_company.gaming_company.shortcode');
         const clients_country     = Client.get('residence') || State.getResponse('website_status.clients_country');

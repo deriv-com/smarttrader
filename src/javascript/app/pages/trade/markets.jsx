@@ -118,16 +118,18 @@ const List = ({
     );
 };
 
+const { MARKET, UNDERLYING } = Defaults.PARAM_NAMES;
+
 class Markets extends React.Component {
     constructor (props) {
         super(props);
-        let market_symbol = Defaults.get('market');
+        let market_symbol = Defaults.get(MARKET);
         
         const market_list = Symbols.markets();
         this.markets = getAvailableUnderlyings(market_list);
 
         this.underlyings = Symbols.getAllSymbols() || {};
-        let underlying_symbol = Defaults.get('underlying');
+        let underlying_symbol = Defaults.get(UNDERLYING);
         if (!underlying_symbol || !this.underlyings[underlying_symbol]) {
             const submarket = Object.keys(this.markets[market_symbol].submarkets).sort(sortSubmarket)[0];
             underlying_symbol = Object.keys(this.markets[market_symbol].submarkets[submarket].symbols).sort()[0];
@@ -136,7 +138,7 @@ class Markets extends React.Component {
         this.markets_all = markets_arr.slice();
         if (!(market_symbol in this.markets)) {
             market_symbol = Object.keys(this.markets).find(m => this.markets[m].submarkets[market_symbol]);
-            Defaults.set('market', market_symbol);
+            Defaults.set(MARKET, market_symbol);
         }
         this.keys_arr = [];
         this.markets_all.forEach((market) => {
@@ -190,7 +192,7 @@ class Markets extends React.Component {
             ...prevState,
             open_accordion: !prevState.open_accordion,
         }));
-    }
+    };
 
     getCurrentUnderlying = () => {
         const { underlying: { name: underlying } } = this.state;
@@ -199,7 +201,7 @@ class Markets extends React.Component {
             return `${underlying.substr(0, max_char)}...`;
         }
         return underlying;
-    }
+    };
 
     handleClickOutside = (e) => {
         if (this.references.wrapper_ref
@@ -207,7 +209,7 @@ class Markets extends React.Component {
             && this.state.open) {
             this.closeDropdown();
         }
-    }
+    };
 
     handleScroll = (e) => {
         const { market_nodes, list } = this.references;
@@ -240,7 +242,7 @@ class Markets extends React.Component {
         }
 
         this.stickyHeader(position);
-    }
+    };
 
     openScrollMonitor = (element) => {
         // if there is no scroll, we don't need to register anything.
@@ -255,14 +257,14 @@ class Markets extends React.Component {
         setTimeout(() => {
             this.closeScrollMonitor();
         }, 1500);
-    }
+    };
 
     closeScrollMonitor = () => {
         clearInterval(this.state.open_dropdown_scroll_id);
         this.setState({
             open_dropdown_scroll_id: 0,
         });
-    }
+    };
 
     openDropdown = () => {
         this.setState({ open: true });
@@ -279,8 +281,8 @@ class Markets extends React.Component {
     };
 
     onUnderlyingClick = (underlying_symbol, market_symbol) => {
-        Defaults.set('underlying', underlying_symbol);
-        Defaults.set('market', market_symbol);
+        Defaults.set(UNDERLYING, underlying_symbol);
+        Defaults.set(MARKET, market_symbol);
 
         this.setState({
             market: {
@@ -304,12 +306,12 @@ class Markets extends React.Component {
         /* Todo add notification for closed markets */
         // Notifications.show({ text: localize('All markets are closed now. Please try again later.'), uid: 'MARKETS_CLOSED' });
 
-    }
+    };
 
     onTabChange = (e) => {
         const market = e.target.dataset.market;
         this.scrollToElement(`${market}_market`, 120, 0);
-    }
+    };
 
     saveRef = (node_name, node) => this.references[node_name] = node;
 
@@ -318,7 +320,7 @@ class Markets extends React.Component {
         const { list } = this.references;
         const to_offset = getElementById(id).offsetTop - list.offsetTop - offset;
         scrollToPosition(list, to_offset, duration);
-    }
+    };
 
     stickyHeader = (position) => {
         const { market_nodes } = this.references;
@@ -360,7 +362,7 @@ class Markets extends React.Component {
         }
         current_viewed_node.children[0].classList.add(class_sticky);
         current_viewed_node.style.paddingTop = `${TITLE_HEIGHT}px`;
-    }
+    };
 
     saveMarketRef = (market, node) => {
         if (!node) return;
@@ -369,8 +371,9 @@ class Markets extends React.Component {
         // Save offsets of elements for sticky headers.
         node.dataset.offsetTop = node.offsetTop;
         node.dataset.offsetHeight = node.offsetHeight;
-    }
+    };
 
+    /* eslint-disable class-methods-use-this */
     groupMarkets = (markets) => {
         const market_group = {};
         markets.forEach(([key, obj]) => {
@@ -385,7 +388,7 @@ class Markets extends React.Component {
             }
         });
         return market_group;
-    }
+    };
 
     searchSymbols = ({ target: { value: query } }) => {
         this.setState({ query });
@@ -441,7 +444,7 @@ class Markets extends React.Component {
         if (!filter_markets.length) return;
 
         this.setState({ markets: filter_markets, active_market: filter_markets[0][0] });
-    }
+    };
 
     /* eslint-disable no-shadow */
     scrollToMarket = (key) => {
@@ -449,7 +452,7 @@ class Markets extends React.Component {
         const node = this.references.market_nodes[key];
         const offset = node.dataset.offsetTop - list.offsetTop;
         scrollToPosition(list, offset, 0);
-    }
+    };
 
     /* eslint-enable no-shadow */
     /* eslint-enable no-undef */

@@ -1,13 +1,12 @@
-const UglifyJsPlugin    = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const publicPathFactory = require('./helpers').publicPathFactory;
 
 const commonConfig = (grunt) => ({
     devtool: false, // handled by SourceMapDevToolPlugin
     mode   : global.is_release ? 'production' : 'development',
     stats  : {
-        chunks    : false,
-        maxModules: 0,
-        warnings  : false,
+        chunks  : false,
+        warnings: false,
     },
     output: {
         filename     : '[name].js',
@@ -15,14 +14,16 @@ const commonConfig = (grunt) => ({
         publicPath   : publicPathFactory(grunt),
     },
     optimization: {
-        namedChunks: true,
-        minimize   : true,
-        minimizer  : [
-            new UglifyJsPlugin({
-                test     : /\.min\.js/,
-                exclude  : /vendors~/,
-                parallel : true,
-                sourceMap: true,
+        chunkIds : 'named',
+        minimize : true,
+        minimizer: [
+            new TerserPlugin({
+                test         : /\.min\.js$/,
+                exclude      : /vendors~/,
+                parallel     : true,
+                terserOptions: {
+                    sourceMap: true,
+                },
             }),
         ],
     },
@@ -36,10 +37,9 @@ const commonConfig = (grunt) => ({
                 exclude: /node_modules/,
                 loader : 'babel-loader',
                 options: {
-                    presets: ['env', 'stage-1', 'react'],
+                    presets: ['@babel/preset-env', '@babel/preset-react'],
                     plugins: [
                         'transform-decorators-legacy',
-                        'transform-object-rest-spread',
                         'transform-class-properties',
                         'babel-plugin-syntax-dynamic-import',
                     ],
@@ -50,9 +50,9 @@ const commonConfig = (grunt) => ({
                 use : [
                     'babel-loader',
                     {
-                        loader : 'react-svg-loader',
+                        loader : '@svgr/webpack',
                         options: {
-                            svgo: {
+                            svgoConfig: {
                                 plugins: [
                                     { removeTitle: false },
                                 ],

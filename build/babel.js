@@ -3,7 +3,7 @@ module.exports = {
         options: {
             minified  : true,
             plugins   : ['transform-remove-strict-mode'],
-            presets   : ['env'],
+            presets   : ['@babel/preset-env'],
             sourceMap : true,
             sourceType: 'script',
         },

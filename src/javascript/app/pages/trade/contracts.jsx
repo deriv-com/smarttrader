@@ -9,7 +9,7 @@ class Contracts extends React.Component {
     constructor (props) {
         super(props);
         const { contracts, contracts_tree, selected } = props;
-        const formname = selected || Defaults.get('formname');
+        const formname = selected || Defaults.get(Defaults.PARAM_NAMES.FORM_NAME);
         this.references = {};
         this.el_contract = getElementById('contract');
         this.el_contract.value = formname;
@@ -35,7 +35,7 @@ class Contracts extends React.Component {
             && !this.references.wrapper.contains(e.target) && this.state.open) {
             this.closeDropDown();
         }
-    }
+    };
 
     openDropDown = () => {
         if (this.state.contracts_tree.length < 1) return;
@@ -48,7 +48,7 @@ class Contracts extends React.Component {
         const el_dropdown = this.references.wrapper;
         // reposition dropdown after the animation is finished.
         setTimeout(() => el_dropdown.removeAttribute('style'), 500);
-    }
+    };
 
     positionDropDown = () => {
         const el_dropdown = this.references.wrapper;
@@ -60,7 +60,7 @@ class Contracts extends React.Component {
         } else if ((pos.x + pos.width + 10) !== window.innerWidth) {
             el_dropdown.removeAttribute('style');
         }
-    }
+    };
 
     saveRef = (name, node) => { this.references[name] = node; };
 
@@ -80,7 +80,7 @@ class Contracts extends React.Component {
         });
 
         return contracts[type];
-    }
+    };
 
     getCurrentContract = () => {
         const { formname, contracts } = this.state;
@@ -89,7 +89,7 @@ class Contracts extends React.Component {
             return `${contracts[formname].substr(0,max_char)}...`;
         }
         return contracts[formname];
-    }
+    };
 
     onContractClick = (formname) => {
         this.closeDropDown();
@@ -100,7 +100,7 @@ class Contracts extends React.Component {
         this.el_contract.dispatchEvent(event);
 
         this.setState({ formname });
-    }
+    };
 
     /* eslint-enable no-undef */
     render () {

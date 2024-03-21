@@ -220,7 +220,6 @@ const Trading = () => (
                                     <a
                                         id='authorization_error_btn_login'
                                         className='btn btn--link'
-                                        href='javascript:;'
                                     >
                                         {it.L('Log in here')}
                                     </a>

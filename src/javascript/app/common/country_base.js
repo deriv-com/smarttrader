@@ -6,8 +6,8 @@ const State  = require('../../_common/storage').State;
 // 'mt' is part of EU but account opening is not offered so the landing company response won't include the expected shortcode.
 // we will use the fallback eu_excluded_regex for them.
 const isEuCountry = () => {
-    const eu_shortcode_regex  = new RegExp('^(maltainvest|malta|iom)$');
-    const eu_excluded_regex   = new RegExp('^mt$');
+    const eu_shortcode_regex  = /^(maltainvest|malta|iom)$/;
+    const eu_excluded_regex   = /^mt$/;
     const financial_shortcode = State.getResponse('landing_company.financial_company.shortcode');
     const gaming_shortcode    = State.getResponse('landing_company.gaming_company.shortcode');
     const svg_shortcode       = gaming_shortcode === 'svg';
@@ -24,7 +24,7 @@ const isEuCountry = () => {
 const isIndonesia = () => State.getResponse('website_status.clients_country') === 'id';
 
 const isExcludedFromCfd = () => {
-    const cfd_excluded_regex = new RegExp('^fr$');
+    const cfd_excluded_regex = /^fr$/;
     const clients_country = Client.get('residence') || State.getResponse('website_status.clients_country');
     return cfd_excluded_regex.test(clients_country);
 };

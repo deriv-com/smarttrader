@@ -41,10 +41,12 @@ const TickDisplay = (() => {
         is_chart_init       = false;
     };
 
-    const initializeChart = () => new Promise(async (resolve) => {
+    const initializeChart = () => new Promise((resolve) => {
         is_chart_init = true;
 
-        display_decimals = await getUnderlyingPipSize(contract.underlying);
+        (async () => {
+            display_decimals = await getUnderlyingPipSize(contract.underlying);
+        })();
 
         if (/reset/i.test(contract.shortcode)) {
             reset_time_index = Math.floor(contract.tick_count / 2); // use index to draw ticks reset_time

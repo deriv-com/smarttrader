@@ -12,7 +12,7 @@ export const Tabs = ({ id, id_ul, arr_tabs = [], no_href }) => (
             { arr_tabs.map((tab, idx) => (
                 !tab.disabled &&
                     <li key={idx} id={tab.id} className={`tm-li ${tab.className || ''}`}>
-                        <a href={no_href ? 'javascript:;' : `#${tab.id}`} className='tm-a'>{tab.text}</a>
+                        <a href={no_href ? undefined : `#${tab.id}`} className='tm-a'>{tab.text}</a>
                     </li>
             ))}
         </ul>

@@ -24,7 +24,7 @@ const Menu = (() => {
         }
 
         const menu_top_item_for_page =  Array.from(menu_top.getElementsByTagName('a'))
-            .find(link => !/invisible/.test(findParent(link, 'li').classList) && link.href !== 'javascript:;' && window.location.pathname.indexOf(link.pathname.replace(/\.html/, '')) >= 0 && link.target !== '_blank');
+            .find(link => !/invisible/.test(findParent(link, 'li').classList) && link.href !== undefined && window.location.pathname.indexOf(link.pathname.replace(/\.html/, '')) >= 0 && link.target !== '_blank');
 
         if (menu_top_item_for_page) {
             findParent(menu_top_item_for_page, 'li').classList.add('active');

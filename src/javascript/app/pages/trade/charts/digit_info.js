@@ -102,7 +102,7 @@ const DigitInfo = (() => {
 
     const addContent = (underlying) => {
         const domain  = document.domain.split('.').slice(-2).join('.');
-        const symbols = getSymbolsForMarket(State.getResponse('active_symbols'), Defaults.get('market'));
+        const symbols = getSymbolsForMarket(State.getResponse('active_symbols'), Defaults.get(Defaults.PARAM_NAMES.MARKET));
 
         let elem = '';
         Object.keys(symbols).forEach((symbol) => {

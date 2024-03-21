@@ -19,10 +19,10 @@ const displayCurrencies = () => {
 
     if (currencies && currencies.length > 1) {
         $currency.html(Currency.getCurrencyList(currencies).html());
-        Defaults.set('currency', $currency.val());
+        Defaults.set(Defaults.PARAM_NAMES.CURRENCY, $currency.val());
     } else {
         $currency.replaceWith($('<span/>', { id: $currency.attr('id'), class: $currency.attr('class'), value: currencies[0], html: Currency.formatCurrency(currencies[0]) }));
-        Defaults.set('currency', currencies[0]);
+        Defaults.set(Defaults.PARAM_NAMES.CURRENCY, currencies[0]);
     }
 };
 

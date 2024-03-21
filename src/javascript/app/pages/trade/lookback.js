@@ -6,6 +6,8 @@ const localize = require('../../../_common/localize').localize;
  * Handles lookback option form
  */
 const Lookback = (() => {
+    const { MULTIPLIER } = Defaults.PARAM_NAMES;
+
     const displayLookback = () => {
         const multiplier_element    = document.getElementById('multiplier_row');
         const multiplier_input      = document.getElementById('multiplier');
@@ -14,10 +16,10 @@ const Lookback = (() => {
         if (Contract.form() === 'lookback') {
             multiplier_element.show();
             payout_element.hide(); // Hide payout
-            if (Defaults.get('multiplier')) {
-                multiplier_input.value = Defaults.get('multiplier');
+            if (Defaults.get(MULTIPLIER)) {
+                multiplier_input.value = Defaults.get(MULTIPLIER);
             } else {
-                Defaults.set('multiplier', multiplier_input.value);
+                Defaults.set(MULTIPLIER, multiplier_input.value);
             }
         } else {
             multiplier_element.hide();
@@ -25,7 +27,7 @@ const Lookback = (() => {
         }
     };
 
-    const getFormula = (type = '', mul) => {
+    const getFormula = (type = '', mul = '') => {
         const formulaMapping = {
             LBFLOATPUT : `${mul} x (${localize('High')} - ${localize('Close')})`,
             LBFLOATCALL: `${mul} x (${localize('Close')} - ${localize('Low')})`,

@@ -4,6 +4,29 @@ const webpack                  = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const PATHS                    = require('./paths');
 
+class WatchRunPlugin {
+    constructor(grunt) {
+        this.grunt = grunt;
+    }
+
+    apply(compiler) {
+        compiler.hooks.watchRun.tap('WatchRunPlugin', (comp) => {
+            // eslint-disable-next-line no-console
+            console.log('\n');
+            this.grunt.log.ok('Build started at:', new Date().toString().grey);
+
+            if (comp.modifiedFiles) {
+                const changed_files = Array.from(comp.modifiedFiles, (file) => `\n  ${file}`).join('');
+                this.grunt.log.ok(`Changed file${changed_files.length > 1 ? 's' : ''}:`);
+                changed_files.forEach((file) =>{
+                    const file_path = file.replace(process.cwd(), '.').match(/(.*\/)(.*(?!\/))$/);
+                    this.grunt.log.write('   -'.green, file_path[1].grey, `\b${file_path[2]}\n`);
+                });
+            }
+        });
+    }
+}
+
 const getPlugins = (app, grunt) => ([
     new CircularDependencyPlugin({
         failOnError: true,
@@ -29,25 +52,7 @@ const getPlugins = (app, grunt) => ([
             }),
         ]
         : [
-            function() {
-                this.plugin('watch-run', (watching, callback) => {
-                    // eslint-disable-next-line no-console
-                    console.log('\n');
-                    grunt.log.ok('Build started at:', new Date().toString().grey);
-
-                    const changed_files = Object.keys(watching.watchFileSystem.watcher.mtimes);
-                    if (changed_files.length) {
-                        grunt.log.ok(`Changed file${changed_files.length > 1 ? 's' : ''}:`);
-                        changed_files.forEach((file) =>{
-                            const file_path = file.replace(process.cwd(), '.').match(/(.*\/)(.*(?!\/))$/);
-                            grunt.log.write('   -'.green, file_path[1].grey, `\b${file_path[2]}\n`);
-                        });
-                    }
-
-                    callback();
-                });
-            },
-
+            new WatchRunPlugin(grunt),
             ...(!grunt.option('analyze') ? [] : [
                 new BundleAnalyzerPlugin({
                     analyzerMode  : 'static',

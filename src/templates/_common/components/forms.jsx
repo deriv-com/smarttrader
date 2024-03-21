@@ -205,7 +205,7 @@ export const SubmitButton = ({
                 { custom_btn_text &&
                     <a
                         className={`button ${custom_btn_class || ''}`}
-                        href={custom_btn_href || 'javascript:;'}
+                        href={custom_btn_href}
                         id={custom_btn_id}
                     >
                         <span className='button'>{custom_btn_text}</span>

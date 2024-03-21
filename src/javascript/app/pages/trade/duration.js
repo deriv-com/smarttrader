@@ -32,26 +32,37 @@ const Durations = (() => {
     let selected_duration = {};
     let smallest_duration = {};
     let has_end_date      = 0;
+    const {
+        DATE_START,
+        DURATION,
+        DURATION_AMOUNT,
+        DURATION_UNITS,
+        EXPIRY_DATE,
+        EXPIRY_TIME,
+        EXPIRY_TYPE,
+        FORM_NAME,
+        TIME_START,
+    } = Defaults.PARAM_NAMES;
 
     const displayDurations = (time_start_val) => {
-        let date_time_start = moment(Defaults.get('date_start') * 1000);
+        let date_time_start = moment(Defaults.get(DATE_START) * 1000);
         if (time_start_val) {
             const start_time = time_start_val.split(':');
             date_time_start  = date_time_start.utc().hour(start_time[0]).minute(start_time[1]);
         }
 
         let start_type;
-        if (Defaults.get('date_start') !== 'now' && State.get('is_start_dates_displayed') && date_time_start.isAfter(moment())) {
+        if (Defaults.get(DATE_START) !== 'now' && State.get('is_start_dates_displayed') && date_time_start.isAfter(moment())) {
             start_type = 'forward';
         } else {
             start_type = 'spot';
         }
 
-        if (Defaults.get('formname') === 'highlowticks') {
+        if (Defaults.get(FORM_NAME) === 'highlowticks') {
             Barriers.display(); // hide barrier field, instead of selecting barrier we select tick number
-            Defaults.set('expiry_type', 'duration');
-            Defaults.set('duration_amount', 5);
-            Defaults.set('duration_units', 't');
+            Defaults.set(EXPIRY_TYPE, DURATION);
+            Defaults.set(DURATION_AMOUNT, 5);
+            Defaults.set(DURATION_UNITS, 't');
             // display label instead of populating durations
             CommonFunctions.getElementById('expiry_row').style.display = 'none';
             return false;
@@ -60,7 +71,7 @@ const Durations = (() => {
         const durations = Contract.durations();
         if (durations === false) {
             CommonFunctions.getElementById('expiry_row').style.display = 'none';
-            Defaults.remove('expiry_type', 'duration_amount', 'duration_units', 'expiry_date', 'expiry_time');
+            Defaults.remove(DURATION_AMOUNT, DURATION_UNITS, EXPIRY_DATE, EXPIRY_TIME, EXPIRY_TYPE);
             return false;
         }
 
@@ -169,7 +180,7 @@ const Durations = (() => {
                 option.setAttribute('data-maximum', max);
             }
         }
-        if (map_min.unit === Defaults.get('duration_units')) {
+        if (map_min.unit === Defaults.get(DURATION_UNITS)) {
             option.setAttribute('selected', 'selected');
         }
         return option;
@@ -195,11 +206,11 @@ const Durations = (() => {
         const plus_5_min        = current_moment.clone().add(5, 'minutes');
         // for contracts with min. duration of 1 day, the endtime should be the min. duration, else endtime is current time plus 5 mins
         const selected_end_time = smallest_end_time.isAfter(plus_5_min) ? smallest_end_time : plus_5_min;
-        const default_end_time  = Defaults.get('expiry_date');
+        const default_end_time  = Defaults.get(EXPIRY_DATE);
 
         let expiry_date      = default_end_time &&
             moment(default_end_time).isAfter(smallest_end_time) ? moment(default_end_time) : selected_end_time.utc();
-        let expiry_time      = Defaults.get('expiry_time') || current_moment.format('HH:mm');
+        let expiry_time      = Defaults.get(EXPIRY_TIME) || current_moment.format('HH:mm');
         let expiry_date_iso  = toISOFormat(expiry_date);
 
         if (moment.utc(`${expiry_date_iso} ${expiry_time}`).valueOf() < current_moment.valueOf()) {
@@ -215,8 +226,8 @@ const Durations = (() => {
         expiry_date_el.setAttribute('data-value', expiry_date_iso);
         expiry_time_el.value = expiry_time;
         expiry_time_el.setAttribute('data-value', expiry_time);
-        Defaults.set('expiry_date', expiry_date_iso);
-        Defaults.set('expiry_time', expiry_time);
+        Defaults.set(EXPIRY_DATE, expiry_date_iso);
+        Defaults.set(EXPIRY_TIME, expiry_time);
         setTime(expiry_time);
 
         durationPopulate();
@@ -277,7 +288,7 @@ const Durations = (() => {
         const duration_amount_id = '#duration_amount';
         const unit_min_value     = selected_unit.getAttribute('data-minimum');
         const unit_max_value     = selected_unit.getAttribute('data-maximum');
-        let unit_value           = Defaults.get('duration_amount') || unit_min_value;
+        let unit_value           = Defaults.get(DURATION_AMOUNT) || unit_min_value;
         Dropdown('#duration_units');
         CommonFunctions.elementTextContent(CommonFunctions.getElementById('duration_minimum'), unit_min_value);
         CommonFunctions.elementTextContent(CommonFunctions.getElementById('duration_unit'), DurationMap.get(unit.value, +unit_min_value > 1));
@@ -287,11 +298,11 @@ const Durations = (() => {
         }
     
         CommonFunctions.getElementById('duration_amount').value = unit_value;
-        Defaults.set('duration_amount', unit_value);
+        Defaults.set(DURATION_AMOUNT, unit_value);
         displayExpiryType();
         Dropdown('#expiry_type');
 
-        Defaults.set('duration_units', unit.value);
+        Defaults.set(DURATION_UNITS, unit.value);
 
         // jquery for datepicker
         if (unit.value === 'd') {
@@ -362,7 +373,7 @@ const Durations = (() => {
             let $expiry_date     = $('#expiry_date');
             const date_start_val = CommonFunctions.getElementById('date_start').value || 'now';
 
-            if (isNow(date_start_val) || !/^(risefall|callputequal)$/.test(Defaults.get('formname'))) {
+            if (isNow(date_start_val) || !/^(risefall|callputequal)$/.test(Defaults.get(FORM_NAME))) {
                 if (!$expiry_date.is('input')) {
                     $expiry_date.replaceWith($('<input/>', { id: 'expiry_date', type: 'text', readonly: 'readonly', autocomplete: 'off', 'data-value': $expiry_date.attr('data-value') }))
                         .val(toReadableFormat($expiry_date.attr('data-value')));
@@ -395,7 +406,7 @@ const Durations = (() => {
                     });
                 }
 
-                const default_date          = moment(Defaults.get('expiry_date'));
+                const default_date          = moment(Defaults.get(EXPIRY_DATE));
                 const is_default_date_valid = default_date.isSameOrAfter(min_date)
                                                 && (!max_date || default_date.isSameOrBefore(max_date));
                 const selected_date         = is_default_date_valid ? default_date : min_date;
@@ -428,11 +439,11 @@ const Durations = (() => {
         // in case of having endtime as expiry_type and change the form to contract types
         // which only have duration and do not support endtime, it should change the Default value
         // to get corrected based on contract situations
-        if ($('#expiry_type').find(`option[value=${Defaults.get('expiry_type')}]`).length === 0 && target.value) {
-            Defaults.set('expiry_type', target.value);
+        if ($('#expiry_type').find(`option[value=${Defaults.get(EXPIRY_TYPE)}]`).length === 0 && target.value) {
+            Defaults.set(EXPIRY_TYPE, target.value);
         }
 
-        const current_selected = Defaults.get('expiry_type') || target.value || 'duration';
+        const current_selected = Defaults.get(EXPIRY_TYPE) || target.value || 'duration';
 
         CommonFunctions.getElementById(`expiry_type_${current_selected}`).style.display = 'flex';
         // need to hide the non selected one
@@ -487,13 +498,13 @@ const Durations = (() => {
 
             removeCustomDropDown($expiry_date);
         }
-        Defaults.set('expiry_date', end_date_iso);
+        Defaults.set(EXPIRY_DATE, end_date_iso);
         if (isNow() && !isSameDay()) {
-            Defaults.remove('expiry_time');
+            Defaults.remove(EXPIRY_TIME);
             expiry_time_row.hide();
             Barriers.display();
             $(expiry_time).val('').attr('data-value', '');
-            Defaults.set('expiry_time', '');
+            Defaults.set(EXPIRY_TIME, '');
             return processTradingTimesRequest(end_date_iso);
         } // else
         return showExpiryTime(expiry_time, expiry_time_row);
@@ -501,7 +512,7 @@ const Durations = (() => {
 
     const hideExpiryTime = (expiry_time) => {
         const requested = setTime('');
-        Defaults.remove('expiry_time');
+        Defaults.remove(EXPIRY_TIME);
         expiry_time.hide();
         Barriers.display();
         return requested;
@@ -555,9 +566,9 @@ const Durations = (() => {
             el_expiry_time.setAttribute('data-value', new_time);
             time_changed = setTime(el_expiry_time.value, 1);
         } else {
-            time_changed = setTime(Defaults.get('expiry_time') || el_expiry_time.value);
+            time_changed = setTime(Defaults.get(EXPIRY_TIME) || el_expiry_time.value);
         }
-        Defaults.set('expiry_time', Defaults.get('expiry_time') || el_expiry_time.value);
+        Defaults.set(EXPIRY_TIME, Defaults.get(EXPIRY_TIME) || el_expiry_time.value);
         el_expiry_time_row.show();
         Barriers.display();
         return time_changed;
@@ -615,7 +626,7 @@ const Durations = (() => {
             duration_amount_element.classList.remove('error-field');
             duration_wrapper_element.classList.remove('error-msg');
             if (Reset.isReset(Contract.form())) {
-                Reset.displayResetTime(duration_amount_element.value, Defaults.get('duration_units'));
+                Reset.displayResetTime(duration_amount_element.value, Defaults.get(DURATION_UNITS));
             } else {
                 duration_min_element.classList.remove('invisible');
                 duration_max_element.classList.add('invisible');
@@ -634,11 +645,11 @@ const Durations = (() => {
         $date_start_select.val(value);
 
         $('#time_start_row').setVisibility(value !== 'now');
-        const time_start = CommonFunctions.getElementById('time_start');
+        const time_start = CommonFunctions.getElementById(TIME_START);
         if (value === 'now') {
             time_start.value = '';
         } else {
-            commonIndependent.checkValidTime(time_start, $date_start_select, Defaults.get('time_start'));
+            commonIndependent.checkValidTime(time_start, $date_start_select, Defaults.get(TIME_START));
         }
 
         let make_price_request = 1;
@@ -646,10 +657,10 @@ const Durations = (() => {
         const displayed = displayDurations(time_start.value);
         if (+displayed > 0) {
             make_price_request = -1;
-        } else if (value !== 'now' && Defaults.get('expiry_type') === 'endtime') {
+        } else if (value !== 'now' && Defaults.get(EXPIRY_TYPE) === 'endtime') {
             const end_time     = moment(parseInt(value) * 1000).add(5, 'minutes').utc();
-            setTime(Defaults.get('expiry_time') ? Defaults.get('expiry_time') : end_time.format('HH:mm'));
-            let expiry_date = Defaults.get('expiry_date') ? moment(Defaults.get('expiry_date')) : '';
+            setTime(Defaults.get(EXPIRY_TIME) ? Defaults.get(EXPIRY_TIME) : end_time.format('HH:mm'));
+            let expiry_date = Defaults.get(EXPIRY_DATE) ? moment(Defaults.get(EXPIRY_DATE)) : '';
             if (expiry_date) {
                 const date_start = moment(+$date_start_select.val() * 1000);
                 // if chosen end date is not start date or one day after start date, reset its value
@@ -658,8 +669,8 @@ const Durations = (() => {
                 }
             }
             requested = selectEndDate(expiry_date || end_time);
-        } else if (value === 'now' && isSameDay() && Defaults.get('expiry_type') === 'endtime') {
-            let expiry_time = Defaults.get('expiry_time') || moment().utc().add(5, 'minutes').format('HH:mm');
+        } else if (value === 'now' && isSameDay() && Defaults.get(EXPIRY_TYPE) === 'endtime') {
+            let expiry_time = Defaults.get(EXPIRY_TIME) || moment().utc().add(5, 'minutes').format('HH:mm');
             const times = expiry_time.split(':');
             if (times.length > 1) {
                 let moment_expiry_time = moment.utc();
@@ -684,7 +695,7 @@ const Durations = (() => {
         const $expiry_time = $('#expiry_time');
         if ($expiry_time.attr('data-value') !== time || $expiry_time.val() !== time || process_new_time) {
             $expiry_time.val(time).attr('data-value', time);
-            Defaults.set('expiry_time', time);
+            Defaults.set(EXPIRY_TIME, time);
             if (commonTrading.timeIsValid($expiry_time)) {
                 Price.processPriceRequest();
                 return true;

@@ -47,8 +47,8 @@ const Login = (() => {
                 const utm_medium_link      = utm_data.utm_medium ? `&utm_medium=${utm_data.utm_medium}` : '';
                 const utm_campaign_link    = utm_data.utm_campaign ? `&utm_campaign=${utm_data.utm_campaign}` : '';
                 const affiliate_token_link = affiliate_tracking ? `&affiliate_token=${affiliate_tracking.t}` : '';
-                const social_login_url     = socialLoginUrl(provider, affiliate_token_link,
-                    utm_source_link, utm_medium_link, utm_campaign_link);
+                const social_login_url
+                  = socialLoginUrl(provider, affiliate_token_link, utm_source_link, utm_medium_link, utm_campaign_link);
 
                 window.location.href = social_login_url;
             });
