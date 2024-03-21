@@ -29,6 +29,5 @@ module.exports = {
         'string-no-newline'                                : true,
         'time-min-milliseconds'                            : 100,
         'unit-allowed-list'                                : ['px', 'em', 'rem', '%', 'vw', 'vh', 'deg', 'ms', 's', 'fr'],
-        'value-keyword-case'                               : 'lower',
     }
 };
