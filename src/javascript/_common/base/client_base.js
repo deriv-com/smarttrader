@@ -48,6 +48,9 @@ const ClientBase = (() => {
             if (!(loginid in client_object)) {
                 client_object[loginid] = {};
             }
+            if (loginid === '__proto__' || loginid === 'constructor' || loginid === 'prototype') {
+                return;
+            }
             client_object[loginid][key] = value;
             syncWithDerivApp(loginid, client_object);
             LocalStore.setObject(storage_key, client_object);
