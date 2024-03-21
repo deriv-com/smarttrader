@@ -20,6 +20,23 @@ const commonTrading = (() => {
      * display contract form as element of ul
      */
     let contracts_element = null;
+    const {
+        AMOUNT,
+        AMOUNT_TYPE,
+        DATE_START,
+        DURATION_UNITS,
+        DURATION_VALUE,
+        CURRENCY,
+        EXPIRY_DATE,
+        EXPIRY_TIME,
+        EXPIRY_TYPE,
+        FORM_NAME,
+        MARKET,
+        PREDICTION,
+        TIME_START,
+        UNDERLYING,
+    } = Defaults.PARAM_NAMES;
+
     const displayContractForms = (id, elements, selected) => {
         if (!id || !elements || !selected) return;
 
@@ -34,7 +51,7 @@ const commonTrading = (() => {
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
                 contracts: all_contracts,
-                formname : contract_to_show || Defaults.get('formname'),
+                formname : contract_to_show || Defaults.get(FORM_NAME),
             });
         }
     };
@@ -250,7 +267,7 @@ const commonTrading = (() => {
      * check if selected market is allowed for current user
      */
     const getDefaultMarket = () => {
-        let mkt       = Defaults.get('market');
+        let mkt       = Defaults.get(MARKET);
         const markets = Symbols.markets(1);
         if (!mkt || !markets[mkt]) {
             const sorted_markets = Object.keys(Symbols.markets()).filter(v => markets[v].is_active)
@@ -308,7 +325,7 @@ const commonTrading = (() => {
     const displayTooltip = () => {
         const tip = getElementById('symbol_tip');
         if (tip) {
-            const market = ActiveSymbols.getSymbols()[Defaults.get('underlying')].market;
+            const market = ActiveSymbols.getSymbols()[Defaults.get(UNDERLYING)].market;
             const map_to_section_id = {
                 forex          : 'forex',
                 indices        : 'indices',
@@ -367,7 +384,22 @@ const commonTrading = (() => {
     };
 
     const reloadPage = () => {
-        Defaults.remove('market', 'underlying', 'formname', 'date_start', 'time_start', 'expiry_type', 'expiry_date', 'expirt_time', 'duration_units', 'diration_value', 'amount', 'amount_type', 'currency', 'prediction');
+        Defaults.remove(
+            AMOUNT,
+            AMOUNT_TYPE,
+            DATE_START,
+            DURATION_UNITS,
+            DURATION_VALUE,
+            CURRENCY,
+            FORM_NAME,
+            EXPIRY_DATE,
+            EXPIRY_TIME,
+            EXPIRY_TYPE,
+            MARKET,
+            PREDICTION,
+            TIME_START,
+            UNDERLYING,
+        );
         location.reload();
     };
 

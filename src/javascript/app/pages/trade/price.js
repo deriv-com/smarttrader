@@ -31,6 +31,7 @@ const Price = (() => {
     let type_display_id_mapping = {};
     let form_id                 = 0;
     let is_resubscribing        = false;
+    const { DURATION_AMOUNT, DURATION_UNITS, EXPIRY_TIME, FORM_NAME } = Defaults.PARAM_NAMES;
 
     const createProposal = (type_of_contract) => {
         const proposal = {
@@ -99,7 +100,7 @@ const Price = (() => {
             proposal.duration_unit = duration_unit.value;
         } else if (expiry_type && CommonFunctions.isVisible(expiry_type) && expiry_type.value === 'endtime') {
             const end_date2 = end_date.getAttribute('data-value');
-            let end_time2   = Defaults.get('expiry_time');
+            let end_time2   = Defaults.get(EXPIRY_TIME);
             if (!end_time2) {
                 const trading_times = getTradingTimes();
                 const trading_times_end_date2 = getPropertyValue(trading_times, [end_date2, underlying.value]);
@@ -137,8 +138,8 @@ const Price = (() => {
             proposal.selected_tick = parseInt(selected_tick.value);
             // the only possibility for duration and duration tick is 5 ticks
             // so we show a label and directly pass those values here
-            proposal.duration      = Defaults.get('duration_amount');
-            proposal.duration_unit = Defaults.get('duration_units');
+            proposal.duration      = Defaults.get(DURATION_AMOUNT);
+            proposal.duration_unit = Defaults.get(DURATION_UNITS);
         }
 
         if (contract_type) {
@@ -196,7 +197,7 @@ const Price = (() => {
 
         if (!h4) return;
 
-        const form_name = Defaults.get('formname');
+        const form_name = Defaults.get(FORM_NAME);
         let display_text = type && contract_type ? contract_type[type] : '';
 
         if (form_name === 'risefall' || form_name === 'callputequal') {

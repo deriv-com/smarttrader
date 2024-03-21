@@ -9,7 +9,7 @@ class Contracts extends React.Component {
     constructor (props) {
         super(props);
         const { contracts, contracts_tree, selected } = props;
-        const formname = selected || Defaults.get('formname');
+        const formname = selected || Defaults.get(Defaults.PARAM_NAMES.FORM_NAME);
         this.references = {};
         this.el_contract = getElementById('contract');
         this.el_contract.value = formname;

@@ -118,16 +118,18 @@ const List = ({
     );
 };
 
+const { MARKET, UNDERLYING } = Defaults.PARAM_NAMES;
+
 class Markets extends React.Component {
     constructor (props) {
         super(props);
-        let market_symbol = Defaults.get('market');
+        let market_symbol = Defaults.get(MARKET);
         
         const market_list = Symbols.markets();
         this.markets = getAvailableUnderlyings(market_list);
 
         this.underlyings = Symbols.getAllSymbols() || {};
-        let underlying_symbol = Defaults.get('underlying');
+        let underlying_symbol = Defaults.get(UNDERLYING);
         if (!underlying_symbol || !this.underlyings[underlying_symbol]) {
             const submarket = Object.keys(this.markets[market_symbol].submarkets).sort(sortSubmarket)[0];
             underlying_symbol = Object.keys(this.markets[market_symbol].submarkets[submarket].symbols).sort()[0];
@@ -136,7 +138,7 @@ class Markets extends React.Component {
         this.markets_all = markets_arr.slice();
         if (!(market_symbol in this.markets)) {
             market_symbol = Object.keys(this.markets).find(m => this.markets[m].submarkets[market_symbol]);
-            Defaults.set('market', market_symbol);
+            Defaults.set(MARKET, market_symbol);
         }
         this.keys_arr = [];
         this.markets_all.forEach((market) => {
@@ -279,8 +281,8 @@ class Markets extends React.Component {
     };
 
     onUnderlyingClick = (underlying_symbol, market_symbol) => {
-        Defaults.set('underlying', underlying_symbol);
-        Defaults.set('market', market_symbol);
+        Defaults.set(UNDERLYING, underlying_symbol);
+        Defaults.set(MARKET, market_symbol);
 
         this.setState({
             market: {

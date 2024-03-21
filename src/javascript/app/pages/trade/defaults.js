@@ -16,6 +16,31 @@ const isEmptyObject  = require('../../../_common/utility').isEmptyObject;
 
 const Defaults = (() => {
     let params       = {};
+    const PARAM_NAMES = {
+        AMOUNT         : 'amount',
+        AMOUNT_TYPE    : 'amount_type',
+        BARRIER        : 'barrier',
+        BARRIER_HIGH   : 'barrier_high',
+        BARRIER_LOW    : 'barrier_low',
+        CURRENCY       : 'currency',
+        DATE_START     : 'date_start',
+        DURATION       : 'duration',
+        DURATION_AMOUNT: 'duration_amount',
+        DURATION_UNITS : 'duration_units',
+        DURATION_VALUE : 'duration_value',
+        END_DATE       : 'end_date',
+        EXPIRY_DATE    : 'expiry_date',
+        EXPIRY_TIME    : 'expiry_time',
+        EXPIRY_TYPE    : 'expiry_type',
+        FORM_NAME      : 'formname',
+        IS_EQUAL       : 'is_equal',
+        MARKET         : 'market',
+        MULTIPLIER     : 'multiplier',
+        PREDICTION     : 'prediction',
+        SELECTED_TICK  : 'selected_tick',
+        TIME_START     : 'time_start',
+        UNDERLYING     : 'underlying',
+    };
     const getDefault = (key) => {
         const p_value = params[key] || Url.param(key);
         const s_value = sessionStorage.getItem(key);
@@ -74,6 +99,7 @@ const Defaults = (() => {
         update: updateAll,
         remove: removeDefault,
         clear : () => { params = {}; },
+        PARAM_NAMES,
     };
 })();
 

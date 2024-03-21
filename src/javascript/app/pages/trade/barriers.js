@@ -17,13 +17,14 @@ const localize           = require('../../../_common/localize').localize;
 
 const Barriers = (() => {
     let is_barrier_updated = false;
+    const { BARRIER, BARRIER_HIGH, BARRIER_LOW, FORM_NAME, UNDERLYING } = Defaults.PARAM_NAMES;
 
     const display = () => {
-        const barriers  = Contract.barriers()[Defaults.get('underlying')];
+        const barriers  = Contract.barriers()[Defaults.get(UNDERLYING)];
         const form_name = Contract.form();
 
         // TODO: remove `reset` when API stops sending barrier for Resets in contracts_for response
-        if (barriers && form_name && barriers[form_name] && !/risefall|reset/i.test(Defaults.get('formname'))) {
+        if (barriers && form_name && barriers[form_name] && !/risefall|reset/i.test(Defaults.get(FORM_NAME))) {
             const unit     = getElementById('duration_units');
             const end_time = getElementById('expiry_date');
             const is_daily = (unit && isVisible(unit) && unit.value === 'd') ||
@@ -43,7 +44,7 @@ const Barriers = (() => {
                     getElementById('low_barrier_row').style.display  = 'none';
                     getElementById('barrier_row').setAttribute('style', '');
 
-                    const defaults_barrier = Defaults.get('barrier');
+                    const defaults_barrier = Defaults.get(BARRIER);
                     const elm              = getElementById('barrier');
                     const tooltip          = getElementById('barrier_tooltip');
                     const span             = getElementById('barrier_span');
@@ -74,8 +75,8 @@ const Barriers = (() => {
                     }
                     elm.value = elm.textContent = value;
                     Barriers.validateBarrier();
-                    Defaults.set('barrier', elm.value);
-                    Defaults.remove('barrier_high', 'barrier_low');
+                    Defaults.set(BARRIER, elm.value);
+                    Defaults.remove(BARRIER_HIGH, BARRIER_LOW);
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
                     return;
                 } else if (barrier.count === 2) {
@@ -90,8 +91,8 @@ const Barriers = (() => {
                     const low_tooltip  = getElementById('barrier_low_tooltip');
                     const low_span     = getElementById('barrier_low_span');
 
-                    const defaults_high = Defaults.get('barrier_high');
-                    const defaults_low  = Defaults.get('barrier_low');
+                    const defaults_high = Defaults.get(BARRIER_HIGH);
+                    const defaults_low  = Defaults.get(BARRIER_LOW);
 
                     let barrier_high = defaults_high && !isNaN(defaults_high) ? defaults_high : (barrier.barrier || 0);
                     let barrier_low  = defaults_low && !isNaN(defaults_low) ?
@@ -144,11 +145,11 @@ const Barriers = (() => {
                     high_elm.value = high_elm.textContent = value_high;
                     low_elm.value  = low_elm.textContent  = value_low;
 
-                    Defaults.remove('barrier');
+                    Defaults.remove(BARRIER);
                     showHideRelativeTip(barrier.barrier, [high_tooltip, high_span, low_tooltip, low_span]);
                     Barriers.validateBarrier();
-                    Defaults.set('barrier_high', high_elm.value);
-                    Defaults.set('barrier_low', low_elm.value);
+                    Defaults.set(BARRIER_HIGH, high_elm.value);
+                    Defaults.set(BARRIER_LOW, low_elm.value);
                     return;
                 }
             }
@@ -158,7 +159,7 @@ const Barriers = (() => {
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = 'none';
         }
-        Defaults.remove('barrier', 'barrier_high', 'barrier_low');
+        Defaults.remove(BARRIER, BARRIER_HIGH, BARRIER_LOW);
     };
 
     /**

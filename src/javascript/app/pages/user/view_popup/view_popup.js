@@ -89,7 +89,7 @@ const ViewPopup = (() => {
     };
 
     const ContractTypeDisplay = () => {
-        const form_name = Defaults.get('formname');
+        const form_name = Defaults.get(Defaults.PARAM_NAMES.FORM_NAME);
 
         return {
             ASIANU      : localize('Asian Up'),
