@@ -1,7 +1,7 @@
 import React from 'react';
 import Analysis from './analysis.jsx';
 import Loading from '../../_common/components/loading.jsx';
-// import DerivBanner from '../../_common/components/deriv_banner.jsx';
+// import DerivBanner from '../../_common/components/deriv_banner.jsx';test
 
 const Trading = () => (
     <React.Fragment>
