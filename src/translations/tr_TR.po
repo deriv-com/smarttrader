@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-13 05:28\n"
+"PO-Revision-Date: 2024-03-29 03:17\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -338,19 +338,19 @@ msgid "Deposits and withdrawals have been disabled on your account. Please check
 msgstr "Hesabınızda para yatırma ve çekme işlemleri devre dışı bırakıldı. Daha fazla ayrıntı için lütfen e-postanızı kontrol edin."
 
 msgid "Deriv "
-msgstr "Türev "
+msgstr "Deriv "
 
 msgid "Deriv Apps"
-msgstr ""
+msgstr "Deriv Uygulamaları"
 
 msgid "Deriv Apps accounts"
-msgstr ""
+msgstr "Deriv Apps hesapları"
 
 msgid "Details"
 msgstr "Detaylar"
 
 msgid "Digit"
-msgstr "Rakamlı"
+msgstr "Digit"
 
 msgid "Digit Differs"
 msgstr "Digit Differs"
@@ -440,13 +440,13 @@ msgid "Excluded from the website until"
 msgstr "Web sitesinden şu tarihe kadar hariç tutuldu"
 
 msgid "Exit Spot"
-msgstr "Nokta Çık"
+msgstr "Çıkış Noktası"
 
 msgid "Exit spot"
 msgstr "Çıkış noktası"
 
 msgid "Exit spot time"
-msgstr "Spot zamanından çıkın"
+msgstr "Çıkış noktası zamanı"
 
 msgid "Exit time"
 msgstr "Çıkış zamanı"
@@ -458,10 +458,10 @@ msgid "Fall"
 msgstr "Fall"
 
 msgid "Fall or equal"
-msgstr "Güz veya eşit"
+msgstr "Fall or equal"
 
 msgid "Feb"
-msgstr "Şubat"
+msgstr "Şub"
 
 msgid "February"
 msgstr "Şubat"
@@ -470,7 +470,7 @@ msgid "Fiat"
 msgstr "Fiat"
 
 msgid "Final price"
-msgstr "Nihai fiyat"
+msgstr "Son fiyat"
 
 msgid "Financial"
 msgstr "Mali"
@@ -500,7 +500,7 @@ msgid "Go back"
 msgstr "Geri dön"
 
 msgid "Go to statement"
-msgstr "İfadeye git"
+msgstr "Açıklamaya git"
 
 msgid "Goes Outside"
 msgstr "Goes Outside"
@@ -665,10 +665,10 @@ msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks r
 msgstr "%1\"Only Ups\"%2 seçeneğini seçerseniz, %1entry spot%2'dan sonra art arda tikler yükselirse ödemeyi kazanırsınız.%3 Herhangi bir tikin düşmesi veya önceki tiklerden herhangi birine eşit olması durumunda ödeme yapılmaz."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr "Gelecekte bir <strong>Başlangıç zamanı</strong> , the <strong>Başlangıç zamanı</strong> seçilen ve <strong>giriş noktası</strong> o sırada geçerli olan fiyattır."
+msgstr "Gelecekte bir <strong>başlangıç zamanı</strong> seçerseniz, <strong>başlangıç zamanı</strong> seçili olanıdır ve <strong>giriş noktası</strong> o sırada geçerli olan fiyattır."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "<strong>başlangıç zamanını</strong> \"Şimdi\" olarak seçerseniz, <strong>bitiş zamanı</strong> <strong>başlangıç zamanından</strong> (süresi bir günden azsa) veya işlem gününün sonundan (süresi bir gün veya daha fazlaysa) sonra seçilen dakika/saat sayısıdır."
+msgstr "<strong>Başlangıç</strong> zamanını \"Şimdi\" olarak seçerseniz, <strong>bitiş</strong> zamanı <strong>başlangıç zaman</strong> ından seçilen dakika/saat sayısı kadar sonra (bir günden kısa süreliyse) veya işlem gününün sonunda (bir gün veya daha uzun süreliyse) olur."
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
 msgstr "Belirli bir <strong>bitiş zamanı</strong>seçerseniz, <strong>bitiş zamanı</strong> seçilen zamandır."
@@ -683,7 +683,7 @@ msgid "Indicates required field"
 msgstr "Zorunlu alanı gösterir"
 
 msgid "Indicative"
-msgstr "Gösterge niteliğinde"
+msgstr "Gösterge"
 
 msgid "Invalid app id"
 msgstr "Geçersiz uygulama kimliği"
@@ -704,7 +704,7 @@ msgid "January"
 msgstr "Ocak"
 
 msgid "Jul"
-msgstr "Temmuz"
+msgstr "Tem"
 
 msgid "July"
 msgstr "Temmuz"
@@ -752,10 +752,10 @@ msgid "Lookbacks"
 msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr "CFD hesapları mı arıyorsunuz? Trader'ın merkezine git"
+msgstr "CFD hesapları mı arıyorsunuz? Trader's Hub'a Git"
 
 msgid "Looking for CFDs? Go to Trader's hub"
-msgstr ""
+msgstr "CFD'leri mi arıyorsunuz? Trader’s hub'a Gidin"
 
 msgid "Loss"
 msgstr "Kayıp"
@@ -767,7 +767,7 @@ msgid "Low Barrier"
 msgstr "Düşük Bariyer"
 
 msgid "Low Tick"
-msgstr "Düşük kene"
+msgstr "Düşük Tik"
 
 msgid "Low barrier"
 msgstr "Düşük bariyer"
@@ -791,7 +791,7 @@ msgid "Manage accounts"
 msgstr "Hesapları yönet"
 
 msgid "Manage funds"
-msgstr ""
+msgstr "Fonları yönetin "
 
 msgid "Mar"
 msgstr "Mar"
@@ -836,7 +836,7 @@ msgid "More information can be found in an email sent to you."
 msgstr "Daha fazla bilgi size gönderilen bir e-postada bulunabilir."
 
 msgid "Multi-Collateral"
-msgstr "Çok Teminat"
+msgstr "Multi-Collateral"
 
 msgid "Multiplier"
 msgstr "Multiplier"
@@ -878,7 +878,7 @@ msgid "No notifications"
 msgstr "Bildirim yok"
 
 msgid "Non-EU Deriv "
-msgstr "AB Dışı Türev "
+msgstr "AB-Dışı Deriv "
 
 msgid "Not"
 msgstr "Değil"
@@ -890,7 +890,7 @@ msgid "Notifications"
 msgstr "Bildirimler"
 
 msgid "Nov"
-msgstr "Kas"
+msgstr "Kasım"
 
 msgid "November"
 msgstr "Kasım"
@@ -899,13 +899,13 @@ msgid "Now"
 msgstr "Şimdi"
 
 msgid "Number of ticks:"
-msgstr "Kene sayısı:"
+msgstr "Tiklerin sayısı:"
 
 msgid "OAuth App ID"
 msgstr "OAuth Uygulama Kimliği"
 
 msgid "Oct"
-msgstr "Eki"
+msgstr "Ekim"
 
 msgid "October"
 msgstr "Ekim"
@@ -920,10 +920,10 @@ msgid "Online trading platform"
 msgstr "Online ticaret platformu"
 
 msgid "Only Downs"
-msgstr "Sadece Downs"
+msgstr "Only Downs"
 
 msgid "Only Ups"
-msgstr "Sadece Ups"
+msgstr "Only Ups"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
 msgstr "Sadece harflere, sayılara, boşluğa ve kısa çizgiye izin verilir."
@@ -1115,7 +1115,7 @@ msgid "Purchase time"
 msgstr "Satın alma süresi"
 
 msgid "Put Spread"
-msgstr "Yayılmış Koymak"
+msgstr "Put Spread"
 
 msgid "Ready to trade?"
 msgstr "Ticarete hazır mısınız?"
@@ -1163,25 +1163,25 @@ msgid "Reset Barrier"
 msgstr "Bariyeri sıfırla"
 
 msgid "Reset Call"
-msgstr "Arama Sıfırla"
+msgstr "Reset Call"
 
 msgid "Reset Call/Reset Put"
-msgstr "Aramayı Sıfırla/Sıfırla"
+msgstr "Reset Call/Reset Put"
 
 msgid "Reset Put"
-msgstr "Sıfırla"
+msgstr "Reset Put"
 
 msgid "Reset Time"
-msgstr "Sıfırlama Süresi"
+msgstr "Süreyi Sıfırla"
 
 msgid "Reset balance"
-msgstr "Dengeyi sıfırla"
+msgstr "Bakiyeyi sıfırla"
 
 msgid "Reset barrier"
 msgstr "Bariyeri sıfırla"
 
 msgid "Reset time"
-msgstr "Sıfırlama zamanı"
+msgstr "Reset time"
 
 msgid "Reset to original settings"
 msgstr "Orijinal ayarlara sıfırla"
@@ -1196,7 +1196,7 @@ msgid "Rise"
 msgstr "Rise"
 
 msgid "Rise or equal"
-msgstr "Yükseliş veya eşit"
+msgstr "Rise or equal"
 
 msgid "Rise/Fall"
 msgstr "Rise/Fall"
@@ -1226,7 +1226,7 @@ msgid "Select date"
 msgstr "Tarih seç"
 
 msgid "Select market:"
-msgstr "Pazar seç:"
+msgstr "Piyasa seç:"
 
 msgid "Select your market and underlying asset"
 msgstr "Pazarınızı ve dayanak varlığınızı seçin"
@@ -1235,16 +1235,16 @@ msgid "Select your trade type"
 msgstr "Ticaret türünüzü seçin"
 
 msgid "Selected tick"
-msgstr "Seçilen kene"
+msgstr "Seçilen tik"
 
 msgid "Self-exclusion"
-msgstr "Kendini dışlama"
+msgstr "Kendini-dışlama"
 
 msgid "Sell"
 msgstr "Satmak"
 
 msgid "Sell at market"
-msgstr "Pazarda satış"
+msgstr "Piyasada sat"
 
 msgid "Sep"
 msgstr "Eyl"
@@ -1343,7 +1343,7 @@ msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase pri
 msgstr "Stays Between/Goes Outside sözleşmeleri, başlangıç ve bitiş zamanları arasında 2'den az tick varsa, satın alma fiyatında iade edilecektir."
 
 msgid "Step"
-msgstr "Adım"
+msgstr "Step"
 
 msgid "Straight rows of keys are easy to guess"
 msgstr "Düz tuş sıralarının tahmin edilmesi kolaydır"
@@ -1418,25 +1418,25 @@ msgid "The <strong>entry spot</strong> is the first tick after the contract is p
 msgstr "The <strong>giriş noktası</strong> sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk işarettir."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr "The <strong>çıkış noktası</strong> veya önceki en son işarettir <strong>bitiş zamanı</strong>."
+msgstr "<strong>çıkış noktası</strong>, <strong>bitiş saati</strong>sonundaki veya öncesindeki en son tikdir."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr "The <strong>Başlangıç saati</strong> sözleşmenin sunucularımız tarafından işlendiği ve <strong>giriş noktası</strong> ... <strong>sonraki kene</strong> ondan sonra."
+msgstr "<strong>Başlangıç zamanı</strong>, sözleşmenin sunucularımız tarafından işlendiği zamandır ve <strong>giriş noktası</strong> bundan sonraki bir <strong>sonraki tikdir</strong>."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr "The <strong>başlangıç zamanı</strong> , sözleşmenin sunucularımız tarafından işlendiği zamandır."
+msgstr "The <strong>başlangıç zamanı</strong>, sözleşmenin sunucularımız tarafından işlendiği zamandır."
 
 msgid "The Average"
 msgstr "Ortalama"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr "Ortalama, giriş noktası ve son kene dahil olmak üzere kenelerin ortalamasıdır."
+msgstr "Ortalama, giriş noktası ve son tik dahil olmak üzere tiklerin ortalamasıdır."
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr "Sözleşme 5 dakika içinde bitmez (kene süresi sözleşmeleri için)"
+msgstr "Sözleşme 5 dakika içinde bitmez (tik süresi sözleşmeleri için)"
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr "Giriş noktası, sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk işarettir."
+msgstr "Giriş noktası, sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk tikdir."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "İstediğiniz sayfa bulunamadı. Ya artık yok ya da adres yanlış. Lütfen herhangi bir yazım hatası olup olmadığını kontrol edin."
@@ -1445,13 +1445,13 @@ msgid "The reset time is %1"
 msgstr "Sıfırlama süresi %1"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
-msgstr "Sunucu <a href=\"%1\">uç noktası</a> şudur: %2"
+msgstr "Sunucu <a href=\"%1\">endpoint</a> is: %2"
 
 msgid "The two passwords that you entered do not match."
 msgstr "Girdiğiniz iki şifre eşleşmiyor."
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr "Başlangıç ve bitiş saatleri arasında 2'den az kene vardır"
+msgstr "Başlangıç ve bitiş saatleri arasında 2'den az tik vardır"
 
 msgid "There was a problem accessing the server during purchase."
 msgstr "Satın alma sırasında sunucuya erişimde bir sorun oluştu."
@@ -1469,13 +1469,13 @@ msgid "This contract is only available on %1DTrader%2."
 msgstr "Bu sözleşme yalnızca şu adreste mevcuttur: %1DTrader%2."
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr "Bu sözleşme yalnızca DTrader'da mevcuttur.%1%2Go to Dtrader%3 bu sözleşmeyi kapatmak veya iptal etmek için."
+msgstr "Bu sözleşme yalnızca DTrader'da mevcuttur. Bu sözleşmeyi kapatmak veya iptal etmek için %1%2Dtrader'a gidin%3."
 
 msgid "This contract lost"
-msgstr "Bu sözleşme kayboldu"
+msgstr "Bu sözleşme kaybedildi"
 
 msgid "This contract type only offers 5 ticks"
-msgstr "Bu sözleşme türü yalnızca 5 kene sunar"
+msgstr "Bu sözleşme türü yalnızca 5 tik sunar"
 
 msgid "This contract won"
 msgstr "Bu sözleşme kazandı"
@@ -1502,7 +1502,7 @@ msgid "This is an indicative barrier. Actual barrier will be the entry spot plus
 msgstr "Bu gösterge niteliğindeki bir engeldir. Gerçek bariyer giriş noktası artı bariyer ofseti olacaktır."
 
 msgid "This is similar to a commonly used password"
-msgstr "Bu, yaygın olarak kullanılan bir şifreye benzer"
+msgstr "Bu, sık kullanılan bir parolaya benziyor"
 
 msgid "This page is only available to logged out clients."
 msgstr "Bu sayfa yalnızca oturumu kapatmış müşteriler tarafından kullanılabilir."
@@ -1514,31 +1514,31 @@ msgid "Thursday"
 msgstr "Perşembe"
 
 msgid "Tick"
-msgstr "kene"
+msgstr "Tik"
 
 msgid "Tick Prediction"
-msgstr "Kene Tahmini"
+msgstr "Tik Tahmini"
 
 msgid "Ticks"
-msgstr "Keneler"
+msgstr "Tikler"
 
 msgid "Ticks history returned an empty array."
-msgstr "Keneler geçmişi boş bir dizi döndürdü."
+msgstr "Tik geçmişi boş bir dizi döndürdü."
 
 msgid "Time is in the wrong format."
 msgstr "Zaman yanlış formatta."
 
 msgid "Time out cannot be in the past."
-msgstr "Zaman aşım geçmişte olamaz."
+msgstr "Ara geçmişte olamaz."
 
 msgid "Time out cannot be more than 6 weeks."
 msgstr "Zaman aşım 6 haftadan fazla olamaz."
 
 msgid "Time out must be after today."
-msgstr "Molama bugünden sonra olmalı."
+msgstr "Ara bugünden sonra olmalı."
 
 msgid "Timed out until"
-msgstr "Kadar zaman aşımına uğradı"
+msgstr "Şu zamana kadar ara verildi"
 
 msgid "Today"
 msgstr "Bugün"
@@ -1553,7 +1553,7 @@ msgid "Total Cost"
 msgstr "Toplam Maliyet"
 
 msgid "Total assets"
-msgstr "Toplam aktifler"
+msgstr "Toplam varlıklar"
 
 msgid "Total assets in your Deriv accounts"
 msgstr "Deriv hesaplarınızdaki toplam varlıklar"
@@ -1739,7 +1739,7 @@ msgid "You win the payout if the market price ends in the digit you have selecte
 msgstr "Piyasa fiyatı seçtiğiniz rakamla biterse ödemeyi kazanırsınız."
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr "Hesabınız kısıtlı. Lütfen %1contact müşteri desteği%2 yardım için."
+msgstr "Hesabınız kısıtlı. Lütfen yardım için %1müşteri desteği ile iletişime geçin%2."
 
 msgid "Your application to be treated as a professional client is being processed."
 msgstr "Profesyonel bir müşteri olarak değerlendirilecek başvurunuz işleme alınmaktadır."
@@ -1754,13 +1754,13 @@ msgid "Your preferred time interval between each report:"
 msgstr "Her rapor arasında tercih ettiğiniz zaman aralığı:"
 
 msgid "Your professional client request is %1not approved%2."
-msgstr "Profesyonel müşteri isteğiniz %1not onaylandı%2."
+msgstr "Profesyonel müşteri talebiniz %1onaylanmadı%2."
 
 msgid "Your session duration limit will end in %1 seconds."
 msgstr "Oturum süresi sınırınız %1 saniye içinde sona erecek."
 
 msgid "Your trading statistics since %1."
-msgstr "O zamandan beri ticaret istatistikleriniz %1."
+msgstr "%1'den bu yana işlem istatistikleriniz."
 
 msgid "Your transaction reference is"
 msgstr "İşlem referansınız"
@@ -1772,7 +1772,7 @@ msgid "Your virtual balance has been reset."
 msgstr "Sanal bakiyeniz sıfırlandı."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr "Web tarayıcınız (%1) güncel değildir ve işlem deneyiminizi etkileyebilir. Riski size ait olmak üzere devam edin. %2Update browser%3"
+msgstr "Web tarayıcınız (%1) güncel değildir ve işlem deneyiminizi etkileyebilir. Riski size ait olmak üzere devam edin. %2Tarayıcıyı Güncelle%3"
 
 msgid "account"
 msgstr "hesap"
@@ -1781,7 +1781,7 @@ msgid "accounts"
 msgstr "hesaplar"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr "ikili opsiyonlar, forex, forex ticareti, online ticaret, finansal ticaret, ikili ticaret, endeks ticareti, ticaret hisse senedi endeksleri, forex işlemleri, ticaret emtiaları, ikili opsiyon stratejisi, ikili komisyoncu, ikili bahis, ikili opsiyon ticaret platformu, ikili strateji, finans, yatırım, ticaret"
+msgstr "ikili opsiyonlar, forex, forex ticareti, online ticaret, finansal ticaret, ikili ticaret, endeks ticareti, ticaret hisse senedi endeksleri, forex işlemleri, ticaret emtiaları, ikili opsiyon stratejisi, ikili broker, ikili bahis, ikili opsiyon ticaret platformu, ikili strateji, finans, yatırım, ticaret"
 
 msgid "day"
 msgstr "gün"
@@ -1814,22 +1814,22 @@ msgid "minutes"
 msgstr "dakikalar"
 
 msgid "second"
-msgstr "ikinci"
+msgstr "saniye"
 
 msgid "seconds"
 msgstr "saniyeler"
 
 msgid "tick"
-msgstr "işlemek"
+msgstr "tik"
 
 msgid "ticks"
-msgstr "keneler"
+msgstr "tikler"
 
 msgid "today"
 msgstr "bugün"
 
 msgid "today, Fridays"
-msgstr "bugün, cuma"
+msgstr "bugün, Cumaları"
 
 msgid "virtual money credit to account"
 msgstr "hesaba sanal para kredisi"

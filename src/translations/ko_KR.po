@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-13 05:28\n"
+"PO-Revision-Date: 2024-03-29 03:17\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -341,10 +341,10 @@ msgid "Deriv "
 msgstr "Deriv "
 
 msgid "Deriv Apps"
-msgstr ""
+msgstr "Deriv 앱"
 
 msgid "Deriv Apps accounts"
-msgstr ""
+msgstr "Deriv Apps 계정"
 
 msgid "Details"
 msgstr "세부 정보"
@@ -746,7 +746,7 @@ msgid "Login ID"
 msgstr "로그인 ID"
 
 msgid "Login at:"
-msgstr "로그인 주소:"
+msgstr ""
 
 msgid "Lookbacks"
 msgstr "Lookbacks"
@@ -755,7 +755,7 @@ msgid "Looking for CFD accounts? Go to Trader's hub"
 msgstr "CFD 계정을 찾고 계신가요? 트레이더 허브로 이동하세요"
 
 msgid "Looking for CFDs? Go to Trader's hub"
-msgstr ""
+msgstr "CFD를 찾고 계신가요? Trader's hub으로 이동하세요"
 
 msgid "Loss"
 msgstr "손실"
@@ -791,7 +791,7 @@ msgid "Manage accounts"
 msgstr "계정 관리"
 
 msgid "Manage funds"
-msgstr ""
+msgstr "자금 관리"
 
 msgid "Mar"
 msgstr "3월"
@@ -1721,7 +1721,7 @@ msgid "You have sold this contract at %1 %2"
 msgstr "귀하는 이 계약을 %1%2에 판매했습니다"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
-msgstr "다른 OAuth 서버를 인증 절차에 사용하려면 먼저 등록하고 앱 ID를 받아야 합니다. 자세한 내용은 https://api.deriv.com/의 OAuth 세부 정보를 참조하세요."
+msgstr "다른 OAuth 서버를 인증 절차에 사용하기 위해서는 우선 가입하여 앱 ID를 받아야 합니다. 자세한 내용은 https://api.deriv.com/에서 OAuth 세부 정보를 참조하시기 바랍니다."
 
 msgid "You have yet to receive any notifications"
 msgstr "귀하는 아직 알림을 받지 못했습니다"
