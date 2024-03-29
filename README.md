@@ -26,7 +26,7 @@ Before running or contribute to this project, you need to have the setup of the 
 
 - Ruby, RubyGems
 - Sass (`sudo gem install sass`)
-- Node.js (14.19.3 is recommended)
+- Node.js (18.16.0 is recommended)
 - NPM (see <https://nodejs.org/en/download/package-manager/>)
 - NVM (see <https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm/> and follow install NVM section)
 - Grunt (`sudo npm install -g grunt-cli`)
@@ -59,7 +59,7 @@ Before running or contribute to this project, you need to have the setup of the 
 
    - Check node version `node -v`
    - Check list of available node versions `nvm ls`
-   - To install node 14 `nvm install 14`
+   - To install node 18 `nvm install 18`
    - To switch to a different node version in the current terminal `nvm use {version number}` 
 
 6. **Install your dependencies:**

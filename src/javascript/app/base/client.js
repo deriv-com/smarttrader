@@ -141,7 +141,8 @@ const Client = (() => {
         sessionStorage.removeItem('_elevaddon-6app');
         sessionStorage.removeItem('_elevaddon-6create');
         // clear trading session
-        Defaults.remove('underlying', 'market');
+        const { MARKET, UNDERLYING } = Defaults.PARAM_NAMES;
+        Defaults.remove(MARKET, UNDERLYING);
         ClientBase.clearAllAccounts();
         ClientBase.set('loginid', '');
         SocketCache.clear();

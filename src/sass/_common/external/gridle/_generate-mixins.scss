@@ -386,9 +386,9 @@
 
 			@if $value == null {
 				$gridle-settings-states : "#{$gridle-settings-states} \"#{$varName}\" : null,";
-			} @elseif type-of($value) == bool {
+			} @else if type-of($value) == bool {
 				$gridle-settings-states : "#{$gridle-settings-states} \"#{$varName}\" : #{$value},";
-			} @elseif type-of($value) == map {
+			} @else if type-of($value) == map {
 				$gridle-settings-states : "#{$gridle-settings-states} \"#{$varName}\" : {";
 				@each $vn, $vv in $value {
 					$gridle-settings-states : "#{$gridle-settings-states} \"#{$vn}\" : \"#{$vv}\","

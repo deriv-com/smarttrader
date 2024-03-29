@@ -8,7 +8,7 @@ const isEmptyObject    = require('../utility').isEmptyObject;
 const PromiseClass     = require('../utility').PromiseClass;
 const getAppId         = require('../../config').getAppId;
 const getSocketURL     = require('../../config').getSocketURL;
-const isLoginPages     = require('../../_common/utility').isLoginPages;
+const isLoginPages     = require('../utility').isLoginPages;
 
 /*
  * An abstraction layer over native javascript WebSocket,

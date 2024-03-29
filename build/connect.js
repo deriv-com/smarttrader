@@ -9,13 +9,13 @@ module.exports = function (grunt) {
     return {
         livereload: {
             options: {
-                hostname  : '0.0.0.0',
-                port      : 8090,
-                protocol  : 'https',
-                base      : 'dist',
-                open      : {
+                hostname   : '0.0.0.0',
+                port       : 8090,
+                protocol   : 'https',
+                base       : 'dist',
+                open       : {
                     appName: {
-                        app: 'Google\ Chrome'
+                        name: 'Google\ Chrome'
                     },
                     target : 'https://localhost:8090',
                 },

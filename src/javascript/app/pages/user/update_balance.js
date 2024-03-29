@@ -1,10 +1,10 @@
 const PortfolioInit         = require('./account/portfolio/portfolio.init');
 const updateTotal           = require('./update_total');
+const TopUpVirtualPopup     = require('./account/top_up_virtual/pop_up');
 const updateContractBalance = require('../trade/update_values').updateContractBalance;
 const Client                = require('../../base/client');
 const BinarySocket          = require('../../base/socket');
 const formatMoney           = require('../../common/currency').formatMoney;
-const TopUpVirtualPopup     = require('../../pages/user/account/top_up_virtual/pop_up');
 const getPropertyValue      = require('../../../_common/utility').getPropertyValue;
 const createElement         = require('../../../_common/utility').createElement;
 const localize              = require('../../../_common/localize').localize;
@@ -17,7 +17,8 @@ const updateBalance = (response) => {
     function waitForReadyElement(selector) {
         return new Promise(resolve => {
             if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
+                resolve(document.querySelector(selector));
+                return;
             }
     
             const observer = new MutationObserver(() => {
@@ -31,7 +32,6 @@ const updateBalance = (response) => {
                 childList: true,
                 subtree  : true,
             });
-            return null;
         });
     }
 

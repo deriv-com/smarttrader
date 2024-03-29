@@ -1,11 +1,11 @@
 const HighchartUI          = require('./highchart.ui');
 const getHighstock         = require('../common').requireHighstock;
 const getUnderlyingPipSize = require('../symbols').getUnderlyingPipSize;
-const Callputspread        = require('../../trade/callputspread');
-const Defaults             = require('../../trade/defaults');
-const GetTicks             = require('../../trade/get_ticks');
-const Lookback             = require('../../trade/lookback');
-const Reset                = require('../../trade/reset');
+const Callputspread        = require('../callputspread');
+const Defaults             = require('../defaults');
+const GetTicks             = require('../get_ticks');
+const Lookback             = require('../lookback');
+const Reset                = require('../reset');
 const ViewPopupUI          = require('../../user/view_popup/view_popup.ui');
 const BinarySocket         = require('../../../base/socket');
 const addComma             = require('../../../common/currency').addComma;
@@ -225,7 +225,7 @@ const Highchart = (() => {
             // send view popup the response ID so view popup can forget the calls if it's closed before contract ends
             if (response_id && !is_response_id_set) {
                 if (State.get('is_trading')) {
-                    const page_underlying = Defaults.get('underlying');
+                    const page_underlying = Defaults.get(Defaults.PARAM_NAMES.UNDERLYING);
                     if (page_underlying !== (tick || ohlc).symbol) {
                         ViewPopupUI.storeSubscriptionID(response_id, true);
                         ViewPopupUI.setOnCloseFunction(onClose);

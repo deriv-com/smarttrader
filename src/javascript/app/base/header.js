@@ -796,7 +796,7 @@ const Header = (() => {
                     } else {
                         loginid_demo_select.appendChild(account);
                     }
-                    // const link    = createElement('a', { href: `${'javascript:;'}`, 'data-value': loginid });
+                    // const link    = createElement('a', { 'data-value': loginid });
                     // const li_type = createElement('li', { text: localized_type });
 
                     // li_type.appendChild(createElement('div', { text: loginid }));

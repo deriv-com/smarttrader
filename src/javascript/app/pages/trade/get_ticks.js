@@ -10,7 +10,7 @@ const GetTicks = (() => {
     let underlying;
 
     const request = (symbol, req, callback) => {
-        underlying = Defaults.get('underlying');
+        underlying = Defaults.get(Defaults.PARAM_NAMES.UNDERLYING);
         if (underlying && req && callback && (underlying !== req.ticks_history || !req.subscribe)) {
             BinarySocket.send(req, { callback });
         } else {

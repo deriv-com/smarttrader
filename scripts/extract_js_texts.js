@@ -3,7 +3,6 @@
 /* eslint-disable no-console */
 const BabelParser = require('@babel/parser');
 const color       = require('cli-color');
-const emphasize   = require('emphasize');
 const estraverse  = require('estraverse');
 const fs          = require('fs');
 const Path        = require('path');
@@ -34,7 +33,10 @@ const source_strings = {};
 const ignored_list   = {};
 const invalid_list   = {};
 
-let this_app_name;
+let this_app_name, emphasize;
+import('emphasize').then(module => {
+    emphasize = module.default;
+});
 
 const parse = (app_name, is_silent) => {
     if (!config.supported_apps.includes(app_name)) {
