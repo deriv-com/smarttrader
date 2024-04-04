@@ -675,7 +675,7 @@ const Highchart = (() => {
         const series      = chart.series[0];
         if (granularity === 0) {
             const data = update_options.tick;
-            chart.series[0].addPoint({ x: data.epoch * 1000, y: data.quote * 1 }, false);
+            chart.series[0].addPoint({ x: data.epoch * 1000, y: data.quote * 1 });
             updateBarrier();
         } else {
             const c    = update_options.ohlc;
