@@ -23,14 +23,13 @@ runs:
         RELEASE_TYPE: ${{ inputs.RELEASE_TYPE }}
         VERSION: ${{ inputs.VERSION }}
         SLACK_WEBHOOK_URL : ${{ inputs.SLACK_WEBHOOK_URL }}
-
     if: inputs.status == 'success'
     run: |
         curl -X POST -H 'Content-type: application/json' \
         --data '{
-        "text": "${{ RELEASE_TYPE }} Release succeeded for smarttrader.deriv.com with version ${{ VERSION }}"
+        "text": "${RELEASE_TYPE} Release succeeded for smarttrader.deriv.com with version ${VERSION}"
         }' \
-          ${{ SLACK_WEBHOOK_URL }}
+          ${SLACK_WEBHOOK_URL}
     shell: bash
   
   - name: Send Slack Notification on Failure
@@ -42,8 +41,8 @@ runs:
     run: |
           curl -X POST -H 'Content-type: application/json' \
           --data '{
-            "text": "${{ RELEASE_TYPE }} Release failed for smarttrader.deriv.com with version ${{ VERSION }}"
+            "text": "${RELEASE_TYPE} Release failed for smarttrader.deriv.com with version ${VERSION}"
           }' \
-          ${{ SLACK_WEBHOOK_URL }}
+          ${SLACK_WEBHOOK_URL}
     shell: bash
 
