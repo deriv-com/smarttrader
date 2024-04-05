@@ -11,5 +11,5 @@ runs:
     - name: Building dist for ${{ inputs.target }}
       env:
         TARGET_ENV: ${{ inputs.target }}
-      run: node_modules/grunt/bin/grunt releaseci --${TARGET_ENV}
+      run: node_modules/grunt/bin/grunt releaseci --$TARGET_ENV
       shell: bash
