@@ -3,9 +3,6 @@ on:
   push:
     tags:
       - production_*
-env:
-  RELEASE_TYPE: Production
-  APP_NAME: smarttrader-deriv-app
 jobs:
   build_and_test:
     name: Build and Test
@@ -92,6 +89,9 @@ jobs:
         id: extract_version
         run: echo "RELEASE_VERSION=$(cat dist/version.txt)" >> $GITHUB_ENV
       - name: Send Slack Notification
+        env:
+          RELEASE_TYPE: Production
+          APP_NAME: smarttrader-deriv-app
         uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
