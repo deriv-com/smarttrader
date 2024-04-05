@@ -5,6 +5,7 @@ on:
       - production_*
 env:
   RELEASE_TYPE: Production
+  APP_NAME: smarttrader-deriv-app
 jobs:
   build_and_test:
     name: Build and Test
@@ -91,9 +92,7 @@ jobs:
         id: extract_version
         run: echo "RELEASE_VERSION=$(cat dist/version.txt)" >> $GITHUB_ENV
       - name: Send Slack Notification
-        uses: './.github/actions/notify_slack'
+        uses: 'deriv-com/shared-actions/.github/actions/send_slack_notification@master'
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          status: ${{ env.WORKFLOW_CONCLUSION }}
-          release_type: ${{env.RELEASE_TYPE}}
-          version: ${{ steps.extract_version.outputs.RELEASE_VERSION }}
+          MESSAGE: '$RELEASE_TYPE Docker Publish and Kubernetes Deployment for $APP_NAME with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed'
