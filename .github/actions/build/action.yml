@@ -2,7 +2,7 @@ name: Build
 description: Build dist
 inputs:
   target:
-    description: 'Target Environment'
+    description: "Target Environment"
     required: true
     default: staging
 runs:

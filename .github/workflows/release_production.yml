@@ -18,16 +18,16 @@ jobs:
         with:
           node-version: 18.x
       - name: Install dependencies
-        uses: './.github/actions/npm_install'
+        uses: "./.github/actions/npm_install"
       - name: Build
-        uses: './.github/actions/build'
+        uses: "./.github/actions/build"
         with:
           target: production
       - name: Versioning
-        uses: './.github/actions/versioning'
+        uses: "./.github/actions/versioning"
         with:
           target_branch: production
-      - name: 'Run Tests'
+      - name: "Run Tests"
         run: npm run test
       - name: Upload Artifacts
         uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32
@@ -51,12 +51,12 @@ jobs:
           name: dist
           path: dist
       - name: Publish to Cloudflare
-        uses: './.github/actions/publish_to_pages_production'
+        uses: "./.github/actions/publish_to_pages_production"
         with:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Build Docker image and push to Docker hub and K8S
-        uses: './.github/actions/build_and_push_docker_image'
+        uses: "./.github/actions/build_and_push_docker_image"
         with:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
@@ -92,7 +92,7 @@ jobs:
         id: extract_version
         run: echo "RELEASE_VERSION=$(cat dist/version.txt)" >> $GITHUB_ENV
       - name: Send Slack Notification
-        uses: 'deriv-com/shared-actions/.github/actions/send_slack_notification@master'
+        uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          MESSAGE: '$RELEASE_TYPE Docker Publish and Kubernetes Deployment for $APP_NAME with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed'
+          MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for $APP_NAME with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed"

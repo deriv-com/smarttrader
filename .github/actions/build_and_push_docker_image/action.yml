@@ -2,31 +2,31 @@ name: build_and_push_docker_image_and_k8s
 description: Build docker image and push to docker hub and K8S
 inputs:
   DOCKERHUB_ORGANISATION:
-    description: 'Dockerhub Organisation'
+    description: "Dockerhub Organisation"
     required: true
   DOCKERHUB_USERNAME:
-    description: 'Dockerhub Username'
+    description: "Dockerhub Username"
     required: true
   DOCKERHUB_PASSWORD:
-    description: 'Dockerhub Password'
+    description: "Dockerhub Password"
     required: true
   K8S_NAMESPACE:
-    description: 'K8S namespace'
+    description: "K8S namespace"
     required: true
   K8S_SERVICE:
-    description: 'K8S service'
+    description: "K8S service"
     required: true
   KUBE_SERVER:
-    description: 'K8S server'
+    description: "K8S server"
     required: true
   SERVICEACCOUNT_TOKEN:
-    description: 'K8S service account token'
+    description: "K8S service account token"
     required: true
   CA_CRT:
-    description: 'K8S CA_CRT'
+    description: "K8S CA_CRT"
     required: true
   APP_VERSION:
-    description: 'App version'
+    description: "App version"
     required: true
 runs:
   using: composite
