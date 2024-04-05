@@ -7,8 +7,8 @@ inputs:
 runs:
   using: composite
   steps:
-  - name: Tag build
-    env:
-    TARGET_BRANCH: ${{ inputs.target_branch }}    
-    run: echo "${TARGET_BRANCH} $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version.txt
-    shell: bash
+    - name: Tag build
+      env:
+      TARGET_BRANCH: ${{ inputs.target_branch }}
+      run: echo "${TARGET_BRANCH} $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version.txt
+      shell: bash
