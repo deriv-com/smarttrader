@@ -79,7 +79,7 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     env:
-      RELEASE_TYPE: $RELEASE_TYPE
+      RELEASE_TYPE: Production
       APP_NAME: smarttrader-deriv-app
     needs: [publish_cloudflare_production, build_and_test]
     steps:
