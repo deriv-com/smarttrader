@@ -26,7 +26,6 @@ jobs:
         uses: "./.github/actions/versioning"
         with:
           target_branch: production
-          RELEASE_TYPE: $RELEASE_TYPE
       - name: "Run Tests"
         run: npm run test
       - name: Upload Artifacts
