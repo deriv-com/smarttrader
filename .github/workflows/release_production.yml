@@ -3,11 +3,11 @@ on:
   push:
     tags:
       - production_*
-env:
-  RELEASE_TYPE: Production
 jobs:
   build_and_test:
     name: Build and Test
+    env:
+      RELEASE_TYPE: Production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,6 +37,8 @@ jobs:
   publish_cloudflare_production:
     name: Publish to Cloudflare Production
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TYPE: Production
     needs: [build_and_test]
     steps:
       - name: Checkout
@@ -74,6 +76,9 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed"
   notify_on_slack:
+    env:
+      RELEASE_TYPE: $RELEASE_TYPE
+      APP_NAME: smarttrader-deriv-app
     name: Notify on Slack
     if: always()
     runs-on: ubuntu-latest
