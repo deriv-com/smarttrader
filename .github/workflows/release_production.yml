@@ -73,7 +73,7 @@ jobs:
         uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed"
+          MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }} has Failed"
   notify_on_slack:
     name: Notify on Slack
     if: always()
