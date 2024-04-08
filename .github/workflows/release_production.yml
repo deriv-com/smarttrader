@@ -6,9 +6,9 @@ on:
 jobs:
   build_and_test:
     name: Build and Test
+    runs-on: ubuntu-latest
     env:
       RELEASE_TYPE: Production
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
@@ -76,12 +76,12 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_test_and_publish.outputs.RELEASE_VERSION }} has Failed"
   notify_on_slack:
-    env:
-      RELEASE_TYPE: $RELEASE_TYPE
-      APP_NAME: smarttrader-deriv-app
     name: Notify on Slack
     if: always()
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TYPE: $RELEASE_TYPE
+      APP_NAME: smarttrader-deriv-app
     needs: [publish_cloudflare_production, build_and_test]
     steps:
       - name: Checkout
