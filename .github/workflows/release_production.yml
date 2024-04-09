@@ -7,6 +7,8 @@ jobs:
   build_and_test:
     name: Build and Test
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TYPE: Production
     steps:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
@@ -34,6 +36,8 @@ jobs:
   publish_cloudflare_production:
     name: Publish to Cloudflare Production
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TYPE: Production
     needs: [build_and_test]
     steps:
       - name: Checkout
@@ -53,6 +57,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Build Docker image and push to Docker hub and K8S
+        id: build_and_push_docker_image
         uses: "./.github/actions/build_and_push_docker_image"
         with:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -63,12 +68,19 @@ jobs:
           SERVICEACCOUNT_TOKEN: ${{ secrets.SERVICEACCOUNT_TOKEN }}
           CA_CRT: ${{ secrets.CA_CRT }}
           APP_VERSION: latest
-
+      - name: Send Slack Notification on Docker Publish and Kubernetes Deployment Failure
+        if: ${{ steps.build_and_push_docker_image.outcome != 'success' }}
+        uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
+        with:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }} has Failed"
   notify_on_slack:
     name: Notify on Slack
     if: always()
     runs-on: ubuntu-latest
-
+    env:
+      RELEASE_TYPE: Production
+      APP_NAME: smarttrader-deriv-app
     needs: [publish_cloudflare_production, build_and_test]
     steps:
       - name: Checkout
@@ -79,7 +91,6 @@ jobs:
           node-version: 20
       - name: Conclusion
         uses: technote-space/workflow-conclusion-action@45ce8e0eb155657ab8ccf346ade734257fd196a5
-
       - name: Download Artifacts
         uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
         with:
@@ -88,10 +99,16 @@ jobs:
       - name: Grab Version Name
         id: extract_version
         run: echo "RELEASE_VERSION=$(cat dist/version.txt)" >> $GITHUB_ENV
+      - name: Create Slack Message
+        id: create_slack_message
+        run: |
+          if [ $WORKFLOW_CONCLUSION == "success" ]; then
+            echo "MESSAGE=$RELEASE_TYPE Release succeeded for $APP_NAME with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }}" >> $GITHUB_OUTPUT
+          else
+            echo "MESSAGE=$RELEASE_TYPE Release failed for $APP_NAME with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }}" >> $GITHUB_OUTPUT
+          fi
       - name: Send Slack Notification
-        uses: "./.github/actions/notify_slack"
+        uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          status: ${{ env.WORKFLOW_CONCLUSION }}
-          release_type: Production
-          version: ${{ steps.extract_version.outputs.RELEASE_VERSION }}
+          MESSAGE: ${{ steps.create_slack_message.outputs.MESSAGE }}
