@@ -70,8 +70,8 @@ const Page = (() => {
                             };
                             // reload the page when the client account values(except balance and startsession) is changed on other pages.
                             const active_loginid = LocalStore.get('active_loginid');
-                            const new_currency = JSON.parse(evt.newValue)[active_loginid].currency;
-                            const old_currency = JSON.parse(evt.oldValue)[active_loginid].currency;
+                            const new_currency = JSON.parse(evt.newValue)[active_loginid] ? JSON.parse(evt.newValue)[active_loginid].currency : '';
+                            const old_currency = JSON.parse(evt.oldValue)[active_loginid] ? JSON.parse(evt.oldValue)[active_loginid].currency : '';
 
                             if (removedSessionAndBalnce(evt.newValue) !== removedSessionAndBalnce(evt.oldValue) &&
                                 old_currency !== new_currency) {
