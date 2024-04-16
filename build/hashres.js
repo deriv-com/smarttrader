@@ -12,6 +12,6 @@ module.exports = {
       "!dist/js/vendor.min.js",
       "dist/images/**/*.{png,jpg,jpeg,gif,webp,svg}",
     ],
-    dest: ["dist/**/*.html", "dist/*.html"],
+    dest: "dist/**/*.html",
   },
 };
