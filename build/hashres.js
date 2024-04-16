@@ -3,7 +3,8 @@ module.exports = {
     encoding: "utf8",
     length: 8,
     algorithm: "md5",
-    fileNameFormat: "${hash}.${name}.${ext}",
+    renameFiles: false,
+    fileNameFormat: "${name}.${ext}?${hash}",
   },
   main: {
     src: [
