@@ -10,7 +10,6 @@ module.exports = {
     src: [
       "dist/css/*.css",
       "dist/js/**/*.js",
-      "!dist/js/vendor.min.js",
       "dist/images/**/*.{png,jpg,jpeg,gif,webp,svg}",
       "!dist/images/common/logos/icon_deriv.svg",
     ],
