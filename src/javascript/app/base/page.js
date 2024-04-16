@@ -14,7 +14,6 @@ const getElementById   = require('../../_common/common_functions').getElementByI
 const Crowdin          = require('../../_common/crowdin');
 const GTM              = require('../../_common/gtm');
 const Language         = require('../../_common/language');
-const PushNotification = require('../../_common/lib/push_notification');
 const localize         = require('../../_common/localize').localize;
 const isMobile         = require('../../_common/os_detect').isMobile;
 const LocalStore       = require('../../_common/storage').LocalStore;
