@@ -33,7 +33,6 @@ const Page = (() => {
         GTM.init();
         Url.init();
         Elevio.init();
-        PushNotification.init();
         onDocumentReady();
         Crowdin.init();
     };
