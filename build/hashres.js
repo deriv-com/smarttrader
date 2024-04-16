@@ -1,0 +1,17 @@
+module.exports = {
+  options: {
+    encoding: "utf8",
+    length: 8,
+    algorithm: "md5",
+    fileNameFormat: "${hash}.${name}.${ext}",
+  },
+  main: {
+    src: [
+      "dist/css/*.css",
+      "dist/js/**/*.js",
+      "!dist/js/vendor.min.js",
+      "dist/images/**/*.{png,jpg,jpeg,gif,webp,svg}",
+    ],
+    dest: ["dist/**/*.html", "dist/*.html"],
+  },
+};
