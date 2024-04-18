@@ -127,95 +127,95 @@ const Header = (() => {
     const bindSvg = () => {
 
         applyToAllElements('#add-account-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg?${process.env.BUILD_HASH}`);
         });
         
         applyToAllElements('#appstore-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.header__expand', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg?${process.env.BUILD_HASH}`);
         });
         // TODO : Change to light arrow down icon
         applyToAllElements('.header__expand-light', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.header__logo', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}${getPlatformSettings('smarttrader').icon}`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}${getPlatformSettings('smarttrader').icon}?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.logout-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.reports-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.whatsapp-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.livechat-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.btn__close', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__notification-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__notification-empty-img', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__account-settings', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__hamburger', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.wallet-apps-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-apps-logo.svg`);
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-apps-logo.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.deriv-com-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg`);
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#cashier-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__platform-switcher-icon-arrowright', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-back', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-open', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-profit', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-statement', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg?${process.env.BUILD_HASH}`);
         });
     };
 

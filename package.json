@@ -107,6 +107,7 @@
     "@livechat/customer-sdk": "4.0.2",
     "canvas-toBlob": "1.0.0",
     "classnames": "2.2.5",
+    "crypto-js": "^4.2.0",
     "custom-event-polyfill": "0.3.0",
     "davidshimjs-qrcodejs": "0.0.2",
     "event-source-polyfill": "0.0.9",
