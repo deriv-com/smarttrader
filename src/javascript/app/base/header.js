@@ -267,7 +267,7 @@ const Header = (() => {
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
             const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform.link });
-            const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}`)}`, class: 'platform__list-item-icon' });
+            const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}?${process.env.BUILD_HASH}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
             const platform_desc  = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
@@ -647,8 +647,8 @@ const Header = (() => {
                         return 'virtual';
                     };
 
-                    const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
-                    const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+                    const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -751,7 +751,7 @@ const Header = (() => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
                         return 'virtual';
                     });
-                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -1074,7 +1074,7 @@ const Header = (() => {
 
         const notification_content = getElementById('header__notification-content');
         const notification_item    = createElement('div', { class: 'header__notification-content-item', 'notification-key': key });
-        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
+        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg?${process.env.BUILD_HASH}`) });
         const notification_message = createElement('div', { class: 'header__notification-content-message' });
         const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
         const notification_text    = createElement('div', { html: message, class: 'header__notification-content-desc' });

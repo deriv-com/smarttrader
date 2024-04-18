@@ -240,7 +240,7 @@ const TradingAnalysis = (() => {
             if (images[form_name].image2) {
                 $container
                     .find('#explanation_image_2')
-                    .attr('src', image_path + images[form_name].image2)
+                    .attr('src', `${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`)
                     .parent()
                     .setVisibility(1);
             } else {
