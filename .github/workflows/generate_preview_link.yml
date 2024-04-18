@@ -42,7 +42,7 @@ jobs:
           node-version: 18.x
 
       - name: Install dependencies
-        uses: "deriv-com/shared-actions/.github/actions/npm_install@v1"
+        uses: "deriv-com/shared-actions/.github/actions/npm_install@master"
 
       - name: Build
         uses: "./.github/actions/build"
