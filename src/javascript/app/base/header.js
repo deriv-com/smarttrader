@@ -330,7 +330,7 @@ const Header = (() => {
         mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
         // Mobile Menu Livechat Icon
-        mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
+        mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
 
         // Notification Event
         const notification_bell      = getElementById('header__notification-icon-container');
@@ -541,7 +541,7 @@ const Header = (() => {
 
         // Livechat Logo
         const livechat_img = getElementById('livechat__logo');
-        livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
+        livechat_img.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
@@ -552,7 +552,7 @@ const Header = (() => {
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
 
         const el_language_select_img = getElementById('language-select__logo');
-        el_language_select_img.src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
+        el_language_select_img.src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg?${process.env.BUILD_HASH}`);
 
         getElementById('language-select').addEventListener('click', toggleLanguagePopup);
 
@@ -568,7 +568,7 @@ const Header = (() => {
                 class: `language-menu-item${ current_language === language[0] ? ' language-menu-item__active' : '' }`,
                 id   : language[0],
             });
-            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg`) }));
+            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg?${process.env.BUILD_HASH}`) }));
             language_menu_item.appendChild(createElement('span', { text: language[1] }));
             getElementById('language-menu-list').appendChild(language_menu_item);
         });

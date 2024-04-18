@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const PostCssCacheBuster = require('postcss-cachebuster');
 const publicPathFactory = require('./helpers').publicPathFactory;
 
 const commonConfig = (grunt) => ({
@@ -61,6 +62,25 @@ const commonConfig = (grunt) => ({
                         },
                     },
                 ],
+            },
+            {
+                test   : /\.css?$/,
+                exclude: /node_modules/,
+                loader : 'postcss-loader',
+                options: {
+                    sourceMap: true,
+                    plugins  : () => [
+                        PostCssCacheBuster({
+                            imagesPath    : '/src/images',
+                            cssPath       : '/dist/css',
+                            supportedProps: [
+                                'background',
+                                'background-image',
+                            ],
+                            paramName: 'v=',
+                        }),
+                    ],
+                },
             },
         ],
     },

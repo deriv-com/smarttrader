@@ -118,6 +118,7 @@
     "js-yaml": "4.1.0",
     "kinetic": "5.2.0",
     "moment": "^2.29.4",
+    "postcss-cachebuster": "^0.1.6",
     "promise-polyfill": "6.1.0",
     "prop-types": "^15.8.1",
     "react": "16.14.0",
