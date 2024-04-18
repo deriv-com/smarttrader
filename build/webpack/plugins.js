@@ -48,7 +48,7 @@ const getPlugins = (app, grunt) => ([
 
             new webpack.DefinePlugin({
                 'process.env': {
-                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()).replace(/\W/g, '').substring(0, 10),
                     NODE_ENV  : JSON.stringify('production'),
                 },
             }),

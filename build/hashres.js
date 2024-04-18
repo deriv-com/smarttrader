@@ -1,7 +1,7 @@
 module.exports = {
   options: {
     encoding: "utf8",
-    length: 8,
+    length: 11,
     algorithm: "md5",
     renameFiles: false,
     fileNameFormat: "${name}.${ext}?${hash}",
