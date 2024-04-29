@@ -236,11 +236,11 @@ const TradingAnalysis = (() => {
 
         if (images[form_name]) {
             const image_path = Url.urlForStatic(`images/pages/trade-explanation/${getLanguage().toLowerCase()}/`);
-            $container.find('#explanation_image_1').attr('src', image_path + images[form_name].image1);
+            $container.find('#explanation_image_1').attr('src', `${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`);
             if (images[form_name].image2) {
                 $container
                     .find('#explanation_image_2')
-                    .attr('src', image_path + images[form_name].image2)
+                    .attr('src', `${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`)
                     .parent()
                     .setVisibility(1);
             } else {
