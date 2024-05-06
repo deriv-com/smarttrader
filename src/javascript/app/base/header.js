@@ -127,95 +127,95 @@ const Header = (() => {
     const bindSvg = () => {
 
         applyToAllElements('#add-account-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-add-account.svg?${process.env.BUILD_HASH}`);
         });
         
         applyToAllElements('#appstore-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-appstore-home.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.header__expand', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg?${process.env.BUILD_HASH}`);
         });
         // TODO : Change to light arrow down icon
         applyToAllElements('.header__expand-light', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-down.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.header__logo', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}${getPlatformSettings('smarttrader').icon}`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}${getPlatformSettings('smarttrader').icon}?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.logout-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-logout.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.reports-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-reports.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.whatsapp-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-whatsapp.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.livechat-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.btn__close', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__notification-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-bell.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__notification-empty-img', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-box.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__account-settings', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-user-outline.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#header__hamburger', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-hamburger.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.wallet-apps-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-apps-logo.svg`);
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-apps-logo.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('.deriv-com-logo', (el) => {
-            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg`);
+            el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#cashier-icon', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-cashier.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__platform-switcher-icon-arrowright', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-right.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-back', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-open', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-portfolio.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-profit', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-profit-table.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-statement', (el) => {
-            el.src = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg`);
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-statement.svg?${process.env.BUILD_HASH}`);
         });
     };
 
@@ -267,7 +267,7 @@ const Header = (() => {
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
             const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform.link });
-            const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}`)}`, class: 'platform__list-item-icon' });
+            const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}?${process.env.BUILD_HASH}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
             const platform_desc  = createElement('div', { text: platform.desc, class: 'platform__list-item-desc' });
@@ -330,7 +330,7 @@ const Header = (() => {
         mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
 
         // Mobile Menu Livechat Icon
-        mobile_menu__livechat_logo.src = Url.urlForStatic('images/common/livechat.svg');
+        mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
 
         // Notification Event
         const notification_bell      = getElementById('header__notification-icon-container');
@@ -541,7 +541,7 @@ const Header = (() => {
 
         // Livechat Logo
         const livechat_img = getElementById('livechat__logo');
-        livechat_img.src = Url.urlForStatic('images/common/livechat.svg');
+        livechat_img.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
@@ -552,7 +552,7 @@ const Header = (() => {
         const available_languages = Object.entries(Language.getAll()).filter(language => !(/ACH/.test(language[0])));
 
         const el_language_select_img = getElementById('language-select__logo');
-        el_language_select_img.src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg`);
+        el_language_select_img.src = Url.urlForStatic(`images/languages/ic-flag-${current_language.toLowerCase()}.svg?${process.env.BUILD_HASH}`);
 
         getElementById('language-select').addEventListener('click', toggleLanguagePopup);
 
@@ -568,7 +568,7 @@ const Header = (() => {
                 class: `language-menu-item${ current_language === language[0] ? ' language-menu-item__active' : '' }`,
                 id   : language[0],
             });
-            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg`) }));
+            language_menu_item.appendChild(createElement('img', { src: Url.urlForStatic(`images/languages/ic-flag-${language[0].toLowerCase()}.svg?${process.env.BUILD_HASH}`) }));
             language_menu_item.appendChild(createElement('span', { text: language[1] }));
             getElementById('language-menu-list').appendChild(language_menu_item);
         });
@@ -647,8 +647,8 @@ const Header = (() => {
                         return 'virtual';
                     };
 
-                    const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg`);
-                    const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+                    const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -751,7 +751,7 @@ const Header = (() => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
                         return 'virtual';
                     });
-                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg`);
+                    const icon                 = Url.urlForStatic(`${header_icon_base_path}ic-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const current_active_login = Client.get('loginid');
                     const is_current           = loginid === current_active_login;
 
@@ -1074,7 +1074,7 @@ const Header = (() => {
 
         const notification_content = getElementById('header__notification-content');
         const notification_item    = createElement('div', { class: 'header__notification-content-item', 'notification-key': key });
-        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg`) });
+        const notification_icon    = createElement('img', { src: Url.urlForStatic(`${header_icon_base_path}ic-alert-${type || 'info'}.svg?${process.env.BUILD_HASH}`) });
         const notification_message = createElement('div', { class: 'header__notification-content-message' });
         const notification_title   = createElement('div', { text: title, class: 'header__notification-content-title' });
         const notification_text    = createElement('div', { html: message, class: 'header__notification-content-desc' });

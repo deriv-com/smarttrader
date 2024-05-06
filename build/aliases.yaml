@@ -64,3 +64,4 @@ release:
 releaseci:
   - 'default'
   - 'shell:compile_production'
+  - 'hashres'
