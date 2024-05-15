@@ -35,7 +35,7 @@ const Favicons = () => (
     <link
         rel='icon'
         type={'image/svg'}
-        href={it.url_for('/images/common/logos/icon_deriv.svg')}
+        href={it.url_for('/images/common/logos/icon_smarttrader.svg')}
     />
 );
 
