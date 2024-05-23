@@ -83,7 +83,7 @@ const Header = (() => {
             el.href = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
+            el.href = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
