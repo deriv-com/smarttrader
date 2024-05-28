@@ -1,32 +1,13 @@
 import React from 'react';
 import Analysis from './analysis.jsx';
 import Loading from '../../_common/components/loading.jsx';
-// import DerivBanner from '../../_common/components/deriv_banner.jsx';
 
 const Trading = () => (
     <React.Fragment>
         <div id='trading_socket_container'>
-            {/* <DerivBanner content_name='page-trading-banner' /> */}
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
-            {/* <a
-                id='deposit_btn_trade'
-                className='client_real invisible gr-hide-m btn btn--primary'
-                href='https://app.deriv.com/cashier/deposit'
-                target='_blank'
-                rel='noopener noreferrer'
-            >
-                <span>
-                    <img src={it.url_for('images/common/plus.svg')} />
-                    {it.L('Deposit')}
-                </span>
-            </a> */}
-            {/* <div className='client_virtual invisible'> */}
-            {/*    <div id='upgrade_btn_trade' className='invisible upgrademessage gr-hide-m'> */}
-            {/*        <a className='button' /> */}
-            {/*    </div> */}
-            {/* </div> */}
-            <div className='client_virtual client_logged_out invisible' id='guideBtn' />
+            <div id='guideBtn' />
             <div className='row' id='contract_symbol_container'>
                 <div id='contract_markets_container'>
                     <div id='underlying_component' />
@@ -40,7 +21,6 @@ const Trading = () => (
                     <span id='trading_worm_chart' />
                     <span id='spot' />
                 </div>
-                {/* <a id='symbol_tip' target='_blank'>&#9432;</a> */}
             </div>
             <div className='row clear' id='contract_form_content_wrapper'>
                 <div className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
