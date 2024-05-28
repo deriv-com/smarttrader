@@ -236,7 +236,7 @@ const Header = (() => {
         const platforms          = {
             dtrader: {
                 desc     : localize('A whole new trading experience on a powerful yet easy to use platform.'),
-                link     : main_domain,
+                link     : `${main_domain}/dtrader`,
                 icon     : getPlatformSettings('dtrader').icon,
                 on_mobile: true,
             },
