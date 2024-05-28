@@ -80,10 +80,10 @@ const Header = (() => {
         }
 
         applyToAllElements('.url-wallet-apps', (el) => {
-            el.href = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
+            el.href = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
+            el.href = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
@@ -110,7 +110,7 @@ const Header = (() => {
             el.href = Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-wallets-deposit', el => {
-            el.href = Url.urlForDeriv('wallets/cashier/transfer', `ext_platform_url=${ext_platform_url}`);
+            el.href = Url.urlForDeriv('redirect', `action=payment_transfer&ext_platform_url=${ext_platform_url}`);
         });
     };
 
