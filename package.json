@@ -103,7 +103,7 @@
     "@babel/polyfill": "7.12.1",
     "@binary-com/binary-document-uploader": "^2.4.4",
     "@binary-com/binary-style": "^0.2.26",
-    "@binary-com/webtrader-charts": "0.5.22",
+    "@binary-com/webtrader-charts": "^0.6.0",
     "@livechat/customer-sdk": "4.0.2",
     "canvas-toBlob": "1.0.0",
     "classnames": "2.2.5",
