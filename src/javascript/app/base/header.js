@@ -286,10 +286,9 @@ const Header = (() => {
         });
 
         // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
-        const wallets_hub_link                = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
-        const traders_hub_link                = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
+        const traders_hub_link                = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
-        const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: `${Client.isLoggedIn() && Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link}` });
+        const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: traders_hub_link });
         
         platform_dropdown_cta_container.appendChild(platform_dropdown_cta_link);
         platform_list.appendChild(platform_dropdown_cta_container.cloneNode(true));
@@ -411,9 +410,8 @@ const Header = (() => {
 
         // Dynamic link for trader's hub cta for mobile menu
         const mobile_platform_appstore_link     = getElementById('url-appstore');
-        const wallets_hub_link                  = Url.urlForDeriv('wallets', `ext_platform_url=${ext_platform_url}`);
-        const traders_hub_link                  = Url.urlForDeriv('appstore/traders-hub', `ext_platform_url=${ext_platform_url}`);
-        mobile_platform_appstore_link.href      = Client.hasWalletsAccount() ? wallets_hub_link : traders_hub_link;
+        const traders_hub_link                  = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+        mobile_platform_appstore_link.href      = traders_hub_link;
 
         // Account Switcher Event
         const acc_switcher                = Client.hasWalletsAccount() ? getElementById('wallet_switcher') : getElementById('acc_switcher');
