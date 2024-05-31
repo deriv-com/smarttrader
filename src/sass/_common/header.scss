@@ -178,6 +178,12 @@ body .header, .wallet__header {
     border: none;
     z-index: 1;
 
+    &-divider {
+        background: var(--general-section-2);
+        height: 30px;
+        width: 1px;
+        margin-left: 8px;
+    }
     .is-login, .is-logout {
         display: none;
     }
@@ -256,6 +262,12 @@ body .header, .wallet__header {
         }
     }
     &__hamburger {
+        &--container {
+            border-right: 1px solid var(--general-section-1);
+            height: 100%;
+            align-items: center;
+            display: flex;
+        }
         padding: 0 12px;
         width: 20px;
         height: 20px;
@@ -1058,9 +1070,6 @@ body .mobile {
         height: 40px !important;
 
         &__menu {
-            &-left {
-                border-right: 1px solid var(--general-section-1);
-            }
             &-acc {
                 position: unset;
             }

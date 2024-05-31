@@ -9,7 +9,15 @@ const Header = () => (
         </div>
         <div id='deriv__header' className='header__menu-items'>
             <div className='header__menu-left'>
-                <img id='header__hamburger' className='header__hamburger mobile-show' />
+                <span className='header__hamburger--container'>
+                    <img id='header__hamburger' className='header__hamburger mobile-show' />
+                </span>
+                <div className='header-menu-item header-menu-links'>
+                    <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
+                        <img className='deriv-com-logo' />
+                    </a>
+                </div>
+                <div className='header-divider is-logout mobile-hide' />
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
