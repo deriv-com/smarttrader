@@ -50,6 +50,8 @@ const Header = (() => {
             bindClick();
         });
         if (Client.isLoggedIn()) {
+            const wallet_divider = getElementById('wallet-divider');
+            if (wallet_divider) wallet_divider.style.display = 'none';
             displayAccountStatus();
         }
         fullscreen_map.event.forEach(event => {

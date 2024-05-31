@@ -15,13 +15,17 @@ class WatchRunPlugin {
             // eslint-disable-next-line no-console
             console.log('\n');
             this.grunt.log.ok('Build started at:', new Date().toString().grey);
-
+    
             if (comp.modifiedFiles) {
-                const changed_files = Array.from(comp.modifiedFiles, (file) => `\n  ${file}`).join('');
+                const changed_files = Array.from(comp.modifiedFiles);
+    
                 this.grunt.log.ok(`Changed file${changed_files.length > 1 ? 's' : ''}:`);
-                changed_files.forEach((file) =>{
+    
+                changed_files.forEach((file) => {
                     const file_path = file.replace(process.cwd(), '.').match(/(.*\/)(.*(?!\/))$/);
-                    this.grunt.log.write('   -'.green, file_path[1].grey, `\b${file_path[2]}\n`);
+                    if (file_path) {
+                        this.grunt.log.write('   -'.green, file_path[1].grey, `\b${file_path[2]}\n`);
+                    }
                 });
             }
         });
@@ -62,6 +66,11 @@ const getPlugins = (app, grunt) => ([
                     openAnalyzer  : false,
                 }),
             ]),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                },
+            }),
         ]
     ),
 ]);

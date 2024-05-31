@@ -12,12 +12,12 @@ const WalletHeader = () => (
                 <span className='wallet__header__hamburger--container'>
                     <img id='header__hamburger' className='header__hamburger mobile-show' />
                 </span>
-                <div className='wallet__header-menu-item wallet__header-menu-links'>
+                <div className='wallet__header-menu-item wallet__header-menu-links is-logout'>
                     <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
                         <img className='deriv-com-logo' />
                     </a>
                 </div>
-                <div className='wallet__header-divider is-logout mobile-hide' />
+                <div id='wallet-divider' className='wallet__header-divider mobile-hide-wallet' />
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-appstore header__menu-links-item'>
                         <span>
@@ -26,6 +26,7 @@ const WalletHeader = () => (
                         </span>
                     </a>
                 </div>
+                <div className='wallet__header-divider client_logged_in invisible mobile-hide' />
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
                     <img id='platform__switcher-expand' className='header__icon header__expand' />

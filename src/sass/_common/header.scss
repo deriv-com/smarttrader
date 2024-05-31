@@ -1060,6 +1060,9 @@ body .mobile {
 }
 
 @media only screen and (max-width: 879px) {
+    .mobile-hide-wallet {
+        display: none;
+    }
     .mobile-hide {
         display: none !important;
     }
