@@ -38,7 +38,7 @@ const Language = (() => {
         if (url_lang && !custom_url) return url_lang;
         const url_params = (custom_url || window.location.href).split('/').slice(3);
         let language     = (url_params.find(lang => lang_regex.test(lang)) || '');
-        if (!Object.keys(all_languages).includes(language.toUpperCase())) {
+        if (language && !Object.keys(all_languages).includes(language.toUpperCase())) {
             language = 'en';
         }
         if (!custom_url) {
