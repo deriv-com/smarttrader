@@ -133,10 +133,10 @@ const Validation = (() => {
 
             if (field.$.attr('type') === 'text') {
                 field.$.attr('type', 'password');
-                el_password_icon.attr('src', urlFor('images/common/password_hide.svg'));
+                el_password_icon.attr('src', urlFor(`images/common/password_hide.svg?${process.env.BUILD_HASH}`));
             } else if (field.$.attr('type') === 'password') {
                 field.$.attr('type', 'text');
-                el_password_icon.attr('src', urlFor('images/common/password_show.svg'));
+                el_password_icon.attr('src', urlFor(`images/common/password_show.svg?${process.env.BUILD_HASH}`));
             }
         };
 

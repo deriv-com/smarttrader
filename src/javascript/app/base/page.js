@@ -14,7 +14,6 @@ const getElementById   = require('../../_common/common_functions').getElementByI
 const Crowdin          = require('../../_common/crowdin');
 const GTM              = require('../../_common/gtm');
 const Language         = require('../../_common/language');
-const PushNotification = require('../../_common/lib/push_notification');
 const localize         = require('../../_common/localize').localize;
 const isMobile         = require('../../_common/os_detect').isMobile;
 const LocalStore       = require('../../_common/storage').LocalStore;
@@ -34,7 +33,6 @@ const Page = (() => {
         GTM.init();
         Url.init();
         Elevio.init();
-        PushNotification.init();
         onDocumentReady();
         Crowdin.init();
     };
@@ -70,8 +68,10 @@ const Page = (() => {
                             };
                             // reload the page when the client account values(except balance and startsession) is changed on other pages.
                             const active_loginid = LocalStore.get('active_loginid');
-                            const new_currency = JSON.parse(evt.newValue)[active_loginid].currency;
-                            const old_currency = JSON.parse(evt.oldValue)[active_loginid].currency;
+                            const new_accounts = JSON.parse(evt.newValue);
+                            const old_accounts = JSON.parse(evt.oldValue);
+                            const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
+                            const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
 
                             if (removedSessionAndBalnce(evt.newValue) !== removedSessionAndBalnce(evt.oldValue) &&
                                 old_currency !== new_currency) {

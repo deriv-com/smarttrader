@@ -2,7 +2,13 @@ module.exports = function (grunt) {
     return {
         options: {
             processors: [
-                require('autoprefixer')()
+                require('autoprefixer')(),
+                require('postcss-cachebuster')({
+                    supportedProps: [
+                        'background',
+                        'background-image',
+                    ],
+                }),
             ],
         },
         dist: {

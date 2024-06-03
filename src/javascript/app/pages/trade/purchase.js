@@ -151,7 +151,6 @@ const Purchase = (() => {
             }
         } else {
             contracts_list.style.display = 'none';
-            CommonFunctions.getElementById('guideBtn').style.display = 'none';
             container.style.display = 'table-row';
             message_container.show();
             authorization_error.setVisibility(0);

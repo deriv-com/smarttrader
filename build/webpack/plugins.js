@@ -1,4 +1,5 @@
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const CryptoJS   = require('crypto-js');
 const path                     = require('path');
 const webpack                  = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -47,7 +48,8 @@ const getPlugins = (app, grunt) => ([
 
             new webpack.DefinePlugin({
                 'process.env': {
-                    NODE_ENV: JSON.stringify('production'),
+                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                    NODE_ENV  : JSON.stringify('production'),
                 },
             }),
         ]
@@ -60,6 +62,11 @@ const getPlugins = (app, grunt) => ([
                     openAnalyzer  : false,
                 }),
             ]),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                },
+            }),
         ]
     ),
 ]);
