@@ -892,7 +892,8 @@ const Header = (() => {
             event : 'click',
             activate(ui) {
                 updateTotal();
-                const currentTab = ui.currentTarget.hash;
+                const defaultOpenedTab = is_virtual ? '#demo_tab' : '#real_tab';
+                const currentTab = ui.currentTarget ? ui.currentTarget.hash : defaultOpenedTab;
                 if (currentTab === '#demo_tab') {
                     manage_acc_btn.style.visibility   = 'hidden';
                     showTradersHubLink(true);
