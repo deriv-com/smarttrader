@@ -11,6 +11,7 @@ const GTM = require('../../_common/base/gtm');
 const Login = require('../../_common/base/login');
 const LiveChat = require('../../_common/base/livechat');
 const getElementById = require('../../_common/common_functions').getElementById;
+const getAll = require('../../_common/language').getAll;
 const urlLang = require('../../_common/language').urlLang;
 const localizeForLang = require('../../_common/localize').forLang;
 const localize = require('../../_common/localize').localize;
@@ -25,6 +26,13 @@ const BinaryLoader = (() => {
     let active_script = null;
 
     const init = () => {
+        const supported_langs_regex = Object.keys(getAll()).map(lang => lang.toLowerCase()).join('|');
+        // redirect to /en/ page if pathname contains an unsupported language:
+        if (new RegExp(`/(?!${supported_langs_regex})\\w{2}/\\w+.html`, 'g').test(window.location.pathname)) {
+            const en_pathname  = window.location.pathname.split('?')[0].replace(new RegExp(`/(?!${supported_langs_regex})\\w{2}/`), '/en/');
+            const en_href = `${window.location.origin}${en_pathname}`;
+            window.history.replaceState({ url: en_href }, document.title, en_href);
+        }
 
         if (!isStorageSupported(localStorage) || !isStorageSupported(sessionStorage)) {
             Header.displayNotification({ key: 'storage_not_supported', title: 'Storage not supported', message: localize('Requires your browser\'s web storage to be enabled in order to function properly. Please enable it or exit private browsing mode.'), type: 'danger' });
