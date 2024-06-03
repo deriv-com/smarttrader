@@ -45,6 +45,12 @@ module.exports = function (grunt) {
                     middlewares.push(serveIndex(directory));
 
                     middlewares.push((req, res) => {
+                        if (new RegExp(`/(?!${lang_regex})\\w{2}/\\w+.html`, 'g').test(req.url)) {
+                            const en_pathname = req.url.split('?')[0].replace(new RegExp(`/(?!${lang_regex})\\w{2}/`), '/en/');
+                            const en_file_path = `${options.base[0]}${en_pathname}`;
+                            require('fs').createReadStream(en_file_path).pipe(res);
+                            return;
+                        }
                         const path_404 = `${options.base[0]}/404.html`;
                         if (grunt.file.exists(path_404)) {
                             require('fs').createReadStream(path_404).pipe(res);
