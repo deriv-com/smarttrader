@@ -2,11 +2,13 @@ name: versioning
 description: Tag build
 inputs:
   target_branch:
-    description: 'Target branch'
+    description: "Target branch"
     required: false
 runs:
   using: composite
   steps:
-  - name: Tag build
-    run: echo "${{ inputs.target_branch }} $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version.txt
-    shell: bash
+    - name: Tag build
+      env:
+        TARGET_BRANCH: ${{ inputs.target_branch }}
+      run: echo "$TARGET_BRANCH $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version.txt
+      shell: bash
