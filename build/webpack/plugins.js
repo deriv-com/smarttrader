@@ -15,7 +15,7 @@ class WatchRunPlugin {
             // eslint-disable-next-line no-console
             console.log('\n');
             this.grunt.log.ok('Build started at:', new Date().toString().grey);
-    
+
             if (comp.modifiedFiles) {
                 const changed_files = Array.from(comp.modifiedFiles);
     
