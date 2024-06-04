@@ -23,6 +23,7 @@ describe('check svg file format', () => {
 
     it('should be valid svgs', async () => {
         try {
+            await exec('git fetch origin master --depth 1');
             changed_files = [
                 ...await fetchFiles('git diff --name-only -- *.svg'),
                 ...await fetchFiles('git diff HEAD origin/master --name-only -- *.svg'),
