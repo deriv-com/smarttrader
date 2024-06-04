@@ -49,8 +49,10 @@ module.exports = function (grunt) {
                         if (new RegExp(`^/(?!${lang_regex})\\w{2,5}/\\w+`).test(pathname)) {
                             const en_pathname  = pathname.replace(new RegExp(`/(?!${lang_regex})\\w{2,5}/`), '/en/');
                             const en_file_path = `${options.base[0]}${en_pathname}`;
-                            require('fs').createReadStream(en_file_path).pipe(res);
-                            return;
+                            if (grunt.file.exists(en_file_path)) {
+                                require('fs').createReadStream(en_file_path).pipe(res);
+                                return;
+                            }
                         }
                         const path_404 = `${options.base[0]}/404.html`;
                         if (grunt.file.exists(path_404)) {

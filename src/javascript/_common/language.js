@@ -60,6 +60,9 @@ const Language = (() => {
                 }
             }
         }
+        if (current_lang && languageFromUrl() && current_lang !== languageFromUrl()) {
+            current_lang = languageFromUrl();
+        }
         current_lang = (current_lang || (languageFromUrl() || Cookies.get('language') || default_language).toUpperCase());
         return current_lang;
     };
