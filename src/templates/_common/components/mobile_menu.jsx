@@ -20,7 +20,7 @@ const MobileMenu = () => (
                     <div id='mobile__platform-switcher-dropdown' className='mobile__platform-switcher-dropdown' />
                 </div>
                 <div className='mobile__platform-switcher-lists'>
-                    <div id='mobile__platform-switcher-item-appstore' className='mobile__platform-switcher-item  client_logged_in invisible'>
+                    <div id='mobile__platform-switcher-item-appstore' className='mobile__platform-switcher-item'>
                         <a id='url-appstore' className='url-appstore'>
                             <img id='appstore-icon' className='mobile__platform-switcher-icon appstore-icon' />
                             <div className='mobile__platform-switcher-text'>{it.L('Trader\'s hub')}</div>

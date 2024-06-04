@@ -18,7 +18,7 @@ const WalletHeader = () => (
                     </a>
                 </div>
                 <div id='wallet-divider' className='wallet__header-divider mobile-hide-wallet' />
-                <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
+                <div className='header__menu-item header__menu-links mobile-hide'>
                     <a className='url-appstore header__menu-links-item'>
                         <span>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
