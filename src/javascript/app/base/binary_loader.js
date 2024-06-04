@@ -33,7 +33,7 @@ const BinaryLoader = (() => {
         // redirect to /en/ page if pathname contains an unsupported language:
         if (new RegExp(`^${pattern}\\w+`).test(pathname)) {
             const en_pathname  = pathname.replace(new RegExp(pattern), '/en/');
-            const en_href = `${window.location.origin}${en_pathname}${search ? `?${search}` : ''}`;
+            const en_href = `${window.location.origin}${en_pathname}${search || ''}`;
             window.history.replaceState({ url: en_href }, document.title, en_href);
         }
 
