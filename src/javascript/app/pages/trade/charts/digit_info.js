@@ -254,6 +254,9 @@ const DigitInfo = (() => {
                 BinarySocket.send({ forget: (tick.tick.id).toString() });
             }
         } else {
+            if (chart.series[0].name !== tick.tick.symbol) {
+                BinarySocket.send({ forget: (tick.tick.id).toString() });
+            }
             update(tick.tick.symbol, addComma(tick.tick.quote, decimal_places).replace(',', ''));
         }
     };
