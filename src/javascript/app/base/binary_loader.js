@@ -28,9 +28,11 @@ const BinaryLoader = (() => {
     const init = () => {
         const supported_langs_regex = Object.keys(getAll()).map(lang => lang.toLowerCase()).join('|');
         // redirect to /en/ page if pathname contains an unsupported language:
-        if (new RegExp(`/(?!${supported_langs_regex})\\w{2,5}/\\w+`, 'g').test(window.location.pathname)) {
-            const en_pathname  = window.location.pathname.replace(new RegExp(`/(?!${supported_langs_regex})\\w{2,5}/`), '/en/');
-            const en_href = `${window.location.origin}${en_pathname}${window.location.search || ''}`;
+        const pathname = window.location.pathname;
+        const search = window.location.search;
+        if (new RegExp(`^/(?!${supported_langs_regex})\\w{2,5}/\\w+`).test(pathname)) {
+            const en_pathname  = pathname.replace(new RegExp(`^/(?!${supported_langs_regex})\\w{2,5}/`), '/en/');
+            const en_href = `${window.location.origin}${en_pathname}${search ? `?${search}` : ''}`;
             window.history.replaceState({ url: en_href }, document.title, en_href);
         }
 

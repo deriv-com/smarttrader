@@ -46,9 +46,9 @@ module.exports = function (grunt) {
 
                     middlewares.push((req, res) => {
                         const pathname = req.url.split('?')[0];
-                        if (new RegExp(`/(?!${lang_regex})\\w{2,5}/\\w+`, 'g').test(pathname)) {
+                        if (new RegExp(`^/(?!${lang_regex})\\w{2,5}/\\w+`).test(pathname)) {
                             const en_pathname  = pathname.replace(new RegExp(`/(?!${lang_regex})\\w{2,5}/`), '/en/');
-                            const en_file_path = `${options.base[0]}${en_pathname}${req.url.split('?')[1] || ''}`;
+                            const en_file_path = `${options.base[0]}${en_pathname}`;
                             require('fs').createReadStream(en_file_path).pipe(res);
                             return;
                         }
