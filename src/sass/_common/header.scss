@@ -215,6 +215,11 @@ body .header, .wallet__header {
         &-item {
             height: 100%;
             align-self: center;
+
+            &--label {
+                display: flex;
+                align-items: center;
+            }
         }
         &-links {
             display: flex;

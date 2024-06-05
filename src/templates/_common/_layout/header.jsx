@@ -25,7 +25,7 @@ const Header = () => (
                 <div className='header-divider is-logout mobile-hide' />
                 <div className='header__menu-item header__menu-links mobile-hide'>
                     <a className='url-appstore header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
                             {it.L('Trader\'s hub')}
                         </span>
@@ -37,13 +37,13 @@ const Header = () => (
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-reports-positions header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
                     </a>
                     <a className='url-cashier-deposit header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img id='cashier-icon' className='header__icon-text' />
                             {it.L('Cashier')}
                         </span>

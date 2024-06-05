@@ -20,7 +20,7 @@ const WalletHeader = () => (
                 <div id='wallet-divider' className='wallet__header-divider mobile-hide-wallet' />
                 <div className='header__menu-item header__menu-links mobile-hide'>
                     <a className='url-appstore header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
                             {it.L('Trader\'s hub')}
                         </span>
@@ -33,7 +33,7 @@ const WalletHeader = () => (
                 </div>
                 <div className='header__menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-reports-positions header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
