@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
+import { Button } from '@deriv-com/quill-ui';
 import Symbols from './symbols';
 // Should be remove in the future
 import Defaults from './defaults';
@@ -485,6 +486,7 @@ class Markets extends React.Component {
 
         return (
             <div className='markets'>
+                <Button label='My Quill Button' />
                 <div
                     className='market_current'
                     onClick={openDropdown}
