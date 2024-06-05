@@ -192,6 +192,10 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg?${process.env.BUILD_HASH}`);
         });
 
+        applyToAllElements('.deriv-com-logo-mobile', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}deriv-com-logo.svg?${process.env.BUILD_HASH}`);
+        });
+
         applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-trade.svg?${process.env.BUILD_HASH}`);
         });
