@@ -36,12 +36,6 @@ const Header = () => (
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
-                    {/* <a className='url-appstore header__menu-links-item'>
-                        <span>
-                            <img id='appstore-icon' className='header__icon-text appstore-icon' />
-                            {it.L('Trader\'s hub')}
-                        </span>
-                    </a> */}
                     <a className='url-reports-positions header__menu-links-item'>
                         <span>
                             <img className='header__icon-text reports-icon' />
