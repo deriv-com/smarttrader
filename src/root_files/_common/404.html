@@ -11,14 +11,15 @@
     }
 
     var langs = {
+        // TODO: uncomment if we enable id, ko and pt languages
+        // 'id': 'id',
+        // 'ko': 'kr',
+        // 'pt': 'br|mz|ao|pt|gw|pg|cv|st',
         'de': 'de|at|li',
         'es': 'ar|bo|cl|co|cr|cu|do|ec|sv|gt|hn|mx|ni|pa|py|pr|es|uy|ve',
         'fr': 'fr|ad|bj|bf|cf|cg|ga|gn|ml|mc|ne|sn|tg',
-        'id': 'id',
         'it': 'it',
-        'ko': 'kr',
         'pl': 'po',
-        'pt': 'br|mz|ao|pt|gw|pg|cv|st',
         'ru': 'ru|ua|by|kz',
         'th': 'th',
         'vi': 'vn',
@@ -44,7 +45,7 @@
 
         // redirect to /en/ page if pathname contains an unsupported language:
         const supported_langs_regex = Object.keys(langs).join('|');
-        if (new RegExp(`^/(?!${supported_langs_regex})\\w{2,5}/\\w+`).test(window.location.pathname)) {
+        if (new RegExp(`^/(?!${supported_langs_regex})\\w{2,5}/\\w+`).test(window.location.pathname.toLowerCase())) {
             lang = 'en';
             window.location.href = base + '/' + lang + '/' + 'trading.html';
             return;
