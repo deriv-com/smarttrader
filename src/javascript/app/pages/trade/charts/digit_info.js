@@ -249,14 +249,13 @@ const DigitInfo = (() => {
         if (stream_id) {
             if (chart.series[0].name === tick.tick.symbol) {
                 stream_id = tick.tick.id || null;
-                update(tick.tick.symbol, tick.tick.quote);
+                update(tick.tick.symbol, addComma(tick.tick.quote, decimal_places).replace(',', ''));
             } else {
                 BinarySocket.send({ forget: (tick.tick.id).toString() });
+                stream_id = null;
             }
         } else {
-            if (chart.series[0].name !== tick.tick.symbol) {
-                BinarySocket.send({ forget: (tick.tick.id).toString() });
-            }
+            stream_id = tick.tick.id || null;
             update(tick.tick.symbol, addComma(tick.tick.quote, decimal_places).replace(',', ''));
         }
     };
