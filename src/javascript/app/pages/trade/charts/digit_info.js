@@ -3,6 +3,7 @@ const getHighstock        = require('../common').requireHighstock;
 const Defaults            = require('../defaults');
 const Symbols             = require('../symbols');
 const BinarySocket        = require('../../../base/socket');
+const { getElementById } = require('../../../../_common/common_functions');
 const getSymbolsForMarket = require('../../../common/active_symbols').getSymbolsForMarket;
 const addComma            = require('../../../../_common/base/currency_base').addComma;
 const localize            = require('../../../../_common/localize').localize;
@@ -129,7 +130,7 @@ const DigitInfo = (() => {
                 count,
             };
             if (chart.series[0].name !== symbol) {
-                if ($('#underlying').find('option:selected').val() !== $('#digit_underlying').val()) {
+                if (getElementById('underlying').value !== $('#digit_underlying').val()) {
                     request.subscribe = 1;
                     request.style     = 'ticks';
                 }
@@ -251,7 +252,7 @@ const DigitInfo = (() => {
                 stream_id = tick.tick.id || null;
                 update(tick.tick.symbol, addComma(tick.tick.quote, decimal_places).replace(',', ''));
             } else {
-                BinarySocket.send({ forget: (tick.tick.id).toString() });
+                BinarySocket.send({ forget: (stream_id).toString() });
                 stream_id = null;
             }
         } else {
