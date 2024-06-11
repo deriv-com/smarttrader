@@ -9,26 +9,41 @@ const Header = () => (
         </div>
         <div id='deriv__header' className='header__menu-items'>
             <div className='header__menu-left'>
-                <img id='header__hamburger' className='header__hamburger mobile-show' />
+                <span className='header__hamburger--container'>
+                    <img id='header__hamburger' className='header__hamburger mobile-show' />
+                </span>
+                <div className='header-menu-item header-menu-links client_logged_in invisible mobile-hide'>
+                    <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
+                        <img className='deriv-com-logo' />
+                    </a>
+                </div>
+                <div className='header-menu-item header-menu-links is-logout'>
+                    <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
+                        <img className='deriv-com-logo' />
+                    </a>
+                </div>
+                <div className='header-divider is-logout mobile-hide' />
+                <div className='header__menu-item header__menu-links mobile-hide'>
+                    <a className='url-appstore header__menu-links-item'>
+                        <span className='header__menu-item--label'>
+                            <img id='appstore-icon' className='header__icon-text appstore-icon' />
+                            {it.L('Trader\'s hub')}
+                        </span>
+                    </a>
+                </div>
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
-                    <a className='url-appstore header__menu-links-item'>
-                        <span>
-                            <img id='appstore-icon' className='header__icon-text appstore-icon' />
-                            {it.L('Trader\'s hub')}
-                        </span>
-                    </a>
                     <a className='url-reports-positions header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
                     </a>
                     <a className='url-cashier-deposit header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img id='cashier-icon' className='header__icon-text' />
                             {it.L('Cashier')}
                         </span>
