@@ -50,6 +50,8 @@ const Header = (() => {
             bindClick();
         });
         if (Client.isLoggedIn()) {
+            const wallet_divider = getElementById('wallet-divider');
+            if (wallet_divider) wallet_divider.style.display = 'none';
             displayAccountStatus();
         }
         fullscreen_map.event.forEach(event => {
@@ -188,6 +190,10 @@ const Header = (() => {
 
         applyToAllElements('.deriv-com-logo', (el) => {
             el.src = Url.urlForStatic(`${wallet_header_icon_base_path}wallet-deriv-logo.svg?${process.env.BUILD_HASH}`);
+        });
+
+        applyToAllElements('.deriv-com-logo-mobile', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}deriv-com-logo.svg?${process.env.BUILD_HASH}`);
         });
 
         applyToAllElements('#mobile__platform-switcher-icon-trade', (el) => {

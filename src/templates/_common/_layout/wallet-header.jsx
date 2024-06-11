@@ -9,24 +9,31 @@ const WalletHeader = () => (
         </div>
         <div className='wallet__header-menu-items'>
             <div className='wallet__header-menu-left'>
-                <img id='header__hamburger' className='header__hamburger mobile-show' />
-                <div className='wallet__header-menu-item wallet__header-menu-links client_logged_in invisible mobile-hide'>
+                <span className='wallet__header__hamburger--container'>
+                    <img id='header__hamburger' className='header__hamburger mobile-show' />
+                </span>
+                <div className='wallet__header-menu-item wallet__header-menu-links is-logout'>
                     <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
                         <img className='deriv-com-logo' />
                     </a>
                 </div>
-                <div className='wallet__header-menu-item wallet__header-menu-links client_logged_in invisible mobile-hide'>
-                    <a className='url-wallet-apps'>
-                        <img className='wallet-apps-logo' />
+                <div id='wallet-divider' className='wallet__header-divider mobile-hide-wallet' />
+                <div className='header__menu-item header__menu-links mobile-hide'>
+                    <a className='url-appstore header__menu-links-item'>
+                        <span className='header__menu-item--label'>
+                            <img id='appstore-icon' className='header__icon-text appstore-icon' />
+                            {it.L('Trader\'s hub')}
+                        </span>
                     </a>
                 </div>
+                <div className='wallet__header-divider client_logged_in invisible mobile-hide' />
                 <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
                     <img className='header__logo' />
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-reports-positions header__menu-links-item'>
-                        <span>
+                        <span className='header__menu-item--label'>
                             <img className='header__icon-text reports-icon' />
                             {it.L('Reports')}
                         </span>
@@ -79,6 +86,12 @@ const WalletHeader = () => (
                     </div>
                 </div>
                 <a className='url-wallets-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Manage funds')}</a>
+            </div>
+            <div className='header__menu-right is-logout'>
+                <div className='header__btn'>
+                    <button id='btn__login' className='btn btn--tertiary header__btn-login'>{it.L('Log in')}</button>
+                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer'>{it.L('Sign up')}</a>
+                </div>
             </div>
         </div>
         <MobileMenu />

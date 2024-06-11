@@ -11,18 +11,17 @@
     }
 
     var langs = {
-        // TODO: uncomment if we enable de again
-        // 'de': 'de|at|li',
+        // TODO: uncomment if we enable id, ko and pt languages
+        // 'id': 'id',
+        // 'ko': 'kr',
+        // 'pt': 'br|mz|ao|pt|gw|pg|cv|st',
+        'de': 'de|at|li',
         'es': 'ar|bo|cl|co|cr|cu|do|ec|sv|gt|hn|mx|ni|pa|py|pr|es|uy|ve',
         'fr': 'fr|ad|bj|bf|cf|cg|ga|gn|ml|mc|ne|sn|tg',
-        'id': 'id',
         'it': 'it',
-        'ko': 'kr',
         'pl': 'po',
-        'pt': 'br|mz|ao|pt|gw|pg|cv|st',
         'ru': 'ru|ua|by|kz',
-        // TODO: uncomment if we enable th again
-        // 'th': 'th',
+        'th': 'th',
         'vi': 'vn',
         'zh_tw': 'tw|mo',
         'zh_cn': 'cn',
@@ -44,11 +43,11 @@
     function redirect(lang) {
         var base = /^(.+?).github.io$/.test(window.location.hostname) ? window.location.origin + '/binary-static' : window.location.origin;
 
-        // TODO: REMOVE/CHANGE this after addition of DE or TH languages
-        var unsupported_languages = ['de', 'th'];
-        if (unsupported_languages.indexOf(lang.toLowerCase()) >= 0) {
+        // redirect to /en/ page if pathname contains an unsupported language:
+        const supported_langs_regex = Object.keys(langs).join('|');
+        if (new RegExp(`^/(?!${supported_langs_regex})\\w{2,5}/\\w+`).test(window.location.pathname.toLowerCase())) {
             lang = 'en';
-            window.location.href = base + '/' + lang.toLowerCase() + '/' + 'trading.html';
+            window.location.href = base + '/' + lang + '/' + 'trading.html';
             return;
         }
 

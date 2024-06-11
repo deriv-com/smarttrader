@@ -37,7 +37,10 @@ const Language = (() => {
     const languageFromUrl = (custom_url) => {
         if (url_lang && !custom_url) return url_lang;
         const url_params = (custom_url || window.location.href).split('/').slice(3);
-        const language   = (url_params.find(lang => lang_regex.test(lang)) || '');
+        let language     = (url_params.find(lang => lang_regex.test(lang)) || '');
+        if (language && !Object.keys(all_languages).includes(language.toUpperCase())) {
+            language = 'en';
+        }
         if (!custom_url) {
             url_lang = language;
         }
@@ -56,6 +59,9 @@ const Language = (() => {
                     document.body.classList.add(current_lang); // set the body class removed by crowdin code
                 }
             }
+        }
+        if (current_lang && languageFromUrl() && current_lang !== languageFromUrl()) {
+            current_lang = languageFromUrl();
         }
         current_lang = (current_lang || (languageFromUrl() || Cookies.get('language') || default_language).toUpperCase());
         return current_lang;
