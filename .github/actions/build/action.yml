@@ -8,6 +8,9 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Install dependencies
+      run: npm install
+      shell: bash
     - name: Transpile Quill UI
       run: npm run transpile
       shell: bash
