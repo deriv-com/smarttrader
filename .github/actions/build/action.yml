@@ -10,6 +10,7 @@ runs:
   steps:
     - name: Transpile Quill UI
       run: npm run transpile
+      shell: bash
     - name: Building dist for ${{ inputs.target }}
       env:
         TARGET_ENV: ${{ inputs.target }}
