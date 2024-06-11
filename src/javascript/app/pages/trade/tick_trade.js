@@ -4,6 +4,7 @@ const requireHighstock     = require('./common').requireHighstock;
 const Reset                = require('./reset');
 const getUnderlyingPipSize = require('./symbols').getUnderlyingPipSize;
 const updatePurchaseStatus = require('./update_values').updatePurchaseStatus;
+const isEmptyObject        = require('../../../_common/utility').isEmptyObject;
 const ChartSettings        = require('../../common/chart_settings');
 const addComma             = require('../../../_common/base/currency_base').addComma;
 const CommonFunctions      = require('../../../_common/common_functions');
@@ -93,7 +94,10 @@ const TickDisplay = (() => {
                 if (!CommonFunctions.isVisible(el_chart_container)) return;
                 clearTimeout(resize_timeout);
                 resize_timeout = setTimeout(() => {
-                    const { offsetWidth, offsetHeight } = el_chart_container;
+                    const { offsetWidth, offsetHeight } = el_chart_container || {};
+                    if (isEmptyObject(chart) || !offsetWidth || !offsetHeight) {
+                        return;
+                    }
                     chart.setSize(offsetWidth, offsetHeight);
                 }, 250);
             });
