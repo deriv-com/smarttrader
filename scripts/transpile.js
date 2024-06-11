@@ -3,17 +3,17 @@ const path = require('path');
 const babel = require('@babel/core');
 const ncp = require('ncp').ncp;
 const glob = require('glob');
-const fse = require('fs-extra'); // Import fs-extra
+const fse = require('fs-extra'); 
 
 const colorConsole = (message, type) => {
-    const color = '\x1b[37m'; // Default color is white for the rest of the message
-    let prefixColor = '\x1b[33m'; // Default color for the prefix 'Quill UI' is yellow
+    const color = '\x1b[37m'; 
+    let prefixColor = '\x1b[33m'; 
 
     if (type === 'error') {
-        prefixColor = '\x1b[31m'; // Change prefix color to red for error messages
+        prefixColor = '\x1b[31m'; 
     }
 
-    console.log(`${prefixColor}Quill UI:\x1b[0m ${color}${message}\x1b[0m`); // Reset color after the message
+    console.log(`${prefixColor}Quill UI:\x1b[0m ${color}${message}\x1b[0m`); 
 };
 
 const srcDir = path.resolve(__dirname, '../node_modules/@deriv-com/quill-ui');
@@ -93,9 +93,7 @@ const updatePackageJson = async () => {
         // Update the necessary fields
         packageJson.type = 'commonjs'; // Change type to commonjs
         packageJson.main = 'dist/main.js'; // Update main field if needed
-        // Add any additional fields or modifications here
-
-        // Write the updated package.json back to file
+    
         await fs.promises.writeFile(transpiledPackageJsonPath, JSON.stringify(packageJson, null, 2));
         colorConsole('Package.json updated successfully.', 'normal');
     } catch (err) {
@@ -105,10 +103,10 @@ const updatePackageJson = async () => {
 
 const main = async () => {
     try {
-        await fse.emptyDir(destDir); // Use fs-extra to empty destination directory
-        await asyncNcp(srcDir, destDir); // Copy files from source to destination
-        await transpileAndCopyFiles(srcDir, destDir); // Transpile and copy files
-        await updatePackageJson(); // Update the package.json
+        await fse.emptyDir(destDir); 
+        await asyncNcp(srcDir, destDir); 
+        await transpileAndCopyFiles(srcDir, destDir); 
+        await updatePackageJson(); 
 
         colorConsole('Transpilation and file copying completed successfully.', 'normal');
     } catch (err) {

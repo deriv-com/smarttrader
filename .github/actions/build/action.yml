@@ -8,6 +8,8 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Transpile Quill UI
+      run: npm run transpile
     - name: Building dist for ${{ inputs.target }}
       env:
         TARGET_ENV: ${{ inputs.target }}
