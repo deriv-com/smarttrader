@@ -1,5 +1,7 @@
 import React from 'react';
 import { Select } from '../../_common/components/elements.jsx';
+// eslint-disable-next-line import/no-relative-packages
+import { Button } from '../../../../dist/quill-ui';
 
 const LastDigit = () => (
     <div className='gr-parent'>
@@ -25,6 +27,7 @@ const LastDigit = () => (
                 </div>
             </div>
         </div>
+        <Button label='Quill Button' />
         <div id='last_digit_histo' className='gr-8 gr-12-m gr-centered' />
         <div id='last_digit_title' className='gr-hide'><span id='digit_domain' /> - {it.L('Last digit stats for the latest [_1] ticks on [_2]', '<span id="digit_info_count">100</span>', '<span id="digit_info_underlying" />')}</div>
     </div>

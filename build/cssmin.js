@@ -7,6 +7,7 @@ module.exports = {
             {
                 src: [
                     `${global.dist}/css/common.css`,
+                    `${global.dist}/css/quill.css`,
                     `${global.node_modules_paths.binary_style}/binary.css`,
                     `${global.node_modules_paths.binary_style}/binary.more.css`,
                 ],
