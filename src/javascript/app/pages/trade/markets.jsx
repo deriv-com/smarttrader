@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
-import { Button, Heading } from '@deriv-com/quill-ui';
+import {  Heading } from '@deriv-com/quill-ui';
 import Symbols from './symbols';
 // Should be remove in the future
 import Defaults from './defaults';
