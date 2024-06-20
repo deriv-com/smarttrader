@@ -32,10 +32,9 @@ const Crypto         = require('crypto');
 const fs             = require('fs');
 const Path           = require('path');
 const Url            = require('url');
-const { Console } = require('console');
-const Gettext        = require('./gettext');
-const js_translation = require('./js_translation');
 const common         = require('./common');
+const js_translation = require('./js_translation');
+const Gettext        = require('./gettext');
 
 program
     .version('0.2.2')
@@ -336,9 +335,6 @@ const getFilteredPages = () => {
                     console.log(color.green('  - '), p.save_as, p.section ? `(${p.section})` : '');
                 });
         }
-
-        console.log('Section');
-        console.log(sections);
 
         context_builder = await createContextBuilder(sections);
 
