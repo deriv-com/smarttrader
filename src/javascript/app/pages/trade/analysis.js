@@ -105,7 +105,7 @@ const TradingAnalysis = (() => {
 
             TabSelector.slideSelector(tab_selector_id, el_to_show);
             if (el_mobile_tab_header) {
-                el_mobile_tab_header.innerHTML = el_to_show.firstChild.innerHTML;
+                // el_mobile_tab_header.innerHTML = el_to_show.firstChild.innerHTML;
             }
         }
 
