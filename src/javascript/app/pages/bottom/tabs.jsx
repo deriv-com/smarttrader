@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
+import { useContractChange } from '../../hooks/events';
+import Defaults, { PARAM_NAMES } from '../trade/defaults';
 
 const Note = ({ children, text }) => (
     <p className='hint'><strong>Note: </strong>{text || children}</p>
@@ -335,6 +337,20 @@ const Graph = () => (
 );
 
 const BottomTabs = () => {
+    const hasContractChange = useContractChange();
+
+    useEffect(() => {
+        if (hasContractChange) {
+            const market = Defaults.get(PARAM_NAMES.MARKET);
+            const symbol = Defaults.get(PARAM_NAMES.UNDERLYING);
+
+            console.log({
+                market,
+                symbol,
+            });
+        }
+    }, [hasContractChange]);
+  
     const [selectedTab,setSelectedTab] = useState(1);
 
     useEffect(() => {
