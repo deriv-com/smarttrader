@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             ],
         },
         dist: {
-            src: `${global.dist}/css/{app,common,static}.css`,
+            src: `${global.dist}/css/{app,common,static,reset}.css`,
         },
     };
 };

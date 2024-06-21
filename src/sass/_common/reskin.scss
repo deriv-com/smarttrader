@@ -1,0 +1,19 @@
+.quill {
+    &-container {
+        &-centered {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.tab-explanation {
+    h3 {
+       font-weight: 700; 
+    }
+}
+
+.explanation-container {
+    margin-block-end: 50px;
+}

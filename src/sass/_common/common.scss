@@ -194,11 +194,6 @@ button {
     vertical-align: top;
 }
 
-button:focus, input[type='submit']:focus {
-    background: $COLOR_GREEN;
-    outline: none;
-}
-
 button::-moz-focus-inner, input[type='submit']::-moz-focus-inner {
     border: 0;
 }
@@ -1119,3 +1114,5 @@ label + input {
         font-weight: bold !important;
     }
 }
+
+
