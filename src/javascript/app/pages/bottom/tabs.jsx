@@ -79,15 +79,13 @@ const Explanation = () => {
     return (
         <div className='tab-explanation'>
             {/* ========== Winning ========== */}
-            <div id='explanation_winning'>
-                {Object.keys(contractExplanationData.winning).map((key) => (
-                    <div key={key} id={`winning_${key}`} className={form_name !== key && 'invisible'}>
-                        <h3>{localize(contractExplanationData.winning[key].title)}</h3>
-                        {contractExplanationData.winning[key].content.map((data, idx) => (
-                            <p key={idx}>{localize(data)}</p>
-                        ))}
-                    </div>
-                ))}
+            <div>
+                <div>
+                    <h3>{localize('Winning the contract')}</h3>
+                    {contractExplanationData.winning[form_name].content.map((data, idx) => (
+                        <p key={idx}>{localize(data)}</p>
+                    ))}
+                </div>
             </div>
     
             {/* ========== Image ========== */}
@@ -107,35 +105,27 @@ const Explanation = () => {
     
             {/* ========== Explain ========== */}
             <div id='explanation_explain' className='gr-child'>
-                {Object.keys(contractExplanationData.explain).map((key) => (
-                    <div key={key} id={`explain_${key}`} className={form_name !== key && 'invisible'}>
-                        <h3>{localize(contractExplanationData.explain[key].title)}</h3>
-                        {contractExplanationData.explain[key].content.map((data, idx) => (
-                            <p key={idx}>{localize(data)}</p>
-                        ))}
-                        {contractExplanationData.explain[key].title_secondary &&
-                            <h3 className='secondary-title'>{localize(contractExplanationData.explain[key].title_secondary)}</h3>}
-                        {contractExplanationData.explain[key].content_secondary &&
-                            contractExplanationData.explain[key].content_secondary.map((data, idx) => (
+                   
+                <h3>{localize(contractExplanationData.explain[form_name].title)}</h3>
+                {contractExplanationData.explain[form_name].content.map((data, idx) => (
+                    <p key={idx}>{localize(data)}</p>
+                ))}
+                {contractExplanationData.explain[form_name].title_secondary &&
+                <h3 className='secondary-title'>{localize(contractExplanationData.explain[form_name].title_secondary)}</h3>}
+                {contractExplanationData.explain[form_name].content_secondary &&
+                            contractExplanationData.explain[form_name].content_secondary.map((data, idx) => (
                                 <p key={idx}>{localize(data)}</p>
                             ))}
-                        
-                    </div>
-                ))}
+        
             </div>
           
             {/* ========== Note ========== */}
-            
-            {Object.keys(contractExplanationData.note).map((key) => (
-                <div key={key} id='explanation_note' className={form_name !== key && 'invisible gr-padding-20 gr-child' }>
-                    <p className='hint'>{contractExplanationData.note[key].content.map((data, idx) => (
-                        <p key={idx}>{localize(data)}</p>
-                    ))}
-                        
-                    </p>
-                </div>
+               
+            <p className='hint'>{contractExplanationData.note[form_name].content.map((data, idx) => (
+                <p key={idx}>{localize(data)}</p>
             ))}
-           
+                        
+            </p>
         </div>
       
     );
