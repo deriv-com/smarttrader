@@ -92,7 +92,7 @@ const Explanation = () => {
     
             {/* ========== Image ========== */}
             {images[form_name] && (
-                <div id='explanation_image' className='invisible' >
+                <div id='explanation_image'  >
                     <div className='gr-row'>
                         <div className='gr-2 hide-mobile' />
                         <div className='gr-4 gr-12-m padding-right' style={{ margin: 'auto' }}>
