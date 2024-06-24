@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import parse from 'html-react-parser';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
-import { contractExplanationData } from './explanation_data';
+import { contractExplanationData } from './explanation_data.js';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useContractChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
+import { localize } from '../../../_common/localize.js';
 
 const Explanation = () => {
     const language = Language.get();
@@ -82,9 +82,9 @@ const Explanation = () => {
             <div id='explanation_winning'>
                 {Object.keys(contractExplanationData.winning).map((key) => (
                     <div key={key} id={`winning_${key}`} className={form_name !== key && 'invisible'}>
-                        <h3>{parse(contractExplanationData.winning[key].title)}</h3>
+                        <h3>{localize(contractExplanationData.winning[key].title)}</h3>
                         {contractExplanationData.winning[key].content.map((data, idx) => (
-                            <p key={idx}>{parse(data)}</p>
+                            <p key={idx}>{localize(data)}</p>
                         ))}
                     </div>
                 ))}
@@ -109,15 +109,15 @@ const Explanation = () => {
             <div id='explanation_explain' className='gr-child'>
                 {Object.keys(contractExplanationData.explain).map((key) => (
                     <div key={key} id={`explain_${key}`} className={form_name !== key && 'invisible'}>
-                        <h3>{parse(contractExplanationData.explain[key].title)}</h3>
+                        <h3>{localize(contractExplanationData.explain[key].title)}</h3>
                         {contractExplanationData.explain[key].content.map((data, idx) => (
-                            <p key={idx}>{parse(data)}</p>
+                            <p key={idx}>{localize(data)}</p>
                         ))}
                         {contractExplanationData.explain[key].title_secondary &&
-                            <h3 className='secondary-title'>{parse(contractExplanationData.explain[key].title_secondary)}</h3>}
+                            <h3 className='secondary-title'>{localize(contractExplanationData.explain[key].title_secondary)}</h3>}
                         {contractExplanationData.explain[key].content_secondary &&
                             contractExplanationData.explain[key].content_secondary.map((data, idx) => (
-                                <p key={idx}>{parse(data)}</p>
+                                <p key={idx}>{localize(data)}</p>
                             ))}
                         
                     </div>
@@ -129,7 +129,7 @@ const Explanation = () => {
             {Object.keys(contractExplanationData.note).map((key) => (
                 <div key={key} id='explanation_note' className={form_name !== key && 'invisible gr-padding-20 gr-child' }>
                     <p className='hint'>{contractExplanationData.note[key].content.map((data, idx) => (
-                        <p key={idx}>{parse(data)}</p>
+                        <p key={idx}>{localize(data)}</p>
                     ))}
                         
                     </p>
