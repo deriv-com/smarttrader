@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import  parse  from 'html-react-parser';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { contractExplanationData } from './explanation_data.js';
 import { getElementById } from '../../../_common/common_functions';
@@ -79,50 +80,52 @@ const Explanation = () => {
     return (
         <div className='tab-explanation'>
             {/* ========== Winning ========== */}
-            <div>
-                <div>
-                    <h3>{localize('Winning the contract')}</h3>
-                    {contractExplanationData.winning[form_name].content.map((data, idx) => (
-                        <p key={idx}>{localize(data)}</p>
+            <div id='explanation_winning'>
+               
+                <h3>{parse(localize('Winning the contract'))}</h3>
+                {contractExplanationData.winning[form_name] &&
+                    contractExplanationData.winning[form_name].content?.map((data, idx) => (
+                        <p key={idx}>{parse(localize(data))}</p>
                     ))}
-                </div>
+               
             </div>
     
             {/* ========== Image ========== */}
-    
-            <div className='explanation_image'>
-                <div className='gr-row'>
-                    <div className='gr-2 hide-mobile' />
-                    <div className='gr-4 gr-12-m padding-right' style={{ margin: 'auto' }}>
-                        <img id='explanation_image_1' className='responsive' src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`} />
+            {images[form_name] && (
+                <div id='explanation_image' className='invisible' >
+                    <div className='gr-row'>
+                        <div className='gr-2 hide-mobile' />
+                        <div className='gr-4 gr-12-m padding-right' style={{ margin: 'auto' }}>
+                            <img id='explanation_image_1' className='responsive' src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`} />
+                        </div>
+                        <div className='gr-4 gr-12-m padding-left'>
+                            <img id='explanation_image_2' className='responsive' src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}  />
+                        </div>
+                        <div className='gr-2 hide-mobile' />
                     </div>
-                    <div className='gr-4 gr-12-m padding-left'>
-                        <img id='explanation_image_2' className='responsive' src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}  />
-                    </div>
-                    <div className='gr-2 hide-mobile' />
                 </div>
-            </div>
+            )}
     
             {/* ========== Explain ========== */}
             <div id='explanation_explain' className='gr-child'>
                    
                 <h3>{localize(contractExplanationData.explain[form_name].title)}</h3>
                 {contractExplanationData.explain[form_name].content.map((data, idx) => (
-                    <p key={idx}>{localize(data)}</p>
+                    <p key={idx}>{parse(localize(data))}</p>
                 ))}
                 {contractExplanationData.explain[form_name].title_secondary &&
                 <h3 className='secondary-title'>{localize(contractExplanationData.explain[form_name].title_secondary)}</h3>}
                 {contractExplanationData.explain[form_name].content_secondary &&
                             contractExplanationData.explain[form_name].content_secondary.map((data, idx) => (
-                                <p key={idx}>{localize(data)}</p>
+                                <p key={idx}>{parse(localize(data))}</p>
                             ))}
         
             </div>
           
             {/* ========== Note ========== */}
                
-            <p className='hint'>{contractExplanationData.note[form_name].content.map((data, idx) => (
-                <p key={idx}>{localize(data)}</p>
+            <p className='hint'><strong>{localize('Note: ')}</strong>{contractExplanationData.note[form_name].content.map((data, idx) => (
+                <span key={idx}>{parse(localize(data))}</span>
             ))}
                         
             </p>
