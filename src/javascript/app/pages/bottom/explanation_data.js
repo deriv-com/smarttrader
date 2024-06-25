@@ -328,9 +328,9 @@ export const contractExplanationData = {
         },
         risefall: {
             content: [
-                localize('Rise/Fall contracts will be refunded if: <br />'),
-                localize(' • There are less than 2 ticks between the start and end times <br />'),
-                localize(' • The contract doesn\'t end within 5 minutes (for tick duration contracts'),
+                `${localize('Rise/Fall contracts will be refunded if:')}  <br />`,
+                ` • ${localize('There are less than 2 ticks between the start and end times')}<br />`,
+                ` • ${localize('The contract doesn\'t end within 5 minutes (for tick duration contracts)')}`,
         
             ],
         },
