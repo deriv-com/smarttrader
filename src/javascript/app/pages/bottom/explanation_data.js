@@ -198,7 +198,7 @@ export const contractExplanationData = {
             ],
         },
         risefall: {
-            title  : 'Entry spot' ,
+            title  : localize('Entry spot') ,
             content: [
                 localize('The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.'),
                 localize('If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time.'),

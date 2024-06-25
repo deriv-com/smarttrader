@@ -1,4 +1,5 @@
 const moment   = require('moment');
+const { urlLang } = require('./language');
 require('moment/min/locales');
 const template = require('./utility').template;
 
@@ -14,6 +15,10 @@ const Localize = (() => {
         let text = txt;
 
         const index = text.replace(/[\s|.]/g, '_');
+
+        const lang = urlLang().toUpperCase();
+
+        localized_texts = texts_json[lang];
 
         text = (localized_texts && localized_texts[index]) || text;
 
