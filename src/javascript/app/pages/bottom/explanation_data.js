@@ -1,6 +1,5 @@
 import { localize } from '../../../_common/localize.js';
 
-/* eslint-disable quotes */
 export const contractExplanationData = {
     winning: {
         asian: {
@@ -40,7 +39,7 @@ export const contractExplanationData = {
             content: [
                 localize('If you select "Higher", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>.'),
                 localize('If you select "Lower", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>.'),
-                "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout.",
+                localize('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don\'t win the payout.'),
             ],
         },
         overunder: {
@@ -128,7 +127,7 @@ export const contractExplanationData = {
             content: [
                 localize('If you select "Reset-Call", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time.'),
                 localize('If you select "Reset-Put", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time.'),
-                "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout.",
+                localize('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don\'t win the payout.'),
             ],
         },
         highlowticks: {
@@ -298,43 +297,36 @@ export const contractExplanationData = {
     },
     note: {
         asian: {
-            
             content: [
                 localize('Asian contracts will be refunded at the purchase price if the contract doesn\'t end within 5 minutes.'),
             ],
         },
         digits: {
-            
             content: [
                 localize('Digit contracts will be refunded at the purchase price if the contract doesn\'t end within 5 minutes.'),
             ],
         },
         endsinout: {
-            
             content: [
                 localize('Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times.'),
             ],
         },
         evenodd: {
-            
             content: [
                 localize('Even/Odd contracts will be refunded at the purchase price if the contract doesn\'t end within 5 minutes.'),
             ],
         },
         higherlower: {
-            
             content: [
                 localize('Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times.'),
             ],
         },
         overunder: {
-            
             content: [
                 localize('Over/Under contracts will be refunded at the purchase price if the contract doesn\'t end within 5 minutes.'),
             ],
         },
         risefall: {
-            
             content: [
                 localize('Rise/Fall contracts will be refunded if: <br />'),
                 localize(' • There are less than 2 ticks between the start and end times <br />'),
@@ -343,7 +335,6 @@ export const contractExplanationData = {
             ],
         },
         staysinout: {
-            
             content: [
                 localize('Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times.'),
             ],
