@@ -17,8 +17,10 @@ const Localize = (() => {
         const index = text.replace(/[\s|.]/g, '_');
 
         const lang = urlLang().toUpperCase();
-        // eslint-disable-next-line no-undef
-        localized_texts = texts_json[lang];
+   
+        const strings = typeof texts_json !== 'undefined' ? texts_json : {};
+
+        localized_texts = strings[lang];
 
         text = (localized_texts && localized_texts[index]) || text;
 
