@@ -124,7 +124,7 @@ const Explanation = () => {
           
             {/* ========== Note ========== */}
                
-            <p className='hint'><strong>{localize('Note: ')}</strong>{contractExplanationData.note[form_name].content.map((data, idx) => (
+            <p className='hint'><strong>{localize('Note')}: </strong>{contractExplanationData.note[form_name].content.map((data, idx) => (
                 <span key={idx}>{parse(localize(data))}</span>
             ))}
                         
