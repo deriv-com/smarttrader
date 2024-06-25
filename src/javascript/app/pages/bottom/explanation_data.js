@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export const contractExplanationData = {
     winning: {
         asian: {
@@ -5,54 +6,54 @@ export const contractExplanationData = {
             content: [
                 'Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period.',
                 'Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period.',
-                'If you select "Asian Rise", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks.',
-                'If you select "Asian Fall", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks.',
+                'If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks.',
+                'If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks.',
                 'If the <strong>last tick</strong> is equal to the average of the ticks, you don\'t win the payout.',
             ],
         },
         digits: {
             
             content: [
-                'If you select "Matches", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>',
-                'If you select "Differs", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>.',
+                'If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>',
+                'If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>.',
             ],
         },
         endsinout: {
             
             content: [
-                'If you select "Ends Between", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>.',
-                'If you select "Ends Outside", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>.',
+                'If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>.',
+                'If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>.',
                 'If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don\'t win the payout.',
             ],
         },
         evenodd: {
             
             content: [
-                'If you select "Even", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>',
-                'If you select "Odd", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>',
+                'If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>',
+                'If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>',
             ],
         },
         higherlower: {
             
             content: [
-                'If you select "Higher", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>.',
-                'If you select "Lower", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>.',
-                'If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don\'t win the payout.',
+                'If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>.',
+                'If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>.',
+                "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout.",
             ],
         },
         overunder: {
             
             content: [
-                'If you select "Over", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>',
-                'If you select "Under", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>',
+                'If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>',
+                'If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>',
             ],
         },
         risefall: {
             
             content: [
-                'If you select "Rise", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>.',
-                'If you select "Fall", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>.',
-                'If you select "Allow equals", you win the payout if exit spot is higher than or equal to entry spot for "Rise". Similarly, you win the payout if exit spot is lower than or equal to entry spot for "Fall".',
+                'If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>.',
+                'If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>.',
+                'If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\".',
             ],
         },
         runbet_lucky10: {
@@ -70,76 +71,76 @@ export const contractExplanationData = {
         runbet_updown: {
             
             content: [
-                'If you select "rises", you win the payout if the market price is higher than the <strong>entry spot</strong>.',
-                'If you select "falls", you win the payout if the market price is lower than the <strong>entry spot</strong>.',
+                'If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>.',
+                'If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>.',
             ],
         },
         staysinout: {
             
             content: [
-                'If you select "Stays Between", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>.',
-                'If you select "Goes Outside", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>.',
+                'If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>.',
+                'If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>.',
             ],
         },
         ticks: {
             
             content: [
-                'If you select "Rises", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>.',
-                'If you select "Falls", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>.',
+                'If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>.',
+                'If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>.',
             ],
         },
         touchnotouch: {
             
             content: [
-                'If you select "Touches", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>.',
-                'If you select "Does Not Touch", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>.',
+                'If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>.',
+                'If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>.',
             ],
         },
         updown: {
             
             content: [
-                'If you select "rises", you win the payout if the market price is higher than the entry spot.',
-                'If you select "falls", you win the payout if the market price is lower than the entry spot.',
+                'If you select \"rises\", you win the payout if the market price is higher than the entry spot.',
+                'If you select \"falls\", you win the payout if the market price is lower than the entry spot.',
             ],
         },
         lookbacklow: {
             title  : 'Pay-out',
             content: [
-                'By purchasing the <strong>"Close-Low"</strong> contract, you\'ll win the multiplier times the difference between the <strong>close</strong> and <strong>low</strong> over the duration of the contract.',
+                'By purchasing the <strong>\"Close-Low\"</strong> contract, you\'ll win the multiplier times the difference between the <strong>close</strong> and <strong>low</strong> over the duration of the contract.',
             ],
         },
         lookbackhigh: {
             title  : 'Pay-out',
             content: [
-                'By purchasing the <strong>"High-Close"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>close</strong> over the duration of the contract.',
+                'By purchasing the <strong>\"High-Close\"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>close</strong> over the duration of the contract.',
             ],
         },
         lookbackhighlow: {
             title  : 'Pay-out',
             content: [
-                'By purchasing the <strong>"High-Low"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>low</strong> over the duration of the contract.',
+                'By purchasing the <strong>\"High-Low\"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>low</strong> over the duration of the contract.',
             ],
         },
         reset: {
             
             content: [
-                'If you select "Reset-Call", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time.',
-                'If you select "Reset-Put", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time.',
-                'If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don\'t win the payout.',
+                'If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time.',
+                'If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time.',
+                "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout.",
             ],
         },
         highlowticks: {
             
             content: [
-                'If you select <strong>"High Tick"</strong>, you win the payout if the selected tick is the <strong>highest among the next five ticks</strong>.',
-                'If you select <strong>"Low Tick"</strong>, you win the payout if the selected tick is the <strong>lowest among the next five ticks</strong>.',
+                'If you select <strong>\"High Tick\"</strong>, you win the payout if the selected tick is the <strong>highest among the next five ticks</strong>.',
+                'If you select <strong>\"Low Tick\"</strong>, you win the payout if the selected tick is the <strong>lowest among the next five ticks</strong>.',
             ],
         },
         runs: {
             
             content: [
-                'If you select <strong>"Only Ups"</strong>, you win the payout if consecutive ticks rise successively after the <strong>entry spot</strong>.<br />No payout if any tick falls or is equal to any of the previous ticks.',
-                'If you select <strong>"Only Downs"</strong>, you win the payout if consecutive ticks fall successively after the <strong>entry spot</strong>.<br />No payout if any tick rises or is equal to any of the previous ticks.',
+                'If you select <strong>\"Only Ups\"</strong>, you win the payout if consecutive ticks rise successively after the <strong>entry spot</strong>.<br />No payout if any tick falls or is equal to any of the previous ticks.',
+                'If you select <strong>\"Only Downs\"</strong>, you win the payout if consecutive ticks fall successively after the <strong>entry spot</strong>.<br />No payout if any tick rises or is equal to any of the previous ticks.',
             ],
         },
     },
@@ -203,7 +204,7 @@ export const contractExplanationData = {
             title_secondary  : 'Exit spot',
             content_secondary: [
                 'The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>.',
-                'If you select a <strong>start time</strong> of "Now", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).',
+                'If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).',
                 'If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.',
             ],
         },
