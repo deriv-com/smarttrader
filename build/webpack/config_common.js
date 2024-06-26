@@ -62,6 +62,10 @@ const commonConfig = (grunt) => ({
                     },
                 ],
             },
+            {
+                test: /\.css$/,
+                use : ['style-loader', 'css-loader'],
+            },
         ],
     },
     watch       : false,

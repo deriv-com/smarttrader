@@ -12,6 +12,7 @@ module.exports = {
                 ],
                 dest: `${global.dist}/css/common.min.css`,
             },
+            { src: `${global.dist}/css/reset.css`,                              dest: `${global.dist}/css/reset.min.css` },
             { src: `${global.dist}/css/app.css`,                                dest: `${global.dist}/css/app.min.css` },
             { src: `${global.dist}/css/static.css`,                             dest: `${global.dist}/css/static.min.css` },
         ],

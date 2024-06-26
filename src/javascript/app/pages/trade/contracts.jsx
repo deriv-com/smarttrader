@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Defaults from './defaults';
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
+import { triggerContractChange } from '../../hooks/events';
 
 class Contracts extends React.Component {
     constructor (props) {
@@ -100,6 +101,8 @@ class Contracts extends React.Component {
         this.el_contract.dispatchEvent(event);
 
         this.setState({ formname });
+
+        triggerContractChange();
     };
 
     /* eslint-enable no-undef */
