@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 import { contractExplanationData } from './data/explanation.js';
-import { useContractChange } from '../../hooks/events';
+import { useContractChange, useMarketChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
@@ -13,6 +13,7 @@ export const Explanation = () => {
     const [formName,setFormName] = useState('');
 
     const hasContractChanges = useContractChange();
+    const hasMarketChange = useMarketChange();
 
     useEffect(() => {
         const contractObject = {
@@ -26,7 +27,7 @@ export const Explanation = () => {
        
         setFormName(finalFormName);
        
-    },[hasContractChanges]);
+    },[hasContractChanges, hasMarketChange]);
 
     const image_path = Url.urlForStatic(
         `images/pages/trade-explanation/${language}/`
