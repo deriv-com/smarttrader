@@ -34,7 +34,7 @@ const TradingAnalysis = (() => {
         form_name     = map_obj[form_name] || form_name;
 
         $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(form_name));
-        sessionStorage.setItem('currentAnalysisTab', getActiveTab());
+       
         loadAnalysisTab();
     };
 
@@ -105,7 +105,7 @@ const TradingAnalysis = (() => {
 
             TabSelector.slideSelector(tab_selector_id, el_to_show);
             if (el_mobile_tab_header) {
-                el_mobile_tab_header.innerHTML = el_to_show.firstChild.innerHTML;
+                // el_mobile_tab_header.innerHTML = el_to_show.firstChild.innerHTML;
             }
         }
 
