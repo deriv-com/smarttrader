@@ -6,7 +6,7 @@ import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { contractExplanationData } from './explanation_data.js';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
-import { useMarketChange } from '../../hooks/events';
+import { useContractChange, useMarketChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
@@ -14,14 +14,24 @@ import { localize } from '../../../_common/localize.js';
 
 const Explanation = () => {
     const language = Language.get();
-    let form_name;
-    form_name = Defaults.get(PARAM_NAMES.FORM_NAME) || 'risefall';
-    const map_obj = {
-        matchdiff   : 'digits',
-        callputequal: 'risefall',
-        callput     : 'higherlower',
-    };
-    form_name = map_obj[form_name] || form_name;
+   
+    const [formName,setFormName] = useState('');
+
+    const hasContractChanges = useContractChange();
+
+    useEffect(() => {
+        const contractObject = {
+            matchdiff   : 'digits',
+            callputequal: 'risefall',
+            callput     : 'higherlower',
+        };
+
+        const newFormName = Defaults.get(PARAM_NAMES.FORM_NAME) || 'risefall';
+        const finalFormName =  contractObject[newFormName] || newFormName;
+       
+        setFormName(finalFormName);
+       
+    },[hasContractChanges]);
 
     const image_path = Url.urlForStatic(
         `images/pages/trade-explanation/${language}/`
@@ -83,79 +93,83 @@ const Explanation = () => {
         },
     };
 
-    return (
-        <div className='tab-explanation'>
-            {/* ========== Winning ========== */}
-            <div id='explanation_winning'>
-                <div id={`winning_${form_name}`}>
-                    <h3>{localize('Winning the contract')}</h3>
-                    {contractExplanationData.winning[form_name].content.map(
-                        (data, idx) => (
-                            <p key={idx}>{parse(data)}</p>
-                        )
-                    )}
-                </div>
-            </div>
-
-            {/* ========== Image ========== */}
-            {images[form_name] && (
-                <div id='explanation_image'>
-                    <div className='gr-row'>
-                        <div className='gr-2 hide-mobile' />
-                        <div
-                            className='gr-4 gr-12-m padding-right'
-                            style={{ margin: 'auto' }}
-                        >
-                            <img
-                                id='explanation_image_1'
-                                className='responsive'
-                                src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`}
-                            />
-                        </div>
-                        <div className='gr-4 gr-12-m padding-left'>
-                            <img
-                                id='explanation_image_2'
-                                className='responsive'
-                                src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}
-                            />
-                        </div>
-                        <div className='gr-2 hide-mobile' />
+    if (formName){
+        return (
+            <div className='tab-explanation'>
+                {/* ========== Winning ========== */}
+                <div id='explanation_winning'>
+                    <div id={`winning_${formName}`}>
+                        <h3>{localize('Winning the contract')}</h3>
+                        {contractExplanationData.winning[formName].content.map(
+                            (data, idx) => (
+                                <p key={idx}>{parse(data)}</p>
+                            )
+                        )}
                     </div>
                 </div>
-            )}
 
-            {/* ========== Explain ========== */}
-            <div id='explanation_explain' className='gr-child'>
-                <div id={`explain_${form_name}`}>
-                    <h3>{contractExplanationData.explain[form_name].title}</h3>
-                    {contractExplanationData.explain[form_name].content.map(
-                        (data, idx) => (
-                            <p key={idx}>{parse(data)}</p>
-                        )
-                    )}
-                    {contractExplanationData.explain[form_name].title_secondary && (
-                        <h3 className='secondary-title'>
-                            {contractExplanationData.explain[form_name].title_secondary}
-                        </h3>
-                    )}
-                    {contractExplanationData.explain[form_name].content_secondary &&
-            contractExplanationData.explain[form_name].content_secondary.map(
+                {/* ========== Image ========== */}
+                {images[formName] && (
+                    <div id='explanation_image'>
+                        <div className='gr-row'>
+                            <div className='gr-2 hide-mobile' />
+                            <div
+                                className='gr-4 gr-12-m padding-right'
+                                style={{ margin: 'auto' }}
+                            >
+                                <img
+                                    id='explanation_image_1'
+                                    className='responsive'
+                                    src={`${image_path}${images[formName].image1}?${process.env.BUILD_HASH}`}
+                                />
+                            </div>
+                            <div className='gr-4 gr-12-m padding-left'>
+                                <img
+                                    id='explanation_image_2'
+                                    className='responsive'
+                                    src={`${image_path}${images[formName].image2}?${process.env.BUILD_HASH}`}
+                                />
+                            </div>
+                            <div className='gr-2 hide-mobile' />
+                        </div>
+                    </div>
+                )}
+
+                {/* ========== Explain ========== */}
+                <div id='explanation_explain' className='gr-child'>
+                    <div id={`explain_${formName}`}>
+                        <h3>{contractExplanationData.explain[formName].title}</h3>
+                        {contractExplanationData.explain[formName].content.map(
+                            (data, idx) => (
+                                <p key={idx}>{parse(data)}</p>
+                            )
+                        )}
+                        {contractExplanationData.explain[formName].title_secondary && (
+                            <h3 className='secondary-title'>
+                                {contractExplanationData.explain[formName].title_secondary}
+                            </h3>
+                        )}
+                        {contractExplanationData.explain[formName].content_secondary &&
+            contractExplanationData.explain[formName].content_secondary.map(
                 (data, idx) => <p key={idx}>{parse(data)}</p>
             )}
+                    </div>
                 </div>
-            </div>
 
-            {/* ========== Note ========== */}
-            {contractExplanationData.note[form_name] && (
-                <p className='hint'>
-                    <strong>{localize('Note')}: </strong>
-                    {contractExplanationData.note[form_name].content.map((data, idx) => (
-                        <span key={idx}>{parse(data)}</span>
-                    ))}
-                </p>
-            )}
-        </div>
-    );
+                {/* ========== Note ========== */}
+                {contractExplanationData.note[formName] && (
+                    <p className='hint'>
+                        <strong>{localize('Note')}: </strong>
+                        {contractExplanationData.note[formName].content.map((data, idx) => (
+                            <span key={idx}>{parse(data)}</span>
+                        ))}
+                    </p>
+                )}
+            </div>
+        );
+    }
+
+    return <></>;
 };
 
 const Graph = () => (
