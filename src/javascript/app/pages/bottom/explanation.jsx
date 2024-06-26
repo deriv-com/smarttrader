@@ -12,7 +12,7 @@ export const Explanation = () => {
    
     const [formName,setFormName] = useState('');
 
-    const hasContractChanges = useContractChange();
+    const hasContractChange = useContractChange();
     const hasMarketChange = useMarketChange();
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export const Explanation = () => {
        
         setFormName(finalFormName);
        
-    },[hasContractChanges, hasMarketChange]);
+    },[hasContractChange, hasMarketChange]);
 
     const image_path = Url.urlForStatic(
         `images/pages/trade-explanation/${language}/`
