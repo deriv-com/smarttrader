@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import  parse  from 'html-react-parser';
+import parse from 'html-react-parser';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { contractExplanationData } from './explanation_data.js';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
-import { useContractChange } from '../../hooks/events';
+import { useMarketChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
@@ -16,11 +16,17 @@ const Explanation = () => {
     const language = Language.get();
     let form_name;
     form_name = Defaults.get(PARAM_NAMES.FORM_NAME) || 'risefall';
-    const map_obj = { matchdiff: 'digits', callputequal: 'risefall', callput: 'higherlower' };
+    const map_obj = {
+        matchdiff   : 'digits',
+        callputequal: 'risefall',
+        callput     : 'higherlower',
+    };
     form_name = map_obj[form_name] || form_name;
 
-    const image_path = Url.urlForStatic(`images/pages/trade-explanation/${language}/`);
-   
+    const image_path = Url.urlForStatic(
+        `images/pages/trade-explanation/${language}/`
+    );
+
     const images = {
         risefall: {
             image1: 'rises.svg',
@@ -76,67 +82,79 @@ const Explanation = () => {
             image2: 'only-downs.svg',
         },
     };
-    
+
     return (
         <div className='tab-explanation'>
             {/* ========== Winning ========== */}
             <div id='explanation_winning'>
                 <div id={`winning_${form_name}`}>
                     <h3>{localize('Winning the contract')}</h3>
-                    {contractExplanationData.winning[form_name].content.map((data, idx) => (
-                        <p key={idx}>{parse(data)}</p>
-                    ))}
-                    
+                    {contractExplanationData.winning[form_name].content.map(
+                        (data, idx) => (
+                            <p key={idx}>{parse(data)}</p>
+                        )
+                    )}
                 </div>
-           
             </div>
-    
+
             {/* ========== Image ========== */}
             {images[form_name] && (
-                <div id='explanation_image'  >
+                <div id='explanation_image'>
                     <div className='gr-row'>
                         <div className='gr-2 hide-mobile' />
-                        <div className='gr-4 gr-12-m padding-right' style={{ margin: 'auto' }}>
-                            <img id='explanation_image_1' className='responsive' src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`} />
+                        <div
+                            className='gr-4 gr-12-m padding-right'
+                            style={{ margin: 'auto' }}
+                        >
+                            <img
+                                id='explanation_image_1'
+                                className='responsive'
+                                src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`}
+                            />
                         </div>
                         <div className='gr-4 gr-12-m padding-left'>
-                            <img id='explanation_image_2' className='responsive' src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}  />
+                            <img
+                                id='explanation_image_2'
+                                className='responsive'
+                                src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}
+                            />
                         </div>
                         <div className='gr-2 hide-mobile' />
                     </div>
                 </div>
             )}
-    
+
             {/* ========== Explain ========== */}
             <div id='explanation_explain' className='gr-child'>
-                
                 <div id={`explain_${form_name}`}>
-                    <h3>{(contractExplanationData.explain[form_name].title)}</h3>
-                    {contractExplanationData.explain[form_name].content.map((data, idx) => (
-                        <p key={idx}>{parse(data)}</p>
-                    ))}
-                    {contractExplanationData.explain[form_name].title_secondary &&
-                    <h3 className='secondary-title'>{(contractExplanationData.explain[form_name].title_secondary)}</h3>}
+                    <h3>{contractExplanationData.explain[form_name].title}</h3>
+                    {contractExplanationData.explain[form_name].content.map(
+                        (data, idx) => (
+                            <p key={idx}>{parse(data)}</p>
+                        )
+                    )}
+                    {contractExplanationData.explain[form_name].title_secondary && (
+                        <h3 className='secondary-title'>
+                            {contractExplanationData.explain[form_name].title_secondary}
+                        </h3>
+                    )}
                     {contractExplanationData.explain[form_name].content_secondary &&
-                            contractExplanationData.explain[form_name].content_secondary.map((data, idx) => (
-                                <p key={idx}>{parse(data)}</p>
-                            ))}
-                        
+            contractExplanationData.explain[form_name].content_secondary.map(
+                (data, idx) => <p key={idx}>{parse(data)}</p>
+            )}
                 </div>
-              
             </div>
-          
+
             {/* ========== Note ========== */}
             {contractExplanationData.note[form_name] && (
-                <p className='hint'><strong>{localize('Note')}: </strong>{contractExplanationData.note[form_name].content.map((data, idx) => (
-                    <span key={idx}>{parse((data))}</span>
-                ))}
-            
+                <p className='hint'>
+                    <strong>{localize('Note')}: </strong>
+                    {contractExplanationData.note[form_name].content.map((data, idx) => (
+                        <span key={idx}>{parse(data)}</span>
+                    ))}
                 </p>
             )}
-           
         </div>
-      
     );
 };
 
@@ -150,45 +168,58 @@ const Graph = () => (
 );
 
 const BottomTabs = () => {
-    const hasContractChange = useContractChange();
+    const hasMarketChange = useMarketChange();
+    const [selectedTab, setSelectedTab] = useState(1);
+    const [showGraph, setShowGraph] = useState(true);
 
-    useEffect(() => {
-       
-    }, [hasContractChange]);
-  
-    const [selectedTab,setSelectedTab] = useState(1);
-
-    useEffect(() => {
-        if (selectedTab === 0){
-            WebtraderChart.showChart();
-        } else {
+    const renderGraph = (callback) => {
+        setTimeout(() => {
             WebtraderChart.cleanupChart();
+            WebtraderChart.showChart();
+
+            if (typeof callback === 'function') {
+                callback();
+            }
+        }, 100);
+    };
+
+    const resetGraph = () => {
+        setShowGraph(false);
+
+        renderGraph(() => {
+            setShowGraph(true);
+        });
+    };
+
+    useEffect(() => {
+        resetGraph();
+    }, [hasMarketChange]);
+
+    useEffect(() => {
+        if (selectedTab === 0) {
+            renderGraph();
         }
-    },[selectedTab]);
+    }, [selectedTab]);
+
     return (
         <>
             <div className='quill-container-centered'>
                 <SegmentedControlSingleChoice
-                    options={[
-                        { label: 'Chart' },
-                        { label: 'Explanation' },
-                    ]}
+                    options={[{ label: 'Chart' }, { label: 'Explanation' }]}
                     selectedItemIndex={selectedTab}
-                    onChange={e => setSelectedTab(e)}
+                    onChange={(e) => setSelectedTab(e)}
                 />
             </div>
 
-            {selectedTab === 0 && (
-                <Graph />
-            )}
+            {selectedTab === 0 && showGraph && <Graph />}
 
             {selectedTab === 1 && (
                 <div className='explanation-container'>
                     <Explanation />
                 </div>
             )}
-        </>);
-   
+        </>
+    );
 };
 
 export const init = () => {

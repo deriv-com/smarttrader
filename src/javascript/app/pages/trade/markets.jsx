@@ -8,6 +8,7 @@ import { sortSubmarket, getAvailableUnderlyings } from '../../common/active_symb
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
 import { isMobile } from '../../../_common/os_detect';
+import { triggerMarketChange } from '../../hooks/events';
 
 function scrollToPosition (element, to, duration) {
     const requestAnimationFrame = window.requestAnimationFrame ||
@@ -305,6 +306,8 @@ class Markets extends React.Component {
         this.closeDropdown();
         /* Todo add notification for closed markets */
         // Notifications.show({ text: localize('All markets are closed now. Please try again later.'), uid: 'MARKETS_CLOSED' });
+
+        triggerMarketChange();
 
     };
 
