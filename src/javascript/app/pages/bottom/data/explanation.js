@@ -1,4 +1,4 @@
-import { localize } from '../../../_common/localize.js';
+import { localize } from '../../../../_common/localize.js';
 
 export const contractExplanationData = {
     winning: {

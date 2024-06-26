@@ -4,6 +4,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            padding-block: 20px;
         }
     }
 }
@@ -25,6 +26,10 @@
 
 .hint {
     line-height: 22px;
+}
+
+.chart-section {
+    padding-block: 32px;
 }
 
 .explanation-container {

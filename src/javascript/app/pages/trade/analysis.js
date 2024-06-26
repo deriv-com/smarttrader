@@ -34,7 +34,7 @@ const TradingAnalysis = (() => {
         form_name     = map_obj[form_name] || form_name;
 
         $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(form_name));
-        sessionStorage.setItem('currentAnalysisTab', getActiveTab());
+       
         loadAnalysisTab();
     };
 
