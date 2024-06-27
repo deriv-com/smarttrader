@@ -260,14 +260,6 @@ const Header = (() => {
                 icon     : getPlatformSettings('smarttrader').icon,
                 on_mobile: true,
             },
-            ...(should_show_bots ? {
-                binarybot: {
-                    desc     : localize('Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'),
-                    link     : `https://bot.deriv.${getTopLevelDomain()}`,
-                    icon     : getPlatformSettings('bbot').icon,
-                    on_mobile: true,
-                },
-            } : {}),
         };
 
         Object.keys(platforms).forEach(key => {

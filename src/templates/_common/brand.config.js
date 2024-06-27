@@ -13,10 +13,6 @@ const brand_config_data = {
             name: 'DBot',
             icon: 'ic-brand-dbot.svg',
         },
-        bbot: {
-            name: 'Binary Bot',
-            icon: 'ic-brand-binarybot.svg',
-        },
     },
 };
 
