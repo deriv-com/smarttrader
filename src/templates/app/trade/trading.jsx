@@ -22,6 +22,7 @@ const Trading = () => (
                     <span id='spot' />
                 </div>
             </div>
+            <div id='contract_forms_wrapper' />
             <div className='row clear' id='contract_form_content_wrapper'>
                 <div className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
                     <div id='contract_container' className='col row'>
