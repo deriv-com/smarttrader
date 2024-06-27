@@ -11,13 +11,12 @@
 
 .tab-explanation {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     gap: 40px;
 
     h3 {
-       font-weight: 700; 
+        font-weight: 700;
     }
-    
 }
 
 .secondary-title {
@@ -35,4 +34,33 @@
 .explanation-container {
     margin-block-end: 50px;
     padding-block: 20px;
+}
+
+.form_container {
+    display: flex;
+    width: 612px;
+    position: relative;
+    z-index: 99;
+    padding: var(--semantic-spacing-general-md);
+
+    .form_rows {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .row {
+        padding-block: 0;
+
+        .form_field {
+            flex: 1;
+        }
+    }
+    .gap-8 {
+        gap: 8px;
+    }
+}
+
+.deriv-dropdown__menu--open {
+    position: relative;
+    z-index: 99;
 }

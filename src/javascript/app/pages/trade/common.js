@@ -4,6 +4,7 @@ const Tick             = require('./tick');
 const contractsElement = require('./contracts.jsx');
 const marketsElement   = require('./markets.jsx');
 const TabsElement      = require('../bottom/tabs.jsx');
+const FormsElement     = require('../form/contract_form_wrapper.jsx');
 const formatMoney      = require('../../common/currency').formatMoney;
 const ActiveSymbols    = require('../../common/active_symbols');
 const elementInnerHtml = require('../../../_common/common_functions').elementInnerHtml;
@@ -59,7 +60,7 @@ const commonTrading = (() => {
 
     const displayMarkets = () => {
         marketsElement.init();
-
+        FormsElement.init();
         // All other Quill refactored components
         TabsElement.init();
     };
