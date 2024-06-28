@@ -131,7 +131,6 @@ class Markets extends React.Component {
 
         this.underlyings = Symbols.getAllSymbols() || {};
         let underlying_symbol = Defaults.get(UNDERLYING);
-       
         if (!underlying_symbol || !this.underlyings[underlying_symbol]) {
             const submarket = Object.keys(this.markets[market_symbol].submarkets).sort(sortSubmarket)[0];
             underlying_symbol = Object.keys(this.markets[market_symbol].submarkets[submarket].symbols).sort()[0];
