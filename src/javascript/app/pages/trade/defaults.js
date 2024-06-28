@@ -44,12 +44,14 @@ const Defaults = (() => {
     const getDefault = (key) => {
         const p_value = params[key] || Url.param(key);
         const s_value = sessionStorage.getItem(key);
+
         if (p_value && (!s_value || p_value !== s_value)) {
             sessionStorage.setItem(key, p_value);
         }
         if (!p_value && s_value) {
             setDefault(key, s_value);
         }
+        
         return p_value || s_value;
     };
 

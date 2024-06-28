@@ -11,13 +11,13 @@
 
 .tab-explanation {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     gap: 40px;
 
     h3 {
-       font-weight: 700; 
+        font-weight: 700;
     }
-    
+
 }
 
 .secondary-title {
@@ -30,6 +30,40 @@
 
 .chart-section {
     padding-block: 32px;
+}
+
+
+.quill-market-dropdown {
+    &-container {
+        width: 360px;
+        padding-top: 8px;
+        background: var(--core-color-solid-slate-50);
+        margin: 10px 0px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.04)
+    }
+    &-search-container {
+        padding: var(--core-spacing-400) var(--core-spacing-800);
+    }
+    &-tab-container {
+        .tab-list--item-hug-content {
+            height: 48px; // Needs to be fixed from Quill side. 
+        }
+    }
+    &-item-container {
+        height: 500px;
+        overflow-y: auto;
+        padding: 0 var(--core-spacing-400);
+
+        .market-item-heading {
+            position: sticky;
+            top: 0px;
+            background: var(--core-color-solid-slate-50);
+            padding: var(--core-spacing-200) 0;
+        }
+    }
+
+
 }
 
 .explanation-container {
