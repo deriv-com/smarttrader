@@ -97,6 +97,8 @@ const Process = (() => {
         const underlying_element = document.getElementById('underlying');
         const underlying = underlying_element.value;
       
+        Defaults.set(UNDERLYING, underlying);
+        
         commonTrading.showFormOverlay();
 
         // get ticks for current underlying
