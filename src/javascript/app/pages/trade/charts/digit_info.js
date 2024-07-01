@@ -246,6 +246,10 @@ const DigitInfo = (() => {
     };
 
     const updateChart = async (tick) => {
+        if (typeof chart === 'undefined') {
+            return;
+        }
+        
         const decimal_places = await Symbols.getUnderlyingPipSize(tick.tick.symbol);
         if (stream_id) {
             if (chart.series[0].name === tick.tick.symbol) {

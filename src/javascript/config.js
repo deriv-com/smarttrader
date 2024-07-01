@@ -106,7 +106,8 @@ const getSocketURL = () => {
 
         const loginid       = window.localStorage.getItem('active_loginid');
         const is_real       = loginid && !/^VRT/.test(loginid);
-        const server        = isProduction() && is_real ? 'green' : 'red';
+        const real_server   = is_real ? 'green' : 'blue';
+        const server        = isProduction() ? real_server : 'red';
 
         server_url = `${server}.derivws.com`;
     }
