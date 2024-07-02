@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { DropdownItem, SearchField, Tab, Text } from '@deriv-com/quill-ui';
+import { CustomDropdown, DropdownItem, SearchField, Tab, Text, useDropdown } from '@deriv-com/quill-ui';
 import { getElementById } from '../../../../_common/common_functions';
 import Symbols from '../symbols';
 import {
@@ -11,7 +11,7 @@ import {
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { triggerMarketChange } from '../../../hooks/events';
 
-const MarketsDropdown = () => {
+const MarketsContent = () => {
     const { UNDERLYING } = PARAM_NAMES;
     const [defaultMarkets, setDefaultMarkets] = useState({});
     const [markets, setMarkets] = useState({});
@@ -23,6 +23,8 @@ const MarketsDropdown = () => {
     const [searchKey, setSearchKey] = useState('');
     const itemsContainer = useRef(null);
     const isScrolling = useRef(false);
+
+    const { close, setSelectedValue } = useDropdown();
 
     const filterMarkets = () => {
         const data = JSON.parse(JSON.stringify(defaultMarkets));
@@ -143,6 +145,9 @@ const MarketsDropdown = () => {
     const handleUnderlyingClick = (underlying) => {
         Defaults.set(UNDERLYING, underlying);
         setSelectedMarket(underlying);
+        setSelectedValue(underlying);
+        close();
+        
         triggerMarketChange();
     };
 
@@ -223,6 +228,12 @@ const MarketsDropdown = () => {
         </div>
     );
 };
+
+const MarketsDropdown = () => (
+    <CustomDropdown placeholder='Choose your market'>
+        <MarketsContent />
+    </CustomDropdown>
+);
 
 export const init = () => {
     ReactDOM.render(
