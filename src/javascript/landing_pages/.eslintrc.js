@@ -7,5 +7,5 @@ module.exports = {
         toggleMobileMenu: false,
         wsConnect       : false,
         wsSend          : false,
-    }
+    },
 };

@@ -8,6 +8,7 @@ const Trading = () => (
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
             <div id='guideBtn' />
+            <div id='markets-dropdown-container' />
             <div className='row' id='contract_symbol_container'>
                 <div id='contract_markets_container'>
                     <div id='underlying_component' />
