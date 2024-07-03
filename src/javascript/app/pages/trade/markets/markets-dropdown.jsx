@@ -1,17 +1,44 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ReactDOM from 'react-dom';
-import { DropdownItem, SearchField, Tab, Text } from '@deriv-com/quill-ui';
+import {
+    DropdownItem,
+    SearchField,
+    Tab,
+    DropdownTitle,
+    Divider,
+    useDropdown,
+} from '@deriv-com/quill-ui';
 import { getElementById } from '../../../../_common/common_functions';
 import Symbols from '../symbols';
-import {
+import ActiveSymbols, {
     marketOrder,
     sortObjectByKeys,
     derived,
 } from '../../../common/active_symbols';
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { triggerMarketChange } from '../../../hooks/events';
+import { localize } from '../../../../_common/localize';
 
-const MarketsDropdown = () => {
+export const getMarketName = () => {
+    const obj =  ActiveSymbols.getMarkets();
+    const symbolKey = Defaults.get(PARAM_NAMES.UNDERLYING);
+    
+    // Find the market and submarket where the symbolKey exists
+    const marketKey = Object.keys(obj).find(market =>
+        Object.keys(obj[market].submarkets).some(submarket =>
+            obj[market].submarkets[submarket].symbols?.[symbolKey]
+        )
+    );
+
+    // Return the display value if found
+    const displayValue = obj[marketKey]?.submarkets?.[Object.keys(obj[marketKey].submarkets).find(submarket =>
+        obj[marketKey].submarkets[submarket].symbols?.[symbolKey]
+    )]?.symbols[symbolKey]?.display;
+
+    return displayValue || null;
+
+};
+
+export const MarketsDropdown = () => {
     const { UNDERLYING } = PARAM_NAMES;
     const [defaultMarkets, setDefaultMarkets] = useState({});
     const [markets, setMarkets] = useState({});
@@ -23,25 +50,28 @@ const MarketsDropdown = () => {
     const [searchKey, setSearchKey] = useState('');
     const itemsContainer = useRef(null);
     const isScrolling = useRef(false);
+    const underlyings = Symbols.getAllSymbols() || {};
+
+    const { close: closeMarketDropdown } = useDropdown();
 
     const filterMarkets = () => {
         const data = JSON.parse(JSON.stringify(defaultMarkets));
         const searchStr = searchKey?.toLowerCase();
         let foundMatchingSymbol = false;
 
-        Object.keys(data).forEach(marketKey => {
+        Object.keys(data).forEach((marketKey) => {
             const market = data[marketKey];
 
-            Object.keys(market.submarkets).forEach(submarketKey => {
+            Object.keys(market.submarkets).forEach((submarketKey) => {
                 const submarket = market.submarkets[submarketKey];
                 const subMarketName = submarket.name.toLowerCase();
 
                 // If submarket name matches to search key then don't filter children
-                if (!subMarketName.includes(searchStr)){
-                    Object.keys(submarket.symbols).forEach(symbolKey => {
+                if (!subMarketName.includes(searchStr)) {
+                    Object.keys(submarket.symbols).forEach((symbolKey) => {
                         const symbol = submarket.symbols[symbolKey];
                         const displayName = symbol.display.toLowerCase();
-                    
+
                         if (!displayName.includes(searchStr)) {
                             delete submarket.symbols[symbolKey];
                         } else {
@@ -56,23 +86,23 @@ const MarketsDropdown = () => {
                     delete market.submarkets[submarketKey];
                 }
             });
-           
+
             if (Object.keys(market.submarkets).length === 0) {
                 delete data[marketKey];
             }
         });
-    
+
         // If no matching symbols were found, return the original markets object
         if (!foundMatchingSymbol) {
             return defaultMarkets;
         }
-    
+
         return data;
     };
 
     useEffect(() => {
         setMarkets(filterMarkets());
-    },[searchKey]);
+    }, [searchKey]);
 
     useEffect(() => {
         const marketList = Symbols.markets();
@@ -92,7 +122,7 @@ const MarketsDropdown = () => {
             let closestOffset = Infinity;
 
             marketDivs.forEach((div) => {
-                const paddingOffset = 110;
+                const paddingOffset = 120;
                 const offsetTop = div.offsetTop - container.scrollTop - paddingOffset;
 
                 if (offsetTop <= 0 && Math.abs(offsetTop) < Math.abs(closestOffset)) {
@@ -144,6 +174,15 @@ const MarketsDropdown = () => {
         Defaults.set(UNDERLYING, underlying);
         setSelectedMarket(underlying);
         triggerMarketChange();
+
+        // Old Trigger
+        const underlyingElement = getElementById('underlying');
+        const event = new Event('change');
+        underlyingElement.value = underlying;
+        underlyingElement.setAttribute('data-text', underlyings[underlying]);
+        underlyingElement.dispatchEvent(event);
+
+        closeMarketDropdown();
     };
 
     return (
@@ -152,7 +191,7 @@ const MarketsDropdown = () => {
                 <SearchField
                     inputSize='sm'
                     onChange={(e) => setSearchKey(e.target.value)}
-                    placeholder='Search...'
+                    placeholder={localize('Search...')}
                     value=''
                     variant='fill'
                 />
@@ -191,27 +230,23 @@ const MarketsDropdown = () => {
 
                                     return (
                                         <React.Fragment key={sk}>
-                                            {
-                                                <Text size='md' bold className='market-item-heading'>
-                                                    {name}
-                                                </Text>
-                                            }
+                                            <DropdownTitle label={name} />
                                             {Object.keys(symbols).map((yk) => {
                                                 const symbol = symbols[yk];
                                                 const { display } = symbol;
-
+                                                const isSelected = yk === selectedMarket;
+                                               
                                                 return (
                                                     <DropdownItem
                                                         key={yk}
-                                                        className=''
                                                         onClick={() => handleUnderlyingClick(yk)}
                                                         label={display}
-                                                        selected={yk === selectedMarket}
+                                                        selected={isSelected}
                                                         size='sm'
                                                     />
                                                 );
                                             })}
-                                            <hr />
+                                            <Divider />
                                         </React.Fragment>
                                     );
                                 })}
@@ -224,11 +259,3 @@ const MarketsDropdown = () => {
     );
 };
 
-export const init = () => {
-    ReactDOM.render(
-        <MarketsDropdown />,
-        getElementById('markets-dropdown-container')
-    );
-};
-
-export default init;

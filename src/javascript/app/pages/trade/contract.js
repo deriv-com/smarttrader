@@ -126,7 +126,7 @@ const Contract = (() => {
         }
         barrier = form_barrier.barrier_category;
 
-        contracts.available.forEach((current_obj) => {
+        contracts?.available.forEach((current_obj) => {
             const contract_category = current_obj.contract_category;
             // for callput and callputequals, populate duration for both
             if (form === contract_category || (/callput/.test(form) && /callput/.test(contract_category))) {
@@ -202,7 +202,7 @@ const Contract = (() => {
     const getContractCategories = () => {
         const contracts           = Contract.contracts().contracts_for;
         const contract_categories = {};
-        contracts.available.forEach((current_obj) => {
+        contracts?.available?.forEach((current_obj) => {
             const contract_category = current_obj.contract_category;
             const contract_barrier  = current_obj.barrier_category;
             const contract_display  = current_obj.contract_category_display;

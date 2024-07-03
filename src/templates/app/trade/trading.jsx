@@ -8,19 +8,21 @@ const Trading = () => (
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
             <div id='guideBtn' />
-            <div id='markets-dropdown-container' />
-            <div className='row' id='contract_symbol_container'>
-                <div id='contract_markets_container'>
-                    <div id='underlying_component' />
-                    <input type='hidden' id='underlying' />
-                </div>
-                <div id='contract_type_container'>
-                    <div id='contract_component' />
-                    <input type='hidden' id='contract' />
-                </div>
+
+            <div className='market-navigation-container'>
+                <div id='markets-dropdown-container' />
                 <div id='underlying_details'>
                     <span id='trading_worm_chart' />
                     <span id='spot' />
+                </div>
+            </div>
+            <div className='row' id='contract_symbol_container'>
+                <div id='contract_markets_container'>
+                    <div id='underlying_component' className='invisible' />
+                    <input type='hidden' id='underlying' />
+                </div>
+                <div id='contract_type_container'>
+                    <input type='hidden' id='contract' />
                 </div>
             </div>
             <div className='row clear' id='contract_form_content_wrapper'>
