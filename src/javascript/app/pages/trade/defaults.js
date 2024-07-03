@@ -40,7 +40,6 @@ const Defaults = (() => {
         SELECTED_TICK  : 'selected_tick',
         TIME_START     : 'time_start',
         UNDERLYING     : 'underlying',
-        MARKET_NAME    : 'market_name',
         CONTRACT_NAME  : 'contract_name',
     };
     const getDefault = (key) => {

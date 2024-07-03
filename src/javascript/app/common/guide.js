@@ -21,7 +21,7 @@ const Guide = (() => {
         opt = {
             script           : '',      // the script name in scripts
             autoStart        : false,   // false: start by button click
-            guideBtnID       : '#guideBtn',
+            guideBtnID       : '#onboarding-btn',
             btnText          : localize('Guide'),  // guide start button's text
             blink_class      : 'highlight',
             blink_inDelay    : 1000,
@@ -46,7 +46,7 @@ const Guide = (() => {
             return;
         }
 
-        makeButton();
+        setEvents();
     };
 
     /*
@@ -68,27 +68,10 @@ const Guide = (() => {
     };
 
     /*
-     *  generate the button's html
-     */
-    const makeButton = () => {
-        if ($(opt.guideBtnID).children().length > 0) {
-            return;
-        }
-
-        $(opt.guideBtnID)
-            .addClass('gr-hide-m')
-            .append($('<span/>', { class: 'close', text: 'X' }))
-            .append($('<strong/>'));
-        $(`${opt.guideBtnID} strong`).html(`<span></span>${opt.btnText}`);
-
-        setEvents();
-    };
-
-    /*
      *  both buttons' click event
      */
     const setEvents = () => {
-        $(`${opt.guideBtnID} strong`).click(() => {
+        $(opt.guideBtnID).click(() => {
             const enjoyhint_instance = new EnjoyHint({});
             const contractList = $(opt.contractList);
             const closeConfirmation = $(opt.closeConfirmation);
@@ -119,13 +102,13 @@ const Guide = (() => {
         }
         return [
             {
-                selector   : '#underlying_component',
+                selector   : '.quill-market-selector-dropdown',
                 description: `<h1>${localize('Step')} 1</h1>${localize('Select your market and underlying asset')}`,
                 event_type : 'next',
                 nextButton : btn_next,
             },
             {
-                selector   : '#contract_component',
+                selector   : '#tradetype-dropdown',
                 description: `<h1>${localize('Step')} 2</h1>${localize('Select your trade type')}`,
                 event_type : 'next',
                 nextButton : btn_next,

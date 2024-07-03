@@ -36,6 +36,19 @@
 .market-navigation-container {
     display: flex;
     align-items: center;
+    height: 80px;
+
+    div#underlying_details {
+        display: flex;
+        flex-direction: column;
+
+        #spot{
+            margin-top:  5px;
+        }
+    }
+    div#onboarding-container {
+        margin-left: auto;
+    }
 }
 
 .quill-market-selector {
@@ -80,9 +93,13 @@
     }
     &-item-container {
         height: fit-content;
-        max-height: 300px;
+        max-height: 420px;
         overflow-y: auto;
         padding: 0 var(--core-spacing-400);
+
+        &.market-item-container {
+            max-height: 320px;
+        }
     }
 }
 

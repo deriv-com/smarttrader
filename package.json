@@ -107,6 +107,7 @@
     "@binary-com/binary-style": "^0.2.26",
     "@binary-com/webtrader-charts": "^0.6.1",
     "@deriv-com/quill-ui": "^1.12.2",
+    "@deriv/quill-icons": "^1.23.1",
     "@livechat/customer-sdk": "4.0.2",
     "canvas-toBlob": "1.0.0",
     "classnames": "2.2.5",

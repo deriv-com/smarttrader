@@ -80,11 +80,7 @@ const TradePage = (() => {
         if (document.getElementById('websocket_form')) {
             commonTrading.addEventListenerForm();
         }
-
-        // Walk-through Guide
-        Guide.init({
-            script: 'trading',
-        });
+     
         TradingAnalysis.bindAnalysisTabEvent();
 
         ViewPopup.viewButtonOnClick('#contract_confirmation_container');

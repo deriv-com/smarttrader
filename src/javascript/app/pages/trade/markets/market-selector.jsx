@@ -53,10 +53,11 @@ const MarketSelector = () => {
                 containerClassName='quill-market-selector-dropdown'
                 label={localize('Market')}
                 value={marketLabel}
+                id='market-dropdown'
             >
                 <MarketsDropdown />
             </CustomDropdown>
-            <div ref={contractDropdownRef} className='quill-market-selector-dropdown'>
+            <div ref={contractDropdownRef} className='quill-market-selector-dropdown' id='tradetype-dropdown'>
                 <CustomDropdown
                     label={localize('Trade types')}
                     value={tradeTypeLabel}

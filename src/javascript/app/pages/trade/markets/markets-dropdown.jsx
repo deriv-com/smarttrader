@@ -214,7 +214,7 @@ export const MarketsDropdown = () => {
                     </Tab.List>
                 </Tab.Container>
                 <div
-                    className='quill-market-dropdown-item-container'
+                    className='quill-market-dropdown-item-container market-item-container'
                     id='quill-market-dropdown-list'
                     ref={itemsContainer}
                 >

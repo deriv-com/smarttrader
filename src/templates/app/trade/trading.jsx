@@ -7,7 +7,6 @@ const Trading = () => (
         <div id='trading_socket_container'>
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
-            <div id='guideBtn' />
 
             <div className='market-navigation-container'>
                 <div id='markets-dropdown-container' />
@@ -15,6 +14,7 @@ const Trading = () => (
                     <span id='trading_worm_chart' />
                     <span id='spot' />
                 </div>
+                <div id='onboarding-container' />
             </div>
             <div className='row' id='contract_symbol_container'>
                 <div id='contract_markets_container'>
