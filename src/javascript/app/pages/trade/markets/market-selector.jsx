@@ -9,7 +9,6 @@ import Defaults, { PARAM_NAMES } from '../defaults.js';
 
 const MarketSelector = () => {
     const [marketLabel, setMarketLabel] = useState(getMarketName());
-    const [isMarketDropdownOpen, setMarketDropdownOpen] = useState(false);
     const [isContractDropdownOpen, setIsContractDropdownOpen] = useState(false);
     const [tradeTypeLabel, setTradeTypeLabel] = useState('');
     const hasContractChange = useContractChange();
@@ -46,7 +45,6 @@ const MarketSelector = () => {
 
     useEffect(() => {
         setMarketLabel(getMarketName());
-        setMarketDropdownOpen(false);
     }, [hasMarketChange]);
 
     return (
