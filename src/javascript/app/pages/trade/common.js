@@ -49,7 +49,7 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             contracts_element = contractsElement.init(all_contracts, contracts_tree, contract_to_show);
-            FormsElement.init(all_contracts, contracts_tree, contract_to_show);
+            FormsElement.init();
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
