@@ -33,11 +33,33 @@
 }
 
 
+.contained-section {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.trading-container {
+    background: var(--core-color-solid-slate-75);
+    padding: 40px 0px;
+}
+
 .market-navigation-container {
     display: flex;
     align-items: center;
-    height: 80px;
+    flex-wrap: wrap;
+    gap: var(--core-size-800);
 
+    @media(max-width: 768px){
+        flex-direction: column-reverse;
+    }
+
+    div#markets-dropdown-container {
+        @media(max-width: 768px){
+            width: 100%;
+        }
+    }
     div#underlying_details {
         display: flex;
         flex-direction: column;
@@ -49,15 +71,29 @@
     div#onboarding-container {
         margin-left: auto;
     }
+    .sub-navigation-container {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+
+        @media(max-width: 768px){
+            width: 100%;
+        }
+    }
 }
 
 .quill-market-selector {
     &-container {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         width: 100%;
         position: relative;
         z-index: 100;
+
+        @media(max-width: 768px){
+           gap: var(--core-size-800);
+        }
 
         .contract-dropdown {
             top: -999px;
@@ -69,8 +105,13 @@
     }
     &-dropdown {
         width: 100%;
-        max-width: 360px;
+        max-width: 222px;
         margin: 0 10px 0 0;
+        flex: none;
+
+        @media(max-width: 768px){
+            max-width: 100%;
+        }
     }
 }
 
