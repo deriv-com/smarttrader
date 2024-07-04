@@ -85,7 +85,7 @@ export const FormComponent = ({ formName, handlers }) => {
                 </div>
             )}
 
-            {formName === 'touchnotouch' || formName === 'higherlower'  && (
+            {(formName === 'touchnotouch' || formName === 'higherlower')  && (
                 <div className='form_rows'>
                     <div className='row gap-8'>
                         <div className='form_field'>
