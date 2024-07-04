@@ -4,6 +4,7 @@ import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 
 export const FormComponent = ({ formName, handlers }) => {
+    console.log(formName);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const config = formConfig[formName];
 
@@ -39,43 +40,33 @@ export const FormComponent = ({ formName, handlers }) => {
                         </div>
                         {expiryType === 'duration' &&
                             <>
-                                <div className='form_field'>
-                                    <TextField type='number' value='15' message='Minimum: 15' />
-                                </div>
-                                <div className='form_field'>
-                                    <InputDropdown
-                                        options={[
-                                            {
-                                                text : 'minutes',
-                                                value: 'minutes',
-                                            },
-                                            {
-                                                text : 'hours',
-                                                value: 'hours',
-                                            },
-                                            {
-                                                text : 'days',
-                                                value: 'days',
-                                            },
-                                        ]}
-                                        status='neutral'
-                                        value='minutes'
-                                        onSelectOption={(e) => handlers.handleSelect(e)}
-                                    />
-                                </div>
+                                {config.expiryType.duration.map(field => (
+                                    <div className='form_field' key={field.id}>
+                                        {field.component === 'TextField' &&
+                                            <TextField {...field.props} />
+                                        }
+                                        {field.component === 'InputDropdown' &&
+                                            <InputDropdown
+                                                status='neutral'
+                                                {...field.props}
+                                                onSelectOption={(e) => handlers.handleSelect(e)}
+                                            />
+                                        }
+                                    </div>
+                                ))}
                             </>
                         }
                         {expiryType === 'endtime' &&
                             <>
-                                <div className='form_field'>
-                                    <DatePickerDropdown
-                                        onSelectDate={(e) => handlers.handleDateSelect(e) }
-                                        status='neutral'
-                                    />
-                                </div>
-                                <div className='form_field'>
-                                    <TextField label='Time' />
-                                </div>
+                                {config.expiryType.endtime.map(field => (
+                                    <div className='form_field' key={field.id}>
+                                        {field.component === 'DatePickerDropdown' &&
+                                            <DatePickerDropdown
+                                                onSelectDate={(e) => handlers.handleDateSelect(e) }
+                                            />
+                                        }
+                                    </div>
+                                ))}
                             </>
                         }
                     </div>
@@ -94,7 +85,7 @@ export const FormComponent = ({ formName, handlers }) => {
                 </div>
             )}
 
-            {formName === 'touchnotouch' && (
+            {formName === 'touchnotouch' || formName === 'higherlower'  && (
                 <div className='form_rows'>
                     <div className='row gap-8'>
                         <div className='form_field'>
@@ -109,43 +100,33 @@ export const FormComponent = ({ formName, handlers }) => {
                         </div>
                         {expiryType === 'duration' &&
                             <>
-                                <div className='form_field'>
-                                    <TextField type='number' value='15' message='Minimum: 15' />
-                                </div>
-                                <div className='form_field'>
-                                    <InputDropdown
-                                        options={[
-                                            {
-                                                text : 'minutes',
-                                                value: 'minutes',
-                                            },
-                                            {
-                                                text : 'hours',
-                                                value: 'hours',
-                                            },
-                                            {
-                                                text : 'days',
-                                                value: 'days',
-                                            },
-                                        ]}
-                                        status='neutral'
-                                        value={'minutes'}
-                                        onSelectOption={(e) => handlers.handleSelect(e)}
-                                    />
-                                </div>
+                                {config.expiryType.duration.map(field => (
+                                    <div className='form_field' key={field.id}>
+                                        {field.component === 'TextField' &&
+                                            <TextField {...field.props} />
+                                        }
+                                        {field.component === 'InputDropdown' &&
+                                            <InputDropdown
+                                                status='neutral'
+                                                {...field.props}
+                                                onSelectOption={(e) => handlers.handleSelect(e)}
+                                            />
+                                        }
+                                    </div>
+                                ))}
                             </>
                         }
                         {expiryType === 'endtime' &&
                             <>
-                                <div className='form_field'>
-                                    <DatePickerDropdown
-                                        onSelectDate={(e) => handlers.handleDateSelect(e) }
-                                        status='neutral'
-                                    />
-                                </div>
-                                <div className='form_field'>
-                                    <TextField label='Time' />
-                                </div>
+                                {config.expiryType.endtime.map(field => (
+                                    <div className='form_field' key={field.id}>
+                                        {field.component === 'DatePickerDropdown' &&
+                                            <DatePickerDropdown
+                                                onSelectDate={(e) => handlers.handleDateSelect(e) }
+                                            />
+                                        }
+                                    </div>
+                                ))}
                             </>
                         }
                     </div>

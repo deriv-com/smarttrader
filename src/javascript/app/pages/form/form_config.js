@@ -1,3 +1,55 @@
+
+const ExpiryType = {
+    options: [
+        { text: 'Duration', value: 'duration' },
+        { text: 'End Time', value: 'endtime' },
+    ],
+    defaultValue: 'duration',
+    duration    : [
+        {
+            id       : 'duration_amount',
+            component: 'TextField',
+            props    : {
+                type   : 'number',
+                value  : '15',
+                message: 'Minimum: 15',
+            },
+        },
+        {
+            id       : 'duration_units',
+            component: 'InputDropdown',
+            props    : {
+                options: [
+                    {
+                        text : 'minutes',
+                        value: 'minutes',
+                    },
+                    {
+                        text : 'hours',
+                        value: 'hours',
+                    },
+                    {
+                        text : 'days',
+                        value: 'days',
+                    },
+                ],
+                value: 'days',
+            },
+        },
+    ],
+    endtime: [
+        {
+            id       : 'expiry_type_endtime',
+            component: 'DatePickerDropdown',
+            props    : {
+                type   : 'number',
+                value  : '15',
+                message: 'Minimum: 15',
+            },
+        },
+    ],
+};
+
 const PayoutType = [
     {
         type     : 'payout_type',
@@ -21,6 +73,15 @@ const PayoutType = [
     },
 ];
 
+const Barrier = {
+    type : 'barrier',
+    props: {
+        label: 'Barrier',
+        type : 'number',
+        value: '2318.13',
+    },
+};
+
 export const formConfig = {
     risefall: {
         startTime: {
@@ -32,31 +93,17 @@ export const formConfig = {
             ],
             defaultValue: 'now',
         },
-        expiryType: {
-            options: [
-                { text: 'Duration', value: 'duration' },
-                { text: 'End Time', value: 'endtime' },
-            ],
-            defaultValue: 'duration',
-        },
+        expiryType: ExpiryType,
         payoutType: PayoutType,
     },
     touchnotouch: {
-        expiryType: {
-            options: [
-                { text: 'Duration', value: 'duration' },
-                { text: 'End Time', value: 'endtime' },
-            ],
-            defaultValue: 'duration',
-        },
-        barrier: {
-            type : 'barrier',
-            props: {
-                label: 'Barrier',
-                type : 'number',
-                value: '2318.13',
-            },
-        },
+        expiryType: ExpiryType,
+        barrier   : Barrier,
+        payoutType: PayoutType,
+    },
+    higherlower: {
+        expiryType: ExpiryType,
+        barrier   : Barrier,
         payoutType: PayoutType,
     },
 };
