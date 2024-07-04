@@ -97,7 +97,7 @@
     "webpack": "5.81.0",
     "webpack-bundle-analyzer": "4.3.0",
     "webpack-merge": "4.1.4",
-    "ws": "8.16.0"
+    "ws": "8.17.1"
   },
   "dependencies": {
     "@babel/polyfill": "7.12.1",
