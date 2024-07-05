@@ -3,8 +3,7 @@ import { TextField, InputDropdown, TextFieldAddon, DatePickerDropdown } from '@d
 import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 
-export const FormComponent = ({ formName, handlers }) => {
-    console.log(formName);
+export const FormComponent = ({ formName, handlers, startDates }) => {
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const config = formConfig[formName];
 
@@ -16,17 +15,19 @@ export const FormComponent = ({ formName, handlers }) => {
         <div className='form_container'>
             {formName === 'risefall' && (
                 <div className='form_rows'>
-                    <div className='row gap-8'>
-                        <div className='form_field'>
-                            <InputDropdown
-                                label={config.startTime.label}
-                                options={config.startTime.options}
-                                status='neutral'
-                                value={config.startTime.defaultValue}
-                                onSelectOption={handlers.handleStartTime}
-                            />
+                    {startDates?.list?.length > 0 &&
+                        <div className='row gap-8'>
+                            <div className='form_field'>
+                                <InputDropdown
+                                    label={config.startTime.label}
+                                    options={config.startTime.options}
+                                    status='neutral'
+                                    value={config.startTime.defaultValue}
+                                    onSelectOption={handlers.handleStartTime}
+                                />
+                            </div>
                         </div>
-                    </div>
+                    }
                     <div className='row gap-8'>
                         <div className='form_field'>
                             <InputDropdown
@@ -67,6 +68,9 @@ export const FormComponent = ({ formName, handlers }) => {
                                         }
                                     </div>
                                 ))}
+                                <div className='form_field'>
+                                    <TextFieldAddon value='12:40' addonLabel='GMT' addOnPosition='right' />
+                                </div>
                             </>
                         }
                     </div>

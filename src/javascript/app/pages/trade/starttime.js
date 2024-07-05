@@ -10,6 +10,7 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
+const { triggerSessionChange } = require('../../hooks/events');
 
 /*
  * Handles start time display
@@ -35,6 +36,8 @@ const StartDates = (() => {
 
     const displayStartDates = () => {
         const start_dates = Contract.startDates();
+        sessionStorage.setItem('start_dates', JSON.stringify(start_dates));
+        triggerSessionChange();
 
         if (start_dates && start_dates.list && start_dates.list.length) {
             const target   = CommonIndependent.getStartDateNode();

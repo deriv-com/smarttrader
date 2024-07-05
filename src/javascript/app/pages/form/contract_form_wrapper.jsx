@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // eslint-disable-next-line import/no-unresolved
 import { FormComponent } from './form_component';
 import { getElementById } from '../../../_common/common_functions';
-import { useContractChange, useMarketChange } from '../../hooks/events';
+import { useContractChange, useMarketChange, useSessionChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 
 const ContractFormWrapper = () => {
@@ -12,9 +12,11 @@ const ContractFormWrapper = () => {
     
     const hasContractChange = useContractChange();
     const hasMarketChange = useMarketChange();
+    const hasSessionChange = useSessionChange();
 
     const [formName, setFormName] = useState(Defaults.get(PARAM_NAMES.FORM_NAME));
     const [expiry_type, setExpiryType] = useState(Defaults.get(PARAM_NAMES.EXPIRY_TYPE) || 'duration');
+    const [startDates, setStartDates] = useState({});
 
     const { EXPIRY_TYPE, DURATION_UNITS } = Defaults.PARAM_NAMES;
 
@@ -47,13 +49,15 @@ const ContractFormWrapper = () => {
 
     useEffect(() => {
         setFormName(Defaults.get(PARAM_NAMES.FORM_NAME));
-    }, [hasContractChange, hasMarketChange]);
+        setStartDates(JSON.parse(sessionStorage.getItem('start_dates')));
+    }, [hasContractChange, hasMarketChange, hasSessionChange]);
 
     return (
         <FormComponent
             formName={formName}
             handlers={handlers}
             expiryType={expiry_type}
+            startDates={startDates}
         />
     );
 };

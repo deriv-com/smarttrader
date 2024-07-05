@@ -57,3 +57,7 @@ export const triggerMarketChange = () => triggerCustomEvent('marketChange');
 // Contract Change
 export const useContractChange = () => useCustomEvent('contractChange');
 export const triggerContractChange = () => triggerCustomEvent('contractChange');
+
+// SesstionStorage Change
+export const useSessionChange = () => useCustomEvent('sessionChange');
+export const triggerSessionChange = () => triggerCustomEvent('sessionChange');
