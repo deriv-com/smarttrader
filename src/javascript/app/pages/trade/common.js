@@ -4,7 +4,7 @@ const Tick             = require('./tick');
 const contractsElement = require('./contracts.jsx');
 const marketsElement   = require('./markets.jsx');
 const TabsElement      = require('../bottom/tabs.jsx');
-const FormsElement     = require('../form/contract_form_wrapper.jsx');
+const FormsWrapperElement     = require('../form/contract_form_wrapper.jsx');
 const formatMoney      = require('../../common/currency').formatMoney;
 const ActiveSymbols    = require('../../common/active_symbols');
 const elementInnerHtml = require('../../../_common/common_functions').elementInnerHtml;
@@ -49,7 +49,7 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             contracts_element = contractsElement.init(all_contracts, contracts_tree, contract_to_show);
-            FormsElement.init();
+            FormsWrapperElement.init(all_contracts, contracts_tree, contract_to_show);
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,

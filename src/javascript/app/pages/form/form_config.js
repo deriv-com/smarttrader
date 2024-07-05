@@ -52,7 +52,7 @@ const ExpiryType = {
 
 const PayoutType = [
     {
-        type     : 'payout_type',
+        id       : 'payout_type',
         component: 'InputDropdown',
         props    : {
             options: [
@@ -63,7 +63,7 @@ const PayoutType = [
         },
     },
     {
-        type     : 'payout_amount',
+        id       : 'payout_amount',
         component: 'TextFieldAddon',
         props    : {
             addonLabel   : 'USD',
@@ -74,13 +74,32 @@ const PayoutType = [
 ];
 
 const Barrier = {
-    type : 'barrier',
+    id   : 'barrier',
     props: {
         label: 'Barrier',
         type : 'number',
         value: '2318.13',
     },
 };
+
+const HighLowBarrier = [
+    {
+        id   : 'barrier_high',
+        props: {
+            label: 'High barrier',
+            type : 'number',
+            value: '18391',
+        },
+    },
+    {
+        id   : 'barrier_low',
+        props: {
+            label: 'Low barrier',
+            type : 'number',
+            value: '17592',
+        },
+    },
+];
 
 export const formConfig = {
     risefall: {
@@ -105,6 +124,16 @@ export const formConfig = {
         expiryType: ExpiryType,
         barrier   : Barrier,
         payoutType: PayoutType,
+    },
+    endsinout: {
+        expiryType    : ExpiryType,
+        highlowBarrier: HighLowBarrier,
+        payoutType    : PayoutType,
+    },
+    staysinout: {
+        expiryType    : ExpiryType,
+        highlowBarrier: HighLowBarrier,
+        payoutType    : PayoutType,
     },
 };
 

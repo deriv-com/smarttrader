@@ -72,7 +72,7 @@ export const FormComponent = ({ formName, handlers }) => {
                     </div>
                     <div className='row gap-8'>
                         {config.payoutType.map(field => (
-                            <div className='form_field' key={field.type}>
+                            <div className='form_field' key={field.id}>
                                 {field.component === 'InputDropdown' &&
                                     <InputDropdown {...field.props} onSelectOption={(e) => handlers.handleSelect(e)} />
                                 }
@@ -85,7 +85,7 @@ export const FormComponent = ({ formName, handlers }) => {
                 </div>
             )}
 
-            {(formName === 'touchnotouch' || formName === 'higherlower')  && (
+            {['touchnotouch', 'higherlower', 'endsinout', 'staysinout'].includes(formName)  && (
                 <div className='form_rows'>
                     <div className='row gap-8'>
                         <div className='form_field'>
@@ -130,14 +130,24 @@ export const FormComponent = ({ formName, handlers }) => {
                             </>
                         }
                     </div>
-                    <div className='row'>
-                        <div className='form_field'>
-                            <TextField {...config.barrier.props} />
-                        </div>
+                    <div className='row gap-8'>
+                        {(formName === 'endsinout' || formName === 'staysinout') ?
+                            <>
+                                <div className='form_field'>
+                                    <TextField {...config.highlowBarrier[0].props} />
+                                </div>
+                                <div className='form_field'>
+                                    <TextField {...config.highlowBarrier[1].props} />
+                                </div>
+                            </> :
+                            <div className='form_field'>
+                                <TextField {...config.barrier.props} />
+                            </div>
+                        }
                     </div>
                     <div className='row gap-8'>
                         {config.payoutType.map(field => (
-                            <div className='form_field' key={field.type}>
+                            <div className='form_field' key={field.id}>
                                 {field.component === 'InputDropdown' &&
                                     <InputDropdown {...field.props} onSelectOption={(e) => handlers.handleSelect(e)} />
                                 }

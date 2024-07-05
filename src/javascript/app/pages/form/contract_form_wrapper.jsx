@@ -7,6 +7,8 @@ import { useContractChange, useMarketChange } from '../../hooks/events';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 
 const ContractFormWrapper = () => {
+    // const { contracts, contracts_tree, selected } = props;
+    // console.log(props);
     
     const hasContractChange = useContractChange();
     const hasMarketChange = useMarketChange();
@@ -56,9 +58,9 @@ const ContractFormWrapper = () => {
     );
 };
 
-export const init = () => {
+export const init = (contracts, contracts_tree, selected) => {
     ReactDOM.render(
-        <ContractFormWrapper />,
+        <ContractFormWrapper contracts={contracts} contracts_tree={contracts_tree} selected={selected} />,
         getElementById('contract_forms_wrapper')
     );
 };
