@@ -94,23 +94,19 @@
         @media(max-width: 768px){
            gap: var(--core-size-800);
         }
-
-        .contract-dropdown {
-            top: -999px;
-           
-            &-open {
-                top: unset;
-            }
-        }
     }
     &-dropdown {
         width: 100%;
-        max-width: 222px;
+        max-width: 222px !important;
         margin: 0 10px 0 0;
         flex: none;
 
         @media(max-width: 768px){
-            max-width: 100%;
+            max-width: 100% !important;
+
+            .quill-custom-dropdown__container {
+                max-width: 100% !important;
+            }
         }
     }
 }
@@ -123,6 +119,11 @@
         margin: 10px 0px;
         border-radius: 8px;
         border: 1px solid rgba(0, 0, 0, 0.04);
+
+        @media(max-width: 768px){
+            width: 100%;
+            margin: 0px;
+        }
     }
     &-search-container {
         padding: var(--core-spacing-400) var(--core-spacing-800);
@@ -140,6 +141,31 @@
 
         &.market-item-container {
             max-height: 320px;
+
+            @media(max-width: 768px){
+                max-height: calc(100vh - 300px);
+            }
+        }
+    }
+}
+
+
+div#tradetype-dropdown {
+    #contract_component {
+        display: none;
+    }
+}
+
+div#contract-injection-container {
+    #contract_component {
+        display: block;
+
+        @media(max-width: 768px){
+           width: 100%;
+
+           .quill-market-dropdown-item-container {
+            max-height: none;
+           }
         }
     }
 }
@@ -149,7 +175,3 @@
     padding-block: 20px;
 }
 
-div#contract_component {
-    position: absolute;
-    z-index: 100;
-}

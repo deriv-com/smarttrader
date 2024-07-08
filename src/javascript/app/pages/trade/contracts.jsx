@@ -111,6 +111,7 @@ export class Contracts extends React.Component {
                                                 label={contracts[subtype]}
                                                 selected={subtype === formname}
                                                 size='sm'
+                                                className='contract-item-clickables'
                                             />);
                                     })}
                                     <Divider />
@@ -130,6 +131,7 @@ export class Contracts extends React.Component {
                                     label={contracts[contract]}
                                     selected={contract === formname}
                                     size='sm'
+                                    className='contract-item-clickables'
                                 />
                                 <Divider />
                             </React.Fragment>
