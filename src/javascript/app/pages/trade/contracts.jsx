@@ -6,7 +6,7 @@ import Defaults, { PARAM_NAMES } from './defaults';
 import { getElementById } from '../../../_common/common_functions';
 import { triggerContractChange } from '../../hooks/events';
 
-export class Contracts extends React.Component {
+class Contracts extends React.Component {
     constructor (props) {
         super(props);
         const { contracts, contracts_tree, selected } = props;
