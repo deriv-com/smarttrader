@@ -17,6 +17,6 @@ module.exports = {
     setURL,
     getApiToken: () => 'hhh9bfrbq0G3dRf',
     api: new DerivAPIBasic({
-        connection: new websocket('wss://ws.binaryws.com/websockets/v3?app_id=1&l=en&brand=binary'),
+        connection: new websocket('wss://ws.derivws.com/websockets/v3?app_id=1'),
     }),
 };
