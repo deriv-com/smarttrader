@@ -170,6 +170,103 @@ div#contract-injection-container {
     }
 }
 
+div#purchase_container {
+    width: 100%;
+    max-width: 430px;
+}
+
+.quill-purchase-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--core-spacing-800);
+
+    &.disabled {
+        opacity: 0.5;
+    }
+    p {
+        margin: 0px;
+    }
+    .purchase-box {
+        display: flex;
+        flex-direction: column;
+        background: var(--core-color-solid-slate-50);
+        border-radius: var(--core-borderRadius-800);
+        height: fit-content;
+        min-height: 50px;
+        width: 100%;
+        
+       
+        .purchase-header {
+            display: flex;
+            padding: var(--core-spacing-800);
+            gap: var(--core-spacing-800);
+           
+            .purchase-icon-box {
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 80px;
+
+                .contract_heading {
+                    height: 48px;
+                    width: 48px;
+                    background-size: 75% !important;
+                }
+            }
+            .purchase-body-box {
+                display: flex;
+                flex-direction: column;
+                gap: var(--core-spacing-800);
+                width: 100%;
+
+                .purchase-amount-box {
+                    display: flex;
+                    gap: var(--core-spacing-400);
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    .purchase-amount-info-box {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        align-items: center;
+
+                        p {
+                            transition: 100ms color ease-in-out;
+                        }
+                        .price_moved_up,.price_moved_down{
+                            background: unset;
+                        }
+                        .price_moved_up {
+                            color: var(--semantic-color-emerald-solid-surface-normal-highest);
+                        }
+                        .price_moved_down {
+                            color: var(--semantic-color-cherry-solid-surface-normal-highest);
+                        }
+                    }   
+                }
+            }
+        }
+        .purchase-footer {
+            display: flex;
+            width: 100%;
+            height: 32px;
+            border-radius: 0 0 var(--core-borderRadius-800) var(--core-borderRadius-800);
+            background: var(--core-color-opacity-slate-100);
+            justify-content: center;
+            padding: var(--core-spacing-400) var(--core-spacing-800);
+        }
+        
+    }
+}
+
+.purchase-tooltip {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+}
+
 .explanation-container {
     margin-block-end: 50px;
     padding-block: 20px;

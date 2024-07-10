@@ -57,3 +57,8 @@ export const triggerMarketChange = () => triggerCustomEvent('marketChange');
 // Contract Change
 export const useContractChange = () => useCustomEvent('contractChange');
 export const triggerContractChange = () => triggerCustomEvent('contractChange');
+
+// Purchase Change
+export const usePurchaseChange = () => useCustomEvent('purchaseChange');
+export const triggerPurchaseChange = () => triggerCustomEvent('purchaseChange');
+
