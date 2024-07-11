@@ -108,7 +108,7 @@ const Guide = (() => {
                 nextButton : btn_next,
             },
             {
-                selector   : '#tradetype-dropdown',
+                selector   : '.quill-custom-contract-dropdown',
                 description: `<h1>${localize('Step')} 2</h1>${localize('Select your trade type')}`,
                 event_type : 'next',
                 nextButton : btn_next,
