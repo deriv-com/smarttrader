@@ -1,14 +1,13 @@
 const Defaults                   = require('./defaults');
 const Symbols                    = require('./symbols');
 const Tick                       = require('./tick');
-const contractsElement           = require('./contracts.jsx');
 const marketsElement             = require('./markets.jsx');
 const GuideElement               = require('./guide.jsx');
 const MarketSelectorElement      = require('./markets/market-selector.jsx');
 const TabsElement                = require('../bottom/tabs.jsx');
 const formatMoney                = require('../../common/currency').formatMoney;
 const ActiveSymbols              = require('../../common/active_symbols');
-const { default: contractManager } = require('../../common/contract-manager.js');
+const contractManager            = require('../../common/contract-manager.js').default;
 const elementInnerHtml           = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById             = require('../../../_common/common_functions').getElementById;
 const localize                   = require('../../../_common/localize').localize;

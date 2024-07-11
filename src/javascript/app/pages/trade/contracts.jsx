@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { Divider, DropdownItem, DropdownTitle } from '@deriv-com/quill-ui';
-import Defaults, { PARAM_NAMES } from './defaults';
+import Defaults from './defaults';
 import { getElementById } from '../../../_common/common_functions';
-import { triggerContractChange } from '../../hooks/events';
+import { localize } from '../../../_common/localize';
 
 class Contracts extends React.Component {
     constructor (props) {
@@ -38,6 +37,31 @@ class Contracts extends React.Component {
         }
     };
 
+    openDropDown = () => {
+        if (this.state.contracts_tree.length < 1) return;
+        this.positionDropDown();
+        this.setState({ open: true });
+    };
+
+    closeDropDown = () => {
+        this.setState({ open: false });
+        const el_dropdown = this.references.wrapper;
+        // reposition dropdown after the animation is finished.
+        setTimeout(() => el_dropdown.removeAttribute('style'), 500);
+    };
+
+    positionDropDown = () => {
+        const el_dropdown = this.references.wrapper;
+        const pos = el_dropdown.getBoundingClientRect();
+
+        if ((pos.x + pos.width + 10) > window.innerWidth) {
+            // 10 is padding right for the element
+            el_dropdown.style.left = `${window.innerWidth - (pos.x + pos.width + 10)}px`;
+        } else if ((pos.x + pos.width + 10) !== window.innerWidth) {
+            el_dropdown.removeAttribute('style');
+        }
+    };
+
     saveRef = (name, node) => { this.references[name] = node; };
 
     getCurrentType = () => {
@@ -68,6 +92,7 @@ class Contracts extends React.Component {
     };
 
     onContractClick = (formname) => {
+        this.closeDropDown();
         if (formname === this.state.formname) { return; }
         // Notify for changes on contract.
         this.el_contract.value = formname;
@@ -77,66 +102,70 @@ class Contracts extends React.Component {
         this.setState({ formname });
     };
 
-    saveSelectedContract = (formname) => {
-        Defaults.set(PARAM_NAMES.CONTRACT_NAME,this.state.contracts[formname]);
-
-        triggerContractChange();
-    };
-
     /* eslint-enable no-undef */
     render () {
         const {
             contracts,
             contracts_tree,
+            open,
             formname,
         } = this.state;
-        
+        const is_mobile = window.innerWidth <= 767;
         return (
-            <div className='quill-market-dropdown-container'>
-                <div className='quill-market-dropdown-item-container'>
-                    { contracts_tree.map((contract, idx) => {
-                        if (typeof contract === 'object') {
+            <div className='contracts'>
+                <div
+                    className={`contract_current ${contracts_tree.length < 1 ? 'disabled' : ''}`}
+                    onClick={this.openDropDown}
+                >
+                    <span className='type'>
+                        {this.getCurrentType()}
+                        <span className={`arrow_down ${contracts_tree.length < 1 ? 'invisible' : ''}`} />
+                    </span>
+                    <span className='contract'>{this.getCurrentContract()}</span>
+                </div>
+                <div
+                    className={`contracts_dropdown ${open ? '' : 'hidden'}`}
+                    ref={this.saveRef.bind(null, 'wrapper')}
+                >
+                    <div className={`mobile_close invisible ${open && is_mobile ? '' : 'disabled'}`}>
+                        <span>{localize('Select Trade Type')}</span>
+                        <span className='close' onClick={this.closeDropDown} />
+                    </div>
+                    <div className='list'>
+                        { contracts_tree.map((contract, idx) => {
+                            if (typeof contract === 'object') {
+                                return (
+                                    <div className='contract' key={idx}>
+                                        <div className='contract_type'>{contracts[contract[0]]}</div>
+                                        <div className='contract_subtypes'>
+                                            {contract[1].map((subtype, i) =>
+                                                <div
+                                                    className={`sub ${subtype === formname ? 'active' : ''}`}
+                                                    key={i}
+                                                    onClick={this.onContractClick.bind(null, subtype)}
+                                                >
+                                                    {contracts[subtype]}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                );
+                            }
                             return (
-                                <React.Fragment key={idx}>
-                                    <DropdownTitle label={contracts[contract[0]]} />
-                                    {contract[1].map((subtype, i) => {
-                                        if (subtype === formname){
-                                            this.saveSelectedContract(formname);
-                                        }
-                                        
-                                        return (
-                                            <DropdownItem
-                                                key={i}
-                                                onClick={this.onContractClick.bind(null, subtype)}
-                                                label={contracts[subtype]}
-                                                selected={subtype === formname}
-                                                size='sm'
-                                                className='contract-item-clickables'
-                                            />);
-                                    })}
-                                    <Divider />
-                                </React.Fragment>
+                                <div className='contract' key={idx}>
+                                    <div className='contract_type'>{contracts[contract]}</div>
+                                    <div className='contract_subtypes'>
+                                        <div
+                                            className={`sub ${contract === formname ? 'active' : ''}`}
+                                            onClick={this.onContractClick.bind(null, contract)}
+                                        >
+                                            {contracts[contract]}
+                                        </div>
+                                    </div>
+                                </div>
                             );
-                        }
-
-                        if (contract === formname){
-                            this.saveSelectedContract(formname);
-                        }
-
-                        return (
-                            <React.Fragment key={idx}>
-                                <DropdownTitle label={contracts[contract]} />
-                                <DropdownItem
-                                    onClick={this.onContractClick.bind(null, contract)}
-                                    label={contracts[contract]}
-                                    selected={contract === formname}
-                                    size='sm'
-                                    className='contract-item-clickables'
-                                />
-                                <Divider />
-                            </React.Fragment>
-                        );
-                    })}
+                        })}
+                    </div>
                 </div>
             </div>
         );
