@@ -177,119 +177,120 @@ const Trading = () => (
                                 </div>
                             </div>
                         </div>
-                        <div id='contract_prices_container' className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
-                            <div id='contract_confirmation_container' className='overlay_container col'>
-                                <a className='close close--dark-bg' id='close_confirmation_container' />
-                                <div id='confirmation_message_container'>
-                                    <div id='confirmation_message'>
-                                        <h3 id='contract_purchase_heading' />
-                                        <div id='contract_purchase_descr' />
-                                        <div className='row' id='contract_purchase_profit_list'>
-                                            <div className='col' id='contract_purchase_payout' />
-                                            <div className='col' id='contract_purchase_cost' />
-                                            <div className='col' id='contract_purchase_profit' />
-                                        </div>
-                                        <div id='contract_purchase_barrier' />
-                                        <div id='contract_purchase_reference' />
-                                        <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
-                                        <div id='contract_purchase_spots' />
-                                        <div id='trade_tick_chart' />
-                                        <div id='digit_ticker_table' className='digit-ticker invisible' />
-                                        <div id='contract_purchase_balance' />
+                        <div id='purchase_container' />
+                    </div>
+                    <div id='contract_prices_container' className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
+                        <div id='contract_confirmation_container' className='overlay_container col'>
+                            <a className='close close--dark-bg' id='close_confirmation_container' />
+                            <div id='confirmation_message_container'>
+                                <div id='confirmation_message'>
+                                    <h3 id='contract_purchase_heading' />
+                                    <div id='contract_purchase_descr' />
+                                    <div className='row' id='contract_purchase_profit_list'>
+                                        <div className='col' id='contract_purchase_payout' />
+                                        <div className='col' id='contract_purchase_cost' />
+                                        <div className='col' id='contract_purchase_profit' />
                                     </div>
-                                    <div id='confirmation_error' className='center-text invisible' />
-                                    <div id='authorization_error_container' className='center-text invisible'>
-                                        <div className='authorization_error'>
-                                            <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                            <a id='authorization_error_btn_signup' className='btn btn__large btn--primary'>
-                                                <span>{it.L('Open a free account')}</span>
-                                            </a>
-                                            <p>{it.L('Already have an account?')}</p>
-                                            <a
-                                                id='authorization_error_btn_login'
-                                                className='btn btn--link'
-                                            >
-                                                {it.L('Log in here')}
-                                            </a>
-                                        </div>
+                                    <div id='contract_purchase_barrier' />
+                                    <div id='contract_purchase_reference' />
+                                    <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
+                                    <div id='contract_purchase_spots' />
+                                    <div id='trade_tick_chart' />
+                                    <div id='digit_ticker_table' className='digit-ticker invisible' />
+                                    <div id='contract_purchase_balance' />
+                                </div>
+                                <div id='confirmation_error' className='center-text invisible' />
+                                <div id='authorization_error_container' className='center-text invisible'>
+                                    <div className='authorization_error'>
+                                        <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
+                                        <a id='authorization_error_btn_signup' className='btn btn__large btn--primary'>
+                                            <span>{it.L('Open a free account')}</span>
+                                        </a>
+                                        <p>{it.L('Already have an account?')}</p>
+                                        <a
+                                            id='authorization_error_btn_login'
+                                            className='btn btn--link'
+                                        >
+                                            {it.L('Log in here')}
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div className='row-inner' id='contracts_list'>
-                                <div id='loading_container2' className='overlay_container' />
-                                <div className='col price_container row-inner' id='price_container_top'>
-                                    <div className='col gr-row'>
-                                        <div className='price_wrapper row'>
-                                            <h4 className='contract_heading' />
-                                            <span className='amount_wrapper'>
-                                                <div className='amount_wrapper_div'>
-                                                    <div className='stake_wrapper'>
-                                                        <span className='stake' />
-                                                        <span className='contract_amount' />
-                                                    </div>
-                                                    <div className='payout_wrapper'>
-                                                        <span className='payout' />
-                                                        <span className='contract_payout' />
-                                                    </div>
+                        </div>
+                        <div className='row-inner' id='contracts_list'>
+                            <div id='loading_container2' className='overlay_container' />
+                            <div className='col price_container row-inner' id='price_container_top'>
+                                <div className='col gr-row'>
+                                    <div className='price_wrapper row'>
+                                        <h4 className='contract_heading' />
+                                        <span className='amount_wrapper'>
+                                            <div className='amount_wrapper_div'>
+                                                <div className='stake_wrapper'>
+                                                    <span className='stake' />
+                                                    <span className='contract_amount' />
                                                 </div>
-                                                <div className='contract_purchase button'>
-                                                    <span className='purchase_button contract_description no-underline' id='purchase_button_top' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <div className='payout_wrapper'>
+                                                    <span className='payout' />
+                                                    <span className='contract_payout' />
                                                 </div>
-                                            </span>
-                                        </div>
+                                            </div>
+                                            <div className='contract_purchase button'>
+                                                <span className='purchase_button contract_description no-underline' id='purchase_button_top' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                            </div>
+                                        </span>
                                     </div>
-                                    <div className='col price_comment' />
-                                    <div className='col contract_error' />
                                 </div>
-                                <div className='col price_container row-inner' id='price_container_bottom'>
-                                    <div className='col gr-row'>
-                                        <div className='price_wrapper row'>
-                                            <h4 className='contract_heading' />
-                                            <span className='amount_wrapper'>
-                                                <div className='amount_wrapper_div'>
-                                                    <div className='stake_wrapper'>
-                                                        <span className='stake' />
-                                                        <span className='contract_amount' />
-                                                    </div>
-                                                    <div className='payout_wrapper'>
-                                                        <span className='payout' />
-                                                        <span className='contract_payout' />
-                                                    </div>
+                                <div className='col price_comment' />
+                                <div className='col contract_error' />
+                            </div>
+                            <div className='col price_container row-inner' id='price_container_bottom'>
+                                <div className='col gr-row'>
+                                    <div className='price_wrapper row'>
+                                        <h4 className='contract_heading' />
+                                        <span className='amount_wrapper'>
+                                            <div className='amount_wrapper_div'>
+                                                <div className='stake_wrapper'>
+                                                    <span className='stake' />
+                                                    <span className='contract_amount' />
                                                 </div>
-                                                <div className='contract_purchase button'>
-                                                    <span className='purchase_button contract_description no-underline' id='purchase_button_bottom' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <div className='payout_wrapper'>
+                                                    <span className='payout' />
+                                                    <span className='contract_payout' />
                                                 </div>
-                                            </span>
-                                        </div>
+                                            </div>
+                                            <div className='contract_purchase button'>
+                                                <span className='purchase_button contract_description no-underline' id='purchase_button_bottom' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                            </div>
+                                        </span>
                                     </div>
-                                    <div className='col price_comment' />
-                                    <div className='col contract_error' />
                                 </div>
-                                <div className='col price_container row-inner' id='price_container_middle'>
-                                    <div className='col gr-row'>
-                                        <div className='price_wrapper row'>
-                                            <h4 className='contract_heading' />
-                                            <span className='amount_wrapper'>
-                                                <div className='amount_wrapper_div'>
-                                                    <div className='stake_wrapper'>
-                                                        <span className='stake' />
-                                                        <span className='contract_amount' />
-                                                    </div>
-                                                    <div className='payout_wrapper'>
-                                                        <span className='multiplier' />
-                                                        <span className='contract_multiplier' />
-                                                    </div>
+                                <div className='col price_comment' />
+                                <div className='col contract_error' />
+                            </div>
+                            <div className='col price_container row-inner' id='price_container_middle'>
+                                <div className='col gr-row'>
+                                    <div className='price_wrapper row'>
+                                        <h4 className='contract_heading' />
+                                        <span className='amount_wrapper'>
+                                            <div className='amount_wrapper_div'>
+                                                <div className='stake_wrapper'>
+                                                    <span className='stake' />
+                                                    <span className='contract_amount' />
                                                 </div>
-                                                <div className='contract_purchase button'>
-                                                    <span className='purchase_button no-underline' id='purchase_button_middle' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <div className='payout_wrapper'>
+                                                    <span className='multiplier' />
+                                                    <span className='contract_multiplier' />
                                                 </div>
-                                            </span>
-                                        </div>
-                                        <div className='contract_longcode' />
+                                            </div>
+                                            <div className='contract_purchase button'>
+                                                <span className='purchase_button no-underline' id='purchase_button_middle' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                            </div>
+                                        </span>
                                     </div>
-                                    <div className='col price_comment' />
-                                    <div className='col contract_error' />
+                                    <div className='contract_longcode' />
                                 </div>
+                                <div className='col price_comment' />
+                                <div className='col contract_error' />
                             </div>
                         </div>
                     </div>

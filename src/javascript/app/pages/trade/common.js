@@ -3,10 +3,12 @@ const Symbols                    = require('./symbols');
 const Tick                       = require('./tick');
 const marketsElement             = require('./markets.jsx');
 const GuideElement               = require('./guide.jsx');
+const PurchaseElement            = require('./purchase.jsx');
 const MarketSelectorElement      = require('./markets/market-selector.jsx');
 const TabsElement                = require('../bottom/tabs.jsx');
 const formatMoney                = require('../../common/currency').formatMoney;
 const ActiveSymbols              = require('../../common/active_symbols');
+const purchaseManager            = require('../../common/purchase_manager.js').default;
 const contractManager            = require('../../common/contract-manager.js').default;
 const elementInnerHtml           = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById             = require('../../../_common/common_functions').getElementById;
@@ -71,6 +73,7 @@ const commonTrading = (() => {
         TabsElement.init();
         MarketSelectorElement.init();
         GuideElement.init();
+        PurchaseElement.init();
     };
 
     /*
@@ -236,7 +239,7 @@ const commonTrading = (() => {
     /*
      * display the profit and return of bet under each trade container
      */
-    const displayCommentPrice = (node, currency, type, payout) => {
+    const displayCommentPrice = (node, currency, type, payout,position) => {
         if (node && type && payout) {
             const profit         = payout - type;
             const return_percent = (profit / type) * 100;
@@ -247,6 +250,9 @@ const commonTrading = (() => {
             } else {
                 node.show();
                 elementInnerHtml(node, comment);
+                purchaseManager.set({
+                    [`${position}Comment`]: comment,
+                });
             }
         }
     };
@@ -464,13 +470,23 @@ const commonTrading = (() => {
         displayMarkets,
         timeIsValid,
         requireHighstock,
-        showPriceOverlay: () => { showHideOverlay('loading_container2', 'block'); },
-        hidePriceOverlay: () => { showHideOverlay('loading_container2', 'none'); },
-        hideFormOverlay : () => { showHideOverlay('loading_container3', 'none'); },
-        showFormOverlay : () => { showHideOverlay('loading_container3', 'block'); },
-        durationOrder   : duration => duration_config[duration].order,
-        durationType    : duration => (duration_config[duration] || {}).type,
-        clean           : () => { $chart = null; contracts_element = null; },
+        showPriceOverlay: () => {
+            showHideOverlay('loading_container2', 'block');
+            purchaseManager.set({
+                isPurchaseFormDisabled: true,
+            });
+        },
+        hidePriceOverlay: () => {
+            showHideOverlay('loading_container2', 'none');
+            purchaseManager.set({
+                isPurchaseFormDisabled: false,
+            });
+        },
+        hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },
+        showFormOverlay: () => { showHideOverlay('loading_container3', 'block'); },
+        durationOrder  : duration => duration_config[duration].order,
+        durationType   : duration => (duration_config[duration] || {}).type,
+        clean          : () => { $chart = null; contracts_element = null; },
     };
 })();
 
