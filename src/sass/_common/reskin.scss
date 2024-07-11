@@ -173,6 +173,10 @@ div#contract-injection-container {
 div#purchase_container {
     width: 100%;
     max-width: 430px;
+
+    @media(max-width: 768px){
+        max-width: none;
+    }
 }
 
 .quill-purchase-section {
