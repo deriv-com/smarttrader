@@ -27,8 +27,6 @@ class ContractManager {
 
                 triggerContractChange();
             }
-        } else {
-            console.error('Data must be an object.');
         }
     }
 

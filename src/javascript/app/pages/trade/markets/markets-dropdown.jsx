@@ -17,7 +17,7 @@ import ActiveSymbols, {
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { triggerMarketChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
-import contractManager from '../../../common/contract-manager';
+import contractManager from '../../../common/contract_manager';
 
 export const getMarketName = () => {
     const obj =  ActiveSymbols.getMarkets();

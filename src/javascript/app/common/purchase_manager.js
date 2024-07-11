@@ -27,8 +27,6 @@ class PurchaseManager {
 
                 triggerPurchaseChange();
             }
-        } else {
-            console.error('Data must be an object.');
         }
     }
    
