@@ -14,6 +14,7 @@ const StartDates        = require('./starttime').StartDates;
 const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const BinarySocket      = require('../../base/socket');
+const purchaseManager   = require('../../common/purchase_manager').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
@@ -146,7 +147,10 @@ const Process = (() => {
     const processContract = (contracts) => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
-            getElementById('contract_confirmation_container').style.display      = 'block';
+            purchaseManager.set({
+                showPurchaseResults: true,
+            });
+            getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';
             getElementById('confirmation_message').hide();
             const confirmation_error = getElementById('confirmation_error');

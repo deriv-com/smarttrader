@@ -19,6 +19,7 @@ const CommonFunctions          = require('../../../_common/common_functions');
 const localize                 = require('../../../_common/localize').localize;
 const State                    = require('../../../_common/storage').State;
 const Url                      = require('../../../_common/url');
+const purchaseManager          = require('../../common/purchase_manager').default;
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
 
@@ -95,6 +96,10 @@ const Purchase = (() => {
             } else {
                 contracts_list.style.display = 'none';
                 container.style.display = 'block';
+                purchaseManager.set({
+                    showPurchaseResults: true,
+                });
+
                 message_container.hide();
                 if (/AuthorizationRequired/.test(error.code)) {
                     authorization_error.setVisibility(1);
@@ -161,6 +166,15 @@ const Purchase = (() => {
             CommonFunctions.elementTextContent(barrier_element, '');
             CommonFunctions.elementTextContent(reference, `${localize('Your transaction reference is')} ${receipt.transaction_id}`);
 
+            purchaseManager.set({
+                showPurchaseResults: true,
+                pr_heading         : localize('Contract Confirmation'),
+                pr_description     : receipt.longcode,
+                pr_barrier         : '',
+                pr_reference       : `${localize('Your transaction reference is')} ${receipt.transaction_id}`,
+                
+            });
+
             const currency = Client.get('currency');
             let formula, multiplier;
             const { contract_type } = passthrough;
@@ -175,13 +189,30 @@ const Purchase = (() => {
             const potential_profit_value = payout_value ? formatMoney(currency, payout_value - cost_value) : undefined;
 
             CommonFunctions.elementInnerHtml(cost,   `${localize('Total Cost')} <p>${formatMoney(currency, cost_value)}</p>`);
+            purchaseManager.set({
+                pr_tableCost     : localize('Total Cost'),
+                pr_tableCostValue: formatMoney(currency, cost_value),
+            });
+
             if (isLookback(contract_type)) {
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formula}</p>`);
+                purchaseManager.set({
+                    pr_tablePayout     : localize('Potential Payout'),
+                    pr_tablePayoutValue: formula,
+                });
                 profit.setVisibility(0);
             } else {
                 profit.setVisibility(1);
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formatMoney(currency, payout_value)}</p>`);
                 CommonFunctions.elementInnerHtml(profit, `${localize('Potential Profit')} <p>${potential_profit_value}</p>`);
+
+                purchaseManager.set({
+                    pr_tablePayout     : localize('Potential Payout'),
+                    pr_tablePayoutValue: formatMoney(currency, payout_value),
+                    pr_tableProfit     : localize('Potential Profit'),
+                    pr_tableProfitValue: potential_profit_value,
+
+                });
             }
 
             updateValues.updateContractBalance(receipt.balance_after);
@@ -205,9 +236,15 @@ const Purchase = (() => {
                 CommonFunctions.elementTextContent(button, localize('View'));
                 button.setAttribute('contract_id', receipt.contract_id);
                 button.show();
+                purchaseManager.set({
+                    pr_showBtn: true,
+                });
                 $('#confirmation_message_container .open_contract_details').attr('contract_id', receipt.contract_id).setVisibility(1);
             } else {
                 button.hide();
+                purchaseManager.set({
+                    pr_showBtn: false,
+                });
                 $('#confirmation_message_container .open_contract_details').setVisibility(0);
             }
         }

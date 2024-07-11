@@ -184,11 +184,88 @@ div#purchase_container {
     flex-direction: column;
     gap: var(--core-spacing-800);
 
-    &.disabled {
-        opacity: 0.5;
-    }
     p {
         margin: 0px;
+    }
+    &-results {
+        display: flex;
+        flex-direction: column;
+        background: var(--core-color-solid-slate-50);
+        border-radius: var(--core-borderRadius-800);
+        width: 100%;
+
+        p {
+            margin: 0px;
+        }
+        .top-box {
+            display: flex;
+            flex-direction: column;
+            padding: var(--core-size-1200) 0;
+
+            .header-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 var(--core-size-800);
+                margin-bottom: var(--core-size-800);
+                position: relative;
+
+                .close-btn {
+                    position: absolute;
+                    right: 16px;
+                    display: flex;
+                    width: 48px;
+                    height: 48px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+            .body-box {
+                display: flex;
+                flex-direction: column;
+                padding: 0 var(--core-size-800);
+                gap: var(--core-size-800);
+
+                .description-box {
+                    display: flex;
+                    border-radius: var(--core-borderRadius-200);
+                    border: solid 1px var( --core-color-opacity-slate-100);
+                    padding: 0 var(--core-size-800);
+                    background-color: var(--core-color-opacity-slate-75);
+                }
+                .table-box {
+                    display: flex;
+        
+                    .table-item {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                    }
+                }
+                .info-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .view-btn {
+                        margin-top: var(--core-size-400);
+                    }
+                }
+            }
+        }
+        .footer-box {
+            display: flex;
+            justify-content: center;
+            background-color: var(--core-color-opacity-slate-100);
+            padding: var(--core-size-400);
+            border-radius: 0 0 var(--core-borderRadius-800) var(--core-borderRadius-800);
+            gap: 4px;
+        }
+    }
+    &.disabled {
+        opacity: 0.5;
     }
     .purchase-box {
         display: flex;
