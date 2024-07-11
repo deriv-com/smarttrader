@@ -12,7 +12,6 @@ const Client            = require('../../base/client');
 const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
 const DerivBanner       = require('../../common/deriv_banner');
-const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
@@ -80,11 +79,7 @@ const TradePage = (() => {
         if (document.getElementById('websocket_form')) {
             commonTrading.addEventListenerForm();
         }
-
-        // Walk-through Guide
-        Guide.init({
-            script: 'trading',
-        });
+     
         TradingAnalysis.bindAnalysisTabEvent();
 
         ViewPopup.viewButtonOnClick('#contract_confirmation_container');
