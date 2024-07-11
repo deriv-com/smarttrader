@@ -26,6 +26,7 @@ const Trading = () => (
                             <input type='hidden' id='underlying' />
                         </div>
                         <div id='contract_type_container'>
+                            <div id='contract_component' />
                             <input type='hidden' id='contract' />
                         </div>
                     </div>

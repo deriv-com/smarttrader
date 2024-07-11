@@ -40,7 +40,6 @@ const Defaults = (() => {
         SELECTED_TICK  : 'selected_tick',
         TIME_START     : 'time_start',
         UNDERLYING     : 'underlying',
-        CONTRACT_NAME  : 'contract_name',
     };
     const getDefault = (key) => {
         const p_value = params[key] || Url.param(key);

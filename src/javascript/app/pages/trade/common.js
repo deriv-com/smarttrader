@@ -8,6 +8,7 @@ const MarketSelectorElement      = require('./markets/market-selector.jsx');
 const TabsElement                = require('../bottom/tabs.jsx');
 const formatMoney                = require('../../common/currency').formatMoney;
 const ActiveSymbols              = require('../../common/active_symbols');
+const { default: contractManager } = require('../../common/contract-manager.js');
 const elementInnerHtml           = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById             = require('../../../_common/common_functions').getElementById;
 const localize                   = require('../../../_common/localize').localize;
@@ -49,7 +50,12 @@ const commonTrading = (() => {
         const contract_to_show = /^(callputequal)$/.test(selected) ? 'risefall' : selected;
 
         if (!contracts_element) {
-            contracts_element = contractsElement.init(all_contracts, contracts_tree, contract_to_show);
+            contractManager.set({
+                contractsTree  : contracts_tree,
+                contracts      : all_contracts,
+                formName       : selected || Defaults.get('formname'),
+                contractElement: getElementById('contract'),
+            });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,

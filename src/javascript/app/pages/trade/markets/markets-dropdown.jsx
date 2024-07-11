@@ -17,6 +17,7 @@ import ActiveSymbols, {
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { triggerMarketChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
+import contractManager from '../../../common/contract-manager';
 
 export const getMarketName = () => {
     const obj =  ActiveSymbols.getMarkets();
@@ -34,8 +35,30 @@ export const getMarketName = () => {
         obj[marketKey].submarkets[submarket].symbols?.[symbolKey]
     )]?.symbols[symbolKey]?.display;
 
-    return displayValue || null;
+    return displayValue || '';
 
+};
+
+export const getContractName = () => {
+    const data = contractManager.getAll();
+    let name = '';
+    // eslint-disable-next-line consistent-return
+    data?.contractsTree?.forEach((contract) => {
+        if (typeof contract === 'object') {
+            contract[1].forEach((subtype) => {
+                if (subtype === data?.formName){
+                    name =  data?.contracts[subtype];
+                }
+            
+            });
+        
+        } else if (contract === data?.formName){
+            name = data?.contracts[contract];
+        }
+       
+    });
+
+    return name;
 };
 
 export const MarketsDropdown = () => {
