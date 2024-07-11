@@ -31,7 +31,6 @@ const MarketSelector = () => {
                     containerClassName='quill-market-selector-dropdown'
                     label={localize('Market')}
                     value={marketLabel}
-                    id='market-dropdown'
                 >
                     <MarketsDropdown />
                 </CustomDropdown>
