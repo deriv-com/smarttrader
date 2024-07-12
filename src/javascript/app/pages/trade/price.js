@@ -248,6 +248,7 @@ const Price = (() => {
             purchaseManager.set({
                 [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value,true) : '-',
                 [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout,true) : '-',
+                [`${position}Multiplier`]  : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
                 currency                   : getCurrencyDisplayCode(currentCurrency),
             });
 
@@ -460,8 +461,18 @@ const Price = (() => {
         Object.keys(position_is_visible).forEach(position => {
             const container = CommonFunctions.getElementById(`price_container_${position}`);
             if (position_is_visible[position]) {
+                if (position === 'middle'){
+                    purchaseManager.set({
+                        showMidPurchase: true,
+                    });
+                }
                 $(container).fadeIn(0);
             } else {
+                if (position === 'middle'){
+                    purchaseManager.set({
+                        showMidPurchase: false,
+                    });
+                }
                 $(container).fadeOut(0);
             }
         });

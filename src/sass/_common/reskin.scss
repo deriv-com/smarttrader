@@ -193,6 +193,7 @@ div#purchase_container {
         background: var(--core-color-solid-slate-50);
         border-radius: var(--core-borderRadius-800);
         width: 100%;
+        height: 100%;
 
         p {
             margin: 0px;
@@ -200,7 +201,7 @@ div#purchase_container {
         .top-box {
             display: flex;
             flex-direction: column;
-            padding: var(--core-size-1200) 0;
+            padding: var(--core-spacing-1200) 0;
 
             .header-box {
                 display: flex;
@@ -253,13 +254,54 @@ div#purchase_container {
                         margin-top: var(--core-size-400);
                     }
                 }
+                .error-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: var(--core-size-800);
+
+                    .error-message {
+                        padding: var(--core-size-800);
+                    }
+                    button {
+                        width: fit-content;
+                    }
+                }
+            }
+            .analysis-box {
+                margin-top: var(--core-spacing-800);
+
+                .digit-tick-epoch {
+                    position: relative !important;
+                    margin-bottom: var(--core-spacing-800);
+                    top: 0 !important;
+                    right: 0 !important;
+                }
+                .digit-trade {
+                    .quote {
+                        font-weight: bold;
+                    }
+                }
+                .digit-ticker {
+                    margin-top: var(--core-spacing-800);
+
+                    .mask {
+                        font-size: 10px;
+                    }
+                    .digit {
+                        &.digit-winning {
+                            background-color: var(--core-color-opacity-green-100);
+                            color: var(--core-color-opacity-green-600);
+                        }
+                    }
+                }
             }
         }
         .footer-box {
             display: flex;
             justify-content: center;
             background-color: var(--core-color-opacity-slate-100);
-            padding: var(--core-size-400);
+            padding: var(--core-spacing-400);
             border-radius: 0 0 var(--core-borderRadius-800) var(--core-borderRadius-800);
             gap: 4px;
         }

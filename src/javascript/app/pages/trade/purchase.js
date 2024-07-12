@@ -114,6 +114,7 @@ const Purchase = (() => {
                     BinarySocket.wait('get_account_status').then(response => {
                         confirmation_error.setVisibility(1);
                         let message = error.message;
+                      
                         if (/NoMFProfessionalClient/.test(error.code)) {
                             const account_status = getPropertyValue(response, ['get_account_status', 'status']) || [];
                             const has_professional_requested = account_status.includes('professional_requested');
@@ -150,6 +151,10 @@ const Purchase = (() => {
                             }
                         }
 
+                        purchaseManager.set({
+                            error: { ...error,message },
+                        });
+
                         CommonFunctions.elementInnerHtml(confirmation_error, message);
                     });
                 }
@@ -160,6 +165,9 @@ const Purchase = (() => {
             message_container.show();
             authorization_error.setVisibility(0);
             confirmation_error.setVisibility(0);
+            purchaseManager.set({
+                error: null,
+            });
 
             CommonFunctions.elementTextContent(heading, localize('Contract Confirmation'));
             CommonFunctions.elementTextContent(descr, receipt.longcode);

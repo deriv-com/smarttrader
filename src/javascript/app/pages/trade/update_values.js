@@ -13,6 +13,7 @@ const updatePurchaseStatus = (final_price, pnl, profit, localized_contract_statu
     $payout.html($('<div/>', { text: localize('Buy price') }).append($('<p/>', { html: formatMoney(currency, Math.abs(pnl)) })));
     $cost.html($('<div/>', { text: localize('Final price') }).append($('<p/>', { html: formatMoney(currency, final_price) })));
     purchaseManager.set({
+        pr_heading         : localized_contract_status,
         pr_tablePayout     : localize('Buy price') ,
         pr_tablePayoutValue: formatMoney(currency, Math.abs(pnl)),
         pr_tableCost       : localize('Final price'),
