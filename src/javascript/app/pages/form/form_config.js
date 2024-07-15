@@ -101,6 +101,12 @@ const HighLowBarrier = [
     },
 ];
 
+const LastDigitPrediction = {
+    label  : 'Last Digit Prediction',
+    options: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    value  : '0',
+};
+
 export const formConfig = {
     risefall: {
         startTime: {
@@ -112,8 +118,9 @@ export const formConfig = {
             ],
             defaultValue: 'now',
         },
-        expiryType: ExpiryType,
-        payoutType: PayoutType,
+        expiryType : ExpiryType,
+        payoutType : PayoutType,
+        allowEquals: true,
     },
     touchnotouch: {
         expiryType: ExpiryType,
@@ -134,6 +141,24 @@ export const formConfig = {
         expiryType    : ExpiryType,
         highlowBarrier: HighLowBarrier,
         payoutType    : PayoutType,
+    },
+    matchdiff: {
+        expiryType: ExpiryType,
+        lastDigit : LastDigitPrediction,
+        payoutType: PayoutType,
+    },
+    evenodd: {
+        expiryType: ExpiryType,
+        payoutType: PayoutType,
+    },
+    overunder: {
+        expiryType: ExpiryType,
+        lastDigit : LastDigitPrediction,
+        payoutType: PayoutType,
+    },
+    asian: {
+        expiryType: ExpiryType,
+        payoutType: PayoutType,
     },
 };
 
