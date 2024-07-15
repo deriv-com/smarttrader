@@ -12,13 +12,13 @@ class EventEmitter {
         }
         this.events[event].push(callback);
         return () => {
-            this.events[event] = this.events[event].filter(cb => cb !== callback);
+            this.events[event] = this.events[event].filter((cb) => cb !== callback);
         };
     }
 
     emit(event, data) {
         if (this.events[event]) {
-            this.events[event].forEach(callback => callback(data));
+            this.events[event].forEach((callback) => callback(data));
         }
     }
 }
@@ -61,3 +61,7 @@ export const triggerContractChange = () => triggerCustomEvent('contractChange');
 // SesstionStorage Change
 export const useSessionChange = () => useCustomEvent('sessionChange');
 export const triggerSessionChange = () => triggerCustomEvent('sessionChange');
+
+// Purchase Change
+export const usePurchaseChange = () => useCustomEvent('purchaseChange');
+export const triggerPurchaseChange = () => triggerCustomEvent('purchaseChange');

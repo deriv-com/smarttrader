@@ -1,15 +1,8 @@
 import React from 'react';
 import { Select } from '../../_common/components/elements.jsx';
 
-const  { Button, Heading } = require('@deriv-com/quill-ui');
-
 const LastDigit = () => (
     <div className='gr-parent'>
-        <Button label='this is Quill Button' />
-        <Heading.H1>QUILL H1</Heading.H1>
-        <Heading.H2>QUILL H2</Heading.H2>
-        <Heading.H3>QUILL H3</Heading.H3>
-        <Heading.H4>QUILL H4</Heading.H4>
         <div id='last_digit_histo_form' className='gr-8 gr-12-m gr-centered'>
             <div className='smallfont gr-row'>
                 <div className='gr-7 gr-12-m'>

@@ -136,12 +136,11 @@ ul.bullet {
         animation: fade 1s;
         animation-fill-mode: forwards;
     }
-    // select, input, div.select-dropdown {
-    //     border-radius: 5px;
-    //     box-sizing: border-box;
-    //     height: 28px;
-    //     border: solid 1px var(--border-normal);
-    // }
+    select, input, div.select-dropdown {
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 28px;
+    }
     div.select-dropdown:after {
         height: 16px;
         width: 16px;
