@@ -107,6 +107,12 @@ const LastDigitPrediction = {
     value  : '0',
 };
 
+const TickPrediction = {
+    label  : 'Tick Prediction',
+    options: ['1', '2', '3', '4', '5'],
+    value  : '1',
+};
+
 export const formConfig = {
     risefall: {
         startTime: {
@@ -157,6 +163,29 @@ export const formConfig = {
         payoutType: PayoutType,
     },
     asian: {
+        expiryType: ExpiryType,
+        payoutType: PayoutType,
+    },
+    lookbackhigh: {
+        expiryType: ExpiryType,
+    },
+    lookbacklow: {
+        expiryType: ExpiryType,
+    },
+    lookbackhighlow: {
+        expiryType: ExpiryType,
+    },
+    reset: {
+        infoMessage: 'The reset time is 30 seconds',
+        expiryType : ExpiryType,
+        payoutType : PayoutType,
+    },
+    highlowticks: {
+        infoMessage   : 'This contract type only offers 5 ticks',
+        tickPrediction: TickPrediction,
+        payoutType    : PayoutType,
+    },
+    runs: {
         expiryType: ExpiryType,
         payoutType: PayoutType,
     },
