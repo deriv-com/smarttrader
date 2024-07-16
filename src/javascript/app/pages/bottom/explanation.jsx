@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import parse from 'html-react-parser';
 import { contractExplanationData } from './data/explanation.js';
-import { useContractChange, useMarketChange } from '../../hooks/events';
-import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
 import { localize } from '../../../_common/localize.js';
 
-export const Explanation = () => {
+export const Explanation = ({ formName }) => {
     const language = Language.get();
    
-    const [formName,setFormName] = useState('');
-
-    const hasContractChange = useContractChange();
-    const hasMarketChange = useMarketChange();
-
-    useEffect(() => {
-        const contractObject = {
-            matchdiff   : 'digits',
-            callputequal: 'risefall',
-            callput     : 'higherlower',
-        };
-
-        const newFormName = Defaults.get(PARAM_NAMES.FORM_NAME) || 'risefall';
-        const finalFormName =  contractObject[newFormName] || newFormName;
-       
-        setFormName(finalFormName);
-       
-    },[hasContractChange, hasMarketChange]);
-
     const image_path = Url.urlForStatic(
         `images/pages/trade-explanation/${language}/`
     );
