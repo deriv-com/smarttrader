@@ -21,7 +21,7 @@ import contractManager from '../../../common/contract_manager';
 
 export const getMarketName = () => {
     const obj =  ActiveSymbols.getMarkets();
-    const symbolKey = Defaults.get(PARAM_NAMES.UNDERLYING);
+    const symbolKey = Defaults.get(PARAM_NAMES.UNDERLYING) || 'frxUSDJPY';
     
     // Find the market and submarket where the symbolKey exists
     const marketKey = Object.keys(obj).find(market =>
@@ -265,7 +265,7 @@ export const MarketsDropdown = () => {
                                                         onClick={() => handleUnderlyingClick(yk)}
                                                         label={display}
                                                         selected={isSelected}
-                                                        size='sm'
+                                                        size='md'
                                                     />
                                                 );
                                             })}
