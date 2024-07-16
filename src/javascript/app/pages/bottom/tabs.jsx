@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { Explanation } from './explanation.jsx';
+import LastDigit from './last-digit.jsx';
 import { getElementById } from '../../../_common/common_functions';
-import  LastDigit  from '../../../../templates/app/trade/last_digit.jsx';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
 import Defaults from '../trade/defaults';
@@ -108,7 +108,7 @@ const BottomTabs = () => {
             )}
             {selectedTab === 2 &&
             <div id='tab_last_digit'>
-                {/* <LastDigit /> */}
+                <LastDigit />
                 <p> Last Digit Stats </p>
             </div>
             }
