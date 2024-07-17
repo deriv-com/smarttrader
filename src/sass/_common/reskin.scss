@@ -384,10 +384,142 @@ div#purchase_container {
     }
 }
 
+.quill-purchase-popup {
+    position: fixed;
+    // top: 48px;
+    // left: 0;
+    // width: 100%;
+    height: calc(100% - 84px);
+    background: var(--core-color-solid-slate-75);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(.8);
+    top: -135px;
+    left: -86px;
+    width: 950px;
+
+    .header-box {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        background: var(--core-color-opacity-white-800);
+
+        .title-box {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .body-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 940px;
+
+        .purchase-details-box {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: var(--core-spacing-1200);
+            flex-direction: column;
+            padding: var(--core-spacing-1200) 0;
+        }
+        .loader-box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: var(--core-spacing-1200);
+            padding: 40px 0 var(--core-spacing-1200) 0;
+
+            .body-loader {
+                display: flex;
+                gap: var(--core-size-800);
+            }
+        }
+        .details-title {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .details-column {
+            display: flex;
+            width: 100%;
+            gap: var(--core-spacing-800);
+
+            .chart-wrapper {
+                width: 100%;
+                background: var(--core-color-solid-slate-50);
+                border-radius: 8px;
+            }
+            .contract-info-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 360px;
+                background: var(--core-color-solid-slate-50);
+                border-radius: 8px;
+
+                .table-box {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    padding: 8px 16px;
+                    border-bottom: solid 1px var(--core-color-opacity-slate-100);
+
+                    &.lg {
+                        flex-direction: column;
+                        border-bottom: none;
+                        justify-content: center;
+                        padding: var(--core-spacing-800);
+                        margin: var(--core-spacing-800) 0 0 0;
+                    }
+                    p, .info-msg{
+                        width: 100%;
+                    }
+                    .table-item {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        min-width: 140px;
+                        width: fit-content;
+
+                        &.profit-loss {
+                            p {
+                                font-weight: bold;
+
+                                &.profit {
+                                    color: var(--semantic-color-emerald-solid-surface-normal-highest);
+                                }
+                                &.loss {
+                                    color: var(--semantic-color-cherry-solid-surface-normal-highest);
+                                }
+                                .symbols {
+                                    margin-right: 5px;
+                                }
+                                .percent {
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .purchase-tooltip {
     display: block;
     width: 100%;
     max-width: 200px;
+}
+
+#react-tiny-popover-container {
+    z-index: 999;
 }
 
 .explanation-container {

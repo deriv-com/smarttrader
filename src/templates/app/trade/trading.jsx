@@ -194,9 +194,6 @@ const Trading = () => (
                                     <div id='contract_purchase_barrier' />
                                     <div id='contract_purchase_reference' />
                                     <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
-                                    <div id='contract_purchase_spots' />
-                                    <div id='trade_tick_chart' />
-                                    <div id='digit_ticker_table' className='digit-ticker invisible' />
                                     <div id='contract_purchase_balance' />
                                 </div>
                                 <div id='confirmation_error' className='center-text invisible' />
