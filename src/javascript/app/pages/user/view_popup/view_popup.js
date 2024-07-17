@@ -458,6 +458,7 @@ const ViewPopup = (() => {
             cd_currentLabel   : localize('Contract result'),
             cd_indicativeLabel: localize('Payout'),
             cd_profitLossLabel: localize('Profit/loss'),
+            cd_contractEnded  : true,
         });
 
         if (contract.status === 'sold') {
@@ -688,6 +689,9 @@ const ViewPopup = (() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
                     appendAuditLink('trade_details_entry_spot');
+                    purchaseManager.set({
+                        cd_showAuditBtn: true,
+                    });
                 } else {
                     contract_starts.div.remove();
                 }
@@ -698,6 +702,9 @@ const ViewPopup = (() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
                             appendAuditLink('trade_details_current_spot');
+                            purchaseManager.set({
+                                cd_showAuditBtn: true,
+                            });
                         } else {
                             contract_ends.div.remove();
                         }
@@ -714,6 +721,9 @@ const ViewPopup = (() => {
                     createAuditHeader(contract_details.table);
                     appendAuditLink('trade_details_entry_spot');
                     appendAuditLink('trade_details_current_spot');
+                    purchaseManager.set({
+                        cd_showAuditBtn: true,
+                    });
                 } else {
                     contract_details.div.remove();
                 }

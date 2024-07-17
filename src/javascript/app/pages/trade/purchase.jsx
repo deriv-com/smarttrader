@@ -225,30 +225,34 @@ const Purchase = () => {
                                                     {data?.cd_currentLabel}
                                                 </Text>
                                             </div>
+                                            {!data?.cd_contractEnded && (
+                                                <div className='table-box'>
+                                                    <div className='table-item'>
+                                                        <Text size='sm'>{data?.cd_spotLabel}</Text>
+                                                    </div>
+                                                    <div className='table-item'>
+                                                        <Text size='sm'>{data?.cd_currentSpot}</Text>
+                                                    </div>
+                                                </div>
+                                            )}
                                             <div className='table-box'>
                                                 <div className='table-item'>
-                                                    <Text size='sm'>{data?.cd_spotLabel}</Text>
+                                                    <Text size='sm'>{data?.cd_endLabel || data?.cd_spotTimeLabel}</Text>
                                                 </div>
                                                 <div className='table-item'>
-                                                    <Text size='sm'>{data?.cd_currentSpot}</Text>
+                                                    {TimeTooltipWrapper(<Text size='sm'>{data?.cd_endDate || data?.cd_currentDate}</Text>,data?.cd_endDate || data?.cd_currentDate)}
                                                 </div>
                                             </div>
-                                            <div className='table-box'>
-                                                <div className='table-item'>
-                                                    <Text size='sm'>{data?.cd_spotTimeLabel}</Text>
+                                            {!data?.cd_contractEnded && (
+                                                <div className='table-box'>
+                                                    <div className='table-item'>
+                                                        <Text size='sm'>{localize('Current time')}</Text>
+                                                    </div>
+                                                    <div className='table-item'>
+                                                        {TimeTooltipWrapper(<Text size='sm'>{data?.cd_currentTime}</Text>,data?.cd_currentTime)}
+                                                    </div>
                                                 </div>
-                                                <div className='table-item'>
-                                                    {TimeTooltipWrapper(<Text size='sm'>{data?.cd_currentDate}</Text>,data?.cd_currentDate)}
-                                                </div>
-                                            </div>
-                                            <div className='table-box'>
-                                                <div className='table-item'>
-                                                    <Text size='sm'>{localize('Current time')}</Text>
-                                                </div>
-                                                <div className='table-item'>
-                                                    {TimeTooltipWrapper(<Text size='sm'>{data?.cd_currentTime}</Text>,data?.cd_currentTime)}
-                                                </div>
-                                            </div>
+                                            )}
                                             <div className='table-box'>
                                                 <div className='table-item'>
                                                     <Text size='sm'>{data?.cd_indicativeLabel}</Text>
@@ -265,6 +269,12 @@ const Purchase = () => {
                                                     <Text size='sm' dangerouslySetInnerHTML={{ __html: data?.cd_profitLoss }} className={data?.cd_profitLossClass} />
                                                 </div>
                                             </div>
+
+                                            {data?.cd_showAuditBtn && (
+                                                <div className='table-box lg'>
+                                                    <Button variant='secondary' size='lg' label={localize('Audit')} color='black' onClick={() => document.querySelector('.link-audit').click()} />
+                                                </div>
+                                            )}
                                             
                                             {(data?.cd_infoMsg || data?.cd_sellMsg) && (
                                                 <div className='table-box'>
