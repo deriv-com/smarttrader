@@ -139,7 +139,8 @@ const Highchart = (() => {
             entry_time: (entry_tick_time || start_time) * 1000,
             exit_time : getExitTime(),
             has_zone  : true,
-            height    : Math.max(el.parentElement.offsetHeight, 450),
+            // height    : Math.max(el.parentElement.offsetHeight, 450),
+            height    : 450,
             radius    : 2,
             title     : init_options.title,
             tooltip   : {

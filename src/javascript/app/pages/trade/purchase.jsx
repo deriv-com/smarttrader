@@ -406,13 +406,62 @@ const Purchase = () => {
         );
     }
 
+    if (data?.error){
+        return (
+            <div className='quill-purchase-section-results'>
+                <div className='top-box'>
+                    <div className='header-box'>
+                        <Text size='xl'>{data?.error?.title}</Text>
+                        <span
+                            className='close-btn'
+                            onClick={() => {
+                                triggerClick('close_confirmation_container');
+                                purchaseManager.set({
+                                    showPurchaseResults: false,
+                                });
+                            }}
+                        >
+                            <LabelPairedXmarkMdRegularIcon />
+                        </span>
+                    </div>
+      
+                    <div className='body-box'>
+                        <div className='error-box'>
+                            {data?.error?.isCustom ? (
+                                <>
+                                    {data?.error.code === 'AuthorizationRequired' && (
+                                        <>
+                                            <Button
+                                                variant='primary'
+                                                size='lg'
+                                                label={localize('Open a free account')}
+                                                onClick={() => window.location.href = data?.error.signupUrl}
+                                            />
+                                            <Text size='sm'>{localize('Already have an account?')}</Text>
+                                            <Button variant='tertiary' size='lg' label={localize('Log in here')} onClick={() => triggerClick('authorization_error_btn_login')} />
+                                        </>
+                                    )}
+                                </>
+                            ) : (
+                                <span className='error-message'>
+                                    <Text size='md' centered>{data?.error.message}</Text>
+                                </span>
+                            )}
+                            {data?.error.code === 'InsufficientBalance' && (
+                                <Button label={localize('Deposit now')} size='md' onClick={() => document.querySelector('.url-cashier-deposit').click()} />
+                            )}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>);
+    }
+
     return (
         <div className='quill-purchase-section-results'>
             <div className='top-box'>
                 <div className='header-box'>
-                    {!data?.error && (
-                        <Text size='xl'>{data?.pr_heading}</Text>
-                    )}
+                    <Text size='xl'>{data?.pr_heading}</Text>
                     <span
                         className='close-btn'
                         onClick={() => {
@@ -427,69 +476,52 @@ const Purchase = () => {
                 </div>
               
                 <div className='body-box'>
-                    {data?.error ? (
-                        <div className='error-box'>
-                            <span className='error-message'>
-                                <Text size='md' centered>{data?.error.message}</Text>
-                            </span>
-                            {data?.error.code === 'InsufficientBalance' && (
-                                <Button label={localize('Deposit now')} size='md' onClick={() => document.querySelector('.url-cashier-deposit').click()} />
-                            )}
-                        </div>
-                    ) : (
-                        <>
-                            <div className='description-box'>
-                                <Text size='sm'>{data?.pr_description}</Text>
-                            </div>
-                            <div className='table-box'>
-                                {data?.pr_tablePayoutValue && (
-                                    <div className='table-item'>
-                                        <Text size='sm' bold>{data?.pr_tablePayout}</Text>
-                                        <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tablePayoutValue }} />
-                                    </div>
-                                )}
-                                { data.pr_tableCostValue && (
-                                    <div className='table-item'>
-                                        <Text size='sm' bold>{data?.pr_tableCost}</Text>
-                                        <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableCostValue }} />
-                                    </div>
-                                )}
-                                { data.pr_tableProfitValue && (
-                                    <div className='table-item'>
-                                        <Text size='sm' bold>{data?.pr_tableProfit}</Text>
-                                        <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableProfitValue }} />
-                                    </div>
-                                )}
-                            </div>
-                            <div className='info-box'>
-                                {data?.pr_barrier && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_barrier }} />}
-                                {data?.pr_reference && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_reference }} />}
-                                {data?.pr_showBtn && <Button
-                                    className='view-btn'
-                                    label={localize('View')}
-                                    onClick={() => {
-                                        triggerClick('contract_purchase_button');
-                                    }}
-                                />}
-                            </div>
-                        </>
-                    )}
-                </div>
-           
-                {!data?.error && (
-                    <div id='confirmation_message' className='analysis-box'>
-                        <div id='contract_purchase_spots' />
-                        <div id='trade_tick_chart' />
-                        <div id='digit_ticker_table' className='digit-ticker invisible' />
+                    <div className='description-box'>
+                        <Text size='sm'>{data?.pr_description}</Text>
                     </div>
-                )}
-            </div>
-            {!data?.error && (
-                <div className='footer-box'>
-                    <CaptionText>{data?.pr_balance} </CaptionText>
-                    <CaptionText  dangerouslySetInnerHTML={{ __html: data?.pr_balanceValue }} />
+                    <div className='table-box'>
+                        {data?.pr_tablePayoutValue && (
+                            <div className='table-item'>
+                                <Text size='sm' bold>{data?.pr_tablePayout}</Text>
+                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tablePayoutValue }} />
+                            </div>
+                        )}
+                        { data.pr_tableCostValue && (
+                            <div className='table-item'>
+                                <Text size='sm' bold>{data?.pr_tableCost}</Text>
+                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableCostValue }} />
+                            </div>
+                        )}
+                        { data.pr_tableProfitValue && (
+                            <div className='table-item'>
+                                <Text size='sm' bold>{data?.pr_tableProfit}</Text>
+                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableProfitValue }} />
+                            </div>
+                        )}
+                    </div>
+                    <div className='info-box'>
+                        {data?.pr_barrier && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_barrier }} />}
+                        {data?.pr_reference && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_reference }} />}
+                        {data?.pr_showBtn && <Button
+                            className='view-btn'
+                            label={localize('View')}
+                            onClick={() => {
+                                triggerClick('contract_purchase_button');
+                            }}
+                        />}
+                    </div>
                 </div>
-            )}
+         
+                <div id='confirmation_message' className='analysis-box'>
+                    <div id='contract_purchase_spots' />
+                    <div id='trade_tick_chart' />
+                    <div id='digit_ticker_table' className='digit-ticker invisible' />
+                </div>
+            </div>
+            <div className='footer-box'>
+                <CaptionText>{data?.pr_balance} </CaptionText>
+                <CaptionText  dangerouslySetInnerHTML={{ __html: data?.pr_balanceValue }} />
+            </div>
         </div>
     );
 };

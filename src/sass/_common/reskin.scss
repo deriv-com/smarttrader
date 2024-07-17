@@ -386,19 +386,20 @@ div#purchase_container {
 
 .quill-purchase-popup {
     position: fixed;
-    // top: 48px;
-    // left: 0;
-    // width: 100%;
+    top: 48px;
+    left: 0;
+    width: 100%;
     height: calc(100% - 84px);
     background: var(--core-color-solid-slate-75);
     z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(.8);
-    top: -135px;
-    left: -86px;
-    width: 950px;
+    overflow-y: auto;
+    // transform: scale(.8);
+    // top: -135px;
+    // left: -86px;
+    // width: 950px;
 
     .header-box {
         display: flex;
@@ -454,6 +455,7 @@ div#purchase_container {
                 width: 100%;
                 background: var(--core-color-solid-slate-50);
                 border-radius: 8px;
+                height: fit-content;
             }
             .contract-info-wrapper {
                 display: flex;
@@ -513,6 +515,13 @@ div#purchase_container {
     }
 }
 
+// Hide old containers
+#contract_prices_container, .popup_page_overlay, .inpage_popup_container {
+    display: none;
+    position: absolute !important;
+    top: -999px;
+}
+
 .purchase-tooltip {
     display: block;
     width: 100%;
@@ -527,4 +536,5 @@ div#purchase_container {
     margin-block-end: 50px;
     padding-block: 20px;
 }
+
 

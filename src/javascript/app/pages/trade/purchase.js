@@ -110,6 +110,16 @@ const Purchase = (() => {
 
                     const signup_url = `${Url.getStaticUrl()}/signup/`;
                     authorization_error_btn_signup.href = signup_url;
+
+                    purchaseManager.set({
+                        error: {
+                            ...error,
+                            signupUrl: signup_url,
+                            title    : localize('Already have an account?'),
+                            isCustom : true,
+                        },
+                    });
+
                 } else {
                     BinarySocket.wait('get_account_status').then(response => {
                         confirmation_error.setVisibility(1);
