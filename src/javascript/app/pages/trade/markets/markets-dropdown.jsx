@@ -140,16 +140,17 @@ export const MarketsDropdown = () => {
         const container = itemsContainer.current;
     
         const checkActiveMarket = () => {
-            const marketDivs = container.querySelectorAll('div');
+            const marketDivs = container.querySelectorAll('div[data-id]');
             let closestMarket = '';
             let closestOffset = Infinity;
     
             marketDivs.forEach((div) => {
-                const paddingOffset = 120;
-                const offsetTop = div.offsetTop - container.scrollTop - paddingOffset;
-
-                if (offsetTop <= 0 && Math.abs(offsetTop) < Math.abs(closestOffset)) {
-                    closestOffset = offsetTop;
+                const containerMiddle = container.scrollTop + container.clientHeight / 2;
+    
+                const distanceToMiddle = Math.abs((div.offsetTop + div.offsetHeight / 2) - containerMiddle);
+    
+                if (distanceToMiddle < closestOffset) {
+                    closestOffset = distanceToMiddle;
                     closestMarket = div.getAttribute('data-id');
                 }
             });
@@ -171,7 +172,7 @@ export const MarketsDropdown = () => {
             container.removeEventListener('scroll', handleScroll);
         };
     }, [isMounted]);
-    
+
     const getactiveMarketIndex = () => Object.keys(markets).indexOf(activeMarket);
 
     const scrollToMarketByIndex = (index) => {
