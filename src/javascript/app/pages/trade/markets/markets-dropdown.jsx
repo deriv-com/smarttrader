@@ -172,7 +172,7 @@ export const MarketsDropdown = () => {
             container.removeEventListener('scroll', handleScroll);
         };
     }, [isMounted]);
-
+    
     const getactiveMarketIndex = () => Object.keys(markets).indexOf(activeMarket);
 
     const scrollToMarketByIndex = (index) => {
