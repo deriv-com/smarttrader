@@ -290,7 +290,7 @@ export const MarketsDropdown = () => {
                                                         onClick={() => handleUnderlyingClick(yk)}
                                                         label={display}
                                                         selected={isSelected}
-                                                        className={`${isSelected && 'market-item-selected'}`}
+                                                        className={isSelected && 'market-item-selected'}
                                                         size='md'
                                                     />
                                                 );
