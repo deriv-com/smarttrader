@@ -120,7 +120,7 @@ const Guide = (() => {
                 nextButton : btn_next,
             },
             {
-                selector   : '#contract_prices_container',
+                selector   : '.quill-purchase-section',
                 description: `<h1>${localize('Step')} 4</h1>${localize('Predict the direction<br />and purchase')}`,
                 event_type : 'next',
                 nextButton : btn_finish,

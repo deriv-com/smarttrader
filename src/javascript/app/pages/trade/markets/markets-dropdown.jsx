@@ -21,7 +21,7 @@ import contractManager from '../../../common/contract_manager';
 
 export const getMarketName = () => {
     const obj =  ActiveSymbols.getMarkets();
-    const symbolKey = Defaults.get(PARAM_NAMES.UNDERLYING);
+    const symbolKey = Defaults.get(PARAM_NAMES.UNDERLYING) || 'frxAUDJPY';
     
     // Find the market and submarket where the symbolKey exists
     const marketKey = Object.keys(obj).find(market =>
@@ -138,12 +138,12 @@ export const MarketsDropdown = () => {
     // Handle selecting of tabs on scroll
     useEffect(() => {
         const container = itemsContainer.current;
-
+    
         const checkActiveMarket = () => {
             const marketDivs = container.querySelectorAll('div');
             let closestMarket = '';
             let closestOffset = Infinity;
-
+    
             marketDivs.forEach((div) => {
                 const paddingOffset = 120;
                 const offsetTop = div.offsetTop - container.scrollTop - paddingOffset;
@@ -153,25 +153,25 @@ export const MarketsDropdown = () => {
                     closestMarket = div.getAttribute('data-id');
                 }
             });
-
+    
             if (closestMarket) {
                 setActiveMarket(closestMarket);
             }
         };
-
+    
         const handleScroll = () => {
             if (!isScrolling.current) {
                 checkActiveMarket();
             }
         };
-
+    
         container.addEventListener('scroll', handleScroll);
-
+    
         return () => {
             container.removeEventListener('scroll', handleScroll);
         };
     }, [isMounted]);
-
+    
     const getactiveMarketIndex = () => Object.keys(markets).indexOf(activeMarket);
 
     const scrollToMarketByIndex = (index) => {
@@ -207,6 +207,22 @@ export const MarketsDropdown = () => {
 
         closeMarketDropdown();
     };
+
+    useEffect(() => {
+        if (isMounted && itemsContainer.current) {
+            
+            const container = itemsContainer.current;
+            const selectedElement = container.querySelector('.market-item-selected');
+            if (selectedElement) {
+                const offsetTop = selectedElement.offsetTop - container.offsetTop;
+                container.scrollTo({
+                    top     : offsetTop,
+                    behavior: 'auto',
+                });
+            }
+            
+        }
+    }, [isMounted]);
 
     return (
         <div className='quill-market-dropdown-container'>
@@ -245,9 +261,17 @@ export const MarketsDropdown = () => {
                         const market = markets[ik];
                         const { submarkets } = market;
 
+                        const sortedSubmarketKeys = Object.keys(submarkets).sort((a, b) => {
+                            if (a === 'major_pairs') return -1;
+                            if (b === 'major_pairs') return 1;
+                            if (a === 'minor_pairs') return -1;
+                            if (b === 'minor_pairs') return 1;
+                            return 0;
+                        });
+
                         return (
                             <div id={`${ik}-dropdown-list`} key={ik} data-id={ik}>
-                                {Object.keys(submarkets).map((sk) => {
+                                {sortedSubmarketKeys.map((sk) => {
                                     const submarket = submarkets[sk];
                                     const { symbols, name } = submarket;
 
@@ -258,14 +282,15 @@ export const MarketsDropdown = () => {
                                                 const symbol = symbols[yk];
                                                 const { display } = symbol;
                                                 const isSelected = yk === selectedMarket;
-                                               
+
                                                 return (
                                                     <DropdownItem
                                                         key={yk}
                                                         onClick={() => handleUnderlyingClick(yk)}
                                                         label={display}
                                                         selected={isSelected}
-                                                        size='sm'
+                                                        className={isSelected && 'market-item-selected'}
+                                                        size='md'
                                                     />
                                                 );
                                             })}
@@ -276,6 +301,7 @@ export const MarketsDropdown = () => {
                             </div>
                         );
                     })}
+
                 </div>
             </div>
         </div>
