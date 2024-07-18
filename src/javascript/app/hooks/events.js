@@ -45,6 +45,11 @@ const useCustomEvent = (eventName) => {
     return hasNewChanges;
 };
 
+export const eventDispatcher = (element, eventName) => {
+    const event = new Event(eventName, { bubbles: true, cancelable: true });
+    element.dispatchEvent(event);
+};
+
 // Trigger functions
 const triggerCustomEvent = (eventName) => {
     eventEmitter.emit(eventName);

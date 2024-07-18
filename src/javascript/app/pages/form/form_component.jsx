@@ -9,8 +9,8 @@ import {
 } from '@deriv-com/quill-ui';
 import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
-import { triggerSessionChange } from '../../hooks/events';
-// import tradeManager from '../../common/trade_manager';
+import { eventDispatcher, triggerSessionChange } from '../../hooks/events';
+import common_functions from '../../../_common/common_functions';
 
 export const FormComponent = ({ handlers, tradeData }) => {
     
@@ -42,6 +42,12 @@ export const FormComponent = ({ handlers, tradeData }) => {
         triggerSessionChange();
     };
 
+    const updateOldField = (elementId, value, eventType) => {
+        const element = common_functions.getElementById(elementId);
+        element.value = value;
+        eventDispatcher(element, eventType);
+    };
+
     const createOptions = (array) => array.map((option) => ({
         text : option.charAt(0).toUpperCase() + option.slice(1),
         value: option,
@@ -61,13 +67,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
                             <div className='form_field'>
                                 <InputDropdown
                                     label={config.startTime.label}
-                                    // options={startDates.options}
                                     options={tradeData.start_dates.options}
                                     status='neutral'
                                     value={Defaults.get(PARAM_NAMES.DATE_START).toString()}
-                                    onSelectOption={(value) =>
-                                        setDefaults(PARAM_NAMES.DATE_START, value)
-                                    }
+                                    onSelectOption={(value) => {
+                                        setDefaults(PARAM_NAMES.DATE_START, value);
+                                        updateOldField('date_start', value, 'change');
+                                    }}
                                 />
                             </div>
                             {Defaults.get(PARAM_NAMES.DATE_START) !== 'now' && (
