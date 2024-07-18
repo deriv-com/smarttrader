@@ -32,22 +32,8 @@ const ContractFormWrapper = () => {
         }));
     }, [hasTradeChange, hasSessionChange]);
 
-    // const [formName, setFormName] = useState(Defaults.get(PARAM_NAMES.FORM_NAME));
-    // const [expiry_type, setExpiryType] = useState(Defaults.get(PARAM_NAMES.EXPIRY_TYPE) || 'duration');
-    // const [startDates, setStartDates] = useState({});
-
-    // const { EXPIRY_TYPE, DURATION_UNITS } = Defaults.PARAM_NAMES;
-
-    // console.log(DURATION_UNITS);
-    // console.log(Defaults.get(PARAM_NAMES.DURATION_UNITS));
-
     const handleStartTime = (value) => {
         console.log('Start Time selected:', value);
-    };
-
-    const handleExpiryType = (value) => {
-        // Defaults.set(EXPIRY_TYPE, value);
-        // setExpiryType(value);
     };
 
     const handleSelect = (value) => {
@@ -60,7 +46,6 @@ const ContractFormWrapper = () => {
 
     const handlers = {
         handleStartTime,
-        handleExpiryType,
         handleSelect,
         handleDateSelect,
     };
