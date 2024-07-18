@@ -21,6 +21,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const { expiry_type_options } = tradeData;
 
     const contractForms = [
+        'risefall',
         'touchnotouch',
         'higherlower',
         'endsinout',
@@ -60,9 +61,15 @@ export const FormComponent = ({ handlers, tradeData }) => {
 
     return (
         <div className='form_container'>
-            {formName === 'risefall' && (
+            {contractForms.includes(formName) && (
                 <div className='form_rows'>
-                    {tradeData.start_dates?.has_now && (
+                    {['reset', 'highlowticks'].includes(formName) && (
+                        <div className='section-msg-container'>
+                            <SectionMessage status='info' message={config.infoMessage} />
+                        </div>
+                    )}
+
+                    {(['risefall'].includes(formName) && tradeData.start_dates?.has_now) &&
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
@@ -86,101 +93,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                 </div>
                             )}
                         </div>
-                    )}
-                    <div className='row gap-8'>
-                        <div className='form_field'>
-                            <InputDropdown
-                                options={expiry_type_options}
-                                status='neutral'
-                                value={expiryType || config.expiryType.defaultValue}
-                                onSelectOption={(value) => {
-                                    handlers.handleExpiryType(value);
-                                }}
-                            />
-                        </div>
-                        {expiryType === 'duration' && (
-                            <>
-                                {config.expiryType.duration.map((field) => (
-                                    <div className='form_field' key={field.id}>
-                                        {field.component === 'TextField' && (
-                                            <TextField {...field.props} />
-                                        )}
-                                        {field.component === 'InputDropdown' && (
-                                            <InputDropdown
-                                                status='neutral'
-                                                {...field.props}
-                                                onSelectOption={(e) => handlers.handleSelect(e)}
-                                            />
-                                        )}
-                                    </div>
-                                ))}
-                            </>
-                        )}
-                        {expiryType === 'endtime' && (
-                            <>
-                                {config.expiryType.endtime.map((field) => (
-                                    <div className='form_field' key={field.id}>
-                                        {field.component === 'DatePickerDropdown' && (
-                                            <DatePickerDropdown
-                                                onSelectDate={(e) => handlers.handleDateSelect(e)}
-                                            />
-                                        )}
-                                    </div>
-                                ))}
-                                <div className='form_field'>
-                                    <TextFieldAddon
-                                        value='12:40'
-                                        addonLabel='GMT'
-                                        addOnPosition='right'
-                                    />
-                                </div>
-                            </>
-                        )}
-                    </div>
-                    <div className='row gap-8'>
-                        {config.payoutType.map((field) => (
-                            <div className='form_field' key={field.id}>
-                                {field.component === 'InputDropdown' && (
-                                    <InputDropdown
-                                        {...field.props}
-                                        onSelectOption={(e) => handlers.handleSelect(e)}
-                                    />
-                                )}
-                                {field.component === 'TextFieldAddon' && (
-                                    <TextFieldAddon {...field.props} />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                    {config.allowEquals && (
-                        <div className='row'>
-                            <Checkbox
-                                id='allow_equlas'
-                                label='Allow equals'
-                                name='demo_checkbox'
-                                onChange={(e) => {
-                                    console.log(e);
-                                }}
-                                size='md'
-                                infoIconMessage='Win payout if exit spot is also equal to entry spot.'
-                            />
-                        </div>
-                    )}
-                </div>
-            )}
+                    }
 
-            {contractForms.includes(formName) && (
-                <div className='form_rows'>
-                    {['reset', 'highlowticks'].includes(formName) && (
-                        <div className='section-msg-container'>
-                            <SectionMessage status='info' message={config.infoMessage} />
-                        </div>
-                    )}
-                    {config.expiryType && (
+                    {config.expiryType && formName !== 'highlowticks' && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
-                                    options={config.expiryType.options}
+                                    options={expiry_type_options}
                                     status='neutral'
                                     value={expiryType || config.expiryType.defaultValue}
                                     onSelectOption={(value) => {
@@ -301,6 +220,21 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                 addOnPosition='right'
                                 label='Multiplier'
                                 value={1}
+                            />
+                        </div>
+                    )}
+
+                    {config.allowEquals && (
+                        <div className='row'>
+                            <Checkbox
+                                id='allow_equlas'
+                                label='Allow equals'
+                                name='demo_checkbox'
+                                onChange={(e) => {
+                                    console.log(e);
+                                }}
+                                size='md'
+                                infoIconMessage='Win payout if exit spot is also equal to entry spot.'
                             />
                         </div>
                     )}
