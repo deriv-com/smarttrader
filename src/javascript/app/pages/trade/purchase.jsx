@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import parse from 'html-react-parser';
 import {  Button, CaptionText, SectionMessage, Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon, LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
@@ -287,7 +288,7 @@ const Purchase = () => {
                                                         <Button variant='secondary' size='lg' label={data?.cd_sellLabel} color='black' onClick={() => triggerClick('sell_at_market')} />
                                                     </div>
                                                     <div className='table-box lg'>
-                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={data.cd_sellInfo} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={parse(data.cd_sellInfo)} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
                                                     </div>
                                                 </>
                                             )}
