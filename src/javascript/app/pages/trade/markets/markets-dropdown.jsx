@@ -140,17 +140,16 @@ export const MarketsDropdown = () => {
         const container = itemsContainer.current;
     
         const checkActiveMarket = () => {
-            const marketDivs = container.querySelectorAll('div[data-id]');
+            const marketDivs = container.querySelectorAll('div');
             let closestMarket = '';
             let closestOffset = Infinity;
     
             marketDivs.forEach((div) => {
-                const containerMiddle = container.scrollTop + container.clientHeight / 2;
-    
-                const distanceToMiddle = Math.abs((div.offsetTop + div.offsetHeight / 2) - containerMiddle);
-    
-                if (distanceToMiddle < closestOffset) {
-                    closestOffset = distanceToMiddle;
+                const paddingOffset = 120;
+                const offsetTop = div.offsetTop - container.scrollTop - paddingOffset;
+
+                if (offsetTop <= 0 && Math.abs(offsetTop) < Math.abs(closestOffset)) {
+                    closestOffset = offsetTop;
                     closestMarket = div.getAttribute('data-id');
                 }
             });
