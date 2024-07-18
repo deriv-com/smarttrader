@@ -90,10 +90,7 @@ const Purchase = () => {
         );
     };
 
-    const parseData = (rawData) => {
-        if (!rawData) return '';
-        return parse(rawData);
-    };
+    const parseData = (rawData) => !rawData ?  '' :  parse(rawData);
         
     const triggerClick = (id) => document.getElementById(id).click();
 
