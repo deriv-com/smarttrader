@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import parse from 'html-react-parser';
 import {  Button, CaptionText, SectionMessage, Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon, LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
@@ -89,6 +90,8 @@ const Purchase = () => {
         );
     };
 
+    const parseData = (rawData) => !rawData ?  '' :  parse(rawData);
+        
     const triggerClick = (id) => document.getElementById(id).click();
 
     if (showPopup){
@@ -209,7 +212,7 @@ const Purchase = () => {
                                                     <Text size='sm'>{data?.cd_payoutLabel}</Text>
                                                 </div>
                                                 <div className='table-item'>
-                                                    <Text size='sm' dangerouslySetInnerHTML={{ __html: data?.cd_payout }} />
+                                                    <Text size='sm'>{parseData(data.cd_payout)}</Text>
                                                 </div>
                                             </div>
                                             <div className='table-box'>
@@ -217,7 +220,7 @@ const Purchase = () => {
                                                     <Text size='sm'>{localize('Purchase price')}</Text>
                                                 </div>
                                                 <div className='table-item'>
-                                                    <Text size='sm' dangerouslySetInnerHTML={{ __html: data?.cd_purchasePrice }} />
+                                                    <Text size='sm'>{parseData(data.cd_purchasePrice)}</Text>
                                                 </div>
                                             </div>
                                             <div className='table-box'>
@@ -258,7 +261,7 @@ const Purchase = () => {
                                                     <Text size='sm'>{data?.cd_indicativeLabel}</Text>
                                                 </div>
                                                 <div className='table-item'>
-                                                    <Text size='sm' dangerouslySetInnerHTML={{ __html: data?.cd_indicativePrice }} />
+                                                    <Text size='sm'>{parseData(data.cd_indicativePrice)}</Text>
                                                 </div>
                                             </div>
                                             <div className='table-box'>
@@ -266,7 +269,7 @@ const Purchase = () => {
                                                     <Text size='sm'>{data?.cd_profitLossLabel}</Text>
                                                 </div>
                                                 <div className='table-item profit-loss'>
-                                                    <Text size='sm' dangerouslySetInnerHTML={{ __html: data?.cd_profitLoss }} className={data?.cd_profitLossClass} />
+                                                    <Text size='sm' className={data?.cd_profitLossClass}>{parseData(data.cd_profitLoss)}</Text>
                                                 </div>
                                             </div>
 
@@ -277,14 +280,14 @@ const Purchase = () => {
                                                     </div>
                                                     {data?.cd_sellMsg  && (
                                                         <div className='table-box'>
-                                                            <SectionMessage  className='info-msg' size='sm' status='info' message={data?.cd_sellMsg} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                            <SectionMessage  className='info-msg' size='sm' status='info' message={parseData(data.cd_sellMsg)} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
                                                         </div>
                                                     )}
                                                 </>
                                             ) : (
                                                 data?.cd_infoMsg && (
                                                     <div className='table-box'>
-                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={data?.cd_infoMsg} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={parseData(data.cd_infoMsg)} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
                                                     </div>
                                                 )
                                             )}
@@ -295,7 +298,7 @@ const Purchase = () => {
                                                         <Button variant='secondary' size='lg' label={data?.cd_sellLabel} color='black' onClick={() => triggerClick('sell_at_market')} />
                                                     </div>
                                                     <div className='table-box lg'>
-                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={data.cd_sellInfo} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={parseData(data.cd_sellInfo)} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
                                                     </div>
                                                 </>
                                             )}
@@ -351,7 +354,7 @@ const Purchase = () => {
                             </div>
                         </div>
                         <div className='purchase-footer'>
-                            <CaptionText centered dangerouslySetInnerHTML={{ __html: data?.middleComment }} />
+                            <CaptionText centered >{parseData(data.middleComment)}</CaptionText>
                         </div>
                     </div>
                 ) : (
@@ -379,7 +382,7 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className='purchase-footer'>
-                                <CaptionText centered dangerouslySetInnerHTML={{ __html: data?.topComment }} />
+                                <CaptionText centered >{parseData(data.topComment)}</CaptionText>
                             </div>
                         </div>
                         <div className='purchase-box'>
@@ -404,9 +407,11 @@ const Purchase = () => {
                                     </div>
                                 </div>
                             </div>
+                                
                             <div className='purchase-footer'>
-                                <CaptionText centered dangerouslySetInnerHTML={{ __html: data?.bottomComment }} />
+                                <CaptionText centered >{parseData(data.bottomComment)}</CaptionText>
                             </div>
+                            
                         </div>
                     </>
                 )}
@@ -491,25 +496,25 @@ const Purchase = () => {
                         {data?.pr_tablePayoutValue && (
                             <div className='table-item'>
                                 <Text size='sm' bold>{data?.pr_tablePayout}</Text>
-                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tablePayoutValue }} />
+                                <Text size='sm' centered >{parseData(data.pr_tablePayoutValue)}</Text>
                             </div>
                         )}
                         { data.pr_tableCostValue && (
                             <div className='table-item'>
                                 <Text size='sm' bold>{data?.pr_tableCost}</Text>
-                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableCostValue }} />
+                                <Text size='sm' centered >{parseData(data.pr_tableCostValue)}</Text>
                             </div>
                         )}
                         { data.pr_tableProfitValue && (
                             <div className='table-item'>
                                 <Text size='sm' bold>{data?.pr_tableProfit}</Text>
-                                <Text size='sm' centered dangerouslySetInnerHTML={{ __html: data.pr_tableProfitValue }} />
+                                <Text size='sm' centered>{parseData(data.pr_tableProfitValue)}</Text>
                             </div>
                         )}
                     </div>
                     <div className='info-box'>
-                        {data?.pr_barrier && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_barrier }} />}
-                        {data?.pr_reference && <Text size='sm' dangerouslySetInnerHTML={{ __html: data.pr_reference }} />}
+                        {data?.pr_barrier && <Text size='sm' >{parseData(data.pr_barrier)}</Text>}
+                        {data?.pr_reference && <Text size='sm' >{parseData(data.pr_reference)}</Text>}
                         {data?.pr_showBtn && <Button
                             className='view-btn'
                             label={localize('View')}
@@ -528,7 +533,7 @@ const Purchase = () => {
             </div>
             <div className='footer-box'>
                 <CaptionText>{data?.pr_balance} </CaptionText>
-                <CaptionText  dangerouslySetInnerHTML={{ __html: data?.pr_balanceValue }} />
+                <CaptionText >{parseData(data.pr_balanceValue)}</CaptionText>
             </div>
         </div>
     );
