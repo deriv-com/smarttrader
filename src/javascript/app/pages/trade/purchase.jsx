@@ -270,17 +270,25 @@ const Purchase = () => {
                                                 </div>
                                             </div>
 
-                                            {data?.cd_showAuditBtn && (
-                                                <div className='table-box lg'>
-                                                    <Button variant='secondary' size='lg' label={localize('Audit')} color='black' onClick={() => document.querySelector('.link-audit').click()} />
-                                                </div>
+                                            {data?.cd_contractEnded ? (
+                                                <>
+                                                    <div className='table-box lg'>
+                                                        <Button variant='secondary' size='lg' label={localize('Audit')} color='black' onClick={() => document.querySelector('.link-audit').click()} />
+                                                    </div>
+                                                    {data?.cd_sellMsg  && (
+                                                        <div className='table-box'>
+                                                            <SectionMessage  className='info-msg' size='sm' status='info' message={data?.cd_sellMsg} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                        </div>
+                                                    )}
+                                                </>
+                                            ) : (
+                                                data?.cd_infoMsg && (
+                                                    <div className='table-box'>
+                                                        <SectionMessage  className='info-msg' size='sm' status='info' message={data?.cd_infoMsg} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
+                                                    </div>
+                                                )
                                             )}
                                             
-                                            {(data?.cd_infoMsg || data?.cd_sellMsg) && (
-                                                <div className='table-box'>
-                                                    <SectionMessage  className='info-msg' size='sm' status='info' message={data?.cd_sellMsg || data?.cd_infoMsg} icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />} />
-                                                </div>
-                                            )}
                                             {data?.cd_showSell && (
                                                 <>
                                                     <div className='table-box lg'>
