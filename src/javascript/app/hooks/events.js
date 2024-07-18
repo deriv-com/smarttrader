@@ -65,3 +65,7 @@ export const triggerSessionChange = () => triggerCustomEvent('sessionChange');
 // Purchase Change
 export const usePurchaseChange = () => useCustomEvent('purchaseChange');
 export const triggerPurchaseChange = () => triggerCustomEvent('purchaseChange');
+
+// Trade Change
+export const useTradeChange = () => useCustomEvent('tradeChange');
+export const triggerTradeChange = () => triggerCustomEvent('tradeChange');
