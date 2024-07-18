@@ -472,6 +472,7 @@ div#purchase_container {
                     display: flex;
                     padding: 8px 16px;
                     border-bottom: solid 1px var(--core-color-opacity-slate-100);
+                    gap: var(--core-spacing-400);
 
                     &.lg {
                         flex-direction: column;
@@ -490,6 +491,9 @@ div#purchase_container {
                         min-width: 140px;
                         width: fit-content;
 
+                        &:first-child {
+                            max-width: 140px;
+                        }
                         &.profit-loss {
                             p {
                                 font-weight: bold;

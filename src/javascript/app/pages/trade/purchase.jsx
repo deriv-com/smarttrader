@@ -135,7 +135,7 @@ const Purchase = () => {
                                         <div className='contract-info-wrapper'>
                                             <div className='table-box'>
                                                 <Text size='md' bold centered>
-                                                    {localize('Contract Information')}
+                                                    {localize('Contract information')}
                                                 </Text>
                                             </div>
                                             <div className='table-box'>
