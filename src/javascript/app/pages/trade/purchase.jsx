@@ -305,7 +305,7 @@ const Purchase = () => {
     if (isloading() || (!data?.showPurchaseResults && data?.isPurchaseFormDisabled)){
         return (
             <div className='quill-purchase-section'>
-                <Skeleton.Square rounded fullWidth height={50} />
+                <Skeleton.Square rounded fullWidth height={30} />
                 <Skeleton.Square rounded fullWidth height={130} />
                 {!isLookBack && (
                     <>
