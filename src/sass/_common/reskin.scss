@@ -517,7 +517,6 @@ div#purchase_container {
 
 // Hide old containers
 #contract_prices_container, .popup_page_overlay, .inpage_popup_container {
-    display: none !important;
     position: absolute !important;
     top: -999px !important;
 }

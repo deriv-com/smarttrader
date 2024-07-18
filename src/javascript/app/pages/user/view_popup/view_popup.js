@@ -440,6 +440,7 @@ const ViewPopup = (() => {
 
             purchaseManager.set({
                 cd_remainingTime: (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'),
+                cd_contractEnded: false,
             });
         }
     };
@@ -919,12 +920,13 @@ const ViewPopup = (() => {
                 });
             });
         } else {
-            if (!is_exist) return;
-            $container.find(`#${sell_button_id}`).unbind('click');
-            $container.find(`#${sell_wrapper_id}`).remove();
             purchaseManager.set({
                 cd_showSell: false,
             });
+
+            if (!is_exist) return;
+            $container.find(`#${sell_button_id}`).unbind('click');
+            $container.find(`#${sell_wrapper_id}`).remove();
         }
     };
 
@@ -936,6 +938,7 @@ const ViewPopup = (() => {
 
         purchaseManager.set({
             cd_sellInfo: `<strong>${localize('Note')}</strong>: ${localize('Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.')}`,
+            cd_showSell: true,
         });
     };
 

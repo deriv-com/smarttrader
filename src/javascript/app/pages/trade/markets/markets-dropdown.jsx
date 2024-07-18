@@ -208,6 +208,22 @@ export const MarketsDropdown = () => {
         closeMarketDropdown();
     };
 
+    useEffect(() => {
+        if (isMounted && itemsContainer.current) {
+            
+            const container = itemsContainer.current;
+            const selectedElement = container.querySelector('.market-item-selected');
+            if (selectedElement) {
+                const offsetTop = selectedElement.offsetTop - container.offsetTop;
+                container.scrollTo({
+                    top     : offsetTop,
+                    behavior: 'auto',
+                });
+            }
+            
+        }
+    }, [isMounted]);
+
     return (
         <div className='quill-market-dropdown-container'>
             <div className='quill-market-dropdown-search-container'>
@@ -244,7 +260,7 @@ export const MarketsDropdown = () => {
                     {Object.keys(markets).map((ik) => {
                         const market = markets[ik];
                         const { submarkets } = market;
-                       
+
                         const sortedSubmarketKeys = Object.keys(submarkets).sort((a, b) => {
                             if (a === 'major_pairs') return -1;
                             if (b === 'major_pairs') return 1;
@@ -273,6 +289,7 @@ export const MarketsDropdown = () => {
                                                         onClick={() => handleUnderlyingClick(yk)}
                                                         label={display}
                                                         selected={isSelected}
+                                                        className={isSelected && 'market-item-selected'}
                                                         size='md'
                                                     />
                                                 );
