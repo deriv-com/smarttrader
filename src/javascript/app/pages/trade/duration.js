@@ -17,6 +17,7 @@ const toReadableFormat   = require('../../../_common/string_util').toReadableFor
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
 const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
+const tradeManager = require('../../common/trade_manager').default;
 
 /*
  * Handles duration processing display
@@ -433,6 +434,7 @@ const Durations = (() => {
     };
 
     const displayExpiryType = () => {
+        const expiry_type_options = [];
         const target   = CommonFunctions.getElementById('expiry_type');
         const fragment = document.createDocumentFragment();
 
@@ -454,6 +456,10 @@ const Durations = (() => {
         }
 
         let option = createElement('option', { value: 'duration', text: localize('Duration') });
+        expiry_type_options.push({
+            value: 'duration',
+            text : localize('Duration'),
+        });
 
         if (current_selected === 'duration') {
             option.setAttribute('selected', 'selected');
@@ -462,12 +468,19 @@ const Durations = (() => {
 
         if (has_end_date && !Reset.isReset(Contract.form())) {
             option = createElement('option', { value: 'endtime', text: localize('End Time') });
+            expiry_type_options.push({
+                value: 'endtime',
+                text : localize('End Time'),
+            });
             if (current_selected === 'endtime') {
                 option.setAttribute('selected', 'selected');
             }
             fragment.appendChild(option);
         }
         target.appendChild(fragment);
+        tradeManager.set({
+            expiry_type_options,
+        });
     };
 
     const isNow = date_start => (date_start ? date_start === 'now' : (!State.get('is_start_dates_displayed') || CommonFunctions.getElementById('date_start').value === 'now'));

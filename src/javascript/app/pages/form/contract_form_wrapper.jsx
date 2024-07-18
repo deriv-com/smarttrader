@@ -3,33 +3,51 @@ import ReactDOM from 'react-dom';
 // eslint-disable-next-line import/no-unresolved
 import { FormComponent } from './form_component';
 import { getElementById } from '../../../_common/common_functions';
-import { useContractChange, useMarketChange, useSessionChange } from '../../hooks/events';
-import Defaults, { PARAM_NAMES } from '../trade/defaults';
+import {
+    useContractChange,
+    useMarketChange,
+    useSessionChange,
+    useTradeChange,
+} from '../../hooks/events';
+// import Defaults, { PARAM_NAMES } from '../trade/defaults';
+import tradeManager from '../../common/trade_manager';
 
 const ContractFormWrapper = () => {
-    // const { contracts, contracts_tree, selected } = props;
-    // console.log(props);
-    
+    const [tradeData, setTradeData] = useState({});
+    const hasTradeChange = useTradeChange();
     const hasContractChange = useContractChange();
     const hasMarketChange = useMarketChange();
     const hasSessionChange = useSessionChange();
 
-    const [formName, setFormName] = useState(Defaults.get(PARAM_NAMES.FORM_NAME));
-    const [expiry_type, setExpiryType] = useState(Defaults.get(PARAM_NAMES.EXPIRY_TYPE) || 'duration');
-    const [startDates, setStartDates] = useState({});
+    useEffect(() => {
+        // setFormName(Defaults.get(PARAM_NAMES.FORM_NAME));
 
-    const { EXPIRY_TYPE, DURATION_UNITS } = Defaults.PARAM_NAMES;
+        // setStartDates(JSON.parse(sessionStorage.getItem('start_dates')));
+    }, [hasContractChange, hasMarketChange, hasSessionChange]);
 
-    console.log(DURATION_UNITS);
-    console.log(Defaults.get(PARAM_NAMES.DURATION_UNITS));
+    useEffect(() => {
+        setTradeData((oldData) => ({
+            ...oldData,
+            ...tradeManager.getAll(),
+        }));
+    }, [hasTradeChange, hasSessionChange]);
+
+    // const [formName, setFormName] = useState(Defaults.get(PARAM_NAMES.FORM_NAME));
+    // const [expiry_type, setExpiryType] = useState(Defaults.get(PARAM_NAMES.EXPIRY_TYPE) || 'duration');
+    // const [startDates, setStartDates] = useState({});
+
+    // const { EXPIRY_TYPE, DURATION_UNITS } = Defaults.PARAM_NAMES;
+
+    // console.log(DURATION_UNITS);
+    // console.log(Defaults.get(PARAM_NAMES.DURATION_UNITS));
 
     const handleStartTime = (value) => {
         console.log('Start Time selected:', value);
     };
 
     const handleExpiryType = (value) => {
-        Defaults.set(EXPIRY_TYPE, value);
-        setExpiryType(value);
+        // Defaults.set(EXPIRY_TYPE, value);
+        // setExpiryType(value);
     };
 
     const handleSelect = (value) => {
@@ -47,17 +65,12 @@ const ContractFormWrapper = () => {
         handleDateSelect,
     };
 
-    useEffect(() => {
-        setFormName(Defaults.get(PARAM_NAMES.FORM_NAME));
-        setStartDates(JSON.parse(sessionStorage.getItem('start_dates')));
-    }, [hasContractChange, hasMarketChange, hasSessionChange]);
-
     return (
         <FormComponent
-            formName={formName}
+            // formName={formName}
             handlers={handlers}
-            expiryType={expiry_type}
-            startDates={startDates}
+            // expiryType={expiry_type}
+            tradeData={tradeData}
         />
     );
 };

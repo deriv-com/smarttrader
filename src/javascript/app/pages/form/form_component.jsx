@@ -9,11 +9,16 @@ import {
 } from '@deriv-com/quill-ui';
 import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
+import { triggerSessionChange } from '../../hooks/events';
+// import tradeManager from '../../common/trade_manager';
 
-export const FormComponent = ({ formName, handlers, startDates }) => {
+export const FormComponent = ({ handlers, tradeData }) => {
+    
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
+    const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const config = formConfig[formName];
-    console.log(formName);
+    console.log(formName, tradeData);
+    const { expiry_type_options } = tradeData;
 
     const contractForms = [
         'touchnotouch',
@@ -32,12 +37,18 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
         'runs',
     ];
 
+    const setDefaults = (param, value) => {
+        Defaults.set(param, value);
+        triggerSessionChange();
+    };
+
     const createOptions = (array) => array.map((option) => ({
         text : option.charAt(0).toUpperCase() + option.slice(1),
         value: option,
     }));
 
-    if (!config) {
+    const isEmpty = (obj) => Object.keys(obj).length === 0;
+    if (!config || isEmpty(tradeData)) {
         return null;
     }
 
@@ -45,23 +56,35 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
         <div className='form_container'>
             {formName === 'risefall' && (
                 <div className='form_rows'>
-                    {startDates?.list?.length > 0 && (
+                    {tradeData.start_dates?.has_now && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
                                     label={config.startTime.label}
-                                    options={config.startTime.options}
+                                    // options={startDates.options}
+                                    options={tradeData.start_dates.options}
                                     status='neutral'
-                                    value={config.startTime.defaultValue}
-                                    onSelectOption={handlers.handleStartTime}
+                                    value={Defaults.get(PARAM_NAMES.DATE_START).toString()}
+                                    onSelectOption={(value) =>
+                                        setDefaults(PARAM_NAMES.DATE_START, value)
+                                    }
                                 />
                             </div>
+                            {Defaults.get(PARAM_NAMES.DATE_START) !== 'now' && (
+                                <div className='form_field'>
+                                    <TextFieldAddon
+                                        value={Defaults.get(PARAM_NAMES.TIME_START)}
+                                        addonLabel='GMT'
+                                        addOnPosition='right'
+                                    />
+                                </div>
+                            )}
                         </div>
                     )}
                     <div className='row gap-8'>
                         <div className='form_field'>
                             <InputDropdown
-                                options={config.expiryType.options}
+                                options={expiry_type_options}
                                 status='neutral'
                                 value={expiryType || config.expiryType.defaultValue}
                                 onSelectOption={(value) => {
@@ -142,15 +165,12 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
 
             {contractForms.includes(formName) && (
                 <div className='form_rows'>
-                    {['reset', 'highlowticks'].includes(formName) &&
+                    {['reset', 'highlowticks'].includes(formName) && (
                         <div className='section-msg-container'>
-                            <SectionMessage
-                                status='info'
-                                message={config.infoMessage}
-                            />
+                            <SectionMessage status='info' message={config.infoMessage} />
                         </div>
-                    }
-                    {config.expiryType &&
+                    )}
+                    {config.expiryType && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
@@ -201,7 +221,7 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
                                 </>
                             )}
                         </div>
-                    }
+                    )}
 
                     {['touchnotouch', 'higherlower'].includes(formName) && (
                         <div className='row gap-8'>
@@ -235,7 +255,7 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
                         </div>
                     )}
 
-                    {config.tickPrediction &&
+                    {config.tickPrediction && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
@@ -246,7 +266,7 @@ export const FormComponent = ({ formName, handlers, startDates }) => {
                                 />
                             </div>
                         </div>
-                    }
+                    )}
 
                     {config.payoutType && (
                         <div className='row gap-8'>

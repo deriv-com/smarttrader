@@ -300,6 +300,13 @@ div#purchase_container {
     .section-msg-container {
         padding-bottom: 58px;
     }
+    .dropdown__wrapper {
+        max-width: unset !important;
+    }
+    .dropdown__container {
+        width: 100% !important;
+        min-width: unset !important;
+    }
 }
 
 .deriv-dropdown__menu--open {

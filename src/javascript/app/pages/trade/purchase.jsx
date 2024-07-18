@@ -16,6 +16,7 @@ const Purchase = () => {
             ...oldData,
             ...purchaseManager.getAll(),
         }));
+        // console.log(purchaseManager.getAll);
     }, [hasPurchaseChange]);
 
     const displayCurrency = (referenceField) => referenceField !== '-' ? data?.currency : '';
@@ -38,6 +39,8 @@ const Purchase = () => {
             </Tooltip>
         );
     };
+
+    // console.log(data)
 
     const purchase = (id) => document.getElementById(id).click();
 

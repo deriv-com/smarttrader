@@ -1,7 +1,9 @@
 const moment           = require('moment');
+const Defaults = require('./defaults');
 const purchaseManager  = require('../../common/purchase_manager').default;
 const getElementById   = require('../../../_common/common_functions').getElementById;
 const getPropertyValue = require('../../../_common/utility').getPropertyValue;
+const { triggerSessionChange } = require('../../hooks/events');
 
 /*
  * Display price/spot movement variation to depict price moved up or down
@@ -83,6 +85,8 @@ const checkValidTime = (time_start_element = getElementById('time_start'), $date
         min_time = min_time.add(5, 'minutes');
     }
     time_start_element.value = date_time.isBefore(min_time) || date_time.isAfter(min_max_time.maxTime) || !time ? min_time.format('HH:mm') : time_array.join(':');
+    Defaults.set(Defaults.PARAM_NAMES.TIME_START, time_start_element.value);
+    triggerSessionChange();
     time_start_element.setAttribute('data-value', time_start_element.value);
 };
 

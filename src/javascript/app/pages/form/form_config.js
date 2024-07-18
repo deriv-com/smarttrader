@@ -22,18 +22,18 @@ const ExpiryType = {
                 options: [
                     {
                         text : 'minutes',
-                        value: 'minutes',
+                        value: 1,
                     },
                     {
                         text : 'hours',
-                        value: 'hours',
+                        value: 2,
                     },
                     {
                         text : 'days',
-                        value: 'days',
+                        value: 3,
                     },
                 ],
-                value: 'days',
+                value: 2,
             },
         },
     ],
@@ -116,13 +116,7 @@ const TickPrediction = {
 export const formConfig = {
     risefall: {
         startTime: {
-            label  : 'Start Time',
-            options: [
-                { text: 'Now', value: 'now' },
-                { text: 'Today', value: 'today' },
-                { text: 'Tomorrow', value: 'tomorrow' },
-            ],
-            defaultValue: 'now',
+            label: 'Start Time',
         },
         expiryType : ExpiryType,
         payoutType : PayoutType,
