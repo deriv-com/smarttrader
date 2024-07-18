@@ -210,11 +210,11 @@ export const MarketsDropdown = () => {
 
     useEffect(() => {
         if (isMounted && itemsContainer.current) {
-            
+            const paddingOffset = 96;
             const container = itemsContainer.current;
             const selectedElement = container.querySelector('.market-item-selected');
             if (selectedElement) {
-                const offsetTop = selectedElement.offsetTop - container.offsetTop;
+                const offsetTop = selectedElement.offsetTop - container.offsetTop - paddingOffset;
                 container.scrollTo({
                     top     : offsetTop,
                     behavior: 'auto',
