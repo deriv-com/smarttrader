@@ -63,6 +63,7 @@
     div#underlying_details {
         display: flex;
         flex-direction: column;
+        transform: scale(0.88);
 
         #spot{
             margin-top:  5px;
@@ -395,12 +396,15 @@ div#purchase_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
-    // transform: scale(.8);
-    // top: -135px;
-    // left: -86px;
-    // width: 950px;
-
+ 
+    .popup-scroller {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        height: calc(100% - 48px);
+        width: 100%;
+    }
     .header-box {
         display: flex;
         width: 100%;
@@ -466,12 +470,16 @@ div#purchase_container {
                 border-radius: 8px;
                 height: fit-content;
 
+                &.full {
+                    max-width: none;
+                }
                 .table-box {
                     width: 100%;
                     height: fit-content;
                     display: flex;
                     padding: 8px 16px;
                     border-bottom: solid 1px var(--core-color-opacity-slate-100);
+                    gap: var(--core-spacing-400);
 
                     &.lg {
                         flex-direction: column;
@@ -480,8 +488,9 @@ div#purchase_container {
                         padding: var(--core-spacing-800);
                         margin: var(--core-spacing-800) 0 0 0;
                     }
-                    p, .info-msg{
+                    p, .info-msg {
                         width: 100%;
+                        white-space: normal;
                     }
                     .table-item {
                         display: flex;
@@ -490,6 +499,9 @@ div#purchase_container {
                         min-width: 140px;
                         width: fit-content;
 
+                        &:first-child {
+                            max-width: 140px;
+                        }
                         &.profit-loss {
                             p {
                                 font-weight: bold;
@@ -510,15 +522,66 @@ div#purchase_container {
                         }
                     }
                 }
+                .table-container {
+                    display: flex;
+                    flex-direction: column;
+                    padding: var(--core-spacing-800);
+                    gap: var(--core-spacing-400);
+                    border-bottom: solid 1px var(--core-color-opacity-slate-100);
+
+                    .table-item {
+                        display: flex;
+                        gap: var(--core-spacing-800);
+
+                        .item-header {
+                            display: flex;
+                            width: 100%;
+                            max-width: 120px;
+                            padding: var(--core-spacing-400);
+                        }
+                        .item-content {
+                            display: flex;
+                            padding: var(--core-spacing-400);
+                            width: 100%;
+                            text-align: center;
+
+                            &.highlighted {
+                                background: var(--core-color-solid-slate-100);
+                            }
+                            &.selected {
+                                background: var(--core-color-solid-slate-700);
+                                
+                                p {
+                                    color: var(--core-color-solid-slate-50);
+                                }
+                            }
+                            .item-inner {
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-// Hide old containers
-#contract_prices_container, .popup_page_overlay, .inpage_popup_container {
-    position: absolute !important;
-    top: -999px !important;
+// Hide old containers 
+// This is to allow QA to disable this quickly
+html:not(.test) {
+    #contract_prices_container, .popup_page_overlay, .inpage_popup_container {
+        position: absolute !important;
+        top: -999px !important;
+    }
+}
+
+html.test {
+    .inpage_popup_container {
+        z-index: 9999 !important;
+    }
 }
 
 .purchase-tooltip {
