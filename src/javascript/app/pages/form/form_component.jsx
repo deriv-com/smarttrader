@@ -11,17 +11,23 @@ import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import { eventDispatcher, triggerSessionChange } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
+import { localize } from '../../../_common/localize';
+// import { localize } from '../../../_common/localize.js';
 
 export const FormComponent = ({ handlers, tradeData }) => {
     
-    const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
+    const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
+    const date_start = Defaults.get(PARAM_NAMES.DATE_START);
+    const duration_amount = Defaults.get(PARAM_NAMES.DURATION_AMOUNT);
+    const duration_units = Defaults.get(PARAM_NAMES.DURATION_UNITS);
     const config = formConfig[formName];
     console.log(formName, tradeData);
-    const { expiry_type_options } = tradeData;
+    const { start_dates, expiry_type_options, duration_data, duration_options } = tradeData;
 
     const contractForms = [
         'risefall',
+        'callputequal',
         'touchnotouch',
         'higherlower',
         'endsinout',
@@ -69,14 +75,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {(['risefall'].includes(formName) && tradeData.start_dates?.has_now) &&
+                    {['risefall', 'callputequal'].includes(formName) && start_dates?.has_now && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
-                                    label={config.startTime.label}
-                                    options={tradeData.start_dates.options}
-                                    status='neutral'
-                                    value={Defaults.get(PARAM_NAMES.DATE_START).toString()}
+                                    label={localize('Start Time')}
+                                    options={start_dates.options}
+                                    value={date_start}
                                     onSelectOption={(value) => {
                                         setDefaults(PARAM_NAMES.DATE_START, value);
                                         updateOldField('date_start', value, 'change');
@@ -93,36 +98,41 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                 </div>
                             )}
                         </div>
-                    }
+                    )}
 
                     {config.expiryType && formName !== 'highlowticks' && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
                                     options={expiry_type_options}
-                                    status='neutral'
-                                    value={expiryType || config.expiryType.defaultValue}
+                                    value={expiryType}
                                     onSelectOption={(value) => {
-                                        handlers.handleExpiryType(value);
+                                        updateOldField('expiry_type', value, 'change');
                                     }}
                                 />
                             </div>
                             {expiryType === 'duration' && (
                                 <>
-                                    {config.expiryType.duration.map((field) => (
-                                        <div className='form_field' key={field.id}>
-                                            {field.component === 'TextField' && (
-                                                <TextField {...field.props} />
-                                            )}
-                                            {field.component === 'InputDropdown' && (
-                                                <InputDropdown
-                                                    status='neutral'
-                                                    {...field.props}
-                                                    onSelectOption={(e) => handlers.handleSelect(e)}
-                                                />
-                                            )}
-                                        </div>
-                                    ))}
+                                    <div className='form_field'>
+                                        <TextField
+                                            type='number'
+                                            value={duration_amount}
+                                            message={duration_data.message}
+                                            status={duration_data.status}
+                                            onChange={(e) => {
+                                                updateOldField('duration_amount', e.target.value, 'input');
+                                            }}
+                                        />
+                                    </div>
+                                    <div className='form_field'>
+                                        <InputDropdown
+                                            options={duration_options}
+                                            value={duration_units}
+                                            onSelectOption={(value) => {
+                                                updateOldField('duration_units', value, 'change');
+                                            }}
+                                        />
+                                    </div>
                                 </>
                             )}
                             {expiryType === 'endtime' && (

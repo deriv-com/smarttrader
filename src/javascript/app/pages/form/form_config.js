@@ -4,8 +4,7 @@ const ExpiryType = {
         { text: 'Duration', value: 'duration' },
         { text: 'End Time', value: 'endtime' },
     ],
-    defaultValue: 'duration',
-    duration    : [
+    duration: [
         {
             id       : 'duration_amount',
             component: 'TextField',
@@ -118,6 +117,11 @@ export const formConfig = {
         startTime: {
             label: 'Start Time',
         },
+        expiryType : ExpiryType,
+        payoutType : PayoutType,
+        allowEquals: true,
+    },
+    callputequal: {
         expiryType : ExpiryType,
         payoutType : PayoutType,
         allowEquals: true,

@@ -145,6 +145,14 @@ const Durations = (() => {
             }
         });
 
+        const duration_options = [];
+        Object.values(duration_list).forEach(option => {
+            duration_options.push({ text: option.text, value: option.value });
+        });
+        tradeManager.set({
+            duration_options,
+        });
+
         const list = Object.keys(duration_list).sort((a, b) => (
             commonTrading.durationOrder(a) > commonTrading.durationOrder(b) ? 1 : -1
         ));
@@ -607,6 +615,7 @@ const Durations = (() => {
     };
 
     const validateMinDurationAmount = () => {
+        const duration_data = {};
         const duration_amount_element  = CommonFunctions.getElementById('duration_amount');
         const duration_wrapper_element = CommonFunctions.getElementById('duration_wrapper');
 
@@ -620,6 +629,9 @@ const Durations = (() => {
         const duration_max_element     = CommonFunctions.getElementById('duration_maximum');
         duration_wrapper_element.setVisibility(1);
 
+        duration_data.min = duration_min_element.textContent;
+        duration_data.max = duration_max_element.textContent;
+
         if (+duration_amount_element.value < +duration_min_element.textContent) {
             duration_amount_element.classList.add('error-field');
             duration_wrapper_element.classList.add('error-msg');
@@ -627,6 +639,8 @@ const Durations = (() => {
             duration_max_element.classList.add('invisible');
             elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
             Reset.hideResetTime();
+            duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
+            duration_data.status = 'error';
         } else if (+duration_max_element.textContent &&
             +duration_amount_element.value > +duration_max_element.textContent) {
             duration_amount_element.classList.add('error-field');
@@ -635,9 +649,12 @@ const Durations = (() => {
             duration_max_element.classList.remove('invisible');
             elementInnerHtml(duration_tooltip_element, localize('Maximum:'));
             Reset.hideResetTime();
+            duration_data.message = `${localize('Maximum:')} ${duration_data.max}`;
+            duration_data.status = 'error';
         } else {
             duration_amount_element.classList.remove('error-field');
             duration_wrapper_element.classList.remove('error-msg');
+            duration_data.status = '';
             if (Reset.isReset(Contract.form())) {
                 Reset.displayResetTime(duration_amount_element.value, Defaults.get(DURATION_UNITS));
             } else {
@@ -645,8 +662,12 @@ const Durations = (() => {
                 duration_max_element.classList.add('invisible');
                 elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
                 Reset.hideResetTime();
+                duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
             }
         }
+        tradeManager.set({
+            duration_data,
+        });
     };
 
     const onStartDateChange = (value) => {

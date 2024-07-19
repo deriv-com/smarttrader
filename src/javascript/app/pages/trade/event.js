@@ -169,6 +169,7 @@ const TradingEvents = (() => {
         getElementById('expiry_type').addEventListener('change', (e) => {
             Defaults.set(EXPIRY_TYPE, e.target.value);
             if (Process.onExpiryTypeChange(e.target.value)) Price.processPriceRequest();
+            triggerSessionChange();
         });
 
         /*
