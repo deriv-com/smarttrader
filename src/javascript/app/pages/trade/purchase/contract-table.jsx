@@ -115,7 +115,7 @@ const ContractTable = ({ data }) => (
                 {data?.cd_currentLabel}
             </Text>
         </div>
-        {!data?.cd_contractEnded && (
+        {data?.cd_showCurrentSpot && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{data?.cd_spotLabel}</Text>
@@ -167,7 +167,7 @@ const ContractTable = ({ data }) => (
                 </Text>
             </div>
         </div>
-
+       
         {data?.cd_contractEnded ? (
             <>
                 {(data?.cd_showAuditBtn && !data?.cd_showAudit) && (
@@ -188,7 +188,6 @@ const ContractTable = ({ data }) => (
                             size='sm'
                             status='info'
                             message={parseData(data.cd_sellMsg)}
-                            icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
                         />
                     </div>
                 )}
@@ -201,7 +200,6 @@ const ContractTable = ({ data }) => (
                         size='sm'
                         status='info'
                         message={parseData(data.cd_infoMsg)}
-                        icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
                     />
                 </div>
             )
@@ -217,8 +215,14 @@ const ContractTable = ({ data }) => (
                         color='black'
                         onClick={() => triggerClick('#sell_at_market')}
                     />
-                </div>
-                <div className='table-box lg'>
+                    {data?.cd_errorMsg && (
+                        <SectionMessage
+                            className='info-msg'
+                            size='sm'
+                            status='warning'
+                            message={parseData(data.cd_errorMsg)}
+                        />
+                    )}
                     <SectionMessage
                         className='info-msg'
                         size='sm'

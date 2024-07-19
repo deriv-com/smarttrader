@@ -146,9 +146,9 @@ export const Explanation = ({ explanationOnly = false }) => {
                             )
                         )}
                         {contractExplanationData.explain[formName].title_secondary && (
-                            <h3 className='secondary-title'>
+                            <Text size='lg' bold>
                                 {contractExplanationData.explain[formName].title_secondary}
-                            </h3>
+                            </Text>
                         )}
                         {contractExplanationData.explain[formName].content_secondary &&
             contractExplanationData.explain[formName].content_secondary.map(

@@ -246,12 +246,16 @@ const ViewPopup = (() => {
         if (current_spot) {
             containerSetText('trade_details_current_spot > span', current_spot);
             purchaseManager.set({
-                cd_currentSpot: current_spot,
+                cd_currentSpot    : current_spot,
+                cd_showCurrentSpot: true,
             });
 
             $('#trade_details_current_spot').parent().setVisibility(1);
         } else {
             $('#trade_details_current_spot').parent().setVisibility(0);
+            purchaseManager.set({
+                cd_showCurrentSpot: false,
+            });
         }
 
         if (current_spot_time) {
@@ -603,7 +607,7 @@ const ViewPopup = (() => {
         xhttp.send();
     };
 
-    const parseAuditResponse = (table, array_audit_data) => (
+    const parseAuditResponse = (table, array_audit_data,type) => (
         new Promise((resolve) => {
             const primary_classes   = ['secondary-bg-color', 'content-inverse-color'];
             const secondary_classes = ['fill-bg-color', 'secondary-time'];
@@ -638,7 +642,7 @@ const ViewPopup = (() => {
             });
 
             purchaseManager.set({
-                auditData,
+                [`auditData${type}`]: auditData,
             });
 
             resolve();
@@ -709,7 +713,7 @@ const ViewPopup = (() => {
     const populateAuditTable = (show_audit_table) => {
         if (!contract.tick_count) {
             const contract_starts = createAuditTable(localize('Contract starts'));
-            parseAuditResponse(contract_starts.table, contract.audit_details.contract_start).then(() => {
+            parseAuditResponse(contract_starts.table, contract.audit_details.contract_start,'Start').then(() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
                     appendAuditLink('trade_details_entry_spot');
@@ -722,7 +726,7 @@ const ViewPopup = (() => {
                 // don't show exit tick information if missing or manual sold
                 if (contract.audit_details.contract_end && contract.status !== 'sold') {
                     const contract_ends = createAuditTable(localize('Contract ends'));
-                    parseAuditResponse(contract_ends.table, contract.audit_details.contract_end).then(() => {
+                    parseAuditResponse(contract_ends.table, contract.audit_details.contract_end,'End').then(() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
                             appendAuditLink('trade_details_current_spot');
@@ -740,7 +744,7 @@ const ViewPopup = (() => {
             });
         } else {
             const contract_details = createAuditTable(localize('Contract details'));
-            parseAuditResponse(contract_details.table, contract.audit_details.all_ticks).then(() => {
+            parseAuditResponse(contract_details.table, contract.audit_details.all_ticks,'Details').then(() => {
                 if (contract.audit_details.all_ticks) {
                     createAuditHeader(contract_details.table);
                     appendAuditLink('trade_details_entry_spot');
@@ -986,6 +990,9 @@ const ViewPopup = (() => {
                 getContract();
             } else {
                 $container.find('#errMsg').text(response.error.message).setVisibility(1);
+                purchaseManager.set({
+                    cd_errorMsg: response.error.message,
+                });
             }
             sellSetVisibility(true);
             is_sell_clicked = false;
