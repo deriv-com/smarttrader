@@ -529,8 +529,14 @@ const ViewPopup = (() => {
         if (document.getElementById('sell_details_audit')) {
             if (show) {
                 setAuditVisibility(1);
+                purchaseManager.set({
+                    cd_showAudit: true,
+                });
             } else {
                 setAuditButtonsVisibility(1);
+                purchaseManager.set({
+                    cd_showAudit: false,
+                });
             }
             return;
         }
@@ -601,12 +607,17 @@ const ViewPopup = (() => {
         new Promise((resolve) => {
             const primary_classes   = ['secondary-bg-color', 'content-inverse-color'];
             const secondary_classes = ['fill-bg-color', 'secondary-time'];
+
+            const auditData = [];
             array_audit_data.forEach((audit_data) => {
-                let color;
+                let color,
+                    colorClass;
                 if (audit_data.flag === 'highlight_tick') {
                     color = primary_classes;
+                    colorClass = 'selected';
                 } else if (audit_data.flag === 'highlight_time') {
                     color = secondary_classes;
+                    colorClass = 'highlighted';
                 }
 
                 createAuditRow(
@@ -617,7 +628,19 @@ const ViewPopup = (() => {
                     audit_data.name,
                     color
                 );
+
+                auditData.push({
+                    ...audit_data,
+                    tick : audit_data.tick_display_value,
+                    color: colorClass,
+                    date : audit_data.epoch && !isNaN(audit_data.epoch) ? moment.unix(audit_data.epoch).utc().format('YYYY-MM-DD HH:mm:ss') : (audit_data.epoch || ''),
+                });
             });
+
+            purchaseManager.set({
+                auditData,
+            });
+
             resolve();
         })
     );
@@ -807,7 +830,7 @@ const ViewPopup = (() => {
         purchaseManager.set({
             cd_description     : longcode,
             cd_showEntrySpot   : should_show_entry_spot,
-            cd_ShowBarrier     : should_show_barrier,
+            cd_showBarrier     : should_show_barrier,
             cd_showBarrierReset: Reset.isReset(contract.contract_type),
             cd_showBarrierLow  : contract.barrier_count > 1 ,
             cd_barrierLabel    : barrier_text,

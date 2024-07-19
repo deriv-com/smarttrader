@@ -466,6 +466,9 @@ div#purchase_container {
                 border-radius: 8px;
                 height: fit-content;
 
+                &.full {
+                    max-width: none;
+                }
                 .table-box {
                     width: 100%;
                     height: fit-content;
@@ -481,8 +484,9 @@ div#purchase_container {
                         padding: var(--core-spacing-800);
                         margin: var(--core-spacing-800) 0 0 0;
                     }
-                    p, .info-msg{
+                    p, .info-msg {
                         width: 100%;
+                        white-space: normal;
                     }
                     .table-item {
                         display: flex;
@@ -514,15 +518,64 @@ div#purchase_container {
                         }
                     }
                 }
+                .table-container {
+                    display: flex;
+                    flex-direction: column;
+                    padding: var(--core-spacing-800);
+                    gap: var(--core-spacing-400);
+                    border-bottom: solid 1px var(--core-color-opacity-slate-100);
+
+                    .table-item {
+                        display: flex;
+                        gap: var(--core-spacing-800);
+
+                        .item-header {
+                            display: flex;
+                            width: 100%;
+                            max-width: 120px;
+                            padding: var(--core-spacing-400);
+                        }
+                        .item-content {
+                            display: flex;
+                            padding: var(--core-spacing-400);
+                            width: 100%;
+                            text-align: center;
+
+                            &.highlighted {
+                                background: var(--core-color-solid-slate-100);
+                            }
+                            &.selected {
+                                background: var(--core-color-solid-slate-700);
+                                
+                                p {
+                                    color: var(--core-color-solid-slate-50);
+                                }
+                            }
+                            .item-inner {
+                                width: 100%;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-// Hide old containers
-#contract_prices_container, .popup_page_overlay, .inpage_popup_container {
-    position: absolute !important;
-    top: -999px !important;
+// Hide old containers 
+// This is to allow QA to disable this quickly
+html:not(.test) {
+    #contract_prices_container, .popup_page_overlay, .inpage_popup_container {
+        position: absolute !important;
+        top: -999px !important;
+    }
+}
+
+html.test {
+    .inpage_popup_container {
+        z-index: 9999 !important;
+    }
 }
 
 .purchase-tooltip {
