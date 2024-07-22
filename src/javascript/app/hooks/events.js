@@ -12,13 +12,13 @@ class EventEmitter {
         }
         this.events[event].push(callback);
         return () => {
-            this.events[event] = this.events[event].filter(cb => cb !== callback);
+            this.events[event] = this.events[event].filter((cb) => cb !== callback);
         };
     }
 
     emit(event, data) {
         if (this.events[event]) {
-            this.events[event].forEach(callback => callback(data));
+            this.events[event].forEach((callback) => callback(data));
         }
     }
 }
@@ -45,6 +45,11 @@ const useCustomEvent = (eventName) => {
     return hasNewChanges;
 };
 
+export const eventDispatcher = (element, eventName) => {
+    const event = new Event(eventName, { bubbles: true, cancelable: true });
+    element.dispatchEvent(event);
+};
+
 // Trigger functions
 const triggerCustomEvent = (eventName) => {
     eventEmitter.emit(eventName);
@@ -58,7 +63,14 @@ export const triggerMarketChange = () => triggerCustomEvent('marketChange');
 export const useContractChange = () => useCustomEvent('contractChange');
 export const triggerContractChange = () => triggerCustomEvent('contractChange');
 
+// SesstionStorage Change
+export const useSessionChange = () => useCustomEvent('sessionChange');
+export const triggerSessionChange = () => triggerCustomEvent('sessionChange');
+
 // Purchase Change
 export const usePurchaseChange = () => useCustomEvent('purchaseChange');
 export const triggerPurchaseChange = () => triggerCustomEvent('purchaseChange');
 
+// Trade Change
+export const useTradeChange = () => useCustomEvent('tradeChange');
+export const triggerTradeChange = () => triggerCustomEvent('tradeChange');

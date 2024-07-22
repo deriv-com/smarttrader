@@ -17,7 +17,6 @@
     h3 {
         font-weight: 700;
     }
-
 }
 
 .secondary-title {
@@ -599,4 +598,41 @@ html.test {
     padding-block: 20px;
 }
 
+.form_container {
+    display: flex;
+    width: 612px;
+    position: relative;
+    z-index: 99;
+    padding: var(--semantic-spacing-general-md);
 
+    .form_rows {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .row {
+        padding-block: 0;
+
+        .form_field {
+            flex: 1;
+        }
+    }
+    .gap-8 {
+        gap: 8px;
+    }
+    .section-msg-container {
+        padding-bottom: 58px;
+    }
+    .dropdown__wrapper {
+        max-width: unset !important;
+    }
+    .dropdown__container {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+}
+
+.deriv-dropdown__menu--open {
+    position: relative;
+    z-index: 99;
+}

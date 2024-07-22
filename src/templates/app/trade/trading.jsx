@@ -30,6 +30,7 @@ const Trading = () => (
                             <input type='hidden' id='contract' />
                         </div>
                     </div>
+                    <div id='contract_forms_wrapper' />
                     <div className='row clear' id='contract_form_content_wrapper'>
                         <div className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
                             <div id='contract_container' className='col row'>
@@ -38,11 +39,20 @@ const Trading = () => (
                                     <div id='contract_form_content' className='gr-gutter'>
                                         <form id='websocket_form'>
                                             <div className='row' id='date_start_row'>
-                                                <div className='col form_label' id='start_time_label'>{it.L('Start time')}</div>
+                                                <div className='col form_label' id='start_time_label'>
+                                                    {it.L('Start time')}
+                                                </div>
                                                 <div className='big-col'>
                                                     <select id='date_start' />
                                                     <div id='time_start_row' className='invisible'>
-                                                        <input type='text' data-lpignore='true' id='time_start' autoComplete='off' readOnly='readonly' className='medium_width_input' />
+                                                        <input
+                                                            type='text'
+                                                            data-lpignore='true'
+                                                            id='time_start'
+                                                            autoComplete='off'
+                                                            readOnly='readonly'
+                                                            className='medium_width_input'
+                                                        />
                                                         <span className='gr-gutter-left'>GMT</span>
                                                     </div>
                                                 </div>
@@ -53,17 +63,42 @@ const Trading = () => (
                                                 </div>
                                                 <div className='big-col'>
                                                     <div id='expiry_type_duration'>
-                                                        <input id='duration_amount' type='number' className='small_width_input' autoComplete='off' /><label />
-                                                        <select id='duration_units' className='medium_width_input' />
+                                                        <input
+                                                            id='duration_amount'
+                                                            type='number'
+                                                            className='small_width_input'
+                                                            autoComplete='off'
+                                                        />
+                                                        <label />
+                                                        <select
+                                                            id='duration_units'
+                                                            className='medium_width_input'
+                                                        />
                                                     </div>
                                                     <div id='duration_wrapper' className='hint'>
-                                                        <span id='duration_tooltip'>{it.L('Minimum:')}</span> <span id='duration_minimum' />
+                                                        <span id='duration_tooltip'>
+                                                            {it.L('Minimum:')}
+                                                        </span>{' '}
+                                                        <span id='duration_minimum' />
                                                         <span id='duration_maximum' className='invisible' />
                                                     </div>
                                                     <div id='expiry_type_endtime'>
-                                                        <input id='expiry_date' type='text' data-lpignore='true' readOnly='readonly' autoComplete='off' />
+                                                        <input
+                                                            id='expiry_date'
+                                                            type='text'
+                                                            data-lpignore='true'
+                                                            readOnly='readonly'
+                                                            autoComplete='off'
+                                                        />
                                                         <div id='expiry_time_row'>
-                                                            <input id='expiry_time' type='text' data-lpignore='true' autoComplete='off' readOnly='readonly' className='medium_width_input' />
+                                                            <input
+                                                                id='expiry_time'
+                                                                type='text'
+                                                                data-lpignore='true'
+                                                                autoComplete='off'
+                                                                readOnly='readonly'
+                                                                className='medium_width_input'
+                                                            />
                                                             <span className='gr-gutter-left'>GMT</span>
                                                         </div>
                                                     </div>
@@ -75,102 +110,210 @@ const Trading = () => (
                                                 </div>
                                                 <div className='big-col'>
                                                     <label className='gr-gutter'>5</label>
-                                                    <label className='gr-gutter-left'>{it.L('Ticks')}</label>
-                                                    <div className='hint'>{it.L('This contract type only offers 5 ticks')}</div>
+                                                    <label className='gr-gutter-left'>
+                                                        {it.L('Ticks')}
+                                                    </label>
+                                                    <div className='hint'>
+                                                        {it.L('This contract type only offers 5 ticks')}
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className='row barrier_class' id='barrier_row'>
                                                 <div className='col form_label'>
                                                     <label htmlFor='H' id='barrier_label'>
-                                                        <span id='barrier_tooltip'>{it.L('Barrier offset')}</span>
+                                                        <span id='barrier_tooltip'>
+                                                            {it.L('Barrier offset')}
+                                                        </span>
                                                         <span id='barrier_span'>{it.L('Barrier')}</span>
                                                     </label>
                                                 </div>
                                                 <div className='big-col'>
-                                                    <input id='barrier' type='text' data-lpignore='true' name='H' autoComplete='off' />
-                                                    <span id='indicative_barrier_tooltip' data-balloon={it.L('This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.')} data-balloon-length='xlarge' />
+                                                    <input
+                                                        id='barrier'
+                                                        type='text'
+                                                        data-lpignore='true'
+                                                        name='H'
+                                                        autoComplete='off'
+                                                    />
+                                                    <span
+                                                        id='indicative_barrier_tooltip'
+                                                        data-balloon={it.L(
+                                                            'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'
+                                                        )}
+                                                        data-balloon-length='xlarge'
+                                                    />
                                                 </div>
                                             </div>
                                             <div className='row barrier_class' id='high_barrier_row'>
                                                 <div className='col form_label'>
                                                     <label htmlFor='H' id='barrier_high_label'>
-                                                        <span id='barrier_high_tooltip'>{it.L('High barrier offset')}</span>
-                                                        <span id='barrier_high_span'>{it.L('High barrier')}</span>
+                                                        <span id='barrier_high_tooltip'>
+                                                            {it.L('High barrier offset')}
+                                                        </span>
+                                                        <span id='barrier_high_span'>
+                                                            {it.L('High barrier')}
+                                                        </span>
                                                     </label>
                                                 </div>
                                                 <div className='big-col'>
-                                                    <input id='barrier_high' type='text' data-lpignore='true' name='H' autoComplete='off' />
-                                                    <span id='indicative_high_barrier_tooltip' data-balloon={it.L('This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.')} data-balloon-length='xlarge' />
+                                                    <input
+                                                        id='barrier_high'
+                                                        type='text'
+                                                        data-lpignore='true'
+                                                        name='H'
+                                                        autoComplete='off'
+                                                    />
+                                                    <span
+                                                        id='indicative_high_barrier_tooltip'
+                                                        data-balloon={it.L(
+                                                            'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'
+                                                        )}
+                                                        data-balloon-length='xlarge'
+                                                    />
                                                     <div className='hint'>
-                                                        <span id='barrier_high_error' className='error-msg invisible'>{it.L('High barrier must be higher than low barrier')}</span>
+                                                        <span
+                                                            id='barrier_high_error'
+                                                            className='error-msg invisible'
+                                                        >
+                                                            {it.L(
+                                                                'High barrier must be higher than low barrier'
+                                                            )}
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='row barrier_class' id='low_barrier_row'>
                                                 <div className='col form_label'>
                                                     <label htmlFor='L' id='barrier_low_label'>
-                                                        <span id='barrier_low_tooltip'>{it.L('Low barrier offset')}</span>
-                                                        <span id='barrier_low_span'>{it.L('Low barrier')}</span>
+                                                        <span id='barrier_low_tooltip'>
+                                                            {it.L('Low barrier offset')}
+                                                        </span>
+                                                        <span id='barrier_low_span'>
+                                                            {it.L('Low barrier')}
+                                                        </span>
                                                     </label>
                                                 </div>
                                                 <div className='big-col'>
-                                                    <input id='barrier_low' type='text' data-lpignore='true' name='L' autoComplete='off' />
-                                                    <span id='indicative_low_barrier_tooltip' data-balloon={it.L('This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.')} data-balloon-length='xlarge' />
+                                                    <input
+                                                        id='barrier_low'
+                                                        type='text'
+                                                        data-lpignore='true'
+                                                        name='L'
+                                                        autoComplete='off'
+                                                    />
+                                                    <span
+                                                        id='indicative_low_barrier_tooltip'
+                                                        data-balloon={it.L(
+                                                            'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'
+                                                        )}
+                                                        data-balloon-length='xlarge'
+                                                    />
                                                 </div>
                                             </div>
                                             <div className='row' id='prediction_row'>
                                                 <div className='col form_label'>
-                                                    <label htmlFor='prediction' id='prediction_label'>{it.L('Last Digit Prediction')}</label>
+                                                    <label htmlFor='prediction' id='prediction_label'>
+                                                        {it.L('Last Digit Prediction')}
+                                                    </label>
                                                 </div>
                                                 <div className='big-col'>
                                                     <select id='prediction' className='small_width_input'>
                                                         {Array.from(new Array(10)).map((x, idx) => (
-                                                            <option key={idx} value={idx}>{idx}</option>
+                                                            <option key={idx} value={idx}>
+                                                                {idx}
+                                                            </option>
                                                         ))}
                                                     </select>
                                                 </div>
                                             </div>
                                             <div className='row' id='selected_tick_row'>
                                                 <div className='col form_label'>
-                                                    <label htmlFor='selected_tick' id='selected_tick_label'>{it.L('Tick Prediction')}</label>
+                                                    <label
+                                                        htmlFor='selected_tick'
+                                                        id='selected_tick_label'
+                                                    >
+                                                        {it.L('Tick Prediction')}
+                                                    </label>
                                                 </div>
                                                 <div className='big-col'>
-                                                    <select id='selected_tick' className='small_width_input'>
+                                                    <select
+                                                        id='selected_tick'
+                                                        className='small_width_input'
+                                                    >
                                                         {Array.from(new Array(5)).map((x, idx) => (
-                                                            <option key={idx + 1} value={idx + 1}>{idx + 1}</option>
+                                                            <option key={idx + 1} value={idx + 1}>
+                                                                {idx + 1}
+                                                            </option>
                                                         ))}
                                                     </select>
                                                 </div>
                                             </div>
                                             <div className='row' id='multiplier_row'>
                                                 <div className='col form_label'>
-                                                    <label htmlFor='multiplier' id='multiplier_label'>{it.L('Multiplier')}</label>
+                                                    <label htmlFor='multiplier' id='multiplier_label'>
+                                                        {it.L('Multiplier')}
+                                                    </label>
                                                 </div>
                                                 <div className='row-inner big-col'>
                                                     <div className='col-inner'>
-                                                        <select id='multiplier_currency' className='currency small_width_input' />
-                                                        <input type='text' data-lpignore='true' defaultValue='1' step='any' maxLength='10' name='multiplier' id='multiplier' className='small_width_input' />
+                                                        <select
+                                                            id='multiplier_currency'
+                                                            className='currency small_width_input'
+                                                        />
+                                                        <input
+                                                            type='text'
+                                                            data-lpignore='true'
+                                                            defaultValue='1'
+                                                            step='any'
+                                                            maxLength='10'
+                                                            name='multiplier'
+                                                            id='multiplier'
+                                                            className='small_width_input'
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='row' id='payout_row'>
                                                 <div className='col form_label'>
                                                     <select id='amount_type'>
-                                                        <option value='stake' id='stake_option'>{it.L('Stake')}</option>
-                                                        <option value='payout' id='payout_option'>{it.L('Payout')}</option>
+                                                        <option value='stake' id='stake_option'>
+                                                            {it.L('Stake')}
+                                                        </option>
+                                                        <option value='payout' id='payout_option'>
+                                                            {it.L('Payout')}
+                                                        </option>
                                                     </select>
                                                 </div>
                                                 <div className='row-inner big-col'>
                                                     <div className='col-inner'>
-                                                        <input id='amount' type='text' data-lpignore='true' step='any' maxLength='10' className='medium_width_input' autoComplete='off' />
-                                                        <select id='currency' className='currency small_width_input' />
+                                                        <input
+                                                            id='amount'
+                                                            type='text'
+                                                            data-lpignore='true'
+                                                            step='any'
+                                                            maxLength='10'
+                                                            className='medium_width_input'
+                                                            autoComplete='off'
+                                                        />
+                                                        <select
+                                                            id='currency'
+                                                            className='currency small_width_input'
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='row' id='reset_time' />
                                             <div className='row invisible' id='equals_row'>
                                                 <input id='callputequal' type='checkbox' />
-                                                <label htmlFor='callputequal'><span data-balloon={it.L('Win payout if exit spot is also equal to entry spot.')}>{it.L('Allow equals')}</span></label>
+                                                <label htmlFor='callputequal'>
+                                                    <span
+                                                        data-balloon={it.L(
+                                                            'Win payout if exit spot is also equal to entry spot.'
+                                                        )}
+                                                    >
+                                                        {it.L('Allow equals')}
+                                                    </span>
+                                                </label>
                                             </div>
                                         </form>
                                     </div>
@@ -179,9 +322,18 @@ const Trading = () => (
                         </div>
                         <div id='purchase_container' />
                     </div>
-                    <div id='contract_prices_container' className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
-                        <div id='contract_confirmation_container' className='overlay_container col'>
-                            <a className='close close--dark-bg' id='close_confirmation_container' />
+                    <div
+                        id='contract_prices_container'
+                        className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'
+                    >
+                        <div
+                            id='contract_confirmation_container'
+                            className='overlay_container col'
+                        >
+                            <a
+                                className='close close--dark-bg'
+                                id='close_confirmation_container'
+                            />
                             <div id='confirmation_message_container'>
                                 <div id='confirmation_message'>
                                     <h3 id='contract_purchase_heading' />
@@ -196,11 +348,22 @@ const Trading = () => (
                                     <button id='contract_purchase_button'className='open_contract_details btn btn--primary' />
                                     <div id='contract_purchase_balance' />
                                 </div>
-                                <div id='confirmation_error' className='center-text invisible' />
-                                <div id='authorization_error_container' className='center-text invisible'>
+                                <div
+                                    id='confirmation_error'
+                                    className='center-text invisible'
+                                />
+                                <div
+                                    id='authorization_error_container'
+                                    className='center-text invisible'
+                                >
                                     <div className='authorization_error'>
-                                        <h3 id='authorization_error_text'>{it.L('Ready to trade?')}</h3>
-                                        <a id='authorization_error_btn_signup' className='btn btn__large btn--primary'>
+                                        <h3 id='authorization_error_text'>
+                                            {it.L('Ready to trade?')}
+                                        </h3>
+                                        <a
+                                            id='authorization_error_btn_signup'
+                                            className='btn btn__large btn--primary'
+                                        >
                                             <span>{it.L('Open a free account')}</span>
                                         </a>
                                         <p>{it.L('Already have an account?')}</p>
@@ -216,7 +379,10 @@ const Trading = () => (
                         </div>
                         <div className='row-inner' id='contracts_list'>
                             <div id='loading_container2' className='overlay_container' />
-                            <div className='col price_container row-inner' id='price_container_top'>
+                            <div
+                                className='col price_container row-inner'
+                                id='price_container_top'
+                            >
                                 <div className='col gr-row'>
                                     <div className='price_wrapper row'>
                                         <h4 className='contract_heading' />
@@ -232,7 +398,14 @@ const Trading = () => (
                                                 </div>
                                             </div>
                                             <div className='contract_purchase button'>
-                                                <span className='purchase_button contract_description no-underline' id='purchase_button_top' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <span
+                                                    className='purchase_button contract_description no-underline'
+                                                    id='purchase_button_top'
+                                                    data-balloon-length='xlarge'
+                                                    value='purchase'
+                                                >
+                                                    {it.L('Purchase')}
+                                                </span>
                                             </div>
                                         </span>
                                     </div>
@@ -240,7 +413,10 @@ const Trading = () => (
                                 <div className='col price_comment' />
                                 <div className='col contract_error' />
                             </div>
-                            <div className='col price_container row-inner' id='price_container_bottom'>
+                            <div
+                                className='col price_container row-inner'
+                                id='price_container_bottom'
+                            >
                                 <div className='col gr-row'>
                                     <div className='price_wrapper row'>
                                         <h4 className='contract_heading' />
@@ -256,7 +432,14 @@ const Trading = () => (
                                                 </div>
                                             </div>
                                             <div className='contract_purchase button'>
-                                                <span className='purchase_button contract_description no-underline' id='purchase_button_bottom' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <span
+                                                    className='purchase_button contract_description no-underline'
+                                                    id='purchase_button_bottom'
+                                                    data-balloon-length='xlarge'
+                                                    value='purchase'
+                                                >
+                                                    {it.L('Purchase')}
+                                                </span>
                                             </div>
                                         </span>
                                     </div>
@@ -264,7 +447,10 @@ const Trading = () => (
                                 <div className='col price_comment' />
                                 <div className='col contract_error' />
                             </div>
-                            <div className='col price_container row-inner' id='price_container_middle'>
+                            <div
+                                className='col price_container row-inner'
+                                id='price_container_middle'
+                            >
                                 <div className='col gr-row'>
                                     <div className='price_wrapper row'>
                                         <h4 className='contract_heading' />
@@ -280,7 +466,14 @@ const Trading = () => (
                                                 </div>
                                             </div>
                                             <div className='contract_purchase button'>
-                                                <span className='purchase_button no-underline' id='purchase_button_middle' data-balloon-length='xlarge' value='purchase'>{it.L('Purchase')}</span>
+                                                <span
+                                                    className='purchase_button no-underline'
+                                                    id='purchase_button_middle'
+                                                    data-balloon-length='xlarge'
+                                                    value='purchase'
+                                                >
+                                                    {it.L('Purchase')}
+                                                </span>
                                             </div>
                                         </span>
                                     </div>
@@ -302,7 +495,6 @@ const Trading = () => (
             <Loading />
         </div>
     </React.Fragment>
-
 );
 
 export default Trading;
