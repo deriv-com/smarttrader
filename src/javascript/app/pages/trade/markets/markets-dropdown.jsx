@@ -209,39 +209,37 @@ export const MarketsDropdown = () => {
     };
 
     useEffect(() => {
-        setTimeout(() =>{
-            if (isMounted && itemsContainer.current) {
-                const paddingOffset = 96;
-                const container = itemsContainer.current;
-                const selectedElement = container.querySelector('.market-item-selected');
-                if (selectedElement) {
-                    const offsetTop = selectedElement.offsetTop - container.offsetTop - paddingOffset;
-                    container.scrollTo({
-                        top     : offsetTop,
-                        behavior: 'auto',
-                    });
-                }
+        if (isMounted && itemsContainer.current) {
+            const paddingOffset = 96;
+            const container = itemsContainer.current;
+            const selectedElement = container.querySelector('.market-item-selected');
+            if (selectedElement) {
+                const offsetTop = selectedElement.offsetTop - container.offsetTop - paddingOffset;
+                container.scrollTo({
+                    top     : offsetTop,
+                    behavior: 'auto',
+                });
+            }
                 
-            }
+        }
     
-            const toActiveMarket = () => {
-                const container = itemsContainer.current;
-                let selectedElement = container.querySelector('.market-item-selected');
+        const toActiveMarket = () => {
+            const container = itemsContainer.current;
+            let selectedElement = container.querySelector('.market-item-selected');
         
-                while (selectedElement && selectedElement !== document) {
-                    if (selectedElement.tagName === 'DIV' && selectedElement.hasAttribute('data-id')) {
-                        const market =  selectedElement.getAttribute('data-id');
-                        return setActiveMarket(market);
-                    }
-                    selectedElement = selectedElement.parentElement;
+            while (selectedElement && selectedElement !== document) {
+                if (selectedElement.tagName === 'DIV' && selectedElement.hasAttribute('data-id')) {
+                    const market =  selectedElement.getAttribute('data-id');
+                    return setActiveMarket(market);
                 }
-                return null;
-            };
-    
-            if (searchKey === '') {
-                toActiveMarket();
+                selectedElement = selectedElement.parentElement;
             }
-        }, 100);
+            return null;
+        };
+    
+        if (searchKey === '') {
+            toActiveMarket();
+        }
 
     }, [isMounted, markets]);
 
