@@ -7,12 +7,12 @@ import {
     Checkbox,
     SectionMessage,
 } from '@deriv-com/quill-ui';
+import moment from 'moment';
 import { formConfig } from './form_config';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import { eventDispatcher, triggerSessionChange } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
-// import { localize } from '../../../_common/localize.js';
 
 export const FormComponent = ({ handlers, tradeData }) => {
     
@@ -21,6 +21,8 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const date_start = Defaults.get(PARAM_NAMES.DATE_START);
     const duration_amount = Defaults.get(PARAM_NAMES.DURATION_AMOUNT);
     const duration_units = Defaults.get(PARAM_NAMES.DURATION_UNITS);
+    const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
+
     const config = formConfig[formName];
     console.log(formName, tradeData);
     const { start_dates, expiry_type_options, duration_data, duration_options } = tradeData;
@@ -47,6 +49,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const setDefaults = (param, value) => {
         Defaults.set(param, value);
         triggerSessionChange();
+    };
+
+    const onExpiryDateChange = (value) => {
+        const element = common_functions.getElementById('expiry_date');
+        const newDate = moment(value).format('YYYY-MM-DD');
+        element.setAttribute('data-value', newDate);
+        eventDispatcher(element, 'change');
     };
 
     const updateOldField = (elementId, value, eventType) => {
@@ -117,8 +126,8 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                         <TextField
                                             type='number'
                                             value={duration_amount}
-                                            message={duration_data.message}
-                                            status={duration_data.status}
+                                            message={duration_data?.message || ''}
+                                            status={duration_data?.status}
                                             onChange={(e) => {
                                                 updateOldField('duration_amount', e.target.value, 'input');
                                             }}
@@ -141,7 +150,11 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                         <div className='form_field' key={field.id}>
                                             {field.component === 'DatePickerDropdown' && (
                                                 <DatePickerDropdown
-                                                    onSelectDate={(e) => handlers.handleDateSelect(e)}
+                                                    value={moment(expiry_date).format('DD/MM/YYYY')}
+                                                    datePickerProps = {{ minDate: new Date() }}
+                                                    onSelectDate={(value) => {
+                                                        onExpiryDateChange(value);
+                                                    }}
                                                 />
                                             )}
                                         </div>

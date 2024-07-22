@@ -10,6 +10,7 @@ const Reset              = require('./reset');
 const BinarySocket       = require('../../base/socket');
 const DatePicker         = require('../../components/date_picker');
 const CommonFunctions    = require('../../../_common/common_functions');
+const { triggerSessionChange } = require('../../hooks/events');
 const localize           = require('../../../_common/localize').localize;
 const State              = require('../../../_common/storage').State;
 const toISOFormat        = require('../../../_common/string_util').toISOFormat;
@@ -381,7 +382,6 @@ const Durations = (() => {
         if (CommonFunctions.getElementById('expiry_type').value === 'endtime') {
             let $expiry_date     = $('#expiry_date');
             const date_start_val = CommonFunctions.getElementById('date_start').value || 'now';
-
             if (isNow(date_start_val) || !/^(risefall|callputequal)$/.test(Defaults.get(FORM_NAME))) {
                 if (!$expiry_date.is('input')) {
                     $expiry_date.replaceWith($('<input/>', { id: 'expiry_date', type: 'text', readonly: 'readonly', autocomplete: 'off', 'data-value': $expiry_date.attr('data-value') }))
@@ -526,6 +526,7 @@ const Durations = (() => {
             Barriers.display();
             $(expiry_time).val('').attr('data-value', '');
             Defaults.set(EXPIRY_TIME, '');
+            triggerSessionChange();
             return processTradingTimesRequest(end_date_iso);
         } // else
         return showExpiryTime(expiry_time, expiry_time_row);
