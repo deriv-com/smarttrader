@@ -10,6 +10,7 @@ const Reset              = require('./reset');
 const BinarySocket       = require('../../base/socket');
 const DatePicker         = require('../../components/date_picker');
 const CommonFunctions    = require('../../../_common/common_functions');
+const { triggerSessionChange } = require('../../hooks/events');
 const localize           = require('../../../_common/localize').localize;
 const State              = require('../../../_common/storage').State;
 const toISOFormat        = require('../../../_common/string_util').toISOFormat;
@@ -17,6 +18,7 @@ const toReadableFormat   = require('../../../_common/string_util').toReadableFor
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
 const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
+const tradeManager = require('../../common/trade_manager').default;
 
 /*
  * Handles duration processing display
@@ -142,6 +144,14 @@ const Durations = (() => {
             } else if (duration === 'daily' || duration === 'tick') {
                 duration_list[min_unit] = makeDurationOption(text_mapping_min, text_mapping_max);
             }
+        });
+
+        const duration_options = [];
+        Object.values(duration_list).forEach(option => {
+            duration_options.push({ text: option.text, value: option.value });
+        });
+        tradeManager.set({
+            duration_options,
         });
 
         const list = Object.keys(duration_list).sort((a, b) => (
@@ -372,7 +382,6 @@ const Durations = (() => {
         if (CommonFunctions.getElementById('expiry_type').value === 'endtime') {
             let $expiry_date     = $('#expiry_date');
             const date_start_val = CommonFunctions.getElementById('date_start').value || 'now';
-
             if (isNow(date_start_val) || !/^(risefall|callputequal)$/.test(Defaults.get(FORM_NAME))) {
                 if (!$expiry_date.is('input')) {
                     $expiry_date.replaceWith($('<input/>', { id: 'expiry_date', type: 'text', readonly: 'readonly', autocomplete: 'off', 'data-value': $expiry_date.attr('data-value') }))
@@ -433,6 +442,7 @@ const Durations = (() => {
     };
 
     const displayExpiryType = () => {
+        const expiry_type_options = [];
         const target   = CommonFunctions.getElementById('expiry_type');
         const fragment = document.createDocumentFragment();
 
@@ -454,6 +464,10 @@ const Durations = (() => {
         }
 
         let option = createElement('option', { value: 'duration', text: localize('Duration') });
+        expiry_type_options.push({
+            value: 'duration',
+            text : localize('Duration'),
+        });
 
         if (current_selected === 'duration') {
             option.setAttribute('selected', 'selected');
@@ -462,12 +476,19 @@ const Durations = (() => {
 
         if (has_end_date && !Reset.isReset(Contract.form())) {
             option = createElement('option', { value: 'endtime', text: localize('End Time') });
+            expiry_type_options.push({
+                value: 'endtime',
+                text : localize('End Time'),
+            });
             if (current_selected === 'endtime') {
                 option.setAttribute('selected', 'selected');
             }
             fragment.appendChild(option);
         }
         target.appendChild(fragment);
+        tradeManager.set({
+            expiry_type_options,
+        });
     };
 
     const isNow = date_start => (date_start ? date_start === 'now' : (!State.get('is_start_dates_displayed') || CommonFunctions.getElementById('date_start').value === 'now'));
@@ -505,6 +526,7 @@ const Durations = (() => {
             Barriers.display();
             $(expiry_time).val('').attr('data-value', '');
             Defaults.set(EXPIRY_TIME, '');
+            triggerSessionChange();
             return processTradingTimesRequest(end_date_iso);
         } // else
         return showExpiryTime(expiry_time, expiry_time_row);
@@ -594,6 +616,7 @@ const Durations = (() => {
     };
 
     const validateMinDurationAmount = () => {
+        const duration_data = {};
         const duration_amount_element  = CommonFunctions.getElementById('duration_amount');
         const duration_wrapper_element = CommonFunctions.getElementById('duration_wrapper');
 
@@ -607,6 +630,9 @@ const Durations = (() => {
         const duration_max_element     = CommonFunctions.getElementById('duration_maximum');
         duration_wrapper_element.setVisibility(1);
 
+        duration_data.min = duration_min_element.textContent;
+        duration_data.max = duration_max_element.textContent;
+
         if (+duration_amount_element.value < +duration_min_element.textContent) {
             duration_amount_element.classList.add('error-field');
             duration_wrapper_element.classList.add('error-msg');
@@ -614,6 +640,8 @@ const Durations = (() => {
             duration_max_element.classList.add('invisible');
             elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
             Reset.hideResetTime();
+            duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
+            duration_data.status = 'error';
         } else if (+duration_max_element.textContent &&
             +duration_amount_element.value > +duration_max_element.textContent) {
             duration_amount_element.classList.add('error-field');
@@ -622,9 +650,12 @@ const Durations = (() => {
             duration_max_element.classList.remove('invisible');
             elementInnerHtml(duration_tooltip_element, localize('Maximum:'));
             Reset.hideResetTime();
+            duration_data.message = `${localize('Maximum:')} ${duration_data.max}`;
+            duration_data.status = 'error';
         } else {
             duration_amount_element.classList.remove('error-field');
             duration_wrapper_element.classList.remove('error-msg');
+            duration_data.status = '';
             if (Reset.isReset(Contract.form())) {
                 Reset.displayResetTime(duration_amount_element.value, Defaults.get(DURATION_UNITS));
             } else {
@@ -632,8 +663,12 @@ const Durations = (() => {
                 duration_max_element.classList.add('invisible');
                 elementInnerHtml(duration_tooltip_element, localize('Minimum:'));
                 Reset.hideResetTime();
+                duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
             }
         }
+        tradeManager.set({
+            duration_data,
+        });
     };
 
     const onStartDateChange = (value) => {
