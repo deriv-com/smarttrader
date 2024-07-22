@@ -209,20 +209,41 @@ export const MarketsDropdown = () => {
     };
 
     useEffect(() => {
-        if (isMounted && itemsContainer.current) {
-            const paddingOffset = 96;
-            const container = itemsContainer.current;
-            const selectedElement = container.querySelector('.market-item-selected');
-            if (selectedElement) {
-                const offsetTop = selectedElement.offsetTop - container.offsetTop - paddingOffset;
-                container.scrollTo({
-                    top     : offsetTop,
-                    behavior: 'auto',
-                });
+        setTimeout(() =>{
+            if (isMounted && itemsContainer.current) {
+                const paddingOffset = 96;
+                const container = itemsContainer.current;
+                const selectedElement = container.querySelector('.market-item-selected');
+                if (selectedElement) {
+                    const offsetTop = selectedElement.offsetTop - container.offsetTop - paddingOffset;
+                    container.scrollTo({
+                        top     : offsetTop,
+                        behavior: 'auto',
+                    });
+                }
+                
             }
-            
-        }
-    }, [isMounted]);
+    
+            const toActiveMarket = () => {
+                const container = itemsContainer.current;
+                let selectedElement = container.querySelector('.market-item-selected');
+        
+                while (selectedElement && selectedElement !== document) {
+                    if (selectedElement.tagName === 'DIV' && selectedElement.hasAttribute('data-id')) {
+                        const market =  selectedElement.getAttribute('data-id');
+                        return setActiveMarket(market);
+                    }
+                    selectedElement = selectedElement.parentElement;
+                }
+                return null;
+            };
+    
+            if (searchKey === '') {
+                toActiveMarket();
+            }
+        }, 100);
+
+    }, [isMounted, markets]);
 
     return (
         <div className='quill-market-dropdown-container'>
