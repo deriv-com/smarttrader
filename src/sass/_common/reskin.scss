@@ -636,3 +636,12 @@ html.test {
     position: relative;
     z-index: 99;
 }
+
+.bottom-content-section {
+    min-height: 400px;
+
+    @media(max-width: 768px){
+        min-height: fit-content;
+    }
+   
+}

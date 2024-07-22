@@ -86,6 +86,17 @@ const BottomTabs = () => {
             renderGraph();
         }
     }, [selectedTab]);
+
+    const handleChange = (e) => {
+        console.log(e, 'event');
+        setSelectedTab(e);
+       
+        const delay = e === '2' ? '100' : 0;
+        setTimeout(() => {
+            document.querySelectorAll('#trade_analysis li')[e].querySelector('a').click();
+        }, delay);
+    };
+
     const bottomTabOptions = hasLastDigit
         ? [{ label: 'Chart' }, { label: 'Explanation' }, { label: 'Last Digit Stats' }]
         : [{ label: 'Chart' }, { label: 'Explanation' }];
@@ -96,20 +107,22 @@ const BottomTabs = () => {
                 <SegmentedControlSingleChoice
                     options={bottomTabOptions}
                     selectedItemIndex={selectedTab}
-                    onChange={(e) => setSelectedTab(e)}
+                    onChange={(e) => handleChange(e)}
                 />
             </div>
+            <div className='bottom-content-section'>
+                {selectedTab === 0 && showGraph && <Graph />}
 
-            {selectedTab === 0 && showGraph && <Graph />}
-
-            {selectedTab === 1 && (
-                <div className='explanation-container'>
-                    <Explanation formName={formName} />
-                </div>
-            )}
-            {selectedTab === 2 && (
-                <LastDigit />
-            )}
+                {selectedTab === 1 && (
+                    <div className='explanation-container'>
+                        <Explanation formName={formName} />
+                    </div>
+                )}
+                {selectedTab === 2 && (
+                    <LastDigit />
+                )}
+            </div>
+           
         </>
     );
 };
