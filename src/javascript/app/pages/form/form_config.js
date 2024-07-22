@@ -1,54 +1,4 @@
 
-const ExpiryType = {
-    options: [
-        { text: 'Duration', value: 'duration' },
-        { text: 'End Time', value: 'endtime' },
-    ],
-    duration: [
-        {
-            id       : 'duration_amount',
-            component: 'TextField',
-            props    : {
-                type   : 'number',
-                value  : '15',
-                message: 'Minimum: 15',
-            },
-        },
-        {
-            id       : 'duration_units',
-            component: 'InputDropdown',
-            props    : {
-                options: [
-                    {
-                        text : 'minutes',
-                        value: 1,
-                    },
-                    {
-                        text : 'hours',
-                        value: 2,
-                    },
-                    {
-                        text : 'days',
-                        value: 3,
-                    },
-                ],
-                value: 2,
-            },
-        },
-    ],
-    endtime: [
-        {
-            id       : 'expiry_type_endtime',
-            component: 'DatePickerDropdown',
-            props    : {
-                type   : 'number',
-                value  : '15',
-                message: 'Minimum: 15',
-            },
-        },
-    ],
-};
-
 const PayoutType = [
     {
         id       : 'payout_type',
@@ -117,65 +67,51 @@ export const formConfig = {
         startTime: {
             label: 'Start Time',
         },
-        expiryType : ExpiryType,
         payoutType : PayoutType,
         allowEquals: true,
     },
     callputequal: {
-        expiryType : ExpiryType,
         payoutType : PayoutType,
         allowEquals: true,
     },
     touchnotouch: {
-        expiryType: ExpiryType,
         barrier   : Barrier,
         payoutType: PayoutType,
     },
     higherlower: {
-        expiryType: ExpiryType,
         barrier   : Barrier,
         payoutType: PayoutType,
     },
     endsinout: {
-        expiryType    : ExpiryType,
         highlowBarrier: HighLowBarrier,
         payoutType    : PayoutType,
     },
     staysinout: {
-        expiryType    : ExpiryType,
         highlowBarrier: HighLowBarrier,
         payoutType    : PayoutType,
     },
     matchdiff: {
-        expiryType: ExpiryType,
         lastDigit : LastDigitPrediction,
         payoutType: PayoutType,
     },
     evenodd: {
-        expiryType: ExpiryType,
         payoutType: PayoutType,
     },
     overunder: {
-        expiryType: ExpiryType,
         lastDigit : LastDigitPrediction,
         payoutType: PayoutType,
     },
     asian: {
-        expiryType: ExpiryType,
         payoutType: PayoutType,
     },
     lookbackhigh: {
-        expiryType: ExpiryType,
     },
     lookbacklow: {
-        expiryType: ExpiryType,
     },
     lookbackhighlow: {
-        expiryType: ExpiryType,
     },
     reset: {
         infoMessage: 'The reset time is 30 seconds',
-        expiryType : ExpiryType,
         payoutType : PayoutType,
     },
     highlowticks: {
@@ -184,7 +120,6 @@ export const formConfig = {
         payoutType    : PayoutType,
     },
     runs: {
-        expiryType: ExpiryType,
         payoutType: PayoutType,
     },
 };

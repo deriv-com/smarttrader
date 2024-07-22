@@ -22,6 +22,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const duration_amount = Defaults.get(PARAM_NAMES.DURATION_AMOUNT);
     const duration_units = Defaults.get(PARAM_NAMES.DURATION_UNITS);
     const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
+    const expiry_time = Defaults.get(PARAM_NAMES.EXPIRY_TIME);
 
     const config = formConfig[formName];
     console.log(formName, tradeData);
@@ -109,7 +110,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {config.expiryType && formName !== 'highlowticks' && (
+                    {formName !== 'highlowticks' && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
@@ -146,26 +147,25 @@ export const FormComponent = ({ handlers, tradeData }) => {
                             )}
                             {expiryType === 'endtime' && (
                                 <>
-                                    {config.expiryType.endtime.map((field) => (
-                                        <div className='form_field' key={field.id}>
-                                            {field.component === 'DatePickerDropdown' && (
-                                                <DatePickerDropdown
-                                                    value={moment(expiry_date).format('DD/MM/YYYY')}
-                                                    datePickerProps = {{ minDate: new Date() }}
-                                                    onSelectDate={(value) => {
-                                                        onExpiryDateChange(value);
-                                                    }}
-                                                />
-                                            )}
-                                        </div>
-                                    ))}
                                     <div className='form_field'>
-                                        <TextFieldAddon
-                                            value='12:40'
-                                            addonLabel='GMT'
-                                            addOnPosition='right'
+                                        <DatePickerDropdown
+                                            value={moment(expiry_date).format('DD/MM/YYYY')}
+                                            datePickerProps = {{ minDate: new Date() }}
+                                            onSelectDate={(value) => {
+                                                onExpiryDateChange(value);
+                                            }}
                                         />
                                     </div>
+
+                                    {expiry_time &&
+                                        <div className='form_field'>
+                                            <TextFieldAddon
+                                                value={expiry_time}
+                                                addonLabel='GMT'
+                                                addOnPosition='right'
+                                            />
+                                        </div>
+                                    }
                                 </>
                             )}
                         </div>

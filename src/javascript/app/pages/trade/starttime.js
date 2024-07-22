@@ -111,11 +111,6 @@ const StartDates = (() => {
                 Dropdown('#date_start');
                 Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
-                // sessionStorage.setItem(
-                //     'start_dates',
-                //     JSON.stringify(start_dates_data)
-                // );
-                // triggerSessionChange();
                 tradeManager.set({
                     start_dates: start_dates_data,
                 });
