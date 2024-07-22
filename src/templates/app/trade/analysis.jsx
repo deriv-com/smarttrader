@@ -1,6 +1,4 @@
 import React from 'react';
-import Explanation from './explanation.jsx';
-import LastDigit from './last_digit.jsx';
 import { TabContainer, TabsSubtabs, TabContentContainer, TabContent } from '../../_common/components/tabs.jsx';
 
 const ArrowsMobile = ({ direction, parent }) => (
