@@ -57,6 +57,10 @@ const ViewPopup = (() => {
             ViewPopupUI.cleanup(false);
         }
 
+        ViewPopupUI.setOnDestroyFunction(()=>{
+            Highchart.hideChart();
+        });
+
         getContract();
 
         setLoadingState(true);

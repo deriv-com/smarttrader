@@ -319,6 +319,13 @@ const Highchart = (() => {
         }
     };
 
+    const hideChart = () => {
+        if (typeof getPropertyValue(chart, ['destroy']) === 'function') {
+            chart.destroy();
+        }
+        chart = undefined;
+    };
+
     const requestData = (update) => {
         const calculate_granularity = calculateGranularity();
         const granularity           = calculate_granularity[0];
@@ -712,6 +719,7 @@ const Highchart = (() => {
 
     return {
         showChart,
+        hideChart,
     };
 })();
 
