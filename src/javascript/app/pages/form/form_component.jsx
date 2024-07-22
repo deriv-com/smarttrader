@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
     TextField,
@@ -24,7 +25,6 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
 
     const config = formConfig[formName];
-    console.log(formName, tradeData);
     const { start_dates, expiry_type_options, duration_data, duration_options } = tradeData;
 
     const contractForms = [
@@ -84,7 +84,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {['risefall', 'callputequal'].includes(formName) && start_dates?.has_now && (
+                    {['risefall', 'callputequal'].includes(formName) && start_dates && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
@@ -254,7 +254,6 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                 label='Allow equals'
                                 name='demo_checkbox'
                                 onChange={(e) => {
-                                    console.log(e);
                                 }}
                                 size='md'
                                 infoIconMessage='Win payout if exit spot is also equal to entry spot.'

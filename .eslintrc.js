@@ -21,7 +21,7 @@ module.exports = {
         'keyword-spacing'               : ['error', { after: true }],
         'lines-between-class-members'   : ['error', 'always', { exceptAfterSingleLine: true }],
         'no-extra-semi'                 : 'error',
-        // 'no-console'                    : 'error',
+        'no-console'                    : 'error',
         'no-else-return'                : ['error', { allowElseIf: true }],
         'no-multi-assign'               : 0,
         'no-param-reassign'             : ['error', { props: false }],
