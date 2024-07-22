@@ -9,7 +9,7 @@ import {
     useSessionChange,
     useTradeChange,
 } from '../../hooks/events';
-// import Defaults, { PARAM_NAMES } from '../trade/defaults';
+
 import tradeManager from '../../common/trade_manager';
 
 const ContractFormWrapper = () => {
@@ -52,9 +52,7 @@ const ContractFormWrapper = () => {
 
     return (
         <FormComponent
-            // formName={formName}
             handlers={handlers}
-            // expiryType={expiry_type}
             tradeData={tradeData}
         />
     );
