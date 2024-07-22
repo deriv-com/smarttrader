@@ -84,7 +84,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {['risefall', 'callputequal'].includes(formName) && start_dates?.has_now && (
+                    {['risefall', 'callputequal'].includes(formName) && start_dates && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <InputDropdown
