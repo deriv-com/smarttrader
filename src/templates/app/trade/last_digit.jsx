@@ -1,5 +1,7 @@
 import React from 'react';
+import parse from 'html-react-parser';
 import { Select } from '../../_common/components/elements.jsx';
+import { localize } from '../../../javascript/_common/localize.js';
 
 const LastDigit = () => (
     <div className='gr-parent'>
@@ -26,7 +28,10 @@ const LastDigit = () => (
             </div>
         </div>
         <div id='last_digit_histo' className='gr-8 gr-12-m gr-centered' />
-        <div id='last_digit_title' className='gr-hide'><span id='digit_domain' /> - {('Last digit stats for the latest [_1] ticks on [_2]', '<span id="digit_info_count">100</span>', '<span id="digit_info_underlying" />')}</div>
+        <div id='last_digit_title' className='gr-hide'>
+            <span id='digit_domain' />
+            - {parse(localize('Last digit stats for the latest [_1] ticks on [_2]', ['<span id="digit_info_count">100</span>', '<span id="digit_info_underlying" />']))}
+        </div>
     </div>
 );
 
