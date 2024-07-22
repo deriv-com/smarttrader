@@ -115,7 +115,7 @@ const Purchase = (() => {
                         error: {
                             ...error,
                             signupUrl: signup_url,
-                            title    : localize('Already have an account?'),
+                            title    : localize('Ready to trade?'),
                             isCustom : true,
                         },
                     });
