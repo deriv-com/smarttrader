@@ -198,12 +198,14 @@ export const MarketsDropdown = () => {
         setSelectedMarket(underlying);
         triggerMarketChange();
 
-        // Old Trigger
-        const underlyingElement = getElementById('underlying');
-        const event = new Event('change');
-        underlyingElement.value = underlying;
-        underlyingElement.setAttribute('data-text', underlyings[underlying]);
-        underlyingElement.dispatchEvent(event);
+        // const underlyingElement = getElementById('underlying');
+        // const event = new Event('change');
+        // underlyingElement.value = underlying;
+        // underlyingElement.setAttribute('data-text', underlyings[underlying]);
+        // underlyingElement.dispatchEvent(event);
+
+        // Trigger the old form to enable other required effects from it
+        document.querySelectorAll('.symbol_name').forEach(el => el.id === underlying && el.click());
 
         closeMarketDropdown();
     };
