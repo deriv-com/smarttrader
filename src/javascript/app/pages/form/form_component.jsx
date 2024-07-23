@@ -29,6 +29,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
     const amount = Defaults.get(PARAM_NAMES.AMOUNT);
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
+    const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
 
     const config = formConfig[formName];
     const {
@@ -86,7 +87,11 @@ export const FormComponent = ({ handlers, tradeData }) => {
 
     const updateOldField = (elementId, value, eventType) => {
         const element = common_functions.getElementById(elementId);
-        element.value = value;
+        if (elementId === 'callputequal') {
+            element.checked = !+is_equal;
+        } else {
+            element.value = value;
+        }
         eventDispatcher(element, eventType);
     };
 
@@ -334,14 +339,16 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {config.allowEquals && (
+                    {['risefall', 'callputequal'].includes(formName) && (
                         <div className='row'>
                             <Checkbox
                                 id='allow_equlas'
                                 label='Allow equals'
-                                name='demo_checkbox'
-                                onChange={(e) => {}}
+                                onChange={(e) => {
+                                    updateOldField('callputequal', e, 'change');
+                                }}
                                 size='md'
+                                checked={+is_equal === 1}
                                 infoIconMessage='Win payout if exit spot is also equal to entry spot.'
                             />
                         </div>
