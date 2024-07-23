@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
-import { SectionMessage, Text } from '@deriv-com/quill-ui';
+import { SectionMessage, Skeleton, Text } from '@deriv-com/quill-ui';
 import { contractExplanationData } from './data/explanation.js';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
 import { localize } from '../../../_common/localize.js';
+import contractManager from '../../common/contract_manager.js';
+import { useContractChange } from '../../hooks/events.js';
 
-export const Explanation = ({ explanationOnly = false, formName }) => {
+export const Explanation = ({ explanationOnly = false }) => {
+
+    const [formName,setFormName] = useState(null);
+
+    const hasContractChanges = useContractChange();
+
+    useEffect(() => {
+        const actualFormName = contractManager.get('explanationFormName');
+        setFormName(null);
+        
+        setTimeout(() => {
+            setFormName(actualFormName);
+        }, 500);
+       
+    },[hasContractChanges]);
+
     const language = Language.get();
     const image_path = Url.urlForStatic(
         `images/pages/trade-explanation/${language}/`
     );
     const Notes = () => (
-        <Text size='sm' className='hint'>
+        <>
             <strong>{localize('Note')}: </strong>
             {contractExplanationData.note[formName].content.map((data, idx) => (
                 <span key={idx}>{parse(data)}</span>
             ))}
-        </Text>
+        </>
     );
 
     const images = {
@@ -97,7 +114,7 @@ export const Explanation = ({ explanationOnly = false, formName }) => {
                                 
                             </div>
                         </div>
-
+                          
                         {/* ========== Image ========== */}
                         {images[formName] && (
                             <div id='explanation_image'>
@@ -165,12 +182,39 @@ export const Explanation = ({ explanationOnly = false, formName }) => {
                 {/* ========== Note ========== */}
                 {!explanationOnly && (
                     contractExplanationData.note[formName] && (
-                        <SectionMessage status='info' message={<Notes />} />
+                        <SectionMessage status='info' message={<Notes />} size='sm' />
                     )
                 )}
             </div>
         );
     }
-
-    return <></>;
+    
+    if (explanationOnly){
+        return (
+            <div className='explanation-container-loader'>
+                <Skeleton.Square width={250} height={50} rounded />
+                <Skeleton.Square fullWidth height={30} rounded />
+                <Skeleton.Square fullWidth height={30} rounded />
+                <Skeleton.Square fullWidth height={30} rounded />
+            </div>);
+    }
+    
+    return (
+        <div className='explanation-container-loader'>
+            <Skeleton.Square width={250} height={50} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <div className='section-loaders'>
+                <Skeleton.Square width={300} height={195} rounded />
+                <Skeleton.Square width={300} height={195} rounded />
+            </div>
+            <Skeleton.Square width={250} height={50} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <Skeleton.Square fullWidth height={30} rounded />
+            <Skeleton.Square fullWidth height={120} rounded />
+        </div>
+    );
+    
 };

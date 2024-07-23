@@ -1,11 +1,12 @@
-const showChart      = require('./charts/webtrader_chart').showChart;
-const Defaults       = require('./defaults');
-const getActiveTab   = require('./get_active_tab').getActiveTab;
-const GetTicks       = require('./get_ticks');
-const getElementById = require('../../../_common/common_functions').getElementById;
-const getLanguage    = require('../../../_common/language').get;
-const TabSelector    = require('../../../_common/tab_selector');
-const Url            = require('../../../_common/url');
+const showChart       = require('./charts/webtrader_chart').showChart;
+const Defaults        = require('./defaults');
+const getActiveTab    = require('./get_active_tab').getActiveTab;
+const GetTicks        = require('./get_ticks');
+const getElementById  = require('../../../_common/common_functions').getElementById;
+const getLanguage     = require('../../../_common/language').get;
+const TabSelector     = require('../../../_common/tab_selector');
+const Url             = require('../../../_common/url');
+const contractManager = require('../../common/contract_manager').default;
 
 /*
  * This file contains the code related to loading of trading page bottom analysis
@@ -30,10 +31,17 @@ const TradingAnalysis = (() => {
     const requestTradeAnalysis = () => {
         form_name = Defaults.get(FORM_NAME) || 'risefall';
 
-        const map_obj = { matchdiff: 'digits', callputequal: 'risefall', callput: 'higherlower' };
-        form_name     = map_obj[form_name] || form_name;
+        const map_obj = { callputequal: 'risefall', callput: 'higherlower' };
+        const tab_obj = { ...map_obj, matchdiff: 'digits' };
+        const tab_form_name     = tab_obj[form_name] || form_name;
+        form_name = map_obj[form_name] || form_name;
 
-        $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(form_name));
+        contractManager.set({
+            actualFormName     : form_name,
+            explanationFormName: tab_form_name,
+        });
+
+        $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(tab_form_name));
        
         loadAnalysisTab();
     };
