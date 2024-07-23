@@ -8,11 +8,11 @@ const LastDigit = () => (
         <div id='last_digit_histo_form' className='gr-8 gr-12-m gr-centered'>
             <div className='smallfont gr-row'>
                 <div className='gr-7 gr-12-m'>
-                    <label htmlFor='digit_underlying'>{('Select market:')}</label>
+                    <label htmlFor='digit_underlying'>{localize('Select market:')}</label>
                     <select className='smallfont' id='digit_underlying' />
                 </div>
                 <div className='gr-5 gr-12-m'>
-                    <label htmlFor='tick_count'>{('Number of ticks:')}</label>
+                    <label htmlFor='tick_count'>{localize('Number of ticks:')}</label>
                     <Select
                         className='smallfont'
                         id='tick_count'
