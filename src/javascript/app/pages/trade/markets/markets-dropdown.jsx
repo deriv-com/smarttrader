@@ -7,7 +7,6 @@ import {
     Divider,
     useDropdown,
 } from '@deriv-com/quill-ui';
-import { getElementById } from '../../../../_common/common_functions';
 import Symbols from '../symbols';
 import ActiveSymbols, {
     marketOrder,
@@ -73,7 +72,6 @@ export const MarketsDropdown = () => {
     const [searchKey, setSearchKey] = useState('');
     const itemsContainer = useRef(null);
     const isScrolling = useRef(false);
-    const underlyings = Symbols.getAllSymbols() || {};
 
     const { close: closeMarketDropdown } = useDropdown();
 
