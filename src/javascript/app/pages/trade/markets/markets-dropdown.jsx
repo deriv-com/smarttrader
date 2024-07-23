@@ -220,9 +220,28 @@ export const MarketsDropdown = () => {
                     behavior: 'auto',
                 });
             }
-            
+                
         }
-    }, [isMounted]);
+    
+        const toActiveMarket = () => {
+            const container = itemsContainer.current;
+            let selectedElement = container.querySelector('.market-item-selected');
+        
+            while (selectedElement && selectedElement !== document) {
+                if (selectedElement.tagName === 'DIV' && selectedElement.hasAttribute('data-id')) {
+                    const market =  selectedElement.getAttribute('data-id');
+                    return setActiveMarket(market);
+                }
+                selectedElement = selectedElement.parentElement;
+            }
+            return null;
+        };
+    
+        if (searchKey === '') {
+            toActiveMarket();
+        }
+
+    }, [isMounted, markets]);
 
     return (
         <div className='quill-market-dropdown-container'>

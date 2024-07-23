@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 // eslint-disable-next-line import/no-unresolved
@@ -9,7 +10,6 @@ import {
     useSessionChange,
     useTradeChange,
 } from '../../hooks/events';
-
 import tradeManager from '../../common/trade_manager';
 
 const ContractFormWrapper = () => {
@@ -20,9 +20,7 @@ const ContractFormWrapper = () => {
     const hasSessionChange = useSessionChange();
 
     useEffect(() => {
-        // setFormName(Defaults.get(PARAM_NAMES.FORM_NAME));
-
-        // setStartDates(JSON.parse(sessionStorage.getItem('start_dates')));
+        
     }, [hasContractChange, hasMarketChange, hasSessionChange]);
 
     useEffect(() => {
@@ -32,17 +30,11 @@ const ContractFormWrapper = () => {
         }));
     }, [hasTradeChange, hasSessionChange]);
 
-    const handleStartTime = (value) => {
-        console.log('Start Time selected:', value);
-    };
+    const handleStartTime = (value) => {};
 
-    const handleSelect = (value) => {
-        console.log('Option selected:', value);
-    };
+    const handleSelect = (value) => {};
 
-    const handleDateSelect = (value) => {
-        console.log('Date selected:', value);
-    };
+    const handleDateSelect = (value) => {};
 
     const handlers = {
         handleStartTime,
