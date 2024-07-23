@@ -7,7 +7,6 @@ import {
     Divider,
     useDropdown,
 } from '@deriv-com/quill-ui';
-import { getElementById } from '../../../../_common/common_functions';
 import Symbols from '../symbols';
 import ActiveSymbols, {
     marketOrder,
@@ -73,7 +72,6 @@ export const MarketsDropdown = () => {
     const [searchKey, setSearchKey] = useState('');
     const itemsContainer = useRef(null);
     const isScrolling = useRef(false);
-    const underlyings = Symbols.getAllSymbols() || {};
 
     const { close: closeMarketDropdown } = useDropdown();
 
@@ -198,12 +196,8 @@ export const MarketsDropdown = () => {
         setSelectedMarket(underlying);
         triggerMarketChange();
 
-        // Old Trigger
-        const underlyingElement = getElementById('underlying');
-        const event = new Event('change');
-        underlyingElement.value = underlying;
-        underlyingElement.setAttribute('data-text', underlyings[underlying]);
-        underlyingElement.dispatchEvent(event);
+        // Trigger the old form to enable other required effects from it
+        document.querySelectorAll('.symbol_name').forEach(el => el.id === underlying && el.click());
 
         closeMarketDropdown();
     };

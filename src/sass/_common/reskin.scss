@@ -4,7 +4,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            padding-block: 20px;
+            padding-bottom: 24px;
         }
     }
 }
@@ -12,15 +12,15 @@
 .tab-explanation {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 16px;
 
     h3 {
         font-weight: 700;
     }
 }
 
-.secondary-title {
-    margin-top: 40px;
+.secondary-heading {
+  padding-top: 16px;
 }
 
 .hint {
@@ -36,7 +36,7 @@
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding-block: 40px;
 }
 
 .trading-container {
@@ -593,9 +593,14 @@ html.test {
     z-index: 999;
 }
 
-.explanation-container {
-    margin-block-end: 50px;
-    padding-block: 20px;
+.explanation-heading {
+   padding-bottom: 8px;
+}
+
+.explanation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .form_container {
@@ -635,4 +640,14 @@ html.test {
 .deriv-dropdown__menu--open {
     position: relative;
     z-index: 99;
+}
+
+.bottom-content-section {
+    min-height: 400px;
+    padding: 16px;
+
+    @media(max-width: 768px){
+        min-height: fit-content;
+    }
+   
 }
