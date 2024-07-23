@@ -10,7 +10,6 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
-const { triggerSessionChange } = require('../../hooks/events');
 const tradeManager = require('../../common/trade_manager').default;
 
 /*
@@ -118,7 +117,6 @@ const StartDates = (() => {
             State.set('is_start_dates_displayed', true);
             if (first) {
                 Durations.onStartDateChange(first);
-                triggerSessionChange();
             }
         } else {
             if (start_dates && start_dates.has_spot) {

@@ -13,4 +13,21 @@ const onlyNumericOnKeypress = (ev, optional_value) => {
     }
 };
 
-module.exports = onlyNumericOnKeypress;
+const onlyNumericOnKeyDown = (ev, optional_value) => {
+    const char = ev.charCode;
+    let array_of_char = [0, 8, 37, 39, 46]; // special keypresses (tab, esc), delete, backspace, arrow keys
+    if (optional_value && optional_value.length > 0) {
+        array_of_char = array_of_char.concat(optional_value);
+    }
+    if (
+        (ev.key === '.' && ev.target.value.indexOf(ev.key) >= 0) ||
+    (!/[0-9.]/.test(ev.key) && array_of_char.indexOf(char) < 0) ||
+    /['%]/.test(ev.key)
+    ) {
+    // similarity to arrows key code in some browsers
+        ev.returnValue = false;
+        ev.preventDefault();
+    }
+};
+
+module.exports = { onlyNumericOnKeypress, onlyNumericOnKeyDown };

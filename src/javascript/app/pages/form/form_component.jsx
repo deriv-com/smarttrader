@@ -10,10 +10,12 @@ import {
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
 import { formConfig } from './form_config';
+import { CurrencyDropdown } from './currencyDropdown.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
-import { eventDispatcher, triggerSessionChange } from '../../hooks/events';
+import { eventDispatcher } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
+import { onlyNumericOnKeyDown, onlyNumericOnKeypress } from '../../common/event_handler';
 
 export const FormComponent = ({ handlers, tradeData }) => {
     
@@ -24,9 +26,19 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const duration_units = Defaults.get(PARAM_NAMES.DURATION_UNITS);
     const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
     const expiry_time = Defaults.get(PARAM_NAMES.EXPIRY_TIME);
+    const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
+    const amount = Defaults.get(PARAM_NAMES.AMOUNT);
+    const currency = Defaults.get(PARAM_NAMES.CURRENCY);
 
     const config = formConfig[formName];
-    const { start_dates, expiry_type_options, duration_data, duration_options } = tradeData;
+    const {
+        start_dates,
+        expiry_type_options,
+        duration_data,
+        duration_options,
+        endtime_data,
+        currency_list,
+    } = tradeData;
 
     const contractForms = [
         'risefall',
@@ -49,13 +61,26 @@ export const FormComponent = ({ handlers, tradeData }) => {
 
     const setDefaults = (param, value) => {
         Defaults.set(param, value);
-        triggerSessionChange();
+        // triggerSessionChange();
     };
 
     const onExpiryDateChange = (value) => {
+        // debugger;
         const element = common_functions.getElementById('expiry_date');
         const newDate = moment(value).format('YYYY-MM-DD');
-        element.setAttribute('data-value', newDate);
+        if (!endtime_data.show_datepicker) {
+            Array.from(element.options).map(option => {
+                if (moment(option.text).format('YYYY-MM-DD') === value) {
+                    option.setAttribute('selected', true);
+                    option.setAttribute('data-value', newDate);
+                } else {
+                    option.setAttribute('selected', false);
+                    option.setAttribute('data-value', newDate);
+                }
+            });
+        } else {
+            element.setAttribute('data-value', newDate);
+        }
         eventDispatcher(element, 'change');
     };
 
@@ -130,7 +155,11 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                             message={duration_data?.message || ''}
                                             status={duration_data?.status}
                                             onChange={(e) => {
-                                                updateOldField('duration_amount', e.target.value, 'input');
+                                                updateOldField(
+                                                    'duration_amount',
+                                                    e.target.value,
+                                                    'input'
+                                                );
                                             }}
                                         />
                                     </div>
@@ -147,17 +176,30 @@ export const FormComponent = ({ handlers, tradeData }) => {
                             )}
                             {expiryType === 'endtime' && (
                                 <>
-                                    <div className='form_field'>
-                                        <DatePickerDropdown
-                                            value={moment(expiry_date).format('DD/MM/YYYY')}
-                                            datePickerProps = {{ minDate: new Date() }}
-                                            onSelectDate={(value) => {
-                                                onExpiryDateChange(value);
-                                            }}
-                                        />
-                                    </div>
+                                    {endtime_data && (
+                                        <div className='form_field'>
+                                            {endtime_data.show_datepicker ? (
+                                                <DatePickerDropdown
+                                                    value={moment(expiry_date).format('DD/MM/YYYY')}
+                                                    datePickerProps={{ minDate: new Date() }}
+                                                    onSelectDate={(value) => {
+                                                        onExpiryDateChange(value);
+                                                    }}
+                                                />
+                                            ) : (
+                                                <InputDropdown
+                                                    options={endtime_data.options}
+                                                    value={expiry_date}
+                                                    onSelectOption={(value) => {
+                                                        setDefaults(PARAM_NAMES.EXPIRY_DATE, value);
+                                                        onExpiryDateChange(value);
+                                                    }}
+                                                />
+                                            )}
+                                        </div>
+                                    )}
 
-                                    {expiry_time &&
+                                    {expiry_time && (
                                         <div className='form_field'>
                                             <TextFieldAddon
                                                 value={expiry_time}
@@ -165,7 +207,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                                 addOnPosition='right'
                                             />
                                         </div>
-                                    }
+                                    )}
                                 </>
                             )}
                         </div>
@@ -216,21 +258,66 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         </div>
                     )}
 
-                    {config.payoutType && (
+                    {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
+                        formName
+                    ) && (
                         <div className='row gap-8'>
-                            {config.payoutType.map((field) => (
-                                <div className='form_field' key={field.id}>
-                                    {field.component === 'InputDropdown' && (
-                                        <InputDropdown
-                                            {...field.props}
-                                            onSelectOption={(e) => handlers.handleSelect(e)}
+                            <div className='form_field'>
+                                <InputDropdown
+                                    options={[
+                                        { text: localize('Stake'), value: 'stake' },
+                                        { text: localize('Payout'), value: 'payout' },
+                                    ]}
+                                    value={amount_type}
+                                    onSelectOption={(value) => {
+                                        updateOldField('amount_type', value, 'change');
+                                    }}
+                                />
+                            </div>
+
+                            {currency_list ?
+                                <>
+                                    <div className='form_field'>
+                                        <TextField
+                                            value={amount}
+                                            onKeyDown={onlyNumericOnKeyDown}
+                                            onChange={(e) => {
+                                                updateOldField(
+                                                    'amount',
+                                                    e.target.value,
+                                                    'input'
+                                                );
+                                            }}
                                         />
-                                    )}
-                                    {field.component === 'TextFieldAddon' && (
-                                        <TextFieldAddon {...field.props} />
-                                    )}
+                                    </div>
+                                    <div className='form_field'>
+                                        <CurrencyDropdown
+                                            currency_list={currency_list}
+                                            currency={currency}
+                                            onUpdate={updateOldField}
+                                        />
+                                    </div>
+                                </>
+                                :
+                                <div className='form_field'>
+                                    <TextFieldAddon
+                                        type='text'
+                                        onKeyDown={onlyNumericOnKeyDown}
+                                        onChange={(e) => {
+                                            updateOldField(
+                                                'amount',
+                                                e.target.value,
+                                                'input'
+                                            );
+                                        }}
+                                        value={amount}
+                                        addonLabel={currency}
+                                        addOnPosition='right'
+
+                                    />
                                 </div>
-                            ))}
+                            }
+
                         </div>
                     )}
 
@@ -253,8 +340,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                 id='allow_equlas'
                                 label='Allow equals'
                                 name='demo_checkbox'
-                                onChange={(e) => {
-                                }}
+                                onChange={(e) => {}}
                                 size='md'
                                 infoIconMessage='Win payout if exit spot is also equal to entry spot.'
                             />

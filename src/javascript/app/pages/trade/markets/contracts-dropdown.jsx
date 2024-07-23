@@ -1,6 +1,6 @@
 import { Divider, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
 import React, { useEffect, useState } from 'react';
-import { triggerContractChange, triggerSessionChange, useContractChange } from '../../../hooks/events';
+import { triggerContractChange, useContractChange } from '../../../hooks/events';
 import contractManager from '../../../common/contract_manager';
 import Defaults, { PARAM_NAMES } from '../defaults';
 
@@ -27,7 +27,6 @@ export const ContractDropdown = () => {
         });
 
         triggerContractChange();
-        triggerSessionChange();
 
         setTimeout(() => {
             close();
