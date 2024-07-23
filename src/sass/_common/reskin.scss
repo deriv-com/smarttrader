@@ -232,7 +232,7 @@ div#purchase_container {
                     display: flex;
                     border-radius: var(--core-borderRadius-200);
                     border: solid 1px var( --core-color-opacity-slate-100);
-                    padding: 0 var(--core-size-800);
+                    padding: var(--core-size-800);
                     background-color: var(--core-color-opacity-slate-75);
                 }
                 .table-box {
@@ -287,6 +287,7 @@ div#purchase_container {
 
                     .mask {
                         font-size: 10px;
+                        text-align: center;
                     }
                     .digit {
                         &.digit-winning {

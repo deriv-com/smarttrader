@@ -8,6 +8,10 @@
 }
 
 body .topbar {
+    &, * {
+        box-sizing: content-box;
+    }
+
     @include BIDIR_VALUE(text-align, right, left);
     z-index: 4;
 
