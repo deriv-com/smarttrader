@@ -26,7 +26,8 @@ const BottomTabs = () => {
     const [hasLastDigit, setHasLastDigit] = useState(false);
     const [formName, setFormName] = useState('');
     const hasContractChange = useContractChange();
-
+    const savedTab = sessionStorage.getItem('currentTab');
+       
     useEffect(() => {
         const contractObject = {
             matchdiff   : 'digits',
@@ -50,7 +51,6 @@ const BottomTabs = () => {
     }, [formName]);
 
     useEffect(() => {
-        const savedTab = sessionStorage.getItem('currentTab');
         if (savedTab !== null) {
             const tabIndex = parseInt(savedTab);
             if (tabIndex === 2 && !hasLastDigit) {
@@ -87,10 +87,10 @@ const BottomTabs = () => {
     }, [hasMarketChange]);
 
     useEffect(() => {
-        if (selectedTab === 0) {
+        if (selectedTab === 0 || savedTab === 0) {
             renderGraph();
         }
-    }, [selectedTab]);
+    }, [selectedTab, savedTab]);
 
     const handleChange = (e) => {
         setSelectedTab(e);
