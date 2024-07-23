@@ -8,6 +8,7 @@ import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
 import LastDigit from '../../../../templates/app/trade/last_digit.jsx';
 import Defaults from '../trade/defaults';
+import { localize } from '../../../_common/localize';
 
 const Graph = () => (
     <div id='tab_graph' className='chart-section'>
@@ -25,7 +26,7 @@ const BottomTabs = () => {
     const [hasLastDigit, setHasLastDigit] = useState(false);
     const [formName, setFormName] = useState('');
     const hasContractChange = useContractChange();
-   
+
     useEffect(() => {
         const contractObject = {
             matchdiff   : 'digits',
@@ -47,6 +48,21 @@ const BottomTabs = () => {
             setHasLastDigit(false);
         }
     }, [formName]);
+
+    useEffect(() => {
+        const savedTab = sessionStorage.getItem('currentTab');
+        if (savedTab !== null) {
+            const tabIndex = parseInt(savedTab);
+            if (tabIndex === 2 && !hasLastDigit) {
+                setSelectedTab(1);
+            } else {
+                setSelectedTab(tabIndex);
+            }
+        } else {
+            setSelectedTab(1);
+        }
+    }, [hasLastDigit]);
+
     const renderGraph = (callback) => {
         setTimeout(() => {
             WebtraderChart.cleanupChart();
@@ -57,6 +73,7 @@ const BottomTabs = () => {
             }
         }, 100);
     };
+
     const resetGraph = () => {
         setShowGraph(false);
 
@@ -70,25 +87,26 @@ const BottomTabs = () => {
     }, [hasMarketChange]);
 
     useEffect(() => {
-               
         if (selectedTab === 0) {
             renderGraph();
         }
     }, [selectedTab]);
 
     const handleChange = (e) => {
-       
         setSelectedTab(e);
-        
+        sessionStorage.setItem('currentTab', e);
+
         const delay = e === '2' ? '100' : 0;
         setTimeout(() => {
             document.querySelectorAll('#trade_analysis li')[e].querySelector('a').click();
         }, delay);
     };
 
+    const tabs = [{ label: localize('Chart') }, { label: localize('Explanation') }];
+
     const bottomTabOptions = hasLastDigit
-        ? [{ label: 'Chart' }, { label: 'Explanation' }, { label: 'Last Digit Stats' }]
-        : [{ label: 'Chart' }, { label: 'Explanation' }];
+        ? [...tabs, { label: localize('Last Digit Stats') }]
+        : tabs;
 
     return (
         <>
