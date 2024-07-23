@@ -57,7 +57,7 @@ export const ContractDropdown = () => {
                                         onClick={() => onContractClick(subtype)}
                                         label={data?.contracts[subtype]}
                                         selected={subtype === data?.formName}
-                                        size='sm'
+                                        size='md'
                                         className='contract-item-clickables'
                                     />))}
                                 <Divider />
@@ -72,7 +72,7 @@ export const ContractDropdown = () => {
                                 onClick={() => onContractClick(contract)}
                                 label={data?.contracts[contract]}
                                 selected={contract === data?.formName}
-                                size='sm'
+                                size='md'
                                 className='contract-item-clickables'
                             />
                             <Divider />
