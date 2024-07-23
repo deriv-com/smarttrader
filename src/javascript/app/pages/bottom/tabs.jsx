@@ -7,7 +7,6 @@ import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
 import LastDigit from '../../../../templates/app/trade/last_digit.jsx';
-import Defaults from '../trade/defaults';
 import { localize } from '../../../_common/localize';
 import contractManager from '../../common/contract_manager.js';
 
