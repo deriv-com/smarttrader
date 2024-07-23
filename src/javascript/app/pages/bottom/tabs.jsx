@@ -7,8 +7,8 @@ import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
 import LastDigit from '../../../../templates/app/trade/last_digit.jsx';
-import Defaults from '../trade/defaults';
 import { localize } from '../../../_common/localize';
+import contractManager from '../../common/contract_manager.js';
 
 const Graph = () => (
     <div id='tab_graph' className='chart-section'>
@@ -29,17 +29,7 @@ const BottomTabs = () => {
     const savedTab = sessionStorage.getItem('currentTab');
        
     useEffect(() => {
-        const contractObject = {
-            matchdiff   : 'digits',
-            callputequal: 'risefall',
-            callput     : 'higherlower',
-        };
-        const { FORM_NAME } = Defaults.PARAM_NAMES;
-
-        const newFormName = Defaults.get(FORM_NAME) || 'risefall';
-        const finalFormName = contractObject[newFormName] || newFormName;
-
-        setFormName(finalFormName);
+        setFormName(contractManager.get('explanationFormName'));
     }, [hasContractChange, hasMarketChange]);
 
     useEffect(() => {
@@ -119,7 +109,7 @@ const BottomTabs = () => {
             </div>
             <div className='bottom-content-section'>
                 {selectedTab === 0 && showGraph && <Graph />}
-                {selectedTab === 1 && <Explanation formName={formName} />}
+                {selectedTab === 1 && <Explanation />}
                 {selectedTab === 2 && hasLastDigit && <LastDigit />}
             </div>
         </>

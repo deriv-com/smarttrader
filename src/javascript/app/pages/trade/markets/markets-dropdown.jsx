@@ -45,13 +45,13 @@ export const getContractName = () => {
     data?.contractsTree?.forEach((contract) => {
         if (typeof contract === 'object') {
             contract[1].forEach((subtype) => {
-                if (subtype === data?.formName){
+                if (subtype === data?.actualFormName){
                     name =  data?.contracts[subtype];
                 }
             
             });
         
-        } else if (contract === data?.formName){
+        } else if (contract === data?.actualFormName){
             name = data?.contracts[contract];
         }
        
