@@ -25,7 +25,7 @@ const BottomTabs = () => {
     const [hasLastDigit, setHasLastDigit] = useState(false);
     const [formName, setFormName] = useState('');
     const hasContractChange = useContractChange();
-
+   
     useEffect(() => {
         const contractObject = {
             matchdiff   : 'digits',
@@ -47,14 +47,6 @@ const BottomTabs = () => {
             setHasLastDigit(false);
         }
     }, [formName]);
-
-    useEffect(() => {
-        const savedTab = sessionStorage.getItem('currentAnalysisTab');
-        if (savedTab !== null) {
-            setSelectedTab(Number(savedTab));
-        }
-    }, []);
-
     const renderGraph = (callback) => {
         setTimeout(() => {
             WebtraderChart.cleanupChart();
@@ -65,7 +57,6 @@ const BottomTabs = () => {
             }
         }, 100);
     };
-
     const resetGraph = () => {
         setShowGraph(false);
 
@@ -79,18 +70,16 @@ const BottomTabs = () => {
     }, [hasMarketChange]);
 
     useEffect(() => {
-        const updatedTab = hasLastDigit ? 2 : selectedTab;
-        sessionStorage.setItem('currentAnalysisTab', updatedTab);
-        
+               
         if (selectedTab === 0) {
             renderGraph();
         }
     }, [selectedTab]);
 
     const handleChange = (e) => {
-        console.log(e, 'event');
-        setSelectedTab(e);
        
+        setSelectedTab(e);
+        
         const delay = e === '2' ? '100' : 0;
         setTimeout(() => {
             document.querySelectorAll('#trade_analysis li')[e].querySelector('a').click();
@@ -112,17 +101,9 @@ const BottomTabs = () => {
             </div>
             <div className='bottom-content-section'>
                 {selectedTab === 0 && showGraph && <Graph />}
-
-                {selectedTab === 1 && (
-                    <div className='explanation-container'>
-                        <Explanation formName={formName} />
-                    </div>
-                )}
-                {selectedTab === 2 && (
-                    <LastDigit />
-                )}
+                {selectedTab === 1 && <Explanation formName={formName} />}
+                {selectedTab === 2 && hasLastDigit && <LastDigit />}
             </div>
-           
         </>
     );
 };
