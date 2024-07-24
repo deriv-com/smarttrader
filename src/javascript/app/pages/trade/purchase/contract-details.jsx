@@ -52,7 +52,7 @@ const AuditSection = ({ data }) => {
                 <div className='body-box'>
                     <div className='purchase-details-box'>
                         <div className='details-title'>
-                            <Text size='md'>{data?.cd_description}</Text>
+                            <Text centered size='md'>{data?.cd_description}</Text>
                         </div>
                         <div className='details-column'>
                             <div className='contract-info-wrapper full'>
@@ -144,7 +144,7 @@ const DetailsSection = ({ data }) => (
             <div className='body-box'>
                 <div className='purchase-details-box'>
                     <div className='details-title'>
-                        <Text size='md'>{data?.cd_description}</Text>
+                        <Text centered size='md'>{data?.cd_description}</Text>
                     </div>
                     <div className='details-column'>
                         <div className='chart-wrapper' id={data?.cd_chartId} />

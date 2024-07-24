@@ -5,7 +5,10 @@ import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { Explanation } from './explanation.jsx';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
-import { useMarketChange } from '../../hooks/events';
+import { useMarketChange, useContractChange } from '../../hooks/events';
+import LastDigit from '../../../../templates/app/trade/last_digit.jsx';
+import { localize } from '../../../_common/localize';
+import contractManager from '../../common/contract_manager.js';
 
 const Graph = () => (
     <div id='tab_graph' className='chart-section'>
@@ -20,13 +23,35 @@ const BottomTabs = () => {
     const hasMarketChange = useMarketChange();
     const [selectedTab, setSelectedTab] = useState(1);
     const [showGraph, setShowGraph] = useState(true);
+    const [hasLastDigit, setHasLastDigit] = useState(false);
+    const [formName, setFormName] = useState('');
+    const hasContractChange = useContractChange();
+    const savedTab = sessionStorage.getItem('currentTab');
+       
+    useEffect(() => {
+        setFormName(contractManager.get('explanationFormName'));
+    }, [hasContractChange, hasMarketChange]);
 
     useEffect(() => {
-        const savedTab = sessionStorage.getItem('currentAnalysisTab');
-        if (savedTab !== null) {
-            setSelectedTab(Number(savedTab));
+        if (formName === 'digits' || formName === 'evenodd' || formName === 'overunder') {
+            setHasLastDigit(true);
+        } else {
+            setHasLastDigit(false);
         }
-    }, []);
+    }, [formName]);
+
+    useEffect(() => {
+        if (savedTab !== null) {
+            const tabIndex = parseInt(savedTab);
+            if (tabIndex === 2 && !hasLastDigit) {
+                setSelectedTab(1);
+            } else {
+                setSelectedTab(tabIndex);
+            }
+        } else {
+            setSelectedTab(1);
+        }
+    }, [hasLastDigit]);
 
     const renderGraph = (callback) => {
         setTimeout(() => {
@@ -52,29 +77,41 @@ const BottomTabs = () => {
     }, [hasMarketChange]);
 
     useEffect(() => {
-        sessionStorage.setItem('currentAnalysisTab', selectedTab);
-        if (selectedTab === 0) {
+        if (selectedTab === 0 || savedTab === 0) {
             renderGraph();
         }
-    }, [selectedTab]);
+    }, [selectedTab, savedTab]);
+
+    const handleChange = (e) => {
+        setSelectedTab(e);
+        sessionStorage.setItem('currentTab', e);
+
+        const delay = e === '2' ? '100' : 0;
+        setTimeout(() => {
+            document.querySelectorAll('#trade_analysis li')[e].querySelector('a').click();
+        }, delay);
+    };
+
+    const tabs = [{ label: localize('Chart') }, { label: localize('Explanation') }];
+
+    const bottomTabOptions = hasLastDigit
+        ? [...tabs, { label: localize('Last Digit Stats') }]
+        : tabs;
 
     return (
         <>
             <div className='quill-container-centered'>
                 <SegmentedControlSingleChoice
-                    options={[{ label: 'Chart' }, { label: 'Explanation' }]}
+                    options={bottomTabOptions}
                     selectedItemIndex={selectedTab}
-                    onChange={(e) => setSelectedTab(e)}
+                    onChange={(e) => handleChange(e)}
                 />
             </div>
-
-            {selectedTab === 0 && showGraph && <Graph />}
-
-            {selectedTab === 1 && (
-                <div className='explanation-container'>
-                    <Explanation />
-                </div>
-            )}
+            <div className='bottom-content-section'>
+                {selectedTab === 0 && showGraph && <Graph />}
+                {selectedTab === 1 && <Explanation />}
+                {selectedTab === 2 && hasLastDigit && <LastDigit />}
+            </div>
         </>
     );
 };
