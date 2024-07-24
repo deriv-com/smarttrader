@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     TextField,
     InputDropdown,
@@ -9,15 +9,16 @@ import {
     SectionMessage,
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
-import { formConfig } from './form_config';
 import { CurrencyDropdown } from './currencyDropdown.jsx';
+import { NumbersDropdown } from './numbersDropdown.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import { eventDispatcher } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
-import { onlyNumericOnKeyDown, onlyNumericOnKeypress } from '../../common/event_handler';
+import tradeManager from '../../common/trade_manager.js';
+import { handleNumeric } from '../../common/event_handler';
 
-export const FormComponent = ({ handlers, tradeData }) => {
+export const FormComponent = ({ tradeData }) => {
     
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -30,8 +31,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
     const amount = Defaults.get(PARAM_NAMES.AMOUNT);
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
     const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
+    const barrier = Defaults.get(PARAM_NAMES.BARRIER);
+    const barrier_high = Defaults.get(PARAM_NAMES.BARRIER_HIGH);
+    const barrier_low = Defaults.get(PARAM_NAMES.BARRIER_LOW);
+    const prediction = Defaults.get(PARAM_NAMES.PREDICTION);
+    const selected_tick = Defaults.get(PARAM_NAMES.SELECTED_TICK);
+    const multiplier = Defaults.get(PARAM_NAMES.MULTIPLIER);
 
-    const config = formConfig[formName];
     const {
         start_dates,
         expiry_type_options,
@@ -39,6 +45,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
         duration_options,
         endtime_data,
         currency_list,
+        highBarrierProps,
     } = tradeData;
 
     const contractForms = [
@@ -95,13 +102,35 @@ export const FormComponent = ({ handlers, tradeData }) => {
         eventDispatcher(element, eventType);
     };
 
-    const createOptions = (array) => array.map((option) => ({
-        text : option.charAt(0).toUpperCase() + option.slice(1),
-        value: option,
-    }));
+    const validateHighBarrier = () => {
+        let highBarrierData = {};
+        if (+barrier_high <= +barrier_low) {
+            highBarrierData.message = localize(
+                'High barrier must be higher than low barrier'
+            );
+            highBarrierData.status = 'error';
+        } else {
+            highBarrierData = {};
+        }
+        tradeManager.set({ highBarrierProps: highBarrierData });
+    };
+
+    const getMessage = (form) => {
+        if (form === 'highlowticks') {
+            return localize('This contract type only offers 5 ticks');
+        } else if (form === 'reset') {
+            return localize('The reset time is 30 seconds'); // TODO
+        }
+        return null;
+    };
+
+    const handleAmountChange = (e, id) => {
+        const value = handleNumeric(e);
+        updateOldField(id, value, 'input');
+    };
 
     const isEmpty = (obj) => Object.keys(obj).length === 0;
-    if (!config || isEmpty(tradeData)) {
+    if (isEmpty(tradeData)) {
         return null;
     }
 
@@ -111,7 +140,7 @@ export const FormComponent = ({ handlers, tradeData }) => {
                 <div className='form_rows'>
                     {['reset', 'highlowticks'].includes(formName) && (
                         <div className='section-msg-container'>
-                            <SectionMessage status='info' message={config.infoMessage} />
+                            <SectionMessage status='info' message={getMessage(formName)} />
                         </div>
                     )}
 
@@ -221,7 +250,13 @@ export const FormComponent = ({ handlers, tradeData }) => {
                     {['touchnotouch', 'higherlower'].includes(formName) && (
                         <div className='row gap-8'>
                             <div className='form_field'>
-                                <TextField {...config.barrier.props} />
+                                <TextField
+                                    label={localize('Barrier')}
+                                    value={barrier}
+                                    type='number'
+                                    allowDecimals={true}
+                                    onChange={(e) => handleAmountChange(e, 'barrier')}
+                                />
                             </div>
                         </div>
                     )}
@@ -229,10 +264,30 @@ export const FormComponent = ({ handlers, tradeData }) => {
                     {['endsinout', 'staysinout'].includes(formName) && (
                         <div className='row gap-8'>
                             <div className='form_field'>
-                                <TextField {...config.highlowBarrier[0].props} />
+                                <TextField
+                                    type='number'
+                                    allowDecimals={true}
+                                    label={localize('High barrier')}
+                                    value={barrier_high}
+                                    onChange={(e) => {
+                                        handleAmountChange(e, 'barrier_high');
+                                        // validateHighBarrier();
+                                    }}
+                                    // message={highBarrierProps?.message}
+                                    // status={highBarrierProps?.status}
+                                />
                             </div>
                             <div className='form_field'>
-                                <TextField {...config.highlowBarrier[1].props} />
+                                <TextField
+                                    label={localize('Low barrier')}
+                                    value={barrier_low}
+                                    type='number'
+                                    allowDecimals={true}
+                                    onChange={(e) => {
+                                        handleAmountChange(e, 'barrier_low');
+                                        // validateHighBarrier();
+                                    }}
+                                />
                             </div>
                         </div>
                     )}
@@ -240,24 +295,28 @@ export const FormComponent = ({ handlers, tradeData }) => {
                     {['matchdiff', 'overunder'].includes(formName) && (
                         <div className='row gap-8'>
                             <div className='form_field'>
-                                <InputDropdown
-                                    label={config.lastDigit.label}
-                                    options={createOptions(config.lastDigit.options)}
-                                    onSelectOption={(e) => handlers.handleSelect(e)}
-                                    value={config.lastDigit.value}
+                                <NumbersDropdown
+                                    value={prediction}
+                                    label={localize('Last Digit Prediction')}
+                                    start={0}
+                                    end={9}
+                                    elementId='prediction'
+                                    onUpdate={updateOldField}
                                 />
                             </div>
                         </div>
                     )}
 
-                    {config.tickPrediction && (
+                    {['highlowticks'].includes(formName) && (
                         <div className='row gap-8'>
                             <div className='form_field'>
-                                <InputDropdown
-                                    label={config.tickPrediction.label}
-                                    options={createOptions(config.tickPrediction.options)}
-                                    onSelectOption={(e) => handlers.handleSelect(e)}
-                                    value={config.tickPrediction.value}
+                                <NumbersDropdown
+                                    value={selected_tick}
+                                    label={localize('Tick Prediction')}
+                                    start={1}
+                                    end={5}
+                                    elementId='selected_tick'
+                                    onUpdate={updateOldField}
                                 />
                             </div>
                         </div>
@@ -285,14 +344,9 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                     <div className='form_field'>
                                         <TextField
                                             value={amount}
-                                            onKeyDown={onlyNumericOnKeyDown}
-                                            onChange={(e) => {
-                                                updateOldField(
-                                                    'amount',
-                                                    e.target.value,
-                                                    'input'
-                                                );
-                                            }}
+                                            type='number'
+                                            allowDecimals={true}
+                                            onChange={(e) => handleAmountChange(e, 'amount')}
                                         />
                                     </div>
                                     <div className='form_field'>
@@ -300,29 +354,22 @@ export const FormComponent = ({ handlers, tradeData }) => {
                                             currency_list={currency_list}
                                             currency={currency}
                                             onUpdate={updateOldField}
+                                            elementId='currency'
                                         />
                                     </div>
                                 </>
                                 :
                                 <div className='form_field'>
                                     <TextFieldAddon
-                                        type='text'
-                                        onKeyDown={onlyNumericOnKeyDown}
-                                        onChange={(e) => {
-                                            updateOldField(
-                                                'amount',
-                                                e.target.value,
-                                                'input'
-                                            );
-                                        }}
+                                        type='number'
+                                        allowDecimals
+                                        onChange={(e) => handleAmountChange(e, 'amount')}
                                         value={amount}
                                         addonLabel={currency}
                                         addOnPosition='right'
-
                                     />
                                 </div>
                             }
-
                         </div>
                     )}
 
@@ -330,26 +377,53 @@ export const FormComponent = ({ handlers, tradeData }) => {
                         formName
                     ) && (
                         <div className='row gap-8'>
-                            <TextFieldAddon
-                                addonLabel='USD'
-                                addOnPosition='right'
-                                label='Multiplier'
-                                value={1}
-                            />
+                            {currency_list ?
+                                <>
+                                    <div className='form_field'>
+                                        <TextField
+                                            value={multiplier}
+                                            label={localize('Multiplier')}
+                                            type='number'
+                                            allowDecimals={true}
+                                            onChange={(e) => handleAmountChange(e, 'multiplier')}
+                                        />
+                                    </div>
+                                    <div className='form_field'>
+                                        <CurrencyDropdown
+                                            currency_list={currency_list}
+                                            currency={currency}
+                                            onUpdate={updateOldField}
+                                            elementId='multiplier_currency'
+                                        />
+                                    </div>
+                                </>
+                                :
+                                <div className='form_field'>
+                                    <TextFieldAddon
+                                        addonLabel={currency}
+                                        addOnPosition='right'
+                                        label={localize('Multiplier')}
+                                        value={multiplier}
+                                        type='number'
+                                        allowDecimals={true}
+                                        onChange={(e) => handleAmountChange(e, 'multiplier')}
+                                        
+                                    />
+                                </div>
+                            }
                         </div>
                     )}
 
                     {['risefall', 'callputequal'].includes(formName) && (
                         <div className='row'>
                             <Checkbox
-                                id='allow_equlas'
-                                label='Allow equals'
+                                label={localize('Allow equals')}
                                 onChange={(e) => {
                                     updateOldField('callputequal', e, 'change');
                                 }}
                                 size='md'
                                 checked={+is_equal === 1}
-                                infoIconMessage='Win payout if exit spot is also equal to entry spot.'
+                                infoIconMessage={localize('Win payout if exit spot is also equal to entry spot.')}
                             />
                         </div>
                     )}

@@ -638,7 +638,9 @@ html.test {
         border: 1px solid rgba(0, 0, 0, 0.04);
         max-height: 320px;
         overflow-y: auto;
-
+    }
+    .quill-custom-dropdown__container {
+        max-width: unset !important;
     }
 }
 
