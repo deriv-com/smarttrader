@@ -396,6 +396,9 @@ div#purchase_container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 768px) {
+        top: 40px;      
+    }
  
     .popup-scroller {
         display: flex;
@@ -424,6 +427,10 @@ div#purchase_container {
         align-items: center;
         width: 100%;
         max-width: 940px;
+        @media (max-width: 968px) {
+            max-width: auto;
+            
+        }
 
         .purchase-details-box {
             display: flex;
@@ -432,6 +439,11 @@ div#purchase_container {
             gap: var(--core-spacing-1200);
             flex-direction: column;
             padding: var(--core-spacing-1200) 0;
+            @media(max-width: 768px){
+                padding: var(--core-spacing-1200) var(--core-spacing-800);
+            
+            }
+
         }
         .loader-box {
             display: flex;
@@ -454,11 +466,16 @@ div#purchase_container {
             display: flex;
             width: 100%;
             gap: var(--core-spacing-800);
+            @media (max-width: 768px) {
+                flex-direction: column;
+                
+            }
 
             .chart-wrapper {
-                width: 100%;
                 background: var(--core-color-solid-slate-50);
+                padding: 16px;
                 border-radius: 8px;
+                width: fit-content;
                 height: fit-content;
             }
             .contract-info-wrapper {
@@ -469,6 +486,11 @@ div#purchase_container {
                 background: var(--core-color-solid-slate-50);
                 border-radius: 8px;
                 height: fit-content;
+
+                @media (max-width: 768px) {
+                    max-width: 100%;
+                    
+                }
 
                 &.full {
                     max-width: none;
@@ -496,7 +518,7 @@ div#purchase_container {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        min-width: 140px;
+                        min-width: 124px;
                         width: fit-content;
 
                         &:first-child {
