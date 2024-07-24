@@ -66,7 +66,6 @@ const Process = (() => {
             } else if (country === 'gb' || country === 'im'){
                 $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') })));
             } else {
-                // $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text hello-wrold', text: localize('Trading is unavailable at this time.') })));
                 NotAvailable.init();
             }
         });
