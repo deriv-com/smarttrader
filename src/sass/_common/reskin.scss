@@ -666,3 +666,20 @@ html.test {
     }
    
 }
+
+.not-available-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--core-spacing-1600);
+    padding: var(--core-spacing-1600) var(--core-spacing-800);
+}
+
+.text-width {
+    max-width: 940px;
+}
+
+// #content {
+//     margin: auto;
+// }
