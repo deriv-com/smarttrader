@@ -79,6 +79,7 @@ const Defaults = (() => {
             }
         });
         if (is_updated) {
+            triggerSessionChange();
             updateURL();
         }
     };
