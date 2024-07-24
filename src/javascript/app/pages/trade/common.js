@@ -58,11 +58,6 @@ const commonTrading = (() => {
                 formName       : selected || Defaults.get('formname'),
                 contractElement: getElementById('contract'),
             });
-            FormsWrapperElement.init(
-                all_contracts,
-                contracts_tree,
-                contract_to_show
-            );
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
@@ -70,6 +65,7 @@ const commonTrading = (() => {
                 formname : contract_to_show || Defaults.get(FORM_NAME),
             });
         }
+        FormsWrapperElement.init();
     };
 
     const displayMarkets = () => {
