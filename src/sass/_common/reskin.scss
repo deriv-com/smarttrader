@@ -732,3 +732,23 @@ html.test {
     }
    
 }
+
+.not-available-container {
+    height: calc(100vh - 48px - 37px);
+    padding: var(--core-spacing-1600) var(--core-spacing-800);
+    display: flex;
+    justify-content: center;
+
+    button:focus {
+        background-color: var(--core-color-solid-coral-700);
+    }
+}
+
+.not-available-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--core-spacing-1600);
+    max-width: 940px;
+}
