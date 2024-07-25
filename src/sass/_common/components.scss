@@ -28,8 +28,8 @@
     }
 }
 
-.highcharts-container {
-    width: fit-content;
+.highcharts-container { 
+    max-width: 564px;
     
     .highcharts-subtitle {
         white-space: normal !important;

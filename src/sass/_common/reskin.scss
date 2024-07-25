@@ -237,6 +237,10 @@ div#purchase_container {
                 }
                 .table-box {
                     display: flex;
+                    @media (max-width: 319px) {
+                        flex-direction: column;
+                        
+                    }
         
                     .table-item {
                         display: flex;
@@ -396,8 +400,10 @@ div#purchase_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 768px) {
-        top: 40px;      
+
+    @media (max-width: 940px) {
+        top: 40px;   
+        height: calc(100% - 40px);   
     }
  
     .popup-scroller {
@@ -427,10 +433,7 @@ div#purchase_container {
         align-items: center;
         width: 100%;
         max-width: 940px;
-        @media (max-width: 968px) {
-            max-width: auto;
-            
-        }
+ 
 
         .purchase-details-box {
             display: flex;
@@ -439,7 +442,7 @@ div#purchase_container {
             gap: var(--core-spacing-1200);
             flex-direction: column;
             padding: var(--core-spacing-1200) 0;
-            @media(max-width: 768px){
+            @media (max-width: 940px){
                 padding: var(--core-spacing-1200) var(--core-spacing-800);
             
             }
@@ -466,7 +469,7 @@ div#purchase_container {
             display: flex;
             width: 100%;
             gap: var(--core-spacing-800);
-            @media (max-width: 768px) {
+            @media (max-width: 940px) {
                 flex-direction: column;
                 
             }
@@ -475,19 +478,22 @@ div#purchase_container {
                 background: var(--core-color-solid-slate-50);
                 padding: 16px;
                 border-radius: 8px;
-                width: fit-content;
+                width: fit-content;        
                 height: fit-content;
+
+                @media (max-width: 940px) {
+                    width: 100%;
+                    
+                }
             }
             .contract-info-wrapper {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
                 max-width: 360px;
                 background: var(--core-color-solid-slate-50);
                 border-radius: 8px;
                 height: fit-content;
-
-                @media (max-width: 768px) {
+                @media (max-width: 940px) {
                     max-width: 100%;
                     
                 }
@@ -502,6 +508,10 @@ div#purchase_container {
                     padding: 8px 16px;
                     border-bottom: solid 1px var(--core-color-opacity-slate-100);
                     gap: var(--core-spacing-400);
+                    @media (max-width: 319px) {
+                        flex-direction: column;
+                        
+                    }
 
                     &.lg {
                         flex-direction: column;
@@ -518,12 +528,23 @@ div#purchase_container {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        min-width: 124px;
+                        min-width: 140px;
                         width: fit-content;
+                        word-break: break-word;
 
-                        &:first-child {
-                            max-width: 140px;
+                        &:last-child {
+                            min-width: 180px;
                         }
+
+                        @media (max-width: 940px) {
+                            word-break: break-word;
+
+                            &:first-child, &:last-child {
+                                min-width: 120px;
+                            }
+                        }
+
+                        
                         &.profit-loss {
                             p {
                                 font-weight: bold;
