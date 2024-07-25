@@ -64,7 +64,7 @@ const Process = (() => {
                 commonTrading.displayMarkets();
                 processMarket();
             } else if (country === 'gb' || country === 'im'){
-                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') })));
+                NotAvailable.init({ body: 'Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.' });
             } else {
                 NotAvailable.init();
             }
