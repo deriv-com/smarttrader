@@ -23,8 +23,8 @@ const NotAvailable = ({
     </div>
 );
 
-export const init = () => {
-    ReactDOM.render(<NotAvailable />, getElementById('content'));
+export const init = ({ ...props }) => {
+    ReactDOM.render(<NotAvailable {...props} />, getElementById('content'));
 };
 
 export default init;
