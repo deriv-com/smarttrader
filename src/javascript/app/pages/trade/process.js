@@ -13,6 +13,7 @@ const Reset             = require('./reset');
 const StartDates        = require('./starttime').StartDates;
 const Symbols           = require('./symbols');
 const Tick              = require('./tick');
+const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
 const purchaseManager   = require('../../common/purchase_manager').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
@@ -63,9 +64,9 @@ const Process = (() => {
                 commonTrading.displayMarkets();
                 processMarket();
             } else if (country === 'gb' || country === 'im'){
-                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') })));
+                NotAvailable.init({ body: 'Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.' });
             } else {
-                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Trading is unavailable at this time.') })));
+                NotAvailable.init();
             }
         });
     };
