@@ -2,6 +2,7 @@ const moment             = require('moment');
 const Contract           = require('./contract');
 const Defaults           = require('./defaults');
 const Tick               = require('./tick');
+const { default: tradeManager } = require('../../common/trade_manager');
 const addComma           = require('../../../_common/base/currency_base').addComma;
 const elementTextContent = require('../../../_common/common_functions').elementTextContent;
 const getElementById     = require('../../../_common/common_functions').getElementById;
@@ -32,6 +33,7 @@ const Barriers = (() => {
 
             const barrier = barriers[form_name][is_daily ? 'daily' : 'intraday'];
             if (barrier) {
+                const barrier_data = {};
                 const current_tick   = Tick.quote();
                 const decimal_places = Tick.pipSize();
 
@@ -40,9 +42,11 @@ const Barriers = (() => {
                 const indicative_low_barrier_tooltip  = getElementById('indicative_low_barrier_tooltip');
 
                 if (barrier.count === 1) {
+                    
                     getElementById('high_barrier_row').style.display = 'none';
                     getElementById('low_barrier_row').style.display  = 'none';
                     getElementById('barrier_row').setAttribute('style', '');
+                    console.log('barrier_row show');
 
                     const defaults_barrier = Defaults.get(BARRIER);
                     const elm              = getElementById('barrier');
@@ -59,6 +63,7 @@ const Barriers = (() => {
                         }
                         tooltip.style.display = 'none';
                         span.style.display    = 'inherit';
+                        barrier_data.isOffset = false;
                         // no need to display indicative barrier in case of absolute barrier
                         elementTextContent(indicative_barrier_tooltip, '');
                     } else {
@@ -66,6 +71,8 @@ const Barriers = (() => {
                         value                 = barrier_def;
                         span.style.display    = 'none';
                         tooltip.style.display = 'inherit';
+                        barrier_data.isOffset = true;
+                        barrier_data.barrier_text = localize('Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.');
                         if (current_tick && !isNaN(current_tick)) {
                             elementTextContent(indicative_barrier_tooltip, addComma((parseFloat(current_tick) +
                                 parseFloat(barrier_def)), decimal_places));
@@ -78,6 +85,10 @@ const Barriers = (() => {
                     Defaults.set(BARRIER, elm.value);
                     Defaults.remove(BARRIER_HIGH, BARRIER_LOW);
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
+                    barrier_data.show_barrier = true;
+                    tradeManager.set({
+                        barrier_data,
+                    }, 'barrier');
                     return;
                 } else if (barrier.count === 2) {
                     getElementById('barrier_row').style.display = 'none';
@@ -150,6 +161,10 @@ const Barriers = (() => {
                     Barriers.validateBarrier();
                     Defaults.set(BARRIER_HIGH, high_elm.value);
                     Defaults.set(BARRIER_LOW, low_elm.value);
+                    barrier_data.show_barrier = false;
+                    tradeManager.set({
+                        barrier_data,
+                    }, 'barrier');
                     return;
                 }
             }

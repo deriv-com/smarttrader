@@ -2,6 +2,7 @@ const moment               = require('moment');
 const countDecimalPlaces   = require('./common_independent').countDecimalPlaces;
 const displayPriceMovement = require('./common_independent').displayPriceMovement;
 const underlyings          = require('./symbols').underlyings;
+const { default: tradeManager } = require('../../common/trade_manager');
 const addComma             = require('../../../_common/base/currency_base').addComma;
 const elementTextContent   = require('../../../_common/common_functions').elementTextContent;
 const getElementById       = require('../../../_common/common_functions').getElementById;
@@ -59,6 +60,7 @@ const Tick = (() => {
     };
 
     const display = () => {
+        // debugger
         $('#spot').fadeIn(200);
         let message = '';
         let message_number = '';
@@ -81,6 +83,9 @@ const Tick = (() => {
 
         spot_element.setAttribute('data-value', message_number);
         elementTextContent(spot_element, message);
+        // tradeManager.set({
+        //     barrier_indicator: message_number,
+        // }, 'barrier');
     };
 
     /*
@@ -104,7 +109,6 @@ const Tick = (() => {
         const low_span                        = getElementById('barrier_low_span');
 
         let value;
-
         const end_time = getElementById('expiry_date');
         if (unit && (!isVisible(unit) || unit.value !== 'd') && current_tick && !isNaN(current_tick) &&
             (end_time && (!isVisible(end_time) || moment(end_time.getAttribute('data-value')).isBefore(moment().add(1, 'day'), 'day')))) {
@@ -114,12 +118,24 @@ const Tick = (() => {
 
                 indicative_barrier_tooltip.textContent =
                     addComma((parseFloat(current_tick) + barrier_value), decimal_places);
+                tradeManager.set({
+                    barrier_indicator: addComma((parseFloat(current_tick) + barrier_value), decimal_places),
+                }, 'barrier');
                 tooltip.style.display = 'inherit';
                 span.style.display    = 'none';
+                // tradeManager.set({
+                //     barrier_offset: true,
+                // });
             } else {
                 elementTextContent(indicative_barrier_tooltip, '');
+                tradeManager.set({
+                    barrier_indicator: null,
+                }, 'barrier');
                 tooltip.style.display = 'none';
                 span.style.display    = 'inherit';
+                // tradeManager.set({
+                //     barrier_offset: false,
+                // });
             }
 
             if (isVisible(indicative_high_barrier_tooltip) && String(high_barrier_element.value).match(/^[+-]/)) {
@@ -148,6 +164,9 @@ const Tick = (() => {
             }
         } else {
             elementTextContent(indicative_barrier_tooltip, '');
+            tradeManager.set({
+                barrier_indicator: null,
+            }, 'barrier');
             elementTextContent(indicative_high_barrier_tooltip, '');
             elementTextContent(indicative_low_barrier_tooltip, '');
         }

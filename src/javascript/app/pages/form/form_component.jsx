@@ -7,8 +7,10 @@ import {
     DatePickerDropdown,
     Checkbox,
     SectionMessage,
+    Tooltip,
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
+import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
 import { CurrencyDropdown } from './currencyDropdown.jsx';
 import { NumbersDropdown } from './numbersDropdown.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
@@ -16,6 +18,8 @@ import {
     useSessionChange,
     useTradeChange,
     eventDispatcher,
+    useBarrierChange,
+    triggerSessionChange,
 } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
@@ -25,15 +29,33 @@ import { handleNumeric } from '../../common/event_handler';
 export const FormComponent = () => {
 
     const [tradeData, setTradeData] = useState({});
+    // const [barrierAmount, setBarrierAmount] = useState();
+    // const barrier = Defaults.get(PARAM_NAMES.BARRIER);
+
     const hasTradeChange = useTradeChange();
     const hasSessionChange = useSessionChange();
+    const hasBarrierChange = useBarrierChange();
+
+    useEffect(() => {},[barrier]);
+
+    useEffect(() => {
+        console.log('session or trade change');
+
+        // setBarrierAmount(barrier);
+        // console.log(barrierAmount);
+
+        setTradeData((oldData) => ({
+            ...oldData,
+            ...tradeManager.getAll(),
+        }));
+    }, [hasTradeChange, hasSessionChange]);
 
     useEffect(() => {
         setTradeData((oldData) => ({
             ...oldData,
             ...tradeManager.getAll(),
         }));
-    }, [hasTradeChange, hasSessionChange]);
+    }, [hasBarrierChange]);
     
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -60,6 +82,9 @@ export const FormComponent = () => {
         duration_options,
         endtime_data,
         currency_list,
+        barrier_data,
+        barrier_indicator,
+        barrier_offset,
         highBarrierProps,
     } = tradeData;
 
@@ -134,10 +159,21 @@ export const FormComponent = () => {
         return null;
     };
 
-    const handleAmountChange = (e, id) => {
-        const value = handleNumeric(e);
+    const handleAmountChange = (e, id, regex) => {
+        const value = handleNumeric(e, regex);
+        // if (id === 'barrier') {
+        //     setBarrierAmount(value);
+        // }
         updateOldField(id, value, 'input');
     };
+
+    const barrierIcon = (
+        <Tooltip tooltipContent={barrier_data?.barrier_text} >
+            <StandaloneCircleInfoRegularIcon iconSize='sm' />
+        </Tooltip>
+    );
+
+    const barrierRegex = '[+-]?(d+(.d*)?|.d+)';
 
     const isEmpty = (obj) => Object.keys(obj).length === 0;
     if (isEmpty(tradeData)) {
@@ -255,17 +291,31 @@ export const FormComponent = () => {
                         </div>
                     )}
 
-                    {['touchnotouch', 'higherlower'].includes(formName) && (
+                    {(['touchnotouch', 'higherlower'].includes(formName) && barrier !== null && barrier_data?.show_barrier) && (
                         <div className='row gap-8'>
-                            <div className='form_field'>
-                                <TextField
-                                    label={localize('Barrier')}
-                                    value={barrier}
-                                    type='number'
-                                    allowDecimals={true}
-                                    onChange={(e) => handleAmountChange(e, 'barrier')}
-                                />
-                            </div>
+                            {!barrier_data?.isOffset ?
+                                <div className='form_field'>
+                                    <TextField
+                                        label={localize('Barrier')}
+                                        value={barrier}
+                                        type='number'
+                                        allowDecimals={true}
+                                        onChange={(e) => handleAmountChange(e, 'barrier')}
+                                    />
+                                </div>
+                                :
+                                <div className='form_field'>
+                                    <TextField
+                                        label={localize('Barrier offset')}
+                                        value={barrier}
+                                        type='text'
+                                        rightIcon={barrierIcon}
+                                        onKeyDown={(e) => handleAmountChange(e, 'barrier')}
+                                        onChange={(e) => handleAmountChange(e, 'barrier', barrierRegex)}
+                                        message={barrier_indicator && localize(`Indicator barrier: ${barrier_indicator}`)}
+                                    />
+                                </div>
+                            }
                         </div>
                     )}
 
@@ -273,12 +323,11 @@ export const FormComponent = () => {
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <TextField
-                                    type='number'
-                                    allowDecimals={true}
                                     label={localize('High barrier')}
                                     value={barrier_high}
                                     onChange={(e) => {
                                         handleAmountChange(e, 'barrier_high');
+                                        // console.log(barrier_high);
                                         // validateHighBarrier();
                                     }}
                                     // message={highBarrierProps?.message}
@@ -289,8 +338,6 @@ export const FormComponent = () => {
                                 <TextField
                                     label={localize('Low barrier')}
                                     value={barrier_low}
-                                    type='number'
-                                    allowDecimals={true}
                                     onChange={(e) => {
                                         handleAmountChange(e, 'barrier_low');
                                         // validateHighBarrier();
