@@ -2,6 +2,7 @@
     &-container {
         &-centered {
             width: 100%;
+            position: sticky;
             display: flex;
             justify-content: center;
             padding-bottom: 24px;
