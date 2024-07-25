@@ -12,13 +12,28 @@ import moment from 'moment';
 import { CurrencyDropdown } from './currencyDropdown.jsx';
 import { NumbersDropdown } from './numbersDropdown.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
-import { eventDispatcher } from '../../hooks/events';
+import {
+    useSessionChange,
+    useTradeChange,
+    eventDispatcher,
+} from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
 import tradeManager from '../../common/trade_manager.js';
 import { handleNumeric } from '../../common/event_handler';
 
-export const FormComponent = ({ tradeData }) => {
+export const FormComponent = () => {
+
+    const [tradeData, setTradeData] = useState({});
+    const hasTradeChange = useTradeChange();
+    const hasSessionChange = useSessionChange();
+
+    useEffect(() => {
+        setTradeData((oldData) => ({
+            ...oldData,
+            ...tradeManager.getAll(),
+        }));
+    }, [hasTradeChange, hasSessionChange]);
     
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -66,11 +81,6 @@ export const FormComponent = ({ tradeData }) => {
         'highlowticks',
         'runs',
     ];
-
-    const setDefaults = (param, value) => {
-        Defaults.set(param, value);
-        // triggerSessionChange();
-    };
 
     const onExpiryDateChange = (value) => {
         // debugger;
@@ -152,7 +162,6 @@ export const FormComponent = ({ tradeData }) => {
                                     options={start_dates.options}
                                     value={date_start}
                                     onSelectOption={(value) => {
-                                        setDefaults(PARAM_NAMES.DATE_START, value);
                                         updateOldField('date_start', value, 'change');
                                     }}
                                 />
@@ -225,7 +234,6 @@ export const FormComponent = ({ tradeData }) => {
                                                     options={endtime_data.options}
                                                     value={expiry_date}
                                                     onSelectOption={(value) => {
-                                                        setDefaults(PARAM_NAMES.EXPIRY_DATE, value);
                                                         onExpiryDateChange(value);
                                                     }}
                                                 />
