@@ -489,10 +489,14 @@ div#purchase_container {
             .contract-info-wrapper {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                max-width: 360px;
                 background: var(--core-color-solid-slate-50);
                 border-radius: 8px;
                 height: fit-content;
+                @media (max-width: 940px) {
+                    max-width: 100%;
+                    
+                }
 
                 &.full {
                     max-width: none;
