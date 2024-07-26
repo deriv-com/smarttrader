@@ -101,6 +101,8 @@ div.select-dropdown:after {
             background: var(--core-color-solid-slate-50);
             width: 100%;
             max-width: 462px;
+            height: 100%;
+            align-items: center;
         }
     }
 }
