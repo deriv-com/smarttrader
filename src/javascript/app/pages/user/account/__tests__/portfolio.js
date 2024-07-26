@@ -24,9 +24,14 @@ describe('Portfolio', () => {
         this.timeout(10000);
         // this is a read token, even if other people take it, won't be able to do any harm
         api.authorize(getApiToken()).then(() => {
-            api.subscribeToBalance().then((response) => {
-                balance = response;
-                done();
+          api
+            .send({
+              balance: 1,
+              subscribe: 1,
+            })
+            .then((response) => {
+              balance = response;
+              done();
             });
         });
     });
