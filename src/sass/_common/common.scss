@@ -779,6 +779,7 @@ ul.bullet.gr-row > li {
             display: flex;
             align-items: center;
             text-transform: none;
+            border: solid 1px var(--semantic-color-monochrome-border-normal-high);           
         }
         ul.select-options {
             position: absolute;
