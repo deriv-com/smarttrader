@@ -15,12 +15,15 @@ const DerivBanner       = require('../../common/deriv_banner');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
+const LoaderElement     = require('../loader.jsx');
 
 const TradePage = (() => {
     let events_initialized = 0;
     State.remove('is_trading');
+    LoaderElement.init();
 
     const onLoad = () => {
+        
         const iframe_target_origin = getAllowedLocalStorageOrigin();
         BinarySocket.wait('authorize').then(() => {
             if (iframe_target_origin) {

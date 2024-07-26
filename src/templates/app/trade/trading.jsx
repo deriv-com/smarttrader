@@ -494,6 +494,7 @@ const Trading = () => (
         <div id='trading_init_progress'>
             <Loading />
         </div>
+        <div id='app-loader' />
     </React.Fragment>
 );
 

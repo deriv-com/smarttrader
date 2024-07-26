@@ -406,7 +406,8 @@ div#purchase_container {
     }
 }
 
-.quill-purchase-popup {
+.quill-purchase-popup,
+.quill-generic-popup {
     position: fixed;
     top: 48px;
     left: 0;
@@ -638,7 +639,11 @@ div#purchase_container {
 // Hide old containers 
 // This is to allow QA to disable this quickly
 html:not(.test) {
-    #contract_prices_container, .popup_page_overlay, .inpage_popup_container {
+    #trading_init_progress, 
+    #contract_forms_wrapper,
+    #contract_prices_container, 
+    .popup_page_overlay, 
+    .inpage_popup_container {
         position: absolute !important;
         top: -999px !important;
     }
@@ -751,4 +756,58 @@ html.test {
     align-items: center;
     gap: var(--core-spacing-1600);
     max-width: 940px;
+}
+
+.main-loader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-block: 40px;
+    
+    .header-loader {
+        display: flex;
+        margin-top: 42px;
+        gap: 36px;
+
+        .dropdown-loader-container {
+            display: flex;
+            gap: 12px;
+
+            .dropdown-loader {
+                width: 220px;
+            }
+        }
+        .other-header-loader-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .body-loader {
+        display: flex;
+        margin-top: 28px;
+        width: 100%;
+        gap: 36px;
+
+        .trade-section-loader {
+            display: flex;
+            width: 100%;
+            max-width: 480px;
+        }
+        .purchase-section-loader {
+            display: flex;
+            flex-direction: column;
+            gap: var(--core-spacing-800);
+            width: 100%;
+            max-width: 435px;
+        }
+    }
+    .footer-loader {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 132px;
+    }
 }
