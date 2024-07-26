@@ -58,6 +58,10 @@ const ViewPopup = (() => {
             ViewPopupUI.cleanup(false);
         }
 
+        ViewPopupUI.setOnDestroyFunction(()=>{
+            Highchart.hideChart();
+        });
+
         getContract();
 
         purchaseManager.set({
