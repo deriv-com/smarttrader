@@ -60,7 +60,6 @@ const Tick = (() => {
     };
 
     const display = () => {
-        // debugger
         $('#spot').fadeIn(200);
         let message = '';
         let message_number = '';
@@ -83,9 +82,6 @@ const Tick = (() => {
 
         spot_element.setAttribute('data-value', message_number);
         elementTextContent(spot_element, message);
-        // tradeManager.set({
-        //     barrier_indicator: message_number,
-        // }, 'barrier');
     };
 
     /*
@@ -123,9 +119,6 @@ const Tick = (() => {
                 }, 'barrier');
                 tooltip.style.display = 'inherit';
                 span.style.display    = 'none';
-                // tradeManager.set({
-                //     barrier_offset: true,
-                // });
             } else {
                 elementTextContent(indicative_barrier_tooltip, '');
                 tradeManager.set({
@@ -133,9 +126,6 @@ const Tick = (() => {
                 }, 'barrier');
                 tooltip.style.display = 'none';
                 span.style.display    = 'inherit';
-                // tradeManager.set({
-                //     barrier_offset: false,
-                // });
             }
 
             if (isVisible(indicative_high_barrier_tooltip) && String(high_barrier_element.value).match(/^[+-]/)) {
@@ -143,10 +133,16 @@ const Tick = (() => {
                 value = isNaN(value) ? 0 : value;
                 indicative_high_barrier_tooltip.textContent =
                     (parseFloat(current_tick) + value).toFixed(decimal_places);
+                tradeManager.set({
+                    barrier_indicator_high: (parseFloat(current_tick) + value).toFixed(decimal_places),
+                }, 'barrier');
                 high_tooltip.style.display = 'inherit';
                 high_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_high_barrier_tooltip, '');
+                tradeManager.set({
+                    barrier_indicator_high: null,
+                }, 'barrier');
                 high_tooltip.style.display = 'none';
                 high_span.style.display    = 'inherit';
             }
@@ -155,20 +151,28 @@ const Tick = (() => {
                 value = parseFloat(low_barrier_element.value);
                 value = isNaN(value) ? 0 : value;
                 indicative_low_barrier_tooltip.textContent = (parseFloat(current_tick) + value).toFixed(decimal_places);
+                tradeManager.set({
+                    barrier_indicator_low: (parseFloat(current_tick) + value).toFixed(decimal_places),
+                }, 'barrier');
                 low_tooltip.style.display = 'inherit';
                 low_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_low_barrier_tooltip, '');
+                tradeManager.set({
+                    barrier_indicator_low: null,
+                }, 'barrier');
                 low_tooltip.style.display = 'none';
                 low_span.style.display    = 'inherit';
             }
         } else {
             elementTextContent(indicative_barrier_tooltip, '');
-            tradeManager.set({
-                barrier_indicator: null,
-            }, 'barrier');
             elementTextContent(indicative_high_barrier_tooltip, '');
             elementTextContent(indicative_low_barrier_tooltip, '');
+            tradeManager.set({
+                barrier_indicator     : null,
+                barrier_indicator_high: null,
+                barrier_indicator_low : null,
+            }, 'barrier');
         }
     };
 

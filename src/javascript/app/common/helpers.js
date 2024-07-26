@@ -21,9 +21,39 @@ const TimeTooltipWrapper = (element, time) => {
     );
 };
 
+const handleNumeric = (event, regexString) => {
+    let inputValue = event.target.value;
+    const regex = new RegExp(regexString) || /[^0-9.]/g;
+
+    // Remove characters that do not match the regex
+    inputValue = inputValue
+        .split('')
+        .filter((char, index, array) => {
+            const tempValue = array.slice(0, index + 1).join('');
+            return !regex.test(tempValue);
+        })
+        .join('');
+
+    // Ensure only one sign character is allowed at the start
+    if (inputValue.match(/[+-]/g) && inputValue.match(/[+-]/g).length > 1) {
+        inputValue = inputValue.replace(/[+-]/g, '');
+    }
+
+    // Ensure only one decimal point is allowed
+    const decimalCount = (inputValue.match(/\./g) || []).length;
+    if (decimalCount > 1) {
+        inputValue = inputValue.replace(/\./g, (match, offset) =>
+            offset === inputValue.indexOf('.') ? match : ''
+        );
+    }
+
+    return inputValue;
+};
+
 export {
     parseData,
     triggerClick,
     TimeTooltipWrapper,
+    handleNumeric,
 };
 

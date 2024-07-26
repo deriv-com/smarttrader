@@ -46,7 +46,6 @@ const Barriers = (() => {
                     getElementById('high_barrier_row').style.display = 'none';
                     getElementById('low_barrier_row').style.display  = 'none';
                     getElementById('barrier_row').setAttribute('style', '');
-                    console.log('barrier_row show');
 
                     const defaults_barrier = Defaults.get(BARRIER);
                     const elm              = getElementById('barrier');
@@ -64,6 +63,7 @@ const Barriers = (() => {
                         tooltip.style.display = 'none';
                         span.style.display    = 'inherit';
                         barrier_data.isOffset = false;
+                        barrier_data.label = localize('Barrier');
                         // no need to display indicative barrier in case of absolute barrier
                         elementTextContent(indicative_barrier_tooltip, '');
                     } else {
@@ -72,7 +72,7 @@ const Barriers = (() => {
                         span.style.display    = 'none';
                         tooltip.style.display = 'inherit';
                         barrier_data.isOffset = true;
-                        barrier_data.barrier_text = localize('Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.');
+                        barrier_data.label = localize('Barrier offset');
                         if (current_tick && !isNaN(current_tick)) {
                             elementTextContent(indicative_barrier_tooltip, addComma((parseFloat(current_tick) +
                                 parseFloat(barrier_def)), decimal_places));
@@ -86,6 +86,7 @@ const Barriers = (() => {
                     Defaults.remove(BARRIER_HIGH, BARRIER_LOW);
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
                     barrier_data.show_barrier = true;
+                    barrier_data.show_barrier_highlow = false;
                     tradeManager.set({
                         barrier_data,
                     }, 'barrier');
@@ -123,6 +124,9 @@ const Barriers = (() => {
                         high_tooltip.style.display = 'none';
                         low_span.style.display     = 'inherit';
                         low_tooltip.style.display  = 'none';
+                        barrier_data.label_high = localize('High barrier');
+                        barrier_data.label_low = localize('Low barrier');
+                        barrier_data.isOffsetHightLow = false;
 
                         elementTextContent(indicative_high_barrier_tooltip, '');
                         elementTextContent(indicative_low_barrier_tooltip, '');
@@ -139,6 +143,9 @@ const Barriers = (() => {
                         high_tooltip.style.display = 'inherit';
                         low_span.style.display     = 'none';
                         low_tooltip.style.display  = 'inherit';
+                        barrier_data.label_high = localize('High barrier offset');
+                        barrier_data.label_low = localize('Low barrier offset');
+                        barrier_data.isOffsetHightLow = true;
 
                         const barrierVal = (tick, barrier_value) => (
                             (tick + parseFloat(barrier_value)).toFixed(decimal_places)
@@ -162,6 +169,7 @@ const Barriers = (() => {
                     Defaults.set(BARRIER_HIGH, high_elm.value);
                     Defaults.set(BARRIER_LOW, low_elm.value);
                     barrier_data.show_barrier = false;
+                    barrier_data.show_barrier_highlow = true;
                     tradeManager.set({
                         barrier_data,
                     }, 'barrier');

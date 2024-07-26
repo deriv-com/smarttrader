@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
 import {
     TextField,
@@ -19,31 +20,21 @@ import {
     useTradeChange,
     eventDispatcher,
     useBarrierChange,
-    triggerSessionChange,
 } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
 import tradeManager from '../../common/trade_manager.js';
-import { handleNumeric } from '../../common/event_handler';
+// import { handleNumeric } from '../../common/helpers.js';
 
 export const FormComponent = () => {
 
     const [tradeData, setTradeData] = useState({});
-    // const [barrierAmount, setBarrierAmount] = useState();
-    // const barrier = Defaults.get(PARAM_NAMES.BARRIER);
 
     const hasTradeChange = useTradeChange();
     const hasSessionChange = useSessionChange();
     const hasBarrierChange = useBarrierChange();
 
-    useEffect(() => {},[barrier]);
-
     useEffect(() => {
-        console.log('session or trade change');
-
-        // setBarrierAmount(barrier);
-        // console.log(barrierAmount);
-
         setTradeData((oldData) => ({
             ...oldData,
             ...tradeManager.getAll(),
@@ -84,8 +75,8 @@ export const FormComponent = () => {
         currency_list,
         barrier_data,
         barrier_indicator,
-        barrier_offset,
-        highBarrierProps,
+        barrier_indicator_high,
+        barrier_indicator_low,
     } = tradeData;
 
     const contractForms = [
@@ -137,19 +128,6 @@ export const FormComponent = () => {
         eventDispatcher(element, eventType);
     };
 
-    const validateHighBarrier = () => {
-        let highBarrierData = {};
-        if (+barrier_high <= +barrier_low) {
-            highBarrierData.message = localize(
-                'High barrier must be higher than low barrier'
-            );
-            highBarrierData.status = 'error';
-        } else {
-            highBarrierData = {};
-        }
-        tradeManager.set({ highBarrierProps: highBarrierData });
-    };
-
     const getMessage = (form) => {
         if (form === 'highlowticks') {
             return localize('This contract type only offers 5 ticks');
@@ -160,15 +138,13 @@ export const FormComponent = () => {
     };
 
     const handleAmountChange = (e, id, regex) => {
-        const value = handleNumeric(e, regex);
-        // if (id === 'barrier') {
-        //     setBarrierAmount(value);
-        // }
-        updateOldField(id, value, 'input');
+        // const value = handleNumeric(e, regex);
+    
+        updateOldField(id, e.target.value, 'input');
     };
 
     const barrierIcon = (
-        <Tooltip tooltipContent={barrier_data?.barrier_text} >
+        <Tooltip tooltipContent={localize('Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.')} >
             <StandaloneCircleInfoRegularIcon iconSize='sm' />
         </Tooltip>
     );
@@ -291,57 +267,47 @@ export const FormComponent = () => {
                         </div>
                     )}
 
-                    {(['touchnotouch', 'higherlower'].includes(formName) && barrier !== null && barrier_data?.show_barrier) && (
-                        <div className='row gap-8'>
-                            {!barrier_data?.isOffset ?
-                                <div className='form_field'>
-                                    <TextField
-                                        label={localize('Barrier')}
-                                        value={barrier}
-                                        type='number'
-                                        allowDecimals={true}
-                                        onChange={(e) => handleAmountChange(e, 'barrier')}
-                                    />
-                                </div>
-                                :
-                                <div className='form_field'>
-                                    <TextField
-                                        label={localize('Barrier offset')}
-                                        value={barrier}
-                                        type='text'
-                                        rightIcon={barrierIcon}
-                                        onKeyDown={(e) => handleAmountChange(e, 'barrier')}
-                                        onChange={(e) => handleAmountChange(e, 'barrier', barrierRegex)}
-                                        message={barrier_indicator && localize(`Indicator barrier: ${barrier_indicator}`)}
-                                    />
-                                </div>
-                            }
-                        </div>
-                    )}
-
-                    {['endsinout', 'staysinout'].includes(formName) && (
+                    {(['touchnotouch', 'higherlower'].includes(formName) && barrier_data?.show_barrier) && (
                         <div className='row gap-8'>
                             <div className='form_field'>
                                 <TextField
-                                    label={localize('High barrier')}
+                                    label={barrier_data.label}
+                                    value={barrier}
+                                    type={barrier_data?.isOffset ? 'text' : 'number'}
+                                    rightIcon={barrier_data?.isOffset ? barrierIcon : null}
+                                    onChange={(e) => handleAmountChange(
+                                        e, 'barrier', barrier_data?.isOffset ? barrierRegex : null
+                                    )}
+                                    message={barrier_indicator && localize(`Indicator barrier: ${barrier_indicator}`)}
+                                />
+                            </div>
+                        </div>
+                    )}
+
+                    {['endsinout', 'staysinout'].includes(formName) && barrier_data?.show_barrier_highlow && (
+                        <div className='row gap-8'>
+                            <div className='form_field'>
+                                <TextField
+                                    label={barrier_data.label_high}
                                     value={barrier_high}
-                                    onChange={(e) => {
-                                        handleAmountChange(e, 'barrier_high');
-                                        // console.log(barrier_high);
-                                        // validateHighBarrier();
-                                    }}
-                                    // message={highBarrierProps?.message}
-                                    // status={highBarrierProps?.status}
+                                    type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
+                                    rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
+                                    onChange={(e) => handleAmountChange(
+                                        e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                    )}
+                                    message={barrier_indicator_high && localize(`Indicator barrier: ${barrier_indicator_high}`)}
                                 />
                             </div>
                             <div className='form_field'>
                                 <TextField
-                                    label={localize('Low barrier')}
+                                    label={barrier_data.label_low}
                                     value={barrier_low}
-                                    onChange={(e) => {
-                                        handleAmountChange(e, 'barrier_low');
-                                        // validateHighBarrier();
-                                    }}
+                                    type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
+                                    rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
+                                    onChange={(e) => handleAmountChange(
+                                        e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                    )}
+                                    message={barrier_indicator_low && localize(`Indicator barrier: ${barrier_indicator_low}`)}
                                 />
                             </div>
                         </div>
