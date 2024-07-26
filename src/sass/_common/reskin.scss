@@ -331,11 +331,12 @@ div#purchase_container {
                         font-size: 10px;
                         text-align: center;
                         border: none;
+                        font-weight: bold;
                     }
                     .digit {
                         &.digit-winning {
-                            background-color: var(--core-color-opacity-green-100);
-                            color: var(--core-color-opacity-green-600);
+                            background-color: var(--core-color-solid-emerald-100);
+                            color: var(--core-color-solid-emerald-700);
                         }
                     }
                     .peek-box {
