@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
 import {
     TextField,
@@ -8,25 +7,23 @@ import {
     DatePickerDropdown,
     Checkbox,
     SectionMessage,
-    Tooltip,
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
-import { CurrencyDropdown } from './currencyDropdown.jsx';
-import { NumbersDropdown } from './numbersDropdown.jsx';
-import BarrierFields from './barrier_fields.jsx';
-import Defaults, { PARAM_NAMES } from '../trade/defaults';
+import { CurrencyDropdown } from './currency-dropdown.jsx';
+import { NumbersDropdown } from './numbers-dropdown.jsx';
+import BarrierFields from './barrier-fields.jsx';
+import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 import {
     useSessionChange,
     useTradeChange,
     eventDispatcher,
-} from '../../hooks/events';
-import common_functions from '../../../_common/common_functions';
-import { localize } from '../../../_common/localize';
+} from '../../hooks/events.js';
+import common_functions from '../../../_common/common_functions.js';
+import { localize } from '../../../_common/localize.js';
 import tradeManager from '../../common/trade_manager.js';
 // import { handleNumeric } from '../../common/helpers.js';
 
 export const FormComponent = () => {
-
     const [tradeData, setTradeData] = useState({});
 
     const hasTradeChange = useTradeChange();
@@ -38,7 +35,7 @@ export const FormComponent = () => {
             ...tradeManager.getAll(),
         }));
     }, [hasTradeChange, hasSessionChange]);
-    
+
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const date_start = Defaults.get(PARAM_NAMES.DATE_START);
@@ -61,6 +58,7 @@ export const FormComponent = () => {
         duration_options,
         endtime_data,
         currency_list,
+        reset_message,
     } = tradeData;
 
     const contractForms = [
@@ -86,7 +84,7 @@ export const FormComponent = () => {
         const element = common_functions.getElementById('expiry_date');
         const newDate = moment(value).format('YYYY-MM-DD');
         if (!endtime_data.show_datepicker) {
-            Array.from(element.options).map(option => {
+            Array.from(element.options).map((option) => {
                 if (moment(option.text).format('YYYY-MM-DD') === value) {
                     option.setAttribute('selected', true);
                     option.setAttribute('data-value', newDate);
@@ -114,15 +112,13 @@ export const FormComponent = () => {
     const getMessage = (form) => {
         if (form === 'highlowticks') {
             return localize('This contract type only offers 5 ticks');
-        } else if (form === 'reset') {
-            return localize('The reset time is 30 seconds'); // TODO
         }
         return null;
     };
 
     const handleAmountChange = (e, id, regex) => {
-        // const value = handleNumeric(e, regex);
-    
+    // const value = handleNumeric(e, regex);
+
         updateOldField(id, e.target.value, 'input');
     };
 
@@ -135,9 +131,15 @@ export const FormComponent = () => {
         <div className='form_container'>
             {contractForms.includes(formName) && (
                 <div className='form_rows'>
-                    {['reset', 'highlowticks'].includes(formName) && (
+
+                    {formName === 'highlowticks' && (
                         <div className='section-msg-container'>
                             <SectionMessage status='info' message={getMessage(formName)} />
+                        </div>
+                    )}
+                    {formName === 'reset' && reset_message && (
+                        <div className='section-msg-container'>
+                            <SectionMessage status='info' message={reset_message} />
                         </div>
                     )}
 
@@ -242,7 +244,10 @@ export const FormComponent = () => {
                         </div>
                     )}
 
-                    <BarrierFields formName={formName} handleAmountChange={handleAmountChange} />
+                    <BarrierFields
+                        formName={formName}
+                        handleAmountChange={handleAmountChange}
+                    />
 
                     {['matchdiff', 'overunder'].includes(formName) && (
                         <div className='row gap-8'>
@@ -291,7 +296,7 @@ export const FormComponent = () => {
                                 />
                             </div>
 
-                            {currency_list ?
+                            {currency_list ? (
                                 <>
                                     <div className='form_field'>
                                         <TextField
@@ -310,7 +315,7 @@ export const FormComponent = () => {
                                         />
                                     </div>
                                 </>
-                                :
+                            ) : (
                                 <div className='form_field'>
                                     <TextFieldAddon
                                         type='number'
@@ -321,7 +326,7 @@ export const FormComponent = () => {
                                         addOnPosition='right'
                                     />
                                 </div>
-                            }
+                            )}
                         </div>
                     )}
 
@@ -329,7 +334,7 @@ export const FormComponent = () => {
                         formName
                     ) && (
                         <div className='row gap-8'>
-                            {currency_list ?
+                            {currency_list ? (
                                 <>
                                     <div className='form_field'>
                                         <TextField
@@ -349,7 +354,7 @@ export const FormComponent = () => {
                                         />
                                     </div>
                                 </>
-                                :
+                            ) : (
                                 <div className='form_field'>
                                     <TextFieldAddon
                                         addonLabel={currency}
@@ -359,10 +364,9 @@ export const FormComponent = () => {
                                         type='number'
                                         allowDecimals={true}
                                         onChange={(e) => handleAmountChange(e, 'multiplier')}
-                                        
                                     />
                                 </div>
-                            }
+                            )}
                         </div>
                     )}
 
@@ -375,7 +379,9 @@ export const FormComponent = () => {
                                 }}
                                 size='md'
                                 checked={+is_equal === 1}
-                                infoIconMessage={localize('Win payout if exit spot is also equal to entry spot.')}
+                                infoIconMessage={localize(
+                                    'Win payout if exit spot is also equal to entry spot.'
+                                )}
                             />
                         </div>
                     )}

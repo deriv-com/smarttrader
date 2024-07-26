@@ -5,9 +5,9 @@ import {
     Tooltip,
 } from '@deriv-com/quill-ui';
 import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
-import { useBarrierChange } from '../../hooks/events';
+import { useBarrierChange } from '../../hooks/events.js';
 import tradeManager from '../../common/trade_manager.js';
-import { localize } from '../../../_common/localize';
+import { localize } from '../../../_common/localize.js';
 import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 
 const BarrierFields = ({ formName, handleAmountChange }) => {
