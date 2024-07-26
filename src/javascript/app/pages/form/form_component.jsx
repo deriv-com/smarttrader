@@ -11,15 +11,14 @@ import {
     Tooltip,
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
-import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
 import { CurrencyDropdown } from './currencyDropdown.jsx';
 import { NumbersDropdown } from './numbersDropdown.jsx';
+import BarrierFields from './barrier_fields.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults';
 import {
     useSessionChange,
     useTradeChange,
     eventDispatcher,
-    useBarrierChange,
 } from '../../hooks/events';
 import common_functions from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize';
@@ -32,7 +31,6 @@ export const FormComponent = () => {
 
     const hasTradeChange = useTradeChange();
     const hasSessionChange = useSessionChange();
-    const hasBarrierChange = useBarrierChange();
 
     useEffect(() => {
         setTradeData((oldData) => ({
@@ -40,13 +38,6 @@ export const FormComponent = () => {
             ...tradeManager.getAll(),
         }));
     }, [hasTradeChange, hasSessionChange]);
-
-    useEffect(() => {
-        setTradeData((oldData) => ({
-            ...oldData,
-            ...tradeManager.getAll(),
-        }));
-    }, [hasBarrierChange]);
     
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -59,9 +50,6 @@ export const FormComponent = () => {
     const amount = Defaults.get(PARAM_NAMES.AMOUNT);
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
     const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
-    const barrier = Defaults.get(PARAM_NAMES.BARRIER);
-    const barrier_high = Defaults.get(PARAM_NAMES.BARRIER_HIGH);
-    const barrier_low = Defaults.get(PARAM_NAMES.BARRIER_LOW);
     const prediction = Defaults.get(PARAM_NAMES.PREDICTION);
     const selected_tick = Defaults.get(PARAM_NAMES.SELECTED_TICK);
     const multiplier = Defaults.get(PARAM_NAMES.MULTIPLIER);
@@ -73,10 +61,6 @@ export const FormComponent = () => {
         duration_options,
         endtime_data,
         currency_list,
-        barrier_data,
-        barrier_indicator,
-        barrier_indicator_high,
-        barrier_indicator_low,
     } = tradeData;
 
     const contractForms = [
@@ -99,7 +83,6 @@ export const FormComponent = () => {
     ];
 
     const onExpiryDateChange = (value) => {
-        // debugger;
         const element = common_functions.getElementById('expiry_date');
         const newDate = moment(value).format('YYYY-MM-DD');
         if (!endtime_data.show_datepicker) {
@@ -142,14 +125,6 @@ export const FormComponent = () => {
     
         updateOldField(id, e.target.value, 'input');
     };
-
-    const barrierIcon = (
-        <Tooltip tooltipContent={localize('Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.')} >
-            <StandaloneCircleInfoRegularIcon iconSize='sm' />
-        </Tooltip>
-    );
-
-    const barrierRegex = '[+-]?(d+(.d*)?|.d+)';
 
     const isEmpty = (obj) => Object.keys(obj).length === 0;
     if (isEmpty(tradeData)) {
@@ -267,51 +242,7 @@ export const FormComponent = () => {
                         </div>
                     )}
 
-                    {(['touchnotouch', 'higherlower'].includes(formName) && barrier_data?.show_barrier) && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <TextField
-                                    label={barrier_data.label}
-                                    value={barrier}
-                                    type={barrier_data?.isOffset ? 'text' : 'number'}
-                                    rightIcon={barrier_data?.isOffset ? barrierIcon : null}
-                                    onChange={(e) => handleAmountChange(
-                                        e, 'barrier', barrier_data?.isOffset ? barrierRegex : null
-                                    )}
-                                    message={barrier_indicator && localize(`Indicator barrier: ${barrier_indicator}`)}
-                                />
-                            </div>
-                        </div>
-                    )}
-
-                    {['endsinout', 'staysinout'].includes(formName) && barrier_data?.show_barrier_highlow && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <TextField
-                                    label={barrier_data.label_high}
-                                    value={barrier_high}
-                                    type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                                    rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
-                                    onChange={(e) => handleAmountChange(
-                                        e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
-                                    )}
-                                    message={barrier_indicator_high && localize(`Indicator barrier: ${barrier_indicator_high}`)}
-                                />
-                            </div>
-                            <div className='form_field'>
-                                <TextField
-                                    label={barrier_data.label_low}
-                                    value={barrier_low}
-                                    type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                                    rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
-                                    onChange={(e) => handleAmountChange(
-                                        e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
-                                    )}
-                                    message={barrier_indicator_low && localize(`Indicator barrier: ${barrier_indicator_low}`)}
-                                />
-                            </div>
-                        </div>
-                    )}
+                    <BarrierFields formName={formName} handleAmountChange={handleAmountChange} />
 
                     {['matchdiff', 'overunder'].includes(formName) && (
                         <div className='row gap-8'>
