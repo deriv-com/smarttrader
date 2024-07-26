@@ -130,13 +130,16 @@ export const Explanation = ({ explanationOnly = false }) => {
                                             src={`${image_path}${images[formName].image1}?${process.env.BUILD_HASH}`}
                                         />
                                     </div>
-                                    <div className='gr-4 gr-12-m padding-left'>
-                                        <img
-                                            id='explanation_image_2'
-                                            className='responsive'
-                                            src={`${image_path}${images[formName].image2}?${process.env.BUILD_HASH}`}
-                                        />
-                                    </div>
+                                    {images[formName].image2 && (
+                                        <div className='gr-4 gr-12-m padding-left'>
+                                            <img
+                                                id='explanation_image_2'
+                                                className='responsive'
+                                                src={`${image_path}${images[formName].image2}?${process.env.BUILD_HASH}`}
+                                            />
+                                        </div>
+                                    )}
+                                   
                                     <div className='gr-2 hide-mobile' />
                                 </div>
                             </div>
