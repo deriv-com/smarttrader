@@ -7,7 +7,8 @@ const ViewPopupUI = (() => {
     let $container,
         stream_ids,
         chart_stream_ids,
-        triggerOnClose;
+        triggerOnClose,
+        triggerOnDestroy;
 
     const init = () => {
         $container = null;
@@ -28,6 +29,10 @@ const ViewPopupUI = (() => {
                 $(document).off('keydown');
                 $(window).off('popstate', onClose);
                 removeDigitTicker();
+
+                if (typeof triggerOnDestroy === 'function') {
+                    triggerOnDestroy();
+                }
             };
             $con.find('a.close').on('click', onClose);
             $(document).on('keydown', (e) => {
@@ -181,7 +186,8 @@ const ViewPopupUI = (() => {
         repositionConfirmation,
         storeSubscriptionID,
 
-        setOnCloseFunction: (onCloseFnc) => { triggerOnClose = onCloseFnc; },
+        setOnCloseFunction  : (onCloseFnc) => { triggerOnClose = onCloseFnc; },
+        setOnDestroyFunction: (onDestroyFnc) => { triggerOnDestroy = onDestroyFnc; },
     };
 })();
 

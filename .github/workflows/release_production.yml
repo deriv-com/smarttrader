@@ -56,24 +56,22 @@ jobs:
         with:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      - name: Build Docker image and push to Docker hub and K8S
-        id: build_and_push_docker_image
-        uses: "./.github/actions/build_and_push_docker_image"
+      - name: Upload to vercel
+        id: deploy_vercel
+        uses: 'deriv-com/shared-actions/.github/actions/vercel_DR_publish@master'
         with:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-          DOCKERHUB_ORGANISATION: ${{ secrets.DOCKERHUB_ORGANISATION }}
-          K8S_NAMESPACE: smarttrader-deriv-app-production
-          KUBE_SERVER: ${{ secrets.KUBE_SERVER }}
-          SERVICEACCOUNT_TOKEN: ${{ secrets.SERVICEACCOUNT_TOKEN }}
-          CA_CRT: ${{ secrets.CA_CRT }}
-          APP_VERSION: latest
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
+          ENVIRONMENT: Production
+          VERCEL_SCOPE: deriv
+          ALIAS_DOMAIN_URL: 'smarttrader-dr.binary.sx'
       - name: Send Slack Notification on Docker Publish and Kubernetes Deployment Failure
-        if: ${{ steps.build_and_push_docker_image.outcome != 'success' }}
+        if: ${{ steps.deploy_vercel.outcome != 'success' }}
         uses: "deriv-com/shared-actions/.github/actions/send_slack_notification@master"
         with:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          MESSAGE: "$RELEASE_TYPE Docker Publish and Kubernetes Deployment for smarttrader.deriv.com with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }} has Failed"
+          MESSAGE: "$RELEASE_TYPE Vercel Deployment for smarttrader.deriv.com with version ${{ needs.build_and_test.outputs.RELEASE_VERSION }} has Failed"
   notify_on_slack:
     name: Notify on Slack
     if: always()

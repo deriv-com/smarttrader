@@ -179,3 +179,9 @@ git push origin staging_v20191010_0
 ## Manage translations
 
 To add translation manually use [manual translation doc](scripts/README.md#Updating-the-translations)
+
+## Disaster Recovery
+
+Each release, whether to staging or production is backed up and deployed to Vercel
+
+You may see the current production and staging deployed into: https://staging-smarttrader-dr.binary.sx and https://smarttrader-dr.binary.sx
