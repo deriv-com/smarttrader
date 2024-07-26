@@ -88,6 +88,23 @@ div.select-dropdown:after {
     }
 }
 
+.trade-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px 0 0;
+
+    #contract_forms_wrapper {
+        .form_container {
+            border-radius: 16px;
+            padding: 16px;
+            background: var(--core-color-solid-slate-50);
+            width: 100%;
+            max-width: 462px;
+        }
+    }
+}
+
 .quill-market-selector {
     &-container {
         display: flex;
@@ -313,11 +330,19 @@ div#purchase_container {
                     .mask {
                         font-size: 10px;
                         text-align: center;
+                        border: none;
                     }
                     .digit {
                         &.digit-winning {
                             background-color: var(--core-color-opacity-green-100);
                             color: var(--core-color-opacity-green-600);
+                        }
+                    }
+                    .peek-box {
+                        &.digit-winning {
+                            .peek {
+                                border: none;
+                            }
                         }
                     }
                 }
@@ -330,6 +355,7 @@ div#purchase_container {
             padding: var(--core-spacing-400);
             border-radius: 0 0 var(--core-borderRadius-800) var(--core-borderRadius-800);
             gap: 4px;
+            margin-top: auto;
         }
     }
     &.disabled {
@@ -644,7 +670,8 @@ div#purchase_container {
 // This is to allow QA to disable this quickly
 html:not(.test) {
     #trading_init_progress, 
-    #contract_forms_wrapper,
+    #contract_container,
+    #contract_symbol_container,
     #contract_prices_container, 
     .popup_page_overlay, 
     .inpage_popup_container {
@@ -803,14 +830,14 @@ html.test {
     }
     .body-loader {
         display: flex;
-        margin-top: 28px;
+        margin-top: 18px;
         width: 100%;
-        gap: 36px;
+        gap: 16px;
 
         .trade-section-loader {
             display: flex;
             width: 100%;
-            max-width: 480px;
+            max-width: 462px;
         }
         .purchase-section-loader {
             display: flex;

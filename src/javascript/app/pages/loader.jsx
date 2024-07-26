@@ -29,10 +29,6 @@ const Loader = () => {
     useEffect(() => {
         const hidePageLoader = contractManager.get('hidePageLoader');
 
-        console.log({
-            hidePageLoader,
-        });
-
         if (hidePageLoader){
             setLoading(false);
         }

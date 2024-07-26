@@ -20,6 +20,11 @@ const Trading = () => (
                             <div id='onboarding-container' />
                         </div>
                     </div>
+                    <div className='trade-container'>
+                        <div id='contract_forms_wrapper' />
+                        <div id='purchase_container' />
+                    </div>
+                    {/* Old Containers  */}
                     <div className='row' id='contract_symbol_container'>
                         <div id='contract_markets_container'>
                             <div id='underlying_component' className='invisible' />
@@ -30,7 +35,6 @@ const Trading = () => (
                             <input type='hidden' id='contract' />
                         </div>
                     </div>
-                    <div id='contract_forms_wrapper' />
                     <div className='row clear' id='contract_form_content_wrapper'>
                         <div className='col row-inner gr-6 gr-12-p gr-12-m gr-no-gutter'>
                             <div id='contract_container' className='col row'>
@@ -320,7 +324,6 @@ const Trading = () => (
                                 </div>
                             </div>
                         </div>
-                        <div id='purchase_container' />
                     </div>
                     <div
                         id='contract_prices_container'
@@ -483,8 +486,8 @@ const Trading = () => (
                                 <div className='col contract_error' />
                             </div>
                         </div>
+                        <div id='all_prices' />
                     </div>
-                    <div id='all_prices' />
                 </div>
             </div>
         </section>
