@@ -15,6 +15,7 @@ const getElementById           = require('../../../../_common/common_functions')
 const localize                 = require('../../../../_common/localize').localize;
 const urlFor                   = require('../../../../_common/url').urlFor;
 const Utility                  = require('../../../../_common/utility');
+const contractManager          = require('../../../common/contract_manager').default;
 const purchaseManager          = require('../../../common/purchase_manager').default;
 
 const ViewPopup = (() => {
@@ -56,6 +57,10 @@ const ViewPopup = (() => {
         if (btn_view) {
             ViewPopupUI.cleanup(false);
         }
+
+        ViewPopupUI.setOnDestroyFunction(()=>{
+            Highchart.hideChart();
+        });
 
         getContract();
 
@@ -878,6 +883,10 @@ const ViewPopup = (() => {
                 $loading.show();
             }
         } else if ($loading){
+            contractManager.set({
+                isPageLoading: false,
+            });
+            
             if ($loading.length) {
                 $loading.hide();
             }

@@ -15,6 +15,7 @@ const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
+const contractManager   = require('../../common/contract_manager.js').default;
 const purchaseManager   = require('../../common/purchase_manager').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
@@ -128,6 +129,10 @@ const Process = (() => {
         getElementById('trading_socket_container').classList.add('show');
         const init_logo = getElementById('trading_init_progress');
 
+        contractManager.set({
+            hidePageLoader: true,
+        });
+        
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';
             Defaults.update();

@@ -3,8 +3,8 @@
 /* eslint-disable no-console */
 require('@babel/register')({
     plugins: [
-        'babel-plugin-transform-es2015-modules-commonjs',
-        'babel-plugin-transform-react-jsx',
+        '@babel/plugin-transform-modules-commonjs',
+        '@babel/plugin-transform-react-jsx',
     ],
     extensions: ['.jsx'],
     cache     : true,
