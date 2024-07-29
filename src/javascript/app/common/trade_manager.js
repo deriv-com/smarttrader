@@ -26,10 +26,10 @@ class TradeManager {
                 }));
                 if (optional === 'barrier') {
                     triggerBarrierChange();
-                } else if (optional === "time") {
-                  triggerTimeChange();
+                } else if (optional === 'time') {
+                    triggerTimeChange();
                 } else {
-                  triggerTradeChange();
+                    triggerTradeChange();
                 }
             }
         }

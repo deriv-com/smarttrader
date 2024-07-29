@@ -12,6 +12,7 @@ import moment from 'moment';
 import { CurrencyDropdown } from './currency-dropdown.jsx';
 import { NumbersDropdown } from './numbers-dropdown.jsx';
 import BarrierFields from './barrier-fields.jsx';
+import { TimePickerDropdown } from './time-selection.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 import {
     useSessionChange,
@@ -21,7 +22,6 @@ import {
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import tradeManager from '../../common/trade_manager.js';
-import { TimePickerDropdown } from './time-selection.jsx';
 // import { handleNumeric } from '../../common/helpers.js';
 
 export const FormComponent = () => {

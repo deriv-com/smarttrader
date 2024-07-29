@@ -56,7 +56,7 @@ const TimePicker = (() => {
 
         if (options.selector === '#time_start' && (options.minTime || options.maxTime)) {
             tradeManager.set({
-              starttime_obj: obj_config,
+                starttime_obj: obj_config,
             }, 'time');
         }
         if (options.selector === '#expiry_time' && (options.minTime || options.maxTime)) {
