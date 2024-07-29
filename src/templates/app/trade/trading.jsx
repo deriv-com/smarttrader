@@ -21,8 +21,8 @@ const Trading = () => (
                         </div>
                     </div>
                     <div className='trade-container'>
-                        <div id='contract_forms_wrapper' />
-                        <div id='purchase_container' />
+                        <div id='contract_forms_wrapper' className='trade-parameter-block' />
+                        <div id='purchase_container' className='trade-parameter-block' />
                     </div>
                     {/* Old Containers  */}
                     <div className='row' id='contract_symbol_container'>

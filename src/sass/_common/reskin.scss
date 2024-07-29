@@ -35,14 +35,17 @@
 
 .contained-section {
     width: 100%;
-    max-width: 960px;
+    max-width: 940px;
     margin: 0 auto;
     padding-block: 40px;
+
+    @media(max-width: 940px){
+        padding-inline: 16px;
+    }
 }
 
 .trading-container {
     background: var(--core-color-solid-slate-75);
-    padding: 40px 0px;
 }
 
 .market-navigation-container {
@@ -96,10 +99,19 @@
             padding: 16px;
             background: var(--core-color-solid-slate-50);
             width: 100%;
-            max-width: 462px;
             height: 100%;
             align-items: center;
         }
+    }
+}
+
+.trade-parameter-block {
+    max-width: 462px;
+    width: 100%;
+
+    @media (max-width: 940px){
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -203,15 +215,6 @@ div#contract-injection-container {
         display: unset;
         border-radius: var(--core-borderRadius-500);
         background-color: rgba(0, 0, 0, 0.08);
-    }
-}
-
-div#purchase_container {
-    width: 100%;
-    max-width: 430px;
-
-    @media(max-width: 768px){
-        max-width: none;
     }
 }
 
