@@ -1,5 +1,5 @@
 import { Divider, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { triggerContractChange, useContractChange } from '../../../hooks/events';
 import contractManager from '../../../common/contract_manager';
 import Defaults, { PARAM_NAMES } from '../defaults';
@@ -7,8 +7,10 @@ import Defaults, { PARAM_NAMES } from '../defaults';
 export const ContractDropdown = () => {
     const { close } = useDropdown();
     const hasContractChange  = useContractChange();
-    const [data,setData] = useState(contractManager.getAll());
- 
+    const [data, setData] = useState(contractManager.getAll());
+    const selectedRef = useRef(null);
+    const containerRef = useRef(null);
+
     const onContractClick = (formName) => {
         if (formName === data?.formName) { return; }
 
@@ -39,13 +41,26 @@ export const ContractDropdown = () => {
             ...oldData,
             ...contractManager.getAll(),
         }));
- 
     }, [hasContractChange]);
-    
+
+    useEffect(() => {
+        if (selectedRef.current && containerRef.current) {
+            const selectedRect = selectedRef.current.getBoundingClientRect();
+            const containerRect = containerRef.current.getBoundingClientRect();
+            const offset = 96;
+            if (selectedRect.top < containerRect.top + offset || selectedRect.bottom > containerRect.bottom) {
+                containerRef.current.scrollTo({
+                    top     : containerRef.current.scrollTop + selectedRect.top - containerRect.top - offset,
+                    behavior: 'auto',
+                });
+            }
+        }
+    }, [data]);
+
     return (
-        <div className='quill-market-dropdown-container'>
-            <div className='quill-market-dropdown-item-container'>
-                { data?.contractsTree?.map((contract, idx) => {
+        <div className='quill-market-dropdown-container' >
+            <div className='quill-market-dropdown-item-container' ref={containerRef}>
+                {data?.contractsTree?.map((contract, idx) => {
                     if (typeof contract === 'object') {
                         return (
                             <React.Fragment key={idx}>
@@ -57,8 +72,11 @@ export const ContractDropdown = () => {
                                         label={data?.contracts[subtype]}
                                         selected={subtype === data?.formName}
                                         size='md'
-                                        className='contract-item-clickables'
-                                    />))}
+                                        className='trade-item-selected'
+                                        ref={subtype === data?.formName ? selectedRef : null}
+                                    />
+                                )
+                                )}
                                 <Divider />
                             </React.Fragment>
                         );
@@ -73,6 +91,7 @@ export const ContractDropdown = () => {
                                 selected={contract === data?.formName}
                                 size='md'
                                 className='contract-item-clickables'
+                                ref={contract === data?.formName ? selectedRef : null}
                             />
                             <Divider />
                         </React.Fragment>
