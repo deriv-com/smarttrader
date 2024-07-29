@@ -3,6 +3,7 @@ import {
     TextField,
     Tooltip,
 } from '@deriv-com/quill-ui';
+// eslint-disable-next-line import/no-unresolved
 import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useBarrierChange } from '../../hooks/events.js';
 import tradeManager from '../../common/trade_manager.js';
