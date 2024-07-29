@@ -39,7 +39,7 @@ const Loader = () => {
         window.addEventListener('load', () => {
             setLoading(false);
         });
-    });
+    },[]);
 
     if (loading){
         return (
