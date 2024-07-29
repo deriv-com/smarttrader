@@ -136,6 +136,9 @@
   "peerDependencies": {
     "circular-dependency-plugin": "5.2.2"
   },
+  "overrides": {
+    "braces": "^3.0.3"  
+  },
   "engines": {
     "node": "18.x"
   },
