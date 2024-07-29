@@ -797,18 +797,38 @@ html.test {
     max-width: 960px;
     margin: 0 auto;
     padding-block: 40px;
+
+    @media (max-width: 768px) {
+        padding: 16px;
+        
+    }
     
     .header-loader {
         display: flex;
         margin-top: 42px;
-        gap: 36px;
+        gap: 16px;
+
+        @media (max-width: 768px) {
+           flex-direction: column-reverse;
+            
+        }
 
         .dropdown-loader-container {
             display: flex;
             gap: 12px;
 
+            @media (max-width: 768px) {
+                flex-direction: column;
+                   
+            }
+
             .dropdown-loader {
                 width: 220px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                       
+                }
             }
         }
         .other-header-loader-container {
@@ -823,17 +843,32 @@ html.test {
         width: 100%;
         gap: 16px;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+               
+        }
+
         .trade-section-loader {
             display: flex;
             width: 100%;
             max-width: 462px;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+                   
+            }
         }
         .purchase-section-loader {
             display: flex;
             flex-direction: column;
             gap: var(--core-spacing-800);
             width: 100%;
-            max-width: 435px;
+            max-width: 490px;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+                   
+            }
         }
     }
     .footer-loader {
