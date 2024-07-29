@@ -3,10 +3,10 @@ import Analysis from './analysis.jsx';
 import Loading from '../../_common/components/loading.jsx';
 
 const Trading = () => (
-    <React.Fragment>
+    <div id='trading_socket_container'>
         <section className='trading-container'>
             <div className='contained-section'>
-                <div id='trading_socket_container'>
+                <div >
                     <div id='notifications_wrapper' />
                     <div id='loading_container' className='overlay_container' />
 
@@ -498,7 +498,7 @@ const Trading = () => (
             <Loading />
         </div>
         <div id='app-loader' />
-    </React.Fragment>
+    </div>
 );
 
 export default Trading;
