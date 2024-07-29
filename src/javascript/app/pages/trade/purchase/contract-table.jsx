@@ -37,17 +37,32 @@ const ContractTable = ({ data }) => (
           })}
             </div>
         </div>
-        <div className='table-box'>
-            <div className='table-item'>
-                <Text size='sm'>{localize('Start time')}</Text>
+        {data?.cd_purchaseTime && (
+            <div className='table-box'>
+                <div className='table-item'>
+                    <Text size='sm'>{localize('Purchase time')}</Text>
+                </div>
+                <div className='table-item'>
+                    {TimeTooltipWrapper(
+                        <Text size='sm'>{data.cd_purchaseTime}</Text>,
+                        data.cd_purchaseTime
+                    )}
+                </div>
             </div>
-            <div className='table-item'>
-                {TimeTooltipWrapper(
-                    <Text size='sm'>{data?.cd_startTime}</Text>,
-                    data?.cd_startTime
-                )}
+        )}
+        {data?.cd_startTime && !data?.soldBeforeStart && (
+            <div className='table-box'>
+                <div className='table-item'>
+                    <Text size='sm'>{localize('Start time')}</Text>
+                </div>
+                <div className='table-item'>
+                    {TimeTooltipWrapper(
+                        <Text size='sm'>{data.cd_startTime}</Text>,
+                        data.cd_startTime
+                    )}
+                </div>
             </div>
-        </div>
+        )}
         <div className='table-box'>
             <div className='table-item'>
                 <Text size='sm'>{localize('Remaining time')}</Text>
@@ -66,14 +81,16 @@ const ContractTable = ({ data }) => (
                 </div>
             </div>
         )}
-        <div className='table-box'>
-            <div className='table-item'>
-                <Text size='sm'>{data?.cd_barrierLabel}</Text>
+        {data?.cd_barrier && (
+            <div className='table-box'>
+                <div className='table-item'>
+                    <Text size='sm'>{data?.cd_barrierLabel}</Text>
+                </div>
+                <div className='table-item'>
+                    <Text size='sm'>{data?.cd_barrier}</Text>
+                </div>
             </div>
-            <div className='table-item'>
-                <Text size='sm'>{data?.cd_barrier}</Text>
-            </div>
-        </div>
+        )}
         {data?.cd_showBarrierLow && (
             <div className='table-box'>
                 <div className='table-item'>
@@ -223,13 +240,15 @@ const ContractTable = ({ data }) => (
                             message={parseData(data.cd_errorMsg)}
                         />
                     )}
-                    <SectionMessage
-                        className='info-msg'
-                        size='sm'
-                        status='info'
-                        message={parseData(data.cd_sellInfo)}
-                        icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
-                    />
+                    {data?.cd_sellInfo && (
+                        <SectionMessage
+                            className='info-msg'
+                            size='sm'
+                            status='info'
+                            message={parseData(data.cd_sellInfo)}
+                            icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
+                        />
+                    )}
                 </div>
             </>
         )}
