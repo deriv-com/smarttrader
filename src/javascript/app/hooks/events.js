@@ -78,3 +78,7 @@ export const triggerTradeChange = () => triggerCustomEvent('tradeChange');
 // Barrier Change
 export const useBarrierChange = () => useCustomEvent('barrierChange');
 export const triggerBarrierChange = () => triggerCustomEvent('barrierChange');
+
+// Start/End Time Change
+export const useTimeChange = () => useCustomEvent('timeChange');
+export const triggerTimeChange = () => triggerCustomEvent('timeChange');

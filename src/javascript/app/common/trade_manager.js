@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import { triggerBarrierChange, triggerTradeChange } from '../hooks/events';
+import { triggerBarrierChange, triggerTimeChange, triggerTradeChange } from '../hooks/events';
 
 class TradeManager {
     constructor() {
@@ -26,8 +26,10 @@ class TradeManager {
                 }));
                 if (optional === 'barrier') {
                     triggerBarrierChange();
+                } else if (optional === "time") {
+                  triggerTimeChange();
                 } else {
-                    triggerTradeChange();
+                  triggerTradeChange();
                 }
             }
         }

@@ -21,6 +21,7 @@ import {
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import tradeManager from '../../common/trade_manager.js';
+import { TimePickerDropdown } from './time-selection.jsx';
 // import { handleNumeric } from '../../common/helpers.js';
 
 export const FormComponent = () => {
@@ -39,6 +40,7 @@ export const FormComponent = () => {
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const date_start = Defaults.get(PARAM_NAMES.DATE_START);
+    const time_start = Defaults.get(PARAM_NAMES.TIME_START);
     const duration_amount = Defaults.get(PARAM_NAMES.DURATION_AMOUNT);
     const duration_units = Defaults.get(PARAM_NAMES.DURATION_UNITS);
     const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
@@ -155,12 +157,12 @@ export const FormComponent = () => {
                                     }}
                                 />
                             </div>
-                            {Defaults.get(PARAM_NAMES.DATE_START) !== 'now' && (
+                            {date_start !== 'now' && (
                                 <div className='form_field'>
-                                    <TextFieldAddon
-                                        value={Defaults.get(PARAM_NAMES.TIME_START)}
-                                        addonLabel='GMT'
-                                        addOnPosition='right'
+                                    <TimePickerDropdown
+                                        time={time_start}
+                                        onUpdate={updateOldField}
+                                        elementId='time_start'
                                     />
                                 </div>
                             )}
@@ -232,10 +234,10 @@ export const FormComponent = () => {
 
                                     {expiry_time && (
                                         <div className='form_field'>
-                                            <TextFieldAddon
-                                                value={expiry_time}
-                                                addonLabel='GMT'
-                                                addOnPosition='right'
+                                            <TimePickerDropdown
+                                                time={expiry_time}
+                                                onUpdate={updateOldField}
+                                                elementId='expiry_time'
                                             />
                                         </div>
                                     )}
