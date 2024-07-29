@@ -182,13 +182,15 @@ const ViewPopup = (() => {
             $('#trade_details_start_date').parent().setVisibility(0);
             containerSetText('trade_details_purchase_time', epochToDateTime(contract.purchase_time), '', true);
             purchaseManager.set({
-                cd_startTime: epochToDateTime(contract.purchase_time),
+                cd_purchaseTime: epochToDateTime(contract.purchase_time),
+                soldBeforeStart: true,
             });
         } else {
             $('#trade_details_purchase_time').parent().setVisibility(0);
             containerSetText('trade_details_start_date', epochToDateTime(contract.date_start), '', true);
             purchaseManager.set({
-                cd_startTime: epochToDateTime(contract.date_start),
+                cd_startTime   : epochToDateTime(contract.date_start),
+                soldBeforeStart: false,
             });
         }
 
