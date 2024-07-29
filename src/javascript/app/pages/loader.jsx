@@ -32,7 +32,14 @@ const Loader = () => {
         if (hidePageLoader){
             setLoading(false);
         }
+           
     },[hasContractChange]);
+
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            setLoading(false);
+        });
+    },[]);
 
     if (loading){
         return (
