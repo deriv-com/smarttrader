@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React, { useState, useEffect } from 'react';
 import {
     TextField,

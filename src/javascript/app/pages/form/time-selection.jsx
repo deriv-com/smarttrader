@@ -25,8 +25,7 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
         const formattedHour = timeObj.hour.toString();
         const formattedMinute = timeObj.minute.toString().padStart(2, '0');
         return `${formattedHour}:${formattedMinute}`;
-    }
-
+    };
 
     const generateTimeIntervalsFromCurrentGMT = () => {
         const timeIntervals = [];
@@ -81,11 +80,11 @@ export const TimePickerDropdown = ({
 }) => (
     <BreakpointProvider>
         <CustomDropdown value={time}>
-        <TimeContent
-            time={time}
-            onUpdate={onUpdate}
-            elementId={elementId}
-        />
+            <TimeContent
+                time={time}
+                onUpdate={onUpdate}
+                elementId={elementId}
+            />
         </CustomDropdown>
     </BreakpointProvider>
 );

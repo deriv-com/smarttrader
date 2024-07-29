@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import {
     TextField,
@@ -118,9 +117,8 @@ export const FormComponent = () => {
         return null;
     };
 
-    const handleAmountChange = (e, id, regex) => {
+    const handleAmountChange = (e, id) => {
     // const value = handleNumeric(e, regex);
-
         updateOldField(id, e.target.value, 'input');
     };
 
