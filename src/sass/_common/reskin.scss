@@ -806,10 +806,11 @@ html.test {
     .header-loader {
         display: flex;
         margin-top: 42px;
-        gap: 16px;
+        gap: 26px;
 
         @media (max-width: 768px) {
            flex-direction: column-reverse;
+           gap: 16px;
             
         }
 
