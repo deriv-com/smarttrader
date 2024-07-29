@@ -34,7 +34,7 @@ const Loader = () => {
         }
     },[hasContractChange]);
 
-    if (!loading){
+    if (loading){
         return (
             <Portal>
                 <div className='quill-generic-popup'>
