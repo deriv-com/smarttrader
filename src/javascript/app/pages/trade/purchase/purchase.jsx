@@ -226,10 +226,6 @@ const Purchase = () => {
                                     <Text size='md' centered>{data?.error.message}</Text>
                                 </span>
                             )}
-                            {data?.error.code === 'InsufficientBalance' && (
-                                <Button label={localize('Deposit now')} size='md' onClick={() => document.querySelector('.url-cashier-deposit').click()} />
-                            )}
-                            
                         </div>
                     </div>
                 </div>
