@@ -16,6 +16,7 @@ const NotAvailable = ({ title, body }) => (
             <Button
                 onClick={() => {
                     getElementById('acc_switcher').click();
+                    // eslint-disable-next-line no-console
                     console.log(getElementById('acc_switcher'));
                 }}
                 size='lg'
