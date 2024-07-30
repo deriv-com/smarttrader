@@ -128,10 +128,9 @@ export const FormComponent = () => {
     }
 
     return (
-        <div className='form_container'>
+        <div className='quill-form-container'>
             {contractForms.includes(formName) && (
-                <div className='form_rows'>
-
+                <>
                     {formName === 'highlowticks' && (
                         <div className='section-msg-container'>
                             <SectionMessage status='info' message={getMessage(formName)} />
@@ -142,250 +141,253 @@ export const FormComponent = () => {
                             <SectionMessage status='info' message={reset_message} />
                         </div>
                     )}
+                
+                    <div className='quill-form-rows'>
 
-                    {['risefall', 'callputequal'].includes(formName) && start_dates && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <InputDropdown
-                                    label={localize('Start Time')}
-                                    options={start_dates.options}
-                                    value={date_start}
-                                    onSelectOption={(value) => {
-                                        updateOldField('date_start', value, 'change');
-                                    }}
-                                />
-                            </div>
-                            {date_start !== 'now' && (
+                        {['risefall', 'callputequal'].includes(formName) && start_dates && (
+                            <div className='quill-form-row'>
                                 <div className='form_field'>
-                                    <TimePickerDropdown
-                                        time={time_start}
-                                        onUpdate={updateOldField}
-                                        elementId='time_start'
+                                    <InputDropdown
+                                        label={localize('Start Time')}
+                                        options={start_dates.options}
+                                        value={date_start}
+                                        onSelectOption={(value) => {
+                                            updateOldField('date_start', value, 'change');
+                                        }}
                                     />
                                 </div>
-                            )}
-                        </div>
-                    )}
-
-                    {formName !== 'highlowticks' && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <InputDropdown
-                                    options={expiry_type_options}
-                                    value={expiryType}
-                                    onSelectOption={(value) => {
-                                        updateOldField('expiry_type', value, 'change');
-                                    }}
-                                />
+                                {date_start !== 'now' && (
+                                    <div className='form_field'>
+                                        <TimePickerDropdown
+                                            time={time_start}
+                                            onUpdate={updateOldField}
+                                            elementId='time_start'
+                                        />
+                                    </div>
+                                )}
                             </div>
-                            {expiryType === 'duration' && (
-                                <>
-                                    <div className='form_field'>
-                                        <TextField
-                                            type='number'
-                                            value={duration_amount}
-                                            message={duration_data?.message || ''}
-                                            status={duration_data?.status}
-                                            onChange={(e) => {
-                                                updateOldField(
-                                                    'duration_amount',
-                                                    e.target.value,
-                                                    'input'
-                                                );
-                                            }}
-                                        />
-                                    </div>
-                                    <div className='form_field'>
-                                        <InputDropdown
-                                            options={duration_options}
-                                            value={duration_units}
-                                            onSelectOption={(value) => {
-                                                updateOldField('duration_units', value, 'change');
-                                            }}
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {expiryType === 'endtime' && (
-                                <>
-                                    {endtime_data && (
-                                        <div className='form_field'>
-                                            {endtime_data.show_datepicker ? (
-                                                <DatePickerDropdown
-                                                    value={moment(expiry_date).format('DD/MM/YYYY')}
-                                                    datePickerProps={{ minDate: new Date() }}
-                                                    onSelectDate={(value) => {
-                                                        onExpiryDateChange(value);
-                                                    }}
-                                                />
-                                            ) : (
-                                                <InputDropdown
-                                                    options={endtime_data.options}
-                                                    value={expiry_date}
-                                                    onSelectOption={(value) => {
-                                                        onExpiryDateChange(value);
-                                                    }}
-                                                />
-                                            )}
-                                        </div>
-                                    )}
+                        )}
 
-                                    {expiry_time && (
+                        {formName !== 'highlowticks' && (
+                            <div className='quill-form-row'>
+                                <div className='form_field'>
+                                    <InputDropdown
+                                        options={expiry_type_options}
+                                        value={expiryType}
+                                        onSelectOption={(value) => {
+                                            updateOldField('expiry_type', value, 'change');
+                                        }}
+                                    />
+                                </div>
+                                {expiryType === 'duration' && (
+                                    <>
                                         <div className='form_field'>
-                                            <TimePickerDropdown
-                                                time={expiry_time}
-                                                onUpdate={updateOldField}
-                                                elementId='expiry_time'
+                                            <TextField
+                                                type='number'
+                                                value={duration_amount}
+                                                message={duration_data?.message || ''}
+                                                status={duration_data?.status}
+                                                onChange={(e) => {
+                                                    updateOldField(
+                                                        'duration_amount',
+                                                        e.target.value,
+                                                        'input'
+                                                    );
+                                                }}
                                             />
                                         </div>
-                                    )}
-                                </>
-                            )}
-                        </div>
-                    )}
+                                        <div className='form_field'>
+                                            <InputDropdown
+                                                options={duration_options}
+                                                value={duration_units}
+                                                onSelectOption={(value) => {
+                                                    updateOldField('duration_units', value, 'change');
+                                                }}
+                                            />
+                                        </div>
+                                    </>
+                                )}
+                                {expiryType === 'endtime' && (
+                                    <>
+                                        {endtime_data && (
+                                            <div className='form_field'>
+                                                {endtime_data.show_datepicker ? (
+                                                    <DatePickerDropdown
+                                                        value={moment(expiry_date).format('DD/MM/YYYY')}
+                                                        datePickerProps={{ minDate: new Date() }}
+                                                        onSelectDate={(value) => {
+                                                            onExpiryDateChange(value);
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <InputDropdown
+                                                        options={endtime_data.options}
+                                                        value={expiry_date}
+                                                        onSelectOption={(value) => {
+                                                            onExpiryDateChange(value);
+                                                        }}
+                                                    />
+                                                )}
+                                            </div>
+                                        )}
 
-                    <BarrierFields
-                        formName={formName}
-                        handleAmountChange={handleAmountChange}
-                    />
-
-                    {['matchdiff', 'overunder'].includes(formName) && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <NumbersDropdown
-                                    value={prediction}
-                                    label={localize('Last Digit Prediction')}
-                                    start={0}
-                                    end={9}
-                                    elementId='prediction'
-                                    onUpdate={updateOldField}
-                                />
+                                        {expiry_time && (
+                                            <div className='form_field'>
+                                                <TimePickerDropdown
+                                                    time={expiry_time}
+                                                    onUpdate={updateOldField}
+                                                    elementId='expiry_time'
+                                                />
+                                            </div>
+                                        )}
+                                    </>
+                                )}
                             </div>
-                        </div>
-                    )}
+                        )}
 
-                    {['highlowticks'].includes(formName) && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <NumbersDropdown
-                                    value={selected_tick}
-                                    label={localize('Tick Prediction')}
-                                    start={1}
-                                    end={5}
-                                    elementId='selected_tick'
-                                    onUpdate={updateOldField}
-                                />
-                            </div>
-                        </div>
-                    )}
+                        <BarrierFields
+                            formName={formName}
+                            handleAmountChange={handleAmountChange}
+                        />
 
-                    {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                        formName
-                    ) && (
-                        <div className='row gap-8'>
-                            <div className='form_field'>
-                                <InputDropdown
-                                    options={[
-                                        { text: localize('Stake'), value: 'stake' },
-                                        { text: localize('Payout'), value: 'payout' },
-                                    ]}
-                                    value={amount_type}
-                                    onSelectOption={(value) => {
-                                        updateOldField('amount_type', value, 'change');
-                                    }}
-                                />
-                            </div>
-
-                            {currency_list ? (
-                                <>
-                                    <div className='form_field'>
-                                        <TextField
-                                            value={amount}
-                                            type='number'
-                                            allowDecimals={true}
-                                            onChange={(e) => handleAmountChange(e, 'amount')}
-                                        />
-                                    </div>
-                                    <div className='form_field'>
-                                        <CurrencyDropdown
-                                            currency_list={currency_list}
-                                            currency={currency}
-                                            onUpdate={updateOldField}
-                                            elementId='currency'
-                                        />
-                                    </div>
-                                </>
-                            ) : (
+                        {['matchdiff', 'overunder'].includes(formName) && (
+                            <div className='quill-form-row'>
                                 <div className='form_field'>
-                                    <TextFieldAddon
-                                        type='number'
-                                        allowDecimals
-                                        onChange={(e) => handleAmountChange(e, 'amount')}
-                                        value={amount}
-                                        addonLabel={currency}
-                                        addOnPosition='right'
+                                    <NumbersDropdown
+                                        value={prediction}
+                                        label={localize('Last Digit Prediction')}
+                                        start={0}
+                                        end={9}
+                                        elementId='prediction'
+                                        onUpdate={updateOldField}
                                     />
                                 </div>
-                            )}
-                        </div>
-                    )}
+                            </div>
+                        )}
 
-                    {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                        formName
-                    ) && (
-                        <div className='row gap-8'>
-                            {currency_list ? (
-                                <>
+                        {['highlowticks'].includes(formName) && (
+                            <div className='quill-form-row'>
+                                <div className='form_field'>
+                                    <NumbersDropdown
+                                        value={selected_tick}
+                                        label={localize('Tick Prediction')}
+                                        start={1}
+                                        end={5}
+                                        elementId='selected_tick'
+                                        onUpdate={updateOldField}
+                                    />
+                                </div>
+                            </div>
+                        )}
+
+                        {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
+                            formName
+                        ) && (
+                            <div className='quill-form-row'>
+                                <div className='form_field'>
+                                    <InputDropdown
+                                        options={[
+                                            { text: localize('Stake'), value: 'stake' },
+                                            { text: localize('Payout'), value: 'payout' },
+                                        ]}
+                                        value={amount_type}
+                                        onSelectOption={(value) => {
+                                            updateOldField('amount_type', value, 'change');
+                                        }}
+                                    />
+                                </div>
+
+                                {currency_list ? (
+                                    <>
+                                        <div className='form_field'>
+                                            <TextField
+                                                value={amount}
+                                                type='number'
+                                                allowDecimals={true}
+                                                onChange={(e) => handleAmountChange(e, 'amount')}
+                                            />
+                                        </div>
+                                        <div className='form_field'>
+                                            <CurrencyDropdown
+                                                currency_list={currency_list}
+                                                currency={currency}
+                                                onUpdate={updateOldField}
+                                                elementId='currency'
+                                            />
+                                        </div>
+                                    </>
+                                ) : (
                                     <div className='form_field'>
-                                        <TextField
-                                            value={multiplier}
+                                        <TextFieldAddon
+                                            type='number'
+                                            allowDecimals
+                                            onChange={(e) => handleAmountChange(e, 'amount')}
+                                            value={amount}
+                                            addonLabel={currency}
+                                            addOnPosition='right'
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
+                            formName
+                        ) && (
+                            <div className='quill-form-row'>
+                                {currency_list ? (
+                                    <>
+                                        <div className='form_field'>
+                                            <TextField
+                                                value={multiplier}
+                                                label={localize('Multiplier')}
+                                                type='number'
+                                                allowDecimals={true}
+                                                onChange={(e) => handleAmountChange(e, 'multiplier')}
+                                            />
+                                        </div>
+                                        <div className='form_field'>
+                                            <CurrencyDropdown
+                                                currency_list={currency_list}
+                                                currency={currency}
+                                                onUpdate={updateOldField}
+                                                elementId='multiplier_currency'
+                                            />
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className='form_field'>
+                                        <TextFieldAddon
+                                            addonLabel={currency}
+                                            addOnPosition='right'
                                             label={localize('Multiplier')}
+                                            value={multiplier}
                                             type='number'
                                             allowDecimals={true}
                                             onChange={(e) => handleAmountChange(e, 'multiplier')}
                                         />
                                     </div>
-                                    <div className='form_field'>
-                                        <CurrencyDropdown
-                                            currency_list={currency_list}
-                                            currency={currency}
-                                            onUpdate={updateOldField}
-                                            elementId='multiplier_currency'
-                                        />
-                                    </div>
-                                </>
-                            ) : (
-                                <div className='form_field'>
-                                    <TextFieldAddon
-                                        addonLabel={currency}
-                                        addOnPosition='right'
-                                        label={localize('Multiplier')}
-                                        value={multiplier}
-                                        type='number'
-                                        allowDecimals={true}
-                                        onChange={(e) => handleAmountChange(e, 'multiplier')}
-                                    />
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    {['risefall', 'callputequal'].includes(formName) && (
-                        <div className='row'>
-                            <Checkbox
-                                label={localize('Allow equals')}
-                                onChange={(e) => {
-                                    updateOldField('callputequal', e, 'change');
-                                }}
-                                size='md'
-                                checked={+is_equal === 1}
-                                infoIconMessage={localize(
-                                    'Win payout if exit spot is also equal to entry spot.'
                                 )}
-                            />
-                        </div>
-                    )}
-                </div>
+                            </div>
+                        )}
+
+                        {['risefall', 'callputequal'].includes(formName) && (
+                            <div className='quill-form-row allow-equals'>
+                                <Checkbox
+                                    label={localize('Allow equals')}
+                                    onChange={(e) => {
+                                        updateOldField('callputequal', e, 'change');
+                                    }}
+                                    size='md'
+                                    checked={+is_equal === 1}
+                                    infoIconMessage={localize(
+                                        'Win payout if exit spot is also equal to entry spot.'
+                                    )}
+                                />
+                            </div>
+                        )}
+                    </div>
+                </>
             )}
         </div>
     );

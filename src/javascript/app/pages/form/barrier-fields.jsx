@@ -49,7 +49,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
     return (
         <>
             {['touchnotouch', 'higherlower'].includes(formName) && barrier_data?.show_barrier && (
-                <div className='row gap-8'>
+                <div className='quill-form-row'>
                     <div className='form_field'>
                         <TextField
                             label={barrier_data.label}
@@ -73,7 +73,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
             )}
 
             {['endsinout', 'staysinout'].includes(formName) && barrier_data?.show_barrier_highlow && (
-                <div className='row gap-8'>
+                <div className='quill-form-row'>
                     <div className='form_field'>
                         <TextField
                             label={barrier_data.label_high}
