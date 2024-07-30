@@ -15,7 +15,7 @@ const ArrowsMobile = ({ direction, parent }) => (
 const Analysis = ({ no_graph }) => (
     <div id='trading_bottom_content'>
         <div id='trading_bottom_content_tabs' />
-        <TabContainer className='gr-padding-30 gr-parent full-width' theme='light'>
+        <TabContainer className='invisible gr-padding-30 gr-parent full-width' theme='light'>
             <div className='gr-row'>
                 <ArrowsMobile parent='trade_analysis' direction='left' />
                 <strong id='tab_mobile_header' className='align-self-center gr-hide gr-show-m' />
@@ -23,7 +23,7 @@ const Analysis = ({ no_graph }) => (
             </div>
             <TabsSubtabs
                 id='trade_analysis'
-                className='gr-padding-20 gr-parent tab-selector-wrapper'
+                className='gr-padding-20 gr-parent tab-selector-wrapper invisible'
                 items={[
                     { id: 'tab_graph',        disabled: no_graph, text: it.L('Chart') },
                     { id: 'tab_explanation',  text: it.L('Explanation') },
