@@ -13,7 +13,13 @@ const NotAvailable = ({ title, body }) => (
             <Text size='lg' centered>
                 {body}
             </Text>
-            <Button onClick={() => getElementById('acc_switcher').click()} size='lg'>
+            <Button
+                onClick={() => {
+                    getElementById('acc_switcher').click();
+                    console.log(getElementById('acc_switcher'));
+                }}
+                size='lg'
+            >
                 {localize('Switch to another account')}
             </Button>
         </section>
