@@ -101,19 +101,19 @@ export const contractExplanationData = {
         lookbacklow: {
             title  : 'Pay-out' ,
             content: [
-                localize('By purchasing the <strong>"Close-Low"</strong> contract, you\'ll win the multiplier times the difference between the <strong>close</strong> and <strong>low</strong> over the duration of the contract.'),
+                localize('By purchasing the [_1]"Close-Low"[_2] contract, you\'ll win the multiplier times the difference between the [_1]close[_2] and [_1]low[_2] over the duration of the contract.', ['<strong>', '</strong>']),
             ],
         },
         lookbackhigh: {
             title  : 'Pay-out' ,
             content: [
-                localize('By purchasing the <strong>"High-Close"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>close</strong> over the duration of the contract.'),
+                localize('By purchasing the [_1]"High-Close"[_2] contract, you\'ll win the multiplier times the difference between the [_1]high[_2] and [_1]close[_2] over the duration of the contract.', ['<strong>', '</strong>']),
             ],
         },
         lookbackhighlow: {
             title  : 'Pay-out' ,
             content: [
-                localize('By purchasing the <strong>"High-Low"</strong> contract, you\'ll win the multiplier times the difference between the <strong>high</strong> and <strong>low</strong> over the duration of the contract.'),
+                localize('By purchasing the [_1]"High-Low"[_2] contract, you\'ll win the multiplier times the difference between the [_1]high[_2] and [_1]low[_2] over the duration of the contract.', ['<strong>', '</strong>']),
             ],
         },
         reset: {
@@ -121,21 +121,21 @@ export const contractExplanationData = {
             content: [
                 localize('If you select "Reset-Call", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time.'),
                 localize('If you select "Reset-Put", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time.'),
-                localize('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don\'t win the payout.'),
+                localize('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don\'t win the payout.'),
             ],
         },
         highlowticks: {
             
             content: [
-                localize('If you select <strong>"High Tick"</strong>, you win the payout if the selected tick is the <strong>highest among the next five ticks</strong>.'),
-                localize('If you select <strong>"Low Tick"</strong>, you win the payout if the selected tick is the <strong>lowest among the next five ticks</strong>.'),
+                localize('If you select [_1]"High Tick"[_2], you win the payout if the selected tick is the [_1]highest among the next five ticks[_2].', ['<strong>', '</strong>']),
+                localize('If you select [_1]"Low Tick"[_2], you win the payout if the selected tick is the [_1]lowest among the next five ticks[_2].', ['<strong>', '</strong>']),
             ],
         },
         runs: {
             
             content: [
-                localize('If you select <strong>"Only Ups"</strong>, you win the payout if consecutive ticks rise successively after the <strong>entry spot</strong>.<br />No payout if any tick falls or is equal to any of the previous ticks.'),
-                localize('If you select <strong>"Only Downs"</strong>, you win the payout if consecutive ticks fall successively after the <strong>entry spot</strong>.<br />No payout if any tick rises or is equal to any of the previous ticks.'),
+                localize('If you select [_1]"Only Ups"[_2], you win the payout if consecutive ticks rise successively after the [_1]entry spot[_2].[_3]No payout if any tick falls or is equal to any of the previous ticks.', ['<strong>', '</strong>', '<br />']),
+                localize('If you select [_1]"Only Downs"[_2], you win the payout if consecutive ticks fall successively after the [_1]entry spot[_2].[_3]No payout if any tick rises or is equal to any of the previous ticks.', ['<strong>', '</strong>', '<br />']),
             ],
         },
     },
@@ -223,43 +223,43 @@ export const contractExplanationData = {
         lookbacklow: {
             title  : localize('High, Low and Close') ,
             content: [
-                localize('The <strong>high</strong> is the highest point ever reached by the market during the contract period.'),
-                localize('The <strong>low</strong> is the lowest point ever reached by the market during the contract period.'),
-                localize('The <strong>close</strong> is the latest tick at or before the <strong>end time</strong>. If you selected a specific <strong>end time,</strong> the <strong>end time</strong> is the selected time.'),
+                localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The <strong>contract period</strong> is the period between the <strong>first tick</strong> (after start time) and the <strong>end time</strong>.'),
-                localize('The <strong>start time</strong> begins when the contract is processed by our servers.'),
-                localize('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>.'),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
+                localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],
         },
         lookbackhigh: {
             title  : localize('High, Low and Close') ,
             content: [
-                localize('The <strong>high</strong> is the highest point ever reached by the market during the contract period.'),
-                localize('The <strong>low</strong> is the lowest point ever reached by the market during the contract period.'),
-                localize('The <strong>close</strong> is the latest tick at or before the <strong>end time</strong>. If you selected a specific <strong>end time,</strong> the <strong>end time</strong> is the selected time.'),
+                localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The <strong>contract period</strong> is the period between the <strong>first tick</strong> (after start time) and the <strong>end time</strong>.'),
-                localize('The <strong>start time</strong> begins when the contract is processed by our servers.'),
-                localize('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>.'),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
+                localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],
         },
         lookbackhighlow: {
             title  : localize('High, Low and Close') ,
             content: [
-                localize('The <strong>high</strong> is the highest point ever reached by the market during the contract period.'),
-                localize('The <strong>low</strong> is the lowest point ever reached by the market during the contract period.'),
-                localize('The <strong>close</strong> is the latest tick at or before the <strong>end time</strong>. If you selected a specific <strong>end time,</strong> the <strong>end time</strong> is the selected time.'),
+                localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The <strong>contract period</strong> is the period between the <strong>first tick</strong> (after start time) and the <strong>end time</strong>.'),
-                localize('The <strong>start time</strong> begins when the contract is processed by our servers.'),
-                localize('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>.'),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
+                localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],
         },
         reset: {
@@ -281,11 +281,11 @@ export const contractExplanationData = {
         runs: {
             title  : localize('Entry spot') ,
             content: [
-                localize('The <strong>start time</strong> is when the contract has been processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.'),
+                localize('The [_1]start time[_2] is when the contract has been processed by our servers and the [_1]entry spot[_2] is the [_1]next tick[_2] thereafter.', ['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Exit Spot'),
             content_secondary: [
-                localize('The <strong>exit spot</strong> is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern.'),
+                localize('The [_1]exit spot[_2] is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern.', ['<strong>', '</strong>']),
             ],
         },
     },
