@@ -204,16 +204,17 @@ div#contract-injection-container {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
     border-radius: var(--core-borderRadius-500);
+
     &::-webkit-scrollbar {
         scrollbar-width: thin;
         width: var(--core-size-200);
         background-color: transparent;
         border-radius: var(--core-borderRadius-500);
     }
+
     &::-webkit-scrollbar-track {
         scrollbar-width: thin;
         background-color: transparent !important;
-    
     }
 
     &:hover {
@@ -225,10 +226,8 @@ div#contract-injection-container {
             display: unset;
             border-radius: var(--core-borderRadius-500);
             background-color: rgba(0, 0, 0, 0.08);
-        }
-       
-    }
-    
+        }  
+    } 
 }
 
 .quill-purchase-section {
