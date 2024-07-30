@@ -14,12 +14,9 @@ const NotAvailable = ({ title, body }) => (
                 {body}
             </Text>
             <Button
-                onClick={() => {
-                    document.querySelector('.header__acc-icon').click();
-                    // eslint-disable-next-line no-console
-                    console.log(document.querySelector('.header__acc-icon'));
-                    // window.accSwitcher = getElementById('acc_switcher');
-                    // console.log(window.)
+                onClick={(e) => {
+                    document.getElementById('acc_switcher').click();
+                    e.preventDefault();
                 }}
                 size='lg'
             >
