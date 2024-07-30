@@ -170,7 +170,31 @@
         max-height: 420px;
         overflow-y: auto;
         padding: 0 var(--core-spacing-400);
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+        border-radius: var(--core-borderRadius-500);
 
+        &::-webkit-scrollbar {
+            scrollbar-width: thin;
+            width: var(--core-size-200);
+            background-color: transparent;
+            border-radius: var(--core-borderRadius-500);
+        }
+        &::-webkit-scrollbar-track {
+            scrollbar-width: thin;
+            background-color: transparent !important;
+        }
+        &:hover {
+            scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+            border-radius: var(--core-borderRadius-500);
+    
+            &::-webkit-scrollbar-thumb {
+                scrollbar-width: thin;
+                display: unset;
+                border-radius: var(--core-borderRadius-500);
+                background-color: rgba(0, 0, 0, 0.08);
+            }  
+        } 
         &.market-item-container {
             max-height: 320px;
 
@@ -194,27 +218,9 @@ div#contract-injection-container {
 
         @media(max-width: 768px){
            width: 100%;
-
-           .quill-market-dropdown-item-container {
-            max-height: none;
-           }
+           max-height: none;
+           
         }
-    }
-}
-
-.quill-market-dropdown-item-container::-webkit-scrollbar {
-    scrollbar-width: thin;
-    width: var(--core-size-200);
-    background-color: transparent;
-    border-radius: var(--core-borderRadius-500);
-}
-
-.quill-market-dropdown-item-container:hover {
-    &::-webkit-scrollbar-thumb {
-        scrollbar-width: thin;
-        display: unset;
-        border-radius: var(--core-borderRadius-500);
-        background-color: rgba(0, 0, 0, 0.08);
     }
 }
 

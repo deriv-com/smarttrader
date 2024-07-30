@@ -6,7 +6,6 @@ export const contractExplanationData = {
             
             content: [
                 localize('Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period.'),
-                localize('Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period.'),
                 localize('If you select "Asian Rise", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks.'),
                 localize('If you select "Asian Fall", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks.'),
                 localize('If the <strong>last tick</strong> is equal to the average of the ticks, you don\'t win the payout.'),
