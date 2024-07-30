@@ -21,7 +21,6 @@ import {
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import tradeManager from '../../common/trade_manager.js';
-// import { handleNumeric } from '../../common/helpers.js';
 
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});

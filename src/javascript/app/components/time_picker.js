@@ -1,5 +1,4 @@
 const moment     = require('moment');
-const { default: tradeManager } = require('../common/trade_manager');
 const checkInput = require('../../_common/common_functions').checkInput;
 const localize   = require('../../_common/localize').localize;
 const padLeft    = require('../../_common/string_util').padLeft;
@@ -52,17 +51,6 @@ const TimePicker = (() => {
             }
 
             obj_config.maxTime = { hour, minute };
-        }
-
-        if (options.selector === '#time_start' && (options.minTime || options.maxTime)) {
-            tradeManager.set({
-                starttime_obj: obj_config,
-            }, 'time');
-        }
-        if (options.selector === '#expiry_time' && (options.minTime || options.maxTime)) {
-            tradeManager.set({
-                endtime_obj: obj_config,
-            }, 'time');
         }
 
         let $this;

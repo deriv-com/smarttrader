@@ -3,23 +3,18 @@ import { BreakpointProvider, CustomDropdown, DropdownItem, useDropdown } from '@
 import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
 import tradeManager from '../../common/trade_manager.js';
+import { setMinMaxTime } from '../../common/helpers.js';
 
 const TimeContent = ({ time, onUpdate, elementId }) => {
-    const [timeData, setTimeData] = useState();
+    const [startTimeData, setStartTimeData] = useState();
+    const [expiryTimeData, setExpiryTimeData] = useState();
     const hasTimeChange = useTimeChange();
     const { close } = useDropdown();
 
     useEffect(() => {
-        setTimeData((oldData) => ({
-            ...oldData,
-            ...tradeManager.getAll(),
-        }));
-
+        setStartTimeData(tradeManager.get('starttime_obj'));
+        setExpiryTimeData(tradeManager.get('expirytime_obj'));
     }, [hasTimeChange]);
-
-    useEffect(() => {
-        onUpdate(elementId, '', 'click');
-    },[]);
 
     const formatTime = (timeObj) => {
         const formattedHour = timeObj.hour.toString();
@@ -32,16 +27,16 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
         let startTime, endTime;
 
         if (elementId === 'time_start') {
-            const minTime = timeData?.starttime_obj?.minTime;
-            const maxTime = timeData?.starttime_obj?.maxTime;
-            startTime = minTime ? formatTime(minTime) : '00:00';
-            endTime = maxTime ? formatTime(maxTime) : '23:55';
+            const minTime = startTimeData?.minTime;
+            const maxTime = startTimeData?.maxTime;
+            startTime = minTime && !isNaN(minTime.hour) && !isNaN(minTime.minute) ? formatTime(minTime) : '00:00';
+            endTime = maxTime && !isNaN(maxTime.hour) && !isNaN(maxTime.minute) ? formatTime(maxTime) : '23:55';
         }
         if (elementId === 'expiry_time') {
-            const minTime = timeData?.endtime_obj?.minTime;
-            const maxTime = timeData?.endtime_obj?.maxTime;
-            startTime = minTime ? formatTime(minTime) : '00:00';
-            endTime = maxTime ? formatTime(maxTime) : '23:55';
+            const minTime = expiryTimeData?.minTime;
+            const maxTime = expiryTimeData?.maxTime;
+            startTime = minTime && !isNaN(minTime.hour) && !isNaN(minTime.minute) ? formatTime(minTime) : '00:00';
+            endTime = maxTime && !isNaN(maxTime.hour) && !isNaN(maxTime.minute) ? formatTime(maxTime) : '23:55';
         }
     
         const currentTime = moment.utc(startTime, 'HH:mm');
@@ -77,14 +72,24 @@ export const TimePickerDropdown = ({
     time,
     onUpdate,
     elementId,
-}) => (
-    <BreakpointProvider>
-        <CustomDropdown value={time}>
-            <TimeContent
-                time={time}
-                onUpdate={onUpdate}
-                elementId={elementId}
-            />
-        </CustomDropdown>
-    </BreakpointProvider>
-);
+}) => {
+    const handleOpen = (id) => {
+        if (id === 'expiry_time') {
+            setMinMaxTime(id, 1);
+        } else {
+            setMinMaxTime(id);
+        }
+    };
+
+    return (
+        <BreakpointProvider>
+            <CustomDropdown value={time} onClickDropdown={() => handleOpen(elementId)}>
+                <TimeContent
+                    time={time}
+                    onUpdate={onUpdate}
+                    elementId={elementId}
+                />
+            </CustomDropdown>
+        </BreakpointProvider>
+    );
+};
