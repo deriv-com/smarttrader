@@ -18,6 +18,7 @@ const NotAvailable = ({ title, body }) => (
                     getElementById('acc_switcher').click();
                     // eslint-disable-next-line no-console
                     console.log(getElementById('acc_switcher'));
+                    window.accSwitcher = getElementById('acc_switcher');
                 }}
                 size='lg'
             >
