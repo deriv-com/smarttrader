@@ -51,7 +51,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
         if (barrier_error) {
             return localize('High barrier must be higher than low barrier');
         } else if (barrier_indicator_high) {
-            return localize(`Indicator barrier: ${barrier_indicator_high}`);
+            return `${localize('Indicator barrier')} : ${barrier_indicator}`;
         }
         return null;
     };
@@ -75,10 +75,9 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                                     barrier_data?.isOffset ? barrierRegex : null
                                 )
                             }
-                            status={barrier_error && 'error'}
+                            status={barrier_error ? 'error' : 'neutral'}
                             message={
-                                barrier_indicator &&
-                                localize(`Indicator barrier: ${barrier_indicator}`)
+                                barrier_indicator && `${localize('Indicator barrier')} : ${barrier_indicator}`
                             }
                         />
                     </div>
@@ -98,7 +97,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             onChange={(e) => handleAmountChange(
                                 e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
                             )}
-                            status={barrier_error && 'error'}
+                            status={barrier_error ? 'error' : 'neutral'}
                             message={getMessage()}
                         />
                     </div>
@@ -111,7 +110,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             onChange={(e) => handleAmountChange(
                                 e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
                             )}
-                            message={barrier_indicator_low && localize(`Indicator barrier: ${barrier_indicator_low}`)}
+                            message={barrier_indicator_low && `${localize('Indicator barrier')} : ${barrier_indicator_low}`}
                         />
                     </div>
                 </div>
