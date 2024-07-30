@@ -448,6 +448,7 @@ div#contract-injection-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 12;
 
     @media (max-width: 940px) {
         top: 40px;   
