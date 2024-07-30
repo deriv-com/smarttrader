@@ -1,5 +1,5 @@
 const CommonFunctions = require('../../../_common/common_functions');
-const { default: tradeManager } = require('../../common/trade_manager');
+const { tradeManager } = require('../../common/trade_manager').default;
 const localize        = require('../../../_common/localize').localize;
 
 /*

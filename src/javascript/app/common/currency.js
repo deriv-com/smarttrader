@@ -1,4 +1,4 @@
-const { default: tradeManager } = require('./trade_manager');
+const { tradeManager } = require('./trade_manager').default;
 const CurrencyBase = require('../../_common/base/currency_base');
 const localize     = require('../../_common/localize').localize;
 
