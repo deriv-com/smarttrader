@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
     TextField,
-    InputDropdown,
     TextFieldAddon,
     DatePickerDropdown,
     Checkbox,
@@ -12,6 +11,7 @@ import { CurrencyDropdown } from './currency-dropdown.jsx';
 import { NumbersDropdown } from './numbers-dropdown.jsx';
 import BarrierFields from './barrier-fields.jsx';
 import { TimePickerDropdown } from './time-selection.jsx';
+import { DropdownComponent } from './dropdown-component.jsx';
 import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 import {
     useSessionChange,
@@ -122,10 +122,17 @@ export const FormComponent = () => {
         updateOldField(id, e.target.value, 'input');
     };
 
+    const findTextByValue = (arr, value) => arr.find(item => item.value === value)?.text || null;
+    
     const isEmpty = (obj) => Object.keys(obj).length === 0;
     if (isEmpty(tradeData)) {
         return null;
     }
+
+    const payoutTypeOptions = [
+        { text: localize('Stake'), value: 'stake' },
+        { text: localize('Payout'), value: 'payout' },
+    ];
 
     return (
         <div className='quill-form-container'>
@@ -147,13 +154,12 @@ export const FormComponent = () => {
                         {['risefall', 'callputequal'].includes(formName) && start_dates && (
                             <div className='quill-form-row'>
                                 <div className='form_field'>
-                                    <InputDropdown
+                                    <DropdownComponent
                                         label={localize('Start Time')}
                                         options={start_dates.options}
-                                        value={date_start}
-                                        onSelectOption={(value) => {
-                                            updateOldField('date_start', value, 'change');
-                                        }}
+                                        value={findTextByValue(start_dates.options, date_start)}
+                                        onUpdate={updateOldField}
+                                        elementId='date_start'
                                     />
                                 </div>
                                 {date_start !== 'now' && (
@@ -171,12 +177,11 @@ export const FormComponent = () => {
                         {formName !== 'highlowticks' && (
                             <div className='quill-form-row'>
                                 <div className='form_field'>
-                                    <InputDropdown
+                                    <DropdownComponent
                                         options={expiry_type_options}
-                                        value={expiryType}
-                                        onSelectOption={(value) => {
-                                            updateOldField('expiry_type', value, 'change');
-                                        }}
+                                        value={findTextByValue(expiry_type_options, expiryType)}
+                                        onUpdate={updateOldField}
+                                        elementId='expiry_type'
                                     />
                                 </div>
                                 {expiryType === 'duration' && (
@@ -197,12 +202,11 @@ export const FormComponent = () => {
                                             />
                                         </div>
                                         <div className='form_field'>
-                                            <InputDropdown
+                                            <DropdownComponent
                                                 options={duration_options}
-                                                value={duration_units}
-                                                onSelectOption={(value) => {
-                                                    updateOldField('duration_units', value, 'change');
-                                                }}
+                                                value={findTextByValue(duration_options, duration_units)}
+                                                onUpdate={updateOldField}
+                                                elementId='duration_units'
                                             />
                                         </div>
                                     </>
@@ -220,12 +224,11 @@ export const FormComponent = () => {
                                                         }}
                                                     />
                                                 ) : (
-                                                    <InputDropdown
+                                                    <DropdownComponent
                                                         options={endtime_data.options}
                                                         value={expiry_date}
-                                                        onSelectOption={(value) => {
-                                                            onExpiryDateChange(value);
-                                                        }}
+                                                        onUpdate={onExpiryDateChange}
+                                                        elementId='expiry_date'
                                                     />
                                                 )}
                                             </div>
@@ -285,15 +288,11 @@ export const FormComponent = () => {
                         ) && (
                             <div className='quill-form-row'>
                                 <div className='form_field'>
-                                    <InputDropdown
-                                        options={[
-                                            { text: localize('Stake'), value: 'stake' },
-                                            { text: localize('Payout'), value: 'payout' },
-                                        ]}
-                                        value={amount_type}
-                                        onSelectOption={(value) => {
-                                            updateOldField('amount_type', value, 'change');
-                                        }}
+                                    <DropdownComponent
+                                        options={payoutTypeOptions}
+                                        value={findTextByValue(payoutTypeOptions, amount_type)}
+                                        onUpdate={updateOldField}
+                                        elementId='amount_type'
                                     />
                                 </div>
 

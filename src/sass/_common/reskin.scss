@@ -781,6 +781,9 @@ html.test {
             .quill-custom-dropdown__container {
                 max-width: unset !important;
             }
+            .datepicker__wrapper {
+                max-width: unset !important;
+            }
         }
         &.allow-equals {
             justify-content: center;
