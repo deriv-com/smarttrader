@@ -15,10 +15,11 @@ const NotAvailable = ({ title, body }) => (
             </Text>
             <Button
                 onClick={() => {
-                    getElementById('acc_switcher').click();
+                    document.querySelector('.header__acc-icon').click();
                     // eslint-disable-next-line no-console
-                    console.log(getElementById('acc_switcher'));
-                    window.accSwitcher = getElementById('acc_switcher');
+                    console.log(document.querySelector('.header__acc-icon'));
+                    // window.accSwitcher = getElementById('acc_switcher');
+                    // console.log(window.)
                 }}
                 size='lg'
             >
