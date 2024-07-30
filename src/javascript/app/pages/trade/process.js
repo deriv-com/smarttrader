@@ -65,9 +65,9 @@ const Process = (() => {
                 commonTrading.displayMarkets();
                 processMarket();
             } else if (country === 'gb' || country === 'im'){
-                NotAvailable.init({ body: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') });
+                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') });
             } else {
-                NotAvailable.init();
+                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.') });
             }
         });
     };
