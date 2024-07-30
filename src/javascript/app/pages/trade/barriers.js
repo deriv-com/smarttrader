@@ -192,11 +192,13 @@ const Barriers = (() => {
         const barrier_element      = getElementById('barrier');
         const barrier_high_element = getElementById('barrier_high');
         const empty = isNaN(parseFloat(barrier_element.value)) || isAbsoluteZero(barrier_element.value);
-
+        let barrier_error;
         if (isVisible(barrier_element) && empty) {
             barrier_element.classList.add('error-field');
+            barrier_error = true;
         } else {
             barrier_element.classList.remove('error-field');
+            barrier_error = false;
         }
 
         if (isVisible(barrier_high_element)) {
@@ -205,7 +207,17 @@ const Barriers = (() => {
             const is_high_barrier_greater = +barrier_high_element.value > +barrier_low_element.value;
             barrier_high_element.classList[is_high_barrier_greater ? 'remove' : 'add']('error-field');
             error_node.classList[is_high_barrier_greater ? 'add' : 'remove']('invisible');
+
+            if (is_high_barrier_greater) {
+                barrier_error = false;
+            } else {
+                barrier_error = true;
+            }
         }
+
+        tradeManager.set({
+            barrier_error,
+        },'barrier');
     };
 
     const showHideRelativeTip = (barrier, arr_el) => {

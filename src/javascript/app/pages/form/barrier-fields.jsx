@@ -42,13 +42,25 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
         barrier_indicator,
         barrier_indicator_high,
         barrier_indicator_low,
+        barrier_error,
     } = barrierData;
 
     const barrierRegex = '[+-]?(d+(.d*)?|.d+)';
 
+    const getMessage = () => {
+        if (barrier_error) {
+            return localize('High barrier must be higher than low barrier');
+        } else if (barrier_indicator_high) {
+            return localize(`Indicator barrier: ${barrier_indicator_high}`);
+        }
+        return null;
+    };
+
     return (
         <>
-            {['touchnotouch', 'higherlower'].includes(formName) && barrier_data?.show_barrier && (
+            {['touchnotouch', 'higherlower'].includes(formName) &&
+            barrier_data?.show_barrier &&
+            barrier && (
                 <div className='quill-form-row'>
                     <div className='form_field'>
                         <TextField
@@ -63,6 +75,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                                     barrier_data?.isOffset ? barrierRegex : null
                                 )
                             }
+                            status={barrier_error && 'error'}
                             message={
                                 barrier_indicator &&
                                 localize(`Indicator barrier: ${barrier_indicator}`)
@@ -72,7 +85,9 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                 </div>
             )}
 
-            {['endsinout', 'staysinout'].includes(formName) && barrier_data?.show_barrier_highlow && (
+            {['endsinout', 'staysinout'].includes(formName) &&
+            barrier_data?.show_barrier_highlow &&
+            barrier_high && barrier_low && (
                 <div className='quill-form-row'>
                     <div className='form_field'>
                         <TextField
@@ -83,7 +98,8 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             onChange={(e) => handleAmountChange(
                                 e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
                             )}
-                            message={barrier_indicator_high && localize(`Indicator barrier: ${barrier_indicator_high}`)}
+                            status={barrier_error && 'error'}
+                            message={getMessage()}
                         />
                     </div>
                     <div className='form_field'>
