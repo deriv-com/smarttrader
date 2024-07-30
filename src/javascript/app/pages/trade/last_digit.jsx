@@ -1,7 +1,7 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import { Select } from '../../_common/components/elements.jsx';
-import { localize } from '../../../javascript/_common/localize.js';
+import { Select } from '../../../../templates/_common/components/elements.jsx';
+import { localize } from '../../../_common/localize.js';
 
 const LastDigit = () => (
     <div className='gr-parent'>
