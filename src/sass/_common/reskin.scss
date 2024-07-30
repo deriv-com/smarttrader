@@ -211,12 +211,10 @@ div#contract-injection-container {
         background-color: transparent;
         border-radius: var(--core-borderRadius-500);
     }
-
     &::-webkit-scrollbar-track {
         scrollbar-width: thin;
         background-color: transparent !important;
     }
-
     &:hover {
         scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
         border-radius: var(--core-borderRadius-500);
