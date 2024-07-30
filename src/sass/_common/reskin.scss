@@ -194,12 +194,26 @@ div#contract-injection-container {
 
         @media(max-width: 768px){
            width: 100%;
-
-           .quill-market-dropdown-item-container {
-            max-height: none;
-           }
+           max-height: none;
+           
         }
     }
+}
+
+.quill-market-dropdown-item-container{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+    border-radius: var(--core-borderRadius-500);
+
+    &:hover {
+        scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+        border-radius: var(--core-borderRadius-500);
+    }
+}
+
+.quill-market-dropdown-item-container::-webkit-scrollbar-track {
+    scrollbar-width: thin;
+    background-color: transparent !important;
 }
 
 .quill-market-dropdown-item-container::-webkit-scrollbar {
@@ -209,12 +223,14 @@ div#contract-injection-container {
     border-radius: var(--core-borderRadius-500);
 }
 
-.quill-market-dropdown-item-container:hover {
-    &::-webkit-scrollbar-thumb {
-        scrollbar-width: thin;
-        display: unset;
-        border-radius: var(--core-borderRadius-500);
-        background-color: rgba(0, 0, 0, 0.08);
+.quill-market-dropdown-item-container {
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            scrollbar-width: thin;
+            display: unset;
+            border-radius: var(--core-borderRadius-500);
+            background-color: rgba(0, 0, 0, 0.08);
+        }
     }
 }
 
