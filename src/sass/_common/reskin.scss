@@ -872,9 +872,9 @@ html.test {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 960px;
+    max-width: 942px;
     margin: 0 auto;
-    padding-block: 40px;
+
 
     @media (max-width: 768px) {
         padding: 16px;
@@ -959,7 +959,7 @@ html.test {
 }
 
 .static-page-layout {
-    margin-top: 17px;
+    margin-top: 40px;
     margin-bottom: 20px;
 
     @media (max-width: 768px) {

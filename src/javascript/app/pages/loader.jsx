@@ -25,6 +25,24 @@ const Loader = () => {
     const hasContractChange  = useContractChange();
 
     const [loading,setLoading] = useState(true);
+    const pageTypes = [
+        {
+            name: '404',
+            code: '404',
+        },
+        {
+            name: 'Trade',
+            code: 'trading',
+        },
+        {
+            name: 'Endpoint',
+            code: 'endpoint',
+        },
+    ];
+
+    const getPageType = () => pageTypes.find(({ code }) => window.location.pathname.includes(code)) || { name: 'Generic', code: '' };
+
+    const page = getPageType().name;
  
     useEffect(() => {
         const hidePageLoader = contractManager.get('hidePageLoader');
@@ -37,7 +55,9 @@ const Loader = () => {
 
     useEffect(() => {
         window.addEventListener('load', () => {
-            setLoading(false);
+            if (page !== 'Trade'){
+                setLoading(false);
+            }
         });
     },[]);
 
@@ -46,31 +66,37 @@ const Loader = () => {
             <Portal>
                 <div className='quill-generic-popup'>
                     <div className='main-loader'>
-                        <div className='header-loader'>
-                            <div className='dropdown-loader-container'>
-                                <span className='dropdown-loader'>
-                                    <Skeleton.Square height={53} rounded fullWidth />
-                                </span>
-                                <span className='dropdown-loader'>
-                                    <Skeleton.Square height={53} rounded fullWidth />
-                                </span>
-                            </div>
-                            <div className='other-header-loader-container'>
-                                <Skeleton.Square height={53} width={80} rounded  />
-                                <Skeleton.Square height={53} width={105} rounded  />
-                            </div>
-                        </div>
-                        <div className='body-loader'>
-                            <div className='trade-section-loader'>
-                                <Skeleton.Square height={370} rounded fullWidth />
-                            </div>
-                            <div className='purchase-section-loader'>
-                                <PurchaseSectionLoader />
-                            </div>
-                        </div>
-                        <div className='footer-loader'>
-                            <Skeleton.Square height={50} width={245} rounded  />
-                        </div>
+                        {page === 'Trade' ? (
+                            <>
+                                <div className='header-loader'>
+                                    <div className='dropdown-loader-container'>
+                                        <span className='dropdown-loader'>
+                                            <Skeleton.Square height={53} rounded fullWidth />
+                                        </span>
+                                        <span className='dropdown-loader'>
+                                            <Skeleton.Square height={53} rounded fullWidth />
+                                        </span>
+                                    </div>
+                                    <div className='other-header-loader-container'>
+                                        <Skeleton.Square height={53} width={80} rounded  />
+                                        <Skeleton.Square height={53} width={105} rounded  />
+                                    </div>
+                                </div>
+                                <div className='body-loader'>
+                                    <div className='trade-section-loader'>
+                                        <Skeleton.Square height={370} rounded fullWidth />
+                                    </div>
+                                    <div className='purchase-section-loader'>
+                                        <PurchaseSectionLoader />
+                                    </div>
+                                </div>
+                                <div className='footer-loader'>
+                                    <Skeleton.Square height={50} width={245} rounded  />
+                                </div>
+                            </>
+                        ) : (
+                            <Skeleton.Square height={300} fullWidth rounded  />
+                        )}
                     </div>
                 </div>
             </Portal>
