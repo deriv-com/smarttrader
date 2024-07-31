@@ -59,6 +59,7 @@ export const FormComponent = () => {
         endtime_data,
         currency_list,
         reset_message,
+        show_allow_equals,
     } = tradeData;
 
     const contractForms = [
@@ -369,7 +370,7 @@ export const FormComponent = () => {
                             </div>
                         )}
 
-                        {['risefall', 'callputequal'].includes(formName) && (
+                        {show_allow_equals && (
                             <div className='quill-form-row allow-equals'>
                                 <Checkbox
                                     label={localize('Allow equals')}
