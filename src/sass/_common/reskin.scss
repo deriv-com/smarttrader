@@ -561,6 +561,12 @@ div#contract-injection-container {
 
                 &.full {
                     max-width: none;
+                    min-width: 564px;
+
+                    @media (max-width: 940px) {
+                        min-width: 100%;
+                        
+                    }
                 }
                 .table-box {
                     width: 100%;
