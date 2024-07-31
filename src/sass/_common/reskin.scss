@@ -823,6 +823,16 @@ html.test {
     }
 }
 
+.barrier-tooltip {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.barrier-indicator {
+    text-decoration: underline;
+}
+
 .deriv-dropdown__menu--open {
     position: relative;
     z-index: 99;
