@@ -217,6 +217,7 @@ const Purchase = (() => {
                 purchaseManager.set({
                     pr_tablePayout     : localize('Potential Payout'),
                     pr_tablePayoutValue: formula,
+                    pr_showTableProfit : false,
                 });
                 profit.setVisibility(0);
             } else {
@@ -229,6 +230,7 @@ const Purchase = (() => {
                     pr_tablePayoutValue: formatMoney(currency, payout_value),
                     pr_tableProfit     : localize('Potential Profit'),
                     pr_tableProfitValue: potential_profit_value,
+                    pr_showTableProfit : true,
 
                 });
             }
