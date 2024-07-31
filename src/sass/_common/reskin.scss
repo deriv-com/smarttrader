@@ -203,9 +203,7 @@
                 background-color: rgba(0, 0, 0, 0.08);
             }  
         } 
-        :not(:hover)::-webkit-scrollbar-thumb {
-            background-color: transparent !important; /* hide the scrollbar handle */
-        }
+    
         &.market-item-container {
             max-height: 320px;
 
