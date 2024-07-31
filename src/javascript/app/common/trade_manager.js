@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import { triggerTradeChange } from '../hooks/events';
+import { triggerBarrierChange, triggerTimeChange, triggerTradeChange } from '../hooks/events';
 
 class TradeManager {
     constructor() {
@@ -8,7 +8,7 @@ class TradeManager {
         }
     }
 
-    set(data) {
+    set(data, optional) {
         if (typeof data === 'object') {
             const oldValues = {};
             const newValues = {};
@@ -24,8 +24,13 @@ class TradeManager {
                 window.dispatchEvent(new CustomEvent('tradeChange', {
                     detail: { oldValues, newValues },
                 }));
-
-                triggerTradeChange();
+                if (optional === 'barrier') {
+                    triggerBarrierChange();
+                } else if (optional === 'time') {
+                    triggerTimeChange();
+                } else {
+                    triggerTradeChange();
+                }
             }
         }
     }

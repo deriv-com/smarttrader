@@ -5,7 +5,7 @@ const marketsElement             = require('./markets.jsx');
 const GuideElement               = require('./guide.jsx');
 const PurchaseElement            = require('./purchase/purchase.jsx');
 const MarketSelectorElement      = require('./markets/market-selector.jsx');
-const FormsWrapperElement        = require('../form/contract_form_wrapper.jsx');
+const FormsWrapperElement        = require('../form/contract-form-wrapper.jsx');
 const TabsElement                = require('../bottom/tabs.jsx');
 const formatMoney                = require('../../common/currency').formatMoney;
 const ActiveSymbols              = require('../../common/active_symbols');
@@ -58,11 +58,6 @@ const commonTrading = (() => {
                 formName       : selected || Defaults.get('formname'),
                 contractElement: getElementById('contract'),
             });
-            FormsWrapperElement.init(
-                all_contracts,
-                contracts_tree,
-                contract_to_show
-            );
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
@@ -70,6 +65,7 @@ const commonTrading = (() => {
                 formname : contract_to_show || Defaults.get(FORM_NAME),
             });
         }
+        FormsWrapperElement.init();
     };
 
     const displayMarkets = () => {

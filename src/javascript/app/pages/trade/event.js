@@ -17,7 +17,6 @@ const isCryptocurrency      = require('../../common/currency').isCryptocurrency;
 const onlyNumericOnKeypress = require('../../common/event_handler');
 const TimePicker            = require('../../components/time_picker');
 const GTM                   = require('../../../_common/base/gtm');
-const { triggerSessionChange } = require('../../hooks/events');
 const dateValueChanged      = require('../../../_common/common_functions').dateValueChanged;
 const isVisible             = require('../../../_common/common_functions').isVisible;
 const getElementById        = require('../../../_common/common_functions').getElementById;
@@ -169,7 +168,6 @@ const TradingEvents = (() => {
         getElementById('expiry_type').addEventListener('change', (e) => {
             Defaults.set(EXPIRY_TYPE, e.target.value);
             if (Process.onExpiryTypeChange(e.target.value)) Price.processPriceRequest();
-            triggerSessionChange();
         });
 
         /*
@@ -247,7 +245,6 @@ const TradingEvents = (() => {
                         return false;
                     }
                     Defaults.set(TIME_START, time_start_element.value);
-                    triggerSessionChange();
                     let make_price_request = 1;
                     if (Defaults.get(EXPIRY_DATE)) {
                         // if time changed, proposal will be sent there if not we should send it here

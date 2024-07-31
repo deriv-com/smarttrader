@@ -2,6 +2,7 @@ const getElementById = require('../../../_common/common_functions').getElementBy
 const isVisible      = require('../../../_common/common_functions').isVisible;
 const State          = require('../../../_common/storage').State;
 const Url            = require('../../../_common/url');
+const { triggerSessionChange } = require('../../hooks/events');
 const isEmptyObject  = require('../../../_common/utility').isEmptyObject;
 
 /*
@@ -61,6 +62,7 @@ const Defaults = (() => {
             // to increase speed, do not set values when form is still loading
             if (!isVisible(getElementById('trading_init_progress'))) {
                 sessionStorage.setItem(key, value);
+                triggerSessionChange();
                 updateURL();
             }
         }
@@ -77,6 +79,7 @@ const Defaults = (() => {
             }
         });
         if (is_updated) {
+            triggerSessionChange();
             updateURL();
         }
     };

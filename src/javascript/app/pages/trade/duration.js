@@ -10,7 +10,6 @@ const Reset              = require('./reset');
 const BinarySocket       = require('../../base/socket');
 const DatePicker         = require('../../components/date_picker');
 const CommonFunctions    = require('../../../_common/common_functions');
-const { triggerSessionChange } = require('../../hooks/events');
 const localize           = require('../../../_common/localize').localize;
 const State              = require('../../../_common/storage').State;
 const toISOFormat        = require('../../../_common/string_util').toISOFormat;
@@ -379,6 +378,10 @@ const Durations = (() => {
 
     const changeExpiryTimeType = () => {
         let requested = -1;
+        const endtime_data = {
+            options        : [],
+            show_datepicker: true,
+        };
         if (CommonFunctions.getElementById('expiry_type').value === 'endtime') {
             let $expiry_date     = $('#expiry_date');
             const date_start_val = CommonFunctions.getElementById('date_start').value || 'now';
@@ -395,7 +398,11 @@ const Durations = (() => {
                     minDate : smallest_duration.unit === 'd' ? 1 : 0,
                     maxDate : 365,
                 });
+                endtime_data.options = [];
+                endtime_data.show_datepicker = true;
             } else {
+                endtime_data.options = [];
+                endtime_data.show_datepicker = false;
                 const min_date    = moment.unix(date_start_val).utc();
                 const next_day    = moment.unix(date_start_val).utc().add(1, 'day');
                 const start_dates = Contract.startDates();
@@ -428,12 +435,23 @@ const Durations = (() => {
                     $expiry_date.empty().attr('data-value', toISOFormat(selected_date));
                 }
                 appendExpiryDateValues($expiry_date, min_date, selected_date);
+                endtime_data.options.push({
+                    text : min_date.format('ddd - DD MMM, YYYY'),
+                    value: toISOFormat(min_date),
+                });
                 if (max_date) {
                     appendExpiryDateValues($expiry_date, max_date, selected_date);
+                    endtime_data.options.push({
+                        text : max_date.format('ddd - DD MMM, YYYY'),
+                        value: toISOFormat(max_date),
+                    });
                 }
                 requested = selectEndDate(selected_date);
             }
         }
+        tradeManager.set({
+            endtime_data,
+        });
         return requested;
     };
 
@@ -526,7 +544,6 @@ const Durations = (() => {
             Barriers.display();
             $(expiry_time).val('').attr('data-value', '');
             Defaults.set(EXPIRY_TIME, '');
-            triggerSessionChange();
             return processTradingTimesRequest(end_date_iso);
         } // else
         return showExpiryTime(expiry_time, expiry_time_row);

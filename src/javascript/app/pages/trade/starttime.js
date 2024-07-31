@@ -10,7 +10,6 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
-const { triggerSessionChange } = require('../../hooks/events');
 const tradeManager = require('../../common/trade_manager').default;
 
 /*
@@ -111,11 +110,6 @@ const StartDates = (() => {
                 Dropdown('#date_start');
                 Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
-                // sessionStorage.setItem(
-                //     'start_dates',
-                //     JSON.stringify(start_dates_data)
-                // );
-                // triggerSessionChange();
                 tradeManager.set({
                     start_dates: start_dates_data,
                 });
@@ -123,7 +117,6 @@ const StartDates = (() => {
             State.set('is_start_dates_displayed', true);
             if (first) {
                 Durations.onStartDateChange(first);
-                triggerSessionChange();
             }
         } else {
             if (start_dates && start_dates.has_spot) {

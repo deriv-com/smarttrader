@@ -15,6 +15,7 @@ const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
+const tradeManager      = require('../../common/trade_manager.js').default;
 const contractManager   = require('../../common/contract_manager.js').default;
 const purchaseManager   = require('../../common/purchase_manager').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
@@ -305,8 +306,14 @@ const Process = (() => {
                 el_equals.checked = true;
             }
             el_equals.parentElement.setVisibility(1);
+            tradeManager.set({
+                show_allow_equals: true,
+            });
         } else {
             el_equals.parentElement.setVisibility(0);
+            tradeManager.set({
+                show_allow_equals: false,
+            });
         }
     };
 
