@@ -373,6 +373,7 @@ export const FormComponent = () => {
                             <div className='quill-form-row allow-equals'>
                                 <Checkbox
                                     label={localize('Allow equals')}
+                                    id='allow_equals'
                                     onChange={(e) => {
                                         updateFormField('callputequal', e, 'change');
                                     }}
