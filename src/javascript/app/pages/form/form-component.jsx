@@ -100,7 +100,7 @@ export const FormComponent = () => {
         eventDispatcher(element, 'change');
     };
 
-    const updateOldField = (elementId, value, eventType) => {
+    const updateFormField = (elementId, value, eventType) => {
         const element = common_functions.getElementById(elementId);
         if (elementId === 'callputequal') {
             element.checked = !+is_equal;
@@ -118,8 +118,7 @@ export const FormComponent = () => {
     };
 
     const handleAmountChange = (e, id) => {
-    // const value = handleNumeric(e, regex);
-        updateOldField(id, e.target.value, 'input');
+        updateFormField(id, e.target.value, 'input');
     };
 
     const findTextByValue = (arr, value) => arr.find(item => item.value === value)?.text || null;
@@ -158,7 +157,7 @@ export const FormComponent = () => {
                                         label={localize('Start Time')}
                                         options={start_dates.options}
                                         value={findTextByValue(start_dates.options, date_start)}
-                                        onUpdate={updateOldField}
+                                        onUpdate={updateFormField}
                                         elementId='date_start'
                                     />
                                 </div>
@@ -166,7 +165,7 @@ export const FormComponent = () => {
                                     <div className='form_field'>
                                         <TimePickerDropdown
                                             time={time_start}
-                                            onUpdate={updateOldField}
+                                            onUpdate={updateFormField}
                                             elementId='time_start'
                                         />
                                     </div>
@@ -180,7 +179,7 @@ export const FormComponent = () => {
                                     <DropdownComponent
                                         options={expiry_type_options}
                                         value={findTextByValue(expiry_type_options, expiryType)}
-                                        onUpdate={updateOldField}
+                                        onUpdate={updateFormField}
                                         elementId='expiry_type'
                                     />
                                 </div>
@@ -193,7 +192,7 @@ export const FormComponent = () => {
                                                 message={duration_data?.message || ''}
                                                 status={duration_data?.status}
                                                 onChange={(e) => {
-                                                    updateOldField(
+                                                    updateFormField(
                                                         'duration_amount',
                                                         e.target.value,
                                                         'input'
@@ -205,7 +204,7 @@ export const FormComponent = () => {
                                             <DropdownComponent
                                                 options={duration_options}
                                                 value={findTextByValue(duration_options, duration_units)}
-                                                onUpdate={updateOldField}
+                                                onUpdate={updateFormField}
                                                 elementId='duration_units'
                                             />
                                         </div>
@@ -238,7 +237,7 @@ export const FormComponent = () => {
                                             <div className='form_field'>
                                                 <TimePickerDropdown
                                                     time={expiry_time}
-                                                    onUpdate={updateOldField}
+                                                    onUpdate={updateFormField}
                                                     elementId='expiry_time'
                                                 />
                                             </div>
@@ -262,7 +261,7 @@ export const FormComponent = () => {
                                         start={0}
                                         end={9}
                                         elementId='prediction'
-                                        onUpdate={updateOldField}
+                                        onUpdate={updateFormField}
                                     />
                                 </div>
                             </div>
@@ -277,7 +276,7 @@ export const FormComponent = () => {
                                         start={1}
                                         end={5}
                                         elementId='selected_tick'
-                                        onUpdate={updateOldField}
+                                        onUpdate={updateFormField}
                                     />
                                 </div>
                             </div>
@@ -291,7 +290,7 @@ export const FormComponent = () => {
                                     <DropdownComponent
                                         options={payoutTypeOptions}
                                         value={findTextByValue(payoutTypeOptions, amount_type)}
-                                        onUpdate={updateOldField}
+                                        onUpdate={updateFormField}
                                         elementId='amount_type'
                                     />
                                 </div>
@@ -310,7 +309,7 @@ export const FormComponent = () => {
                                             <CurrencyDropdown
                                                 currency_list={currency_list}
                                                 currency={currency}
-                                                onUpdate={updateOldField}
+                                                onUpdate={updateFormField}
                                                 elementId='currency'
                                             />
                                         </div>
@@ -349,7 +348,7 @@ export const FormComponent = () => {
                                             <CurrencyDropdown
                                                 currency_list={currency_list}
                                                 currency={currency}
-                                                onUpdate={updateOldField}
+                                                onUpdate={updateFormField}
                                                 elementId='multiplier_currency'
                                             />
                                         </div>
@@ -375,7 +374,7 @@ export const FormComponent = () => {
                                 <Checkbox
                                     label={localize('Allow equals')}
                                     onChange={(e) => {
-                                        updateOldField('callputequal', e, 'change');
+                                        updateFormField('callputequal', e, 'change');
                                     }}
                                     size='md'
                                     checked={+is_equal === 1}
