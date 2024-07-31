@@ -114,7 +114,7 @@ const Guide = (() => {
                 nextButton : btn_next,
             },
             {
-                selector   : '.quill-form-rows',
+                selector   : '#contract_forms_wrapper',
                 description: `<h1>${localize('Step')} 3</h1>${localize('Adjust trade parameters')}`,
                 event_type : 'next',
                 nextButton : btn_next,
