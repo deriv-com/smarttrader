@@ -68,12 +68,21 @@
         flex-direction: column;
         transform: scale(0.88);
 
+        @media(max-width: 768px){
+           flex-direction: row;
+        }
+
         #spot{
             margin-top:  5px;
         }
     }
     div#onboarding-container {
         margin-left: auto;
+
+        @media (max-width: 768px) {
+           display: none;
+            
+        }
     }
     .sub-navigation-container {
         display: flex;
