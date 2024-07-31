@@ -35,7 +35,7 @@ const Guide = (() => {
 
         cookie_name = 'hide_guide';
         btn_next    = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Next') }) };
-        btn_finish  = { className: 'btn btn--primary', html: $('<span/>', { text: localize('Finish') }) };
+        btn_finish  = { className: 'btn btn--primary btn--finish', html: $('<span/>', { text: localize('Finish') }) };
 
         if ($(opt.guideBtnID).length === 0 || opt.script.length === 0) {
             return;
@@ -114,7 +114,7 @@ const Guide = (() => {
                 nextButton : btn_next,
             },
             {
-                selector   : '#websocket_form',
+                selector   : '.quill-form-rows',
                 description: `<h1>${localize('Step')} 3</h1>${localize('Adjust trade parameters')}`,
                 event_type : 'next',
                 nextButton : btn_next,
