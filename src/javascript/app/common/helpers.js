@@ -80,10 +80,10 @@ const setMinMaxTime = (selector, check_end_time) => {
         initObj.maxTime = max_time.clone();
     }
 
-    makeConfig(initObj);
+    setMinMaxTimeObj(initObj);
 };
 
-const makeConfig = (options) => {
+const setMinMaxTimeObj = (options) => {
     const time_now = moment.utc(window.time).clone();
     const starttime_obj = {};
     const expirytime_obj = {};
