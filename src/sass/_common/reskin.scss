@@ -228,6 +228,15 @@ div#contract-injection-container {
     flex-direction: column;
     gap: var(--core-spacing-800);
 
+    @media (max-width: 940px) {
+       flex-direction: row;    
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        
+    }
+
     p {
         margin: 0px;
     }
