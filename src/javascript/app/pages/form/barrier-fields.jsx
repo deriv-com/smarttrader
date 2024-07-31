@@ -27,14 +27,21 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
 
     if (!barrierData) return null;
 
-    const barrierIcon = (
+    const TooltipWrapper = (tooltipContent, description) => (
         <Tooltip
-            tooltipContent={localize(
-                'Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.'
-            )}
+            tooltipContent={
+                <span className='barrier-tooltip'>{tooltipContent}</span>
+            }
         >
-            <StandaloneCircleInfoRegularIcon iconSize='sm' />
+            {description}
         </Tooltip>
+    );
+
+    const barrierIcon = TooltipWrapper(
+        localize(
+            'Add +/– to define a barrier offset. For example, +0.005 means a barrier that\'s 0.005 higher than the entry spot.'
+        ),
+        <StandaloneCircleInfoRegularIcon iconSize='sm' />
     );
 
     const {
@@ -47,13 +54,18 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
 
     const barrierRegex = '[+-]?(d+(.d*)?|.d+)';
 
-    const getMessage = () => {
-        if (barrier_error) {
+    const getMessage = (indicative, type) => {
+        const tooltipContent = localize('This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.');
+        let description;
+        if (type === 'high' && barrier_error) {
             return localize('High barrier must be higher than low barrier');
-        } else if (barrier_indicator_high) {
-            return `${localize('Indicator barrier')} : ${barrier_indicator}`;
+        } else if (indicative) {
+            description =
+                <span className='barrier-indicator'>
+                    {`${localize('Indicative barrier')} : ${indicative}`}
+                </span>;
         }
-        return null;
+        return TooltipWrapper(tooltipContent, description);
     };
 
     return (
@@ -67,7 +79,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             label={barrier_data.label}
                             value={barrier}
                             type={barrier_data?.isOffset ? 'text' : 'number'}
-                            rightIcon={barrier_data?.isOffset ? barrierIcon : null}
+                            rightIcon={barrier_data?.isOffset && barrierIcon}
                             onChange={(e) =>
                                 handleAmountChange(
                                     e,
@@ -76,9 +88,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                                 )
                             }
                             status={barrier_error ? 'error' : 'neutral'}
-                            message={
-                                barrier_indicator && `${localize('Indicator barrier')} : ${barrier_indicator}`
-                            }
+                            message={getMessage(barrier_indicator)}
                         />
                     </div>
                 </div>
@@ -93,12 +103,12 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             label={barrier_data.label_high}
                             value={barrier_high}
                             type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                            rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
+                            rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
                             onChange={(e) => handleAmountChange(
                                 e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
                             )}
                             status={barrier_error ? 'error' : 'neutral'}
-                            message={getMessage()}
+                            message={getMessage(barrier_indicator_high, 'high')}
                         />
                     </div>
                     <div className='form_field'>
@@ -106,11 +116,11 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             label={barrier_data.label_low}
                             value={barrier_low}
                             type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                            rightIcon={barrier_data?.isOffsetHightLow ? barrierIcon : null}
+                            rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
                             onChange={(e) => handleAmountChange(
                                 e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
                             )}
-                            message={barrier_indicator_low && `${localize('Indicator barrier')} : ${barrier_indicator_low}`}
+                            message={getMessage(barrier_indicator_low)}
                         />
                     </div>
                 </div>
