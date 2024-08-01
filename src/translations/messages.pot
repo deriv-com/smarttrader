@@ -166,15 +166,6 @@ msgstr ""
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
 msgstr ""
 
-msgid "By purchasing the <strong>\"Close-Low\"</strong> contract, you'll win the multiplier times the difference between the <strong>close</strong> and <strong>low</strong> over the duration of the contract."
-msgstr ""
-
-msgid "By purchasing the <strong>\"High-Close\"</strong> contract, you'll win the multiplier times the difference between the <strong>high</strong> and <strong>close</strong> over the duration of the contract."
-msgstr ""
-
-msgid "By purchasing the <strong>\"High-Low\"</strong> contract, you'll win the multiplier times the difference between the <strong>high</strong> and <strong>low</strong> over the duration of the contract."
-msgstr ""
-
 msgid "Call Spread"
 msgstr ""
 
@@ -374,6 +365,9 @@ msgid "Digit contracts will be refunded at the purchase price if the contract do
 msgstr ""
 
 msgid "Digits"
+msgstr ""
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
 msgstr ""
 
 msgid "Does Not Touch"
@@ -667,18 +661,6 @@ msgstr ""
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
 msgstr ""
 
-msgid "If you select <strong>\"High Tick\"</strong>, you win the payout if the selected tick is the <strong>highest among the next five ticks</strong>."
-msgstr ""
-
-msgid "If you select <strong>\"Low Tick\"</strong>, you win the payout if the selected tick is the <strong>lowest among the next five ticks</strong>."
-msgstr ""
-
-msgid "If you select <strong>\"Only Downs\"</strong>, you win the payout if consecutive ticks fall successively after the <strong>entry spot</strong>.<br />No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
-
-msgid "If you select <strong>\"Only Ups\"</strong>, you win the payout if consecutive ticks rise successively after the <strong>entry spot</strong>.<br />No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
-
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
 msgstr ""
 
@@ -698,6 +680,9 @@ msgid "Indicates required field"
 msgstr ""
 
 msgid "Indicative"
+msgstr ""
+
+msgid "Indicative barrier"
 msgstr ""
 
 msgid "Invalid app id"
@@ -1426,12 +1411,6 @@ msgstr ""
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
 msgstr ""
 
-msgid "The <strong>close</strong> is the latest tick at or before the <strong>end time</strong>. If you selected a specific <strong>end time,</strong> the <strong>end time</strong> is the selected time."
-msgstr ""
-
-msgid "The <strong>contract period</strong> is the period between the <strong>first tick</strong> (after start time) and the <strong>end time</strong>."
-msgstr ""
-
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr ""
 
@@ -1444,22 +1423,7 @@ msgstr ""
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
 msgstr ""
 
-msgid "The <strong>exit spot</strong> is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
-
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
-
-msgid "The <strong>high</strong> is the highest point ever reached by the market during the contract period."
-msgstr ""
-
-msgid "The <strong>low</strong> is the lowest point ever reached by the market during the contract period."
-msgstr ""
-
-msgid "The <strong>start time</strong> begins when the contract is processed by our servers."
-msgstr ""
-
-msgid "The <strong>start time</strong> is when the contract has been processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
 msgstr ""
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
@@ -1583,6 +1547,12 @@ msgid "Timed out until"
 msgstr ""
 
 msgid "Today"
+msgstr ""
+
+msgid "Top up"
+msgstr ""
+
+msgid "Top up Virtual Account?"
 msgstr ""
 
 msgid "Top up error"
