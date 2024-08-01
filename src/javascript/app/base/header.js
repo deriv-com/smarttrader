@@ -718,6 +718,9 @@ const Header = (() => {
         const low_risk_eu_accordion_header        = getElementById('low_risk_accounts_eu');
         const low_risk_eu_container               = getElementById('account__switcher-accordion-eu');
         const is_mf_account                       = Client.get('loginid').startsWith('MF');
+        const all_login_ids                       = Client.getAllLoginids();
+        const has_mf_account                      = all_login_ids.some(loginid => loginid.startsWith('MF'));
+
         if (Client.isHighRisk() && is_mf_account) {
             high_risk_accounts_accordion_header.style.display = 'none';
             low_risk_eu_accordion_header.style.display        = 'flex';
@@ -727,6 +730,10 @@ const Header = (() => {
             high_risk_accounts_accordion_header.style.display = 'flex';
             low_risk_non_eu_accordion_header.style.display    = 'none';
             low_risk_eu_accordion_header.style.display        = 'none';
+            low_risk_eu_container.style.display               = 'none';
+        } else if (Client.isLowRisk() && !has_mf_account) {
+            low_risk_non_eu_accordion_header.style.display    = 'none';
+            high_risk_accounts_accordion_header.style.display = 'flex';
             low_risk_eu_container.style.display               = 'none';
         } else if (Client.isLowRisk()) {
             high_risk_accounts_accordion_header.style.display = 'none';
