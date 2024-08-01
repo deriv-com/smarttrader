@@ -152,7 +152,7 @@ export const FormComponent = () => {
 
                         {['risefall', 'callputequal'].includes(formName) && start_dates && (
                             <div className='quill-form-row'>
-                                <div className='form_field'>
+                                <div className='form_field field-pb'>
                                     <DropdownComponent
                                         label={localize('Start Time')}
                                         options={start_dates.options}
@@ -162,7 +162,7 @@ export const FormComponent = () => {
                                     />
                                 </div>
                                 {date_start !== 'now' && (
-                                    <div className='form_field'>
+                                    <div className='form_field field-pb'>
                                         <TimePickerDropdown
                                             time={time_start}
                                             onUpdate={updateFormField}
@@ -175,7 +175,7 @@ export const FormComponent = () => {
 
                         {formName !== 'highlowticks' && (
                             <div className='quill-form-row'>
-                                <div className='form_field'>
+                                <div className='form_field field-pb'>
                                     <DropdownComponent
                                         options={expiry_type_options}
                                         value={findTextByValue(expiry_type_options, expiryType)}
@@ -185,7 +185,7 @@ export const FormComponent = () => {
                                 </div>
                                 {expiryType === 'duration' && (
                                     <>
-                                        <div className='form_field'>
+                                        <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
                                             <TextField
                                                 type='number'
                                                 value={duration_amount}
@@ -200,7 +200,7 @@ export const FormComponent = () => {
                                                 }}
                                             />
                                         </div>
-                                        <div className='form_field'>
+                                        <div className='form_field field-pb'>
                                             <DropdownComponent
                                                 options={duration_options}
                                                 value={findTextByValue(duration_options, duration_units)}
@@ -213,7 +213,7 @@ export const FormComponent = () => {
                                 {expiryType === 'endtime' && (
                                     <>
                                         {endtime_data && (
-                                            <div className='form_field'>
+                                            <div className='form_field field-pb'>
                                                 {endtime_data.show_datepicker ? (
                                                     <DatePickerDropdown
                                                         value={moment(expiry_date).format('DD/MM/YYYY')}
@@ -234,7 +234,7 @@ export const FormComponent = () => {
                                         )}
 
                                         {expiry_time && (
-                                            <div className='form_field'>
+                                            <div className='form_field field-pb'>
                                                 <TimePickerDropdown
                                                     time={expiry_time}
                                                     onUpdate={updateFormField}
@@ -254,7 +254,7 @@ export const FormComponent = () => {
 
                         {['matchdiff', 'overunder'].includes(formName) && (
                             <div className='quill-form-row'>
-                                <div className='form_field'>
+                                <div className='form_field field-pb'>
                                     <NumbersDropdown
                                         value={prediction}
                                         label={localize('Last Digit Prediction')}
@@ -269,7 +269,7 @@ export const FormComponent = () => {
 
                         {['highlowticks'].includes(formName) && (
                             <div className='quill-form-row'>
-                                <div className='form_field'>
+                                <div className='form_field field-pb'>
                                     <NumbersDropdown
                                         value={selected_tick}
                                         label={localize('Tick Prediction')}
@@ -286,7 +286,7 @@ export const FormComponent = () => {
                             formName
                         ) && (
                             <div className='quill-form-row'>
-                                <div className='form_field'>
+                                <div className='form_field field-pb'>
                                     <DropdownComponent
                                         options={payoutTypeOptions}
                                         value={findTextByValue(payoutTypeOptions, amount_type)}
@@ -297,7 +297,7 @@ export const FormComponent = () => {
 
                                 {currency_list ? (
                                     <>
-                                        <div className='form_field'>
+                                        <div className='form_field field-pb'>
                                             <TextField
                                                 value={amount}
                                                 type='number'
@@ -305,7 +305,7 @@ export const FormComponent = () => {
                                                 onChange={(e) => handleAmountChange(e, 'amount')}
                                             />
                                         </div>
-                                        <div className='form_field'>
+                                        <div className='form_field field-pb'>
                                             <CurrencyDropdown
                                                 currency_list={currency_list}
                                                 currency={currency}
@@ -315,7 +315,7 @@ export const FormComponent = () => {
                                         </div>
                                     </>
                                 ) : (
-                                    <div className='form_field'>
+                                    <div className='form_field field-pb'>
                                         <TextFieldAddon
                                             type='number'
                                             allowDecimals
@@ -335,7 +335,7 @@ export const FormComponent = () => {
                             <div className='quill-form-row'>
                                 {currency_list ? (
                                     <>
-                                        <div className='form_field'>
+                                        <div className='form_field field-pb'>
                                             <TextField
                                                 value={multiplier}
                                                 label={localize('Multiplier')}
@@ -344,7 +344,7 @@ export const FormComponent = () => {
                                                 onChange={(e) => handleAmountChange(e, 'multiplier')}
                                             />
                                         </div>
-                                        <div className='form_field'>
+                                        <div className='form_field field-pb'>
                                             <CurrencyDropdown
                                                 currency_list={currency_list}
                                                 currency={currency}
@@ -354,7 +354,7 @@ export const FormComponent = () => {
                                         </div>
                                     </>
                                 ) : (
-                                    <div className='form_field'>
+                                    <div className='form_field field-pb'>
                                         <TextFieldAddon
                                             addonLabel={currency}
                                             addOnPosition='right'
