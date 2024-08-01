@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {  Button, CaptionText,  Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
 import {  LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import parse from 'html-react-parser';
 import ContractDetails from './contract-details';
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { getElementById } from '../../../../_common/common_functions';
 import { useContractChange, usePurchaseChange } from '../../../hooks/events';
 import purchaseManager from '../../../common/purchase_manager';
 import { localize } from '../../../../_common/localize';
-import parse from 'html-react-parser';
 
 import { parseData, triggerClick } from '../../../common/helpers';
 
@@ -26,8 +26,8 @@ const Purchase = () => {
 
     const hidePurchaseResults = () =>
         purchaseManager.set({
-          showPurchaseResults: false,
-          error: null,
+            showPurchaseResults: false,
+            error              : null,
         });
  
     useEffect(() => {
@@ -202,7 +202,7 @@ const Purchase = () => {
                             className='close-btn'
                             onClick={() => {
                                 triggerClick('#close_confirmation_container');
-                                hidePurchaseResults()
+                                hidePurchaseResults();
                             }}
                         >
                             <LabelPairedXmarkMdRegularIcon />
@@ -225,19 +225,21 @@ const Purchase = () => {
                                             <Button variant='tertiary' size='lg' label={localize('Log in here')} onClick={() => triggerClick('#authorization_error_btn_login')} />
                                         </>
                                     )}
-                                     {data?.error.code === 'InsufficientBalance' && (
+                                    {data?.error.code === 'InsufficientBalance' && (
                                         <>
-                                           
                                             <Text size='sm'>{data?.error?.message}</Text>
                                             <Text size='sm'>{
-                                                 parse(localize('Do you want to top up for another [_1]? If not, you can do this later on the [_2]Cashier page[_3], too.',['$10,000.00', `<a id='top_up_cashier_redirect' href=''>`, '</a>']))}</Text>
+                                                parse(
+                                                    localize('Do you want to top up for another [_1]? If not, you can do this later on the [_2]Cashier page[_3], too.',['$10,000.00', '<a id=\'top_up_cashier_redirect\' href=\'\'>', '</a>'])
+                                                )}
+                                            </Text>
                                             <Button
                                                 variant='primary'
                                                 size='lg'
                                                 label={localize('Top up')}
                                                 onClick={() => {
-                                                    data?.error?.action?.()
-                                                    hidePurchaseResults()
+                                                    data?.error?.action?.();
+                                                    hidePurchaseResults();
                                                 }}
                                             />
                                         </>
@@ -263,7 +265,7 @@ const Purchase = () => {
                         className='close-btn'
                         onClick={() => {
                             triggerClick('#close_confirmation_container');
-                            hidePurchaseResults()
+                            hidePurchaseResults();
                         }}
                     >
                         <LabelPairedXmarkMdRegularIcon />
