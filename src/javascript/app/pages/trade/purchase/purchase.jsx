@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {  Button, CaptionText,  Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
 import {  LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import parse from 'html-react-parser';
 import ContractDetails from './contract-details';
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { getElementById } from '../../../../_common/common_functions';
@@ -22,6 +23,12 @@ const Purchase = () => {
     const [showPopup,setShowPopup] = useState(false);
     
     const isloading = () => !data?.topAmount && !data?.middleAmount && !data?.bottomAmount;
+
+    const hidePurchaseResults = () =>
+        purchaseManager.set({
+            showPurchaseResults: false,
+            error              : null,
+        });
  
     useEffect(() => {
         const newData = purchaseManager.getAll();
@@ -93,7 +100,7 @@ const Purchase = () => {
             </div>);
     }
   
-    if (!data?.showPurchaseResults){
+    if (!data?.showPurchaseResults && !data?.error){
         return (
             <div className={`quill-purchase-section ${data?.isPurchaseFormDisabled && 'disabled'}`}>
                 {data?.showMidPurchase ? (
@@ -195,9 +202,7 @@ const Purchase = () => {
                             className='close-btn'
                             onClick={() => {
                                 triggerClick('#close_confirmation_container');
-                                purchaseManager.set({
-                                    showPurchaseResults: false,
-                                });
+                                hidePurchaseResults();
                             }}
                         >
                             <LabelPairedXmarkMdRegularIcon />
@@ -218,6 +223,25 @@ const Purchase = () => {
                                             />
                                             <Text size='sm'>{localize('Already have an account?')}</Text>
                                             <Button variant='tertiary' size='lg' label={localize('Log in here')} onClick={() => triggerClick('#authorization_error_btn_login')} />
+                                        </>
+                                    )}
+                                    {data?.error.code === 'InsufficientBalance' && (
+                                        <>
+                                            <Text size='sm'>{data?.error?.message}</Text>
+                                            <Text size='sm'>{
+                                                parse(
+                                                    localize('Do you want to top up for another [_1]? If not, you can do this later on the [_2]Cashier page[_3], too.',['$10,000.00', '<a id=\'top_up_cashier_redirect\' href=\'\'>', '</a>'])
+                                                )}
+                                            </Text>
+                                            <Button
+                                                variant='primary'
+                                                size='lg'
+                                                label={localize('Top up')}
+                                                onClick={() => {
+                                                    data?.error?.action?.();
+                                                    hidePurchaseResults();
+                                                }}
+                                            />
                                         </>
                                     )}
                                 </>
@@ -241,9 +265,7 @@ const Purchase = () => {
                         className='close-btn'
                         onClick={() => {
                             triggerClick('#close_confirmation_container');
-                            purchaseManager.set({
-                                showPurchaseResults: false,
-                            });
+                            hidePurchaseResults();
                         }}
                     >
                         <LabelPairedXmarkMdRegularIcon />

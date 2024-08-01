@@ -93,6 +93,16 @@ const Purchase = (() => {
                 hidePriceOverlay();
                 processPriceRequest();
                 TopUpVirtualPopup.show(error.message);
+
+                purchaseManager.set({
+                    error: {
+                        showPurchaseResults: true,
+                        ...error,
+                        action             : TopUpVirtualPopup.doTopUp,
+                        title              : localize('Top up Virtual Account?'),
+                        isCustom           : true,
+                    },
+                });
             } else {
                 contracts_list.style.display = 'none';
                 container.style.display = 'block';
