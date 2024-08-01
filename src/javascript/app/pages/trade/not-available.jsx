@@ -24,6 +24,7 @@ const NotAvailable = ({
 );
 
 export const init = ({ ...props }) => {
+    document.body.appendChild(Object.assign(document.createElement('div'), { id: 'unavailable-content', className: 'quill-generic-popup' }));
     ReactDOM.render(<NotAvailable {...props} />, getElementById('content'));
 };
 

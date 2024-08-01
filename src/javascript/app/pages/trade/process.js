@@ -53,6 +53,8 @@ const Process = (() => {
      * and underlying list
      */
     const processActiveSymbols = (country) => {
+        NotAvailable.init({ body: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') });
+        
         BinarySocket.send({ active_symbols: 'brief' }).then((response) => {
             if (!isEuCountry() && response.active_symbols && response.active_symbols.length) {
                 // populate the Symbols object
@@ -71,6 +73,7 @@ const Process = (() => {
                 NotAvailable.init();
             }
         });
+      
     };
 
     /*
