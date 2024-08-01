@@ -1,5 +1,5 @@
 import React from 'react';
-import { BreakpointProvider, CustomDropdown, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
+import { CustomDropdown, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
 
 const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
     const { close } = useDropdown();
@@ -26,14 +26,12 @@ const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
     );
 };
 export const CurrencyDropdown = ({ currency_list, currency, onUpdate, elementId }) => (
-    <BreakpointProvider>
-        <CustomDropdown value={currency}>
-            <CurrencyContent
-                currency_list={currency_list}
-                currency={currency}
-                onUpdate={onUpdate}
-                elementId={elementId}
-            />
-        </CustomDropdown>
-    </BreakpointProvider>
+    <CustomDropdown value={currency}>
+        <CurrencyContent
+            currency_list={currency_list}
+            currency={currency}
+            onUpdate={onUpdate}
+            elementId={elementId}
+        />
+    </CustomDropdown>
 );

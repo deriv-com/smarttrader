@@ -145,17 +145,17 @@ const Durations = (() => {
             }
         });
 
+        const list = Object.keys(duration_list).sort((a, b) => (
+            commonTrading.durationOrder(a) > commonTrading.durationOrder(b) ? 1 : -1
+        ));
+        
         const duration_options = [];
-        Object.values(duration_list).forEach(option => {
-            duration_options.push({ text: option.text, value: option.value });
+        Object.values(list).forEach(option => {
+            duration_options.push({ text: duration_list[option].text, value: option });
         });
         tradeManager.set({
             duration_options,
         });
-
-        const list = Object.keys(duration_list).sort((a, b) => (
-            commonTrading.durationOrder(a) > commonTrading.durationOrder(b) ? 1 : -1
-        ));
 
         smallest_duration = {
             amount: duration_list[list[0]].dataset.minimum,

@@ -5,6 +5,7 @@ import {
     DatePickerDropdown,
     Checkbox,
     SectionMessage,
+    BreakpointProvider,
 } from '@deriv-com/quill-ui';
 import moment from 'moment';
 import { CurrencyDropdown } from './currency-dropdown.jsx';
@@ -134,265 +135,267 @@ export const FormComponent = () => {
     ];
 
     return (
-        <div className='quill-form-container'>
-            {contractForms.includes(formName) && (
-                <>
-                    {formName === 'highlowticks' && (
-                        <div className='section-msg-container'>
-                            <SectionMessage status='info' message={getMessage(formName)} />
-                        </div>
-                    )}
-                    {formName === 'reset' && reset_message && (
-                        <div className='section-msg-container'>
-                            <SectionMessage status='info' message={reset_message} />
-                        </div>
-                    )}
-                
-                    <div className='quill-form-rows'>
-
-                        {['risefall', 'callputequal'].includes(formName) && start_dates && (
-                            <div className='quill-form-row'>
-                                <div className='form_field field-pb'>
-                                    <DropdownComponent
-                                        label={localize('Start Time')}
-                                        options={start_dates.options}
-                                        value={findTextByValue(start_dates.options, date_start)}
-                                        onUpdate={updateFormField}
-                                        elementId='date_start'
-                                    />
-                                </div>
-                                {date_start !== 'now' && (
-                                    <div className='form_field field-pb'>
-                                        <TimePickerDropdown
-                                            time={time_start}
-                                            onUpdate={updateFormField}
-                                            elementId='time_start'
-                                        />
-                                    </div>
-                                )}
+        <BreakpointProvider>
+            <div className='quill-form-container'>
+                {contractForms.includes(formName) && (
+                    <>
+                        {formName === 'highlowticks' && (
+                            <div className='section-msg-container'>
+                                <SectionMessage status='info' message={getMessage(formName)} />
                             </div>
                         )}
+                        {formName === 'reset' && reset_message && (
+                            <div className='section-msg-container'>
+                                <SectionMessage status='info' message={reset_message} />
+                            </div>
+                        )}
+                    
+                        <div className='quill-form-rows'>
 
-                        {formName !== 'highlowticks' && (
-                            <>
+                            {['risefall', 'callputequal'].includes(formName) && start_dates && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <DropdownComponent
-                                            options={expiry_type_options}
-                                            value={findTextByValue(expiry_type_options, expiryType)}
+                                            label={localize('Start Time')}
+                                            options={start_dates.options}
+                                            value={findTextByValue(start_dates.options, date_start)}
                                             onUpdate={updateFormField}
-                                            elementId='expiry_type'
+                                            elementId='date_start'
                                         />
                                     </div>
-                                    {expiryType === 'duration' && (
+                                    {date_start !== 'now' && (
+                                        <div className='form_field field-pb'>
+                                            <TimePickerDropdown
+                                                time={time_start}
+                                                onUpdate={updateFormField}
+                                                elementId='time_start'
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {formName !== 'highlowticks' && (
+                                <>
+                                    <div className='quill-form-row'>
+                                        <div className='form_field field-pb'>
+                                            <DropdownComponent
+                                                options={expiry_type_options}
+                                                value={findTextByValue(expiry_type_options, expiryType)}
+                                                onUpdate={updateFormField}
+                                                elementId='expiry_type'
+                                            />
+                                        </div>
+                                        {expiryType === 'duration' && (
+                                            <>
+                                                <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
+                                                    <TextField
+                                                        type='number'
+                                                        value={duration_amount}
+                                                        message={duration_data?.message || ''}
+                                                        status={duration_data?.status || 'neutral'}
+                                                        onChange={(e) => {
+                                                            updateFormField(
+                                                                'duration_amount',
+                                                                e.target.value,
+                                                                'input'
+                                                            );
+                                                        }}
+                                                    />
+                                                </div>
+                                                <div className='form_field field-pb'>
+                                                    <DropdownComponent
+                                                        options={duration_options}
+                                                        value={findTextByValue(duration_options, duration_units)}
+                                                        onUpdate={updateFormField}
+                                                        elementId='duration_units'
+                                                    />
+                                                </div>
+                                            </>
+                                        )}
+                                        {expiryType === 'endtime' && (
+                                            <>
+                                                {endtime_data && (
+                                                    <div className='form_field field-pb'>
+                                                        {endtime_data.show_datepicker ? (
+                                                            <DatePickerDropdown
+                                                                value={moment(expiry_date).format('DD/MM/YYYY')}
+                                                                datePickerProps={{ minDate: new Date() }}
+                                                                onSelectDate={(value) => {
+                                                                    onExpiryDateChange(value);
+                                                                }}
+                                                            />
+                                                        ) : (
+                                                            <DropdownComponent
+                                                                options={endtime_data.options}
+                                                                value={expiry_date}
+                                                                onUpdate={onExpiryDateChange}
+                                                                elementId='expiry_date'
+                                                            />
+                                                        )}
+                                                    </div>
+                                                )}
+                                            </>
+                                        )}
+                                    </div>
+
+                                    {expiryType === 'endtime' && expiry_time && (
+                                        <div className='quill-form-row'>
+                                            <div className='form_field field-pb'>
+                                                <TimePickerDropdown
+                                                    time={expiry_time}
+                                                    onUpdate={updateFormField}
+                                                    elementId='expiry_time'
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
+                                </>
+                            )}
+
+                            <BarrierFields
+                                formName={formName}
+                                handleAmountChange={handleAmountChange}
+                            />
+
+                            {['matchdiff', 'overunder'].includes(formName) && (
+                                <div className='quill-form-row'>
+                                    <div className='form_field field-pb'>
+                                        <NumbersDropdown
+                                            value={prediction}
+                                            label={localize('Last Digit Prediction')}
+                                            start={0}
+                                            end={9}
+                                            elementId='prediction'
+                                            onUpdate={updateFormField}
+                                        />
+                                    </div>
+                                </div>
+                            )}
+
+                            {['highlowticks'].includes(formName) && (
+                                <div className='quill-form-row'>
+                                    <div className='form_field field-pb'>
+                                        <NumbersDropdown
+                                            value={selected_tick}
+                                            label={localize('Tick Prediction')}
+                                            start={1}
+                                            end={5}
+                                            elementId='selected_tick'
+                                            onUpdate={updateFormField}
+                                        />
+                                    </div>
+                                </div>
+                            )}
+
+                            {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
+                                formName
+                            ) && (
+                                <div className='quill-form-row'>
+                                    <div className='form_field field-pb'>
+                                        <DropdownComponent
+                                            options={payoutTypeOptions}
+                                            value={findTextByValue(payoutTypeOptions, amount_type)}
+                                            onUpdate={updateFormField}
+                                            elementId='amount_type'
+                                        />
+                                    </div>
+
+                                    {currency_list ? (
                                         <>
-                                            <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
+                                            <div className='form_field field-pb'>
                                                 <TextField
+                                                    value={amount}
                                                     type='number'
-                                                    value={duration_amount}
-                                                    message={duration_data?.message || ''}
-                                                    status={duration_data?.status}
-                                                    onChange={(e) => {
-                                                        updateFormField(
-                                                            'duration_amount',
-                                                            e.target.value,
-                                                            'input'
-                                                        );
-                                                    }}
+                                                    allowDecimals={true}
+                                                    onChange={(e) => handleAmountChange(e, 'amount')}
                                                 />
                                             </div>
                                             <div className='form_field field-pb'>
-                                                <DropdownComponent
-                                                    options={duration_options}
-                                                    value={findTextByValue(duration_options, duration_units)}
+                                                <CurrencyDropdown
+                                                    currency_list={currency_list}
+                                                    currency={currency}
                                                     onUpdate={updateFormField}
-                                                    elementId='duration_units'
+                                                    elementId='currency'
                                                 />
                                             </div>
                                         </>
-                                    )}
-                                    {expiryType === 'endtime' && (
-                                        <>
-                                            {endtime_data && (
-                                                <div className='form_field field-pb'>
-                                                    {endtime_data.show_datepicker ? (
-                                                        <DatePickerDropdown
-                                                            value={moment(expiry_date).format('DD/MM/YYYY')}
-                                                            datePickerProps={{ minDate: new Date() }}
-                                                            onSelectDate={(value) => {
-                                                                onExpiryDateChange(value);
-                                                            }}
-                                                        />
-                                                    ) : (
-                                                        <DropdownComponent
-                                                            options={endtime_data.options}
-                                                            value={expiry_date}
-                                                            onUpdate={onExpiryDateChange}
-                                                            elementId='expiry_date'
-                                                        />
-                                                    )}
-                                                </div>
-                                            )}
-                                        </>
-                                    )}
-                                </div>
-
-                                {expiryType === 'endtime' && expiry_time && (
-                                    <div className='quill-form-row'>
+                                    ) : (
                                         <div className='form_field field-pb'>
-                                            <TimePickerDropdown
-                                                time={expiry_time}
-                                                onUpdate={updateFormField}
-                                                elementId='expiry_time'
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-                            </>
-                        )}
-
-                        <BarrierFields
-                            formName={formName}
-                            handleAmountChange={handleAmountChange}
-                        />
-
-                        {['matchdiff', 'overunder'].includes(formName) && (
-                            <div className='quill-form-row'>
-                                <div className='form_field field-pb'>
-                                    <NumbersDropdown
-                                        value={prediction}
-                                        label={localize('Last Digit Prediction')}
-                                        start={0}
-                                        end={9}
-                                        elementId='prediction'
-                                        onUpdate={updateFormField}
-                                    />
-                                </div>
-                            </div>
-                        )}
-
-                        {['highlowticks'].includes(formName) && (
-                            <div className='quill-form-row'>
-                                <div className='form_field field-pb'>
-                                    <NumbersDropdown
-                                        value={selected_tick}
-                                        label={localize('Tick Prediction')}
-                                        start={1}
-                                        end={5}
-                                        elementId='selected_tick'
-                                        onUpdate={updateFormField}
-                                    />
-                                </div>
-                            </div>
-                        )}
-
-                        {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                            formName
-                        ) && (
-                            <div className='quill-form-row'>
-                                <div className='form_field field-pb'>
-                                    <DropdownComponent
-                                        options={payoutTypeOptions}
-                                        value={findTextByValue(payoutTypeOptions, amount_type)}
-                                        onUpdate={updateFormField}
-                                        elementId='amount_type'
-                                    />
-                                </div>
-
-                                {currency_list ? (
-                                    <>
-                                        <div className='form_field field-pb'>
-                                            <TextField
-                                                value={amount}
+                                            <TextFieldAddon
                                                 type='number'
-                                                allowDecimals={true}
+                                                allowDecimals
                                                 onChange={(e) => handleAmountChange(e, 'amount')}
+                                                value={amount}
+                                                addonLabel={currency}
+                                                addOnPosition='right'
                                             />
                                         </div>
-                                        <div className='form_field field-pb'>
-                                            <CurrencyDropdown
-                                                currency_list={currency_list}
-                                                currency={currency}
-                                                onUpdate={updateFormField}
-                                                elementId='currency'
-                                            />
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className='form_field field-pb'>
-                                        <TextFieldAddon
-                                            type='number'
-                                            allowDecimals
-                                            onChange={(e) => handleAmountChange(e, 'amount')}
-                                            value={amount}
-                                            addonLabel={currency}
-                                            addOnPosition='right'
-                                        />
-                                    </div>
-                                )}
-                            </div>
-                        )}
+                                    )}
+                                </div>
+                            )}
 
-                        {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                            formName
-                        ) && (
-                            <div className='quill-form-row'>
-                                {currency_list ? (
-                                    <>
+                            {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
+                                formName
+                            ) && (
+                                <div className='quill-form-row'>
+                                    {currency_list ? (
+                                        <>
+                                            <div className='form_field field-pb'>
+                                                <TextField
+                                                    value={multiplier}
+                                                    label={localize('Multiplier')}
+                                                    type='number'
+                                                    allowDecimals={true}
+                                                    onChange={(e) => handleAmountChange(e, 'multiplier')}
+                                                />
+                                            </div>
+                                            <div className='form_field field-pb'>
+                                                <CurrencyDropdown
+                                                    currency_list={currency_list}
+                                                    currency={currency}
+                                                    onUpdate={updateFormField}
+                                                    elementId='multiplier_currency'
+                                                />
+                                            </div>
+                                        </>
+                                    ) : (
                                         <div className='form_field field-pb'>
-                                            <TextField
-                                                value={multiplier}
+                                            <TextFieldAddon
+                                                addonLabel={currency}
+                                                addOnPosition='right'
                                                 label={localize('Multiplier')}
+                                                value={multiplier}
                                                 type='number'
                                                 allowDecimals={true}
                                                 onChange={(e) => handleAmountChange(e, 'multiplier')}
                                             />
                                         </div>
-                                        <div className='form_field field-pb'>
-                                            <CurrencyDropdown
-                                                currency_list={currency_list}
-                                                currency={currency}
-                                                onUpdate={updateFormField}
-                                                elementId='multiplier_currency'
-                                            />
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className='form_field field-pb'>
-                                        <TextFieldAddon
-                                            addonLabel={currency}
-                                            addOnPosition='right'
-                                            label={localize('Multiplier')}
-                                            value={multiplier}
-                                            type='number'
-                                            allowDecimals={true}
-                                            onChange={(e) => handleAmountChange(e, 'multiplier')}
-                                        />
-                                    </div>
-                                )}
-                            </div>
-                        )}
-
-                        {show_allow_equals && (
-                            <div className='quill-form-row allow-equals'>
-                                <Checkbox
-                                    label={localize('Allow equals')}
-                                    id='allow_equals'
-                                    onChange={(e) => {
-                                        updateFormField('callputequal', e, 'change');
-                                    }}
-                                    size='md'
-                                    checked={+is_equal === 1}
-                                    infoIconMessage={localize(
-                                        'Win payout if exit spot is also equal to entry spot.'
                                     )}
-                                />
-                            </div>
-                        )}
-                    </div>
-                </>
-            )}
-        </div>
+                                </div>
+                            )}
+
+                            {show_allow_equals && (
+                                <div className='quill-form-row allow-equals'>
+                                    <Checkbox
+                                        label={localize('Allow equals')}
+                                        id='allow_equals'
+                                        onChange={(e) => {
+                                            updateFormField('callputequal', e, 'change');
+                                        }}
+                                        size='md'
+                                        checked={+is_equal === 1}
+                                        infoIconMessage={localize(
+                                            'Win payout if exit spot is also equal to entry spot.'
+                                        )}
+                                    />
+                                </div>
+                            )}
+                        </div>
+                    </>
+                )}
+            </div>
+        </BreakpointProvider>
     );
 };
 
