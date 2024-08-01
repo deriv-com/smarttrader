@@ -20,6 +20,7 @@ const isStorageSupported = require('../../_common/storage').isStorageSupported;
 const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
 const createElement = require('../../_common/utility').createElement;
+const NotAvailable = require('../pages/trade/not-available.jsx');
 
 const BinaryLoader = (() => {
     let container;
@@ -152,9 +153,9 @@ const BinaryLoader = (() => {
             if (config.no_blocked_country && Client.isLoggedIn() && Client.isOptionsBlocked()) {
                 displayMessage(error_messages.options_blocked());
             } else if (Client.isLoggedIn() && Client.isOfferingBlocked()) {
-                displayMessage(error_messages.offerings_blocked());
+                displayUnavailable({ body: error_messages.offerings_blocked() });
             } else if (config.no_mf && Client.isLoggedIn() && Client.isAccountOfType('financial')) {
-                displayUnavailable();
+                displayUnavailable({ body: localize('Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.') });
             }
         });
 
@@ -193,35 +194,13 @@ const BinaryLoader = (() => {
         }
     };
 
-    const displayUnavailable = () => {
+    const displayUnavailable = (props) => {
         const content = container.querySelector('#content .container');
         if (!content) {
             return;
         }
 
-        const div_container = createElement('div', { class: 'platform-unavailable' });
-        const inner_container = createElement('div', { class: 'platform-unavailable-inner' });
-        const h1_title = createElement('h1', { text: localize('SmartTrader is unavailable for this account'), class: 'platform-unavailable-inner-title' });
-        const message = createElement('div',
-            {
-                text: localize(
-                    'Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.'
-                ),
-                class: 'platform-unavailable-inner-message',
-            });
-        const button = createElement('button', { text: localize('Switch to another account'), class: 'platform-unavailable-inner-button' });
-        
-        div_container.appendChild(inner_container);
-        inner_container.appendChild(h1_title);
-        inner_container.appendChild(message);
-        inner_container.appendChild(button);
-
-        button.addEventListener('click', (event) => {
-            document.getElementById('acc_switcher').click();
-            event.stopPropagation();
-        });
-        
-        content.html(div_container);
+        NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), ...props });
     };
 
     const handleNotAuthenticated = () => {
