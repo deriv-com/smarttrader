@@ -74,7 +74,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
             barrier_data?.show_barrier &&
             barrier && (
                 <div className='quill-form-row'>
-                    <div className={`form_field ${!barrier_data?.isOffset ? 'row-pb' : ''}`}>
+                    <div className={`form_field ${!barrier_data?.isOffset ? 'field-pb' : ''}`}>
                         <TextField
                             label={barrier_data.label}
                             value={barrier}
@@ -99,7 +99,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
             barrier_data?.show_barrier_highlow &&
             barrier_high && barrier_low && (
                 <div className='quill-form-row'>
-                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'row-pb' : ''}`}>
+                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
                         <TextField
                             label={barrier_data.label_high}
                             value={barrier_high}
@@ -113,7 +113,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             message={getMessage(barrier_indicator_high, 'high')}
                         />
                     </div>
-                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'row-pb' : ''}`}>
+                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
                         <TextField
                             label={barrier_data.label_low}
                             value={barrier_low}

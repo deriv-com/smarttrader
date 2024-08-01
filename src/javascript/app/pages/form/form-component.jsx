@@ -174,77 +174,81 @@ export const FormComponent = () => {
                         )}
 
                         {formName !== 'highlowticks' && (
-                            <div className='quill-form-row'>
-                                <div className='form_field field-pb'>
-                                    <DropdownComponent
-                                        options={expiry_type_options}
-                                        value={findTextByValue(expiry_type_options, expiryType)}
-                                        onUpdate={updateFormField}
-                                        elementId='expiry_type'
-                                    />
-                                </div>
-                                {expiryType === 'duration' && (
-                                    <>
-                                        <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
-                                            <TextField
-                                                type='number'
-                                                value={duration_amount}
-                                                message={duration_data?.message || ''}
-                                                status={duration_data?.status}
-                                                onChange={(e) => {
-                                                    updateFormField(
-                                                        'duration_amount',
-                                                        e.target.value,
-                                                        'input'
-                                                    );
-                                                }}
-                                            />
-                                        </div>
-                                        <div className='form_field field-pb'>
-                                            <DropdownComponent
-                                                options={duration_options}
-                                                value={findTextByValue(duration_options, duration_units)}
-                                                onUpdate={updateFormField}
-                                                elementId='duration_units'
-                                            />
-                                        </div>
-                                    </>
-                                )}
-                                {expiryType === 'endtime' && (
-                                    <>
-                                        {endtime_data && (
-                                            <div className='form_field field-pb'>
-                                                {endtime_data.show_datepicker ? (
-                                                    <DatePickerDropdown
-                                                        value={moment(expiry_date).format('DD/MM/YYYY')}
-                                                        datePickerProps={{ minDate: new Date() }}
-                                                        onSelectDate={(value) => {
-                                                            onExpiryDateChange(value);
-                                                        }}
-                                                    />
-                                                ) : (
-                                                    <DropdownComponent
-                                                        options={endtime_data.options}
-                                                        value={expiry_date}
-                                                        onUpdate={onExpiryDateChange}
-                                                        elementId='expiry_date'
-                                                    />
-                                                )}
-                                            </div>
-                                        )}
-
-                                        {expiry_time && (
-                                            <div className='form_field field-pb'>
-                                                <TimePickerDropdown
-                                                    time={expiry_time}
-                                                    onUpdate={updateFormField}
-                                                    elementId='expiry_time'
+                            <>
+                                <div className='quill-form-row'>
+                                    <div className='form_field field-pb'>
+                                        <DropdownComponent
+                                            options={expiry_type_options}
+                                            value={findTextByValue(expiry_type_options, expiryType)}
+                                            onUpdate={updateFormField}
+                                            elementId='expiry_type'
+                                        />
+                                    </div>
+                                    {expiryType === 'duration' && (
+                                        <>
+                                            <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
+                                                <TextField
+                                                    type='number'
+                                                    value={duration_amount}
+                                                    message={duration_data?.message || ''}
+                                                    status={duration_data?.status}
+                                                    onChange={(e) => {
+                                                        updateFormField(
+                                                            'duration_amount',
+                                                            e.target.value,
+                                                            'input'
+                                                        );
+                                                    }}
                                                 />
                                             </div>
-                                        )}
-                                    </>
+                                            <div className='form_field field-pb'>
+                                                <DropdownComponent
+                                                    options={duration_options}
+                                                    value={findTextByValue(duration_options, duration_units)}
+                                                    onUpdate={updateFormField}
+                                                    elementId='duration_units'
+                                                />
+                                            </div>
+                                        </>
+                                    )}
+                                    {expiryType === 'endtime' && (
+                                        <>
+                                            {endtime_data && (
+                                                <div className='form_field field-pb'>
+                                                    {endtime_data.show_datepicker ? (
+                                                        <DatePickerDropdown
+                                                            value={moment(expiry_date).format('DD/MM/YYYY')}
+                                                            datePickerProps={{ minDate: new Date() }}
+                                                            onSelectDate={(value) => {
+                                                                onExpiryDateChange(value);
+                                                            }}
+                                                        />
+                                                    ) : (
+                                                        <DropdownComponent
+                                                            options={endtime_data.options}
+                                                            value={expiry_date}
+                                                            onUpdate={onExpiryDateChange}
+                                                            elementId='expiry_date'
+                                                        />
+                                                    )}
+                                                </div>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
+
+                                {expiryType === 'endtime' && expiry_time && (
+                                    <div className='quill-form-row'>
+                                        <div className='form_field field-pb'>
+                                            <TimePickerDropdown
+                                                time={expiry_time}
+                                                onUpdate={updateFormField}
+                                                elementId='expiry_time'
+                                            />
+                                        </div>
+                                    </div>
                                 )}
-                            </div>
+                            </>
                         )}
 
                         <BarrierFields
