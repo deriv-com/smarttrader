@@ -99,7 +99,7 @@ const Process = (() => {
      */
     const processMarketUnderlying = () => {
         const underlying_element = document.getElementById('underlying');
-        const underlying = underlying_element.value;
+        const underlying = underlying_element?.value;
 
         Defaults.set(UNDERLYING, underlying);
 

@@ -348,7 +348,7 @@ const commonTrading = (() => {
     const displayTooltip = () => {
         const tip = getElementById('symbol_tip');
         if (tip) {
-            const market = ActiveSymbols.getSymbols()[Defaults.get(UNDERLYING)].market;
+            const market = ActiveSymbols.getSymbols()[Defaults.get(UNDERLYING)]?.market;
             const map_to_section_id = {
                 forex          : 'forex',
                 indices        : 'indices',
