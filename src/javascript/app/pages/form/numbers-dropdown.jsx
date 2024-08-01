@@ -1,5 +1,5 @@
 import React from 'react';
-import { BreakpointProvider, CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
+import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 
 const Content = ({ value, start, end, elementId, onUpdate }) => {
     const { close } = useDropdown();
@@ -22,15 +22,13 @@ const Content = ({ value, start, end, elementId, onUpdate }) => {
 };
 
 export const NumbersDropdown = ({ value, label, start, end, elementId, onUpdate }) => (
-    <BreakpointProvider>
-        <CustomDropdown value={value} label={label}>
-            <Content
-                value={value}
-                start={start}
-                end={end}
-                elementId={elementId}
-                onUpdate={onUpdate}
-            />
-        </CustomDropdown>
-    </BreakpointProvider>
+    <CustomDropdown value={value} label={label}>
+        <Content
+            value={value}
+            start={start}
+            end={end}
+            elementId={elementId}
+            onUpdate={onUpdate}
+        />
+    </CustomDropdown>
 );

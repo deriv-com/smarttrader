@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BreakpointProvider, CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
+import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
 import tradeManager from '../../common/trade_manager.js';
@@ -82,14 +82,12 @@ export const TimePickerDropdown = ({
     };
 
     return (
-        <BreakpointProvider>
-            <CustomDropdown value={time} onClickDropdown={() => handleOpen(elementId)}>
-                <TimeContent
-                    time={time}
-                    onUpdate={onUpdate}
-                    elementId={elementId}
-                />
-            </CustomDropdown>
-        </BreakpointProvider>
+        <CustomDropdown value={time} onClickDropdown={() => handleOpen(elementId)}>
+            <TimeContent
+                time={time}
+                onUpdate={onUpdate}
+                elementId={elementId}
+            />
+        </CustomDropdown>
     );
 };
