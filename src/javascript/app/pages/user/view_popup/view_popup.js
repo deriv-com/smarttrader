@@ -886,7 +886,7 @@ const ViewPopup = (() => {
             }
         } else if ($loading){
             contractManager.set({
-                isPageLoading: false,
+                hidePageLoader: true,
             });
             
             if ($loading.length) {
