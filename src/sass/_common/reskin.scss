@@ -472,7 +472,6 @@ div#contract-injection-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 12;
 
     @media (max-width: 940px) {
         top: 40px;   
@@ -715,6 +714,9 @@ html.test {
     .inpage_popup_container {
         z-index: 9999 !important;
     }
+    .quill-purchase-popup {
+        z-index: 12;
+    }
 }
 
 .purchase-tooltip {
@@ -808,6 +810,28 @@ html.test {
                 border: 1px solid rgba(0, 0, 0, 0.04);
                 max-height: 320px;
                 overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    scrollbar-width: thin;
+                    width: var(--core-size-200);
+                    background-color: transparent;
+                    border-radius: var(--core-borderRadius-500);
+                }
+                &::-webkit-scrollbar-track {
+                    scrollbar-width: thin;
+                    background-color: transparent !important;
+                }
+                &:hover {
+                    scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+                    border-radius: var(--core-borderRadius-500);
+            
+                    &::-webkit-scrollbar-thumb {
+                        scrollbar-width: thin;
+                        display: unset;
+                        border-radius: var(--core-borderRadius-500);
+                        background-color: rgba(0, 0, 0, 0.08);
+                    } 
+                }     
             }
             .quill-custom-dropdown__container {
                 max-width: unset !important;
