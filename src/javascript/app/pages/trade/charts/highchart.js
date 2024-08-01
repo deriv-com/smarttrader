@@ -338,7 +338,6 @@ const Highchart = (() => {
             start            : ((purchase_time || start_time) - margin).toFixed(0), /* load more ticks first */
             end              : end_time ? (end_time + margin).toFixed(0) : 'latest',
             style            : granularity === 0 ? 'ticks' : 'candles',
-            count            : 4999, /* maximum number of ticks possible */
             adjust_start_time: 1,
         };
 
