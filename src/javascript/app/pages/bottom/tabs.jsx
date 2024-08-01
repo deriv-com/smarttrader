@@ -61,7 +61,7 @@ const BottomTabs = () => {
     };
 
     const triggerOldTab = id => {
-        document.querySelectorAll('#trade_analysis li')[id].querySelector('a').click();
+        document.querySelectorAll('#trade_analysis li')?.[id]?.querySelector('a').click();
     };
 
     const tabs = [{ label: localize('Chart') }, { label: localize('Explanation') }];

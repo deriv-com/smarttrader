@@ -62,7 +62,7 @@ const TradePage = (() => {
             BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
                 displayCurrencies();
                 Dropdown('#currency', true);
-                if (document.getElementById('multiplier_currency').tagName === 'SELECT') {
+                if (document.getElementById('multiplier_currency')?.tagName === 'SELECT') {
                     Dropdown('#multiplier_currency', true);
                 }
                 Process.processActiveSymbols(country);

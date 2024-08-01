@@ -152,7 +152,7 @@ const BinaryLoader = (() => {
         BinarySocket.wait('authorize').then(() => {
             if (config.no_blocked_country && Client.isLoggedIn() && Client.isOptionsBlocked()) {
                 displayMessage(error_messages.options_blocked());
-            } else if (Client.isLoggedIn() && Client.isOfferingBlocked()) {
+            } else if (Client.isLoggedIn() && Client.isOfferingBlocked()){
                 displayUnavailable({ body: error_messages.offerings_blocked() });
             } else if (config.no_mf && Client.isLoggedIn() && Client.isAccountOfType('financial')) {
                 displayUnavailable({ body: localize('Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.') });
