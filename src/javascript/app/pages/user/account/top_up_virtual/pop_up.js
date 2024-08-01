@@ -68,7 +68,7 @@ const TopUpVirtualPopup = (() => {
         showPopup({
             form_id,
             popup_id,
-            // url               : urlFor('user/top_up_virtual_pop_up'), // Unused in pages.js.
+            url               : urlFor('user/top_up_virtual_pop_up'), // Unused in pages.js.
             // TODO: Uncomment/update popup logic when restoring TopUpVirtualPopup. Removed JSX can be found in PR#592 (4f8e0ff)
             content_id        : '#top_up',
             additionalFunction: () => {
