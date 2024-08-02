@@ -98,35 +98,39 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
             {['endsinout', 'staysinout'].includes(formName) &&
             barrier_data?.show_barrier_highlow &&
             barrier_high && barrier_low && (
-                <div className='quill-form-row'>
-                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
-                        <TextField
-                            label={barrier_data.label_high}
-                            value={barrier_high}
-                            type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                            allowDecimals
-                            rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
-                            onChange={(e) => handleAmountChange(
-                                e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
-                            )}
-                            status={barrier_error ? 'error' : 'neutral'}
-                            message={getMessage(barrier_indicator_high, 'high')}
-                        />
+                <>
+                    <div className='quill-form-row'>
+                        <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
+                            <TextField
+                                label={barrier_data.label_high}
+                                value={barrier_high}
+                                type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
+                                allowDecimals
+                                rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
+                                onChange={(e) => handleAmountChange(
+                                    e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                )}
+                                status={barrier_error ? 'error' : 'neutral'}
+                                message={getMessage(barrier_indicator_high, 'high')}
+                            />
+                        </div>
                     </div>
-                    <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
-                        <TextField
-                            label={barrier_data.label_low}
-                            value={barrier_low}
-                            type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
-                            allowDecimals
-                            rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
-                            onChange={(e) => handleAmountChange(
-                                e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
-                            )}
-                            message={getMessage(barrier_indicator_low)}
-                        />
+                    <div className='quill-form-row'>
+                        <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
+                            <TextField
+                                label={barrier_data.label_low}
+                                value={barrier_low}
+                                type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
+                                allowDecimals
+                                rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
+                                onChange={(e) => handleAmountChange(
+                                    e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                )}
+                                message={getMessage(barrier_indicator_low)}
+                            />
+                        </div>
                     </div>
-                </div>
+                </>
             )}
         </>
     );
