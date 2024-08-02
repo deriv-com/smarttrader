@@ -1,3 +1,19 @@
+body {
+    &.DE {
+        .quill-purchase-section {
+            .purchase-box {
+                .purchase-header {
+                    .purchase-icon-box{ 
+                        .contract_heading {
+                            background-size: 35% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .quill {
     &-container {
         &-centered {
