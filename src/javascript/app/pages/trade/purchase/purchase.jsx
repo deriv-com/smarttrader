@@ -28,16 +28,21 @@ const Purchase = () => {
         purchaseManager.set({
             showPurchaseResults: false,
             error              : null,
+            cd_errorMsg        : null,
+            cd_showAuditBtn    : false,
+            cd_infoMsg         : null,
         });
  
     useEffect(() => {
         const newData = purchaseManager.getAll();
 
         setShowPopup(!!newData?.showContractDetailsPopup);
+
         setData(oldData => ({
             ...oldData,
             ...newData,
         }));
+       
     }, [hasPurchaseChange]);
 
     useEffect(() => {

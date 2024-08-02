@@ -223,34 +223,32 @@ const ContractTable = ({ data }) => (
         )}
 
         {data?.cd_showSell && (
-            <>
-                <div className='table-box lg'>
-                    <Button
-                        variant='secondary'
-                        size='lg'
-                        label={data?.cd_sellLabel}
-                        color='black'
-                        onClick={() => triggerClick('#sell_at_market')}
+            <div className='table-box lg'>
+                <Button
+                    variant='secondary'
+                    size='lg'
+                    label={data?.cd_sellLabel}
+                    color='black'
+                    onClick={() => triggerClick('#sell_at_market')}
+                />
+                {data?.cd_errorMsg && (
+                    <SectionMessage
+                        className='info-msg'
+                        size='sm'
+                        status='warning'
+                        message={parseData(data.cd_errorMsg)}
                     />
-                    {data?.cd_errorMsg && (
-                        <SectionMessage
-                            className='info-msg'
-                            size='sm'
-                            status='warning'
-                            message={parseData(data.cd_errorMsg)}
-                        />
-                    )}
-                    {data?.cd_sellInfo && (
-                        <SectionMessage
-                            className='info-msg'
-                            size='sm'
-                            status='info'
-                            message={parseData(data.cd_sellInfo)}
-                            icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
-                        />
-                    )}
-                </div>
-            </>
+                )}
+                {data?.cd_sellInfo && (
+                    <SectionMessage
+                        className='info-msg'
+                        size='sm'
+                        status='info'
+                        message={parseData(data.cd_sellInfo)}
+                        icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
+                    />
+                )}
+            </div>
         )}
     </div>
 );
