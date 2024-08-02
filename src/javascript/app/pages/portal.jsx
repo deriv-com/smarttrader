@@ -2,11 +2,7 @@ import { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
 const Portal = ({ children }) => {
-    const elRef = useRef(null);
-
-    if (!elRef.current) {
-        elRef.current = document.createElement('div');
-    }
+    const elRef = useRef(document.createElement('div'));
 
     useEffect(() => {
         const el = elRef.current;
