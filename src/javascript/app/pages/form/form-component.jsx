@@ -85,20 +85,22 @@ export const FormComponent = () => {
     const onExpiryDateChange = (value) => {
         const element = common_functions.getElementById('expiry_date');
         const newDate = moment(value).format('YYYY-MM-DD');
-        if (!endtime_data.show_datepicker) {
-            Array.from(element.options).map((option) => {
-                if (moment(option.text).format('YYYY-MM-DD') === value) {
-                    option.setAttribute('selected', true);
-                    option.setAttribute('data-value', newDate);
-                } else {
-                    option.setAttribute('selected', false);
-                    option.setAttribute('data-value', newDate);
-                }
-            });
-        } else {
-            element.setAttribute('data-value', newDate);
+        if (newDate !== expiry_date) {
+            if (!endtime_data.show_datepicker) {
+                Array.from(element.options).map((option) => {
+                    if (moment(option.text).format('YYYY-MM-DD') === value) {
+                        option.setAttribute('selected', true);
+                        option.setAttribute('data-value', newDate);
+                    } else {
+                        option.setAttribute('selected', false);
+                        option.setAttribute('data-value', newDate);
+                    }
+                });
+            } else {
+                element.setAttribute('data-value', newDate);
+            }
+            eventDispatcher(element, 'change');
         }
-        eventDispatcher(element, 'change');
     };
 
     const updateFormField = (elementId, value, eventType) => {
