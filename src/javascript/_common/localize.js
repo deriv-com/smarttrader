@@ -18,7 +18,7 @@ const Localize = (() => {
 
         const lang = urlLang().toUpperCase();
    
-        const strings = typeof texts_json !== 'undefined' ? texts_json : {};
+        const strings = texts_json ?? {};
 
         localized_texts = strings[lang];
 
