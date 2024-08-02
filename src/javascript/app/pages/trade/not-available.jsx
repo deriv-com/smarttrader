@@ -22,9 +22,8 @@ const NotAvailable = ({ title, body }) => (
                     e.preventDefault();
                 }}
                 size='lg'
-            >
-                {localize('Switch to another account')}
-            </Button>
+                label={localize('Switch to another account')}
+            />
         </section>
     </div>
 );
