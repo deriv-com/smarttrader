@@ -8,10 +8,10 @@ import contractManager from '../../common/contract_manager.js';
 const NotAvailable = ({ title, body }) => (
     <div className='not-available-container'>
         <section className='not-available-section'>
-            <Text size='xl' bold centered>
+            <Text size='xl' bold centered color='not-available-section-text'>
                 {title}
             </Text>
-            <Text size='lg' centered>
+            <Text size='lg' centered color='not-available-section-text'>
                 {body}
             </Text>
             <Button
