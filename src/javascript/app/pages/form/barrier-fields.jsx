@@ -52,8 +52,6 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
         barrier_error,
     } = barrierData;
 
-    const barrierRegex = '[+-]?(d+(.d*)?|.d+)';
-
     const getMessage = (indicative, type) => {
         const tooltipContent = localize('This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.');
         let description;
@@ -84,12 +82,12 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                             onChange={(e) =>
                                 handleAmountChange(
                                     e,
-                                    'barrier',
-                                    barrier_data?.isOffset ? barrierRegex : null
+                                    'barrier'
                                 )
                             }
                             status={barrier_error ? 'error' : 'neutral'}
                             message={getMessage(barrier_indicator)}
+                            customType='barrier'
                         />
                     </div>
                 </div>
@@ -108,10 +106,11 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                                 allowDecimals
                                 rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
                                 onChange={(e) => handleAmountChange(
-                                    e, 'barrier_high', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                    e, 'barrier_high'
                                 )}
                                 status={barrier_error ? 'error' : 'neutral'}
                                 message={getMessage(barrier_indicator_high, 'high')}
+                                customType='barrier'
                             />
                         </div>
                     </div>
@@ -124,9 +123,10 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                                 allowDecimals
                                 rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
                                 onChange={(e) => handleAmountChange(
-                                    e, 'barrier_low', barrier_data?.isOffsetHightLow ? barrierRegex : null
+                                    e, 'barrier_low'
                                 )}
                                 message={getMessage(barrier_indicator_low)}
+                                customType='barrier'
                             />
                         </div>
                     </div>
