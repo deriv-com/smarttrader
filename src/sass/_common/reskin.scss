@@ -508,6 +508,11 @@ div#contract-injection-container {
         height: 48px;
         background: var(--core-color-opacity-white-800);
 
+        .spacer {
+            flex:none;
+            width: 46px;
+            height: 100%;
+        }
         .title-box {
             display: flex;
             width: 100%;
