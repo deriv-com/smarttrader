@@ -138,7 +138,7 @@ const DetailsSection = ({ data }) => (
                     {localize('Contract Details')}
                 </Text>
             </div>
-            <Button variant='tertiary' size='lg' />
+            <div className='spacer' />
         </div>
         <div className='popup-scroller'>
             <div className='body-box'>
