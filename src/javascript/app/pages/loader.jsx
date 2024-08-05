@@ -55,11 +55,16 @@ const Loader = () => {
     },[hasContractChange]);
 
     useEffect(() => {
-        window.addEventListener('load', () => {
-            if (page !== 'Trade'){
+        const handleLoad = () => {
+            if (page !== 'Trade') {
                 setLoading(false);
             }
-        });
+        };
+    
+        window.addEventListener('load', handleLoad);
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
     },[]);
 
     if (loading){
