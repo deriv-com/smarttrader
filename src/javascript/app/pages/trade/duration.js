@@ -17,7 +17,8 @@ const toReadableFormat   = require('../../../_common/string_util').toReadableFor
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
 const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
-const tradeManager = require('../../common/trade_manager').default;
+// const tradeManager = require('../../common/trade_manager').default;
+const dataManager = require('../../common/data_manager').default;
 
 /*
  * Handles duration processing display
@@ -153,9 +154,9 @@ const Durations = (() => {
         Object.values(list).forEach(option => {
             duration_options.push({ text: duration_list[option].text, value: option });
         });
-        tradeManager.set({
+        dataManager.set({
             duration_options,
-        });
+        }, 'trade');
 
         smallest_duration = {
             amount: duration_list[list[0]].dataset.minimum,
@@ -449,9 +450,9 @@ const Durations = (() => {
                 requested = selectEndDate(selected_date);
             }
         }
-        tradeManager.set({
+        dataManager.set({
             endtime_data,
-        });
+        }, 'trade');
         return requested;
     };
 
@@ -504,9 +505,9 @@ const Durations = (() => {
             fragment.appendChild(option);
         }
         target.appendChild(fragment);
-        tradeManager.set({
+        dataManager.set({
             expiry_type_options,
-        });
+        }, 'trade');
     };
 
     const isNow = date_start => (date_start ? date_start === 'now' : (!State.get('is_start_dates_displayed') || CommonFunctions.getElementById('date_start').value === 'now'));
@@ -683,9 +684,9 @@ const Durations = (() => {
                 duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
             }
         }
-        tradeManager.set({
+        dataManager.set({
             duration_data,
-        });
+        }, 'trade');
     };
 
     const onStartDateChange = (value) => {

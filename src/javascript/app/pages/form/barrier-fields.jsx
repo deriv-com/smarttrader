@@ -6,7 +6,8 @@ import {
 // eslint-disable-next-line import/no-unresolved
 import { StandaloneCircleInfoRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useBarrierChange } from '../../hooks/events.js';
-import tradeManager from '../../common/trade_manager.js';
+// import tradeManager from '../../common/trade_manager.js';
+import dataManager from '../../common/data_manager.js';
 import { localize } from '../../../_common/localize.js';
 import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 
@@ -21,7 +22,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
     useEffect(() => {
         setBarrierData((oldData) => ({
             ...oldData,
-            ...tradeManager.getAll(),
+            ...dataManager.getAll('trade'),
         }));
     }, [hasBarrierChange]);
 

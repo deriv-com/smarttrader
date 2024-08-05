@@ -2,7 +2,8 @@ const moment             = require('moment');
 const Contract           = require('./contract');
 const Defaults           = require('./defaults');
 const Tick               = require('./tick');
-const tradeManager       = require('../../common/trade_manager').default;
+// const tradeManager       = require('../../common/trade_manager').default;
+const dataManager       = require('../../common/data_manager').default;
 const addComma           = require('../../../_common/base/currency_base').addComma;
 const elementTextContent = require('../../../_common/common_functions').elementTextContent;
 const getElementById     = require('../../../_common/common_functions').getElementById;
@@ -87,9 +88,9 @@ const Barriers = (() => {
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
                     barrier_data.show_barrier = true;
                     barrier_data.show_barrier_highlow = false;
-                    tradeManager.set({
+                    dataManager.set({
                         barrier_data,
-                    }, 'barrier');
+                    }, 'trade', 'barrier');
                     return;
                 } else if (barrier.count === 2) {
                     getElementById('barrier_row').style.display = 'none';
@@ -170,9 +171,9 @@ const Barriers = (() => {
                     Defaults.set(BARRIER_LOW, low_elm.value);
                     barrier_data.show_barrier = false;
                     barrier_data.show_barrier_highlow = true;
-                    tradeManager.set({
+                    dataManager.set({
                         barrier_data,
-                    }, 'barrier');
+                    }, 'trade', 'barrier');
                     return;
                 }
             }
@@ -215,9 +216,9 @@ const Barriers = (() => {
             }
         }
 
-        tradeManager.set({
+        dataManager.set({
             barrier_error,
-        },'barrier');
+        }, 'trade', 'barrier');
     };
 
     const showHideRelativeTip = (barrier, arr_el) => {

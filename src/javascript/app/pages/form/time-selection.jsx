@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
-import tradeManager from '../../common/trade_manager.js';
+// import tradeManager from '../../common/trade_manager.js';
+import dataManager from '../../common/data_manager.js';
 import { setMinMaxTime } from '../../common/helpers.js';
 
 const TimeContent = ({ time, onUpdate, elementId }) => {
@@ -12,8 +13,8 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
     const { close } = useDropdown();
 
     useEffect(() => {
-        setStartTimeData(tradeManager.get('starttime_obj'));
-        setExpiryTimeData(tradeManager.get('expirytime_obj'));
+        setStartTimeData(dataManager.get('starttime_obj', 'trade'));
+        setExpiryTimeData(dataManager.get('expirytime_obj', 'trade'));
     }, [hasTimeChange]);
 
     const formatTime = (timeObj) => {

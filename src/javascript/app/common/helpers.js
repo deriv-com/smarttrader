@@ -2,7 +2,8 @@ import React from 'react';
 import { Tooltip } from '@deriv-com/quill-ui';
 import parse from 'html-react-parser';
 import moment from 'moment';
-import tradeManager from './trade_manager';
+// import tradeManager from './trade_manager';
+import dataManager from './data_manager';
 import { getLocalTime } from '../base/clock';
 import common_independent from '../pages/trade/common_independent';
 
@@ -125,10 +126,10 @@ const setMinMaxTimeObj = (options) => {
         }
     }
 
-    tradeManager.set({
+    dataManager.set({
         starttime_obj,
         expirytime_obj,
-    },'time');
+    }, 'trade', 'time');
 };
 
 export {

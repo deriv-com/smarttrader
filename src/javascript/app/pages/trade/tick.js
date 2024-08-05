@@ -2,7 +2,8 @@ const moment               = require('moment');
 const countDecimalPlaces   = require('./common_independent').countDecimalPlaces;
 const displayPriceMovement = require('./common_independent').displayPriceMovement;
 const underlyings          = require('./symbols').underlyings;
-const tradeManager         = require('../../common/trade_manager').default;
+// const tradeManager         = require('../../common/trade_manager').default;
+const dataManager          = require('../../common/data_manager').default;
 const addComma             = require('../../../_common/base/currency_base').addComma;
 const elementTextContent   = require('../../../_common/common_functions').elementTextContent;
 const getElementById       = require('../../../_common/common_functions').getElementById;
@@ -114,16 +115,16 @@ const Tick = (() => {
 
                 indicative_barrier_tooltip.textContent =
                     addComma((parseFloat(current_tick) + barrier_value), decimal_places);
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator: addComma((parseFloat(current_tick) + barrier_value), decimal_places),
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 tooltip.style.display = 'inherit';
                 span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_barrier_tooltip, '');
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator: null,
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 tooltip.style.display = 'none';
                 span.style.display    = 'inherit';
             }
@@ -133,16 +134,16 @@ const Tick = (() => {
                 value = isNaN(value) ? 0 : value;
                 indicative_high_barrier_tooltip.textContent =
                     (parseFloat(current_tick) + value).toFixed(decimal_places);
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator_high: (parseFloat(current_tick) + value).toFixed(decimal_places),
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 high_tooltip.style.display = 'inherit';
                 high_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_high_barrier_tooltip, '');
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator_high: null,
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 high_tooltip.style.display = 'none';
                 high_span.style.display    = 'inherit';
             }
@@ -151,16 +152,16 @@ const Tick = (() => {
                 value = parseFloat(low_barrier_element.value);
                 value = isNaN(value) ? 0 : value;
                 indicative_low_barrier_tooltip.textContent = (parseFloat(current_tick) + value).toFixed(decimal_places);
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator_low: (parseFloat(current_tick) + value).toFixed(decimal_places),
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 low_tooltip.style.display = 'inherit';
                 low_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_low_barrier_tooltip, '');
-                tradeManager.set({
+                dataManager.set({
                     barrier_indicator_low: null,
-                }, 'barrier');
+                }, 'trade', 'barrier');
                 low_tooltip.style.display = 'none';
                 low_span.style.display    = 'inherit';
             }
@@ -168,11 +169,11 @@ const Tick = (() => {
             elementTextContent(indicative_barrier_tooltip, '');
             elementTextContent(indicative_high_barrier_tooltip, '');
             elementTextContent(indicative_low_barrier_tooltip, '');
-            tradeManager.set({
+            dataManager.set({
                 barrier_indicator     : null,
                 barrier_indicator_high: null,
                 barrier_indicator_low : null,
-            }, 'barrier');
+            }, 'trade', 'barrier');
         }
     };
 
