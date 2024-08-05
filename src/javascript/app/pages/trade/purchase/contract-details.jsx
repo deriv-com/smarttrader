@@ -173,6 +173,22 @@ const ContractDetails = () => {
     const [data, setData] = useState({});
 
     useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                purchaseManager.set({
+                    showContractDetailsPopup: false,
+                });
+            }
+        };
+    
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [hasPurchaseChange]);
+
+    useEffect(() => {
         const newData = purchaseManager.getAll();
 
         setData((oldData) => ({
