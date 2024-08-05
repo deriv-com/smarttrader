@@ -21,24 +21,25 @@ const PurchaseSectionLoader = ({ hideBottom }) => (
     </>
 );
 
+const pageTypes = [
+    {
+        name: '404',
+        code: '404',
+    },
+    {
+        name: 'Trade',
+        code: 'trading',
+    },
+    {
+        name: 'Endpoint',
+        code: 'endpoint',
+    },
+];
+
 const Loader = () => {
     const hasContractChange  = useContractChange();
 
     const [loading,setLoading] = useState(true);
-    const pageTypes = [
-        {
-            name: '404',
-            code: '404',
-        },
-        {
-            name: 'Trade',
-            code: 'trading',
-        },
-        {
-            name: 'Endpoint',
-            code: 'endpoint',
-        },
-    ];
 
     const getPageType = () => pageTypes.find(({ code }) => window.location.pathname.includes(code)) || { name: 'Generic', code: '' };
 
@@ -54,11 +55,16 @@ const Loader = () => {
     },[hasContractChange]);
 
     useEffect(() => {
-        window.addEventListener('load', () => {
-            if (page !== 'Trade'){
+        const handleLoad = () => {
+            if (page !== 'Trade') {
                 setLoading(false);
             }
-        });
+        };
+    
+        window.addEventListener('load', handleLoad);
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
     },[]);
 
     if (loading){
