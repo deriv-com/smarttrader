@@ -109,12 +109,7 @@ const TradingAnalysis = (() => {
         }
         if (current_tab) {
             const el_to_show           = getElementById(current_tab);
-            const el_mobile_tab_header = getElementById('tab_mobile_header');
-
             TabSelector.slideSelector(tab_selector_id, el_to_show);
-            if (el_mobile_tab_header) {
-                // el_mobile_tab_header.innerHTML = el_to_show.firstChild.innerHTML;
-            }
         }
 
         // workaround for underline during window resize

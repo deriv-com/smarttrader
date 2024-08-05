@@ -55,11 +55,16 @@ const Loader = () => {
     },[hasContractChange]);
 
     useEffect(() => {
-        window.addEventListener('load', () => {
-            if (page !== 'Trade'){
+        const handleLoad = () => {
+            if (page !== 'Trade') {
                 setLoading(false);
             }
-        });
+        };
+    
+        window.addEventListener('load', handleLoad);
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
     },[]);
 
     if (loading){
@@ -96,7 +101,7 @@ const Loader = () => {
                                 </div>
                             </>
                         ) : (
-                            <Skeleton.Square height={300} fullWidth rounded  />
+                            <Skeleton.Square height={300} fullWidth rounded className='static-page-loader' />
                         )}
                     </div>
                 </div>
