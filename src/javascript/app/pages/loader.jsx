@@ -40,7 +40,7 @@ const Loader = () => {
     const hasContractChange  = useContractChange();
 
     const [loading,setLoading] = useState(true);
-
+    
     const getPageType = () => pageTypes.find(({ code }) => window.location.pathname.includes(code)) || { name: 'Generic', code: '' };
 
     const page = getPageType().name;
