@@ -284,19 +284,19 @@ const Purchase = () => {
                     <div className='table-box'>
                         {data?.pr_tablePayoutValue && (
                             <div className='table-item'>
-                                <Text size='sm' bold>{data?.pr_tablePayout}</Text>
+                                <Text size='sm' centered bold>{data?.pr_tablePayout}</Text>
                                 <Text size='sm' centered >{parseData(data.pr_tablePayoutValue)}</Text>
                             </div>
                         )}
                         { data?.pr_tableCostValue && (
                             <div className='table-item'>
-                                <Text size='sm' bold>{data?.pr_tableCost}</Text>
+                                <Text size='sm' centered bold>{data?.pr_tableCost}</Text>
                                 <Text size='sm' centered >{parseData(data.pr_tableCostValue)}</Text>
                             </div>
                         )}
                         { data?.pr_tableProfitValue && data?.pr_showTableProfit && (
                             <div className='table-item'>
-                                <Text size='sm' bold>{data?.pr_tableProfit}</Text>
+                                <Text size='sm' centered bold>{data?.pr_tableProfit}</Text>
                                 <Text size='sm' centered>{parseData(data.pr_tableProfitValue)}</Text>
                             </div>
                         )}
