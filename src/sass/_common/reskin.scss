@@ -929,6 +929,10 @@ html.test {
     color: var(--component-textIcon-normal-prominent);
 }
 
+.static-page-loader {
+   margin-top: 15px;
+}
+
 .main-loader {
     display: flex;
     flex-direction: column;
@@ -1020,7 +1024,7 @@ html.test {
 }
 
 .static-page-layout {
-    margin-top: 40px;
+    margin-top: 15px;
     margin-bottom: 20px;
 
     @media (max-width: 768px) {

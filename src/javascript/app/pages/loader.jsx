@@ -96,7 +96,7 @@ const Loader = () => {
                                 </div>
                             </>
                         ) : (
-                            <Skeleton.Square height={300} fullWidth rounded  />
+                            <Skeleton.Square height={300} fullWidth rounded className='static-page-loader' />
                         )}
                     </div>
                 </div>
