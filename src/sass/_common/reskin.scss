@@ -920,6 +920,10 @@ html.test {
     max-width: 940px;
 }
 
+.not-available-section-text {
+    color: var(--component-textIcon-normal-prominent);
+}
+
 .main-loader {
     display: flex;
     flex-direction: column;
