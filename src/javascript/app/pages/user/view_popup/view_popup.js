@@ -720,7 +720,7 @@ const ViewPopup = (() => {
     const populateAuditTable = (show_audit_table) => {
         if (!contract.tick_count) {
             const contract_starts = createAuditTable(localize('Contract starts'));
-            parseAuditResponse(contract_starts.table, contract.audit_details.contract_start,'Start').then(() => {
+            parseAuditResponse(contract_starts.table, contract.audit_details.contract_start, 'Start').then(() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
                     appendAuditLink('trade_details_entry_spot');
@@ -733,7 +733,7 @@ const ViewPopup = (() => {
                 // don't show exit tick information if missing or manual sold
                 if (contract.audit_details.contract_end && contract.status !== 'sold') {
                     const contract_ends = createAuditTable(localize('Contract ends'));
-                    parseAuditResponse(contract_ends.table, contract.audit_details.contract_end,'End').then(() => {
+                    parseAuditResponse(contract_ends.table, contract.audit_details.contract_end, 'End').then(() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
                             appendAuditLink('trade_details_current_spot');
@@ -751,7 +751,7 @@ const ViewPopup = (() => {
             });
         } else {
             const contract_details = createAuditTable(localize('Contract details'));
-            parseAuditResponse(contract_details.table, contract.audit_details.all_ticks,'Details').then(() => {
+            parseAuditResponse(contract_details.table, contract.audit_details.all_ticks, 'Details').then(() => {
                 if (contract.audit_details.all_ticks) {
                     createAuditHeader(contract_details.table);
                     appendAuditLink('trade_details_entry_spot');

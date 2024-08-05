@@ -24,12 +24,11 @@ const TimeTooltipWrapper = (element, time) => {
     );
 };
 
-const handleNumeric = (event, regexString) => {
-    let inputValue = event.target.value;
-    const regex = new RegExp(regexString) || /[^0-9.]/g;
+const handleNumeric = (event, regex_string) => {
+    let input_value = event.target.value;
+    const regex = new RegExp(regex_string) || /[^0-9.]/g;
 
-    // Remove characters that do not match the regex
-    inputValue = inputValue
+    input_value = input_value
         .split('')
         .filter((char, index, array) => {
             const tempValue = array.slice(0, index + 1).join('');
@@ -37,20 +36,18 @@ const handleNumeric = (event, regexString) => {
         })
         .join('');
 
-    // Ensure only one sign character is allowed at the start
-    if (inputValue.match(/[+-]/g) && inputValue.match(/[+-]/g).length > 1) {
-        inputValue = inputValue.replace(/[+-]/g, '');
+    if (input_value.match(/[+-]/g) && input_value.match(/[+-]/g).length > 1) {
+        input_value = input_value.replace(/[+-]/g, '');
     }
 
-    // Ensure only one decimal point is allowed
-    const decimalCount = (inputValue.match(/\./g) || []).length;
-    if (decimalCount > 1) {
-        inputValue = inputValue.replace(/\./g, (match, offset) =>
-            offset === inputValue.indexOf('.') ? match : ''
+    const decimal_count = (input_value.match(/\./g) || []).length;
+    if (decimal_count > 1) {
+        input_value = input_value.replace(/\./g, (match, offset) =>
+            offset === input_value.indexOf('.') ? match : ''
         );
     }
 
-    return inputValue;
+    return input_value;
 };
 
 const setMinMaxTime = (selector, check_end_time) => {
@@ -72,15 +69,15 @@ const setMinMaxTime = (selector, check_end_time) => {
             min_time = moment_now.clone();
         }
     }
-    const initObj = { selector };
+    const init_obj = { selector };
     if (min_time) {
-        initObj.minTime = min_time.clone();
+        init_obj.minTime = min_time.clone();
     }
     if (max_time) {
-        initObj.maxTime = max_time.clone();
+        init_obj.maxTime = max_time.clone();
     }
 
-    setMinMaxTimeObj(initObj);
+    setMinMaxTimeObj(init_obj);
 };
 
 const setMinMaxTimeObj = (options) => {
