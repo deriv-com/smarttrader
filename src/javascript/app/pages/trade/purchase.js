@@ -19,7 +19,7 @@ const CommonFunctions          = require('../../../_common/common_functions');
 const localize                 = require('../../../_common/localize').localize;
 const State                    = require('../../../_common/storage').State;
 const Url                      = require('../../../_common/url');
-const purchaseManager          = require('../../common/purchase_manager').default;
+const dataManager              = require('../../common/data_manager').default;
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
 
@@ -27,8 +27,8 @@ const getPropertyValue         = require('../../../_common/utility').getProperty
  * Purchase object that handles all the functions related to
  * contract purchase response
  */
-
 const Purchase = (() => {
+    const type_purchase = 'purchase';
     const adjustment = 5;
 
     let payout_value,
@@ -94,7 +94,7 @@ const Purchase = (() => {
                 processPriceRequest();
                 TopUpVirtualPopup.show(error.message);
 
-                purchaseManager.set({
+                dataManager.set({
                     error: {
                         showPurchaseResults: true,
                         ...error,
@@ -102,13 +102,13 @@ const Purchase = (() => {
                         title              : localize('Top up Virtual Account?'),
                         isCustom           : true,
                     },
-                });
+                }, type_purchase);
             } else {
                 contracts_list.style.display = 'none';
                 container.style.display = 'block';
-                purchaseManager.set({
+                dataManager.set({
                     showPurchaseResults: true,
-                });
+                }, type_purchase);
 
                 message_container.hide();
                 if (/AuthorizationRequired/.test(error.code)) {
@@ -121,14 +121,14 @@ const Purchase = (() => {
                     const signup_url = `${Url.getStaticUrl()}/signup/`;
                     authorization_error_btn_signup.href = signup_url;
 
-                    purchaseManager.set({
+                    dataManager.set({
                         error: {
                             ...error,
                             signupUrl: signup_url,
                             title    : localize('Ready to trade?'),
                             isCustom : true,
                         },
-                    });
+                    }, type_purchase);
 
                 } else {
                     BinarySocket.wait('get_account_status').then(response => {
@@ -171,9 +171,9 @@ const Purchase = (() => {
                             }
                         }
 
-                        purchaseManager.set({
+                        dataManager.set({
                             error: { ...error,message },
-                        });
+                        }, type_purchase);
 
                         CommonFunctions.elementInnerHtml(confirmation_error, message);
                     });
@@ -185,23 +185,22 @@ const Purchase = (() => {
             message_container.show();
             authorization_error.setVisibility(0);
             confirmation_error.setVisibility(0);
-            purchaseManager.set({
+            dataManager.set({
                 error: null,
-            });
+            }, type_purchase);
 
             CommonFunctions.elementTextContent(heading, localize('Contract Confirmation'));
             CommonFunctions.elementTextContent(descr, receipt.longcode);
             CommonFunctions.elementTextContent(barrier_element, '');
             CommonFunctions.elementTextContent(reference, `${localize('Your transaction reference is')} ${receipt.transaction_id}`);
 
-            purchaseManager.set({
+            dataManager.set({
                 showPurchaseResults: true,
                 pr_heading         : localize('Contract Confirmation'),
                 pr_description     : receipt.longcode,
                 pr_barrier         : '',
                 pr_reference       : `${localize('Your transaction reference is')} ${receipt.transaction_id}`,
-                
-            });
+            }, type_purchase);
 
             const currency = Client.get('currency');
             let formula, multiplier;
@@ -217,32 +216,31 @@ const Purchase = (() => {
             const potential_profit_value = payout_value ? formatMoney(currency, payout_value - cost_value) : undefined;
 
             CommonFunctions.elementInnerHtml(cost,   `${localize('Total Cost')} <p>${formatMoney(currency, cost_value)}</p>`);
-            purchaseManager.set({
+            dataManager.set({
                 pr_tableCost     : localize('Total Cost'),
                 pr_tableCostValue: formatMoney(currency, cost_value),
-            });
+            }, type_purchase);
 
             if (isLookback(contract_type)) {
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formula}</p>`);
-                purchaseManager.set({
+                dataManager.set({
                     pr_tablePayout     : localize('Potential Payout'),
                     pr_tablePayoutValue: formula,
                     pr_showTableProfit : false,
-                });
+                }, type_purchase);
                 profit.setVisibility(0);
             } else {
                 profit.setVisibility(1);
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formatMoney(currency, payout_value)}</p>`);
                 CommonFunctions.elementInnerHtml(profit, `${localize('Potential Profit')} <p>${potential_profit_value}</p>`);
 
-                purchaseManager.set({
+                dataManager.set({
                     pr_tablePayout     : localize('Potential Payout'),
                     pr_tablePayoutValue: formatMoney(currency, payout_value),
                     pr_tableProfit     : localize('Potential Profit'),
                     pr_tableProfitValue: potential_profit_value,
                     pr_showTableProfit : true,
-
-                });
+                }, type_purchase);
             }
 
             updateValues.updateContractBalance(receipt.balance_after);
@@ -266,15 +264,15 @@ const Purchase = (() => {
                 CommonFunctions.elementTextContent(button, localize('View'));
                 button.setAttribute('contract_id', receipt.contract_id);
                 button.show();
-                purchaseManager.set({
+                dataManager.set({
                     pr_showBtn: true,
-                });
+                }, type_purchase);
                 $('#confirmation_message_container .open_contract_details').attr('contract_id', receipt.contract_id).setVisibility(1);
             } else {
                 button.hide();
-                purchaseManager.set({
+                dataManager.set({
                     pr_showBtn: false,
-                });
+                }, type_purchase);
                 $('#confirmation_message_container .open_contract_details').setVisibility(0);
             }
         }

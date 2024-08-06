@@ -17,8 +17,7 @@ const toReadableFormat   = require('../../../_common/string_util').toReadableFor
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
 const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
-// const tradeManager = require('../../common/trade_manager').default;
-const dataManager = require('../../common/data_manager').default;
+const dataManager        = require('../../common/data_manager').default;
 
 /*
  * Handles duration processing display
@@ -45,6 +44,7 @@ const Durations = (() => {
         FORM_NAME,
         TIME_START,
     } = Defaults.PARAM_NAMES;
+    const type_trade = 'trade';
 
     const displayDurations = (time_start_val) => {
         let date_time_start = moment(Defaults.get(DATE_START) * 1000);
@@ -156,7 +156,7 @@ const Durations = (() => {
         });
         dataManager.set({
             duration_options,
-        }, 'trade');
+        }, type_trade);
 
         smallest_duration = {
             amount: duration_list[list[0]].dataset.minimum,
@@ -452,7 +452,7 @@ const Durations = (() => {
         }
         dataManager.set({
             endtime_data,
-        }, 'trade');
+        }, type_trade);
         return requested;
     };
 
@@ -507,7 +507,7 @@ const Durations = (() => {
         target.appendChild(fragment);
         dataManager.set({
             expiry_type_options,
-        }, 'trade');
+        }, type_trade);
     };
 
     const isNow = date_start => (date_start ? date_start === 'now' : (!State.get('is_start_dates_displayed') || CommonFunctions.getElementById('date_start').value === 'now'));
@@ -686,7 +686,7 @@ const Durations = (() => {
         }
         dataManager.set({
             duration_data,
-        }, 'trade');
+        }, type_trade);
     };
 
     const onStartDateChange = (value) => {

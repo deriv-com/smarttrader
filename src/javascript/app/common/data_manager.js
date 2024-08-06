@@ -1,11 +1,16 @@
-import { triggerBarrierChange, triggerTimeChange, triggerTradeChange } from '../hooks/events';
+import {
+    triggerBarrierChange,
+    triggerPurchaseChange,
+    triggerTimeChange,
+    triggerTradeChange,
+} from '../hooks/events';
 
 class DataManager {
     constructor() {
         this.data = {
-            trade: {},
+            trade   : {},
+            purchase: {},
         };
-        // this.trade = {};
     }
 
     set(data, data_type, optional) {
@@ -29,7 +34,18 @@ class DataManager {
                 } else if (optional === 'time') {
                     triggerTimeChange();
                 } else {
-                    triggerTradeChange();
+                    switch (data_type) {
+                        case 'trade':
+                            triggerTradeChange();
+                            break;
+
+                        case 'purchase':
+                            triggerPurchaseChange();
+                            break;
+                    
+                        default:
+                            break;
+                    }
                 }
             }
         }
@@ -43,13 +59,21 @@ class DataManager {
         return { ...this.data[data_type] };
     }
 
-    clear() {
-        const oldValues = { ...this.data };
-        this.data = {};
-        window.dispatchEvent(new CustomEvent('tradeChange', {
-            detail: { oldValues, newValues: {} },
-        }));
-        triggerTradeChange();
+    clear(data_type) {
+        const oldValues = { ...this.data[data_type] };
+        this.data[data_type] = {};
+        if (data_type === 'trade') {
+            window.dispatchEvent(new CustomEvent('tradeChange', {
+                detail: { oldValues, newValues: {} },
+            }));
+            triggerTradeChange();
+        }
+        if (data_type === 'purchase') {
+            window.dispatchEvent(new CustomEvent('purchaseChange', {
+                detail: { oldValues, newValues: {} },
+            }));
+            triggerPurchaseChange();
+        }
     }
 
     has(key, data_type) {

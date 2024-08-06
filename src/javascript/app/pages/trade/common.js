@@ -9,7 +9,7 @@ const FormsWrapperElement        = require('../form/contract-form-wrapper.jsx');
 const TabsElement                = require('../bottom/tabs.jsx');
 const formatMoney                = require('../../common/currency').formatMoney;
 const ActiveSymbols              = require('../../common/active_symbols');
-const purchaseManager            = require('../../common/purchase_manager.js').default;
+const dataManager                = require('../../common/data_manager.js').default;
 const contractManager            = require('../../common/contract_manager.js').default;
 const elementInnerHtml           = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById             = require('../../../_common/common_functions').getElementById;
@@ -42,6 +42,8 @@ const commonTrading = (() => {
         TIME_START,
         UNDERLYING,
     } = Defaults.PARAM_NAMES;
+
+    const type_purchase = 'purchase';
 
     const displayContractForms = (id, elements, selected) => {
         if (!id || !elements || !selected) return;
@@ -158,9 +160,9 @@ const commonTrading = (() => {
         showHideOverlay('contract_confirmation_container', 'none');
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
-        purchaseManager.set({
+        dataManager.set({
             showPurchaseResults: false,
-        });
+        }, type_purchase);
     };
 
     const getContractCategoryTree = (elements) => {
@@ -254,9 +256,9 @@ const commonTrading = (() => {
             } else {
                 node.show();
                 elementInnerHtml(node, comment);
-                purchaseManager.set({
+                dataManager.set({
                     [`${position}Comment`]: comment,
-                });
+                }, type_purchase);
             }
         }
     };
@@ -476,15 +478,15 @@ const commonTrading = (() => {
         requireHighstock,
         showPriceOverlay: () => {
             showHideOverlay('loading_container2', 'block');
-            purchaseManager.set({
+            dataManager.set({
                 isPurchaseFormDisabled: true,
-            });
+            }, type_purchase);
         },
         hidePriceOverlay: () => {
             showHideOverlay('loading_container2', 'none');
-            purchaseManager.set({
+            dataManager.set({
                 isPurchaseFormDisabled: false,
-            });
+            }, type_purchase);
         },
         hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },
         showFormOverlay: () => { showHideOverlay('loading_container3', 'block'); },

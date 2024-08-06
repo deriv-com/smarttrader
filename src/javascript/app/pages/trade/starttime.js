@@ -10,7 +10,6 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
-// const tradeManager = require('../../common/trade_manager').default;
 const dataManager       = require('../../common/data_manager').default;
 
 /*

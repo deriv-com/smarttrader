@@ -15,10 +15,8 @@ const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
-// const tradeManager      = require('../../common/trade_manager.js').default;
-const dataManager      = require('../../common/data_manager.js').default;
+const dataManager       = require('../../common/data_manager.js').default;
 const contractManager   = require('../../common/contract_manager.js').default;
-const purchaseManager   = require('../../common/purchase_manager').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
@@ -48,6 +46,9 @@ const Process = (() => {
         SELECTED_TICK,
         UNDERLYING,
     } = Defaults.PARAM_NAMES;
+
+    const type_purchase = 'purchase';
+    const type_trade = 'trade';
 
     /*
      * This function processes the active symbols to get markets
@@ -155,9 +156,9 @@ const Process = (() => {
     const processContract = (contracts) => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
-            purchaseManager.set({
+            dataManager.set({
                 showPurchaseResults: true,
-            });
+            }, type_purchase);
             getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';
             getElementById('confirmation_message').hide();
@@ -309,12 +310,12 @@ const Process = (() => {
             el_equals.parentElement.setVisibility(1);
             dataManager.set({
                 show_allow_equals: true,
-            }, 'trade');
+            }, type_trade);
         } else {
             el_equals.parentElement.setVisibility(0);
             dataManager.set({
                 show_allow_equals: false,
-            }, 'trade');
+            }, type_trade);
         }
     };
 

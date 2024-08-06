@@ -1,5 +1,4 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {  Button, CaptionText,  Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
@@ -9,12 +8,13 @@ import ContractDetails from './contract-details';
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { getElementById } from '../../../../_common/common_functions';
 import { useContractChange, usePurchaseChange } from '../../../hooks/events';
-import purchaseManager from '../../../common/purchase_manager';
+import dataManager from '../../../common/data_manager';
 import { localize } from '../../../../_common/localize';
 
 import { parseData, triggerClick } from '../../../common/helpers';
 
 const Purchase = () => {
+    const type_purchase = 'purchase';
     const hasPurchaseChange  = usePurchaseChange();
     const hasContractChange  = useContractChange();
 
@@ -25,16 +25,16 @@ const Purchase = () => {
     const isloading = () => !data?.topAmount && !data?.middleAmount && !data?.bottomAmount;
 
     const hidePurchaseResults = () =>
-        purchaseManager.set({
+        dataManager.set({
             showPurchaseResults: false,
             error              : null,
             cd_errorMsg        : null,
             cd_showAuditBtn    : false,
             cd_infoMsg         : null,
-        });
+        }, type_purchase);
  
     useEffect(() => {
-        const newData = purchaseManager.getAll();
+        const newData = dataManager.getAll(type_purchase);
 
         setShowPopup(!!newData?.showContractDetailsPopup);
 

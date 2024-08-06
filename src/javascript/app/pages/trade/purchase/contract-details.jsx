@@ -4,11 +4,14 @@ import { Button,  Skeleton, Text } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import ContractTable from './contract-table';
 import Portal from '../../portal';
-import purchaseManager from '../../../common/purchase_manager';
+// import purchaseManager from '../../../common/purchase_manager';
+import dataManager from '../../../common/data_manager';
 import { usePurchaseChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
+
+const type_purchase = 'purchase';
 
 const AuditSection = ({ data }) => {
     const auditData = {
@@ -35,9 +38,9 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        purchaseManager.set({
+                        dataManager.set({
                             cd_showAudit: false,
-                        });
+                        }, type_purchase);
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -128,9 +131,9 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    purchaseManager.set({
+                    dataManager.set({
                         showContractDetailsPopup: false,
-                    });
+                    }, type_purchase);
                 }}
             />
             <div className='title-box'>
@@ -175,9 +178,9 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                purchaseManager.set({
+                dataManager.set({
                     showContractDetailsPopup: false,
-                });
+                }, type_purchase);
             }
         };
     
@@ -189,7 +192,7 @@ const ContractDetails = () => {
     }, [hasPurchaseChange]);
 
     useEffect(() => {
-        const newData = purchaseManager.getAll();
+        const newData = dataManager.getAll(type_purchase);
 
         setData((oldData) => ({
             ...oldData,
