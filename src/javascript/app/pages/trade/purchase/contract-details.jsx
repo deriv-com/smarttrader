@@ -135,7 +135,7 @@ const AuditSection = ({ data }) => {
 const DetailsSection = ({ data }) => (
     <>
         <div className='header-box'>
-         
+            <div className='spacer' />
             <div className='title-box'>
                 <Text size='md' bold>
                     {localize('Contract Details')}
