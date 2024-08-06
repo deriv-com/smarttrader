@@ -226,6 +226,7 @@ export const FormComponent = () => {
                                                                 onSelectDate={(value) => {
                                                                     onExpiryDateChange(value);
                                                                 }}
+                                                                fullHeightOnOpen={false}
                                                             />
                                                         ) : (
                                                             <DropdownComponent

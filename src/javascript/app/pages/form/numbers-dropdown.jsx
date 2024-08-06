@@ -22,7 +22,11 @@ const Content = ({ value, start, end, elementId, onUpdate }) => {
 };
 
 export const NumbersDropdown = ({ value, label, start, end, elementId, onUpdate }) => (
-    <CustomDropdown value={value} label={label}>
+    <CustomDropdown
+        value={value}
+        label={label}
+        fullHeightOnOpen={false}
+    >
         <Content
             value={value}
             start={start}

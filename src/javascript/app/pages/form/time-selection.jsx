@@ -82,7 +82,11 @@ export const TimePickerDropdown = ({
     };
 
     return (
-        <CustomDropdown value={time} onClickDropdown={() => handleOpen(elementId)}>
+        <CustomDropdown
+            value={time}
+            onClickDropdown={() => handleOpen(elementId)}
+            fullHeightOnOpen={false}
+        >
             <TimeContent
                 time={time}
                 onUpdate={onUpdate}
