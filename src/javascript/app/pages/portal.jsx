@@ -6,7 +6,7 @@ const Portal = ({ children }) => {
 
     useEffect(() => {
         const el = elRef.current;
-        document.body.appendChild(el);
+        document.body?.appendChild(el);
 
         return () => {
             if (document.body.contains(el)) {
