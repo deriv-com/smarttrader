@@ -26,7 +26,10 @@ const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
     );
 };
 export const CurrencyDropdown = ({ currency_list, currency, onUpdate, elementId }) => (
-    <CustomDropdown value={currency}>
+    <CustomDropdown
+        value={currency}
+        fullHeightOnOpen={false}
+    >
         <CurrencyContent
             currency_list={currency_list}
             currency={currency}

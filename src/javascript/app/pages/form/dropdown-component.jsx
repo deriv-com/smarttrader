@@ -29,7 +29,11 @@ const DropdownContent = ({ options, value, onUpdate, elementId }) => {
     );
 };
 export const DropdownComponent = ({ label = '', options, value, onUpdate, elementId }) => (
-    <CustomDropdown value={value} label={label}>
+    <CustomDropdown
+        value={value}
+        label={label}
+        fullHeightOnOpen={false}
+    >
         <DropdownContent
             options={options}
             value={value}

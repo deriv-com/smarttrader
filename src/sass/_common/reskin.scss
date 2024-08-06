@@ -198,6 +198,10 @@ body {
         scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
         border-radius: var(--core-borderRadius-500);
 
+        @media(max-width: 768px){
+            max-height: unset;
+        }
+
         &::-webkit-scrollbar {
             scrollbar-width: thin;
             width: var(--core-size-200);
