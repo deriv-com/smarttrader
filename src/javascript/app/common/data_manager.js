@@ -6,6 +6,12 @@ import {
     triggerTradeChange,
 } from '../hooks/events';
 
+const changeTypeMap = {
+    trade   : 'tradeChange',
+    purchase: 'purchaseChange',
+    contract: 'contractChange',
+};
+
 class DataManager {
     constructor() {
         this.data = {
@@ -15,12 +21,7 @@ class DataManager {
         };
     }
 
-    set(data, data_type, optional) {
-        const changeTypeMap = {
-            trade   : 'tradeChange',
-            purchase: 'purchaseChange',
-            contract: 'contractChange',
-        };
+    set(data, data_type, optional_trigger) {
         if (typeof data === 'object') {
             const oldValues = {};
             const newValues = {};
@@ -36,9 +37,9 @@ class DataManager {
                 window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
                     detail: { oldValues, newValues },
                 }));
-                if (optional === 'barrier') {
+                if (optional_trigger === 'barrier') {
                     triggerBarrierChange();
-                } else if (optional === 'time') {
+                } else if (optional_trigger === 'time') {
                     triggerTimeChange();
                 } else {
                     switch (data_type) {
@@ -73,11 +74,7 @@ class DataManager {
     clear(data_type) {
         const oldValues = { ...this.data[data_type] };
         this.data[data_type] = {};
-        const changeTypeMap = {
-            trade   : 'tradeChange',
-            purchase: 'purchaseChange',
-            contract: 'contractChange',
-        };
+
         window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
             detail: { oldValues, newValues: {} },
         }));
