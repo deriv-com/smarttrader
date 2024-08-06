@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
-// import tradeManager from '../../common/trade_manager.js';
 import dataManager from '../../common/data_manager.js';
 import { setMinMaxTime } from '../../common/helpers.js';
 
