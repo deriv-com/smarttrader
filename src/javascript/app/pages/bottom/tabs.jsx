@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { SegmentedControlSingleChoice, Skeleton } from '@deriv-com/quill-ui';
@@ -6,9 +5,8 @@ import { Explanation } from './explanation.jsx';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
-
 import { localize } from '../../../_common/localize';
-import contractManager from '../../common/contract_manager.js';
+import dataManager from '../../common/data_manager.js';
 import LastDigit from '../trade/last_digit.jsx';
 
 const Graph = ({ renderGraph }) => {
@@ -71,7 +69,7 @@ const BottomTabs = () => {
         : tabs;
 
     useEffect(() => {
-        setFormName(contractManager.get('explanationFormName'));
+        setFormName(dataManager.get('explanationFormName', 'contract'));
     }, [hasContractChange, hasMarketChange]);
 
     useEffect(() => {

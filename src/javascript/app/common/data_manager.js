@@ -1,5 +1,6 @@
 import {
     triggerBarrierChange,
+    triggerContractChange,
     triggerPurchaseChange,
     triggerTimeChange,
     triggerTradeChange,
@@ -10,10 +11,16 @@ class DataManager {
         this.data = {
             trade   : {},
             purchase: {},
+            contract: {},
         };
     }
 
     set(data, data_type, optional) {
+        const changeTypeMap = {
+            trade   : 'tradeChange',
+            purchase: 'purchaseChange',
+            contract: 'contractChange',
+        };
         if (typeof data === 'object') {
             const oldValues = {};
             const newValues = {};
@@ -26,7 +33,7 @@ class DataManager {
             });
             if (Object.keys(newValues).length > 0) {
                 // Trigger a custom event with old and new values
-                window.dispatchEvent(new CustomEvent('tradeChange', {
+                window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
                     detail: { oldValues, newValues },
                 }));
                 if (optional === 'barrier') {
@@ -41,6 +48,10 @@ class DataManager {
 
                         case 'purchase':
                             triggerPurchaseChange();
+                            break;
+
+                        case 'contract':
+                            triggerContractChange();
                             break;
                     
                         default:
@@ -62,17 +73,22 @@ class DataManager {
     clear(data_type) {
         const oldValues = { ...this.data[data_type] };
         this.data[data_type] = {};
+        const changeTypeMap = {
+            trade   : 'tradeChange',
+            purchase: 'purchaseChange',
+            contract: 'contractChange',
+        };
+        window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
+            detail: { oldValues, newValues: {} },
+        }));
         if (data_type === 'trade') {
-            window.dispatchEvent(new CustomEvent('tradeChange', {
-                detail: { oldValues, newValues: {} },
-            }));
             triggerTradeChange();
         }
         if (data_type === 'purchase') {
-            window.dispatchEvent(new CustomEvent('purchaseChange', {
-                detail: { oldValues, newValues: {} },
-            }));
             triggerPurchaseChange();
+        }
+        if (data_type === 'contract') {
+            triggerContractChange();
         }
     }
 

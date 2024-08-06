@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Text, Button } from '@deriv-com/quill-ui';
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize.js';
-import contractManager from '../../common/contract_manager.js';
+import dataManager from '../../common/contract_manager.js';
 
 const NotAvailable = ({ title, body }) => (
     <div className='not-available-container'>
@@ -29,9 +29,9 @@ const NotAvailable = ({ title, body }) => (
 );
 
 export const init = ({ ...props }) => {
-    contractManager.set({
+    dataManager.set({
         hidePageLoader: true,
-    });
+    }, 'contract');
     ReactDOM.render(<NotAvailable {...props} />, getElementById('content'));
 };
 

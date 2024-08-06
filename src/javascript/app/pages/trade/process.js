@@ -16,7 +16,6 @@ const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
 const dataManager       = require('../../common/data_manager.js').default;
-const contractManager   = require('../../common/contract_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
@@ -132,9 +131,9 @@ const Process = (() => {
         getElementById('trading_socket_container').classList.add('show');
         const init_logo = getElementById('trading_init_progress');
 
-        contractManager.set({
+        dataManager.set({
             hidePageLoader: true,
-        });
+        }, 'contract');
         
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';

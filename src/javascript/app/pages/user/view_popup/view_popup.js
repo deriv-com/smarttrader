@@ -15,7 +15,6 @@ const getElementById           = require('../../../../_common/common_functions')
 const localize                 = require('../../../../_common/localize').localize;
 const urlFor                   = require('../../../../_common/url').urlFor;
 const Utility                  = require('../../../../_common/utility');
-const contractManager          = require('../../../common/contract_manager').default;
 const dataManager              = require('../../../common/data_manager').default;
 
 const ViewPopup = (() => {
@@ -886,9 +885,9 @@ const ViewPopup = (() => {
                 $loading.show();
             }
         } else if ($loading){
-            contractManager.set({
+            dataManager.set({
                 hidePageLoader: true,
-            });
+            }, 'contract');
             
             if ($loading.length) {
                 $loading.hide();
