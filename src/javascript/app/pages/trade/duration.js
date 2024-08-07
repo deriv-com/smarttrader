@@ -380,8 +380,9 @@ const Durations = (() => {
     const changeExpiryTimeType = () => {
         let requested = -1;
         const endtime_data = {
-            options        : [],
-            show_datepicker: true,
+            options          : [],
+            show_datepicker  : true,
+            datepicker_config: {},
         };
         if (CommonFunctions.getElementById('expiry_type').value === 'endtime') {
             let $expiry_date     = $('#expiry_date');
@@ -401,6 +402,8 @@ const Durations = (() => {
                 });
                 endtime_data.options = [];
                 endtime_data.show_datepicker = true;
+                endtime_data.datepicker_config.minDate = smallest_duration.unit === 'd' ? 1 : 0;
+                endtime_data.datepicker_config.maxDate = 365;
             } else {
                 endtime_data.options = [];
                 endtime_data.show_datepicker = false;
