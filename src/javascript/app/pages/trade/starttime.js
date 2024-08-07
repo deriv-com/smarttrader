@@ -128,6 +128,9 @@ const StartDates = (() => {
             getElementById('date_start_row').style.display = 'none';
             getElementById('date_start').value = 'now';
             Defaults.remove(DATE_START);
+            dataManager.setTrade({
+                start_dates: null,
+            });
         }
     };
 

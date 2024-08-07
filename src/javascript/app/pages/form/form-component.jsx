@@ -167,7 +167,7 @@ export const FormComponent = () => {
                     
                         <div className='quill-form-rows'>
 
-                            {['risefall', 'callputequal'].includes(formName) && start_dates && (
+                            {['risefall', 'callputequal'].includes(formName) && start_dates && date_start && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <DropdownComponent

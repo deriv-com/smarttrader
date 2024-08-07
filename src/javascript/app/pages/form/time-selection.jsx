@@ -83,6 +83,7 @@ export const TimePickerDropdown = ({
 
     return (
         <CustomDropdown
+            label='GMT'
             value={time}
             onClickDropdown={() => handleOpen(elementId)}
             fullHeightOnOpen={false}
