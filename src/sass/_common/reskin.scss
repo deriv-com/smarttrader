@@ -1081,3 +1081,10 @@ html.test {
 .header__hamburger {
     box-sizing: content-box;
 }
+
+// temporary patch for datepicker disabled+now date
+.quill-date-picker .react-calendar__tile--now {
+    &:disabled {
+        background-color: $COLOR_GRAY;
+    }
+}
