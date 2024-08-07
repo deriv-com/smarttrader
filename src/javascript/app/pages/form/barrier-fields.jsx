@@ -69,13 +69,12 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
     return (
         <>
             {['touchnotouch', 'higherlower'].includes(formName) &&
-            barrier_data?.show_barrier &&
-            barrier && (
+            barrier_data?.show_barrier && (
                 <div className='quill-form-row'>
                     <div className={`form_field ${!barrier_data?.isOffset ? 'field-pb' : ''}`}>
                         <TextField
                             label={barrier_data.label}
-                            value={barrier}
+                            value={barrier ?? ''}
                             type={barrier_data?.isOffset ? 'text' : 'number'}
                             allowDecimals
                             rightIcon={barrier_data?.isOffset && barrierIcon}
@@ -94,14 +93,13 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
             )}
 
             {['endsinout', 'staysinout'].includes(formName) &&
-            barrier_data?.show_barrier_highlow &&
-            barrier_high && barrier_low && (
+            barrier_data?.show_barrier_highlow && (
                 <>
                     <div className='quill-form-row'>
                         <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
                             <TextField
                                 label={barrier_data.label_high}
-                                value={barrier_high}
+                                value={barrier_high ?? ''}
                                 type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
                                 allowDecimals
                                 rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
@@ -118,7 +116,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                         <div className={`form_field ${!barrier_data?.isOffsetHightLow ? 'field-pb' : ''}`}>
                             <TextField
                                 label={barrier_data.label_low}
-                                value={barrier_low}
+                                value={barrier_low ?? ''}
                                 type={barrier_data?.isOffsetHightLow ? 'text' : 'number'}
                                 allowDecimals
                                 rightIcon={barrier_data?.isOffsetHightLow && barrierIcon}
