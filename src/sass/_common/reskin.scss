@@ -508,6 +508,7 @@ div#contract-injection-container {
     }
     .header-box {
         display: flex;
+        max-width: 940px;
         width: 100%;
         height: 48px;
         background: var(--core-color-opacity-white-800);

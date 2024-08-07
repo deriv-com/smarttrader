@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
 import { Button,  Skeleton, Text } from '@deriv-com/quill-ui';
-import { LabelPairedArrowLeftMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedArrowLeftMdRegularIcon, LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import ContractTable from './contract-table';
 import Portal from '../../portal';
 import purchaseManager from '../../../common/purchase_manager';
@@ -46,7 +46,20 @@ const AuditSection = ({ data }) => {
                         {localize('Audit page')}
                     </Text>
                 </div>
-                <Button variant='tertiary' size='lg' />
+                <Button
+                    variant='tertiary'
+                    color='black'
+                    size='lg'
+                    onClick={() => {
+                        purchaseManager.set({
+                            showContractDetailsPopup: false,
+                        });
+                    }}
+                    icon={<LabelPairedXmarkMdRegularIcon
+                        color='black'
+                        
+                    />}
+                />
             </div>
             <div className='popup-scroller'>
                 <div className='body-box'>
@@ -122,23 +135,26 @@ const AuditSection = ({ data }) => {
 const DetailsSection = ({ data }) => (
     <>
         <div className='header-box'>
-            <Button
-                variant='tertiary'
-                size='lg'
-                icon={<LabelPairedArrowLeftMdRegularIcon />}
-                color='black'
-                onClick={() => {
-                    purchaseManager.set({
-                        showContractDetailsPopup: false,
-                    });
-                }}
-            />
+            <div className='spacer' />
             <div className='title-box'>
                 <Text size='md' bold>
                     {localize('Contract Details')}
                 </Text>
             </div>
-            <div className='spacer' />
+            <Button
+                variant='tertiary'
+                color='black'
+                size='lg'
+                onClick={() => {
+                    purchaseManager.set({
+                        showContractDetailsPopup: false,
+                    });
+                }}
+                icon={<LabelPairedXmarkMdRegularIcon
+                    color='black'
+                    
+                />}
+            />
         </div>
         <div className='popup-scroller'>
             <div className='body-box'>
