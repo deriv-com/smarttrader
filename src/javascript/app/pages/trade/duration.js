@@ -17,7 +17,7 @@ const toReadableFormat   = require('../../../_common/string_util').toReadableFor
 const createElement      = require('../../../_common/utility').createElement;
 const getPropertyValue   = require('../../../_common/utility').getPropertyValue;
 const elementInnerHtml   = require('../../../_common/common_functions').elementInnerHtml;
-const tradeManager = require('../../common/trade_manager').default;
+const dataManager        = require('../../common/data_manager').default;
 
 /*
  * Handles duration processing display
@@ -153,7 +153,7 @@ const Durations = (() => {
         Object.values(list).forEach(option => {
             duration_options.push({ text: duration_list[option].text, value: option });
         });
-        tradeManager.set({
+        dataManager.setTrade({
             duration_options,
         });
 
@@ -452,7 +452,7 @@ const Durations = (() => {
                 requested = selectEndDate(selected_date);
             }
         }
-        tradeManager.set({
+        dataManager.setTrade({
             endtime_data,
         });
         return requested;
@@ -507,7 +507,7 @@ const Durations = (() => {
             fragment.appendChild(option);
         }
         target.appendChild(fragment);
-        tradeManager.set({
+        dataManager.setTrade({
             expiry_type_options,
         });
     };
@@ -686,7 +686,7 @@ const Durations = (() => {
                 duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
             }
         }
-        tradeManager.set({
+        dataManager.setTrade({
             duration_data,
         });
     };

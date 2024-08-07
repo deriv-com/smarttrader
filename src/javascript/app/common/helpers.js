@@ -2,7 +2,7 @@ import React from 'react';
 import { Tooltip } from '@deriv-com/quill-ui';
 import parse from 'html-react-parser';
 import moment from 'moment';
-import tradeManager from './trade_manager';
+import dataManager from './data_manager';
 import { getLocalTime } from '../base/clock';
 import common_independent from '../pages/trade/common_independent';
 
@@ -22,32 +22,6 @@ const TimeTooltipWrapper = (element, time) => {
             {element}
         </Tooltip>
     );
-};
-
-const handleNumeric = (event, regex_string) => {
-    let input_value = event.target.value;
-    const regex = new RegExp(regex_string) || /[^0-9.]/g;
-
-    input_value = input_value
-        .split('')
-        .filter((char, index, array) => {
-            const tempValue = array.slice(0, index + 1).join('');
-            return !regex.test(tempValue);
-        })
-        .join('');
-
-    if (input_value.match(/[+-]/g) && input_value.match(/[+-]/g).length > 1) {
-        input_value = input_value.replace(/[+-]/g, '');
-    }
-
-    const decimal_count = (input_value.match(/\./g) || []).length;
-    if (decimal_count > 1) {
-        input_value = input_value.replace(/\./g, (match, offset) =>
-            offset === input_value.indexOf('.') ? match : ''
-        );
-    }
-
-    return input_value;
 };
 
 const setMinMaxTime = (selector, check_end_time) => {
@@ -125,17 +99,16 @@ const setMinMaxTimeObj = (options) => {
         }
     }
 
-    tradeManager.set({
+    dataManager.setTrade({
         starttime_obj,
         expirytime_obj,
-    },'time');
+    }, 'time');
 };
 
 export {
     parseData,
     triggerClick,
     TimeTooltipWrapper,
-    handleNumeric,
     setMinMaxTime,
 };
 

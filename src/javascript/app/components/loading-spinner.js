@@ -1,4 +1,4 @@
-import contractManager from '../common/contract_manager';
+import dataManager from '../common/data_manager';
 
 const assertContainerExists = (content_id) => {
     if (!content_id) {
@@ -28,7 +28,7 @@ export const show = (content_id) => {
  * @param content_id
  */
 export const hide = (content_id) => {
-    contractManager.set({
+    dataManager.setContract({
         hidePageLoader: true,
     });
 

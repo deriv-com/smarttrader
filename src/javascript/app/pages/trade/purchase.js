@@ -19,7 +19,7 @@ const CommonFunctions          = require('../../../_common/common_functions');
 const localize                 = require('../../../_common/localize').localize;
 const State                    = require('../../../_common/storage').State;
 const Url                      = require('../../../_common/url');
-const purchaseManager          = require('../../common/purchase_manager').default;
+const dataManager              = require('../../common/data_manager').default;
 const createElement            = require('../../../_common/utility').createElement;
 const getPropertyValue         = require('../../../_common/utility').getPropertyValue;
 
@@ -27,7 +27,6 @@ const getPropertyValue         = require('../../../_common/utility').getProperty
  * Purchase object that handles all the functions related to
  * contract purchase response
  */
-
 const Purchase = (() => {
     const adjustment = 5;
 
@@ -94,7 +93,7 @@ const Purchase = (() => {
                 processPriceRequest();
                 TopUpVirtualPopup.show(error.message);
 
-                purchaseManager.set({
+                dataManager.setPurchase({
                     error: {
                         showPurchaseResults: true,
                         ...error,
@@ -106,7 +105,7 @@ const Purchase = (() => {
             } else {
                 contracts_list.style.display = 'none';
                 container.style.display = 'block';
-                purchaseManager.set({
+                dataManager.setPurchase({
                     showPurchaseResults: true,
                 });
 
@@ -121,7 +120,7 @@ const Purchase = (() => {
                     const signup_url = `${Url.getStaticUrl()}/signup/`;
                     authorization_error_btn_signup.href = signup_url;
 
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         error: {
                             ...error,
                             signupUrl: signup_url,
@@ -171,7 +170,7 @@ const Purchase = (() => {
                             }
                         }
 
-                        purchaseManager.set({
+                        dataManager.setPurchase({
                             error: { ...error,message },
                         });
 
@@ -185,7 +184,7 @@ const Purchase = (() => {
             message_container.show();
             authorization_error.setVisibility(0);
             confirmation_error.setVisibility(0);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 error: null,
             });
 
@@ -194,13 +193,12 @@ const Purchase = (() => {
             CommonFunctions.elementTextContent(barrier_element, '');
             CommonFunctions.elementTextContent(reference, `${localize('Your transaction reference is')} ${receipt.transaction_id}`);
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 showPurchaseResults: true,
                 pr_heading         : localize('Contract Confirmation'),
                 pr_description     : receipt.longcode,
                 pr_barrier         : '',
                 pr_reference       : `${localize('Your transaction reference is')} ${receipt.transaction_id}`,
-                
             });
 
             const currency = Client.get('currency');
@@ -217,14 +215,14 @@ const Purchase = (() => {
             const potential_profit_value = payout_value ? formatMoney(currency, payout_value - cost_value) : undefined;
 
             CommonFunctions.elementInnerHtml(cost,   `${localize('Total Cost')} <p>${formatMoney(currency, cost_value)}</p>`);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 pr_tableCost     : localize('Total Cost'),
                 pr_tableCostValue: formatMoney(currency, cost_value),
             });
 
             if (isLookback(contract_type)) {
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formula}</p>`);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     pr_tablePayout     : localize('Potential Payout'),
                     pr_tablePayoutValue: formula,
                     pr_showTableProfit : false,
@@ -235,13 +233,12 @@ const Purchase = (() => {
                 CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p>${formatMoney(currency, payout_value)}</p>`);
                 CommonFunctions.elementInnerHtml(profit, `${localize('Potential Profit')} <p>${potential_profit_value}</p>`);
 
-                purchaseManager.set({
+                dataManager.setPurchase({
                     pr_tablePayout     : localize('Potential Payout'),
                     pr_tablePayoutValue: formatMoney(currency, payout_value),
                     pr_tableProfit     : localize('Potential Profit'),
                     pr_tableProfitValue: potential_profit_value,
                     pr_showTableProfit : true,
-
                 });
             }
 
@@ -266,13 +263,13 @@ const Purchase = (() => {
                 CommonFunctions.elementTextContent(button, localize('View'));
                 button.setAttribute('contract_id', receipt.contract_id);
                 button.show();
-                purchaseManager.set({
+                dataManager.setPurchase({
                     pr_showBtn: true,
                 });
                 $('#confirmation_message_container .open_contract_details').attr('contract_id', receipt.contract_id).setVisibility(1);
             } else {
                 button.hide();
-                purchaseManager.set({
+                dataManager.setPurchase({
                     pr_showBtn: false,
                 });
                 $('#confirmation_message_container .open_contract_details').setVisibility(0);

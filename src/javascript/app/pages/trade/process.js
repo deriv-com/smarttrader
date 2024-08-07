@@ -15,9 +15,7 @@ const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
-const tradeManager      = require('../../common/trade_manager.js').default;
-const contractManager   = require('../../common/contract_manager.js').default;
-const purchaseManager   = require('../../common/purchase_manager').default;
+const dataManager       = require('../../common/data_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
@@ -130,7 +128,7 @@ const Process = (() => {
         getElementById('trading_socket_container').classList.add('show');
         const init_logo = getElementById('trading_init_progress');
 
-        contractManager.set({
+        dataManager.setContract({
             hidePageLoader: true,
         });
         
@@ -154,7 +152,7 @@ const Process = (() => {
     const processContract = (contracts) => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
-            purchaseManager.set({
+            dataManager.setPurchase({
                 showPurchaseResults: true,
             });
             getElementById('contract_confirmation_container').style.display = 'block';
@@ -306,12 +304,12 @@ const Process = (() => {
                 el_equals.checked = true;
             }
             el_equals.parentElement.setVisibility(1);
-            tradeManager.set({
+            dataManager.setTrade({
                 show_allow_equals: true,
             });
         } else {
             el_equals.parentElement.setVisibility(0);
-            tradeManager.set({
+            dataManager.setTrade({
                 show_allow_equals: false,
             });
         }

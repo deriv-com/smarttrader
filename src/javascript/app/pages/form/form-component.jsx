@@ -21,7 +21,7 @@ import {
 } from '../../hooks/events.js';
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
-import tradeManager from '../../common/trade_manager.js';
+import dataManager from '../../common/data_manager.js';
 
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
@@ -32,7 +32,7 @@ export const FormComponent = () => {
     useEffect(() => {
         setTradeData((oldData) => ({
             ...oldData,
-            ...tradeManager.getAll(),
+            ...dataManager.getAllTrades(),
         }));
     }, [hasTradeChange, hasSessionChange]);
 

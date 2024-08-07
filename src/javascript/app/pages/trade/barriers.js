@@ -2,7 +2,7 @@ const moment             = require('moment');
 const Contract           = require('./contract');
 const Defaults           = require('./defaults');
 const Tick               = require('./tick');
-const tradeManager       = require('../../common/trade_manager').default;
+const dataManager        = require('../../common/data_manager').default;
 const addComma           = require('../../../_common/base/currency_base').addComma;
 const elementTextContent = require('../../../_common/common_functions').elementTextContent;
 const getElementById     = require('../../../_common/common_functions').getElementById;
@@ -87,7 +87,7 @@ const Barriers = (() => {
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
                     barrier_data.show_barrier = true;
                     barrier_data.show_barrier_highlow = false;
-                    tradeManager.set({
+                    dataManager.setTrade({
                         barrier_data,
                     }, 'barrier');
                     return;
@@ -170,7 +170,7 @@ const Barriers = (() => {
                     Defaults.set(BARRIER_LOW, low_elm.value);
                     barrier_data.show_barrier = false;
                     barrier_data.show_barrier_highlow = true;
-                    tradeManager.set({
+                    dataManager.setTrade({
                         barrier_data,
                     }, 'barrier');
                     return;
@@ -215,9 +215,9 @@ const Barriers = (() => {
             }
         }
 
-        tradeManager.set({
+        dataManager.setTrade({
             barrier_error,
-        },'barrier');
+        }, 'barrier');
     };
 
     const showHideRelativeTip = (barrier, arr_el) => {

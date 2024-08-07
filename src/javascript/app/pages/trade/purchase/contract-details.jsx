@@ -4,7 +4,7 @@ import { Button,  Skeleton, Text } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import ContractTable from './contract-table';
 import Portal from '../../portal';
-import purchaseManager from '../../../common/purchase_manager';
+import dataManager from '../../../common/data_manager';
 import { usePurchaseChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
@@ -35,7 +35,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        purchaseManager.set({
+                        dataManager.setPurchase({
                             cd_showAudit: false,
                         });
                         triggerClick('#contract_purchase_button');
@@ -128,7 +128,7 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         showContractDetailsPopup: false,
                     });
                 }}
@@ -175,7 +175,7 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                purchaseManager.set({
+                dataManager.setPurchase({
                     showContractDetailsPopup: false,
                 });
             }
@@ -189,7 +189,7 @@ const ContractDetails = () => {
     }, [hasPurchaseChange]);
 
     useEffect(() => {
-        const newData = purchaseManager.getAll();
+        const newData = dataManager.getAllPurchases();
 
         setData((oldData) => ({
             ...oldData,

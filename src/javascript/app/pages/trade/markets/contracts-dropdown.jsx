@@ -1,13 +1,13 @@
 import { Divider, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
 import React, { useEffect, useRef, useState } from 'react';
 import { triggerContractChange, useContractChange } from '../../../hooks/events';
-import contractManager from '../../../common/contract_manager';
+import dataManager from '../../../common/data_manager';
 import Defaults, { PARAM_NAMES } from '../defaults';
 
 export const ContractDropdown = () => {
     const { close } = useDropdown();
     const hasContractChange  = useContractChange();
-    const [data, setData] = useState(contractManager.getAll());
+    const [data, setData] = useState(dataManager.getAllContracts());
     const selectedRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -24,7 +24,7 @@ export const ContractDropdown = () => {
 
         Defaults.set(PARAM_NAMES.FORM_NAME,formName);
 
-        contractManager.set({
+        dataManager.setContract({
             formName,
         });
 
@@ -39,7 +39,7 @@ export const ContractDropdown = () => {
     useEffect(() => {
         setData(oldData => ({
             ...oldData,
-            ...contractManager.getAll(),
+            ...dataManager.getAllContracts(),
         }));
     }, [hasContractChange]);
 

@@ -1,30 +1,30 @@
 const moment           = require('moment');
 const Defaults = require('./defaults');
-const purchaseManager  = require('../../common/purchase_manager').default;
+const dataManager      = require('../../common/data_manager').default;
 const getElementById   = require('../../../_common/common_functions').getElementById;
 const getPropertyValue = require('../../../_common/utility').getPropertyValue;
 
 /*
  * Display price/spot movement variation to depict price moved up or down
  */
-const displayPriceMovement = (element, old_value, current_value,data_key) => {
+const displayPriceMovement = (element, old_value, current_value, data_key) => {
     element.classList.remove('price_moved_down');
     element.classList.remove('price_moved_up');
 
-    purchaseManager.set({
+    dataManager.setPurchase({
         [data_key]: '',
     });
 
     if (parseFloat(current_value) > parseFloat(old_value)) {
         element.classList.remove('price_moved_down');
         element.classList.add('price_moved_up');
-        purchaseManager.set({
+        dataManager.setPurchase({
             [data_key]: 'price_moved_up',
         });
     } else if (parseFloat(current_value) < parseFloat(old_value)) {
         element.classList.remove('price_moved_up');
         element.classList.add('price_moved_down');
-        purchaseManager.set({
+        dataManager.setPurchase({
             [data_key]: 'price_moved_down',
         });
     }

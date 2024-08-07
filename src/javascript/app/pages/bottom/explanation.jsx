@@ -5,7 +5,7 @@ import { contractExplanationData } from './data/explanation.js';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
 import { localize } from '../../../_common/localize.js';
-import contractManager from '../../common/contract_manager.js';
+import dataManager from '../../common/data_manager.js';
 import { useContractChange } from '../../hooks/events.js';
 
 export const Explanation = ({ explanationOnly = false }) => {
@@ -15,7 +15,7 @@ export const Explanation = ({ explanationOnly = false }) => {
     const hasContractChanges = useContractChange();
 
     useEffect(() => {
-        const actualFormName = contractManager.get('explanationFormName');
+        const actualFormName = dataManager.getContract('explanationFormName');
         setFormName(null);
         
         setTimeout(() => {

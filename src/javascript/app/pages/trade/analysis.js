@@ -6,7 +6,7 @@ const getElementById  = require('../../../_common/common_functions').getElementB
 const getLanguage     = require('../../../_common/language').get;
 const TabSelector     = require('../../../_common/tab_selector');
 const Url             = require('../../../_common/url');
-const contractManager = require('../../common/contract_manager').default;
+const dataManager     = require('../../common/data_manager').default;
 
 /*
  * This file contains the code related to loading of trading page bottom analysis
@@ -36,7 +36,7 @@ const TradingAnalysis = (() => {
         const tab_form_name     = tab_obj[form_name] || form_name;
         form_name = map_obj[form_name] || form_name;
 
-        contractManager.set({
+        dataManager.setContract({
             actualFormName     : form_name,
             explanationFormName: tab_form_name,
         });

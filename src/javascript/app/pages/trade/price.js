@@ -12,7 +12,7 @@ const BinarySocket         = require('../../base/socket');
 const formatMoney          = require('../../common/currency').formatMoney;
 const CommonFunctions      = require('../../../_common/common_functions');
 const { getCurrencyDisplayCode } = require('../../../_common/base/currency_base');
-const  purchaseManager     = require('../../common/purchase_manager').default;
+const  dataManager     = require('../../common/data_manager').default;
 const localize             = require('../../../_common/localize').localize;
 const getPropertyValue     = require('../../../_common/utility').getPropertyValue;
 
@@ -214,7 +214,7 @@ const Price = (() => {
             h4.setAttribute('class', `contract_heading ${type}`);
             CommonFunctions.elementTextContent(h4, display_text);
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 [`${position}DisplayText`] : display_text,
                 [`${position}ContractType`]: type,
             });
@@ -226,7 +226,7 @@ const Price = (() => {
         
             if (!data.display_value) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
-                purchaseManager.set({
+                dataManager.setPurchase({
                     [`${position}AmountClassname`]: '',
                 });
             }
@@ -235,7 +235,7 @@ const Price = (() => {
 
             if (!data.payout) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
-                purchaseManager.set({
+                dataManager.setPurchase({
                     [`${position}AmountClassname`]: '',
                 });
             }
@@ -245,7 +245,7 @@ const Price = (() => {
             CommonFunctions.elementTextContent(multiplier, `${localize('Multiplier')}: `);
             CommonFunctions.elementInnerHtml(contract_multiplier, data.multiplier ? formatMoney(currentCurrency, data.multiplier, false, 0, 2) : '-');
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value,true) : '-',
                 [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout,true) : '-',
                 [`${position}Multiplier`]  : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
@@ -253,14 +253,14 @@ const Price = (() => {
             });
 
             if (data.longcode && window.innerWidth > 500) {
-                purchaseManager.set({
+                dataManager.setPurchase({
                     [`${position}Description`]: data.longcode,
                 });
 
                 if (description) description.setAttribute('data-balloon', data.longcode);
                 if (longcode) CommonFunctions.elementTextContent(longcode, data.longcode);
             } else {
-                purchaseManager.set({
+                dataManager.setPurchase({
                     [`${position}Description`]: '',
                 });
 
@@ -270,7 +270,7 @@ const Price = (() => {
         };
 
         const setPurchaseStatus = (enable) => {
-            purchaseManager.set({
+            dataManager.setPurchase({
                 [`${position}PurchaseDisabled`]: !enable,
             });
             purchase.parentNode.classList[enable ? 'remove' : 'add']('button-disabled');
@@ -282,7 +282,7 @@ const Price = (() => {
             setData();
             error.show();
             CommonFunctions.elementTextContent(error, details.error.message);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 [`${position}Comment`]: details.error.message,
             });
         } else {
@@ -297,7 +297,7 @@ const Price = (() => {
             if (isLookback(type)) {
                 const multiplier_value = formatMoney(Client.get('currency'), proposal.multiplier, false, 3, 2);
                 CommonFunctions.elementInnerHtml(comment, `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     [`${position}Comment`]: `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`,
                 });
             } else {
@@ -462,14 +462,14 @@ const Price = (() => {
             const container = CommonFunctions.getElementById(`price_container_${position}`);
             if (position_is_visible[position]) {
                 if (position === 'middle'){
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         showMidPurchase: true,
                     });
                 }
                 $(container).fadeIn(0);
             } else {
                 if (position === 'middle'){
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         showMidPurchase: false,
                     });
                 }

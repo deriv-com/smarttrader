@@ -16,7 +16,7 @@ import ActiveSymbols, {
 import Defaults, { PARAM_NAMES } from '../defaults';
 import { triggerMarketChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
-import contractManager from '../../../common/contract_manager';
+import dataManager from '../../../common/data_manager';
 
 export const getMarketName = () => {
     const obj =  ActiveSymbols.getMarkets();
@@ -39,7 +39,7 @@ export const getMarketName = () => {
 };
 
 export const getContractName = () => {
-    const data = contractManager.getAll();
+    const data = dataManager.getAllContracts('contract');
     let name = '';
     // eslint-disable-next-line consistent-return
     data?.contractsTree?.forEach((contract) => {

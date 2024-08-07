@@ -15,8 +15,7 @@ const getElementById           = require('../../../../_common/common_functions')
 const localize                 = require('../../../../_common/localize').localize;
 const urlFor                   = require('../../../../_common/url').urlFor;
 const Utility                  = require('../../../../_common/utility');
-const contractManager          = require('../../../common/contract_manager').default;
-const purchaseManager          = require('../../../common/purchase_manager').default;
+const dataManager              = require('../../../common/data_manager').default;
 
 const ViewPopup = (() => {
     let contract_id,
@@ -64,7 +63,7 @@ const ViewPopup = (() => {
 
         getContract();
 
-        purchaseManager.set({
+        dataManager.setPurchase({
             showContractDetailsPopup: true,
             cd_description          : null,
         });
@@ -147,13 +146,13 @@ const ViewPopup = (() => {
         containerSetText('trade_details_multiplier', formatMoney(contract.currency, multiplier, false, 3, 2));
         if (Lookback.isLookback(contract.contract_type)) {
             containerSetText('trade_details_payout', Lookback.getFormula(contract.contract_type, formatMoney(contract.currency, multiplier, false, 3, 2)));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_payout: Lookback.getFormula(contract.contract_type,
                     formatMoney(contract.currency, multiplier, false, 3, 2)),
             });
         } else {
             containerSetText('trade_details_payout', formatMoney(contract.currency, contract.payout));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_payout: formatMoney(contract.currency, contract.payout),
             });
         }
@@ -161,7 +160,7 @@ const ViewPopup = (() => {
         update();
         ViewPopupUI.repositionConfirmation();
 
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_contractType : ContractTypeDisplay()[contract.contract_type],
             cd_purchasePrice: formatMoney(contract.currency, contract.buy_price),
             cd_multiplier   : formatMoney(contract.currency, multiplier, false, 3, 2),
@@ -181,14 +180,14 @@ const ViewPopup = (() => {
         if (is_sold_before_start) {
             $('#trade_details_start_date').parent().setVisibility(0);
             containerSetText('trade_details_purchase_time', epochToDateTime(contract.purchase_time), '', true);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_purchaseTime: epochToDateTime(contract.purchase_time),
                 soldBeforeStart: true,
             });
         } else {
             $('#trade_details_purchase_time').parent().setVisibility(0);
             containerSetText('trade_details_start_date', epochToDateTime(contract.date_start), '', true);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_startTime   : epochToDateTime(contract.date_start),
                 soldBeforeStart: false,
             });
@@ -201,7 +200,7 @@ const ViewPopup = (() => {
         if (contract.barrier_count > 1) {
             containerSetText('trade_details_barrier', is_sold_before_start ? '-' : addComma(contract.high_barrier), '', true);
             containerSetText('trade_details_barrier_low', is_sold_before_start ? '-' : addComma(contract.low_barrier), '', true);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_barrier   : is_sold_before_start ? '-' : addComma(contract.high_barrier),
                 cd_barrierLow: is_sold_before_start ? '-' : addComma(contract.low_barrier),
             });
@@ -220,7 +219,7 @@ const ViewPopup = (() => {
                 '',
                 true);
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_barrier: contract.entry_tick_time && is_sold_before_start ? '-' : (barrier_prefix + formatted_barrier),
             });
 
@@ -236,7 +235,7 @@ const ViewPopup = (() => {
                     '',
                     true);
 
-                purchaseManager.set({
+                dataManager.setPurchase({
                     cd_barrier     : is_sold_before_start ? '-' : contract.entry_spot_display_value,
                     cd_barrierReset: contract.entry_tick_time && is_sold_before_start ? '-' : (barrier_prefix + formatted_barrier),
                 });
@@ -252,7 +251,7 @@ const ViewPopup = (() => {
 
         if (current_spot) {
             containerSetText('trade_details_current_spot > span', current_spot);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_currentSpot    : current_spot,
                 cd_showCurrentSpot: true,
             });
@@ -260,7 +259,7 @@ const ViewPopup = (() => {
             $('#trade_details_current_spot').parent().setVisibility(1);
         } else {
             $('#trade_details_current_spot').parent().setVisibility(0);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_showCurrentSpot: false,
             });
         }
@@ -272,7 +271,7 @@ const ViewPopup = (() => {
                 updateTimers();
             }
             containerSetText('trade_details_current_date', epochToDateTime(current_spot_time));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_currentDate: epochToDateTime(current_spot_time),
             });
             $('#trade_details_current_date').parent().setVisibility(1);
@@ -283,14 +282,14 @@ const ViewPopup = (() => {
         containerSetText('trade_details_ref_id', `${contract.transaction_ids.buy} (${localize('Buy')}) ${contract.transaction_ids.sell ? `<br>${contract.transaction_ids.sell} (${localize('Sell')})` : ''}`);
         containerSetText('trade_details_indicative_price', indicative_price ? formatMoney(contract.currency, indicative_price) : '-');
 
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_transaction_ids: contract.transaction_ids,
             cd_indicativePrice: indicative_price ? formatMoney(contract.currency, indicative_price) : '-',
         });
 
         if (is_ended && !contract.sell_price) {
             containerSetText('trade_details_profit_loss', localize('Waiting for contract settlement.'), { class: 'pending' });
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_profitLoss     : localize('Waiting for contract settlement.'),
                 cd_profitLossClass: 'pending',
             });
@@ -299,13 +298,13 @@ const ViewPopup = (() => {
                 `${formatMoney(contract.currency, contract.profit)}<span class="percent">(${(contract.profit_percentage > 0 ? '+' : '')}${addComma(contract.profit_percentage, 2)}%)</span>`,
                 { class: (contract.profit >= 0 ? 'profit' : 'loss') }
             );
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_profitLoss     : `${formatMoney(contract.currency, contract.profit)}<span class="percent">(${(contract.profit_percentage > 0 ? '+' : '')}${addComma(contract.profit_percentage, 2)}%)</span>`,
                 cd_profitLossClass: (contract.profit >= 0 ? 'profit' : 'loss'),
             });
         } else {
             containerSetText('trade_details_profit_loss', '-', { class: 'loss' });
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_profitLoss     : '-',
                 cd_profitLossClass: 'loss',
             });
@@ -330,7 +329,7 @@ const ViewPopup = (() => {
         if (!is_started) {
             containerSetText('trade_details_entry_spot > span', '-');
             containerSetText('trade_details_message', localize('Contract has not started yet'));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_entrySpot: '-',
                 cd_infoMsg  : localize('Contract has not started yet'),
             });
@@ -338,12 +337,12 @@ const ViewPopup = (() => {
             if (contract.entry_spot > 0) {
                 // only show entry spot if available and contract was not sold before start time
                 containerSetText('trade_details_entry_spot > span', is_sold_before_start ? '-' : contract.entry_spot_display_value);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     cd_entrySpot: is_sold_before_start ? '-' : contract.entry_spot_display_value,
                 });
             }
             containerSetText('trade_details_message', contract.validation_error && !is_unsupported_contract ? contract.validation_error : '&nbsp;');
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_infoMsg: contract.validation_error && !is_unsupported_contract ? contract.validation_error : null,
             });
             if (is_unsupported_contract) {
@@ -404,7 +403,7 @@ const ViewPopup = (() => {
             containerSetText('trade_details_live_remaining', '-');
             Clock.setExternalTimer(); // stop timer
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_remainingTime: '-',
             });
         } else {
@@ -427,7 +426,7 @@ const ViewPopup = (() => {
     const updateTimers = () => {
         const now = Math.max(Math.floor((window.time || 0) / 1000), contract.current_spot_time || 0);
         containerSetText('trade_details_live_date', epochToDateTime(now));
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_currentTime: epochToDateTime(now),
         });
         Clock.showLocalTimeOnHover('#trade_details_live_date');
@@ -436,7 +435,7 @@ const ViewPopup = (() => {
         let remained     = contract.date_expiry - now;
         if (!is_started || contract.status !== 'open' || remained < 0) {
             containerSetText('trade_details_live_remaining', '-');
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_remainingTime: '-',
             });
         } else {
@@ -449,7 +448,7 @@ const ViewPopup = (() => {
             containerSetText('trade_details_live_remaining',
                 (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'));
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_remainingTime: (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'),
                 cd_contractEnded: false,
             });
@@ -466,7 +465,7 @@ const ViewPopup = (() => {
         containerSetText('trade_details_indicative_label', localize('Payout'));
         containerSetText('trade_details_profit_loss_label', localize('Profit/loss'));
 
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_currentLabel   : localize('Contract result'),
             cd_indicativeLabel: localize('Payout'),
             cd_profitLossLabel: localize('Profit/loss'),
@@ -476,7 +475,7 @@ const ViewPopup = (() => {
         if (contract.status === 'sold') {
             containerSetText('trade_details_end_label', localize('Exit time'));
             containerSetText('trade_details_end_date', epochToDateTime(contract.sell_time), '', true);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_endLabel: localize('Exit time'),
                 cd_endDate : epochToDateTime(contract.sell_time),
             });
@@ -484,14 +483,14 @@ const ViewPopup = (() => {
         if (Lookback.isLookback(contract.contract_type)) {
             containerSetText('trade_details_spot_label', localize('Close'));
             containerSetText('trade_details_spottime_label', localize('Close time'));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_spotLabel    : localize('Close'),
                 cd_spotTimeLabel: localize('Close time'),
             });
         } else {
             containerSetText('trade_details_spot_label', localize('Exit spot'));
             containerSetText('trade_details_spottime_label', localize('Exit spot time'));
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_spotLabel    : localize('Exit spot'),
                 cd_spotTimeLabel: localize('Exit spot time'),
             });
@@ -540,12 +539,12 @@ const ViewPopup = (() => {
         if (document.getElementById('sell_details_audit')) {
             if (show) {
                 setAuditVisibility(1);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     cd_showAudit: true,
                 });
             } else {
                 setAuditButtonsVisibility(1);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     cd_showAudit: false,
                 });
             }
@@ -648,7 +647,7 @@ const ViewPopup = (() => {
                 });
             });
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 [`auditData${type}`]: auditData,
             });
 
@@ -724,7 +723,7 @@ const ViewPopup = (() => {
                 if (contract.audit_details.contract_start) {
                     createAuditHeader(contract_starts.table);
                     appendAuditLink('trade_details_entry_spot');
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         cd_showAuditBtn: true,
                     });
                 } else {
@@ -737,7 +736,7 @@ const ViewPopup = (() => {
                         if (contract.audit_details.contract_end) {
                             createAuditHeader(contract_ends.table);
                             appendAuditLink('trade_details_current_spot');
-                            purchaseManager.set({
+                            dataManager.setPurchase({
                                 cd_showAuditBtn: true,
                             });
                         } else {
@@ -756,7 +755,7 @@ const ViewPopup = (() => {
                     createAuditHeader(contract_details.table);
                     appendAuditLink('trade_details_entry_spot');
                     appendAuditLink('trade_details_current_spot');
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         cd_showAuditBtn: true,
                     });
                 } else {
@@ -838,7 +837,7 @@ const ViewPopup = (() => {
         ViewPopupUI.showInpagePopup(`<div class="${popupbox_id}">${$container.html()}</div>`, '', '#sell_bet_desc');
         // Pass all contract details to new quill contract detail popup
         // cd_ prefix is Contract Details
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_description     : longcode,
             cd_showEntrySpot   : should_show_entry_spot,
             cd_showBarrier     : should_show_barrier,
@@ -885,7 +884,7 @@ const ViewPopup = (() => {
                 $loading.show();
             }
         } else if ($loading){
-            contractManager.set({
+            dataManager.setContract({
                 hidePageLoader: true,
             });
             
@@ -921,7 +920,7 @@ const ViewPopup = (() => {
         if (show) {
             const is_started    = !contract.is_forward_starting || contract.current_spot_time > contract.date_start;
             const $sell_wrapper = $container.find('#contract_sell_wrapper');
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_showSell: true,
             });
 
@@ -929,7 +928,7 @@ const ViewPopup = (() => {
                 if (!sell_text_updated && is_started) {
                     addSellNote($sell_wrapper);
                     $sell_wrapper.find(`#${sell_button_id}`).text(localize('Sell at market'));
-                    purchaseManager.set({
+                    dataManager.setPurchase({
                         cd_sellLabel: localize('Sell at market'),
                     });
                 }
@@ -943,7 +942,7 @@ const ViewPopup = (() => {
                 addSellNote($sell_wrapper);
             }
 
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_sellLabel: is_started ? localize('Sell at market') : localize('Sell'),
             });
 
@@ -958,7 +957,7 @@ const ViewPopup = (() => {
                 });
             });
         } else {
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_showSell: false,
             });
 
@@ -974,7 +973,7 @@ const ViewPopup = (() => {
             .append($('<strong/>', { text: `${localize('Note')}: ` }))
             .append($('<span/>', { text: localize('Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.') })));
 
-        purchaseManager.set({
+        dataManager.setPurchase({
             cd_sellInfo: `<strong>${localize('Note')}</strong>: ${localize('Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.')}`,
             cd_showSell: true,
         });
@@ -1001,7 +1000,7 @@ const ViewPopup = (() => {
                 getContract();
             } else {
                 $container.find('#errMsg').text(response.error.message).setVisibility(1);
-                purchaseManager.set({
+                dataManager.setPurchase({
                     cd_errorMsg: response.error.message,
                 });
             }
@@ -1018,7 +1017,7 @@ const ViewPopup = (() => {
                 `${localize('You have sold this contract at [_1] [_2]', [formatted_sell_price, getCurrencyDisplayCode(contract.currency)])}
                 <br />
                 ${localize('Your transaction reference number is [_1]', response.sell.transaction_id)}`);
-            purchaseManager.set({
+            dataManager.setPurchase({
                 cd_sellMsg: `${localize('You have sold this contract at [_1] [_2]', [formatted_sell_price, getCurrencyDisplayCode(contract.currency)])}
                     <br />
                     ${localize('Your transaction reference number is [_1]', response.sell.transaction_id)}`,

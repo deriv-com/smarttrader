@@ -1,12 +1,11 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Skeleton } from '@deriv-com/quill-ui';
 import Portal from './portal';
 import { getElementById } from '../../_common/common_functions';
 import { useContractChange } from '../hooks/events';
-import contractManager from '../common/contract_manager';
+import dataManager from '../common/data_manager';
 
 const PurchaseSectionLoader = ({ hideBottom }) => (
     <>
@@ -46,7 +45,7 @@ const Loader = () => {
     const page = getPageType().name;
  
     useEffect(() => {
-        const hidePageLoader = contractManager.get('hidePageLoader');
+        const hidePageLoader = dataManager.getContract('hidePageLoader');
 
         if (hidePageLoader){
             setLoading(false);

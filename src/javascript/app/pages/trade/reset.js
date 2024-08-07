@@ -1,5 +1,5 @@
 const CommonFunctions = require('../../../_common/common_functions');
-const tradeManager    = require('../../common/trade_manager').default;
+const dataManager     = require('../../common/data_manager').default;
 const localize        = require('../../../_common/localize').localize;
 
 /*
@@ -36,7 +36,7 @@ const Reset = (() => {
         CommonFunctions.getElementById('reset_time')
             .html(localize('The reset time is [_1]', reset_time_str))
             .setAttribute('style', '');
-        tradeManager.set({
+        dataManager.setTrade({
             reset_message: localize('The reset time is [_1]', reset_time_str),
         });
     };
@@ -63,7 +63,7 @@ const Reset = (() => {
 
     const hideResetTime = () => {
         CommonFunctions.getElementById('reset_time').style.display = 'none';
-        tradeManager.set({
+        dataManager.setTrade({
             reset_message: null,
         });
     };

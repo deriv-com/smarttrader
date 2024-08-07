@@ -10,7 +10,7 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
-const tradeManager = require('../../common/trade_manager').default;
+const dataManager       = require('../../common/data_manager').default;
 
 /*
  * Handles start time display
@@ -110,7 +110,7 @@ const StartDates = (() => {
                 Dropdown('#date_start');
                 Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
-                tradeManager.set({
+                dataManager.setTrade({
                     start_dates: start_dates_data,
                 });
             }

@@ -1,4 +1,4 @@
-const tradeManager = require('./trade_manager').default;
+const dataManager  = require('./data_manager').default;
 const CurrencyBase = require('../../_common/base/currency_base');
 const localize     = require('../../_common/localize').localize;
 
@@ -23,7 +23,7 @@ const getCurrencyList = (currencies) => {
             currency_list.fiat.push({ value: currency, text: currency_name });
         }
     });
-    tradeManager.set({
+    dataManager.setTrade({
         currency_list,
     });
 
