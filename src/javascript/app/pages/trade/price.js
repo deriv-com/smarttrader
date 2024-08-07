@@ -34,7 +34,6 @@ const Price = (() => {
     let form_id                 = 0;
     let is_resubscribing        = false;
     const { DURATION_AMOUNT, DURATION_UNITS, EXPIRY_TIME, FORM_NAME } = Defaults.PARAM_NAMES;
-    const type_purchase = 'purchase';
 
     const createProposal = (type_of_contract) => {
         const proposal = {
@@ -215,10 +214,10 @@ const Price = (() => {
             h4.setAttribute('class', `contract_heading ${type}`);
             CommonFunctions.elementTextContent(h4, display_text);
 
-            dataManager.set({
+            dataManager.setPurchase({
                 [`${position}DisplayText`] : display_text,
                 [`${position}ContractType`]: type,
-            }, type_purchase);
+            });
            
         }
 
@@ -227,18 +226,18 @@ const Price = (() => {
         
             if (!data.display_value) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}AmountClassname`]: '',
-                }, type_purchase);
+                });
             }
             CommonFunctions.elementTextContent(stake, `${localize('Stake')}: `);
             CommonFunctions.elementInnerHtml(amount, data.display_value ? formatMoney(currentCurrency, data.display_value) : '-');
 
             if (!data.payout) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}AmountClassname`]: '',
-                }, type_purchase);
+                });
             }
             CommonFunctions.elementTextContent(payout, `${localize('Payout')}: `);
             CommonFunctions.elementInnerHtml(payout_amount, data.payout ? formatMoney(currentCurrency, data.payout) : '-');
@@ -246,24 +245,24 @@ const Price = (() => {
             CommonFunctions.elementTextContent(multiplier, `${localize('Multiplier')}: `);
             CommonFunctions.elementInnerHtml(contract_multiplier, data.multiplier ? formatMoney(currentCurrency, data.multiplier, false, 0, 2) : '-');
 
-            dataManager.set({
+            dataManager.setPurchase({
                 [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value,true) : '-',
                 [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout,true) : '-',
                 [`${position}Multiplier`]  : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
                 currency                   : getCurrencyDisplayCode(currentCurrency),
-            }, type_purchase);
+            });
 
             if (data.longcode && window.innerWidth > 500) {
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}Description`]: data.longcode,
-                }, type_purchase);
+                });
 
                 if (description) description.setAttribute('data-balloon', data.longcode);
                 if (longcode) CommonFunctions.elementTextContent(longcode, data.longcode);
             } else {
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}Description`]: '',
-                }, type_purchase);
+                });
 
                 if (description) description.removeAttribute('data-balloon');
                 if (longcode) CommonFunctions.elementTextContent(longcode, '');
@@ -271,9 +270,9 @@ const Price = (() => {
         };
 
         const setPurchaseStatus = (enable) => {
-            dataManager.set({
+            dataManager.setPurchase({
                 [`${position}PurchaseDisabled`]: !enable,
-            }, type_purchase);
+            });
             purchase.parentNode.classList[enable ? 'remove' : 'add']('button-disabled');
         };
 
@@ -283,9 +282,9 @@ const Price = (() => {
             setData();
             error.show();
             CommonFunctions.elementTextContent(error, details.error.message);
-            dataManager.set({
+            dataManager.setPurchase({
                 [`${position}Comment`]: details.error.message,
-            }, type_purchase);
+            });
         } else {
             setData(proposal);
             if ($('#websocket_form').find('.error-field:visible').length > 0) {
@@ -298,9 +297,9 @@ const Price = (() => {
             if (isLookback(type)) {
                 const multiplier_value = formatMoney(Client.get('currency'), proposal.multiplier, false, 3, 2);
                 CommonFunctions.elementInnerHtml(comment, `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`);
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}Comment`]: `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`,
-                }, type_purchase);
+                });
             } else {
                 commonTrading.displayCommentPrice(comment, (currency.value || currency.getAttribute('value')), proposal.display_value, proposal.payout,position);
             }
@@ -463,16 +462,16 @@ const Price = (() => {
             const container = CommonFunctions.getElementById(`price_container_${position}`);
             if (position_is_visible[position]) {
                 if (position === 'middle'){
-                    dataManager.set({
+                    dataManager.setPurchase({
                         showMidPurchase: true,
-                    }, type_purchase);
+                    });
                 }
                 $(container).fadeIn(0);
             } else {
                 if (position === 'middle'){
-                    dataManager.set({
+                    dataManager.setPurchase({
                         showMidPurchase: false,
-                    }, type_purchase);
+                    });
                 }
                 $(container).fadeOut(0);
             }

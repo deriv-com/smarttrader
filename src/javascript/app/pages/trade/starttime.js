@@ -110,9 +110,9 @@ const StartDates = (() => {
                 Dropdown('#date_start');
                 Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
-                dataManager.set({
+                dataManager.setTrade({
                     start_dates: start_dates_data,
-                }, 'trade');
+                });
             }
             State.set('is_start_dates_displayed', true);
             if (first) {

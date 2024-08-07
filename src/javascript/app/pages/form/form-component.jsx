@@ -32,7 +32,7 @@ export const FormComponent = () => {
     useEffect(() => {
         setTradeData((oldData) => ({
             ...oldData,
-            ...dataManager.getAll('trade'),
+            ...dataManager.getAllTrades(),
         }));
     }, [hasTradeChange, hasSessionChange]);
 

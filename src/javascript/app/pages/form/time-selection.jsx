@@ -12,8 +12,8 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
     const { close } = useDropdown();
 
     useEffect(() => {
-        setStartTimeData(dataManager.get('starttime_obj', 'trade'));
-        setExpiryTimeData(dataManager.get('expirytime_obj', 'trade'));
+        setStartTimeData(dataManager.getTrade('starttime_obj'));
+        setExpiryTimeData(dataManager.getTrade('expirytime_obj'));
     }, [hasTimeChange]);
 
     const formatTime = (timeObj) => {

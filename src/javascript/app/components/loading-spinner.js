@@ -28,9 +28,9 @@ export const show = (content_id) => {
  * @param content_id
  */
 export const hide = (content_id) => {
-    dataManager.set({
+    dataManager.setContract({
         hidePageLoader: true,
-    }, 'contract');
+    });
 
     assertContainerExists(content_id);
     const $container = $(`#${content_id}`);

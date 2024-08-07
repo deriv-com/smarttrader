@@ -42,8 +42,6 @@ const commonTrading = (() => {
         UNDERLYING,
     } = Defaults.PARAM_NAMES;
 
-    const type_purchase = 'purchase';
-
     const displayContractForms = (id, elements, selected) => {
         if (!id || !elements || !selected) return;
 
@@ -53,12 +51,12 @@ const commonTrading = (() => {
         const contract_to_show = /^(callputequal)$/.test(selected) ? 'risefall' : selected;
 
         if (!contracts_element) {
-            dataManager.set({
+            dataManager.setContract({
                 contractsTree  : contracts_tree,
                 contracts      : all_contracts,
                 formName       : selected || Defaults.get('formname'),
                 contractElement: getElementById('contract'),
-            }, 'contract');
+            });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
@@ -159,9 +157,9 @@ const commonTrading = (() => {
         showHideOverlay('contract_confirmation_container', 'none');
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
-        dataManager.set({
+        dataManager.setPurchase({
             showPurchaseResults: false,
-        }, type_purchase);
+        });
     };
 
     const getContractCategoryTree = (elements) => {
@@ -255,9 +253,9 @@ const commonTrading = (() => {
             } else {
                 node.show();
                 elementInnerHtml(node, comment);
-                dataManager.set({
+                dataManager.setPurchase({
                     [`${position}Comment`]: comment,
-                }, type_purchase);
+                });
             }
         }
     };
@@ -477,15 +475,15 @@ const commonTrading = (() => {
         requireHighstock,
         showPriceOverlay: () => {
             showHideOverlay('loading_container2', 'block');
-            dataManager.set({
+            dataManager.setPurchase({
                 isPurchaseFormDisabled: true,
-            }, type_purchase);
+            });
         },
         hidePriceOverlay: () => {
             showHideOverlay('loading_container2', 'none');
-            dataManager.set({
+            dataManager.setPurchase({
                 isPurchaseFormDisabled: false,
-            }, type_purchase);
+            });
         },
         hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },
         showFormOverlay: () => { showHideOverlay('loading_container3', 'block'); },

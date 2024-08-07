@@ -167,9 +167,9 @@ const TickDisplay = (() => {
 
     const setBarrierValue = (lbl_barrier) => {
         CommonFunctions.elementInnerHtml(CommonFunctions.getElementById('contract_purchase_barrier'), `${lbl_barrier}: ${addComma(contract.barrier, display_decimals)}`);
-        dataManager.set({
+        dataManager.setPurchase({
             pr_barrier: `${lbl_barrier}: ${addComma(contract.barrier, display_decimals)}`,
-        }, 'purchase');
+        });
     };
 
     const evaluateContractOutcome = () => {

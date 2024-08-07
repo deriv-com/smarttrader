@@ -46,9 +46,6 @@ const Process = (() => {
         UNDERLYING,
     } = Defaults.PARAM_NAMES;
 
-    const type_purchase = 'purchase';
-    const type_trade = 'trade';
-
     /*
      * This function processes the active symbols to get markets
      * and underlying list
@@ -131,9 +128,9 @@ const Process = (() => {
         getElementById('trading_socket_container').classList.add('show');
         const init_logo = getElementById('trading_init_progress');
 
-        dataManager.set({
+        dataManager.setContract({
             hidePageLoader: true,
-        }, 'contract');
+        });
         
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';
@@ -155,9 +152,9 @@ const Process = (() => {
     const processContract = (contracts) => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
-            dataManager.set({
+            dataManager.setPurchase({
                 showPurchaseResults: true,
-            }, type_purchase);
+            });
             getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';
             getElementById('confirmation_message').hide();
@@ -307,14 +304,14 @@ const Process = (() => {
                 el_equals.checked = true;
             }
             el_equals.parentElement.setVisibility(1);
-            dataManager.set({
+            dataManager.setTrade({
                 show_allow_equals: true,
-            }, type_trade);
+            });
         } else {
             el_equals.parentElement.setVisibility(0);
-            dataManager.set({
+            dataManager.setTrade({
                 show_allow_equals: false,
-            }, type_trade);
+            });
         }
     };
 

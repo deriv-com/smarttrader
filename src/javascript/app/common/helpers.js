@@ -99,10 +99,10 @@ const setMinMaxTimeObj = (options) => {
         }
     }
 
-    dataManager.set({
+    dataManager.setTrade({
         starttime_obj,
         expirytime_obj,
-    }, 'trade', 'time');
+    }, 'time');
 };
 
 export {

@@ -7,7 +7,7 @@ import Defaults, { PARAM_NAMES } from '../defaults';
 export const ContractDropdown = () => {
     const { close } = useDropdown();
     const hasContractChange  = useContractChange();
-    const [data, setData] = useState(dataManager.getAll('contract'));
+    const [data, setData] = useState(dataManager.getAllContracts());
     const selectedRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -24,9 +24,9 @@ export const ContractDropdown = () => {
 
         Defaults.set(PARAM_NAMES.FORM_NAME,formName);
 
-        dataManager.set({
+        dataManager.setContract({
             formName,
-        }, 'contract');
+        });
 
         triggerContractChange();
 
@@ -39,7 +39,7 @@ export const ContractDropdown = () => {
     useEffect(() => {
         setData(oldData => ({
             ...oldData,
-            ...dataManager.getAll('contract'),
+            ...dataManager.getAllContracts(),
         }));
     }, [hasContractChange]);
 

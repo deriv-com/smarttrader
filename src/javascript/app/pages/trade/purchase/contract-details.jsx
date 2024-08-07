@@ -10,8 +10,6 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
-const type_purchase = 'purchase';
-
 const AuditSection = ({ data }) => {
     const auditData = {
         start: {
@@ -37,9 +35,9 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        dataManager.set({
+                        dataManager.setPurchase({
                             cd_showAudit: false,
-                        }, type_purchase);
+                        });
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -130,9 +128,9 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    dataManager.set({
+                    dataManager.setPurchase({
                         showContractDetailsPopup: false,
-                    }, type_purchase);
+                    });
                 }}
             />
             <div className='title-box'>
@@ -177,9 +175,9 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                dataManager.set({
+                dataManager.setPurchase({
                     showContractDetailsPopup: false,
-                }, type_purchase);
+                });
             }
         };
     
@@ -191,7 +189,7 @@ const ContractDetails = () => {
     }, [hasPurchaseChange]);
 
     useEffect(() => {
-        const newData = dataManager.getAll(type_purchase);
+        const newData = dataManager.getAllPurchases();
 
         setData((oldData) => ({
             ...oldData,

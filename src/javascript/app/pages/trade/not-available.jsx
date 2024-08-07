@@ -29,9 +29,9 @@ const NotAvailable = ({ title, body }) => (
 );
 
 export const init = ({ ...props }) => {
-    dataManager.set({
+    dataManager.setContract({
         hidePageLoader: true,
-    }, 'contract');
+    });
     ReactDOM.render(<NotAvailable {...props} />, getElementById('content'));
 };
 

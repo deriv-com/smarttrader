@@ -14,7 +14,6 @@ import { localize } from '../../../../_common/localize';
 import { parseData, triggerClick } from '../../../common/helpers';
 
 const Purchase = () => {
-    const type_purchase = 'purchase';
     const hasPurchaseChange  = usePurchaseChange();
     const hasContractChange  = useContractChange();
 
@@ -25,16 +24,16 @@ const Purchase = () => {
     const isloading = () => !data?.topAmount && !data?.middleAmount && !data?.bottomAmount;
 
     const hidePurchaseResults = () =>
-        dataManager.set({
+        dataManager.setPurchase({
             showPurchaseResults: false,
             error              : null,
             cd_errorMsg        : null,
             cd_showAuditBtn    : false,
             cd_infoMsg         : null,
-        }, type_purchase);
+        });
  
     useEffect(() => {
-        const newData = dataManager.getAll(type_purchase);
+        const newData = dataManager.getAllPurchases();
 
         setShowPopup(!!newData?.showContractDetailsPopup);
 

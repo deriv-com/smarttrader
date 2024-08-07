@@ -45,7 +45,7 @@ const Loader = () => {
     const page = getPageType().name;
  
     useEffect(() => {
-        const hidePageLoader = dataManager.get('hidePageLoader', 'contract');
+        const hidePageLoader = dataManager.getContract('hidePageLoader');
 
         if (hidePageLoader){
             setLoading(false);

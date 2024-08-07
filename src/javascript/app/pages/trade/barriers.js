@@ -87,9 +87,9 @@ const Barriers = (() => {
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
                     barrier_data.show_barrier = true;
                     barrier_data.show_barrier_highlow = false;
-                    dataManager.set({
+                    dataManager.setTrade({
                         barrier_data,
-                    }, 'trade', 'barrier');
+                    }, 'barrier');
                     return;
                 } else if (barrier.count === 2) {
                     getElementById('barrier_row').style.display = 'none';
@@ -170,9 +170,9 @@ const Barriers = (() => {
                     Defaults.set(BARRIER_LOW, low_elm.value);
                     barrier_data.show_barrier = false;
                     barrier_data.show_barrier_highlow = true;
-                    dataManager.set({
+                    dataManager.setTrade({
                         barrier_data,
-                    }, 'trade', 'barrier');
+                    }, 'barrier');
                     return;
                 }
             }
@@ -215,9 +215,9 @@ const Barriers = (() => {
             }
         }
 
-        dataManager.set({
+        dataManager.setTrade({
             barrier_error,
-        }, 'trade', 'barrier');
+        }, 'barrier');
     };
 
     const showHideRelativeTip = (barrier, arr_el) => {

@@ -39,7 +39,7 @@ export const getMarketName = () => {
 };
 
 export const getContractName = () => {
-    const data = dataManager.getAll('contract');
+    const data = dataManager.getAllContracts('contract');
     let name = '';
     // eslint-disable-next-line consistent-return
     data?.contractsTree?.forEach((contract) => {

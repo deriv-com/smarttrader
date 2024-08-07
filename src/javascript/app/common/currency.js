@@ -23,9 +23,9 @@ const getCurrencyList = (currencies) => {
             currency_list.fiat.push({ value: currency, text: currency_name });
         }
     });
-    dataManager.set({
+    dataManager.setTrade({
         currency_list,
-    }, 'trade');
+    });
 
     return $currencies.append($fiat_currencies.children().length ? $fiat_currencies : '').append($cryptocurrencies.children().length ? $cryptocurrencies : '');
 };

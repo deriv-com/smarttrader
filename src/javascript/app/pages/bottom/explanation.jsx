@@ -15,7 +15,7 @@ export const Explanation = ({ explanationOnly = false }) => {
     const hasContractChanges = useContractChange();
 
     useEffect(() => {
-        const actualFormName = dataManager.get('explanationFormName', 'contract');
+        const actualFormName = dataManager.getContract('explanationFormName');
         setFormName(null);
         
         setTimeout(() => {

@@ -36,9 +36,9 @@ const Reset = (() => {
         CommonFunctions.getElementById('reset_time')
             .html(localize('The reset time is [_1]', reset_time_str))
             .setAttribute('style', '');
-        dataManager.set({
+        dataManager.setTrade({
             reset_message: localize('The reset time is [_1]', reset_time_str),
-        }, 'trade');
+        });
     };
 
     const DurationMap = (() => {
@@ -63,9 +63,9 @@ const Reset = (() => {
 
     const hideResetTime = () => {
         CommonFunctions.getElementById('reset_time').style.display = 'none';
-        dataManager.set({
+        dataManager.setTrade({
             reset_message: null,
-        }, 'trade');
+        });
     };
 
     const isNewBarrier = (entry_barrier, current_barrier) => (

@@ -37,28 +37,30 @@ class DataManager {
                 window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
                     detail: { oldValues, newValues },
                 }));
-                if (optional_trigger === 'barrier') {
-                    triggerBarrierChange();
-                } else if (optional_trigger === 'time') {
-                    triggerTimeChange();
-                } else {
-                    switch (data_type) {
-                        case 'trade':
+                
+                switch (data_type) {
+                    case 'trade':
+                        if (optional_trigger === 'barrier') {
+                            triggerBarrierChange();
+                        } else if (optional_trigger === 'time') {
+                            triggerTimeChange();
+                        } else {
                             triggerTradeChange();
-                            break;
+                        }
+                        break;
 
-                        case 'purchase':
-                            triggerPurchaseChange();
-                            break;
+                    case 'purchase':
+                        triggerPurchaseChange();
+                        break;
 
-                        case 'contract':
-                            triggerContractChange();
-                            break;
-                    
-                        default:
-                            break;
-                    }
+                    case 'contract':
+                        triggerContractChange();
+                        break;
+                
+                    default:
+                        break;
                 }
+                
             }
         }
     }
@@ -92,6 +94,70 @@ class DataManager {
     has(key, data_type) {
         return Object.prototype.hasOwnProperty.call(this.data[data_type], key);
     }
+
+    // methods for trade
+    setTrade(data, optional_trigger) {
+        this.set(data, 'trade', optional_trigger);
+    }
+
+    getTrade(key) {
+        return this.get(key, 'trade');
+    }
+
+    getAllTrades() {
+        return this.getAll('trade');
+    }
+
+    clearTrades() {
+        this.clear('trade');
+    }
+
+    hasTrade(key) {
+        return this.has(key, 'trade');
+    }
+
+    // methods for purchase
+    setPurchase(data) {
+        this.set(data, 'purchase');
+    }
+
+    getPurchase(key) {
+        return this.get(key, 'purchase');
+    }
+
+    getAllPurchases() {
+        return this.getAll('purchase');
+    }
+
+    clearPurchases() {
+        this.clear('purchase');
+    }
+
+    hasPurchase(key) {
+        return this.has(key, 'purchase');
+    }
+
+    // methods for contract
+    setContract(data) {
+        this.set(data, 'contract');
+    }
+
+    getContract(key) {
+        return this.get(key, 'contract');
+    }
+
+    getAllContracts() {
+        return this.getAll('contract');
+    }
+
+    clearContracts() {
+        this.clear('contract');
+    }
+
+    hasContract(key) {
+        return this.has(key, 'contract');
+    }
+
 }
 
 const dataManager = new DataManager();

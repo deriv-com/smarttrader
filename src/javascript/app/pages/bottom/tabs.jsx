@@ -69,7 +69,7 @@ const BottomTabs = () => {
         : tabs;
 
     useEffect(() => {
-        setFormName(dataManager.get('explanationFormName', 'contract'));
+        setFormName(dataManager.getContract('explanationFormName'));
     }, [hasContractChange, hasMarketChange]);
 
     useEffect(() => {

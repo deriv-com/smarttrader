@@ -44,7 +44,6 @@ const Durations = (() => {
         FORM_NAME,
         TIME_START,
     } = Defaults.PARAM_NAMES;
-    const type_trade = 'trade';
 
     const displayDurations = (time_start_val) => {
         let date_time_start = moment(Defaults.get(DATE_START) * 1000);
@@ -154,9 +153,9 @@ const Durations = (() => {
         Object.values(list).forEach(option => {
             duration_options.push({ text: duration_list[option].text, value: option });
         });
-        dataManager.set({
+        dataManager.setTrade({
             duration_options,
-        }, type_trade);
+        });
 
         smallest_duration = {
             amount: duration_list[list[0]].dataset.minimum,
@@ -453,9 +452,9 @@ const Durations = (() => {
                 requested = selectEndDate(selected_date);
             }
         }
-        dataManager.set({
+        dataManager.setTrade({
             endtime_data,
-        }, type_trade);
+        });
         return requested;
     };
 
@@ -508,9 +507,9 @@ const Durations = (() => {
             fragment.appendChild(option);
         }
         target.appendChild(fragment);
-        dataManager.set({
+        dataManager.setTrade({
             expiry_type_options,
-        }, type_trade);
+        });
     };
 
     const isNow = date_start => (date_start ? date_start === 'now' : (!State.get('is_start_dates_displayed') || CommonFunctions.getElementById('date_start').value === 'now'));
@@ -687,9 +686,9 @@ const Durations = (() => {
                 duration_data.message = `${localize('Minimum:')} ${duration_data.min}`;
             }
         }
-        dataManager.set({
+        dataManager.setTrade({
             duration_data,
-        }, type_trade);
+        });
     };
 
     const onStartDateChange = (value) => {

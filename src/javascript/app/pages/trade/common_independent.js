@@ -4,7 +4,6 @@ const dataManager      = require('../../common/data_manager').default;
 const getElementById   = require('../../../_common/common_functions').getElementById;
 const getPropertyValue = require('../../../_common/utility').getPropertyValue;
 
-const type_purchase = 'purchase';
 /*
  * Display price/spot movement variation to depict price moved up or down
  */
@@ -12,22 +11,22 @@ const displayPriceMovement = (element, old_value, current_value, data_key) => {
     element.classList.remove('price_moved_down');
     element.classList.remove('price_moved_up');
 
-    dataManager.set({
+    dataManager.setPurchase({
         [data_key]: '',
-    }, type_purchase);
+    });
 
     if (parseFloat(current_value) > parseFloat(old_value)) {
         element.classList.remove('price_moved_down');
         element.classList.add('price_moved_up');
-        dataManager.set({
+        dataManager.setPurchase({
             [data_key]: 'price_moved_up',
-        }, type_purchase);
+        });
     } else if (parseFloat(current_value) < parseFloat(old_value)) {
         element.classList.remove('price_moved_up');
         element.classList.add('price_moved_down');
-        dataManager.set({
+        dataManager.setPurchase({
             [data_key]: 'price_moved_down',
-        }, type_purchase);
+        });
     }
 };
 
