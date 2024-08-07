@@ -131,6 +131,19 @@ export const FormComponent = () => {
         return null;
     }
 
+    const getMinMaxDate = () => {
+        const { minDate: min, maxDate: max } = endtime_data.datepicker_config;
+        const today = new Date();
+    
+        const minDate = new Date(today);
+        minDate.setDate(today.getDate() + min);
+    
+        const maxDate = new Date(today);
+        maxDate.setDate(today.getDate() + max);
+    
+        return { minDate, maxDate };
+    };
+
     const payoutTypeOptions = [
         { text: localize('Stake'), value: 'stake' },
         { text: localize('Payout'), value: 'payout' },
@@ -222,7 +235,10 @@ export const FormComponent = () => {
                                                         {endtime_data.show_datepicker ? (
                                                             <DatePickerDropdown
                                                                 value={moment(expiry_date).format('DD/MM/YYYY')}
-                                                                datePickerProps={{ minDate: new Date() }}
+                                                                datePickerProps={{
+                                                                    minDate: getMinMaxDate().minDate,
+                                                                    maxDate: getMinMaxDate().maxDate,
+                                                                }}
                                                                 onSelectDate={(value) => {
                                                                     onExpiryDateChange(value);
                                                                 }}
