@@ -62,7 +62,9 @@ const Defaults = (() => {
             // to increase speed, do not set values when form is still loading
             if (!isVisible(getElementById('trading_init_progress'))) {
                 sessionStorage.setItem(key, value);
-                triggerSessionChange();
+                if (!['barrier', 'barrier_high', 'barrier_low'].includes(key)) {
+                    triggerSessionChange();
+                }
                 updateURL();
             }
         }
