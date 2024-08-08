@@ -206,7 +206,7 @@ const ContractDetails = () => {
                             <Skeleton.Square fullWidth height={24} rounded />
                             <div className='body-loader'>
                                 <Skeleton.Square fullWidth height={495} rounded />
-                                <Skeleton.Square width={'360px'} height={670} rounded />
+                                <Skeleton.Square width={360} height={670} rounded />
                             </div>
                         </div>
                     </div>

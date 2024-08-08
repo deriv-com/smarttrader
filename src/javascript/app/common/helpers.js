@@ -8,7 +8,7 @@ import common_independent from '../pages/trade/common_independent';
 import Defaults, { PARAM_NAMES } from '../pages/trade/defaults';
 import { triggerSessionChange } from '../hooks/events';
 
-const parseData = (rawData) => !rawData ?  '' :  parse(rawData);
+const parseData = (raw_data) => !raw_data ?  '' :  parse(raw_data);
         
 const triggerClick = (query) => document.querySelector(query)?.click();
 

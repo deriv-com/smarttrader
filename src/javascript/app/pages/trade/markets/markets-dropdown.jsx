@@ -72,6 +72,7 @@ export const MarketsDropdown = () => {
     const [searchKey, setSearchKey] = useState('');
     const itemsContainer = useRef(null);
     const isScrolling = useRef(false);
+    const disableScrollTimer = useRef();
 
     const { close: closeMarketDropdown } = useDropdown();
 
@@ -131,6 +132,8 @@ export const MarketsDropdown = () => {
         setDefaultMarkets(originalMarkets);
         setMarkets(originalMarkets);
         setIsMounted(true);
+
+        return () => clearTimeout(disableScrollTimer.current);
     }, []);
 
     // Handle selecting of tabs on scroll
@@ -185,7 +188,7 @@ export const MarketsDropdown = () => {
                     behavior: 'smooth',
                 });
             }
-            setTimeout(() => {
+            disableScrollTimer.current = setTimeout(() => {
                 isScrolling.current = false;
             }, 1000);
         }
