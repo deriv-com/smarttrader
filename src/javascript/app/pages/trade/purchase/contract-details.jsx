@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
-import { Button,  Skeleton, Text } from '@deriv-com/quill-ui';
+import { Button, Skeleton, Text } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import ContractTable from './contract-table';
 import Portal from '../../portal';
@@ -10,13 +10,18 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
-const hidePurchaseResults = () =>
-    dataManager.setPurchase({
-        cd_showAudit: false,
-        auditDataEnd: [],
-        cd_infoMsg  : null,
+const getDefaultPurchaseObject = () => ({
+    cd_showAudit: false,
+    auditDataEnd: [],
+    cd_infoMsg  : null,
+});
 
+const setPurchaseWithDefaults = (additionalProps = {}) => {
+    dataManager.setPurchase({
+        ...getDefaultPurchaseObject(),
+        ...additionalProps,
     });
+};
 
 const AuditSection = ({ data }) => {
     const auditData = {
@@ -43,7 +48,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        hidePurchaseResults();
+                        setPurchaseWithDefaults();
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -110,7 +115,7 @@ const AuditSection = ({ data }) => {
                                         );
                                     }
 
-                                    return false;
+                                    return null;
                                 })}
                                 <div className='table-box lg'>
                                     <Explanation explanationOnly />
@@ -134,9 +139,8 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
+                    setPurchaseWithDefaults({
                     
-                    dataManager.setPurchase({
-                        ...hidePurchaseResults(),
                         showContractDetailsPopup: false,
                         cd_showSell             : false,
                         cd_contractEnded        : false,
@@ -187,9 +191,7 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-              
-                dataManager.setPurchase({
-                    ...hidePurchaseResults(),
+                setPurchaseWithDefaults({
                     showContractDetailsPopup: false,
                     cd_showSell             : false,
                     cd_contractEnded        : false,
