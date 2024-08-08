@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
-import { Button,  Skeleton, Text } from '@deriv-com/quill-ui';
+import { Button, Skeleton, Text } from '@deriv-com/quill-ui';
 import { LabelPairedArrowLeftMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import ContractTable from './contract-table';
 import Portal from '../../portal';
@@ -9,6 +9,26 @@ import { usePurchaseChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
+
+const resetPopupData = (isAuditReset = false) => {
+    const audit_reset_object = {
+        cd_showAudit: false,
+        auditDataEnd: [],
+        cd_infoMsg  : null,
+    };
+     
+    const contract_reset_object = {
+        ...audit_reset_object,
+        showContractDetailsPopup: false,
+        cd_showSell             : false,
+        cd_contractEnded        : false,
+        cd_showAuditBtn         : false,
+    };
+  
+    dataManager.setPurchase({
+        ...(isAuditReset ? { ...audit_reset_object } : contract_reset_object),
+    });
+};
 
 const AuditSection = ({ data }) => {
     const auditData = {
@@ -35,9 +55,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        dataManager.setPurchase({
-                            cd_showAudit: false,
-                        });
+                        resetPopupData(true);
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -57,12 +75,12 @@ const AuditSection = ({ data }) => {
                         <div className='details-column'>
                             <div className='contract-info-wrapper full'>
                                 {Object.keys(auditData).map(adk =>{
-                                    const { title,content } = auditData[adk];
-
-                                    if (content){
+                                    const { title, content } = auditData[adk];
+                                  
+                                    if (content?.length) {
                                         return (
                                             <React.Fragment key={`audit-table-${title}-${adk}`}>
-                                                <div className='table-box'>
+                                                <div className='table-box' >
                                                     <Text size='md' bold centered>
                                                         {title}
                                                     </Text>
@@ -104,7 +122,7 @@ const AuditSection = ({ data }) => {
                                         );
                                     }
 
-                                    return false;
+                                    return null;
                                 })}
                                 <div className='table-box lg'>
                                     <Explanation explanationOnly />
@@ -128,9 +146,7 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    dataManager.setPurchase({
-                        showContractDetailsPopup: false,
-                    });
+                    resetPopupData(false);
                 }}
             />
             <div className='title-box'>
@@ -175,9 +191,7 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                dataManager.setPurchase({
-                    showContractDetailsPopup: false,
-                });
+                resetPopupData(false);
             }
         };
     
