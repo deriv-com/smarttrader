@@ -37,6 +37,8 @@ const DigitTicker = (() => {
         populateContainer(el_container);
         highlightWinningNumbers(getWinningNumbers(contract_type, barrier));
         observeResize();
+
+        return true;
     };
 
     const populateContainer = (container_element) => {
