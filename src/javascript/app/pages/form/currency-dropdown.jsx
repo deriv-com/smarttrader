@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomDropdown, DropdownItem, DropdownTitle, useDropdown } from '@deriv-com/quill-ui';
+import { setDefaultParams } from '../../common/helpers';
 
 const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
     const { close } = useDropdown();
@@ -16,6 +17,7 @@ const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
                             selected={item.value === currency}
                             onClick={() => {
                                 onUpdate(elementId, item.value, 'change');
+                                setDefaultParams(elementId, item.value);
                                 close();
                             }}
                         />
