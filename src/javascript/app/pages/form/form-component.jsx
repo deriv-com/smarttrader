@@ -18,15 +18,20 @@ import {
     useSessionChange,
     useTradeChange,
     eventDispatcher,
+    useMarketChange,
+    useContractChange,
 } from '../../hooks/events.js';
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import dataManager from '../../common/data_manager.js';
+import { setDefaultParams } from '../../common/helpers.js';
 
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
 
     const hasTradeChange = useTradeChange();
+    const hasMarketChange = useMarketChange();
+    const hasContractChange = useContractChange();
     const hasSessionChange = useSessionChange();
 
     useEffect(() => {
@@ -34,7 +39,7 @@ export const FormComponent = () => {
             ...oldData,
             ...dataManager.getAllTrades(),
         }));
-    }, [hasTradeChange, hasSessionChange]);
+    }, [hasMarketChange, hasContractChange, hasTradeChange, hasSessionChange]);
 
     const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -122,6 +127,7 @@ export const FormComponent = () => {
 
     const handleAmountChange = (e, id) => {
         updateFormField(id, e.target.value, 'input');
+        setDefaultParams(id, e.target.value);
     };
 
     const findTextByValue = (arr, value) => arr.find(item => item.value === value)?.text || null;
@@ -215,6 +221,7 @@ export const FormComponent = () => {
                                                                 e.target.value,
                                                                 'input'
                                                             );
+                                                            setDefaultParams('duration_amount', e.target.value);
                                                         }}
                                                     />
                                                 </div>
