@@ -170,7 +170,6 @@ export const FormComponent = () => {
                                 <SectionMessage status='info' message={reset_message} />
                             </div>
                         )}
-                    
                         <div className='quill-form-rows'>
                             {['risefall', 'callputequal'].includes(form_name) && start_dates && date_start && (
                                 <div className='quill-form-row'>
@@ -194,7 +193,6 @@ export const FormComponent = () => {
                                     )}
                                 </div>
                             )}
-
                             {form_name !== 'highlowticks' && (
                                 <>
                                     <div className='quill-form-row'>
@@ -262,7 +260,6 @@ export const FormComponent = () => {
                                             </>
                                         )}
                                     </div>
-
                                     {expiry_type === 'endtime' && expiry_time && (
                                         <div className='quill-form-row'>
                                             <div className='form_field field-pb'>
@@ -276,12 +273,10 @@ export const FormComponent = () => {
                                     )}
                                 </>
                             )}
-
                             <BarrierFields
                                 form_name={form_name}
                                 handleAmountChange={handleAmountChange}
                             />
-
                             {['matchdiff', 'overunder'].includes(form_name) && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
@@ -296,7 +291,6 @@ export const FormComponent = () => {
                                     </div>
                                 </div>
                             )}
-
                             {['highlowticks'].includes(form_name) && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
@@ -311,7 +305,6 @@ export const FormComponent = () => {
                                     </div>
                                 </div>
                             )}
-
                             {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
                                 form_name
                             ) && (
@@ -324,7 +317,6 @@ export const FormComponent = () => {
                                             elementId='amount_type'
                                         />
                                     </div>
-
                                     {currency_list ? (
                                         <>
                                             <div className='form_field field-pb'>
@@ -358,7 +350,6 @@ export const FormComponent = () => {
                                     )}
                                 </div>
                             )}
-
                             {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
                                 form_name
                             ) && (
@@ -398,7 +389,6 @@ export const FormComponent = () => {
                                     )}
                                 </div>
                             )}
-
                             {show_allow_equals && (
                                 <div className='quill-form-row allow-equals'>
                                     <Checkbox
