@@ -15,6 +15,7 @@ const DigitTicker = (() => {
     const array_of_digits         = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     const init = (container_id, contract_type, shortcode, tick_count, status = 'open') => {
+   
         contract_status      = status;
         total_tick_count     = tick_count;
         type                 = contract_type;
@@ -23,10 +24,21 @@ const DigitTicker = (() => {
         container_ref        = container_id;
         is_initialized       = true;
 
+        // wait for the digit container to load before init
+        if (!el_container){
+            setTimeout(() => {
+                init(container_id, contract_type, shortcode, tick_count, status);
+            }, 10);
+
+            return false;
+        }
+
         setBarrierFromShortcode(type, shortcode);
         populateContainer(el_container);
         highlightWinningNumbers(getWinningNumbers(contract_type, barrier));
         observeResize();
+
+        return true;
     };
 
     const populateContainer = (container_element) => {

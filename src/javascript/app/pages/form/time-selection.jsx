@@ -3,7 +3,7 @@ import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
 import dataManager from '../../common/data_manager.js';
-import { setMinMaxTime } from '../../common/helpers.js';
+import { setDefaultParams, setMinMaxTime } from '../../common/helpers.js';
 
 const TimeContent = ({ time, onUpdate, elementId }) => {
     const [startTimeData, setStartTimeData] = useState();
@@ -61,6 +61,7 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
                     selected={item === time}
                     onClick={() => {
                         onUpdate(elementId, item, 'change');
+                        setDefaultParams(elementId, item);
                         close();
                     }}
                 />
