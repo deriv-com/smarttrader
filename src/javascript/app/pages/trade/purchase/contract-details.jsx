@@ -10,7 +10,7 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
-const setPurchaseWithDefaults = (isAuditReset = false) => {
+const resetPopupData = (isAuditReset = false) => {
     const audit_reset_object = {
         cd_showAudit: false,
         auditDataEnd: [],
@@ -55,7 +55,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        setPurchaseWithDefaults(true);
+                        resetPopupData(true);
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -146,7 +146,7 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    setPurchaseWithDefaults(false);
+                    resetPopupData(false);
                 }}
             />
             <div className='title-box'>
@@ -191,7 +191,7 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                setPurchaseWithDefaults(false);
+                resetPopupData(false);
             }
         };
     
