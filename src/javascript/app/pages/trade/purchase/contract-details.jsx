@@ -31,7 +31,7 @@ const resetPopupData = (isAuditReset = false) => {
 };
 
 const AuditSection = ({ data }) => {
-    const auditData = {
+    const audit_data = {
         start: {
             title  : localize('Contract starts'),
             content: data?.auditDataStart,
@@ -74,12 +74,12 @@ const AuditSection = ({ data }) => {
                         </div>
                         <div className='details-column'>
                             <div className='contract-info-wrapper full'>
-                                {Object.keys(auditData).map(adk =>{
-                                    const { title, content } = auditData[adk];
+                                {Object.keys(audit_data).map(audit_data_key =>{
+                                    const { title, content } = audit_data[audit_data_key];
                                   
                                     if (content?.length) {
                                         return (
-                                            <React.Fragment key={`audit-table-${title}-${adk}`}>
+                                            <React.Fragment key={`audit-table-${title}-${audit_data_key}`}>
                                                 <div className='table-box' >
                                                     <Text size='md' bold centered>
                                                         {title}
@@ -97,8 +97,8 @@ const AuditSection = ({ data }) => {
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    {content?.map((audit,ak) =>
-                                                        <React.Fragment key={`audit-${audit.tick}-${ak}`}>
+                                                    {content?.map((audit, audit_key) =>
+                                                        <React.Fragment key={`audit-${audit.tick}-${audit_key}`}>
                                                             <div className='table-item'>
                                                                 <div className='item-header'>
                                                                     <Text size='sm' bold>{ audit?.name}</Text>
@@ -220,7 +220,7 @@ const ContractDetails = () => {
                             <Skeleton.Square fullWidth height={24} rounded />
                             <div className='body-loader'>
                                 <Skeleton.Square fullWidth height={495} rounded />
-                                <Skeleton.Square width={'360px'} height={670} rounded />
+                                <Skeleton.Square width={360} height={670} rounded />
                             </div>
                         </div>
                     </div>

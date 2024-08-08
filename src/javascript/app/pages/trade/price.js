@@ -246,8 +246,8 @@ const Price = (() => {
             CommonFunctions.elementInnerHtml(contract_multiplier, data.multiplier ? formatMoney(currentCurrency, data.multiplier, false, 0, 2) : '-');
 
             dataManager.setPurchase({
-                [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value,true) : '-',
-                [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout,true) : '-',
+                [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value, true) : '-',
+                [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout, true) : '-',
                 [`${position}Multiplier`]  : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
                 currency                   : getCurrencyDisplayCode(currentCurrency),
             });

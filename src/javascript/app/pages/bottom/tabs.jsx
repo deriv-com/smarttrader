@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { Explanation } from './explanation.jsx';
@@ -17,6 +17,7 @@ const BottomTabs = () => {
     const [formName, setFormName] = useState('');
     const hasContractChange = useContractChange();
     const savedTab = sessionStorage.getItem('currentTab');
+    const triggerOldTabTimer = useRef();
 
     const renderGraph = (callback) => {
         const timer = setTimeout(() => {
@@ -69,10 +70,12 @@ const BottomTabs = () => {
       
         triggerOldTab(oppositeTab);
 
-        setTimeout(() => {
+        triggerOldTabTimer.current = setTimeout(() => {
             triggerOldTab(selectedTab);
         }, 100);
     }, [selectedTab, savedTab]);
+
+    useEffect(() => () => clearTimeout(triggerOldTabTimer.current), []);
 
     return (
         <>

@@ -5,6 +5,7 @@ const DigitTicker = (() => {
         el_peek,
         el_peek_box,
         el_mask,
+        init_timer,
         total_tick_count,
         contract_status,
         type,
@@ -25,8 +26,8 @@ const DigitTicker = (() => {
         is_initialized       = true;
 
         // wait for the digit container to load before init
-        if (!el_container){
-            setTimeout(() => {
+        if (!el_container) {
+            init_timer = setTimeout(() => {
                 init(container_id, contract_type, shortcode, tick_count, status);
             }, 10);
 
@@ -234,6 +235,7 @@ const DigitTicker = (() => {
             el_container.removeChild(el_container.firstChild);
         }
         if (el_container) el_container.classList.add('invisible');
+        clearTimeout(init_timer);
     };
 
     const countDecimals = (value) => {

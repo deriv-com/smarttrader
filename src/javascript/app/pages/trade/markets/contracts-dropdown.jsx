@@ -10,6 +10,7 @@ export const ContractDropdown = () => {
     const [data, setData] = useState(dataManager.getAllContracts());
     const selectedRef = useRef(null);
     const containerRef = useRef(null);
+    const closeDropdownTimer = useRef();
 
     const onContractClick = (formName) => {
         if (formName === data?.formName) { return; }
@@ -22,7 +23,7 @@ export const ContractDropdown = () => {
             contractElement.dispatchEvent(event);
         }
 
-        Defaults.set(PARAM_NAMES.FORM_NAME,formName);
+        Defaults.set(PARAM_NAMES.FORM_NAME, formName);
 
         dataManager.setContract({
             formName,
@@ -30,11 +31,12 @@ export const ContractDropdown = () => {
 
         triggerContractChange();
 
-        setTimeout(() => {
+        closeDropdownTimer.current = setTimeout(() => {
             close();
         }, 10);
-      
     };
+
+    useEffect(() => () => clearTimeout(closeDropdownTimer.current), []);
 
     useEffect(() => {
         setData(oldData => ({
