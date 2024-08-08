@@ -5,6 +5,8 @@ import moment from 'moment';
 import dataManager from './data_manager';
 import { getLocalTime } from '../base/clock';
 import common_independent from '../pages/trade/common_independent';
+import Defaults, { PARAM_NAMES } from '../pages/trade/defaults';
+import { triggerSessionChange } from '../hooks/events';
 
 const parseData = (rawData) => !rawData ?  '' :  parse(rawData);
         
@@ -105,10 +107,38 @@ const setMinMaxTimeObj = (options) => {
     }, 'time');
 };
 
+const paramsMap = {
+    'date_start'     : PARAM_NAMES.DATE_START,
+    'time_start'     : PARAM_NAMES.TIME_START,
+    'expiry_type'    : PARAM_NAMES.EXPIRY_TYPE,
+    'duration_amount': PARAM_NAMES.DURATION_AMOUNT,
+    'duration_units' : PARAM_NAMES.DURATION_UNITS,
+    'expiry_date'    : PARAM_NAMES.EXPIRY_DATE,
+    'expiry_time'    : PARAM_NAMES.EXPIRY_TIME,
+    'barrier'        : PARAM_NAMES.BARRIER,
+    'barrier_high'   : PARAM_NAMES.BARRIER_HIGH,
+    'barrier_low'    : PARAM_NAMES.BARRIER_LOW,
+    'prediction'     : PARAM_NAMES.PREDICTION,
+    'selected_tick'  : PARAM_NAMES.SELECTED_TICK,
+    'amount_type'    : PARAM_NAMES.AMOUNT_TYPE,
+    'amount'         : PARAM_NAMES.AMOUNT,
+    'currency'       : PARAM_NAMES.CURRENCY,
+    'multiplier'     : PARAM_NAMES.MULTIPLIER,
+    'callputequal'   : PARAM_NAMES.IS_EQUAL,
+};
+
+const setDefaultParams = (elementId, value) => {
+    if (paramsMap[elementId]) {
+        Defaults.set(paramsMap[elementId], value);
+        triggerSessionChange();
+    }
+};
+
 export {
     parseData,
     triggerClick,
     TimeTooltipWrapper,
     setMinMaxTime,
+    setDefaultParams,
 };
 
