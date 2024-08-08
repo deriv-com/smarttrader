@@ -1,38 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { SegmentedControlSingleChoice, Skeleton } from '@deriv-com/quill-ui';
+import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { Explanation } from './explanation.jsx';
+import Graph from './graph.jsx';
 import { getElementById } from '../../../_common/common_functions';
 import WebtraderChart from '../trade/charts/webtrader_chart';
 import { useMarketChange, useContractChange } from '../../hooks/events';
 import { localize } from '../../../_common/localize';
 import dataManager from '../../common/data_manager.js';
 import LastDigit from '../trade/last_digit.jsx';
-
-const Graph = ({ renderGraph }) => {
-    const [isMounted,setMounted] = useState(false);
-    useEffect(() => {
-        setTimeout(() => {
-            setMounted(true);
-            setTimeout(() => {
-                renderGraph();
-            }, 1000);
-        }, 1000);
-    },[]);
-
-    if (isMounted){
-        return (
-            <div id='tab_graph' className='chart-section'>
-                <p className='error-msg' id='chart-error' />
-                <div id='trade_live_chart'>
-                    <div id='webtrader_chart' />
-                </div>
-            </div>
-        );
-    }
-
-    return <Skeleton.Square rounded fullWidth height={300} />;
-};
 
 const BottomTabs = () => {
     const hasMarketChange = useMarketChange();
@@ -43,14 +19,13 @@ const BottomTabs = () => {
     const savedTab = sessionStorage.getItem('currentTab');
 
     const renderGraph = (callback) => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             WebtraderChart.cleanupChart();
             WebtraderChart.showChart();
-
-            if (typeof callback === 'function') {
-                callback();
-            }
+            callback?.();
         }, 100);
+    
+        return () => clearTimeout(timer);
     };
 
     const handleChange = (e) => {
@@ -73,11 +48,7 @@ const BottomTabs = () => {
     }, [hasContractChange, hasMarketChange]);
 
     useEffect(() => {
-        if (formName === 'digits' || formName === 'evenodd' || formName === 'overunder') {
-            setHasLastDigit(true);
-        } else {
-            setHasLastDigit(false);
-        }
+        setHasLastDigit(formName === 'digits' || formName === 'evenodd' || formName === 'overunder');
     }, [formName]);
 
     useEffect(() => {
@@ -109,7 +80,7 @@ const BottomTabs = () => {
                 <SegmentedControlSingleChoice
                     options={bottomTabOptions}
                     selectedItemIndex={selectedTab}
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
                 />
             </div>
             <div className='bottom-content-section'>

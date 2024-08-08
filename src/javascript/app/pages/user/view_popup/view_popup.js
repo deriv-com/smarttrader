@@ -613,7 +613,7 @@ const ViewPopup = (() => {
         xhttp.send();
     };
 
-    const parseAuditResponse = (table, array_audit_data,type) => (
+    const parseAuditResponse = (table, array_audit_data, type) => (
         new Promise((resolve) => {
             const primary_classes   = ['secondary-bg-color', 'content-inverse-color'];
             const secondary_classes = ['fill-bg-color', 'secondary-time'];

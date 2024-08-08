@@ -207,12 +207,9 @@ const Barriers = (() => {
             const is_high_barrier_greater = +barrier_high_element.value > +barrier_low_element.value;
             barrier_high_element.classList[is_high_barrier_greater ? 'remove' : 'add']('error-field');
             error_node.classList[is_high_barrier_greater ? 'add' : 'remove']('invisible');
+         
+            barrier_error = !is_high_barrier_greater;
 
-            if (is_high_barrier_greater) {
-                barrier_error = false;
-            } else {
-                barrier_error = true;
-            }
         }
 
         dataManager.setTrade({

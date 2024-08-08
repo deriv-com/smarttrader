@@ -242,7 +242,7 @@ const commonTrading = (() => {
     /*
      * display the profit and return of bet under each trade container
      */
-    const displayCommentPrice = (node, currency, type, payout,position) => {
+    const displayCommentPrice = (node, currency, type, payout, position) => {
         if (node && type && payout) {
             const profit         = payout - type;
             const return_percent = (profit / type) * 100;

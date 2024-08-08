@@ -217,22 +217,21 @@ export const MarketsDropdown = () => {
                 
         }
     
-        const toActiveMarket = () => {
+        const goToActiveMarket = () => {
             const container = itemsContainer.current;
             let selectedElement = container.querySelector('.market-item-selected');
         
             while (selectedElement && selectedElement !== document) {
                 if (selectedElement.tagName === 'DIV' && selectedElement.hasAttribute('data-id')) {
                     const market =  selectedElement.getAttribute('data-id');
-                    return setActiveMarket(market);
+                    setActiveMarket(market);
                 }
                 selectedElement = selectedElement.parentElement;
             }
-            return null;
         };
     
         if (searchKey === '') {
-            toActiveMarket();
+            goToActiveMarket();
         }
 
     }, [isMounted, markets]);
@@ -256,12 +255,12 @@ export const MarketsDropdown = () => {
                     onTabClick={(e) => scrollToMarketByIndex(e)}
                 >
                     <Tab.List>
-                        {Object.keys(markets).map((ik) => {
-                            const market = markets[ik];
-                            const marketName = derived.includes(ik)
+                        {Object.keys(markets).map((market_key) => {
+                            const market = markets[market_key];
+                            const marketName = derived.includes(market_key)
                                 ? `Derived (${market.name})`
                                 : market.name;
-                            return <Tab.Trigger key={ik}>{marketName}</Tab.Trigger>;
+                            return <Tab.Trigger key={market_key}>{marketName}</Tab.Trigger>;
                         })}
                     </Tab.List>
                 </Tab.Container>
@@ -270,26 +269,25 @@ export const MarketsDropdown = () => {
                     id='quill-market-dropdown-list'
                     ref={itemsContainer}
                 >
-                    {Object.keys(markets).map((ik) => {
-                        const market = markets[ik];
+                    {Object.keys(markets).map((market_key) => {
+                        const market = markets[market_key];
                         const { submarkets } = market;
 
                         const sortedSubmarketKeys = Object.keys(submarkets).sort((a, b) => {
-                            if (a === 'major_pairs') return -1;
-                            if (b === 'major_pairs') return 1;
-                            if (a === 'minor_pairs') return -1;
-                            if (b === 'minor_pairs') return 1;
+                            const pairs = ['major_pairs', 'minor_pairs'];
+                            if (pairs.includes(a)) return -1;
+                            if (pairs.includes(b)) return 1;
                             return 0;
                         });
 
                         return (
-                            <div id={`${ik}-dropdown-list`} key={ik} data-id={ik}>
-                                {sortedSubmarketKeys.map((sk) => {
-                                    const submarket = submarkets[sk];
+                            <div id={`${market_key}-dropdown-list`} key={market_key} data-id={market_key}>
+                                {sortedSubmarketKeys.map((sub_market_key) => {
+                                    const submarket = submarkets[sub_market_key];
                                     const { symbols, name } = submarket;
 
                                     return (
-                                        <React.Fragment key={sk}>
+                                        <React.Fragment key={sub_market_key}>
                                             <DropdownTitle label={name} />
                                             {Object.keys(symbols).map((yk) => {
                                                 const symbol = symbols[yk];
