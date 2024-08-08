@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { SegmentedControlSingleChoice } from '@deriv-com/quill-ui';
 import { Explanation } from './explanation.jsx';
@@ -75,9 +75,7 @@ const BottomTabs = () => {
         }, 100);
     }, [selectedTab, savedTab]);
 
-    useEffect(() => {
-        return () => clearTimeout(triggerOldTabTimer.current);
-    }, []);
+    useEffect(() => () => clearTimeout(triggerOldTabTimer.current), []);
 
     return (
         <>

@@ -10,6 +10,7 @@ export const ContractDropdown = () => {
     const [data, setData] = useState(dataManager.getAllContracts());
     const selectedRef = useRef(null);
     const containerRef = useRef(null);
+    const closeDropdownTimer = useRef();
 
     const onContractClick = (formName) => {
         if (formName === data?.formName) { return; }
@@ -30,11 +31,12 @@ export const ContractDropdown = () => {
 
         triggerContractChange();
 
-        setTimeout(() => {
+        closeDropdownTimer.current = setTimeout(() => {
             close();
         }, 10);
-      
     };
+
+    useEffect(() => () => clearTimeout(closeDropdownTimer.current), []);
 
     useEffect(() => {
         setData(oldData => ({
