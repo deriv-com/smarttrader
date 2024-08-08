@@ -8,9 +8,7 @@ const Graph = ({ renderGraph }) => {
         const mountTimer = setTimeout(() => {
             setMounted(true);
             const renderTimer = setTimeout(() => {
-                const cleanupRender = renderGraph();
-
-                return cleanupRender;
+                renderGraph();
             }, 1000);
 
             return () => clearTimeout(renderTimer);
@@ -30,7 +28,7 @@ const Graph = ({ renderGraph }) => {
         );
     }
 
-    return <Skeleton.Square rounded fullWidth height={300} />;
+    return <Skeleton.Square rounded height={300} />;
 };
 
 export default Graph;
