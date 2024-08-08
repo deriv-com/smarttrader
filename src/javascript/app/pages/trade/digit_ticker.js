@@ -28,7 +28,7 @@ const DigitTicker = (() => {
         if (!el_container){
             setTimeout(() => {
                 init(container_id, contract_type, shortcode, tick_count, status);
-            },10);
+            }, 10);
 
             return false;
         }
