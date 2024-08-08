@@ -10,6 +10,14 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
+const hidePurchaseResults = () =>
+    dataManager.setPurchase({
+        cd_showAudit: false,
+        auditDataEnd: [],
+        cd_infoMsg  : null,
+
+    });
+
 const AuditSection = ({ data }) => {
     const auditData = {
         start: {
@@ -35,12 +43,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        dataManager.setPurchase({
-                            cd_showAudit: false,
-                            auditDataEnd: [],
-                            cd_infoMsg  : null,
-                         
-                        });
+                        hidePurchaseResults();
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -131,16 +134,15 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
+                    
                     dataManager.setPurchase({
+                        ...hidePurchaseResults(),
                         showContractDetailsPopup: false,
                         cd_showSell             : false,
                         cd_contractEnded        : false,
-                        cd_infoMsg              : null,
                         cd_showAuditBtn         : false,
-                        auditDataEnd            : [],
                         
                     });
-                    
                 }}
             />
             <div className='title-box'>
@@ -185,14 +187,14 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
+              
                 dataManager.setPurchase({
+                    ...hidePurchaseResults(),
                     showContractDetailsPopup: false,
                     cd_showSell             : false,
                     cd_contractEnded        : false,
-                    cd_infoMsg              : null,
                     cd_showAuditBtn         : false,
-                    cd_showAudit            : false,
-                    auditDataEnd            : [],
+                   
                 });
             }
         };
