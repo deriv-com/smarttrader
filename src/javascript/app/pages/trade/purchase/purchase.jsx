@@ -29,6 +29,8 @@ const Purchase = () => {
             error              : null,
             cd_errorMsg        : null,
             cd_showAuditBtn    : false,
+            cd_contractEnded   : false,
+            auditDataEnd       : [],
             cd_infoMsg         : null,
         });
  
