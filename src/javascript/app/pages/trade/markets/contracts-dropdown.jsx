@@ -23,7 +23,7 @@ export const ContractDropdown = () => {
             contractElement.dispatchEvent(event);
         }
 
-        Defaults.set(PARAM_NAMES.FORM_NAME,formName);
+        Defaults.set(PARAM_NAMES.FORM_NAME, formName);
 
         dataManager.setContract({
             formName,
