@@ -13,19 +13,16 @@ import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 const AuditSection = ({ data }) => {
     const auditData = {
         start: {
-            title    : localize('Contract starts'),
-            content  : data?.auditDataStart,
-            isVisible: data?.auditDataStart?.length > 0,
+            title  : localize('Contract starts'),
+            content: data?.auditDataStart,
         },
         end: {
-            title    : localize('Contract ends'),
-            content  : data?.auditDataEnd,
-            isVisible: data?.auditDataEnd?.length > 0,
+            title  : localize('Contract ends'),
+            content: data?.auditDataEnd,
         },
         details: {
-            title    : localize('Contract details'),
-            content  : data?.auditDataDetails,
-            isVisible: data?.auditDataDetails?.length > 0,
+            title  : localize('Contract details'),
+            content: data?.auditDataDetails,
         },
     };
 
@@ -63,17 +60,17 @@ const AuditSection = ({ data }) => {
                         <div className='details-column'>
                             <div className='contract-info-wrapper full'>
                                 {Object.keys(auditData).map(adk =>{
-                                    const { title,content, isVisible } = auditData[adk];
-
-                                    if (content){
+                                    const { title, content } = auditData[adk];
+                                  
+                                    if (content?.length) {
                                         return (
                                             <React.Fragment key={`audit-table-${title}-${adk}`}>
-                                                <div className={`table-box ${isVisible ? '' : 'hide-table'}`} >
+                                                <div className='table-box' >
                                                     <Text size='md' bold centered>
                                                         {title}
                                                     </Text>
                                                 </div>
-                                                <div className={`table-container ${isVisible ? '' : 'hide-table'}`}>
+                                                <div className='table-container'>
                                                     <div className='table-item'>
                                                         <div className='item-header' />
                                                         <div className='item-content'>
