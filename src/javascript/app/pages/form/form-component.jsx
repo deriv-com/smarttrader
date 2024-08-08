@@ -18,6 +18,7 @@ import {
     useSessionChange,
     useTradeChange,
     eventDispatcher,
+    useMarketChange,
 } from '../../hooks/events.js';
 import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
@@ -27,6 +28,7 @@ export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
 
     const hasTradeChange = useTradeChange();
+    const hasMarketChange = useMarketChange();
     const hasSessionChange = useSessionChange();
 
     useEffect(() => {
@@ -45,12 +47,18 @@ export const FormComponent = () => {
     const expiry_date = Defaults.get(PARAM_NAMES.EXPIRY_DATE);
     const expiry_time = Defaults.get(PARAM_NAMES.EXPIRY_TIME);
     const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
-    const amount = Defaults.get(PARAM_NAMES.AMOUNT);
+    const form_amount = Defaults.get(PARAM_NAMES.AMOUNT);
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
     const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
     const prediction = Defaults.get(PARAM_NAMES.PREDICTION);
     const selected_tick = Defaults.get(PARAM_NAMES.SELECTED_TICK);
     const multiplier = Defaults.get(PARAM_NAMES.MULTIPLIER);
+
+    const [amount,setAmount] = useState(form_amount);
+
+    useEffect(() => {
+        setAmount(form_amount);
+    }, [hasMarketChange,hasTradeChange]);
 
     const {
         start_dates,
@@ -121,7 +129,12 @@ export const FormComponent = () => {
     };
 
     const handleAmountChange = (e, id) => {
-        updateFormField(id, e.target.value, 'input');
+        const value = e.target.value;
+        updateFormField(id, value, 'input');
+
+        if (id === 'amount'){
+            setAmount(value);
+        }
     };
 
     const findTextByValue = (arr, value) => arr.find(item => item.value === value)?.text || null;
