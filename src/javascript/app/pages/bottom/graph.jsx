@@ -7,11 +7,9 @@ const Graph = ({ renderGraph }) => {
     useEffect(() => {
         const mountTimer = setTimeout(() => {
             setMounted(true);
-            const renderTimer = setTimeout(() => {
+            setTimeout(() => {
                 renderGraph();
             }, 1000);
-
-            return () => clearTimeout(renderTimer);
         }, 1000);
 
         return () => clearTimeout(mountTimer);
