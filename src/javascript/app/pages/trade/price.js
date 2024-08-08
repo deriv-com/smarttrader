@@ -301,7 +301,7 @@ const Price = (() => {
                     [`${position}Comment`]: `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`,
                 });
             } else {
-                commonTrading.displayCommentPrice(comment, (currency.value || currency.getAttribute('value')), proposal.display_value, proposal.payout,position);
+                commonTrading.displayCommentPrice(comment, (currency.value || currency.getAttribute('value')), proposal.display_value, proposal.payout, position);
             }
             const old_price  = purchase.getAttribute('data-display_value');
             const old_payout = purchase.getAttribute('data-payout');

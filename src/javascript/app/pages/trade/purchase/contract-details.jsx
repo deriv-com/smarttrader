@@ -46,7 +46,7 @@ const AuditSection = ({ data }) => {
                         {localize('Audit page')}
                     </Text>
                 </div>
-                <Button variant='tertiary' size='lg' />
+                <div className='spacer' />
             </div>
             <div className='popup-scroller'>
                 <div className='body-box'>

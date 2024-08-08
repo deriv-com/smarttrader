@@ -41,8 +41,8 @@ export const FormComponent = () => {
         }));
     }, [hasMarketChange, hasContractChange, hasTradeChange, hasSessionChange]);
 
-    const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
-    const expiryType = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
+    const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
+    const expiry_type = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
     const date_start = Defaults.get(PARAM_NAMES.DATE_START);
     const time_start = Defaults.get(PARAM_NAMES.TIME_START);
     const duration_amount = Defaults.get(PARAM_NAMES.DURATION_AMOUNT);
@@ -158,22 +158,21 @@ export const FormComponent = () => {
     return (
         <BreakpointProvider>
             <div className='quill-form-container'>
-                {contractForms.includes(formName) && (
+                {contractForms.includes(form_name) && (
                     <>
-                        {formName === 'highlowticks' && (
+                        {form_name === 'highlowticks' && (
                             <div className='section-msg-container'>
-                                <SectionMessage status='info' message={getMessage(formName)} />
+                                <SectionMessage status='info' message={getMessage(form_name)} />
                             </div>
                         )}
-                        {formName === 'reset' && reset_message && (
+                        {form_name === 'reset' && reset_message && (
                             <div className='section-msg-container'>
                                 <SectionMessage status='info' message={reset_message} />
                             </div>
                         )}
                     
                         <div className='quill-form-rows'>
-
-                            {['risefall', 'callputequal'].includes(formName) && start_dates && date_start && (
+                            {['risefall', 'callputequal'].includes(form_name) && start_dates && date_start && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <DropdownComponent
@@ -196,18 +195,18 @@ export const FormComponent = () => {
                                 </div>
                             )}
 
-                            {formName !== 'highlowticks' && (
+                            {form_name !== 'highlowticks' && (
                                 <>
                                     <div className='quill-form-row'>
                                         <div className='form_field field-pb'>
                                             <DropdownComponent
                                                 options={expiry_type_options}
-                                                value={findTextByValue(expiry_type_options, expiryType)}
+                                                value={findTextByValue(expiry_type_options, expiry_type)}
                                                 onUpdate={updateFormField}
                                                 elementId='expiry_type'
                                             />
                                         </div>
-                                        {expiryType === 'duration' && (
+                                        {expiry_type === 'duration' && (
                                             <>
                                                 <div className={`form_field ${!duration_data?.message ? 'field-pb' : ''}`}>
                                                     <TextField
@@ -235,7 +234,7 @@ export const FormComponent = () => {
                                                 </div>
                                             </>
                                         )}
-                                        {expiryType === 'endtime' && (
+                                        {expiry_type === 'endtime' && (
                                             <>
                                                 {endtime_data && (
                                                     <div className='form_field field-pb'>
@@ -264,7 +263,7 @@ export const FormComponent = () => {
                                         )}
                                     </div>
 
-                                    {expiryType === 'endtime' && expiry_time && (
+                                    {expiry_type === 'endtime' && expiry_time && (
                                         <div className='quill-form-row'>
                                             <div className='form_field field-pb'>
                                                 <TimePickerDropdown
@@ -279,11 +278,11 @@ export const FormComponent = () => {
                             )}
 
                             <BarrierFields
-                                formName={formName}
+                                form_name={form_name}
                                 handleAmountChange={handleAmountChange}
                             />
 
-                            {['matchdiff', 'overunder'].includes(formName) && (
+                            {['matchdiff', 'overunder'].includes(form_name) && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <NumbersDropdown
@@ -298,7 +297,7 @@ export const FormComponent = () => {
                                 </div>
                             )}
 
-                            {['highlowticks'].includes(formName) && (
+                            {['highlowticks'].includes(form_name) && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <NumbersDropdown
@@ -314,7 +313,7 @@ export const FormComponent = () => {
                             )}
 
                             {!['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                                formName
+                                form_name
                             ) && (
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
@@ -361,7 +360,7 @@ export const FormComponent = () => {
                             )}
 
                             {['lookbackhigh', 'lookbacklow', 'lookbackhighlow'].includes(
-                                formName
+                                form_name
                             ) && (
                                 <div className='quill-form-row'>
                                     {currency_list ? (
