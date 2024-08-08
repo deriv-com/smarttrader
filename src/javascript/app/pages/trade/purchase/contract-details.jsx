@@ -10,16 +10,23 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
-const getDefaultPurchaseObject = () => ({
-    cd_showAudit: false,
-    auditDataEnd: [],
-    cd_infoMsg  : null,
-});
-
-const setPurchaseWithDefaults = (additionalProps = {}) => {
+const setPurchaseWithDefaults = (isAuditReset = false) => {
+    const audit_reset_object = {
+        cd_showAudit: false,
+        auditDataEnd: [],
+        cd_infoMsg  : null,
+    };
+     
+    const contract_reset_object = {
+        ...audit_reset_object,
+        showContractDetailsPopup: false,
+        cd_showSell             : false,
+        cd_contractEnded        : false,
+        cd_showAuditBtn         : false,
+    };
+  
     dataManager.setPurchase({
-        ...getDefaultPurchaseObject(),
-        ...additionalProps,
+        ...(isAuditReset ? { ...audit_reset_object } : contract_reset_object),
     });
 };
 
@@ -48,7 +55,7 @@ const AuditSection = ({ data }) => {
                     icon={<LabelPairedArrowLeftMdRegularIcon />}
                     color='black'
                     onClick={() => {
-                        setPurchaseWithDefaults();
+                        setPurchaseWithDefaults(true);
                         triggerClick('#contract_purchase_button');
                     }}
                 />
@@ -139,14 +146,7 @@ const DetailsSection = ({ data }) => (
                 icon={<LabelPairedArrowLeftMdRegularIcon />}
                 color='black'
                 onClick={() => {
-                    setPurchaseWithDefaults({
-                    
-                        showContractDetailsPopup: false,
-                        cd_showSell             : false,
-                        cd_contractEnded        : false,
-                        cd_showAuditBtn         : false,
-                        
-                    });
+                    setPurchaseWithDefaults(false);
                 }}
             />
             <div className='title-box'>
@@ -191,13 +191,7 @@ const ContractDetails = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                setPurchaseWithDefaults({
-                    showContractDetailsPopup: false,
-                    cd_showSell             : false,
-                    cd_contractEnded        : false,
-                    cd_showAuditBtn         : false,
-                   
-                });
+                setPurchaseWithDefaults(false);
             }
         };
     
