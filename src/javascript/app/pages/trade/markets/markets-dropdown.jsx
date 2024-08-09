@@ -292,15 +292,15 @@ export const MarketsDropdown = () => {
                                     return (
                                         <React.Fragment key={sub_market_key}>
                                             <DropdownTitle label={name} />
-                                            {Object.keys(symbols).map((yk) => {
-                                                const symbol = symbols[yk];
+                                            {Object.keys(symbols).map((mk) => {
+                                                const symbol = symbols[mk];
                                                 const { display } = symbol;
-                                                const isSelected = yk === selectedMarket;
+                                                const isSelected = mk === selectedMarket;
 
                                                 return (
                                                     <DropdownItem
-                                                        key={yk}
-                                                        onClick={() => handleUnderlyingClick(yk)}
+                                                        key={mk}
+                                                        onClick={() => handleUnderlyingClick(mk)}
                                                         label={display}
                                                         selected={isSelected}
                                                         className={isSelected && 'market-item-selected'}
