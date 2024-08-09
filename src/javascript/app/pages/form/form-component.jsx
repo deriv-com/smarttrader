@@ -155,7 +155,13 @@ export const FormComponent = () => {
         { text: localize('Payout'), value: 'payout' },
     ];
 
-    const formatEndDate = (date) => moment(date).format('ddd - DD MMM, YYYY');
+    const formatEndDate = (date) => {
+        const expriry_date_obj = endtime_data.options.find(obj => obj.value === date);
+        if (expriry_date_obj) {
+            return moment(date).format('ddd - DD MMM, YYYY');
+        }
+        return moment(endtime_data.options[0].value).format('ddd - DD MMM, YYYY');
+    };
 
     return (
         <BreakpointProvider>
