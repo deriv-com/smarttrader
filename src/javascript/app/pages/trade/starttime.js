@@ -58,7 +58,7 @@ const StartDates = (() => {
             if (start_dates.has_spot) {
                 option = createElement('option', { value: 'now', text: localize('Now') });
                 start_dates_data.has_now = 1;
-                start_dates_data.options.push({ text: 'Now', value: 'now' });
+                start_dates_data.options.push({ text: localize('Now'), value: 'now' });
                 fragment.appendChild(option);
                 has_now = 1;
             } else {

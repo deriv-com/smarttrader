@@ -10,7 +10,7 @@ import dataManager from '../../common/data_manager.js';
 import { localize } from '../../../_common/localize.js';
 import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 
-const BarrierFields = ({ formName, handleAmountChange }) => {
+const BarrierFields = ({ form_name, handleAmountChange }) => {
     const [barrierData, setBarrierData] = useState();
     const hasBarrierChange = useBarrierChange();
 
@@ -68,7 +68,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
 
     return (
         <>
-            {['touchnotouch', 'higherlower'].includes(formName) &&
+            {['touchnotouch', 'higherlower'].includes(form_name) &&
             barrier_data?.show_barrier && (
                 <div className='quill-form-row'>
                     <div className={`form_field ${!barrier_data?.isOffset ? 'field-pb' : ''}`}>
@@ -92,7 +92,7 @@ const BarrierFields = ({ formName, handleAmountChange }) => {
                 </div>
             )}
 
-            {['endsinout', 'staysinout'].includes(formName) &&
+            {['endsinout', 'staysinout'].includes(form_name) &&
             barrier_data?.show_barrier_highlow && (
                 <>
                     <div className='quill-form-row'>
