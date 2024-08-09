@@ -4,6 +4,7 @@ import moment from 'moment/moment';
 import { useTimeChange } from '../../hooks/events';
 import dataManager from '../../common/data_manager.js';
 import { setDefaultParams, setMinMaxTime } from '../../common/helpers.js';
+import common_functions from '../../../_common/common_functions.js';
 
 const TimeContent = ({ time, onUpdate, elementId }) => {
     const [startTimeData, setStartTimeData] = useState();
@@ -61,6 +62,7 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
                     selected={item === time}
                     onClick={() => {
                         onUpdate(elementId, item, 'change');
+                        common_functions.getElementById(elementId).setAttribute('data-value', item);
                         setDefaultParams(elementId, item);
                         close();
                     }}
