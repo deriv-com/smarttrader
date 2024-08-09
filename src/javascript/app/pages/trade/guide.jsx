@@ -6,6 +6,7 @@ import { LabelPairedPresentationScreenMdBoldIcon } from '@deriv/quill-icons/Labe
 import { getElementById } from '../../../_common/common_functions';
 import { localize } from '../../../_common/localize.js';
 import Guide from '../../common/guide.js';
+import dataManager from '../../common/data_manager.js';
 
 const GuideBtn = () => {
     useEffect(() => {
@@ -24,6 +25,11 @@ const GuideBtn = () => {
             color='black'
             label={localize('Guide')}
             icon={<LabelPairedPresentationScreenMdBoldIcon />}
+            onClick={() => {
+                dataManager.setPurchase({
+                    error: null,
+                });
+            }}
         />
     );
 };
