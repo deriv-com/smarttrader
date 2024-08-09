@@ -155,6 +155,8 @@ export const FormComponent = () => {
         { text: localize('Payout'), value: 'payout' },
     ];
 
+    const formatEndDate = (date) => moment(date).format('ddd - DD MMM, YYYY');
+
     return (
         <BreakpointProvider>
             <div className='quill-form-container'>
@@ -250,7 +252,7 @@ export const FormComponent = () => {
                                                         ) : (
                                                             <DropdownComponent
                                                                 options={endtime_data.options}
-                                                                value={expiry_date}
+                                                                value={formatEndDate(expiry_date)}
                                                                 onUpdate={onExpiryDateChange}
                                                                 elementId='expiry_date'
                                                             />
