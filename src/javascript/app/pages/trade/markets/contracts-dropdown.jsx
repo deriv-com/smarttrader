@@ -13,7 +13,10 @@ export const ContractDropdown = () => {
     const closeDropdownTimer = useRef();
 
     const onContractClick = (formName) => {
-        if (formName === data?.formName) { return; }
+        if (formName === data?.formName) {
+            close();
+            return;
+        }
 
         const contractElement = data?.contractElement;
 
