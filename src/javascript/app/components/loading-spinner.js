@@ -1,3 +1,5 @@
+import dataManager from '../common/data_manager';
+
 const assertContainerExists = (content_id) => {
     if (!content_id) {
         throw new Error('Loading spinner content id is missing or undefined.');
@@ -26,6 +28,10 @@ export const show = (content_id) => {
  * @param content_id
  */
 export const hide = (content_id) => {
+    dataManager.setContract({
+        hidePageLoader: true,
+    });
+
     assertContainerExists(content_id);
     const $container = $(`#${content_id}`);
     const $spinner   = $container.find('.barspinner');

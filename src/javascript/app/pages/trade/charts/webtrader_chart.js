@@ -30,7 +30,7 @@ const WebtraderChart = (() => {
 
     const setChart = () => {
         const new_underlying = getElementById('underlying').value;
-        if ($('#tab_graph').hasClass('active') &&
+        if (
             (!chart || chart.data().instrumentCode !== new_underlying)
         ) {
             cleanupChart();

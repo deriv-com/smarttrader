@@ -157,15 +157,15 @@ $COLOR_PEEK_LIGHT_GRAY: #c2c2c2;
     .peek-box.digit-winning {
         @each $item in $PEEKBOX_GRID_ITEMS {
             .#{$item} {
-                background-color: var(--text-profit-success);
+                background-color: var(--core-color-solid-emerald-700);
             }
         }
 
         .peek {
-            border: 5px solid var(--text-profit-success);
+            border: 5px solid var(--core-color-solid-emerald-700);
         }
         .mask {
-            border: 1px solid var(--text-profit-success);
+            border: 1px solid var(--core-color-solid-emerald-700);
         }
     }
     .digits {

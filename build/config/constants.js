@@ -39,6 +39,7 @@ const release_config = {
 
 const node_modules_paths = {
     binary_style: 'node_modules/@binary-com/binary-style',
+    quill       : 'node_modules/@deriv-com/quill-ui',
 };
 
 const config = {

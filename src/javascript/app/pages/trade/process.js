@@ -13,7 +13,9 @@ const Reset             = require('./reset');
 const StartDates        = require('./starttime').StartDates;
 const Symbols           = require('./symbols');
 const Tick              = require('./tick');
+const NotAvailable      = require('./not-available.jsx');
 const BinarySocket      = require('../../base/socket');
+const dataManager       = require('../../common/data_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
@@ -61,10 +63,10 @@ const Process = (() => {
 
                 commonTrading.displayMarkets();
                 processMarket();
-            } else if (country === 'gb' || country === 'im'){
-                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') })));
+            } else if (country === 'gb' || country === 'im') {
+                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') });
             } else {
-                $('#content').empty().html($('<div/>', { class: 'container' }).append($('<p/>', { class: 'notice-msg center-text', text: localize('Trading is unavailable at this time.') })));
+                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.') });
             }
         });
     };
@@ -95,7 +97,7 @@ const Process = (() => {
      */
     const processMarketUnderlying = () => {
         const underlying_element = document.getElementById('underlying');
-        const underlying = underlying_element.value;
+        const underlying = underlying_element?.value;
 
         Defaults.set(UNDERLYING, underlying);
 
@@ -126,6 +128,10 @@ const Process = (() => {
         getElementById('trading_socket_container').classList.add('show');
         const init_logo = getElementById('trading_init_progress');
 
+        dataManager.setContract({
+            hidePageLoader: true,
+        });
+        
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';
             Defaults.update();
@@ -146,7 +152,10 @@ const Process = (() => {
     const processContract = (contracts) => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
-            getElementById('contract_confirmation_container').style.display      = 'block';
+            dataManager.setPurchase({
+                showPurchaseResults: true,
+            });
+            getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';
             getElementById('confirmation_message').hide();
             const confirmation_error = getElementById('confirmation_error');
@@ -295,8 +304,14 @@ const Process = (() => {
                 el_equals.checked = true;
             }
             el_equals.parentElement.setVisibility(1);
+            dataManager.setTrade({
+                show_allow_equals: true,
+            });
         } else {
             el_equals.parentElement.setVisibility(0);
+            dataManager.setTrade({
+                show_allow_equals: false,
+            });
         }
     };
 

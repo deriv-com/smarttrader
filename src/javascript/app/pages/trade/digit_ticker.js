@@ -5,6 +5,7 @@ const DigitTicker = (() => {
         el_peek,
         el_peek_box,
         el_mask,
+        init_timer,
         total_tick_count,
         contract_status,
         type,
@@ -15,6 +16,7 @@ const DigitTicker = (() => {
     const array_of_digits         = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     const init = (container_id, contract_type, shortcode, tick_count, status = 'open') => {
+   
         contract_status      = status;
         total_tick_count     = tick_count;
         type                 = contract_type;
@@ -23,10 +25,21 @@ const DigitTicker = (() => {
         container_ref        = container_id;
         is_initialized       = true;
 
+        // wait for the digit container to load before init
+        if (!el_container) {
+            init_timer = setTimeout(() => {
+                init(container_id, contract_type, shortcode, tick_count, status);
+            }, 10);
+
+            return false;
+        }
+
         setBarrierFromShortcode(type, shortcode);
         populateContainer(el_container);
         highlightWinningNumbers(getWinningNumbers(contract_type, barrier));
         observeResize();
+
+        return true;
     };
 
     const populateContainer = (container_element) => {
@@ -222,6 +235,7 @@ const DigitTicker = (() => {
             el_container.removeChild(el_container.firstChild);
         }
         if (el_container) el_container.classList.add('invisible');
+        clearTimeout(init_timer);
     };
 
     const countDecimals = (value) => {

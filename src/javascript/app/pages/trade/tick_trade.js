@@ -8,6 +8,7 @@ const isEmptyObject        = require('../../../_common/utility').isEmptyObject;
 const ChartSettings        = require('../../common/chart_settings');
 const addComma             = require('../../../_common/base/currency_base').addComma;
 const CommonFunctions      = require('../../../_common/common_functions');
+const dataManager          = require('../../common/data_manager').default;
 const localize             = require('../../../_common/localize').localize;
 
 const TickDisplay = (() => {
@@ -166,6 +167,9 @@ const TickDisplay = (() => {
 
     const setBarrierValue = (lbl_barrier) => {
         CommonFunctions.elementInnerHtml(CommonFunctions.getElementById('contract_purchase_barrier'), `${lbl_barrier}: ${addComma(contract.barrier, display_decimals)}`);
+        dataManager.setPurchase({
+            pr_barrier: `${lbl_barrier}: ${addComma(contract.barrier, display_decimals)}`,
+        });
     };
 
     const evaluateContractOutcome = () => {

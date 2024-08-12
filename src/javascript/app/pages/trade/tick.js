@@ -2,6 +2,7 @@ const moment               = require('moment');
 const countDecimalPlaces   = require('./common_independent').countDecimalPlaces;
 const displayPriceMovement = require('./common_independent').displayPriceMovement;
 const underlyings          = require('./symbols').underlyings;
+const dataManager          = require('../../common/data_manager').default;
 const addComma             = require('../../../_common/base/currency_base').addComma;
 const elementTextContent   = require('../../../_common/common_functions').elementTextContent;
 const getElementById       = require('../../../_common/common_functions').getElementById;
@@ -104,7 +105,6 @@ const Tick = (() => {
         const low_span                        = getElementById('barrier_low_span');
 
         let value;
-
         const end_time = getElementById('expiry_date');
         if (unit && (!isVisible(unit) || unit.value !== 'd') && current_tick && !isNaN(current_tick) &&
             (end_time && (!isVisible(end_time) || moment(end_time.getAttribute('data-value')).isBefore(moment().add(1, 'day'), 'day')))) {
@@ -114,10 +114,16 @@ const Tick = (() => {
 
                 indicative_barrier_tooltip.textContent =
                     addComma((parseFloat(current_tick) + barrier_value), decimal_places);
+                dataManager.setTrade({
+                    barrier_indicator: addComma((parseFloat(current_tick) + barrier_value), decimal_places),
+                }, 'barrier');
                 tooltip.style.display = 'inherit';
                 span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_barrier_tooltip, '');
+                dataManager.setTrade({
+                    barrier_indicator: null,
+                }, 'barrier');
                 tooltip.style.display = 'none';
                 span.style.display    = 'inherit';
             }
@@ -127,10 +133,16 @@ const Tick = (() => {
                 value = isNaN(value) ? 0 : value;
                 indicative_high_barrier_tooltip.textContent =
                     (parseFloat(current_tick) + value).toFixed(decimal_places);
+                dataManager.setTrade({
+                    barrier_indicator_high: (parseFloat(current_tick) + value).toFixed(decimal_places),
+                }, 'barrier');
                 high_tooltip.style.display = 'inherit';
                 high_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_high_barrier_tooltip, '');
+                dataManager.setTrade({
+                    barrier_indicator_high: null,
+                }, 'barrier');
                 high_tooltip.style.display = 'none';
                 high_span.style.display    = 'inherit';
             }
@@ -139,10 +151,16 @@ const Tick = (() => {
                 value = parseFloat(low_barrier_element.value);
                 value = isNaN(value) ? 0 : value;
                 indicative_low_barrier_tooltip.textContent = (parseFloat(current_tick) + value).toFixed(decimal_places);
+                dataManager.setTrade({
+                    barrier_indicator_low: (parseFloat(current_tick) + value).toFixed(decimal_places),
+                }, 'barrier');
                 low_tooltip.style.display = 'inherit';
                 low_span.style.display    = 'none';
             } else {
                 elementTextContent(indicative_low_barrier_tooltip, '');
+                dataManager.setTrade({
+                    barrier_indicator_low: null,
+                }, 'barrier');
                 low_tooltip.style.display = 'none';
                 low_span.style.display    = 'inherit';
             }
@@ -150,6 +168,11 @@ const Tick = (() => {
             elementTextContent(indicative_barrier_tooltip, '');
             elementTextContent(indicative_high_barrier_tooltip, '');
             elementTextContent(indicative_low_barrier_tooltip, '');
+            dataManager.setTrade({
+                barrier_indicator     : null,
+                barrier_indicator_high: null,
+                barrier_indicator_low : null,
+            }, 'barrier');
         }
     };
 

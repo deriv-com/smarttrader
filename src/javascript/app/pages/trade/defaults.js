@@ -2,6 +2,7 @@ const getElementById = require('../../../_common/common_functions').getElementBy
 const isVisible      = require('../../../_common/common_functions').isVisible;
 const State          = require('../../../_common/storage').State;
 const Url            = require('../../../_common/url');
+const { triggerSessionChange } = require('../../hooks/events');
 const isEmptyObject  = require('../../../_common/utility').isEmptyObject;
 
 /*
@@ -77,6 +78,7 @@ const Defaults = (() => {
             }
         });
         if (is_updated) {
+            triggerSessionChange();
             updateURL();
         }
     };

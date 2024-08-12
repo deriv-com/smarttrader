@@ -62,7 +62,7 @@ const Layout = () => {
     }
 
     return (
-        <html>
+        <html className='light'>
             <Head />
             <body className={it.language} >
                 <Gtm />

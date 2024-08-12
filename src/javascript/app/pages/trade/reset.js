@@ -1,4 +1,5 @@
 const CommonFunctions = require('../../../_common/common_functions');
+const dataManager     = require('../../common/data_manager').default;
 const localize        = require('../../../_common/localize').localize;
 
 /*
@@ -35,6 +36,9 @@ const Reset = (() => {
         CommonFunctions.getElementById('reset_time')
             .html(localize('The reset time is [_1]', reset_time_str))
             .setAttribute('style', '');
+        dataManager.setTrade({
+            reset_message: localize('The reset time is [_1]', reset_time_str),
+        });
     };
 
     const DurationMap = (() => {
@@ -57,7 +61,12 @@ const Reset = (() => {
         };
     })();
 
-    const hideResetTime = () => { CommonFunctions.getElementById('reset_time').style.display = 'none'; };
+    const hideResetTime = () => {
+        CommonFunctions.getElementById('reset_time').style.display = 'none';
+        dataManager.setTrade({
+            reset_message: null,
+        });
+    };
 
     const isNewBarrier = (entry_barrier, current_barrier) => (
         (entry_barrier || entry_barrier === 0) && (current_barrier || current_barrier === 0) ?

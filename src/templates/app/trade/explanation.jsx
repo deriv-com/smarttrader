@@ -119,7 +119,7 @@ const Explanation = () => (
                 <h3>{it.L('Winning the contract')}</h3>
                 <p>{it.L('If you select "Reset-Call", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time.')}</p>
                 <p>{it.L('If you select "Reset-Put", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time.')}</p>
-                <p>{it.L('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don\'t win the payout.')}</p>
+                <p>{it.L('If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don\'t win the payout.')}</p>
             </div>
 
             <div id='winning_highlowticks' className='invisible'>

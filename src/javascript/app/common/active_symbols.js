@@ -24,6 +24,17 @@ const submarket_order = {
     random_nightly : 20,
 };
 
+const marketOrder = [
+    'forex',
+    'indices',
+    'cryptocurrency',
+    'commodities',
+    'baskets',
+    'synthetics',
+];
+
+const derived = ['baskets', 'synthetics'];
+
 const ActiveSymbols = (() => {
     const groupBy = (xs, key) => (
         xs.reduce((rv, x) => {
@@ -218,6 +229,30 @@ const ActiveSymbols = (() => {
         return all_symbols;
     };
 
+    const sortObjectByKeys = (obj, order) => {
+        const orderedObj = {};
+        const remainingObj = {};
+    
+        // Add keys in the specified order
+        order.forEach(key => {
+            // eslint-disable-next-line no-prototype-builtins
+            if (obj.hasOwnProperty(key)) {
+                orderedObj[key] = obj[key];
+            }
+        });
+    
+        // Add any remaining keys that were not specified in the order array
+        Object.keys(obj).forEach(key => {
+            // eslint-disable-next-line no-prototype-builtins
+            if (!orderedObj.hasOwnProperty(key)) {
+                remainingObj[key] = obj[key];
+            }
+        });
+    
+        // Combine ordered keys and remaining keys
+        return { ...orderedObj, ...remainingObj };
+    };
+
     return {
         getMarkets,
         getSubmarkets,
@@ -229,6 +264,9 @@ const ActiveSymbols = (() => {
         getSymbolsForMarket,
         sortSubmarket,
         getAvailableUnderlyings,
+        marketOrder,
+        derived,
+        sortObjectByKeys,
     };
 })();
 

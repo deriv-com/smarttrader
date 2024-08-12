@@ -22,7 +22,7 @@
   "devDependencies": {
     "@babel/core": "7.24.0",
     "@babel/eslint-parser": "7.23.10",
-    "@babel/parser": "7.1.2",
+    "@babel/parser": "7.25.0",
     "@babel/plugin-proposal-decorators": "^7.24.7",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-class-properties": "^7.24.7",
@@ -44,6 +44,7 @@
     "commander": "2.12.2",
     "connect-livereload": "0.6.0",
     "connect-modrewrite": "^0.10.2",
+    "css-loader": "^7.1.2",
     "deep-diff": "0.3.8",
     "emphasize": "7.0.0",
     "enzyme": "3.3.0",
@@ -87,6 +88,7 @@
     "react-render-html": "0.6.0",
     "sass": "^1.77.6",
     "sitemap": "1.13.0",
+    "style-loader": "^4.0.0",
     "stylelint": "15.11.0",
     "stylelint-formatter-pretty": "1.0.3",
     "stylelint-selector-bem-pattern": "3.0.1",
@@ -103,7 +105,9 @@
     "@binary-com/binary-document-uploader": "^2.4.4",
     "@binary-com/binary-style": "^0.2.26",
     "@binary-com/webtrader-charts": "^0.6.1",
+    "@deriv-com/quill-ui": "^1.13.44",
     "@deriv/deriv-api": "^1.0.15",
+    "@deriv/quill-icons": "^1.23.1",
     "@livechat/customer-sdk": "4.0.2",
     "canvas-toBlob": "1.0.0",
     "classnames": "2.2.5",
@@ -112,6 +116,7 @@
     "davidshimjs-qrcodejs": "0.0.2",
     "event-source-polyfill": "0.0.9",
     "highstock-release": "5.0.14",
+    "html-react-parser": "^5.1.10",
     "jquery": "3.5.1",
     "jquery.scrollto": "2.1.2",
     "js-cookie": "2.2.0",
@@ -130,6 +135,11 @@
   },
   "peerDependencies": {
     "circular-dependency-plugin": "5.2.2"
+  },
+  "overrides": {
+    "braces": "^3.0.3",
+    "@babel/parser": "7.25.0",
+    "@babel/plugin-proposal-optional-chaining": "7.22.5"
   },
   "engines": {
     "node": "18.x"
