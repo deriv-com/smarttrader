@@ -1,6 +1,6 @@
 import React from 'react';
 import Explanation from './explanation.jsx';
-import Graph from '../../../javascript/app/pages/bottom/graph.jsx'
+import Graph from '../../../javascript/app/pages/bottom/graph.jsx';
 import { TabContainer, TabsSubtabs, TabContentContainer, TabContent } from '../../_common/components/tabs.jsx';
 
 const ArrowsMobile = ({ direction, parent }) => (
