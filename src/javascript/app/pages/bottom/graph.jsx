@@ -6,11 +6,11 @@ const Graph = ({ renderGraph }) => {
 
     useEffect(() => {
         const mountTimer = setTimeout(() => {
-            setMounted(true);
             setTimeout(() => {
                 renderGraph();
-            }, 100);
-        }, 100);
+            }, 1000);
+            setMounted(true);
+        }, 1000);
 
         return () => clearTimeout(mountTimer);
     }, [renderGraph]);
