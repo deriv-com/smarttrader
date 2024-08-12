@@ -225,11 +225,11 @@ export const contractExplanationData = {
             content: [
                 localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
                 localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
-                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.', ['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].', ['<strong>', '</strong>']),
                 localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
                 localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],
@@ -239,11 +239,11 @@ export const contractExplanationData = {
             content: [
                 localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
                 localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
-                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.', ['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].', ['<strong>', '</strong>']),
                 localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
                 localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],
@@ -253,11 +253,11 @@ export const contractExplanationData = {
             content: [
                 localize('The [_1]high[_2] is the highest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
                 localize('The [_1]low[_2] is the lowest point ever reached by the market during the contract period.', ['<strong>', '</strong>']),
-                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.',['<strong>', '</strong>']),
+                localize('The [_1]close[_2] is the latest tick at or before the [_1]end time[_2]. If you selected a specific [_1]end time,[_2] the [_1]end time[_2] is the selected time.', ['<strong>', '</strong>']),
             ],
             title_secondary  : localize('Contract period') ,
             content_secondary: [
-                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].',['<strong>', '</strong>']),
+                localize('The [_1]contract period[_2] is the period between the [_1]first tick[_2] (after start time) and the [_1]end time[_2].', ['<strong>', '</strong>']),
                 localize('The [_1]start time[_2] begins when the contract is processed by our servers.', ['<strong>', '</strong>']),
                 localize('The [_1]end time[_2] is the selected number of minutes/hours after the [_1]start time[_2].', ['<strong>', '</strong>']),
             ],

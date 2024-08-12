@@ -14,7 +14,7 @@ const GuideBtn = () => {
         Guide.init({
             script: 'trading',
         });
-    },[]);
+    }, []);
 
     return (
         <Button

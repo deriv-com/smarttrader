@@ -3,7 +3,7 @@ body {
         .quill-purchase-section {
             .purchase-box {
                 .purchase-header {
-                    .purchase-icon-box{ 
+                    .purchase-icon-box { 
                         .contract_heading {
                             background-size: 35% !important;
                         }
@@ -55,7 +55,7 @@ body {
     margin: 0 auto;
     padding-block: 40px;
 
-    @media(max-width: 940px){
+    @media(max-width: 940px) {
         padding-inline: 16px;
     }
 }
@@ -70,12 +70,12 @@ body {
     flex-wrap: wrap;
     gap: var(--core-size-800);
 
-    @media(max-width: 768px){
+    @media(max-width: 768px) {
         flex-direction: column-reverse;
     }
 
     div#markets-dropdown-container {
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             width: 100%;
         }
     }
@@ -84,7 +84,7 @@ body {
         flex-direction: column;
         transform: scale(0.88);
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
            flex-direction: row;
         }
 
@@ -106,7 +106,7 @@ body {
         flex-grow: 1;
         align-items: center;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             width: 100%;
         }
     }
@@ -133,7 +133,7 @@ body {
     max-width: 462px;
     width: 100%;
 
-    @media (max-width: 940px){
+    @media (max-width: 940px) {
         max-width: none;
         width: 100%;
     }
@@ -147,7 +147,7 @@ body {
         position: relative;
         z-index: 100;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
            gap: var(--core-size-800);
         }
     }
@@ -157,7 +157,7 @@ body {
         margin: 0 10px 0 0;
         flex: none;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             max-width: 100% !important;
 
             .quill-custom-dropdown__container {
@@ -177,7 +177,7 @@ body {
         border: 1px solid rgba(0, 0, 0, 0.04);
         box-shadow: var(--component-dropdownList-elevation-shadow);
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             width: 100%;
             margin: 0px;
         }
@@ -199,7 +199,7 @@ body {
         scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
         border-radius: var(--core-borderRadius-500);
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             max-height: unset;
         }
 
@@ -227,7 +227,7 @@ body {
         &.market-item-container {
             max-height: 320px;
 
-            @media(max-width: 768px){
+            @media(max-width: 768px) {
                 max-height: calc(100vh - 300px);
             }
         }
@@ -245,7 +245,7 @@ div#contract-injection-container {
     #contract_component {
         display: block;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
            width: 100%;
            max-height: none;
            
@@ -541,7 +541,7 @@ div#contract-injection-container {
             gap: var(--core-spacing-1200);
             flex-direction: column;
             padding: var(--core-spacing-1200) 0;
-            @media (max-width: 940px){
+            @media (max-width: 940px) {
                 padding: var(--core-spacing-1200) var(--core-spacing-800);
             
             }
@@ -790,7 +790,7 @@ html.test {
         gap: 16px;
         min-height: 290px;
 
-        @media(max-width: 940px){
+        @media(max-width: 940px) {
             padding: 32px 16px;
         }
 
@@ -806,7 +806,7 @@ html.test {
         flex-direction: column;
         gap: 16px;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             gap: 8px;
         }
     }
@@ -814,7 +814,7 @@ html.test {
         display: flex;
         gap: 8px;
 
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             flex-direction: column;
             gap: 8px;
         }
@@ -826,7 +826,7 @@ html.test {
                 padding-bottom: 20px;
             }
 
-            @media(max-width: 768px){
+            @media(max-width: 768px) {
                 width: 100%;
             }
 
@@ -906,7 +906,7 @@ html.test {
     min-height: 400px;
     padding: 16px;
 
-    @media(max-width: 768px){
+    @media(max-width: 768px) {
         min-height: fit-content;
     }
    

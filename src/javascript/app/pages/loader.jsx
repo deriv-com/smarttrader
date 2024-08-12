@@ -47,11 +47,11 @@ const Loader = () => {
     useEffect(() => {
         const hidePageLoader = dataManager.getContract('hidePageLoader');
 
-        if (hidePageLoader){
+        if (hidePageLoader) {
             setLoading(false);
         }
            
-    },[hasContractChange]);
+    }, [hasContractChange]);
 
     useEffect(() => {
         const handleLoad = () => {
@@ -64,9 +64,9 @@ const Loader = () => {
         return () => {
             window.removeEventListener('load', handleLoad);
         };
-    },[]);
+    }, []);
 
-    if (loading){
+    if (loading) {
         return (
             <Portal>
                 <div className='quill-generic-popup'>
