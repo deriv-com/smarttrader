@@ -7,6 +7,7 @@ import { getLocalTime } from '../base/clock';
 import common_independent from '../pages/trade/common_independent';
 import Defaults, { PARAM_NAMES } from '../pages/trade/defaults';
 import { triggerSessionChange } from '../hooks/events';
+import { isCryptocurrency } from '../../_common/base/currency_base';
 
 const parseData = (raw_data) => !raw_data ?  '' :  parse(raw_data);
         
@@ -130,7 +131,12 @@ const paramsMap = {
 
 const setDefaultParams = (elementId, value) => {
     if (paramsMap[elementId]) {
-        Defaults.set(paramsMap[elementId], value);
+        const currency = Defaults.get(PARAM_NAMES.CURRENCY);
+        if (elementId === 'amount' && isCryptocurrency(currency)) {
+            Defaults.set('amount_crypto', value);
+        } else {
+            Defaults.set(paramsMap[elementId], value);
+        }
         triggerSessionChange();
     }
 };

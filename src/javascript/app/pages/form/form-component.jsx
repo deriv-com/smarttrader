@@ -25,6 +25,7 @@ import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import dataManager from '../../common/data_manager.js';
 import { setDefaultParams } from '../../common/helpers.js';
+import { isCryptocurrency } from '../../../_common/base/currency_base.js';
 
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
@@ -51,6 +52,7 @@ export const FormComponent = () => {
     const expiry_time = Defaults.get(PARAM_NAMES.EXPIRY_TIME);
     const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
     const amount = Defaults.get(PARAM_NAMES.AMOUNT);
+    const amount_crypto = Defaults.get('amount_crypto');
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
     const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
     const prediction = Defaults.get(PARAM_NAMES.PREDICTION);
@@ -162,6 +164,8 @@ export const FormComponent = () => {
         }
         return moment(endtime_data.options[0].value).format('ddd - DD MMM, YYYY');
     };
+
+    const getAmount = () => isCryptocurrency(currency) ? amount_crypto : amount;
 
     return (
         <BreakpointProvider>
@@ -329,7 +333,7 @@ export const FormComponent = () => {
                                         <>
                                             <div className='form_field field-pb'>
                                                 <TextField
-                                                    value={amount}
+                                                    value={getAmount()}
                                                     type='number'
                                                     allowDecimals={true}
                                                     onChange={(e) => handleAmountChange(e, 'amount')}
@@ -350,7 +354,7 @@ export const FormComponent = () => {
                                                 type='number'
                                                 allowDecimals
                                                 onChange={(e) => handleAmountChange(e, 'amount')}
-                                                value={amount}
+                                                value={getAmount()}
                                                 addonLabel={currency}
                                                 addOnPosition='right'
                                             />
