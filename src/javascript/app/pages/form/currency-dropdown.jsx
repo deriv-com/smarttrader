@@ -6,11 +6,16 @@ import { localize } from '../../../_common/localize';
 const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
     const { close } = useDropdown();
 
+    const getCurrencyGroupMap = {
+        fiat  : localize('Fiat'),
+        crypto: localize('Crypto'),
+    };
+
     return (
         <div className='custom-dropdown-wrapper'>
             {Object.keys(currency_list).map((key) => (
                 <div key={key}>
-                    <DropdownTitle label={localize(key.charAt(0).toUpperCase() + key.slice(1))} />
+                    <DropdownTitle label={getCurrencyGroupMap[key]} />
                     {currency_list[key].map((item) => (
                         <DropdownItem
                             key={item.value}
