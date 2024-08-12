@@ -15,6 +15,7 @@ const resetPopupData = (isAuditReset = false) => {
         cd_showAudit: false,
         auditDataEnd: [],
         cd_infoMsg  : null,
+        cd_sellMsg  : null,
     };
      
     const contract_reset_object = {
