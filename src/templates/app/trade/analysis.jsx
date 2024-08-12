@@ -1,5 +1,6 @@
 import React from 'react';
 import Explanation from './explanation.jsx';
+import Graph from '../../../javascript/app/pages/bottom/graph.jsx'
 import { TabContainer, TabsSubtabs, TabContentContainer, TabContent } from '../../_common/components/tabs.jsx';
 
 const ArrowsMobile = ({ direction, parent }) => (
@@ -35,10 +36,7 @@ const Analysis = ({ no_graph }) => (
                 <TabContentContainer id='analysis_content'>
                     { !no_graph &&
                     <TabContent id='tab_graph'>
-                        <p className='error-msg' id='chart-error' />
-                        <div id='trade_live_chart'>
-                            <div id='webtrader_chart' />
-                        </div>
+                        <Graph />
                     </TabContent>
                     }
 
