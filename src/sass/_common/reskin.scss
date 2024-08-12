@@ -1090,3 +1090,12 @@ html.test {
         background-color: $COLOR_GRAY;
     }
 }
+
+
+// Graph visibility control
+#tab_graph {
+    &.grap-hide {
+        position: absolute;
+        top: -9999px;
+    }
+}
