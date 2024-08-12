@@ -22,7 +22,7 @@ export const Explanation = ({ explanationOnly = false }) => {
             setFormName(actualFormName);
         }, 500);
        
-    },[hasContractChanges]);
+    }, [hasContractChanges]);
 
     const language = Language.get();
     const image_path = Url.urlForStatic(
@@ -192,7 +192,7 @@ export const Explanation = ({ explanationOnly = false }) => {
         );
     }
     
-    if (explanationOnly){
+    if (explanationOnly) {
         return (
             <div className='explanation-container-loader'>
                 <Skeleton.Square width={250} height={50} rounded />

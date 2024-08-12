@@ -33,7 +33,7 @@ const marketOrder = [
     'synthetics',
 ];
 
-const derived = ['baskets','synthetics'];
+const derived = ['baskets', 'synthetics'];
 
 const ActiveSymbols = (() => {
     const groupBy = (xs, key) => (

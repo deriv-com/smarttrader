@@ -20,7 +20,7 @@ export const ContractDropdown = () => {
 
         const contractElement = data?.contractElement;
 
-        if (contractElement){
+        if (contractElement) {
             const event = new Event('change');
             contractElement.value = formName;
             contractElement.dispatchEvent(event);

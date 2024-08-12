@@ -883,7 +883,7 @@ const ViewPopup = (() => {
             if ($loading.length) {
                 $loading.show();
             }
-        } else if ($loading){
+        } else if ($loading) {
             dataManager.setContract({
                 hidePageLoader: true,
             });

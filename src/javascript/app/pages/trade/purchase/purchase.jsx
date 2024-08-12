@@ -49,11 +49,11 @@ const Purchase = () => {
     useEffect(() => {
         const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
 
-        const lookbacks = ['lookbacklow','lookbackhigh','lookbackhighlow'];
+        const lookbacks = ['lookbacklow', 'lookbackhigh', 'lookbackhighlow'];
 
         setIsLookBack(lookbacks.includes(formName));
       
-    },[hasContractChange]);
+    }, [hasContractChange]);
 
     useEffect(() => {
         document.body.style.overflow = showPopup ? 'hidden' : '';
@@ -66,7 +66,7 @@ const Purchase = () => {
     const displayCurrency = (referenceField) => referenceField !== '-' ? data?.currency : '';
 
     const ButtonTooltipWrapper = (button,description) => {
-        if (!description || description === '' || data?.isPurchaseFormDisabled){
+        if (!description || description === '' || data?.isPurchaseFormDisabled) {
             return button;
         }
         return (
@@ -84,11 +84,11 @@ const Purchase = () => {
         );
     };
 
-    if (showPopup){
+    if (showPopup) {
         return <ContractDetails />;
     }
 
-    if (isloading() || (!data?.showPurchaseResults && data?.isPurchaseFormDisabled)){
+    if (isloading() || (!data?.showPurchaseResults && data?.isPurchaseFormDisabled)) {
         return (
             <div className='quill-purchase-section'>
                 <Skeleton.Square rounded fullWidth height={30} />
@@ -102,7 +102,7 @@ const Purchase = () => {
             </div>);
     }
   
-    if (!data?.showPurchaseResults && !data?.error){
+    if (!data?.showPurchaseResults && !data?.error) {
         return (
             <div className={`quill-purchase-section ${data?.isPurchaseFormDisabled && 'disabled'}`}>
                 {data?.showMidPurchase ? (
@@ -194,7 +194,7 @@ const Purchase = () => {
         );
     }
 
-    if (data?.error){
+    if (data?.error) {
         return (
             <div className='quill-purchase-section-results'>
                 <div className='top-box'>
@@ -232,7 +232,7 @@ const Purchase = () => {
                                             <Text size='sm'>{data?.error?.message}</Text>
                                             <Text size='sm'>{
                                                 parse(
-                                                    localize('Do you want to top up for another [_1]? If not, you can do this later on the [_2]Cashier page[_3], too.',['$10,000.00', '<a id=\'top_up_cashier_redirect\' href=\'\'>', '</a>'])
+                                                    localize('Do you want to top up for another [_1]? If not, you can do this later on the [_2]Cashier page[_3], too.', ['$10,000.00', '<a id=\'top_up_cashier_redirect\' href=\'\'>', '</a>'])
                                                 )}
                                             </Text>
                                             <Button

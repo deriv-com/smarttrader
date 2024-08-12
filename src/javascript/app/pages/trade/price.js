@@ -461,14 +461,14 @@ const Price = (() => {
         Object.keys(position_is_visible).forEach(position => {
             const container = CommonFunctions.getElementById(`price_container_${position}`);
             if (position_is_visible[position]) {
-                if (position === 'middle'){
+                if (position === 'middle') {
                     dataManager.setPurchase({
                         showMidPurchase: true,
                     });
                 }
                 $(container).fadeIn(0);
             } else {
-                if (position === 'middle'){
+                if (position === 'middle') {
                     dataManager.setPurchase({
                         showMidPurchase: false,
                     });
