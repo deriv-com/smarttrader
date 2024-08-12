@@ -18,7 +18,7 @@ const BottomTabs = () => {
     const hasContractChange = useContractChange();
     const savedTab = sessionStorage.getItem('currentTab');
     const triggerOldTabTimer = useRef();
-    const [isShowGraph,setIsShowGraph] = useState(false);
+    const [isShowGraph, setIsShowGraph] = useState(false);
 
     const handleChange = (e) => {
         setSelectedTab(e);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Skeleton } from '@deriv-com/quill-ui';
 
-const Graph = ({ onLoad,onUnload }) => {
+const Graph = ({ onLoad, onUnload }) => {
     const [isMounted, setMounted] = useState(false);
 
     useEffect(() => {
