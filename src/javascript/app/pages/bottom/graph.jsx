@@ -9,8 +9,8 @@ const Graph = ({ renderGraph }) => {
             setMounted(true);
             setTimeout(() => {
                 renderGraph();
-            }, 1000);
-        }, 1000);
+            }, 100);
+        }, 100);
 
         return () => clearTimeout(mountTimer);
     }, [renderGraph]);
