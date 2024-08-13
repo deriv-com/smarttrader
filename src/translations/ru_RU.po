@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,9 @@ msgid "Audit"
 msgstr "Аудит"
 
 msgid "Audit Page"
+msgstr "Страница аудита"
+
+msgid "Audit page"
 msgstr "Страница аудита"
 
 msgid "Aug"
@@ -256,6 +259,9 @@ msgstr "Продолжить торговлю"
 msgid "Contract Confirmation"
 msgstr "Подтверждение контракта"
 
+msgid "Contract Details"
+msgstr "Детали контракта"
+
 msgid "Contract details"
 msgstr "Детали контракта"
 
@@ -376,6 +382,9 @@ msgstr "Цена покупки Digit контрактов будет возме
 msgid "Digits"
 msgstr "Digits"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Хотите пополнить счет еще на %1? Если нет, вы можете сделать это позже на странице %2Касса%3."
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "пятница"
 
 msgid "Gaming"
-msgstr "Игровой"
+msgstr "Игры"
 
 msgid "Go To Reports"
 msgstr "Перейти к отчетам"
@@ -561,6 +570,9 @@ msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Если <strong>последняя котировка</strong> равна <strong>нижнему барьеру</strong> или <strong>верхнему барьеру</strong>, вы не получите выплату."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Если <strong>последняя котировка</strong> равна <strong>барьеру</strong> или <strong>новому барьеру (в случае его переустановки)</strong>, вы не получите выплату."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Если <strong>последняя котировка</strong> равна <strong>барьеру</strong> или <stronm g>новому барьеру (в случае его переустановки)</stronmg>, вы не получите выплату."
@@ -685,6 +697,9 @@ msgstr "Обозначает поле, которое является обяз�
 msgid "Indicative"
 msgstr "Ориентировочная цена"
 
+msgid "Indicative barrier"
+msgstr "Ориентировочный барьер"
+
 msgid "Invalid app id"
 msgstr "Неверный id приложения"
 
@@ -798,6 +813,9 @@ msgstr "Мар"
 
 msgid "March"
 msgstr "Март"
+
+msgid "Market"
+msgstr "Рынок"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Спот (GMT)"
 msgid "Stake"
 msgstr "Ставка"
 
+msgid "Start Time"
+msgstr "Время начала"
+
 msgid "Start time"
 msgstr "Время начала"
 
@@ -1543,6 +1564,12 @@ msgstr "Ограничение до"
 msgid "Today"
 msgstr "Сегодня"
 
+msgid "Top up"
+msgstr "Пополнить"
+
+msgid "Top up Virtual Account?"
+msgstr "Пополнить виртуальный счет?"
+
 msgid "Top up error"
 msgstr "Ошибка при пополнении"
 
@@ -1579,6 +1606,9 @@ msgstr "Торгуйте цифровыми опционами на мировы
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Торгуйте на мировых рынках с нашей популярной и удобной платформы."
 
+msgid "Trade types"
+msgstr "Типы контрактов"
+
 msgid "Trader's hub"
 msgstr "Trader's hub"
 
@@ -1587,9 +1617,6 @@ msgstr "Торговля и пополнение счета отключены"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "На вашем счете заблокирована торговля и пополнение. Пожалуйста, свяжитесь со %1службой поддержки%2 для получения помощи."
-
-msgid "Trading is unavailable at this time."
-msgstr "В данное время торговля недоступна."
 
 msgid "Trading statistics report"
 msgstr "Отчет по торговой статистике"

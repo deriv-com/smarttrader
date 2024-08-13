@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "Denetim"
 
 msgid "Audit Page"
 msgstr "Denetim Sayfası"
+
+msgid "Audit page"
+msgstr "Denetim sayfası"
 
 msgid "Aug"
 msgstr "Ağu"
@@ -256,6 +259,9 @@ msgstr "Ticarete devam et"
 msgid "Contract Confirmation"
 msgstr "Sözleşme Onayı"
 
+msgid "Contract Details"
+msgstr "Sözleşme Detayları"
+
 msgid "Contract details"
 msgstr "Sözleşme ayrıntıları"
 
@@ -375,6 +381,9 @@ msgstr "Sözleşme 5 dakika içinde bitmezse digit sözleşmeleri satın alma fi
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Başka bir %1için doldurmak ister misiniz? Değilse, bunu daha sonra %2Cashier sayfasında%3da yapabilirsiniz."
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -562,6 +571,9 @@ msgstr "İDK"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "<strong>çıkış noktası</strong> , <strong>Düşük bariyer</strong> veya <strong>Yüksek bariyer</strong>ile eşitse, ödemeyi kazanamazsınız."
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "<strong>çıkış noktası</strong> <strong>bariyerine eşitse</strong> veya <strong>yeni bariyere (sıfırlama gerçekleşirse)</strong>ödemeyi kazanamazsınız."
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "<strong>çıkış noktası</strong> , <strong>bariyer</strong> veya <stronm g>yeni bariyere eşitse (sıfırlama gerçekleşirse)</stronmg>, ödemeyi kazanmazsınız."
 
@@ -685,6 +697,9 @@ msgstr "Zorunlu alanı gösterir"
 msgid "Indicative"
 msgstr "Gösterge"
 
+msgid "Indicative barrier"
+msgstr "Gösterge bariyeri"
+
 msgid "Invalid app id"
 msgstr "Geçersiz uygulama kimliği"
 
@@ -798,6 +813,9 @@ msgstr "Mar"
 
 msgid "March"
 msgstr "Mart"
+
+msgid "Market"
+msgstr "Pazar"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -971,7 +989,7 @@ msgid "PM"
 msgstr "PM"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr "Şifre, sayılarla birlikte daha düşük ve büyük harfli İngilizce harflere sahip olmalıdır."
+msgstr "Şifre, sayılarla birlikte küçük ve büyük harfli İngilizce harflere sahip olmalıdır."
 
 msgid "Paxos Standard"
 msgstr "Paxos Standardı"
@@ -989,10 +1007,10 @@ msgid "Percentage"
 msgstr "Yüzde"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr "Para çekme ve işlem limitlerinizi kaldırmak için lütfen %1chesap profilinizi%2 omplete edin."
+msgstr "Para çekme ve işlem limitlerinizi kaldırmak için lütfen %1hesap profilinizi tamamlayın%2."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr "Lütfen %1log in%2 veya %3sign up%4 bu sayfayı görüntülemek için."
+msgstr "Bu sayfayı görüntülemek için lütfen %1Giriş yap%2 veya %3Kayıt ol%4."
 
 msgid "Please accept the terms and conditions."
 msgstr "Lütfen hüküm ve koşulları kabul edin."
@@ -1001,10 +1019,10 @@ msgid "Please complete the %1Real Account form%2 to verify your age as required 
 msgstr "Lütfen %3UK Gambling%4 Commission (UKGC) tarafından istenen yaşınızı doğrulamak için %1Real Account formunu%2 doldurun."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "Para çekme ve alım satım limitlerinizi kaldırmak için lütfen %1ffinansal değerlendirme formunu%2 doldurun."
+msgstr "Para çekme ve alım satım limitlerinizi kaldırmak için lütfen %1finansal değerlendirme formunu%2 doldurun."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr "Lütfen politik olarak maruz kalan bir kişi olmadığınızı onaylayın."
+msgstr "Lütfen siyasi olarak teşhir edilen bir kişi olmadığınızı teyit edin."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
 msgstr "Lütfen cihazınızda Telegram uygulamasının yüklü olduğundan emin olun."
@@ -1271,13 +1289,13 @@ msgid "Short keyboard patterns are easy to guess"
 msgstr "Kısa klavye desenlerini tahmin etmek kolaydır"
 
 msgid "Should be %1"
-msgstr "%1olmalı"
+msgstr "%1 olmalı"
 
 msgid "Should be a valid number."
 msgstr "Geçerli bir numara olmalı."
 
 msgid "Should be between %1 and %2"
-msgstr "%1 ile %2arasında olmalıdır"
+msgstr "%1 ile %2 arasında olmalıdır"
 
 msgid "Should be less than %1"
 msgstr "%1adresinden daha az olmalıdır."
@@ -1289,7 +1307,7 @@ msgid "Should start with letter or number, and may contain hyphen and underscore
 msgstr "Harf veya sayı ile başlamalı, kısa çizgi ve alt çizgi içerebilir."
 
 msgid "Sign out"
-msgstr "Oturumu Çık"
+msgstr "Oturumu kapat"
 
 msgid "Sign up"
 msgstr "Kaydolun"
@@ -1325,13 +1343,16 @@ msgid "Spot time (GMT)"
 msgstr "Spot zamanı (GMT)"
 
 msgid "Stake"
-msgstr "Kazık"
+msgstr "Bahis"
+
+msgid "Start Time"
+msgstr "Başlangıç Saati"
 
 msgid "Start time"
 msgstr "Başlangıç zamanı"
 
 msgid "Statements"
-msgstr "Deyimleri"
+msgstr "Açıklamalar"
 
 msgid "Stays Between"
 msgstr "Stays Between"
@@ -1367,10 +1388,10 @@ msgid "Target"
 msgstr "Hedef"
 
 msgid "Tether ERC20"
-msgstr "Urgan ERC20"
+msgstr "Tether ERC20"
 
 msgid "Tether Omni"
-msgstr "Urgan Omni"
+msgstr "Tether Omni"
 
 msgid "Tether TRC20"
 msgstr "Tether TRC20"
@@ -1379,19 +1400,19 @@ msgid "Th"
 msgstr "Th"
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Teşekkür ederim, 24 saat içinde size geri döneceğiz"
+msgstr "Teşekkür ederiz, 24 saat içinde size geri döneceğiz"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "The %1ckaybetmek%2 en son kene veya daha önce %1end zaman%2. Belirli bir seçtiyseniz %1end zaman,%2 the %1end zaman%2 seçilen zamandır."
+msgstr "The %1close%2 %1end time%2'dan önceki veya en sonuncu tiktir. Belirli bir %1end time,%2 seçtiyseniz, %1end time%2 seçilen zamandır."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr "%1csözleşme süresi%2 %1filk tik%2 (başlangıç saatinden sonra) ile %1eikinci tik%2arasındaki süredir."
+msgstr "%1contract period%2 %1first tick%2 (başlangıç saatinden sonra) ile %1end time%2 arasındaki süredir."
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr "%1end zamanı%2 %1start zamanından%2sonra seçilen dakika/saat sayısıdır."
+msgstr "%1end zamanı%2 %1start time%2 sonrasında seçilen dakika/saat sayısıdır."
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr "The %1exit spot%2 sözleşme sona erdiğinde son işarettir. Sözleşme, tüm keneler art arda yükseldiğinde veya düştüğünde sona erer, veya tek bir kene tahmin edilen deseni kırdığında."
+msgstr "The %1exit spot%2 sözleşme sona erdiğinde son işarettir. Sözleşme, tüm tikler art arda yükseldiğinde veya düştüğünde sona erer, veya tek bir tik tahmin edilen deseni kırdığında."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
 msgstr "The %1high%2 sözleşme süresi boyunca piyasanın ulaştığı en yüksek noktadır."
@@ -1400,22 +1421,22 @@ msgid "The %1low%2 is the lowest point ever reached by the market during the con
 msgstr "The %1low%2 sözleşme süresi boyunca piyasanın ulaştığı en düşük noktadır."
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr "The %1start zamanı%2 sözleşme sunucularımız tarafından işlendiğinde başlar."
+msgstr "The %1start time%2 sözleşme sunucularımız tarafından işlendiğinde başlar."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr "%1start zamanı%2 sözleşmenin sunucularımız tarafından işlendiği zamandır ve %1entry spot%2 bundan sonraki %1next tick%2 dir."
+msgstr "%1start time%2 sözleşmenin sunucularımız tarafından işlendiği zamandır ve %1entry spot%2 bundan sonraki %1next tick%2 dir."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr "The <strong>sözleşme dönemi</strong> arasındaki dönemdir <strong>sonraki kene</strong> sonra <strong>Başlangıç saati</strong> ve <strong>bitiş zamanı</strong>."
+msgstr "<strong>contract period</strong>, <strong>start time</strong> sonrasındaki <strong>next tick</strong> ile <strong>end time</strong> arasındaki dönemdir."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "<strong>bitiş zamanı</strong> , <strong>başlangıç saatinden</strong> (süre olarak bir günden az ise) veya işlem gününün sonunda (eğer bir gün veya daha uzun süre) sonra seçilen dakika/saat sayısıdır."
+msgstr "<strong>end time</strong> , <strong>start time</strong> (süre olarak bir günden az ise) veya işlem gününün sonunda (eğer bir gün veya daha uzun süre) sonrasında seçilen dakika/saat sayısıdır."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr "<strong>bitiş zamanı</strong> , <strong>başlangıç zamanından</strong>sonra seçilen dakika/saat sayısıdır."
+msgstr "<strong>end time</strong> , <strong>start time</strong> sonrasında seçilen dakika/saat sayısıdır."
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr "The <strong>giriş noktası</strong> sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk işarettir."
+msgstr "The <strong>entry spot</strong> sözleşmenin sunucularımız tarafından işlenmesinden sonraki ilk tikdir.."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
 msgstr "<strong>çıkış noktası</strong>, <strong>bitiş saati</strong>sonundaki veya öncesindeki en son tikdir."
@@ -1543,6 +1564,12 @@ msgstr "Şu zamana kadar ara verildi"
 msgid "Today"
 msgstr "Bugün"
 
+msgid "Top up"
+msgstr "Doldurma"
+
+msgid "Top up Virtual Account?"
+msgstr "Sanal Hesap Yükleme?"
+
 msgid "Top up error"
 msgstr "Top up hatası"
 
@@ -1579,17 +1606,17 @@ msgstr "Güçlü, kullanıcı dostu bir çevrimiçi ticaret platformu olan Smart
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Popüler kullanıcı dostu platformumuzla dünya pazarlarında ticaret yapın."
 
+msgid "Trade types"
+msgstr "Ticaret türleri"
+
 msgid "Trader's hub"
-msgstr "Tüccar merkezi"
+msgstr "Trader's hub"
 
 msgid "Trading and deposit disabled"
 msgstr "Ticaret ve mevduat devre dışı"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr "Hesabınızda alım satım ve para yatırma işlemleri devre dışı bırakıldı. Lütfen %1contact müşteri desteği%2 yardım için."
-
-msgid "Trading is unavailable at this time."
-msgstr "Ticaret şu anda kullanılamıyor."
+msgstr "Hesabınızda alım satım ve para yatırma işlemleri devre dışı bırakıldı. Lütfen %1müşteri desteğine başvurun%2 yardım için."
 
 msgid "Trading statistics report"
 msgstr "Alım satım istatistikleri raporu"
@@ -1598,19 +1625,19 @@ msgid "Transaction ID"
 msgstr "İşlem Kimliği"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr "İşlem %1 tarafından gerçekleştirildi (Uygulama Kimliği: %2)"
+msgstr "İşlem %1 (Uygulama Kimliği: %2) tarafından gerçekleştirildi "
 
 msgid "True USD"
-msgstr "Gerçek USD"
+msgstr "TrueUSD"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr "%1Synthetic Indices%2adresimizi deneyin."
+msgstr "%1Sentetik Endekslerimizi%2 deneyin."
 
 msgid "Try our other markets."
-msgstr "Diğer pazarlarımızı deneyin."
+msgstr "Diğer piyasalarımızı deneyin."
 
 msgid "Tu"
-msgstr "Tu"
+msgstr "Salı"
 
 msgid "Tuesday"
 msgstr "Salı"
@@ -1661,13 +1688,13 @@ msgid "Virtual"
 msgstr "Sanal"
 
 msgid "Waiting for contract settlement."
-msgstr "Sözleşme anlaşmasını bekliyorum."
+msgstr "Sözleşme anlaşması bekleniyor"
 
 msgid "Waiting for entry tick."
-msgstr "Giriş kene bekliyorum."
+msgstr "Giriş tiki bekleniyor"
 
 msgid "Waiting for exit tick."
-msgstr "Çıkış kene bekliyorum."
+msgstr "Çıkış tiki bekleniyor"
 
 msgid "We"
 msgstr "Biz"
@@ -1676,7 +1703,7 @@ msgid "Wednesday"
 msgstr "Çarşamba"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr "Sınırlarınızı güncelleyeceğiz. Tıklayın %1Agree ve kabul et%2 eylemlerinizden tamamen sorumlu olduğunuzu kabul etmek, ve herhangi bir bağımlılık veya kayıptan sorumlu değiliz."
+msgstr "Limitlerinizi güncelleyeceğiz. Eylemlerinizden tamamen sorumlu olduğunuzu ve herhangi bir bağımlılık veya kayıptan sorumlu olmadığımızı kabul etmek için %1Kabul vea Onay%2'a tıklayın."
 
 msgid "WhatsApp"
 msgstr "WhatsApp"
@@ -1688,10 +1715,10 @@ msgid "Win payout if exit spot is also equal to entry spot."
 msgstr "Çıkış noktası da giriş noktasına eşitse ödeme kazanın."
 
 msgid "Winning the contract"
-msgstr "Sözleşmeyi kazanmak"
+msgstr "Sözleşmenin kazanılması"
 
 msgid "Withdrawal"
-msgstr "Çekilme"
+msgstr "Para çekme"
 
 msgid "Withdrawal and trading limits"
 msgstr "Para çekme ve işlem limitleri"
@@ -1718,7 +1745,7 @@ msgid "You have reached the rate limit of requests per second. Please try later.
 msgstr "Saniyede taleplerin oran sınırına ulaştınız. Lütfen daha sonra deneyin."
 
 msgid "You have sold this contract at %1 %2"
-msgstr "Bu sözleşmeyi sattınız %1 %2"
+msgstr "Bu sözleşmeyi %1 %2 değerde sattınız"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
 msgstr "Kimlik doğrulama için farklı OAuth sunucusu kullanmadan önce kayıt olmanız ve Uygulama Kimliği almanız gerekir. Daha fazla bilgi için https://api.deriv.com/ adresindeki OAuth ayrıntılarına bakın."
@@ -1727,7 +1754,7 @@ msgid "You have yet to receive any notifications"
 msgstr "Henüz herhangi bir bildirim almadınız"
 
 msgid "You should enter %1 characters."
-msgstr "Girmelisiniz %1 karakterler."
+msgstr "%1 karakterleri girmelisiniz."
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
 msgstr "Binary.com'a ait olmayan üçüncü taraf bir web sitesine yönlendirileceksiniz."
