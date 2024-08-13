@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Sinhala\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,9 @@ msgid "Audit"
 msgstr "විගණන"
 
 msgid "Audit Page"
+msgstr "විගණන පිටුව"
+
+msgid "Audit page"
 msgstr "විගණන පිටුව"
 
 msgid "Aug"
@@ -256,6 +259,9 @@ msgstr "වෙළඳාම දිගටම කරගෙන යන්න"
 msgid "Contract Confirmation"
 msgstr "කොන්ත්රාත් තහවුරු කිරීම"
 
+msgid "Contract Details"
+msgstr "කොන්ත්රාත් විස්තර"
+
 msgid "Contract details"
 msgstr "කොන්ත්රාත් විස්තර"
 
@@ -375,6 +381,9 @@ msgstr "මිනිත්තු 5 ක් ඇතුළත කොන්ත්ර�
 
 msgid "Digits"
 msgstr "ඉලක්කම්"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "ඔබට තවත් %1සඳහා ඉහල දැමීමට අවශ්යද? එහෙම නැත්නම් මේක පස්සේ කරන්න පුලුවන් %2Cඅෂියර් පිටුවෙත්%3, ඒ වගේම."
 
 msgid "Does Not Touch"
 msgstr "ස්පර්ශ නොකරයි"
@@ -562,6 +571,9 @@ msgstr "IDK"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "මෙම <strong>පිටවීමේ ස්ථානයේදීම</strong> <strong>අඩු බාධකයක්</strong> හෝ <strong>මහ බාධකයක්</strong>එක්කෝ සමාන වේ නම්, ඔබ ගෙවීම් දිනා නැහැ."
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "<strong>පිටවීමේ ස්ථානය</strong> <strong>බාධකයට</strong> හෝ <strong>නව බාධකයට සමාන වේ නම් (යළි පිහිටුවීමක් සිදුවුවහොත්)</strong>, ඔබ ගෙවීම දිනා ගන්නේ නැත."
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "<strong>පිටවීමේ ස්ථානය</strong> <strong>බාධකයට සමාන නම්</strong> හෝ <stronm g>නව බාධකයට (නැවත සකස් කිරීමක් සිදුවුවහොත්)</stronmg>, ඔබ ගෙවීම දිනා නොගනී."
 
@@ -685,6 +697,9 @@ msgstr "අවශ්ය ක්ෂේත්රය දක්වයි"
 msgid "Indicative"
 msgstr "ඇඟවුම්"
 
+msgid "Indicative barrier"
+msgstr "දර්ශක බාධකය"
+
 msgid "Invalid app id"
 msgstr "වලංගු නොවන යෙදුම හැඳුනුම්පත"
 
@@ -798,6 +813,9 @@ msgstr "මාර්"
 
 msgid "March"
 msgstr "මාර්තු"
+
+msgid "Market"
+msgstr "වෙළඳපල"
 
 msgid "Matches/Differs"
 msgstr "ගැලපුම්/වෙනස්"
@@ -1327,6 +1345,9 @@ msgstr "ස්ථානයේදීම කාලය (GMT)"
 msgid "Stake"
 msgstr "කණුවක්"
 
+msgid "Start Time"
+msgstr "ආරම්භක වේලාව"
+
 msgid "Start time"
 msgstr "ආරම්භක වේලාව"
 
@@ -1543,6 +1564,12 @@ msgstr "තෙක් කාලය ගත කර ඇත"
 msgid "Today"
 msgstr "අද"
 
+msgid "Top up"
+msgstr "ඉහළට"
+
+msgid "Top up Virtual Account?"
+msgstr "අතථ්ය ගිණුම පුරවන්න?"
+
 msgid "Top up error"
 msgstr "ඉහළට දෝෂය"
 
@@ -1579,6 +1606,9 @@ msgstr "බලවත්, පරිශීලක-හිතකාමී මාර�
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "අපගේ ජනප්රිය පරිශීලක-හිතකාමී වේදිකාව සමඟ ලෝකයේ වෙළඳපල වෙළඳාම් කරන්න."
 
+msgid "Trade types"
+msgstr "වෙළඳ වර්ග"
+
 msgid "Trader's hub"
 msgstr "වෙළෙන්දාගේ කේන්ද්රස්ථානය"
 
@@ -1587,9 +1617,6 @@ msgstr "වෙළඳාම සහ තැන්පතු අක්රීයයි
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "ඔබේ ගිණුමේ වෙළඳ සහ තැන්පතු අක්රීය කර ඇත. සහාය සඳහා කරුණාකර %1cඔන්ටාක් පාරිභෝගික සහාය%2 ."
-
-msgid "Trading is unavailable at this time."
-msgstr "මෙම අවස්ථාවේදී වෙළඳාම ලබා ගත නොහැක."
 
 msgid "Trading statistics report"
 msgstr "වෙළඳ සංඛ්යාලේඛන වාර්තාව"

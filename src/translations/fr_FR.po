@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-12 08:59\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "Vérification"
 
 msgid "Audit Page"
 msgstr "Page de vérification"
+
+msgid "Audit page"
+msgstr "Page d'audit"
 
 msgid "Aug"
 msgstr "Août"
@@ -256,6 +259,9 @@ msgstr "Continuer à trader"
 msgid "Contract Confirmation"
 msgstr "Confirmation du contrat"
 
+msgid "Contract Details"
+msgstr "Détails du Contrat"
+
 msgid "Contract details"
 msgstr "Détails du contrat"
 
@@ -376,6 +382,9 @@ msgstr "Les contrats de type Digit seront remboursés à hauteur de leur prix d'
 msgid "Digits"
 msgstr "Digits"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Voulez-vous recharger pour un autre %1 ? Sinon, vous pouvez également le faire plus tard sur la page de caisse %2C%3."
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "Les vendredis"
 
 msgid "Gaming"
-msgstr "Jeu"
+msgstr "Jeux"
 
 msgid "Go To Reports"
 msgstr "Accéder à Rapports"
@@ -561,6 +570,9 @@ msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Si le <strong>spot de sortie</strong> est égal à la <strong>barrière inférieure</strong> ou à la <strong>barrière supérieure</strong>, vous n'obtenez pas le paiement."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Si le point de sortie <strong></strong> est égal à la barrière <strong></strong> ou à la nouvelle barrière <strong>(en cas de réinitialisation)</strong>, vous ne gagnez pas le paiement."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Si le <strong>spot de sortie</strong> est égal à la <strong>barrière</strong> ou à la <strong>nouvelle barrière (si une réinitialisation survient)</strong>, vous n'obtenez pas le paiement."
@@ -685,6 +697,9 @@ msgstr "Indique un champ obligatoire"
 msgid "Indicative"
 msgstr "Indicatif"
 
+msgid "Indicative barrier"
+msgstr "Barrière indicative"
+
 msgid "Invalid app id"
 msgstr "Identifiant d'application non valide"
 
@@ -734,7 +749,7 @@ msgid "Live chat"
 msgstr "Chat en direct"
 
 msgid "Log in"
-msgstr "Connexion"
+msgstr "Se connecter"
 
 msgid "Log in here"
 msgstr "Connectez-vous ici"
@@ -798,6 +813,9 @@ msgstr "Mars"
 
 msgid "March"
 msgstr "Mars"
+
+msgid "Market"
+msgstr "Marché"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Heure spot (GMT)"
 msgid "Stake"
 msgstr "Mise"
 
+msgid "Start Time"
+msgstr "Heure de début"
+
 msgid "Start time"
 msgstr "Heure de début"
 
@@ -1543,6 +1564,12 @@ msgstr "Expire jusqu'au"
 msgid "Today"
 msgstr "Aujourd'hui"
 
+msgid "Top up"
+msgstr "Rechargez"
+
+msgid "Top up Virtual Account?"
+msgstr "Rechargez votre compte virtuel ?"
+
 msgid "Top up error"
 msgstr "Erreur de rechargement"
 
@@ -1579,6 +1606,9 @@ msgstr "Tradez des options numériques sur les marchés mondiaux grâce à Smart
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Tradez sur les marchés mondiaux grâce à notre plateforme populaire et conviviale."
 
+msgid "Trade types"
+msgstr "Types de traders"
+
 msgid "Trader's hub"
 msgstr "Centre du trader"
 
@@ -1587,9 +1617,6 @@ msgstr "Trading et dépôts désactivés"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Le trading et les dépôts ont été désactivés sur votre compte. Veuillez %1contacter le service client%2 pour obtenir de l'aide."
-
-msgid "Trading is unavailable at this time."
-msgstr "Il est actuellement impossible de trader."
 
 msgid "Trading statistics report"
 msgstr "Rapport de statistiques de trading"
@@ -1802,7 +1829,7 @@ msgid "including Deal Cancel. Fee"
 msgstr "y compris Annulation de trans. Coût"
 
 msgid "login"
-msgstr "connexion"
+msgstr "se connecter"
 
 msgid "logout"
 msgstr "déconnexion"

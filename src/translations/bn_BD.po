@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Bengali\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "অডিট"
 
 msgid "Audit Page"
 msgstr "অডিট পৃষ্ঠা"
+
+msgid "Audit page"
+msgstr "নিরীক্ষা পাতা"
 
 msgid "Aug"
 msgstr "আগস্ট"
@@ -256,6 +259,9 @@ msgstr "ট্রেডিং চালিয়ে যান"
 msgid "Contract Confirmation"
 msgstr "চুক্তি নিশ্চিতকরণ"
 
+msgid "Contract Details"
+msgstr "চুক্তির বিবরণ"
+
 msgid "Contract details"
 msgstr "চুক্তির বিবরণ"
 
@@ -375,6 +381,9 @@ msgstr "চুক্তি 5 মিনিটের মধ্যে শেষ ন
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "আপনি কি অন্য %1এর জন্য টপ আপ করতে চান? যদি তা না হয় তবে আপনি পরে %2Cashier পৃষ্ঠায়%3এছাড়াও এটি করতে পারেন।"
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -562,6 +571,9 @@ msgstr "আইডিকে"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "যদি <strong>প্রস্থান স্পট</strong> হয় <strong>নিম্ন বাধা</strong> বা <strong>উচ্চ বাধা</strong>এর সমান হয়, আপনি পেআউট জিতবেন না।"
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "<strong>এক্সিট স্পট</strong> যদি <strong>বাধা</strong> বা <strong>নতুন বাধা (যদি রিসেট ঘটে)</strong>এর সমান হয় তবে আপনি পেআউট জিতবেন না।"
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "যদি <strong>প্রস্থান স্পট</strong> <strong>বাধা</strong> বা <stronm g>নতুন বাধা (যদি একটি রিসেট ঘটে) সমান হয়</stronmg>, আপনি পেআউট জিতবেন না।"
 
@@ -685,6 +697,9 @@ msgstr "প্রয়োজনীয় ক্ষেত্র নির্দেশ 
 msgid "Indicative"
 msgstr "ইঙ্গিতপূর্ণ"
 
+msgid "Indicative barrier"
+msgstr "সূচক বাধা"
+
 msgid "Invalid app id"
 msgstr "অকার্যকর অ্যাপ আইডি"
 
@@ -798,6 +813,9 @@ msgstr "নষ্ট করা"
 
 msgid "March"
 msgstr "মার্চ"
+
+msgid "Market"
+msgstr "বাজার"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "স্পট টাইম (GMT)"
 msgid "Stake"
 msgstr "পণ"
 
+msgid "Start Time"
+msgstr "শুরুর সময়"
+
 msgid "Start time"
 msgstr "আরম্ভের সময়"
 
@@ -1543,6 +1564,12 @@ msgstr "সময়সীমা শেষ হওয়া পর্যন্ত"
 msgid "Today"
 msgstr "আজ"
 
+msgid "Top up"
+msgstr "টপ আপ"
+
+msgid "Top up Virtual Account?"
+msgstr "টপ আপ ভার্চুয়াল অ্যাকাউন্ট?"
+
 msgid "Top up error"
 msgstr "টপ-আপ ত্রুটি"
 
@@ -1579,6 +1606,9 @@ msgstr "স্মার্টট্রেডার, একটি শক্তি
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "আমাদের জনপ্রিয় ব্যবহারকারী-বন্ধুত্বপূর্ণ প্ল্যাটফর্মের সাথে বিশ্বের বাজারে ট্রেড করুন।"
 
+msgid "Trade types"
+msgstr "বাণিজ্যের ধরন"
+
 msgid "Trader's hub"
 msgstr "ট্রেডারের হাব"
 
@@ -1587,9 +1617,6 @@ msgstr "ট্রেডিং এবং ডিপোজিট নিষ্ক্
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "আপনার অ্যাকাউন্টে ট্রেডিং এবং ডিপোজিট নিষ্ক্রিয় করা হয়েছে। সহায়তার%2 জন্য দয়া করে গ্রাহক সহায়তার %1cসাথে যোগাযোগ করুন।"
-
-msgid "Trading is unavailable at this time."
-msgstr "এই সময়ে ট্রেডিং অনুপলব্ধ।"
 
 msgid "Trading statistics report"
 msgstr "ট্রেডিং পরিসংখ্যান রিপোর্ট"

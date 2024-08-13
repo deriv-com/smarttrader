@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "审计"
 
 msgid "Audit Page"
 msgstr "审核页面"
+
+msgid "Audit page"
+msgstr "审计页面"
 
 msgid "Aug"
 msgstr "八月"
@@ -256,6 +259,9 @@ msgstr "继续交易"
 msgid "Contract Confirmation"
 msgstr "合约确认"
 
+msgid "Contract Details"
+msgstr "合约详情"
+
 msgid "Contract details"
 msgstr "合约细节"
 
@@ -375,6 +381,9 @@ msgstr "Digit 合约如果没在 5 分钟内结束，将退还购入价格。"
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "你想为另一个 %1充值吗？如果没有，你也可以稍后在 %2Cashier 页面%3上执行此操作。"
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -562,6 +571,9 @@ msgstr "IDK"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>低障碍</strong> 或 <strong>高障碍</strong>, 您将不会赢得赔付。"
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "如果 <strong>出口点</strong> 等于 <strong>屏障</strong> 或 <strong>新屏障（如果发生重置）</strong>，则您不会赢得奖金。"
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>障碍</strong> 或 <strong>重设后的新障碍</strong>, 您将不会赢得赔付。"
 
@@ -685,6 +697,9 @@ msgstr "为必填字段"
 msgid "Indicative"
 msgstr "指示性"
 
+msgid "Indicative barrier"
+msgstr "指示性屏障"
+
 msgid "Invalid app id"
 msgstr "无效的应用 id"
 
@@ -798,6 +813,9 @@ msgstr "三月"
 
 msgid "March"
 msgstr "三月"
+
+msgid "Market"
+msgstr "市场"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "现货时间 (GMT)"
 msgid "Stake"
 msgstr "投注资金"
 
+msgid "Start Time"
+msgstr "开始时间"
+
 msgid "Start time"
 msgstr "开始时间"
 
@@ -1543,6 +1564,12 @@ msgstr "暂停至"
 msgid "Today"
 msgstr "今天"
 
+msgid "Top up"
+msgstr "充值"
+
+msgid "Top up Virtual Account?"
+msgstr "为虚拟账户充值？"
+
 msgid "Top up error"
 msgstr "充值错误"
 
@@ -1579,6 +1606,9 @@ msgstr "使用功能强大、用户友好的在线交易平台 SmartTrader 在�
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "在我们极受欢迎、人性化的平台进行全球市场交易。"
 
+msgid "Trade types"
+msgstr "交易类型"
+
 msgid "Trader's hub"
 msgstr "Trader's hub"
 
@@ -1587,9 +1617,6 @@ msgstr "已禁止交易和存款"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "您的账户已被禁交易和存款。请 %1联系客服部%2 寻求帮助。"
-
-msgid "Trading is unavailable at this time."
-msgstr "此时无法交易。"
 
 msgid "Trading statistics report"
 msgstr "交易统计报表"

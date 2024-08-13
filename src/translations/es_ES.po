@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-12 08:59\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,9 @@ msgid "Audit"
 msgstr "Auditoría"
 
 msgid "Audit Page"
+msgstr "Página de auditoría"
+
+msgid "Audit page"
 msgstr "Página de auditoría"
 
 msgid "Aug"
@@ -256,6 +259,9 @@ msgstr "Seguir operando"
 msgid "Contract Confirmation"
 msgstr "Confirmación del contrato"
 
+msgid "Contract Details"
+msgstr "Detalles del Contrato"
+
 msgid "Contract details"
 msgstr "Detalles del contrato"
 
@@ -376,6 +382,9 @@ msgstr "Los contratos de dígitos se reembolsarán al precio de compra si el con
 msgid "Digits"
 msgstr "Digits"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "¿Quieres recargar para otro %1? Si no, también puedes hacerlo más adelante en la página%3del cajero %2C."
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "Viernes"
 
 msgid "Gaming"
-msgstr "Juegos de azar"
+msgstr "Juegos"
 
 msgid "Go To Reports"
 msgstr "Ir a Informes"
@@ -561,6 +570,9 @@ msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Si el <strong>punto de salida</strong> es igual a la <strong>barrera inferior</strong> o a la <strong>barrera superior</strong>, no gana el pago."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Si el punto de salida <strong></strong> es igual a la barrera <strong></strong> o a la nueva barrera <strong>(si se reinicia)</strong>, no ganarás el pago."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Si el <strong>punto de salida</strong> es igual a la <strong>barrera</strong> o a la <stronm g>nueva barrera (en caso de un reset)</stronmg>, no gana el pago."
@@ -685,6 +697,9 @@ msgstr "Indica campo obligatorio"
 msgid "Indicative"
 msgstr "Indicativo"
 
+msgid "Indicative barrier"
+msgstr "Barrera indicativa"
+
 msgid "Invalid app id"
 msgstr "App ID inválida"
 
@@ -798,6 +813,9 @@ msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
+
+msgid "Market"
+msgstr "Mercado"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Hora Spot (GTM)"
 msgid "Stake"
 msgstr "Inversión"
 
+msgid "Start Time"
+msgstr "Hora de inicio"
+
 msgid "Start time"
 msgstr "Hora de inicio"
 
@@ -1543,6 +1564,12 @@ msgstr "Inactivo hasta"
 msgid "Today"
 msgstr "Hoy"
 
+msgid "Top up"
+msgstr "Recargar"
+
+msgid "Top up Virtual Account?"
+msgstr "¿Recargar una cuenta virtual?"
+
 msgid "Top up error"
 msgstr "Error de recarga"
 
@@ -1579,6 +1606,9 @@ msgstr "Opere con opciones digitales en los mercados mundiales con SmartTrader, 
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Opere en los mercados mundiales con nuestra popular plataforma fácil de usar."
 
+msgid "Trade types"
+msgstr "Operar tipos"
+
 msgid "Trader's hub"
 msgstr "Trader's hub"
 
@@ -1587,9 +1617,6 @@ msgstr "Operaciones y depósitos deshabilitados"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Se han desactivado las operaciones y depósitos en su cuenta. Por favor %1póngase en contacto con nuestro servicio de atención al cliente%2 para recibir asistencia."
-
-msgid "Trading is unavailable at this time."
-msgstr "No se puede operar en este momento."
 
 msgid "Trading statistics report"
 msgstr "Informe de estadísticas comerciales"

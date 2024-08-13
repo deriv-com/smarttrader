@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-12 08:59\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,9 @@ msgid "Audit"
 msgstr "التدقيق"
 
 msgid "Audit Page"
+msgstr "صفحة التدقيق"
+
+msgid "Audit page"
 msgstr "صفحة التدقيق"
 
 msgid "Aug"
@@ -256,6 +259,9 @@ msgstr "استمر في التداول"
 msgid "Contract Confirmation"
 msgstr "تأكيد العقد"
 
+msgid "Contract Details"
+msgstr "تفاصيل العقد"
+
 msgid "Contract details"
 msgstr "تفاصيل العقد"
 
@@ -375,6 +381,9 @@ msgstr "سيتم استرداد العقود الرقمية بسعر الشرا�
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "هل تريد تعبئة رصيد %1آخر؟ إذا لم يكن الأمر كذلك، فيمكنك القيام بذلك لاحقًا على صفحة %2Cashier%3أيضًا."
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -562,6 +571,9 @@ msgstr "أتساءل"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "إذا كانت نقطة <strong></strong> الخروج مساوية للحاجز <strong>المنخفض</strong> أو الحاجز <strong>العالي</strong>، فلن تربح العائد."
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "إذا كانت نقطة الخروج <strong></strong> تساوي حاجز <strong></strong> أو حاجز <strong>الجديد (في حالة حدوث إعادة الضبط)</strong>، فلن تربح العائد."
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "إذا كانت نقطة <strong></strong> الخروج مساوية <strong>للحاجز</strong> أو الحاجز <stronm g>الجديد (في حالة حدوث إعادة تعيين)</stronmg>، فلن تربح العائد."
 
@@ -685,6 +697,9 @@ msgstr "يشير إلى الحقل المطلوب"
 msgid "Indicative"
 msgstr "إرشادي"
 
+msgid "Indicative barrier"
+msgstr "حاجز إرشادي"
+
 msgid "Invalid app id"
 msgstr "معرف تطبيق غير صالح"
 
@@ -798,6 +813,9 @@ msgstr "مسخ"
 
 msgid "March"
 msgstr "مارس"
+
+msgid "Market"
+msgstr "السوق"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "التوقيت الفوري (بتوقيت جرينتش)"
 msgid "Stake"
 msgstr "حصة"
 
+msgid "Start Time"
+msgstr "وقت البدء"
+
 msgid "Start time"
 msgstr "وقت البدء"
 
@@ -1543,6 +1564,12 @@ msgstr "انتهت المهلة حتى"
 msgid "Today"
 msgstr "اليوم"
 
+msgid "Top up"
+msgstr "اشحن رصيدك"
+
+msgid "Top up Virtual Account?"
+msgstr "قم بتعبئة الحساب الافتراضي؟"
+
 msgid "Top up error"
 msgstr "خطأ في إعادة التعبئة"
 
@@ -1579,6 +1606,9 @@ msgstr "تداول الخيارات الرقمية في الأسواق العا�
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "تداول في الأسواق العالمية من خلال منصتنا الشهيرة سهلة الاستخدام."
 
+msgid "Trade types"
+msgstr "أنواع التجارة"
+
 msgid "Trader's hub"
 msgstr "مركز التاجر"
 
@@ -1587,9 +1617,6 @@ msgstr "تم تعطيل التداول والإيداع"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "تم تعطيل التداول والودائع في حسابك. يرجى %1cالاتصال بدعم العملاء%2 للحصول على المساعدة."
-
-msgid "Trading is unavailable at this time."
-msgstr "التداول غير متاح في الوقت الحالي."
 
 msgid "Trading statistics report"
 msgstr "تقرير إحصائيات التداول"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,16 +26,16 @@ msgid "%1 days %2 hours %3 minutes"
 msgstr "%1 dias %2 horas %3 minutos"
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr "%1 foram creditados na sua conta de dinheiro virtual: %2."
+msgstr "%1 foi creditado na sua Conta Virtual: %2."
 
 msgid "%1Return to trading page%2"
 msgstr "%1Voltar para a página de negociação%2"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr "Uma nova experiência de negociação em uma plataforma poderosa e fácil de usar."
+msgstr "Uma nova experiência de negociação numa plataforma poderosa e intuitiva."
 
 msgid "A word by itself is easy to guess"
-msgstr "Uma palavra por si só é fácil de adivinhar"
+msgstr "Uma única palavra é simples de adivinhar"
 
 msgid "AM"
 msgstr "AM"
@@ -44,7 +44,7 @@ msgid "Account Authenticated"
 msgstr "Conta autenticada"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr "O acesso à conta está temporariamente limitado. Verifique sua caixa de email para mais detalhes."
+msgstr "O acesso à conta está temporariamente restrito. Por favor, verifique a sua caixa de e-mail para mais detalhes."
 
 msgid "Account authentication"
 msgstr "Autenticação de conta"
@@ -56,10 +56,10 @@ msgid "Add"
 msgstr "Adicionar"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr "Acrescente +/- para definir uma deslocação de barreira. Por exemplo, +0.005 significa uma barreira que está 0.005 acima do preço de entrada."
+msgstr "Adicione +/- para definir o offset da barreira. Por exemplo, +0,005 indica uma barreira que está 0,005 acima do preço de abertura."
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr "Adicione outra palavra ou duas. Palavras incomuns são melhores."
+msgstr "Adicione uma ou duas palavras. As palavras pouco comuns são melhores."
 
 msgid "Adjust trade parameters"
 msgstr "Ajustar parâmetros de negociação"
@@ -68,16 +68,16 @@ msgid "Agree and accept"
 msgstr "Concordar e aceitar"
 
 msgid "All markets are closed now. Please try again later."
-msgstr "Todos os mercados estão agora fechados. Tente novamente mais tarde."
+msgstr "Todos os mercados estão encerrados neste momento. Tente novamente mais tarde."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
 msgstr "Todas as letras maiúsculas são tão fáceis de adivinhar quanto as letras minúsculas"
 
 msgid "Allow equals"
-msgstr "Permitir igualdades"
+msgstr "Allow equals"
 
 msgid "Already have an account?"
-msgstr "Já possui uma conta?"
+msgstr "Já tem uma conta?"
 
 msgid "Apply now as a professional investor"
 msgstr "Inscreva-se agora como um investidor profissional"
@@ -95,21 +95,24 @@ msgid "Asian Up"
 msgstr "Asian Up"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Contratos Asian serão reembolsados ao preço de compra se o contrato não terminar dentro de 5 minutos."
+msgstr "Os contratos \"Asian\" serão reembolsados ao preço de compra se o contrato não terminar dentro de 5 minutos."
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr "As opções Asian são estabelecidas por meio da comparação entre o <strong>último tique-taque</strong> e o valor (ponto) médio durante o período."
+msgstr "As opções \"Asian\" são liquidadas através da comparação do <strong>último tick</strong> com a média à vista durante o período."
 
 msgid "Asians"
 msgstr "Asians"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "Na hora de redefinição, se o preço estiver na direção oposta à sua previsão, a barreira é redefinida para esse preço."
+msgstr "No tempo de reinício, se o preço estiver na direção oposta à sua previsão, a barreira é reiniciada nesse preço."
 
 msgid "Audit"
 msgstr "Auditoria"
 
 msgid "Audit Page"
+msgstr "Página de auditoria"
+
+msgid "Audit page"
 msgstr "Página de auditoria"
 
 msgid "Aug"
@@ -122,16 +125,16 @@ msgid "Australian Dollar"
 msgstr "Dólar australiano"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr "Autentique a sua conta já para tirar o máximo proveito de todas as métodos de pagamento disponíveis."
+msgstr "Faça a autenticação da sua conta agora para usufruir ao máximo de todos os métodos de pagamento disponíveis."
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr "Negociação automatizada na ponta dos dedos. Não é necessário saber programação."
+msgstr "Negociação automatizada ao seu alcance. Não é necessário ter conhecimentos de programação."
 
 msgid "Average"
 msgstr "Média"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr "Evite datas e anos associados a você"
+msgstr "Evite utilizar datas e anos associados a si"
 
 msgid "Avoid recent years"
 msgstr "Evite os últimos anos"
@@ -143,22 +146,22 @@ msgid "Avoid sequences"
 msgstr "Evite sequências"
 
 msgid "Avoid years that are associated with you"
-msgstr "Evite anos que estão associados a você"
+msgstr "Evite anos associados a si"
 
 msgid "Barrier"
 msgstr "Barreira"
 
 msgid "Barrier change"
-msgstr "Alteração de barreira"
+msgstr "Alteração da barreira"
 
 msgid "Barrier offset"
-msgstr "Compensação de Barreira"
+msgstr "Offset da barreira"
 
 msgid "Binance USD"
 msgstr "Binance USD"
 
 msgid "Binary Coin"
-msgstr "Moeda Binary"
+msgstr "Binary Coin"
 
 msgid "Bitcoin"
 msgstr "Bitcoin"
@@ -179,34 +182,34 @@ msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier ti
 msgstr "Ao comprar o contrato %1 \"High-Low\"%2, vai ganhar o \"multiplier\" vezes a diferença entre %1\"high\"%2 e %1\"low\"%2 no decorrer da duração do contrato."
 
 msgid "Call Spread"
-msgstr "Spread de compra"
+msgstr "Call Spread"
 
 msgid "Call Spread/Put Spread"
-msgstr "Spread de compra/venda"
+msgstr "Call Spread/Put Spread"
 
 msgid "Capitalization doesn't help very much"
-msgstr "Letras maiúsculas não ajudam muito"
+msgstr "A utilização de letras maiúsculas não ajuda"
 
 msgid "Cashier"
 msgstr "Caixa"
 
 msgid "Cashier disabled"
-msgstr "Caixa desabilitado"
+msgstr "Caixa desativada"
 
 msgid "Change API Endpoint"
-msgstr "Alterar ponto de extremidade da API"
+msgstr "Alterar o Endpoint da API"
 
 msgid "Chart"
 msgstr "Gráfico"
 
 msgid "Chart is not available for this underlying."
-msgstr "Não há nenhum gráfico disponível para este ativo subjacente."
+msgstr "Não existe nenhum gráfico disponível para este ativo subjacente."
 
 msgid "Charting for this underlying is delayed"
-msgstr "Os gráficos para esta base estão com atraso"
+msgstr "O gráfico para este ativo subjacente está atrasado"
 
 msgid "Check your connection."
-msgstr "Verifique sua conexão."
+msgstr "Verifique a sua ligação."
 
 msgid "Christmas Day"
 msgstr "Dia de Natal"
@@ -215,19 +218,19 @@ msgid "Click OK to proceed."
 msgstr "Clique em OK para avançar."
 
 msgid "Click here to open a Financial Account"
-msgstr "Clique aqui para abrir uma conta financeira"
+msgstr "Clique aqui para abrir uma Conta Financeira"
 
 msgid "Click here to open a Gaming account"
-msgstr "Clique aqui para abrir uma conta de Jogos"
+msgstr "Clique aqui para abrir uma Conta Demo"
 
 msgid "Click here to open a Real Account"
-msgstr "Clique aqui para abrir uma conta real"
+msgstr "Clique aqui para abrir uma Conta Real"
 
 msgid "Close"
 msgstr "Fechar"
 
 msgid "Close time"
-msgstr "Hora de fechamento"
+msgstr "Hora de fecho"
 
 msgid "Close-Low"
 msgstr "Close-Low"
@@ -239,31 +242,34 @@ msgid "Closes early (at 21:00)"
 msgstr "Fecha cedo (às 21:00)"
 
 msgid "Common names and surnames are easy to guess"
-msgstr "Nomes e sobrenomes comuns são fáceis de adivinhar"
+msgstr "Os nomes e apelidos comuns são fáceis de adivinhar"
 
 msgid "Complete details"
-msgstr "Detalhes completos"
+msgstr "Dados completos"
 
 msgid "Confirm changes"
-msgstr "Confirmar mudanças"
+msgstr "Confirmar alterações"
 
 msgid "Connecting to server"
-msgstr "Conectando ao servidor"
+msgstr "A ligar ao servidor"
 
 msgid "Continue trading"
-msgstr "Continue a negociar"
+msgstr "Continuar a negociar"
 
 msgid "Contract Confirmation"
-msgstr "Confirmação de Contrato"
+msgstr "Confirmação do contrato"
+
+msgid "Contract Details"
+msgstr "Dados do contrato"
 
 msgid "Contract details"
-msgstr "Detalhes do contrato"
+msgstr "Dados do contrato"
 
 msgid "Contract ends"
-msgstr "Contrato termina"
+msgstr "Contrato termina a"
 
 msgid "Contract has not started yet"
-msgstr "O contrato ainda não foi iniciado"
+msgstr "O contrato ainda não entrou em vigor"
 
 msgid "Contract information"
 msgstr "Informação do contrato"
@@ -275,16 +281,16 @@ msgid "Contract result"
 msgstr "Resultado do contrato"
 
 msgid "Contract starts"
-msgstr "Contrato começa"
+msgstr "Contrato começa a "
 
 msgid "Contract type"
 msgstr "Tipo de contrato"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "O contrato será vendido ao preço prevalecente do mercado no momento em que o pedido for recebido pelos nossos servidores. Esse preço pode ser diferente do preço indicado."
+msgstr "O contrato será vendido ao preço atual do mercado no momento em que o pedido for recebido pelos nossos servidores. Este preço pode divergir do preço indicado."
 
 msgid "Contracts bought"
-msgstr "Contratos adquiridos"
+msgstr "Contratos comprados"
 
 msgid "Contracts sold"
 msgstr "Contratos vendidos"
@@ -305,10 +311,10 @@ msgid "Current time:"
 msgstr "Hora atual:"
 
 msgid "Dates are often easy to guess"
-msgstr "Datas costumam ser fáceis de adivinhar"
+msgstr "As datas geralmente são fáceis de adivinhar"
 
 msgid "Deal cancel. fee"
-msgstr "Taxa cancelam. da negociação"
+msgstr "Taxa de \"Deal cancellation\""
 
 msgid "Dec"
 msgstr "Dez"
@@ -332,10 +338,10 @@ msgid "Demo account"
 msgstr "Conta Demo"
 
 msgid "Deposit"
-msgstr "Depositar"
+msgstr "Depósitos"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Depósitos e retiradas foram desativados na sua conta. Confira o seu e-mail para mais detalhes."
+msgstr "Os depósitos e levantamentos foram desativados na sua conta. Por favor, verifique o seu e-mail para mais informações."
 
 msgid "Deriv "
 msgstr "Deriv "
@@ -347,7 +353,7 @@ msgid "Deriv Apps accounts"
 msgstr "Contas Deriv Apps"
 
 msgid "Details"
-msgstr "Detalhes"
+msgstr "Dados"
 
 msgid "Digit"
 msgstr "Digit"
@@ -371,10 +377,13 @@ msgid "Digit Under"
 msgstr "Digit Under"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Os contratos Digit serão reembolsados ao preço de compra se o contrato não terminar dentro de 5 minutos."
+msgstr "Os contratos \"Digit\" serão reembolsados ao preço de compra se o contrato não terminar dentro de 5 minutos."
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Pretender adicionar fundos para mais %1? Caso contrário, pode fazê-lo mais tarde na página %2Caixa%3."
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -386,13 +395,13 @@ msgid "EU Deriv account"
 msgstr "Conta UE da Deriv"
 
 msgid "End Time"
-msgstr "Hora final"
+msgstr "Hora de fim"
 
 msgid "End time"
-msgstr "Hora final"
+msgstr "Hora de fim"
 
 msgid "Endpoint"
-msgstr "Ponto de extremidade"
+msgstr "Endpoint"
 
 msgid "Ends Between"
 msgstr "Ends Between"
@@ -401,22 +410,22 @@ msgid "Ends Between/Ends Outside"
 msgstr "Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Os contratos Ends Between/Ends Outside serão reembolsados ao preço de compra caso existam menos de 2 tique-taques entre a hora de início e a hora de término."
+msgstr "Os contratos \"Ends Between/Ends Outside\" serão reembolsados ao preço de compra caso existam menos de 2 ticks entre a hora de início e a hora de fim."
 
 msgid "Ends Outside"
 msgstr "Ends Outside"
 
 msgid "Entry Spot"
-msgstr "Preço de entrada"
+msgstr "Preço de abertura"
 
 msgid "Entry spot"
-msgstr "Preço de entrada"
+msgstr "Preço de abertura"
 
 msgid "Equals"
-msgstr "Igual"
+msgstr "Equals"
 
 msgid "Ether Classic"
-msgstr "Ethereum Classic"
+msgstr "Ether Classic"
 
 msgid "Ethereum"
 msgstr "Ethereum"
@@ -428,7 +437,7 @@ msgid "Even/Odd"
 msgstr "Even/Odd"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Os contratos Even/Odd serão reembolsados ao preço de compra se o contrato não terminar dentro de 5 minutos."
+msgstr "Os contratos \"Even/Odd\" serão reembolsados ao preço de compra se não terminarem dentro de 5 minutos."
 
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "O tempo de exclusão não pode ser superior a 5 anos."
@@ -440,16 +449,16 @@ msgid "Excluded from the website until"
 msgstr "Excluído deste site até"
 
 msgid "Exit Spot"
-msgstr "Preço de Saída"
+msgstr "Preço de fecho"
 
 msgid "Exit spot"
-msgstr "Preço de saída"
+msgstr "Preço de fecho"
 
 msgid "Exit spot time"
-msgstr "Hora do preço de saída"
+msgstr "Hora do preço de fecho"
 
 msgid "Exit time"
-msgstr "Hora Final"
+msgstr "Hora de fecho"
 
 msgid "Explanation"
 msgstr "Explicação"
@@ -458,7 +467,7 @@ msgid "Fall"
 msgstr "Fall"
 
 msgid "Fall or equal"
-msgstr "Desce ou igual"
+msgstr "\"Fall\" ou \"equal\""
 
 msgid "Feb"
 msgstr "Fev"
@@ -488,19 +497,19 @@ msgid "Friday"
 msgstr "Sexta-feira"
 
 msgid "Fridays"
-msgstr "Sexta-feiras"
+msgstr "Sextas-feiras"
 
 msgid "Gaming"
-msgstr "Apostas"
+msgstr "Gaming"
 
 msgid "Go To Reports"
-msgstr "Ir Para Relatórios"
+msgstr "Ir para Relatórios"
 
 msgid "Go back"
 msgstr "Voltar"
 
 msgid "Go to statement"
-msgstr "Ir para extrato"
+msgstr "Ir para o extrato"
 
 msgid "Goes Outside"
 msgstr "Goes Outside"
@@ -509,28 +518,28 @@ msgid "Guide"
 msgstr "Guia"
 
 msgid "High"
-msgstr "Alta"
+msgstr "High"
 
 msgid "High Barrier"
-msgstr "Barreira Alta"
+msgstr "Barreira superior"
 
 msgid "High Tick"
 msgstr "High Tick"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr "Os contratos High Tick/Low Tick têm uma duração estrita de cinco tique-taques."
+msgstr "Os contratos \"High Tick/Low Tick\" têm uma duração fixa de cinco ticks."
 
 msgid "High barrier"
-msgstr "Barreira alta"
+msgstr "Barreira superior"
 
 msgid "High barrier must be higher than low barrier"
-msgstr "Barreira superior deve estar acima da barreira inferior"
+msgstr "A barreira superior deve estar acima da barreira inferior"
 
 msgid "High barrier offset"
-msgstr "Variação de barreira alta"
+msgstr "Offset da barreira superior"
 
 msgid "High, Low and Close"
-msgstr "Alta, Baixa e Fechamento"
+msgstr "Superior, Inferior e Fecho"
 
 msgid "High-Close"
 msgstr "High-Close"
@@ -548,145 +557,151 @@ msgid "Higher/Lower"
 msgstr "Higher/Lower"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Os contratos Higher/Lower serão reembolsados ao preço de compra caso existam menos de 2 tique-taques entre a hora de início e a hora final."
+msgstr "Os contratos \"Higher/Lower\" serão reembolsados ao preço de compra caso existam menos de 2 ticks entre a hora de início e a hora de fim."
 
 msgid "Hour"
 msgstr "Hora"
 
 msgid "I want to reapply"
-msgstr "Desejo candidatar-me novamente"
+msgstr "Pretendo voltar a inscrever-me"
 
 msgid "IDK"
 msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr "Se o <strong>preço de saída</strong> for igual à <strong>Barreira inferior</strong> OU à <strong>Barreira superior</strong>, você não receberá o prêmio."
+msgstr "Se o <strong>preço de fecho</strong> for igual à <strong>Barreira inferior</strong> ou à <strong>Barreira superior</strong>, não recebe o pagamento."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Se o <strong>preço de fecho</strong> for igual à <strong>barreira</strong> ou à <strong>nova barreira (no caso de ocorrer um reinício)</strong>, não recebe o pagamento."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "Se o <strong>preço de saída</strong> for igual à <strong>barreira</strong> ou à <strong>nova barreira (no caso de ocorrer uma redefinição)</strong>, você não ganhará o prêmio."
+msgstr "Se o <strong>preço de fecho</strong> for igual à <strong>barreira</strong> ou à <strong>nova barreira (no caso de ocorrer um reinício)</strong>, não recebe o pagamento."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr "Se o <strong>preço de saída</strong> for igual à <strong>barreira</strong>, você não receberá o prêmio."
+msgstr "Se o <strong>preço de fecho</strong> for igual à <strong>barreira</strong>, não recebe o pagamento."
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr "Se o <strong>último tique-taque</strong> for igual à média dos tique-taques, você não receberá o prêmio"
+msgstr "Se o <strong>último tick</strong> for igual à média dos ticks, não recebe o pagamento."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "Se você selecionar “Permitir iguais”, você ganha o pagamento se a vaga de saída for maior ou igual à vaga de entrada para \"Rise\". Da mesma forma, você ganha o pagamento se a vaga de saída for menor ou igual à vaga de entrada para \"Fall\"."
+msgstr "Se selecionar \"Allow equals\", recebe o pagamento se o preço de fecho for maior ou igual ao preço de abertura para \"Rise\". Da mesma forma que ganha o pagamento se o preço de fecho for menor ou igual ao preço de abertura para \"Fall\"."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr "Se selecionar \"Asian Fall\", você ganha o pagamento se o <strong>último tique-taque</strong> for <strong>inferior</strong> à <strong>média</strong> dos tique-taques."
+msgstr "Se selecionar \"Asian Fall\", ganha o pagamento se o <strong>último tick</strong> for <strong>inferior</strong> à <strong>média</strong> dos ticks."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr "Se você selecionar \"Asian Rise\", você ganha o pagamento se o <strong>último tique-taque</strong> for <strong>superior</strong> à <strong>média</strong>dos tique-taques."
+msgstr "Se selecionar \"Asian Rise\", recebe o pagamento se o <strong>último tick</strong> for <strong>superior</strong> à <strong>média</strong>dos ticks."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr "Se você selecionar \"Differs\", você ganha o pagamento se o <strong>último dígito</strong> do último tique-taque <strong>não for o mesmo</strong> que a sua <strong>previsão</strong>."
+msgstr "Se selecionar \"Differs\", recebe o pagamento se o <strong>último dígito</strong> do último tick<strong>não for o mesmo</strong> que a sua <strong>previsão</strong>."
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Se você selecionar \"Does Not Touch\", você ganha o prêmio se o mercado nunca tocar na <strong>barreira</strong> em nenhum momento durante o <strong>período do contrato</strong>."
+msgstr "Se selecionar \"Does Not Touch\", recebe o pagamento se o mercado nunca tocar na <strong>barreira</strong> em nenhum momento durante o <strong>período do contrato</strong>."
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr "Se você selecionar \"Ends Between\", você ganha o pagamento se o <strong>preço de saída</strong> for estritamente superior à <strong>barreira baixa</strong> E estritamente inferior à <strong>barreira alta</strong>."
+msgstr "Se selecionar \"Ends Between\", recebe o pagamento se o <strong>preço de fecho</strong> for superior à <strong>barreira inferior</strong> e inferior à <strong>barreira superior</strong>."
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr "Se você selecionar \"Ends Outside\", você ganha o prêmio se o <strong>preço de saída do mercado</strong> for estritamente superior à <strong>barreira alta</strong> ou estritamente inferior à <strong>barreira baixa</strong>."
+msgstr "Se selecionar \"Ends Outside\", recebe o pagamento se o <strong>preço de fecho</strong> for superior à <strong>barreira superior</strong> ou inferior à <strong>barreira inferior</strong>."
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr "Se você selecionar \"Even\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for um <strong>número par (i.e., 2, 4, 6, 8 ou 0).</strong>"
+msgstr "Se selecionar \"Even\", recebe o pagamento se o <strong>último dígito</strong> do último tick for um <strong>número par (i.e., 2, 4, 6, 8 ou 0).</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Se você selecionar \"Fall\", você ganha o pagamento se o <strong>ponto de saída</strong> for estritamente menor do que o <strong>ponto de entrada</strong>."
+msgstr "Se selecionar \"Fall\", recebe o pagamento se o <strong>preço de fecho</strong> for menor que o <strong>preço de abertura</strong>."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "Se você selecionar \"Falls\", você ganha o prêmio se o <strong>preço de saída</strong> for estritamente inferior ao <strong>preço de entrada</strong>."
+msgstr "Se selecionar \"Falls\", recebe o pagamento se o <strong>preço de fecho</strong> for inferior ao <strong>preço de abertura</strong>."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Se você selecionar \"Goes Outside\", você ganha o prêmio se o mercado tocar na <strong>barreira alta</strong> ou na <strong>barreira baixa</strong> em qualquer momento durante o <strong>período do contrato</strong>."
+msgstr "Se selecionar \"Goes Outside\", recebe o pagamento se o mercado tocar na <strong>barreira superior</strong> ou na <strong>barreira inferior</strong> em qualquer momento durante o <strong>período do contrato</strong>."
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr "Se você selecionar \"Higher\", você ganha o prêmio se o <strong>preço de saída</strong> for estritamente superior à <strong>barreira</strong>."
+msgstr "Se selecionar \"Higher\", recebe o pagamento se o <strong>preço de fecho</strong> for superior à <strong>barreira</strong>."
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr "Se você selecionar \"Lower\", você ganha o prêmio se o <strong>preço de saída</strong> for estritamente inferior à <strong>barreira</strong>."
+msgstr "Se selecionar \"Lower\", recebe o pagamento se o <strong>preço de fecho</strong> for inferior à <strong>barreira</strong>."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr "Se você selecionar \"Matches\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for o <strong>mesmo</strong> que a sua <strong>previsão.</strong>"
+msgstr "Se selecionar \"Matches\", recebe o pagamento se o <strong>último dígito</strong> do último tick for o <strong>mesmo</strong> que a sua <strong>previsão.</strong>"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr "Se você selecionar \"Odd\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for um <strong>número ímpar (i.e., 1, 3, 5, 7 ou 9).</strong>"
+msgstr "Se selecionar \"Odd\", recebe o pagamento se o <strong>último dígito</strong> do último tick for um <strong>número ímpar (i.e., 1, 3, 5, 7 ou 9).</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr "Se você selecionar \"Over\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for <strong>superior à sua previsão.</strong>"
+msgstr "Se selecionar \"Over\", recebe o pagamento se o <strong>último dígito</strong> do último tick for <strong>superior à sua previsão.</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr "Se você selecionar \"Reset-Call\", você ganhará o prêmio se o preço de saída for estritamente superior ao preço de entrada OU ao preço no momento de redefinição."
+msgstr "Se selecionar \"Reset-Call\", recebe o pagamento se o preço de fecho for superior ao preço de abertura ou ao preço na hora de reinício."
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr "Se você selecionar \"Reset-Put\", você ganhará o prêmio se o preço de saída for estritamente inferior ao preço de entrada Ou ao preço no momento de redefinição."
+msgstr "Se selecionar \"Reset-Put\", recebe o pagamento se o preço de fecho for claramente inferior ao preço de abertura ou ao preço na hora de reinício."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Ao selecionar “Rise”, ganha o pagamento se o <strong>preço de fecho</strong> for estritamente maior do que o <strong>preço de abertura</strong>."
+msgstr "Ao selecionar “Rise”, ganha o pagamento se o <strong>preço de fecho</strong> for claramente maior do que o <strong>preço de abertura</strong>."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "Se você selecionar \"Sobe\", você ganha o prêmio se o <strong>preço de saída</strong> for estritamente superior ao <strong>preço de entrada</strong>."
+msgstr "Se selecionar \"Rises\", recebe o pagamento se o <strong>preço de fecho</strong> for claramente superior ao <strong>preço de abertura</strong>."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Se você selecionar \"Stays Between\", você ganha o prêmio se o mercado ficar entre (não toca) a <strong>barreira alta</strong> ou a <strong>barreira baixa</strong> em qualquer momento durante o <strong>período do contrato</strong>."
+msgstr "Se selecionar \"Stays Between\", recebe o pagamento se o mercado ficar entre (não tocar) a <strong>barreira superior</strong> ou a <strong>barreira inferior</strong> em qualquer momento durante o <strong>período do contrato</strong>."
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "Se você selecionar \"Touches\", você ganha o prêmio se o mercado tocar na <strong>barreira</strong> em qualquer momento durante o <strong>período do contrato</strong>."
+msgstr "Se selecionar \"Touches\", recebe o pagamento se o mercado tocar na <strong>barreira</strong> em qualquer momento durante o <strong>período do contrato</strong>."
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr "Se você selecionar \"Under\", você ganha o prêmio se o <strong>último dígito</strong> do último tique-taque for <strong>inferior à sua previsão.</strong>"
+msgstr "Se selecionar \"Under\", recebe o pagamento se o <strong>último dígito</strong> do último tick for <strong>inferior à sua previsão.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr "Se você selecionar \"falls\", você ganha o prêmio se o preço do mercado for inferior ao <strong>preço de entrada</strong>."
+msgstr "Se selecionar \"falls\", recebe o pagamento se o preço do mercado for inferior ao <strong>preço de abertura</strong>."
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr "Se você selecionar \"falls\", você ganha o prêmio se o preço do mercado for inferior ao preço de entrada."
+msgstr "Se selecionar \"falls\", recebe o pagamento se o preço do mercado for inferior ao preço de abertura."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr "Se você selecionar \"sobe\", você ganha o prêmio se o preço do mercado for superior ao <strong>preço de entrada</strong>."
+msgstr "Se selecionar \"rises\", recebe o pagamento se o preço do mercado for superior ao <strong>preço de abertura</strong>."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr "Se você selecionar \"sobe\", você ganha o prêmio se o preço do mercado for superior ao preço de entrada."
+msgstr "Se selecionar \"rises\", recebe o pagamento se o preço do mercado for superior ao preço de abertura."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr "Se você selecionar %1\"High Tick\"%2, você ganhará o prêmio se o tique-taque selecionado for o %1mais alto entre os seguintes cinco tique-taques%2."
+msgstr "Se selecionar %1\"High Tick\"%2, recebe o pagamento se o tick selecionado for o %1mais alto entre os seguintes cinco ticks%2."
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr "Se você selecionar %1\"Low Tick\"%2, você ganhará o prêmio se o tique-taque selecionado for o %1mais baixo entre os seguintes cinco tique-taques%2."
+msgstr "Se selecionar %1\"Low Tick\"%2, recebe o pagamento se o tick selecionado for o %1mais baixo entre os seguintes cinco ticks%2."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "Se você selecionar %1\"Only Downs\"%2, você ganhará o pagamento se os ticks consecutivos caírem sucessivamente após o %1Preço de entrada%2.%3Não haverá ganho se qualquer tick subir ou for igual a qualquer um dos ticks anteriores."
+msgstr "Se selecionar %1\"Only Downs\"%2, recebe o pagamento se os ticks consecutivos caírem sucessivamente após o %1preço de abertura%2.%3Não haverá pagamento se qualquer tick subir ou for igual a qualquer um dos ticks anteriores."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "Se você selecionar %1\"Only Ups\"%2, você ganhará o pagamento se os ticks consecutivos aumentarem sucessivamente após o %1Preço de Entrada% 2.%3Não haverá ganho se qualquer tick cair ou for igual a qualquer um dos ticks anteriores."
+msgstr "Se selecionar %1\"Only Ups\"%2, recebe o pagamento se os ticks consecutivos aumentarem sucessivamente após o %1preço de abertura% 2.%3Não haverá pagamento se qualquer tick cair ou for igual a qualquer um dos ticks anteriores."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr "Se você selecionar uma <strong>hora de início</strong> no futuro, a <strong>hora de início</strong> do contrato será a selecionada e o <strong>preço de entrada</strong> é o preço em vigor naquele momento."
+msgstr "Se selecionar uma <strong>hora de início</strong> no futuro, a <strong>hora de início</strong> do contrato será a selecionada e o <strong>preço de abertura</strong> é o preço em vigor naquele momento."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "Se você selecionar uma <strong>hora de início</strong> como \"Agora\", a <strong>hora de término</strong> do contrato é o número de minutos/horas selecionado após a <strong>hora de início</strong> (se inferior a um dia de duração), ou no final do dia de negociação (se tiver uma duração de um dia, ou superior)."
+msgstr "Se selecionar uma <strong>hora de início</strong> como \"Agora\", a <strong>hora de fim</strong> do contrato é o número de minutos/horas selecionado após a <strong>hora de início</strong> (se inferior a um dia de duração), ou no final do dia de negociação (se tiver uma duração de um dia, ou superior)."
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr "Se você selecionar uma <strong>hora de término</strong> específica, a <strong>hora de término</strong> do contrato é a hora selecionada."
+msgstr "Se selecionar uma <strong>hora de fim</strong> específica, a <strong>hora de fim</strong> do contrato é a hora selecionada."
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr "Na UE, as opções binárias financeiras apenas estão disponíveis a investidores profissionais."
+msgstr "Na União Europeia, as opções binárias financeiras estão disponíveis apenas para investidores profissionais."
 
 msgid "In/Out"
 msgstr "In/Out"
 
 msgid "Indicates required field"
-msgstr "Indica campo obrigatórios"
+msgstr "Indica os campos obrigatórios"
 
 msgid "Indicative"
 msgstr "Indicativo"
 
+msgid "Indicative barrier"
+msgstr "Barreira indicativa"
+
 msgid "Invalid app id"
-msgstr "Id de aplicativo inválida"
+msgstr "ID da aplicação inválido"
 
 msgid "Invalid email address."
 msgstr "Endereço de e-mail inválido."
@@ -716,7 +731,7 @@ msgid "June"
 msgstr "Junho"
 
 msgid "Language settings"
-msgstr "Configurações de Idioma"
+msgstr "Definições de idioma"
 
 msgid "Last Digit Prediction"
 msgstr "Previsão do último dígito"
@@ -725,34 +740,34 @@ msgid "Last Digit Stats"
 msgstr "Estatísticas do último dígito"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr "Estatísticas dos últimos dígitos dos últimos %1 tique-taques de %2"
+msgstr "Estatísticas dos últimos dígitos dos últimos %1 ticks de %2"
 
 msgid "Litecoin"
 msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr "Chat ao vivo"
+msgstr "Live chat"
 
 msgid "Log in"
-msgstr "Conectar-se"
+msgstr "Iniciar sessão"
 
 msgid "Log in here"
-msgstr "Conectar-se aqui"
+msgstr "Inicie sessão aqui"
 
 msgid "Log out"
-msgstr "Sair"
+msgstr "Terminar sessão"
 
 msgid "Login ID"
-msgstr "ID de Login"
+msgstr "ID de início de sessão"
 
 msgid "Login at:"
-msgstr "Login em:"
+msgstr "Inicio de sessão:"
 
 msgid "Lookbacks"
 msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr "Procura contas de CFDs? Vá para o Trader's hub"
+msgstr "Procura contas de CFDs? Aceda ao Trader's hub"
 
 msgid "Looking for CFDs? Go to Trader's hub"
 msgstr "Procura CFDs? Aceda ao Trader's Hub"
@@ -761,19 +776,19 @@ msgid "Loss"
 msgstr "Perda"
 
 msgid "Low"
-msgstr "Baixa"
+msgstr "Low"
 
 msgid "Low Barrier"
-msgstr "Barreira Baixa"
+msgstr "Barreira Inferior"
 
 msgid "Low Tick"
 msgstr "Low Tick"
 
 msgid "Low barrier"
-msgstr "Barreira Baixa"
+msgstr "Barreira Inferior"
 
 msgid "Low barrier offset"
-msgstr "Variação de barreira baixa"
+msgstr "Offset da barreira inferior"
 
 msgid "Lower"
 msgstr "Lower"
@@ -782,10 +797,10 @@ msgid "MT5"
 msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
-msgstr "Retirada do MT5 desativada"
+msgstr "A opção de levantamento na MT5 encontra-se desativada"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Retiradas da MT5 foram desativadas na sua conta. Confira o seu e-mail para mais detalhes."
+msgstr "Os levantamentos da MT5 foram desativados na sua conta. Por favor, verifique o seu e-mail para mais detalhes."
 
 msgid "Manage accounts"
 msgstr "Gerir contas"
@@ -799,6 +814,9 @@ msgstr "Mar"
 msgid "March"
 msgstr "Março"
 
+msgid "Market"
+msgstr "Mercado"
+
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
 
@@ -806,7 +824,7 @@ msgid "Maximum multiplier of 1000."
 msgstr "\"Multiplier\" máximo de 1000."
 
 msgid "Maximum payout"
-msgstr "Prêmio máximo"
+msgstr "Pagamento máximo"
 
 msgid "Maximum:"
 msgstr "Máximo:"
@@ -818,7 +836,7 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Minimum of %1 characters required."
-msgstr "Um mínimo de %1 caracteres é necessário."
+msgstr "É requerido um mínimo de %1 caracteres."
 
 msgid "Minimum:"
 msgstr "Mínimo:"
@@ -833,10 +851,10 @@ msgid "Monday"
 msgstr "Segunda-feira"
 
 msgid "More information can be found in an email sent to you."
-msgstr "Mais informações podem ser encontradas em um email enviado para você."
+msgstr "Encontrará mais informações no e-mail que lhe enviámos."
 
 msgid "Multi-Collateral"
-msgstr "Multi-Collateral"
+msgstr "Multi-Collateral (Múltiplos Colaterais)"
 
 msgid "Multiplier"
 msgstr "Multiplier"
@@ -851,13 +869,13 @@ msgid "Multipliers"
 msgstr "Multipliers"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr "Nomes e sobrenomes sozinhos são fáceis de adivinhar"
+msgstr "Nomes e sobrenomes por si só são fáceis de adivinhar"
 
 msgid "Net profit"
 msgstr "Lucro líquido"
 
 msgid "Network status"
-msgstr "Status da rede"
+msgstr "Estado da rede"
 
 msgid "New Year's Day"
 msgstr "Dia de Ano Novo"
@@ -866,22 +884,22 @@ msgid "Next"
 msgstr "Próximo"
 
 msgid "No currency assigned"
-msgstr "Nenhuma moeda selecionada"
+msgstr "Nenhuma moeda atribuída"
 
 msgid "No currency selected"
 msgstr "Nenhuma moeda selecionada"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr "Não há necessidade de símbolos, dígitos ou letras maiúsculas"
+msgstr "Não são necessários símbolos, dígitos ou letras maiúsculas"
 
 msgid "No notifications"
-msgstr "Nenhum notificação"
+msgstr "Não tem notificações"
 
 msgid "Non-EU Deriv "
-msgstr "Deriv fora da UE "
+msgstr "Deriv não sujeita à regulamentação da UE "
 
 msgid "Not"
-msgstr "Não"
+msgstr "Not"
 
 msgid "Note"
 msgstr "Nota"
@@ -899,10 +917,10 @@ msgid "Now"
 msgstr "Agora"
 
 msgid "Number of ticks:"
-msgstr "Número de tique-taques:"
+msgstr "Número de ticks:"
 
 msgid "OAuth App ID"
-msgstr "ID de aplicativo OAuth"
+msgstr "ID da aplicação OAuth"
 
 msgid "Oct"
 msgstr "Out"
@@ -926,40 +944,40 @@ msgid "Only Ups"
 msgstr "Only Ups"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr "Apenas letras, números, espaços e o hífen são permitidos."
+msgstr "Só são permitidas letras, números, espaços e hífenes."
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr "Apenas são permitidos números, letras, espaços e estes caracteres especiais: %1"
+msgstr "Só são permitidos números, espaços e os seguintes caracteres especiais: %1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr "Apenas letras, números, espaços, hífenes, pontos e apóstrofes são permitidos."
+msgstr "Só são permitidas letras, números, espaços, hífenes, pontos finais e apóstrofos."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr "Apenas letras, espaços, pontos e apóstrofes são permitidos."
+msgstr "Só são permitidas letras, espaços, pontos finais e apóstrofes."
 
 msgid "Oops... Page Not Available"
-msgstr "Ops... Página não disponível"
+msgstr "Ups... A página não está disponível"
 
 msgid "Open a Financial Account"
-msgstr "Abrir uma conta financeira"
+msgstr "Abrir uma Conta Financeira"
 
 msgid "Open a Real Account"
-msgstr "Abrir uma conta de dinheiro real"
+msgstr "Abrir uma Conta Real"
 
 msgid "Open a free account"
-msgstr "Abra uma conta gratuita"
+msgstr "Abrir uma Conta Gratuita"
 
 msgid "Open positions"
-msgstr "Vagas em aberto"
+msgstr "Posições abertas"
 
 msgid "Options & Multipliers"
-msgstr "Options e Multipliers"
+msgstr "Opções e Multipliers"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr "A negociação de opções binárias pode se tornar num verdadeiro vício, tal como qualquer atividade levada ao extremo. Para evitar os perigos desse vício, nós fornecemos um balanço da realidade que lhe mostra um resumo das suas negociações e contas regularmente."
+msgstr "A negociação de opções pode tornar-se viciante, tal como qualquer outra atividade levada ao extremo. Para evitar o risco desse vício, oferecemos um \"reality-check\" que lhe proporciona um resumo regular das suas negociações e contas."
 
 msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
-msgstr "Nossa clássica ferramenta de \"drag-and-drop\" para a criação de bots, apresentando pop-up de gráficos de negociação, para usuários avançados."
+msgstr "A nossa ferramenta clássica de \"arrastar e soltar\" para criar bots de negociação inclui gráficos de negociação pop-up para utilizadores avançados."
 
 msgid "Over/Under"
 msgstr "Over/Under"
@@ -971,61 +989,61 @@ msgid "PM"
 msgstr "PM"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr "A senha deve conter letras maiúsculas e minúsculas com números."
+msgstr "A palavra-passe deve conter letras maiúsculas e minúsculas do alfabeto inglês e números."
 
 msgid "Paxos Standard"
 msgstr "Paxos Standard"
 
 msgid "Pay-out"
-msgstr "Prêmio"
+msgstr "Reembolso"
 
 msgid "Payout"
-msgstr "Prêmio"
+msgstr "Reembolso"
 
 msgid "Payout range"
-msgstr "Intervalo do pagamento de prêmios"
+msgstr "Intervalo do reembolso"
 
 msgid "Percentage"
-msgstr "Porcentagem"
+msgstr "Percentage"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr "Por favor %1complete o perfil de conta%2 para aumentar os seus limites de retirada e negociação."
+msgstr "Por favor, %1preencha os dados do seu perfil de conta%2 para aumentar os seus limites de levantamento e de negociação."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr "%1Conecte-se%2 ou %3inscreva-se%4 para ver esta página."
+msgstr "Por favor, %1loinicie sessão%2 ou %3sregiste-se%4 para ver esta página."
 
 msgid "Please accept the terms and conditions."
-msgstr "Por favor aceite os termos e condições."
+msgstr "Por favor, aceite os termos e condições."
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr "Por favor, preencha o formulário de %1Conta Real%2 para verificar a sua idade, conforme exigido pela Comissão %3UK Gambling%4 (UKGC)."
+msgstr "Por favor, preencha o %1formulário de Conta Real%2 para validar a sua idade, conforme exigido pela %3UK Gambling%4 Commission (UKGC)."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "Por favor complete o %1formulário de avaliação financeira%2 para aumentar os seus limites de retirada e negociação."
+msgstr "Por favor, preencha o %1formulário de avaliação financeira%2 para aumentar os seus limites de levantamento e de negociação."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr "Confirme que você não é uma pessoa politicamente exposta."
+msgstr "Por favor, confirme que não é uma pessoa politicamente exposta."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "Certifique-se de que tenha o aplicativo Telegram instalado no seu dispositivo."
+msgstr "Por favor, certifique-se de que tem a aplicação Telegram instalada no seu dispositivo."
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr "Digite um número de telefone válido (por exemplo, +5511991234567)."
+msgstr "Por favor, introduza um número de telefone válido (por exemplo, +15417541234)."
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr "Por favor, reaplique quando os critérios exigidos forem cumpridos."
+msgstr "Por favor, volte a inscrever-se quando os critérios exigidos tiverem sido cumpridos."
 
 msgid "Please reload the page"
-msgstr "Recarregue a página"
+msgstr "Por favor, atualize a página"
 
 msgid "Please select"
-msgstr "Selecione"
+msgstr "Por favor, selecione"
 
 msgid "Please select a valid time."
-msgstr "Selecione uma hora válida."
+msgstr "Por favor, selecione uma hora válida."
 
 msgid "Please select the checkbox."
-msgstr "Selecione a caixa de seleção"
+msgstr "Por favor, selecione a checkbox."
 
 msgid "Please set the currency of your account."
 msgstr "Defina a moeda da sua conta."
@@ -1235,7 +1253,7 @@ msgid "Select your trade type"
 msgstr "Selecione o tipo de negociação"
 
 msgid "Selected tick"
-msgstr "Tique-taque selecionado"
+msgstr "tick selecionado"
 
 msgid "Self-exclusion"
 msgstr "Auto-exclusão"
@@ -1327,6 +1345,9 @@ msgstr "Hora do preço (GMT)"
 msgid "Stake"
 msgstr "Entrada"
 
+msgid "Start Time"
+msgstr "Hora de início"
+
 msgid "Start time"
 msgstr "Hora de início"
 
@@ -1340,7 +1361,7 @@ msgid "Stays Between/Goes Outside"
 msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Os contratos Stays Between/Goes Outside serão reembolsados ao preço de compra caso existam menos de 2 tique-taques entre a hora de início e a hora de término."
+msgstr "Os contratos Stays Between/Goes Outside serão reembolsados ao preço de compra caso existam menos de 2 ticks entre a hora de início e a hora de término."
 
 msgid "Step"
 msgstr "Etapa"
@@ -1382,16 +1403,16 @@ msgid "Thank you, we'll get back to you within 24 hours"
 msgstr "Obrigado, retornaremos dentro de 24 horas"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "O %1fechamento%2 é o último tique-taque em ou antes da %1hora de término%2. Caso você tenha selecionado uma \"%1hora de término%2 específica, a %1hora de término%2 é a hora selecionada."
+msgstr "O %1fechamento%2 é o último tick em ou antes da %1hora de término%2. Caso você tenha selecionado uma \"%1hora de término%2 específica, a %1hora de término%2 é a hora selecionada."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr "O %1período do contrato%2 é o período entre o %1primeiro tique-taque%2 (depois da hora de início) e a \"%1hora de término%2."
+msgstr "O %1período do contrato%2 é o período entre o %1primeiro tick%2 (depois da hora de início) e a \"%1hora de término%2."
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
 msgstr "A %1hora de término%2 é o número de minutos/horas selecionado depois da %1hora de início%2."
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr "O %1preço de saída%2 é o último tique-taque quando o contrato termina. O contrato termina quando todos os tique-taques sobem ou descem sucessivamente, ou quando um único tique-taque quebra o padrão previsto."
+msgstr "O %1preço de fecho%2 é o último tick quando o contrato termina. O contrato termina quando todos os ticks sobem ou descem sucessivamente, ou quando um único tick quebra o padrão previsto."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
 msgstr "A %1alta%2 é o ponto mais alto alcançado pelo mercado durante o período do contrato."
@@ -1403,7 +1424,7 @@ msgid "The %1start time%2 begins when the contract is processed by our servers."
 msgstr "A %1hora de início%2 começa quando o contrato é processado pelos nossos servidores."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr "A %1hora de início%2 é quando o contrato foi processado por nossos servidores e o %1preço de entrada%2 é o %1próximo tique-taque%2 disponível."
+msgstr "A %1hora de início%2 é quando o contrato foi processado por nossos servidores e o %1preço de abertura%2 é o %1próximo tick%2 disponível."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
 msgstr "O <strong>período do contrato</strong> é o período entre o <strong>movimento mínimo seguinte</strong> após a <strong>hora de início</strong> e a <strong>hora de fim</strong> do contrato."
@@ -1415,13 +1436,13 @@ msgid "The <strong>end time</strong> is the selected number of minutes/hours aft
 msgstr "A <strong>hora de término</strong> é o número de minutos/horas selecionado depois da <strong>hora de início</strong>."
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr "O <strong>preço de entrada</strong> é o primeiro tique-taque depois do contrato ser processado pelos nossos servidores."
+msgstr "O <strong>preço de abertura</strong> é o primeiro tick depois do contrato ser processado pelos nossos servidores."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr "O <strong>preço de saída</strong> é o tique-taque mais recente na ou antes da <strong>hora final</strong>."
+msgstr "O <strong>preço de fecho</strong> é o tick mais recente na ou antes da <strong>hora final</strong>."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr "A <strong>hora de início</strong> é quando o contrato é processado pelos nossos servidores e o <strong>preço de entrada</strong> é o <strong>próximo tique-taque</strong> a seguir."
+msgstr "A <strong>hora de início</strong> é quando o contrato é processado pelos nossos servidores e o <strong>preço de abertura</strong> é o <strong>próximo tick</strong> a seguir."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
 msgstr "A <strong>hora de início</strong> é quando o contrato é processado pelos nossos servidores."
@@ -1430,13 +1451,13 @@ msgid "The Average"
 msgstr "A Média"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr "A média é a média dos tique-taques, incluindo o primeiro e o último tique-taque."
+msgstr "A média é a média dos ticks, incluindo o primeiro e o último tick."
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr "O contrato não termina em 5 minutos (para contratos de duração de tique-taque)"
+msgstr "O contrato não termina em 5 minutos (para contratos de duração de tick)"
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr "O preço de entrada é o primeiro tique-taque quando o contrato é processado pelos nossos servidores."
+msgstr "O preço de abertura é o primeiro tick quando o contrato é processado pelos nossos servidores."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
 msgstr "A página requisitada não pode ser encontrada. Ela não existe mais ou o endereço está incorreto. Por favor verifique se há algum erro."
@@ -1451,7 +1472,7 @@ msgid "The two passwords that you entered do not match."
 msgstr "As palavras-chave que introduziu não coincidem."
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr "Existem menos de 2 tique-taques entre os horários de início e término"
+msgstr "Existem menos de 2 ticks entre os horários de início e término"
 
 msgid "There was a problem accessing the server during purchase."
 msgstr "Ocorreu um problema ao aceder ao servidor durante a aquisição."
@@ -1475,7 +1496,7 @@ msgid "This contract lost"
 msgstr "Esse contrato perdeu"
 
 msgid "This contract type only offers 5 ticks"
-msgstr "Este tipo de contrato apenas disponibiliza 5 tique-taques"
+msgstr "Este tipo de contrato apenas disponibiliza 5 ticks"
 
 msgid "This contract won"
 msgstr "Esse contrato ganhou"
@@ -1514,16 +1535,16 @@ msgid "Thursday"
 msgstr "Quinta-feira"
 
 msgid "Tick"
-msgstr "Tique-taque"
+msgstr "tick"
 
 msgid "Tick Prediction"
-msgstr "Previsão de Tique-taque"
+msgstr "Previsão de tick"
 
 msgid "Ticks"
-msgstr "Tique-taques"
+msgstr "ticks"
 
 msgid "Ticks history returned an empty array."
-msgstr "O histórico de tique-taques devolveu uma série vazia."
+msgstr "O histórico de ticks devolveu uma série vazia."
 
 msgid "Time is in the wrong format."
 msgstr "A hora está no formato incorreto."
@@ -1542,6 +1563,12 @@ msgstr "Bloqueado até"
 
 msgid "Today"
 msgstr "Hoje"
+
+msgid "Top up"
+msgstr "Adicionar fundos"
+
+msgid "Top up Virtual Account?"
+msgstr "Carregar saldo na conta virtual?"
 
 msgid "Top up error"
 msgstr "Erro de carregamento de saldo"
@@ -1565,7 +1592,7 @@ msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "Os contratos Touch/No Touch serão reembolsados ao preço de compra caso existam menos de 2 tique-taques entre a hora de início e a hora final."
+msgstr "Os contratos Touch/No Touch serão reembolsados ao preço de compra caso existam menos de 2 ticks entre a hora de início e a hora final."
 
 msgid "Touches"
 msgstr "Touches"
@@ -1579,6 +1606,9 @@ msgstr "Negocie opções digitais nos mercados mundiais com SmartTrader, uma pla
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Negocie em mercados mundiais com nossa popular plataforma de fácil utilização."
 
+msgid "Trade types"
+msgstr "Tipo de negociação"
+
 msgid "Trader's hub"
 msgstr "Trader's hub"
 
@@ -1587,9 +1617,6 @@ msgstr "Negociação e depósitos desativados"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Negociações e depósitos foram desativados na sua conta. Entre em contato com o %1suporte ao cliente%2 para receber assistência."
-
-msgid "Trading is unavailable at this time."
-msgstr "As negociações estão atualmente indisponíveis."
 
 msgid "Trading statistics report"
 msgstr "Relatório de estatísticas de negociação"
@@ -1667,7 +1694,7 @@ msgid "Waiting for entry tick."
 msgstr "Aguardando tick de entrada."
 
 msgid "Waiting for exit tick."
-msgstr "Aguardando tique-taque de saída."
+msgstr "Aguardando tick de saída."
 
 msgid "We"
 msgstr "Qua"
@@ -1685,22 +1712,22 @@ msgid "When you click \"OK\" you will be excluded from trading on the site until
 msgstr "Quando você clicar em \"OK\" será excluído de poder negociar no site até a data selecionada."
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr "Ganhe o prêmio se o preço de saída também for igual ao preço de entrada."
+msgstr "Ganhe o prêmio se o preço de fecho também for igual ao preço de abertura."
 
 msgid "Winning the contract"
 msgstr "Ganhar o Contrato"
 
 msgid "Withdrawal"
-msgstr "Retirada"
+msgstr "Levantamentos"
 
 msgid "Withdrawal and trading limits"
-msgstr "Limites de retirada e negociação"
+msgstr "Limites de levantamentos e negociação"
 
 msgid "Withdrawal disabled"
-msgstr "Retirada desativada"
+msgstr "A opção de levantamento está desativada"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "Retiradas foram desativadas na sua conta. Confira o seu e-mail para mais detalhes."
+msgstr "A opção de levantamento foi desativada na sua conta. Por favor, verifique o seu e-mail para mais informações."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
 msgstr "Gostaria de verificar seu extrato primeiro? %1Verificar Extrato%2"
@@ -1820,10 +1847,10 @@ msgid "seconds"
 msgstr "segundos"
 
 msgid "tick"
-msgstr "tique-taque"
+msgstr "tick"
 
 msgid "ticks"
-msgstr "tique-taques"
+msgstr "ticks"
 
 msgid "today"
 msgstr "hoje"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,9 @@ msgid "Audit"
 msgstr "Controllo"
 
 msgid "Audit Page"
+msgstr "Pagina di controllo"
+
+msgid "Audit page"
 msgstr "Pagina di controllo"
 
 msgid "Aug"
@@ -256,6 +259,9 @@ msgstr "Continua il trading"
 msgid "Contract Confirmation"
 msgstr "Conferma del contratto"
 
+msgid "Contract Details"
+msgstr "Dettagli del Contratto"
+
 msgid "Contract details"
 msgstr "Dettagli del contratto"
 
@@ -376,6 +382,9 @@ msgstr "I contratti Digit verranno rimborsati al prezzo d'acquisto se il contrat
 msgid "Digits"
 msgstr "Digits"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Vuoi ricaricare per un altro %1? In caso contrario, puoi farlo anche più tardi sulla pagina hasher %2C%3."
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "Venerdì"
 
 msgid "Gaming"
-msgstr "Gioco online"
+msgstr "Gaming"
 
 msgid "Go To Reports"
 msgstr "Vai Ai Report"
@@ -561,6 +570,9 @@ msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Se <strong>il prezzo di uscita</strong> corrisponde alla <strong>barriera inferiore</strong> o alla <strong>barriera superiore</strong>, non ottieni il payout."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Se il punto di uscita <strong></strong> è uguale alla barriera <strong></strong> o alla nuova barriera <strong>(se si verifica un ripristino)</strong>, non vinci la vincita."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Se il <strong>prezzo di uscita</strong> coincide con la <strong>barriera</strong> o la <stronm g>nuova barriera (in caso di reset)</stronmg>, non ottieni il payout."
@@ -685,6 +697,9 @@ msgstr "Indica un campo obbligatorio"
 msgid "Indicative"
 msgstr "Indicativo"
 
+msgid "Indicative barrier"
+msgstr "Barriera indicativa"
+
 msgid "Invalid app id"
 msgstr "Id dell'app non valido"
 
@@ -798,6 +813,9 @@ msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
+
+msgid "Market"
+msgstr "Mercato"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Orario di spot (GMT)"
 msgid "Stake"
 msgstr "Puntata"
 
+msgid "Start Time"
+msgstr "Ora di inizio"
+
 msgid "Start time"
 msgstr "Orario d'inizio"
 
@@ -1543,6 +1564,12 @@ msgstr "Sessione sospesa fino a"
 msgid "Today"
 msgstr "Oggi"
 
+msgid "Top up"
+msgstr "Ricarica"
+
+msgid "Top up Virtual Account?"
+msgstr "Ricaricare l'account virtuale?"
+
 msgid "Top up error"
 msgstr "Errore di caricamento"
 
@@ -1579,6 +1606,9 @@ msgstr "Fai trading con le opzioni digitali sui mercati internazionali grazie a 
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Fai trading sui mercati internazionali con la nostra famosa piattaforma dal semplice utilizzo."
 
+msgid "Trade types"
+msgstr "Tipi di Trade"
+
 msgid "Trader's hub"
 msgstr "Trader's hub"
 
@@ -1587,9 +1617,6 @@ msgstr "Sono stati disattivati trading e depositi"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Le funzioni di trading e di deposito sono state disabilitate per il tuo conto. Ti preghiamo di %1contattare l'assistenza clienti%2."
-
-msgid "Trading is unavailable at this time."
-msgstr "Al momento non è possibile effettuare trading."
 
 msgid "Trading statistics report"
 msgstr "Report delle statistiche di trading"

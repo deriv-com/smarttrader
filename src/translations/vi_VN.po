@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "Kiểm toán"
 
 msgid "Audit Page"
 msgstr "Kiểm tra trang"
+
+msgid "Audit page"
+msgstr "Trang kiểm toán"
 
 msgid "Aug"
 msgstr "Tháng 8"
@@ -256,6 +259,9 @@ msgstr "Tiếp tục giao dịch"
 msgid "Contract Confirmation"
 msgstr "Xác nhận Hợp đồng"
 
+msgid "Contract Details"
+msgstr "Chi tiết Hợp đồng"
+
 msgid "Contract details"
 msgstr "Chi tiết hợp đồng"
 
@@ -376,6 +382,9 @@ msgstr "Các hợp đồng Digit sẽ được hoàn tiền tại giá mua nếu
 msgid "Digits"
 msgstr "Digits"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Bạn có muốn nạp tiền cho một %1khác không? Nếu không, bạn cũng có thể làm điều này sau trên trang %2Cashier%3."
+
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "Thứ Sáu"
 
 msgid "Gaming"
-msgstr "Đặt cược"
+msgstr "Chơi game"
 
 msgid "Go To Reports"
 msgstr "Đi tới Báo cáo"
@@ -561,6 +570,9 @@ msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Nếu <strong>điểm chốt</strong> bằng với <strong>Rào cản thấp</strong> hoặc <strong>Rào cản cao</strong>, bạn không thắng khoản thanh toán."
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Nếu điểm thoát <strong></strong> bằng rào cản <strong></strong> hoặc <strong>mới (nếu xảy ra đặt lại)</strong>, bạn sẽ không giành được khoản thanh toán."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Nếu <strong>điểm chốt</strong> tương đương với <strong>rào cản</strong> hoặc <stronm g>rào cản mới(nếu một thiết lập lại diễn ra) </stronmg>, bạn không thắng khoản thanh toán."
@@ -685,6 +697,9 @@ msgstr "Biểu thị trường bắt buộc"
 msgid "Indicative"
 msgstr "Chỉ thị"
 
+msgid "Indicative barrier"
+msgstr "Rào cản chỉ định"
+
 msgid "Invalid app id"
 msgstr "Id ứng dụng không khả dụng"
 
@@ -798,6 +813,9 @@ msgstr "Tháng Ba"
 
 msgid "March"
 msgstr "Tháng Ba"
+
+msgid "Market"
+msgstr "Thị trường"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Thời điểm làm giá (GMT)"
 msgid "Stake"
 msgstr "Vốn đầu tư"
 
+msgid "Start Time"
+msgstr "Thời gian bắt đầu"
+
 msgid "Start time"
 msgstr "Thời gian bắt đầu"
 
@@ -1543,6 +1564,12 @@ msgstr "Tạm ngưng cho đến khi"
 msgid "Today"
 msgstr "Hôm nay"
 
+msgid "Top up"
+msgstr "Nạp tiền"
+
+msgid "Top up Virtual Account?"
+msgstr "Nạp tiền tài khoản ảo?"
+
 msgid "Top up error"
 msgstr "Lỗi nạp"
 
@@ -1579,6 +1606,9 @@ msgstr "Giao dịch quyền chọn kỹ thuật số trên thị trường thế
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Giao dịch trên các thị trường toàn cầu cùng nền tảng phổ biến và thân thiện với người dùng của chúng tôi."
 
+msgid "Trade types"
+msgstr "Các loại giao dịch"
+
 msgid "Trader's hub"
 msgstr "Trung tâm của nhà giao dịch"
 
@@ -1587,9 +1617,6 @@ msgstr "Giao dịch và tiền gửi bị vô hiệu hóa"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Giao dịch và gửi tiền đã bị khóa trên tài khoản của bạn. Xin vui lòng %1liên hệ hỗ trợ khách hàng%2 để được trợ giúp."
-
-msgid "Trading is unavailable at this time."
-msgstr "Giao dịch không khả dụng tại thời điểm này."
 
 msgid "Trading statistics report"
 msgstr "Báo cáo thống kê giao dịch"
