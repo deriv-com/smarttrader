@@ -18,16 +18,7 @@ const BottomTabs = () => {
     const hasContractChange = useContractChange();
     const savedTab = sessionStorage.getItem('currentTab');
     const triggerOldTabTimer = useRef();
-
-    const renderGraph = (callback) => {
-        const timer = setTimeout(() => {
-            WebtraderChart.cleanupChart();
-            WebtraderChart.showChart();
-            callback?.();
-        }, 100);
-    
-        return () => clearTimeout(timer);
-    };
+    const [isShowGraph, setIsShowGraph] = useState(false);
 
     const handleChange = (e) => {
         setSelectedTab(e);
@@ -75,7 +66,11 @@ const BottomTabs = () => {
         }, 100);
     }, [selectedTab, savedTab]);
 
-    useEffect(() => () => clearTimeout(triggerOldTabTimer.current), []);
+    useEffect(() => () => {
+        clearTimeout(triggerOldTabTimer.current);
+        WebtraderChart.cleanupChart();
+        WebtraderChart.showChart();
+    },[]);
 
     return (
         <>
@@ -87,9 +82,19 @@ const BottomTabs = () => {
                 />
             </div>
             <div className='bottom-content-section'>
-                {selectedTab === 0 && <Graph renderGraph={renderGraph} />}
+                {selectedTab === 0 && <Graph
+                    onUnload={() => setIsShowGraph(false)}
+                    onLoad={() => setIsShowGraph(true)}
+                />}
                 {selectedTab === 1 && <Explanation />}
                 {selectedTab === 2 && hasLastDigit && <LastDigit />}
+       
+                <div id='tab_graph' className={`chart-section ${isShowGraph ? '' : 'grap-hide'}`}>
+                    <p className='error-msg' id='chart-error' />
+                    <div id='trade_live_chart'>
+                        <div id='webtrader_chart' />
+                    </div>
+                </div>
             </div>
         </>
     );
