@@ -2,14 +2,14 @@ import React from 'react';
 import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import { setDefaultParams } from '../../common/helpers';
 
-const DropdownContent = ({ options, value, onUpdate, elementId }) => {
+const DropdownContent = ({ options, value, onUpdate, element_id }) => {
     const { close } = useDropdown();
 
     const handleClick = (val) => {
-        if (elementId === 'expiry_date') {
+        if (element_id === 'expiry_date') {
             onUpdate(val);
         } else {
-            onUpdate(elementId, val, 'change');
+            onUpdate(element_id, val, 'change');
         }
     };
 
@@ -22,7 +22,7 @@ const DropdownContent = ({ options, value, onUpdate, elementId }) => {
                     selected={(item.value === value || item.text === value)}
                     onClick={() => {
                         handleClick(item.value);
-                        setDefaultParams(elementId, item.value);
+                        setDefaultParams(element_id, item.value);
                         close();
                     }}
                 />
@@ -30,7 +30,7 @@ const DropdownContent = ({ options, value, onUpdate, elementId }) => {
         </div>
     );
 };
-export const DropdownComponent = ({ label = '', options, value, onUpdate, elementId }) => (
+export const DropdownComponent = ({ label = '', options, value, onUpdate, element_id }) => (
     <CustomDropdown
         value={value}
         label={label}
@@ -40,7 +40,7 @@ export const DropdownComponent = ({ label = '', options, value, onUpdate, elemen
             options={options}
             value={value}
             onUpdate={onUpdate}
-            elementId={elementId}
+            element_id={element_id}
         />
     </CustomDropdown>
 );

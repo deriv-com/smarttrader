@@ -6,7 +6,7 @@ import dataManager from '../../common/data_manager.js';
 import { setDefaultParams, setMinMaxTime } from '../../common/helpers.js';
 import common_functions from '../../../_common/common_functions.js';
 
-const TimeContent = ({ time, onUpdate, elementId }) => {
+const TimeContent = ({ time, onUpdate, element_id }) => {
     const [startTimeData, setStartTimeData] = useState();
     const [expiryTimeData, setExpiryTimeData] = useState();
     const hasTimeChange = useTimeChange();
@@ -27,13 +27,13 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
         const timeIntervals = [];
         let startTime, endTime;
 
-        if (elementId === 'time_start') {
+        if (element_id === 'time_start') {
             const minTime = startTimeData?.minTime;
             const maxTime = startTimeData?.maxTime;
             startTime = minTime && !isNaN(minTime.hour) && !isNaN(minTime.minute) ? formatTime(minTime) : '00:00';
             endTime = maxTime && !isNaN(maxTime.hour) && !isNaN(maxTime.minute) ? formatTime(maxTime) : '23:55';
         }
-        if (elementId === 'expiry_time') {
+        if (element_id === 'expiry_time') {
             const minTime = expiryTimeData?.minTime;
             const maxTime = expiryTimeData?.maxTime;
             startTime = minTime && !isNaN(minTime.hour) && !isNaN(minTime.minute) ? formatTime(minTime) : '00:00';
@@ -61,9 +61,9 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
                     label={item}
                     selected={item === time}
                     onClick={() => {
-                        onUpdate(elementId, item, 'change');
-                        common_functions.getElementById(elementId).setAttribute('data-value', item);
-                        setDefaultParams(elementId, item);
+                        onUpdate(element_id, item, 'change');
+                        common_functions.getElementById(element_id).setAttribute('data-value', item);
+                        setDefaultParams(element_id, item);
                         close();
                     }}
                 />
@@ -74,7 +74,7 @@ const TimeContent = ({ time, onUpdate, elementId }) => {
 export const TimePickerDropdown = ({
     time,
     onUpdate,
-    elementId,
+    element_id,
 }) => {
     const handleOpen = (id) => {
         if (id === 'expiry_time') {
@@ -88,13 +88,13 @@ export const TimePickerDropdown = ({
         <CustomDropdown
             label='GMT'
             value={time}
-            onClickDropdown={() => handleOpen(elementId)}
+            onClickDropdown={() => handleOpen(element_id)}
             fullHeightOnOpen={false}
         >
             <TimeContent
                 time={time}
                 onUpdate={onUpdate}
-                elementId={elementId}
+                element_id={element_id}
             />
         </CustomDropdown>
     );

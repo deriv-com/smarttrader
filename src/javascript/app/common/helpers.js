@@ -129,13 +129,13 @@ const paramsMap = {
     'callputequal'       : PARAM_NAMES.IS_EQUAL,
 };
 
-const setDefaultParams = (elementId, value) => {
-    if (paramsMap[elementId]) {
+const setDefaultParams = (element_id, value) => {
+    if (paramsMap[element_id]) {
         const currency = Defaults.get(PARAM_NAMES.CURRENCY);
-        if (elementId === 'amount' && isCryptocurrency(currency)) {
+        if (element_id === 'amount' && isCryptocurrency(currency)) {
             Defaults.set('amount_crypto', value);
         } else {
-            Defaults.set(paramsMap[elementId], value);
+            Defaults.set(paramsMap[element_id], value);
         }
         triggerSessionChange();
     }

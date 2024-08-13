@@ -9,14 +9,14 @@ class Contracts extends React.Component {
     constructor (props) {
         super(props);
         const { contracts, contracts_tree, selected } = props;
-        const formname = selected || Defaults.get(Defaults.PARAM_NAMES.FORM_NAME);
+        const form_name = selected || Defaults.get(Defaults.PARAM_NAMES.FORM_NAME);
         this.references = {};
         this.el_contract = getElementById('contract');
-        this.el_contract.value = formname;
+        this.el_contract.value = form_name;
         this.state = {
             contracts,
             contracts_tree,
-            formname,
+            form_name,
             open: false,
         };
     }
@@ -65,16 +65,16 @@ class Contracts extends React.Component {
     saveRef = (name, node) => { this.references[name] = node; };
 
     getCurrentType = () => {
-        const { formname, contracts } = this.state;
+        const { form_name, contracts } = this.state;
         let type = '';
         this.state.contracts_tree.forEach((e) => {
             if (typeof e === 'object') {
                 e[1].forEach((subtype) => {
-                    if (subtype === formname) {
+                    if (subtype === form_name) {
                         type = e[0];
                     }
                 });
-            } else if (e === formname) {
+            } else if (e === form_name) {
                 type = e;
             }
         });
@@ -83,23 +83,23 @@ class Contracts extends React.Component {
     };
 
     getCurrentContract = () => {
-        const { formname, contracts } = this.state;
+        const { form_name, contracts } = this.state;
         const max_char = window.innerWidth <= 767 ? 10 : 15;
-        if ((contracts[formname] || '').length > max_char) {
-            return `${contracts[formname].substr(0,max_char)}...`;
+        if ((contracts[form_name] || '').length > max_char) {
+            return `${contracts[form_name].substr(0,max_char)}...`;
         }
-        return contracts[formname];
+        return contracts[form_name];
     };
 
-    onContractClick = (formname) => {
+    onContractClick = (form_name) => {
         this.closeDropDown();
-        if (formname === this.state.formname) { return; }
+        if (form_name === this.state.form_name) { return; }
         // Notify for changes on contract.
-        this.el_contract.value = formname;
+        this.el_contract.value = form_name;
         const event = new Event('change');
         this.el_contract.dispatchEvent(event);
 
-        this.setState({ formname });
+        this.setState({ form_name });
     };
 
     /* eslint-enable no-undef */
@@ -108,7 +108,7 @@ class Contracts extends React.Component {
             contracts,
             contracts_tree,
             open,
-            formname,
+            form_name,
         } = this.state;
         const is_mobile = window.innerWidth <= 767;
         return (
@@ -140,7 +140,7 @@ class Contracts extends React.Component {
                                         <div className='contract_subtypes'>
                                             {contract[1].map((subtype, i) =>
                                                 <div
-                                                    className={`sub ${subtype === formname ? 'active' : ''}`}
+                                                    className={`sub ${subtype === form_name ? 'active' : ''}`}
                                                     key={i}
                                                     onClick={this.onContractClick.bind(null, subtype)}
                                                 >
@@ -156,7 +156,7 @@ class Contracts extends React.Component {
                                     <div className='contract_type'>{contracts[contract]}</div>
                                     <div className='contract_subtypes'>
                                         <div
-                                            className={`sub ${contract === formname ? 'active' : ''}`}
+                                            className={`sub ${contract === form_name ? 'active' : ''}`}
                                             onClick={this.onContractClick.bind(null, contract)}
                                         >
                                             {contracts[contract]}

@@ -30,17 +30,17 @@ import { isCryptocurrency } from '../../../_common/base/currency_base.js';
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
 
-    const hasTradeChange = useTradeChange();
-    const hasMarketChange = useMarketChange();
-    const hasContractChange = useContractChange();
-    const hasSessionChange = useSessionChange();
+    const has_trade_change = useTradeChange();
+    const has_market_change = useMarketChange();
+    const has_contract_change = useContractChange();
+    const has_session_change = useSessionChange();
 
     useEffect(() => {
-        setTradeData((oldData) => ({
-            ...oldData,
+        setTradeData((old_data) => ({
+            ...old_data,
             ...dataManager.getAllTrades(),
         }));
-    }, [hasMarketChange, hasContractChange, hasTradeChange, hasSessionChange]);
+    }, [has_market_change, has_contract_change, has_trade_change, has_session_change]);
 
     const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiry_type = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -91,33 +91,33 @@ export const FormComponent = () => {
 
     const onExpiryDateChange = (value) => {
         const element = common_functions.getElementById('expiry_date');
-        const newDate = moment(value).format('YYYY-MM-DD');
-        if (newDate !== expiry_date) {
+        const new_date = moment(value).format('YYYY-MM-DD');
+        if (new_date !== expiry_date) {
             if (!endtime_data.show_datepicker) {
                 Array.from(element.options).map((option) => {
                     if (moment(option.text).format('YYYY-MM-DD') === value) {
                         option.setAttribute('selected', true);
-                        option.setAttribute('data-value', newDate);
+                        option.setAttribute('data-value', new_date);
                     } else {
                         option.setAttribute('selected', false);
-                        option.setAttribute('data-value', newDate);
+                        option.setAttribute('data-value', new_date);
                     }
                 });
             } else {
-                element.setAttribute('data-value', newDate);
+                element.setAttribute('data-value', new_date);
             }
             eventDispatcher(element, 'change');
         }
     };
 
-    const updateFormField = (elementId, value, eventType) => {
-        const element = common_functions.getElementById(elementId);
-        if (elementId === 'callputequal') {
+    const updateFormField = (element_id, value, event_type) => {
+        const element = common_functions.getElementById(element_id);
+        if (element_id === 'callputequal') {
             element.checked = !+is_equal;
         } else {
             element.value = value;
         }
-        eventDispatcher(element, eventType);
+        eventDispatcher(element, event_type);
     };
 
     const getMessage = (form) => {
@@ -191,7 +191,7 @@ export const FormComponent = () => {
                                             options={start_dates.options}
                                             value={findTextByValue(start_dates.options, date_start)}
                                             onUpdate={updateFormField}
-                                            elementId='date_start'
+                                            element_id='date_start'
                                         />
                                     </div>
                                     {date_start !== 'now' && (
@@ -199,7 +199,7 @@ export const FormComponent = () => {
                                             <TimePickerDropdown
                                                 time={time_start}
                                                 onUpdate={updateFormField}
-                                                elementId='time_start'
+                                                element_id='time_start'
                                             />
                                         </div>
                                     )}
@@ -213,7 +213,7 @@ export const FormComponent = () => {
                                                 options={expiry_type_options}
                                                 value={findTextByValue(expiry_type_options, expiry_type)}
                                                 onUpdate={updateFormField}
-                                                elementId='expiry_type'
+                                                element_id='expiry_type'
                                             />
                                         </div>
                                         {expiry_type === 'duration' && (
@@ -239,7 +239,7 @@ export const FormComponent = () => {
                                                         options={duration_options}
                                                         value={findTextByValue(duration_options, duration_units)}
                                                         onUpdate={updateFormField}
-                                                        elementId='duration_units'
+                                                        element_id='duration_units'
                                                     />
                                                 </div>
                                             </>
@@ -264,7 +264,7 @@ export const FormComponent = () => {
                                                                 options={endtime_data.options}
                                                                 value={formatEndDate(expiry_date)}
                                                                 onUpdate={onExpiryDateChange}
-                                                                elementId='expiry_date'
+                                                                element_id='expiry_date'
                                                             />
                                                         )}
                                                     </div>
@@ -278,7 +278,7 @@ export const FormComponent = () => {
                                                 <TimePickerDropdown
                                                     time={expiry_time}
                                                     onUpdate={updateFormField}
-                                                    elementId='expiry_time'
+                                                    element_id='expiry_time'
                                                 />
                                             </div>
                                         </div>
@@ -297,7 +297,7 @@ export const FormComponent = () => {
                                             label={localize('Last Digit Prediction')}
                                             start={0}
                                             end={9}
-                                            elementId='prediction'
+                                            element_id='prediction'
                                             onUpdate={updateFormField}
                                         />
                                     </div>
@@ -311,7 +311,7 @@ export const FormComponent = () => {
                                             label={localize('Tick Prediction')}
                                             start={1}
                                             end={5}
-                                            elementId='selected_tick'
+                                            element_id='selected_tick'
                                             onUpdate={updateFormField}
                                         />
                                     </div>
@@ -326,7 +326,7 @@ export const FormComponent = () => {
                                             options={payoutTypeOptions}
                                             value={findTextByValue(payoutTypeOptions, amount_type)}
                                             onUpdate={updateFormField}
-                                            elementId='amount_type'
+                                            element_id='amount_type'
                                         />
                                     </div>
                                     {currency_list ? (
@@ -344,7 +344,7 @@ export const FormComponent = () => {
                                                     currency_list={currency_list}
                                                     currency={currency}
                                                     onUpdate={updateFormField}
-                                                    elementId='currency'
+                                                    element_id='currency'
                                                 />
                                             </div>
                                         </>
@@ -382,7 +382,7 @@ export const FormComponent = () => {
                                                     currency_list={currency_list}
                                                     currency={currency}
                                                     onUpdate={updateFormField}
-                                                    elementId='multiplier_currency'
+                                                    element_id='multiplier_currency'
                                                 />
                                             </div>
                                         </>

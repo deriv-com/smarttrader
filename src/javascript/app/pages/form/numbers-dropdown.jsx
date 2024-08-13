@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomDropdown, DropdownItem, useDropdown } from '@deriv-com/quill-ui';
 import { setDefaultParams } from '../../common/helpers';
 
-const Content = ({ value, start, end, elementId, onUpdate }) => {
+const Content = ({ value, start, end, element_id, onUpdate }) => {
     const { close } = useDropdown();
 
     return (
@@ -13,8 +13,8 @@ const Content = ({ value, start, end, elementId, onUpdate }) => {
                     label={start + idx}
                     selected={start + idx === +value}
                     onClick={() => {
-                        onUpdate(elementId, start + idx, 'change');
-                        setDefaultParams(elementId, start + idx);
+                        onUpdate(element_id, start + idx, 'change');
+                        setDefaultParams(element_id, start + idx);
                         close();
                     }}
                 />
@@ -23,7 +23,7 @@ const Content = ({ value, start, end, elementId, onUpdate }) => {
     );
 };
 
-export const NumbersDropdown = ({ value, label, start, end, elementId, onUpdate }) => (
+export const NumbersDropdown = ({ value, label, start, end, element_id, onUpdate }) => (
     <CustomDropdown
         value={value}
         label={label}
@@ -33,7 +33,7 @@ export const NumbersDropdown = ({ value, label, start, end, elementId, onUpdate 
             value={value}
             start={start}
             end={end}
-            elementId={elementId}
+            element_id={element_id}
             onUpdate={onUpdate}
         />
     </CustomDropdown>

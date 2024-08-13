@@ -139,7 +139,7 @@ const Contract = (() => {
                 }
             }
             if (form === contract_category) {
-                if (current_obj.forward_starting_options && current_obj.start_type === 'forward' && sessionStorage.formname !== 'higherlower') {
+                if (current_obj.forward_starting_options && current_obj.start_type === 'forward' && sessionStorage.form_name !== 'higherlower') {
                     start_dates.list = current_obj.forward_starting_options;
                 } else if (current_obj.start_type === 'spot') {
                     start_dates.has_spot = 1;

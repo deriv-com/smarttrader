@@ -215,8 +215,8 @@ const Price = (() => {
             CommonFunctions.elementTextContent(h4, display_text);
 
             dataManager.setPurchase({
-                [`${position}DisplayText`] : display_text,
-                [`${position}ContractType`]: type,
+                [`${position}_display_text`] : display_text,
+                [`${position}_contract_type`]: type,
             });
            
         }
@@ -227,7 +227,7 @@ const Price = (() => {
             if (!data.display_value) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
                 dataManager.setPurchase({
-                    [`${position}AmountClassname`]: '',
+                    [`${position}_amount_classname`]: '',
                 });
             }
             CommonFunctions.elementTextContent(stake, `${localize('Stake')}: `);
@@ -236,7 +236,7 @@ const Price = (() => {
             if (!data.payout) {
                 amount.classList.remove('price_moved_up', 'price_moved_down');
                 dataManager.setPurchase({
-                    [`${position}AmountClassname`]: '',
+                    [`${position}_amount_classname`]: '',
                 });
             }
             CommonFunctions.elementTextContent(payout, `${localize('Payout')}: `);
@@ -246,22 +246,22 @@ const Price = (() => {
             CommonFunctions.elementInnerHtml(contract_multiplier, data.multiplier ? formatMoney(currentCurrency, data.multiplier, false, 0, 2) : '-');
 
             dataManager.setPurchase({
-                [`${position}Amount`]      : data.display_value ? formatMoney(currentCurrency, data.display_value, true) : '-',
-                [`${position}PayoutAmount`]: data.payout ? formatMoney(currentCurrency, data.payout, true) : '-',
-                [`${position}Multiplier`]  : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
-                currency                   : getCurrencyDisplayCode(currentCurrency),
+                [`${position}_amount`]       : data.display_value ? formatMoney(currentCurrency, data.display_value, true) : '-',
+                [`${position}_payout_amount`]: data.payout ? formatMoney(currentCurrency, data.payout, true) : '-',
+                [`${position}_multiplier`]   : data.multiplier ? formatMoney(currentCurrency, data.multiplier, true, 0, 2) : '-',
+                currency                     : getCurrencyDisplayCode(currentCurrency),
             });
 
             if (data.longcode && window.innerWidth > 500) {
                 dataManager.setPurchase({
-                    [`${position}Description`]: data.longcode,
+                    [`${position}_description`]: data.longcode,
                 });
 
                 if (description) description.setAttribute('data-balloon', data.longcode);
                 if (longcode) CommonFunctions.elementTextContent(longcode, data.longcode);
             } else {
                 dataManager.setPurchase({
-                    [`${position}Description`]: '',
+                    [`${position}_description`]: '',
                 });
 
                 if (description) description.removeAttribute('data-balloon');
@@ -271,7 +271,7 @@ const Price = (() => {
 
         const setPurchaseStatus = (enable) => {
             dataManager.setPurchase({
-                [`${position}PurchaseDisabled`]: !enable,
+                [`${position}_purchase_disabled`]: !enable,
             });
             purchase.parentNode.classList[enable ? 'remove' : 'add']('button-disabled');
         };
@@ -283,7 +283,7 @@ const Price = (() => {
             error.show();
             CommonFunctions.elementTextContent(error, details.error.message);
             dataManager.setPurchase({
-                [`${position}Comment`]: details.error.message,
+                [`${position}_comment`]: details.error.message,
             });
         } else {
             setData(proposal);
@@ -298,15 +298,15 @@ const Price = (() => {
                 const multiplier_value = formatMoney(Client.get('currency'), proposal.multiplier, false, 3, 2);
                 CommonFunctions.elementInnerHtml(comment, `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`);
                 dataManager.setPurchase({
-                    [`${position}Comment`]: `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`,
+                    [`${position}_comment`]: `${localize('Payout')}: ${getLookBackFormula(type, multiplier_value)}`,
                 });
             } else {
                 commonTrading.displayCommentPrice(comment, (currency.value || currency.getAttribute('value')), proposal.display_value, proposal.payout, position);
             }
             const old_price  = purchase.getAttribute('data-display_value');
             const old_payout = purchase.getAttribute('data-payout');
-            if (amount) displayPriceMovement(amount, old_price, proposal.display_value,`${position}AmountClassname`);
-            if (payout_amount) displayPriceMovement(payout_amount, old_payout, proposal.payout,`${position}PayoutAmountClassname`);
+            if (amount) displayPriceMovement(amount, old_price, proposal.display_value,`${position}_amount_classname`);
+            if (payout_amount) displayPriceMovement(payout_amount, old_payout, proposal.payout,`${position}_payout_amount_classname`);
             Array.from(purchase.attributes).filter(attr => {
                 if (!/^data/.test(attr.name) ||
                     /^data-balloon$/.test(attr.name) ||
@@ -366,7 +366,7 @@ const Price = (() => {
         commonTrading.showPriceOverlay();
         let types = Contract.contractType()[Contract.form()];
         if (Contract.form() === 'digits') {
-            switch (sessionStorage.getItem('formname')) {
+            switch (sessionStorage.getItem('form_name')) {
                 case 'matchdiff':
                     types = {
                         DIGITMATCH: 1,
@@ -391,7 +391,7 @@ const Price = (() => {
         }
 
         if (Contract.form() === 'lookback') {
-            switch (sessionStorage.getItem('formname')) {
+            switch (sessionStorage.getItem('form_name')) {
                 case 'lookbackhigh':
                     types = {
                         LBFLOATPUT: 1,
@@ -463,14 +463,14 @@ const Price = (() => {
             if (position_is_visible[position]) {
                 if (position === 'middle') {
                     dataManager.setPurchase({
-                        showMidPurchase: true,
+                        show_mid_purchase: true,
                     });
                 }
                 $(container).fadeIn(0);
             } else {
                 if (position === 'middle') {
                     dataManager.setPurchase({
-                        showMidPurchase: false,
+                        show_mid_purchase: false,
                     });
                 }
                 $(container).fadeOut(0);

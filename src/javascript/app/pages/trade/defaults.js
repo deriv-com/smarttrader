@@ -33,7 +33,7 @@ const Defaults = (() => {
         EXPIRY_DATE    : 'expiry_date',
         EXPIRY_TIME    : 'expiry_time',
         EXPIRY_TYPE    : 'expiry_type',
-        FORM_NAME      : 'formname',
+        FORM_NAME      : 'form_name',
         IS_EQUAL       : 'is_equal',
         MARKET         : 'market',
         MULTIPLIER     : 'multiplier',

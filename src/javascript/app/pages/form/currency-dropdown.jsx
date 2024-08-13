@@ -3,7 +3,7 @@ import { CustomDropdown, DropdownItem, DropdownTitle, useDropdown } from '@deriv
 import { setDefaultParams } from '../../common/helpers';
 import { localize } from '../../../_common/localize';
 
-const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
+const CurrencyContent = ({ currency_list, currency, onUpdate, element_id }) => {
     const { close } = useDropdown();
 
     const getCurrencyGroupMap = {
@@ -22,8 +22,8 @@ const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
                             label={item.text}
                             selected={item.value === currency}
                             onClick={() => {
-                                onUpdate(elementId, item.value, 'change');
-                                setDefaultParams(elementId, item.value);
+                                onUpdate(element_id, item.value, 'change');
+                                setDefaultParams(element_id, item.value);
                                 close();
                             }}
                         />
@@ -33,7 +33,7 @@ const CurrencyContent = ({ currency_list, currency, onUpdate, elementId }) => {
         </div>
     );
 };
-export const CurrencyDropdown = ({ currency_list, currency, onUpdate, elementId }) => (
+export const CurrencyDropdown = ({ currency_list, currency, onUpdate, element_id }) => (
     <CustomDropdown
         value={currency}
         fullHeightOnOpen={false}
@@ -42,7 +42,7 @@ export const CurrencyDropdown = ({ currency_list, currency, onUpdate, elementId 
             currency_list={currency_list}
             currency={currency}
             onUpdate={onUpdate}
-            elementId={elementId}
+            element_id={element_id}
         />
     </CustomDropdown>
 );

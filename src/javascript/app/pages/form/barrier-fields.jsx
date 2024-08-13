@@ -19,8 +19,8 @@ const BarrierFields = ({ form_name, handleAmountChange }) => {
     const barrier_low = Defaults.get(PARAM_NAMES.BARRIER_LOW);
 
     useEffect(() => {
-        setBarrierData((oldData) => ({
-            ...oldData,
+        setBarrierData((old_data) => ({
+            ...old_data,
             ...dataManager.getAllTrades(),
         }));
     }, [hasBarrierChange]);

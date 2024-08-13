@@ -129,7 +129,7 @@ const Process = (() => {
         const init_logo = getElementById('trading_init_progress');
 
         dataManager.setContract({
-            hidePageLoader: true,
+            hide_page_loader: true,
         });
         
         if (init_logo && init_logo.style.display !== 'none') {
@@ -153,7 +153,7 @@ const Process = (() => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
             dataManager.setPurchase({
-                showPurchaseResults: true,
+                show_purchase_results: true,
             });
             getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';
@@ -173,33 +173,33 @@ const Process = (() => {
         Contract.setContracts(contracts);
 
         const contract_categories = Contract.contractForms();
-        let formname;
+        let form_name;
         if (Defaults.get(FORM_NAME) && contract_categories && contract_categories[Defaults.get(FORM_NAME)]) {
-            formname = Defaults.get(FORM_NAME);
+            form_name = Defaults.get(FORM_NAME);
         } else {
             const tree = commonTrading.getContractCategoryTree(contract_categories);
             if (tree[0]) {
                 if (typeof tree[0] === 'object') {
-                    formname = tree[0][1][0];
+                    form_name = tree[0][1][0];
                 } else {
-                    formname = tree[0];
+                    form_name = tree[0];
                 }
             }
         }
 
-        commonTrading.displayContractForms('contract_form_name_nav', contract_categories, formname);
+        commonTrading.displayContractForms('contract_form_name_nav', contract_categories, form_name);
 
-        processContractForm(formname);
+        processContractForm(form_name);
 
         TradingAnalysis.request();
 
         commonTrading.hideFormOverlay();
     };
 
-    const processContractForm = (formname_to_set = getElementById('contract').value || Defaults.get(FORM_NAME)) => {
-        setFormName(formname_to_set);
+    const processContractForm = (form_name_to_set = getElementById('contract').value || Defaults.get(FORM_NAME)) => {
+        setFormName(form_name_to_set);
 
-        // get updated formname
+        // get updated form_name
         Contract.details(Defaults.get(FORM_NAME));
 
         StartDates.display();
@@ -258,7 +258,7 @@ const Process = (() => {
 
     const displayPrediction = () => {
         const prediction_row = getElementById('prediction_row');
-        if (Contract.form() === 'digits' && sessionStorage.getItem('formname') !== 'evenodd') {
+        if (Contract.form() === 'digits' && sessionStorage.getItem('form_name') !== 'evenodd') {
             prediction_row.show();
             const prediction = getElementById('prediction');
             if (Defaults.get(PREDICTION)) {
@@ -275,7 +275,7 @@ const Process = (() => {
     const displaySelectedTick = () => {
         const selected_tick_row       = getElementById('selected_tick_row');
         const highlowticks_expiry_row = getElementById('highlowticks_expiry_row');
-        if (sessionStorage.getItem('formname') === 'highlowticks') {
+        if (sessionStorage.getItem('form_name') === 'highlowticks') {
             selected_tick_row.show();
             highlowticks_expiry_row.show();
             const selected_tick = getElementById('selected_tick');
@@ -295,11 +295,11 @@ const Process = (() => {
         contracts.find(contract => contract.contract_category === 'callputequal');
 
     const displayEquals = (expiry_type = 'duration') => {
-        const formname  = Defaults.get(FORM_NAME);
+        const form_name  = Defaults.get(FORM_NAME);
         const el_equals = document.getElementById('callputequal');
         const durations
             = getPropertyValue(Contract.durations(), [commonTrading.durationType(Defaults.get(DURATION_UNITS))]) || [];
-        if (/^(callputequal|risefall)$/.test(formname) && (('callputequal' in durations || expiry_type === 'endtime') && hasCallPutEqual())) {
+        if (/^(callputequal|risefall)$/.test(form_name) && (('callputequal' in durations || expiry_type === 'endtime') && hasCallPutEqual())) {
             if (+Defaults.get(IS_EQUAL)) {
                 el_equals.checked = true;
             }
@@ -315,16 +315,16 @@ const Process = (() => {
         }
     };
 
-    const setFormName = (formname) => {
-        let formname_to_set    = formname;
+    const setFormName = (form_name) => {
+        let form_name_to_set    = form_name;
         const has_callputequal = hasCallPutEqual();
-        if (formname_to_set === 'callputequal' && (!has_callputequal || !+Defaults.get(IS_EQUAL))) {
-            formname_to_set = 'risefall';
-        } else if (formname_to_set === 'risefall' && has_callputequal && +Defaults.get(IS_EQUAL)) {
-            formname_to_set = 'callputequal';
+        if (form_name_to_set === 'callputequal' && (!has_callputequal || !+Defaults.get(IS_EQUAL))) {
+            form_name_to_set = 'risefall';
+        } else if (form_name_to_set === 'risefall' && has_callputequal && +Defaults.get(IS_EQUAL)) {
+            form_name_to_set = 'callputequal';
         }
-        Defaults.set(FORM_NAME, formname_to_set);
-        getElementById('contract').setAttribute('value', formname_to_set);
+        Defaults.set(FORM_NAME, form_name_to_set);
+        getElementById('contract').setAttribute('value', form_name_to_set);
     };
 
     const forgetTradingStreams = () => {

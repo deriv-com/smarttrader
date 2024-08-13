@@ -14,46 +14,48 @@ import { localize } from '../../../../_common/localize';
 import { parseData, triggerClick } from '../../../common/helpers';
 
 const Purchase = () => {
-    const hasPurchaseChange  = usePurchaseChange();
-    const hasContractChange  = useContractChange();
+    const has_purchase_change  = usePurchaseChange();
+    const has_contract_change  = useContractChange();
 
     const [data,setData] = useState({});
     const [isLookBack,setIsLookBack] = useState(false);
     const [showPopup,setShowPopup] = useState(false);
     
-    const isloading = () => !data?.topAmount && !data?.middleAmount && !data?.bottomAmount;
+    const isloading = () => !data?.top_amount && !data?.middle_amount && !data?.bottom_amount;
+
+    const purchase_positions = ['top','bottom'];
 
     const hidePurchaseResults = () =>
         dataManager.setPurchase({
-            showPurchaseResults: false,
-            error              : null,
-            cd_errorMsg        : null,
-            cd_showAuditBtn    : false,
-            cd_contractEnded   : false,
-            auditDataEnd       : [],
-            cd_infoMsg         : null,
+            show_purchase_results: false,
+            error                : null,
+            cd_error_msg         : null,
+            cd_show_audit_buton  : false,
+            cd_contract_ended    : false,
+            audit_data_end       : [],
+            cd_info_msg          : null,
         });
  
     useEffect(() => {
-        const newData = dataManager.getAllPurchases();
+        const new_data = dataManager.getAllPurchases();
 
-        setShowPopup(!!newData?.showContractDetailsPopup);
+        setShowPopup(!!new_data?.show_contract_details_popup);
 
-        setData(oldData => ({
-            ...oldData,
-            ...newData,
+        setData(old_data => ({
+            ...old_data,
+            ...new_data,
         }));
        
-    }, [hasPurchaseChange]);
+    }, [has_purchase_change]);
 
     useEffect(() => {
-        const formName = Defaults.get(PARAM_NAMES.FORM_NAME);
+        const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
 
         const lookbacks = ['lookbacklow', 'lookbackhigh', 'lookbackhighlow'];
 
-        setIsLookBack(lookbacks.includes(formName));
+        setIsLookBack(lookbacks.includes(form_name));
       
-    }, [hasContractChange]);
+    }, [has_contract_change]);
 
     useEffect(() => {
         document.body.style.overflow = showPopup ? 'hidden' : '';
@@ -63,10 +65,10 @@ const Purchase = () => {
         };
     }, [showPopup]);
 
-    const displayCurrency = (referenceField) => referenceField !== '-' ? data?.currency : '';
+    const displayCurrency = (reference_field) => reference_field !== '-' ? data?.currency : '';
 
     const ButtonTooltipWrapper = (button,description) => {
-        if (!description || description === '' || data?.isPurchaseFormDisabled) {
+        if (!description || description === '' || data?.is_purchase_form_disabled) {
             return button;
         }
         return (
@@ -88,7 +90,7 @@ const Purchase = () => {
         return <ContractDetails />;
     }
 
-    if (isloading() || (!data?.showPurchaseResults && data?.isPurchaseFormDisabled)) {
+    if (isloading() || (!data?.show_purchase_results && data?.is_purchase_form_disabled)) {
         return (
             <div className='quill-purchase-section'>
                 <Skeleton.Square rounded fullWidth height={30} />
@@ -102,29 +104,29 @@ const Purchase = () => {
             </div>);
     }
   
-    if (!data?.showPurchaseResults && !data?.error) {
+    if (!data?.show_purchase_results && !data?.error) {
         return (
-            <div className={`quill-purchase-section ${data?.isPurchaseFormDisabled && 'disabled'}`}>
-                {data?.showMidPurchase ? (
+            <div className={`quill-purchase-section ${data?.is_purchase_form_disabled && 'disabled'}`}>
+                {data?.show_mid_purchase ? (
                     <div className='purchase-box'>
                         <div className='purchase-header'>
                             <div className='purchase-icon-box'>
-                                <div className={`contract_heading ${data?.middleContractType}`} />
-                                <Text size='md' centered bold> {data?.middleDisplayText}</Text>
+                                <div className={`contract_heading ${data?.middle_contract_type}`} />
+                                <Text size='md' centered bold> {data?.middle_display_text}</Text>
                             </div>
                             <div className='purchase-body-box'>
                                 <div className='purchase-amount-box'>
                                     <div className='purchase-amount-info-box'>
                                         <Text size='md'>{localize('Stake')}:</Text>
-                                        <Text size='md' className={data.middleAmountClassname} bold>{data?.middleAmount} {displayCurrency(data?.middleAmount)}</Text>
+                                        <Text size='md' className={data.middle_amount_classname} bold>{data?.middle_amount} {displayCurrency(data?.middle_amount)}</Text>
                                     </div>
                                     <div className='purchase-amount-info-box'>
                                         <Text size='md'>{localize('Multiplier')}:</Text>
-                                        <Text size='md' bold>{data?.middleMultiplier} {displayCurrency(data?.middleMultiplier)}</Text>
+                                        <Text size='md' bold>{data?.middle_multiplier} {displayCurrency(data?.middle_multiplier)}</Text>
                                     </div>
                                 </div>
                                 <div className='purchase-btn-box'>
-                                    {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_middle')} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.middlePurchaseDisabled} />,data?.middleDescription)}
+                                    {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_middle')} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.middle_purchase_disabled} />,data?.middle_description)}
                                 </div>
                             </div>
                         </div>
@@ -134,60 +136,48 @@ const Purchase = () => {
                     </div>
                 ) : (
                     <>
-                        <div className='purchase-box'>
-                            <div className='purchase-header'>
-                                <div className='purchase-icon-box'>
-                                    <div className={`contract_heading ${data?.topContractType}`} />
-                                    <Text size='md' centered bold> {data?.topDisplayText}</Text>
-                                </div>
-                                <div className='purchase-body-box'>
-                                    <div className='purchase-amount-box'>
-                                        <div className='purchase-amount-info-box'>
-                                            <Text size='md'>{localize('Stake')}:</Text>
-                                            <Text size='md' className={data.topAmountClassname} bold>{data?.topAmount} {displayCurrency(data?.topAmount)}</Text>
-                                        </div>
-                                        <div className='purchase-amount-info-box'>
-                                            <Text size='md'>{localize('Payout')}:</Text>
-                                            <Text size='md' className={data.topPayoutAmountClassname} bold>{data?.topPayoutAmount} {displayCurrency(data?.topPayoutAmount)}</Text>
-                                        </div>
-                                    </div>
-                                    <div className='purchase-btn-box'>
-                                        {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_top')} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.topPurchaseDisabled} />,data?.topDescription)}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='purchase-footer'>
-                                <CaptionText centered >{parseData(data.topComment)}</CaptionText>
-                            </div>
-                        </div>
-                        <div className='purchase-box'>
-                            <div className='purchase-header'>
-                                <div className='purchase-icon-box'>
-                                    <div className={`contract_heading ${data?.bottomContractType}`} />
-                                    <Text size='md' centered bold> {data?.bottomDisplayText}</Text>
-                                </div>
-                                <div className='purchase-body-box'>
-                                    <div className='purchase-amount-box'>
-                                        <div className='purchase-amount-info-box'>
-                                            <Text size='md'>{localize('Stake')}:</Text>
-                                            <Text size='md' className={data.bottomAmountClassname} bold>{data?.bottomAmount} {displayCurrency(data?.bottomAmount)}</Text>
-                                        </div>
-                                        <div className='purchase-amount-info-box'>
-                                            <Text size='md'>{localize('Payout')}:</Text>
-                                            <Text size='md'  className={data.bottomPayoutAmountClassname} bold>{data?.bottomPayoutAmount} {displayCurrency(data?.bottomPayoutAmount)}</Text>
-                                        </div>
-                                    </div>
-                                    <div className='purchase-btn-box'>
-                                        {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_bottom')}  color='sell' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.bottomPurchaseDisabled} />,data?.bottomDescription)}
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div className='purchase-footer'>
-                                <CaptionText centered >{parseData(data.bottomComment)}</CaptionText>
-                            </div>
+                        {purchase_positions.map(position => {
+                            const contract_type  = data?.[`${position}_contract_type`];
+                            const display_text  = data?.[`${position}_display_text`];
+                            const amount  = data?.[`${position}_amount`];
+                            const amount_classname  = data?.[`${position}_amount_classname`];
+                            const payout_amount_classname  = data?.[`${position}_payout_amount_classname`];
+                            const payout_amount  = data?.[`${position}_payout_amount`];
+                            const purchase_disabled  = data?.[`${position}_purchase_disabled`];
+                            const description  = data?.[`${position}_description`];
+                            const comment  = data?.[`${position}_comment`];
                             
-                        </div>
+                            return (
+                                <React.fragment key={`purchase-action-${position}`}>
+                                    <div className='purchase-box'>
+                                        <div className='purchase-header'>
+                                            <div className='purchase-icon-box'>
+                                                <div className={`contract_heading ${contract_type}`} />
+                                                <Text size='md' centered bold> {display_text}</Text>
+                                            </div>
+                                            <div className='purchase-body-box'>
+                                                <div className='purchase-amount-box'>
+                                                    <div className='purchase-amount-info-box'>
+                                                        <Text size='md'>{localize('Stake')}:</Text>
+                                                        <Text size='md' className={amount_classname} bold>{amount} {displayCurrency(amount)}</Text>
+                                                    </div>
+                                                    <div className='purchase-amount-info-box'>
+                                                        <Text size='md'>{localize('Payout')}:</Text>
+                                                        <Text size='md' className={payout_amount_classname} bold>{payout_amount} {displayCurrency(payout_amount)}</Text>
+                                                    </div>
+                                                </div>
+                                                <div className='purchase-btn-box'>
+                                                    {ButtonTooltipWrapper(<Button onClick={() => triggerClick(`#purchase_button_${position}`)} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={purchase_disabled} />,description)}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='purchase-footer'>
+                                            <CaptionText centered >{parseData(comment)}</CaptionText>
+                                        </div>
+                                    </div>
+                                </React.fragment>
+                            );
+                        })}
                     </>
                 )}
             </div>
@@ -221,7 +211,7 @@ const Purchase = () => {
                                                 variant='primary'
                                                 size='lg'
                                                 label={localize('Open a free account')}
-                                                onClick={() => window.location.href = data?.error.signupUrl}
+                                                onClick={() => window.location.href = data?.error.signup_url}
                                             />
                                             <Text size='sm'>{localize('Already have an account?')}</Text>
                                             <Button variant='tertiary' size='lg' label={localize('Log in here')} onClick={() => triggerClick('#authorization_error_btn_login')} />
@@ -279,29 +269,29 @@ const Purchase = () => {
                         <Text size='sm'>{data?.pr_description}</Text>
                     </div>
                     <div className='table-box'>
-                        {data?.pr_tablePayoutValue && (
+                        {data?.pr_table_payout_value && (
                             <div className='table-item'>
-                                <Text size='sm' centered bold>{data?.pr_tablePayout}</Text>
-                                <Text size='sm' centered >{parseData(data.pr_tablePayoutValue)}</Text>
+                                <Text size='sm' centered bold>{data?.pr_table_payout}</Text>
+                                <Text size='sm' centered >{parseData(data.pr_table_payout_value)}</Text>
                             </div>
                         )}
-                        { data?.pr_tableCostValue && (
+                        { data?.pr_table_cost_value && (
                             <div className='table-item'>
-                                <Text size='sm' centered bold>{data?.pr_tableCost}</Text>
-                                <Text size='sm' centered >{parseData(data.pr_tableCostValue)}</Text>
+                                <Text size='sm' centered bold>{data?.pr_table_cost}</Text>
+                                <Text size='sm' centered >{parseData(data.pr_table_cost_value)}</Text>
                             </div>
                         )}
-                        { data?.pr_tableProfitValue && data?.pr_showTableProfit && (
+                        { data?.pr_table_profit_value && data?.pr_show_table_profit && (
                             <div className='table-item'>
-                                <Text size='sm' centered bold>{data?.pr_tableProfit}</Text>
-                                <Text size='sm' centered>{parseData(data.pr_tableProfitValue)}</Text>
+                                <Text size='sm' centered bold>{data?.pr_table_profit}</Text>
+                                <Text size='sm' centered>{parseData(data.pr_table_profit_value)}</Text>
                             </div>
                         )}
                     </div>
                     <div className='info-box'>
                         {data?.pr_barrier && <Text size='sm' >{parseData(data.pr_barrier)}</Text>}
                         {data?.pr_reference && <Text size='sm' >{parseData(data.pr_reference)}</Text>}
-                        {data?.pr_showBtn && <Button
+                        {data?.pr_show_button && <Button
                             className='view-btn'
                             label={localize('View')}
                             onClick={() => {
@@ -319,7 +309,7 @@ const Purchase = () => {
             </div>
             <div className='footer-box'>
                 <CaptionText>{data?.pr_balance} </CaptionText>
-                <CaptionText >{parseData(data.pr_balanceValue)}</CaptionText>
+                <CaptionText >{parseData(data.pr_balance_value)}</CaptionText>
             </div>
         </div>
     );

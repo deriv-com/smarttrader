@@ -52,16 +52,16 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             dataManager.setContract({
-                contractsTree  : contracts_tree,
+                contracts_tree,
                 contracts      : all_contracts,
-                formName       : selected || Defaults.get('formname'),
+                formName       : selected || Defaults.get('form_name'),
                 contractElement: getElementById('contract'),
             });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
                 contracts: all_contracts,
-                formname : contract_to_show || Defaults.get(FORM_NAME),
+                form_name: contract_to_show || Defaults.get(FORM_NAME),
             });
         }
         FormsWrapperElement.init();
@@ -158,7 +158,7 @@ const commonTrading = (() => {
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
         dataManager.setPurchase({
-            showPurchaseResults: false,
+            show_purchase_results: false,
         });
     };
 
@@ -254,7 +254,7 @@ const commonTrading = (() => {
                 node.show();
                 elementInnerHtml(node, comment);
                 dataManager.setPurchase({
-                    [`${position}Comment`]: comment,
+                    [`${position}_comment`]: comment,
                 });
             }
         }
@@ -476,13 +476,13 @@ const commonTrading = (() => {
         showPriceOverlay: () => {
             showHideOverlay('loading_container2', 'block');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: true,
+                is_purchase_form_disabled: true,
             });
         },
         hidePriceOverlay: () => {
             showHideOverlay('loading_container2', 'none');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: false,
+                is_purchase_form_disabled: false,
             });
         },
         hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },

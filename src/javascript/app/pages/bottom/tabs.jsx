@@ -11,11 +11,11 @@ import dataManager from '../../common/data_manager.js';
 import LastDigit from '../trade/last_digit.jsx';
 
 const BottomTabs = () => {
-    const hasMarketChange = useMarketChange();
+    const has_market_change = useMarketChange();
     const [selectedTab, setSelectedTab] = useState(1);
     const [hasLastDigit, setHasLastDigit] = useState(false);
-    const [formName, setFormName] = useState('');
-    const hasContractChange = useContractChange();
+    const [form_name, setFormName] = useState('');
+    const has_contract_change = useContractChange();
     const savedTab = sessionStorage.getItem('currentTab');
     const triggerOldTabTimer = useRef();
     const [isShowGraph, setIsShowGraph] = useState(false);
@@ -37,11 +37,11 @@ const BottomTabs = () => {
 
     useEffect(() => {
         setFormName(dataManager.getContract('explanationFormName'));
-    }, [hasContractChange, hasMarketChange]);
+    }, [has_contract_change, has_market_change]);
 
     useEffect(() => {
-        setHasLastDigit(formName === 'digits' || formName === 'evenodd' || formName === 'overunder');
-    }, [formName]);
+        setHasLastDigit(form_name === 'digits' || form_name === 'evenodd' || form_name === 'overunder');
+    }, [form_name]);
 
     useEffect(() => {
         if (savedTab !== null) {
