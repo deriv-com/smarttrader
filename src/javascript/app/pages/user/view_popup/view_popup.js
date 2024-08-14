@@ -847,7 +847,7 @@ const ViewPopup = (() => {
             cd_spot_label        : localize('Spot'),
             cd_lowBarrierText    : low_barrier_text,
             cd_payout_label      : Callputspread.isCallputspread(contract.contract_type) ? localize('Maximum payout') : localize('Potential payout'),
-            cd_chartId           : (contract.tick_count ? id_tick_chart : 'analysis_live_chart'),
+            cd_chart_id          : (contract.tick_count ? id_tick_chart : 'analysis_live_chart'),
             cd_current_label     : localize('Current'),
             cd_spot_time_label   : localize('Spot time'),
             cd_indicative_label  : localize('Indicative'),

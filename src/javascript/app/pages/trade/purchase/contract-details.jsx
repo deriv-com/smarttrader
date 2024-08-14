@@ -164,7 +164,7 @@ const DetailsSection = ({ data }) => (
                         <Text centered size='md'>{data?.cd_description}</Text>
                     </div>
                     <div className='details-column'>
-                        <div className='chart-wrapper' id={data?.cd_chartId} />
+                        <div className='chart-wrapper' id={data?.cd_chart_id} />
                         <ContractTable data={data} />
                     </div>
                 </div>
