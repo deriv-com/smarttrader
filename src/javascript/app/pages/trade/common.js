@@ -52,7 +52,7 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             dataManager.setContract({
-                contractsTree   : contracts_tree,
+                contracts_tree,
                 contracts       : all_contracts,
                 form_name       : selected || Defaults.get('formname'),
                 contract_element: getElementById('contract'),

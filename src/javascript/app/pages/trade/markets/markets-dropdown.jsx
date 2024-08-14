@@ -42,7 +42,7 @@ export const getContractName = () => {
     const data = dataManager.getAllContracts('contract');
     let name = '';
     // eslint-disable-next-line consistent-return
-    data?.contractsTree?.forEach((contract) => {
+    data?.contracts_tree?.forEach((contract) => {
         if (typeof contract === 'object') {
             contract[1].forEach((subtype) => {
                 if (subtype === data?.actualFormName) {

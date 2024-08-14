@@ -65,7 +65,7 @@ export const ContractDropdown = () => {
     return (
         <div className='quill-market-dropdown-container' >
             <div className='quill-market-dropdown-item-container' ref={container_ref}>
-                {data?.contractsTree?.map((contract, idx) => {
+                {data?.contracts_tree?.map((contract, idx) => {
                     if (typeof contract === 'object') {
                         return (
                             <React.Fragment key={idx}>
