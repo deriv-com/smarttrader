@@ -31,7 +31,7 @@ export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
 
     const hasTradeChange = useTradeChange();
-    const hasMarketChange = useMarketChange();
+    const has_market_change = useMarketChange();
     const has_contract_change = useContractChange();
     const hasSessionChange = useSessionChange();
 
@@ -40,7 +40,7 @@ export const FormComponent = () => {
             ...oldData,
             ...dataManager.getAllTrades(),
         }));
-    }, [hasMarketChange, has_contract_change, hasTradeChange, hasSessionChange]);
+    }, [has_market_change, has_contract_change, hasTradeChange, hasSessionChange]);
 
     const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiry_type = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);

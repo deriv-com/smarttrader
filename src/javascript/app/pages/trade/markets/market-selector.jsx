@@ -14,7 +14,7 @@ const MarketSelector = () => {
     const [marketLabel, setMarketLabel] = useState(getMarketName());
     const [tradeTypeLabel, setTradeTypeLabel] = useState(getContractName());
     const has_contract_change = useContractChange();
-    const hasMarketChange = useMarketChange();
+    const has_market_change = useMarketChange();
   
     useEffect(() => {
         setTradeTypeLabel(getContractName());
@@ -22,7 +22,7 @@ const MarketSelector = () => {
 
     useEffect(() => {
         setMarketLabel(getMarketName());
-    }, [hasMarketChange]);
+    }, [has_market_change]);
 
     return (
         <BreakpointProvider>
