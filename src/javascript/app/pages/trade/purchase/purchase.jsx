@@ -130,7 +130,7 @@ const Purchase = () => {
                             </div>
                         </div>
                         <div className='purchase-footer'>
-                            <CaptionText centered >{parseData(data.middle_comment)}</CaptionText>
+                            <CaptionText centered>{parseData(data.middle_comment)}</CaptionText>
                         </div>
                     </div>
                 ) : (
@@ -174,7 +174,7 @@ const Purchase = () => {
                                         </div>
                                       
                                         <div className='purchase-footer'>
-                                            <CaptionText centered >{parseData(comment)}</CaptionText>
+                                            <CaptionText centered>{parseData(comment)}</CaptionText>
                                         </div>
                                     </div>
                                 </Fragment>
