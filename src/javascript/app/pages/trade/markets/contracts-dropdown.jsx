@@ -50,12 +50,12 @@ export const ContractDropdown = () => {
 
     useEffect(() => {
         if (selected_ref.current && container_ref.current) {
-            const selectedRect = selected_ref.current.getBoundingClientRect();
-            const containerRect = container_ref.current.getBoundingClientRect();
+            const selected_rect = selected_ref.current.getBoundingClientRect();
+            const container_rect = container_ref.current.getBoundingClientRect();
             const offset = 96;
-            if (selectedRect.top < containerRect.top + offset || selectedRect.bottom > containerRect.bottom) {
+            if (selected_rect.top < container_rect.top + offset || selected_rect.bottom > container_rect.bottom) {
                 container_ref.current.scrollTo({
-                    top     : container_ref.current.scrollTop + selectedRect.top - containerRect.top - offset,
+                    top     : container_ref.current.scrollTop + selected_rect.top - container_rect.top - offset,
                     behavior: 'auto',
                 });
             }
