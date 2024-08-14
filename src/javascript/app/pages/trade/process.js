@@ -153,7 +153,7 @@ const Process = (() => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
             dataManager.setPurchase({
-                showPurchaseResults: true,
+                show_purchase_results: true,
             });
             getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';

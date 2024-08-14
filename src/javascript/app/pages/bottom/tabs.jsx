@@ -15,7 +15,7 @@ const BottomTabs = () => {
     const [selectedTab, setSelectedTab] = useState(1);
     const [hasLastDigit, setHasLastDigit] = useState(false);
     const [formName, setFormName] = useState('');
-    const hasContractChange = useContractChange();
+    const has_contract_change = useContractChange();
     const savedTab = sessionStorage.getItem('currentTab');
     const triggerOldTabTimer = useRef();
     const [isShowGraph, setIsShowGraph] = useState(false);
@@ -37,7 +37,7 @@ const BottomTabs = () => {
 
     useEffect(() => {
         setFormName(dataManager.getContract('explanationFormName'));
-    }, [hasContractChange, hasMarketChange]);
+    }, [has_contract_change, hasMarketChange]);
 
     useEffect(() => {
         setHasLastDigit(formName === 'digits' || formName === 'evenodd' || formName === 'overunder');

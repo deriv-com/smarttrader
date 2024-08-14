@@ -158,7 +158,7 @@ const commonTrading = (() => {
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
         dataManager.setPurchase({
-            showPurchaseResults: false,
+            show_purchase_results: false,
         });
     };
 
@@ -254,7 +254,7 @@ const commonTrading = (() => {
                 node.show();
                 elementInnerHtml(node, comment);
                 dataManager.setPurchase({
-                    [`${position}Comment`]: comment,
+                    [`${position}_comment`]: comment,
                 });
             }
         }
@@ -476,13 +476,13 @@ const commonTrading = (() => {
         showPriceOverlay: () => {
             showHideOverlay('loading_container2', 'block');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: true,
+                is_purchase_form_disabled: true,
             });
         },
         hidePriceOverlay: () => {
             showHideOverlay('loading_container2', 'none');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: false,
+                is_purchase_form_disabled: false,
             });
         },
         hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },

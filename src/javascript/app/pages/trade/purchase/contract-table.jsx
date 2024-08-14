@@ -17,7 +17,7 @@ const ContractTable = ({ data }) => (
                 <Text size='sm'>{localize('Contract type')}</Text>
             </div>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_contractType}</Text>
+                <Text size='sm'>{data?.cd_contract_type}</Text>
             </div>
         </div>
         <div className='table-box'>
@@ -26,39 +26,39 @@ const ContractTable = ({ data }) => (
             </div>
             <div className='table-item'>
                 {data?.cd_transaction_ids &&
-          Object.keys(data?.cd_transaction_ids).map((tik) => {
-              const transactionName =
-              tik === 'buy' ? localize('Buy') : localize('Sell');
-              return (
-                  <Text size='sm' key={`${transactionName}-${tik}`}>
-                      {data?.cd_transaction_ids[tik]} ({transactionName})
-                  </Text>
-              );
-          })}
+                Object.keys(data?.cd_transaction_ids).map((tik) => {
+                    const transaction_name =
+                    tik === 'buy' ? localize('Buy') : localize('Sell');
+                    return (
+                        <Text size='sm' key={`${transaction_name}-${tik}`}>
+                            {data?.cd_transaction_ids[tik]} ({transaction_name})
+                        </Text>
+                    );
+                })}
             </div>
         </div>
-        {data?.cd_purchaseTime && (
+        {data?.cd_purchase_time && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Purchase time')}</Text>
                 </div>
                 <div className='table-item'>
                     {TimeTooltipWrapper(
-                        <Text size='sm'>{data.cd_purchaseTime}</Text>,
-                        data.cd_purchaseTime
+                        <Text size='sm'>{data.cd_purchase_time}</Text>,
+                        data.cd_purchase_time
                     )}
                 </div>
             </div>
         )}
-        {data?.cd_startTime && !data?.soldBeforeStart && (
+        {data?.cd_start_time && !data?.sold_before_start && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Start time')}</Text>
                 </div>
                 <div className='table-item'>
                     {TimeTooltipWrapper(
-                        <Text size='sm'>{data.cd_startTime}</Text>,
-                        data.cd_startTime
+                        <Text size='sm'>{data.cd_start_time}</Text>,
+                        data.cd_start_time
                     )}
                 </div>
             </div>
@@ -71,49 +71,49 @@ const ContractTable = ({ data }) => (
                 <Text size='sm'>{data?.cd_remainingTime}</Text>
             </div>
         </div>
-        {data?.cd_showEntrySpot && (
+        {data?.cd_show_entry_spot && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Entry spot')}</Text>
                 </div>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_entrySpot}</Text>
+                    <Text size='sm'>{data?.cd_entry_spot}</Text>
                 </div>
             </div>
         )}
         {data?.cd_barrier && (
             <div className='table-box'>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_barrierLabel}</Text>
+                    <Text size='sm'>{data?.cd_barrier_label}</Text>
                 </div>
                 <div className='table-item'>
                     <Text size='sm'>{data?.cd_barrier}</Text>
                 </div>
             </div>
         )}
-        {data?.cd_showBarrierLow && (
+        {data?.cd_show_barrier_low && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Low barrier')}</Text>
                 </div>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_barrierLow}</Text>
+                    <Text size='sm'>{data?.cd_barrier_low}</Text>
                 </div>
             </div>
         )}
-        {data?.cd_showBarrierReset && (
+        {data?.cd_show_barrier_reset && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Reset barrier')}</Text>
                 </div>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_barrierReset}</Text>
+                    <Text size='sm'>{data?.cd_barrier_reset}</Text>
                 </div>
             </div>
         )}
         <div className='table-box'>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_payoutLabel}</Text>
+                <Text size='sm'>{data?.cd_payout_label}</Text>
             </div>
             <div className='table-item'>
                 <Text size='sm'>{parseData(data.cd_payout)}</Text>
@@ -124,70 +124,70 @@ const ContractTable = ({ data }) => (
                 <Text size='sm'>{localize('Purchase price')}</Text>
             </div>
             <div className='table-item'>
-                <Text size='sm'>{parseData(data.cd_purchasePrice)}</Text>
+                <Text size='sm'>{parseData(data.cd_purchase_price)}</Text>
             </div>
         </div>
         <div className='table-box'>
             <Text size='md' bold centered>
-                {data?.cd_currentLabel}
+                {data?.cd_current_label}
             </Text>
         </div>
-        {data?.cd_showCurrentSpot && (
+        {data?.cd_show_current_spot && (
             <div className='table-box'>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_spotLabel}</Text>
+                    <Text size='sm'>{data?.cd_spot_label}</Text>
                 </div>
                 <div className='table-item'>
-                    <Text size='sm'>{data?.cd_currentSpot}</Text>
+                    <Text size='sm'>{data?.cd_current_spot}</Text>
                 </div>
             </div>
         )}
         <div className='table-box'>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_endLabel || data?.cd_spotTimeLabel}</Text>
+                <Text size='sm'>{data?.cd_end_label || data?.cd_spot_time_label}</Text>
             </div>
             <div className='table-item'>
                 {TimeTooltipWrapper(
-                    <Text size='sm'>{data?.cd_endDate || data?.cd_currentDate}</Text>,
-                    data?.cd_endDate || data?.cd_currentDate
+                    <Text size='sm'>{data?.cd_end_date || data?.cd_current_date}</Text>,
+                    data?.cd_end_date || data?.cd_current_date
                 )}
             </div>
         </div>
-        {!data?.cd_contractEnded && (
+        {!data?.cd_contract_ended && (
             <div className='table-box'>
                 <div className='table-item'>
                     <Text size='sm'>{localize('Current time')}</Text>
                 </div>
                 <div className='table-item'>
                     {TimeTooltipWrapper(
-                        <Text size='sm'>{data?.cd_currentTime}</Text>,
-                        data?.cd_currentTime
+                        <Text size='sm'>{data?.cd_current_time}</Text>,
+                        data?.cd_current_time
                     )}
                 </div>
             </div>
         )}
         <div className='table-box'>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_indicativeLabel}</Text>
+                <Text size='sm'>{data?.cd_indicative_label}</Text>
             </div>
             <div className='table-item'>
-                <Text size='sm'>{parseData(data.cd_indicativePrice)}</Text>
+                <Text size='sm'>{parseData(data.cd_indicative_price)}</Text>
             </div>
         </div>
         <div className='table-box'>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_profitLossLabel}</Text>
+                <Text size='sm'>{data?.cd_profit_loss_label}</Text>
             </div>
             <div className='table-item profit-loss'>
-                <Text size='sm' className={data?.cd_profitLossClass}>
-                    {parseData(data.cd_profitLoss)}
+                <Text size='sm' className={data?.cd_profit_loss_class}>
+                    {parseData(data.cd_profit_loss)}
                 </Text>
             </div>
         </div>
        
-        {data?.cd_contractEnded ? (
+        {data?.cd_contract_ended ? (
             <>
-                {(data?.cd_showAuditBtn && !data?.cd_showAudit) && (
+                {(data?.cd_show_audit_button && !data?.cd_show_audit) && (
                     <div className='table-box lg'>
                         <Button
                             variant='secondary'
@@ -198,53 +198,53 @@ const ContractTable = ({ data }) => (
                         />
                     </div>
                 )}
-                {data?.cd_sellMsg && (
+                {data?.cd_sell_msg && (
                     <div className='table-box'>
                         <SectionMessage
                             className='info-msg'
                             size='sm'
                             status='info'
-                            message={parseData(data.cd_sellMsg)}
+                            message={parseData(data.cd_sell_msg)}
                         />
                     </div>
                 )}
             </>
         ) : (
-            data?.cd_infoMsg && (
+            data?.cd_info_msg && (
                 <div className='table-box'>
                     <SectionMessage
                         className='info-msg'
                         size='sm'
                         status='info'
-                        message={parseData(data.cd_infoMsg)}
+                        message={parseData(data.cd_info_msg)}
                     />
                 </div>
             )
         )}
 
-        {data?.cd_showSell && (
+        {data?.cd_show_sell && (
             <div className='table-box lg'>
                 <Button
                     variant='secondary'
                     size='lg'
-                    label={data?.cd_sellLabel}
+                    label={data?.cd_sell_label}
                     color='black'
                     onClick={() => triggerClick('#sell_at_market')}
                 />
-                {data?.cd_errorMsg && (
+                {data?.cd_error_msg && (
                     <SectionMessage
                         className='info-msg'
                         size='sm'
                         status='warning'
-                        message={parseData(data.cd_errorMsg)}
+                        message={parseData(data.cd_error_msg)}
                     />
                 )}
-                {data?.cd_sellInfo && (
+                {data?.cd_sell_info && (
                     <SectionMessage
                         className='info-msg'
                         size='sm'
                         status='info'
-                        message={parseData(data.cd_sellInfo)}
+                        message={parseData(data.cd_sell_info)}
                         icon={<StandaloneCircleInfoRegularIcon iconSize='sm' />}
                     />
                 )}

@@ -13,12 +13,12 @@ import { useContractChange, useMarketChange } from '../../../hooks/events.js';
 const MarketSelector = () => {
     const [marketLabel, setMarketLabel] = useState(getMarketName());
     const [tradeTypeLabel, setTradeTypeLabel] = useState(getContractName());
-    const hasContractChange = useContractChange();
+    const has_contract_change = useContractChange();
     const hasMarketChange = useMarketChange();
   
     useEffect(() => {
         setTradeTypeLabel(getContractName());
-    }, [hasContractChange]);
+    }, [has_contract_change]);
 
     useEffect(() => {
         setMarketLabel(getMarketName());

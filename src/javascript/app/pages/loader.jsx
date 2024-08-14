@@ -36,7 +36,7 @@ const pageTypes = [
 ];
 
 const Loader = () => {
-    const hasContractChange  = useContractChange();
+    const has_contract_change  = useContractChange();
 
     const [loading, setLoading] = useState(true);
     
@@ -51,7 +51,7 @@ const Loader = () => {
             setLoading(false);
         }
            
-    }, [hasContractChange]);
+    }, [has_contract_change]);
 
     useEffect(() => {
         const handleLoad = () => {

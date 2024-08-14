@@ -10,24 +10,24 @@ import { localize } from '../../../../_common/localize';
 import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
-const resetPopupData = (isAuditReset = false) => {
+const resetPopupData = (is_audit_reset = false) => {
     const audit_reset_object = {
-        cd_showAudit: false,
-        auditDataEnd: [],
-        cd_infoMsg  : null,
-        cd_sellMsg  : null,
+        cd_show_audit : false,
+        audit_data_end: [],
     };
      
     const contract_reset_object = {
         ...audit_reset_object,
-        showContractDetailsPopup: false,
-        cd_showSell             : false,
-        cd_contractEnded        : false,
-        cd_showAuditBtn         : false,
+        show_contract_details_popup: false,
+        cd_show_sell               : false,
+        cd_contract_ended          : false,
+        cd_show_audit_button       : false,
+        cd_sell_msg                : null,
+        cd_info_msg                : null,
     };
   
     dataManager.setPurchase({
-        ...(isAuditReset ? { ...audit_reset_object } : contract_reset_object),
+        ...(is_audit_reset ? { ...audit_reset_object } : contract_reset_object),
     });
 };
 
@@ -35,15 +35,15 @@ const AuditSection = ({ data }) => {
     const audit_data = {
         start: {
             title  : localize('Contract starts'),
-            content: data?.auditDataStart,
+            content: data?.audit_data_start,
         },
         end: {
             title  : localize('Contract ends'),
-            content: data?.auditDataEnd,
+            content: data?.audit_data_end,
         },
         details: {
             title  : localize('Contract details'),
-            content: data?.auditDataDetails,
+            content: data?.audit_data_details,
         },
     };
 
@@ -174,7 +174,7 @@ const DetailsSection = ({ data }) => (
 );
 
 const Contents = ({ data }) => {
-    if (data?.cd_showAudit) {
+    if (data?.cd_show_audit) {
         return (
             <AuditSection data={data} />
         );
@@ -186,7 +186,7 @@ const Contents = ({ data }) => {
 };
 
 const ContractDetails = () => {
-    const hasPurchaseChange = usePurchaseChange();
+    const has_purchase_change = usePurchaseChange();
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -201,7 +201,7 @@ const ContractDetails = () => {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [hasPurchaseChange]);
+    }, [has_purchase_change]);
 
     useEffect(() => {
         const newData = dataManager.getAllPurchases();
@@ -210,7 +210,7 @@ const ContractDetails = () => {
             ...oldData,
             ...newData,
         }));
-    }, [hasPurchaseChange]);
+    }, [has_purchase_change]);
 
     return (
         <Portal>

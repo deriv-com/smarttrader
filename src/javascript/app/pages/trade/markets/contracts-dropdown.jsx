@@ -6,7 +6,7 @@ import Defaults, { PARAM_NAMES } from '../defaults';
 
 export const ContractDropdown = () => {
     const { close } = useDropdown();
-    const hasContractChange  = useContractChange();
+    const has_contract_change  = useContractChange();
     const [data, setData] = useState(dataManager.getAllContracts());
     const selectedRef = useRef(null);
     const containerRef = useRef(null);
@@ -46,7 +46,7 @@ export const ContractDropdown = () => {
             ...oldData,
             ...dataManager.getAllContracts(),
         }));
-    }, [hasContractChange]);
+    }, [has_contract_change]);
 
     useEffect(() => {
         if (selectedRef.current && containerRef.current) {

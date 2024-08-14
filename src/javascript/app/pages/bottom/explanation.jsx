@@ -12,7 +12,7 @@ export const Explanation = ({ explanationOnly = false }) => {
 
     const [formName,setFormName] = useState(null);
 
-    const hasContractChanges = useContractChange();
+    const has_contract_changes = useContractChange();
 
     useEffect(() => {
         const actualFormName = dataManager.getContract('explanationFormName');
@@ -22,7 +22,7 @@ export const Explanation = ({ explanationOnly = false }) => {
             setFormName(actualFormName);
         }, 500);
        
-    }, [hasContractChanges]);
+    }, [has_contract_changes]);
 
     const language = Language.get();
     const image_path = Url.urlForStatic(
