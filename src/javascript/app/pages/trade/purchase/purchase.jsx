@@ -40,8 +40,8 @@ const Purchase = () => {
 
         setShowPopup(!!new_data?.show_contract_details_popup);
 
-        setData(oldData => ({
-            ...oldData,
+        setData(old_data => ({
+            ...old_data,
             ...new_data,
         }));
        
