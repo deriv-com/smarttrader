@@ -8,9 +8,9 @@ export const ContractDropdown = () => {
     const { close } = useDropdown();
     const has_contract_change  = useContractChange();
     const [data, setData] = useState(dataManager.getAllContracts());
-    const selectedRef = useRef(null);
-    const containerRef = useRef(null);
-    const closeDropdownTimer = useRef();
+    const selected_ref = useRef(null);
+    const container_ref = useRef(null);
+    const close_dropdown_timer = useRef();
 
     const onContractClick = (form_name) => {
         if (form_name === data?.form_name) {
@@ -34,12 +34,12 @@ export const ContractDropdown = () => {
 
         triggerContractChange();
 
-        closeDropdownTimer.current = setTimeout(() => {
+        close_dropdown_timer.current = setTimeout(() => {
             close();
         }, 10);
     };
 
-    useEffect(() => () => clearTimeout(closeDropdownTimer.current), []);
+    useEffect(() => () => clearTimeout(close_dropdown_timer.current), []);
 
     useEffect(() => {
         setData(oldData => ({
@@ -49,13 +49,13 @@ export const ContractDropdown = () => {
     }, [has_contract_change]);
 
     useEffect(() => {
-        if (selectedRef.current && containerRef.current) {
-            const selectedRect = selectedRef.current.getBoundingClientRect();
-            const containerRect = containerRef.current.getBoundingClientRect();
+        if (selected_ref.current && container_ref.current) {
+            const selectedRect = selected_ref.current.getBoundingClientRect();
+            const containerRect = container_ref.current.getBoundingClientRect();
             const offset = 96;
             if (selectedRect.top < containerRect.top + offset || selectedRect.bottom > containerRect.bottom) {
-                containerRef.current.scrollTo({
-                    top     : containerRef.current.scrollTop + selectedRect.top - containerRect.top - offset,
+                container_ref.current.scrollTo({
+                    top     : container_ref.current.scrollTop + selectedRect.top - containerRect.top - offset,
                     behavior: 'auto',
                 });
             }
@@ -64,7 +64,7 @@ export const ContractDropdown = () => {
 
     return (
         <div className='quill-market-dropdown-container' >
-            <div className='quill-market-dropdown-item-container' ref={containerRef}>
+            <div className='quill-market-dropdown-item-container' ref={container_ref}>
                 {data?.contractsTree?.map((contract, idx) => {
                     if (typeof contract === 'object') {
                         return (
@@ -78,7 +78,7 @@ export const ContractDropdown = () => {
                                         selected={subtype === data?.form_name}
                                         size='md'
                                         className='trade-item-selected'
-                                        ref={subtype === data?.form_name ? selectedRef : null}
+                                        ref={subtype === data?.form_name ? selected_ref : null}
                                     />
                                 )
                                 )}
@@ -96,7 +96,7 @@ export const ContractDropdown = () => {
                                 selected={contract === data?.form_name}
                                 size='md'
                                 className='contract-item-clickables'
-                                ref={contract === data?.form_name ? selectedRef : null}
+                                ref={contract === data?.form_name ? selected_ref : null}
                             />
                             <Divider />
                         </React.Fragment>
