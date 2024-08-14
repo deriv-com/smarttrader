@@ -35,9 +35,17 @@ const Clock = (() => {
         });
     };
 
+    const getLocalTime = (time) => {
+        const gmt_time_str = time.replaceAll('\n', ' ');
+        const local_time   = moment.utc(gmt_time_str, 'YYYY-MM-DD HH:mm:ss').local();
+       
+        return local_time.format('YYYY-MM-DD HH:mm:ss Z');
+    };
+
     return {
         startClock,
         showLocalTimeOnHover,
+        getLocalTime,
         setExternalTimer: (func) => { fncExternalTimer = func; },
     };
 })();

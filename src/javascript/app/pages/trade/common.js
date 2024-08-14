@@ -1,15 +1,20 @@
-const Defaults         = require('./defaults');
-const Symbols          = require('./symbols');
-const Tick             = require('./tick');
-const contractsElement = require('./contracts.jsx');
-const marketsElement   = require('./markets.jsx');
-const formatMoney      = require('../../common/currency').formatMoney;
-const ActiveSymbols    = require('../../common/active_symbols');
-const elementInnerHtml = require('../../../_common/common_functions').elementInnerHtml;
-const getElementById   = require('../../../_common/common_functions').getElementById;
-const localize         = require('../../../_common/localize').localize;
-const urlFor           = require('../../../_common/url').urlFor;
-const cloneObject      = require('../../../_common/utility').cloneObject;
+const Defaults                   = require('./defaults');
+const Symbols                    = require('./symbols');
+const Tick                       = require('./tick');
+const marketsElement             = require('./markets.jsx');
+const GuideElement               = require('./guide.jsx');
+const PurchaseElement            = require('./purchase/purchase.jsx');
+const MarketSelectorElement      = require('./markets/market-selector.jsx');
+const FormsWrapperElement        = require('../form/contract-form-wrapper.jsx');
+const TabsElement                = require('../bottom/tabs.jsx');
+const formatMoney                = require('../../common/currency').formatMoney;
+const ActiveSymbols              = require('../../common/active_symbols');
+const dataManager                = require('../../common/data_manager.js').default;
+const elementInnerHtml           = require('../../../_common/common_functions').elementInnerHtml;
+const getElementById             = require('../../../_common/common_functions').getElementById;
+const localize                   = require('../../../_common/localize').localize;
+const urlFor                     = require('../../../_common/url').urlFor;
+const cloneObject                = require('../../../_common/utility').cloneObject;
 
 /*
  * This contains common functions we need for processing the response
@@ -46,7 +51,12 @@ const commonTrading = (() => {
         const contract_to_show = /^(callputequal)$/.test(selected) ? 'risefall' : selected;
 
         if (!contracts_element) {
-            contracts_element = contractsElement.init(all_contracts, contracts_tree, contract_to_show);
+            dataManager.setContract({
+                contractsTree  : contracts_tree,
+                contracts      : all_contracts,
+                formName       : selected || Defaults.get('formname'),
+                contractElement: getElementById('contract'),
+            });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
                 contracts_tree,
@@ -54,10 +64,16 @@ const commonTrading = (() => {
                 formname : contract_to_show || Defaults.get(FORM_NAME),
             });
         }
+        FormsWrapperElement.init();
     };
 
     const displayMarkets = () => {
         marketsElement.init();
+        // All other Quill refactored components
+        TabsElement.init();
+        MarketSelectorElement.init();
+        GuideElement.init();
+        PurchaseElement.init();
     };
 
     /*
@@ -141,6 +157,9 @@ const commonTrading = (() => {
         showHideOverlay('contract_confirmation_container', 'none');
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
+        dataManager.setPurchase({
+            showPurchaseResults: false,
+        });
     };
 
     const getContractCategoryTree = (elements) => {
@@ -223,7 +242,7 @@ const commonTrading = (() => {
     /*
      * display the profit and return of bet under each trade container
      */
-    const displayCommentPrice = (node, currency, type, payout) => {
+    const displayCommentPrice = (node, currency, type, payout, position) => {
         if (node && type && payout) {
             const profit         = payout - type;
             const return_percent = (profit / type) * 100;
@@ -234,6 +253,9 @@ const commonTrading = (() => {
             } else {
                 node.show();
                 elementInnerHtml(node, comment);
+                dataManager.setPurchase({
+                    [`${position}Comment`]: comment,
+                });
             }
         }
     };
@@ -325,7 +347,7 @@ const commonTrading = (() => {
     const displayTooltip = () => {
         const tip = getElementById('symbol_tip');
         if (tip) {
-            const market = ActiveSymbols.getSymbols()[Defaults.get(UNDERLYING)].market;
+            const market = ActiveSymbols.getSymbols()[Defaults.get(UNDERLYING)]?.market;
             const map_to_section_id = {
                 forex          : 'forex',
                 indices        : 'indices',
@@ -451,13 +473,23 @@ const commonTrading = (() => {
         displayMarkets,
         timeIsValid,
         requireHighstock,
-        showPriceOverlay: () => { showHideOverlay('loading_container2', 'block'); },
-        hidePriceOverlay: () => { showHideOverlay('loading_container2', 'none'); },
-        hideFormOverlay : () => { showHideOverlay('loading_container3', 'none'); },
-        showFormOverlay : () => { showHideOverlay('loading_container3', 'block'); },
-        durationOrder   : duration => duration_config[duration].order,
-        durationType    : duration => (duration_config[duration] || {}).type,
-        clean           : () => { $chart = null; contracts_element = null; },
+        showPriceOverlay: () => {
+            showHideOverlay('loading_container2', 'block');
+            dataManager.setPurchase({
+                isPurchaseFormDisabled: true,
+            });
+        },
+        hidePriceOverlay: () => {
+            showHideOverlay('loading_container2', 'none');
+            dataManager.setPurchase({
+                isPurchaseFormDisabled: false,
+            });
+        },
+        hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },
+        showFormOverlay: () => { showHideOverlay('loading_container3', 'block'); },
+        durationOrder  : duration => duration_config[duration].order,
+        durationType   : duration => (duration_config[duration] || {}).type,
+        clean          : () => { $chart = null; contracts_element = null; },
     };
 })();
 

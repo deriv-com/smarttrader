@@ -1,19 +1,32 @@
 const moment           = require('moment');
+const Defaults = require('./defaults');
+const dataManager      = require('../../common/data_manager').default;
 const getElementById   = require('../../../_common/common_functions').getElementById;
 const getPropertyValue = require('../../../_common/utility').getPropertyValue;
 
 /*
  * Display price/spot movement variation to depict price moved up or down
  */
-const displayPriceMovement = (element, old_value, current_value) => {
+const displayPriceMovement = (element, old_value, current_value, data_key) => {
     element.classList.remove('price_moved_down');
     element.classList.remove('price_moved_up');
+
+    dataManager.setPurchase({
+        [data_key]: '',
+    });
+
     if (parseFloat(current_value) > parseFloat(old_value)) {
         element.classList.remove('price_moved_down');
         element.classList.add('price_moved_up');
+        dataManager.setPurchase({
+            [data_key]: 'price_moved_up',
+        });
     } else if (parseFloat(current_value) < parseFloat(old_value)) {
         element.classList.remove('price_moved_up');
         element.classList.add('price_moved_down');
+        dataManager.setPurchase({
+            [data_key]: 'price_moved_down',
+        });
     }
 };
 
@@ -71,6 +84,7 @@ const checkValidTime = (time_start_element = getElementById('time_start'), $date
         min_time = min_time.add(5, 'minutes');
     }
     time_start_element.value = date_time.isBefore(min_time) || date_time.isAfter(min_max_time.maxTime) || !time ? min_time.format('HH:mm') : time_array.join(':');
+    Defaults.set(Defaults.PARAM_NAMES.TIME_START, time_start_element.value);
     time_start_element.setAttribute('data-value', time_start_element.value);
 };
 

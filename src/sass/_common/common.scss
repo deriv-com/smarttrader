@@ -194,11 +194,6 @@ button {
     vertical-align: top;
 }
 
-button:focus, input[type='submit']:focus {
-    background: $COLOR_GREEN;
-    outline: none;
-}
-
 button::-moz-focus-inner, input[type='submit']::-moz-focus-inner {
     border: 0;
 }
@@ -440,7 +435,11 @@ label {
 
 #content-holder {
     flex: 1 1 auto;
-    margin-top: 25px;
+    margin-top: 48px;
+
+    @media(max-width: 880px) {
+        margin-top: 40px;
+    }
 }
 
 .popup_page_overlay {
@@ -773,7 +772,6 @@ ul.bullet.gr-row > li {
 }
 
 #content {
-    margin-top: 40px;
     margin-bottom: 20px;
 
     div.select {
@@ -781,6 +779,7 @@ ul.bullet.gr-row > li {
             display: flex;
             align-items: center;
             text-transform: none;
+            border: solid 1px var(--semantic-color-monochrome-border-normal-high);           
         }
         ul.select-options {
             position: absolute;
@@ -1119,3 +1118,5 @@ label + input {
         font-weight: bold !important;
     }
 }
+
+

@@ -2,6 +2,7 @@ const moment             = require('moment');
 const Contract           = require('./contract');
 const Defaults           = require('./defaults');
 const Tick               = require('./tick');
+const dataManager        = require('../../common/data_manager').default;
 const addComma           = require('../../../_common/base/currency_base').addComma;
 const elementTextContent = require('../../../_common/common_functions').elementTextContent;
 const getElementById     = require('../../../_common/common_functions').getElementById;
@@ -32,6 +33,7 @@ const Barriers = (() => {
 
             const barrier = barriers[form_name][is_daily ? 'daily' : 'intraday'];
             if (barrier) {
+                const barrier_data = {};
                 const current_tick   = Tick.quote();
                 const decimal_places = Tick.pipSize();
 
@@ -40,6 +42,7 @@ const Barriers = (() => {
                 const indicative_low_barrier_tooltip  = getElementById('indicative_low_barrier_tooltip');
 
                 if (barrier.count === 1) {
+                    
                     getElementById('high_barrier_row').style.display = 'none';
                     getElementById('low_barrier_row').style.display  = 'none';
                     getElementById('barrier_row').setAttribute('style', '');
@@ -59,6 +62,8 @@ const Barriers = (() => {
                         }
                         tooltip.style.display = 'none';
                         span.style.display    = 'inherit';
+                        barrier_data.isOffset = false;
+                        barrier_data.label = localize('Barrier');
                         // no need to display indicative barrier in case of absolute barrier
                         elementTextContent(indicative_barrier_tooltip, '');
                     } else {
@@ -66,6 +71,8 @@ const Barriers = (() => {
                         value                 = barrier_def;
                         span.style.display    = 'none';
                         tooltip.style.display = 'inherit';
+                        barrier_data.isOffset = true;
+                        barrier_data.label = localize('Barrier offset');
                         if (current_tick && !isNaN(current_tick)) {
                             elementTextContent(indicative_barrier_tooltip, addComma((parseFloat(current_tick) +
                                 parseFloat(barrier_def)), decimal_places));
@@ -78,6 +85,11 @@ const Barriers = (() => {
                     Defaults.set(BARRIER, elm.value);
                     Defaults.remove(BARRIER_HIGH, BARRIER_LOW);
                     showHideRelativeTip(barrier.barrier, [tooltip, span]);
+                    barrier_data.show_barrier = true;
+                    barrier_data.show_barrier_highlow = false;
+                    dataManager.setTrade({
+                        barrier_data,
+                    }, 'barrier');
                     return;
                 } else if (barrier.count === 2) {
                     getElementById('barrier_row').style.display = 'none';
@@ -112,6 +124,9 @@ const Barriers = (() => {
                         high_tooltip.style.display = 'none';
                         low_span.style.display     = 'inherit';
                         low_tooltip.style.display  = 'none';
+                        barrier_data.label_high = localize('High barrier');
+                        barrier_data.label_low = localize('Low barrier');
+                        barrier_data.isOffsetHightLow = false;
 
                         elementTextContent(indicative_high_barrier_tooltip, '');
                         elementTextContent(indicative_low_barrier_tooltip, '');
@@ -128,6 +143,9 @@ const Barriers = (() => {
                         high_tooltip.style.display = 'inherit';
                         low_span.style.display     = 'none';
                         low_tooltip.style.display  = 'inherit';
+                        barrier_data.label_high = localize('High barrier offset');
+                        barrier_data.label_low = localize('Low barrier offset');
+                        barrier_data.isOffsetHightLow = true;
 
                         const barrierVal = (tick, barrier_value) => (
                             (tick + parseFloat(barrier_value)).toFixed(decimal_places)
@@ -150,6 +168,11 @@ const Barriers = (() => {
                     Barriers.validateBarrier();
                     Defaults.set(BARRIER_HIGH, high_elm.value);
                     Defaults.set(BARRIER_LOW, low_elm.value);
+                    barrier_data.show_barrier = false;
+                    barrier_data.show_barrier_highlow = true;
+                    dataManager.setTrade({
+                        barrier_data,
+                    }, 'barrier');
                     return;
                 }
             }
@@ -169,11 +192,13 @@ const Barriers = (() => {
         const barrier_element      = getElementById('barrier');
         const barrier_high_element = getElementById('barrier_high');
         const empty = isNaN(parseFloat(barrier_element.value)) || isAbsoluteZero(barrier_element.value);
-
+        let barrier_error;
         if (isVisible(barrier_element) && empty) {
             barrier_element.classList.add('error-field');
+            barrier_error = true;
         } else {
             barrier_element.classList.remove('error-field');
+            barrier_error = false;
         }
 
         if (isVisible(barrier_high_element)) {
@@ -182,7 +207,14 @@ const Barriers = (() => {
             const is_high_barrier_greater = +barrier_high_element.value > +barrier_low_element.value;
             barrier_high_element.classList[is_high_barrier_greater ? 'remove' : 'add']('error-field');
             error_node.classList[is_high_barrier_greater ? 'add' : 'remove']('invisible');
+         
+            barrier_error = !is_high_barrier_greater;
+
         }
+
+        dataManager.setTrade({
+            barrier_error,
+        }, 'barrier');
     };
 
     const showHideRelativeTip = (barrier, arr_el) => {

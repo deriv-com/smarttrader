@@ -140,7 +140,6 @@ ul.bullet {
         border-radius: 5px;
         box-sizing: border-box;
         height: 28px;
-        border: solid 1px var(--border-normal);
     }
     div.select-dropdown:after {
         height: 16px;
@@ -1072,7 +1071,6 @@ ul.bullet {
 }
 
 #trading_bottom_content {
-    margin-top: 15px;
     font-size: $FONT_SIZE_N;
 
     #tab_mobile_header {

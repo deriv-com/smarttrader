@@ -10,6 +10,7 @@ const localizeForLang   = require('../../../_common/localize').forLang;
 const urlLang           = require('../../../_common/language').urlLang;
 const State             = require('../../../_common/storage').State;
 const createElement     = require('../../../_common/utility').createElement;
+const dataManager       = require('../../common/data_manager').default;
 
 /*
  * Handles start time display
@@ -34,8 +35,11 @@ const StartDates = (() => {
     };
 
     const displayStartDates = () => {
+        const start_dates_data = {
+            has_now: 0,
+            options: [],
+        };
         const start_dates = Contract.startDates();
-
         if (start_dates && start_dates.list && start_dates.list.length) {
             const target   = CommonIndependent.getStartDateNode();
             const fragment = document.createDocumentFragment();
@@ -53,9 +57,12 @@ const StartDates = (() => {
 
             if (start_dates.has_spot) {
                 option = createElement('option', { value: 'now', text: localize('Now') });
+                start_dates_data.has_now = 1;
+                start_dates_data.options.push({ text: localize('Now'), value: 'now' });
                 fragment.appendChild(option);
                 has_now = 1;
             } else {
+                start_dates_data.has_now = 0;
                 has_now = 0;
             }
 
@@ -83,6 +90,10 @@ const StartDates = (() => {
                         }
                     } else {
                         option = createElement('option', { value: date_open.unix(), 'data-end': date_close.unix(), text: day });
+                        start_dates_data.options.push({
+                            text : day,
+                            value: date_open.unix().toString(),
+                        });
                         if (option.value >= default_start && !selected) {
                             selected = true;
                             option.setAttribute('selected', 'selected');
@@ -99,6 +110,9 @@ const StartDates = (() => {
                 Dropdown('#date_start');
                 Defaults.set(DATE_START, target.value);
                 $('#time_start_row').setVisibility(target.value !== 'now');
+                dataManager.setTrade({
+                    start_dates: start_dates_data,
+                });
             }
             State.set('is_start_dates_displayed', true);
             if (first) {
@@ -114,6 +128,9 @@ const StartDates = (() => {
             getElementById('date_start_row').style.display = 'none';
             getElementById('date_start').value = 'now';
             Defaults.remove(DATE_START);
+            dataManager.setTrade({
+                start_dates: null,
+            });
         }
     };
 

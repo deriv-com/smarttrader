@@ -12,16 +12,18 @@ const Client            = require('../../base/client');
 const Header            = require('../../base/header');
 const BinarySocket      = require('../../base/socket');
 const DerivBanner       = require('../../common/deriv_banner');
-const Guide             = require('../../common/guide');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
+const LoaderElement     = require('../loader.jsx');
 
 const TradePage = (() => {
     let events_initialized = 0;
     State.remove('is_trading');
+    LoaderElement.init();
 
     const onLoad = () => {
+        
         const iframe_target_origin = getAllowedLocalStorageOrigin();
         BinarySocket.wait('authorize').then(() => {
             if (iframe_target_origin) {
@@ -60,7 +62,7 @@ const TradePage = (() => {
             BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
                 displayCurrencies();
                 Dropdown('#currency', true);
-                if (document.getElementById('multiplier_currency').tagName === 'SELECT') {
+                if (document.getElementById('multiplier_currency')?.tagName === 'SELECT') {
                     Dropdown('#multiplier_currency', true);
                 }
                 Process.processActiveSymbols(country);
@@ -80,11 +82,7 @@ const TradePage = (() => {
         if (document.getElementById('websocket_form')) {
             commonTrading.addEventListenerForm();
         }
-
-        // Walk-through Guide
-        Guide.init({
-            script: 'trading',
-        });
+     
         TradingAnalysis.bindAnalysisTabEvent();
 
         ViewPopup.viewButtonOnClick('#contract_confirmation_container');

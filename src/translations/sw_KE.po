@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-29 03:17\n"
+"PO-Revision-Date: 2024-08-13 02:55\n"
 "Last-Translator: \n"
 "Language-Team: Swahili\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "Ukaguzi"
 
 msgid "Audit Page"
 msgstr "Ukurasa wa Ukaguzi"
+
+msgid "Audit page"
+msgstr "Ukurasa wa ukaguzi"
 
 msgid "Aug"
 msgstr "Ago"
@@ -256,6 +259,9 @@ msgstr "Endelea kufanya biashara"
 msgid "Contract Confirmation"
 msgstr "Uthibitisho wa M"
 
+msgid "Contract Details"
+msgstr "Maelezo ya Mkataba"
+
 msgid "Contract details"
 msgstr "Maelezo ya mkataba"
 
@@ -375,6 +381,9 @@ msgstr "Mikataba ya Digit itarejeshwa kwa bei ya ununuzi ikiwa mkataba hauishia 
 
 msgid "Digits"
 msgstr "Digits"
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "Je! Unataka kuongeza %1nyingine? Ikiwa sivyo, unaweza kufanya hivyo baadaye kwenye ukurasa wa %2Cashier%3, pia."
 
 msgid "Does Not Touch"
 msgstr "Haigusa"
@@ -562,6 +571,9 @@ msgstr "IDK"
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "Ikiwa mahali pa kuondoka la <strong></strong> ni sawa na kama kizuizi cha chini cha <strong></strong> au <strong>cha High kizuizi</strong>, haushinda malipo."
 
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "Ikiwa sehemu ya kutoka <strong></strong> ni sawa na kizuizi cha <strong></strong> au kizuizi kipya cha <strong>(ikiwa upya unatokea)</strong>, haushinda malipo."
+
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Ikiwa sehemu ya kutoka <strong></strong> ni sawa na kizuizi cha <strong></strong> au kizuizi kipya cha <stronm g>(ikiwa upya unatokea)</stronmg>, haushinda malipo."
 
@@ -685,6 +697,9 @@ msgstr "Inaonyesha uwanja unaohit"
 msgid "Indicative"
 msgstr "Maonyesho"
 
+msgid "Indicative barrier"
+msgstr "Kizuizi cha kiashi"
+
 msgid "Invalid app id"
 msgstr "Kitambulisho cha programu halali"
 
@@ -798,6 +813,9 @@ msgstr "Haribu"
 
 msgid "March"
 msgstr "Machi"
+
+msgid "Market"
+msgstr "Soko"
 
 msgid "Matches/Differs"
 msgstr "Matches/Differs"
@@ -1327,6 +1345,9 @@ msgstr "Wakati wa mahali (GMT)"
 msgid "Stake"
 msgstr "Dau"
 
+msgid "Start Time"
+msgstr "Wakati wa Kuanza"
+
 msgid "Start time"
 msgstr "Wakati wa kuanza"
 
@@ -1543,6 +1564,12 @@ msgstr "Imeelekea hadi"
 msgid "Today"
 msgstr "Leo"
 
+msgid "Top up"
+msgstr "Ongeza"
+
+msgid "Top up Virtual Account?"
+msgstr "Kujaza Akaunti Halisi?"
+
 msgid "Top up error"
 msgstr "Hitilafu ya kuongeza"
 
@@ -1579,6 +1606,9 @@ msgstr "Biashara chaguzi za dijiti kwenye masoko ya ulimwengu na SmartTrader, ju
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "Biashara masoko ya ulimwengu na jukwaa letu maarufu la rafiki."
 
+msgid "Trade types"
+msgstr "Aina za biashara"
+
 msgid "Trader's hub"
 msgstr "Kitovu cha mfanyabiashara"
 
@@ -1587,9 +1617,6 @@ msgstr "Biashara na amana imezimwa"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "Biashara na amana zimezimwa kwenye akaunti yako. Tafadhali %1cwasiliana na msaada wa wateja%2 kwa usaidizi."
-
-msgid "Trading is unavailable at this time."
-msgstr "Biashara haipatikani kwa wakati huu."
 
 msgid "Trading statistics report"
 msgstr "Ripoti ya takwimu za biashara"

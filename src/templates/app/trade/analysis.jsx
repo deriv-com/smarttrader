@@ -1,6 +1,5 @@
 import React from 'react';
 import Explanation from './explanation.jsx';
-import LastDigit from './last_digit.jsx';
 import { TabContainer, TabsSubtabs, TabContentContainer, TabContent } from '../../_common/components/tabs.jsx';
 
 const ArrowsMobile = ({ direction, parent }) => (
@@ -15,7 +14,8 @@ const ArrowsMobile = ({ direction, parent }) => (
 
 const Analysis = ({ no_graph }) => (
     <div id='trading_bottom_content'>
-        <TabContainer className='gr-padding-30 gr-parent full-width' theme='light'>
+        <div id='trading_bottom_content_tabs' />
+        <TabContainer className='invisible gr-padding-30 gr-parent full-width' theme='light'>
             <div className='gr-row'>
                 <ArrowsMobile parent='trade_analysis' direction='left' />
                 <strong id='tab_mobile_header' className='align-self-center gr-hide gr-show-m' />
@@ -23,7 +23,7 @@ const Analysis = ({ no_graph }) => (
             </div>
             <TabsSubtabs
                 id='trade_analysis'
-                className='gr-padding-20 gr-parent tab-selector-wrapper'
+                className='gr-padding-20 gr-parent tab-selector-wrapper invisible'
                 items={[
                     { id: 'tab_graph',        disabled: no_graph, text: it.L('Chart') },
                     { id: 'tab_explanation',  text: it.L('Explanation') },
@@ -31,7 +31,7 @@ const Analysis = ({ no_graph }) => (
                     { id: 'trade_analysis_selector', className: 'tab-selector' },
                 ]}
             />
-            <div className='tab-content'>
+            <div className='tab-content invisible'>
                 <TabContentContainer id='analysis_content'>
                     { !no_graph &&
                     <TabContent id='tab_graph'>
@@ -42,13 +42,9 @@ const Analysis = ({ no_graph }) => (
                     </TabContent>
                     }
 
-                    <TabContent id='tab_explanation' className='selectedTab'>
-                        <Explanation />
-                    </TabContent>
+                    <TabContent id='tab_explanation' className='selectedTab invisible' ><Explanation /> </TabContent>
 
-                    <TabContent id='tab_last_digit'>
-                        <LastDigit />
-                    </TabContent>
+                    <TabContent id='tab_last_digit' />
                 </TabContentContainer>
             </div>
         </TabContainer>

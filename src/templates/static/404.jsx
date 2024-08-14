@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Page404 = () => (
-    <div className='container'>
-        <div className='page_404 static_full'>
+    <div className='container static-page-layout static_full'>
+        <div className='page_404 static-content'>
             <div className='gr-row'>
                 <div className='gr-12'>
                     <h1>{it.L('Oops... Page Not Available')}</h1>

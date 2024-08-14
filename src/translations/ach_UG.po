@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-03-13 05:28\n"
+"PO-Revision-Date: 2024-08-12 08:59\n"
 "Last-Translator: \n"
 "Language-Team: Acholi\n"
 "MIME-Version: 1.0\n"
@@ -111,6 +111,9 @@ msgstr "crwdns91376:0crwdne91376:0"
 
 msgid "Audit Page"
 msgstr "crwdns162696:0crwdne162696:0"
+
+msgid "Audit page"
+msgstr "crwdns6033402:0crwdne6033402:0"
 
 msgid "Aug"
 msgstr "crwdns91380:0crwdne91380:0"
@@ -256,6 +259,9 @@ msgstr "crwdns92240:0crwdne92240:0"
 msgid "Contract Confirmation"
 msgstr "crwdns92246:0crwdne92246:0"
 
+msgid "Contract Details"
+msgstr "crwdns6033404:0crwdne6033404:0"
+
 msgid "Contract details"
 msgstr "crwdns116944:0crwdne116944:0"
 
@@ -376,6 +382,9 @@ msgstr "crwdns92642:0crwdne92642:0"
 msgid "Digits"
 msgstr "crwdns92644:0crwdne92644:0"
 
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr "crwdns6033406:0%1crwdnd6033406:0%2Ccrwdnd6033406:0%3crwdne6033406:0"
+
 msgid "Does Not Touch"
 msgstr "crwdns92696:0crwdne92696:0"
 
@@ -491,7 +500,7 @@ msgid "Fridays"
 msgstr "crwdns93430:0crwdne93430:0"
 
 msgid "Gaming"
-msgstr "crwdns93480:0crwdne93480:0"
+msgstr "crwdns6033408:0crwdne6033408:0"
 
 msgid "Go To Reports"
 msgstr "crwdns162832:0crwdne162832:0"
@@ -561,6 +570,9 @@ msgstr "crwdns162844:0crwdne162844:0"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
 msgstr "crwdns93826:0crwdne93826:0"
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr "crwdns6033410:0crwdne6033410:0"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "crwdns93828:0crwdne93828:0"
@@ -685,6 +697,9 @@ msgstr "crwdns94158:0crwdne94158:0"
 msgid "Indicative"
 msgstr "crwdns94162:0crwdne94162:0"
 
+msgid "Indicative barrier"
+msgstr "crwdns6033412:0crwdne6033412:0"
+
 msgid "Invalid app id"
 msgstr "crwdns116970:0crwdne116970:0"
 
@@ -798,6 +813,9 @@ msgstr "crwdns94736:0crwdne94736:0"
 
 msgid "March"
 msgstr "crwdns94738:0crwdne94738:0"
+
+msgid "Market"
+msgstr "crwdns6033414:0crwdne6033414:0"
 
 msgid "Matches/Differs"
 msgstr "crwdns94792:0crwdne94792:0"
@@ -1327,6 +1345,9 @@ msgstr "crwdns117034:0crwdne117034:0"
 msgid "Stake"
 msgstr "crwdns96596:0crwdne96596:0"
 
+msgid "Start Time"
+msgstr "crwdns6033416:0crwdne6033416:0"
+
 msgid "Start time"
 msgstr "crwdns96610:0crwdne96610:0"
 
@@ -1543,6 +1564,12 @@ msgstr "crwdns98068:0crwdne98068:0"
 msgid "Today"
 msgstr "crwdns98130:0crwdne98130:0"
 
+msgid "Top up"
+msgstr "crwdns6033418:0crwdne6033418:0"
+
+msgid "Top up Virtual Account?"
+msgstr "crwdns6033420:0crwdne6033420:0"
+
 msgid "Top up error"
 msgstr "crwdns98148:0crwdne98148:0"
 
@@ -1579,6 +1606,9 @@ msgstr "crwdns168621:0crwdne168621:0"
 msgid "Trade the world's markets with our popular user-friendly platform."
 msgstr "crwdns168625:0crwdne168625:0"
 
+msgid "Trade types"
+msgstr "crwdns6033422:0crwdne6033422:0"
+
 msgid "Trader's hub"
 msgstr "crwdns1990109:0crwdne1990109:0"
 
@@ -1587,9 +1617,6 @@ msgstr "crwdns117048:0crwdne117048:0"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
 msgstr "crwdns123202:0%1ccrwdnd123202:0%2crwdne123202:0"
-
-msgid "Trading is unavailable at this time."
-msgstr "crwdns98298:0crwdne98298:0"
 
 msgid "Trading statistics report"
 msgstr "crwdns163648:0crwdne163648:0"
