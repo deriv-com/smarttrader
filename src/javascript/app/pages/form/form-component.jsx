@@ -110,14 +110,14 @@ export const FormComponent = () => {
         }
     };
 
-    const updateFormField = (element_id, value, eventType) => {
+    const updateFormField = (element_id, value, event_type) => {
         const element = common_functions.getElementById(element_id);
         if (element_id === 'callputequal') {
             element.checked = !+is_equal;
         } else {
             element.value = value;
         }
-        eventDispatcher(element, eventType);
+        eventDispatcher(element, event_type);
     };
 
     const getMessage = (form) => {
