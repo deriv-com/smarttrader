@@ -12,8 +12,8 @@ export const ContractDropdown = () => {
     const containerRef = useRef(null);
     const closeDropdownTimer = useRef();
 
-    const onContractClick = (formName) => {
-        if (formName === data?.formName) {
+    const onContractClick = (form_name) => {
+        if (form_name === data?.form_name) {
             close();
             return;
         }
@@ -22,14 +22,14 @@ export const ContractDropdown = () => {
 
         if (contract_element) {
             const event = new Event('change');
-            contract_element.value = formName;
+            contract_element.value = form_name;
             contract_element.dispatchEvent(event);
         }
 
-        Defaults.set(PARAM_NAMES.FORM_NAME, formName);
+        Defaults.set(PARAM_NAMES.FORM_NAME, form_name);
 
         dataManager.setContract({
-            formName,
+            form_name,
         });
 
         triggerContractChange();
@@ -75,10 +75,10 @@ export const ContractDropdown = () => {
                                         key={i}
                                         onClick={() => onContractClick(subtype)}
                                         label={data?.contracts[subtype]}
-                                        selected={subtype === data?.formName}
+                                        selected={subtype === data?.form_name}
                                         size='md'
                                         className='trade-item-selected'
-                                        ref={subtype === data?.formName ? selectedRef : null}
+                                        ref={subtype === data?.form_name ? selectedRef : null}
                                     />
                                 )
                                 )}
@@ -93,10 +93,10 @@ export const ContractDropdown = () => {
                             <DropdownItem
                                 onClick={() => onContractClick(contract)}
                                 label={data?.contracts[contract]}
-                                selected={contract === data?.formName}
+                                selected={contract === data?.form_name}
                                 size='md'
                                 className='contract-item-clickables'
-                                ref={contract === data?.formName ? selectedRef : null}
+                                ref={contract === data?.form_name ? selectedRef : null}
                             />
                             <Divider />
                         </React.Fragment>
