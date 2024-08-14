@@ -42,8 +42,8 @@ export const ContractDropdown = () => {
     useEffect(() => () => clearTimeout(close_dropdown_timer.current), []);
 
     useEffect(() => {
-        setData(oldData => ({
-            ...oldData,
+        setData(old_data => ({
+            ...old_data,
             ...dataManager.getAllContracts(),
         }));
     }, [has_contract_change]);

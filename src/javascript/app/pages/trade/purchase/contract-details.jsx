@@ -206,8 +206,8 @@ const ContractDetails = () => {
     useEffect(() => {
         const newData = dataManager.getAllPurchases();
 
-        setData((oldData) => ({
-            ...oldData,
+        setData((old_data) => ({
+            ...old_data,
             ...newData,
         }));
     }, [has_purchase_change]);
