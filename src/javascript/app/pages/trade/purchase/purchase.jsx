@@ -283,7 +283,7 @@ const Purchase = () => {
                                 <Text size='sm' centered >{parseData(data.pr_table_cost_value)}</Text>
                             </div>
                         )}
-                        { data?.pr_table_profit_value && data?.pr_showTableProfit && (
+                        { data?.pr_table_profit_value && data?.pr_show_table_profit && (
                             <div className='table-item'>
                                 <Text size='sm' centered bold>{data?.pr_tableProfit}</Text>
                                 <Text size='sm' centered>{parseData(data.pr_table_profit_value)}</Text>
