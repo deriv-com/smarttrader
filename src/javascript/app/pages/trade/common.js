@@ -52,10 +52,10 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             dataManager.setContract({
-                contractsTree  : contracts_tree,
-                contracts      : all_contracts,
-                formName       : selected || Defaults.get('formname'),
-                contractElement: getElementById('contract'),
+                contractsTree   : contracts_tree,
+                contracts       : all_contracts,
+                formName        : selected || Defaults.get('formname'),
+                contract_element: getElementById('contract'),
             });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {

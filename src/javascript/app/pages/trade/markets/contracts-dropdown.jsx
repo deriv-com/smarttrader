@@ -18,12 +18,12 @@ export const ContractDropdown = () => {
             return;
         }
 
-        const contractElement = data?.contractElement;
+        const contract_element = data?.contract_element;
 
-        if (contractElement) {
+        if (contract_element) {
             const event = new Event('change');
-            contractElement.value = formName;
-            contractElement.dispatchEvent(event);
+            contract_element.value = formName;
+            contract_element.dispatchEvent(event);
         }
 
         Defaults.set(PARAM_NAMES.FORM_NAME, formName);
