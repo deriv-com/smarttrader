@@ -12,13 +12,13 @@ import LastDigit from '../trade/last_digit.jsx';
 
 const BottomTabs = () => {
     const has_market_change = useMarketChange();
-    const [selectedTab, setSelectedTab] = useState(1);
-    const [hasLastDigit, setHasLastDigit] = useState(false);
-    const [formName, setFormName] = useState('');
+    const [selected_tab, setSelectedTab] = useState(1);
+    const [has_last_digit, setHasLastDigit] = useState(false);
+    const [form_name, setFormName] = useState('');
     const has_contract_change = useContractChange();
-    const savedTab = sessionStorage.getItem('currentTab');
+    const saved_tab = sessionStorage.getItem('currentTab');
+    const [is_show_graph, setIsShowGraph] = useState(false);
     const triggerOldTabTimer = useRef();
-    const [isShowGraph, setIsShowGraph] = useState(false);
 
     const handleChange = (e) => {
         setSelectedTab(e);
@@ -31,7 +31,7 @@ const BottomTabs = () => {
 
     const tabs = [{ label: localize('Chart') }, { label: localize('Explanation') }];
 
-    const bottomTabOptions = hasLastDigit
+    const bottom_tab_options = has_last_digit
         ? [...tabs, { label: localize('Last Digit Stats') }]
         : tabs;
 
@@ -40,31 +40,31 @@ const BottomTabs = () => {
     }, [has_contract_change, has_market_change]);
 
     useEffect(() => {
-        setHasLastDigit(formName === 'digits' || formName === 'evenodd' || formName === 'overunder');
-    }, [formName]);
+        setHasLastDigit(form_name === 'digits' || form_name === 'evenodd' || form_name === 'overunder');
+    }, [form_name]);
 
     useEffect(() => {
-        if (savedTab !== null) {
-            const tabIndex = parseInt(savedTab);
-            if (tabIndex === 2 && !hasLastDigit) {
+        if (saved_tab !== null) {
+            const tab_index = parseInt(saved_tab);
+            if (tab_index === 2 && !has_last_digit) {
                 setSelectedTab(1);
             } else {
-                setSelectedTab(tabIndex);
+                setSelectedTab(tab_index);
             }
         } else {
             setSelectedTab(1);
         }
-    }, [hasLastDigit]);
+    }, [has_last_digit]);
 
     useEffect(() => {
-        const oppositeTab = (selectedTab + 1) > 2 ? 0 : (selectedTab + 1);
+        const opposite_tab = (selected_tab + 1) > 2 ? 0 : (selected_tab + 1);
       
-        triggerOldTab(oppositeTab);
+        triggerOldTab(opposite_tab);
 
         triggerOldTabTimer.current = setTimeout(() => {
-            triggerOldTab(selectedTab);
+            triggerOldTab(selected_tab);
         }, 100);
-    }, [selectedTab, savedTab]);
+    }, [selected_tab, saved_tab]);
 
     useEffect(() => () => {
         clearTimeout(triggerOldTabTimer.current);
@@ -76,20 +76,20 @@ const BottomTabs = () => {
         <>
             <div className='quill-container-centered'>
                 <SegmentedControlSingleChoice
-                    options={bottomTabOptions}
-                    selectedItemIndex={selectedTab}
+                    options={bottom_tab_options}
+                    selectedItemIndex={selected_tab}
                     onChange={handleChange}
                 />
             </div>
             <div className='bottom-content-section'>
-                {selectedTab === 0 && <Graph
+                {selected_tab === 0 && <Graph
                     onUnload={() => setIsShowGraph(false)}
                     onLoad={() => setIsShowGraph(true)}
                 />}
-                {selectedTab === 1 && <Explanation />}
-                {selectedTab === 2 && hasLastDigit && <LastDigit />}
+                {selected_tab === 1 && <Explanation />}
+                {selected_tab === 2 && has_last_digit && <LastDigit />}
        
-                <div id='tab_graph' className={`chart-section ${isShowGraph ? '' : 'grap-hide'}`}>
+                <div id='tab_graph' className={`chart-section ${is_show_graph ? '' : 'grap-hide'}`}>
                     <p className='error-msg' id='chart-error' />
                     <div id='trade_live_chart'>
                         <div id='webtrader_chart' />
