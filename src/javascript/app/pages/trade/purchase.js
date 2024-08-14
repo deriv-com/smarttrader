@@ -236,7 +236,7 @@ const Purchase = (() => {
                 dataManager.setPurchase({
                     pr_table_payout      : localize('Potential Payout'),
                     pr_table_payout_value: formatMoney(currency, payout_value),
-                    pr_tableProfit       : localize('Potential Profit'),
+                    pr_table_profit      : localize('Potential Profit'),
                     pr_table_profit_value: potential_profit_value,
                     pr_show_table_profit : true,
                 });

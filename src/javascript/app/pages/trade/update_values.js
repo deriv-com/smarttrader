@@ -23,14 +23,14 @@ const updatePurchaseStatus = (final_price, pnl, profit, localized_contract_statu
     if (!final_price) {
         $profit.html($('<div/>', { text: localize('Loss') }).append($('<p/>', { html: formatMoney(currency, pnl) })));
         dataManager.setPurchase({
-            pr_tableProfit     : localize('Loss'),
+            pr_table_profit     : localize('Loss'),
             pr_table_profit_value: formatMoney(currency, pnl),
         });
     } else {
         $profit.html($('<div/>', { text: localize('Profit') }).append($('<p/>', { html: formatMoney(currency, profit) })));
         updateContractBalance(Client.get('balance'));
         dataManager.setPurchase({
-            pr_tableProfit     : localize('Profit'),
+            pr_table_profit     : localize('Profit'),
             pr_table_profit_value: formatMoney(currency, profit),
         });
     }
