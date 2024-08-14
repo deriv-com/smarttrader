@@ -1,6 +1,6 @@
 import { localize } from '../../../../_common/localize.js';
 
-export const contractExplanationData = {
+export const contract_explanation_data = {
     winning: {
         asian: {
             

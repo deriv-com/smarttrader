@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 import { SectionMessage, Skeleton, Text } from '@deriv-com/quill-ui';
-import { contractExplanationData } from './data/explanation.js';
+import { contract_explanation_data } from './data/explanation.js';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
 import { localize } from '../../../_common/localize.js';
@@ -31,7 +31,7 @@ export const Explanation = ({ explanationOnly = false }) => {
     const Notes = () => (
         <>
             <strong>{localize('Note')}: </strong>
-            {contractExplanationData.note[form_name].content.map((data, idx) => (
+            {contract_explanation_data.note[form_name].content.map((data, idx) => (
                 <span key={idx}>{parse(data)}</span>
             ))}
         </>
@@ -105,7 +105,7 @@ export const Explanation = ({ explanationOnly = false }) => {
                                     <Text size='lg' bold>{localize('Winning the contract')}</Text>
                                 </div>
                                 <div className='explanation-content'>
-                                    {contractExplanationData.winning[form_name].content.map(
+                                    {contract_explanation_data.winning[form_name].content.map(
                                         (data, idx) => (
                                             <Text size='md' key={idx}>{parse(data)}</Text>
                                         )
@@ -151,27 +151,27 @@ export const Explanation = ({ explanationOnly = false }) => {
                 <div id='explanation_explain' className='gr-child'>
                     <div id={`explain_${form_name}`}  >
                         <div className='explanation-heading'>
-                            <Text size='lg' bold >{contractExplanationData.explain[form_name].title}</Text>
+                            <Text size='lg' bold >{contract_explanation_data.explain[form_name].title}</Text>
                         </div>
                         <div className='explanation-content'>
-                            {contractExplanationData.explain[form_name].content.map(
+                            {contract_explanation_data.explain[form_name].content.map(
                                 (data, idx) => (
                                     <Text size='md' key={idx}>{parse(data)}</Text>
                                 )
                             )}
                         </div>
                         
-                        {contractExplanationData.explain[form_name].title_secondary && (
+                        {contract_explanation_data.explain[form_name].title_secondary && (
                             <div className='explanation-heading secondary-heading'>
                                 <Text size='lg' bold>
-                                    {contractExplanationData.explain[form_name].title_secondary}
+                                    {contract_explanation_data.explain[form_name].title_secondary}
                                 </Text>
                             </div>
                         )}
                         
-                        {contractExplanationData.explain[form_name].content_secondary && (
+                        {contract_explanation_data.explain[form_name].content_secondary && (
                             <div className='explanation-content'>
-                                {contractExplanationData.explain[form_name].content_secondary.map(
+                                {contract_explanation_data.explain[form_name].content_secondary.map(
                                     (data, idx) => (
                                         <Text size='md' key={idx}>{parse(data)}</Text>
                                     )
@@ -184,7 +184,7 @@ export const Explanation = ({ explanationOnly = false }) => {
 
                 {/* ========== Note ========== */}
                 {!explanationOnly && (
-                    contractExplanationData.note[form_name] && (
+                    contract_explanation_data.note[form_name] && (
                         <SectionMessage status='info' message={<Notes />} size='sm' />
                     )
                 )}
