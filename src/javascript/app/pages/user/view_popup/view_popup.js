@@ -404,7 +404,7 @@ const ViewPopup = (() => {
             Clock.setExternalTimer(); // stop timer
 
             dataManager.setPurchase({
-                cd_remainingTime: '-',
+                cd_remaining_time: '-',
             });
         } else {
             $container.find('#notice_ongoing').setVisibility(1);
@@ -436,7 +436,7 @@ const ViewPopup = (() => {
         if (!is_started || contract.status !== 'open' || remained < 0) {
             containerSetText('trade_details_live_remaining', '-');
             dataManager.setPurchase({
-                cd_remainingTime: '-',
+                cd_remaining_time: '-',
             });
         } else {
             let days = 0;
@@ -449,7 +449,7 @@ const ViewPopup = (() => {
                 (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'));
 
             dataManager.setPurchase({
-                cd_remainingTime : (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'),
+                cd_remaining_time: (days > 0 ? `${days} ${days > 1 ? localize('days') : localize('day')}, ` : '') + moment((remained) * 1000).utc().format('HH:mm:ss'),
                 cd_contract_ended: false,
             });
         }

@@ -68,7 +68,7 @@ const ContractTable = ({ data }) => (
                 <Text size='sm'>{localize('Remaining time')}</Text>
             </div>
             <div className='table-item'>
-                <Text size='sm'>{data?.cd_remainingTime}</Text>
+                <Text size='sm'>{data?.cd_remaining_time}</Text>
             </div>
         </div>
         {data?.cd_show_entry_spot && (
