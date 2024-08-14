@@ -205,7 +205,7 @@ const Purchase = () => {
       
                     <div className='body-box'>
                         <div className='error-box'>
-                            {data?.error?.isCustom ? (
+                            {data?.error?.is_custom ? (
                                 <>
                                     {data?.error.code === 'AuthorizationRequired' && (
                                         <>

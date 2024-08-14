@@ -99,7 +99,7 @@ const Purchase = (() => {
                         ...error,
                         action               : TopUpVirtualPopup.doTopUp,
                         title                : localize('Top up Virtual Account?'),
-                        isCustom             : true,
+                        is_custom            : true,
                     },
                 });
             } else {
@@ -124,8 +124,8 @@ const Purchase = (() => {
                         error: {
                             ...error,
                             signup_url,
-                            title   : localize('Ready to trade?'),
-                            isCustom: true,
+                            title    : localize('Ready to trade?'),
+                            is_custom: true,
                         },
                     });
 
