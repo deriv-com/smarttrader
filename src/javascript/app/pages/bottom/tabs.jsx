@@ -18,7 +18,7 @@ const BottomTabs = () => {
     const has_contract_change = useContractChange();
     const saved_tab = sessionStorage.getItem('currentTab');
     const [is_show_graph, setIsShowGraph] = useState(false);
-    const triggerOldTabTimer = useRef();
+    const trigger_old_tab_timer = useRef();
 
     const handleChange = (e) => {
         setSelectedTab(e);
@@ -61,13 +61,13 @@ const BottomTabs = () => {
       
         triggerOldTab(opposite_tab);
 
-        triggerOldTabTimer.current = setTimeout(() => {
+        trigger_old_tab_timer.current = setTimeout(() => {
             triggerOldTab(selected_tab);
         }, 100);
     }, [selected_tab, saved_tab]);
 
     useEffect(() => () => {
-        clearTimeout(triggerOldTabTimer.current);
+        clearTimeout(trigger_old_tab_timer.current);
         WebtraderChart.cleanupChart();
         WebtraderChart.showChart();
     },[]);
