@@ -129,7 +129,7 @@ const Process = (() => {
         const init_logo = getElementById('trading_init_progress');
 
         dataManager.setContract({
-            hidePageLoader: true,
+            hide_page_loader: true,
         });
         
         if (init_logo && init_logo.style.display !== 'none') {
