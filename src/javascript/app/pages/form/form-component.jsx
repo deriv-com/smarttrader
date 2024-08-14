@@ -30,17 +30,17 @@ import { isCryptocurrency } from '../../../_common/base/currency_base.js';
 export const FormComponent = () => {
     const [tradeData, setTradeData] = useState({});
 
-    const hasTradeChange = useTradeChange();
+    const has_trade_change = useTradeChange();
     const has_market_change = useMarketChange();
     const has_contract_change = useContractChange();
-    const hasSessionChange = useSessionChange();
+    const has_session_change = useSessionChange();
 
     useEffect(() => {
         setTradeData((oldData) => ({
             ...oldData,
             ...dataManager.getAllTrades(),
         }));
-    }, [has_market_change, has_contract_change, hasTradeChange, hasSessionChange]);
+    }, [has_market_change, has_contract_change, has_trade_change, has_session_change]);
 
     const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiry_type = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
