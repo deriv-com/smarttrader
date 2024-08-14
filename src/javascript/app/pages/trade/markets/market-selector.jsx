@@ -11,7 +11,7 @@ import { localize } from '../../../../_common/localize';
 import { useContractChange, useMarketChange } from '../../../hooks/events.js';
 
 const MarketSelector = () => {
-    const [marketLabel, setMarketLabel] = useState(getMarketName());
+    const [market_label, setMarketLabel] = useState(getMarketName());
     const [tradeTypeLabel, setTradeTypeLabel] = useState(getContractName());
     const has_contract_change = useContractChange();
     const has_market_change = useMarketChange();
@@ -30,7 +30,7 @@ const MarketSelector = () => {
                 <CustomDropdown
                     containerClassName='quill-market-selector-dropdown'
                     label={localize('Market')}
-                    value={marketLabel}
+                    value={market_label}
                 >
                     <MarketsDropdown />
                 </CustomDropdown>
