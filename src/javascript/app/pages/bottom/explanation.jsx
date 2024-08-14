@@ -102,7 +102,7 @@ export const Explanation = ({ explanationOnly = false }) => {
                         <div id='explanation_winning'>
                             <div id={`winning_${form_name}`}>
                                 <div className='explanation-heading'>
-                                    <Text size='lg' bold >{localize('Winning the contract')}</Text>
+                                    <Text size='lg' bold>{localize('Winning the contract')}</Text>
                                 </div>
                                 <div className='explanation-content'>
                                     {contractExplanationData.winning[form_name].content.map(
