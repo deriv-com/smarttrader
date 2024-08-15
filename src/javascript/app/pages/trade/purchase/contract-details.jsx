@@ -204,11 +204,11 @@ const ContractDetails = () => {
     }, [has_purchase_change]);
 
     useEffect(() => {
-        const newData = dataManager.getAllPurchases();
+        const new_data = dataManager.getAllPurchases();
 
         setData((old_data) => ({
             ...old_data,
-            ...newData,
+            ...new_data,
         }));
     }, [has_purchase_change]);
 
