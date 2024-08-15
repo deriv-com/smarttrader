@@ -199,7 +199,7 @@ export const FormComponent = () => {
                                             <TimePickerDropdown
                                                 time={time_start}
                                                 onUpdate={updateFormField}
-                                                element_id='time_start'
+                                                elementId='time_start'
                                             />
                                         </div>
                                     )}
@@ -278,7 +278,7 @@ export const FormComponent = () => {
                                                 <TimePickerDropdown
                                                     time={expiry_time}
                                                     onUpdate={updateFormField}
-                                                    element_id='expiry_time'
+                                                    elementId='expiry_time'
                                                 />
                                             </div>
                                         </div>
