@@ -344,7 +344,7 @@ export const FormComponent = () => {
                                                     currency_list={currency_list}
                                                     currency={currency}
                                                     onUpdate={updateFormField}
-                                                    element_id='currency'
+                                                    elementId='currency'
                                                 />
                                             </div>
                                         </>
@@ -382,7 +382,7 @@ export const FormComponent = () => {
                                                     currency_list={currency_list}
                                                     currency={currency}
                                                     onUpdate={updateFormField}
-                                                    element_id='multiplier_currency'
+                                                    elementId='multiplier_currency'
                                                 />
                                             </div>
                                         </>
