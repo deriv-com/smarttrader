@@ -37,6 +37,7 @@ export const CurrencyDropdown = ({ currency_list, currency, onUpdate, elementId 
     <CustomDropdown
         value={currency}
         fullHeightOnOpen={false}
+        containerClassName='input-wrapper-container'
     >
         <CurrencyContent
             currency_list={currency_list}
