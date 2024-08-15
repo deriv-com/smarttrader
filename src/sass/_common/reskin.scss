@@ -49,7 +49,7 @@ body {
 }
 
 // Hide persistent chart showing in under the main chart
-div[data-highcharts-chart="0"]:not(.quill-purchase-popup div[data-highcharts-chart="0"]) {
+div.chart-wrapper[data-highcharts-chart="0"]:not(.quill-purchase-popup div.chart-wrapper[data-highcharts-chart="0"]) {
     position: absolute;
     top: -9999px;
 }
@@ -908,6 +908,7 @@ html.test {
 }
 
 .bottom-content-section {
+    position: relative;
     min-height: 400px;
     padding: 16px;
 
@@ -1099,7 +1100,8 @@ html.test {
 
 // Graph visibility control
 #tab_graph {
-    &.grap-hide {
+    &.graph-hide {
+        width: 100%;
         position: absolute;
         top: -9999px;
     }

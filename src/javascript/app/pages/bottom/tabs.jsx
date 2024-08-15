@@ -88,8 +88,8 @@ const BottomTabs = () => {
                 />}
                 {selectedTab === 1 && <Explanation />}
                 {selectedTab === 2 && hasLastDigit && <LastDigit />}
-       
-                <div id='tab_graph' className={`chart-section ${isShowGraph ? '' : 'grap-hide'}`}>
+   
+                <div id='tab_graph' className={`chart-section ${isShowGraph ? '' : 'graph-hide'}`}>
                     <p className='error-msg' id='chart-error' />
                     <div id='trade_live_chart'>
                         <div id='webtrader_chart' />
