@@ -28,6 +28,7 @@ export const NumbersDropdown = ({ value, label, start, end, elementId, onUpdate 
         value={value}
         label={label}
         fullHeightOnOpen={false}
+        containerClassName='input-wrapper-container'
     >
         <Content
             value={value}

@@ -35,6 +35,7 @@ export const DropdownComponent = ({ label = '', options, value, onUpdate, elemen
         value={value}
         label={label}
         fullHeightOnOpen={false}
+        containerClassName='input-wrapper-container'
     >
         <DropdownContent
             options={options}

@@ -90,6 +90,7 @@ export const TimePickerDropdown = ({
             value={time}
             onClickDropdown={() => handleOpen(elementId)}
             fullHeightOnOpen={false}
+            containerClassName='input-wrapper-container'
         >
             <TimeContent
                 time={time}
