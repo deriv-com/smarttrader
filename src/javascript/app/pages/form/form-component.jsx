@@ -191,7 +191,7 @@ export const FormComponent = () => {
                                             options={start_dates.options}
                                             value={findTextByValue(start_dates.options, date_start)}
                                             onUpdate={updateFormField}
-                                            element_id='date_start'
+                                            elementId='date_start'
                                         />
                                     </div>
                                     {date_start !== 'now' && (
@@ -213,7 +213,7 @@ export const FormComponent = () => {
                                                 options={expiry_type_options}
                                                 value={findTextByValue(expiry_type_options, expiry_type)}
                                                 onUpdate={updateFormField}
-                                                element_id='expiry_type'
+                                                elementId='expiry_type'
                                             />
                                         </div>
                                         {expiry_type === 'duration' && (
@@ -239,7 +239,7 @@ export const FormComponent = () => {
                                                         options={duration_options}
                                                         value={findTextByValue(duration_options, duration_units)}
                                                         onUpdate={updateFormField}
-                                                        element_id='duration_units'
+                                                        elementId='duration_units'
                                                     />
                                                 </div>
                                             </>
@@ -297,7 +297,7 @@ export const FormComponent = () => {
                                             label={localize('Last Digit Prediction')}
                                             start={0}
                                             end={9}
-                                            element_id='prediction'
+                                            elementId='prediction'
                                             onUpdate={updateFormField}
                                         />
                                     </div>
@@ -311,7 +311,7 @@ export const FormComponent = () => {
                                             label={localize('Tick Prediction')}
                                             start={1}
                                             end={5}
-                                            element_id='selected_tick'
+                                            elementId='selected_tick'
                                             onUpdate={updateFormField}
                                         />
                                     </div>
@@ -326,7 +326,7 @@ export const FormComponent = () => {
                                             options={payout_type_options}
                                             value={findTextByValue(payout_type_options, amount_type)}
                                             onUpdate={updateFormField}
-                                            element_id='amount_type'
+                                            elementId='amount_type'
                                         />
                                     </div>
                                     {currency_list ? (
