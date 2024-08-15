@@ -8,7 +8,7 @@ import { localize } from '../../../_common/localize.js';
 import dataManager from '../../common/data_manager.js';
 import { useContractChange } from '../../hooks/events.js';
 
-export const Explanation = ({ explanationOnly = false }) => {
+export const Explanation = ({ explanation_only = false }) => {
 
     const [form_name,setFormName] = useState(null);
 
@@ -97,7 +97,7 @@ export const Explanation = ({ explanationOnly = false }) => {
         return (
             <div className='tab-explanation'>
                 {/* ========== Winning ========== */}
-                {!explanationOnly && (
+                {!explanation_only && (
                     <>
                         <div id='explanation_winning'>
                             <div id={`winning_${form_name}`}>
@@ -183,7 +183,7 @@ export const Explanation = ({ explanationOnly = false }) => {
                 </div>
 
                 {/* ========== Note ========== */}
-                {!explanationOnly && (
+                {!explanation_only && (
                     contract_explanation_data.note[form_name] && (
                         <SectionMessage status='info' message={<Notes />} size='sm' />
                     )
@@ -192,7 +192,7 @@ export const Explanation = ({ explanationOnly = false }) => {
         );
     }
     
-    if (explanationOnly) {
+    if (explanation_only) {
         return (
             <div className='explanation-container-loader'>
                 <Skeleton.Square width={250} height={50} rounded />

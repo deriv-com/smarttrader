@@ -126,7 +126,7 @@ const AuditSection = ({ data }) => {
                                     return null;
                                 })}
                                 <div className='table-box lg'>
-                                    <Explanation explanationOnly />
+                                    <Explanation explanation_only />
                                 </div>
                             </div>
                             <ContractTable data={data} />
