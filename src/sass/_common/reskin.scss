@@ -47,13 +47,7 @@ body {
 .chart-section {
     padding-block: 32px;
 }
-
-// Hide persistent chart showing in under the main chart
-div.chart-wrapper[data-highcharts-chart="0"]:not(.quill-purchase-popup div.chart-wrapper[data-highcharts-chart="0"]) {
-    position: absolute;
-    top: -9999px;
-}
-   
+ 
 .contained-section {
     width: 100%;
     max-width: 940px;
