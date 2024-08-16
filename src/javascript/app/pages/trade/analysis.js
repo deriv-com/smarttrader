@@ -37,7 +37,7 @@ const TradingAnalysis = (() => {
         form_name = map_obj[form_name] || form_name;
 
         dataManager.setContract({
-            actualFormName     : form_name,
+            actual_form_name   : form_name,
             explanationFormName: tab_form_name,
         });
 

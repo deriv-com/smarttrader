@@ -15,11 +15,11 @@ export const Explanation = ({ explanation_only = false }) => {
     const has_contract_changes = useContractChange();
 
     useEffect(() => {
-        const actualFormName = dataManager.getContract('explanationFormName');
+        const actual_form_name = dataManager.getContract('explanationFormName');
         setFormName(null);
         
         setTimeout(() => {
-            setFormName(actualFormName);
+            setFormName(actual_form_name);
         }, 500);
        
     }, [has_contract_changes]);
