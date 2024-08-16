@@ -38,7 +38,7 @@ const TradingAnalysis = (() => {
 
         dataManager.setContract({
             actual_form_name   : form_name,
-            explanationFormName: tab_form_name,
+            explanation_form_name: tab_form_name,
         });
 
         $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(tab_form_name));
