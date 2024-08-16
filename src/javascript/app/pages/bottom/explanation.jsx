@@ -10,7 +10,7 @@ import { useContractChange } from '../../hooks/events.js';
 
 export const Explanation = ({ explanation_only = false }) => {
 
-    const [form_name,setFormName] = useState(null);
+    const [form_name, setFormName] = useState(null);
 
     const has_contract_changes = useContractChange();
 
