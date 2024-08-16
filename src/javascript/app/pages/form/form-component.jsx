@@ -165,7 +165,7 @@ export const FormComponent = () => {
         return moment(endtime_data.options[0].value).format('ddd - DD MMM, YYYY');
     };
 
-    const getAmount = () => isCryptocurrency(currency) ? amount_crypto : amount;
+    const getAmount = () => (isCryptocurrency(currency) && amount_crypto) ? amount_crypto : amount;
 
     return (
         <BreakpointProvider>
