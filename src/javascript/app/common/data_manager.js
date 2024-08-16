@@ -23,19 +23,19 @@ class DataManager {
 
     set(data, data_type, optional_trigger) {
         if (typeof data === 'object') {
-            const oldValues = {};
-            const newValues = {};
+            const old_values = {};
+            const new_values = {};
             Object.entries(data).forEach(([key, value]) => {
                 if (this.data[data_type][key] !== value) {
-                    oldValues[key] = this.data[data_type][key];
-                    newValues[key] = value;
+                    old_values[key] = this.data[data_type][key];
+                    new_values[key] = value;
                 }
                 this.data[data_type][key] = value;
             });
-            if (Object.keys(newValues).length > 0) {
+            if (Object.keys(new_values).length > 0) {
                 // Trigger a custom event with old and new values
                 window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
-                    detail: { oldValues, newValues },
+                    detail: { old_values, new_values },
                 }));
                 
                 switch (data_type) {
@@ -74,11 +74,11 @@ class DataManager {
     }
 
     clear(data_type) {
-        const oldValues = { ...this.data[data_type] };
+        const old_values = { ...this.data[data_type] };
         this.data[data_type] = {};
 
         window.dispatchEvent(new CustomEvent(changeTypeMap[data_type], {
-            detail: { oldValues, newValues: {} },
+            detail: { old_values, new_values: {} },
         }));
         if (data_type === 'trade') {
             triggerTradeChange();
