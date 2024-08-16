@@ -264,7 +264,7 @@ export const FormComponent = () => {
                                                                 options={endtime_data.options}
                                                                 value={formatEndDate(expiry_date)}
                                                                 onUpdate={onExpiryDateChange}
-                                                                element_id='expiry_date'
+                                                                elementId='expiry_date'
                                                             />
                                                         )}
                                                     </div>
