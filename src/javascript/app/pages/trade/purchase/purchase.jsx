@@ -18,8 +18,8 @@ const Purchase = () => {
     const has_contract_change  = useContractChange();
 
     const [data,setData] = useState({});
-    const [is_look_back,setIsLookBack] = useState(false);
-    const [show_popup,setShowPopup] = useState(false);
+    const [is_look_back, setIsLookBack] = useState(false);
+    const [show_popup, setShowPopup] = useState(false);
     const purchase_positions = ['top','bottom'];
     
     const isloading = () => !data?.top_amount && !data?.middle_amount && !data?.bottom_amount;
