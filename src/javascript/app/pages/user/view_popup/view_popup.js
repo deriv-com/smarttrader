@@ -840,7 +840,7 @@ const ViewPopup = (() => {
         dataManager.setPurchase({
             cd_description       : longcode,
             cd_show_entry_spot   : should_show_entry_spot,
-            cd_showBarrier       : should_show_barrier,
+            cd_show_barrier      : should_show_barrier,
             cd_show_barrier_reset: Reset.isReset(contract.contract_type),
             cd_show_barrier_low  : contract.barrier_count > 1 ,
             cd_barrier_label     : barrier_text,
