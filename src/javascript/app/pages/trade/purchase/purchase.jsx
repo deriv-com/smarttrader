@@ -111,17 +111,23 @@ const Purchase = () => {
                         <div className='purchase-header'>
                             <div className='purchase-icon-box'>
                                 <div className={`contract_heading ${data?.middle_contract_type}`} />
-                                <Text size='md' centered bold> {data?.middle_display_text}</Text>
+                                <Text centered bold> {data?.middle_display_text}</Text>
                             </div>
                             <div className='purchase-body-box'>
                                 <div className='purchase-amount-box'>
                                     <div className='purchase-amount-info-box'>
-                                        <Text size='md'>{localize('Stake')}:</Text>
-                                        <Text size='md' className={data.middle_amount_classname} bold>{data?.middle_amount} {displayCurrency(data?.middle_amount)}</Text>
+                                        <Text>{localize('Stake')}:</Text>
+                                        <Text
+                                            className={data.middle_amount_classname}
+                                            bold
+                                        >{data?.middle_amount} {displayCurrency(data?.middle_amount)}
+                                        </Text>
                                     </div>
                                     <div className='purchase-amount-info-box'>
-                                        <Text size='md'>{localize('Multiplier')}:</Text>
-                                        <Text size='md' bold>{data?.middle_multiplier} {displayCurrency(data?.middle_multiplier)}</Text>
+                                        <Text>{localize('Multiplier')}:</Text>
+                                        <Text bold>
+                                            {data?.middle_multiplier} {displayCurrency(data?.middle_multiplier)}
+                                        </Text>
                                     </div>
                                 </div>
                                 <div className='purchase-btn-box'>
@@ -152,18 +158,26 @@ const Purchase = () => {
                                         <div className='purchase-header'>
                                             <div className='purchase-icon-box'>
                                                 <div className={`contract_heading ${contract_type}`} />
-                                                <Text size='md' centered bold> {display_text}</Text>
+                                                <Text centered bold> {display_text}</Text>
                                             </div>
                                           
                                             <div className='purchase-body-box'>
                                                 <div className='purchase-amount-box'>
                                                     <div className='purchase-amount-info-box'>
-                                                        <Text size='md'>{localize('Stake')}:</Text>
-                                                        <Text size='md' className={amount_classname} bold>{amount} {displayCurrency(amount)}</Text>
+                                                        <Text>{localize('Stake')}:</Text>
+                                                        <Text
+                                                            className={amount_classname}
+                                                            bold
+                                                        >{amount} {displayCurrency(amount)}
+                                                        </Text>
                                                     </div>
                                                     <div className='purchase-amount-info-box'>
-                                                        <Text size='md'>{localize('Payout')}:</Text>
-                                                        <Text size='md' className={payout_amount_classname} bold>{payout_amount} {displayCurrency(payout_amount)}</Text>
+                                                        <Text>{localize('Payout')}:</Text>
+                                                        <Text
+                                                            className={payout_amount_classname}
+                                                            bold
+                                                        >{payout_amount} {displayCurrency(payout_amount)}
+                                                        </Text>
                                                     </div>
                                                 </div>
                                               
@@ -241,7 +255,7 @@ const Purchase = () => {
                                 </>
                             ) : (
                                 <span className='error-message'>
-                                    <Text size='md' centered>{data?.error.message}</Text>
+                                    <Text centered>{data?.error.message}</Text>
                                 </span>
                             )}
                         </div>

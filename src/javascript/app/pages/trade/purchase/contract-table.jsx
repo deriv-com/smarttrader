@@ -8,7 +8,7 @@ import { parseData, TimeTooltipWrapper, triggerClick } from '../../../common/hel
 const ContractTable = ({ data }) => (
     <div className='contract-info-wrapper'>
         <div className='table-box'>
-            <Text size='md' bold centered>
+            <Text bold centered>
                 {localize('Contract information')}
             </Text>
         </div>
@@ -128,7 +128,7 @@ const ContractTable = ({ data }) => (
             </div>
         </div>
         <div className='table-box'>
-            <Text size='md' bold centered>
+            <Text bold centered>
                 {data?.cd_current_label}
             </Text>
         </div>

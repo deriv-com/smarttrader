@@ -61,7 +61,7 @@ const AuditSection = ({ data }) => {
                     }}
                 />
                 <div className='title-box'>
-                    <Text size='md' bold>
+                    <Text bold>
                         {localize('Audit page')}
                     </Text>
                 </div>
@@ -82,7 +82,7 @@ const AuditSection = ({ data }) => {
                                         return (
                                             <React.Fragment key={`audit-table-${title}-${audit_data_key}`}>
                                                 <div className='table-box' >
-                                                    <Text size='md' bold centered>
+                                                    <Text bold centered>
                                                         {title}
                                                     </Text>
                                                 </div>
@@ -151,7 +151,7 @@ const DetailsSection = ({ data }) => (
                 }}
             />
             <div className='title-box'>
-                <Text size='md' bold>
+                <Text bold>
                     {localize('Contract Details')}
                 </Text>
             </div>

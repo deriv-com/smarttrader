@@ -107,7 +107,7 @@ export const Explanation = ({ explanation_only = false }) => {
                                 <div className='explanation-content'>
                                     {contract_explanation_data.winning[form_name].content.map(
                                         (data, idx) => (
-                                            <Text size='md' key={idx}>{parse(data)}</Text>
+                                            <Text key={idx}>{parse(data)}</Text>
                                         )
                                     )}
                                 </div>
@@ -156,7 +156,7 @@ export const Explanation = ({ explanation_only = false }) => {
                         <div className='explanation-content'>
                             {contract_explanation_data.explain[form_name].content.map(
                                 (data, idx) => (
-                                    <Text size='md' key={idx}>{parse(data)}</Text>
+                                    <Text key={idx}>{parse(data)}</Text>
                                 )
                             )}
                         </div>
@@ -173,7 +173,7 @@ export const Explanation = ({ explanation_only = false }) => {
                             <div className='explanation-content'>
                                 {contract_explanation_data.explain[form_name].content_secondary.map(
                                     (data, idx) => (
-                                        <Text size='md' key={idx}>{parse(data)}</Text>
+                                        <Text key={idx}>{parse(data)}</Text>
                                     )
                                 )}
                             </div>
