@@ -180,6 +180,7 @@ body {
         @media(max-width: 768px) {
             width: 100%;
             margin: 0px;
+            box-shadow: unset;
         }
     }
     &-search-container {
@@ -840,12 +841,15 @@ html.test {
             .custom-dropdown-wrapper {
                 padding: 8px 0 0;
                 background: var(--core-color-solid-slate-50);
-                box-shadow: var(--component-dropdownList-elevation-shadow);
                 margin: 10px 0px;
                 border-radius: 8px;
                 border: 1px solid rgba(0, 0, 0, 0.04);
                 max-height: 320px;
                 overflow-y: auto;
+                box-shadow: var(--component-dropdownList-elevation-shadow);
+                @media(max-width: 768px) {
+                    box-shadow: unset;
+                }
 
                 &::-webkit-scrollbar {
                     scrollbar-width: thin;
@@ -1098,4 +1102,8 @@ html.test {
         position: absolute;
         top: -9999px;
     }
+}
+
+.input-wrapper-container {
+    width: 100%;
 }
