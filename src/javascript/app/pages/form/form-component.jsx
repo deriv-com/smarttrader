@@ -28,19 +28,19 @@ import { setDefaultParams } from '../../common/helpers.js';
 import { isCryptocurrency } from '../../../_common/base/currency_base.js';
 
 export const FormComponent = () => {
-    const [tradeData, setTradeData] = useState({});
+    const [trade_data, setTradeData] = useState({});
 
-    const hasTradeChange = useTradeChange();
-    const hasMarketChange = useMarketChange();
-    const hasContractChange = useContractChange();
-    const hasSessionChange = useSessionChange();
+    const has_trade_change = useTradeChange();
+    const has_market_change = useMarketChange();
+    const has_contract_change = useContractChange();
+    const has_session_change = useSessionChange();
 
     useEffect(() => {
-        setTradeData((oldData) => ({
-            ...oldData,
+        setTradeData((old_data) => ({
+            ...old_data,
             ...dataManager.getAllTrades(),
         }));
-    }, [hasMarketChange, hasContractChange, hasTradeChange, hasSessionChange]);
+    }, [has_market_change, has_contract_change, has_trade_change, has_session_change]);
 
     const form_name = Defaults.get(PARAM_NAMES.FORM_NAME);
     const expiry_type = Defaults.get(PARAM_NAMES.EXPIRY_TYPE);
@@ -68,9 +68,9 @@ export const FormComponent = () => {
         currency_list,
         reset_message,
         show_allow_equals,
-    } = tradeData;
+    } = trade_data;
 
-    const contractForms = [
+    const contract_forms = [
         'risefall',
         'callputequal',
         'touchnotouch',
@@ -91,33 +91,33 @@ export const FormComponent = () => {
 
     const onExpiryDateChange = (value) => {
         const element = common_functions.getElementById('expiry_date');
-        const newDate = moment(value).format('YYYY-MM-DD');
-        if (newDate !== expiry_date) {
+        const new_date = moment(value).format('YYYY-MM-DD');
+        if (new_date !== expiry_date) {
             if (!endtime_data.show_datepicker) {
                 Array.from(element.options).map((option) => {
                     if (moment(option.text).format('YYYY-MM-DD') === value) {
                         option.setAttribute('selected', true);
-                        option.setAttribute('data-value', newDate);
+                        option.setAttribute('data-value', new_date);
                     } else {
                         option.setAttribute('selected', false);
-                        option.setAttribute('data-value', newDate);
+                        option.setAttribute('data-value', new_date);
                     }
                 });
             } else {
-                element.setAttribute('data-value', newDate);
+                element.setAttribute('data-value', new_date);
             }
             eventDispatcher(element, 'change');
         }
     };
 
-    const updateFormField = (elementId, value, eventType) => {
-        const element = common_functions.getElementById(elementId);
-        if (elementId === 'callputequal') {
+    const updateFormField = (element_id, value, event_type) => {
+        const element = common_functions.getElementById(element_id);
+        if (element_id === 'callputequal') {
             element.checked = !+is_equal;
         } else {
             element.value = value;
         }
-        eventDispatcher(element, eventType);
+        eventDispatcher(element, event_type);
     };
 
     const getMessage = (form) => {
@@ -135,7 +135,7 @@ export const FormComponent = () => {
     const findTextByValue = (arr, value) => arr.find(item => item.value === value)?.text || null;
     
     const isEmpty = (obj) => Object.keys(obj).length === 0;
-    if (isEmpty(tradeData)) {
+    if (isEmpty(trade_data)) {
         return null;
     }
 
@@ -152,7 +152,7 @@ export const FormComponent = () => {
         return { minDate, maxDate };
     };
 
-    const payoutTypeOptions = [
+    const payout_type_options = [
         { text: localize('Stake'), value: 'stake' },
         { text: localize('Payout'), value: 'payout' },
     ];
@@ -170,7 +170,7 @@ export const FormComponent = () => {
     return (
         <BreakpointProvider>
             <div className='quill-form-container'>
-                {contractForms.includes(form_name) && (
+                {contract_forms.includes(form_name) && (
                     <>
                         {form_name === 'highlowticks' && (
                             <div className='section-msg-container'>
@@ -323,8 +323,8 @@ export const FormComponent = () => {
                                 <div className='quill-form-row'>
                                     <div className='form_field field-pb'>
                                         <DropdownComponent
-                                            options={payoutTypeOptions}
-                                            value={findTextByValue(payoutTypeOptions, amount_type)}
+                                            options={payout_type_options}
+                                            value={findTextByValue(payout_type_options, amount_type)}
                                             onUpdate={updateFormField}
                                             elementId='amount_type'
                                         />

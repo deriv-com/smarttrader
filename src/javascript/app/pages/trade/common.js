@@ -52,10 +52,10 @@ const commonTrading = (() => {
 
         if (!contracts_element) {
             dataManager.setContract({
-                contractsTree  : contracts_tree,
-                contracts      : all_contracts,
-                formName       : selected || Defaults.get('formname'),
-                contractElement: getElementById('contract'),
+                contracts_tree,
+                contracts       : all_contracts,
+                form_name       : selected || Defaults.get('formname'),
+                contract_element: getElementById('contract'),
             });
         } else { // Update the component.
             contracts_element.updater.enqueueSetState(contracts_element, {
@@ -158,7 +158,7 @@ const commonTrading = (() => {
         showHideOverlay('contracts_list', 'flex');
         $('.purchase_button').text(localize('Purchase'));
         dataManager.setPurchase({
-            showPurchaseResults: false,
+            show_purchase_results: false,
         });
     };
 
@@ -254,7 +254,7 @@ const commonTrading = (() => {
                 node.show();
                 elementInnerHtml(node, comment);
                 dataManager.setPurchase({
-                    [`${position}Comment`]: comment,
+                    [`${position}_comment`]: comment,
                 });
             }
         }
@@ -476,13 +476,13 @@ const commonTrading = (() => {
         showPriceOverlay: () => {
             showHideOverlay('loading_container2', 'block');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: true,
+                is_purchase_form_disabled: true,
             });
         },
         hidePriceOverlay: () => {
             showHideOverlay('loading_container2', 'none');
             dataManager.setPurchase({
-                isPurchaseFormDisabled: false,
+                is_purchase_form_disabled: false,
             });
         },
         hideFormOverlay: () => { showHideOverlay('loading_container3', 'none'); },

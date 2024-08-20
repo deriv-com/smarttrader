@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 import { SectionMessage, Skeleton, Text } from '@deriv-com/quill-ui';
-import { contractExplanationData } from './data/explanation.js';
+import { contract_explanation_data } from './data/explanation.js';
 import Language from '../../../_common/language';
 import Url from '../../../_common/url';
 import { localize } from '../../../_common/localize.js';
 import dataManager from '../../common/data_manager.js';
 import { useContractChange } from '../../hooks/events.js';
 
-export const Explanation = ({ explanationOnly = false }) => {
+export const Explanation = ({ explanation_only = false }) => {
 
-    const [formName,setFormName] = useState(null);
+    const [form_name, setFormName] = useState(null);
 
-    const hasContractChanges = useContractChange();
+    const has_contract_changes = useContractChange();
 
     useEffect(() => {
-        const actualFormName = dataManager.getContract('explanationFormName');
+        const actual_form_name = dataManager.getContract('explanation_form_name');
         setFormName(null);
         
         setTimeout(() => {
-            setFormName(actualFormName);
+            setFormName(actual_form_name);
         }, 500);
        
-    }, [hasContractChanges]);
+    }, [has_contract_changes]);
 
     const language = Language.get();
     const image_path = Url.urlForStatic(
@@ -31,7 +31,7 @@ export const Explanation = ({ explanationOnly = false }) => {
     const Notes = () => (
         <>
             <strong>{localize('Note')}: </strong>
-            {contractExplanationData.note[formName].content.map((data, idx) => (
+            {contract_explanation_data.note[form_name].content.map((data, idx) => (
                 <span key={idx}>{parse(data)}</span>
             ))}
         </>
@@ -93,21 +93,21 @@ export const Explanation = ({ explanationOnly = false }) => {
         },
     };
 
-    if (formName) {
+    if (form_name) {
         return (
             <div className='tab-explanation'>
                 {/* ========== Winning ========== */}
-                {!explanationOnly && (
+                {!explanation_only && (
                     <>
                         <div id='explanation_winning'>
-                            <div id={`winning_${formName}`}>
+                            <div id={`winning_${form_name}`}>
                                 <div className='explanation-heading'>
-                                    <Text size='lg' bold >{localize('Winning the contract')}</Text>
+                                    <Text size='lg' bold>{localize('Winning the contract')}</Text>
                                 </div>
                                 <div className='explanation-content'>
-                                    {contractExplanationData.winning[formName].content.map(
+                                    {contract_explanation_data.winning[form_name].content.map(
                                         (data, idx) => (
-                                            <Text size='md' key={idx}>{parse(data)}</Text>
+                                            <Text key={idx}>{parse(data)}</Text>
                                         )
                                     )}
                                 </div>
@@ -116,7 +116,7 @@ export const Explanation = ({ explanationOnly = false }) => {
                         </div>
                           
                         {/* ========== Image ========== */}
-                        {images[formName] && (
+                        {images[form_name] && (
                             <div id='explanation_image'>
                                 <div className='gr-row'>
                                     <div className='gr-2 hide-mobile' />
@@ -127,15 +127,15 @@ export const Explanation = ({ explanationOnly = false }) => {
                                         <img
                                             id='explanation_image_1'
                                             className='responsive'
-                                            src={`${image_path}${images[formName].image1}?${process.env.BUILD_HASH}`}
+                                            src={`${image_path}${images[form_name].image1}?${process.env.BUILD_HASH}`}
                                         />
                                     </div>
-                                    {images[formName].image2 && (
+                                    {images[form_name].image2 && (
                                         <div className='gr-4 gr-12-m padding-left'>
                                             <img
                                                 id='explanation_image_2'
                                                 className='responsive'
-                                                src={`${image_path}${images[formName].image2}?${process.env.BUILD_HASH}`}
+                                                src={`${image_path}${images[form_name].image2}?${process.env.BUILD_HASH}`}
                                             />
                                         </div>
                                     )}
@@ -149,31 +149,31 @@ export const Explanation = ({ explanationOnly = false }) => {
 
                 {/* ========== Explain ========== */}
                 <div id='explanation_explain' className='gr-child'>
-                    <div id={`explain_${formName}`}  >
+                    <div id={`explain_${form_name}`}  >
                         <div className='explanation-heading'>
-                            <Text size='lg' bold >{contractExplanationData.explain[formName].title}</Text>
+                            <Text size='lg' bold >{contract_explanation_data.explain[form_name].title}</Text>
                         </div>
                         <div className='explanation-content'>
-                            {contractExplanationData.explain[formName].content.map(
+                            {contract_explanation_data.explain[form_name].content.map(
                                 (data, idx) => (
-                                    <Text size='md' key={idx}>{parse(data)}</Text>
+                                    <Text key={idx}>{parse(data)}</Text>
                                 )
                             )}
                         </div>
                         
-                        {contractExplanationData.explain[formName].title_secondary && (
+                        {contract_explanation_data.explain[form_name].title_secondary && (
                             <div className='explanation-heading secondary-heading'>
                                 <Text size='lg' bold>
-                                    {contractExplanationData.explain[formName].title_secondary}
+                                    {contract_explanation_data.explain[form_name].title_secondary}
                                 </Text>
                             </div>
                         )}
                         
-                        {contractExplanationData.explain[formName].content_secondary && (
+                        {contract_explanation_data.explain[form_name].content_secondary && (
                             <div className='explanation-content'>
-                                {contractExplanationData.explain[formName].content_secondary.map(
+                                {contract_explanation_data.explain[form_name].content_secondary.map(
                                     (data, idx) => (
-                                        <Text size='md' key={idx}>{parse(data)}</Text>
+                                        <Text key={idx}>{parse(data)}</Text>
                                     )
                                 )}
                             </div>
@@ -183,8 +183,8 @@ export const Explanation = ({ explanationOnly = false }) => {
                 </div>
 
                 {/* ========== Note ========== */}
-                {!explanationOnly && (
-                    contractExplanationData.note[formName] && (
+                {!explanation_only && (
+                    contract_explanation_data.note[form_name] && (
                         <SectionMessage status='info' message={<Notes />} size='sm' />
                     )
                 )}
@@ -192,7 +192,7 @@ export const Explanation = ({ explanationOnly = false }) => {
         );
     }
     
-    if (explanationOnly) {
+    if (explanation_only) {
         return (
             <div className='explanation-container-loader'>
                 <Skeleton.Square width={250} height={50} rounded />
