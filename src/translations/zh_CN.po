@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-08-13 02:55\n"
+"PO-Revision-Date: 2024-08-20 08:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +113,7 @@ msgid "Audit Page"
 msgstr "审核页面"
 
 msgid "Audit page"
-msgstr "审计页面"
+msgstr "审核页面"
 
 msgid "Aug"
 msgstr "八月"
@@ -260,7 +260,7 @@ msgid "Contract Confirmation"
 msgstr "合约确认"
 
 msgid "Contract Details"
-msgstr "合约详情"
+msgstr "合同细节"
 
 msgid "Contract details"
 msgstr "合约细节"
@@ -383,7 +383,7 @@ msgid "Digits"
 msgstr "Digits"
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr "你想为另一个 %1充值吗？如果没有，你也可以稍后在 %2Cashier 页面%3上执行此操作。"
+msgstr "是否要充值 %1？如果不是，也可以稍后 %2收银台页面%3执行此操作。"
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -572,7 +572,7 @@ msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barr
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>低障碍</strong> 或 <strong>高障碍</strong>, 您将不会赢得赔付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr "如果 <strong>出口点</strong> 等于 <strong>屏障</strong> 或 <strong>新屏障（如果发生重置）</strong>，则您不会赢得奖金。"
+msgstr "如果<strong>退市现价</strong>等于<strong>障碍</strong>或<strong>重置后的新障碍</strong>，将不会赢得赔付。"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "如果 <strong>退市现价</strong> 等于 <strong>障碍</strong> 或 <strong>重设后的新障碍</strong>, 您将不会赢得赔付。"
@@ -698,7 +698,7 @@ msgid "Indicative"
 msgstr "指示性"
 
 msgid "Indicative barrier"
-msgstr "指示性屏障"
+msgstr "指示性障碍"
 
 msgid "Invalid app id"
 msgstr "无效的应用 id"
