@@ -29,7 +29,7 @@ export const show = (content_id) => {
  */
 export const hide = (content_id) => {
     dataManager.setContract({
-        hidePageLoader: true,
+        hide_page_loader: true,
     });
 
     assertContainerExists(content_id);

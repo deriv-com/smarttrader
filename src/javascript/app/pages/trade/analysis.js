@@ -37,8 +37,8 @@ const TradingAnalysis = (() => {
         form_name = map_obj[form_name] || form_name;
 
         dataManager.setContract({
-            actualFormName     : form_name,
-            explanationFormName: tab_form_name,
+            actual_form_name     : form_name,
+            explanation_form_name: tab_form_name,
         });
 
         $('#tab_last_digit').setVisibility(/digits|overunder|evenodd/.test(tab_form_name));

@@ -129,7 +129,7 @@ const Process = (() => {
         const init_logo = getElementById('trading_init_progress');
 
         dataManager.setContract({
-            hidePageLoader: true,
+            hide_page_loader: true,
         });
         
         if (init_logo && init_logo.style.display !== 'none') {
@@ -153,7 +153,7 @@ const Process = (() => {
         if (getPropertyValue(contracts, ['error', 'code']) === 'InvalidSymbol') {
             Price.processForgetProposals();
             dataManager.setPurchase({
-                showPurchaseResults: true,
+                show_purchase_results: true,
             });
             getElementById('contract_confirmation_container').style.display = 'block';
             getElementById('contracts_list').style.display = 'none';

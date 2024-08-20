@@ -12,18 +12,18 @@ import Defaults, { PARAM_NAMES } from '../trade/defaults.js';
 
 const BarrierFields = ({ form_name, handleAmountChange }) => {
     const [barrierData, setBarrierData] = useState();
-    const hasBarrierChange = useBarrierChange();
+    const has_barrier_change = useBarrierChange();
 
     const barrier = Defaults.get(PARAM_NAMES.BARRIER);
     const barrier_high = Defaults.get(PARAM_NAMES.BARRIER_HIGH);
     const barrier_low = Defaults.get(PARAM_NAMES.BARRIER_LOW);
 
     useEffect(() => {
-        setBarrierData((oldData) => ({
-            ...oldData,
+        setBarrierData((old_data) => ({
+            ...old_data,
             ...dataManager.getAllTrades(),
         }));
-    }, [hasBarrierChange]);
+    }, [has_barrier_change]);
 
     if (!barrierData) return null;
 

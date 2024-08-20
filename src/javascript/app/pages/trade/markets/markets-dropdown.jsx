@@ -42,16 +42,16 @@ export const getContractName = () => {
     const data = dataManager.getAllContracts('contract');
     let name = '';
     // eslint-disable-next-line consistent-return
-    data?.contractsTree?.forEach((contract) => {
+    data?.contracts_tree?.forEach((contract) => {
         if (typeof contract === 'object') {
             contract[1].forEach((subtype) => {
-                if (subtype === data?.actualFormName) {
+                if (subtype === data?.actual_form_name) {
                     name =  data?.contracts[subtype];
                 }
             
             });
         
-        } else if (contract === data?.actualFormName) {
+        } else if (contract === data?.actual_form_name) {
             name = data?.contracts[contract];
         }
        
