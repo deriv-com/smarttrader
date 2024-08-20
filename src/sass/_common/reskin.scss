@@ -47,8 +47,7 @@ body {
 .chart-section {
     padding-block: 32px;
 }
-
-
+ 
 .contained-section {
     width: 100%;
     max-width: 940px;
@@ -907,6 +906,7 @@ html.test {
 }
 
 .bottom-content-section {
+    position: relative;
     min-height: 400px;
     padding: 16px;
 
@@ -1098,7 +1098,8 @@ html.test {
 
 // Graph visibility control
 #tab_graph {
-    &.grap-hide {
+    &.graph-hide {
+        width: 100%;
         position: absolute;
         top: -9999px;
     }

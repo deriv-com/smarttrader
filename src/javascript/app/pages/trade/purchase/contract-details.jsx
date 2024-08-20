@@ -11,6 +11,9 @@ import { Explanation } from '../../bottom/explanation';
 import { TimeTooltipWrapper, triggerClick } from '../../../common/helpers';
 
 const resetPopupData = (is_audit_reset = false) => {
+    // Trigger old close btn
+    triggerClick('.inpage_popup_container a.close');
+
     const audit_reset_object = {
         cd_show_audit : false,
         audit_data_end: [],
