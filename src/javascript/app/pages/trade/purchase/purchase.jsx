@@ -94,13 +94,7 @@ const Purchase = () => {
             if (purchaseSection && targetElement) {
                 const purchaseSectionTop = purchaseSection.offsetTop;
                 const bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    
-                console.log({
-                    purchaseSectionTop,
-                    bodyScrollTop,
-                    condition: bodyScrollTop >= purchaseSectionTop,
-                    elem     : targetElement,
-                });
+
                 if ((bodyScrollTop + window.innerHeight) >= purchaseSectionTop) {
                     targetElement.classList.add('hide');
                 } else {
