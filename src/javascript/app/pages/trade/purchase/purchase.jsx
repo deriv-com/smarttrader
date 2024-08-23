@@ -36,8 +36,7 @@ const Purchase = () => {
         });
  
     useEffect(() => {
-        const new_data = dataManager.getAllPurchases();
-       
+        const new_data = dataManager.getAllPurchases();d;
         setShowPopup(!!new_data?.show_contract_details_popup);
 
         setData(old_data => ({
