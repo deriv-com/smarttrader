@@ -508,12 +508,12 @@ div#contract-injection-container {
     .purchase-button {
         display: flex;
         flex-direction: column;
-        padding: var(--core-spacing-800);
+        padding: var(--core-spacing-200) var(--core-spacing-800);
         cursor: pointer;
         border-radius: var(--core-borderRadius-800);
         width: 100%;
         max-width: 300px;
-        height: fit-content;
+        height: 56px;
 
         .label {
             display: flex;
