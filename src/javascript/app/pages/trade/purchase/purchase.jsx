@@ -85,6 +85,12 @@ const Purchase = () => {
     };
 
     const responsivePurchaser = useRef(null);
+    const scrollToPurchaseContainer = () => {
+        const purchaseContainer = document.getElementById('purchase_container');
+        if (purchaseContainer) {
+            purchaseContainer.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -226,8 +232,13 @@ const Purchase = () => {
                 <div className='responsive-purchase-section' ref={responsivePurchaser}>
                     {data?.show_mid_purchase ? (
                         <div
-                            className={`purchase-button buy ${ data?.bottom_purchase_disabled ? 'disabled' : ''}`}
-                            onClick={() => !data?.mid_purchase_disabled && triggerClick('#purchase_button_mid') }
+                            className={`purchase-button buy ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
+                            onClick={() => {
+                                if (!data?.mid_purchase_disabled) {
+                                    triggerClick('#purchase_button_mid');
+                                    scrollToPurchaseContainer();
+                                }
+                            }}
                         >
                             <span className='label'>{data?.middle_display_text}</span>
                             <div className='content'>
@@ -239,7 +250,12 @@ const Purchase = () => {
                         <>
                             <div
                                 className={`purchase-button buy ${ data?.top_purchase_disabled ? 'disabled' : ''}`}
-                                onClick={() => !data?.top_purchase_disabled && triggerClick('#purchase_button_top') }
+                                onClick={() => {
+                                    if (!data?.top_purchase_disabled) {
+                                        triggerClick('#purchase_button_top');
+                                        scrollToPurchaseContainer();
+                                    }
+                                }}
                             >
                                 <span className='label'>{data?.top_display_text}</span>
                                 <div className='content'>
@@ -248,8 +264,13 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div
-                                className={`purchase-button sell inverse ${ data?.bottom_purchase_disabled ? 'disabled' : ''}`}
-                                onClick={() => !data?.bottom_purchase_disabled && triggerClick('#purchase_button_bottom') }
+                                className={`purchase-button sell inverse ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
+                                onClick={() => {
+                                    if (!data?.bottom_purchase_disabled) {
+                                        triggerClick('#purchase_button_bottom');
+                                        scrollToPurchaseContainer();
+                                    }
+                                }}
                             >
                                 <span className='label'>{data?.bottom_display_text}</span>
                                 <div className='content'>
