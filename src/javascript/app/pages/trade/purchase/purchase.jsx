@@ -85,10 +85,18 @@ const Purchase = () => {
     };
 
     const responsivePurchaser = useRef(null);
+    const responsiveSize = window.innerWidth < 763;
     const scrollToPurchaseContainer = () => {
         const purchaseContainer = document.getElementById('purchase_container');
         if (purchaseContainer) {
             purchaseContainer.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+    };
+
+    const scrollToContractsFormContainer = () => {
+        const contractsFormContainer = document.getElementById('trading_socket_container');
+        if (contractsFormContainer) {
+            contractsFormContainer.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
     };
 
@@ -296,6 +304,8 @@ const Purchase = () => {
                             onClick={() => {
                                 triggerClick('#close_confirmation_container');
                                 hidePurchaseResults();
+                                if (responsiveSize) scrollToContractsFormContainer();
+                              
                             }}
                         >
                             <LabelPairedXmarkMdRegularIcon />
@@ -359,6 +369,7 @@ const Purchase = () => {
                         onClick={() => {
                             triggerClick('#close_confirmation_container');
                             hidePurchaseResults();
+                            if (responsiveSize) scrollToContractsFormContainer();
                         }}
                     >
                         <LabelPairedXmarkMdRegularIcon />
