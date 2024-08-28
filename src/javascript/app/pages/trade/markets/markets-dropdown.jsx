@@ -298,14 +298,15 @@ export const MarketsDropdown = () => {
                                                 const isSelected = symbol_key === selectedMarket;
 
                                                 return (
-                                                    <DropdownItem
-                                                        key={symbol_key}
-                                                        onClick={() => handleUnderlyingClick(symbol_key)}
-                                                        label={display}
-                                                        selected={isSelected}
-                                                        className={isSelected && 'market-item-selected'}
-                                                        size='md'
-                                                    />
+                                                    <div key={symbol_key} data-id={market_key}>
+                                                        <DropdownItem
+                                                            onClick={() => handleUnderlyingClick(symbol_key)}
+                                                            label={display}
+                                                            selected={isSelected}
+                                                            className={isSelected && 'market-item-selected'}
+                                                            size='md'
+                                                        />
+                                                    </div>
                                                 );
                                             })}
                                             <Divider />
