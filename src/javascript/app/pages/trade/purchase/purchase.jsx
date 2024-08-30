@@ -99,13 +99,15 @@ const Purchase = () => {
             contractsFormContainer.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
     };
-
+    const bodyScrollTop = window.scrollY;
+      
     useEffect(() => {
         const handleScroll = () => {
             const targetElement = responsivePurchaser.current;
     
             if (targetElement) {
-                const bodyScrollTop = window.scrollY;
+                
+                console.log(bodyScrollTop);
     
                 if (bodyScrollTop === 0) {
                     targetElement.classList.remove('hide');
@@ -116,8 +118,7 @@ const Purchase = () => {
         };
     
         const checkScrollOnActivation = () => {
-            const bodyScrollTop = window.scrollY;
-    
+           
             if (responsivePurchaser.current) {
                 if (bodyScrollTop === 0) {
                     responsivePurchaser.current.classList.remove('hide');
@@ -136,7 +137,7 @@ const Purchase = () => {
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('visibilitychange', checkScrollOnActivation);
         };
-    }, [responsivePurchaser]);
+    }, [responsivePurchaser, bodyScrollTop]);
 
     if (show_popup) {
         return <ContractDetails />;
