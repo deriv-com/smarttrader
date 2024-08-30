@@ -102,27 +102,39 @@ const Purchase = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const purchaseSection = document.querySelector('.quill-purchase-section');
             const targetElement = responsivePurchaser.current;
-        
-            if (purchaseSection && targetElement) {
-                const purchaseSectionRect = purchaseSection.getBoundingClientRect();
+    
+            if (targetElement) {
                 const bodyScrollTop = window.scrollY;
-        
-                const targetElementVisible = (purchaseSectionRect.top <= window.innerHeight);
-        
-                if (bodyScrollTop > 0 && targetElementVisible) {
-                    targetElement.classList.add('hide');
-                } else {
+    
+                if (bodyScrollTop === 0) {
                     targetElement.classList.remove('hide');
+                } else {
+                    targetElement.classList.add('hide');
+                }
+            }
+        };
+    
+        const checkScrollOnActivation = () => {
+            const bodyScrollTop = window.scrollY;
+    
+            if (responsivePurchaser.current) {
+                if (bodyScrollTop === 0) {
+                    responsivePurchaser.current.classList.remove('hide');
+                } else {
+                    responsivePurchaser.current.classList.add('hide');
                 }
             }
         };
     
         window.addEventListener('scroll', handleScroll);
+        document.addEventListener('visibilitychange', checkScrollOnActivation);
+    
+        checkScrollOnActivation();
     
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('visibilitychange', checkScrollOnActivation);
         };
     }, [responsivePurchaser]);
 
