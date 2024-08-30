@@ -15,7 +15,8 @@ import { parseData, triggerClick } from '../../../common/helpers';
 
 const Purchase = () => {
     const has_purchase_change  = usePurchaseChange();
-    const has_contract_change  = useContractChange();
+    const has_contract_change = useContractChange();
+    const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
 
     const [data,setData] = useState({});
     const [is_look_back, setIsLookBack] = useState(false);
@@ -269,8 +270,8 @@ const Purchase = () => {
                             >
                                 <span className='label'>{data?.top_display_text}</span>
                                 <div className='content'>
-                                    <span className='text'>{localize('Payout')}</span>
-                                    <span className='text'>{data?.top_payout_amount} {displayCurrency(data?.top_payout_amount)}</span>
+                                    <span className='text'>{amount_type === 'payout' ? localize('Stake') : localize('Payout')}</span>
+                                    <span className='text'>{amount_type === 'payout' ? data?.top_amount  : data?.top_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
                                 </div>
                             </div>
                             <div
@@ -284,8 +285,8 @@ const Purchase = () => {
                             >
                                 <span className='label'>{data?.bottom_display_text}</span>
                                 <div className='content'>
-                                    <span className='text'>{localize('Payout')}</span>
-                                    <span className='text'>{data?.bottom_payout_amount} {displayCurrency(data?.bottom_payout_amount)}</span>
+                                    <span className='text'>{amount_type === 'payout' ? localize('Stake') : localize('Payout')}</span>
+                                    <span className='text'>{amount_type === 'payout' ? data?.top_amount  : data?.top_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
                                 </div>
                             </div>
                         </>
