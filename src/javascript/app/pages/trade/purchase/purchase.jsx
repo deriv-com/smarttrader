@@ -99,43 +99,25 @@ const Purchase = () => {
             contractsFormContainer.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
     };
-    const bodyScrollTop = window.scrollY;
+
+    const observer = new IntersectionObserver((entries) => {
+        const targetElement = responsivePurchaser.current;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                targetElement?.classList?.add('hide');
+            } else {
+                targetElement?.classList?.remove('hide');
+            }
+        });
+    });
       
+    const purchaseSection = document.querySelectorAll('.purchase-footer') ;
     useEffect(() => {
-        const handleScroll = () => {
-            const targetElement = responsivePurchaser.current;
     
-            if (targetElement) {
-          
-                if (bodyScrollTop === 0) {
-                    targetElement.classList.remove('hide');
-                } else {
-                    targetElement.classList.add('hide');
-                }
-            }
-        };
-    
-        const checkScrollOnActivation = () => {
-           
-            if (responsivePurchaser.current) {
-                if (bodyScrollTop === 0) {
-                    responsivePurchaser.current.classList.remove('hide');
-                } else {
-                    responsivePurchaser.current.classList.add('hide');
-                }
-            }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-        document.addEventListener('visibilitychange', checkScrollOnActivation);
-    
-        checkScrollOnActivation();
-    
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            document.removeEventListener('visibilitychange', checkScrollOnActivation);
-        };
-    }, [responsivePurchaser, bodyScrollTop]);
+        if (purchaseSection.length) {
+            observer.observe(purchaseSection[0]);
+        }
+    }, [responsivePurchaser,purchaseSection]);
 
     if (show_popup) {
         return <ContractDetails />;
