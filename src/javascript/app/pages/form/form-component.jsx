@@ -256,9 +256,11 @@ export const FormComponent = () => {
                                                             <DatePickerDropdown
                                                                 value={moment(expiry_date).format('DD/MM/YYYY')}
                                                                 datePickerProps={{
-                                                                    minDate: getMinMaxDate().minDate,
-                                                                    maxDate: getMinMaxDate().maxDate,
-                                                                    locale : lang,
+                                                                    minDate  : getMinMaxDate().minDate,
+                                                                    maxDate  : getMinMaxDate().maxDate,
+                                                                    locale   : lang,
+                                                                    formatDay: (locale, date) =>
+                                                                        moment(date).format('D').replace(/\D/g, ''),
                                                                 }}
                                                                 onSelectDate={(value) => {
                                                                     onExpiryDateChange(value);
