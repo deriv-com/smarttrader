@@ -103,6 +103,7 @@ const Purchase = () => {
     const observer = new IntersectionObserver((entries) => {
         const targetElement = responsivePurchaser.current;
         entries.forEach(entry => {
+
             if (entry.isIntersecting) {
                 targetElement?.classList?.add('hide');
             } else {
@@ -111,12 +112,18 @@ const Purchase = () => {
         });
     });
       
-    const purchaseSection = document.querySelectorAll('.purchase-footer') ;
+    const purchaseSection = document.querySelectorAll('.purchase-footer');
+    
     useEffect(() => {
     
         if (purchaseSection.length) {
             observer.observe(purchaseSection[0]);
+           
         }
+
+        return () => {
+            observer.disconnect();
+        };
     }, [responsivePurchaser,purchaseSection]);
 
     if (show_popup) {
@@ -232,7 +239,7 @@ const Purchase = () => {
                         </>
                     )}
                 </div>
-                <div className='responsive-purchase-section' ref={responsivePurchaser}>
+                <div className='responsive-purchase-section hide' ref={responsivePurchaser}>
                     {data?.show_mid_purchase ? (
                         <div
                             className={`purchase-button buy ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
