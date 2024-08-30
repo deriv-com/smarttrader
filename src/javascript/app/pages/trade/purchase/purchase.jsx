@@ -106,9 +106,7 @@ const Purchase = () => {
             const targetElement = responsivePurchaser.current;
     
             if (targetElement) {
-                
-                console.log(bodyScrollTop);
-    
+          
                 if (bodyScrollTop === 0) {
                     targetElement.classList.remove('hide');
                 } else {
