@@ -104,12 +104,14 @@ const Purchase = () => {
         const handleScroll = () => {
             const purchaseSection = document.querySelector('.quill-purchase-section');
             const targetElement = responsivePurchaser.current;
-    
+        
             if (purchaseSection && targetElement) {
-                const purchaseSectionTop = purchaseSection.offsetTop;
-                const bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-                if ((bodyScrollTop + window.innerHeight) >= purchaseSectionTop) {
+                const purchaseSectionRect = purchaseSection.getBoundingClientRect();
+                const bodyScrollTop = window.scrollY;
+        
+                const targetElementVisible = (purchaseSectionRect.top <= window.innerHeight);
+        
+                if (bodyScrollTop > 0 && targetElementVisible) {
                     targetElement.classList.add('hide');
                 } else {
                     targetElement.classList.remove('hide');
