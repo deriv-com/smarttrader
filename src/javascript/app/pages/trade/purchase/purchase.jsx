@@ -104,8 +104,7 @@ const Purchase = () => {
     const observer = new IntersectionObserver((entries) => {
         const targetElement = responsivePurchaser.current;
         entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
+            if (entry.boundingClientRect.top < window.innerHeight || entry.isIntersecting) {
                 targetElement?.classList?.add('hide');
             } else {
                 targetElement?.classList?.remove('hide');
