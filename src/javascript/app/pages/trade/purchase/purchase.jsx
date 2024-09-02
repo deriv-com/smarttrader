@@ -286,7 +286,7 @@ const Purchase = () => {
                                 <span className='label'>{data?.bottom_display_text}</span>
                                 <div className='content'>
                                     <span className='text'>{amount_type === 'payout' ? localize('Stake') : localize('Payout')}</span>
-                                    <span className='text'>{amount_type === 'payout' ? data?.top_amount  : data?.top_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
+                                    <span className='text'>{amount_type === 'payout' ? data?.bottom_amount  : data?.bottom_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
                                 </div>
                             </div>
                         </>
