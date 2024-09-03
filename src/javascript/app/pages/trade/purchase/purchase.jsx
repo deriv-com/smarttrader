@@ -245,7 +245,7 @@ const Purchase = () => {
                             className={`purchase-button buy ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
                             onClick={() => {
                                 if (!data?.mid_purchase_disabled) {
-                                    triggerClick('#purchase_button_mid');
+                                    triggerClick('#purchase_button_middle');
                                     scrollToPurchaseContainer();
                                 }
                             }}
