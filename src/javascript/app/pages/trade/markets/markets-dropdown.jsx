@@ -146,7 +146,7 @@ export const MarketsDropdown = () => {
             let closestOffset = Infinity;
     
             marketDivs.forEach((div) => {
-                const paddingOffset = 120;
+                const paddingOffset = window.innerWidth > 768 ? 120 : 220;
                 const offsetTop = div.offsetTop - container.scrollTop - paddingOffset;
 
                 if (offsetTop <= 0 && Math.abs(offsetTop) < Math.abs(closestOffset)) {
@@ -291,7 +291,7 @@ export const MarketsDropdown = () => {
 
                                     return (
                                         <React.Fragment key={sub_market_key}>
-                                            <DropdownTitle label={name} />
+                                            <DropdownTitle label={name} data-id={market_key} />
                                             {Object.keys(symbols).map((symbol_key) => {
                                                 const symbol = symbols[symbol_key];
                                                 const { display } = symbol;
@@ -300,6 +300,7 @@ export const MarketsDropdown = () => {
                                                 return (
                                                     <DropdownItem
                                                         key={symbol_key}
+                                                        data-id={market_key}
                                                         onClick={() => handleUnderlyingClick(symbol_key)}
                                                         label={display}
                                                         selected={isSelected}
