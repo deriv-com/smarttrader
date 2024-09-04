@@ -264,7 +264,6 @@ module.exports = [
     'Open a Financial Account',
     'Open a Real Account',
     'Open a free account',
-    'Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.',
     'Over/Under contracts will be refunded at the purchase price if the contract doesn\'t end within 5 minutes.',
     'PM',
     'Password should have lower and uppercase English letters with numbers.',

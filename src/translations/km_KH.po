@@ -4,1857 +4,1857 @@ msgstr ""
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2024-09-04 07:48\n"
 "Last-Translator: \n"
-"Language-Team: Chinese Traditional\n"
+"Language-Team: Khmer\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: dsmarttrader\n"
 "X-Crowdin-Project-ID: 397380\n"
-"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-Language: km\n"
 "X-Crowdin-File: messages.pot\n"
 "X-Crowdin-File-ID: 196\n"
-"Language: zh_TW\n"
+"Language: km_KH\n"
 
 msgid "404"
-msgstr "404"
+msgstr ""
 
 msgid "%1 and %2 cannot be the same."
-msgstr "%1 和 %2 不可相同。"
+msgstr ""
 
 msgid "%1 days %2 hours %3 minutes"
-msgstr "%1 天 %2 小時 %3 分鐘"
+msgstr ""
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr "%1 已記入您的虛擬帳戶: %2。"
+msgstr ""
 
 msgid "%1Return to trading page%2"
-msgstr "%1返回交易頁面%2"
+msgstr ""
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr "功能強大又容易使用的平台全新交易體驗。"
+msgstr ""
 
 msgid "A word by itself is easy to guess"
-msgstr "一個詞本身很容易猜到"
+msgstr ""
 
 msgid "AM"
-msgstr "上午"
+msgstr ""
 
 msgid "Account Authenticated"
-msgstr "帳戶驗證"
+msgstr ""
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr "帳戶存取已暫時受限制。欲知詳情請檢視收件匣。"
+msgstr ""
 
 msgid "Account authentication"
-msgstr "帳戶驗證"
+msgstr ""
 
 msgid "Account balance:"
-msgstr "帳戶餘額："
+msgstr ""
 
 msgid "Add"
-msgstr "新增"
+msgstr ""
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr "透過新增+/-給障礙偏移量定義。例如，+0.005 表示比入市現價高0.005 的障礙。"
+msgstr ""
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr "加上一兩個字。不常見的詞更好。"
+msgstr ""
 
 msgid "Adjust trade parameters"
-msgstr "調整交易參數"
+msgstr ""
 
 msgid "Agree and accept"
-msgstr "同意和接受"
+msgstr ""
 
 msgid "All markets are closed now. Please try again later."
-msgstr "所有市場現已關閉。請稍後重試。"
+msgstr ""
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr "全大寫幾乎和全小寫一樣容易猜出"
+msgstr ""
 
 msgid "Allow equals"
-msgstr "Allow equals"
+msgstr ""
 
 msgid "Already have an account?"
-msgstr "已經有帳戶？"
+msgstr ""
 
 msgid "Apply now as a professional investor"
-msgstr "立刻申請成為專業投資者"
+msgstr ""
 
 msgid "Apr"
-msgstr "四月"
+msgstr ""
 
 msgid "April"
-msgstr "四月"
+msgstr ""
 
 msgid "Asian Down"
-msgstr "Asian Down"
+msgstr ""
 
 msgid "Asian Up"
-msgstr "Asian Up"
+msgstr ""
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Asian 合約如果沒在 5 分鐘內結束，將退還購入價格。"
+msgstr ""
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr "通過把<strong>退出點</strong>與同期的平均點相比較來結算亞洲期權。"
+msgstr ""
 
 msgid "Asians"
-msgstr "Asians"
+msgstr ""
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr "重設時，如果現貨價與您的預測方向相反，則障礙將重設至現貨價的方向。"
+msgstr ""
 
 msgid "Audit"
-msgstr "審計"
+msgstr ""
 
 msgid "Audit Page"
-msgstr "審核頁面"
+msgstr ""
 
 msgid "Audit page"
-msgstr "審核頁面"
+msgstr ""
 
 msgid "Aug"
-msgstr "八月"
+msgstr ""
 
 msgid "August"
-msgstr "八月"
+msgstr ""
 
 msgid "Australian Dollar"
-msgstr "澳元"
+msgstr ""
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr "立刻進行帳戶驗證，以獲得付款選項的所有優惠。"
+msgstr ""
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr "觸手可及的自動交易。無需編碼。"
+msgstr ""
 
 msgid "Average"
-msgstr "平均"
+msgstr ""
 
 msgid "Avoid dates and years that are associated with you"
-msgstr "避免與您相關的日期和年份"
+msgstr ""
 
 msgid "Avoid recent years"
-msgstr "避免用最近數年的年份"
+msgstr ""
 
 msgid "Avoid repeated words and characters"
-msgstr "避免重複的單詞和字元"
+msgstr ""
 
 msgid "Avoid sequences"
-msgstr "避免序列式密碼"
+msgstr ""
 
 msgid "Avoid years that are associated with you"
-msgstr "避免用與您相關的年份"
+msgstr ""
 
 msgid "Barrier"
-msgstr "障礙"
+msgstr ""
 
 msgid "Barrier change"
-msgstr "障礙變更"
+msgstr ""
 
 msgid "Barrier offset"
-msgstr "障礙位移"
+msgstr ""
 
 msgid "Binance USD"
-msgstr "幣安美元"
+msgstr ""
 
 msgid "Binary Coin"
-msgstr "Binary 硬幣"
+msgstr ""
 
 msgid "Bitcoin"
-msgstr "比特幣"
+msgstr ""
 
 msgid "Buy"
-msgstr "買入"
+msgstr ""
 
 msgid "Buy price"
-msgstr "買入價"
+msgstr ""
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr "透過購入%1「Close-Low」%2 合約，將贏取合約期間內乘數值乘以%1收盤%2 與 %1最低值%2之間的差額。"
+msgstr ""
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr "透過購入%1「High-Close」%2 合約，將贏取合約期間內乘數值乘以%1最高值%2 與 %1收盤%2之間的差額。"
+msgstr ""
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr "透過購入%1「High-Low」%2 合約，將贏取合約期間內乘數值乘以%1最高值%2 與 %1最低值%2之間的差額。"
+msgstr ""
 
 msgid "Call Spread"
-msgstr "Call Spread"
+msgstr ""
 
 msgid "Call Spread/Put Spread"
-msgstr "Call Spread/Put Spread"
+msgstr ""
 
 msgid "Capitalization doesn't help very much"
-msgstr "大寫並不提供很大幫助"
+msgstr ""
 
 msgid "Cashier"
-msgstr "收銀台"
+msgstr ""
 
 msgid "Cashier disabled"
-msgstr "收銀台已禁用"
+msgstr ""
 
 msgid "Change API Endpoint"
-msgstr "更改 API 端點"
+msgstr ""
 
 msgid "Chart"
-msgstr "圖表"
+msgstr ""
 
 msgid "Chart is not available for this underlying."
-msgstr "此標的工具圖表不可用。"
+msgstr ""
 
 msgid "Charting for this underlying is delayed"
-msgstr "此標的資產的圖表資料已延遲"
+msgstr ""
 
 msgid "Check your connection."
-msgstr "檢查您的連接。"
+msgstr ""
 
 msgid "Christmas Day"
-msgstr "聖誕節"
+msgstr ""
 
 msgid "Click OK to proceed."
-msgstr "按一下「確定」繼續。"
+msgstr ""
 
 msgid "Click here to open a Financial Account"
-msgstr "按一下此處開立金融帳戶"
+msgstr ""
 
 msgid "Click here to open a Gaming account"
-msgstr "按一下此處開立博彩帳戶"
+msgstr ""
 
 msgid "Click here to open a Real Account"
-msgstr "按一下此處開立真實帳戶"
+msgstr ""
 
 msgid "Close"
-msgstr "收盤"
+msgstr ""
 
 msgid "Close time"
-msgstr "收盤時間"
+msgstr ""
 
 msgid "Close-Low"
-msgstr "Close-Low"
+msgstr ""
 
 msgid "Closes early (at 18:00)"
-msgstr "收盤提前（至18:00）"
+msgstr ""
 
 msgid "Closes early (at 21:00)"
-msgstr "收盤提前（至21:00）"
+msgstr ""
 
 msgid "Common names and surnames are easy to guess"
-msgstr "常用名稱和姓氏容易猜到"
+msgstr ""
 
 msgid "Complete details"
-msgstr "完整資料"
+msgstr ""
 
 msgid "Confirm changes"
-msgstr "確認更改"
+msgstr ""
 
 msgid "Connecting to server"
-msgstr "連接伺服器"
+msgstr ""
 
 msgid "Continue trading"
-msgstr "繼續交易"
+msgstr ""
 
 msgid "Contract Confirmation"
-msgstr "合約確認"
+msgstr ""
 
 msgid "Contract Details"
-msgstr "合約詳細資料"
+msgstr ""
 
 msgid "Contract details"
-msgstr "合約詳情"
+msgstr ""
 
 msgid "Contract ends"
-msgstr "合約結束"
+msgstr ""
 
 msgid "Contract has not started yet"
-msgstr "合約尚未開始"
+msgstr ""
 
 msgid "Contract information"
-msgstr "合約資訊"
+msgstr ""
 
 msgid "Contract period"
-msgstr "合約期限"
+msgstr ""
 
 msgid "Contract result"
-msgstr "合約結果"
+msgstr ""
 
 msgid "Contract starts"
-msgstr "合約開始時間"
+msgstr ""
 
 msgid "Contract type"
-msgstr "合約類型"
+msgstr ""
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異。"
+msgstr ""
 
 msgid "Contracts bought"
-msgstr "已買入合約"
+msgstr ""
 
 msgid "Contracts sold"
-msgstr "已賣出合約"
+msgstr ""
 
 msgid "Crypto"
-msgstr "加密"
+msgstr ""
 
 msgid "Currency"
-msgstr "貨幣"
+msgstr ""
 
 msgid "Current"
-msgstr "目前"
+msgstr ""
 
 msgid "Current time"
-msgstr "目前時間"
+msgstr ""
 
 msgid "Current time:"
-msgstr "目前時間:"
+msgstr ""
 
 msgid "Dates are often easy to guess"
-msgstr "日期通常很容易猜到"
+msgstr ""
 
 msgid "Deal cancel. fee"
-msgstr "交易取消。費用"
+msgstr ""
 
 msgid "Dec"
-msgstr "十二月"
+msgstr ""
 
 msgid "December"
-msgstr "十二月"
+msgstr ""
 
 msgid "Demo"
-msgstr "示範"
+msgstr ""
 
 msgid "Demo Financial"
-msgstr "示範財務"
+msgstr ""
 
 msgid "Demo Financial STP"
-msgstr "模擬財務 STP"
+msgstr ""
 
 msgid "Demo Synthetic"
-msgstr "示範綜合"
+msgstr ""
 
 msgid "Demo account"
-msgstr "示範帳戶"
+msgstr ""
 
 msgid "Deposit"
-msgstr "存款"
+msgstr ""
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的帳戶已被禁存款和提款。請檢查您的電子郵件，以瞭解更多詳情。"
+msgstr ""
 
 msgid "Deriv "
-msgstr "Deriv "
+msgstr ""
 
 msgid "Deriv Apps"
-msgstr "Deriv 應用程式"
+msgstr ""
 
 msgid "Deriv Apps accounts"
-msgstr "Deriv 應用帳戶"
+msgstr ""
 
 msgid "Details"
-msgstr "詳細資料"
+msgstr ""
 
 msgid "Digit"
-msgstr "Digit"
+msgstr ""
 
 msgid "Digit Differs"
-msgstr "Digit Differs"
+msgstr ""
 
 msgid "Digit Even"
-msgstr "Digit Even"
+msgstr ""
 
 msgid "Digit Matches"
-msgstr "Digit Matches"
+msgstr ""
 
 msgid "Digit Odd"
-msgstr "Digit Odd"
+msgstr ""
 
 msgid "Digit Over"
-msgstr "Digit Over"
+msgstr ""
 
 msgid "Digit Under"
-msgstr "Digit Under"
+msgstr ""
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Digit 合約如果沒在 5 分鐘內結束，將退還購入價格。"
+msgstr ""
 
 msgid "Digits"
-msgstr "Digits"
+msgstr ""
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr "是否要為另一個%1充值？如果不是，也可以稍後在%2收银台頁面%3執行此操作。"
+msgstr ""
 
 msgid "Does Not Touch"
-msgstr "Does Not Touch"
+msgstr ""
 
 msgid "Duration"
-msgstr "期限"
+msgstr ""
 
 msgid "EU Deriv account"
-msgstr "歐盟 Deriv 帳戶"
+msgstr ""
 
 msgid "End Time"
-msgstr "結束時間"
+msgstr ""
 
 msgid "End time"
-msgstr "結束時間"
+msgstr ""
 
 msgid "Endpoint"
-msgstr "端點"
+msgstr ""
 
 msgid "Ends Between"
-msgstr "Ends Between"
+msgstr ""
 
 msgid "Ends Between/Ends Outside"
-msgstr "Ends Between/Ends Outside"
+msgstr ""
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "如果開始和結束期間價格跳動次數少於2，Ends Between/Ends Outside 合約購入價將全額退還。"
+msgstr ""
 
 msgid "Ends Outside"
-msgstr "Ends Outside"
+msgstr ""
 
 msgid "Entry Spot"
-msgstr "入市現價"
+msgstr ""
 
 msgid "Entry spot"
-msgstr "入市現價"
+msgstr ""
 
 msgid "Equals"
-msgstr "等於"
+msgstr ""
 
 msgid "Ether Classic"
-msgstr "古典以太幣"
+msgstr ""
 
 msgid "Ethereum"
-msgstr "以太坊"
+msgstr ""
 
 msgid "Euro"
-msgstr "歐元"
+msgstr ""
 
 msgid "Even/Odd"
-msgstr "Even/Odd"
+msgstr ""
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "Even/Odd 合約如果沒在 5 分鐘內結束，將退還購入價格。"
+msgstr ""
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr "禁止時間不能超過5年。"
+msgstr ""
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr "禁止時間不能少於6個月。"
+msgstr ""
 
 msgid "Excluded from the website until"
-msgstr "已被禁止訪問本網站直到"
+msgstr ""
 
 msgid "Exit Spot"
-msgstr "退市現價"
+msgstr ""
 
 msgid "Exit spot"
-msgstr "退市現價"
+msgstr ""
 
 msgid "Exit spot time"
-msgstr "退市現價時間"
+msgstr ""
 
 msgid "Exit time"
-msgstr "退市時間"
+msgstr ""
 
 msgid "Explanation"
-msgstr "說明"
+msgstr ""
 
 msgid "Fall"
-msgstr "Fall"
+msgstr ""
 
 msgid "Fall or equal"
-msgstr "Fall 或 equal"
+msgstr ""
 
 msgid "Feb"
-msgstr "二月"
+msgstr ""
 
 msgid "February"
-msgstr "二月"
+msgstr ""
 
 msgid "Fiat"
-msgstr "法定貨幣"
+msgstr ""
 
 msgid "Final price"
-msgstr "最終價格"
+msgstr ""
 
 msgid "Financial"
-msgstr "財務"
+msgstr ""
 
 msgid "Financial STP"
-msgstr "財務 STP"
+msgstr ""
 
 msgid "Finish"
-msgstr "完成"
+msgstr ""
 
 msgid "Fr"
-msgstr "星期五"
+msgstr ""
 
 msgid "Friday"
-msgstr "星期五"
+msgstr ""
 
 msgid "Fridays"
-msgstr "星期五"
+msgstr ""
 
 msgid "Gaming"
-msgstr "博彩"
+msgstr ""
 
 msgid "Go To Reports"
-msgstr "前往報表"
+msgstr ""
 
 msgid "Go back"
-msgstr "返回"
+msgstr ""
 
 msgid "Go to statement"
-msgstr "前往月結單"
+msgstr ""
 
 msgid "Goes Outside"
-msgstr "Goes Outside"
+msgstr ""
 
 msgid "Guide"
-msgstr "指南"
+msgstr ""
 
 msgid "High"
-msgstr "High"
+msgstr ""
 
 msgid "High Barrier"
-msgstr "高障礙"
+msgstr ""
 
 msgid "High Tick"
-msgstr "High Tick"
+msgstr ""
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr "High Tick/Low Tick 合約具有嚴格的五跳動點週期。"
+msgstr ""
 
 msgid "High barrier"
-msgstr "高障礙"
+msgstr ""
 
 msgid "High barrier must be higher than low barrier"
-msgstr "高障礙必須高於低障礙"
+msgstr ""
 
 msgid "High barrier offset"
-msgstr "高障礙位移"
+msgstr ""
 
 msgid "High, Low and Close"
-msgstr "High、Low 和 Close"
+msgstr ""
 
 msgid "High-Close"
-msgstr "High-Close"
+msgstr ""
 
 msgid "High-Low"
-msgstr "High-Low"
+msgstr ""
 
 msgid "High/Low Ticks"
-msgstr "High/Low Ticks"
+msgstr ""
 
 msgid "Higher"
-msgstr "Higher"
+msgstr ""
 
 msgid "Higher/Lower"
-msgstr "Higher/Lower"
+msgstr ""
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "如果開始和結束期間價格跳動次數少於 2，Higher/Lower 合約購入價將全額退還。"
+msgstr ""
 
 msgid "Hour"
-msgstr "小時"
+msgstr ""
 
 msgid "I want to reapply"
-msgstr "我想重新申請"
+msgstr ""
 
 msgid "IDK"
-msgstr "IDK"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>低障礙</strong> 或 <strong>高障礙</strong>，將不會贏得賠付。"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr "如果<strong>退市現價</strong>等於<strong>障礙</strong>或<strong>重設後的新障礙</strong>，將不會贏得賠付。"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙</strong> 或 <strong>重設後的新障礙</strong>，將不會贏得賠付。"
+msgstr ""
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr "如果 <strong>退市現價</strong> 等於 <strong>障礙價格</strong>，將不會贏得賠付。"
+msgstr ""
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr "如果 <strong>最後跳動點</strong> 等於平均跳動點，將不會贏得賠付。"
+msgstr ""
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr "如果選擇 \"Allow equals\"，如果退市現價高於或等於 \"Rise\" 的入市現價，將獲得賠付。同樣，如果退市現價低於或等於 \"Fall\" 的入市現價，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr "如果選擇「Asian Fall」期權，<strong>當</strong><strong>最新價格</strong>低於<strong>平均</strong>價格時，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr "如果選擇「Asian Rise」期權，<strong>當</strong><strong>最新價格</strong>高於<strong>平均</strong>價格時，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr "如果選擇 \"Differs\" 期權，當<strong>最新價格的最後一個數字</strong>跟<strong>預測</strong><strong>不同</strong>時，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果選擇 \"Does Not Touch\" 期權，假設市場在<strong>合約期限內</strong>一直沒有觸及<strong>障礙水平</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr "如果選擇 \"Ends Between\" 期權，假設<strong>退市現價</strong>嚴格高於<strong>低障礙</strong>，並且嚴格低於<strong>高障礙</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr "如果選擇 \"Ends Outside\" 期權，只要<strong>退市現價</strong>嚴格高於<strong>高障礙</strong>，或者嚴格低於<strong>低障礙</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr "如果選擇 \"Even\" 期權，只要<strong>最新價格的</strong>最後一個數字<strong>是偶數(如 2、4、6、8 或 0)，將獲得賠付。</strong>"
+msgstr ""
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "如果選擇 \"Fall\" 期權，只要<strong>退市現價</strong>嚴格低於<strong>入市現價</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr "如果選擇「Falls」期權，只要<strong>退市現價</strong>嚴格低於<strong>入市現價</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果選擇 \"Goes Outside\" 期權，只要市場在<strong>合約期限內的</strong>任何時候觸及<strong>高障礙</strong>或<strong>低障礙</strong>，將得獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr "如果選擇 \"Higher\" 期權，只要<strong>退市現價</strong>嚴格高於<strong>障礙</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr "如果選擇 \"Lower\" 期權，只要<strong>退市現價</strong>嚴格低於<strong>障礙</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr "如果選擇 \"Matches\" 期權，只要<strong>最新價格的</strong>最後一個數字<strong>與</strong>預測<strong>相同，將獲得賠付。</strong>"
+msgstr ""
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr "如果選擇 \"Odd\" 期權，只要<strong>最新價格的</strong>最後一個數字<strong>是奇數(如 1、3、5、7 或 9)，將獲得賠付。</strong>"
+msgstr ""
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr "如果選擇 \"Over\" 期權，只要<strong>最新價格的</strong>最後一個數字<strong>大於預測，將獲得賠付。</strong>"
+msgstr ""
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr "如果選擇 \"Reset-Call\"，只要退市現價嚴格高於入市現價或重設時現貨價，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr "如果選擇 \"Reset-Put\"，只要退市現價嚴格低於入市現價或重設時現貨價，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "如果選擇 \"Rise\" 期權，只要<strong>退市現價</strong>嚴格高於<strong>入市現價</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr "如果選擇「Rises」期權，只要<strong>退市現價</strong>嚴格高於<strong>入市現價</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果選擇 \"Stays Between\" 期權，只要市場在<strong>合約期限內的</strong>任何時間位於<strong>高障礙</strong>和<strong>低障礙</strong>之間（但並不觸及），將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr "如果選擇 \"Touches\" 期權，只要市場價格在<strong>合約期限內的</strong>任何時間觸及<strong>障礙</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr "如果選擇 \"Under\" 期權，只要<strong>最新價格的</strong>最後一個數字<strong>小於預測，將獲得賠付。</strong>"
+msgstr ""
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr "如果選擇「falls」期權，只要市場價格低於<strong>入市價格</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr "如果選擇「falls」期權，只要市場價格低於入市價格，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr "如果選擇「rises」期權，只要市場價格高於<strong>入市價格</strong>，將獲得賠付。"
+msgstr ""
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr "如果選擇「rises」期權，只要市場價格高於入市價格，將獲得賠付。"
+msgstr ""
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr "如果選擇 %1\"High Tick\"%2，如果所選跳動點是接下來五個跳動點%2 中的 %1最高值，可獲得賠付。"
+msgstr ""
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr "如果選擇 %1\"Low Tick\"%2，如果所選跳動點是接下來五個跳動點%2 中的 %1最低值，可獲得賠付。"
+msgstr ""
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr "如果選擇%1「Only Downs」%2期權，只要%1入市現價%2後的價格持續下跌，將獲得賠付。如果期間內的價格有任何上漲或相等於之前的價格， 將%3不會獲得賠付。"
+msgstr ""
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr "如果選擇%1「Only Ups」%2期權，只要%1入市現價%2後的價格持續上漲，將獲得賠付。如果期間內的價格有任何下跌或相等於之前的價格， 將%3不會獲得賠付。"
+msgstr ""
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr "如果選擇的<strong>開始時間</strong>為未來的某個時間，交易的<strong>開始時間</strong>就是選擇的時間，<strong>入市價格</strong>就是當時的實時價格。"
+msgstr ""
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "如果選擇的<strong>開始時間</strong>是「現在」，交易<strong>結束時間</strong>就是交易<strong>開始時間</strong>之後所選的分鐘數或小時數（如果期限短於一天），或在交易日的結束時間（如果期限為一天或更長）。"
+msgstr ""
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr "如果選擇具體的<strong>結束時間</strong>，交易<strong>結束時間</strong>就是選擇的時間。"
+msgstr ""
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr "歐盟的金融二元期權僅供專業投資者使用。"
+msgstr ""
 
 msgid "In/Out"
-msgstr "In/Out"
+msgstr ""
 
 msgid "Indicates required field"
-msgstr "表示必填欄位"
+msgstr ""
 
 msgid "Indicative"
-msgstr "指示性"
+msgstr ""
 
 msgid "Indicative barrier"
-msgstr "指示性障礙"
+msgstr ""
 
 msgid "Invalid app id"
-msgstr "無效的應用 id"
+msgstr ""
 
 msgid "Invalid email address."
-msgstr "無效的電子郵件地址."
+msgstr ""
 
 msgid "Invalid verification code."
-msgstr "無效的驗證代碼。"
+msgstr ""
 
 msgid "Investment"
-msgstr "投資"
+msgstr ""
 
 msgid "Jan"
-msgstr "一月"
+msgstr ""
 
 msgid "January"
-msgstr "一月"
+msgstr ""
 
 msgid "Jul"
-msgstr "七月"
+msgstr ""
 
 msgid "July"
-msgstr "七月"
+msgstr ""
 
 msgid "Jun"
-msgstr "六月"
+msgstr ""
 
 msgid "June"
-msgstr "六月"
+msgstr ""
 
 msgid "Language settings"
-msgstr "語言設定"
+msgstr ""
 
 msgid "Last Digit Prediction"
-msgstr "最後數字的預測"
+msgstr ""
 
 msgid "Last Digit Stats"
-msgstr "最後數字的統計資料"
+msgstr ""
 
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr "顯示 %2 最新 %1 跳點之最後統計數字"
+msgstr ""
 
 msgid "Litecoin"
-msgstr "萊特幣"
+msgstr ""
 
 msgid "Live chat"
-msgstr "即時聊天"
+msgstr ""
 
 msgid "Log in"
-msgstr "登入"
+msgstr ""
 
 msgid "Log in here"
-msgstr "此處登入"
+msgstr ""
 
 msgid "Log out"
-msgstr "登出"
+msgstr ""
 
 msgid "Login ID"
-msgstr "登入ID"
+msgstr ""
 
 msgid "Login at:"
-msgstr "登入位置:"
+msgstr ""
 
 msgid "Lookbacks"
-msgstr "回顧"
+msgstr ""
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr "尋找差價合約帳戶？前往 Trader's hub"
+msgstr ""
 
 msgid "Looking for CFDs? Go to Trader's hub"
-msgstr "正在尋找差價合約？前往 Trader’s hub"
+msgstr ""
 
 msgid "Loss"
-msgstr "虧損"
+msgstr ""
 
 msgid "Low"
-msgstr "Low"
+msgstr ""
 
 msgid "Low Barrier"
-msgstr "低障礙"
+msgstr ""
 
 msgid "Low Tick"
-msgstr "Low Tick"
+msgstr ""
 
 msgid "Low barrier"
-msgstr "低障礙"
+msgstr ""
 
 msgid "Low barrier offset"
-msgstr "低障礙位移"
+msgstr ""
 
 msgid "Lower"
-msgstr "Lower"
+msgstr ""
 
 msgid "MT5"
-msgstr "MT5"
+msgstr ""
 
 msgid "MT5 withdrawal disabled"
-msgstr "MT5已被禁提款"
+msgstr ""
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的MT5帳戶已被禁提款。請檢查您的電子郵件，以瞭解更多詳情。"
+msgstr ""
 
 msgid "Manage accounts"
-msgstr "帳戶管理"
+msgstr ""
 
 msgid "Manage funds"
-msgstr "基金管理"
+msgstr ""
 
 msgid "Mar"
-msgstr "三月"
+msgstr ""
 
 msgid "March"
-msgstr "三月"
+msgstr ""
 
 msgid "Market"
-msgstr "市場"
+msgstr ""
 
 msgid "Matches/Differs"
-msgstr "Matches/Differs"
+msgstr ""
 
 msgid "Maximum multiplier of 1000."
-msgstr "最大乘數為1000。"
+msgstr ""
 
 msgid "Maximum payout"
-msgstr "最大賠付"
+msgstr ""
 
 msgid "Maximum:"
-msgstr "最大:"
+msgstr ""
 
 msgid "May"
-msgstr "五月"
+msgstr ""
 
 msgid "Menu"
-msgstr "功能表"
+msgstr ""
 
 msgid "Minimum of %1 characters required."
-msgstr "需至少%1 個字元。"
+msgstr ""
 
 msgid "Minimum:"
-msgstr "最小:"
+msgstr ""
 
 msgid "Minute"
-msgstr "分鐘"
+msgstr ""
 
 msgid "Mo"
-msgstr "星期一"
+msgstr ""
 
 msgid "Monday"
-msgstr "星期一"
+msgstr ""
 
 msgid "More information can be found in an email sent to you."
-msgstr "您可以在傳給您的電子郵件中找到更詳細的資訊。"
+msgstr ""
 
 msgid "Multi-Collateral"
-msgstr "多資產抵押"
+msgstr ""
 
 msgid "Multiplier"
-msgstr "Multiplier"
+msgstr ""
 
 msgid "Multiplier Down"
-msgstr "Multiplier Down"
+msgstr ""
 
 msgid "Multiplier Up"
-msgstr "Multiplier Up"
+msgstr ""
 
 msgid "Multipliers"
-msgstr "Multipliers"
+msgstr ""
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr "僅名字和姓氏本身很容易猜到"
+msgstr ""
 
 msgid "Net profit"
-msgstr "淨收益"
+msgstr ""
 
 msgid "Network status"
-msgstr "網路狀態"
+msgstr ""
 
 msgid "New Year's Day"
-msgstr "新年"
+msgstr ""
 
 msgid "Next"
-msgstr "下一頁"
+msgstr ""
 
 msgid "No currency assigned"
-msgstr "未分配幣種"
+msgstr ""
 
 msgid "No currency selected"
-msgstr "未選擇幣種"
+msgstr ""
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr "不需要符號、數字或大寫字母"
+msgstr ""
 
 msgid "No notifications"
-msgstr "沒有通知"
+msgstr ""
 
 msgid "Non-EU Deriv "
-msgstr "非歐盟 Deriv "
+msgstr ""
 
 msgid "Not"
-msgstr "不"
+msgstr ""
 
 msgid "Note"
-msgstr "備註"
+msgstr ""
 
 msgid "Notifications"
-msgstr "通知"
+msgstr ""
 
 msgid "Nov"
-msgstr "十一月"
+msgstr ""
 
 msgid "November"
-msgstr "十一月"
+msgstr ""
 
 msgid "Now"
-msgstr "現在"
+msgstr ""
 
 msgid "Number of ticks:"
-msgstr "跳動點數目:"
+msgstr ""
 
 msgid "OAuth App ID"
-msgstr "OAuth 應用程式 ID"
+msgstr ""
 
 msgid "Oct"
-msgstr "十月"
+msgstr ""
 
 msgid "October"
-msgstr "十月"
+msgstr ""
 
 msgid "Offline"
-msgstr "離線"
+msgstr ""
 
 msgid "Online"
-msgstr "線上"
+msgstr ""
 
 msgid "Online trading platform"
-msgstr "線上交易平台"
+msgstr ""
 
 msgid "Only Downs"
-msgstr "Only Downs"
+msgstr ""
 
 msgid "Only Ups"
-msgstr "Only Ups"
+msgstr ""
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr "僅允許字母、數字、空格和連字符。"
+msgstr ""
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr "僅允許字母、數字、空格和這些特殊字元: %1"
+msgstr ""
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr "只允許使用字母、數字、空格、連字號、句號和所有格號。"
+msgstr ""
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr "只允許字母、空格、連字號、句號和所有格號。"
+msgstr ""
 
 msgid "Oops... Page Not Available"
-msgstr "抱歉!找不到頁面"
+msgstr ""
 
 msgid "Open a Financial Account"
-msgstr "開立金融帳戶"
+msgstr ""
 
 msgid "Open a Real Account"
-msgstr "開立真實帳戶"
+msgstr ""
 
 msgid "Open a free account"
-msgstr "註冊免費帳戶"
+msgstr ""
 
 msgid "Open positions"
-msgstr "空缺"
+msgstr ""
 
 msgid "Options & Multipliers"
-msgstr "期權和Multipliers"
+msgstr ""
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會上癮。為了避免發生此種風險，我們定期向您提供交易和財務的實況簡報。"
+msgstr ""
 
 msgid "Over/Under"
-msgstr "Over/Under"
+msgstr ""
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr "大於/小於合約如果沒在 5 分鐘內結束，將退還購入價格。"
+msgstr ""
 
 msgid "PM"
-msgstr "下午"
+msgstr ""
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr "密碼必須有大小寫英文字母和數字。"
+msgstr ""
 
 msgid "Paxos Standard"
-msgstr "Paxos 標準"
+msgstr ""
 
 msgid "Pay-out"
-msgstr "回報"
+msgstr ""
 
 msgid "Payout"
-msgstr "賠付"
+msgstr ""
 
 msgid "Payout range"
-msgstr "賠付範圍"
+msgstr ""
 
 msgid "Percentage"
-msgstr "百分比"
+msgstr ""
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr "請%1完成帳戶資料%2，以提高取款和交易限額。"
+msgstr ""
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr "請%1登入%2 或 %3註冊%4 以檢視此頁。"
+msgstr ""
 
 msgid "Please accept the terms and conditions."
-msgstr "請接受條款和條件。"
+msgstr ""
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr "請按照%3英國博彩%4委員會 (UKGC) 的需求完成%1真實帳戶表格%2以驗證您的年齡。"
+msgstr ""
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr "請完成%1財務評估表格%2，以便提升您的取款和交易限額。"
+msgstr ""
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr "請確認您不是政治公眾人士。"
+msgstr ""
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr "請確保您的設備已安裝了Telegram應用程式。"
+msgstr ""
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr "請輸入有效的電話號 (例如 +15417541234)。"
+msgstr ""
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr "一旦滿足所需標準，請重新申請。"
+msgstr ""
 
 msgid "Please reload the page"
-msgstr "請重新載入頁面"
+msgstr ""
 
 msgid "Please select"
-msgstr "請選擇"
+msgstr ""
 
 msgid "Please select a valid time."
-msgstr "請選擇有效時間。"
+msgstr ""
 
 msgid "Please select the checkbox."
-msgstr "請選擇核取方塊。"
+msgstr ""
 
 msgid "Please set the currency of your account."
-msgstr "請設定帳戶的幣種。"
+msgstr ""
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr "請將 %130 天交易額限制%2 設定為刪除存款限額。"
+msgstr ""
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr "請指定您首選的實況調查間隔時間，以分鐘計："
+msgstr ""
 
 msgid "Please submit your proof of address."
-msgstr "請提交您的地址證明。"
+msgstr ""
 
 msgid "Please submit your proof of identity."
-msgstr "請提交您的身份證明。"
+msgstr ""
 
 msgid "Potential Payout"
-msgstr "可能的賠付額"
+msgstr ""
 
 msgid "Potential Profit"
-msgstr "潛在利潤"
+msgstr ""
 
 msgid "Potential payout"
-msgstr "可能的賠付額"
+msgstr ""
 
 msgid "Potential profit"
-msgstr "潛在利潤"
+msgstr ""
 
 msgid "Potential profit/loss"
-msgstr "潛在利潤/虧損"
+msgstr ""
 
 msgid "Pound Sterling"
-msgstr "英鎊"
+msgstr ""
 
 msgid "Predict the direction<br />and purchase"
-msgstr "預測價格走向<br />並購入"
+msgstr ""
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr "容易猜測的替換，例如用'@'代替'a'並沒有提供太大幫助"
+msgstr ""
 
 msgid "Previous"
-msgstr "之前"
+msgstr ""
 
 msgid "Profit"
-msgstr "利潤"
+msgstr ""
 
 msgid "Profit / Loss"
-msgstr "利潤 / 虧損"
+msgstr ""
 
 msgid "Profit table"
-msgstr "利潤表"
+msgstr ""
 
 msgid "Profit/loss"
-msgstr "利潤/虧損"
+msgstr ""
 
 msgid "Proof of address"
-msgstr "地址證明"
+msgstr ""
 
 msgid "Proof of address expired"
-msgstr "地址證明已過期"
+msgstr ""
 
 msgid "Proof of address required"
-msgstr "需要地址證明"
+msgstr ""
 
 msgid "Proof of identity"
-msgstr "身份證明"
+msgstr ""
 
 msgid "Proof of identity expired"
-msgstr "身份證明已過期"
+msgstr ""
 
 msgid "Proof of identity required"
-msgstr "需要身份證明"
+msgstr ""
 
 msgid "Purchase"
-msgstr "買入"
+msgstr ""
 
 msgid "Purchase Time"
-msgstr "買入時間"
+msgstr ""
 
 msgid "Purchase price"
-msgstr "購入價格"
+msgstr ""
 
 msgid "Purchase request sent"
-msgstr "採購請求已傳送"
+msgstr ""
 
 msgid "Purchase time"
-msgstr "買入時間"
+msgstr ""
 
 msgid "Put Spread"
-msgstr "Put Spread"
+msgstr ""
 
 msgid "Ready to trade?"
-msgstr "已經準備好開始交易了嗎？"
+msgstr ""
 
 msgid "Real"
-msgstr "真實"
+msgstr ""
 
 msgid "Real Financial"
-msgstr "真實財務"
+msgstr ""
 
 msgid "Real Financial STP"
-msgstr "真實財務 STP"
+msgstr ""
 
 msgid "Real Synthetic"
-msgstr "真實綜合"
+msgstr ""
 
 msgid "Reality Check"
-msgstr "實況簡報"
+msgstr ""
 
 msgid "Recent years are easy to guess"
-msgstr "以最近年份作密碼很容易猜出"
+msgstr ""
 
 msgid "Remaining time"
-msgstr "剩餘時間"
+msgstr ""
 
 msgid "Remove deposit limits"
-msgstr "移除存款限額"
+msgstr ""
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr "像“aaa”這樣的重複密碼很容易猜到"
+msgstr ""
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr "像“abcabcabc”這樣的重複詞比“abc”更難猜測"
+msgstr ""
 
 msgid "Reports"
-msgstr "報告"
+msgstr ""
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr "您必須啟用瀏覽器的web存儲，才能正常工作。請啟用它或退出私人瀏覽模式。"
+msgstr ""
 
 msgid "Resale not offered"
-msgstr "不提供轉售"
+msgstr ""
 
 msgid "Reset Barrier"
-msgstr "重設障礙"
+msgstr ""
 
 msgid "Reset Call"
-msgstr "Reset Call"
+msgstr ""
 
 msgid "Reset Call/Reset Put"
-msgstr "Reset Call/Reset Put"
+msgstr ""
 
 msgid "Reset Put"
-msgstr "Reset Put"
+msgstr ""
 
 msgid "Reset Time"
-msgstr "重設時間"
+msgstr ""
 
 msgid "Reset balance"
-msgstr "重設餘額"
+msgstr ""
 
 msgid "Reset barrier"
-msgstr "重設障礙"
+msgstr ""
 
 msgid "Reset time"
-msgstr "重設時間"
+msgstr ""
 
 msgid "Reset to original settings"
-msgstr "重設為原始設定"
+msgstr ""
 
 msgid "Return"
-msgstr "回報"
+msgstr ""
 
 msgid "Reversed words aren't much harder to guess"
-msgstr "倒寫單詞並不難猜"
+msgstr ""
 
 msgid "Rise"
-msgstr "Rise"
+msgstr ""
 
 msgid "Rise or equal"
-msgstr "Rise 或 equal"
+msgstr ""
 
 msgid "Rise/Fall"
-msgstr "Rise/Fall"
+msgstr ""
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr "Rise/Fall 合約將退款，如："
+msgstr ""
 
 msgid "STASIS Euro"
-msgstr "STASIS Euro"
+msgstr ""
 
 msgid "Sa"
-msgstr "星期六"
+msgstr ""
 
 msgid "Saturday"
-msgstr "星期六"
+msgstr ""
 
 msgid "Search..."
-msgstr "搜尋.."
+msgstr ""
 
 msgid "Select Asset"
-msgstr "選擇資產"
+msgstr ""
 
 msgid "Select Trade Type"
-msgstr "選擇交易類型"
+msgstr ""
 
 msgid "Select date"
-msgstr "選擇日期"
+msgstr ""
 
 msgid "Select market:"
-msgstr "選擇市場:"
+msgstr ""
 
 msgid "Select your market and underlying asset"
-msgstr "選擇您的市場和標的資產"
+msgstr ""
 
 msgid "Select your trade type"
-msgstr "選取交易類型"
+msgstr ""
 
 msgid "Selected tick"
-msgstr "選定跳動點"
+msgstr ""
 
 msgid "Self-exclusion"
-msgstr "自我禁止"
+msgstr ""
 
 msgid "Sell"
-msgstr "賣出"
+msgstr ""
 
 msgid "Sell at market"
-msgstr "按市價賣出"
+msgstr ""
 
 msgid "Sep"
-msgstr "九月"
+msgstr ""
 
 msgid "September"
-msgstr "九月"
+msgstr ""
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr "像abc或6543這樣的序列密碼很容易猜到"
+msgstr ""
 
 msgid "Server"
-msgstr "伺服器"
+msgstr ""
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr "交易期持續時間限制不能大於6週。"
+msgstr ""
 
 msgid "Session duration:"
-msgstr "交易期持續時間："
+msgstr ""
 
 msgid "Set account currency"
-msgstr "設定帳戶幣種"
+msgstr ""
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr "短鍵盤列式很容易猜到"
+msgstr ""
 
 msgid "Should be %1"
-msgstr "必須為%1"
+msgstr ""
 
 msgid "Should be a valid number."
-msgstr "必須是有效號碼。"
+msgstr ""
 
 msgid "Should be between %1 and %2"
-msgstr "須在%1 與 %2之間"
+msgstr ""
 
 msgid "Should be less than %1"
-msgstr "必須小於%1"
+msgstr ""
 
 msgid "Should be more than %1"
-msgstr "必須大於%1"
+msgstr ""
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr "應以字母或數位開始，可包含連字號和底線。"
+msgstr ""
 
 msgid "Sign out"
-msgstr "登出"
+msgstr ""
 
 msgid "Sign up"
-msgstr "註冊"
+msgstr ""
 
 msgid "SmartTrader"
-msgstr "SmartTrader"
+msgstr ""
 
 msgid "SmartTrader is unavailable for this account"
-msgstr "此帳戶不可用 SmartTrader"
+msgstr ""
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr "對不起，在處理您的請求時發生錯誤。"
+msgstr ""
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr "對不起，您的國家無法進行二元期權交易。"
+msgstr ""
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr "對不起，您的金融帳戶無法進行二元期權交易。"
+msgstr ""
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr "抱歉，英國和曼島不提供期權交易。"
+msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr "對不起，此功能僅適用虛擬帳戶。"
+msgstr ""
 
 msgid "Spot"
-msgstr "現價"
+msgstr ""
 
 msgid "Spot time"
-msgstr "現貨時間"
+msgstr ""
 
 msgid "Spot time (GMT)"
-msgstr "現貨時間 (GMT)"
+msgstr ""
 
 msgid "Stake"
-msgstr "投注資金"
+msgstr ""
 
 msgid "Start Time"
-msgstr "開始時間"
+msgstr ""
 
 msgid "Start time"
-msgstr "開始時間"
+msgstr ""
 
 msgid "Statements"
-msgstr "聲明"
+msgstr ""
 
 msgid "Stays Between"
-msgstr "Stays Between"
+msgstr ""
 
 msgid "Stays Between/Goes Outside"
-msgstr "Stays Between/Goes Outside"
+msgstr ""
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "如果開始和結束期間價格跳動次數少於2，Stays Between/Goes Outside 合約購入價將全額退還。"
+msgstr ""
 
 msgid "Step"
-msgstr "步驟"
+msgstr ""
 
 msgid "Straight rows of keys are easy to guess"
-msgstr "直線排列鍵很容易猜到"
+msgstr ""
 
 msgid "Su"
-msgstr "星期日"
+msgstr ""
 
 msgid "Submit"
-msgstr "送出"
+msgstr ""
 
 msgid "Sunday"
-msgstr "星期日"
+msgstr ""
 
 msgid "Switch to another account"
-msgstr "轉換到另一個帳戶"
+msgstr ""
 
 msgid "Synthetic"
-msgstr "綜合"
+msgstr ""
 
 msgid "Target"
-msgstr "目標"
+msgstr ""
 
 msgid "Tether ERC20"
-msgstr "泰達 ERC20"
+msgstr ""
 
 msgid "Tether Omni"
-msgstr "泰達 Omni"
+msgstr ""
 
 msgid "Tether TRC20"
-msgstr "泰達 TRC20"
+msgstr ""
 
 msgid "Th"
-msgstr "星期四"
+msgstr ""
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "謝謝，我們會在24小時內回覆您"
+msgstr ""
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr "%1收盤值%2是%1結束時間%2的最新或之前的跳動點。如選擇指定的%1結束時間，%2 那麼 %1結束時間%2就是選定的時間。"
+msgstr ""
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr "%1合約期限%2是在合約開始時間之後的%1第一個跳動點%2和%1結束時間%2之間的期限。"
+msgstr ""
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr "%1結束時間%2是%1開始時間%2後的選定分鐘/小時數。"
+msgstr ""
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr "%1退市現價%2是合約結束時最後一個價格跳動點。當所有價格持續上漲或下跌，或當其中一個價格跳動點突破了預測的價格形態時，合約即結束。"
+msgstr ""
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
-msgstr "%1high%2是市場在合同期內達到的最高點。"
+msgstr ""
 
 msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
-msgstr "%1low%2是市場在合同期內達到的最低點。"
+msgstr ""
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr "%1開始時間%2即我們的伺服器開始處理合約的時間。"
+msgstr ""
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr "%1開始時間%2就是我們的伺服器處理合約交易的時間，%1入市現價%2就是%1下一個跳動價格%2。"
+msgstr ""
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr "<strong>合約期限</strong>是在合約<strong>開始時間</strong> 之後的<strong>下一個跳動點</strong>和合約<strong>結束時間</strong>之間的期限。"
+msgstr ""
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr "合約<strong>結束時間</strong>是指合約<strong>開始時間</strong>（如果期限小於一天）以後所選定的分鐘/小時數，或是交易日結束之時（如果期限是一天或更長）。"
+msgstr ""
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr "<strong>結束時間</strong>是<strong>開始時間</strong>過後的選定分鐘/小時數。"
+msgstr ""
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr "<strong>入市現價</strong>指我們伺服器處理合約後的第一個跳動點。"
+msgstr ""
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr "<strong>退市現價</strong>是合約<strong>結束時或結束之前的</strong>最後跳動價點。"
+msgstr ""
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr "<strong>開始時間</strong>就是我們的伺服器處理合約交易的時間，<strong>入市現價</strong>就是<strong>下一個價格</strong>。"
+msgstr ""
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr "合約<strong>開始時間</strong>即我們的伺服器處理合約的時間。"
+msgstr ""
 
 msgid "The Average"
-msgstr "平均"
+msgstr ""
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr "平均價位是所有跳動點的平均值，包括入市現價和最後跳動點。"
+msgstr ""
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr "跳動期合約不會在五分鐘內終止"
+msgstr ""
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr "入市現價指我們伺服器處理合約後的第一個跳動點。"
+msgstr ""
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
-msgstr "找不到您要求的頁面。它不再存在或輸入網址出錯。請檢查是否輸入錯誤。"
+msgstr ""
 
 msgid "The reset time is %1"
-msgstr "重設時間為 %1"
+msgstr ""
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
-msgstr "伺服器<a href=\"%1\">終端</a>是: %2"
+msgstr ""
 
 msgid "The two passwords that you entered do not match."
-msgstr "兩次輸入的密碼不相符。"
+msgstr ""
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr "開始時間和終止時間之間的跳動價位少於2個"
+msgstr ""
 
 msgid "There was a problem accessing the server during purchase."
-msgstr "買入時伺服器存取出了問題。"
+msgstr ""
 
 msgid "There was a problem accessing the server."
-msgstr "伺服器存取出了問題。"
+msgstr ""
 
 msgid "There was an error"
-msgstr "出現錯誤"
+msgstr ""
 
 msgid "There was some invalid character in an input field."
-msgstr "某字欄的輸入字元無效。"
+msgstr ""
 
 msgid "This contract is only available on %1DTrader%2."
-msgstr "此合約僅適用於%1DTrader%2。"
+msgstr ""
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr "此合約只能通過DTrader執行。 %1%2前往 Dtrader%3 終止或取消此合約。"
+msgstr ""
 
 msgid "This contract lost"
-msgstr "此合約虧損"
+msgstr ""
 
 msgid "This contract type only offers 5 ticks"
-msgstr "此合約類型僅提供5跳動點"
+msgstr ""
 
 msgid "This contract won"
-msgstr "此合約獲利"
+msgstr ""
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr "此功能不適用於虛擬資金帳戶。"
+msgstr ""
 
 msgid "This field is required."
-msgstr "此為必填欄位。"
+msgstr ""
 
 msgid "This is a staging server - For testing purposes only"
-msgstr "這是分期伺服器，僅用於測試目的"
+msgstr ""
 
 msgid "This is a top-10 common password"
-msgstr "這是10個最常用的密碼"
+msgstr ""
 
 msgid "This is a top-100 common password"
-msgstr "這是100個最常用的密碼"
+msgstr ""
 
 msgid "This is a very common password"
-msgstr "這是很常用的密碼"
+msgstr ""
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr "這是一個指示性的障礙。實際障礙將是入市現價加上障礙距離。"
+msgstr ""
 
 msgid "This is similar to a commonly used password"
-msgstr "這類似於常用密碼"
+msgstr ""
 
 msgid "This page is only available to logged out clients."
-msgstr "此頁面僅適用於已登出的客戶。"
+msgstr ""
 
 msgid "This password is on the blacklist"
-msgstr "此密碼已列入黑名單"
+msgstr ""
 
 msgid "Thursday"
-msgstr "星期四"
+msgstr ""
 
 msgid "Tick"
-msgstr "跳動點"
+msgstr ""
 
 msgid "Tick Prediction"
-msgstr "跳動點預測"
+msgstr ""
 
 msgid "Ticks"
-msgstr "跳動點"
+msgstr ""
 
 msgid "Ticks history returned an empty array."
-msgstr "跳動點歷史返回空數組"
+msgstr ""
 
 msgid "Time is in the wrong format."
-msgstr "時間格式錯誤。"
+msgstr ""
 
 msgid "Time out cannot be in the past."
-msgstr "到期時間不可為過去式。"
+msgstr ""
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr "到期時間不能大於6週。"
+msgstr ""
 
 msgid "Time out must be after today."
-msgstr "到期時間必須在今日之後。"
+msgstr ""
 
 msgid "Timed out until"
-msgstr "時間已過。下次開啟時間為"
+msgstr ""
 
 msgid "Today"
-msgstr "今天"
+msgstr ""
 
 msgid "Top up"
-msgstr "充值"
+msgstr ""
 
 msgid "Top up Virtual Account?"
-msgstr "給虛擬帳戶充值？"
+msgstr ""
 
 msgid "Top up error"
-msgstr "充值錯誤"
+msgstr ""
 
 msgid "Top-up successful"
-msgstr "充值成功"
+msgstr ""
 
 msgid "Total Cost"
-msgstr "成本總計"
+msgstr ""
 
 msgid "Total assets"
-msgstr "總資產"
+msgstr ""
 
 msgid "Total assets in your Deriv accounts"
-msgstr "您的 Deriv 帳戶中的總資產。"
+msgstr ""
 
 msgid "Total profit/loss"
-msgstr "總損益"
+msgstr ""
 
 msgid "Touch/No Touch"
-msgstr "Touch/No Touch"
+msgstr ""
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr "如果開始和結束期間價格跳動次數少於2，Touch/No Touch 合約購入價將全額退還。"
+msgstr ""
 
 msgid "Touches"
-msgstr "Touches"
+msgstr ""
 
 msgid "Trade"
-msgstr "交易"
+msgstr ""
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr "使用功能強大、用戶友好的線上交易平台 SmartTrader 在全球市場交易數字期權。"
+msgstr ""
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr "在我們極受歡迎、人性化的平台進行全球市場交易。"
+msgstr ""
 
 msgid "Trade types"
-msgstr "交易類型"
+msgstr ""
 
 msgid "Trader's hub"
-msgstr "Trader's hub"
+msgstr ""
 
 msgid "Trading and deposit disabled"
-msgstr "已禁止交易和存款"
+msgstr ""
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr "您的帳戶已被禁交易和存款。請 %1聯繫客服部%2 尋求幫助。"
+msgstr ""
 
 msgid "Trading statistics report"
-msgstr "交易統計報告"
+msgstr ""
 
 msgid "Transaction ID"
-msgstr "交易ID"
+msgstr ""
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr "交易執行者為%1 (應用程式 ID: %2)"
+msgstr ""
 
 msgid "True USD"
-msgstr "True USD"
+msgstr ""
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr "請試試%1綜合指數%2。"
+msgstr ""
 
 msgid "Try our other markets."
-msgstr "請嘗試我們其他的市場。"
+msgstr ""
 
 msgid "Tu"
-msgstr "星期二"
+msgstr ""
 
 msgid "Tuesday"
-msgstr "星期二"
+msgstr ""
 
 msgid "Turnover"
-msgstr "交易額"
+msgstr ""
 
 msgid "US Dollar"
-msgstr "美元"
+msgstr ""
 
 msgid "USD Coin"
-msgstr "USD Coin"
+msgstr ""
 
 msgid "USDK"
-msgstr "USDK"
+msgstr ""
 
 msgid "Understood"
-msgstr "理解"
+msgstr ""
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr "不幸的是，此交易平台不適用於歐盟 Deriv 帳戶。請切換到非歐盟帳戶以繼續交易。"
+msgstr ""
 
 msgid "Unknown OS"
-msgstr "未知 OS"
+msgstr ""
 
 msgid "Up to %1 decimal places are allowed."
-msgstr "允許小數點后%位。"
+msgstr ""
 
 msgid "Up/Down"
-msgstr "Up/Down"
+msgstr ""
 
 msgid "Use a few words, avoid common phrases"
-msgstr "用幾個詞，避免常用短語"
+msgstr ""
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr "使用更長的鍵盤列式並給予更多變化"
+msgstr ""
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr "驗證碼錯誤。請使用以下連結傳送到您的電子郵件。"
+msgstr ""
 
 msgid "View"
-msgstr "檢視"
+msgstr ""
 
 msgid "View chart"
-msgstr "檢視圖表"
+msgstr ""
 
 msgid "Virtual"
-msgstr "虛擬"
+msgstr ""
 
 msgid "Waiting for contract settlement."
-msgstr "等待合約結算。"
+msgstr ""
 
 msgid "Waiting for entry tick."
-msgstr "等待買入價跳動。"
+msgstr ""
 
 msgid "Waiting for exit tick."
-msgstr "等待賣出價跳動。"
+msgstr ""
 
 msgid "We"
-msgstr "星期三"
+msgstr ""
 
 msgid "Wednesday"
-msgstr "星期三"
+msgstr ""
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr "我們將更新您的限額。點選％1同意和接受％2以確認您對自己的行為負全部責任，如果您因此而上癮或蒙受損失，我們將不承擔任何責任。"
+msgstr ""
 
 msgid "WhatsApp"
-msgstr "WhatsApp"
+msgstr ""
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr "當您點選「OK」後，您將被禁止在此網站交易，直到選定期限結束為止。"
+msgstr ""
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr "如果退市現貨價與入市現貨價相同，則將贏得賠付。"
+msgstr ""
 
 msgid "Winning the contract"
-msgstr "合約盈利"
+msgstr ""
 
 msgid "Withdrawal"
-msgstr "提款"
+msgstr ""
 
 msgid "Withdrawal and trading limits"
-msgstr "取款和交易限額"
+msgstr ""
 
 msgid "Withdrawal disabled"
-msgstr "已被禁提款"
+msgstr ""
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr "您的帳戶已被禁提款。請檢查您的電子郵件，以瞭解更多詳情。"
+msgstr ""
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr "想先檢查一下您的月結單？%1檢查月結單%2"
+msgstr ""
 
 msgid "You are offline"
-msgstr "您已離線"
+msgstr ""
 
 msgid "You can close this window without interrupting your trade."
-msgstr "您可以在不中斷交易的情況下關閉此視窗。"
+msgstr ""
 
 msgid "You did not change anything."
-msgstr "您沒做任何更改。"
+msgstr ""
 
 msgid "You have reached the rate limit of requests per second. Please try later."
-msgstr "您已達每秒鐘提呈請求的最高限率。請稍後重試。"
+msgstr ""
 
 msgid "You have sold this contract at %1 %2"
-msgstr "您已經以 %1 %2 賣出此合約"
+msgstr ""
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
-msgstr "必須註冊並獲取應用程序 ID，然後才能使用不同的 OAuth 伺服器進行身份驗證。如需詳細資訊，請參閱 api.deriv.com 網站上的 OAuth 詳細資訊。"
+msgstr ""
 
 msgid "You have yet to receive any notifications"
-msgstr "您還未收到任何通知"
+msgstr ""
 
 msgid "You should enter %1 characters."
-msgstr "您必須輸入%1個字元。"
+msgstr ""
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
-msgstr "您將被轉到不是Binary.com擁有的第三方網站。"
+msgstr ""
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr "如果市價並未以選取的數字結束，則將贏得賠付額。"
+msgstr ""
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr "如果市價以選取的數字結束，則將贏得賠付額。"
+msgstr ""
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr "您的帳戶已被限制交易。請 %1聯繫客服部%2，以取得協助。"
+msgstr ""
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr "您請求成為專業客戶的申請正在處理中。"
+msgstr ""
 
 msgid "Your changes have been updated."
-msgstr "您的更改已成功更新。"
+msgstr ""
 
 msgid "Your password cannot be the same as your email address."
-msgstr "您的密碼不可與電子郵件地址相同。"
+msgstr ""
 
 msgid "Your preferred time interval between each report:"
-msgstr "每個報告之間的首選時間間隔："
+msgstr ""
 
 msgid "Your professional client request is %1not approved%2."
-msgstr "您申請成為專業客戶的請求%1不受批准%2。"
+msgstr ""
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr "交易期持續時間限制將於%1秒內結束。"
+msgstr ""
 
 msgid "Your trading statistics since %1."
-msgstr "您自 %1 至今的交易統計。"
+msgstr ""
 
 msgid "Your transaction reference is"
-msgstr "您的交易參考號是"
+msgstr ""
 
 msgid "Your transaction reference number is %1"
-msgstr "您的交易號是 %1"
+msgstr ""
 
 msgid "Your virtual balance has been reset."
-msgstr "您的虛擬餘額已重設。"
+msgstr ""
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr "您的網絡瀏覽器 (%1) 已過時，並可能會影響您的交易操作。繼續操作須自行承擔風險。%2更新瀏覽器%3"
+msgstr ""
 
 msgid "account"
-msgstr "帳戶"
+msgstr ""
 
 msgid "accounts"
-msgstr "帳戶"
+msgstr ""
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr "二元期權、外匯、外匯交易、線上交易、金融交易、二元交易、指數交易、交易股票指數、外匯交易、交易商品、二元期權策略、二元經紀、二元投注、二元期權交易平台、二元策略、金融、投資、交易"
+msgstr ""
 
 msgid "day"
-msgstr "天"
+msgstr ""
 
 msgid "days"
-msgstr "天"
+msgstr ""
 
 msgid "e.g. frontend.derivws.com"
-msgstr "例如 frontend.derivws.com"
+msgstr ""
 
 msgid "hour"
-msgstr "小時"
+msgstr ""
 
 msgid "hours"
-msgstr "小時"
+msgstr ""
 
 msgid "including Deal Cancel. Fee"
-msgstr "包含交易取消. 費用"
+msgstr ""
 
 msgid "login"
-msgstr "登入"
+msgstr ""
 
 msgid "logout"
-msgstr "登出"
+msgstr ""
 
 msgid "minute"
-msgstr "分鐘"
+msgstr ""
 
 msgid "minutes"
-msgstr "分鐘"
+msgstr ""
 
 msgid "second"
-msgstr "秒"
+msgstr ""
 
 msgid "seconds"
-msgstr "秒"
+msgstr ""
 
 msgid "tick"
-msgstr "跳動點"
+msgstr ""
 
 msgid "ticks"
-msgstr "跳動點"
+msgstr ""
 
 msgid "today"
-msgstr "今天"
+msgstr ""
 
 msgid "today, Fridays"
-msgstr "今天，週五"
+msgstr ""
 
 msgid "virtual money credit to account"
-msgstr "虛擬資金存入帳戶"
+msgstr ""
 
