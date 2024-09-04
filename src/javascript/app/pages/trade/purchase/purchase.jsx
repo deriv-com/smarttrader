@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {  Button, CaptionText,  Skeleton, Text, Tooltip } from '@deriv-com/quill-ui';
 import {  LabelPairedXmarkMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
@@ -15,7 +15,8 @@ import { parseData, triggerClick } from '../../../common/helpers';
 
 const Purchase = () => {
     const has_purchase_change  = usePurchaseChange();
-    const has_contract_change  = useContractChange();
+    const has_contract_change = useContractChange();
+    const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
 
     const [data,setData] = useState({});
     const [is_look_back, setIsLookBack] = useState(false);
@@ -37,7 +38,6 @@ const Purchase = () => {
  
     useEffect(() => {
         const new_data = dataManager.getAllPurchases();
-
         setShowPopup(!!new_data?.show_contract_details_popup);
 
         setData(old_data => ({
@@ -85,6 +85,47 @@ const Purchase = () => {
         );
     };
 
+    const responsivePurchaser = useRef(null);
+    const responsiveSize = window.innerWidth < 763;
+    const scrollToPurchaseContainer = () => {
+        const purchaseContainer = document.getElementById('purchase_container');
+        if (purchaseContainer) {
+            purchaseContainer.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+    };
+
+    const scrollToContractsFormContainer = () => {
+        const contractsFormContainer = document.getElementById('trading_socket_container');
+        if (contractsFormContainer) {
+            contractsFormContainer.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        const targetElement = responsivePurchaser.current;
+        entries.forEach(entry => {
+            if (entry.boundingClientRect.top < window.innerHeight || entry.isIntersecting) {
+                targetElement?.classList?.add('hide');
+            } else {
+                targetElement?.classList?.remove('hide');
+            }
+        });
+    });
+      
+    const purchaseSection = document.querySelectorAll('.purchase-footer');
+    
+    useEffect(() => {
+    
+        if (purchaseSection.length) {
+            observer.observe(purchaseSection[0]);
+           
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [responsivePurchaser,purchaseSection]);
+
     if (show_popup) {
         return <ContractDetails />;
     }
@@ -105,98 +146,152 @@ const Purchase = () => {
     
     if (!data?.show_purchase_results && !data?.error) {
         return (
-            <div className={`quill-purchase-section ${data?.is_purchase_form_disabled && 'disabled'}`}>
-                {data?.show_mid_purchase ? (
-                    <div className='purchase-box'>
-                        <div className='purchase-header'>
-                            <div className='purchase-icon-box'>
-                                <div className={`contract_heading ${data?.middle_contract_type}`} />
-                                <Text centered bold> {data?.middle_display_text}</Text>
-                            </div>
-                            <div className='purchase-body-box'>
-                                <div className='purchase-amount-box'>
-                                    <div className='purchase-amount-info-box'>
-                                        <Text>{localize('Stake')}:</Text>
-                                        <Text
-                                            className={data.middle_amount_classname}
-                                            bold
-                                        >{data?.middle_amount} {displayCurrency(data?.middle_amount)}
-                                        </Text>
+            <>
+                <div className={`quill-purchase-section ${data?.is_purchase_form_disabled && 'disabled'}`}>
+                    {data?.show_mid_purchase ? (
+                        <div className='purchase-box'>
+                            <div className='purchase-header'>
+                                <div className='purchase-icon-box'>
+                                    <div className={`contract_heading ${data?.middle_contract_type}`} />
+                                    <Text centered bold> {data?.middle_display_text}</Text>
+                                </div>
+                                <div className='purchase-body-box'>
+                                    <div className='purchase-amount-box'>
+                                        <div className='purchase-amount-info-box'>
+                                            <Text>{localize('Stake')}:</Text>
+                                            <Text
+                                                className={data.middle_amount_classname}
+                                                bold
+                                            >{data?.middle_amount} {displayCurrency(data?.middle_amount)}
+                                            </Text>
+                                        </div>
+                                        <div className='purchase-amount-info-box'>
+                                            <Text>{localize('Multiplier')}:</Text>
+                                            <Text bold>
+                                                {data?.middle_multiplier} {displayCurrency(data?.middle_multiplier)}
+                                            </Text>
+                                        </div>
                                     </div>
-                                    <div className='purchase-amount-info-box'>
-                                        <Text>{localize('Multiplier')}:</Text>
-                                        <Text bold>
-                                            {data?.middle_multiplier} {displayCurrency(data?.middle_multiplier)}
-                                        </Text>
+                                    <div className='purchase-btn-box'>
+                                        {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_middle')} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.middle_purchase_disabled} />,data?.middle_description)}
                                     </div>
                                 </div>
-                                <div className='purchase-btn-box'>
-                                    {ButtonTooltipWrapper(<Button onClick={() => triggerClick('#purchase_button_middle')} color='purchase' size='lg' label={localize('Purchase')} fullWidth  disabled={data?.middle_purchase_disabled} />,data?.middle_description)}
-                                </div>
+                            </div>
+                            <div className='purchase-footer'>
+                                <CaptionText centered>{parseData(data.middle_comment)}</CaptionText>
                             </div>
                         </div>
-                        <div className='purchase-footer'>
-                            <CaptionText centered>{parseData(data.middle_comment)}</CaptionText>
-                        </div>
-                    </div>
-                ) : (
-                    <>
-                        {purchase_positions.map(position => {
-                            const contract_type  = data?.[`${position}_contract_type`];
-                            const display_text  = data?.[`${position}_display_text`];
-                            const amount  = data?.[`${position}_amount`];
-                            const amount_classname  = data?.[`${position}_amount_classname`];
-                            const payout_amount_classname  = data?.[`${position}_payout_amount_classname`];
-                            const payout_amount  = data?.[`${position}_payout_amount`];
-                            const purchase_disabled  = data?.[`${position}_purchase_disabled`];
-                            const description  = data?.[`${position}_description`];
-                            const comment  = data?.[`${position}_comment`];
+                    ) : (
+                        <>
+                            {purchase_positions.map(position => {
+                                const contract_type  = data?.[`${position}_contract_type`];
+                                const display_text  = data?.[`${position}_display_text`];
+                                const amount  = data?.[`${position}_amount`];
+                                const amount_classname  = data?.[`${position}_amount_classname`];
+                                const payout_amount_classname  = data?.[`${position}_payout_amount_classname`];
+                                const payout_amount  = data?.[`${position}_payout_amount`];
+                                const purchase_disabled  = data?.[`${position}_purchase_disabled`];
+                                const description  = data?.[`${position}_description`];
+                                const comment  = data?.[`${position}_comment`];
                         
-                            return (
-                                <Fragment key={`purchase-action-${position}`}>
-                                    <div className='purchase-box'>
-                                        <div className='purchase-header'>
-                                            <div className='purchase-icon-box'>
-                                                <div className={`contract_heading ${contract_type}`} />
-                                                <Text centered bold> {display_text}</Text>
-                                            </div>
+                                return (
+                                    <Fragment key={`purchase-action-${position}`}>
+                                        <div className='purchase-box'>
+                                            <div className='purchase-header'>
+                                                <div className='purchase-icon-box'>
+                                                    <div className={`contract_heading ${contract_type}`} />
+                                                    <Text centered bold> {display_text}</Text>
+                                                </div>
                                           
-                                            <div className='purchase-body-box'>
-                                                <div className='purchase-amount-box'>
-                                                    <div className='purchase-amount-info-box'>
-                                                        <Text>{localize('Stake')}:</Text>
-                                                        <Text
-                                                            className={amount_classname}
-                                                            bold
-                                                        >{amount} {displayCurrency(amount)}
-                                                        </Text>
+                                                <div className='purchase-body-box'>
+                                                    <div className='purchase-amount-box'>
+                                                        <div className='purchase-amount-info-box'>
+                                                            <Text>{localize('Stake')}:</Text>
+                                                            <Text
+                                                                className={amount_classname}
+                                                                bold
+                                                            >{amount} {displayCurrency(amount)}
+                                                            </Text>
+                                                        </div>
+                                                        <div className='purchase-amount-info-box'>
+                                                            <Text>{localize('Payout')}:</Text>
+                                                            <Text
+                                                                className={payout_amount_classname}
+                                                                bold
+                                                            >{payout_amount} {displayCurrency(payout_amount)}
+                                                            </Text>
+                                                        </div>
                                                     </div>
-                                                    <div className='purchase-amount-info-box'>
-                                                        <Text>{localize('Payout')}:</Text>
-                                                        <Text
-                                                            className={payout_amount_classname}
-                                                            bold
-                                                        >{payout_amount} {displayCurrency(payout_amount)}
-                                                        </Text>
-                                                    </div>
-                                                </div>
                                               
-                                                <div className='purchase-btn-box'>
-                                                    {ButtonTooltipWrapper(<Button onClick={() => triggerClick(`#purchase_button_${position}`)} color={position === 'top' ? 'purchase' : 'sell'} size='lg' label={localize('Purchase')} fullWidth  disabled={purchase_disabled} />,description)}
+                                                    <div className='purchase-btn-box'>
+                                                        {ButtonTooltipWrapper(<Button onClick={() => triggerClick(`#purchase_button_${position}`)} color={position === 'top' ? 'purchase' : 'sell'} size='lg' label={localize('Purchase')} fullWidth  disabled={purchase_disabled} />,description)}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
                                       
-                                        <div className='purchase-footer'>
-                                            <CaptionText centered>{parseData(comment)}</CaptionText>
+                                            <div className='purchase-footer'>
+                                                <CaptionText centered>{parseData(comment)}</CaptionText>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-                    </>
-                )}
-            </div>
+                                    </Fragment>
+                                );
+                            })}
+                        </>
+                    )}
+                </div>
+                <div className='responsive-purchase-section hide' ref={responsivePurchaser}>
+                    {data?.show_mid_purchase ? (
+                        <div
+                            className={`purchase-button buy ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
+                            onClick={() => {
+                                if (!data?.mid_purchase_disabled) {
+                                    triggerClick('#purchase_button_middle');
+                                    scrollToPurchaseContainer();
+                                }
+                            }}
+                        >
+                            <span className='label'>{data?.middle_display_text}</span>
+                            <div className='content'>
+                                <span className='text'>{localize('Stake')}</span>
+                                <span className='text'>{data?.middle_amount} {displayCurrency(data?.middle_amount)}</span>
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            <div
+                                className={`purchase-button buy ${ data?.top_purchase_disabled ? 'disabled' : ''}`}
+                                onClick={() => {
+                                    if (!data?.top_purchase_disabled) {
+                                        triggerClick('#purchase_button_top');
+                                        scrollToPurchaseContainer();
+                                    }
+                                }}
+                            >
+                                <span className='label'>{data?.top_display_text}</span>
+                                <div className='content'>
+                                    <span className='text'>{amount_type === 'payout' ? localize('Stake') : localize('Payout')}</span>
+                                    <span className='text'>{amount_type === 'payout' ? data?.top_amount  : data?.top_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
+                                </div>
+                            </div>
+                            <div
+                                className={`purchase-button sell inverse ${data?.bottom_purchase_disabled ? 'disabled' : ''}`}
+                                onClick={() => {
+                                    if (!data?.bottom_purchase_disabled) {
+                                        triggerClick('#purchase_button_bottom');
+                                        scrollToPurchaseContainer();
+                                    }
+                                }}
+                            >
+                                <span className='label'>{data?.bottom_display_text}</span>
+                                <div className='content'>
+                                    <span className='text'>{amount_type === 'payout' ? localize('Stake') : localize('Payout')}</span>
+                                    <span className='text'>{amount_type === 'payout' ? data?.bottom_amount  : data?.bottom_payout_amount } {displayCurrency(data?.top_payout_amount)}</span>
+                                </div>
+                            </div>
+                        </>
+                    )}
+                </div>
+            </>
         );
     }
 
@@ -211,6 +306,8 @@ const Purchase = () => {
                             onClick={() => {
                                 triggerClick('#close_confirmation_container');
                                 hidePurchaseResults();
+                                if (responsiveSize) scrollToContractsFormContainer();
+                              
                             }}
                         >
                             <LabelPairedXmarkMdRegularIcon />
@@ -274,6 +371,7 @@ const Purchase = () => {
                         onClick={() => {
                             triggerClick('#close_confirmation_container');
                             hidePurchaseResults();
+                            if (responsiveSize) scrollToContractsFormContainer();
                         }}
                     >
                         <LabelPairedXmarkMdRegularIcon />
