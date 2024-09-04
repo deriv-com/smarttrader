@@ -27,6 +27,8 @@ import dataManager from '../../common/data_manager.js';
 import { setDefaultParams } from '../../common/helpers.js';
 import { isCryptocurrency } from '../../../_common/base/currency_base.js';
 
+const Cookies = require('js-cookie');
+
 export const FormComponent = () => {
     const [trade_data, setTradeData] = useState({});
 
@@ -167,6 +169,8 @@ export const FormComponent = () => {
 
     const getAmount = () => (isCryptocurrency(currency) && amount_crypto) ? amount_crypto : amount;
 
+    const lang = Cookies.get('language').replace('_','-').toLowerCase() || 'en';
+
     return (
         <BreakpointProvider>
             <div className='quill-form-container'>
@@ -252,8 +256,11 @@ export const FormComponent = () => {
                                                             <DatePickerDropdown
                                                                 value={moment(expiry_date).format('DD/MM/YYYY')}
                                                                 datePickerProps={{
-                                                                    minDate: getMinMaxDate().minDate,
-                                                                    maxDate: getMinMaxDate().maxDate,
+                                                                    minDate  : getMinMaxDate().minDate,
+                                                                    maxDate  : getMinMaxDate().maxDate,
+                                                                    locale   : lang,
+                                                                    formatDay: (locale, date) =>
+                                                                        moment(date).format('D').replace(/\D/g, ''),
                                                                 }}
                                                                 onSelectDate={(value) => {
                                                                     onExpiryDateChange(value);

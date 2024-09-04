@@ -80,6 +80,7 @@ body {
     }
     div#underlying_details {
         display: flex;
+        gap: 6px;
         flex-direction: column;
         transform: scale(0.88);
 
@@ -87,8 +88,17 @@ body {
            flex-direction: row;
         }
 
-        #spot{
-            margin-top:  5px;
+        #spot {
+            line-height: 26px !important;
+            margin-left: 0 !important;
+            padding-block: var(--semantic-spacing-general-2xs) !important;
+            padding-inline: var(--semantic-spacing-general-xs) !important;
+        }
+        .price_moved_up {
+            background-color: var(--semantic-color-emerald-solid-surface-normal-highest);
+        }
+        .price_moved_down {
+            background-color: var(--semantic-color-cherry-solid-surface-normal-highest);
         }
     }
     div#onboarding-container {
