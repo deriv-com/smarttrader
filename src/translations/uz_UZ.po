@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-08-20 08:19\n"
+"PO-Revision-Date: 2024-09-04 07:48\n"
 "Last-Translator: \n"
 "Language-Team: Uzbek\n"
 "MIME-Version: 1.0\n"
@@ -17,1847 +17,1844 @@ msgstr ""
 "Language: uz_UZ\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 and %2 cannot be the same."
-msgstr ""
+msgstr "%1 va %2 bir xil bo'lishi mumkin emas."
 
 msgid "%1 days %2 hours %3 minutes"
-msgstr ""
+msgstr "%1 kunlar %2 soatlar %3 daqiqalar"
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr ""
+msgstr "%1 sizning Virtual Hisobingizga kiritildi: %2."
 
 msgid "%1Return to trading page%2"
-msgstr ""
+msgstr "%1Savdo sahifasiga qaytish%2"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr ""
+msgstr "Kuchli, ammo ulardan foydalanish oson platformada mutlaqo yangi savdo tajribasi."
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "Bir so'zni o'z-o'zidan taxmin qilish oson"
 
 msgid "AM"
-msgstr ""
+msgstr "Kun"
 
 msgid "Account Authenticated"
-msgstr ""
+msgstr "Hisob autentifikatsiyalangan"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr ""
+msgstr "Hisobga kirish vaqtincha cheklangan. Qo'shimcha ma'lumot olish uchun pochta qutingizni tekshiring."
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Hisob autentifikatsiyasi"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Hisob balansi:"
 
 msgid "Add"
-msgstr ""
+msgstr "Qo'shish"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr ""
+msgstr "To'siq ofsetini aniqlash uchun +/— qo'shing. Masalan, +0.005 kirish joyiga qaraganda 0,005 yuqori bo'lgan to'siqni anglatadi."
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "Yana bir yoki ikkita so'z qo'shing. Noodatiy so'zlar yaxshiroqdir."
 
 msgid "Adjust trade parameters"
-msgstr ""
+msgstr "Savdo parametrlarini sozlash"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "Rozilik berish va qabul qilish"
 
 msgid "All markets are closed now. Please try again later."
-msgstr ""
+msgstr "Hozir barcha bozorlar yopiq. Iltimos, keyinroq qayta urinib ko'ring."
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "Barcha-katta harflar deyarli barcha kichik harflar kabi taxmin qilish oson"
 
 msgid "Allow equals"
-msgstr ""
+msgstr "Tenglarga ruxsat berish"
 
 msgid "Already have an account?"
-msgstr ""
+msgstr "Allaqachon hisob qaydnomangiz bormi?"
 
 msgid "Apply now as a professional investor"
-msgstr ""
+msgstr "Professional investor sifatida hozir murojaat qiling"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
-msgstr ""
+msgstr "Aprel"
 
 msgid "Asian Down"
-msgstr ""
+msgstr "Asian Down"
 
 msgid "Asian Up"
-msgstr ""
+msgstr "Asian Up"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Asian shartnomalari 5 daqiqa ichida shartnoma tugamasa, sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr ""
+msgstr "Asian options davr mobaynida o'rtacha spot bilan <strong>oxirgi tik</strong> ni solishtirib hal qiladi."
 
 msgid "Asians"
-msgstr ""
+msgstr "Asians"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr ""
+msgstr "Qayta tiklash vaqtida, agar spot sizning tahminingiz qarama-qarshi yo'nalishida bo'lsa, to'siq o'sha joyga qayta tiklanadi."
 
 msgid "Audit"
-msgstr ""
+msgstr "Audit"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "Audit sahifasi"
 
 msgid "Audit page"
-msgstr ""
+msgstr "Audit sahifasi"
 
 msgid "Aug"
-msgstr ""
+msgstr "Avg"
 
 msgid "August"
-msgstr ""
+msgstr "Avgust"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Avstraliya dollari"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "Mavjud barcha to'lov usullaridan to'liq foydalanish uchun hozir hisobingizni autentifikatsiya qiling."
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr ""
+msgstr "Sizning qoʻlingizda avtomatlashtirilgan savdolar. Kodlash kerak emas."
 
 msgid "Average"
-msgstr ""
+msgstr "O'rtacha"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "Siz bilan bog'liq bo'lgan sanalar va yillardan saqlaning"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "So'nggi yillardan saqlaning"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "Takroriy so'zlar va belgilardan saqlaning"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "Ketma-ketliklardan saqlanish"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "Siz bilan bog'liq bo'lgan yillardan saqlaning"
 
 msgid "Barrier"
-msgstr ""
+msgstr "To'siq"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "To'siq o'zgarishi"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "To'siqni ofsetlash"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "Binance USD"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "Binary Coin"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 msgid "Buy"
-msgstr ""
+msgstr "Sotib olish"
 
 msgid "Buy price"
-msgstr ""
+msgstr "Sotib olish narxi"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“Close-Low”%2 shartnomasini sotib olib, shartnoma muddati mobaynida %1close %2 va %1low%2 o'rtasidagi farqni ko'paytiruvchi barobar yutib olasiz."
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "%1\"High-Close\"%2 shartnomasini xarid qilish orqali siz shartnomaning butun muddati uchun %1high%2 va %1close%2 o'rtasidagi farqga ko'paytirilgan ko'paytirgichni yutib olasiz."
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "%1“High-Low”%2 shartnomasini xarid qilib, shartnoma muddati mobaynida %1high%2 va %1low%2 o'rtasidagi farqni ko'paytiruvchi barobar yutasiz."
 
 msgid "Call Spread"
-msgstr ""
+msgstr "Call Spread"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Call Spread/Put Spread"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "Kapitalizatsiya unchalik yordam bermaydi"
 
 msgid "Cashier"
-msgstr ""
+msgstr "Kassir"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "Kassir o'chirib qo'yilgan"
 
 msgid "Change API Endpoint"
-msgstr ""
+msgstr "API so'nggi nuqtasini o'zgartirish"
 
 msgid "Chart"
-msgstr ""
+msgstr "Grafik"
 
 msgid "Chart is not available for this underlying."
-msgstr ""
+msgstr "Ushbu asosiy element uchun grafik mavjud emas."
 
 msgid "Charting for this underlying is delayed"
-msgstr ""
+msgstr "Ushbu asosiy element uchun grafik kechiktirildi"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "Internetga ulanishingizni tekshiring."
 
 msgid "Christmas Day"
-msgstr ""
+msgstr "Rojdestvo kuni"
 
 msgid "Click OK to proceed."
-msgstr ""
+msgstr "Davom etish uchun OK tugmasini bosing."
 
 msgid "Click here to open a Financial Account"
-msgstr ""
+msgstr "Moliyaviy hisob ochish uchun shu yerni bosing"
 
 msgid "Click here to open a Gaming account"
 msgstr ""
 
 msgid "Click here to open a Real Account"
-msgstr ""
+msgstr "Haqiqiy hisob ochish uchun shu yerni bosing"
 
 msgid "Close"
-msgstr ""
+msgstr "Yopish"
 
 msgid "Close time"
-msgstr ""
+msgstr "Yopish vaqti"
 
 msgid "Close-Low"
-msgstr ""
+msgstr "Close-Low"
 
 msgid "Closes early (at 18:00)"
-msgstr ""
+msgstr "Erta yopiladi (soat 18:00 da)"
 
 msgid "Closes early (at 21:00)"
-msgstr ""
+msgstr "Erta yopiladi (21:00 da)"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "Umumiy ismlar va familiyalarni taxmin qilish oson"
 
 msgid "Complete details"
-msgstr ""
+msgstr "To'liq tafsilotlar"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "O'zgarishlarni tasdiqlang"
 
 msgid "Connecting to server"
-msgstr ""
+msgstr "Serverga ulanish"
 
 msgid "Continue trading"
-msgstr ""
+msgstr "Savdoni davom eting"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Shartnomani tasdiqlash"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Shartnoma tafsilotlari"
 
 msgid "Contract details"
-msgstr ""
+msgstr "Shartnoma tafsilotlari"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "Shartnoma tugashi"
 
 msgid "Contract has not started yet"
-msgstr ""
+msgstr "Shartnoma hali boshlanmagan"
 
 msgid "Contract information"
-msgstr ""
+msgstr "Shartnoma haqida ma'lumot"
 
 msgid "Contract period"
-msgstr ""
+msgstr "Shartnoma muddati"
 
 msgid "Contract result"
-msgstr ""
+msgstr "Shartnoma natijasi"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "Shartnoma boshlanadi"
 
 msgid "Contract type"
-msgstr ""
+msgstr "Shartnoma turi"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Shartnoma bizning serverlarimiz tomonidan so'rov qabul qilinganda, amaldagi bozor narxida sotiladi. Ushbu narx ko'rsatilgan narxdan farq qilishi mumkin."
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "Sotib olingan shartnomalar"
 
 msgid "Contracts sold"
-msgstr ""
+msgstr "Sotilgan shartnomalar"
 
 msgid "Crypto"
-msgstr ""
+msgstr "Kripto"
 
 msgid "Currency"
-msgstr ""
+msgstr "Valyuta"
 
 msgid "Current"
-msgstr ""
+msgstr "Hozirgi"
 
 msgid "Current time"
-msgstr ""
+msgstr "Hozirgi vaqt"
 
 msgid "Current time:"
-msgstr ""
+msgstr "Hozirgi vaqt:"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "Sanalarni ko'pincha taxmin qilish oson"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "Shartnomani bekor qilish. to'lov"
 
 msgid "Dec"
-msgstr ""
+msgstr "Dek"
 
 msgid "December"
-msgstr ""
+msgstr "Dekabr"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Demo Financial"
-msgstr ""
+msgstr "Moliyaviy demo"
 
 msgid "Demo Financial STP"
-msgstr ""
+msgstr "Demo moliyaviy STP"
 
 msgid "Demo Synthetic"
-msgstr ""
+msgstr "Sintetik Demo"
 
 msgid "Demo account"
-msgstr ""
+msgstr "Demo hisob"
 
 msgid "Deposit"
-msgstr ""
+msgstr "Depozit"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "Hisobingizda depozit va pul mablag'lari o'chirib qo'yildi. Batafsil ma'lumot uchun elektron pochtangizni tekshiring."
 
 msgid "Deriv "
-msgstr ""
+msgstr "Deriv "
 
 msgid "Deriv Apps"
-msgstr ""
+msgstr "Deriv ilovalari"
 
 msgid "Deriv Apps accounts"
-msgstr ""
+msgstr "Deriv Apps hisoblari"
 
 msgid "Details"
-msgstr ""
+msgstr "Tafsilotlar"
 
 msgid "Digit"
-msgstr ""
+msgstr "Raqam"
 
 msgid "Digit Differs"
-msgstr ""
+msgstr "Digit Differs"
 
 msgid "Digit Even"
-msgstr ""
+msgstr "Digit Even"
 
 msgid "Digit Matches"
-msgstr ""
+msgstr "Digit Matches"
 
 msgid "Digit Odd"
-msgstr ""
+msgstr "Digit Odd"
 
 msgid "Digit Over"
-msgstr ""
+msgstr "Digit Over"
 
 msgid "Digit Under"
-msgstr ""
+msgstr "Digit Under"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Agar shartnoma 5 daqiqa ichida tugamasa, Digit shartnomalar sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Digits"
-msgstr ""
+msgstr "Digits"
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr ""
+msgstr "Siz boshqa %1 uchun to'ldirishni xohlaysizmi? Agar yo'q bo'lsa, buni keyinchalik %2Kassir sahifasida %3 ham qilishingiz mumkin."
 
 msgid "Does Not Touch"
-msgstr ""
+msgstr "Does Not Touch"
 
 msgid "Duration"
-msgstr ""
+msgstr "Davomiyligi"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "EU Deriv hisobi"
 
 msgid "End Time"
-msgstr ""
+msgstr "Tugash vaqti"
 
 msgid "End time"
-msgstr ""
+msgstr "Tugash vaqti"
 
 msgid "Endpoint"
-msgstr ""
+msgstr "yakun"
 
 msgid "Ends Between"
-msgstr ""
+msgstr "Ends Between"
 
 msgid "Ends Between/Ends Outside"
-msgstr ""
+msgstr "Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Ends Between/Ends Outside shartnomalar boshlang'ich va tugash vaqtlari orasida 2 dan kam tik bo'lsa, sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Ends Outside"
-msgstr ""
+msgstr "Ends Outside"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "Entry Spot"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "Entry spot"
 
 msgid "Equals"
-msgstr ""
+msgstr "Teng"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "Ether Classic"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 msgid "Even/Odd"
-msgstr ""
+msgstr "Even/Odd"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Agar shartnoma 5 daqiqa ichida tugamasa, Even/Odd shartnomalar sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr ""
+msgstr "Cheklov muddati 5 yildan ortiq bo'lishi mumkin emas."
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr ""
+msgstr "Cheklov muddati 6 oydan kam bo'lmasligi kerak."
 
 msgid "Excluded from the website until"
-msgstr ""
+msgstr "Saytga kirish shu paytgacha yopiq:"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "Chiqish joyi"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "Chiqish joyi"
 
 msgid "Exit spot time"
-msgstr ""
+msgstr "Chiqish joyi vaqti"
 
 msgid "Exit time"
-msgstr ""
+msgstr "Chiqish vaqti"
 
 msgid "Explanation"
-msgstr ""
+msgstr "Tushuntirish"
 
 msgid "Fall"
-msgstr ""
+msgstr "Fall"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Fall yoki teng"
 
 msgid "Feb"
-msgstr ""
+msgstr "Fev"
 
 msgid "February"
-msgstr ""
+msgstr "Fevral"
 
 msgid "Fiat"
-msgstr ""
+msgstr "Fiat"
 
 msgid "Final price"
-msgstr ""
+msgstr "Yakuniy narx"
 
 msgid "Financial"
-msgstr ""
+msgstr "Moliyaviy"
 
 msgid "Financial STP"
-msgstr ""
+msgstr "Moliyaviy STP"
 
 msgid "Finish"
-msgstr ""
+msgstr "Tugatish"
 
 msgid "Fr"
-msgstr ""
+msgstr "Fr"
 
 msgid "Friday"
-msgstr ""
+msgstr "Juma"
 
 msgid "Fridays"
-msgstr ""
+msgstr "Juma kunlari"
 
 msgid "Gaming"
-msgstr ""
+msgstr "O'yin"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "Hisobotlarga o'tish"
 
 msgid "Go back"
-msgstr ""
+msgstr "Orqaga qayting"
 
 msgid "Go to statement"
-msgstr ""
+msgstr "Bayonotga o'ting"
 
 msgid "Goes Outside"
-msgstr ""
+msgstr "Goes Outside"
 
 msgid "Guide"
-msgstr ""
+msgstr "Qo'llanma"
 
 msgid "High"
-msgstr ""
+msgstr "Yuqori"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Yuqori to'siq"
 
 msgid "High Tick"
-msgstr ""
+msgstr "High Tick"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr ""
+msgstr "High Tick/Low Stick shartnomalari beshta tikning qat'iy davomiyligiga ega."
 
 msgid "High barrier"
-msgstr ""
+msgstr "Yuqori to'siq"
 
 msgid "High barrier must be higher than low barrier"
-msgstr ""
+msgstr "Yuqori to'siq past to'siqdan yuqori bo'lishi kerak"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "Yuqori to'siq ofsetlari"
 
 msgid "High, Low and Close"
-msgstr ""
+msgstr "High, Low va Close"
 
 msgid "High-Close"
-msgstr ""
+msgstr "High-Close"
 
 msgid "High-Low"
-msgstr ""
+msgstr "High-Low"
 
 msgid "High/Low Ticks"
-msgstr ""
+msgstr "High/Low Ticks"
 
 msgid "Higher"
-msgstr ""
+msgstr "Higher"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Higher/Lower"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Higher/Lower shartnomalar boshlang'ich va tugash vaqtlari orasida 2 tadan kam tik bo'lsa, sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Hour"
-msgstr ""
+msgstr "Soat"
 
 msgid "I want to reapply"
-msgstr ""
+msgstr "Qayta murojaat qilmoqchiman"
 
 msgid "IDK"
-msgstr ""
+msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "Agar <strong>chiqish joyi</strong> yoki <strong>Past to'siq</strong> yoki <strong>Yuqori to'siq</strong>ga teng bo'lsa, siz to'lovni yutmaysiz."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr ""
+msgstr "Agar <strong>chiqish joyi</strong> <strong>to'siq</strong> yoki <strong>yangi to'siqqa teng bo'lsa (agar qayta o'rnatish sodir bo'lsa)</strong>bo'lsa, siz to'lovni yutib olmaysiz."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "Agar <strong>chiqish joyi</strong> <strong>to'siq</strong> yoki <stronm g>yangi to'siqqa teng bo'lsa (agar qayta o'rnatish sodir bo'lsa)</stronmg>bo'lsa, siz to'lovni yutib olmaysiz."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "Agar <strong>chiqish joyi</strong> <strong>to'sig'i</strong>ga teng bo'lsa, siz to'lovni yutmaysiz."
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr ""
+msgstr "Agar <strong>oxirgi tik</strong> tikning o'rtachasiga teng bo'lsa, siz to'lovni yutmaysiz."
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "Agar “Allow equals” ni tanlasangiz, chiqish joyi “Rise” uchun kirish joyidan yuqori yoki teng bo'lsa, siz to'lovni g'alaba qozonasiz. Xuddi shunday, chiqish joyi “Fall” uchun kirish joyidan past yoki teng bo'lsa, siz to'lovni g'alaba qozonasiz."
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "Agar siz “Asia Fall” ni tanlasangiz, <strong>oxirgi tik</strong> tikning <strong>o'rtacha</strong> qiymatidan <strong>past</strong> bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "Agar siz “Asian Rise” ni tanlasangiz, <strong>oxirgi tik</strong> tikining <strong>o'rtacha</strong> qiymatidan <strong>yuqori</strong> bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "Agar siz “Differs” ni tanlasangiz, oxirgi tikning <strong>oxirgi raqami</strong> sizning <strong>tahminingiz bilan bir xil</strong> bo'lmasa <strong>, siz to'lovni yutasiz</strong>."
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "Agar siz “Does Not Touch” ni tanlasangiz, <strong>shartnoma davrida</strong>bozor hech qachon <strong>to'siqqa</strong> tegmasa, to'lovni yutib olasiz."
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr ""
+msgstr "Agar siz “Ends Between” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>Past to'siqdan qat'iyan yuqori bo'lsa</strong> VA <strong>Yuqori to'siq</strong>dan qat'iyan past bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr ""
+msgstr "Agar siz “Ends Outside” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>Yuqori to'siqdan</strong>qat'iy yuqori bo'lsa, YOKI <strong>Past to'siqdan qat'iyan past</strong>bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr ""
+msgstr "Agar siz “Even”ni tanlasangiz, oxirgi belgining<strong>oxirgi raqami</strong>bir <strong>juft raqami (ya'ni, 2, 4, 6, 8, yoki 0) bo'lsa, to'lovni yutib olasiz.</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “Fall” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>kirish joyi</strong>dan qat'iyan past bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “Falls” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>kirish joyi</strong>dan qat'iyan past bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "Agar siz \"Goes Outside\" tanlasangiz, shartnoma muddati <strong>ning istalgan vaqtida bozor </strong>Yuqori to'siq<strong> yoki </strong>Past to'siq<strong>ga tegsa, to'lovni yutib olasiz</strong>."
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr ""
+msgstr "Agar siz “Higer” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>to'siq</strong>dan qat'iyan yuqori bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr ""
+msgstr "Agar siz “Lower” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>to'siq</strong>dan qat'iyan past bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr ""
+msgstr "Agar siz “Matches” ni tanlasangiz, oxirgi belgining <strong>oxirgi raqami</strong> sizning <strong>tahminingizgiz bilan <strong>bir xil</strong> bo'lsa, to'lovni yutib olasiz.</strong>"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "Agar siz “Odd” ni tanlasangiz, oxirgi belgining<strong>oxirgi raqami</strong>ning <strong>toq raqam (ya'ni, 1, 3, 5, 7, yoki 9) bo'lsa, to'lovni yutib olasiz.</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr ""
+msgstr "Agar siz “Over” ni tanlasangiz, oxirgi belgining<strong>oxirgi raqami</strong>sizning tahminingizdan <strong>katta bo'lsa, to'lovni yutib olasiz.</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "Agar “Reset-Call” ni tanlasangiz, chiqish joyi kirish joyidan yoki qayta o'rnatish vaqtidagi joydan qat'iy yuqori bo'lsa, siz to'lovni yutib olasiz."
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "Agar “Reset-Put” ni tanlasangiz, chiqish joyi kirish joyidan yoki tiklash vaqtidagi nuqtadan qat'iy past bo'lsa, siz to'lovni yutib olasiz."
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “Rise” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>kirish joyi</strong>dan qat'iyan yuqori bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “Rises” ni tanlasangiz, <strong>chiqish joyi</strong> <strong>kirish joyi</strong>dan qat'iyan yuqori bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "Agar siz “Stays Between” ni tanlasangiz, bozor <strong>shartnoma davrida istalgan vaqtda </strong>Yuqori to'siq<strong> yoki </strong>Past to'siq<strong> orasida qolsa (hech biriga tegmasa) to'lovni yutasiz</strong>."
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "Agar siz “Touches” ni tanlasangiz, bozor <strong>shartnoma davrida</strong>istalgan vaqtda <strong>to'sig'iga</strong> tegsa, to'lovni yutib olasiz."
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr ""
+msgstr "Agar siz “Under” ni tanlasangiz, oxirgi belgining<strong>oxirgi tiki</strong>sizning tahminingizdan<strong>kam bo'lsa, to'lovni yutib olasiz.</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “falls” ni tanlasangiz, bozor narxi <strong>kirish joyi</strong>dan past bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr ""
+msgstr "Agar “falls” ni tanlasangiz, bozor narxi kirish joyiga nisbatan past bo'lsa, siz to'lovni yutib olasiz."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "Agar siz “rises” ni tanlasangiz, bozor narxi <strong>kirish joyi</strong>dan yuqori bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr ""
+msgstr "Agar “rises” ni tanlasangiz, bozor narxi kirish joyiga nisbatan yuqori bo'lsa, siz to'lovni yutib olasiz."
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr ""
+msgstr "Agar %1“High Tick”%2ni tanlasangiz, tanlangan tik keyingi beshta tik%2orasida %1hiyuqori bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr ""
+msgstr "Agar %1“Low Tick”%2ni tanlasangiz, tanlangan tik keyingi beshta Tik%2orasida %1lopastroq bo'lsa, to'lovni yutib olasiz."
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
+msgstr "Agar %1“Only Downs”%2ni tanlasangiz, %1ekirish joyi%2dan keyin ketma-ket tiklar ketma-ket tushib qolsa, to'lovni yutib olasiz.%3 Agar har qanday tik ko'tarilsa yoki avvalgi tiklarning birortasiga teng bo'lsa, to'lov amalga oshirilmaydi."
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
+msgstr "Agar %1“Only Ups”%2ni tanlasangiz, %1ekirish joyi%2dan keyin ketma-ket tiklar ketma-ket ko'tarilsa, to'lovni yutib olasiz.%3Agar har qanday tik tushsa yoki avvalgi tiklarning birortasiga teng bo'lsa, to'lov amalga oshirilmaydi."
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr ""
+msgstr "Agar kelajakda <strong>boshlanish vaqtini</strong> ni tanlasangiz, <strong>boshlanish vaqti</strong> tanlangan va <strong>kirish joyi</strong> o'sha vaqtda amal qilayotgan narx hisoblanadi."
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "Agar siz “Now” ning <strong>boshlanish vaqtini</strong> ni tanlasangiz, <strong>tugash vaqti</strong> <strong>boshlanish vaqtidan keyin tanlangan daqiqa/soat soni</strong> (agar davomiyligi bir kundan kam bo'lsa), yoki savdo kunining oxirida (davomiyligi bir kun yoki undan ko'p bo'lsa)."
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr ""
+msgstr "Agar ma'lum bir <strong>tugash vaqtini</strong>ni tanlasangiz, <strong>tugash vaqti</strong> tanlangan vaqtdir."
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr ""
+msgstr "YI dagi binary option lar bo'yicha moliyaviy shartnomalar faqat professional investorlar uchun mavjud."
 
 msgid "In/Out"
-msgstr ""
+msgstr "In/Out"
 
 msgid "Indicates required field"
-msgstr ""
+msgstr "Kerakli maydonni bildiradi"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Indikativ"
 
 msgid "Indicative barrier"
-msgstr ""
+msgstr "Indikativ to'siq"
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "Ilova id noto‘g‘ri"
 
 msgid "Invalid email address."
-msgstr ""
+msgstr "Email manzili noto‘g‘ri."
 
 msgid "Invalid verification code."
-msgstr ""
+msgstr "Yaroqsiz tasdiqlash kodi."
 
 msgid "Investment"
-msgstr ""
+msgstr "Investitsiya"
 
 msgid "Jan"
-msgstr ""
+msgstr "Yan"
 
 msgid "January"
-msgstr ""
+msgstr "Yanvar"
 
 msgid "Jul"
-msgstr ""
+msgstr "Iyul"
 
 msgid "July"
-msgstr ""
+msgstr "Iyul"
 
 msgid "Jun"
-msgstr ""
+msgstr "Iyun"
 
 msgid "June"
-msgstr ""
+msgstr "Iyun"
 
 msgid "Language settings"
-msgstr ""
+msgstr "Til sozlamalari"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "So‘nggi Raqam Taxmini"
 
 msgid "Last Digit Stats"
-msgstr ""
+msgstr "Oxirgi raqam statistikasi"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr ""
+msgstr "%2 so'nggi %1 tiklari uchun oxirgi raqam statistikasi"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr ""
+msgstr "Jonli suhbat"
 
 msgid "Log in"
-msgstr ""
+msgstr "Kirish"
 
 msgid "Log in here"
-msgstr ""
+msgstr "Bu yerga kiring"
 
 msgid "Log out"
-msgstr ""
+msgstr "Chiqish"
 
 msgid "Login ID"
-msgstr ""
+msgstr "Kirish ID"
 
 msgid "Login at:"
-msgstr ""
+msgstr "Kirish:"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "CFD hisoblarini qidiryapsizmi? Trader's hub ga o'ting"
 
 msgid "Looking for CFDs? Go to Trader's hub"
-msgstr ""
+msgstr "CFD-larni qidiryapsizmi? Trader's hub ga o'ting"
 
 msgid "Loss"
-msgstr ""
+msgstr "Yo'qotish"
 
 msgid "Low"
-msgstr ""
+msgstr "Past"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Past to'siq"
 
 msgid "Low Tick"
-msgstr ""
+msgstr "Low Tick"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Past to'siq"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Past to'siq ofseti"
 
 msgid "Lower"
-msgstr ""
+msgstr "Lower"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "MT5 pul mablagʻlarini yechib olish oʻchirib qoʻyilgan"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "MT5 hisobingizda pul yechib olish o‘chirib qo‘yilgan. Batafsil ma'lumot uchun elektron pochtangizni tekshiring."
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "Hisoblarni boshqarish"
 
 msgid "Manage funds"
-msgstr ""
+msgstr "Mablag'larni boshqarish"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
-msgstr ""
+msgstr "Mart"
 
 msgid "Market"
-msgstr ""
+msgstr "Bozor"
 
 msgid "Matches/Differs"
-msgstr ""
+msgstr "Matches/Differs"
 
 msgid "Maximum multiplier of 1000."
-msgstr ""
+msgstr "Maksimal 1000 multiplier."
 
 msgid "Maximum payout"
-msgstr ""
+msgstr "Maksimal to'lov"
 
 msgid "Maximum:"
-msgstr ""
+msgstr "Maksimal:"
 
 msgid "May"
-msgstr ""
+msgstr "May"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menyu"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "Eng kam %1 belgilar talab qilinadi."
 
 msgid "Minimum:"
-msgstr ""
+msgstr "Minimal:"
 
 msgid "Minute"
-msgstr ""
+msgstr "Daqiqa"
 
 msgid "Mo"
-msgstr ""
+msgstr "Mo"
 
 msgid "Monday"
-msgstr ""
+msgstr "Dushanba"
 
 msgid "More information can be found in an email sent to you."
-msgstr ""
+msgstr "Qo'shimcha ma'lumotni sizga yuborilgan elektron pochtada topishingiz mumkin."
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "Multi-Collateral"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplier"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "Multiplier Down"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "Multiplier Up"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Multipliers"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "Ismlar va familiyalarni o'z-o'zidan taxmin qilish oson"
 
 msgid "Net profit"
-msgstr ""
+msgstr "Sof foyda"
 
 msgid "Network status"
-msgstr ""
+msgstr "Tarmoq holati"
 
 msgid "New Year's Day"
-msgstr ""
+msgstr "Yangi yil kuni"
 
 msgid "Next"
-msgstr ""
+msgstr "Keyingi"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "Valyuta tayinlanmagan"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "Valyuta tanlanmagan"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "Belgilar, raqamlar yoki katta harflar kerak emas"
 
 msgid "No notifications"
-msgstr ""
+msgstr "Xabarnomalar yo'q"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "Deriv YI dan tshqarida "
 
 msgid "Not"
-msgstr ""
+msgstr "Emas"
 
 msgid "Note"
-msgstr ""
+msgstr "Eslatma"
 
 msgid "Notifications"
-msgstr ""
+msgstr "Bildirishnomalar"
 
 msgid "Nov"
-msgstr ""
+msgstr "Noy"
 
 msgid "November"
-msgstr ""
+msgstr "Noyabr"
 
 msgid "Now"
-msgstr ""
+msgstr "Hozir"
 
 msgid "Number of ticks:"
-msgstr ""
+msgstr "Tiklar soni:"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "OAuth ilovasi ID si"
 
 msgid "Oct"
-msgstr ""
+msgstr "Okt"
 
 msgid "October"
-msgstr ""
+msgstr "Oktyabr"
 
 msgid "Offline"
-msgstr ""
+msgstr "Oflayn"
 
 msgid "Online"
-msgstr ""
+msgstr "Onlayn"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "Onlayn savdo platformasi"
 
 msgid "Only Downs"
-msgstr ""
+msgstr "Only Downs"
 
 msgid "Only Ups"
-msgstr ""
+msgstr "Only Ups"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr ""
+msgstr "Faqat harflar, raqamlar, bo'sh joy va defislarga ruxsat beriladi."
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr ""
+msgstr "Faqat harflar, raqamlar, bo'sh joy va ushbu maxsus belgilarga ruxsat beriladi: %1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "Faqat harflar, raqamlar, bo'sh joy, defis, davr va apostrofga ruxsat beriladi."
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "Faqat harflar, bo'sh joy, defis, davr va apostrofga ruxsat beriladi."
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "Ups... Sahifa mavjud emas"
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "Moliyaviy hisob ochish"
 
 msgid "Open a Real Account"
-msgstr ""
+msgstr "Haqiqiy hisobni ochish"
 
 msgid "Open a free account"
-msgstr ""
+msgstr "Bepul hisob ochish"
 
 msgid "Open positions"
-msgstr ""
+msgstr "Ochiq pozitsiyalar"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "Options va Multipliers"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
-
-msgid "Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users."
-msgstr ""
+msgstr "Options savdosi haqiqiy giyohvandlikka aylanishi mumkin, shuningdek, boshqa har qanday faoliyat o'z chegarasiga olib kelishi mumkin. Bunday qaramlik xavfini oldini olish uchun biz sizga muntazam ravishda savdolaringiz va hisoblaringiz haqida qisqacha ma'lumot beradigan haqiqat tekshiruvini taqdim etamiz."
 
 msgid "Over/Under"
-msgstr ""
+msgstr "Over/Under"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "Agar shartnoma 5 daqiqa ichida tugamasa, Over/Under shartnomalar xarid narxi bo'yicha qaytariladi."
 
 msgid "PM"
-msgstr ""
+msgstr "KECHQURUN"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "Parol raqamlar bilan kichik va katta ingliz harflari bo'lishi kerak."
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "Paxos Standard"
 
 msgid "Pay-out"
-msgstr ""
+msgstr "To'lov"
 
 msgid "Payout"
-msgstr ""
+msgstr "To'lov"
 
 msgid "Payout range"
-msgstr ""
+msgstr "To'lov diapazoni"
 
 msgid "Percentage"
-msgstr ""
+msgstr "Foiz"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Iltimos, %1cyechib olish va savdo chegaralarini ko'tarish uchun%2 hisob profilingizni to'ldiring."
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr ""
+msgstr "Iltimos, sahifani koʻrish uchun %1lotizimga kiring%2 yoki %3sroʻyxatdan oʻting%4."
 
 msgid "Please accept the terms and conditions."
-msgstr ""
+msgstr "Iltimos, shart va shartlarni qabul qiling."
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr ""
+msgstr "%3UK Gambling%4 Komissiyasi (UKGC) tomonidan talab qilinganidek yoshingizni tekshirish uchun %1Haqiqiy hisob shaklini%2 to'ldiring."
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Iltimos, yechib olish va savdo limitlarini olib tashlash uchun %1fimoliyaviy baholash shaklini%2 to'ldiring."
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr ""
+msgstr "Iltimos, siz siyosiy jihatdan fosh bo'lgan shaxs emasligingizni tasdiqlang."
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr ""
+msgstr "Iltimos, qurilmangizda Telegram ilovasi o'rnatilganligiga ishonch hosil qiling."
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "Iltimos, haqiqiy telefon raqamini kiriting (masalan, +15417541234)."
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr ""
+msgstr "Iltimos, kerakli mezonlar bajarilgandan keyin qayta murojaat qiling."
 
 msgid "Please reload the page"
-msgstr ""
+msgstr "Iltimos, sahifani qayta yuklang"
 
 msgid "Please select"
-msgstr ""
+msgstr "Iltimos, tanlang"
 
 msgid "Please select a valid time."
-msgstr ""
+msgstr "Iltimos, to'g'ri vaqtni tanlang."
 
 msgid "Please select the checkbox."
-msgstr ""
+msgstr "Iltimos, katakchani tanlang."
 
 msgid "Please set the currency of your account."
-msgstr ""
+msgstr "Iltimos, hisobingizning valyutasini belgilang."
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr ""
+msgstr "Iltimos, depozit limitlarini olib tashlash uchun %130-kunlik aylanma limitini%2 belgilang."
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "Iltimos, bir necha daqiqada oʻzingiz xohlagan intervalli reallik tekshiruvini belgilang:"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "Iltimos, manzilingizni tasdiqlovchi hujjatni yuboring."
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "Iltimos, shaxsingizni tasdiqlovchi hujjatni yuboring."
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "Potentsial to'lov"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "Potentsial foyda"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "Potentsial to'lov"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "Potentsial foyda"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "Potentsial foyda/zarar"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "Funt sterling"
 
 msgid "Predict the direction<br />and purchase"
-msgstr ""
+msgstr "<br />yo'nalishini tahmin qiling va sotib oling"
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "“A” o'rniga '@' kabi taxmin qilinadigan almashtirishlar juda ko'p yordam bermaydi"
 
 msgid "Previous"
-msgstr ""
+msgstr "Oldingi"
 
 msgid "Profit"
-msgstr ""
+msgstr "Foyda"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "Foyda/zarar"
 
 msgid "Profit table"
-msgstr ""
+msgstr "Foyda jadvali"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "Foyda/zarar"
 
 msgid "Proof of address"
-msgstr ""
+msgstr "Manzilni tasdiqlash"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "Manzilni tasdiqlash muddati tugagan"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "Manzilni tasdiqlash talab qilinadi"
 
 msgid "Proof of identity"
-msgstr ""
+msgstr "Shaxsni tasdiqlovchi"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "Shaxsni tasdiqlash muddati tugagan"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "Shaxsni tasdiqlovchi hujjat talab qilinadi"
 
 msgid "Purchase"
-msgstr ""
+msgstr "Sotib olish"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Sotib olish vaqti"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "Sotib olish narxi"
 
 msgid "Purchase request sent"
-msgstr ""
+msgstr "Xarid so'rovi yuborildi"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "Sotib olish vaqti"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "Put Spread"
 
 msgid "Ready to trade?"
-msgstr ""
+msgstr "Savdo qilishga tayyormisiz?"
 
 msgid "Real"
-msgstr ""
+msgstr "Haqiqiy"
 
 msgid "Real Financial"
-msgstr ""
+msgstr "Haqiqiy moliyaviy"
 
 msgid "Real Financial STP"
-msgstr ""
+msgstr "Haqiqiy moliyaviy STP"
 
 msgid "Real Synthetic"
-msgstr ""
+msgstr "Haqiqiy Sintetik"
 
 msgid "Reality Check"
-msgstr ""
+msgstr "Haqiqatni tekshirish"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "So'nggi yillarni taxmin qilish oson"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "Qolgan vaqt"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "Depozit limitlarini olib tashlash"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "“Aaa” kabi takrorlashni taxmin qilish oson"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "“Abcabcabc” kabi takrorlashlar faqat “abc” ga qaraganda taxmin qilish biroz qiyinroq"
 
 msgid "Reports"
-msgstr ""
+msgstr "Hisobotlar"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "Brauzeringizning veb-saqlashini to'g'ri ishlashi uchun yoqilishini talab qiladi. Iltimos, uni yoqing yoki xususiy ko'rish rejimidan chiqing."
 
 msgid "Resale not offered"
-msgstr ""
+msgstr "Qayta sotish taklif qilinmaydi"
 
 msgid "Reset Barrier"
-msgstr ""
+msgstr "Reset Barrier"
 
 msgid "Reset Call"
-msgstr ""
+msgstr "Reset Call"
 
 msgid "Reset Call/Reset Put"
-msgstr ""
+msgstr "Qo'ng'iroqni tiklash/joylashtirishni tiklashReset Call/Reset Put"
 
 msgid "Reset Put"
-msgstr ""
+msgstr "Reset Put"
 
 msgid "Reset Time"
-msgstr ""
+msgstr "Vaqtni tiklash"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "Balansni tiklash"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "To'siqni tiklash"
 
 msgid "Reset time"
-msgstr ""
+msgstr "Vaqtni tiklash"
 
 msgid "Reset to original settings"
-msgstr ""
+msgstr "Asl sozlamalarga tiklash"
 
 msgid "Return"
-msgstr ""
+msgstr "Qaytish"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "Teskari so'zlarni taxmin qilish unchalik qiyin emas"
 
 msgid "Rise"
-msgstr ""
+msgstr "Rise"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Rise yoki teng"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Rise/Fall"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr ""
+msgstr "Rise/Fall shartnomalari quyidagi hollarda qaytarib beriladi:"
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "STASIS Euro"
 
 msgid "Sa"
-msgstr ""
+msgstr "Sa"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Shanba"
 
 msgid "Search..."
-msgstr ""
+msgstr "Qidiruv..."
 
 msgid "Select Asset"
-msgstr ""
+msgstr "Aktivni tanlang"
 
 msgid "Select Trade Type"
-msgstr ""
+msgstr "Savdo turini tanlang"
 
 msgid "Select date"
-msgstr ""
+msgstr "Sana tanlang"
 
 msgid "Select market:"
-msgstr ""
+msgstr "Bozorni tanlang:"
 
 msgid "Select your market and underlying asset"
-msgstr ""
+msgstr "Bozor va asosiy aktivingizni tanlang"
 
 msgid "Select your trade type"
-msgstr ""
+msgstr "Savdo turini tanlang"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "Tanlangan tik"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "O'z-o'zini istisno qilish"
 
 msgid "Sell"
-msgstr ""
+msgstr "Sotish"
 
 msgid "Sell at market"
-msgstr ""
+msgstr "Bozor narxida sotish"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sen"
 
 msgid "September"
-msgstr ""
+msgstr "Sentyabr"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "abc yoki 6543 kabi ketma-ketliklarni taxmin qilish oson"
 
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr ""
+msgstr "Sessiya muddati 6 haftadan oshmasligi mumkin."
 
 msgid "Session duration:"
-msgstr ""
+msgstr "Sessiya davomiyligi:"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "Hisob valyutasini belgilang"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "Qisqa klaviatura birikmalarini taxmin qilish oson"
 
 msgid "Should be %1"
-msgstr ""
+msgstr "%1bo'lishi kerak"
 
 msgid "Should be a valid number."
-msgstr ""
+msgstr "Haqiqiy raqam bo'lishi kerak."
 
 msgid "Should be between %1 and %2"
-msgstr ""
+msgstr "%1 va %2orasida bo'lishi kerak"
 
 msgid "Should be less than %1"
-msgstr ""
+msgstr "%1dan kam bo'lishi kerak"
 
 msgid "Should be more than %1"
-msgstr ""
+msgstr "%1dan ortiq bo'lishi kerak"
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr ""
+msgstr "Harf yoki raqam bilan boshlanishi kerak, defis va pastki chiziqni o'z ichiga olishi mumkin."
 
 msgid "Sign out"
-msgstr ""
+msgstr "Chiqish"
 
 msgid "Sign up"
-msgstr ""
+msgstr "Ro'yxatdan o'tish"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader ushbu hisob uchun mavjud emas"
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr ""
+msgstr "Kechirasiz, so'rovingizni qayta ishlashda xatolik yuz berdi."
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "Kechirasiz, lekin binary option lar savdosi mamlakatingizda mavjud emas."
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr ""
+msgstr "Kechirasiz, lekin binary option lar savdosi moliyaviy hisobingizda mavjud emas."
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr ""
+msgstr "Kechirasiz, Options savdosi Buyuk Britaniya va Man orolida mavjud emas."
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr ""
+msgstr "Kechirasiz, bu xususiyat faqat virtual hisoblar uchun mavjud."
 
 msgid "Spot"
-msgstr ""
+msgstr "Spot"
 
 msgid "Spot time"
-msgstr ""
+msgstr "Spot vaqti"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "Spot vaqti (GMT)"
 
 msgid "Stake"
-msgstr ""
+msgstr "Stavka"
 
 msgid "Start Time"
-msgstr ""
+msgstr "Boshlanish vaqti"
 
 msgid "Start time"
-msgstr ""
+msgstr "Boshlanish vaqti"
 
 msgid "Statements"
-msgstr ""
+msgstr "Bayonotlar"
 
 msgid "Stays Between"
-msgstr ""
+msgstr "Stays Between"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Stays Between/Goes Outside Shartnomalar boshlang'ich va tugash vaqtlari orasida 2 tadan kam tik bo'lsa, sotib olish narxida qaytarib beriladi."
 
 msgid "Step"
-msgstr ""
+msgstr "qadam"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "To'g'ri qatorli kalitlarni taxmin qilish oson"
 
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 msgid "Submit"
-msgstr ""
+msgstr "Yuborish"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Yakshanba"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "Boshqa hisob qaydnomasiga o'tish"
 
 msgid "Synthetic"
-msgstr ""
+msgstr "Sintetik"
 
 msgid "Target"
-msgstr ""
+msgstr "Maqsad"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "Tether ERC20"
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "Tether Omni"
 
 msgid "Tether TRC20"
-msgstr ""
+msgstr "Tether TRC20"
 
 msgid "Th"
-msgstr ""
+msgstr "Th"
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr ""
+msgstr "Rahmat, biz sizga 24 soat ichida qayta aloqaga chiqamiz"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr ""
+msgstr "%1cyopish%2 - bu %1e tugash vaqti%2 da yoki undan oldingi oxirgi belgi. Agar siz ma'lum %1e tugash vaqtini tanlagan bo'lsangiz,%2 ​​bu %1etugash vaqti%2 tanlangan vaqtdir."
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr ""
+msgstr "%1cshartnoma davri%2 bu %1fbirinchi belgi%2 (boshlanish vaqtidan keyin) va %1etugash vaqti%2 orasidagi davr."
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr ""
+msgstr "%1e tugash vaqti%2 - bu %1s boshlanish vaqti%2 dan keyin tanlangan daqiqa/soat soni."
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
+msgstr "%1exit spot%2 shartnoma tugaganida oxirgi tikdir. Shartnoma barcha tiklar ketma-ket ko'tarilganda yoki tushganda yoki bitta tik tahmin qilingan pattern ni buzganda tugaydi."
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "%1hiYuqori%2 - shartnoma davrida bozor tomonidan erishilgan eng yuqori nuqta."
 
 msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "%1loPast %2 qiymati shartnoma davrida bozor erishgan eng past nuqtadir."
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr ""
+msgstr "%1sBoshlanish vaqti%2 bizning serverlarimiz tomonidan shartnoma qayta ishlanganda boshlanadi."
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1sBoshlanish vaqti%2 - shartnoma bizning serverlarimiz tomonidan qayta ishlangan va %1ekirish joyi%2 undan %1nkeyingi tik%2 hisoblanadi."
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>Shartnoma davri</strong> - <strong>boshlanish vaqti</strong> va <strong>tugash vaqti</strong>dan keyingi <strong>keyingi tik</strong> o'rtasidagi davr."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "<strong>Tugash vaqti</strong> - <strong>boshlanish vaqtidan keyin tanlangan daqiqa/soat soni</strong> (agar davomiyligi bir kundan kam bo'lsa) yoki savdo kunining oxirida (agar bir kun yoki undan ko'p bo'lsa)."
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr ""
+msgstr "<strong>Tugash vaqti</strong> - <strong>boshlanish vaqtidan keyin tanlangan daqiqa/soat soni</strong>."
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "<strong>kirish joyi</strong> bizning serverlarimiz tomonidan shartnoma qayta ishlanganidan keyin birinchi tik hisoblanadi."
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>Chiqish joyi</strong> <strong>tugash vaqti</strong>da yoki undan oldingi eng so'nggi tikdir."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr ""
+msgstr "<strong>Boshlanish vaqti</strong> - shartnoma bizning serverlarimiz tomonidan qayta ishlanganda va <strong>kirish joyi</strong> undan <strong>keyingi tik</strong> hisoblanadi."
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr ""
+msgstr "<strong>Boshlang'ich vaqti</strong> bu - qachonki bizning serverlarimiz tomonidan shartnoma qayta ishlanganda."
 
 msgid "The Average"
-msgstr ""
+msgstr "O'rtacha"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr ""
+msgstr "O'rtacha - kirish joyi va oxirgi tikni o'z ichiga olgan tiklarning o'rtacha qiymati."
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr ""
+msgstr "Shartnoma 5 daqiqa ichida tugamaydi (tik muddatli shartnomalar uchun)"
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "Kirish joyi bizning serverlarimiz tomonidan shartnoma qayta ishlanganidan keyin birinchi tik hisoblanadi."
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
-msgstr ""
+msgstr "Siz so'ragan sahifa topilmadi. Yoki u endi mavjud emas yoki manzil noto'g'ri. Iltimos, har qanday matn terish xatosini tekshiring."
 
 msgid "The reset time is %1"
-msgstr ""
+msgstr "Vaqtni %1 ga tiklang"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
-msgstr ""
+msgstr "Serverning <a href=\"%1\">so'nggi nuqtasi</a> quyidagilardir: %2"
 
 msgid "The two passwords that you entered do not match."
-msgstr ""
+msgstr "Siz kiritgan ikkita parol mos kelmaydi."
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr ""
+msgstr "Boshlanish va tugash vaqtlari orasida 2tadan kamroq tiklar bor"
 
 msgid "There was a problem accessing the server during purchase."
-msgstr ""
+msgstr "Sotib olish paytida serverga kirishda muammo yuzaga keldi."
 
 msgid "There was a problem accessing the server."
-msgstr ""
+msgstr "Serverga kirishda muammo yuzaga keldi."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Xatolik yuz berdi"
 
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "Kirish maydonida yaroqsiz belgi bor edi."
 
 msgid "This contract is only available on %1DTrader%2."
-msgstr ""
+msgstr "Ushbu shartnoma faqat %1DTrader%2saytida mavjud."
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr ""
+msgstr "Ushbu shartnoma faqat DTrader-da mavjud.%1%2Gbu shartnomani yopish yoki bekor qilish uchun Dtrader%3 ga o'ting."
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Ushbu shartnoma yutqazdi"
 
 msgid "This contract type only offers 5 ticks"
-msgstr ""
+msgstr "Ushbu shartnoma turi faqat 5 ta tikni taklif qiladi"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Ushbu shartnoma yutdi"
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr ""
+msgstr "Ushbu xususiyat virtual pul hisoblariga tegishli emas."
 
 msgid "This field is required."
-msgstr ""
+msgstr "Ushbu maydon to'ldirilishi shart."
 
 msgid "This is a staging server - For testing purposes only"
-msgstr ""
+msgstr "Bu sahnalashtiruvchi server - Faqat sinov maqsadlari uchun"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "Bu eng yaxshi 10 umumiy parol"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "Bu eng yaxshi 100 umumiy parol"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "Bu juda keng tarqalgan parol"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr ""
+msgstr "Bu indikativ to'siqdir. Haqiqiy to'siq kirish joyi va to'siq ofsetini tashkil qiladi."
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "Bu keng tarqalgan ishlatiladigan parolga o'xshaydi"
 
 msgid "This page is only available to logged out clients."
-msgstr ""
+msgstr "Ushbu sahifa faqat tizimdan chiqqan mijozlar uchun mavjud."
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "Ushbu parol qora ro'yxatda"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Payshanba"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tik"
 
 msgid "Tick Prediction"
-msgstr ""
+msgstr "Tik Tahmini"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Tiklar"
 
 msgid "Ticks history returned an empty array."
-msgstr ""
+msgstr "Tiklar tarixi bo'sh massivni qaytardi."
 
 msgid "Time is in the wrong format."
-msgstr ""
+msgstr "Vaqt noto'g'ri formatda."
 
 msgid "Time out cannot be in the past."
-msgstr ""
+msgstr "Vaqt muddati o'tmishda bo'lishi mumkin emas."
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr ""
+msgstr "Vaqt muddati 6 haftadan oshmasligi mumkin emas."
 
 msgid "Time out must be after today."
-msgstr ""
+msgstr "Vaqt muddati bugundan kechroq bo'lishi kerak."
 
 msgid "Timed out until"
-msgstr ""
+msgstr "Vaqt tugagunga qadar"
 
 msgid "Today"
-msgstr ""
+msgstr "Bugun"
 
 msgid "Top up"
-msgstr ""
+msgstr "To'ldirish"
 
 msgid "Top up Virtual Account?"
-msgstr ""
+msgstr "Virtual hisobni toʻldirasizmi?"
 
 msgid "Top up error"
-msgstr ""
+msgstr "To'ldirish xatosi"
 
 msgid "Top-up successful"
-msgstr ""
+msgstr "Toʻldirish muvaffaqiyatli"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "Umumiy xarajat"
 
 msgid "Total assets"
-msgstr ""
+msgstr "Jami aktivlar"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "Deriv hisoblaringizdagi jami aktivlar"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "Umumiy foyda/zarar"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "Touch/No Touch shartnomalari boshlang'ich va tugash vaqtlari orasida 2 dan kam tik bo'lsa, sotib olish narxi bo'yicha qaytarib beriladi."
 
 msgid "Touches"
-msgstr ""
+msgstr "Touch"
 
 msgid "Trade"
-msgstr ""
+msgstr "Savdo"
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr ""
+msgstr "SmartTrader, kuchli va foydalanuvchilarga qulay onlayn savdo platformasi yordamida global bozorlarda raqamli opsiyalarni soting."
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr ""
+msgstr "Ommabop va ishlatish uchun qulay platformamiz bilan jahon bozorlarini savdo qiling."
 
 msgid "Trade types"
-msgstr ""
+msgstr "Savdo turlari"
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Trader's hub"
 
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "Savdo va depozit o'chirib qo'yilgan"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "Hisobingizda savdo va depozitlar o'chirib qo'yildi. Iltimos %1cYordam uchun %mijozlarni qo‘llab-quvvatlash xizmatiga %2 murojaat qiling."
 
 msgid "Trading statistics report"
-msgstr ""
+msgstr "Savdo statistikasi hisoboti"
 
 msgid "Transaction ID"
-msgstr ""
+msgstr "Tranzaksiya identifikatori"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr ""
+msgstr "%1 tomonidan amalga oshirilgan tranzaksiya (App ID: %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "True USD"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "Bizning %1Ssintetik indekslarimizni sinab ko'ring%2."
 
 msgid "Try our other markets."
-msgstr ""
+msgstr "Boshqa bozorlarimizni sinab ko'ring."
 
 msgid "Tu"
-msgstr ""
+msgstr "Tu"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Seshanba"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Aylanma"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "US dollar"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "USD Coin"
 
 msgid "USDK"
-msgstr ""
+msgstr "USDK"
 
 msgid "Understood"
-msgstr ""
+msgstr "Tushunarli"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "Afsuski, ushbu savdo platformasi YI Deriv hisob uchun mavjud emas. Savdoni davom ettirish uchun YI bo'lmagan hisob qaydnomasiga o'ting."
 
 msgid "Unknown OS"
-msgstr ""
+msgstr "Noma'lum OS"
 
 msgid "Up to %1 decimal places are allowed."
-msgstr ""
+msgstr "%1 tagacha kasrga ruxsat beriladi."
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "Bir nechta so'zlardan foydalaning, umumiy iboralardan saqlaning"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "Ko'proq aylanishlar bilan uzunroq tugmalar birikmalaridan foydalaning"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr ""
+msgstr "Tasdiqlash kodi noto'g'ri. Iltimos, elektron pochtangizga yuborilgan havoladan foydalaning."
 
 msgid "View"
-msgstr ""
+msgstr "Ko'rish"
 
 msgid "View chart"
-msgstr ""
+msgstr "Grafikni ko'rish"
 
 msgid "Virtual"
-msgstr ""
+msgstr "Virtual"
 
 msgid "Waiting for contract settlement."
-msgstr ""
+msgstr "Shartnoma kelishuvi kutilmoqda."
 
 msgid "Waiting for entry tick."
-msgstr ""
+msgstr "Kirish tiki kutilmoqda."
 
 msgid "Waiting for exit tick."
-msgstr ""
+msgstr "Chiqish tiki kutilmoqda."
 
 msgid "We"
-msgstr ""
+msgstr "Biz"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Chorshanba"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "Biz sizning limitlaringizni yangilaymiz. Sizning harakatlaringiz uchun to'liq javobgar ekanligingizni tan olish uchun %1 Roziman va qabul qilaman%2 tugmasini bosing va biz hech qanday qaramlik yoki yo'qotish uchun javobgar emasmiz."
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "“OK” tugmasini bosganingizda siz tanlangan sanaga qadar saytda savdo-sotiqdan chetlashtirilasiz."
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr ""
+msgstr "Agar chiqish joyi ham kirish joyiga teng bo'lsa, to'lovni yutib oling."
 
 msgid "Winning the contract"
-msgstr ""
+msgstr "Shartnomani yutib olish"
 
 msgid "Withdrawal"
-msgstr ""
+msgstr "Pul olish"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "Savdo va pul olish cheklovlari"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "Pulni yechib olish o‘chirib qo‘yilgan"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "Hisobingizda pul yechib olish o'chirib qo'yildi. Batafsil ma'lumot uchun elektron pochtangizni tekshiring."
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr ""
+msgstr "Avval bayonotingizni tekshirmoqchimisiz? %1CTekshirish bayonnomasi%2"
 
 msgid "You are offline"
-msgstr ""
+msgstr "Siz oflayn rejimsizdasiz"
 
 msgid "You can close this window without interrupting your trade."
-msgstr ""
+msgstr "Ushbu oynani savdoingizni to'xtatmasdan yopishingiz mumkin."
 
 msgid "You did not change anything."
-msgstr ""
+msgstr "Siz hech narsani o'zgartirmadingiz."
 
 msgid "You have reached the rate limit of requests per second. Please try later."
-msgstr ""
+msgstr "Siz soniyada so'rovlar darajasi limitiga yetdingiz. Iltimos, keyinroq harakat qiling."
 
 msgid "You have sold this contract at %1 %2"
-msgstr ""
+msgstr "Siz ushbu shartnomani %1 %2da sotdingiz"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
-msgstr ""
+msgstr "Siz autentifikatsiya qilish uchun turli xil OAuth serverini ishlatishdan oldin ro'yxatdan o'tishingiz va App ID-ni olishingiz kerak. Qo'shimcha ma'lumot olish uchun https://api.deriv.com/ saytidagi OAuth tafsilotlariga qarang."
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "Siz hali bildirishnomalarni olmadingiz"
 
 msgid "You should enter %1 characters."
-msgstr ""
+msgstr "Siz %1 belgilarini kiritishingiz kerak."
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
-msgstr ""
+msgstr "Siz Binary.com kompaniyasiga qarashli bo'lmagan uchinchi tomon veb-saytiga yo'naltirilasiz."
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr ""
+msgstr "Agar bozor narxi siz tanlagan raqamda tugamasa, to'lovni yutib olasiz."
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr ""
+msgstr "Agar bozor narxi siz tanlagan raqamda tugaydigan bo'lsa, to'lovni yutib olasiz."
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "Hisobingiz cheklangan. Yordam uchun %1cmijozlarni qo‘llab-quvvatlash xizmatiga%2 murojaat qiling."
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr ""
+msgstr "Professional mijoz sifatida ko'rib chiqish uchun arizangiz ko'rib chiqilmoqda."
 
 msgid "Your changes have been updated."
-msgstr ""
+msgstr "O'zgartirishlaringiz yangilandi."
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "Sizning parolingiz elektron pochta manzilingiz bilan bir xil bo'lishi mumkin emas."
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "Har bir hisobot orasidagi afzal vaqt oralig'i:"
 
 msgid "Your professional client request is %1not approved%2."
-msgstr ""
+msgstr "Sizning professional mijoz so'rovingiz %1ntasdiqlanmadi%2."
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr ""
+msgstr "Sizning sessiya davomiyligi limiti%1 soniyada tugaydi."
 
 msgid "Your trading statistics since %1."
-msgstr ""
+msgstr "%1dan beri sizning savdo statistikangiz."
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "Sizning tranzaksiya ma'lumotnomangiz"
 
 msgid "Your transaction reference number is %1"
-msgstr ""
+msgstr "Sizning tranzaksiya ma'lumotnoma raqamingiz %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "Virtual balansingiz tiklandi."
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr ""
+msgstr "Sizning veb-brauzeringiz (%1) eskirgan va savdo tajribangizga ta'sir qilishi mumkin. O'zingizning xavf-xataringiz bilan davom eting. %2Brauzerni yangilash%3"
 
 msgid "account"
-msgstr ""
+msgstr "hisob"
 
 msgid "accounts"
-msgstr ""
+msgstr "hisoblar"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "binary opsiyalar, forex, forex savdo, onlayn savdo, moliyaviy savdo, binary savdo, indeks savdo, savdo fond indekslari, forex savdolari, savdo tovarlari, binary opsiyalar strategiyasi, binary broker, binary pul tikish, binary opsiyalar savdo platformasi, binary strategiya, moliya, investitsiya, savdo"
 
 msgid "day"
-msgstr ""
+msgstr "kun"
 
 msgid "days"
-msgstr ""
+msgstr "kunlar"
 
 msgid "e.g. frontend.derivws.com"
-msgstr ""
+msgstr "masalan, frontend.derivws.com"
 
 msgid "hour"
-msgstr ""
+msgstr "soat"
 
 msgid "hours"
-msgstr ""
+msgstr "soatlar"
 
 msgid "including Deal Cancel. Fee"
-msgstr ""
+msgstr "shartnomani bekor qilish, shu jumladan. To'lov"
 
 msgid "login"
-msgstr ""
+msgstr "tizimga kirish"
 
 msgid "logout"
-msgstr ""
+msgstr "tizimdan chiqish"
 
 msgid "minute"
-msgstr ""
+msgstr "daqiqa"
 
 msgid "minutes"
-msgstr ""
+msgstr "daqiqalar"
 
 msgid "second"
-msgstr ""
+msgstr "soniya"
 
 msgid "seconds"
-msgstr ""
+msgstr "soniyalar"
 
 msgid "tick"
-msgstr ""
+msgstr "tik"
 
 msgid "ticks"
-msgstr ""
+msgstr "tiklar"
 
 msgid "today"
-msgstr ""
+msgstr "bugun"
 
 msgid "today, Fridays"
-msgstr ""
+msgstr "bugun, juma kunlari"
 
 msgid "virtual money credit to account"
-msgstr ""
+msgstr "hisob raqamiga virtual pul krediti"
 
