@@ -4,9 +4,9 @@ const Analytics = (() => {
     const init = () => {
         if (process.env.RUDDERSTACK_KEY && process.env.GROWTHBOOK_CLIENT_KEY && process.env.GROWTHBOOK_DECRYPTION_KEY) {
             DerivAnalytics.Analytics.initialise({
-                growthbookKey: process.env.GROWTHBOOK_CLIENT_KEY, // optional key to enable A/B tests
+                growthbookKey          : process.env.GROWTHBOOK_CLIENT_KEY, // optional key to enable A/B tests
                 growthbookDecryptionKey: process.env.GROWTHBOOK_DECRYPTION_KEY, // optional key to enable A/B tests
-                rudderstackKey: process.env.RUDDERSTACK_KEY,
+                rudderstackKey         : process.env.RUDDERSTACK_KEY,
             });
         }
     };
@@ -21,15 +21,18 @@ const Analytics = (() => {
         if (DerivAnalytics.Analytics?.getInstances()?.ab) {
             return [DerivAnalytics.Analytics?.getFeatureValue(featureFlag, resolvedDefaultValue), true];
         }
+
+        return null;
     };
 
     const setGrowthbookOnChange = onChange => {
         const isGBLoaded = isGrowthbookLoaded();
         if (!isGBLoaded) return null;
 
-        DerivAnalytics.Analytics?.getInstances().ab.GrowthBook?.setRenderer(() => {
+        const onChangeRenderer = DerivAnalytics.Analytics?.getInstances().ab.GrowthBook?.setRenderer(() => {
             onChange?.();
         });
+        return onChangeRenderer;
     };
 
     return {
