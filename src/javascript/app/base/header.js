@@ -1,8 +1,7 @@
 // const BinaryPjax               = require('./binary_pjax');
-const AuthClient               = require('../../_common/auth');
-const Analytics                = require('../../_common/analytics');
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
+const AuthClient               = require('../../_common/auth');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -25,6 +24,7 @@ const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
+const DerivIFrame              = require('../pages/deriv_iframe.jsx');
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -46,6 +46,7 @@ const Header = (() => {
         populateWalletAccounts();
         bindSvg();
         switchHeaders();
+        DerivIFrame.init();
         BinarySocket.wait('authorize','landing_company').then(() => {
             setHeaderUrls();
             bindPlatform();
@@ -626,11 +627,8 @@ const Header = (() => {
         Login.redirectToLogin();
     };
 
-    const logoutOnClick = () => {
-        const value = Analytics.getGrowthbookFeatureValue({
-            featureFlag: 'hydra_be',
-        });
-        const onLogoutWithHydra = AuthClient.AuthClient.getLogoutHandler(value, () =>  Client.sendLogoutRequest());
+    const logoutOnClick = async () => {
+        const onLogoutWithHydra = await AuthClient.getLogoutHandler(() =>  Client.sendLogoutRequest());
         onLogoutWithHydra();
     };
 

@@ -1,21 +1,22 @@
-const Dropdown          = require('@binary-com/binary-style').selectDropdown;
-const TradingAnalysis   = require('./analysis');
-const commonTrading     = require('./common');
-const cleanupChart      = require('./charts/webtrader_chart').cleanupChart;
+const Dropdown = require('@binary-com/binary-style').selectDropdown;
+const TradingAnalysis = require('./analysis');
+const commonTrading = require('./common');
+const cleanupChart = require('./charts/webtrader_chart').cleanupChart;
 const displayCurrencies = require('./currency');
-const Defaults          = require('./defaults');
-const TradingEvents     = require('./event');
-const Price             = require('./price');
-const Process           = require('./process');
-const ViewPopup         = require('../user/view_popup/view_popup');
-const Client            = require('../../base/client');
-const Header            = require('../../base/header');
-const BinarySocket      = require('../../base/socket');
-const DerivBanner       = require('../../common/deriv_banner');
+const Defaults = require('./defaults');
+const TradingEvents = require('./event');
+const Price = require('./price');
+const Process = require('./process');
+const AuthClient = require('../../../_common/auth');
+const ViewPopup = require('../user/view_popup/view_popup');
+const Client = require('../../base/client');
+const Header = require('../../base/header');
+const BinarySocket = require('../../base/socket');
+const DerivBanner = require('../../common/deriv_banner');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
-const State             = require('../../../_common/storage').State;
+const State = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
-const LoaderElement     = require('../loader.jsx');
+const LoaderElement = require('../loader.jsx');
 
 const TradePage = (() => {
     let events_initialized = 0;
@@ -23,19 +24,19 @@ const TradePage = (() => {
     LoaderElement.init();
 
     const onLoad = () => {
-        
         const iframe_target_origin = getAllowedLocalStorageOrigin();
+        const isHydraEnabled = AuthClient.isOAuth2Enabled();
         BinarySocket.wait('authorize').then(() => {
-            if (iframe_target_origin) {
-                const el_iframe  = document.getElementById('localstorage-sync');
-                el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
+            if (iframe_target_origin && !isHydraEnabled) {
+                const el_iframe = document.getElementById('localstorage-sync');
+                if (el_iframe) el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
             }
             init();
         });
     };
 
     const init = () => {
-        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked() ||  Client.isOfferingBlocked()) {
+        if (Client.isAccountOfType('financial') || Client.isOptionsBlocked() || Client.isOfferingBlocked()) {
             return;
         }
 
@@ -46,7 +47,8 @@ const TradePage = (() => {
             TradingEvents.init();
         }
         BinarySocket.wait('authorize').then(() => {
-            const country = State.getResponse('authorize.country') || State.getResponse('website_status.clients_country');
+            const country =
+                State.getResponse('authorize.country') || State.getResponse('website_status.clients_country');
 
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
@@ -82,7 +84,7 @@ const TradePage = (() => {
         if (document.getElementById('websocket_form')) {
             commonTrading.addEventListenerForm();
         }
-     
+
         TradingAnalysis.bindAnalysisTabEvent();
 
         ViewPopup.viewButtonOnClick('#contract_confirmation_container');
