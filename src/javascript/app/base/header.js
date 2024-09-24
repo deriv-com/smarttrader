@@ -1,4 +1,6 @@
 // const BinaryPjax               = require('./binary_pjax');
+const AuthClient               = require('../../_common/auth');
+const Analytics                = require('../../_common/analytics');
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const showHidePulser           = require('../common/account_opening').showHidePulser;
@@ -303,7 +305,7 @@ const Header = (() => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
-
+        
         // Mobile menu
         const mobile_menu_overlay        = getElementById('mobile__container');
         const mobile_menu                = getElementById('mobile__menu');
@@ -625,7 +627,11 @@ const Header = (() => {
     };
 
     const logoutOnClick = () => {
-        Client.sendLogoutRequest();
+        const value = Analytics.getGrowthbookFeatureValue({
+            featureFlag: 'hydra_be',
+        });
+        const onLogoutWithHydra = AuthClient.AuthClient.getLogoutHandler(value, () =>  Client.sendLogoutRequest());
+        onLogoutWithHydra();
     };
 
     const populateWalletAccounts = () => {
