@@ -18,11 +18,8 @@ const Analytics = (() => {
         const isGBLoaded = isGrowthbookLoaded();
 
         if (!isGBLoaded) return [null, false];
-        if (DerivAnalytics.Analytics?.getInstances()?.ab) {
-            return [DerivAnalytics.Analytics?.getFeatureValue(featureFlag, resolvedDefaultValue), true];
-        }
 
-        return null;
+        return [DerivAnalytics.Analytics?.getFeatureValue(featureFlag, resolvedDefaultValue), true];
     };
 
     const setGrowthbookOnChange = onChange => {
@@ -30,7 +27,7 @@ const Analytics = (() => {
         if (!isGBLoaded) return null;
 
         const onChangeRenderer = DerivAnalytics.Analytics?.getInstances().ab.GrowthBook?.setRenderer(() => {
-            onChange?.();
+            onChange();
         });
         return onChangeRenderer;
     };
