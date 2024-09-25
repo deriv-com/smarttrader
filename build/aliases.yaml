@@ -11,6 +11,7 @@ test:
   - 'checkDependencies'
   - 'stylelint'
   - 'eslint'
+  - 'mochaTest'
 
 default:
   - 'test'

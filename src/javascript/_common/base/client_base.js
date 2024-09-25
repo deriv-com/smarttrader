@@ -41,9 +41,6 @@ const ClientBase = (() => {
      * @param {String|null} loginid        The account to set the value for
      */
     const set = (key, value, loginid = current_loginid) => {
-        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
-        if (isOAuth2Enabled) return;
-
         if (key === 'loginid' && value !== current_loginid) {
             syncWithDerivApp(value, client_object);
             LocalStore.set('active_loginid', value);
@@ -493,6 +490,9 @@ const ClientBase = (() => {
     };
 
     const syncWithDerivApp = (active_loginid, client_accounts) => {
+        // If the OAuth2 new authentication is enabled, all apps should not use localstorage-sync anymore
+        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
+        if (isOAuth2Enabled) return;
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
 

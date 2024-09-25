@@ -1,3 +1,10 @@
+
+const Mock                         = require('mock-require');
+Mock('../../auth', {
+    isOAuth2Enabled: function() {
+        return false
+    }
+});
 const Client                  = require('../client_base');
 const setCurrencies           = require('../currency_base').setCurrencies;
 const { api, expect, setURL } = require('../../__tests__/tests_common');
@@ -17,7 +24,6 @@ describe('ClientBase', () => {
     const valid_landing_company =
     { landing_company: { financial_company: { name: 'Binary Investments (Europe) Ltd', shortcode: 'maltainvest', legal_allowed_currencies: ['USD'] }, gaming_company: { name: 'Binary (Europe) Ltd', shortcode: 'malta', legal_allowed_currencies: ['USD'] } }, msg_type: 'landing_company' };
     const authorize       = { authorize: { upgradeable_landing_companies: [] }};
-
     describe('.validateLoginid()', () => {
         it('can detect a valid loginid', () => {
             [loginid_virtual, loginid_real].forEach((id) => {

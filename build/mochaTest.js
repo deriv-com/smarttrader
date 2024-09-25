@@ -9,12 +9,11 @@ module.exports = {
                 '@babel/polyfill',
                 'jsdom-global/register',
                 'mock-local-storage',
-                '@deriv-com/analytics'
             ],
         },
         src: [
             'src/javascript/**/__tests__/*.js',
             'scripts/__tests__/*.js',
         ],
-    },
-};
+    }
+}
