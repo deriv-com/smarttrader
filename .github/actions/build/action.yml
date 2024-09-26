@@ -5,11 +5,23 @@ inputs:
     description: "Target Environment"
     required: true
     default: staging
+  rudderstackKey:
+    description: "Rudderstack key for initialising analytics"
+    required: true
+  growthbookDecryptionKey:
+    description: "Growthbook decryption key for initialising analytics"
+    required: true
+  growthbookClientKey:
+    description: "Growthbook client key for initialising analytics"
+    required: true
 runs:
   using: composite
   steps:
     - name: Building dist for ${{ inputs.target }}
       env:
         TARGET_ENV: ${{ inputs.target }}
+        RUDDERSTACK_KEY: inputs.rudderstackKey
+        GROWTHBOOK_DECRYPTION_KEY: inputs.growthbookDecryptionKey
+        GROWTHBOOK_CLIENT_KEY: inputs.growthbookClientKey
       run: node_modules/grunt/bin/grunt releaseci --$TARGET_ENV
       shell: bash
