@@ -23,9 +23,9 @@ jobs:
         uses: "./.github/actions/build"
         with:
           target: production
-          rudderstackKey:  vars.RUDDERSTACK_KEY
-          growthbookDecryptionKey: secrets.GROWTHBOOK_DECRYPTION_KEY
-          growthbookClientKey: vars.GROWTHBOOK_CLIENT_KEY
+          RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
+          GROWTHBOOK_DECRYPTION_KEY: ${{ secrets.GROWTHBOOK_DECRYPTION_KEY }}
+          GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
       - name: Versioning
         uses: "./.github/actions/versioning"
         with:
