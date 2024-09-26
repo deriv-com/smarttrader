@@ -11,7 +11,7 @@ jobs:
       RELEASE_TYPE: Production
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
       - name: Setup Node
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
         with:
@@ -41,7 +41,7 @@ jobs:
     needs: [build_and_test]
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
       - name: Setup Node
         uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
         with:
@@ -82,7 +82,7 @@ jobs:
     needs: [publish_cloudflare_production, build_and_test]
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
       - name: Setup Node
         uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
         with:
