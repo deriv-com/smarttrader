@@ -30,8 +30,7 @@ export const getServerInfo = () => {
         LocalStorageUtils.setValue(LocalStorageConstants.configAppId, `${AppIDConstants.domainAppId[hostname]}`);
     }
 
-    // const storedServerUrl = LocalStorageUtils.getValue(LocalStorageConstants.configServerURL);
-    const serverUrl = 'qa101.deriv.dev';
+    const serverUrl = LocalStorageUtils.getValue(LocalStorageConstants.configServerURL) || localStorage.getItem('config.server_url') || 'oauth.deriv.com';
 
     const appId = LocalStorageUtils.getValue(LocalStorageConstants.configAppId);
     const lang = LocalStorageUtils.getValue(LocalStorageConstants.i18nLanguage);

@@ -6,11 +6,10 @@ const LoggedIn = () => (
     <html>
         <head>
             <AntiClickjack />
-            {it.js_files.map((js_file, inx) => (
+            { it.js_files.map((js_file, inx) => (
                 <script key={inx} src={js_file.replace('{PLACEHOLDER_FOR_LANG}', it.language.toLowerCase())} />
             ))}
-            <style>
-                {`
+            <style>{`
                 body {margin: 0;}
                 // #header-binary {height: 55px; background: #2a3052; border-bottom: 4px solid #e98024; text-align: center; padding: 10px 0;}
                 // #header-binary a {margin: 0 auto; vertical-align: middle; display: inline-block; min-width: 220px;}

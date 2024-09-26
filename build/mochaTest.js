@@ -15,5 +15,5 @@ module.exports = {
             'src/javascript/**/__tests__/*.js',
             'scripts/__tests__/*.js',
         ],
-    }
-}
+    },
+};

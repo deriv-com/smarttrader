@@ -42,11 +42,11 @@ const Header = (() => {
     };
 
     const onLoad = () => {
+        DerivIFrame.init();
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
         switchHeaders();
-        DerivIFrame.init();
         BinarySocket.wait('authorize','landing_company').then(() => {
             setHeaderUrls();
             bindPlatform();
@@ -306,7 +306,6 @@ const Header = (() => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
-        
         // Mobile menu
         const mobile_menu_overlay        = getElementById('mobile__container');
         const mobile_menu                = getElementById('mobile__menu');
@@ -628,8 +627,9 @@ const Header = (() => {
     };
 
     const logoutOnClick = async () => {
-        const onLogoutWithHydra = await AuthClient.getLogoutHandler(() =>  Client.sendLogoutRequest());
-        onLogoutWithHydra();
+        const onLogoutWithOauth = await AuthClient.getLogoutHandler(Client.sendLogoutRequest);
+
+        onLogoutWithOauth();
     };
 
     const populateWalletAccounts = () => {
