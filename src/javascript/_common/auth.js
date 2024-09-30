@@ -11,6 +11,8 @@ export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions
 
 export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
 
+const LOGOUT_HANDLER_TIMEOUT = 10000;
+
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
     [URLConstants.derivP2pStaging]   : 'red.derivws.com',
@@ -85,7 +87,12 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
         const allowedOrigin = getOAuthOrigin();
         if (allowedOrigin === event.origin) {
             if (event.data === 'logout_complete') {
-                await onWSLogoutAndRedirect();
+                try {
+                    await onWSLogoutAndRedirect();
+                } catch (err) {
+                    // eslint-disable-next-line no-console
+                    console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
+                }
             }
         }
     };
@@ -107,7 +114,7 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
 
             setTimeout(() => {
                 onWSLogoutAndRedirect();
-            }, 10000);
+            }, LOGOUT_HANDLER_TIMEOUT);
         }
 
         iframe.src = getOAuthLogoutUrl();
