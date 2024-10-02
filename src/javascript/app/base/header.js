@@ -499,7 +499,6 @@ const Header = (() => {
             showMobileSubmenu(false);
         });
 
-
         // OnClickOutisde Event Handle
         document.addEventListener('click', (event) => {
             // Platform Switcher

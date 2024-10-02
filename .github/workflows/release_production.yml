@@ -6,8 +6,8 @@ on:
 jobs:
   build_and_test:
     name: Build and Test
-    runs-on: ubuntu-latest
     environment: Production
+    runs-on: ubuntu-latest
     env:
       RELEASE_TYPE: Production
     steps:
