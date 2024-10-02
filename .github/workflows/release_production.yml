@@ -39,7 +39,6 @@ jobs:
           path: dist
   publish_cloudflare_production:
     name: Publish to Cloudflare Production
-    environment: Production
     runs-on: ubuntu-latest
     env:
       RELEASE_TYPE: Production
