@@ -6,6 +6,7 @@ on:
 jobs:
   build_and_test:
     name: Build and Test
+    environment: Staging
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,10 +21,16 @@ jobs:
         uses: "./.github/actions/build"
         with:
           target: staging
+          RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
+          GROWTHBOOK_DECRYPTION_KEY: ${{ secrets.GROWTHBOOK_DECRYPTION_KEY }}
+          GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
       - name: Build Translations
         uses: "./.github/actions/build"
         with:
           target: translations
+          RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
+          GROWTHBOOK_DECRYPTION_KEY: ${{ secrets.GROWTHBOOK_DECRYPTION_KEY }}
+          GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
       - name: Versioning
         uses: "./.github/actions/versioning"
         with:
@@ -36,6 +43,7 @@ jobs:
           path: dist
   publish_cloudflare_staging:
     name: Publish to Cloudflare Pages Staging
+    environment: Staging
     runs-on: ubuntu-latest
     needs: [build_and_test]
     steps:
