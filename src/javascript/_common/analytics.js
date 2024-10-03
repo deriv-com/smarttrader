@@ -2,10 +2,9 @@ const DerivAnalytics = require('@deriv-com/analytics');
 
 const Analytics = (() => {
     const init = () => {
-        if (process.env.RUDDERSTACK_KEY && process.env.GROWTHBOOK_CLIENT_KEY && process.env.GROWTHBOOK_DECRYPTION_KEY) {
+        if (process.env.RUDDERSTACK_KEY && process.env.GROWTHBOOK_CLIENT_KEY) {
             DerivAnalytics.Analytics.initialise({
                 growthbookKey          : process.env.GROWTHBOOK_CLIENT_KEY, // optional key to enable A/B tests
-                growthbookDecryptionKey: process.env.GROWTHBOOK_DECRYPTION_KEY, // optional key to enable A/B tests
                 rudderstackKey         : process.env.RUDDERSTACK_KEY,
             });
         }
