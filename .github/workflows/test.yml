@@ -6,7 +6,6 @@ on:
 jobs:
   build_and_test:
     name: Build and Test
-    environment: Development
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
