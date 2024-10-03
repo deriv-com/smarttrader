@@ -489,6 +489,7 @@ const Header = (() => {
             }
         };
 
+
         appstore_menu.addEventListener('click', () => {
             showMobileSubmenu(false);
         });
