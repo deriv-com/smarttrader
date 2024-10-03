@@ -14,7 +14,7 @@ concurrency:
 jobs:
   build_and_deploy_preview_link:
     runs-on: Ubuntu-latest
-    environment: Staging
+    environment: Development
     permissions:
       checks: write
       pull-requests: write
@@ -50,7 +50,6 @@ jobs:
         with:
           target: staging
           RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
-          GROWTHBOOK_DECRYPTION_KEY: ${{ secrets.GROWTHBOOK_DECRYPTION_KEY }}
           GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
 
       - name: Build Translations
@@ -58,7 +57,6 @@ jobs:
         with:
           target: translations
           RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
-          GROWTHBOOK_DECRYPTION_KEY: ${{ secrets.GROWTHBOOK_DECRYPTION_KEY }}
           GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
 
       - name: "Run Tests"
