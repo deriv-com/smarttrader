@@ -12,21 +12,34 @@ const removeCookies      = require('../../_common/storage').removeCookies;
 const paramsHash         = require('../../_common/url').paramsHash;
 const urlFor             = require('../../_common/url').urlFor;
 const getPropertyValue   = require('../../_common/utility').getPropertyValue;
+const Auth               = require('../../_common/authentication');
 
 const LoggedInHandler = (() => {
-    const onLoad = () => {
+    const onLoad = async () => {
         SocketCache.clear();
         parent.window.is_logging_in = 1; // this flag is used in base.js to prevent auto-reloading this page
-        let redirect_url;
         const params = paramsHash(window.location.href);
-        BinarySocket.send({ authorize: params.token1 }).then((response) => {
+
+        const { accessToken } = await Auth.callTokenEndpoint(params.code, params.state);
+
+        const tokens = await Auth.callLegacyTokenEndpoint(accessToken);
+
+        // const isLoggedIn = () => (
+        //     !isEmptyObject(getAllAccountsObject()) &&
+        //     get('loginid') &&
+        //     get('token')
+        // );
+        // localStorage.setItem('loginid', )
+
+        let redirect_url;
+        BinarySocket.send({ authorize: tokens.token1 }).then((response) => {
             const account_list = getPropertyValue(response, ['authorize', 'account_list']);
             if (isStorageSupported(localStorage) && isStorageSupported(sessionStorage) && account_list) {
                 // redirect url
                 redirect_url = sessionStorage.getItem('redirect_url');
                 sessionStorage.removeItem('redirect_url');
 
-                storeClientAccounts(account_list);
+                storeClientAccounts(tokens, account_list);
             } else {
                 Client.doLogout({ logout: 1 });
             }
@@ -62,9 +75,8 @@ const LoggedInHandler = (() => {
         landing_company_name: 'landing_company_shortcode',
     };
 
-    const storeClientAccounts = (account_list) => {
+    const storeClientAccounts = (tokens, account_list) => {
         // Parse url for loginids, tokens, and currencies returned by OAuth
-        const params = paramsHash(window.location.href);
 
         // Clear all accounts before entering the loop
         Client.clearAllAccounts();
@@ -84,9 +96,9 @@ const LoggedInHandler = (() => {
         });
 
         let i = 1;
-        while (params[`acct${i}`]) {
-            const loginid = params[`acct${i}`];
-            const token   = params[`token${i}`];
+        while (tokens[`acct${i}`]) {
+            const loginid = tokens[`acct${i}`];
+            const token   = tokens[`token${i}`];
             if (loginid && token) {
                 Client.set('token', token, loginid);
             }
@@ -96,7 +108,7 @@ const LoggedInHandler = (() => {
         // if didn't find any login ID that matched the above condition
         // or the selected one doesn't have a token, set the first one
         if (!Client.get('loginid') || !Client.get('token')) {
-            Client.set('loginid', params.acct1 || account_list[0].loginid);
+            Client.set('loginid', tokens.acct1 || account_list[0].loginid);
         }
 
         if (Client.isLoggedIn()) {
