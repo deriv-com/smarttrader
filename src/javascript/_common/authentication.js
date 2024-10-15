@@ -1,4 +1,5 @@
-const oidc = require('oidc-client-ts');
+const oidc       = require('oidc-client-ts');
+const AuthClient = require('@deriv-com/auth-client')
 
 const getOIDCConfiguration = async () => {
     const cachedConfig = localStorage.getItem('config.oidc_configuration');
@@ -16,11 +17,12 @@ const getOIDCConfiguration = async () => {
 
 export const createManager = async () => {
     const data = await getOIDCConfiguration();
-   
+    const appId = localStorage.getItem('config.app_id')
+
     const userManager = new oidc.UserManager({
         authority               : data.issuer,
-        client_id               : '1013',
-        redirect_uri            : 'https://localhost:8090/en/logged_inws.html',
+        client_id               : appId,
+        redirect_uri            : `${window.location.origin}/en/logged_inws.html`,
         response_type           : 'code',
         scope                   : 'openid',
         post_logout_redirect_uri: data.end_session_endpoint,
@@ -37,9 +39,10 @@ export const createManager = async () => {
 };
 
 export const callAuthorizationEndpoint = async () => {
-    const manager = await createManager();
-
-    await manager.signinRedirect();
+    const appId = localStorage.getItem('config.app_id')
+    const redirectUri = `${window.location.origin}/en/logged_inws.html`
+    const postLogoutRedirectUri = `${window.location.origin}/en/trading.html`
+    userManager = await AuthClient.requestOidcAuthentication(appId, redirectUri, postLogoutRedirectUri)
 };
 
 export const callTokenEndpoint = async () => {
@@ -48,6 +51,7 @@ export const callTokenEndpoint = async () => {
 
     return {
         accessToken: user.access_token,
+        idToken: user.id_token
     };
 };
 

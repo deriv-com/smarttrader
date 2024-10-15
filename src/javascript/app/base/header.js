@@ -619,10 +619,10 @@ const Header = (() => {
     //     }
     // };
 
-    const loginOnClick =  async (e) => {
+    const loginOnClick =   (e) => {
         e.preventDefault();
         sessionStorage.setItem('redirect_url', window.location.href);
-        await callAuthorizationEndpoint();
+        callAuthorizationEndpoint();
     };
 
     const logoutOnClick = () => {
