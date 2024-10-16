@@ -34,8 +34,9 @@ export const getServerInfo = () => {
 
     const serverUrl = LocalStorageUtils.getValue(LocalStorageConstants.configServerURL) || localStorage.getItem('config.server_url') || 'oauth.deriv.com';
 
-    const appId = LocalStorageUtils.getValue(LocalStorageConstants.configAppId);
-    const lang = LocalStorageUtils.getValue(LocalStorageConstants.i18nLanguage);
+    const defaultAppId = WebSocketUtils.getAppId();
+    const appId = LocalStorageUtils.getValue(LocalStorageConstants.configAppId) || defaultAppId;
+    const lang = LocalStorageUtils.getValue(LocalStorageConstants.i18nLanguage) || 'en';
 
     return {
         appId,
