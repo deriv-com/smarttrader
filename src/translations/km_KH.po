@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-09-04 07:48\n"
+"PO-Revision-Date: 2024-10-17 05:02\n"
 "Last-Translator: \n"
 "Language-Team: Khmer\n"
 "MIME-Version: 1.0\n"
@@ -17,1844 +17,1844 @@ msgstr ""
 "Language: km_KH\n"
 
 msgid "404"
-msgstr ""
+msgstr "404"
 
 msgid "%1 and %2 cannot be the same."
-msgstr ""
+msgstr "%1 និង %2 មិនអាចដូចគ្នាបានទេ។"
 
 msgid "%1 days %2 hours %3 minutes"
-msgstr ""
+msgstr "%1 ថ្ងៃ %2 ម៉ោង %3 នាទី"
 
 msgid "%1 has been credited into your Virtual Account: %2."
-msgstr ""
+msgstr "%1 ត្រូវបានបញ្ចូលទៅក្នុងគណនីនិម្មិតរបស់អ្នកហើយ៖ %2។"
 
 msgid "%1Return to trading page%2"
-msgstr ""
+msgstr "%1ត្រឡប់ទៅទំព័រជួញដូរ%2"
 
 msgid "A whole new trading experience on a powerful yet easy to use platform."
-msgstr ""
+msgstr "បទពិសោធន៍ការជួញដូរថ្មីទាំងអស់នៅលើវេទិកាដ៏មានឥទ្ធិពល និងងាយស្រួលប្រើប្រាស់។"
 
 msgid "A word by itself is easy to guess"
-msgstr ""
+msgstr "ពាក្យតែឯងមួយៗនោះងាយស្រួលទាយ"
 
 msgid "AM"
-msgstr ""
+msgstr "ព្រឹក"
 
 msgid "Account Authenticated"
-msgstr ""
+msgstr "គណនីត្រូវបានផ្ទៀងផ្ទាត់ហើយ"
 
 msgid "Account access is temporarily limited. Please check your inbox for more details."
-msgstr ""
+msgstr "ការចូលប្រើគណនីត្រូវបានកំណត់ជាបណ្តោះអាសន្ន។ សូមពិនិត្យមើលប្រអប់សំបុត្ររបស់អ្នកសម្រាប់ព័ត៌មានលម្អិតបន្ថែម។"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "ការផ្ទៀងផ្ទាត់គណនី"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "សមតុល្យគណនី៖"
 
 msgid "Add"
-msgstr ""
+msgstr "បន្ថែម"
 
 msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
-msgstr ""
+msgstr "បន្ថែម +/ – ដើម្បីកំណត់សំណងសម្រាប់បន្ទាត់កម្រិតតម្លៃគោលដៅ (Barrier Offset)។ ឧទាហរណ៍ +0.005 មានន័យថាបន្ទាត់កម្រិតតម្លៃគោលដៅគឺ 0.005 ខ្ពស់ជាងចំណុចចូល។"
 
 msgid "Add another word or two. Uncommon words are better."
-msgstr ""
+msgstr "បន្ថែមពាក្យមួយឬពីរផ្សេងទៀត។ ប្រើពាក្យមិនធម្មតាល្អជាង។"
 
 msgid "Adjust trade parameters"
-msgstr ""
+msgstr "កែតម្រូវប៉ារ៉ាម៉ែត្រការជួញដូរ"
 
 msgid "Agree and accept"
-msgstr ""
+msgstr "យល់ព្រមនិងទទួលយក"
 
 msgid "All markets are closed now. Please try again later."
-msgstr ""
+msgstr "ទីផ្សារទាំងអស់ត្រូវបានបិទឥឡូវនេះ។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។"
 
 msgid "All-uppercase is almost as easy to guess as all-lowercase"
-msgstr ""
+msgstr "អក្សរធំទាំងអស់គឺស្ទើរតែងាយស្រួលទាយដូចអក្សរតូចទាំងអស់ដែរ។"
 
 msgid "Allow equals"
-msgstr ""
+msgstr "Allow equals"
 
 msgid "Already have an account?"
-msgstr ""
+msgstr "មានគណនីរួចហើយមែនទេ?"
 
 msgid "Apply now as a professional investor"
-msgstr ""
+msgstr "ដាក់ពាក្យឥឡូវនេះក្នុងនាមជាអ្នកវិនិយោគអាជីព"
 
 msgid "Apr"
-msgstr ""
+msgstr "មេសា"
 
 msgid "April"
-msgstr ""
+msgstr "ខែមេសា"
 
 msgid "Asian Down"
-msgstr ""
+msgstr "Asian Down"
 
 msgid "Asian Up"
-msgstr ""
+msgstr "Asian Up"
 
 msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "កិច្ចសន្យា Asian នឹងត្រូវបានសងវិញក្នុងតម្លៃទិញ ប្រសិនបើកិច្ចសន្យាមិនបញ្ចប់ក្នុងរយៈពេល 5 នាទី។"
 
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
-msgstr ""
+msgstr "អប់សិន Asian ដោះស្រាយដោយការប្រៀបធៀប <strong>ចំណុច Tick ចុងក្រោយ</strong> ជាមួយនឹងចំណុចមធ្យមក្នុងរយៈពេលនោះ។"
 
 msgid "Asians"
-msgstr ""
+msgstr "Asians"
 
 msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
-msgstr ""
+msgstr "នៅពេលកំណត់ឡើងវិញ ប្រសិនបើ spot ស្ថិតនៅក្នុងទិសដៅផ្ទុយពីការព្យាករណ៍របស់អ្នក ប្រព័ន្ធនឹងកំណត់បន្ទាត់តម្លៃគោលដៅឡើងវិញនៅចំណុចនោះ។"
 
 msgid "Audit"
-msgstr ""
+msgstr "ការត្រួតពិនិត្យ"
 
 msgid "Audit Page"
-msgstr ""
+msgstr "ទំព័រត្រួតពិនិត្យ"
 
 msgid "Audit page"
-msgstr ""
+msgstr "ទំព័រត្រួតពិនិត្យ"
 
 msgid "Aug"
-msgstr ""
+msgstr "សីហា"
 
 msgid "August"
-msgstr ""
+msgstr "ខែសីហា"
 
 msgid "Australian Dollar"
-msgstr ""
+msgstr "ដុល្លារអូស្ត្រាលី"
 
 msgid "Authenticate your account now to take full advantage of all payment methods available."
-msgstr ""
+msgstr "សូមផ្ទៀងផ្ទាត់គណនីរបស់អ្នកឥឡូវនេះ ដើម្បីទាញយកអត្ថប្រយោជន៍ពេញលេញពីវិធីបង់ប្រាក់ទាំងអស់ដែលមាន។"
 
 msgid "Automated trading at your fingertips. No coding needed."
-msgstr ""
+msgstr "ការជួញដូរដោយស្វ័យប្រវត្តិនៅត្រឹមចុងម្រាមដៃរបស់អ្នក។ ដោយមិនចាំបាច់សរសេរកូដទេ។"
 
 msgid "Average"
-msgstr ""
+msgstr "មធ្យម"
 
 msgid "Avoid dates and years that are associated with you"
-msgstr ""
+msgstr "ជៀសវាងកាលបរិច្ឆេទ និងឆ្នាំដែលពាក់ព័ន្ធជាមួយអ្នក"
 
 msgid "Avoid recent years"
-msgstr ""
+msgstr "ជៀសវាងឆ្នាំថ្មីៗនេះ"
 
 msgid "Avoid repeated words and characters"
-msgstr ""
+msgstr "ជៀសវាងប្រើពាក្យ និងតួអក្សរដដែលៗ"
 
 msgid "Avoid sequences"
-msgstr ""
+msgstr "ជៀសវាងការដាក់តាមលំដាប់"
 
 msgid "Avoid years that are associated with you"
-msgstr ""
+msgstr "ជៀសវាងឆ្នាំដែលទាក់ទងជាមួយអ្នក"
 
 msgid "Barrier"
-msgstr ""
+msgstr "បន្ទាត់តម្លៃគោលដៅ"
 
 msgid "Barrier change"
-msgstr ""
+msgstr "ការផ្លាស់ប្តូរបន្ទាត់តម្លៃគោលដៅ"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "កម្រិតសំណងបន្ទាត់កម្រិតតម្លៃគោលដៅ"
 
 msgid "Binance USD"
-msgstr ""
+msgstr "Binance USD"
 
 msgid "Binary Coin"
-msgstr ""
+msgstr "Binary Coin"
 
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 msgid "Buy"
-msgstr ""
+msgstr "ទិញ"
 
 msgid "Buy price"
-msgstr ""
+msgstr "តម្លៃទិញ"
 
 msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "តាមរយៈការទិញកិច្ចសន្យា %1\"Closs-Low\"%2 អ្នកនឹងឈ្នះទឹកប្រាក់ស្មើរនឹងការយក multiplier គុណនឹងភាពខុសគ្នារវាងតម្លៃ%1បិទ%2 និង%1ទាប%2 ក្នុងរយៈពេលនៃកិច្ចសន្យានោះ។"
 
 msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
-msgstr ""
+msgstr "តាមរយៈការទិញកិច្ចសន្យា %1\"High-Closs\"%2 អ្នកនឹងឈ្នះទឹកប្រាក់ស្មើរនឹងការយក multiplier គុណនឹងភាពខុសគ្នារវាងតម្លៃ%1ខ្ពស់%2 និង%1បិទ%2 ក្នុងរយៈពេលនៃកិច្ចសន្យានោះ។"
 
 msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
-msgstr ""
+msgstr "តាមរយៈការទិញកិច្ចសន្យា %1\"High-Low\"%2 អ្នកនឹងឈ្នះទឹកប្រាក់ស្មើរនឹងការយក multiplier គុណនឹងភាពខុសគ្នារវាងតម្លៃ%1ខ្ពស់%2 និង%1ទាប%2 ក្នុងរយៈពេលនៃកិច្ចសន្យានោះ។"
 
 msgid "Call Spread"
-msgstr ""
+msgstr "Call Spread"
 
 msgid "Call Spread/Put Spread"
-msgstr ""
+msgstr "Call Spread/Put Spread"
 
 msgid "Capitalization doesn't help very much"
-msgstr ""
+msgstr "ការប្រើអក្សរធំមិនបានជួយច្រើននោះទេ"
 
 msgid "Cashier"
-msgstr ""
+msgstr "បេឡា"
 
 msgid "Cashier disabled"
-msgstr ""
+msgstr "ប្រព័ន្ធបេឡាបានបិទ"
 
 msgid "Change API Endpoint"
-msgstr ""
+msgstr "ផ្លាស់ប្តូរ API ចំណុចបញ្ចប់"
 
 msgid "Chart"
-msgstr ""
+msgstr "គំនូសតាង"
 
 msgid "Chart is not available for this underlying."
-msgstr ""
+msgstr "គំនូសតាងមិនមានសម្រាប់ផលិតផលយោងនេះទេ។"
 
 msgid "Charting for this underlying is delayed"
-msgstr ""
+msgstr "គំនូសតាងសម្រាប់ផលិតផលយោងនេះត្រូវបានពន្យារពេល។"
 
 msgid "Check your connection."
-msgstr ""
+msgstr "ពិនិត្យការតភ្ជាប់របស់អ្នក។"
 
 msgid "Christmas Day"
-msgstr ""
+msgstr "ថ្ងៃបុណ្យណូអែល"
 
 msgid "Click OK to proceed."
-msgstr ""
+msgstr "ចុច OK ដើម្បីបន្ត។"
 
 msgid "Click here to open a Financial Account"
-msgstr ""
+msgstr "ចុចទីនេះដើម្បីបើកគណនី Finacial"
 
 msgid "Click here to open a Gaming account"
-msgstr ""
+msgstr "ចុចទីនេះដើម្បីបើកគណនីហ្គេម"
 
 msgid "Click here to open a Real Account"
-msgstr ""
+msgstr "ចុចទីនេះដើម្បីបើកគណនីពិត"
 
 msgid "Close"
-msgstr ""
+msgstr "បិទ"
 
 msgid "Close time"
-msgstr ""
+msgstr "ពេលវេលាបិទ"
 
 msgid "Close-Low"
-msgstr ""
+msgstr "Close-Low"
 
 msgid "Closes early (at 18:00)"
-msgstr ""
+msgstr "បិទមុនម៉ោង (នៅម៉ោង 18:00)"
 
 msgid "Closes early (at 21:00)"
-msgstr ""
+msgstr "បិទមុនម៉ោង (នៅម៉ោង 21:00)"
 
 msgid "Common names and surnames are easy to guess"
-msgstr ""
+msgstr "ឈ្មោះ និងនាមត្រកូលទូទៅងាយស្រួលទាយ"
 
 msgid "Complete details"
-msgstr ""
+msgstr "ព័ត៌មានលម្អិតពេញលេញ"
 
 msgid "Confirm changes"
-msgstr ""
+msgstr "បញ្ជាក់ការផ្លាស់ប្តូរ"
 
 msgid "Connecting to server"
-msgstr ""
+msgstr "កំពុងតភ្ជាប់ទៅម៉ាស៊ីនមេ"
 
 msgid "Continue trading"
-msgstr ""
+msgstr "បន្តការជួញដូរ"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "ការបញ្ជាក់កិច្ចសន្យា"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "ព័ត៌មានលម្អិតនៃកិច្ចសន្យា"
 
 msgid "Contract details"
-msgstr ""
+msgstr "ព័ត៌មានលម្អិតនៃកិច្ចសន្យា"
 
 msgid "Contract ends"
-msgstr ""
+msgstr "កិច្ចសន្យាបញ្ចប់"
 
 msgid "Contract has not started yet"
-msgstr ""
+msgstr "កិច្ចសន្យាមិនទាន់បានចាប់ផ្តើមនៅឡើយទេ"
 
 msgid "Contract information"
-msgstr ""
+msgstr "ព័ត៌មានកិច្ចសន្យា"
 
 msgid "Contract period"
-msgstr ""
+msgstr "រយៈពេលកិច្ចសន្យា"
 
 msgid "Contract result"
-msgstr ""
+msgstr "លទ្ធផលកិច្ចសន្យា"
 
 msgid "Contract starts"
-msgstr ""
+msgstr "កិច្ចសន្យាចាប់ផ្តើម"
 
 msgid "Contract type"
-msgstr ""
+msgstr "ប្រភេទកិច្ចសន្យា"
 
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "កិច្ចសន្យានឹងត្រូវបានលក់ក្នុងតម្លៃទីផ្សារដែលកំពុងមាន នៅពេលដែលម៉ាស៊ីនមេរបស់យើងទទួលបានសំណើបែបនេះ។ តម្លៃនេះអាចខុសពីតម្លៃដែលបានបញ្ជាក់។"
 
 msgid "Contracts bought"
-msgstr ""
+msgstr "កិច្ចសន្យាដែលបានទិញ"
 
 msgid "Contracts sold"
-msgstr ""
+msgstr "កិច្ចសន្យាដែលបានលក់"
 
 msgid "Crypto"
-msgstr ""
+msgstr "គ្រីបតូ"
 
 msgid "Currency"
-msgstr ""
+msgstr "រូបិយប័ណ្ណ"
 
 msgid "Current"
-msgstr ""
+msgstr "បច្ចុប្បន្ន"
 
 msgid "Current time"
-msgstr ""
+msgstr "ពេល​វេលា​បច្ចុប្បន្ន"
 
 msgid "Current time:"
-msgstr ""
+msgstr "ម៉ោងបច្ចុប្បន្ន៖"
 
 msgid "Dates are often easy to guess"
-msgstr ""
+msgstr "កាលបរិច្ឆេទនោះ​ច្រើន​តែ​ងាយ​ស្រួសស្មាន"
 
 msgid "Deal cancel. fee"
-msgstr ""
+msgstr "ថ្លៃសេវានៃការលុបចោលកិច្ចព្រមព្រៀង"
 
 msgid "Dec"
-msgstr ""
+msgstr "ខែធ្នូ"
 
 msgid "December"
-msgstr ""
+msgstr "ខែធ្នូ"
 
 msgid "Demo"
-msgstr ""
+msgstr "សាកល្បង"
 
 msgid "Demo Financial"
-msgstr ""
+msgstr "គណនីសាកល្បង Financial"
 
 msgid "Demo Financial STP"
-msgstr ""
+msgstr "គណនីសាកល្បង Financial STP"
 
 msgid "Demo Synthetic"
-msgstr ""
+msgstr "គណនីសាកល្បង Synthetic"
 
 msgid "Demo account"
-msgstr ""
+msgstr "គណនីសាកល្បង"
 
 msgid "Deposit"
-msgstr ""
+msgstr "ដាក់ប្រាក់"
 
 msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "ការដាក់ប្រាក់ និងការដកប្រាក់ត្រូវបានបិទសម្រាប់គណនីរបស់អ្នក។ សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកសម្រាប់ព័ត៌មានលម្អិតបន្ថែម។"
 
 msgid "Deriv "
-msgstr ""
+msgstr "Deriv "
 
 msgid "Deriv Apps"
-msgstr ""
+msgstr "កម្មវិធី Deriv"
 
 msgid "Deriv Apps accounts"
-msgstr ""
+msgstr "គណនីកម្មវិធី Deriv"
 
 msgid "Details"
-msgstr ""
+msgstr "ព័ត៌មានលម្អិត"
 
 msgid "Digit"
-msgstr ""
+msgstr "តួលេខ"
 
 msgid "Digit Differs"
-msgstr ""
+msgstr "Digit Differs"
 
 msgid "Digit Even"
-msgstr ""
+msgstr "Digit Even"
 
 msgid "Digit Matches"
-msgstr ""
+msgstr "Digit Matches"
 
 msgid "Digit Odd"
-msgstr ""
+msgstr "Digit Odd"
 
 msgid "Digit Over"
-msgstr ""
+msgstr "Digit Over"
 
 msgid "Digit Under"
-msgstr ""
+msgstr "Digit Under"
 
 msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "កិច្ចសន្យាបែប Digit នឹងត្រូវបានបង្វិលសងវិញក្នុងតម្លៃទិញ ប្រសិនបើកិច្ចសន្យាមិនបញ្ចប់ក្នុងរយៈពេល 5 នាទី។"
 
 msgid "Digits"
-msgstr ""
+msgstr "Digits"
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr ""
+msgstr "តើអ្នកចង់បញ្ចូលទឹកប្រាក់សម្រាប់ %1 ផ្សេងទៀតទេ? បើមិនចង់ទេ អ្នកអាចធ្វើវានៅពេលក្រោយនៅលើ %2ទំព័របេឡា%3 បានផងដែរ។"
 
 msgid "Does Not Touch"
-msgstr ""
+msgstr "Does Not Touch"
 
 msgid "Duration"
-msgstr ""
+msgstr "រយៈពេល"
 
 msgid "EU Deriv account"
-msgstr ""
+msgstr "គណនី Deriv EU"
 
 msgid "End Time"
-msgstr ""
+msgstr "ម៉ោងបញ្ចប់"
 
 msgid "End time"
-msgstr ""
+msgstr "ពេលវេលាបញ្ចប់"
 
 msgid "Endpoint"
-msgstr ""
+msgstr "ចំណុចបញ្ចប់"
 
 msgid "Ends Between"
-msgstr ""
+msgstr "Ends Between"
 
 msgid "Ends Between/Ends Outside"
-msgstr ""
+msgstr "Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "កិច្ចសន្យា Ends Between/Ends Outside នឹងត្រូវបង្វិលសងប្រាក់វិញតាមតម្លៃទិញ ប្រសិនបើមានចំនួន ticks តិចជាង 2 រវាងម៉ោងចាប់ផ្តើម និងម៉ោងបញ្ចប់កិច្ចសន្យា។"
 
 msgid "Ends Outside"
-msgstr ""
+msgstr "Ends Outside"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "ចំណុចចូល"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "ចំណុចចូល"
 
 msgid "Equals"
-msgstr ""
+msgstr "ស្មើ"
 
 msgid "Ether Classic"
-msgstr ""
+msgstr "Ether Classic"
 
 msgid "Ethereum"
-msgstr ""
+msgstr "Ethereum"
 
 msgid "Euro"
-msgstr ""
+msgstr "អឺរ៉ូ"
 
 msgid "Even/Odd"
-msgstr ""
+msgstr "Even/Odd"
 
 msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "កិច្ចសន្យាបែប Even/Odd នឹងបង្វិលសងវិញតាមតម្លៃទិញ ប្រសិនបើកិច្ចសន្យាមិនបញ្ចប់ក្នុងរយៈពេល 5 នាទី។"
 
 msgid "Exclude time cannot be for more than 5 years."
-msgstr ""
+msgstr "រយៈពេលសម្រាកមិនអាចលើសពី 5 ឆ្នាំទេ។"
 
 msgid "Exclude time cannot be less than 6 months."
-msgstr ""
+msgstr "រយៈពេលសម្រាកមិនអាចតិចជាង 6 ខែទេ។"
 
 msgid "Excluded from the website until"
-msgstr ""
+msgstr "ដកខ្លូនចេញពីការប្រើគេហទំព័ររហូតដល់"
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "ចំណុចចេញ"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "ចំណុចចេញ"
 
 msgid "Exit spot time"
-msgstr ""
+msgstr "ពេលវេលានៅចំណុចចេញ"
 
 msgid "Exit time"
-msgstr ""
+msgstr "ពេលវេលាបញ្ចប់"
 
 msgid "Explanation"
-msgstr ""
+msgstr "ការពន្យល់"
 
 msgid "Fall"
-msgstr ""
+msgstr "Fall"
 
 msgid "Fall or equal"
-msgstr ""
+msgstr "Fall ឬស្មើ"
 
 msgid "Feb"
-msgstr ""
+msgstr "កុម្ភៈ"
 
 msgid "February"
-msgstr ""
+msgstr "ខែកុម្ភៈ"
 
 msgid "Fiat"
-msgstr ""
+msgstr "Fiat"
 
 msgid "Final price"
-msgstr ""
+msgstr "តម្លៃចុងក្រោយ"
 
 msgid "Financial"
-msgstr ""
+msgstr "គណនី Financial"
 
 msgid "Financial STP"
-msgstr ""
+msgstr "គណនី Financial STP"
 
 msgid "Finish"
-msgstr ""
+msgstr "រួចរាល់"
 
 msgid "Fr"
-msgstr ""
+msgstr "សុក្រ"
 
 msgid "Friday"
-msgstr ""
+msgstr "ថ្ងៃសុក្រ"
 
 msgid "Fridays"
-msgstr ""
+msgstr "ថ្ងៃសុក្រ"
 
 msgid "Gaming"
-msgstr ""
+msgstr "ហ្គេម"
 
 msgid "Go To Reports"
-msgstr ""
+msgstr "ចូលទៅកាន់របាយការណ៍"
 
 msgid "Go back"
-msgstr ""
+msgstr "ត្រលប់ក្រោយ"
 
 msgid "Go to statement"
-msgstr ""
+msgstr "ត្រលប់ទៅរបាយការណ៍គណនី"
 
 msgid "Goes Outside"
-msgstr ""
+msgstr "Goes Outside"
 
 msgid "Guide"
-msgstr ""
+msgstr "ការណែនាំ"
 
 msgid "High"
-msgstr ""
+msgstr "ខ្ពស់"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "បន្ទាត់កម្រិតតម្លៃគោលដៅខាងលើ"
 
 msgid "High Tick"
-msgstr ""
+msgstr "High Tick"
 
 msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
-msgstr ""
+msgstr "កិច្ចសន្យាបែប High Tick/Low Tick មានរយៈពេលកំណត់ដ៏តឹងរ៉ឹងនៅចន្លោះចំណុច Tick 5 ចំណុច។"
 
 msgid "High barrier"
-msgstr ""
+msgstr "បន្ទាត់កម្រិតតម្លៃគោលដៅខាងលើ"
 
 msgid "High barrier must be higher than low barrier"
-msgstr ""
+msgstr "បន្ទាត់តម្លៃគោលដៅខាងលើត្រូវតែខ្ពស់ជាបន្ទាត់តម្លៃគោលដៅខាងក្រោម"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "ផ្នែកសំណងសម្រាប់បន្ទាត់កម្រិតតម្លៃគោលដៅខាងលើ"
 
 msgid "High, Low and Close"
-msgstr ""
+msgstr "High, Low និង Close"
 
 msgid "High-Close"
-msgstr ""
+msgstr "High-Close"
 
 msgid "High-Low"
-msgstr ""
+msgstr "High-Low"
 
 msgid "High/Low Ticks"
-msgstr ""
+msgstr "High/Low Ticks"
 
 msgid "Higher"
-msgstr ""
+msgstr "Higher"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Higher/Lower"
 
 msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "កិច្ចសន្យា Higher/Lower នឹងត្រូវបង្វិលសងប្រាក់វិញតាមតម្លៃទិញ ប្រសិនបើមានចំនួន ticks តិចជាង 2 រវាងម៉ោងចាប់ផ្តើម និងម៉ោងបញ្ចប់កិច្ចសន្យា។"
 
 msgid "Hour"
-msgstr ""
+msgstr "ម៉ោង"
 
 msgid "I want to reapply"
-msgstr ""
+msgstr "ខ្ញុំចង់ដាក់ពាក្យម្តងទៀត"
 
 msgid "IDK"
-msgstr ""
+msgstr "IDK"
 
 msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "ប្រសិនបើ <strong>ចំណុចចេញ</strong> ស្មើនឹង <strong>បន្ទាត់គោលដៅទាប</strong> ឬ <strong>បន្ទាត់គោលដៅខាងលើ</strong> អ្នកនឹងមិនទទួលបានប្រាក់នោះទេ។"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr ""
+msgstr "ប្រសិនបើ <strong>ចំណុចចេញ</strong> នោះស្មើនឹង <strong>បន្ទាត់តម្លៃគោលដៅ</strong> ឬ <strong>បន្ទាត់តម្លៃគោលដៅថ្មី (ក្នុងករណីមានការកំណត់ឡើងវិញ)</strong> អ្នកនឹងទទួលបានប្រាក់សំណង។"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
-msgstr ""
+msgstr "ប្រសិនបើ <strong>ចំណុចចេញ</strong> គឺស្មើនឹង <strong>បន្ទាត់តម្លៃគោលដៅ</strong> ឬ <stronm g>បន្ទាត់តម្លៃគោលដៅថ្មី (ក្នុងករណីមានការកំណត់ឡើងវិញ)</stronmg> អ្នកនឹងមិនទទួលបានប្រាក់ទេ។"
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
-msgstr ""
+msgstr "ប្រសិនបើ <strong>ចំណុចចេញ</strong> មានតម្លៃស្មើនឹង <strong>បន្ទាត់តម្លៃគោលដៅ</strong> អ្នកនឹងមិនទទួលបានប្រាក់សំណងទេ។"
 
 msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
-msgstr ""
+msgstr "ប្រសិនបើ <strong>ចំណុច Tick ចុងក្រោយ</strong> គឺស្មើនឹងតម្លៃមធ្យមនៃចំណុច Tick ទាំងអស់ អ្នកនឹងមិនទទួលបានប្រាក់សំណងទេ។"
 
 msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Allow equals\" អ្នកនឹងឈ្នះបានប្រាក់សំណង ប្រសិនបើកចំណុចចេញខ្ពស់ជាង ឬស្មើនឹងចំណុចចូលសម្រាប់ \"Rise\"។ ដូចគ្នានេះដែរ អ្នកឈ្នះបានប្រាក់សំណង ប្រសិនបើកចំណុចចេញទាបជាង ឬស្មើនឹងចំណុចចូលសម្រាប់ \"Fall\"។"
 
 msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Asian Fall\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុច Tick ចុងក្រោយ</strong> <strong>ទាប</strong> ជាង <strong>តម្លៃមធ្យម</strong> នៃចំណុច Tick។"
 
 msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Asian Rise\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុច Tick ចុងក្រោយ</strong> <strong>ខ្ពស់</strong> ជាង <strong>តម្លៃមធ្យម</strong> នៃចំណុច Tick។"
 
 msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Differs\" អ្នកនឹងឈ្នះប្រាក់សំណងប្រសិនបើ <strong>លេខខ្ទង់ចុងក្រោយ</strong> នៃចំណុច Tick ចុងក្រោយគឺ <strong>មិនដូចគ្នា</strong> ទៅនឹង <strong>ការទស្សន៍ទាយ</strong> របស់អ្នក។"
 
 msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Does Not Touch\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើទីផ្សារមិនដែលប៉ះ <strong>បន្ទាត់តម្លៃគោលដៅឬ barrier</strong> នៅពេលណាក៏បានក្នុងអំឡុងពេល <strong>រយៈពេលកិច្ចសន្យា</strong>។"
 
 msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Ends Between\" អ្នកនឹងឈ្នះប្រាក់សំណងប្រសិនបើ <strong>ចំណុចចេញ</strong> គឺខ្ពស់ជាង<strong>បន្ទាត់តម្លៃគោលដៅខាងក្រោម</strong> ហើយទាបជាង <strong>បន្ទាត់តម្លៃគោលដៅខាងលើ</strong>។"
 
 msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Ends Outside\" អ្នកនឹងឈ្នះប្រាក់សំណងប្រសិនបើ <strong>ចំណុចចេញ</strong> គឺខ្ពស់ជាង <strong>បន្ទាត់តម្លៃគោលដៅខាងលើ</strong> ឬទាបជាង <strong>បន្ទាត់តម្លៃគោលដៅខាងក្រោម</strong>។"
 
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Even\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>លេខខ្ទង់ចុងក្រោយ</strong> នៃចំណុច Tick ចុងក្រោយមានតម្លៃជា <strong>លេខគូ (ឧ. 2, 4, 6, 8, ឬ 0)។</strong>"
 
 msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Fall\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> ទាបជាង <strong>ចំណុចចូល</strong>។"
 
 msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Falls\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> ទាបជាង <strong>ចំណុចចូល</strong>។"
 
 msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Goes Outside\" អ្នកនឹងឈ្នះប្រាក់សំណងប្រសិនបើទីផ្សារប៉ះនឹង <strong>បន្ទាត់តម្លៃគោលដៅខាងលើ</strong> ឬ <strong>បន្ទាត់តម្លៃគោលដៅខាងក្រោម</strong> នៅពេលណាមួយក្នុងអំឡុងពេល <strong>រយៈពេលកិច្ចសន្យា</strong>។"
 
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Higher\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> មានតម្លៃខ្ពស់ជាង <strong>បន្ទាត់តម្លៃគោលដៅ</strong>។"
 
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Lower\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> មានតម្លៃទាបជាង <strong>បន្ទាត់តម្លៃគោលដៅ</strong>។"
 
 msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Matches\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ<strong>លេខខ្ទង់ចុងក្រោយ</strong>នៃចំណុច Tick ចុងក្រោយមានតម្លៃ<strong>ដូចគ្នា</strong>នឹង<strong>ការព្យាករណ៍</strong>របស់អ្នក។"
 
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Odd\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>លេខខ្ទង់ចុងក្រោយ</strong> នៃចំណុច Tick ចុងក្រោយជា <strong>លេខសេស (ឧ. 1, 3, 5, 7, ឬ 9)។</strong>"
 
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Over\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>លេខខ្ទង់ចុងក្រោយ</strong> នៃចំណុច Tick ចុងក្រោយមានតម្លៃ <strong>ធំជាងការទស្សន៍ទាយរបស់អ្នក។</strong>"
 
 msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Reset-Call\" អ្នកឈ្នះប្រាក់សំណង ប្រសិនបើកចំណុចចេញគឺខ្ពស់ជាងចំណុចចូល ឬចំណុចនៅពេលកំណត់ឡើងវិញ។"
 
 msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Reset-Put\" អ្នកឈ្នះប្រាក់សំណង ប្រសិនបើកចំណុចចេញគឺទាបជាងចំណុចចូល ឬចំណុចនៅពេលកំណត់ឡើងវិញ។"
 
 msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Rise\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> ខ្ពស់ជាង <strong>ចំណុចចូល</strong>។"
 
 msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Rises\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>ចំណុចចេញ</strong> ខ្ពស់ជាង <strong>ចំណុចចូល</strong>។"
 
 msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Stays Between\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើទីផ្សារស្ថិតនៅចន្លោះ (មិនប៉ះ) ទាំង <strong>បន្ទាត់តម្លៃគោលដៅខាងលើ</strong> ឬ <strong>បន្ទាត់តម្លៃគោលដៅខាងក្រោម</strong> នៅពេលណាមួយក្នុងអំឡុង <strong>រយៈពេលកិច្ចសន្យា</strong>។"
 
 msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Touches\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើទីផ្សារប៉ះនឹង <strong>បន្ទាត់តម្លៃគោលដៅ</strong> នៅពេលណាមួយក្នុងអំឡុង <strong>រយៈពេលកិច្ចសន្យា</strong>។"
 
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"Uder\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើ <strong>លេខខ្ទង់ចុងក្រោយ</strong> នៃចំណុច Tick ចុងក្រោយមានតម្លៃ <strong>តិចជាងការទស្សន៍ទាយរបស់អ្នក។</strong>"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"falls\" អ្នកឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារទាបជាង <strong>ចំណុចចូល</strong>។"
 
 msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"falls\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារទាបជាងតម្លៃចំណុចចូល។"
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"rises\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារខ្ពស់ជាង <strong>ចំណុចូល</strong>។"
 
 msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស \"rises\" អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារខ្ពស់ជាងតម្លៃចំណុចចូល។"
 
 msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស %1\"High Tick\"%2 អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើចំណុច Tick ដែលបានជ្រើសរើសគឺ %1ខ្ពស់បំផុតក្នុងចំណោមចំណុច Tick ប្រាំចំណុចបន្ទាប់%2។"
 
 msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស %1\"Low Tick\"%2 អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើចំណុច Tick ដែលបានជ្រើសរើសគឺ %1ទាបបំផុតក្នុងចំណោមចំណុច Tick ប្រាំចំណុចបន្ទាប់%2។"
 
 msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស %1\"Only Downs\"%2 អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើចំណុច Tick មានតម្លៃនៅជាប់ៗគ្នាធ្លាក់ចុះជាបន្តបន្ទាប់បន្ទាប់ពី %1ចំណុចចូល%2។ %3 អ្នកនឹងមិនទទួលបានប្រាក់សំណងទេ ប្រសិនបើចំណុច Tick ណាមួយកើនឡើង ឬស្មើនឹងចំណុច Tick ណាមួយពីមុន។"
 
 msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស %1\"Only Ups\"% 2 អ្នកនឹងឈ្នះប្រាក់សំណងប្រសិនបើចំណុច Tick ដែលជាប់ៗគ្នាកើនឡើងជាបន្តបន្ទាប់បន្ទាប់ពី %1ចំណុចចូល%2។ %3 អ្នកនឹងមិនទទួលបានប្រាក់សំណងប្រសិនបើចំណុច Tick ណាមួយធ្លាក់ ឬស្មើនឹងចំណុច Tick ណាមួយពីមុន។"
 
 msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស <strong>ពេលវេលាចាប់ផ្តើម</strong> នៅពេលអនាគតនោះ <strong>ពេលវេលាចាប់ផ្តើម</strong> ដែលបានជ្រើសរើសគឺ <strong>ចំណុចចូល</strong> ដែលបង្ហាញពីតម្លៃដែលមានប្រសិទ្ធភាពនៅពេលនោះ។"
 
 msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស <strong>ម៉ោងចាប់ផ្តើម</strong> ជា \"ឥឡូវនេះ\" នោះ <strong>ម៉ោងបញ្ចប់</strong> នឹងជាចំនួនម៉ោង និងនាទីបន្ទាប់ពី <strong>ពេលវេលាចាប់ផ្តើម</strong> (ប្រសិនបើរយៈពេលតិចជាង 1 ថ្ងៃ) ឬនៅចុងបញ្ចប់នៃការជួញដូរប្រចាំថ្ងៃ។ (ប្រសិនបើរយៈពេលគឺ 1 ថ្ងៃឬច្រើនជាងនេះ)"
 
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
-msgstr ""
+msgstr "ប្រសិនបើអ្នកជ្រើសរើស <strong>ម៉ោងបញ្ចប់</strong>ជាក់លាក់ នោះ <strong>ម៉ោងបញ្ចប់</strong> គឺជាពេលវេលាដែលបានជ្រើសរើស។"
 
 msgid "In the EU, financial binary options are only available to professional investors."
-msgstr ""
+msgstr "នៅក្នុងសហភាពអឺរ៉ុប ផលិតផលហិរញ្ញវត្ថុគោលពីរ ឬ biary options មានសម្រាប់តែអ្នកវិនិយោគដែលមានជំនាញវិជ្ជាជីវៈប៉ុណ្ណោះ។"
 
 msgid "In/Out"
-msgstr ""
+msgstr "In/Out"
 
 msgid "Indicates required field"
-msgstr ""
+msgstr "បញ្ជាក់ចន្លោះដែលត្រូវការបំពេញ"
 
 msgid "Indicative"
-msgstr ""
+msgstr "បានបង្ហាញនៅពេលនោះ"
 
 msgid "Indicative barrier"
-msgstr ""
+msgstr "បន្ទាត់តម្លៃគោលដៅចង្អុលបង្ហាញ"
 
 msgid "Invalid app id"
-msgstr ""
+msgstr "លេខសម្គាល់កម្មវិធីមិនត្រឹមត្រូវ"
 
 msgid "Invalid email address."
-msgstr ""
+msgstr "អាសយដ្ឋានអ៊ីមែលមិនត្រឹមត្រូវ។"
 
 msgid "Invalid verification code."
-msgstr ""
+msgstr "លេខកូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ។"
 
 msgid "Investment"
-msgstr ""
+msgstr "ការវិនិយោគ"
 
 msgid "Jan"
-msgstr ""
+msgstr "មករា"
 
 msgid "January"
-msgstr ""
+msgstr "ខែមករា"
 
 msgid "Jul"
-msgstr ""
+msgstr "កក្កដា"
 
 msgid "July"
-msgstr ""
+msgstr "ខែកក្កដា"
 
 msgid "Jun"
-msgstr ""
+msgstr "មិថុនា"
 
 msgid "June"
-msgstr ""
+msgstr "ខែមិថុនា"
 
 msgid "Language settings"
-msgstr ""
+msgstr "ការកំណត់ភាសា"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "ការព្យាករណ៍លេខខ្ទង់ចុងក្រោយ"
 
 msgid "Last Digit Stats"
-msgstr ""
+msgstr "ស្ថិតិលេខខ្ទង់ចុងក្រោយ"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr ""
+msgstr "ស្ថិតិលេខខ្ទង់ចុងក្រោយសម្រាប់ %1 ចំណុច Tick ចុងក្រោយបំផុតនៅលើ %2"
 
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 msgid "Live chat"
-msgstr ""
+msgstr "ការជជែកផ្ទាល់"
 
 msgid "Log in"
-msgstr ""
+msgstr "ចូលប្រព័ន្ធ"
 
 msgid "Log in here"
-msgstr ""
+msgstr "ចូលប្រព័ន្ធនៅទីនេះ"
 
 msgid "Log out"
-msgstr ""
+msgstr "ចាកចេញ"
 
 msgid "Login ID"
-msgstr ""
+msgstr "លេខសម្គាល់ចូលប្រព័ន្ធ"
 
 msgid "Login at:"
-msgstr ""
+msgstr "ចូលប្រព័ន្ធ​នៅ៖"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Looking for CFD accounts? Go to Trader's hub"
-msgstr ""
+msgstr "កំពុងរកមើលគណនី CFD មែនទេ? ចូលទៅកាន់ Trader's hub"
 
 msgid "Looking for CFDs? Go to Trader's hub"
-msgstr ""
+msgstr "កំពុងរកមើល CFD មែនទេ? ចូលទៅកាន់ Trader's hub"
 
 msgid "Loss"
-msgstr ""
+msgstr "ខាតបង់"
 
 msgid "Low"
-msgstr ""
+msgstr "ទាប"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "បន្ទាត់កម្រិតតម្លៃគោលដៅខាងក្រោម"
 
 msgid "Low Tick"
-msgstr ""
+msgstr "Low Tick"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "កម្រិត​តម្លៃ​គោល​ដៅ​ខាងក្រោម"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "ផ្នែកសំណងសម្រាប់បន្ទាត់កម្រិតតម្លៃគោលដៅខាងក្រោម"
 
 msgid "Lower"
-msgstr ""
+msgstr "Lower"
 
 msgid "MT5"
-msgstr ""
+msgstr "MT5"
 
 msgid "MT5 withdrawal disabled"
-msgstr ""
+msgstr "ការដកប្រាក់ MT5 ត្រូវបានបិទ"
 
 msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "ការដកប្រាក់ MT5 ត្រូវបានបិទនៅលើគណនីរបស់អ្នក។ សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកសម្រាប់ព័ត៌មានលម្អិតបន្ថែម។"
 
 msgid "Manage accounts"
-msgstr ""
+msgstr "គ្រប់គ្រងគណនី"
 
 msgid "Manage funds"
-msgstr ""
+msgstr "គ្រប់គ្រងទឹកប្រាក់"
 
 msgid "Mar"
-msgstr ""
+msgstr "មីនា"
 
 msgid "March"
-msgstr ""
+msgstr "ខែមីនា"
 
 msgid "Market"
-msgstr ""
+msgstr "ទីផ្សារ"
 
 msgid "Matches/Differs"
-msgstr ""
+msgstr "Matches/Differs"
 
 msgid "Maximum multiplier of 1000."
-msgstr ""
+msgstr "Multiplier អតិបរមា 1000 ។"
 
 msgid "Maximum payout"
-msgstr ""
+msgstr "ប្រាក់សំណងអតិបរមា"
 
 msgid "Maximum:"
-msgstr ""
+msgstr "អតិបរមា៖"
 
 msgid "May"
-msgstr ""
+msgstr "ឧសភា"
 
 msgid "Menu"
-msgstr ""
+msgstr "ម៉ឺនុយ"
 
 msgid "Minimum of %1 characters required."
-msgstr ""
+msgstr "តម្រូវ​ឱ្យ​មាន​អក្សរ​យ៉ាងតិច %1 តួអក្សរ។"
 
 msgid "Minimum:"
-msgstr ""
+msgstr "តម្លៃអប្បបរមា៖"
 
 msgid "Minute"
-msgstr ""
+msgstr "នាទី"
 
 msgid "Mo"
-msgstr ""
+msgstr "ចន្ទ"
 
 msgid "Monday"
-msgstr ""
+msgstr "ថ្ងៃចន្ទ"
 
 msgid "More information can be found in an email sent to you."
-msgstr ""
+msgstr "ព័ត៌មានបន្ថែមអាចរកអានបាននៅក្នុងអ៊ីមែលដែលបានផ្ញើទៅអ្នក។"
 
 msgid "Multi-Collateral"
-msgstr ""
+msgstr "វត្ថុបញ្ចាំច្រើន"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplier"
 
 msgid "Multiplier Down"
-msgstr ""
+msgstr "Multiplier Down"
 
 msgid "Multiplier Up"
-msgstr ""
+msgstr "Multiplier Up"
 
 msgid "Multipliers"
-msgstr ""
+msgstr "Multipliers"
 
 msgid "Names and surnames by themselves are easy to guess"
-msgstr ""
+msgstr "ឈ្មោះនិងនាមត្រកូលនោះគឺងាយស្រួលទាយ"
 
 msgid "Net profit"
-msgstr ""
+msgstr "ប្រាក់ចំណេញសុទ្ធ"
 
 msgid "Network status"
-msgstr ""
+msgstr "ស្ថានភាពបណ្តាញ"
 
 msgid "New Year's Day"
-msgstr ""
+msgstr "ថ្ងៃចូលឆ្នាំថ្មី"
 
 msgid "Next"
-msgstr ""
+msgstr "បន្ទាប់"
 
 msgid "No currency assigned"
-msgstr ""
+msgstr "មិនបានកំណត់រូបិយប័ណ្ណទេ"
 
 msgid "No currency selected"
-msgstr ""
+msgstr "មិនបានជ្រើសរើសរូបិយប័ណ្ណទេ"
 
 msgid "No need for symbols, digits, or uppercase letters"
-msgstr ""
+msgstr "មិនចាំបាច់មាននិមិត្តសញ្ញា តួលេខ ឬអក្សរធំទេ"
 
 msgid "No notifications"
-msgstr ""
+msgstr "គ្មានការជូនដំណឹងទេ"
 
 msgid "Non-EU Deriv "
-msgstr ""
+msgstr "គណនី Deriv ក្រៅសហភាពអឺរ៉ុប "
 
 msgid "Not"
-msgstr ""
+msgstr "Not"
 
 msgid "Note"
-msgstr ""
+msgstr "ចំណាំ"
 
 msgid "Notifications"
-msgstr ""
+msgstr "ការជូនដំណឹង"
 
 msgid "Nov"
-msgstr ""
+msgstr "វិច្ឆិកា"
 
 msgid "November"
-msgstr ""
+msgstr "ខែវិច្ឆិកា"
 
 msgid "Now"
-msgstr ""
+msgstr "ឥឡូវ​នេះ"
 
 msgid "Number of ticks:"
-msgstr ""
+msgstr "ចំនួនចំណុច Tick៖"
 
 msgid "OAuth App ID"
-msgstr ""
+msgstr "លេខសម្គាល់កម្មវិធី OAuth"
 
 msgid "Oct"
-msgstr ""
+msgstr "តុលា"
 
 msgid "October"
-msgstr ""
+msgstr "ខែតុលា"
 
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 msgid "Online"
-msgstr ""
+msgstr "អនឡាញ"
 
 msgid "Online trading platform"
-msgstr ""
+msgstr "វេទិកាជួញដូរអនឡាញ"
 
 msgid "Only Downs"
-msgstr ""
+msgstr "Only Downs"
 
 msgid "Only Ups"
-msgstr ""
+msgstr "Only Ups"
 
 msgid "Only letters, numbers, space, and hyphen are allowed."
-msgstr ""
+msgstr "មានតែអក្សរ លេខ ដកឃ្លា និងសហសញ្ញាតែប៉ុណ្ណោះដែលត្រូវបានអនុញ្ញាតឲ្យប្រើ។"
 
 msgid "Only letters, numbers, space, and these special characters are allowed: %1"
-msgstr ""
+msgstr "មានតែអក្សរ លេខ ដកឃ្លា និងតួអក្សរពិសេសទាំងនេះប៉ុណ្ណោះដែលត្រូវបានអនុញ្ញាតឲ្យប្រើ៖%1"
 
 msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "អនុញ្ញាត​ឱ្យ​មាន​តែ​អក្សរ លេខ ដកឃ្លា សហសញ្ញា សញ្ញាចុច និង​សញ្ញា apostrophe ប៉ុណ្ណោះ​។"
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
-msgstr ""
+msgstr "អនុញ្ញាត​ឱ្យ​មាន​តែ​អក្សរ ដកឃ្លា សហសញ្ញា សញ្ញាចុច និង​សញ្ញា apostrophe ប៉ុណ្ណោះ​។"
 
 msgid "Oops... Page Not Available"
-msgstr ""
+msgstr "អូ៎... គេហទំព័រមិនអាចប្រើបានទេ"
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "បើកគណនី Financial"
 
 msgid "Open a Real Account"
-msgstr ""
+msgstr "បើកគណនីពិត"
 
 msgid "Open a free account"
-msgstr ""
+msgstr "បើកគណនីដែលឥតគិតថ្លៃ"
 
 msgid "Open positions"
-msgstr ""
+msgstr "មុខតំណែងការងារដែលបើក"
 
 msgid "Options & Multipliers"
-msgstr ""
+msgstr "អប់សិន & Multipliers"
 
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
-msgstr ""
+msgstr "ការជួញដូរអប់សិនអាចក្លាយទៅជាការ ញៀនពិតប្រាកដ ក៏ដូចជាសកម្មភាពដទៃទៀតដែលត្រូវបានជំរុញដល់ដែនកំណត់របស់វា។ ដើម្បីចៀសវាងគ្រោះថ្នាក់នៃការញៀនបែបនេះ យើងផ្តល់ការត្រួតពិនិត្យការពិតឬ reality-check ដែលផ្តល់ឱ្យអ្នកនូវសេចក្តីសង្ខេបនៃការជួញដូរ និងគណនីរបស់អ្នកជាប្រចាំ។"
 
 msgid "Over/Under"
-msgstr ""
+msgstr "Over/Under"
 
 msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
-msgstr ""
+msgstr "កិច្ចសន្យាបែប Over/Under នឹងបង្វិលសងវិញតាមតម្លៃទិញ ប្រសិនបើកិច្ចសន្យាមិនបញ្ចប់ក្នុងរយៈពេល 5 នាទី។"
 
 msgid "PM"
-msgstr ""
+msgstr "ល្ងាច"
 
 msgid "Password should have lower and uppercase English letters with numbers."
-msgstr ""
+msgstr "ពាក្យ​សម្ងាត់​គួរ​មាន​អក្សរ​អង់គ្លេស​តូច និង​ធំ​ជាមួយ​លេខ។"
 
 msgid "Paxos Standard"
-msgstr ""
+msgstr "ស្តង់ដារ Paxos"
 
 msgid "Pay-out"
-msgstr ""
+msgstr "ប្រាក់សំណង"
 
 msgid "Payout"
-msgstr ""
+msgstr "ប្រាក់សំណង"
 
 msgid "Payout range"
-msgstr ""
+msgstr "ចន្លោះតួលេខប្រាក់សំណង"
 
 msgid "Percentage"
-msgstr ""
+msgstr "ភាគរយ"
 
 msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "សូម %1បំពេញកម្រងព័ត៌មានគណនីរបស់អ្នក%2 ដើម្បីដកដែនកំណត់ការដកប្រាក់ និងការជួញដូររបស់អ្នក។"
 
 msgid "Please %1log in%2 or %3sign up%4 to view this page."
-msgstr ""
+msgstr "សូម %1ចូលប្រព័ន្ធ%2 ឬ %3ចុះឈ្មោះ%4 ដើម្បីមើលទំព័រនេះ។"
 
 msgid "Please accept the terms and conditions."
-msgstr ""
+msgstr "សូមទទួលយកលក្ខខណ្ឌផ្សេងៗ។"
 
 msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
-msgstr ""
+msgstr "សូមបំពេញ %1ទម្រង់គណនីពិត%2 ដើម្បីផ្ទៀងផ្ទាត់អាយុរបស់អ្នកតាមតម្រូវការដោយ %3UK Gambling%4 Commission (UKGC)។"
 
 msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "សូមបំពេញ %1ទម្រង់ការវាយតម្លៃហិរញ្ញវត្ថុ%2 បំពេញវាដើម្បីលុបចោលដែនកំណត់នៃការជួញដូរ និងការដកប្រាក់របស់អ្នក។"
 
 msgid "Please confirm that you are not a politically exposed person."
-msgstr ""
+msgstr "សូម​បញ្ជាក់​ថា អ្នក​មិន​មែន​ជា​អ្នក​លាតត្រដាង​ខាង​នយោបាយ​ទេ។"
 
 msgid "Please ensure that you have the Telegram app installed on your device."
-msgstr ""
+msgstr "សូមប្រាកដថាអ្នកបានដំឡើងកម្មវិធី Telegram នៅលើឧបករណ៍របស់អ្នក។"
 
 msgid "Please enter a valid phone number (e.g. +15417541234)."
-msgstr ""
+msgstr "សូមបញ្ចូលលេខទូរស័ព្ទដែលត្រឹមត្រូវ (ឧ. +15417541234)។"
 
 msgid "Please reapply once the required criteria has been fulfilled."
-msgstr ""
+msgstr "សូមដាក់ពាក្យម្តងទៀត នៅពេលដែលអ្នកបំពេញតាមលក្ខខណ្ឌដែលបានកំណត់។"
 
 msgid "Please reload the page"
-msgstr ""
+msgstr "សូមទាញយកទំព័រនេះឡើងវិញ"
 
 msgid "Please select"
-msgstr ""
+msgstr "សូមជ្រើសរើស"
 
 msgid "Please select a valid time."
-msgstr ""
+msgstr "សូមជ្រើសរើសពេលវេលាដែលត្រឹមត្រូវ។"
 
 msgid "Please select the checkbox."
-msgstr ""
+msgstr "សូមជ្រើសរើសប្រអប់ធីក។"
 
 msgid "Please set the currency of your account."
-msgstr ""
+msgstr "សូមកំណត់រូបិយប័ណ្ណនៃគណនីរបស់អ្នក។"
 
 msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
-msgstr ""
+msgstr "សូមកំណត់ %ដែនកំណត់ការជួញដូរសម្រាប់ 130 ថ្ងៃ%2 របស់អ្នក ដើម្បីលុបដែនកំណត់ការដាក់ប្រាក់។"
 
 msgid "Please specify your preferred interval reality check in minutes:"
-msgstr ""
+msgstr "សូមបញ្ជាក់រយៈពេលនៃការធ្វើតេស្តការពិតដែលអ្នកចង់បានជានាទី៖"
 
 msgid "Please submit your proof of address."
-msgstr ""
+msgstr "សូមដាក់បញ្ជូនឯកសារបញ្ជាក់អាសយដ្ឋានរបស់អ្នក។"
 
 msgid "Please submit your proof of identity."
-msgstr ""
+msgstr "សូមដាក់បញ្ជូនឯកសារបញ្ជាក់អត្តសញ្ញាណរបស់អ្នក។"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "ប្រាក់សំណងដែលអាចទទួលបាន"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "ប្រាក់ចំណេញដែលអាចទទួលបាន"
 
 msgid "Potential payout"
-msgstr ""
+msgstr "ប្រាក់សំណងដែលអាចទទួលបាន"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "ប្រាក់ចំណេញដែលអាចធ្វើបាន"
 
 msgid "Potential profit/loss"
-msgstr ""
+msgstr "ប្រាក់ចំណេញ/ខាតដែលអាចទទួលបាន"
 
 msgid "Pound Sterling"
-msgstr ""
+msgstr "ផោន Sterling"
 
 msgid "Predict the direction<br />and purchase"
-msgstr ""
+msgstr "ទស្សន៍ទាយទិសដៅ<br/>និងការទិញ"
 
 msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
-msgstr ""
+msgstr "ការជំនួសដោយតួអក្សរដែលអាចទស្សន៍ទាយបានដូចជា '@' ជំនួស 'a' វិញនោះមិនជួយបានច្រើនទេ។"
 
 msgid "Previous"
-msgstr ""
+msgstr "ពីមុន"
 
 msgid "Profit"
-msgstr ""
+msgstr "ប្រាក់ចំណេញ"
 
 msgid "Profit / Loss"
-msgstr ""
+msgstr "ចំណេញ / ខាត"
 
 msgid "Profit table"
-msgstr ""
+msgstr "តារាងប្រាក់ចំណេញ"
 
 msgid "Profit/loss"
-msgstr ""
+msgstr "ប្រាក់ចំណេញ/ខាត"
 
 msgid "Proof of address"
-msgstr ""
+msgstr "ឯកសារបញ្ជាក់អាសយដ្ឋាន"
 
 msgid "Proof of address expired"
-msgstr ""
+msgstr "ឯកសារបញ្ជាក់អាសយដ្ឋានបានផុតកំណត់"
 
 msgid "Proof of address required"
-msgstr ""
+msgstr "តម្រូវឱ្យមានឯកសារបញ្ជាក់អាសយដ្ឋាន"
 
 msgid "Proof of identity"
-msgstr ""
+msgstr "ឯកសារបញ្ជាក់អត្តសញ្ញាណ"
 
 msgid "Proof of identity expired"
-msgstr ""
+msgstr "ឯកសារបញ្ជាក់អត្តសញ្ញាណផុតកំណត់ហើយ"
 
 msgid "Proof of identity required"
-msgstr ""
+msgstr "តម្រូវឱ្យមានឯកសារបញ្ជាក់អត្តសញ្ញាណ"
 
 msgid "Purchase"
-msgstr ""
+msgstr "ទិញ"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "ពេលវេលាទិញ"
 
 msgid "Purchase price"
-msgstr ""
+msgstr "តម្លៃទិញ"
 
 msgid "Purchase request sent"
-msgstr ""
+msgstr "សំណើទិញត្រូវបានបញ្ជូនហើយ"
 
 msgid "Purchase time"
-msgstr ""
+msgstr "ពេលវេលាទិញ"
 
 msgid "Put Spread"
-msgstr ""
+msgstr "Put Spread"
 
 msgid "Ready to trade?"
-msgstr ""
+msgstr "ត្រៀមខ្លួនរួចរាល់ក្នុងការជួញដូរហើយឬនៅ?"
 
 msgid "Real"
-msgstr ""
+msgstr "ពិត"
 
 msgid "Real Financial"
-msgstr ""
+msgstr "គណនីពិត Financial"
 
 msgid "Real Financial STP"
-msgstr ""
+msgstr "គណនីពិត Financial STP"
 
 msgid "Real Synthetic"
-msgstr ""
+msgstr "គណនីពិត Synthetic"
 
 msgid "Reality Check"
-msgstr ""
+msgstr "ការត្រួតពិនិត្យការពិត (Reality Check)"
 
 msgid "Recent years are easy to guess"
-msgstr ""
+msgstr "ឆ្នាំថ្មីៗនេះងាយស្រួលទាយ"
 
 msgid "Remaining time"
-msgstr ""
+msgstr "ពេលវេលាដែលនៅសល់"
 
 msgid "Remove deposit limits"
-msgstr ""
+msgstr "ដកដែនកំណត់ដាក់ប្រាក់"
 
 msgid "Repeats like \"aaa\" are easy to guess"
-msgstr ""
+msgstr "ពាក្យដដែលៗដូចជា \"aaa\" នោះងាយស្រួលទាយ"
 
 msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
-msgstr ""
+msgstr "ពាក្យដដែលៗដូចជា \"abcabcabc\" គឺពិបាកទាយជាង \"abc\" បន្តិចបន្តួច"
 
 msgid "Reports"
-msgstr ""
+msgstr "របាយការណ៍"
 
 msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
-msgstr ""
+msgstr "អ្នកត្រូវបើកដំណើរការផ្ទុកទិន្នន័យនៅលើកម្មវិធីរុករកតាមអ៊ីនធឺណិតរបស់អ្នក ដើម្បីឱ្យវាដំណើរការបានត្រឹមត្រូវ។ សូមបើកវា ឬចេញពីរបៀបរុករកឯកជន។"
 
 msgid "Resale not offered"
-msgstr ""
+msgstr "មិនមានការផ្តល់ជូនសម្រាប់លក់បន្តទេ"
 
 msgid "Reset Barrier"
-msgstr ""
+msgstr "កំណត់តម្លៃបន្ទាត់តម្លៃគោលដៅឡើងវិញ"
 
 msgid "Reset Call"
-msgstr ""
+msgstr "Reset Call"
 
 msgid "Reset Call/Reset Put"
-msgstr ""
+msgstr "Reset Call/Reset Put"
 
 msgid "Reset Put"
-msgstr ""
+msgstr "Reset Put"
 
 msgid "Reset Time"
-msgstr ""
+msgstr "កំណត់ពេលវេលាឡើងវិញ"
 
 msgid "Reset balance"
-msgstr ""
+msgstr "កំណត់សមតុល្យឡើងវិញ"
 
 msgid "Reset barrier"
-msgstr ""
+msgstr "កំណត់តម្លៃបន្ទាត់តម្លៃគោលដៅឡើងវិញ"
 
 msgid "Reset time"
-msgstr ""
+msgstr "កំណត់ពេលវេលាឡើងវិញ"
 
 msgid "Reset to original settings"
-msgstr ""
+msgstr "កំណត់តម្លៃត្រឡប់ទៅលំនាំដើមវិញ"
 
 msgid "Return"
-msgstr ""
+msgstr "ប្រាក់សំណង"
 
 msgid "Reversed words aren't much harder to guess"
-msgstr ""
+msgstr "ពាក្យបញ្ច្រាសមិនពិបាកទាយខ្លាំងទេ។"
 
 msgid "Rise"
-msgstr ""
+msgstr "Rise"
 
 msgid "Rise or equal"
-msgstr ""
+msgstr "Rise ឬស្មើ"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Rise/Fall"
 
 msgid "Rise/Fall contracts will be refunded if:"
-msgstr ""
+msgstr "កិច្ចសន្យាបែប Rise/Fall នឹងត្រូវសងវិញប្រសិនបើ៖"
 
 msgid "STASIS Euro"
-msgstr ""
+msgstr "STASIS Euro"
 
 msgid "Sa"
-msgstr ""
+msgstr "ស"
 
 msgid "Saturday"
-msgstr ""
+msgstr "ថ្ងៃសៅរ៍"
 
 msgid "Search..."
-msgstr ""
+msgstr "ស្វែងរក..."
 
 msgid "Select Asset"
-msgstr ""
+msgstr "ជ្រើសរើសទ្រព្យសកម្ម"
 
 msgid "Select Trade Type"
-msgstr ""
+msgstr "ជ្រើសរើសប្រភេទការជួញដូរ"
 
 msgid "Select date"
-msgstr ""
+msgstr "ជ្រើសរើសកាលបរិច្ឆេទ"
 
 msgid "Select market:"
-msgstr ""
+msgstr "ជ្រើសរើសទីផ្សារ៖"
 
 msgid "Select your market and underlying asset"
-msgstr ""
+msgstr "ជ្រើសរើសទីផ្សារ និងទ្រព្យសកម្មមូលដ្ឋានរបស់អ្នក"
 
 msgid "Select your trade type"
-msgstr ""
+msgstr "ជ្រើសរើសប្រភេទការជួញដូររបស់អ្នក"
 
 msgid "Selected tick"
-msgstr ""
+msgstr "ចំណុច Tick ដែលបានជ្រើសរើស"
 
 msgid "Self-exclusion"
-msgstr ""
+msgstr "ប្រព័ន្ធការពារខ្លួនឯង"
 
 msgid "Sell"
-msgstr ""
+msgstr "លក់"
 
 msgid "Sell at market"
-msgstr ""
+msgstr "លក់នៅតម្លៃទីផ្សារ"
 
 msgid "Sep"
-msgstr ""
+msgstr "កញ្ញា"
 
 msgid "September"
-msgstr ""
+msgstr "ខែកញ្ញា"
 
 msgid "Sequences like abc or 6543 are easy to guess"
-msgstr ""
+msgstr "លំដាប់ដូចជា abc ឬ 6543 នោះងាយស្រួលទាយ"
 
 msgid "Server"
-msgstr ""
+msgstr "ម៉ាស៊ីនមេ"
 
 msgid "Session duration limit cannot be more than 6 weeks."
-msgstr ""
+msgstr "ដែនកំណត់រយៈពេលនៃវគ្គការជួញដូរមិនអាចលើសពី 6 សប្តាហ៍បានទេ។"
 
 msgid "Session duration:"
-msgstr ""
+msgstr "រយៈពេលនៃវគ្គប្រើប្រាស់៖"
 
 msgid "Set account currency"
-msgstr ""
+msgstr "កំណត់រូបិយប័ណ្ណគណនី"
 
 msgid "Short keyboard patterns are easy to guess"
-msgstr ""
+msgstr "លំនាំក្តារចុចខ្លីគឺងាយស្រួលទាយ"
 
 msgid "Should be %1"
-msgstr ""
+msgstr "គួរតែជា %1"
 
 msgid "Should be a valid number."
-msgstr ""
+msgstr "គួរតែជាលេខដែលត្រឹមត្រូវ។"
 
 msgid "Should be between %1 and %2"
-msgstr ""
+msgstr "គួរតែមានតម្លៃនៅចន្លោះ %1 និង %2"
 
 msgid "Should be less than %1"
-msgstr ""
+msgstr "គួរមានតម្លៃតិចជាង %1"
 
 msgid "Should be more than %1"
-msgstr ""
+msgstr "គួរតែមានតម្លៃច្រើនជាង %1"
 
 msgid "Should start with letter or number, and may contain hyphen and underscore."
-msgstr ""
+msgstr "គួរចាប់ផ្តើមដោយអក្សរ ឬលេខ ហើយអាចមានសហសញ្ញា និងសញ្ញាគូសក្រោម។"
 
 msgid "Sign out"
-msgstr ""
+msgstr "ចាកចេញ"
 
 msgid "Sign up"
-msgstr ""
+msgstr "ចុះឈ្មោះ"
 
 msgid "SmartTrader"
-msgstr ""
+msgstr "SmartTrader"
 
 msgid "SmartTrader is unavailable for this account"
-msgstr ""
+msgstr "SmartTrader មិនអាចប្រើបានសម្រាប់គណនីនេះទេ។"
 
 msgid "Sorry, an error occurred while processing your request."
-msgstr ""
+msgstr "សូមអភ័យទោស មានកំហុសបានកើតឡើងខណៈពេលកំពុងដំណើរការសំណើរបស់អ្នក។"
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "សូមអភ័យទោស ប៉ុន្តែការជួញដូរ binary options មិនមាននៅក្នុងប្រទេសរបស់អ្នកទេ។"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
-msgstr ""
+msgstr "សូមអភ័យទោស ប៉ុន្តែការជួញដូរ binary options មិនមាននៅក្នុងគណនី Financial របស់អ្នកទេ។"
 
 msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
-msgstr ""
+msgstr "សូមអភ័យទោស ការជួញដូរអប់សិនមិនមាននៅក្នុងចក្រភពអង់គ្លេស និងកោះម៉ាន់ទេ។"
 
 msgid "Sorry, this feature is available to virtual accounts only."
-msgstr ""
+msgstr "សូមអភ័យទោស មុខងារនេះអាចប្រើបានសម្រាប់តែគណនីនិម្មិតប៉ុណ្ណោះ។"
 
 msgid "Spot"
-msgstr ""
+msgstr "Spot"
 
 msgid "Spot time"
-msgstr ""
+msgstr "ពេលវេលា spot"
 
 msgid "Spot time (GMT)"
-msgstr ""
+msgstr "ពេលវេលា spot (GMT)"
 
 msgid "Stake"
-msgstr ""
+msgstr "ដើមទុន"
 
 msgid "Start Time"
-msgstr ""
+msgstr "ម៉ោងចាប់ផ្តើម"
 
 msgid "Start time"
-msgstr ""
+msgstr "ម៉ោងចាប់ផ្តើម"
 
 msgid "Statements"
-msgstr ""
+msgstr "ប្រតិបត្តិការ"
 
 msgid "Stays Between"
-msgstr ""
+msgstr "Stays Between"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "កិច្ចសន្យា Between/Goes Outside នឹងត្រូវបង្វិលសងប្រាក់វិញតាមតម្លៃទិញ ប្រសិនបើមានចំនួន ticks តិចជាង 2 រវាងម៉ោងចាប់ផ្តើម និងម៉ោងបញ្ចប់កិច្ចសន្យា។"
 
 msgid "Step"
-msgstr ""
+msgstr "ជំហាន"
 
 msgid "Straight rows of keys are easy to guess"
-msgstr ""
+msgstr "តួអក្សរពីជួរត្រង់នៃគ្រាប់ចុចនោះគឺងាយស្រួលទាយ"
 
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 msgid "Submit"
-msgstr ""
+msgstr "បញ្ជូន"
 
 msgid "Sunday"
-msgstr ""
+msgstr "ថ្ងៃអាទិត្យ"
 
 msgid "Switch to another account"
-msgstr ""
+msgstr "ប្តូរទៅគណនីផ្សេងទៀត"
 
 msgid "Synthetic"
-msgstr ""
+msgstr "Synthetic"
 
 msgid "Target"
-msgstr ""
+msgstr "គោលដៅ"
 
 msgid "Tether ERC20"
-msgstr ""
+msgstr "Tether ERC20"
 
 msgid "Tether Omni"
-msgstr ""
+msgstr "Tether Omni"
 
 msgid "Tether TRC20"
-msgstr ""
+msgstr "Tether TRC20"
 
 msgid "Th"
-msgstr ""
+msgstr "Th"
 
 msgid "Thank you, we'll get back to you within 24 hours"
-msgstr ""
+msgstr "សូមអរគុណ យើងនឹងទាក់ទងត្រលប់មកអ្នកវិញក្នុងរយៈពេល 24 ម៉ោង។"
 
 msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
-msgstr ""
+msgstr "%1បិទ%2 គឺជាចំណុច Tick ចុងក្រោយបំផុតនៅត្រឹម ឬមុន%1ម៉ោងបញ្ចប់%2។ ប្រសិនបើអ្នកជ្រើសរើស%1ពេលវេលាបញ្ចប់%2ជាក់លាក់រួចហើយ %1ពេលវេលាបញ្ចប់%2 គឺជាពេលវេលាដែលបានជ្រើសរើសស្រាប់។"
 
 msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
-msgstr ""
+msgstr "%1រយៈពេលកិច្ចសន្យា%2 គឺ​ជា​ចន្លោះ​ពេល​រវាង %1ចំណុច Tick ​ដំបូង%2 (ដែល​នៅបន្ទាប់​ពី​ម៉ោង​ចាប់​ផ្តើម) និង %1ពេលវេលាបញ្ចប់%2។"
 
 msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
-msgstr ""
+msgstr "%1ពេលវេលាបញ្ចប់%2 គឺជាចំនួននាទី/ម៉ោងដែលបានជ្រើសរើសបន្ទាប់ពីតម្លៃ %1ពេលវេលាចាប់ផ្តើម%2។"
 
 msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
-msgstr ""
+msgstr "%ចំណុចចេញ%2 គឺជាចំណុច Tick ចុងក្រោយនៅពេលកិច្ចសន្យាបញ្ចប់។ កិច្ចសន្យានឹងបញ្ចប់នៅពេលដែលចំណុច Tick ទាំងអស់បន្តផ្លាស់ទីឡើងលើ ឬចុះក្រោម ឬនៅពេលដែលមានចំណុច Tick ដែលមិនអនុវត្តតាមលំនាំដែលរំពឹងទុក។"
 
 msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "តម្លៃ %1ខ្ពស់%2 នោះសំដៅលើចំណុចដែលខ្ពស់បំផុតដែលទីផ្សារបានឈានដល់ក្នុងអំឡុងពេលកិច្ចសន្យា។"
 
 msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
-msgstr ""
+msgstr "តម្លៃ%1ទាប%2 គឺជាចំណុចទាបបំផុតដែលដែលមិនធ្លាប់មានដែលទីផ្សារបានឈានដល់អំឡុងពេលកិច្ចសន្យា។"
 
 msgid "The %1start time%2 begins when the contract is processed by our servers."
-msgstr ""
+msgstr "%1ពេលវេលាចាប់ផ្តើម%2 នោះគឺជាចំណុចចាប់ផ្តើមនៃវេលាដែលកិច្ចសន្យាត្រូវបានដំណើរការដោយម៉ាស៊ីនមេរបស់យើង។"
 
 msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
-msgstr ""
+msgstr "%1ពេលវេលាចាប់ផ្តើម%2 គឺ​ជា​ចំណុច​ពេលវេលានៅ​ពេល​ដែល​កិច្ចសន្យា​ត្រូវ​បាន​ដំណើរការ​ដោយម៉ាស៊ីនមេ​របស់​យើង ហើយ%1ចំណុចចូល%2 គឺ %1ចំណុច Tick%2 បន្ទាប់​ពី​នោះ។"
 
 msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>រយៈពេលនៃកិច្ចសន្យា</strong> គឺជារយៈពេលរវាង <strong>ចំណុច Tick បន្ទាប់</strong> បន្ទាប់ពី <strong>ម៉ោងចាប់ផ្តើម</strong> និង <strong>ពេលវេលាបញ្ចប់</strong>។"
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
-msgstr ""
+msgstr "<strong>ម៉ោងបញ្ចប់</strong> គឺជាចំនួននៃនាទី/ម៉ោងដែលបានជ្រើសរើសបន្ទាប់ពី <strong>ពេលវេលាចាប់ផ្តើម</strong> (ប្រសិនបើរយៈពេលតិចជាង 1 ថ្ងៃ) ឬនៅចុងបញ្ចប់នៃថ្ងៃជួញដូរ។ (ប្រសិនបើរយៈពេលគឺ 1 ថ្ងៃឬច្រើនជាងនេះ)។"
 
 msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
-msgstr ""
+msgstr "<strong>ម៉ោងបញ្ចប់</strong> គឺជាចំនួននាទី/ម៉ោងដែលបានជ្រើសរើសបន្ទាប់ពី <strong>ម៉ោងចាប់ផ្តើម</strong>។"
 
 msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "<strong>ចំណុចចូល</strong> គឺជាចំណុច Tick ដំបូងបន្ទាប់ពីកិច្ចសន្យាត្រូវបានដំណើរការដោយម៉ាស៊ីនមេរបស់យើង។"
 
 msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
-msgstr ""
+msgstr "<strong>កន្លែងចេញ</strong> គឺជាចំណុច Tick ចុងក្រោយបំផុតនៅត្រឹម ឬមុន <strong>ម៉ោងបញ្ចប់</strong>។"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
-msgstr ""
+msgstr "<strong>ពេលវេលាចាប់ផ្តើម</strong> គឺជាចំណុចពេលដែលកិច្ចសន្យាត្រូវបានដំណើរការដោយម៉ាស៊ីនមេរបស់យើង ហើយ <strong>ចំណុចចូល</strong> គឺជា <strong>ចំណុច Tick បន្ទាប់</strong> ក្រោយពីនោះ។"
 
 msgid "The <strong>start time</strong> is when the contract is processed by our servers."
-msgstr ""
+msgstr "<strong>ពេលវេលាចាប់ផ្តើម</strong> គឺជាពេលដែលកិច្ចសន្យាត្រូវបានដំណើរការដោយម៉ាស៊ីនមេរបស់យើង។"
 
 msgid "The Average"
-msgstr ""
+msgstr "តម្លៃមធ្យម"
 
 msgid "The average is the average of the ticks, including the entry spot and the last tick."
-msgstr ""
+msgstr "តម្លៃមធ្យមគឺជាមធ្យមនៃចំណុច Tick ទាំងអស់ដែលកើតឡើងក្នុងអំឡុងពេលកិច្ចសន្យា រួមទាំងចំណុចចូល និងចំណុច Tick ចុងក្រោយ។"
 
 msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
-msgstr ""
+msgstr "កិច្ចសន្យាមិនបញ្ចប់ក្នុងរយៈពេល 5 នាទីទេ (សម្រាប់កិច្ចសន្យាបែបរយៈពេលតាមចំណុច Tick ផ្សេងៗ)"
 
 msgid "The entry spot is the first tick after the contract is processed by our servers."
-msgstr ""
+msgstr "ចំណុចចូលគឺជាចំណុច Tick ដំបូងដែលកើតឡើងបន្ទាប់ពីកិច្ចសន្យាត្រូវបានដំណើរការដោយម៉ាស៊ីនមេរបស់យើង។"
 
 msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
-msgstr ""
+msgstr "រកមិនឃើញទំព័រដែលអ្នកបានស្នើសុំទេ។ នេះគឺដោយសារតែទំព័រត្រូវបានដកចេញពីប្រព័ន្ធ ឬអាសយដ្ឋានមិនត្រឹមត្រូវ។ ដូច្នេះសូមពិនិត្យកំហុសអក្ខរាវិរុទ្ធណាមួយ។"
 
 msgid "The reset time is %1"
-msgstr ""
+msgstr "ពេលវេលាកំណត់ឡើងវិញជា %1"
 
 msgid "The server <a href=\"%1\">endpoint</a> is: %2"
-msgstr ""
+msgstr "ម៉ាស៊ីនមេ <a href=\"%1\">ចំណុចបញ្ចប់</a> គឺ៖ %2"
 
 msgid "The two passwords that you entered do not match."
-msgstr ""
+msgstr "ពាក្យសម្ងាត់ទាំងពីរដងដែលអ្នកបានបញ្ចូលមិនត្រូវគ្នាទេ។"
 
 msgid "There are less than 2 ticks between the start and end times"
-msgstr ""
+msgstr "មានចំណុច Tick តិចជាង 2 នៅចន្លោះពេលចាប់ផ្តើម និងបញ្ចប់។"
 
 msgid "There was a problem accessing the server during purchase."
-msgstr ""
+msgstr "មានបញ្ហាក្នុងការចូលប្រើម៉ាស៊ីនមេអំឡុងពេលបញ្ជាទិញ។"
 
 msgid "There was a problem accessing the server."
-msgstr ""
+msgstr "មានបញ្ហាក្នុងការចូលប្រើម៉ាស៊ីនបមេ។"
 
 msgid "There was an error"
-msgstr ""
+msgstr "កំហុសមួយបានកើតឡើង"
 
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "មានតួអក្សរមិនត្រឹមត្រូវមួយចំនួននៅក្នុងចន្លោះដែលបញ្ចូល។"
 
 msgid "This contract is only available on %1DTrader%2."
-msgstr ""
+msgstr "កិច្ចសន្យានេះមានតែនៅក្នុង %1Dtrader%2 តែប៉ុណ្ណោះ។"
 
 msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
-msgstr ""
+msgstr "កិច្ចសន្យានេះអាចប្រើបានតែនៅក្នុង DTrader តែប៉ុណ្ណោះ។ %1%2ចូលទៅកាន់ Dtrader%3 ដើម្បីបិទ ឬលុបចោលកិច្ចសន្យានេះ។"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "កិច្ចសន្យានេះខាតបង់"
 
 msgid "This contract type only offers 5 ticks"
-msgstr ""
+msgstr "កិច្ចសន្យាប្រភេទនេះផ្តល់ចំណុច Tick ឲ្យតែ 5 ចំណុចប៉ុណ្ណោះ។"
 
 msgid "This contract won"
-msgstr ""
+msgstr "កិច្ចសន្យានេះគឺចំណេញ"
 
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr ""
+msgstr "មុខងារនេះមិនទាក់ទងនឹងគណនីរូបិយប័ណ្ណនិម្មិតទេ។"
 
 msgid "This field is required."
-msgstr ""
+msgstr "ប្រអប់នេះចាំបាច់ត្រូវបំពេញ។"
 
 msgid "This is a staging server - For testing purposes only"
-msgstr ""
+msgstr "នេះគឺជាម៉ាស៊ីនមេ - សម្រាប់គោលបំណងសាកល្បងតែប៉ុណ្ណោះ"
 
 msgid "This is a top-10 common password"
-msgstr ""
+msgstr "នេះគឺជាពាក្យសម្ងាត់ទូទៅកំពូលទាំង 10"
 
 msgid "This is a top-100 common password"
-msgstr ""
+msgstr "នេះគឺជាពាក្យសម្ងាត់ទូទៅកំពូលទាំង 100"
 
 msgid "This is a very common password"
-msgstr ""
+msgstr "នេះគឺជាពាក្យសម្ងាត់ដែលប្រើជាទូទៅបំផុត។"
 
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
-msgstr ""
+msgstr "នេះ​ជា​បន្ទាត់​កម្រិត​តម្លៃ​គោលដៅ (Barrier) ដែល​ត្រូវ​បាន​បង្ហាញ។ បន្ទាត់តម្លៃគោលដៅ​ពិត​ចេញ​មក​ពី​តម្លៃ​ចំណុច​ចូល​រួម​ជាមួយ​នឹងផ្នែកសំណងសម្រាប់បន្ទាត់កម្រិតតម្លៃគោលដៅ (Barrier)។"
 
 msgid "This is similar to a commonly used password"
-msgstr ""
+msgstr "នេះគឺស្រដៀងនឹងពាក្យសម្ងាត់ដែលប្រើជាទូទៅ"
 
 msgid "This page is only available to logged out clients."
-msgstr ""
+msgstr "ទំព័រនេះអាចប្រើបានសម្រាប់តែអតិថិជនដែលបានចេញពីគណនីប៉ុណ្ណោះ។"
 
 msgid "This password is on the blacklist"
-msgstr ""
+msgstr "ពាក្យ​សម្ងាត់​នេះ​ស្ថិត​ក្នុង​បញ្ជី​ខ្មៅ"
 
 msgid "Thursday"
-msgstr ""
+msgstr "ថ្ងៃព្រហស្បតិ៍"
 
 msgid "Tick"
-msgstr ""
+msgstr "ចំណុច Tick"
 
 msgid "Tick Prediction"
-msgstr ""
+msgstr "ការទស្សន៍ទាយចលនារបស់ចំណុច Tick"
 
 msgid "Ticks"
-msgstr ""
+msgstr "ចំណុច Tick"
 
 msgid "Ticks history returned an empty array."
-msgstr ""
+msgstr "ប្រវត្តិចំណុច Tick បង្ហាញតម្លៃដែលបានត្រឡប់មកវិញជាជួរតាមលំដាប់ទទេ។"
 
 msgid "Time is in the wrong format."
-msgstr ""
+msgstr "ពេលវេលាស្ថិតក្នុងទម្រង់ខុស។"
 
 msgid "Time out cannot be in the past."
-msgstr ""
+msgstr "រយៈពេល​នៃ​ការ​ដកខ្លួនចេញ​មិន​អាច​ជា​រយៈពេល​ក្នុង​អតីតកាល​ទេ។"
 
 msgid "Time out cannot be more than 6 weeks."
-msgstr ""
+msgstr "រយៈពេល​ដកខ្លួន​ចេញ​មិនអាច​លើសពី 6 សប្តាហ៍​បានទេ។"
 
 msgid "Time out must be after today."
-msgstr ""
+msgstr "រយៈពេលនៃការដកខ្លួនចេញត្រូវតែចាប់ផ្តើមនៅថ្ងៃស្អែក។"
 
 msgid "Timed out until"
-msgstr ""
+msgstr "រយៈពេលនៃការដកខ្លួនចេញមានរយៈពេលរហូតដល់"
 
 msgid "Today"
-msgstr ""
+msgstr "ថ្ងៃនេះ"
 
 msgid "Top up"
-msgstr ""
+msgstr "បញ្ចូលទឹកប្រាក់"
 
 msgid "Top up Virtual Account?"
-msgstr ""
+msgstr "បញ្ចូលទឹកប្រាក់គណនីនិម្មិតមែទេ?"
 
 msgid "Top up error"
-msgstr ""
+msgstr "មានកំហុសក្នុងការបញ្ចូលទឹកប្រាក់"
 
 msgid "Top-up successful"
-msgstr ""
+msgstr "បញ្ចូលទឹកប្រាក់បានជោគជ័យហើយ"
 
 msgid "Total Cost"
-msgstr ""
+msgstr "ការចំណាយសរុប"
 
 msgid "Total assets"
-msgstr ""
+msgstr "ទ្រព្យសកម្មសរុប"
 
 msgid "Total assets in your Deriv accounts"
-msgstr ""
+msgstr "ទ្រព្យសកម្មសរុបនៅក្នុងគណនី Deriv របស់អ្នក"
 
 msgid "Total profit/loss"
-msgstr ""
+msgstr "ប្រាក់ចំណេញ/ខាតសរុប"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
-msgstr ""
+msgstr "កិច្ចសន្យា Touch/No Touch នឹងត្រូវបង្វិលសងប្រាក់វិញតាមតម្លៃទិញ ប្រសិនបើមានចំនួន ticks តិចជាង 2 រវាងម៉ោងចាប់ផ្តើម និងម៉ោងបញ្ចប់កិច្ចសន្យា។"
 
 msgid "Touches"
-msgstr ""
+msgstr "Touches"
 
 msgid "Trade"
-msgstr ""
+msgstr "ជួញដូរ"
 
 msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
-msgstr ""
+msgstr "ធ្វើការជួញដូរអប់សិនឌីជីថលនៅលើទីផ្សារពិភពលោកជាមួយ SmartTrader ដែលជាវេទិកាជួញដូរអនឡាញដ៏មានឥទ្ធិពល និងងាយស្រួលប្រើ។"
 
 msgid "Trade the world's markets with our popular user-friendly platform."
-msgstr ""
+msgstr "ធ្វើការជួញដូរក្នុងទីផ្សារពិភពលោកជាមួយនឹងវេទិកាដែលងាយស្រួលប្រើដ៏ពេញនិយមរបស់យើង។"
 
 msgid "Trade types"
-msgstr ""
+msgstr "ប្រភេទការជួញដូរ"
 
 msgid "Trader's hub"
-msgstr ""
+msgstr "Trader's hub"
 
 msgid "Trading and deposit disabled"
-msgstr ""
+msgstr "ការជួញដូរ និងការដាក់ប្រាក់ត្រូវបានបិទ"
 
 msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "ការជួញដូរ និងការដាក់ប្រាក់ត្រូវបានបិទនៅលើគណនីរបស់អ្នក។ សូម %1ទាក់ទងផ្នែកជំនួយអតិថិជន%2 សម្រាប់ជំនួយ។"
 
 msgid "Trading statistics report"
-msgstr ""
+msgstr "របាយការណ៍ស្ថិតិការជួញដូរ"
 
 msgid "Transaction ID"
-msgstr ""
+msgstr "លេខសម្គាល់ប្រតិបត្តិការ"
 
 msgid "Transaction performed by %1 (App ID: %2)"
-msgstr ""
+msgstr "ប្រតិបត្តិការដែលអនុវត្តដោយ %1 (App ID: %2)"
 
 msgid "True USD"
-msgstr ""
+msgstr "True USD"
 
 msgid "Try our %1Synthetic Indices%2."
-msgstr ""
+msgstr "សាកល្បង %1សន្ទស្សន៍ Synthetic%2 របស់យើង។"
 
 msgid "Try our other markets."
-msgstr ""
+msgstr "សាកល្បងទីផ្សារផ្សេងទៀតរបស់យើង។"
 
 msgid "Tu"
-msgstr ""
+msgstr "អង្គារ"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "ថ្ងៃអង្គារ"
 
 msgid "Turnover"
-msgstr ""
+msgstr "តម្លៃក្នុងការជួញដូរ"
 
 msgid "US Dollar"
-msgstr ""
+msgstr "ដុល្លារអាមេរិក"
 
 msgid "USD Coin"
-msgstr ""
+msgstr "USD Coin"
 
 msgid "USDK"
-msgstr ""
+msgstr "USDK"
 
 msgid "Understood"
-msgstr ""
+msgstr "យល់ហើយ"
 
 msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
-msgstr ""
+msgstr "ជាអកុសល វេទិកាជួញដូរនេះមិនអាចប្រើបានសម្រាប់គណនី EU Deriv ទេ។ សូមប្តូរទៅគណនីដែលមិនមែនជាសហភាពអឺរ៉ុប ដើម្បីបន្តការជួញដូរ។"
 
 msgid "Unknown OS"
-msgstr ""
+msgstr "ប្រព័ន្ធប្រតិបត្តិការមិនស្គាល់"
 
 msgid "Up to %1 decimal places are allowed."
-msgstr ""
+msgstr "អនុញ្ញាតឱ្យប្រើខ្ទង់ទសភាគរហូតដល់ %1 ខ្ទង់។"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Use a few words, avoid common phrases"
-msgstr ""
+msgstr "ប្រើពាក្យពីរបីពាក្យ ជៀសវាងឃ្លាទូទៅ"
 
 msgid "Use a longer keyboard pattern with more turns"
-msgstr ""
+msgstr "ប្រើលំនាំក្ដារចុចវែងជាងនិងស្មុគស្មាញជាង"
 
 msgid "Verification code is wrong. Please use the link sent to your email."
-msgstr ""
+msgstr "លេខកូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ។ សូមប្រើតំណដែលបានផ្ញើទៅអ៊ីមែលរបស់អ្នក។"
 
 msgid "View"
-msgstr ""
+msgstr "មើល"
 
 msgid "View chart"
-msgstr ""
+msgstr "មើលគំនូសតាង"
 
 msgid "Virtual"
-msgstr ""
+msgstr "និម្មិត"
 
 msgid "Waiting for contract settlement."
-msgstr ""
+msgstr "រង់ចាំការទូទាត់តាមការសន្យា"
 
 msgid "Waiting for entry tick."
-msgstr ""
+msgstr "កំពុងរង់ចាំចំណុច Tick ចូល។"
 
 msgid "Waiting for exit tick."
-msgstr ""
+msgstr "កំពុងរង់ចាំចំណុច Tick ចេញ។"
 
 msgid "We"
-msgstr ""
+msgstr "យើង"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "ថ្ងៃពុធ"
 
 msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
-msgstr ""
+msgstr "យើងនឹងធ្វើបច្ចុប្បន្នភាពដែនកំណត់របស់អ្នក។ ចុច %1យល់ព្រម និងទទួលយក%2 ដើម្បីទទួលស្គាល់ថាអ្នកទទួលខុសត្រូវទាំងស្រុងចំពោះសកម្មភាពរបស់អ្នក ហើយយើងមិនទទួលខុសត្រូវចំពោះការញៀន ឬការបាត់បង់ណាមួយឡើយ។"
 
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "នៅពេលអ្នកចុច \"OK\" អ្នកនឹងត្រូវបានដកខ្លួនចេញពីការជួញដូរនៅលើគេហទំព័ររហូតដល់កាលបរិច្ឆេទដែលបានជ្រើសរើស។"
 
 msgid "Win payout if exit spot is also equal to entry spot."
-msgstr ""
+msgstr "ឈ្នះប្រាក់សំណងប្រសិនបើកចំណុចចេញក៏ស្មើនឹងចំណុចចូលផងដែរ។"
 
 msgid "Winning the contract"
-msgstr ""
+msgstr "ឈ្នះប្រាក់ចំណេញពីកិច្ចសន្សា"
 
 msgid "Withdrawal"
-msgstr ""
+msgstr "ការដកប្រាក់"
 
 msgid "Withdrawal and trading limits"
-msgstr ""
+msgstr "ដែនកំណត់ការដកប្រាក់និងការជួញដូរ"
 
 msgid "Withdrawal disabled"
-msgstr ""
+msgstr "ការដកប្រាក់ត្រូវបានបិទ"
 
 msgid "Withdrawals have been disabled on your account. Please check your email for more details."
-msgstr ""
+msgstr "ការដកប្រាក់ត្រូវបានបិទនៅលើគណនីរបស់អ្នក។ សូមពិនិត្យមើលអ៊ីមែលរបស់អ្នកសម្រាប់ព័ត៌មានលម្អិតបន្ថែម។"
 
 msgid "Would you like to check your statement first? %1Check Statement%2"
-msgstr ""
+msgstr "តើអ្នកចង់ពិនិត្យមើលរបាយការណ៍របស់អ្នកជាមុនទេ? %1ពិនិត្យរបាយការណ៍%2"
 
 msgid "You are offline"
-msgstr ""
+msgstr "អ្នកនៅ offline"
 
 msgid "You can close this window without interrupting your trade."
-msgstr ""
+msgstr "អ្នកអាចបិទបង្អួចនេះដោយមិនរំខានដល់ការជួញដូររបស់អ្នក។"
 
 msgid "You did not change anything."
-msgstr ""
+msgstr "អ្នកមិនបានផ្លាស់ប្តូរអ្វីទាំងអស់។"
 
 msgid "You have reached the rate limit of requests per second. Please try later."
-msgstr ""
+msgstr "អ្នកបានឈានដល់ដែនកំណត់អត្រានៃសំណើក្នុងមួយវិនាទីហើយ។ សូមព្យាយាមនៅពេលក្រោយ។"
 
 msgid "You have sold this contract at %1 %2"
-msgstr ""
+msgstr "អ្នកបានលក់កិច្ចសន្យានេះក្នុងតម្លៃ %1 %2"
 
 msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
-msgstr ""
+msgstr "អ្នកត្រូវតែចុះឈ្មោះ និងទទួលលេខសម្គាល់កម្មវិធី App ID មុនពេលអ្នកអាចប្រើម៉ាស៊ីនមេ OAuth ផ្សេងគ្នាសម្រាប់ការផ្ទៀងផ្ទាត់។ សម្រាប់ព័ត៌មានបន្ថែម សូមមើលព័ត៌មានលម្អិត OAuth បាននៅលើ https://api.deriv.com/ ។"
 
 msgid "You have yet to receive any notifications"
-msgstr ""
+msgstr "អ្នកមិនទាន់ទទួលបានការជូនដំណឹងណាមួយនៅឡើយទេ"
 
 msgid "You should enter %1 characters."
-msgstr ""
+msgstr "អ្នកគួរតែបញ្ចូលតួអក្សរ %1។"
 
 msgid "You will be redirected to a third-party website which is not owned by Binary.com."
-msgstr ""
+msgstr "អ្នកនឹងត្រូវបានបញ្ជូនបន្តទៅកាន់គេហទំព័រភាគីទីបី ដែលមិនមែនជាកម្មសិទ្ធិរបស់ Binary.com ទេ។"
 
 msgid "You win the payout if the market price does not end in the digit you have selected."
-msgstr ""
+msgstr "អ្នកឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារមិនបញ្ចប់ដោយតួលេខខ្ទង់ដែលអ្នកបានជ្រើសរើស។"
 
 msgid "You win the payout if the market price ends in the digit you have selected."
-msgstr ""
+msgstr "អ្នកនឹងឈ្នះប្រាក់សំណង ប្រសិនបើតម្លៃទីផ្សារបញ្ចប់ដោយតួលេខខ្ទង់ដែលអ្នកបានជ្រើសរើស។"
 
 msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
-msgstr ""
+msgstr "គណនីរបស់អ្នកត្រូវបានផ្អាក។ សូម %1ទាក់ទងផ្នែកជំនួយអតិថិជន%2 សម្រាប់ជំនួយ។"
 
 msgid "Your application to be treated as a professional client is being processed."
-msgstr ""
+msgstr "ពាក្យស្នើសុំរបស់អ្នកដើម្បីចង់ប្តូរជាអតិថិជនដែលមានជំនាញ (Professional Client) កំពុងត្រូវបានដំណើរការ។"
 
 msgid "Your changes have been updated."
-msgstr ""
+msgstr "ការផ្លាស់ប្តូររបស់អ្នកបានអាប់ដេតហើយ។"
 
 msgid "Your password cannot be the same as your email address."
-msgstr ""
+msgstr "ពាក្យសម្ងាត់របស់អ្នកមិនអាចដូចគ្នានឹងអាសយដ្ឋានអ៊ីមែលរបស់អ្នកបានទេ។"
 
 msgid "Your preferred time interval between each report:"
-msgstr ""
+msgstr "ចន្លោះពេលដែលអ្នកពេញចិត្តរវាងរបាយការណ៍នីមួយៗ៖"
 
 msgid "Your professional client request is %1not approved%2."
-msgstr ""
+msgstr "សំណើសុំជាអតិថិជនជំនាញរបស់អ្នកគឺ %1មិនត្រូវបានអនុម័ត%2។"
 
 msgid "Your session duration limit will end in %1 seconds."
-msgstr ""
+msgstr "ដែនកំណត់រយៈពេលវគ្គជួញដូររបស់អ្នកនឹងបញ្ចប់ក្នុងរយៈពេល %1 វិនាទី។"
 
 msgid "Your trading statistics since %1."
-msgstr ""
+msgstr "ស្ថិតិការជួញដូររបស់អ្នកតាំងពី %1។"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "លេខយោងប្រតិបត្តិការរបស់អ្នកគឺ"
 
 msgid "Your transaction reference number is %1"
-msgstr ""
+msgstr "លេខយោងប្រតិបត្តិការរបស់អ្នកគឺ %1"
 
 msgid "Your virtual balance has been reset."
-msgstr ""
+msgstr "សមតុល្យទឹកប្រាក់និម្មិតរបស់អ្នកត្រូវបានកំណត់ឡើងវិញ។"
 
 msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
-msgstr ""
+msgstr "កម្មវិធីរុករកតាមអ៊ីនធឺណិតរបស់អ្នក (%1) ហួសសម័យ ហើយអាចប៉ះពាល់ដល់បទពិសោធន៍ជួញដូររបស់អ្នក។ ដូចនេះអាចបន្តដោយហានិភ័យផ្ទាល់ខ្លួនរបស់អ្នកឬ %2ធ្វើបច្ចុប្បន្នភាពកម្មវិធីរុករក%3"
 
 msgid "account"
-msgstr ""
+msgstr "គណនី"
 
 msgid "accounts"
-msgstr ""
+msgstr "គណនី"
 
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
-msgstr ""
+msgstr "binary options, Forex, ការជួញដូរ Forex, ការជួញដូរអនឡាញ, ការជួញដូរហិរញ្ញវត្ថុ, ការជួញដូរបែប binary, ការជួញដូរសន្ទស្សន៍, សន្ទស្សន៍ការជួញដូរភាគហ៊ុន, ការជួញដូរ Forex, ការជួញដូរទំនិញ, យុទ្ធសាស្រ្តការជួញដូរ binary option, ឈ្មួញកណ្តាល binary, ដើមទុន binary, វេទិកាជួញដូរ binary options, យុទ្ធសាស្រ្ត binary, ហិរញ្ញវត្ថុ, ការវិនិយោគ, ការជួញដូរ"
 
 msgid "day"
-msgstr ""
+msgstr "ថ្ងៃ"
 
 msgid "days"
-msgstr ""
+msgstr "ថ្ងៃ"
 
 msgid "e.g. frontend.derivws.com"
-msgstr ""
+msgstr "ឧ. frontend.derivws.com"
 
 msgid "hour"
-msgstr ""
+msgstr "ម៉ោង"
 
 msgid "hours"
-msgstr ""
+msgstr "ម៉ោង"
 
 msgid "including Deal Cancel. Fee"
-msgstr ""
+msgstr "រួមទាំងថ្លៃសេវាការលុបចោលកិច្ចព្រមព្រៀង"
 
 msgid "login"
-msgstr ""
+msgstr "ចូលប្រព័ន្ធ"
 
 msgid "logout"
-msgstr ""
+msgstr "ចាកចេញ"
 
 msgid "minute"
-msgstr ""
+msgstr "នាទី"
 
 msgid "minutes"
-msgstr ""
+msgstr "នាទី"
 
 msgid "second"
-msgstr ""
+msgstr "វិនាទី"
 
 msgid "seconds"
-msgstr ""
+msgstr "វិនាទី"
 
 msgid "tick"
-msgstr ""
+msgstr "ចំណុច Tick"
 
 msgid "ticks"
-msgstr ""
+msgstr "ចំណុច Tick"
 
 msgid "today"
-msgstr ""
+msgstr "ថ្ងៃនេះ"
 
 msgid "today, Fridays"
-msgstr ""
+msgstr "ថ្ងៃនេះ ថ្ងៃសុក្រ"
 
 msgid "virtual money credit to account"
-msgstr ""
+msgstr "ឥណទានប្រាក់និម្មិតទៅគណនី"
 
