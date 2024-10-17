@@ -7,6 +7,7 @@ const Defaults          = require('./defaults');
 const TradingEvents     = require('./event');
 const Price             = require('./price');
 const Process           = require('./process');
+const AuthClient        = require('../../../_common/auth');
 const ViewPopup         = require('../user/view_popup/view_popup');
 const Client            = require('../../base/client');
 const Header            = require('../../base/header');
@@ -25,10 +26,11 @@ const TradePage = (() => {
     const onLoad = () => {
         
         const iframe_target_origin = getAllowedLocalStorageOrigin();
+        const isOauthEnabled = AuthClient.isOAuth2Enabled();
         BinarySocket.wait('authorize').then(() => {
-            if (iframe_target_origin) {
+            if (iframe_target_origin && !isOauthEnabled) {
                 const el_iframe  = document.getElementById('localstorage-sync');
-                el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
+                if (el_iframe) el_iframe.src = `${iframe_target_origin}/localstorage-sync.html`;
             }
             init();
         });

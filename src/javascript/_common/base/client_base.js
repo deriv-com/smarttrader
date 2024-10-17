@@ -1,6 +1,7 @@
 const moment                       = require('moment');
 const isCryptocurrency             = require('./currency_base').isCryptocurrency;
 const SocketCache                  = require('./socket_cache');
+const AuthClient                   = require('../auth');
 const localize                     = require('../localize').localize;
 const LocalStore                   = require('../storage').LocalStore;
 const State                        = require('../storage').State;
@@ -489,6 +490,9 @@ const ClientBase = (() => {
     };
 
     const syncWithDerivApp = (active_loginid, client_accounts) => {
+        // If the OAuth2 new authentication is enabled, all apps should not use localstorage-sync anymore
+        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
+        if (isOAuth2Enabled) return;
         const iframe_window = document.getElementById('localstorage-sync');
         const origin = getAllowedLocalStorageOrigin();
 

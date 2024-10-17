@@ -1,7 +1,6 @@
 import React from 'react';
 import Loading from '../_common/components/loading.jsx';
 import AntiClickjack from '../_common/includes/anti_clickjack.jsx';
-import DerivIFrame from '../_common/includes/deriv-iframe.jsx';
 
 const LoggedIn = () => (
     <html>
@@ -54,7 +53,7 @@ const LoggedIn = () => (
                     </div>
                 </div>
             </div>
-            <DerivIFrame />
+            <div id='deriv_iframe' />
         </body>
     </html>
 );

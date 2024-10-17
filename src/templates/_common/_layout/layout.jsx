@@ -3,7 +3,6 @@ import Head from './head.jsx';
 import Header from './header.jsx';
 // import MobileMenu from './mobile_menu.jsx';
 import WalletHeader from './wallet-header.jsx';
-import DerivIFrame from '../includes/deriv-iframe.jsx';
 // import Elevio from '../includes/elevio.jsx';
 import Gtm from '../includes/gtm.jsx';
 import LiveChat from '../includes/livechat.jsx';
@@ -77,7 +76,7 @@ const Layout = () => {
                     </div>
                     <Topbar />
                 </div>
-                <DerivIFrame />
+                <div id='deriv_iframe' />
                 {/* <Elevio /> */}
                 <LanguageMenuModal />
             </body>

@@ -52,8 +52,10 @@ const getPlugins = (app, grunt) => ([
 
             new webpack.DefinePlugin({
                 'process.env': {
-                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
-                    NODE_ENV  : JSON.stringify('production'),
+                    BUILD_HASH               : JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                    NODE_ENV                 : JSON.stringify('production'),
+                    GROWTHBOOK_CLIENT_KEY    : JSON.stringify(process.env.GROWTHBOOK_CLIENT_KEY),
+                    RUDDERSTACK_KEY          : JSON.stringify(process.env.RUDDERSTACK_KEY),
                 },
             }),
         ]
@@ -68,7 +70,9 @@ const getPlugins = (app, grunt) => ([
             ]),
             new webpack.DefinePlugin({
                 'process.env': {
-                    BUILD_HASH: JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                    BUILD_HASH               : JSON.stringify(CryptoJS.MD5(Date.now().toString()).toString()),
+                    GROWTHBOOK_CLIENT_KEY    : JSON.stringify(process.env.GROWTHBOOK_CLIENT_KEY),
+                    RUDDERSTACK_KEY          : JSON.stringify(process.env.RUDDERSTACK_KEY),
                 },
             }),
         ]
