@@ -25,6 +25,7 @@ const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivIFrame              = require('../pages/deriv_iframe.jsx');
+const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -40,7 +41,7 @@ const Header = (() => {
         fnc_enter: ['requestFullscreen', 'webkitRequestFullscreen', 'mozRequestFullScreen', 'msRequestFullscreen'],
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
-
+    
     const onLoad = () => {
         DerivIFrame.init();
         populateAccountsList();
@@ -60,8 +61,38 @@ const Header = (() => {
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
+        applyFeatureFlags();
     };
-    
+
+    const applyFeatureFlags = () => {
+        getRemoteConfig(true)
+            .then(data => {
+                const { cs_chat_livechat, cs_chat_whatsapp } = data.data;
+                const mobile_menu_livechat                   = getElementById('mobile__menu-livechat');
+                const livechat                               = getElementById('livechat');
+                const topbar_whatsapp                        = getElementById('topbar-whatsapp');
+                const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
+
+                if (cs_chat_livechat) {
+                    mobile_menu_livechat.style.display       = 'inline-flex';
+                    livechat.style.display                   = 'inline-flex';
+                } else {
+                    mobile_menu_livechat.style.display       = 'none';
+                    livechat.style.display                   = 'none';
+                }
+
+                if (cs_chat_whatsapp) {
+                    topbar_whatsapp.style.display            = 'inline-flex';
+                    whatsapp_mobile_drawer.style.display     = 'inline-flex';
+                } else {
+                    topbar_whatsapp.style.display            = 'none';
+                    whatsapp_mobile_drawer.style.display     = 'none';
+                }
+            })
+            // eslint-disable-next-line no-console
+            .catch(error => console.error('Error fetching feature flags:', error));
+    };
+
     const switchHeaders = () => {
         const regular_header = getElementById('regular__header');
         const wallet_header = getElementById('wallet__header');

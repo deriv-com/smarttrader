@@ -23,12 +23,14 @@ jobs:
           target: staging
           RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
           GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
+          REMOTE_CONFIG_URL:  ${{ vars.REMOTE_CONFIG_URL }}
       - name: Build Translations
         uses: "./.github/actions/build"
         with:
           target: translations
           RUDDERSTACK_KEY:  ${{ vars.RUDDERSTACK_KEY }}
           GROWTHBOOK_CLIENT_KEY: ${{ vars.GROWTHBOOK_CLIENT_KEY }}
+          REMOTE_CONFIG_URL:  ${{ vars.REMOTE_CONFIG_URL }}
       - name: Versioning
         uses: "./.github/actions/versioning"
         with:
