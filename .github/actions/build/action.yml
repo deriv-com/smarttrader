@@ -11,6 +11,9 @@ inputs:
   GROWTHBOOK_CLIENT_KEY:
     description: "Growthbook client key for initialising analytics"
     required: false
+  REMOTE_CONFIG_URL:
+    description: "Remote config for enabling cs chat tools"
+    required: false
 runs:
   using: composite
   steps:
@@ -19,5 +22,6 @@ runs:
         TARGET_ENV: ${{ inputs.target }}
         RUDDERSTACK_KEY: ${{ inputs.RUDDERSTACK_KEY }}
         GROWTHBOOK_CLIENT_KEY: ${{ inputs.GROWTHBOOK_CLIENT_KEY }}
+        REMOTE_CONFIG_URL: ${{ inputs.REMOTE_CONFIG_URL }}
       run: node_modules/grunt/bin/grunt releaseci --$TARGET_ENV
       shell: bash
