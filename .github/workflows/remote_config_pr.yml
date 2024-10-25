@@ -54,7 +54,7 @@ jobs:
 
             # Commit the newly downloaded file
             cd $(git rev-parse --show-toplevel)
-            git add packages/api/src/remote_config.json
+            git add src/javascript/_common/remote_config.json
             git commit -m "🤖 Remote Config file update 🤖"
 
             # Force push to this branch in case a previous run created it.
