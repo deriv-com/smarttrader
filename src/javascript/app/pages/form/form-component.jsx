@@ -167,7 +167,7 @@ export const FormComponent = () => {
         return moment(endtime_data.options[0].value).format('ddd - DD MMM, YYYY');
     };
 
-    const getAmount = () => (isCryptocurrency(currency) && amount_crypto) ? amount_crypto : amount;
+    const getAmount = () => (isCryptocurrency(currency)) ? amount_crypto : amount;
 
     const lang = Cookies.get('language').replace('_','-').toLowerCase() || 'en';
 
