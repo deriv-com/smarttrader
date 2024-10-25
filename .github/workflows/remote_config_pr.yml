@@ -36,7 +36,7 @@ jobs:
         git checkout "$REMOTE_CONFIG_BRANCH" || git checkout -b "$REMOTE_CONFIG_BRANCH" origin/"$REMOTE_CONFIG_BRANCH"
       shell: bash
     - name: Download Remote Config Backup File
-      uses: ./.github/actions/download_remote_config_backup
+      uses: .github/actions/download_remote_config_backup
       with:
         REMOTE_CONFIG_URL: ${{ vars.REMOTE_CONFIG_URL }}
 
