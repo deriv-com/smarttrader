@@ -33,10 +33,10 @@ jobs:
     - name: Checkout to remote_config_update_branch
       run: |
         git fetch origin
-        git checkout "$REMOTE_CONFIG_BRANCH" || git checkout -b "$REMOTE_CONFIG_BRANCH" origin/"$REMOTE_CONFIG_BRANCH"
+        git checkout -B "$REMOTE_CONFIG_BRANCH"
       shell: bash
     - name: Download Remote Config Backup File
-      uses: .github/actions/download_remote_config_backup
+      uses: ./.github/actions/download_remote_config_backup
       with:
         REMOTE_CONFIG_URL: ${{ vars.REMOTE_CONFIG_URL }}
 
@@ -54,7 +54,7 @@ jobs:
 
             # Commit the newly downloaded file
             cd $(git rev-parse --show-toplevel)
-            git add packages/api/src/remote_config.json
+            git add src/javascript/_common/remote_config.json
             git commit -m "🤖 Remote Config file update 🤖"
 
             # Force push to this branch in case a previous run created it.
