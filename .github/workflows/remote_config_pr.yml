@@ -33,7 +33,7 @@ jobs:
     - name: Checkout to remote_config_update_branch
       run: |
         git fetch origin
-        git checkout "$REMOTE_CONFIG_BRANCH" || git checkout -b "$REMOTE_CONFIG_BRANCH" origin/"$REMOTE_CONFIG_BRANCH"
+        git checkout -B "$REMOTE_CONFIG_BRANCH"
       shell: bash
     - name: Download Remote Config Backup File
       uses: ./.github/actions/download_remote_config_backup
