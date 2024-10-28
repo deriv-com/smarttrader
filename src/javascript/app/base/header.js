@@ -41,7 +41,7 @@ const Header = (() => {
         fnc_enter: ['requestFullscreen', 'webkitRequestFullscreen', 'mozRequestFullScreen', 'msRequestFullscreen'],
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
-    
+
     const onLoad = () => {
         DerivIFrame.init();
         populateAccountsList();
@@ -73,21 +73,13 @@ const Header = (() => {
                 const topbar_whatsapp                        = getElementById('topbar-whatsapp');
                 const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
 
-                if (cs_chat_livechat) {
-                    mobile_menu_livechat.style.display       = 'inline-flex';
-                    livechat.style.display                   = 'inline-flex';
-                } else {
-                    mobile_menu_livechat.style.display       = 'none';
-                    livechat.style.display                   = 'none';
-                }
-
-                if (cs_chat_whatsapp) {
-                    topbar_whatsapp.style.display            = 'inline-flex';
-                    whatsapp_mobile_drawer.style.display     = 'inline-flex';
-                } else {
-                    topbar_whatsapp.style.display            = 'none';
-                    whatsapp_mobile_drawer.style.display     = 'none';
-                }
+                const livechatDisplay = cs_chat_livechat ? 'inline-flex' : 'none';
+                mobile_menu_livechat.style.display = livechatDisplay;
+                livechat.style.display            = livechatDisplay;
+                
+                const whatsappDisplay = cs_chat_whatsapp ? 'inline-flex' : 'none';
+                topbar_whatsapp.style.display        = whatsappDisplay;
+                whatsapp_mobile_drawer.style.display = whatsappDisplay;
             })
             // eslint-disable-next-line no-console
             .catch(error => console.error('Error fetching feature flags:', error));
