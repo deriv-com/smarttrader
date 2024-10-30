@@ -71,21 +71,6 @@ const LiveChat = (() => {
         }
     };
 
-    // Fallback LiveChat icon
-    const livechatFallback = () => {
-        let livechat_shell;
-        const livechat_id = 'gtm-deriv-livechat';
-    
-        if (window.LiveChatWidget){
-            window.LiveChatWidget.on('ready', () => {
-                livechat_shell = document.getElementById(livechat_id);
-                livechat_shell.style.display = 'flex';
-                livechat_shell.addEventListener('click', () => window.LC_API.open_chat_window());
-            });
-        }
-        
-    };
-
     // Delete existing LiveChat instance when there is no chat running
     const livechatDeletion = () => new Promise ((resolve) => {
         if (window.LiveChatWidget){
@@ -124,7 +109,6 @@ const LiveChat = (() => {
     return {
         initialize,
         livechatDeletion,
-        livechatFallback,
         liveChatInitialization,
         rerouteGroup,
     };
