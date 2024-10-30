@@ -73,13 +73,11 @@ const Header = (() => {
                 const topbar_whatsapp                        = getElementById('topbar-whatsapp');
                 const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
 
-                const livechatDisplay = cs_chat_livechat ? 'inline-flex' : 'none';
-                mobile_menu_livechat.style.display = livechatDisplay;
-                livechat.style.display            = livechatDisplay;
+                mobile_menu_livechat.style.display = cs_chat_livechat ? 'flex' : 'none';
+                livechat.style.display            = cs_chat_livechat ? 'inline-flex' : 'none';
                 
-                const whatsappDisplay = cs_chat_whatsapp ? 'inline-flex' : 'none';
-                topbar_whatsapp.style.display        = whatsappDisplay;
-                whatsapp_mobile_drawer.style.display = whatsappDisplay;
+                topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
+                whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
             })
             // eslint-disable-next-line no-console
             .catch(error => console.error('Error fetching feature flags:', error));
