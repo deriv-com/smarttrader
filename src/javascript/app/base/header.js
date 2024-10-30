@@ -25,6 +25,8 @@ const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivIFrame              = require('../pages/deriv_iframe.jsx');
+const DerivLiveChat            = require('../pages/livechat.jsx');
+const openChat                 = require('../../_common/utility.js').openChat;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -43,6 +45,7 @@ const Header = (() => {
 
     const onLoad = () => {
         DerivIFrame.init();
+        if (document.getElementById('deriv_livechat')) DerivLiveChat.init();
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
@@ -326,7 +329,7 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
-        mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
+        mobile_menu_livechat.addEventListener('click', () => {openChat();});
 
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
@@ -544,7 +547,9 @@ const Header = (() => {
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
-        livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
+        livechat.addEventListener('click', () => {
+            openChat();
+        });
 
         // Language Popup.
         const current_language = Language.get();
