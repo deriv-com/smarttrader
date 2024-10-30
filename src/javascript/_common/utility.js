@@ -289,6 +289,28 @@ class PromiseClass {
 const lc_licenseID = 12049137;
 const lc_clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
 
+const openChat = () => {
+    if (window.isFreshChat && window.fcWidget) {
+        window.fcWidget.open();
+    } else {
+        window.LC_API.open_chat_window();
+    }
+};
+
+const openChatWithParam = () => {
+    const interval = setInterval(() => {
+        if (window.isFreshChat && window.fcWidget) {
+            window.fcWidget.open();
+            clearInterval(interval);
+        } else if (window.LiveChatWidget) {
+            window.LiveChatWidget.on('ready', () => {
+                window.LC_API.open_chat_window();
+            });
+            clearInterval(interval);
+        }
+    }, 500);
+};
+
 module.exports = {
     showLoadingImage,
     getHighestZIndex,
@@ -314,4 +336,6 @@ module.exports = {
     getHostname,
     lc_licenseID,
     lc_clientID,
+    openChat,
+    openChatWithParam,
 };
