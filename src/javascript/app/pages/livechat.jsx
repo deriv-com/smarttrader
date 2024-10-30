@@ -15,13 +15,7 @@ const LiveChat = () => {
     console.log('is_freshchat', isFreshChatEnabled);
     console.log('isGBLoaded', isGBLoaded);
 
-    const freshChat =  useFreshChat(token);
-
-    if (isFreshChatEnabled && freshChat.isReady) {
-        window.isFreshChat = true;
-    } else {
-        window.isFreshChat = false;
-    }
+    useFreshChat(token);
 
     return (
         <React.Fragment>

@@ -99,11 +99,14 @@ const LiveChat = (() => {
 
     // Reroute group
     const rerouteGroup = () => {
-        LiveChat.livechatDeletion().then(() => {
-            LiveChat.liveChatInitialization().then(() => {
-                LiveChat.initialize();
+        
+        if (!window.fcWidget) {
+            LiveChat.livechatDeletion().then(() => {
+                LiveChat.liveChatInitialization().then(() => {
+                    LiveChat.initialize();
+                });
             });
-        });
+        }
     };
 
     return {
