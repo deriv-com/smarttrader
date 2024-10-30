@@ -9,12 +9,9 @@ const LiveChat = () => {
     const client_info  = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
     const token        = client_info ? client_info.token : null;
 
-    const [isFreshChatEnabled, isGBLoaded] = useGrowthbookGetFeatureValue({
+    const [isFreshChatEnabled] = useGrowthbookGetFeatureValue({
         featureFlag: 'enable_freshworks_live_chat',
     });
-    console.log('is_freshchat', isFreshChatEnabled);
-    console.log('isGBLoaded', isGBLoaded);
-
     useFreshChat(token);
 
     return (
