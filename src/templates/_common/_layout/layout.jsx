@@ -5,7 +5,6 @@ import Header from './header.jsx';
 import WalletHeader from './wallet-header.jsx';
 // import Elevio from '../includes/elevio.jsx';
 import Gtm from '../includes/gtm.jsx';
-import LiveChat from '../includes/livechat.jsx';
 import LanguageMenuModal from '../components/language-menu-modal.jsx';
 
 const CONTENT_PLACEHOLDER = 'CONTENT_PLACEHOLDER';
@@ -44,7 +43,7 @@ const Topbar = () => (
             <div id='topbar-whatsapp'>
                 <img src={it.url_for('images/pages/footer/ic-whatsapp.svg')} />
             </div>
-            <LiveChat />
+            <div id='deriv_livechat' />
             <div id='topbar-help-centre'>
                 <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
             </div>
