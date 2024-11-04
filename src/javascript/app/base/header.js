@@ -27,6 +27,7 @@ const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivIFrame              = require('../pages/deriv_iframe.jsx');
 const DerivLiveChat            = require('../pages/livechat.jsx');
 const openChat                 = require('../../_common/utility.js').openChat;
+const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -63,8 +64,28 @@ const Header = (() => {
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
+        applyFeatureFlags();
     };
-    
+
+    const applyFeatureFlags = () => {
+        getRemoteConfig(true)
+            .then(data => {
+                const { cs_chat_livechat, cs_chat_whatsapp } = data.data;
+                const mobile_menu_livechat                   = getElementById('mobile__menu-livechat');
+                const livechat                               = getElementById('livechat');
+                const topbar_whatsapp                        = getElementById('topbar-whatsapp');
+                const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
+
+                mobile_menu_livechat.style.display = cs_chat_livechat ? 'flex' : 'none';
+                livechat.style.display            = cs_chat_livechat ? 'inline-flex' : 'none';
+                
+                topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
+                whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
+            })
+            // eslint-disable-next-line no-console
+            .catch(error => console.error('Error fetching feature flags:', error));
+    };
+
     const switchHeaders = () => {
         const regular_header = getElementById('regular__header');
         const wallet_header = getElementById('wallet__header');
