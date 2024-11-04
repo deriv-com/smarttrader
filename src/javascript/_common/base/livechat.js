@@ -30,12 +30,12 @@ const LiveChat = (() => {
             ...utm_campaign && { utm_campaign },
             ...utm_medium && { utm_medium },
         };
-        window.LiveChatWidget.call('set_session_variables', session_variables);
+        window.LiveChatWidget?.call('set_session_variables', session_variables);
     };
 
     const setNameEmail = () => {
-        if (client_email) window.LiveChatWidget.call('set_customer_email', client_email);
-        if (first_name && last_name) window.LiveChatWidget.call('set_customer_name', `${first_name} ${last_name}`);
+        if (client_email) window.LiveChatWidget?.call('set_customer_email', client_email);
+        if (first_name && last_name) window.LiveChatWidget?.call('set_customer_name', `${first_name} ${last_name}`);
     };
 
     BinarySocket.wait('get_settings').then((response) => {
@@ -55,12 +55,12 @@ const LiveChat = (() => {
 
     const initialize = () => {
         if (window.LiveChatWidget) {
-            window.LiveChatWidget.on('ready', () => {
+            window.LiveChatWidget?.on('ready', () => {
                 setSessionVariables();
                 if (!ClientBase.isLoggedIn()){
                     window.LC_API.on_chat_ended = () => {
-                        window.LiveChatWidget.call('set_customer_email', ' ');
-                        window.LiveChatWidget.call('set_customer_name', ' ');
+                        window.LiveChatWidget?.call('set_customer_email', ' ');
+                        window.LiveChatWidget?.call('set_customer_name', ' ');
                     };
                 } else {
                     window.LC_API.on_chat_ended = () => {
@@ -74,10 +74,10 @@ const LiveChat = (() => {
     // Delete existing LiveChat instance when there is no chat running
     const livechatDeletion = () => new Promise ((resolve) => {
         if (window.LiveChatWidget){
-            window.LiveChatWidget.on('ready', () => {
+            window.LiveChatWidget?.on('ready', () => {
                 try {
-                    if (window.LiveChatWidget.get('customer_data').status !== 'chatting') {
-                        window.LiveChatWidget.call('destroy');
+                    if (window.LiveChatWidget?.get('customer_data').status !== 'chatting') {
+                        window.LiveChatWidget?.call('destroy');
                         resolve();
                     }
                 } catch (e) {

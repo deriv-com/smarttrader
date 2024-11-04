@@ -303,7 +303,7 @@ const openChatWithParam = () => {
             window.fcWidget.open();
             clearInterval(interval);
         } else if (window.LiveChatWidget) {
-            window.LiveChatWidget.on('ready', () => {
+            window.LiveChatWidget?.on('ready', () => {
                 window.LC_API.open_chat_window();
             });
             clearInterval(interval);

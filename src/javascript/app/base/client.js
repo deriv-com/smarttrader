@@ -108,9 +108,9 @@ const Client = (() => {
     // Called when logging out to end ongoing chats if there is any
     const endLiveChat = () => new Promise ((resolve) => {
         const session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
-        window.LiveChatWidget.call('set_session_variables', session_variables);
-        window.LiveChatWidget.call('set_customer_email', ' ');
-        window.LiveChatWidget.call('set_customer_name', ' ');
+        window.LiveChatWidget?.call('set_session_variables', session_variables);
+        window.LiveChatWidget?.call('set_customer_email', ' ');
+        window.LiveChatWidget?.call('set_customer_name', ' ');
         
         try {
             const customerSDK = init({
@@ -118,8 +118,8 @@ const Client = (() => {
                 clientId : clientID,
             });
             customerSDK.on('connected', () => {
-                if (window.LiveChatWidget.get('chat_data')) {
-                    const { chatId, threadId } = window.LiveChatWidget.get('chat_data');
+                if (window.LiveChatWidget?.get('chat_data')) {
+                    const { chatId, threadId } = window.LiveChatWidget?.get('chat_data');
                     if (threadId) {
                         customerSDK.deactivateChat({ chatId }).catch(() => null);
                     }
