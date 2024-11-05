@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import useFreshChat from '../hooks/use-freshChat';
 import useGrowthbookGetFeatureValue from '../hooks/useGrowthbookGetFeatureValue';
 
-const LiveChat = () => {
+const LiveChat = ({ cs_live_chat }) => {
 
     const loginid      = localStorage.getItem('active_loginid');
     const client_info  = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
@@ -13,6 +13,8 @@ const LiveChat = () => {
         featureFlag: 'enable_freshworks_live_chat',
     });
     useFreshChat(token);
+
+    if (!isFreshChatEnabled && !cs_live_chat) return null;
 
     return (
         <React.Fragment>
@@ -33,8 +35,11 @@ const LiveChat = () => {
     );
 };
 
-export const init = () => {
-    ReactDOM.render(<LiveChat />, document.getElementById('deriv_livechat'));
+export const init = (cs_chat_livechat) => {
+    ReactDOM.render(
+        <LiveChat cs_live_chat={cs_chat_livechat} />,
+        document.getElementById('deriv_livechat')
+    );
 };
 
 export default init;
