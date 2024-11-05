@@ -1,4 +1,5 @@
 const extend                 = require('extend');
+const Cookies                = require('js-cookie');
 const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('./lib/polyfills/element.matches');
 
@@ -311,6 +312,18 @@ const openChatWithParam = () => {
     }, 500);
 };
 
+const getCountry = async () => {
+    try {
+        const response = await fetch('https://www.cloudflare.com/cdn-cgi/trace').catch(() => null);
+        const text = response ? await response.text().catch(() => '') : '';
+        const entries = text ? text.split('\n').map(v => v.split('=', 2)) : [];
+        const data = entries.length ? Object.fromEntries(entries) : {};
+        return data?.loc?.toLowerCase() || JSON.parse(Cookies.get('website_status') || '') || '';
+    } catch {
+        return '';
+    }
+};
+
 module.exports = {
     showLoadingImage,
     getHighestZIndex,
@@ -338,4 +351,5 @@ module.exports = {
     lc_clientID,
     openChat,
     openChatWithParam,
+    getCountry,
 };

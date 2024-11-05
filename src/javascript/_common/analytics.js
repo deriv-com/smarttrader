@@ -1,14 +1,41 @@
 const DerivAnalytics = require('@deriv-com/analytics');
+const Cookies = require('js-cookie');
+const { getCountry } = require('./utility');
+const LocalStore = require('./storage').LocalStore;
+const Language = require('./language');
+const { getAppId } = require('../config');
 
 const Analytics = (() => {
-    const init = () => {
+    const init = async () => {
+        const account_type = LocalStore?.get('active_loginid')
+            ?.match(/[a-zA-Z]+/g)
+            ?.join('');
+        const utmData = Cookies.get('utm_data');
+        const ppcCampaignCookies = utmData ? JSON.parse(utmData) : {
+            utm_campaign: 'no campaign',
+            utm_content : 'no content',
+            utm_medium  : 'no medium',
+            utm_source  : 'no source',
+        };
+
         if (process.env.RUDDERSTACK_KEY && process.env.GROWTHBOOK_CLIENT_KEY) {
             DerivAnalytics.Analytics.initialise({
                 growthbookKey    : process.env.GROWTHBOOK_CLIENT_KEY, // optional key to enable A/B tests
                 rudderstackKey   : process.env.RUDDERSTACK_KEY,
                 growthbookOptions: {
                     attributes: {
-                        url: window.location.href,
+                        account_type   : account_type === 'null' ? 'unlogged' : account_type,
+                        app_id         : String(getAppId()),
+                        country        : await getCountry(),
+                        device_language: navigator?.language || 'en-EN',
+                        device_type    : window.innerWidth <= 600 ? 'mobile' : 'desktop',
+                        domain         : window.location.hostname,
+                        url            : window.location.href,
+                        user_language  : Language.get().toLowerCase(),
+                        utm_campaign   : ppcCampaignCookies?.utm_campaign,
+                        utm_content    : ppcCampaignCookies?.utm_content,
+                        utm_medium     : ppcCampaignCookies?.utm_medium,
+                        utm_source     : ppcCampaignCookies?.utm_source,
                     },
                 },
             });
