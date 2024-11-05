@@ -80,9 +80,10 @@ const Header = (() => {
                 topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
                 whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
             })
-            // eslint-disable-next-line no-console
+            
             .catch(error => {
                 if (document.getElementById('deriv_livechat')) { DerivLiveChat.init(); }
+                // eslint-disable-next-line no-console
                 console.error('Error fetching feature flags:', error);
             });
     };
