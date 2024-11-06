@@ -1,0 +1,1860 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dsmarttrader\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-10-17 05:02\n"
+"Last-Translator: \n"
+"Language-Team: Mongolian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: dsmarttrader\n"
+"X-Crowdin-Project-ID: 397380\n"
+"X-Crowdin-Language: mn\n"
+"X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File-ID: 196\n"
+"Language: mn_MN\n"
+
+msgid "404"
+msgstr ""
+
+msgid "%1 and %2 cannot be the same."
+msgstr ""
+
+msgid "%1 days %2 hours %3 minutes"
+msgstr ""
+
+msgid "%1 has been credited into your Virtual Account: %2."
+msgstr ""
+
+msgid "%1Return to trading page%2"
+msgstr ""
+
+msgid "A whole new trading experience on a powerful yet easy to use platform."
+msgstr ""
+
+msgid "A word by itself is easy to guess"
+msgstr ""
+
+msgid "AM"
+msgstr ""
+
+msgid "Account Authenticated"
+msgstr ""
+
+msgid "Account access is temporarily limited. Please check your inbox for more details."
+msgstr ""
+
+msgid "Account authentication"
+msgstr ""
+
+msgid "Account balance:"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Add +/– to define a barrier offset. For example, +0.005 means a barrier that's 0.005 higher than the entry spot."
+msgstr ""
+
+msgid "Add another word or two. Uncommon words are better."
+msgstr ""
+
+msgid "Adjust trade parameters"
+msgstr ""
+
+msgid "Agree and accept"
+msgstr ""
+
+msgid "All markets are closed now. Please try again later."
+msgstr ""
+
+msgid "All-uppercase is almost as easy to guess as all-lowercase"
+msgstr ""
+
+msgid "Allow equals"
+msgstr ""
+
+msgid "Already have an account?"
+msgstr ""
+
+msgid "Apply now as a professional investor"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "Asian Down"
+msgstr ""
+
+msgid "Asian Up"
+msgstr ""
+
+msgid "Asian contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
+msgstr ""
+
+msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
+msgstr ""
+
+msgid "Asians"
+msgstr ""
+
+msgid "At reset time, if the spot is in the opposite direction of your prediction, the barrier is reset to that spot."
+msgstr ""
+
+msgid "Audit"
+msgstr ""
+
+msgid "Audit Page"
+msgstr ""
+
+msgid "Audit page"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "Australian Dollar"
+msgstr ""
+
+msgid "Authenticate your account now to take full advantage of all payment methods available."
+msgstr ""
+
+msgid "Automated trading at your fingertips. No coding needed."
+msgstr ""
+
+msgid "Average"
+msgstr ""
+
+msgid "Avoid dates and years that are associated with you"
+msgstr ""
+
+msgid "Avoid recent years"
+msgstr ""
+
+msgid "Avoid repeated words and characters"
+msgstr ""
+
+msgid "Avoid sequences"
+msgstr ""
+
+msgid "Avoid years that are associated with you"
+msgstr ""
+
+msgid "Barrier"
+msgstr ""
+
+msgid "Barrier change"
+msgstr ""
+
+msgid "Barrier offset"
+msgstr ""
+
+msgid "Binance USD"
+msgstr ""
+
+msgid "Binary Coin"
+msgstr ""
+
+msgid "Bitcoin"
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "Buy price"
+msgstr ""
+
+msgid "By purchasing the %1\"Close-Low\"%2 contract, you'll win the multiplier times the difference between the %1close%2 and %1low%2 over the duration of the contract."
+msgstr ""
+
+msgid "By purchasing the %1\"High-Close\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1close%2 over the duration of the contract."
+msgstr ""
+
+msgid "By purchasing the %1\"High-Low\"%2 contract, you'll win the multiplier times the difference between the %1high%2 and %1low%2 over the duration of the contract."
+msgstr ""
+
+msgid "Call Spread"
+msgstr ""
+
+msgid "Call Spread/Put Spread"
+msgstr ""
+
+msgid "Capitalization doesn't help very much"
+msgstr ""
+
+msgid "Cashier"
+msgstr ""
+
+msgid "Cashier disabled"
+msgstr ""
+
+msgid "Change API Endpoint"
+msgstr ""
+
+msgid "Chart"
+msgstr ""
+
+msgid "Chart is not available for this underlying."
+msgstr ""
+
+msgid "Charting for this underlying is delayed"
+msgstr ""
+
+msgid "Check your connection."
+msgstr ""
+
+msgid "Christmas Day"
+msgstr ""
+
+msgid "Click OK to proceed."
+msgstr ""
+
+msgid "Click here to open a Financial Account"
+msgstr ""
+
+msgid "Click here to open a Gaming account"
+msgstr ""
+
+msgid "Click here to open a Real Account"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Close time"
+msgstr ""
+
+msgid "Close-Low"
+msgstr ""
+
+msgid "Closes early (at 18:00)"
+msgstr ""
+
+msgid "Closes early (at 21:00)"
+msgstr ""
+
+msgid "Common names and surnames are easy to guess"
+msgstr ""
+
+msgid "Complete details"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr ""
+
+msgid "Connecting to server"
+msgstr ""
+
+msgid "Continue trading"
+msgstr ""
+
+msgid "Contract Confirmation"
+msgstr ""
+
+msgid "Contract Details"
+msgstr ""
+
+msgid "Contract details"
+msgstr ""
+
+msgid "Contract ends"
+msgstr ""
+
+msgid "Contract has not started yet"
+msgstr ""
+
+msgid "Contract information"
+msgstr ""
+
+msgid "Contract period"
+msgstr ""
+
+msgid "Contract result"
+msgstr ""
+
+msgid "Contract starts"
+msgstr ""
+
+msgid "Contract type"
+msgstr ""
+
+msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
+msgstr ""
+
+msgid "Contracts bought"
+msgstr ""
+
+msgid "Contracts sold"
+msgstr ""
+
+msgid "Crypto"
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+msgid "Current"
+msgstr ""
+
+msgid "Current time"
+msgstr ""
+
+msgid "Current time:"
+msgstr ""
+
+msgid "Dates are often easy to guess"
+msgstr ""
+
+msgid "Deal cancel. fee"
+msgstr ""
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Demo"
+msgstr ""
+
+msgid "Demo Financial"
+msgstr ""
+
+msgid "Demo Financial STP"
+msgstr ""
+
+msgid "Demo Synthetic"
+msgstr ""
+
+msgid "Demo account"
+msgstr ""
+
+msgid "Deposit"
+msgstr ""
+
+msgid "Deposits and withdrawals have been disabled on your account. Please check your email for more details."
+msgstr ""
+
+msgid "Deriv "
+msgstr ""
+
+msgid "Deriv Apps"
+msgstr ""
+
+msgid "Deriv Apps accounts"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Digit"
+msgstr ""
+
+msgid "Digit Differs"
+msgstr ""
+
+msgid "Digit Even"
+msgstr ""
+
+msgid "Digit Matches"
+msgstr ""
+
+msgid "Digit Odd"
+msgstr ""
+
+msgid "Digit Over"
+msgstr ""
+
+msgid "Digit Under"
+msgstr ""
+
+msgid "Digit contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
+msgstr ""
+
+msgid "Digits"
+msgstr ""
+
+msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
+msgstr ""
+
+msgid "Does Not Touch"
+msgstr ""
+
+msgid "Duration"
+msgstr ""
+
+msgid "EU Deriv account"
+msgstr ""
+
+msgid "End Time"
+msgstr ""
+
+msgid "End time"
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Ends Between"
+msgstr ""
+
+msgid "Ends Between/Ends Outside"
+msgstr ""
+
+msgid "Ends Between/Ends Outside contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
+msgstr ""
+
+msgid "Ends Outside"
+msgstr ""
+
+msgid "Entry Spot"
+msgstr ""
+
+msgid "Entry spot"
+msgstr ""
+
+msgid "Equals"
+msgstr ""
+
+msgid "Ether Classic"
+msgstr ""
+
+msgid "Ethereum"
+msgstr ""
+
+msgid "Euro"
+msgstr ""
+
+msgid "Even/Odd"
+msgstr ""
+
+msgid "Even/Odd contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
+msgstr ""
+
+msgid "Exclude time cannot be for more than 5 years."
+msgstr ""
+
+msgid "Exclude time cannot be less than 6 months."
+msgstr ""
+
+msgid "Excluded from the website until"
+msgstr ""
+
+msgid "Exit Spot"
+msgstr ""
+
+msgid "Exit spot"
+msgstr ""
+
+msgid "Exit spot time"
+msgstr ""
+
+msgid "Exit time"
+msgstr ""
+
+msgid "Explanation"
+msgstr ""
+
+msgid "Fall"
+msgstr ""
+
+msgid "Fall or equal"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "Fiat"
+msgstr ""
+
+msgid "Final price"
+msgstr ""
+
+msgid "Financial"
+msgstr ""
+
+msgid "Financial STP"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Fr"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "Fridays"
+msgstr ""
+
+msgid "Gaming"
+msgstr ""
+
+msgid "Go To Reports"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
+
+msgid "Go to statement"
+msgstr ""
+
+msgid "Goes Outside"
+msgstr ""
+
+msgid "Guide"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "High Barrier"
+msgstr ""
+
+msgid "High Tick"
+msgstr ""
+
+msgid "High Tick/Low Tick contracts have a strict duration of five ticks."
+msgstr ""
+
+msgid "High barrier"
+msgstr ""
+
+msgid "High barrier must be higher than low barrier"
+msgstr ""
+
+msgid "High barrier offset"
+msgstr ""
+
+msgid "High, Low and Close"
+msgstr ""
+
+msgid "High-Close"
+msgstr ""
+
+msgid "High-Low"
+msgstr ""
+
+msgid "High/Low Ticks"
+msgstr ""
+
+msgid "Higher"
+msgstr ""
+
+msgid "Higher/Lower"
+msgstr ""
+
+msgid "Higher/Lower contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
+msgstr ""
+
+msgid "Hour"
+msgstr ""
+
+msgid "I want to reapply"
+msgstr ""
+
+msgid "IDK"
+msgstr ""
+
+msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barrier</strong> or the <strong>High barrier</strong>, you don't win the payout."
+msgstr ""
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
+msgstr ""
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
+msgstr ""
+
+msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong>, you don't win the payout."
+msgstr ""
+
+msgid "If the <strong>last tick</strong> is equal to the average of the ticks, you don't win the payout."
+msgstr ""
+
+msgid "If you select \"Allow equals\", you win the payout if exit spot is higher than or equal to entry spot for \"Rise\". Similarly, you win the payout if exit spot is lower than or equal to entry spot for \"Fall\"."
+msgstr ""
+
+msgid "If you select \"Asian Fall\", you will win the payout if the <strong>last tick</strong> is <strong>lower</strong> than the <strong>average</strong> of the ticks."
+msgstr ""
+
+msgid "If you select \"Asian Rise\", you will win the payout if the <strong>last tick</strong> is <strong>higher</strong> than the <strong>average</strong> of the ticks."
+msgstr ""
+
+msgid "If you select \"Differs\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>not the same</strong> as your <strong>prediction</strong>."
+msgstr ""
+
+msgid "If you select \"Does Not Touch\", you win the payout if the market never touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
+msgstr ""
+
+msgid "If you select \"Ends Between\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>Low barrier</strong> AND strictly lower than the <strong>High barrier</strong>."
+msgstr ""
+
+msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit spot</strong> is EITHER strictly higher than the <strong>High barrier</strong>, OR strictly lower than the <strong>Low barrier</strong>."
+msgstr ""
+
+msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
+msgstr ""
+
+msgid "If you select \"Fall\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"Falls\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"Goes Outside\", you win the payout if the market touches either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
+msgstr ""
+
+msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
+msgstr ""
+
+msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
+msgstr ""
+
+msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
+msgstr ""
+
+msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
+msgstr ""
+
+msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
+msgstr ""
+
+msgid "If you select \"Reset-Call\", you win the payout if the exit spot is strictly higher than either the entry spot or the spot at reset time."
+msgstr ""
+
+msgid "If you select \"Reset-Put\", you win the payout if the exit spot is strictly lower than either the entry spot or the spot at reset time."
+msgstr ""
+
+msgid "If you select \"Rise\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"Rises\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"Stays Between\", you win the payout if the market stays between (does not touch) either the <strong>High barrier</strong> or the <strong>Low barrier</strong> at any time during the <strong>contract period</strong>."
+msgstr ""
+
+msgid "If you select \"Touches\", you win the payout if the market touches the <strong>barrier</strong> at any time during the <strong>contract period</strong>."
+msgstr ""
+
+msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
+msgstr ""
+
+msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"falls\", you win the payout if the market price is lower than the entry spot."
+msgstr ""
+
+msgid "If you select \"rises\", you win the payout if the market price is higher than the <strong>entry spot</strong>."
+msgstr ""
+
+msgid "If you select \"rises\", you win the payout if the market price is higher than the entry spot."
+msgstr ""
+
+msgid "If you select %1\"High Tick\"%2, you win the payout if the selected tick is the %1highest among the next five ticks%2."
+msgstr ""
+
+msgid "If you select %1\"Low Tick\"%2, you win the payout if the selected tick is the %1lowest among the next five ticks%2."
+msgstr ""
+
+msgid "If you select %1\"Only Downs\"%2, you win the payout if consecutive ticks fall successively after the %1entry spot%2.%3No payout if any tick rises or is equal to any of the previous ticks."
+msgstr ""
+
+msgid "If you select %1\"Only Ups\"%2, you win the payout if consecutive ticks rise successively after the %1entry spot%2.%3No payout if any tick falls or is equal to any of the previous ticks."
+msgstr ""
+
+msgid "If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time."
+msgstr ""
+
+msgid "If you select a <strong>start time</strong> of \"Now\", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
+msgstr ""
+
+msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
+msgstr ""
+
+msgid "In the EU, financial binary options are only available to professional investors."
+msgstr ""
+
+msgid "In/Out"
+msgstr ""
+
+msgid "Indicates required field"
+msgstr ""
+
+msgid "Indicative"
+msgstr ""
+
+msgid "Indicative barrier"
+msgstr ""
+
+msgid "Invalid app id"
+msgstr ""
+
+msgid "Invalid email address."
+msgstr ""
+
+msgid "Invalid verification code."
+msgstr ""
+
+msgid "Investment"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "Language settings"
+msgstr ""
+
+msgid "Last Digit Prediction"
+msgstr ""
+
+msgid "Last Digit Stats"
+msgstr ""
+
+msgid "Last digit stats for the latest %1 ticks on %2"
+msgstr ""
+
+msgid "Litecoin"
+msgstr ""
+
+msgid "Live chat"
+msgstr ""
+
+msgid "Log in"
+msgstr ""
+
+msgid "Log in here"
+msgstr ""
+
+msgid "Log out"
+msgstr ""
+
+msgid "Login ID"
+msgstr ""
+
+msgid "Login at:"
+msgstr ""
+
+msgid "Lookbacks"
+msgstr ""
+
+msgid "Looking for CFD accounts? Go to Trader's hub"
+msgstr ""
+
+msgid "Looking for CFDs? Go to Trader's hub"
+msgstr ""
+
+msgid "Loss"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Low Barrier"
+msgstr ""
+
+msgid "Low Tick"
+msgstr ""
+
+msgid "Low barrier"
+msgstr ""
+
+msgid "Low barrier offset"
+msgstr ""
+
+msgid "Lower"
+msgstr ""
+
+msgid "MT5"
+msgstr ""
+
+msgid "MT5 withdrawal disabled"
+msgstr ""
+
+msgid "MT5 withdrawals have been disabled on your account. Please check your email for more details."
+msgstr ""
+
+msgid "Manage accounts"
+msgstr ""
+
+msgid "Manage funds"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "Market"
+msgstr ""
+
+msgid "Matches/Differs"
+msgstr ""
+
+msgid "Maximum multiplier of 1000."
+msgstr ""
+
+msgid "Maximum payout"
+msgstr ""
+
+msgid "Maximum:"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Minimum of %1 characters required."
+msgstr ""
+
+msgid "Minimum:"
+msgstr ""
+
+msgid "Minute"
+msgstr ""
+
+msgid "Mo"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "More information can be found in an email sent to you."
+msgstr ""
+
+msgid "Multi-Collateral"
+msgstr ""
+
+msgid "Multiplier"
+msgstr ""
+
+msgid "Multiplier Down"
+msgstr ""
+
+msgid "Multiplier Up"
+msgstr ""
+
+msgid "Multipliers"
+msgstr ""
+
+msgid "Names and surnames by themselves are easy to guess"
+msgstr ""
+
+msgid "Net profit"
+msgstr ""
+
+msgid "Network status"
+msgstr ""
+
+msgid "New Year's Day"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "No currency assigned"
+msgstr ""
+
+msgid "No currency selected"
+msgstr ""
+
+msgid "No need for symbols, digits, or uppercase letters"
+msgstr ""
+
+msgid "No notifications"
+msgstr ""
+
+msgid "Non-EU Deriv "
+msgstr ""
+
+msgid "Not"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Number of ticks:"
+msgstr ""
+
+msgid "OAuth App ID"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Online"
+msgstr ""
+
+msgid "Online trading platform"
+msgstr ""
+
+msgid "Only Downs"
+msgstr ""
+
+msgid "Only Ups"
+msgstr ""
+
+msgid "Only letters, numbers, space, and hyphen are allowed."
+msgstr ""
+
+msgid "Only letters, numbers, space, and these special characters are allowed: %1"
+msgstr ""
+
+msgid "Only letters, numbers, space, hyphen, period, and apostrophe are allowed."
+msgstr ""
+
+msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
+msgstr ""
+
+msgid "Oops... Page Not Available"
+msgstr ""
+
+msgid "Open a Financial Account"
+msgstr ""
+
+msgid "Open a Real Account"
+msgstr ""
+
+msgid "Open a free account"
+msgstr ""
+
+msgid "Open positions"
+msgstr ""
+
+msgid "Options & Multipliers"
+msgstr ""
+
+msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
+msgstr ""
+
+msgid "Over/Under"
+msgstr ""
+
+msgid "Over/Under contracts will be refunded at the purchase price if the contract doesn't end within 5 minutes."
+msgstr ""
+
+msgid "PM"
+msgstr ""
+
+msgid "Password should have lower and uppercase English letters with numbers."
+msgstr ""
+
+msgid "Paxos Standard"
+msgstr ""
+
+msgid "Pay-out"
+msgstr ""
+
+msgid "Payout"
+msgstr ""
+
+msgid "Payout range"
+msgstr ""
+
+msgid "Percentage"
+msgstr ""
+
+msgid "Please %1complete your account profile%2 to lift your withdrawal and trading limits."
+msgstr ""
+
+msgid "Please %1log in%2 or %3sign up%4 to view this page."
+msgstr ""
+
+msgid "Please accept the terms and conditions."
+msgstr ""
+
+msgid "Please complete the %1Real Account form%2 to verify your age as required by the %3UK Gambling%4 Commission (UKGC)."
+msgstr ""
+
+msgid "Please complete the %1financial assessment form%2 to lift your withdrawal and trading limits."
+msgstr ""
+
+msgid "Please confirm that you are not a politically exposed person."
+msgstr ""
+
+msgid "Please ensure that you have the Telegram app installed on your device."
+msgstr ""
+
+msgid "Please enter a valid phone number (e.g. +15417541234)."
+msgstr ""
+
+msgid "Please reapply once the required criteria has been fulfilled."
+msgstr ""
+
+msgid "Please reload the page"
+msgstr ""
+
+msgid "Please select"
+msgstr ""
+
+msgid "Please select a valid time."
+msgstr ""
+
+msgid "Please select the checkbox."
+msgstr ""
+
+msgid "Please set the currency of your account."
+msgstr ""
+
+msgid "Please set your %130-day turnover limit%2 to remove deposit limits."
+msgstr ""
+
+msgid "Please specify your preferred interval reality check in minutes:"
+msgstr ""
+
+msgid "Please submit your proof of address."
+msgstr ""
+
+msgid "Please submit your proof of identity."
+msgstr ""
+
+msgid "Potential Payout"
+msgstr ""
+
+msgid "Potential Profit"
+msgstr ""
+
+msgid "Potential payout"
+msgstr ""
+
+msgid "Potential profit"
+msgstr ""
+
+msgid "Potential profit/loss"
+msgstr ""
+
+msgid "Pound Sterling"
+msgstr ""
+
+msgid "Predict the direction<br />and purchase"
+msgstr ""
+
+msgid "Predictable substitutions like '@' instead of 'a' don't help very much"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Profit"
+msgstr ""
+
+msgid "Profit / Loss"
+msgstr ""
+
+msgid "Profit table"
+msgstr ""
+
+msgid "Profit/loss"
+msgstr ""
+
+msgid "Proof of address"
+msgstr ""
+
+msgid "Proof of address expired"
+msgstr ""
+
+msgid "Proof of address required"
+msgstr ""
+
+msgid "Proof of identity"
+msgstr ""
+
+msgid "Proof of identity expired"
+msgstr ""
+
+msgid "Proof of identity required"
+msgstr ""
+
+msgid "Purchase"
+msgstr ""
+
+msgid "Purchase Time"
+msgstr ""
+
+msgid "Purchase price"
+msgstr ""
+
+msgid "Purchase request sent"
+msgstr ""
+
+msgid "Purchase time"
+msgstr ""
+
+msgid "Put Spread"
+msgstr ""
+
+msgid "Ready to trade?"
+msgstr ""
+
+msgid "Real"
+msgstr ""
+
+msgid "Real Financial"
+msgstr ""
+
+msgid "Real Financial STP"
+msgstr ""
+
+msgid "Real Synthetic"
+msgstr ""
+
+msgid "Reality Check"
+msgstr ""
+
+msgid "Recent years are easy to guess"
+msgstr ""
+
+msgid "Remaining time"
+msgstr ""
+
+msgid "Remove deposit limits"
+msgstr ""
+
+msgid "Repeats like \"aaa\" are easy to guess"
+msgstr ""
+
+msgid "Repeats like \"abcabcabc\" are only slightly harder to guess than \"abc\""
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "Requires your browser's web storage to be enabled in order to function properly. Please enable it or exit private browsing mode."
+msgstr ""
+
+msgid "Resale not offered"
+msgstr ""
+
+msgid "Reset Barrier"
+msgstr ""
+
+msgid "Reset Call"
+msgstr ""
+
+msgid "Reset Call/Reset Put"
+msgstr ""
+
+msgid "Reset Put"
+msgstr ""
+
+msgid "Reset Time"
+msgstr ""
+
+msgid "Reset balance"
+msgstr ""
+
+msgid "Reset barrier"
+msgstr ""
+
+msgid "Reset time"
+msgstr ""
+
+msgid "Reset to original settings"
+msgstr ""
+
+msgid "Return"
+msgstr ""
+
+msgid "Reversed words aren't much harder to guess"
+msgstr ""
+
+msgid "Rise"
+msgstr ""
+
+msgid "Rise or equal"
+msgstr ""
+
+msgid "Rise/Fall"
+msgstr ""
+
+msgid "Rise/Fall contracts will be refunded if:"
+msgstr ""
+
+msgid "STASIS Euro"
+msgstr ""
+
+msgid "Sa"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Search..."
+msgstr ""
+
+msgid "Select Asset"
+msgstr ""
+
+msgid "Select Trade Type"
+msgstr ""
+
+msgid "Select date"
+msgstr ""
+
+msgid "Select market:"
+msgstr ""
+
+msgid "Select your market and underlying asset"
+msgstr ""
+
+msgid "Select your trade type"
+msgstr ""
+
+msgid "Selected tick"
+msgstr ""
+
+msgid "Self-exclusion"
+msgstr ""
+
+msgid "Sell"
+msgstr ""
+
+msgid "Sell at market"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "Sequences like abc or 6543 are easy to guess"
+msgstr ""
+
+msgid "Server"
+msgstr ""
+
+msgid "Session duration limit cannot be more than 6 weeks."
+msgstr ""
+
+msgid "Session duration:"
+msgstr ""
+
+msgid "Set account currency"
+msgstr ""
+
+msgid "Short keyboard patterns are easy to guess"
+msgstr ""
+
+msgid "Should be %1"
+msgstr ""
+
+msgid "Should be a valid number."
+msgstr ""
+
+msgid "Should be between %1 and %2"
+msgstr ""
+
+msgid "Should be less than %1"
+msgstr ""
+
+msgid "Should be more than %1"
+msgstr ""
+
+msgid "Should start with letter or number, and may contain hyphen and underscore."
+msgstr ""
+
+msgid "Sign out"
+msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "SmartTrader"
+msgstr ""
+
+msgid "SmartTrader is unavailable for this account"
+msgstr ""
+
+msgid "Sorry, an error occurred while processing your request."
+msgstr ""
+
+msgid "Sorry, but binary options trading is not available in your country."
+msgstr ""
+
+msgid "Sorry, but binary options trading is not available in your financial account."
+msgstr ""
+
+msgid "Sorry, options trading isn’t available in the United Kingdom and the Isle of Man."
+msgstr ""
+
+msgid "Sorry, this feature is available to virtual accounts only."
+msgstr ""
+
+msgid "Spot"
+msgstr ""
+
+msgid "Spot time"
+msgstr ""
+
+msgid "Spot time (GMT)"
+msgstr ""
+
+msgid "Stake"
+msgstr ""
+
+msgid "Start Time"
+msgstr ""
+
+msgid "Start time"
+msgstr ""
+
+msgid "Statements"
+msgstr ""
+
+msgid "Stays Between"
+msgstr ""
+
+msgid "Stays Between/Goes Outside"
+msgstr ""
+
+msgid "Stays Between/Goes Outside Contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "Straight rows of keys are easy to guess"
+msgstr ""
+
+msgid "Su"
+msgstr ""
+
+msgid "Submit"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Switch to another account"
+msgstr ""
+
+msgid "Synthetic"
+msgstr ""
+
+msgid "Target"
+msgstr ""
+
+msgid "Tether ERC20"
+msgstr ""
+
+msgid "Tether Omni"
+msgstr ""
+
+msgid "Tether TRC20"
+msgstr ""
+
+msgid "Th"
+msgstr ""
+
+msgid "Thank you, we'll get back to you within 24 hours"
+msgstr ""
+
+msgid "The %1close%2 is the latest tick at or before the %1end time%2. If you selected a specific %1end time,%2 the %1end time%2 is the selected time."
+msgstr ""
+
+msgid "The %1contract period%2 is the period between the %1first tick%2 (after start time) and the %1end time%2."
+msgstr ""
+
+msgid "The %1end time%2 is the selected number of minutes/hours after the %1start time%2."
+msgstr ""
+
+msgid "The %1exit spot%2 is the last tick when the contract ends. Contract ends when all ticks rise or fall successively, or when a single tick breaks the predicted pattern."
+msgstr ""
+
+msgid "The %1high%2 is the highest point ever reached by the market during the contract period."
+msgstr ""
+
+msgid "The %1low%2 is the lowest point ever reached by the market during the contract period."
+msgstr ""
+
+msgid "The %1start time%2 begins when the contract is processed by our servers."
+msgstr ""
+
+msgid "The %1start time%2 is when the contract has been processed by our servers and the %1entry spot%2 is the %1next tick%2 thereafter."
+msgstr ""
+
+msgid "The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>."
+msgstr ""
+
+msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration)."
+msgstr ""
+
+msgid "The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong>."
+msgstr ""
+
+msgid "The <strong>entry spot</strong> is the first tick after the contract is processed by our servers."
+msgstr ""
+
+msgid "The <strong>exit spot</strong> is the latest tick at or before the <strong>end time</strong>."
+msgstr ""
+
+msgid "The <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter."
+msgstr ""
+
+msgid "The <strong>start time</strong> is when the contract is processed by our servers."
+msgstr ""
+
+msgid "The Average"
+msgstr ""
+
+msgid "The average is the average of the ticks, including the entry spot and the last tick."
+msgstr ""
+
+msgid "The contract doesn't end within 5 minutes (for tick duration contracts)"
+msgstr ""
+
+msgid "The entry spot is the first tick after the contract is processed by our servers."
+msgstr ""
+
+msgid "The page you requested could not be found. Either it no longer exists or the address is wrong. Please check for any typos."
+msgstr ""
+
+msgid "The reset time is %1"
+msgstr ""
+
+msgid "The server <a href=\"%1\">endpoint</a> is: %2"
+msgstr ""
+
+msgid "The two passwords that you entered do not match."
+msgstr ""
+
+msgid "There are less than 2 ticks between the start and end times"
+msgstr ""
+
+msgid "There was a problem accessing the server during purchase."
+msgstr ""
+
+msgid "There was a problem accessing the server."
+msgstr ""
+
+msgid "There was an error"
+msgstr ""
+
+msgid "There was some invalid character in an input field."
+msgstr ""
+
+msgid "This contract is only available on %1DTrader%2."
+msgstr ""
+
+msgid "This contract is only available on DTrader.%1%2Go to Dtrader%3 to close or cancel this contract."
+msgstr ""
+
+msgid "This contract lost"
+msgstr ""
+
+msgid "This contract type only offers 5 ticks"
+msgstr ""
+
+msgid "This contract won"
+msgstr ""
+
+msgid "This feature is not relevant to virtual-money accounts."
+msgstr ""
+
+msgid "This field is required."
+msgstr ""
+
+msgid "This is a staging server - For testing purposes only"
+msgstr ""
+
+msgid "This is a top-10 common password"
+msgstr ""
+
+msgid "This is a top-100 common password"
+msgstr ""
+
+msgid "This is a very common password"
+msgstr ""
+
+msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
+msgstr ""
+
+msgid "This is similar to a commonly used password"
+msgstr ""
+
+msgid "This page is only available to logged out clients."
+msgstr ""
+
+msgid "This password is on the blacklist"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Tick"
+msgstr ""
+
+msgid "Tick Prediction"
+msgstr ""
+
+msgid "Ticks"
+msgstr ""
+
+msgid "Ticks history returned an empty array."
+msgstr ""
+
+msgid "Time is in the wrong format."
+msgstr ""
+
+msgid "Time out cannot be in the past."
+msgstr ""
+
+msgid "Time out cannot be more than 6 weeks."
+msgstr ""
+
+msgid "Time out must be after today."
+msgstr ""
+
+msgid "Timed out until"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Top up"
+msgstr ""
+
+msgid "Top up Virtual Account?"
+msgstr ""
+
+msgid "Top up error"
+msgstr ""
+
+msgid "Top-up successful"
+msgstr ""
+
+msgid "Total Cost"
+msgstr ""
+
+msgid "Total assets"
+msgstr ""
+
+msgid "Total assets in your Deriv accounts"
+msgstr ""
+
+msgid "Total profit/loss"
+msgstr ""
+
+msgid "Touch/No Touch"
+msgstr ""
+
+msgid "Touch/No Touch contracts will be refunded at the purchase price if there are less than 2 ticks between the start and end times."
+msgstr ""
+
+msgid "Touches"
+msgstr ""
+
+msgid "Trade"
+msgstr ""
+
+msgid "Trade digital options on the world’s markets with SmartTrader, a powerful, user-friendly online trading platform."
+msgstr ""
+
+msgid "Trade the world's markets with our popular user-friendly platform."
+msgstr ""
+
+msgid "Trade types"
+msgstr ""
+
+msgid "Trader's hub"
+msgstr ""
+
+msgid "Trading and deposit disabled"
+msgstr ""
+
+msgid "Trading and deposits have been disabled on your account. Kindly %1contact customer support%2 for assistance."
+msgstr ""
+
+msgid "Trading statistics report"
+msgstr ""
+
+msgid "Transaction ID"
+msgstr ""
+
+msgid "Transaction performed by %1 (App ID: %2)"
+msgstr ""
+
+msgid "True USD"
+msgstr ""
+
+msgid "Try our %1Synthetic Indices%2."
+msgstr ""
+
+msgid "Try our other markets."
+msgstr ""
+
+msgid "Tu"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Turnover"
+msgstr ""
+
+msgid "US Dollar"
+msgstr ""
+
+msgid "USD Coin"
+msgstr ""
+
+msgid "USDK"
+msgstr ""
+
+msgid "Understood"
+msgstr ""
+
+msgid "Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading."
+msgstr ""
+
+msgid "Unknown OS"
+msgstr ""
+
+msgid "Up to %1 decimal places are allowed."
+msgstr ""
+
+msgid "Up/Down"
+msgstr ""
+
+msgid "Use a few words, avoid common phrases"
+msgstr ""
+
+msgid "Use a longer keyboard pattern with more turns"
+msgstr ""
+
+msgid "Verification code is wrong. Please use the link sent to your email."
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View chart"
+msgstr ""
+
+msgid "Virtual"
+msgstr ""
+
+msgid "Waiting for contract settlement."
+msgstr ""
+
+msgid "Waiting for entry tick."
+msgstr ""
+
+msgid "Waiting for exit tick."
+msgstr ""
+
+msgid "We"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "We’ll update your limits. Click %1Agree and accept%2 to acknowledge that you are fully responsible for your actions, and we are not liable for any addiction or loss."
+msgstr ""
+
+msgid "WhatsApp"
+msgstr ""
+
+msgid "When you click \"OK\" you will be excluded from trading on the site until the selected date."
+msgstr ""
+
+msgid "Win payout if exit spot is also equal to entry spot."
+msgstr ""
+
+msgid "Winning the contract"
+msgstr ""
+
+msgid "Withdrawal"
+msgstr ""
+
+msgid "Withdrawal and trading limits"
+msgstr ""
+
+msgid "Withdrawal disabled"
+msgstr ""
+
+msgid "Withdrawals have been disabled on your account. Please check your email for more details."
+msgstr ""
+
+msgid "Would you like to check your statement first? %1Check Statement%2"
+msgstr ""
+
+msgid "You are offline"
+msgstr ""
+
+msgid "You can close this window without interrupting your trade."
+msgstr ""
+
+msgid "You did not change anything."
+msgstr ""
+
+msgid "You have reached the rate limit of requests per second. Please try later."
+msgstr ""
+
+msgid "You have sold this contract at %1 %2"
+msgstr ""
+
+msgid "You have to register and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on https://api.deriv.com/."
+msgstr ""
+
+msgid "You have yet to receive any notifications"
+msgstr ""
+
+msgid "You should enter %1 characters."
+msgstr ""
+
+msgid "You will be redirected to a third-party website which is not owned by Binary.com."
+msgstr ""
+
+msgid "You win the payout if the market price does not end in the digit you have selected."
+msgstr ""
+
+msgid "You win the payout if the market price ends in the digit you have selected."
+msgstr ""
+
+msgid "Your account is restricted. Kindly %1contact customer support%2 for assistance."
+msgstr ""
+
+msgid "Your application to be treated as a professional client is being processed."
+msgstr ""
+
+msgid "Your changes have been updated."
+msgstr ""
+
+msgid "Your password cannot be the same as your email address."
+msgstr ""
+
+msgid "Your preferred time interval between each report:"
+msgstr ""
+
+msgid "Your professional client request is %1not approved%2."
+msgstr ""
+
+msgid "Your session duration limit will end in %1 seconds."
+msgstr ""
+
+msgid "Your trading statistics since %1."
+msgstr ""
+
+msgid "Your transaction reference is"
+msgstr ""
+
+msgid "Your transaction reference number is %1"
+msgstr ""
+
+msgid "Your virtual balance has been reset."
+msgstr ""
+
+msgid "Your web browser (%1) is out of date and may affect your trading experience. Proceed at your own risk. %2Update browser%3"
+msgstr ""
+
+msgid "account"
+msgstr ""
+
+msgid "accounts"
+msgstr ""
+
+msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgstr ""
+
+msgid "day"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "e.g. frontend.derivws.com"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "including Deal Cancel. Fee"
+msgstr ""
+
+msgid "login"
+msgstr ""
+
+msgid "logout"
+msgstr ""
+
+msgid "minute"
+msgstr ""
+
+msgid "minutes"
+msgstr ""
+
+msgid "second"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "tick"
+msgstr ""
+
+msgid "ticks"
+msgstr ""
+
+msgid "today"
+msgstr ""
+
+msgid "today, Fridays"
+msgstr ""
+
+msgid "virtual money credit to account"
+msgstr ""
+

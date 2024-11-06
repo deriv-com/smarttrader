@@ -21,6 +21,7 @@ const State            = require('../../_common/storage').State;
 const scrollToTop      = require('../../_common/scroll').scrollToTop;
 const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
+const Analytics        = require('../../_common/analytics');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
@@ -35,6 +36,7 @@ const Page = (() => {
         Elevio.init();
         onDocumentReady();
         Crowdin.init();
+        Analytics.init();
     };
 
     const onDocumentReady = () => {

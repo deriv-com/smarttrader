@@ -1,27 +1,31 @@
 // const BinaryPjax               = require('./binary_pjax');
-const Client                       = require('./client');
-const BinarySocket                 = require('./socket');
-const showHidePulser               = require('../common/account_opening').showHidePulser;
-const updateTotal                  = require('../pages/user/update_total');
-const isAuthenticationAllowed      = require('../../_common/base/client_base').isAuthenticationAllowed;
-const GTM                          = require('../../_common/base/gtm');
-const SocketCache                  = require('../../_common/base/socket_cache');
-// const elementInnerHtml          = require('../../_common/common_functions').elementInnerHtml;
+const Client                   = require('./client');
+const BinarySocket             = require('./socket');
+const AuthClient               = require('../../_common/auth');
+const showHidePulser           = require('../common/account_opening').showHidePulser;
+const updateTotal              = require('../pages/user/update_total');
+const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
+const GTM                      = require('../../_common/base/gtm');
+const Login                    = require('../../_common/base/login');
+const SocketCache              = require('../../_common/base/socket_cache');
+// const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
 const getElementById           = require('../../_common/common_functions').getElementById;
-const localize                     = require('../../_common/localize').localize;
-const localizeKeepPlaceholders     = require('../../_common/localize').localizeKeepPlaceholders;
-const State                        = require('../../_common/storage').State;
-const Url                          = require('../../_common/url');
-const applyToAllElements           = require('../../_common/utility').applyToAllElements;
-const createElement                = require('../../_common/utility').createElement;
-const findParent                   = require('../../_common/utility').findParent;
-const getTopLevelDomain            = require('../../_common/utility').getTopLevelDomain;
-const getPlatformSettings          = require('../../../templates/_common/brand.config').getPlatformSettings;
-const getHostname                  = require('../../_common/utility').getHostname;
-const template                     = require('../../_common/utility').template;
-const Language                     = require('../../_common/language');
-const mapCurrencyName              = require('../../_common/base/currency_base').mapCurrencyName;
-const isEuCountry                  = require('../common/country_base').isEuCountry;
+const localize                 = require('../../_common/localize').localize;
+const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
+const State                    = require('../../_common/storage').State;
+const Url                      = require('../../_common/url');
+const applyToAllElements       = require('../../_common/utility').applyToAllElements;
+const createElement            = require('../../_common/utility').createElement;
+const findParent               = require('../../_common/utility').findParent;
+const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
+const getPlatformSettings      = require('../../../templates/_common/brand.config').getPlatformSettings;
+const getHostname              = require('../../_common/utility').getHostname;
+const template                 = require('../../_common/utility').template;
+const Language                 = require('../../_common/language');
+const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
+const isEuCountry              = require('../common/country_base').isEuCountry;
+const DerivIFrame              = require('../pages/deriv_iframe.jsx');
+const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 const { callAuthorizationEndpoint }  = require('../../_common/authentication');
 
 const header_icon_base_path        = '/images/pages/header/';
@@ -40,6 +44,7 @@ const Header = (() => {
     };
 
     const onLoad = () => {
+        DerivIFrame.init();
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
@@ -57,8 +62,28 @@ const Header = (() => {
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
+        applyFeatureFlags();
     };
-    
+
+    const applyFeatureFlags = () => {
+        getRemoteConfig(true)
+            .then(data => {
+                const { cs_chat_livechat, cs_chat_whatsapp } = data.data;
+                const mobile_menu_livechat                   = getElementById('mobile__menu-livechat');
+                const livechat                               = getElementById('livechat');
+                const topbar_whatsapp                        = getElementById('topbar-whatsapp');
+                const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
+
+                mobile_menu_livechat.style.display = cs_chat_livechat ? 'flex' : 'none';
+                livechat.style.display            = cs_chat_livechat ? 'inline-flex' : 'none';
+                
+                topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
+                whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
+            })
+            // eslint-disable-next-line no-console
+            .catch(error => console.error('Error fetching feature flags:', error));
+    };
+
     const switchHeaders = () => {
         const regular_header = getElementById('regular__header');
         const wallet_header = getElementById('wallet__header');
@@ -303,7 +328,6 @@ const Header = (() => {
             el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
-
         // Mobile menu
         const mobile_menu_overlay        = getElementById('mobile__container');
         const mobile_menu                = getElementById('mobile__menu');
@@ -487,6 +511,7 @@ const Header = (() => {
             }
         };
 
+        // Some note here
         appstore_menu.addEventListener('click', () => {
             showMobileSubmenu(false);
         });
@@ -625,8 +650,13 @@ const Header = (() => {
         callAuthorizationEndpoint();
     };
 
-    const logoutOnClick = () => {
-        Client.sendLogoutRequest();
+    const logoutOnClick = async () => {
+        // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
+        // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
+        // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
+        const onLogoutWithOauth = await AuthClient.getLogoutHandler(Client.sendLogoutRequest);
+
+        onLogoutWithOauth();
     };
 
     const populateWalletAccounts = () => {

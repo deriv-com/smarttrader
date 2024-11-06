@@ -13,6 +13,7 @@ const paramsHash         = require('../../_common/url').paramsHash;
 const urlFor             = require('../../_common/url').urlFor;
 const getPropertyValue   = require('../../_common/utility').getPropertyValue;
 const Auth               = require('../../_common/authentication');
+const DerivIFrame        = require('../pages/deriv_iframe.jsx');
 
 const LoggedInHandler = (() => {
     const onLoad = async () => {

@@ -25,7 +25,7 @@ import common_functions from '../../../_common/common_functions.js';
 import { localize } from '../../../_common/localize.js';
 import dataManager from '../../common/data_manager.js';
 import { setDefaultParams } from '../../common/helpers.js';
-import { isCryptocurrency } from '../../../_common/base/currency_base.js';
+import { isCryptocurrency, getMinPayout } from '../../../_common/base/currency_base.js';
 
 const Cookies = require('js-cookie');
 
@@ -54,8 +54,8 @@ export const FormComponent = () => {
     const expiry_time = Defaults.get(PARAM_NAMES.EXPIRY_TIME);
     const amount_type = Defaults.get(PARAM_NAMES.AMOUNT_TYPE);
     const amount = Defaults.get(PARAM_NAMES.AMOUNT);
-    const amount_crypto = Defaults.get('amount_crypto');
     const currency = Defaults.get(PARAM_NAMES.CURRENCY);
+    const amount_crypto = Defaults.get('amount_crypto') ?? getMinPayout(currency);
     const is_equal = Defaults.get(PARAM_NAMES.IS_EQUAL);
     const prediction = Defaults.get(PARAM_NAMES.PREDICTION);
     const selected_tick = Defaults.get(PARAM_NAMES.SELECTED_TICK);
@@ -167,8 +167,7 @@ export const FormComponent = () => {
         return moment(endtime_data.options[0].value).format('ddd - DD MMM, YYYY');
     };
 
-    const getAmount = () => (isCryptocurrency(currency) && amount_crypto) ? amount_crypto : amount;
-
+    const getAmount = () => (isCryptocurrency(currency)) ? amount_crypto : amount;
     const lang = Cookies.get('language').replace('_','-').toLowerCase() || 'en';
 
     return (
