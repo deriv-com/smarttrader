@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import useFreshChat from '../hooks/use-freshChat';
+import useFreshChat from '../hooks/useFreshChat';
 import useGrowthbookGetFeatureValue from '../hooks/useGrowthbookGetFeatureValue';
 
 const LiveChat = ({ cs_live_chat }) => {
