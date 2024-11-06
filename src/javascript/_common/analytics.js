@@ -7,9 +7,8 @@ const { getAppId } = require('../config');
 
 const Analytics = (() => {
     const init = async () => {
-        const account_type = LocalStore?.get('active_loginid')
-            ?.match(/[a-zA-Z]+/g)
-            ?.join('');
+        const loginid = LocalStore?.get('active_loginid');
+        const active_account = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
         const utmData = Cookies.get('utm_data');
         const ppcCampaignCookies = utmData ? JSON.parse(utmData) : {
             utm_campaign: 'no campaign',
@@ -24,7 +23,8 @@ const Analytics = (() => {
                 rudderstackKey   : process.env.RUDDERSTACK_KEY,
                 growthbookOptions: {
                     attributes: {
-                        account_type   : account_type === 'null' ? 'unlogged' : account_type,
+                        loggedIn       : !!Cookies.get('clients_information'),
+                        account_type   : active_account?.account_type || 'unlogged',
                         app_id         : String(getAppId()),
                         country        : await getCountry(),
                         device_language: navigator?.language || 'en-EN',
