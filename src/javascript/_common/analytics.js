@@ -1,6 +1,6 @@
 const DerivAnalytics = require('@deriv-com/analytics');
+const CountryUtils = require('@deriv-com/utils').CountryUtils;
 const Cookies = require('js-cookie');
-const { getCountry } = require('./utility');
 const LocalStore = require('./storage').LocalStore;
 const Language = require('./language');
 const { getAppId } = require('../config');
@@ -26,7 +26,7 @@ const Analytics = (() => {
                         loggedIn       : !!Cookies.get('clients_information'),
                         account_type   : active_account?.account_type || 'unlogged',
                         app_id         : String(getAppId()),
-                        country        : await getCountry(),
+                        country        : await CountryUtils.getCountry(),
                         device_language: navigator?.language || 'en-EN',
                         device_type    : window.innerWidth <= 600 ? 'mobile' : 'desktop',
                         domain         : window.location.hostname,
