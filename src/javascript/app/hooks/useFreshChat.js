@@ -3,7 +3,7 @@ import { useScript } from 'usehooks-ts';
 import useGrowthbookGetFeatureValue from './useGrowthbookGetFeatureValue';
 
 const useFreshChat = (token) => {
-    const scriptStatus = useScript('https://static.deriv.com/scripts/freshchat-1.0.1.js');
+    const scriptStatus = useScript('https://static.deriv.com/scripts/freshchat/freshchat-1.0.1.js');
     const [isReady, setIsReady] = useState(false);
     const [isFreshChatEnabled] = useGrowthbookGetFeatureValue({
         featureFlag: 'enable_freshworks_live_chat',
