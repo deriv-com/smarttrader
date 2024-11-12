@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-09-04 07:48\n"
+"PO-Revision-Date: 2024-11-12 09:06\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -383,7 +383,7 @@ msgid "Digits"
 msgstr "Digits"
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr "¿Quieres recargar para otro %1? Si no, también puedes hacerlo más adelante en la página%3del cajero %2C."
+msgstr "¿Quiere recargar para otro %1? Si no, también puede hacerlo más adelante en la %2Cpágina del cajero%3."
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -572,7 +572,7 @@ msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barr
 msgstr "Si el <strong>punto de salida</strong> es igual a la <strong>barrera inferior</strong> o a la <strong>barrera superior</strong>, no gana el pago."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr "Si el punto de salida <strong></strong> es igual a la barrera <strong></strong> o a la nueva barrera <strong>(si se reinicia)</strong>, no ganarás el pago."
+msgstr "Si el <strong>punto de salida </strong> es igual a la barrera <strong></strong> o a la nueva barrera <strong>(si ocurre el reset)</strong>, no ganará el pago."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "Si el <strong>punto de salida</strong> es igual a la <strong>barrera</strong> o a la <stronm g>nueva barrera (en caso de un reset)</stronmg>, no gana el pago."
