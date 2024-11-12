@@ -25,6 +25,8 @@ const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivIFrame              = require('../pages/deriv_iframe.jsx');
+const DerivLiveChat            = require('../pages/livechat.jsx');
+const openChat                 = require('../../_common/utility.js').openChat;
 const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
@@ -61,6 +63,7 @@ const Header = (() => {
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
+        
         applyFeatureFlags();
     };
 
@@ -68,19 +71,21 @@ const Header = (() => {
         getRemoteConfig(true)
             .then(data => {
                 const { cs_chat_livechat, cs_chat_whatsapp } = data.data;
-                const mobile_menu_livechat                   = getElementById('mobile__menu-livechat');
-                const livechat                               = getElementById('livechat');
+
                 const topbar_whatsapp                        = getElementById('topbar-whatsapp');
                 const whatsapp_mobile_drawer                 = getElementById('whatsapp-mobile-drawer');
 
-                mobile_menu_livechat.style.display = cs_chat_livechat ? 'flex' : 'none';
-                livechat.style.display            = cs_chat_livechat ? 'inline-flex' : 'none';
+                if (document.getElementById('deriv_livechat')) { DerivLiveChat.init(cs_chat_livechat); }
                 
                 topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
                 whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
             })
-            // eslint-disable-next-line no-console
-            .catch(error => console.error('Error fetching feature flags:', error));
+            
+            .catch(error => {
+                if (document.getElementById('deriv_livechat')) { DerivLiveChat.init(); }
+                // eslint-disable-next-line no-console
+                console.error('Error fetching feature flags:', error);
+            });
     };
 
     const switchHeaders = () => {
@@ -347,7 +352,7 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
-        mobile_menu_livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
+        mobile_menu_livechat.addEventListener('click', () => {openChat();});
 
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
@@ -565,7 +570,9 @@ const Header = (() => {
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
-        livechat.addEventListener('click', () => {window.LC_API.open_chat_window();});
+        livechat.addEventListener('click', () => {
+            openChat();
+        });
 
         // Language Popup.
         const current_language = Language.get();
@@ -649,6 +656,10 @@ const Header = (() => {
     };
 
     const logoutOnClick = async () => {
+        window.fcWidget?.user.clear().then(
+            () => window.fcWidget.destroy(),
+            () => {}
+        );
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
