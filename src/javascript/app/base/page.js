@@ -22,7 +22,7 @@ const scrollToTop      = require('../../_common/scroll').scrollToTop;
 const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
 const Analytics        = require('../../_common/analytics');
-const AuthClient       = require('@deriv-com/auth-client');
+const { openChatWithParam } = require('../../_common/utility');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
@@ -110,11 +110,8 @@ const Page = (() => {
 
                 // Handle opening livechat via URL
                 const is_livechat_open = url_query_strings.is_livechat_open === 'true';
-
-                if (is_livechat_open && window.LiveChatWidget) {
-                    window.LiveChatWidget.on('ready', () => {
-                        window.LC_API.open_chat_window();
-                    });
+                if (is_livechat_open) {
+                    openChatWithParam();
                 }
             }
             Header.onLoad();
