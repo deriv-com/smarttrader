@@ -130,7 +130,7 @@ const CallbackContainer = () => {
   return (
     <Callback
       onSignInSuccess={onLoginSuccess}
-      onSignInError={(err) => console.log(err)}
+      onSignInError={console.error}
     />
   );
 };
