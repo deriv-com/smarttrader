@@ -112,6 +112,7 @@
     "@deriv-com/utils": "^0.0.38",
     "@deriv/deriv-api": "^1.0.15",
     "@deriv/quill-icons": "^1.23.1",
+    "@intercom/messenger-js-sdk": "^0.0.14",
     "@livechat/customer-sdk": "4.0.2",
     "canvas-toBlob": "1.0.0",
     "classnames": "2.2.5",

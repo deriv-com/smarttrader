@@ -1,4 +1,5 @@
 // const BinaryPjax               = require('./binary_pjax');
+const { shutdown }             = require('@intercom/messenger-js-sdk');
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const AuthClient               = require('../../_common/auth');
@@ -656,10 +657,9 @@ const Header = (() => {
     };
 
     const logoutOnClick = async () => {
-        window.fcWidget?.user.clear().then(
-            () => window.fcWidget.destroy(),
-            () => {}
-        );
+        if (window.intercomSettings) {
+            shutdown();
+        }
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.

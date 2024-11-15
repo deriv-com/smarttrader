@@ -100,7 +100,7 @@ const LiveChat = (() => {
     // Reroute group
     const rerouteGroup = () => {
         
-        if (!window.fcWidget) {
+        if (!window.intercomSettings) {
             LiveChat.livechatDeletion().then(() => {
                 LiveChat.liveChatInitialization().then(() => {
                     LiveChat.initialize();

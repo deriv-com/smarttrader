@@ -1,3 +1,4 @@
+const { show } = require('@intercom/messenger-js-sdk');
 const extend                 = require('extend');
 const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('./lib/polyfills/element.matches');
@@ -290,8 +291,8 @@ const lc_licenseID = 12049137;
 const lc_clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
 
 const openChat = () => {
-    if (window.fcWidget) {
-        window.fcWidget.open();
+    if (window.intercomSettings) {
+        show();
     } else {
         window.LC_API.open_chat_window();
     }
@@ -299,8 +300,8 @@ const openChat = () => {
 
 const openChatWithParam = () => {
     const interval = setInterval(() => {
-        if (window.fcWidget) {
-            window.fcWidget.open();
+        if (window.intercomSettings) {
+            show();
             clearInterval(interval);
         } else if (window.LiveChatWidget) {
             window.LiveChatWidget?.on('ready', () => {

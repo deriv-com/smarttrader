@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import useFreshChat from '../hooks/useFreshChat';
+import Intercom from '@intercom/messenger-js-sdk';
 import useGrowthbookGetFeatureValue from '../hooks/useGrowthbookGetFeatureValue';
 
 const LiveChat = ({ cs_live_chat }) => {
 
     const loginid      = localStorage.getItem('active_loginid');
     const client_info  = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
-    const token        = client_info?.token ?? null;
 
     const [isFreshChatEnabled] = useGrowthbookGetFeatureValue({
         featureFlag: 'enable_freshworks_live_chat',
     });
-    useFreshChat(token);
+
+    useEffect(() => {
+        if (!isFreshChatEnabled) return;
+
+        const intercomConfig = {
+            app_id               : 'rfwdy059',
+            hide_default_launcher: true,
+        };
+
+        if (loginid && client_info) {
+            intercomConfig.email = client_info.email;
+            intercomConfig.name = client_info.email.split('@')[0];
+            intercomConfig.user_id = client_info.user_id;
+            intercomConfig.created_at = client_info.created_at;
+        }
+
+        Intercom(intercomConfig);
+    }, [isFreshChatEnabled, client_info, loginid]);
 
     if (!isFreshChatEnabled && !cs_live_chat) return null;
 
