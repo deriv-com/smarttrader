@@ -72,7 +72,6 @@ const storeClientAccounts = (tokens, account_list) => {
 
 const CallbackContainer = () => {
   const onLoginSuccess = async (tokens) => {
-    console.log("got tokens", tokens);
     let redirect_url;
     BinarySocket.send({ authorize: tokens.token1 }).then((response) => {
       const account_list = getPropertyValue(response, [

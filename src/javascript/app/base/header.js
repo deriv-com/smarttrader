@@ -2,6 +2,7 @@
 const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const AuthClient               = require('../../_common/auth');
+const requestOidcAuthentication               = require('@deriv-com/auth-client').requestOidcAuthentication;
 const showHidePulser           = require('../common/account_opening').showHidePulser;
 const updateTotal              = require('../pages/user/update_total');
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -658,7 +659,7 @@ const Header = (() => {
           const postLogoutRedirectUri = `${window.location.origin}/en/trading.html`;
         
           // NOTE: Remove the .html for staging
-          await AuthClient.requestOidcAuthentication({
+          await requestOidcAuthentication({
             redirectCallbackUri,
             postLogoutRedirectUri,
           });
