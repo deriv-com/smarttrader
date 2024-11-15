@@ -22,6 +22,7 @@ const scrollToTop      = require('../../_common/scroll').scrollToTop;
 const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
 const Analytics        = require('../../_common/analytics');
+const AuthClient       = require('@deriv-com/auth-client');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
@@ -93,7 +94,7 @@ const Page = (() => {
         });
     };
 
-    const onLoad = () => {
+    const onLoad = async () => {
         if (State.get('is_loaded_by_pjax')) {
             Url.reset();
             updateLinksURL('#content');
