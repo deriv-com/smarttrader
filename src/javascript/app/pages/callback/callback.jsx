@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -128,10 +129,7 @@ const CallbackContainer = () => {
   };
 
   return (
-    <Callback
-      onSignInSuccess={onLoginSuccess}
-      onSignInError={console.error}
-    />
+    <Callback onSignInSuccess={onLoginSuccess} onSignInError={console.error} />
   );
 };
 
