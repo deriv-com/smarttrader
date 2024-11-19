@@ -655,7 +655,7 @@ const Header = (() => {
         e.preventDefault();
         const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
         if (isOAuth2Enabled) {
-          const redirectCallbackUri = `${window.location.origin}/en/callback`;
+          const redirectCallbackUri = `${window.location.origin}/en/callback.html`;
           const postLoginRedirectUri = window.location.href
           const postLogoutRedirectUri = `${window.location.origin}/en/trading`;
         

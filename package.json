@@ -107,7 +107,7 @@
     "@binary-com/binary-style": "^0.2.26",
     "@binary-com/webtrader-charts": "^0.6.2",
     "@deriv-com/analytics": "^1.18.0",
-    "@deriv-com/auth-client": "file:../auth-client",
+    "@deriv-com/auth-client": "^v1.2.2",
     "@deriv-com/quill-ui": "^1.16.2",
     "@deriv-com/utils": "^0.0.38",
     "@deriv/deriv-api": "^1.0.15",
