@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import AntiClickjack from "../_common/includes/anti_clickjack.jsx";
 

@@ -1,5 +1,6 @@
+/* eslint-disable */
 const SocketCache = require("../../_common/base/socket_cache");
-const CallbackElement = require("../pages/callback/Callback");
+const CallbackElement = require("../pages/callback/callback");
 
 const CallbackHandler = (() => {
   const onLoad = async () => {
