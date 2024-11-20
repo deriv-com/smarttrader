@@ -25,7 +25,7 @@ const LiveChat = ({ cs_live_chat }) => {
     });
 
     useFreshChat(token, isFreshChatEnabled);
-    useInterComChat(client_data, isICEnabled);
+    useInterComChat(token, isICEnabled);
     
     if (!isFreshChatEnabled && !isICEnabled && !cs_live_chat) return null;
 
