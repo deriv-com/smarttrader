@@ -26,7 +26,7 @@ const mapCurrencyName          = require('../../_common/base/currency_base').map
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivIFrame              = require('../pages/deriv_iframe.jsx');
 const DerivLiveChat            = require('../pages/livechat.jsx');
-const openChat                 = require('../../_common/utility.js').openChat;
+const Chat                     = require('../../_common/chat.js').default;
 const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
@@ -352,7 +352,9 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
-        mobile_menu_livechat.addEventListener('click', () => {openChat();});
+        mobile_menu_livechat.addEventListener('click', async () => {
+            await Chat.open();
+        });
 
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
@@ -570,8 +572,8 @@ const Header = (() => {
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
-        livechat.addEventListener('click', () => {
-            openChat();
+        livechat.addEventListener('click', async () => {
+            await Chat.open();
         });
 
         // Language Popup.
@@ -656,10 +658,8 @@ const Header = (() => {
     };
 
     const logoutOnClick = async () => {
-        window.fcWidget?.user.clear().then(
-            () => window.fcWidget.destroy(),
-            () => {}
-        );
+        await Chat.clear();
+
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.

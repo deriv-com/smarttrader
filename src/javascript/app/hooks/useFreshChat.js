@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useScript } from 'usehooks-ts';
-import useGrowthbookGetFeatureValue from './useGrowthbookGetFeatureValue';
 
-const useFreshChat = (token) => {
+const useFreshChat = (token, flag) => {
     const scriptStatus = useScript('https://static.deriv.com/scripts/freshchat/freshchat-1.0.1.js');
-    const [isReady, setIsReady] = useState(false);
-    const [isFreshChatEnabled] = useGrowthbookGetFeatureValue({
-        featureFlag: 'enable_freshworks_live_chat',
-    });
-
+    
     useEffect(() => {
         const checkFcWidget = (intervalId) => {
             if (typeof window !== 'undefined') {
-                if (window.fcWidget?.isInitialized() === true && !isReady) {
-                    setIsReady(true);
+                if (window.fcWidget?.isInitialized() === true) {
                     clearInterval(intervalId);
                 }
             }
@@ -33,13 +27,8 @@ const useFreshChat = (token) => {
             return null;
         };
 
-        if (isFreshChatEnabled) initFreshChat();
-    }, [isFreshChatEnabled, isReady, scriptStatus, token]);
-
-    return {
-        isReady,
-        widget: window.fcWidget,
-    };
+        if (flag) initFreshChat();
+    }, [flag, scriptStatus, token]);
 };
 
 export default useFreshChat;

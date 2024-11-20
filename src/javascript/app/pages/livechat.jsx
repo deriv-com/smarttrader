@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import useFreshChat from '../hooks/useFreshChat';
+import useInterComChat from '../hooks/useInterComChat';
 import useGrowthbookGetFeatureValue from '../hooks/useGrowthbookGetFeatureValue';
 
 const LiveChat = ({ cs_live_chat }) => {
 
-    const loginid      = localStorage.getItem('active_loginid');
-    const client_info  = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
-    const token        = client_info?.token ?? null;
+    const loginid = useMemo(() => localStorage.getItem('active_loginid'), []);
+    const client_accounts = useMemo(
+        () => JSON.parse(localStorage.getItem('client.accounts') || '{}'),
+        []
+    );
+    const client_data = useMemo(
+        () => (loginid ? client_accounts[loginid] : null),
+        [loginid, client_accounts]
+    );
+    const token = client_data?.token ?? null;
 
     const [isFreshChatEnabled] = useGrowthbookGetFeatureValue({
         featureFlag: 'enable_freshworks_live_chat',
     });
-    useFreshChat(token);
+    const [isICEnabled] = useGrowthbookGetFeatureValue({
+        featureFlag: 'enable_intercom_st',
+    });
 
-    if (!isFreshChatEnabled && !cs_live_chat) return null;
+    useFreshChat(token, isFreshChatEnabled);
+    useInterComChat(client_data, isICEnabled);
+    
+    if (!isFreshChatEnabled && !isICEnabled && !cs_live_chat) return null;
 
     return (
         <React.Fragment>
-            {!isFreshChatEnabled && <script
+            {!isFreshChatEnabled && !isICEnabled && <script
                 dangerouslySetInnerHTML={{
                     __html: `
                         window.__lc = window.__lc || {};
