@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useScript } from 'usehooks-ts';
 
 const useFreshChat = (token, flag) => {
-    const scriptStatus = useScript('https://static.deriv.com/scripts/freshchat/freshchat-1.0.1.js');
-    
+    const freshchat_script = 'https://static.deriv.com/scripts/freshchat/freshchat-1.0.1.js';
+    const script_status = useScript(flag ? freshchat_script : null);
+
     useEffect(() => {
         const checkFcWidget = (intervalId) => {
             if (typeof window !== 'undefined') {
@@ -14,7 +15,7 @@ const useFreshChat = (token, flag) => {
         };
 
         const initFreshChat = () => {
-            if (scriptStatus === 'ready' && window.FreshChat && window.fcSettings) {
+            if (script_status === 'ready' && window.FreshChat && window.fcSettings) {
                 window.FreshChat.initialize({
                     token,
                     hideButton: true,
@@ -28,7 +29,7 @@ const useFreshChat = (token, flag) => {
         };
 
         if (flag) initFreshChat();
-    }, [flag, scriptStatus, token]);
+    }, [flag, script_status, token]);
 };
 
 export default useFreshChat;
