@@ -26,7 +26,13 @@ const LiveChat = ({ cs_live_chat }) => {
     });
 
     const freshChat = useFreshChat(token, isFreshChatEnabled);
-    useInterComChat(token, isICEnabled);
+    const userData = client_data?.email
+        ? {
+            name : client_data.email.split('@')[0],
+            email: client_data.email,
+        }
+        : null;
+    useInterComChat(token, isICEnabled, userData);
     
     if (!isFreshChatEnabled && !isICEnabled && !cs_live_chat) return null;
     getElementById('livechat').style.display =
