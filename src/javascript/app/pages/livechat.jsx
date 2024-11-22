@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import useFreshChat from '../hooks/useFreshChat';
 import useInterComChat from '../hooks/useInterComChat';
 import useGrowthbookGetFeatureValue from '../hooks/useGrowthbookGetFeatureValue';
+import { getElementById } from '../../_common/common_functions';
 
 const LiveChat = ({ cs_live_chat }) => {
 
@@ -24,10 +25,12 @@ const LiveChat = ({ cs_live_chat }) => {
         featureFlag: 'enable_intercom_st',
     });
 
-    useFreshChat(token, isFreshChatEnabled);
+    const freshChat = useFreshChat(token, isFreshChatEnabled);
     useInterComChat(token, isICEnabled);
     
     if (!isFreshChatEnabled && !isICEnabled && !cs_live_chat) return null;
+    getElementById('livechat').style.display =
+      isFreshChatEnabled && !freshChat?.is_ready ? 'none' : 'flex';
 
     return (
         <React.Fragment>
