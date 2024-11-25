@@ -911,8 +911,8 @@ const Header = (() => {
             is_virtual                    = current_active_login.startsWith('VRTC');
         }
         const showTradersHubLink = (show) => {
-            traders_hub_link.style.display            = show ? 'flex' : 'none';
-            account_switcher_seperator.style.display  = show ? 'block' : 'none';
+          if (traders_hub_link.style) traders_hub_link.style.display            = show ? 'flex' : 'none';
+          if (account_switcher_seperator.style) account_switcher_seperator.style.display  = show ? 'block' : 'none';
         };
 
         account_header.forEach(header => {
