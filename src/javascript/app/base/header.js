@@ -1,32 +1,33 @@
 // const BinaryPjax               = require('./binary_pjax');
-const Client                   = require('./client');
-const BinarySocket             = require('./socket');
-const AuthClient               = require('../../_common/auth');
-const showHidePulser           = require('../common/account_opening').showHidePulser;
-const updateTotal              = require('../pages/user/update_total');
-const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
-const GTM                      = require('../../_common/base/gtm');
-const Login                    = require('../../_common/base/login');
-const SocketCache              = require('../../_common/base/socket_cache');
+const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
+const Client                    = require('./client');
+const BinarySocket              = require('./socket');
+const AuthClient                = require('../../_common/auth');
+const showHidePulser            = require('../common/account_opening').showHidePulser;
+const updateTotal               = require('../pages/user/update_total');
+const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
+const GTM                       = require('../../_common/base/gtm');
+const Login                     = require('../../_common/base/login');
+const SocketCache               = require('../../_common/base/socket_cache');
 // const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
-const getElementById           = require('../../_common/common_functions').getElementById;
-const localize                 = require('../../_common/localize').localize;
-const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
-const State                    = require('../../_common/storage').State;
-const Url                      = require('../../_common/url');
-const applyToAllElements       = require('../../_common/utility').applyToAllElements;
-const createElement            = require('../../_common/utility').createElement;
-const findParent               = require('../../_common/utility').findParent;
-const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
-const getPlatformSettings      = require('../../../templates/_common/brand.config').getPlatformSettings;
-const getHostname              = require('../../_common/utility').getHostname;
-const template                 = require('../../_common/utility').template;
-const Language                 = require('../../_common/language');
-const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
-const isEuCountry              = require('../common/country_base').isEuCountry;
-const DerivLiveChat            = require('../pages/livechat.jsx');
-const openChat                 = require('../../_common/utility.js').openChat;
-const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
+const getElementById            = require('../../_common/common_functions').getElementById;
+const localize                  = require('../../_common/localize').localize;
+const localizeKeepPlaceholders  = require('../../_common/localize').localizeKeepPlaceholders;
+const State                     = require('../../_common/storage').State;
+const Url                       = require('../../_common/url');
+const applyToAllElements        = require('../../_common/utility').applyToAllElements;
+const createElement             = require('../../_common/utility').createElement;
+const findParent                = require('../../_common/utility').findParent;
+const getTopLevelDomain         = require('../../_common/utility').getTopLevelDomain;
+const getPlatformSettings       = require('../../../templates/_common/brand.config').getPlatformSettings;
+const getHostname               = require('../../_common/utility').getHostname;
+const template                  = require('../../_common/utility').template;
+const Language                  = require('../../_common/language');
+const mapCurrencyName           = require('../../_common/base/currency_base').mapCurrencyName;
+const isEuCountry               = require('../common/country_base').isEuCountry;
+const DerivLiveChat             = require('../pages/livechat.jsx');
+const openChat                  = require('../../_common/utility.js').openChat;
+const getRemoteConfig           = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -649,37 +650,37 @@ const Header = (() => {
     // };
 
     const loginOnClick = async (e) => {
-      e.preventDefault();
-      const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
-      console.log("ARE WE ENABLED", isOAuth2Enabled);
-      if (isOAuth2Enabled) {
-        const redirectCallbackUri = `${window.location.origin}/en/callback.html`;
-        const postLoginRedirectUri = window.location.href;
-        const postLogoutRedirectUri = `${window.location.origin}/en/trading.html`;
-  
-        await requestOidcAuthentication({
-          redirectCallbackUri,
-          postLoginRedirectUri,
-          postLogoutRedirectUri,
-        });
-      } else {
-        Login.redirectToLogin();
-      }
+        e.preventDefault();
+        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
+
+        if (isOAuth2Enabled) {
+            const redirectCallbackUri = `${window.location.origin}/en/callback.html`;
+            const postLoginRedirectUri = window.location.href;
+            const postLogoutRedirectUri = `${window.location.origin}/en/trading.html`;
+      
+            await requestOidcAuthentication({
+                redirectCallbackUri,
+                postLoginRedirectUri,
+                postLogoutRedirectUri,
+            });
+        } else {
+            Login.redirectToLogin();
+        }
     };
   
     const logoutOnClick = async () => {
-      window.fcWidget?.user.clear().then(
-        () => window.fcWidget.destroy(),
-        () => {}
-      );
-      // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
-      // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
-      // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
-      const onLogoutWithOauth = await AuthClient.getLogoutHandler(
-        Client.sendLogoutRequest
-      );
-  
-      onLogoutWithOauth();
+        window.fcWidget?.user.clear().then(
+            () => window.fcWidget.destroy(),
+            () => {}
+        );
+        // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
+        // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
+        // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
+        const onLogoutWithOauth = await AuthClient.getLogoutHandler(
+            Client.sendLogoutRequest
+        );
+    
+        onLogoutWithOauth();
     };
 
     const populateWalletAccounts = () => {
