@@ -22,7 +22,6 @@ const Callback = () => (
       <div id="content-holder">
         <div id="content">
           <div id="callback_container" />
-          <div id="deriv_iframe" />
         </div>
       </div>
     </body>
