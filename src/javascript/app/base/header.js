@@ -657,7 +657,7 @@ const Header = (() => {
             const redirectCallbackUri = `${window.location.origin}/en/callback`;
             const postLoginRedirectUri = window.location.href;
             const postLogoutRedirectUri = `${window.location.origin}/en/trading`;
-      
+            // Test commit
             await requestOidcAuthentication({
                 redirectCallbackUri,
                 postLoginRedirectUri,
