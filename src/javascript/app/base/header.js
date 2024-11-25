@@ -906,13 +906,14 @@ const Header = (() => {
         const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
         const multiplier_text             = localize('Multipliers');
         const account_header              = document.querySelectorAll('.header__accounts-multiple');
+        const is_callback_page            = window.location.pathname.includes('callback');
         let is_virtual;
         if (current_active_login) {
             is_virtual                    = current_active_login.startsWith('VRTC');
         }
         const showTradersHubLink = (show) => {
-            traders_hub_link.style.display            = show ? 'flex' : 'none';
-            account_switcher_seperator.style.display  = show ? 'block' : 'none';
+            if (traders_hub_link.style) traders_hub_link.style.display            = show ? 'flex' : 'none';
+            if (account_switcher_seperator.style) account_switcher_seperator.style.display  = show ? 'block' : 'none';
         };
 
         account_header.forEach(header => {
@@ -923,8 +924,8 @@ const Header = (() => {
             $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
         }
         
-        if (has_real_account) showTradersHubLink(true);
-        if (is_virtual) showTradersHubLink(true);
+        if (has_real_account && !is_callback_page) showTradersHubLink(true);
+        if (is_virtual && !is_callback_page) showTradersHubLink(true);
         if (is_virtual || !has_real_account)  {
             manage_acc_btn.style.visibility           = 'hidden';
         }
