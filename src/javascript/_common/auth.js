@@ -5,6 +5,7 @@ const {
     URLConstants,
     WebSocketUtils,
 } = require('@deriv-com/utils');
+const Cookies = require('js-cookie');
 const Analytics = require('./analytics');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
@@ -102,9 +103,9 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                     if (domains.includes(currentDomain)) {
                         Cookies.set('logged_state', 'false', {
                             expires: 30,
-                            path: '/',
-                            domain: currentDomain,
-                            secure: true,
+                            path   : '/',
+                            domain : currentDomain,
+                            secure : true,
                         });
                     }
                     await onWSLogoutAndRedirect();

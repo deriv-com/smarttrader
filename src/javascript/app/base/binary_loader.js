@@ -1,3 +1,5 @@
+const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
+const Cookies = require('js-cookie');
 const BinaryPjax = require('./binary_pjax');
 const pages_config = require('./binary_pages');
 const Client = require('./client');
@@ -21,8 +23,6 @@ const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
 const createElement = require('../../_common/utility').createElement;
 const NotAvailable = require('../pages/trade/not-available.jsx');
-const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication
-const Cookies = require('js-cookie')
 const AuthClient                = require('../../_common/auth');
 
 const BinaryLoader = (() => {
