@@ -79,17 +79,37 @@ export const isOAuth2Enabled = () => {
 
 export const getLogoutHandler = onWSLogoutAndRedirect => {
     const isAuthEnabled = isOAuth2Enabled();
+    let timeout;
 
     if (!isAuthEnabled) {
         return onWSLogoutAndRedirect;
     }
+
+    const cleanup = () => {
+        clearTimeout(timeout);
+
+        const iframe = document.getElementById('logout-iframe');
+        if (iframe) iframe.remove();
+    };
 
     const onMessage = async event => {
         const allowedOrigin = getOAuthOrigin();
         if (allowedOrigin === event.origin) {
             if (event.data === 'logout_complete') {
                 try {
+                    const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
+                    const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+                    if (domains.includes(currentDomain)) {
+                        Cookies.set('logged_state', 'false', {
+                            expires: 30,
+                            path: '/',
+                            domain: currentDomain,
+                            secure: true,
+                        });
+                    }
                     await onWSLogoutAndRedirect();
+                    window.removeEventListener('message', onMessage);
+                    cleanup();
                 } catch (err) {
                     // eslint-disable-next-line no-console
                     console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
@@ -113,8 +133,10 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
             iframe.style.display = 'none';
             document.body.appendChild(iframe);
 
-            setTimeout(() => {
+            timeout = setTimeout(() => {
                 onWSLogoutAndRedirect();
+                window.removeEventListener('message', onMessage);
+                cleanup();
             }, LOGOUT_HANDLER_TIMEOUT);
         }
 
