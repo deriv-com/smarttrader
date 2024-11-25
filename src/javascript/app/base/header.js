@@ -654,9 +654,9 @@ const Header = (() => {
         const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
 
         if (isOAuth2Enabled) {
-            const redirectCallbackUri = `${window.location.origin}/en/callback.html`;
+            const redirectCallbackUri = `${window.location.origin}/en/callback`;
             const postLoginRedirectUri = window.location.href;
-            const postLogoutRedirectUri = `${window.location.origin}/en/trading.html`;
+            const postLogoutRedirectUri = `${window.location.origin}/en/trading`;
       
             await requestOidcAuthentication({
                 redirectCallbackUri,
