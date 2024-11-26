@@ -13,6 +13,8 @@ export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions
 
 export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
 
+const LOGOUT_HANDLER_TIMEOUT = 10000;
+
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
     [URLConstants.derivP2pStaging]   : 'red.derivws.com',
@@ -79,12 +81,15 @@ export const isOAuth2Enabled = () => {
 
 export const getLogoutHandler = onWSLogoutAndRedirect => {
     const isAuthEnabled = isOAuth2Enabled();
+    let timeout;
 
     if (!isAuthEnabled) {
         return onWSLogoutAndRedirect;
     }
 
     const cleanup = () => {
+        clearTimeout(timeout);
+
         const iframe = document.getElementById('logout-iframe');
         if (iframe) iframe.remove();
     };
@@ -97,6 +102,8 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                     const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
                     const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
                     if (domains.includes(currentDomain)) {
+                        // eslint-disable-next-line
+                        console.log('setting cookie logged_state to false')
                         Cookies.set('logged_state', 'false', {
                             expires: 30,
                             path   : '/',
@@ -130,9 +137,11 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
             iframe.style.display = 'none';
             document.body.appendChild(iframe);
 
-            onWSLogoutAndRedirect();
-            window.removeEventListener('message', onMessage);
-            cleanup();
+            timeout = setTimeout(() => {
+                onWSLogoutAndRedirect();
+                window.removeEventListener('message', onMessage);
+                cleanup();
+            }, LOGOUT_HANDLER_TIMEOUT);
         }
 
         iframe.src = getOAuthLogoutUrl();
