@@ -6,7 +6,7 @@ const Language = require('./language');
 const { getAppId } = require('../config');
 
 const Analytics = (() => {
-    const init = async (onInitialise) => {
+    const init = async () => {
         const loginid = LocalStore?.get('active_loginid');
         const active_account = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
         const utmData = Cookies.get('utm_data');
@@ -38,8 +38,6 @@ const Analytics = (() => {
                         utm_source     : ppcCampaignCookies?.utm_source,
                     },
                 },
-            }).then(() => {
-                if (onInitialise) onInitialise();
             });
         }
     };

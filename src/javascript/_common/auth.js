@@ -154,13 +154,15 @@ export const requestSingleSignOn = async () => {
     const isLoggedInCookie = Cookies.get('logged_state') === 'true';
     const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
     const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
     const isAuthEnabled = isOAuth2Enabled();
     const isCallbackPage = window.location.pathname.includes('callback');
-
+    
     // eslint-disable-next-line
     console.log('requesting single-sign-on...')
     // eslint-disable-next-line
     console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
+    console.log('is growhthbook loaded', isGrowthbookLoaded);
 
     // we only do SSO if:
     // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
