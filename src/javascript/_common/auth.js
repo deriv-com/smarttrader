@@ -149,29 +149,44 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
 };
 
 export const requestSingleSignOn = async () => {
-    // if we have previously logged in,
-    // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
-    const isLoggedInCookie = Cookies.get('logged_state') === 'true';
-    const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-    const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
-    const isAuthEnabled = isOAuth2Enabled();
-    const isCallbackPage = window.location.pathname.includes('callback');
-    
-    // eslint-disable-next-line
-    console.log('requesting single-sign-on...')
-    // eslint-disable-next-line
-    console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
-    console.log('is growhthbook loaded', isGrowthbookLoaded);
+    const _requestSingleSignOn = async () => {
+        // if we have previously logged in,
+        // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
+        const isLoggedInCookie = Cookies.get('logged_state') === 'true';
+        const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+        const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+        const isAuthEnabled = isOAuth2Enabled();
+        const isCallbackPage = window.location.pathname.includes('callback');
+        
+        // eslint-disable-next-line
+        console.log('requesting single-sign-on...')
+        // eslint-disable-next-line
+        console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
 
-    // we only do SSO if:
-    // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
-    // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
-    // if client.accounts in localStorage is empty - !isClientAccountsPopulated
-    // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
-    if (isLoggedInCookie && !isCallbackPage && !isClientAccountsPopulated && isAuthEnabled) {
-        await requestOidcAuthentication({
-            redirectCallbackUri: `${window.location.origin}/en/callback`,
-        });
+        // we only do SSO if:
+        // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
+        // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
+        // if client.accounts in localStorage is empty - !isClientAccountsPopulated
+        // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
+        if (isLoggedInCookie && !isCallbackPage && !isClientAccountsPopulated && isAuthEnabled) {
+            await requestOidcAuthentication({
+                redirectCallbackUri: `${window.location.origin}/en/callback`,
+            });
+        }
+    }
+
+    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
+    if (!isGrowthbookLoaded) {
+        const interval = setInterval(() => {
+            const isLoaded = Analytics.isGrowthbookLoaded();
+            // eslint-disable-next-line
+            console.log('is GB enabled', isLoaded)
+            if (isLoaded) {
+                _requestSingleSignOn();
+                clearInterval(interval);
+            }
+        }, 500)
+    } else {
+        _requestSingleSignOn();
     }
 };
