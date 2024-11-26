@@ -157,6 +157,11 @@ export const requestSingleSignOn = async () => {
     const isAuthEnabled = isOAuth2Enabled();
     const isCallbackPage = window.location.pathname.includes('callback');
 
+    // eslint-disable-next-line
+    console.log('requesting single-sign-on...')
+    // eslint-disable-next-line
+    console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
+
     // we only do SSO if:
     // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
     // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
