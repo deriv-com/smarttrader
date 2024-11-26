@@ -162,6 +162,7 @@ export const requestSingleSignOn = async () => {
     console.log('requesting single-sign-on...')
     // eslint-disable-next-line
     console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
+    // eslint-disable-next-line
     console.log('is growhthbook loaded', isGrowthbookLoaded);
 
     // we only do SSO if:
