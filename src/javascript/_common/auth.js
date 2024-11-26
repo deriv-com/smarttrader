@@ -88,8 +88,6 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
     }
 
     const cleanup = () => {
-        clearTimeout(timeout);
-
         const iframe = document.getElementById('logout-iframe');
         if (iframe) iframe.remove();
     };
@@ -135,11 +133,9 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
             iframe.style.display = 'none';
             document.body.appendChild(iframe);
 
-            timeout = setTimeout(() => {
-                onWSLogoutAndRedirect();
-                window.removeEventListener('message', onMessage);
-                cleanup();
-            }, LOGOUT_HANDLER_TIMEOUT);
+            onWSLogoutAndRedirect();
+            window.removeEventListener('message', onMessage);
+            cleanup();
         }
 
         iframe.src = getOAuthLogoutUrl();
