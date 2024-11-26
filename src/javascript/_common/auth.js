@@ -173,7 +173,7 @@ export const requestSingleSignOn = async () => {
                 redirectCallbackUri: `${window.location.origin}/en/callback`,
             });
         }
-    }
+    };
 
     const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
     if (!isGrowthbookLoaded) {
@@ -185,7 +185,7 @@ export const requestSingleSignOn = async () => {
                 _requestSingleSignOn();
                 clearInterval(interval);
             }
-        }, 500)
+        }, 500);
     } else {
         _requestSingleSignOn();
     }
