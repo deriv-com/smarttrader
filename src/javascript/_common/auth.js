@@ -159,6 +159,7 @@ export const requestSingleSignOn = async () => {
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
         const isAuthEnabled = isOAuth2Enabled();
         const isCallbackPage = window.location.pathname.includes('callback');
+        const isEndpointPage = window.location.pathname.includes('endpoint');
         
         // eslint-disable-next-line
         console.log('requesting single-sign-on...')
@@ -170,7 +171,7 @@ export const requestSingleSignOn = async () => {
         // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
-        if (isLoggedInCookie && !isCallbackPage && !isClientAccountsPopulated && isAuthEnabled) {
+        if (isLoggedInCookie && !isCallbackPage && !isEndpointPage && !isClientAccountsPopulated && isAuthEnabled) {
             await requestOidcAuthentication({
                 redirectCallbackUri: `${window.location.origin}/en/callback`,
             });
