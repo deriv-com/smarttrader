@@ -6,6 +6,7 @@ const {
     WebSocketUtils,
 } = require('@deriv-com/utils');
 const Cookies = require('js-cookie');
+const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const Analytics = require('./analytics');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
@@ -145,4 +146,25 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
     };
 
     return oAuth2Logout;
+};
+
+export const requestSingleSignOn = async () => {
+    // if we have previously logged in,
+    // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
+    const isLoggedInCookie = Cookies.get('logged_state') === 'true';
+    const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+    const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+    const isAuthEnabled = isOAuth2Enabled();
+    const isCallbackPage = window.location.pathname.includes('callback');
+
+    // we only do SSO if:
+    // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
+    // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
+    // if client.accounts in localStorage is empty - !isClientAccountsPopulated
+    // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
+    if (isLoggedInCookie && !isCallbackPage && !isClientAccountsPopulated && isAuthEnabled) {
+        await requestOidcAuthentication({
+            redirectCallbackUri: `${window.location.origin}/en/callback`,
+        });
+    }
 };

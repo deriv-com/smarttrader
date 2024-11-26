@@ -1,5 +1,3 @@
-const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
-const Cookies = require('js-cookie');
 const BinaryPjax = require('./binary_pjax');
 const pages_config = require('./binary_pages');
 const Client = require('./client');
@@ -23,24 +21,12 @@ const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
 const createElement = require('../../_common/utility').createElement;
 const NotAvailable = require('../pages/trade/not-available.jsx');
-const AuthClient                = require('../../_common/auth');
 
 const BinaryLoader = (() => {
     let container;
     let active_script = null;
 
-    const init = async () => {
-        const isLoggedInCookie = Cookies.get('logged_state') === 'true';
-        const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-        const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
-        const isCallbackPage = window.location.pathname.includes('callback');
-
-        if (isLoggedInCookie && !isCallbackPage && !isClientAccountsPopulated && isOAuth2Enabled) {
-            await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/en/callback`,
-            });
-        }
+    const init = () => {
         const supported_langs_regex = Object.keys(getAll()).map(lang => lang.toLowerCase()).join('|');
         const pathname = window.location.pathname;
         const search = window.location.search;
