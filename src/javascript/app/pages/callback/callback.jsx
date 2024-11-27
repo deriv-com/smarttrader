@@ -124,6 +124,19 @@ const CallbackContainer = () => {
       }
       getElementById("loading_link").setAttribute("href", redirect_url);
       console.log("redirect url", redirect_url);
+      const domains = ["deriv.com", "binary.sx", "pages.dev", "localhost"];
+      const currentDomain = window.location.hostname
+        .split(".")
+        .slice(-2)
+        .join(".");
+      if (domains.includes(currentDomain)) {
+        Cookies.set("logged_state", "true", {
+          expires: 30,
+          path: "/",
+          domain: currentDomain,
+          secure: true,
+        });
+      }
       window.location.href = redirect_url; // need to redirect not using pjax
     });
   };
