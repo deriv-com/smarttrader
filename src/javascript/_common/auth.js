@@ -174,11 +174,11 @@ export const requestSingleSignOn = async () => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         // eslint-disable-next-line
-        console.log('fuck this shit')
+        console.log('fuck this shit', currentDomain)
         const x = Cookies.set('logged_state_lmao', 'false', {
             expires: 30,
             path   : '/',
-            domain : currentDomain,
+            domain : `.${currentDomain}`,
             secure : true,
         });
         // eslint-disable-next-line
@@ -187,6 +187,7 @@ export const requestSingleSignOn = async () => {
             expires: 30,
             path   : '/',
             domain : currentDomain,
+            sameSite: 'none'
         });
         Cookies.set('logged_state', 'false', {
             expires: 30,
