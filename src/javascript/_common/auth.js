@@ -172,6 +172,45 @@ export const requestSingleSignOn = async () => {
         const isAuthEnabled = isOAuth2Enabled();
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
+
+        // eslint-disable-next-line
+        console.log('fuck this shit')
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        });
         
         // eslint-disable-next-line
         console.log('requesting single-sign-on...')
