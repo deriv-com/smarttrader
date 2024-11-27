@@ -170,6 +170,8 @@ export const requestSingleSignOn = async () => {
     const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
     if (!isGrowthbookLoaded) {
         let retryInterval = 0;
+        // this interval is to check if Growthbook is already initialised.
+        // If not, keep checking it (max 10 times) and SSO if conditions are met
         const interval = setInterval(() => {
             if (retryInterval > 10) {
                 clearInterval(interval);

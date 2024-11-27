@@ -1,4 +1,3 @@
-const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const publicPathFactory = require('./helpers').publicPathFactory;
 
@@ -30,9 +29,6 @@ const commonConfig = (grunt) => ({
     },
     resolve: {
         extensions: ['.js', '.jsx'],
-        alias: {
-            'react/jsx-runtime': 'react/jsx-runtime.js',
-        },
     },
     module: {
         rules: [
