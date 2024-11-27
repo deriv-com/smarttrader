@@ -104,7 +104,7 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                     if (domains.includes(currentDomain)) {
                         // eslint-disable-next-line
                         console.log('setting cookie logged_state to false', currentDomain)
-                        Cookies.remove('logged_state');
+                        // Cookies.remove('logged_state');
                         Cookies.set('logged_state', 'false', {
                             expires: 30,
                             path   : '/',
