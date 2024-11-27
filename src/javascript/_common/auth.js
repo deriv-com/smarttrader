@@ -94,7 +94,7 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
         if (iframe) iframe.remove();
     };
 
-    const onMessage = async event => {
+    const onMessage =  event => {
         const allowedOrigin = getOAuthOrigin();
         if (allowedOrigin === event.origin) {
             if (event.data === 'logout_complete') {
@@ -117,7 +117,7 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                             secure : true,
                         });
                     }
-                    await onWSLogoutAndRedirect();
+                    onWSLogoutAndRedirect();
                     window.removeEventListener('message', onMessage);
                     cleanup();
                 } catch (err) {
@@ -160,7 +160,13 @@ export const requestSingleSignOn = async () => {
     const _requestSingleSignOn = async () => {
         // if we have previously logged in,
         // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
-        const isLoggedInCookie = Cookies.get('logged_state') === 'true';
+        const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+        const isLoggedInCookie = Cookies.get('logged_state', {
+            expires: 30,
+            path   : '/',
+            domain : currentDomain,
+            secure : true,
+        }) === 'true';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
         const isAuthEnabled = isOAuth2Enabled();
