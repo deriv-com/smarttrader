@@ -95,42 +95,40 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
     };
 
     const onMessage =  event => {
-        const allowedOrigin = getOAuthOrigin();
+        const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
         // eslint-disable-next-line
-        console.log('wtffffff');
         Cookies.set('logged_state', 'false', {
             expires: 30,
             path   : '/',
             secure : true,
+            domain: currentDomain,
         });
-        if (allowedOrigin === event.origin) {
-            if (event.data === 'logout_complete') {
-                try {
-                    const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
-                    const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
-                    if (domains.includes(currentDomain)) {
-                        // eslint-disable-next-line
-                        console.log('setting cookie logged_state to false', currentDomain)
-                        // Cookies.remove('logged_state', {
-                        //     expires: 30,
-                        //     path   : '/',
-                        //     domain : currentDomain,
-                        //     secure : true,
-                        // });
-                        // Cookies.set('logged_state', 'false', {
-                        //     expires: 30,
-                        //     path   : '/',
-                        //     domain : currentDomain,
-                        //     secure : true,
-                        // });
-                    }
-                    onWSLogoutAndRedirect();
-                    window.removeEventListener('message', onMessage);
-                    cleanup();
-                } catch (err) {
-                    // eslint-disable-next-line no-console
-                    console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
+        if (event.data === 'logout_complete') {
+            try {
+                const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
+                const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+                if (domains.includes(currentDomain)) {
+                    // eslint-disable-next-line
+                    console.log('setting cookie logged_state to false', currentDomain)
+                    // Cookies.remove('logged_state', {
+                    //     expires: 30,
+                    //     path   : '/',
+                    //     domain : currentDomain,
+                    //     secure : true,
+                    // });
+                    // Cookies.set('logged_state', 'false', {
+                    //     expires: 30,
+                    //     path   : '/',
+                    //     domain : currentDomain,
+                    //     secure : true,
+                    // });
                 }
+                onWSLogoutAndRedirect();
+                window.removeEventListener('message', onMessage);
+                cleanup();
+            } catch (err) {
+                // eslint-disable-next-line no-console
+                console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
             }
         }
     };
