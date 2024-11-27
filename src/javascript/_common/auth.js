@@ -148,13 +148,7 @@ export const requestSingleSignOn = async () => {
     const _requestSingleSignOn = async () => {
         // if we have previously logged in,
         // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
-        const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
-        const isLoggedInCookie = Cookies.get('logged_state', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        }) === 'true';
+        const isLoggedInCookie = Cookies.get('logged_state') === 'true';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
         const isAuthEnabled = isOAuth2Enabled();
@@ -175,13 +169,18 @@ export const requestSingleSignOn = async () => {
 
     const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
     if (!isGrowthbookLoaded) {
+        let retryInterval = 0;
         const interval = setInterval(() => {
-            const isLoaded = Analytics.isGrowthbookLoaded();
-            // eslint-disable-next-line
-            console.log('is GB enabled', isLoaded)
-            if (isLoaded) {
-                _requestSingleSignOn();
+            if (retryInterval > 10) {
                 clearInterval(interval);
+            } else {
+                const isLoaded = Analytics.isGrowthbookLoaded();
+                if (isLoaded) {
+                    _requestSingleSignOn();
+                    clearInterval(interval);
+                } else {
+                    retryInterval += 1;
+                }
             }
         }, 500);
     } else {

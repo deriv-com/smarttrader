@@ -38,8 +38,7 @@ const Page = (() => {
         Elevio.init();
         onDocumentReady();
         Crowdin.init();
-        // only SSO when Analytics is ready
-        Analytics.init(requestSingleSignOn);
+        Analytics.init();
     };
 
     const onDocumentReady = () => {
