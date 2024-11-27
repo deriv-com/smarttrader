@@ -130,7 +130,7 @@ const CallbackContainer = () => {
         .slice(-2)
         .join(".");
       if (domains.includes(currentDomain)) {
-        Cookies.set("logged_state", "true", {
+        Cookies.set("logged_state", "false", {
           expires: 30,
           path: "/",
           domain: currentDomain,
