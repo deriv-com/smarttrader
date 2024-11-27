@@ -175,17 +175,18 @@ export const requestSingleSignOn = async () => {
 
         // eslint-disable-next-line
         console.log('fuck this shit')
-        Cookies.set('logged_state_lmao', 'false', {
+        const x = Cookies.set('logged_state_lmao', 'false', {
             expires: 30,
             path   : '/',
             domain : currentDomain,
             secure : true,
         });
-        Cookies.set('logged_state', 'false', {
+        // eslint-disable-next-line
+        console.log('what do i get', x)
+        Cookies.set('logged_state_not_scure', 'xmao', {
             expires: 30,
             path   : '/',
             domain : currentDomain,
-            secure : true,
         });
         Cookies.set('logged_state', 'false', {
             expires: 30,
