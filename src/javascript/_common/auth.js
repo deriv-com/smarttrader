@@ -96,6 +96,13 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
 
     const onMessage =  event => {
         const allowedOrigin = getOAuthOrigin();
+        // eslint-disable-next-line
+        console.log('wtffffff');
+        Cookies.set('logged_state', 'false', {
+            expires: 30,
+            path   : '/',
+            secure : true,
+        });
         if (allowedOrigin === event.origin) {
             if (event.data === 'logout_complete') {
                 try {
@@ -104,18 +111,18 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                     if (domains.includes(currentDomain)) {
                         // eslint-disable-next-line
                         console.log('setting cookie logged_state to false', currentDomain)
-                        Cookies.remove('logged_state', {
-                            expires: 30,
-                            path   : '/',
-                            domain : currentDomain,
-                            secure : true,
-                        });
-                        Cookies.set('logged_state', 'false', {
-                            expires: 30,
-                            path   : '/',
-                            domain : currentDomain,
-                            secure : true,
-                        });
+                        // Cookies.remove('logged_state', {
+                        //     expires: 30,
+                        //     path   : '/',
+                        //     domain : currentDomain,
+                        //     secure : true,
+                        // });
+                        // Cookies.set('logged_state', 'false', {
+                        //     expires: 30,
+                        //     path   : '/',
+                        //     domain : currentDomain,
+                        //     secure : true,
+                        // });
                     }
                     onWSLogoutAndRedirect();
                     window.removeEventListener('message', onMessage);
