@@ -95,13 +95,13 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
     };
 
     const onMessage =  event => {
-        const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+        const xmao = window.location.hostname.split('.').slice(-2).join('.');
         // eslint-disable-next-line
         Cookies.set('logged_state', 'false', {
             expires: 30,
             path   : '/',
             secure : true,
-            domain: currentDomain,
+            domain : xmao,
         });
         if (event.data === 'logout_complete') {
             try {
