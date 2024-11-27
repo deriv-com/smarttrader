@@ -95,33 +95,16 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
     };
 
     const onMessage =  event => {
-        const xmao = window.location.hostname.split('.').slice(-2).join('.');
-        // eslint-disable-next-line
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            secure : true,
-            domain : xmao,
-        });
         if (event.data === 'logout_complete') {
             try {
                 const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
                 const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
                 if (domains.includes(currentDomain)) {
-                    // eslint-disable-next-line
-                    console.log('setting cookie logged_state to false', currentDomain)
-                    // Cookies.remove('logged_state', {
-                    //     expires: 30,
-                    //     path   : '/',
-                    //     domain : currentDomain,
-                    //     secure : true,
-                    // });
-                    // Cookies.set('logged_state', 'false', {
-                    //     expires: 30,
-                    //     path   : '/',
-                    //     domain : currentDomain,
-                    //     secure : true,
-                    // });
+                    Cookies.set('logged_state', 'false', {
+                        expires: 30,
+                        path   : '/',
+                        secure : true,
+                    });
                 }
                 onWSLogoutAndRedirect();
                 window.removeEventListener('message', onMessage);
@@ -177,58 +160,6 @@ export const requestSingleSignOn = async () => {
         const isAuthEnabled = isOAuth2Enabled();
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
-
-        // eslint-disable-next-line
-        console.log('fuck this shit', currentDomain)
-        const x = Cookies.set('logged_state_lmao', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : `.${currentDomain}`,
-            secure : true,
-        });
-        // eslint-disable-next-line
-        console.log('what do i get', x)
-        Cookies.set('logged_state_not_scure', 'xmao', {
-            expires : 30,
-            path    : '/',
-            domain  : currentDomain,
-            sameSite: 'none',
-        });
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        });
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        });
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        });
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        });
-        Cookies.set('logged_state', 'false', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            secure : true,
-        });
-        
-        // eslint-disable-next-line
-        console.log('requesting single-sign-on...')
-        // eslint-disable-next-line
-        console.log(isLoggedInCookie, isClientAccountsPopulated,isAuthEnabled, isCallbackPage)
 
         // we only do SSO if:
         // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
