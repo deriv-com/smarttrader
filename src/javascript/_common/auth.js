@@ -184,10 +184,10 @@ export const requestSingleSignOn = async () => {
         // eslint-disable-next-line
         console.log('what do i get', x)
         Cookies.set('logged_state_not_scure', 'xmao', {
-            expires: 30,
-            path   : '/',
-            domain : currentDomain,
-            sameSite: 'none'
+            expires : 30,
+            path    : '/',
+            domain  : currentDomain,
+            sameSite: 'none',
         });
         Cookies.set('logged_state', 'false', {
             expires: 30,
