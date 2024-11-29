@@ -147,5 +147,10 @@
   },
   "engines": {
     "node": "18.x"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "last 5 iOS versions",
+    "last 3 Safari versions"
+  ]
 }
