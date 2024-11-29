@@ -3,7 +3,7 @@
         [
             "@babel/preset-env",
             {
-                "browserslistConfigFile": "./browserslistrc"
+                "ignoreBrowserslistConfig": true
             }
         ],
         "@babel/preset-react"
