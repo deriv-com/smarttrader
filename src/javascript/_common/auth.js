@@ -96,23 +96,18 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
 
     const onMessage =  event => {
         if (event.data === 'logout_complete') {
-            try {
-                const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
-                const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
-                if (domains.includes(currentDomain)) {
-                    Cookies.set('logged_state', 'false', {
-                        expires: 30,
-                        path   : '/',
-                        secure : true,
-                    });
-                }
-                onWSLogoutAndRedirect();
-                window.removeEventListener('message', onMessage);
-                cleanup();
-            } catch (err) {
-                // eslint-disable-next-line no-console
-                console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
+            const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
+            const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+            if (domains.includes(currentDomain)) {
+                Cookies.set('logged_state', 'false', {
+                    expires: 30,
+                    path   : '/',
+                    secure : true,
+                });
             }
+            onWSLogoutAndRedirect();
+            window.removeEventListener('message', onMessage);
+            cleanup();
         }
     };
 
