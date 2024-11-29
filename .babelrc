@@ -1,5 +1,13 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "browserslistConfigFile": "./browserslistrc"
+            }
+        ],
+        "@babel/preset-react"
+    ],
     "plugins": [
         ["@babel/plugin-proposal-decorators", { "legacy": true }],
         "@babel/plugin-transform-class-properties",
@@ -7,12 +15,10 @@
         [
             "module-resolver",
             {
-                "root": [
-                    "./src/javascript"
-                ],
+                "root": ["./src/javascript"],
                 "alias": {
-                    "_common"  : "./src/javascript/_common",
-                    "Images"   : "./src/images/"
+                    "_common": "./src/javascript/_common",
+                    "Images": "./src/images/"
                 }
             }
         ]
