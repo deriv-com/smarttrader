@@ -23,6 +23,7 @@ const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
 const Analytics        = require('../../_common/analytics');
 const { openChatWithParam } = require('../../_common/utility');
+const { requestSingleSignOn } = require('../../_common/auth');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
@@ -100,6 +101,7 @@ const Page = (() => {
             updateLinksURL('#content');
         } else {
             init();
+            requestSingleSignOn();
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
