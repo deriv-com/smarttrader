@@ -23,7 +23,7 @@ const toISOFormat      = require('../../_common/string_util').toISOFormat;
 const Url              = require('../../_common/url');
 const Analytics        = require('../../_common/analytics');
 const { openChatWithParam } = require('../../_common/utility');
-const { requestSingleSignOn } = require('../../_common/auth');
+// const { requestSingleSignOn } = require('../../_common/auth');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
@@ -60,7 +60,7 @@ const Page = (() => {
                         // reload the page when the client changes account on other pages.
                         if (evt.newValue === '' || !window.is_logging_in) {
                             // eslint-disable-next-line
-                            console.log('we are reloading wtf, window.is_logging_in: ', window.is_logging_in, evt);
+                            console.log('we are reloading wtf, window.is_logging_in: ', window.is_logging_in, evt)
                             reload();
                         }
                         break;
@@ -103,7 +103,7 @@ const Page = (() => {
             updateLinksURL('#content');
         } else {
             init();
-            requestSingleSignOn();
+            // requestSingleSignOn();
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
