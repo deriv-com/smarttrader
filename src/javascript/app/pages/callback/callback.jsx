@@ -79,7 +79,9 @@ const CallbackContainer = () => {
 
                 storeClientAccounts(tokens, account_list);
             } else {
-                Client.doLogout({ logout: 1 });
+                // eslint-disable-next-line
+                console.log('apparently we are logging out', response, account_list)
+                // Client.doLogout({ logout: 1 });
             }
 
             // redirect back
