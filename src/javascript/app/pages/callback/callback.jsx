@@ -73,13 +73,17 @@ const CallbackContainer = () => {
                 isStorageSupported(sessionStorage) &&
                 account_list
             ) {
+                // eslint-disable-next-line
+                console.log('we have called authorize', account_list, tokens);
                 // redirect url
                 redirect_url = sessionStorage.getItem('redirect_url');
                 sessionStorage.removeItem('redirect_url');
 
                 storeClientAccounts(tokens, account_list);
             } else {
-                Client.doLogout({ logout: 1 });
+                // eslint-disable-next-line
+                console.log('apparently we are logging out', response, account_list)
+                // Client.doLogout({ logout: 1 });
             }
 
             // redirect back
@@ -115,6 +119,8 @@ const CallbackContainer = () => {
             const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
             const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
             if (domains.includes(currentDomain)) {
+                // eslint-disable-next-line
+                console.log('setting logged_state to false');
                 Cookies.set('logged_state', 'false', {
                     expires: 30,
                     path   : '/',
