@@ -73,17 +73,13 @@ const CallbackContainer = () => {
                 isStorageSupported(sessionStorage) &&
                 account_list
             ) {
-                // eslint-disable-next-line
-                console.log('we have called authorize', account_list, tokens);
                 // redirect url
                 redirect_url = sessionStorage.getItem('redirect_url');
                 sessionStorage.removeItem('redirect_url');
 
                 storeClientAccounts(tokens, account_list);
             } else {
-                // eslint-disable-next-line
-                console.log('apparently we are logging out', response, account_list)
-                // Client.doLogout({ logout: 1 });
+                Client.doLogout({ logout: 1 });
             }
 
             // redirect back
@@ -117,13 +113,15 @@ const CallbackContainer = () => {
             }
             getElementById('loading_link').setAttribute('href', redirect_url);
             
-            // eslint-disable-next-line
-            console.log('setting cookie....SHOULD BE TRUEEEE')
-            Cookies.set('logged_state', 'true', {
-                expires: 30,
-                path   : '/',
-                secure : true,
-            });
+            const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
+            const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
+            if (domains.includes(currentDomain)) {
+                Cookies.set('logged_state', 'true', {
+                    expires: 30,
+                    path   : '/',
+                    secure : true,
+                });
+            }
 
             window.location.href = redirect_url; // need to redirect not using pjax
         });
