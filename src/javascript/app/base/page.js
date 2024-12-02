@@ -60,7 +60,7 @@ const Page = (() => {
                         // reload the page when the client changes account on other pages.
                         if (evt.newValue === '' || !window.is_logging_in) {
                             // eslint-disable-next-line
-                            console.log('we are reloading wtf, window.is_logging_in: ', window.is_logging_in, evt);
+                            console.log('we are reloading wtf, window.is_logging_in: ', window.is_logging_in, evt)
                             reload();
                         }
                         break;
@@ -103,7 +103,7 @@ const Page = (() => {
             updateLinksURL('#content');
         } else {
             init();
-            requestSingleSignOn();
+            // requestSingleSignOn();
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
