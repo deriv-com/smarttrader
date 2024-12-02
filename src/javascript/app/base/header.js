@@ -655,7 +655,7 @@ const Header = (() => {
 
         if (isOAuth2Enabled) {
             const redirectCallbackUri = `${window.location.origin}/en/callback`;
-            const postLoginRedirectUri = window.location.href;
+            const postLoginRedirectUri = window.location.origin;
             const postLogoutRedirectUri = `${window.location.origin}/en/trading`;
             // Test commit
             await requestOidcAuthentication({

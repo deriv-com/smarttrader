@@ -65,7 +65,6 @@ const storeClientAccounts = (tokens, account_list) => {
 
 const CallbackContainer = () => {
     const onLoginSuccess = async tokens => {
-        parent.window.is_logging_in = 1; // this flag is used in base.js to prevent auto-reloading this page
         let redirect_url;
         BinarySocket.send({ authorize: tokens.token1 }).then(response => {
             const account_list = getPropertyValue(response, ['authorize', 'account_list']);
