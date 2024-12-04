@@ -15,7 +15,7 @@ const licenseID          = require('../../_common/utility').lc_licenseID;
 const clientID           = require('../../_common/utility').lc_clientID;
 
 const Client = (() => {
-    
+
     const processNewAccount = (options) => {
         if (ClientBase.setNewAccount(options)) {
             setTimeout(() => { window.location.replace(options.redirect_url || defaultRedirectUrl()); }, 500); // need to redirect not using pjax
@@ -111,7 +111,7 @@ const Client = (() => {
         window.LiveChatWidget?.call('set_session_variables', session_variables);
         window.LiveChatWidget?.call('set_customer_email', ' ');
         window.LiveChatWidget?.call('set_customer_name', ' ');
-        
+
         try {
             const customerSDK = init({
                 licenseId: licenseID,
@@ -136,7 +136,7 @@ const Client = (() => {
 
         if (response.logout !== 1) return;
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
-        removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token');
+        removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token','utm_data', 'gclid');
         // clear elev.io session storage
         sessionStorage.removeItem('_elevaddon-6app');
         sessionStorage.removeItem('_elevaddon-6create');

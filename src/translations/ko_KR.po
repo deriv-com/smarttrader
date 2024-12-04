@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dsmarttrader\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-09-04 07:48\n"
+"PO-Revision-Date: 2024-12-04 03:45\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -383,7 +383,7 @@ msgid "Digits"
 msgstr "Digits"
 
 msgid "Do you want to top up for another %1? If not, you can do this later on the %2Cashier page%3, too."
-msgstr "또 다른 %1충전하고 싶으세요?그렇지 않은 경우 나중에 %2CAshier 페이지%3에서도 이 작업을 수행할 수 있습니다."
+msgstr "%1로 다시 충전하고 싶으신가요? 그렇지 않다면 나중에 %2Cashier 페이지%3에서도 이 작업을 수행할 수 있습니다."
 
 msgid "Does Not Touch"
 msgstr "Does Not Touch"
@@ -572,7 +572,7 @@ msgid "If the <strong>exit spot</strong> is equal to either the <strong>Low barr
 msgstr "<strong>출구 가격</strong>이 <strong>최저 배리어</strong> 또는 <strong>최고 배리어</strong>와 같으면 지급금을 받을 수 없습니다."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <strong>new barrier (if a reset occurs)</strong>, you don't win the payout."
-msgstr "<strong>출구 지점</strong> 가 <strong>배리어</strong> 또는 <strong>새 배리어 (리셋이 발생한 경우)</strong>와 같으면 지급금을 받을 수 없습니다."
+msgstr "<strong>출구 가격</strong>이 <strong>배리어</strong> 또는 <strong>새 배리어 (리셋이 발생한 경우)</strong>와 같으면 지급금을 받을 수 없습니다."
 
 msgid "If the <strong>exit spot</strong> is equal to the <strong>barrier</strong> or the <stronm g>new barrier (if a reset occurs)</stronmg>, you don't win the payout."
 msgstr "<strong>출구 가격이</strong> <strong>배리어</strong> 또는 <strong>새로운 배리어과 같으면 (재설정되는 경우)</strong>지급금을 받을 수 없습니다."
@@ -698,7 +698,7 @@ msgid "Indicative"
 msgstr "표시"
 
 msgid "Indicative barrier"
-msgstr "지시적 장벽"
+msgstr "지표 장벽"
 
 msgid "Invalid app id"
 msgstr "유효하지 않은 앱 ID"
@@ -1562,10 +1562,10 @@ msgid "Today"
 msgstr "오늘"
 
 msgid "Top up"
-msgstr "탑업"
+msgstr "완전 충전"
 
 msgid "Top up Virtual Account?"
-msgstr "가상 계좌를 충전하시겠습니까?"
+msgstr "가상 계정을 최대로 충전하시겠습니까?"
 
 msgid "Top up error"
 msgstr "충전 오류"

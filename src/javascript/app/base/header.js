@@ -10,24 +10,24 @@ const GTM                       = require('../../_common/base/gtm');
 const Login                     = require('../../_common/base/login');
 const SocketCache               = require('../../_common/base/socket_cache');
 // const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
-const getElementById            = require('../../_common/common_functions').getElementById;
-const localize                  = require('../../_common/localize').localize;
-const localizeKeepPlaceholders  = require('../../_common/localize').localizeKeepPlaceholders;
-const State                     = require('../../_common/storage').State;
-const Url                       = require('../../_common/url');
-const applyToAllElements        = require('../../_common/utility').applyToAllElements;
-const createElement             = require('../../_common/utility').createElement;
-const findParent                = require('../../_common/utility').findParent;
-const getTopLevelDomain         = require('../../_common/utility').getTopLevelDomain;
-const getPlatformSettings       = require('../../../templates/_common/brand.config').getPlatformSettings;
-const getHostname               = require('../../_common/utility').getHostname;
-const template                  = require('../../_common/utility').template;
-const Language                  = require('../../_common/language');
-const mapCurrencyName           = require('../../_common/base/currency_base').mapCurrencyName;
-const isEuCountry               = require('../common/country_base').isEuCountry;
-const DerivLiveChat             = require('../pages/livechat.jsx');
-const openChat                  = require('../../_common/utility.js').openChat;
-const getRemoteConfig           = require('../hooks/useRemoteConfig').getRemoteConfig;
+const getElementById           = require('../../_common/common_functions').getElementById;
+const localize                 = require('../../_common/localize').localize;
+const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
+const State                    = require('../../_common/storage').State;
+const Url                      = require('../../_common/url');
+const applyToAllElements       = require('../../_common/utility').applyToAllElements;
+const createElement            = require('../../_common/utility').createElement;
+const findParent               = require('../../_common/utility').findParent;
+const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
+const getPlatformSettings      = require('../../../templates/_common/brand.config').getPlatformSettings;
+const getHostname              = require('../../_common/utility').getHostname;
+const template                 = require('../../_common/utility').template;
+const Language                 = require('../../_common/language');
+const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
+const isEuCountry              = require('../common/country_base').isEuCountry;
+const DerivLiveChat            = require('../pages/livechat.jsx');
+const Chat                     = require('../../_common/chat.js').default;
+const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -351,7 +351,9 @@ const Header = (() => {
 
         hamburger_menu.addEventListener('click', () => showMobileMenu(true));
         mobile_menu_close.addEventListener('click', () => showMobileMenu(false));
-        mobile_menu_livechat.addEventListener('click', () => {openChat();});
+        mobile_menu_livechat.addEventListener('click', async () => {
+            await Chat.open();
+        });
 
         // Mobile Menu Livechat Icon
         mobile_menu__livechat_logo.src = Url.urlForStatic(`images/common/livechat.svg?${process.env.BUILD_HASH}`);
@@ -569,8 +571,8 @@ const Header = (() => {
 
         // Livechat Launcher
         const livechat = getElementById('livechat');
-        livechat.addEventListener('click', () => {
-            openChat();
+        livechat.addEventListener('click', async () => {
+            await Chat.open();
         });
 
         // Language Popup.
@@ -669,10 +671,8 @@ const Header = (() => {
     };
   
     const logoutOnClick = async () => {
-        window.fcWidget?.user.clear().then(
-            () => window.fcWidget.destroy(),
-            () => {}
-        );
+        await Chat.clear();
+
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
