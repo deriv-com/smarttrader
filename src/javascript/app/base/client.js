@@ -135,10 +135,8 @@ const Client = (() => {
     const doLogout = (response) => {
 
         if (response.logout !== 1) return;
-        removeCookies(
-            'login', 'loginid', 'loginid_list', 'email', 'residence', 'settings',
-            'reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token', 'utm_data', 'gclid'
-        );
+        removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
+        removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token','utm_data', 'gclid');
         // clear elev.io session storage
         sessionStorage.removeItem('_elevaddon-6app');
         sessionStorage.removeItem('_elevaddon-6create');
