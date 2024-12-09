@@ -102,6 +102,7 @@ export const getLogoutHandler = onWSLogoutAndRedirect => {
                 Cookies.set('logged_state', 'false', {
                     expires: 30,
                     path   : '/',
+                    domain: currentDomain,
                     secure : true,
                 });
             }

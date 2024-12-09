@@ -119,6 +119,7 @@ const CallbackContainer = () => {
                 Cookies.set('logged_state', 'true', {
                     expires: 30,
                     path   : '/',
+                    domain: currentDomain,
                     secure : true,
                 });
             }
