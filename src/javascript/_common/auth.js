@@ -7,7 +7,7 @@ const {
 } = require('@deriv-com/utils');
 const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
-const handlePostLogout = require('@deriv-com/analytics').handlePostLogout;
+const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
 const Analytics = require('./analytics');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
@@ -79,9 +79,47 @@ export const isOAuth2Enabled = () => {
 };
 
 export const getLogoutHandler = onWSLogoutAndRedirect => {
-    const oAuth2Logout = handlePostLogout(onWSLogoutAndRedirect);
+    const oAuth2Logout = OAuth2Logout(onWSLogoutAndRedirect);
     return oAuth2Logout;
 };
+
+export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
+    const _requestSingleLogout = async () => {
+        const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
+        const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+        const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+        const isAuthEnabled = isOAuth2Enabled();
+        const isCallbackPage = window.location.pathname.includes('callback');
+        const isEndpointPage = window.location.pathname.includes('endpoint');
+
+        if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
+            await getLogoutHandler(onWSLogoutAndRedirect)
+        }
+    };
+
+    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
+    if (!isGrowthbookLoaded) {
+        let retryInterval = 0;
+        // this interval is to check if Growthbook is already initialised.
+        // If not, keep checking it (max 10 times) and SSO if conditions are met
+        const interval = setInterval(() => {
+            if (retryInterval > 10) {
+                clearInterval(interval);
+            } else {
+                const isLoaded = Analytics.isGrowthbookLoaded();
+                if (isLoaded) {
+                    _requestSingleLogout();
+                    clearInterval(interval);
+                } else {
+                    retryInterval += 1;
+                }
+            }
+        }, 500);
+    } else {
+        _requestSingleLogout();
+    }
+};
+
 
 export const requestSingleSignOn = async () => {
     const _requestSingleSignOn = async () => {
