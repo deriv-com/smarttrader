@@ -92,8 +92,10 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
+        const logoutHandler = getLogoutHandler(onWSLogoutAndRedirect);
+
         if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
-            await getLogoutHandler(onWSLogoutAndRedirect);
+            await logoutHandler(onWSLogoutAndRedirect);
         }
     };
 
