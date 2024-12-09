@@ -93,7 +93,8 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         const logoutHandler = getLogoutHandler(onWSLogoutAndRedirect);
-
+        // eslint-disable-next-line
+        console.log('are we logging out', isLoggedOutCookie, isClientAccountsPopulated, isAuthEnabled, isCallbackPage, isEndpointPage);
         if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
             await logoutHandler(onWSLogoutAndRedirect);
         }
