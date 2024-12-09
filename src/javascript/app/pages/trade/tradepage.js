@@ -1,4 +1,5 @@
 const Dropdown          = require('@binary-com/binary-style').selectDropdown;
+const Cookies           = require('js-cookie');
 const TradingAnalysis   = require('./analysis');
 const commonTrading     = require('./common');
 const cleanupChart      = require('./charts/webtrader_chart').cleanupChart;
@@ -17,7 +18,6 @@ const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
 const LoaderElement     = require('../loader.jsx');
-const Cookies           = require('js-cookie');
 
 const TradePage = (() => {
     let events_initialized = 0;
