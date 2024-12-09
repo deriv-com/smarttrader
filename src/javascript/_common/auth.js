@@ -93,7 +93,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
-            await getLogoutHandler(onWSLogoutAndRedirect)
+            await getLogoutHandler(onWSLogoutAndRedirect);
         }
     };
 
@@ -119,7 +119,6 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         _requestSingleLogout();
     }
 };
-
 
 export const requestSingleSignOn = async () => {
     const _requestSingleSignOn = async () => {
