@@ -17,6 +17,7 @@ const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const getAllowedLocalStorageOrigin = require('../../../_common/url').getAllowedLocalStorageOrigin;
 const LoaderElement     = require('../loader.jsx');
+const Cookies           = require('js-cookie');
 
 const TradePage = (() => {
     let events_initialized = 0;
@@ -34,7 +35,7 @@ const TradePage = (() => {
             localStorage.setItem('client.accounts', client_accounts);
             localStorage.setItem('active_loginid', active_loginid);
 
-            const domain = ".deriv.com";
+            const domain = '.deriv.com';
 
             // remove cookies after populating local storage
             Cookies.remove('client.accounts', { domain, secure: true });
