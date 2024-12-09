@@ -7,13 +7,12 @@ const {
 } = require('@deriv-com/utils');
 const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
+const handlePostLogout = require('@deriv-com/analytics').handlePostLogout;
 const Analytics = require('./analytics');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
 
 export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
-
-const LOGOUT_HANDLER_TIMEOUT = 10000;
 
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
@@ -80,63 +79,7 @@ export const isOAuth2Enabled = () => {
 };
 
 export const getLogoutHandler = onWSLogoutAndRedirect => {
-    const isAuthEnabled = isOAuth2Enabled();
-    let timeout;
-
-    if (!isAuthEnabled) {
-        return onWSLogoutAndRedirect;
-    }
-
-    const cleanup = () => {
-        clearTimeout(timeout);
-
-        const iframe = document.getElementById('logout-iframe');
-        if (iframe) iframe.remove();
-    };
-
-    const onMessage =  event => {
-        if (event.data === 'logout_complete') {
-            const domains = ['deriv.com', 'binary.sx', 'pages.dev', 'localhost'];
-            const currentDomain = window.location.hostname.split('.').slice(-2).join('.');
-            if (domains.includes(currentDomain)) {
-                Cookies.set('logged_state', 'false', {
-                    expires: 30,
-                    path   : '/',
-                    domain: currentDomain,
-                    secure : true,
-                });
-            }
-            onWSLogoutAndRedirect();
-            window.removeEventListener('message', onMessage);
-            cleanup();
-        }
-    };
-
-    window.addEventListener('message', onMessage);
-
-    const oAuth2Logout = () => {
-        if (!isAuthEnabled) {
-            onWSLogoutAndRedirect();
-            return;
-        }
-
-        let iframe = document.getElementById('logout-iframe');
-        if (!iframe) {
-            iframe = document.createElement('iframe');
-            iframe.id = 'logout-iframe';
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-
-            timeout = setTimeout(() => {
-                onWSLogoutAndRedirect();
-                window.removeEventListener('message', onMessage);
-                cleanup();
-            }, LOGOUT_HANDLER_TIMEOUT);
-        }
-
-        iframe.src = getOAuthLogoutUrl();
-    };
-
+    const oAuth2Logout = handlePostLogout(onWSLogoutAndRedirect);
     return oAuth2Logout;
 };
 
