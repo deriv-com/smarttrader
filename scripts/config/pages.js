@@ -64,7 +64,6 @@ module.exports = [
     // ['dialog',                                  'app/dialog',                                  null],
     ['explanation',                             'app/trade/explanation',                       null],
     ['logged_inws',                             'app/logged_in',                               null],
-    ['callback',                                'app/callback',                                null],
     // ['redirect',                                'app/logged_in',                               null,         'Redirecting...'],
 
     // ==================== Section: "static" ====================

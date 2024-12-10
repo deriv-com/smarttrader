@@ -3,7 +3,6 @@
 
 // ==================== app ====================
 const LoggedInHandler         = require('./logged_in');
-const CallbackHandler         = require('./callback');
 // const Redirect                = require('./redirect');
 // const AccountTransfer         = require('../pages/cashier/account_transfer');
 // const Cashier                 = require('../pages/cashier/cashier');
@@ -99,7 +98,6 @@ const pages_config = {
     // landing_page             : { module: StaticPages.LandingPage,    is_authenticated: true, only_virtual: true },
     // limitsws                 : { module: Limits,                     is_authenticated: true, no_mf: true, only_real: true, needs_currency: true },
     logged_inws: { module: LoggedInHandler },
-    callback   : { module: CallbackHandler },
     // lost_passwordws          : { module: LostPassword,               not_authenticated: true },
     // malta                    : { module: StaticPages.Locations },
     // maltainvestws            : { module: FinancialAccOpening,        is_authenticated: true },
