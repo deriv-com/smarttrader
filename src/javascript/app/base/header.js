@@ -656,10 +656,9 @@ const Header = (() => {
         const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
 
         if (isOAuth2Enabled) {
-            const currentLanguage = Language.get();
-            const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
+            const redirectCallbackUri = `${window.location.origin}/en/callback`;
             const postLoginRedirectUri = window.location.origin;
-            const postLogoutRedirectUri = `${window.location.origin}/${currentLanguage}/trading`;
+            const postLogoutRedirectUri = `${window.location.origin}/en/trading`;
             // Test commit
             await requestOidcAuthentication({
                 redirectCallbackUri,
