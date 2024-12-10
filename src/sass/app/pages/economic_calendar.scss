@@ -1,0 +1,50 @@
+.economic-calendar {
+    padding: 1rem;
+    
+    .loading {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-general);
+    }
+
+    .no-data {
+        text-align: center;
+        color: var(--text-less-prominent);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--general-section-1);
+        }
+
+        th {
+            background-color: var(--general-section-1);
+            color: var(--text-prominent);
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: var(--general-hover);
+        }
+    }
+
+    // Impact level styling
+    .high-impact {
+        color: var(--text-loss-danger);
+        font-weight: bold;
+    }
+
+    .medium-impact {
+        color: var(--text-warning);
+        font-weight: bold;
+    }
+
+    .low-impact {
+        color: var(--text-success);
+    }
+}
