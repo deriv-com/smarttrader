@@ -12,7 +12,6 @@ const removeCookies      = require('../../_common/storage').removeCookies;
 const paramsHash         = require('../../_common/url').paramsHash;
 const urlFor             = require('../../_common/url').urlFor;
 const getPropertyValue   = require('../../_common/utility').getPropertyValue;
-const DerivIFrame        = require('../pages/deriv_iframe.jsx');
 
 const LoggedInHandler = (() => {
     const onLoad = () => {
@@ -20,7 +19,6 @@ const LoggedInHandler = (() => {
         parent.window.is_logging_in = 1; // this flag is used in base.js to prevent auto-reloading this page
         let redirect_url;
         const params = paramsHash(window.location.href);
-        DerivIFrame.init();
         BinarySocket.send({ authorize: params.token1 }).then((response) => {
             const account_list = getPropertyValue(response, ['authorize', 'account_list']);
             if (isStorageSupported(localStorage) && isStorageSupported(sessionStorage) && account_list) {

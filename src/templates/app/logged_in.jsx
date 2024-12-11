@@ -53,7 +53,6 @@ const LoggedIn = () => (
                     </div>
                 </div>
             </div>
-            <div id='deriv_iframe' />
         </body>
     </html>
 );
