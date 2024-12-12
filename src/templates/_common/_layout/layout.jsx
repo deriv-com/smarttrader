@@ -75,6 +75,7 @@ const Layout = () => {
                     </div>
                     <Topbar />
                 </div>
+                <div id='deriv_iframe' />
                 {/* <Elevio /> */}
                 <LanguageMenuModal />
             </body>

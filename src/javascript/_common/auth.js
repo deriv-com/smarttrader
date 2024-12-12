@@ -5,14 +5,13 @@ const {
     URLConstants,
     WebSocketUtils,
 } = require('@deriv-com/utils');
-const Cookies = require('js-cookie');
-const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
-const handlePostLogout = require('@deriv-com/analytics').handlePostLogout;
 const Analytics = require('./analytics');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
 
 export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
+
+const LOGOUT_HANDLER_TIMEOUT = 10000;
 
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
@@ -79,52 +78,48 @@ export const isOAuth2Enabled = () => {
 };
 
 export const getLogoutHandler = onWSLogoutAndRedirect => {
-    const oAuth2Logout = handlePostLogout(onWSLogoutAndRedirect);
-    return oAuth2Logout;
-};
+    const isAuthEnabled = isOAuth2Enabled();
 
-export const requestSingleSignOn = async () => {
-    const _requestSingleSignOn = async () => {
-        // if we have previously logged in,
-        // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
-        const isLoggedInCookie = Cookies.get('logged_state') === 'true';
-        const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-        const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-        const isAuthEnabled = isOAuth2Enabled();
-        const isCallbackPage = window.location.pathname.includes('callback');
-        const isEndpointPage = window.location.pathname.includes('endpoint');
+    if (!isAuthEnabled) {
+        return onWSLogoutAndRedirect;
+    }
 
-        // we only do SSO if:
-        // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
-        // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
-        // if client.accounts in localStorage is empty - !isClientAccountsPopulated
-        // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
-        if (isLoggedInCookie && !isCallbackPage && !isEndpointPage && !isClientAccountsPopulated && isAuthEnabled) {
-            await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/en/callback`,
-            });
+    const onMessage = async event => {
+        const allowedOrigin = getOAuthOrigin();
+        if (allowedOrigin === event.origin) {
+            if (event.data === 'logout_complete') {
+                try {
+                    await onWSLogoutAndRedirect();
+                } catch (err) {
+                    // eslint-disable-next-line no-console
+                    console.error(`logout was completed successfully on oauth hydra server, but logout handler returned error: ${err}`);
+                }
+            }
         }
     };
 
-    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
-    if (!isGrowthbookLoaded) {
-        let retryInterval = 0;
-        // this interval is to check if Growthbook is already initialised.
-        // If not, keep checking it (max 10 times) and SSO if conditions are met
-        const interval = setInterval(() => {
-            if (retryInterval > 10) {
-                clearInterval(interval);
-            } else {
-                const isLoaded = Analytics.isGrowthbookLoaded();
-                if (isLoaded) {
-                    _requestSingleSignOn();
-                    clearInterval(interval);
-                } else {
-                    retryInterval += 1;
-                }
-            }
-        }, 500);
-    } else {
-        _requestSingleSignOn();
-    }
+    window.addEventListener('message', onMessage);
+
+    const oAuth2Logout = () => {
+        if (!isAuthEnabled) {
+            onWSLogoutAndRedirect();
+            return;
+        }
+
+        let iframe = document.getElementById('logout-iframe');
+        if (!iframe) {
+            iframe = document.createElement('iframe');
+            iframe.id = 'logout-iframe';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            setTimeout(() => {
+                onWSLogoutAndRedirect();
+            }, LOGOUT_HANDLER_TIMEOUT);
+        }
+
+        iframe.src = getOAuthLogoutUrl();
+    };
+
+    return oAuth2Logout;
 };
