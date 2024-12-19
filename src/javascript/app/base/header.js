@@ -1,13 +1,14 @@
 // const BinaryPjax               = require('./binary_pjax');
-const Client                   = require('./client');
-const BinarySocket             = require('./socket');
-const AuthClient               = require('../../_common/auth');
-const showHidePulser           = require('../common/account_opening').showHidePulser;
-const updateTotal              = require('../pages/user/update_total');
-const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
-const GTM                      = require('../../_common/base/gtm');
-const Login                    = require('../../_common/base/login');
-const SocketCache              = require('../../_common/base/socket_cache');
+const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
+const Client                    = require('./client');
+const BinarySocket              = require('./socket');
+const AuthClient                = require('../../_common/auth');
+const showHidePulser            = require('../common/account_opening').showHidePulser;
+const updateTotal               = require('../pages/user/update_total');
+const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
+const GTM                       = require('../../_common/base/gtm');
+const Login                     = require('../../_common/base/login');
+const SocketCache               = require('../../_common/base/socket_cache');
 // const elementInnerHtml         = require('../../_common/common_functions').elementInnerHtml;
 const getElementById           = require('../../_common/common_functions').getElementById;
 const localize                 = require('../../_common/localize').localize;
@@ -24,7 +25,6 @@ const template                 = require('../../_common/utility').template;
 const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
-const DerivIFrame              = require('../pages/deriv_iframe.jsx');
 const DerivLiveChat            = require('../pages/livechat.jsx');
 const Chat                     = require('../../_common/chat.js').default;
 const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
@@ -45,7 +45,6 @@ const Header = (() => {
     };
 
     const onLoad = () => {
-        DerivIFrame.init();
         populateAccountsList();
         populateWalletAccounts();
         bindSvg();
@@ -652,19 +651,36 @@ const Header = (() => {
     //     }
     // };
 
-    const loginOnClick = (e) => {
+    const loginOnClick = async (e) => {
         e.preventDefault();
-        Login.redirectToLogin();
-    };
+        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
 
+        if (isOAuth2Enabled) {
+            const currentLanguage = Language.get();
+            const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
+            const postLoginRedirectUri = window.location.origin;
+            const postLogoutRedirectUri = `${window.location.origin}/${currentLanguage}/trading`;
+            // Test commit
+            await requestOidcAuthentication({
+                redirectCallbackUri,
+                postLoginRedirectUri,
+                postLogoutRedirectUri,
+            });
+        } else {
+            Login.redirectToLogin();
+        }
+    };
+  
     const logoutOnClick = async () => {
         await Chat.clear();
 
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
-        const onLogoutWithOauth = await AuthClient.getLogoutHandler(Client.sendLogoutRequest);
-
+        const onLogoutWithOauth = await AuthClient.getLogoutHandler(
+            Client.sendLogoutRequest
+        );
+    
         onLogoutWithOauth();
     };
 
@@ -891,13 +907,14 @@ const Header = (() => {
         const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
         const multiplier_text             = localize('Multipliers');
         const account_header              = document.querySelectorAll('.header__accounts-multiple');
+        const is_callback_page            = window.location.pathname.includes('callback');
         let is_virtual;
         if (current_active_login) {
             is_virtual                    = current_active_login.startsWith('VRTC');
         }
         const showTradersHubLink = (show) => {
-            traders_hub_link.style.display            = show ? 'flex' : 'none';
-            account_switcher_seperator.style.display  = show ? 'block' : 'none';
+            if (traders_hub_link.style) traders_hub_link.style.display            = show ? 'flex' : 'none';
+            if (account_switcher_seperator.style) account_switcher_seperator.style.display  = show ? 'block' : 'none';
         };
 
         account_header.forEach(header => {
@@ -908,8 +925,8 @@ const Header = (() => {
             $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
         }
         
-        if (has_real_account) showTradersHubLink(true);
-        if (is_virtual) showTradersHubLink(true);
+        if (has_real_account && !is_callback_page) showTradersHubLink(true);
+        if (is_virtual && !is_callback_page) showTradersHubLink(true);
         if (is_virtual || !has_real_account)  {
             manage_acc_btn.style.visibility           = 'hidden';
         }
