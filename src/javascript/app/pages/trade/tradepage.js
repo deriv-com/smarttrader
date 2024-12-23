@@ -1,5 +1,4 @@
 const Dropdown          = require('@binary-com/binary-style').selectDropdown;
-const Cookies           = require('js-cookie');
 const TradingAnalysis   = require('./analysis');
 const commonTrading     = require('./common');
 const cleanupChart      = require('./charts/webtrader_chart').cleanupChart;
@@ -28,21 +27,6 @@ const TradePage = (() => {
         
         const iframe_target_origin = getAllowedLocalStorageOrigin();
         const isOauthEnabled = AuthClient.isOAuth2Enabled();
-        const client_accounts = Cookies.get('client.accounts');
-        const active_loginid = Cookies.get('active_loginid');
-
-        if (client_accounts && active_loginid) {
-            localStorage.setItem('client.accounts', client_accounts);
-            localStorage.setItem('active_loginid', active_loginid);
-
-            const domain = '.deriv.com';
-
-            // remove cookies after populating local storage
-            Cookies.remove('client.accounts', { domain, secure: true });
-            Cookies.remove('active_loginid', { domain, secure: true });
-
-            window.location.reload();
-        }
         BinarySocket.wait('authorize').then(() => {
             if (iframe_target_origin && !isOauthEnabled) {
                 const el_iframe  = document.getElementById('localstorage-sync');
