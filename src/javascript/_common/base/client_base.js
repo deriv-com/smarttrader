@@ -1,20 +1,17 @@
 const moment                       = require('moment');
 const isCryptocurrency             = require('./currency_base').isCryptocurrency;
 const SocketCache                  = require('./socket_cache');
-const AuthClient                   = require('../auth');
 const localize                     = require('../localize').localize;
 const LocalStore                   = require('../storage').LocalStore;
 const State                        = require('../storage').State;
 const getPropertyValue             = require('../utility').getPropertyValue;
 const isEmptyObject                = require('../utility').isEmptyObject;
-const getAllowedLocalStorageOrigin = require('../url').getAllowedLocalStorageOrigin;
 
 const ClientBase = (() => {
     const storage_key = 'client.accounts';
     let client_object = {};
     let total_balance = {};
     let current_loginid;
-    let has_readystate_listener = false;
 
     const init = () => {
         current_loginid = LocalStore.get('active_loginid');
@@ -42,7 +39,6 @@ const ClientBase = (() => {
      */
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
-            syncWithDerivApp(value, client_object);
             LocalStore.set('active_loginid', value);
             current_loginid = value;
         } else {
@@ -53,7 +49,6 @@ const ClientBase = (() => {
                 return;
             }
             client_object[loginid][key] = value;
-            syncWithDerivApp(loginid, client_object);
             LocalStore.setObject(storage_key, client_object);
         }
     };
@@ -487,54 +482,6 @@ const ClientBase = (() => {
         }
 
         return false;
-    };
-
-    const syncWithDerivApp = (active_loginid, client_accounts) => {
-        // If the OAuth2 new authentication is enabled, all apps should not use localstorage-sync anymore
-        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
-        if (isOAuth2Enabled) return;
-        const iframe_window = document.getElementById('localstorage-sync');
-        const origin = getAllowedLocalStorageOrigin();
-
-        if (!iframe_window || !origin) return;
-
-        if (document.readyState === 'complete'){
-            iframe_window.onload = () => {
-                // Keep client.accounts in sync (in case user wasn't logged in).
-                if (iframe_window.src === `${origin}/localstorage-sync.html`) {
-                    iframe_window.contentWindow.postMessage({
-                        key  : 'client.accounts',
-                        value: JSON.stringify(client_accounts),
-                    }, origin);
-                    iframe_window.contentWindow.postMessage({
-                        key  : 'active_loginid',
-                        value: active_loginid,
-                    }, origin);
-                }
-            };
-
-            return;
-        }
-
-        if (!has_readystate_listener){
-            has_readystate_listener = true;
-
-            document.addEventListener('readystatechange', () => {
-                iframe_window.onload = () => {
-                    // Keep client.accounts in sync (in case user wasn't logged in).
-                    if (iframe_window.src === `${origin}/localstorage-sync.html`) {
-                        iframe_window.contentWindow.postMessage({
-                            key  : 'client.accounts',
-                            value: JSON.stringify(client_accounts),
-                        }, origin);
-                        iframe_window.contentWindow.postMessage({
-                            key  : 'active_loginid',
-                            value: active_loginid,
-                        }, origin);
-                    }
-                };
-            });
-        }
     };
 
     return {
