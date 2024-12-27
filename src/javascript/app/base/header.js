@@ -677,11 +677,9 @@ const Header = (() => {
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
-        const onLogoutWithOauth = await AuthClient.getLogoutHandler(
+        AuthClient.requestOauth2Logout(
             Client.sendLogoutRequest
         );
-    
-        onLogoutWithOauth();
     };
 
     const populateWalletAccounts = () => {
