@@ -83,7 +83,7 @@ export const requestOauth2Logout = onWSLogoutAndRedirect => {
 };
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
-    const _requestSingleLogout = async () => {
+    const requestSingleLogoutImpl = async () => {
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -107,7 +107,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
                 if (isLoaded) {
-                    _requestSingleLogout();
+                    requestSingleLogoutImpl();
                     clearInterval(interval);
                 } else {
                     retryInterval += 1;
@@ -115,7 +115,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
             }
         }, 500);
     } else {
-        _requestSingleLogout();
+        requestSingleLogoutImpl();
     }
 };
 
