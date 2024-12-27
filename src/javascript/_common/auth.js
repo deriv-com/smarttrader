@@ -78,9 +78,8 @@ export const isOAuth2Enabled = () => {
     return false;
 };
 
-export const getLogoutHandler = onWSLogoutAndRedirect => {
-    const oAuth2Logout = OAuth2Logout(onWSLogoutAndRedirect);
-    return oAuth2Logout;
+export const requestOauth2Logout = onWSLogoutAndRedirect => {
+    OAuth2Logout(onWSLogoutAndRedirect);
 };
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
@@ -93,8 +92,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
-            const logoutHandler = getLogoutHandler(onWSLogoutAndRedirect);
-            await logoutHandler(onWSLogoutAndRedirect);
+            await requestOauth2Logout(onWSLogoutAndRedirect);
         }
     };
 
