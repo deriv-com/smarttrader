@@ -78,13 +78,12 @@ export const isOAuth2Enabled = () => {
     return false;
 };
 
-export const getLogoutHandler = onWSLogoutAndRedirect => {
-    const oAuth2Logout = OAuth2Logout(onWSLogoutAndRedirect);
-    return oAuth2Logout;
+export const requestOauth2Logout = onWSLogoutAndRedirect => {
+    OAuth2Logout(onWSLogoutAndRedirect);
 };
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
-    const _requestSingleLogout = async () => {
+    const requestSingleLogoutImpl = async () => {
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -93,8 +92,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
-            const logoutHandler = getLogoutHandler(onWSLogoutAndRedirect);
-            await logoutHandler(onWSLogoutAndRedirect);
+            await requestOauth2Logout(onWSLogoutAndRedirect);
         }
     };
 
@@ -109,7 +107,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
                 if (isLoaded) {
-                    _requestSingleLogout();
+                    requestSingleLogoutImpl();
                     clearInterval(interval);
                 } else {
                     retryInterval += 1;
@@ -117,7 +115,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
             }
         }, 500);
     } else {
-        _requestSingleLogout();
+        requestSingleLogoutImpl();
     }
 };
 
