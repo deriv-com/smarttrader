@@ -9,6 +9,7 @@ const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
 const Analytics = require('./analytics');
+const Language  = require('./language');
 
 export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
 
@@ -79,7 +80,13 @@ export const isOAuth2Enabled = () => {
 };
 
 export const requestOauth2Logout = onWSLogoutAndRedirect => {
-    OAuth2Logout(onWSLogoutAndRedirect);
+    const currentLanguage = Language.get();
+
+    OAuth2Logout({
+        WSLogoutAndRedirect  : onWSLogoutAndRedirect,
+        redirectCallbackUri  : `${window.location.origin}/${currentLanguage}/callback`,
+        postLogoutRedirectUri: `${window.location.origin}/${currentLanguage}/trading`,
+    });
 };
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
@@ -136,8 +143,9 @@ export const requestSingleSignOn = async () => {
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
         if (isLoggedInCookie && !isCallbackPage && !isEndpointPage && !isClientAccountsPopulated && isAuthEnabled) {
+            const currentLanguage = Language.get();
             await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/en/callback`,
+                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
             });
         }
     };
