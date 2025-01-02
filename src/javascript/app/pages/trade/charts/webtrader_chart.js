@@ -45,7 +45,7 @@ const WebtraderChart = (() => {
         if (!is_initialized) {
             require.ensure(['highstock-release'], () => {
                 require.ensure([], (require) => {
-                    WebtraderCharts = require('@binary-com/webtrader-charts');
+                    WebtraderCharts = require('@deriv-com/webtrader-charts');
                     WebtraderCharts.init({
                         server: Config.getSocketURL(),
                         appId : Config.getAppId(),
