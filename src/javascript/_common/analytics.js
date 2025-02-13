@@ -1,13 +1,13 @@
 const DerivAnalytics = require('@deriv-com/analytics');
 const CountryUtils = require('@deriv-com/utils').CountryUtils;
 const Cookies = require('js-cookie');
-const LocalStore = require('./storage').LocalStore;
+const { SessionStore, LocalStore } = require('./storage');
 const Language = require('./language');
 const { getAppId } = require('../config');
 
 const Analytics = (() => {
     const init = async () => {
-        const loginid = LocalStore?.get('active_loginid');
+        const loginid = SessionStore?.get('active_loginid') || LocalStore?.get('active_loginid');
         const active_account = loginid && JSON.parse(localStorage.getItem('client.accounts') || '{}')[loginid];
         const utmData = Cookies.get('utm_data');
         const ppcCampaignCookies = utmData ? JSON.parse(utmData) : {
