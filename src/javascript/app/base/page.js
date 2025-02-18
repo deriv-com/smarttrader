@@ -17,6 +17,7 @@ const Language         = require('../../_common/language');
 const localize         = require('../../_common/localize').localize;
 const isMobile         = require('../../_common/os_detect').isMobile;
 const LocalStore       = require('../../_common/storage').LocalStore;
+const SessionStore     = require('../../_common/storage').SessionStore;
 const State            = require('../../_common/storage').State;
 const scrollToTop      = require('../../_common/scroll').scrollToTop;
 const toISOFormat      = require('../../_common/string_util').toISOFormat;
@@ -54,14 +55,8 @@ const Page = (() => {
         $(document).ready(() => {
             // Cookies is not always available.
             // So, fall back to a more basic solution.
-            window.addEventListener('storage', (evt) => {
+            const handleStorageEvent = (evt) => {
                 switch (evt.key) {
-                    case 'active_loginid':
-                        // reload the page when the client changes account on other pages.
-                        if (evt.newValue === '' || !window.is_logging_in) {
-                            reload();
-                        }
-                        break;
                     case 'client.accounts':
                         if (evt.newValue !== evt.oldValue) {
                             const removedSessionAndBalnce = (input) => {
@@ -71,7 +66,7 @@ const Page = (() => {
                                 return filtered_account;
                             };
                             // reload the page when the client account values(except balance and startsession) is changed on other pages.
-                            const active_loginid = LocalStore.get('active_loginid');
+                            const active_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
                             const new_accounts = JSON.parse(evt.newValue);
                             const old_accounts = JSON.parse(evt.oldValue);
                             const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
@@ -90,7 +85,9 @@ const Page = (() => {
                         break;
                     // no default
                 }
-            });
+            };
+
+            window.addEventListener('storage', handleStorageEvent);
             scrollToTop();
         });
     };

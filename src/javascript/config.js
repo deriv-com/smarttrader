@@ -105,7 +105,7 @@ const getSocketURL = () => {
 
         // TODO: in order to use connection_setup config, uncomment the above section and remove next lines
 
-        const loginid       = window.localStorage.getItem('active_loginid');
+        const loginid       = window.sessionStorage.getItem('active_loginid') || window.localStorage.getItem('active_loginid');
         const is_real       = loginid && !/^VRT/.test(loginid);
         const real_server   = is_real ? 'green' : 'blue';
         const server        = isProduction() ? real_server : 'red';

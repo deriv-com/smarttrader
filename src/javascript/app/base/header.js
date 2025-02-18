@@ -292,7 +292,19 @@ const Header = (() => {
 
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
-            const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform.link });
+            const url_params = new URLSearchParams(window.location.search);
+            const account_param = url_params.get('account');
+            let platform_link = platform.link;
+            
+            if (account_param && platform.link !== '#') {
+                const url = new URL(platform.link);
+                url.searchParams.set('account', account_param);
+                platform_link = url.toString();
+            } else if (account_param && platform.link === '#') {
+                platform_link = `/?account=${account_param}`;
+            }
+            
+            const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform_link });
             const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}?${process.env.BUILD_HASH}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
@@ -437,7 +449,10 @@ const Header = (() => {
 
         // Dynamic link for trader's hub cta for mobile menu
         const mobile_platform_appstore_link     = getElementById('url-appstore');
-        const traders_hub_link                  = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+        // Get current account parameter from URL
+        const url_params = new URLSearchParams(window.location.search);
+        const account_param = url_params.get('account');
+        const traders_hub_link = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}${account_param ? `&account=${account_param}` : ''}`);
         mobile_platform_appstore_link.href      = traders_hub_link;
 
         // Account Switcher Event

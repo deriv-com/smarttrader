@@ -12,9 +12,10 @@ const getObject = function(key) {
  */
 const keepUserAndClean = () => {
     const client_accounts = localStorage.getItem('client.accounts');
-    const active_loginid  = localStorage.getItem('active_loginid');
+    const active_loginid  = sessionStorage.getItem('active_loginid') || localStorage.getItem('active_loginid');
     localStorage.clear();
     localStorage.setItem('client.accounts', client_accounts);
+    sessionStorage.setItem('active_loginid', active_loginid);
     localStorage.setItem('active_loginid', active_loginid);
 };
 

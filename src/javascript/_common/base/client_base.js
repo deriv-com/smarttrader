@@ -3,6 +3,7 @@ const isCryptocurrency             = require('./currency_base').isCryptocurrency
 const SocketCache                  = require('./socket_cache');
 const localize                     = require('../localize').localize;
 const LocalStore                   = require('../storage').LocalStore;
+const SessionStore                 = require('../storage').SessionStore;
 const State                        = require('../storage').State;
 const getPropertyValue             = require('../utility').getPropertyValue;
 const isEmptyObject                = require('../utility').isEmptyObject;
@@ -14,8 +15,45 @@ const ClientBase = (() => {
     let current_loginid;
 
     const init = () => {
-        current_loginid = LocalStore.get('active_loginid');
-        client_object   = getAllAccountsObject();
+        const url_params = new URLSearchParams(window.location.search);
+        const account_currency = url_params.get('account');
+        client_object = getAllAccountsObject();
+
+        if (account_currency) {
+            let matching_loginid;
+
+            const account_param_upper = account_currency.toUpperCase();
+            if (account_param_upper === 'DEMO') {
+                matching_loginid = Object.keys(client_object).find(loginid => /^VR/.test(loginid));
+            } else {
+                matching_loginid = Object.keys(client_object).find(loginid =>
+                    client_object[loginid].currency?.toUpperCase() === account_param_upper
+                );
+            }
+            if (matching_loginid) {
+                current_loginid = matching_loginid;
+                SessionStore.set('active_loginid', matching_loginid);
+                LocalStore.set('active_loginid', matching_loginid);
+                return;
+            }
+        }
+
+        current_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
+
+        if (!current_loginid && Object.keys(client_object).length) {
+            current_loginid = Object.keys(client_object)[0];
+            SessionStore.set('active_loginid', current_loginid);
+            LocalStore.set('active_loginid', current_loginid);
+        }
+
+        if (current_loginid) {
+            const url = new URL(window.location.href);
+            const account_param = /^VR/.test(current_loginid) ? 'demo' : client_object[current_loginid]?.currency;
+            if (account_param) {
+                url.searchParams.set('account', account_param);
+                window.history.replaceState({}, '', url.toString());
+            }
+        }
     };
 
     const isLoggedIn = () => (
@@ -39,8 +77,15 @@ const ClientBase = (() => {
      */
     const set = (key, value, loginid = current_loginid) => {
         if (key === 'loginid' && value !== current_loginid) {
+            SessionStore.set('active_loginid', value);
             LocalStore.set('active_loginid', value);
             current_loginid = value;
+            const url = new URL(window.location.href);
+            const account_param = /^VR/.test(value) ? 'demo' : client_object[value]?.currency;
+            if (account_param) {
+                url.searchParams.set('account', account_param);
+                window.history.replaceState({}, '', url.toString());
+            }
         } else {
             if (!(loginid in client_object)) {
                 client_object[loginid] = {};
@@ -62,7 +107,7 @@ const ClientBase = (() => {
     const get = (key, loginid = current_loginid) => {
         let value;
         if (key === 'loginid') {
-            value = loginid || LocalStore.get('active_loginid');
+            value = loginid || SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
         } else {
             const current_client = client_object[loginid] || getAllAccountsObject()[loginid] || client_object;
 
@@ -144,7 +189,7 @@ const ClientBase = (() => {
         }
         return account_object.account_category === 'wallet';
     };
-    
+
     const hasWalletsAccount = () => Object.values(getAllAccountsObject()).some(account => account.account_category === 'wallet');
 
     const TypesMapConfig = (() => {
