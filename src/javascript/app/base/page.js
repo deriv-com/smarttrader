@@ -65,10 +65,33 @@ const Page = (() => {
                                     .replace(/"session_start":([0-9]+),/g, '');
                                 return filtered_account;
                             };
-                            // reload the page when the client account values(except balance and startsession) is changed on other pages.
-                            const active_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
+
                             const new_accounts = JSON.parse(evt.newValue);
                             const old_accounts = JSON.parse(evt.oldValue);
+                            // First try to get account from session storage
+                            const session_account = SessionStore.get('account');
+                            let active_loginid;
+
+                            if (session_account) {
+                                // Find matching account based on account type
+                                if (session_account === 'demo') {
+                                    active_loginid = Object.keys(new_accounts).find(loginid => /^VR/.test(loginid));
+                                } else {
+                                    active_loginid = Object.keys(new_accounts).find(loginid =>
+                                        new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
+                                    );
+                                }
+                                if (active_loginid) {
+                                    SessionStore.set('active_loginid', active_loginid);
+                                    LocalStore.set('active_loginid', active_loginid);
+                                }
+                            }
+
+                            // Fallback to existing logic if no match found
+                            if (!active_loginid) {
+                                active_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
+                            }
+
                             const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
                             const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
 
