@@ -81,6 +81,10 @@ const Page = (() => {
                                         new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
                                     );
                                 }
+                                if (active_loginid) {
+                                    SessionStore.set('active_loginid', active_loginid);
+                                    LocalStore.set('active_loginid', active_loginid);
+                                }
                             }
 
                             // Fallback to existing logic if no match found
