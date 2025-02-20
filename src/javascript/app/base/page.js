@@ -42,6 +42,53 @@ const Page = (() => {
         Analytics.init();
     };
 
+    const handleAccountsChange = (newValue, oldValue) => {
+        const removedSessionAndBalnce = (input) => {
+            const filtered_account = input
+                .replace(/"balance":[+-]?([0-9]*[.])?[0-9]+/g, '')
+                .replace(/"session_start":([0-9]+),/g, '');
+            return filtered_account;
+        };
+
+        const new_accounts = JSON.parse(newValue);
+        const old_accounts = JSON.parse(oldValue || '{}');
+        // First try to get account from session storage
+        const session_account = SessionStore.get('account');
+        let active_loginid;
+
+        if (session_account) {
+            // Find matching account based on account type
+            if (session_account === 'demo') {
+                active_loginid = Object.keys(new_accounts).find(loginid => /^VR/.test(loginid));
+                if (active_loginid) {
+                    SessionStore.set('active_loginid', active_loginid);
+                    LocalStore.set('active_loginid', active_loginid);
+                }
+            } else {
+                active_loginid = Object.keys(new_accounts).find(loginid =>
+                    new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
+                );
+                if (active_loginid) {
+                    SessionStore.set('active_loginid', active_loginid);
+                    LocalStore.set('active_loginid', active_loginid);
+                }
+            }
+        }
+
+        // Fallback to existing logic if no match found
+        if (!active_loginid) {
+            active_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
+        }
+
+        const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
+        const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
+
+        if (removedSessionAndBalnce(newValue) !== removedSessionAndBalnce(oldValue || '{}') &&
+            old_currency !== new_currency) {
+            reload();
+        }
+    };
+
     const onDocumentReady = () => {
         // LocalStorage can be used as a means of communication among
         // different windows. The problem that is solved here is what
@@ -59,46 +106,7 @@ const Page = (() => {
                 switch (evt.key) {
                     case 'client.accounts':
                         if (evt.newValue !== evt.oldValue) {
-                            const removedSessionAndBalnce = (input) => {
-                                const filtered_account = input
-                                    .replace(/"balance":[+-]?([0-9]*[.])?[0-9]+/g, '')
-                                    .replace(/"session_start":([0-9]+),/g, '');
-                                return filtered_account;
-                            };
-
-                            const new_accounts = JSON.parse(evt.newValue);
-                            const old_accounts = JSON.parse(evt.oldValue);
-                            // First try to get account from session storage
-                            const session_account = SessionStore.get('account');
-                            let active_loginid;
-
-                            if (session_account) {
-                                // Find matching account based on account type
-                                if (session_account === 'demo') {
-                                    active_loginid = Object.keys(new_accounts).find(loginid => /^VR/.test(loginid));
-                                } else {
-                                    active_loginid = Object.keys(new_accounts).find(loginid =>
-                                        new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
-                                    );
-                                }
-                                if (active_loginid) {
-                                    SessionStore.set('active_loginid', active_loginid);
-                                    LocalStore.set('active_loginid', active_loginid);
-                                }
-                            }
-
-                            // Fallback to existing logic if no match found
-                            if (!active_loginid) {
-                                active_loginid = SessionStore.get('active_loginid') || LocalStore.get('active_loginid');
-                            }
-
-                            const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
-                            const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
-
-                            if (removedSessionAndBalnce(evt.newValue) !== removedSessionAndBalnce(evt.oldValue) &&
-                                old_currency !== new_currency) {
-                                reload();
-                            }
+                            handleAccountsChange(evt.newValue, evt.oldValue);
                         }
                         break;
                     case 'new_release_reload_time':
@@ -110,7 +118,19 @@ const Page = (() => {
                 }
             };
 
+            // Listen for storage events from other windows
             window.addEventListener('storage', handleStorageEvent);
+
+            // Watch for changes in the current window
+            const originalSetItem = LocalStore.setObject;
+            LocalStore.setObject = function(key, value) {
+                const oldValue = LocalStore.getObject(key);
+                originalSetItem.apply(this, [key, value]);
+                if (key === 'client.accounts') {
+                    handleAccountsChange(JSON.stringify(value), JSON.stringify(oldValue));
+                }
+            };
+
             scrollToTop();
         });
     };
