@@ -60,10 +60,16 @@ const Page = (() => {
             // Find matching account based on account type
             if (session_account === 'demo') {
                 active_loginid = Object.keys(new_accounts).find(loginid => /^VR/.test(loginid));
+                if (active_loginid) {
+                    SessionStore.set('active_loginid', active_loginid);
+                }
             } else {
                 active_loginid = Object.keys(new_accounts).find(loginid =>
                     new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
                 );
+                if (active_loginid) {
+                    SessionStore.set('active_loginid', active_loginid);
+                }
             }
         }
 
