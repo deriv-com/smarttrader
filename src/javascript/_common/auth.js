@@ -142,7 +142,24 @@ export const requestSingleSignOn = async () => {
         // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
-        if (isLoggedInCookie && !isCallbackPage && !isEndpointPage && !isClientAccountsPopulated && isAuthEnabled) {
+        // Check if any account or its linked account is missing a token
+        const hasMissingToken = Object.values(clientAccounts).some((account) => {
+            // Check if current account is missing token
+            if (!account?.token) {
+                return true; // No linked accounts and no token
+            }
+            return false;
+        });
+
+        const shouldRequestSignOn =
+            isLoggedInCookie &&
+            !isCallbackPage &&
+            !isEndpointPage &&
+            (!isClientAccountsPopulated || // Changed this condition since we need accounts to check tokens
+                hasMissingToken) &&
+            isAuthEnabled;
+
+        if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
             await requestOidcAuthentication({
                 redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
