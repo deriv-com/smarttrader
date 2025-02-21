@@ -121,11 +121,23 @@ const Page = (() => {
 
             // Watch for changes in the current window
             const originalSetItem = LocalStore.setObject;
+            const originalSet = LocalStore.set;
+
             LocalStore.setObject = function(key, value) {
                 const oldValue = LocalStore.getObject(key);
                 originalSetItem.apply(this, [key, value]);
                 if (key === 'client.accounts') {
                     handleAccountsChange(JSON.stringify(value), JSON.stringify(oldValue));
+                }
+            };
+
+            LocalStore.set = function(key, value) {
+                originalSet.apply(this, [key, value]);
+                if (key === 'active_loginid') {
+                    const session_loginid = SessionStore.get('active_loginid');
+                    if (session_loginid && session_loginid !== value) {
+                        LocalStore.set('active_loginid', session_loginid);
+                    }
                 }
             };
 
