@@ -13,7 +13,7 @@ const domain_app_ids = { // these domains also being used in '_common/url.js' as
     'smarttrader.deriv.app'        : 22168,
     'smarttrader.deriv.com'        : 22168,
     'smarttrader.deriv.me'         : 27315,
-    'smarttrader.deriv.be'         : 31224,
+    'smarttrader.deriv.be'         : 30768,
     'staging-smarttrader.deriv.be' : 31191,
     'staging-smarttrader.deriv.com': 22169,
     'binary.me'                    : 15284,
