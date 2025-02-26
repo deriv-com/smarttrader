@@ -155,8 +155,7 @@ export const requestSingleSignOn = async () => {
             isLoggedInCookie &&
             !isCallbackPage &&
             !isEndpointPage &&
-            (!isClientAccountsPopulated || // Changed this condition since we need accounts to check tokens
-                hasMissingToken) &&
+            (!isClientAccountsPopulated) &&
             isAuthEnabled;
 
         if (shouldRequestSignOn) {
