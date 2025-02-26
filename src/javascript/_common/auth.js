@@ -144,8 +144,12 @@ export const requestSingleSignOn = async () => {
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
         if (isLoggedInCookie && !isCallbackPage && !isEndpointPage && !isClientAccountsPopulated && isAuthEnabled) {
             const currentLanguage = Language.get();
+            const urlParams = new URLSearchParams(window.location.search);
+            const account = sessionStorage.getItem('account') ||
+                          urlParams.get('account') ||
+                          localStorage.getItem('account');
             await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
+                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback?account=${account}`,
             });
         }
     };
