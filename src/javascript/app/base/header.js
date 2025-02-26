@@ -932,16 +932,18 @@ const Header = (() => {
             manage_acc_btn.style.visibility           = 'visible';
         }
         // Account adder logic
-        new_account_adder_deriv.style.display         = 'flex';
-        new_account_adder_eu.style.display            = 'flex';
-        if (has_real_account) {
-            if (has_mf_account && has_non_eu_account) {
-                new_account_adder_deriv.style.display = 'none';
-                new_account_adder_eu.style.display    = 'none';
-            } else if (has_mf_account && !has_non_eu_account) {
-                new_account_adder_eu.style.display    = 'none';
-            } else if (!has_mf_account && has_non_eu_account) {
-                new_account_adder_deriv.style.display = 'none';
+        if (new_account_adder_deriv && new_account_adder_eu) {
+            new_account_adder_deriv.style.display         = 'flex';
+            new_account_adder_eu.style.display            = 'flex';
+            if (has_real_account) {
+                if (has_mf_account && has_non_eu_account) {
+                    new_account_adder_deriv.style.display = 'none';
+                    new_account_adder_eu.style.display    = 'none';
+                } else if (has_mf_account && !has_non_eu_account) {
+                    new_account_adder_eu.style.display    = 'none';
+                } else if (!has_mf_account && has_non_eu_account) {
+                    new_account_adder_deriv.style.display = 'none';
+                }
             }
         }
     
@@ -952,6 +954,7 @@ const Header = (() => {
                 updateTotal();
                 const defaultOpenedTab = is_virtual ? '#demo_tab' : '#real_tab';
                 const currentTab = ui.currentTarget ? ui.currentTarget.hash : defaultOpenedTab;
+                if (!manage_acc_btn) return;
                 if (currentTab === '#demo_tab') {
                     manage_acc_btn.style.visibility   = 'hidden';
                     showTradersHubLink(true);
