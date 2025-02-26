@@ -943,7 +943,7 @@ const Header = (() => {
         if (is_virtual || !has_real_account)  {
             manage_acc_btn.style.visibility           = 'hidden';
         }
-        if (has_real_account && !is_virtual && manage_acc_btn) {
+        if (has_real_account && !is_virtual) {
             manage_acc_btn.style.visibility           = 'visible';
         }
         // Account adder logic
