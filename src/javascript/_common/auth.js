@@ -161,8 +161,12 @@ export const requestSingleSignOn = async () => {
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
+            const urlParams = new URLSearchParams(window.location.search);
+            const account = sessionStorage.getItem('account') ||
+                          urlParams.get('account') ||
+                          localStorage.getItem('account');
             await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
+                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback?account=${account}`,
             });
         }
     };
