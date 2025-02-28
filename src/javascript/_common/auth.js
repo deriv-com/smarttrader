@@ -143,20 +143,11 @@ export const requestSingleSignOn = async () => {
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
         // Check if any account or its linked account is missing a token
-
-        const hasMissingToken = Object.values(clientAccounts).some((account) => {
-            // Check if current account is missing token
-            if (!account?.token && account?.is_disabled !== 1) {
-                return true; // No linked accounts and no token
-            }
-            return false;
-        });
-
         const shouldRequestSignOn =
           isLoggedInCookie &&
           !isCallbackPage &&
           !isEndpointPage &&
-          (!isClientAccountsPopulated || hasMissingToken) &&
+          (!isClientAccountsPopulated) &&
           isAuthEnabled;
 
         if (shouldRequestSignOn) {
