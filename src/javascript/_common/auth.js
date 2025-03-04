@@ -184,7 +184,8 @@ export const requestSingleSignOn = async () => {
     };
 
     // This is the new SSO method for auto logging-in (SSO) and auto logging-out by using silent login
-    // Front channels (on src/root_files/app/front-channel.html) will help us auto log out in SmartTrader when we log out from other applications like Deriv.app
+    // Front channels triggered by Hydra (on src/root_files/app/front-channel.html) 
+    // will help us auto log out in SmartTrader when we log out from other applications like Deriv.app
     const requestWithSilentLogin = async () => {
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -193,9 +194,8 @@ export const requestSingleSignOn = async () => {
         const isEndpointPage = window.location.pathname.includes('endpoint');
     
         // we only do SSO if:
-        // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
-        // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
+        // if we are not in the callback/endpoint route to prevent re-calling this function - !isCallbackPage && !isEndpointPage
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
         // Check if any account or its linked account is missing a token
         const shouldRequestSignOn =
