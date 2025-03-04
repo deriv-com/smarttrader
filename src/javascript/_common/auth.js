@@ -7,6 +7,7 @@ const {
 } = require('@deriv-com/utils');
 const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
+const requestOidcSilentAuthentication = require('@deriv-com/auth-client').requestOidcSilentAuthentication;
 const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
 const Analytics = require('./analytics');
 const Language  = require('./language');
@@ -19,6 +20,25 @@ const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
     [URLConstants.derivP2pStaging]   : 'red.derivws.com',
 };
+
+const getUserBrowser = () => {
+    // We can't rely only on navigator.userAgent.index, the verification order is also important
+    if ((navigator.userAgent.indexOf('Opera') || navigator.userAgent.indexOf('OPR')) !== -1) {
+        return 'Opera';
+    } else if (navigator.userAgent.indexOf('Edg') !== -1) {
+        return 'Edge';
+    } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
+        return 'Chrome';
+    } else if (navigator.userAgent.indexOf('Safari') !== -1) {
+        return 'Safari';
+    } else if (navigator.userAgent.indexOf('Firefox') !== -1) {
+        return 'Firefox';
+    }
+    return 'unknown';
+};
+
+const isSafariBrowser = () => getUserBrowser() === 'Safari';
+
 
 export const getServerInfo = () => {
     const origin = window.location.origin;
@@ -79,10 +99,10 @@ export const isOAuth2Enabled = () => {
     return false;
 };
 
-export const requestOauth2Logout = onWSLogoutAndRedirect => {
+export const requestOauth2Logout = async onWSLogoutAndRedirect => {
     const currentLanguage = Language.get();
 
-    OAuth2Logout({
+    await OAuth2Logout({
         WSLogoutAndRedirect  : onWSLogoutAndRedirect,
         redirectCallbackUri  : `${window.location.origin}/${currentLanguage}/callback`,
         postLogoutRedirectUri: `${window.location.origin}/${currentLanguage}/trading`,
@@ -91,6 +111,9 @@ export const requestOauth2Logout = onWSLogoutAndRedirect => {
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     const requestSingleLogoutImpl = async () => {
+        // NOTE: We don't check for logged_state anymore in non-Safari browsers
+        // for non-Safari browsers, front channels will help us log out in SmartTrader when we log out from other applications like Deriv.app
+        if (!isSafariBrowser()) return
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -127,7 +150,9 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 };
 
 export const requestSingleSignOn = async () => {
-    const _requestSingleSignOn = async () => {
+    // This is the legacy SSO/SLO method for auto logging-in (SSO) and auto logging-out by checking logged_state cookie
+    // This method is only for Safari browsers
+    const requestWithLoggedState = async () => {
         // if we have previously logged in,
         // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
         const isLoggedInCookie = Cookies.get('logged_state') === 'true';
@@ -158,6 +183,50 @@ export const requestSingleSignOn = async () => {
         }
     };
 
+    // This is the new SSO method for auto logging-in (SSO) and auto logging-out by using silent login
+    // Front channels (on src/root_files/app/front-channel.html) will help us auto log out in SmartTrader when we log out from other applications like Deriv.app
+    const requestWithSilentLogin = async () => {
+        const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+        const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+        const isAuthEnabled = isOAuth2Enabled();
+        const isCallbackPage = window.location.pathname.includes('callback');
+        const isEndpointPage = window.location.pathname.includes('endpoint');
+    
+        // we only do SSO if:
+        // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
+        // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
+        // if client.accounts in localStorage is empty - !isClientAccountsPopulated
+        // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
+        // Check if any account or its linked account is missing a token
+        const shouldRequestSignOn =
+          !isCallbackPage &&
+          !isEndpointPage &&
+          (!isClientAccountsPopulated) &&
+          isAuthEnabled;
+    
+        if (shouldRequestSignOn) {
+            const currentLanguage = Language.get();
+    
+            window.addEventListener(
+                'message',
+                message => {
+                    if (message.data?.event === 'login_successful') {
+                        requestOidcAuthentication({
+                            redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
+                        });
+                    }
+                },
+                false
+            );
+    
+            await requestOidcSilentAuthentication({
+                redirectSilentCallbackUri: `${window.location.origin}/silent-callback.html`,
+                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
+            });
+        }
+    }
+    
+
     const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
     if (!isGrowthbookLoaded) {
         let retryInterval = 0;
@@ -169,7 +238,11 @@ export const requestSingleSignOn = async () => {
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
                 if (isLoaded) {
-                    _requestSingleSignOn();
+                    if (isSafariBrowser()) {
+                        requestWithLoggedState();
+                    } else {
+                        requestWithSilentLogin();
+                    }
                     clearInterval(interval);
                 } else {
                     retryInterval += 1;
@@ -177,6 +250,10 @@ export const requestSingleSignOn = async () => {
             }
         }, 500);
     } else {
-        _requestSingleSignOn();
+        if (isSafariBrowser()) {
+            requestWithLoggedState();
+        } else {
+            requestWithSilentLogin();
+        }
     }
 };
