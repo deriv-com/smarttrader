@@ -4,7 +4,7 @@ runs:
   using: composite
   steps:
     - name: restore_cache
-      uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
+      uses: actions/cache@v4
       with:
         key: node-{{ checksum "package-lock.json" }}
         path: UPDATE_ME
@@ -15,7 +15,7 @@ runs:
       run: npm ci
       shell: bash
     - name: save_cache
-      uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: node-{{ checksum "package-lock.json" }}
