@@ -111,20 +111,25 @@ const Url = (() => {
 
     const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || deriv_app_domain)}/${path}${pars ? `?${pars}` : ''}`;
 
-    const getAllowedLocalStorageOrigin = () => {
+    const urlForTradersHub = (path) => {
+        const origin = getAllowedLocalStorageOrigin(true) || deriv_app_domain;
+        return `${origin}/${path}`;
+    };
+
+    const getAllowedLocalStorageOrigin = (is_traders_hub) => {
         // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
         if (
             /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) ||
             /^staging-smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return 'https://staging-app.deriv.com';
+            return is_traders_hub ? 'https://staging-hub.deriv.com/tradershub' : 'https://staging-app.deriv.com';
         } else if (
             /^smarttrader\.deriv\.app$/i.test(window.location.hostname) ||
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return deriv_app_domain;
+            return is_traders_hub ? 'https://hub.deriv.com/tradershub' : deriv_app_domain;
         }
-        return deriv_app_domain;
+        return is_traders_hub ? 'https://hub.deriv.com/tradershub' : deriv_app_domain;
     };
 
     /**
@@ -182,6 +187,7 @@ const Url = (() => {
         urlForCurrentDomain,
         urlForStatic,
         urlForDeriv,
+        urlForTradersHub,
         getAllowedLocalStorageOrigin,
         getSection,
         getHashValue,

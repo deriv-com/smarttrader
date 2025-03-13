@@ -131,7 +131,7 @@ const Header = () => (
 
                             <div id='cfd-link-seperator' className='account__switcher-seperator' />
                             <div id='account__switcher-cfd' className='account__switcher-cfd'>
-                                <a className='url-appstore account__switcher-cfd-link'>
+                                <a className='url-appstore-cfd account__switcher-cfd-link'>
                                     <span className='account__switcher-cfd-text'>{it.L('Looking for CFD accounts? Go to Trader\'s hub')}</span>
                                 </a>
                             </div>
