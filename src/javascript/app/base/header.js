@@ -114,10 +114,10 @@ const Header = (() => {
             el.href = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = isHubEnabledCountry ? Url.urlForTradersHub('options') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('options') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore-cfd', (el) => {
-            el.href = isHubEnabledCountry ? Url.urlForTradersHub('cfds') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('cfds') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
@@ -456,7 +456,7 @@ const Header = (() => {
         // Get current account parameter from URL
         const url_params = new URLSearchParams(window.location.search);
         const account_param = url_params.get('account');
-        const traders_hub_link = isHubEnabledCountry ? Url.urlForTradersHub('options') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}${account_param ? `&account=${account_param}` : ''}`);
+        const traders_hub_link = isHubEnabledCountry() ? Url.urlForTradersHub('options') : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}${account_param ? `&account=${account_param}` : ''}`);
         mobile_platform_appstore_link.href      = traders_hub_link;
 
         // Account Switcher Event
