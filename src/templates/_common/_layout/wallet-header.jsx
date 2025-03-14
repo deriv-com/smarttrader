@@ -74,9 +74,9 @@ const WalletHeader = () => (
                                     </a>
                                 </div>
                                 <div className='wallet__switcher-footer'>
-                                    <div>
+                                    <a className='url-wallet-apps'>
                                         {it.L('Looking for CFDs? Go to Trader\'s hub')}
-                                    </div>
+                                    </a>
                                     <a className='url-wallet-apps'>
                                         <img src='/images/pages/header/ic-chevron-right.svg' />
                                     </a>
