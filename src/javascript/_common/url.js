@@ -111,9 +111,9 @@ const Url = (() => {
 
     const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || deriv_app_domain)}/${path}${pars ? `?${pars}` : ''}`;
 
-    const urlForTradersHub = (path) => {
+    const urlForTradersHub = (path, pars) => {
         const origin = getAllowedLocalStorageOrigin(true) || deriv_app_domain;
-        return `${origin}/${path}`;
+        return `${origin}/${path}${pars ? `?${pars}` : ''}`;
     };
 
     const getAllowedLocalStorageOrigin = (is_traders_hub) => {
