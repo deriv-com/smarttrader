@@ -329,7 +329,7 @@ const Header = (() => {
         });
 
         // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
-        const traders_hub_link                = Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+        const traders_hub_link                = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
         const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: traders_hub_link });
         
