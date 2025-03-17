@@ -9,6 +9,7 @@ import { useMarketChange, useContractChange } from '../../hooks/events';
 import { localize } from '../../../_common/localize';
 import dataManager from '../../common/data_manager.js';
 import LastDigit from '../trade/last_digit.jsx';
+import EconomicCalendar from './economic_calendar.jsx';
 
 const BottomTabs = () => {
     const has_market_change = useMarketChange();
@@ -29,7 +30,11 @@ const BottomTabs = () => {
         document.querySelectorAll('#trade_analysis li')?.[id]?.querySelector('a').click();
     };
 
-    const tabs = [{ label: localize('Chart') }, { label: localize('Explanation') }];
+    const tabs = [
+        { label: localize('Chart') },
+        { label: localize('Explanation') },
+        { label: localize('Economic Calendar') }
+    ];
 
     const bottom_tab_options = has_last_digit
         ? [...tabs, { label: localize('Last Digit Stats') }]
@@ -46,8 +51,8 @@ const BottomTabs = () => {
     useEffect(() => {
         if (saved_tab !== null) {
             const tab_index = parseInt(saved_tab);
-            if (tab_index === 2 && !has_last_digit) {
-                setSelectedTab(1);
+            if (tab_index === 3 && !has_last_digit) {
+                setSelectedTab(2);
             } else {
                 setSelectedTab(tab_index);
             }
@@ -57,14 +62,14 @@ const BottomTabs = () => {
     }, [has_last_digit]);
 
     useEffect(() => {
-        const opposite_tab = (selected_tab + 1) > 2 ? 0 : (selected_tab + 1);
+        const opposite_tab = (selected_tab + 1) > (has_last_digit ? 3 : 2) ? 0 : (selected_tab + 1);
       
         triggerOldTab(opposite_tab);
 
         trigger_old_tab_timer.current = setTimeout(() => {
             triggerOldTab(selected_tab);
         }, 100);
-    }, [selected_tab, saved_tab]);
+    }, [selected_tab, saved_tab, has_last_digit]);
 
     useEffect(() => () => {
         clearTimeout(trigger_old_tab_timer.current);
@@ -87,7 +92,8 @@ const BottomTabs = () => {
                     onLoad={() => setIsShowGraph(true)}
                 />}
                 {selected_tab === 1 && <Explanation />}
-                {selected_tab === 2 && has_last_digit && <LastDigit />}
+                {selected_tab === 2 && <EconomicCalendar />}
+                {selected_tab === 3 && has_last_digit && <LastDigit />}
    
                 <div id='tab_graph' className={`chart-section ${is_show_graph ? '' : 'graph-hide'}`}>
                     <p className='error-msg' id='chart-error' />
