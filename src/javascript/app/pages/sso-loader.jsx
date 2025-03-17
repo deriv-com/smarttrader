@@ -15,7 +15,7 @@ export const init = () => {
         window.location.pathname.includes('callback') ||
         window.location.pathname.includes('endpoint');
 
-    if (willEventuallySSO || isSilentLoginExcluded) {
+    if (!willEventuallySSO || isSilentLoginExcluded) {
         return null;
     }
 
