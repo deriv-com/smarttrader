@@ -6,7 +6,7 @@ body .sso-loader {
     background-position: center;
     position: fixed;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--general-main-1);
     z-index: 9999;
 
     &__content {
@@ -19,7 +19,7 @@ body .sso-loader {
     }
 
     &__title {
-        color: #000000;
+        color: var(--text-prominent);
         font-size: 24px;
         text-align: center;
         font-weight: bold;
