@@ -10,8 +10,6 @@ import { getTopLevelDomain } from '../../_common/utility';
 const isHubEnabledCountry = () => {
     const is_com_domain = getTopLevelDomain() === 'com';
     
-    console.log('is_com_domain', is_com_domain);
-    console.log('ClientBase.hasWalletsAccount()', ClientBase.hasWalletsAccount());
     if (!is_com_domain || !ClientBase.hasWalletsAccount()) {
         return false;
     }
@@ -22,7 +20,7 @@ const isHubEnabledCountry = () => {
     if (active_loginid) {
         const client_accounts = LocalStore.getObject('client.accounts');
         const current_account = client_accounts[active_loginid];
-        console.log(current_account.country);
+        
         if (current_account && current_account.country) {
             const country = current_account.country.toLowerCase();
             
