@@ -1,7 +1,7 @@
 import React from 'react';
-import SSOLoader from '../../../templates/_common/components/sso_loader';
-import Cookies from 'js-cookie';
 import ReactDOM from 'react-dom';
+import Cookies from 'js-cookie';
+import SSOLoader from '../../../templates/_common/components/sso_loader.jsx';
 
 export const init = () => {
     const loggedState = Cookies.get('logged_state');
@@ -15,14 +15,13 @@ export const init = () => {
         window.location.pathname.includes('callback') ||
         window.location.pathname.includes('endpoint');
 
-    if (willEventuallySSO || isSilentLoginExcluded) {
-        return null;
+    if (willEventuallySSO && !isSilentLoginExcluded) {
+        ReactDOM.render(
+            <SSOLoader />,
+            document.getElementById('sso_loader_container')
+        );
     }
 
-    ReactDOM.render(
-        <SSOLoader />,
-        document.getElementById('sso_loader_container')
-    );
 };
 
 export default init;
