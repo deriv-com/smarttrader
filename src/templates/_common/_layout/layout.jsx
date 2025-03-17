@@ -68,6 +68,7 @@ const Layout = () => {
                 <div id='page-wrapper'>
                     <Header />
                     <WalletHeader />
+                    <div id='sso_loader_container' />
                     <div id='content-holder'>
                         {/* <MobileMenu /> */}
                         {/* <a id='scrollup' /> */}

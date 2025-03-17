@@ -1,0 +1,27 @@
+body .sso-loader {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    align-items: center;
+    background-color: var(--general-main-1);
+    z-index: 9999;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 40px;
+    }
+    &__title {
+        color: var(--text-prominent);
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        margin: 0;
+    }
+}
