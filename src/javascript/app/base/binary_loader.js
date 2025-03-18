@@ -20,6 +20,7 @@ const isStorageSupported = require('../../_common/storage').isStorageSupported;
 const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
 const createElement = require('../../_common/utility').createElement;
+const SSOLoader = require('../pages/sso-loader.jsx');
 const NotAvailable = require('../pages/trade/not-available.jsx');
 
 const BinaryLoader = (() => {
@@ -47,6 +48,7 @@ const BinaryLoader = (() => {
 
         Page.showNotificationOutdatedBrowser();
 
+        SSOLoader.init();
         Client.init();
         NetworkMonitor.init();
         DerivBanner.chooseBanner();
