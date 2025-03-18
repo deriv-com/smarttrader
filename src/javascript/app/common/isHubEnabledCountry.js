@@ -9,6 +9,9 @@ import { getTopLevelDomain } from '../../_common/utility';
  */
 const isHubEnabledCountry = () => {
     const is_com_domain = getTopLevelDomain() === 'com';
+
+    console.log('is_com_domain', is_com_domain);
+    console.log('ClientBase.hasWalletsAccount()', ClientBase.hasWalletsAccount());
     
     if (!is_com_domain || !ClientBase.hasWalletsAccount()) {
         return false;
