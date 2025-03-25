@@ -152,9 +152,13 @@ export const requestSingleSignOn = async () => {
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
-            await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
-            });
+            try {
+                await requestOidcAuthentication({
+                    redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
+                });
+            } catch (err) {
+                console.error(err);
+            }
         }
     };
 
