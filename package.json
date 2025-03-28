@@ -143,7 +143,13 @@
   "overrides": {
     "braces": "^3.0.3",
     "@babel/parser": "7.25.0",
-    "@babel/plugin-proposal-optional-chaining": "7.22.5"
+    "@babel/plugin-proposal-optional-chaining": "7.22.5",
+    "cross-spawn": "7.0.6"
+  },
+  "resolutions": {
+    "cross-spawn": "7.0.6",
+    "**/cross-spawn": "7.0.6",
+    "foreground-child/cross-spawn": "7.0.6"
   },
   "engines": {
     "node": "18.x"
