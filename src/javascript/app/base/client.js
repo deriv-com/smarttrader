@@ -89,11 +89,16 @@ const Client = (() => {
         if (show_login_page) {
             sessionStorage.setItem('showLoginPage', 1);
         }
-        BinarySocket.send({ logout: '1', passthrough: { redirect_to } }).then((response) => {
-            if (response.logout === 1) {
-                GTM.pushDataLayer({ event: 'log_out' });
-            }
-        });
+        try {
+            BinarySocket.send({ logout: '1', passthrough: { redirect_to } }).then((response) => {
+                if (response.logout === 1) {
+                    GTM.pushDataLayer({ event: 'log_out' });
+                }
+            });
+        } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error(error);
+        }
     };
 
     const redirection = (response) => {
