@@ -10,15 +10,17 @@ const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcA
 const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
 const Analytics = require('./analytics');
 const Language  = require('./language');
-
-export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
-
-export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
+const localize  = require('./localize').localize;
+const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
     [URLConstants.derivP2pStaging]   : 'red.derivws.com',
 };
+
+export const DEFAULT_OAUTH_LOGOUT_URL = 'https://oauth.deriv.com/oauth2/sessions/logout';
+
+export const DEFAULT_OAUTH_ORIGIN_URL = 'https://oauth.deriv.com';
 
 export const getServerInfo = () => {
     const origin = window.location.origin;
@@ -82,11 +84,24 @@ export const isOAuth2Enabled = () => {
 export const requestOauth2Logout = onWSLogoutAndRedirect => {
     const currentLanguage = Language.get();
 
-    OAuth2Logout({
-        WSLogoutAndRedirect  : onWSLogoutAndRedirect,
-        redirectCallbackUri  : `${window.location.origin}/${currentLanguage}/callback`,
-        postLogoutRedirectUri: `${window.location.origin}/${currentLanguage}/trading`,
-    });
+    try {
+        OAuth2Logout({
+            WSLogoutAndRedirect  : onWSLogoutAndRedirect,
+            redirectCallbackUri  : `${window.location.origin}/${currentLanguage}/callback`,
+            postLogoutRedirectUri: `${window.location.origin}/${currentLanguage}/trading`,
+        });
+    } catch (error) {
+        ErrorModal.init({
+            message      : localize('Something went wrong while logging out. Please refresh and try again.'),
+            buttonText   : localize('Refresh'),
+            onButtonClick: () => {
+                ErrorModal.remove();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 100);
+            },
+        });
+    }
 };
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
@@ -152,9 +167,28 @@ export const requestSingleSignOn = async () => {
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
-            await requestOidcAuthentication({
-                redirectCallbackUri: `${window.location.origin}/${currentLanguage}/callback`,
-            });
+            const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
+            const postLoginRedirectUri = window.location.origin;
+            const postLogoutRedirectUri = `${window.location.origin}/${currentLanguage}/trading`;
+
+            try {
+                await requestOidcAuthentication({
+                    redirectCallbackUri,
+                    postLoginRedirectUri,
+                    postLogoutRedirectUri,
+                });
+            } catch (error) {
+                ErrorModal.init({
+                    message      : localize('Something went wrong while logging in. Please refresh and try again.'),
+                    buttonText   : localize('Refresh'),
+                    onButtonClick: () => {
+                        ErrorModal.remove();
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 100);
+                    },
+                });
+            }
         }
     };
 

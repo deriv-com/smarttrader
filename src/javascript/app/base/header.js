@@ -30,6 +30,7 @@ const { default: isHubEnabledCountry } = require('../common/isHubEnabledCountry.
 const { SessionStore } = require('../../_common/storage');
 const Chat                     = require('../../_common/chat.js').default;
 const getRemoteConfig          = require('../hooks/useRemoteConfig').getRemoteConfig;
+const ErrorModal = require('../../../templates/_common/components/error-modal.jsx').default;
 
 const header_icon_base_path = '/images/pages/header/';
 const wallet_header_icon_base_path = '/images/pages/header/wallets/';
@@ -680,12 +681,24 @@ const Header = (() => {
             const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
             const postLoginRedirectUri = window.location.origin;
             const postLogoutRedirectUri = `${window.location.origin}/${currentLanguage}/trading`;
-            // Test commit
-            await requestOidcAuthentication({
-                redirectCallbackUri,
-                postLoginRedirectUri,
-                postLogoutRedirectUri,
-            });
+            try {
+                await requestOidcAuthentication({
+                    redirectCallbackUri,
+                    postLoginRedirectUri,
+                    postLogoutRedirectUri,
+                });
+            } catch (error){
+                ErrorModal.init({
+                    message      : localize('Something went wrong while logging in. Please refresh and try again.'),
+                    buttonText   : localize('Refresh'),
+                    onButtonClick: () => {
+                        ErrorModal.remove();
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 0);
+                    },
+                });
+            }
         } else {
             Login.redirectToLogin();
         }
