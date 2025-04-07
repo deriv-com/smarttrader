@@ -680,12 +680,15 @@ const Header = (() => {
             const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
             const postLoginRedirectUri = window.location.origin;
             const postLogoutRedirectUri = `${window.location.origin}/${currentLanguage}/trading`;
-            // Test commit
-            await requestOidcAuthentication({
-                redirectCallbackUri,
-                postLoginRedirectUri,
-                postLogoutRedirectUri,
-            });
+            try {
+                await requestOidcAuthentication({
+                    redirectCallbackUri,
+                    postLoginRedirectUri,
+                    postLogoutRedirectUri,
+                });
+            } catch (err) {
+                console.error(err);
+            }
         } else {
             Login.redirectToLogin();
         }
