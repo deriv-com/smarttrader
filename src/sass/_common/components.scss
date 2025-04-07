@@ -441,3 +441,20 @@
         }
     }
 }
+
+.error_modal_container {
+    @media only screen and (min-width: 769px) {
+        .quill-button {
+            &__full-width {
+                width: auto !important;
+                align-self: flex-end !important;
+            }
+        }
+    }
+
+    .quill-modal__background {
+        @media only screen and (max-width: 768px) {
+           padding: 20px;
+        }
+    }
+}
