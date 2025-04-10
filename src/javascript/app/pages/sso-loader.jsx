@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Cookies from 'js-cookie';
-import Loader from './loader.jsx';
+import SSOLoader from '../../../templates/_common/components/sso_loader.jsx';
 
 export const init = () => {
     const loggedState = Cookies.get('logged_state');
@@ -24,8 +24,8 @@ export const init = () => {
 
     if (willEventuallySSO && !isSilentLoginExcluded) {
         ReactDOM.render(
-            <Loader />,
-            document.getElementById('app-loader')
+            <SSOLoader />,
+            document.getElementById('sso_loader_container')
         );
     }
 
