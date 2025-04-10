@@ -363,8 +363,8 @@ const Header = (() => {
             
         } else {
             // Show regular buttons
-            if (btn_login) btn_login.style.display = 'inline-block';
-            if (btn_signup) btn_signup.style.display = 'inline-block';
+            if (btn_login) btn_login.style.display = 'flex';
+            if (btn_signup) btn_signup.style.display = 'flex';
                 
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
