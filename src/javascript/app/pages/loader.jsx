@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import Cookies from 'js-cookie';
 import { Skeleton } from '@deriv-com/quill-ui';
 import Portal from './portal';
 import { getElementById } from '../../_common/common_functions';
@@ -38,6 +39,24 @@ const pageTypes = [
 const Loader = () => {
     const has_contract_change  = useContractChange();
 
+    const loggedState = Cookies.get('logged_state');
+    const clientAccounts = JSON.parse(
+        localStorage.getItem('client.accounts') || '{}'
+    );
+    
+    const url_params = new URLSearchParams(window.location.search);
+    const account = url_params.get('account');
+    if (account) {
+        sessionStorage.setItem('account', account);
+    }
+    
+    const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+    const willEventuallySSO =
+            loggedState === 'true' && !isClientAccountsPopulated;
+    const isSilentLoginExcluded =
+            window.location.pathname.includes('callback') ||
+            window.location.pathname.includes('endpoint');
+
     const [loading, setLoading] = useState(true);
     
     const getPageType = () => pageTypes.find(({ code }) => window.location.pathname.includes(code)) || { name: 'Generic', code: '' };
@@ -66,7 +85,7 @@ const Loader = () => {
         };
     }, []);
 
-    if (loading) {
+    if (loading || (willEventuallySSO && !isSilentLoginExcluded)) {
         return (
             <Portal>
                 <div className='quill-generic-popup'>
