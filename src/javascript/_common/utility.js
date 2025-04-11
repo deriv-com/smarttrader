@@ -289,6 +289,19 @@ class PromiseClass {
 const lc_licenseID = 12049137;
 const lc_clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
 
+/**
+ * Safely tries to parse a JSON string
+ * @param {string} str - The string to parse
+ * @returns {Object} Object with success status and parsed data
+ */
+const tryParseJSON = (str) => {
+    try {
+        return { success: true, data: JSON.parse(str) };
+    } catch (e) {
+        return { success: false, data: null };
+    }
+};
+
 module.exports = {
     showLoadingImage,
     getHighestZIndex,
@@ -312,6 +325,7 @@ module.exports = {
     removeObjProperties,
     getTopLevelDomain,
     getHostname,
+    tryParseJSON,
     lc_licenseID,
     lc_clientID,
 };

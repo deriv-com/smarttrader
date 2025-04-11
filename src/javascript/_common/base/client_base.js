@@ -64,7 +64,7 @@ const ClientBase = (() => {
 
     const isValidLoginid = () => {
         if (!isLoggedIn()) return true;
-        const valid_login_ids = /^(MX|MF|VRTC|MLT|CR|FOG|VRW|CRW)[0-9]+$/i;
+        const valid_login_ids = /^(MX|MF|VRTC|MLT|CR|FOG|VRW|CRW|MFW)[0-9]+$/i;
         return getAllLoginids().every(loginid => valid_login_ids.test(loginid));
     };
 
