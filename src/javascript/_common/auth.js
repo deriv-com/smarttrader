@@ -65,22 +65,6 @@ export const getOAuthOrigin = () => {
     return oauthUrl;
 };
 
-export const isOAuth2Enabled = () => {
-    const [OAuth2EnabledApps, OAuth2EnabledAppsInitialised] = Analytics.getGrowthbookFeatureValue({
-        featureFlag: 'hydra_be',
-    });
-    const appId = WebSocketUtils.getAppId();
-
-    if (OAuth2EnabledAppsInitialised) {
-        const FEHydraAppIds = OAuth2EnabledApps?.length
-            ? OAuth2EnabledApps[OAuth2EnabledApps.length - 1]?.enabled_for ?? []
-            : [];
-        return FEHydraAppIds.includes(+appId);
-    }
-
-    return false;
-};
-
 export const requestOauth2Logout = onWSLogoutAndRedirect => {
     const currentLanguage = Language.get();
 
@@ -109,11 +93,10 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-        const isAuthEnabled = isOAuth2Enabled();
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
-        if (isLoggedOutCookie && isClientAccountsPopulated && isAuthEnabled && !isCallbackPage && !isEndpointPage) {
+        if (isLoggedOutCookie && isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
             await requestOauth2Logout(onWSLogoutAndRedirect);
         }
     };
@@ -148,7 +131,6 @@ export const requestSingleSignOn = async () => {
         const isLoggedInCookie = Cookies.get('logged_state') === 'true';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-        const isAuthEnabled = isOAuth2Enabled();
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
@@ -162,8 +144,7 @@ export const requestSingleSignOn = async () => {
           isLoggedInCookie &&
           !isCallbackPage &&
           !isEndpointPage &&
-          (!isClientAccountsPopulated) &&
-          isAuthEnabled;
+          (!isClientAccountsPopulated);
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
