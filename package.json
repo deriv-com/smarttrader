@@ -1,5 +1,5 @@
 {
-  "name": "smarttrader",
+  "name": "smart-trader",
   "version": "3.8.0",
   "description": "Deriv SmartTrader",
   "scripts": {
@@ -142,8 +142,7 @@
   },
   "overrides": {
     "braces": "^3.0.3",
-    "@babel/parser": "7.25.0",
-    "@babel/plugin-proposal-optional-chaining": "7.22.5"
+    "@babel/parser": "7.25.0"
   },
   "engines": {
     "node": "18.x"
