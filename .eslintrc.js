@@ -57,7 +57,6 @@ module.exports = {
         'react/prop-types'                  : 0,
         'react/self-closing-comp'           : 'error',
         'react/sort-prop-types'             : ['error', { ignoreCase: true, sortShapeProp: true }],
-        'react/no-unknown-property'         : 0,
     },
     extends: [
         'airbnb-base',
