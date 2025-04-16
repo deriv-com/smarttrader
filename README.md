@@ -60,7 +60,7 @@ Before running or contribute to this project, you need to have the setup of the 
    - Check node version `node -v`
    - Check list of available node versions `nvm ls`
    - To install node 18 `nvm install 18`
-   - To switch to a different node version in the current terminal `nvm use {version number}` 
+   - To switch to a different node version in the current terminal `nvm use {version number}`
 
 6. **Install your dependencies:**
 
@@ -81,7 +81,7 @@ Before running or contribute to this project, you need to have the setup of the 
 ## Preview on your local machine
 
 - To preview your changes locally, run `npm run serve`
-   - It will watch for Javascript or CSS changes and will rebuild on every change you make.
+  - It will watch for Javascript or CSS changes and will rebuild on every change you make.
 - Go to [https://localhost/en/endpoint.html](https://localhost/en/endpoint.html) and change App ID and Server
 - Login with test account
 
@@ -91,14 +91,15 @@ Before running or contribute to this project, you need to have the setup of the 
 - To fix eslint errors run `npm run eslint`
 
 ## Test link deployment
+
 ### Deploy your changes on Vercel (Recommended Option)
 
 1. Commit, push your changes, and create a pull request. GitHub Actions will automatically deploy your application and generate a test link.
 
-2.  Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your deployed page after login.
-    Use `<GENERATED_TEST_LINK_URL>/en/logged_inws.html` for the Redirect URL and `<GENERATED_TEST_LINK_URL>/en/redirect.html` for the Verification URL.
-    - Have your API token ready from app.deriv.com account in order to register
-    - Make note of your App ID to use at `<GENERATED_TEST_LINK_URL>/en/endpoint.html`
+2. Register your application [here](https://api.deriv.com/dashboard/). This will give you the ability to redirect back to your deployed page after login.
+   Use `<GENERATED_TEST_LINK_URL>/en/logged_inws.html` for the Redirect URL and `<GENERATED_TEST_LINK_URL>/en/redirect.html` for the Verification URL.
+   - Have your API token ready from app.deriv.com account in order to register
+   - Make note of your App ID to use at `<GENERATED_TEST_LINK_URL>/en/endpoint.html`
 
 Alternatively, you can manually deploy your test link using gh-pages with the following configurations:
 
