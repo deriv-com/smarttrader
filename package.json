@@ -7,7 +7,8 @@
     "livereload": "grunt livereload",
     "serve": "grunt serve",
     "start": "grunt start",
-    "eslint": "eslint --fix \"src/**/*.jsx\" src/"
+    "eslint": "eslint --fix \"src/**/*.jsx\" src/",
+    "optimize-svgs": "node scripts/optimize-svgs.js"
   },
   "repository": {
     "type": "git",
