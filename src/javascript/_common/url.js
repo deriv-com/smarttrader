@@ -4,6 +4,7 @@ const createElement          = require('./utility').createElement;
 const isEmptyObject          = require('./utility').isEmptyObject;
 const getTopLevelDomain      = require('./utility').getTopLevelDomain;
 const Language               = require('./language');
+const { SessionStore }       = require('./storage');
 const getCurrentBinaryDomain = require('../config').getCurrentBinaryDomain;
 require('url-polyfill');
 
@@ -109,7 +110,16 @@ const Url = (() => {
 
     const deriv_app_domain = `https://app.deriv.${getTopLevelDomain()}`;
 
-    const urlForDeriv = (path, pars) => `${(getAllowedLocalStorageOrigin() || deriv_app_domain)}/${path}${pars ? `?${pars}` : ''}`;
+    const getAccountParam = () =>
+        Url.param('account') ||
+      (SessionStore.get('account')
+          ? SessionStore.get('account')
+          : '');
+
+    const urlForDeriv = (path, pars) =>
+        `${getAllowedLocalStorageOrigin() || deriv_app_domain}/${path}${
+            getAccountParam() ? `?account=${getAccountParam().toUpperCase()}` : ''
+        }${pars ? `&${pars}` : ''}`;
 
     const urlForTradersHub = (path, pars) => {
         const origin = getAllowedLocalStorageOrigin(true) || deriv_app_domain;
