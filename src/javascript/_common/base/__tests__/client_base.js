@@ -1,10 +1,4 @@
 
-const Mock                         = require('mock-require');
-Mock('../../auth', {
-    isOAuth2Enabled: function() {
-        return false
-    }
-});
 const Client                  = require('../client_base');
 const setCurrencies           = require('../currency_base').setCurrencies;
 const { api, expect, setURL } = require('../../__tests__/tests_common');

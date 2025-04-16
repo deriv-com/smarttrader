@@ -709,9 +709,10 @@ const Header = (() => {
 
     const loginOnClick = async (e) => {
         e.preventDefault();
-        const isOAuth2Enabled = AuthClient.isOAuth2Enabled();
+        const is_staging_or_production = /^staging-smarttrader\.deriv\.com$/i.test(window.location.hostname) ||
+                                        /^smarttrader\.deriv\.com$/i.test(window.location.hostname);
 
-        if (isOAuth2Enabled) {
+        if (is_staging_or_production) {
             const currentLanguage = Language.get();
             const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
             const postLoginRedirectUri = window.location.origin;
