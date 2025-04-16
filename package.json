@@ -54,6 +54,7 @@
     "eslint-config-binary": "1.0.2",
     "eslint-config-prettier": "2.9.0",
     "eslint-import-resolver-alias": "1.1.1",
+    "eslint-plugin-escompat": "^3.11.4",
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-react": "7.28.0",
     "estraverse": "4.2.0",
