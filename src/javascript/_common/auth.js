@@ -134,6 +134,14 @@ export const requestSingleSignOn = async () => {
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
+        const hasMissingToken = Object.values(clientAccounts).some((account) => {
+            // Check if current account is missing token
+            if (!account?.token && !account?.is_disabled !== 1) {
+                return true; // No linked accounts and no token
+            }
+            return false;
+        });
+
         // we only do SSO if:
         // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
         // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
@@ -144,7 +152,7 @@ export const requestSingleSignOn = async () => {
           isLoggedInCookie &&
           !isCallbackPage &&
           !isEndpointPage &&
-          (!isClientAccountsPopulated);
+          (!isClientAccountsPopulated || hasMissingToken);
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
