@@ -136,7 +136,7 @@ export const requestSingleSignOn = async () => {
 
         const hasMissingToken = Object.values(clientAccounts).some((account) => {
             // Check if current account is missing token
-            if (!account?.token && !account?.is_disabled !== 1) {
+            if (!account?.token && !account?.is_disabled === 1) {
                 return true; // No linked accounts and no token
             }
             return false;
