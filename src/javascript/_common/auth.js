@@ -145,7 +145,7 @@ export const requestSingleSignOn = async () => {
         });
 
         // Check if account parameter in URL exists in one of the account currencies
-        const isNewCurrency = accountParam && Object.values(clientAccounts).some((account) =>
+        const isExistingCurrency = accountParam && Object.values(clientAccounts).some((account) =>
             account?.currency?.toUpperCase() === accountParam.toUpperCase()
         );
 
@@ -160,7 +160,7 @@ export const requestSingleSignOn = async () => {
           isLoggedInCookie &&
           !isCallbackPage &&
           !isEndpointPage &&
-          (!isClientAccountsPopulated || hasMissingToken || !isNewCurrency);
+          (!isClientAccountsPopulated || hasMissingToken || !isExistingCurrency);
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
