@@ -11,6 +11,7 @@ const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
 const Analytics = require('./analytics');
 const Language  = require('./language');
 const localize  = require('./localize').localize;
+const Url       = require('./url');
 const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 
 const SocketURL = {
@@ -134,6 +135,7 @@ export const requestSingleSignOn = async () => {
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
+        const accountParam = Url.param('account');
         const hasMissingToken = Object.values(clientAccounts).some((account) => {
             // Check if current account is missing token
             if (!account?.token && !account?.is_disabled === 1) {
@@ -142,17 +144,23 @@ export const requestSingleSignOn = async () => {
             return false;
         });
 
+        // Check if account parameter in URL exists in one of the account currencies
+        const isNewCurrency = accountParam && Object.values(clientAccounts).some((account) =>
+            account?.currency?.toUpperCase() === accountParam.toUpperCase()
+        );
+
         // we only do SSO if:
         // we have previously logged-in before from SmartTrader or any other apps (Deriv.app, etc) - isLoggedInCookie
         // if we are not in the callback route to prevent re-calling this function - !isCallbackPage
         // if client.accounts in localStorage is empty - !isClientAccountsPopulated
         // and if feature flag for OIDC Phase 2 is enabled - isAuthEnabled
         // Check if any account or its linked account is missing a token
+        // Check if account parameter in URL exists in one of the account currencies
         const shouldRequestSignOn =
           isLoggedInCookie &&
           !isCallbackPage &&
           !isEndpointPage &&
-          (!isClientAccountsPopulated || hasMissingToken);
+          (!isClientAccountsPopulated || hasMissingToken || !isNewCurrency);
 
         if (shouldRequestSignOn) {
             const currentLanguage = Language.get();
