@@ -50,7 +50,7 @@ const ClientBase = (() => {
             const url = new URL(window.location.href);
             const account_param = /^VR/.test(current_loginid) ? 'demo' : client_object[current_loginid]?.currency;
             if (account_param) {
-                url.searchParams.set('account', account_param);
+                url.searchParams.set('account', new URLSearchParams(window.location.search).get('account') || account_param);
                 window.history.replaceState({}, '', url.toString());
             }
         }
