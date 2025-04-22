@@ -16,7 +16,7 @@ const ClientBase = (() => {
 
     const init = () => {
         const url_params = new URLSearchParams(window.location.search);
-        const account_currency = url_params.get('account');
+        const account_currency = url_params.get('account') || SessionStore.get('account');
         client_object = getAllAccountsObject();
 
         if (account_currency) {
