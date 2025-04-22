@@ -1,3 +1,5 @@
+import { SessionStore } from './storage.js';
+
 const {
     AppIDConstants,
     LocalStorageConstants,
@@ -134,7 +136,7 @@ export const requestSingleSignOn = async () => {
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
-        const accountParam = Url.param('account');
+        const accountParam = Url.param('account') || SessionStore.get('account');
         const hasMissingToken = Object.values(clientAccounts).some((account) => {
             // Check if current account is missing token
             if (!account?.token && !(account?.is_disabled === 1)) {
