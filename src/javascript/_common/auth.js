@@ -176,6 +176,9 @@ export const requestSingleSignOn = async () => {
                     redirectCallbackUri,
                     postLoginRedirectUri,
                     postLogoutRedirectUri,
+                    state: {
+                        account: accountParam,
+                    },
                 });
             } catch (error) {
                 ErrorModal.init({
