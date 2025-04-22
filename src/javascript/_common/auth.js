@@ -144,8 +144,13 @@ export const requestSingleSignOn = async () => {
         });
 
         // Check if account parameter in URL exists in one of the account currencies
-        const isExistingCurrency = accountParam && Object.values(clientAccounts).some((account) =>
-            account?.currency?.toUpperCase() === accountParam.toUpperCase()
+        // or if accountParam is demo, check for accounts starting with VR
+        const isExistingCurrency = accountParam && (
+            Object.values(clientAccounts).some((account) =>
+                account?.currency?.toUpperCase() === accountParam.toUpperCase()
+            ) ||
+            (accountParam.toLowerCase() === 'demo' &&
+                Object.keys(clientAccounts).some(account_id => account_id.startsWith('VR')))
         );
 
         // we only do SSO if:
