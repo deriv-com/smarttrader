@@ -158,7 +158,6 @@ export const requestSingleSignOn = async () => {
         // Check if account parameter in URL exists in one of the account currencies
         const shouldRequestSignOn =
           isLoggedInCookie &&
-          !isCallbackPage &&
           !isEndpointPage &&
           (!isClientAccountsPopulated || hasMissingToken || !isExistingCurrency);
 
