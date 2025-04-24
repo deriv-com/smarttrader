@@ -81,11 +81,8 @@ const Page = (() => {
         const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
         const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
 
-        const old_is_demo = active_loginid && /^VR/.test(active_loginid);
-        const new_is_demo = active_loginid && /^VR/.test(active_loginid);
-
         if (removedSessionAndBalnce(newValue) !== removedSessionAndBalnce(oldValue || '{}') &&
-            (old_currency !== new_currency || old_is_demo !== new_is_demo)) {
+            old_currency !== new_currency) {
             reload();
         }
     };
