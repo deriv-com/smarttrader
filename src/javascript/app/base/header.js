@@ -960,77 +960,84 @@ const Header = (() => {
     };
 
     const bindTabs = () => {
-        const all_login_ids               = Client.getAllLoginids();
-        const real_accounts               = all_login_ids.filter((loginid) => !/^VRT/.test(loginid));
-        const has_real_account            = real_accounts.length > 0;
-        const has_mf_account              = all_login_ids.some(loginid => loginid.startsWith('MF'));
-        const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
-        const has_multiple_CR_accounts    = all_login_ids.filter(loginid => loginid.startsWith('CR')).length > 1;
-        const current_active_login        = Client.get('loginid');
-        const manage_acc_btn              = document.getElementById('account__switcher-manage');
-        const new_account_adder_deriv     = document.getElementById('account__switcher-new-account-deriv');
-        const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
-        const traders_hub_link            = document.getElementById('account__switcher-cfd');
-        const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
-        const multiplier_text             = localize('Multipliers');
-        const account_header              = document.querySelectorAll('.header__accounts-multiple');
-        const is_callback_page            = window.location.pathname.includes('callback');
-        let is_virtual;
-        if (current_active_login) {
-            is_virtual                    = current_active_login.startsWith('VRTC');
-        }
-        const showTradersHubLink = (show) => {
-            if (traders_hub_link.style) traders_hub_link.style.display            = show ? 'flex' : 'none';
-            if (account_switcher_seperator.style) account_switcher_seperator.style.display  = show ? 'block' : 'none';
-        };
+        try {
+            const all_login_ids               = Client.getAllLoginids();
+            const real_accounts               = all_login_ids.filter((loginid) => !/^VRT/.test(loginid));
+            const has_real_account            = real_accounts.length > 0;
+            const has_mf_account              = all_login_ids.some(loginid => loginid.startsWith('MF'));
+            const has_non_eu_account          = all_login_ids.some(loginid => loginid.startsWith('CR'));
+            const has_multiple_CR_accounts    = all_login_ids.filter(loginid => loginid.startsWith('CR')).length > 1;
+            const current_active_login        = Client.get('loginid');
+            const manage_acc_btn              = document.getElementById('account__switcher-manage');
+            const new_account_adder_deriv     = document.getElementById('account__switcher-new-account-deriv');
+            const new_account_adder_eu        = document.getElementById('account__switcher-new-account-eu');
+            const traders_hub_link            = document.getElementById('account__switcher-cfd');
+            const account_switcher_seperator  = document.getElementById('cfd-link-seperator');
+            const multiplier_text             = localize('Multipliers');
+            const account_header              = document.querySelectorAll('.header__accounts-multiple');
+            const is_callback_page            = window.location.pathname.includes('callback');
+            let is_virtual;
+            if (current_active_login) {
+                is_virtual                    = current_active_login.startsWith('VRTC');
+            }
+            const showTradersHubLink = (show) => {
+                if (traders_hub_link.style) traders_hub_link.style.display            = show ? 'flex' : 'none';
+                if (account_switcher_seperator.style) account_switcher_seperator.style.display  = show ? 'block' : 'none';
+            };
 
-        account_header.forEach(header => {
-            header.innerText += has_multiple_CR_accounts ? localize('accounts') : localize('account');
-        });
+            account_header.forEach(header => {
+                header.innerText += has_multiple_CR_accounts ? localize('accounts') : localize('account');
+            });
 
-        if (current_active_login.startsWith('MF')) {
-            $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
-        }
+            if (current_active_login.startsWith('MF')) {
+                $(`<span class="header__acc-display-text">${multiplier_text}</span>`).insertAfter('#header__acc-balance');
+            }
         
-        if (has_real_account && !is_callback_page) showTradersHubLink(true);
-        if (is_virtual && !is_callback_page) showTradersHubLink(true);
-        if (is_virtual || !has_real_account)  {
-            manage_acc_btn.style.visibility           = 'hidden';
-        }
-        if (has_real_account && !is_virtual) {
-            manage_acc_btn.style.visibility           = 'visible';
-        }
-        // Account adder logic
-        new_account_adder_deriv.style.display         = 'flex';
-        new_account_adder_eu.style.display            = 'flex';
-        if (has_real_account) {
-            if (has_mf_account && has_non_eu_account) {
-                new_account_adder_deriv.style.display = 'none';
-                new_account_adder_eu.style.display    = 'none';
-            } else if (has_mf_account && !has_non_eu_account) {
-                new_account_adder_eu.style.display    = 'none';
-            } else if (!has_mf_account && has_non_eu_account) {
-                new_account_adder_deriv.style.display = 'none';
+            if (has_real_account && !is_callback_page) showTradersHubLink(true);
+            if (is_virtual && !is_callback_page) showTradersHubLink(true);
+            if (is_virtual || !has_real_account)  {
+                manage_acc_btn.style.visibility           = 'hidden';
+            }
+            if (has_real_account && !is_virtual) {
+                manage_acc_btn.style.visibility           = 'visible';
+            }
+            // Account adder logic
+            new_account_adder_deriv.style.display         = 'flex';
+            new_account_adder_eu.style.display            = 'flex';
+            if (has_real_account) {
+                if (has_mf_account && has_non_eu_account) {
+                    new_account_adder_deriv.style.display = 'none';
+                    new_account_adder_eu.style.display    = 'none';
+                } else if (has_mf_account && !has_non_eu_account) {
+                    new_account_adder_eu.style.display    = 'none';
+                } else if (!has_mf_account && has_non_eu_account) {
+                    new_account_adder_deriv.style.display = 'none';
+                }
+            }
+    
+            $('#acc_tabs').tabs({
+                active: is_virtual ? 1 : 0,
+                event : 'click',
+                activate(ui) {
+                    updateTotal();
+                    const defaultOpenedTab = is_virtual ? '#demo_tab' : '#real_tab';
+                    const currentTab = ui.currentTarget ? ui.currentTarget.hash : defaultOpenedTab;
+                    if (currentTab === '#demo_tab') {
+                        manage_acc_btn.style.visibility   = 'hidden';
+                        showTradersHubLink(true);
+                    } else if (currentTab === '#real_tab' && has_real_account && !is_virtual) {
+                        manage_acc_btn.style.visibility   = 'visible';
+                    } else if (currentTab === '#real_tab' && !has_real_account) {
+                        showTradersHubLink(false);
+                    }
+                },
+            });
+        } catch (error) {
+            if (window.location.pathname.includes('/callback')) {
+                const account_param = Url.param('account') || SessionStore.get('account');
+                window.location.replace(`${window.location.protocol}//${window.location.hostname}${account_param ? `?account=${account_param}` : ''}`);
             }
         }
-    
-        $('#acc_tabs').tabs({
-            active: is_virtual ? 1 : 0,
-            event : 'click',
-            activate(ui) {
-                updateTotal();
-                const defaultOpenedTab = is_virtual ? '#demo_tab' : '#real_tab';
-                const currentTab = ui.currentTarget ? ui.currentTarget.hash : defaultOpenedTab;
-                if (currentTab === '#demo_tab') {
-                    manage_acc_btn.style.visibility   = 'hidden';
-                    showTradersHubLink(true);
-                } else if (currentTab === '#real_tab' && has_real_account && !is_virtual) {
-                    manage_acc_btn.style.visibility   = 'visible';
-                } else if (currentTab === '#real_tab' && !has_real_account) {
-                    showTradersHubLink(false);
-                }
-            },
-        });
     };
 
     const bindAccordion = (selector) => {
