@@ -82,6 +82,12 @@ const Page = (() => {
         const new_currency = new_accounts[active_loginid] ? new_accounts[active_loginid].currency : '';
         const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
 
+        // Check for account in URL param, if missing add currency or demo
+        if (!Url.param('account') && active_loginid) {
+            const account_param = /^VR/.test(active_loginid) ? 'demo' : new_accounts[active_loginid].currency;
+            Url.updateParamsWithoutReload({ account: account_param }, true);
+        }
+
         if (removedSessionAndBalnce(newValue) !== removedSessionAndBalnce(oldValue || '{}') &&
             old_currency !== new_currency) {
             reload();

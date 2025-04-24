@@ -17,8 +17,10 @@ const localizeForLang = require('../../_common/localize').forLang;
 const localize = require('../../_common/localize').localize;
 const ScrollToAnchor = require('../../_common/scroll_to_anchor');
 const isStorageSupported = require('../../_common/storage').isStorageSupported;
+const SessionStore = require('../../_common/storage').SessionStore;
 const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
+const Url = require('../../_common/url');
 const createElement = require('../../_common/utility').createElement;
 const SSOLoader = require('../pages/sso-loader.jsx');
 const NotAvailable = require('../pages/trade/not-available.jsx');
@@ -56,7 +58,16 @@ const BinaryLoader = (() => {
         container.addEventListener('binarypjax:before', beforeContentChange);
         window.addEventListener('beforeunload', beforeContentChange);
         container.addEventListener('binarypjax:after', afterContentChange);
-        BinaryPjax.init(container, '#content');
+        
+        try {
+            BinaryPjax.init(container, '#content');
+        } catch (error) {
+            if (window.location.pathname.includes('/callback')) {
+                const account_param = Url.param('account') || SessionStore.get('account');
+                window.location.replace(`${window.location.protocol}//${window.location.hostname}${account_param ? `?account=${account_param}` : ''}`);
+            }
+        }
+        
         ThirdPartyLinks.init();
 
     };
