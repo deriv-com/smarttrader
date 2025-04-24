@@ -150,7 +150,8 @@ export const requestSingleSignOn = async () => {
         // or if accountParam is demo, check for accounts starting with VR
         const isExistingCurrency = accountParam && (
             Object.values(clientAccounts).some((account) =>
-                account?.currency?.toUpperCase() === accountParam.toUpperCase()
+                account?.currency?.toUpperCase() === accountParam.toUpperCase() &&
+                !account?.is_virtual
             ) ||
             (accountParam.toLowerCase() === 'demo' &&
                 Object.keys(clientAccounts).some(account_id => account_id.startsWith('VR')))
