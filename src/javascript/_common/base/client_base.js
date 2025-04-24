@@ -28,6 +28,7 @@ const ClientBase = (() => {
             } else {
                 matching_loginid = Object.keys(client_object).find(loginid =>
                     client_object[loginid].currency?.toUpperCase() === account_param_upper
+                    && !client_object[loginid]?.is_virtual
                 );
             }
             if (matching_loginid) {
