@@ -65,7 +65,8 @@ const Page = (() => {
                 }
             } else {
                 active_loginid = Object.keys(new_accounts).find(loginid =>
-                    new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase()
+                    new_accounts[loginid].currency?.toUpperCase() === session_account.toUpperCase() &&
+                    !new_accounts[loginid]?.is_virtual
                 );
                 if (active_loginid) {
                     SessionStore.set('active_loginid', active_loginid);
