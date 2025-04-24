@@ -134,6 +134,7 @@ export const requestSingleSignOn = async () => {
         const isLoggedInCookie = Cookies.get('logged_state') === 'true';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+        const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
 
         const accountParam = Url.param('account') || SessionStore.get('account');
@@ -164,6 +165,7 @@ export const requestSingleSignOn = async () => {
         // Check if account parameter in URL exists in one of the account currencies
         const shouldRequestSignOn =
           isLoggedInCookie &&
+          !isCallbackPage &&
           !isEndpointPage &&
           (!isClientAccountsPopulated || hasMissingToken || !isExistingCurrency);
 
