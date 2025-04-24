@@ -83,8 +83,8 @@ const Page = (() => {
         const old_currency = old_accounts[active_loginid] ? old_accounts[active_loginid].currency : '';
 
         // Check for account in URL param, if missing add currency or demo
-        if (!Url.param('account') && active_loginid) {
-            const account_param = /^VR/.test(active_loginid) ? 'demo' : new_accounts[active_loginid].currency;
+        if (!Url.param('account') && active_loginid && new_accounts[active_loginid]) {
+            const account_param = /^VR/.test(active_loginid) ? 'demo' : new_accounts[active_loginid]?.currency;
             Url.updateParamsWithoutReload({ account: account_param }, true);
         }
 
