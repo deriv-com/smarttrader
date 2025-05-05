@@ -126,7 +126,12 @@ const Url = (() => {
         return `${origin}/${path}${pars ? `?${pars}` : ''}`;
     };
 
-    const getAllowedLocalStorageOrigin = (is_traders_hub) => {
+    const urlForWalletAccount = (path, pars) => {
+        const origin = getAllowedLocalStorageOrigin(true, true) || deriv_app_domain;
+        return `${origin}/${path}${pars ? `?${pars}` : ''}`;
+    };
+
+    const getAllowedLocalStorageOrigin = (is_traders_hub, is_wallet = false) => {
         // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
         if (
             /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) ||
@@ -137,9 +142,21 @@ const Url = (() => {
             /^smarttrader\.deriv\.app$/i.test(window.location.hostname) ||
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return is_traders_hub ? 'https://hub.deriv.com/tradershub' : deriv_app_domain;
+            if (is_wallet) {
+                return 'https://hub.deriv.com';
+            }
+            if (is_traders_hub) {
+                return 'https://hub.deriv.com/tradershub';
+            }
+            return deriv_app_domain;
         }
-        return is_traders_hub ? 'https://hub.deriv.com/tradershub' : deriv_app_domain;
+        if (is_wallet) {
+            return 'https://hub.deriv.com';
+        }
+        if (is_traders_hub) {
+            return 'https://hub.deriv.com/tradershub';
+        }
+        return deriv_app_domain;
     };
 
     /**
@@ -198,6 +215,7 @@ const Url = (() => {
         urlForStatic,
         urlForDeriv,
         urlForTradersHub,
+        urlForWalletAccount,
         getAllowedLocalStorageOrigin,
         getSection,
         getHashValue,

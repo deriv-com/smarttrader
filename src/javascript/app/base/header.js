@@ -137,7 +137,19 @@ const Header = (() => {
             el.href = Url.urlForDeriv('cashier/deposit', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-account-details', el => {
-            el.href = Url.urlForDeriv('account/personal-details', `ext_platform_url=${ext_platform_url}`);
+            const url_params = new URLSearchParams(window.location.search);
+
+            el.href = Client.hasWalletsAccount
+                ? Url.urlForWalletAccount(
+                    'accounts/redirect',
+                    `action=redirect_to&redirect_to=home&account=${url_params.get(
+                        'account'
+                    )}`
+                )
+                : Url.urlForDeriv(
+                    'account/personal-details',
+                    `ext_platform_url=${ext_platform_url}`
+                );
         });
         applyToAllElements('.url-add-account', el => {
             el.href = Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`);
