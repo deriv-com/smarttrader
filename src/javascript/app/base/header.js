@@ -116,13 +116,13 @@ const Header = (() => {
         }
 
         applyToAllElements('.url-wallet-apps', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore-cfd', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
@@ -139,8 +139,8 @@ const Header = (() => {
         applyToAllElements('.url-account-details', el => {
             const url_params = new URLSearchParams(window.location.search);
 
-            el.href = Client.hasWalletsAccount
-                ? Url.urlForWalletAccount(
+            el.href = isHubEnabledCountry()
+                ? Url.urlForTradersHub(
                     'accounts/redirect',
                     `action=redirect_to&redirect_to=home&account=${url_params.get(
                         'account'
@@ -158,10 +158,10 @@ const Header = (() => {
             el.href = Url.urlForDeriv('redirect', `action=add_account_multiplier&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-manage-account', el => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=wallet&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=wallet&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('redirect', `action=manage_account&ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-wallets-deposit', el => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=wallet&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('redirect', `action=payment_transfer&ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=wallet&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('redirect', `action=payment_transfer&ext_platform_url=${ext_platform_url}`);
         });
     };
 
@@ -345,7 +345,7 @@ const Header = (() => {
         });
 
         // Make cta link in dropdown dynamic depending on account type (wallet or non-wallet)
-        const traders_hub_link                = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+        const traders_hub_link                = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         const platform_dropdown_cta_container = createElement('div', { class: 'platform__dropdown-cta' });
         const platform_dropdown_cta_link      = createElement('a', { text: localize('Looking for CFDs? Go to Trader\'s hub'), class: ' platform__dropdown-cta--link', href: traders_hub_link });
         
@@ -505,7 +505,7 @@ const Header = (() => {
         // Get current account parameter from URL
         const url_params = new URLSearchParams(window.location.search);
         const account_param = url_params.get('account');
-        const traders_hub_link = isHubEnabledCountry() ? Url.urlForTradersHub('redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}${account_param ? `&account=${account_param}` : ''}`);
+        const traders_hub_link = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}${account_param ? `&account=${account_param}` : ''}`);
         mobile_platform_appstore_link.href      = traders_hub_link;
 
         // Account Switcher Event
