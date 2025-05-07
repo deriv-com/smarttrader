@@ -61,6 +61,11 @@ const Header = (() => {
             setHeaderUrls();
             bindPlatform();
             bindClick();
+            console.log('Checking is hub', isHubEnabledCountry());
+            if (isHubEnabledCountry()) {
+                console.log('hub is enabled', isHubEnabledCountry());
+                document.getElementById('header__notification').remove();
+            }
         });
         if (Client.isLoggedIn()) {
             const wallet_divider = getElementById('wallet-divider');
@@ -72,11 +77,7 @@ const Header = (() => {
         });
         
         applyFeatureFlags();
-        console.log('Checking is hub', isHubEnabledCountry());
-        if (isHubEnabledCountry()) {
-            console.log('hub is enabled', isHubEnabledCountry());
-            document.getElementById('header__notification').remove();
-        }
+     
     };
 
     const applyFeatureFlags = () => {
