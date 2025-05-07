@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 // const BinaryPjax               = require('./binary_pjax');
 const Cookies                   = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;

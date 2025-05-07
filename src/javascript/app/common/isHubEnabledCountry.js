@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { Analytics } from "@deriv-com/analytics";
 import { LocalStore, SessionStore } from "../../_common/storage";
 import ClientBase from "../../_common/base/client_base";
@@ -14,7 +16,10 @@ const isHubEnabledCountry = () => {
     return false;
   }
 
-  const featureValue = Analytics?.getFeatureValue('hub_enabled_country_list_st', {});
+  const featureValue = Analytics?.getFeatureValue(
+    "hub_enabled_country_list_st",
+    {}
+  );
   const active_loginid = SessionStore.get("active_loginid");
 
   if (active_loginid) {
@@ -23,14 +28,8 @@ const isHubEnabledCountry = () => {
 
     if (current_account && current_account.country) {
       const country = current_account.country.toLowerCase();
-  console.log(
-    "Hub Countries",
-    featureValue.hub_enabled_country_list,
-    "Client Country",
-    country
-  );
+      console.log("Country", country);
       if (featureValue && featureValue.hub_enabled_country_list) {
-        console.log("Country", country);
         return featureValue.hub_enabled_country_list.includes(country);
       }
     }
