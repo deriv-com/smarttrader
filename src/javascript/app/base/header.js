@@ -72,7 +72,7 @@ const Header = (() => {
         });
         
         applyFeatureFlags();
-        console.log('Checking is hub', isHubEnabledCountry())
+        console.log('Checking is hub', isHubEnabledCountry());
         if (isHubEnabledCountry()) {
             console.log('hub is enabled', isHubEnabledCountry());
             document.getElementById('header__notification').remove();
