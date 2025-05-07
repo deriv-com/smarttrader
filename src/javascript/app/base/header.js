@@ -98,6 +98,9 @@ const Header = (() => {
         const wallet_header = getElementById('wallet__header');
         if (Client.hasWalletsAccount()) {
             regular_header.remove();
+             if (isHubEnabledCountry()) {
+               document.getElementById("header__notification").remove();
+             }
         } else {
             wallet_header.remove();
         }
