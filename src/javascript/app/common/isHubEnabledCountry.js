@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import { Analytics } from '@deriv-com/analytics';
 import { LocalStore, SessionStore } from '../../_common/storage';
 import ClientBase from '../../_common/base/client_base';
@@ -20,7 +18,6 @@ const isHubEnabledCountry = () => {
         'hub_enabled_country_list_st',
         {}
     );
-    console.log('Feature flag value', featureValue);
     const active_loginid = SessionStore.get('active_loginid');
 
     if (active_loginid) {
@@ -29,11 +26,7 @@ const isHubEnabledCountry = () => {
 
         if (current_account && current_account.country) {
             const country = current_account.country.toLowerCase();
-            console.log('Country', country);
-            console.log(
-                'Feature flag Check',featureValue,featureValue.hub_enabled_country_list.includes(country)
-            );
-
+            
             if (featureValue && featureValue.hub_enabled_country_list) {
                 return featureValue.hub_enabled_country_list.includes(country);
             }
