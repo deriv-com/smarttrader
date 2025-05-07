@@ -14,37 +14,7 @@ const isHubEnabledCountry = () => {
     return false;
   }
 
-  const featureValue = {
-    hub_enabled_country_list: [
-      "aq",
-      "tm",
-      "dz",
-      "gp",
-      "kn",
-      "lc",
-      "bs",
-      "tw",
-      "rs",
-      "am",
-      "pg",
-      "gn",
-      "al",
-      "gd",
-      "sr",
-      "gy",
-      "mk",
-      "td",
-      "is",
-      "gm",
-      "ad",
-      "cv",
-      "mr",
-      "bz",
-      "sc",
-      "cf",
-    ],
-  };
-  //Analytics?.getFeatureValue('hub_enabled_country_list_st', {});
+  const featureValue = Analytics?.getFeatureValue('hub_enabled_country_list_st', {});
   const active_loginid = SessionStore.get("active_loginid");
 
   if (active_loginid) {
