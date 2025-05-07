@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 // const BinaryPjax               = require('./binary_pjax');
 const Cookies                   = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
@@ -61,9 +59,7 @@ const Header = (() => {
             setHeaderUrls();
             bindPlatform();
             bindClick();
-            console.log('Checking is hub', isHubEnabledCountry());
             if (isHubEnabledCountry()) {
-                console.log('hub is enabled', isHubEnabledCountry());
                 document.getElementById('header__notification').remove();
             }
         });
@@ -92,6 +88,7 @@ const Header = (() => {
                 
                 topbar_whatsapp.style.display        = cs_chat_whatsapp ? 'inline-flex' : 'none';
                 whatsapp_mobile_drawer.style.display = cs_chat_whatsapp ? 'flex' : 'none';
+
             })
             
             .catch(error => {
