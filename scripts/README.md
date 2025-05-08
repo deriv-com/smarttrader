@@ -37,11 +37,11 @@ In order to make sure that no strings are missed by the extractor code while pus
 1. Refactor the code so that the first argument passed to the `localize()` method is a string literal.
    i.e.
    ```js
-   const text = localize(is_started ? 'Sell at market' : 'Sell');
+   const text = localize(is_started ? "Sell at market" : "Sell");
    ```
    would change to:
    ```js
-   const text = is_started ? localize('Sell at market') : localize('Sell');
+   const text = is_started ? localize("Sell at market") : localize("Sell");
    ```
 2. If there is no way to have the string literal in js code (i.e. API texts which are not translated), add them to `scripts/js_texts/static_strings_app.js`.
 
@@ -66,3 +66,43 @@ During the translation update process, the source file `messages.pot` will be up
 
 - The list of paths to include in `sitemap.xml` is here: [config/sitemap_urls.js](config/sitemap_urls.js)
 - Once the paths are updated in the above file, run `./scripts/sitemap.js` or `grunt shell:sitemap` to generate new `sitemap.xml` files in `src/root_files` according to each section.
+
+## SVG Optimization
+
+The project enforces that all SVG files follow a specific format to ensure optimal performance and compatibility. The test `should be valid svgs` in `scripts/__tests__/svg_test.js` checks that SVG files are properly formatted.
+
+### SVG Validation Rules
+
+- SVGs should be on a single line (not multi-line)
+- Must have proper opening `<svg>` and closing `</svg>` tags
+- Must follow the pattern: `/(?!\n)(<svg)(.*)(>).*(<\/\s?svg)>/i`
+
+### How to Optimize SVGs
+
+If you have SVG files that don't pass the validation, use the `optimize-svgs.js` script to fix them:
+
+```bash
+# Using npm script
+npm run optimize-svgs
+
+# Or directly
+node scripts/optimize-svgs.js
+```
+
+The script:
+
+1. Identifies all unoptimized SVG files in the project
+2. Asks for confirmation before optimization
+3. Uses SVGO (SVG Optimizer) to optimize the files
+4. Reports results
+
+### Ignoring SVGs
+
+If specific SVG files should be excluded from optimization for valid reasons, add them to the `ignored_files` array in:
+
+- `scripts/__tests__/svg_test.js`
+- `scripts/optimize-svgs.js`
+
+Currently ignored files:
+
+- `src/images/pages/regulation/map.svg`

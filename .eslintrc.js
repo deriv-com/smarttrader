@@ -1,3 +1,5 @@
+require('eslint-plugin-escompat');
+
 module.exports = {
     parser: '@babel/eslint-parser',
     env   : {
