@@ -16,6 +16,7 @@ const displayed_currencies = {
     tUSDT: localize('Tether TRC20'),
     USDC : localize('USD Coin'),
     LTC  : localize('Litecoin'),
+    XRP  : localize('Ripple'),
 };
 
 const mapCurrencyName = currency => displayed_currencies[currency];
@@ -94,6 +95,7 @@ const CryptoConfig = (() => {
         USDT : { display_code: 'USDT',  name: localize('Tether Omni'),      min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
         eUSDT: { display_code: 'eUSDT', name: localize('Tether ERC20'),     min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
         USB  : { display_code: 'USB',   name: localize('Binary Coin'),      min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
+        XRP  : { display_code: 'XRP',   name: localize('Ripple'),           min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
     });
 
     return {
