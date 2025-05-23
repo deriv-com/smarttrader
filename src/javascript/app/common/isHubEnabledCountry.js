@@ -1,7 +1,20 @@
-import { Analytics } from '@deriv-com/analytics';
 import { LocalStore, SessionStore } from '../../_common/storage';
 import ClientBase from '../../_common/base/client_base';
 import { getTopLevelDomain } from '../../_common/utility';
+import RemoteConfig from '../hooks/useRemoteConfig';
+
+let remoteConfigData = null;
+
+const initRemoteConfig = async () => {
+    try {
+        const { data } = await RemoteConfig.getRemoteConfig(true);
+        remoteConfigData = data;
+    } catch (error) {
+        console.error('Failed to initialize remote config:', error);
+    }
+};
+
+initRemoteConfig();
 
 /**
  * Checks if the current domain is .com AND the user has a wallet account AND their country is in the hub enabled countries list
@@ -14,10 +27,10 @@ const isHubEnabledCountry = () => {
         return false;
     }
 
-    const featureValue = Analytics?.getFeatureValue(
-        'hub_enabled_country_list_st',
-        {}
-    );
+    if (!remoteConfigData) {
+        initRemoteConfig();
+        return false;
+    }
     const active_loginid = SessionStore.get('active_loginid');
 
     if (active_loginid) {
@@ -27,8 +40,8 @@ const isHubEnabledCountry = () => {
         if (current_account && current_account.country) {
             const country = current_account.country.toLowerCase();
             
-            if (featureValue && featureValue.hub_enabled_country_list) {
-                return featureValue.hub_enabled_country_list.includes(country);
+            if (remoteConfigData && remoteConfigData.hub_enabled_country_list) {
+                return remoteConfigData.hub_enabled_country_list.includes(country);
             }
         }
     }
