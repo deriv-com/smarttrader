@@ -142,7 +142,7 @@ const BinarySocketBase = (() => {
             const response = SocketCache.get(data, msg_type);
             if (response) {
                 State.set(['response', msg_type], cloneObject(response));
-                if (isReady() && !availability.is_down && !options.skip_cache_update) { // make the request to keep the cache updated
+                if (isReady() && !availability.is_down && !options.skip_cache_update && binary_socket.readyState === 1) {
                     binary_socket.send(JSON.stringify(data));
                 }
                 promise_obj.resolve(response);
@@ -178,7 +178,7 @@ const BinarySocketBase = (() => {
             subscribe: !!data.subscribe,
         };
 
-        if (isReady() && !availability.is_down && config.isOnline()) {
+        if (isReady() && !availability.is_down && config.isOnline() && binary_socket.readyState === 1) {
             is_disconnect_called = false;
             if (!getPropertyValue(data, 'passthrough') && !getPropertyValue(data, 'verify_email')) {
                 data.passthrough = {};
