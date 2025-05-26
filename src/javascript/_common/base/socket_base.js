@@ -142,7 +142,7 @@ const BinarySocketBase = (() => {
             const response = SocketCache.get(data, msg_type);
             if (response) {
                 State.set(['response', msg_type], cloneObject(response));
-                if (isReady() && !availability.is_down && !options.skip_cache_update && binary_socket.readyState === 1) {
+                if (isReady() && !availability.is_down && !options.skip_cache_update && binary_socket.readyState === 1){
                     binary_socket.send(JSON.stringify(data));
                 }
                 promise_obj.resolve(response);
