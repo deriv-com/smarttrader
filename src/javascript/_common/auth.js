@@ -15,6 +15,7 @@ const Language  = require('./language');
 const localize  = require('./localize').localize;
 const Url       = require('./url');
 const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
+const TMB = require('./tmb');
 
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
@@ -93,6 +94,21 @@ export const requestOauth2Logout = onWSLogoutAndRedirect => {
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     const requestSingleLogoutImpl = async () => {
+        // Check if TMB is enabled first
+        if (TMB.isTMBEnabled()) {
+            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+            const isCallbackPage = window.location.pathname.includes('callback');
+            const isEndpointPage = window.location.pathname.includes('endpoint');
+
+            if (isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
+                await TMB.handleTMBLogout();
+                await requestOauth2Logout(onWSLogoutAndRedirect);
+            }
+            return;
+        }
+
+        // Original OIDC logout logic
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -129,6 +145,50 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 
 export const requestSingleSignOn = async () => {
     const _requestSingleSignOn = async () => {
+        // Check if TMB is enabled first
+        if (TMB.isTMBEnabled()) {
+            // TMB authentication flow
+            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+            const isCallbackPage = window.location.pathname.includes('callback');
+            const isEndpointPage = window.location.pathname.includes('endpoint');
+
+            const accountParam = Url.param('account') || SessionStore.get('account');
+            const hasMissingToken = Object.values(clientAccounts).some((account) => {
+                // Check if current account is missing token
+                if (!account?.token && !(account?.is_disabled === 1)) {
+                    return true; // No linked accounts and no token
+                }
+                return false;
+            });
+
+            // Check if account parameter in URL exists in one of the account currencies
+            // or if accountParam is demo, check for accounts starting with VR
+            const isExistingCurrency = accountParam && (
+                Object.values(clientAccounts).some((account) =>
+                    account?.currency?.toUpperCase() === accountParam.toUpperCase() &&
+                    !account?.is_virtual
+                ) ||
+                (accountParam.toLowerCase() === 'demo' &&
+                    Object.keys(clientAccounts).some(account_id => account_id.startsWith('VR')))
+            );
+
+            // TMB should attempt login if:
+            // - we have previously logged-in (isLoggedInCookie)
+            // - we are not in callback/endpoint pages
+            // - accounts are not populated OR have missing tokens OR account param doesn't match existing currency
+            const shouldRequestTMBSignOn =
+                !isCallbackPage &&
+                !isEndpointPage &&
+                (!isClientAccountsPopulated || hasMissingToken || !isExistingCurrency);
+
+            if (shouldRequestTMBSignOn) {
+                await TMB.handleTMBLogin();
+            }
+            return;
+        }
+
+        // Original OIDC authentication flow
         // if we have previously logged in,
         // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
         const isLoggedInCookie = Cookies.get('logged_state') === 'true';

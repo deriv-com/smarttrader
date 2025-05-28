@@ -4,6 +4,7 @@ const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcA
 const Client                    = require('./client');
 const BinarySocket              = require('./socket');
 const AuthClient                = require('../../_common/auth');
+const TMB                       = require('../../_common/tmb');
 const showHidePulser            = require('../common/account_opening').showHidePulser;
 const updateTotal               = require('../pages/user/update_total');
 const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -731,6 +732,34 @@ const Header = (() => {
                                         /^smarttrader\.deriv\.com$/i.test(window.location.hostname);
 
         if (is_staging_or_production) {
+            // Check if TMB is enabled first
+            if (TMB.isTMBEnabled()) {
+                // TMB doesn't need explicit login redirect - sessions are managed automatically
+                // Just trigger a check for active sessions
+                try {
+                    const loginSuccess = await TMB.handleTMBLogin();
+                    if (!loginSuccess) {
+                        // If no active sessions, user needs to login through other means
+                        // For now, we can show a message or redirect to login page
+                        console.warn('No active TMB sessions found');
+                    }
+                } catch (error) {
+                    console.error('TMB login failed:', error);
+                    ErrorModal.init({
+                        message      : localize('Something went wrong while logging in. Please refresh and try again.'),
+                        buttonText   : localize('Refresh'),
+                        onButtonClick: () => {
+                            ErrorModal.remove();
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 0);
+                        },
+                    });
+                }
+                return;
+            }
+
+            // Original OIDC authentication flow
             const currentLanguage = Language.get();
             const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
             const postLoginRedirectUri = window.location.origin;
@@ -761,6 +790,12 @@ const Header = (() => {
     const logoutOnClick = async () => {
         await Chat.clear();
 
+        // Check if TMB is enabled first
+        if (TMB.isTMBEnabled()) {
+            await TMB.handleTMBLogout();
+        }
+
+        // Original OIDC logout flow
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
