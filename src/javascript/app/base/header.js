@@ -737,7 +737,7 @@ const Header = (() => {
                 // TMB doesn't need explicit login redirect - sessions are managed automatically
                 // Just trigger a check for active sessions
                 try {
-                    const loginSuccess = await TMB.handleTMBLogin();
+                    await TMB.handleTMBLogin();
                 } catch (error) {
                     ErrorModal.init({
                         message      : localize('Something went wrong while logging in. Please refresh and try again.'),

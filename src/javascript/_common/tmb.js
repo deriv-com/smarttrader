@@ -168,7 +168,7 @@ const TMB = (() => {
             }
             
             return false;
-        } catch (error) {            
+        } catch (error) {
             // Show error modal
             ErrorModal.init({
                 message      : localize('Authentication service temporarily unavailable. Please refresh and try again.'),
@@ -209,7 +209,7 @@ const TMB = (() => {
                     secure : true,
                 });
             }
-        } catch (error) {            
+        } catch (error) {
             // Force reload even if logout failed
             if (typeof window !== 'undefined') {
                 window.location.reload();
