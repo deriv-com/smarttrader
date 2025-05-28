@@ -738,13 +738,7 @@ const Header = (() => {
                 // Just trigger a check for active sessions
                 try {
                     const loginSuccess = await TMB.handleTMBLogin();
-                    if (!loginSuccess) {
-                        // If no active sessions, user needs to login through other means
-                        // For now, we can show a message or redirect to login page
-                        console.warn('No active TMB sessions found');
-                    }
                 } catch (error) {
-                    console.error('TMB login failed:', error);
                     ErrorModal.init({
                         message      : localize('Something went wrong while logging in. Please refresh and try again.'),
                         buttonText   : localize('Refresh'),

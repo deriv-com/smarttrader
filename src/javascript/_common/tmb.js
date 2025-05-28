@@ -1,9 +1,9 @@
 /**
  * TMB (Token Management Backend) Authentication Module
- * 
+ *
  * This module provides TMB authentication functionality as an alternative to OIDC
  * when the 'is_tmb_enabled' feature flag is set to true in localStorage.
- * 
+ *
  * Based on the useTMB hook pattern but adapted for vanilla JavaScript.
  */
 
@@ -24,7 +24,6 @@ const TMB = (() => {
         try {
             return localStorage.getItem('is_tmb_enabled') === 'true';
         } catch (error) {
-            console.warn('Could not read TMB feature flag:', error);
             return false; // Default to OIDC if localStorage unavailable
         }
     };
@@ -45,7 +44,7 @@ const TMB = (() => {
         'deriv.com',
         'deriv.me',
         'deriv.be',
-        'binary.com'
+        'binary.com',
     ];
 
     /**
@@ -58,14 +57,6 @@ const TMB = (() => {
             return {};
         }
 
-        // Transform to the format expected by processAccountData
-        const accountObj = tmbResponse.tokens.reduce((acc, data, i) => ({
-            ...acc,
-            [`cur${i + 1}`]: data.cur,
-            [`acct${i + 1}`]: data.loginid,
-            [`token${i + 1}`]: data.token,
-        }), {});
-
         // Convert to ClientBase format
         const accounts = {};
         tmbResponse.tokens.forEach((tokenData) => {
@@ -73,11 +64,11 @@ const TMB = (() => {
             accounts[loginid] = {
                 token,
                 currency,
-                email: tmbResponse.email || '',
-                is_virtual: /^VR/.test(loginid) ? 1 : 0,
+                email                    : tmbResponse.email || '',
+                is_virtual               : /^VR/.test(loginid) ? 1 : 0,
                 landing_company_shortcode: getShortcodeFromLoginId(loginid),
-                account_category: tokenData.account_category || 'trading',
-                is_disabled: 0
+                account_category         : tokenData.account_category || 'trading',
+                is_disabled              : 0,
             };
         });
 
@@ -107,7 +98,6 @@ const TMB = (() => {
             const data = await requestSessionActive();
             return data;
         } catch (error) {
-            console.error('Failed to get active sessions from TMB:', error);
             return null;
         }
     };
@@ -142,10 +132,10 @@ const TMB = (() => {
         const currentDomain = getCurrentDomain();
         if (supportedDomains.includes(currentDomain)) {
             Cookies.set('logged_state', 'true', {
-                domain: currentDomain,
+                domain : currentDomain,
                 expires: 30,
-                path: '/',
-                secure: true,
+                path   : '/',
+                secure : true,
             });
         }
 
@@ -165,8 +155,8 @@ const TMB = (() => {
                 await processActiveSessions(activeSessions);
                 
                 // Handle URL redirection if needed
-                if (typeof window !== 'undefined' && 
-                    window.location.pathname === '/' && 
+                if (typeof window !== 'undefined' &&
+                    window.location.pathname === '/' &&
                     window.location.search) {
                     // Clear search params after successful login
                     const url = new URL(window.location.href);
@@ -178,19 +168,17 @@ const TMB = (() => {
             }
             
             return false;
-        } catch (error) {
-            console.error('TMB login failed:', error);
-            
+        } catch (error) {            
             // Show error modal
             ErrorModal.init({
-                message: localize('Authentication service temporarily unavailable. Please refresh and try again.'),
-                buttonText: localize('Refresh'),
+                message      : localize('Authentication service temporarily unavailable. Please refresh and try again.'),
+                buttonText   : localize('Refresh'),
                 onButtonClick: () => {
                     ErrorModal.remove();
                     setTimeout(() => {
                         window.location.reload();
                     }, 100);
-                }
+                },
             });
             
             return false;
@@ -215,15 +203,13 @@ const TMB = (() => {
             const currentDomain = getCurrentDomain();
             if (supportedDomains.includes(currentDomain)) {
                 Cookies.set('logged_state', 'false', {
-                    domain: currentDomain,
+                    domain : currentDomain,
                     expires: 30,
-                    path: '/',
-                    secure: true,
+                    path   : '/',
+                    secure : true,
                 });
             }
-        } catch (error) {
-            console.error('TMB logout failed:', error);
-            
+        } catch (error) {            
             // Force reload even if logout failed
             if (typeof window !== 'undefined') {
                 window.location.reload();
@@ -240,7 +226,6 @@ const TMB = (() => {
                 localStorage.setItem('is_tmb_enabled', 'true');
                 return true;
             } catch (error) {
-                console.error('Failed to enable TMB:', error);
                 return false;
             }
         },
@@ -250,10 +235,9 @@ const TMB = (() => {
                 localStorage.setItem('is_tmb_enabled', 'false');
                 return true;
             } catch (error) {
-                console.error('Failed to disable TMB:', error);
                 return false;
             }
-        }
+        },
     };
 
     // Public API
@@ -268,8 +252,8 @@ const TMB = (() => {
             transformTMBAccounts,
             processActiveSessions,
             getCurrentDomain,
-            getShortcodeFromLoginId
-        }
+            getShortcodeFromLoginId,
+        },
     };
 })();
 

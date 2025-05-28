@@ -14,8 +14,8 @@ const Analytics = require('./analytics');
 const Language  = require('./language');
 const localize  = require('./localize').localize;
 const Url       = require('./url');
-const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 const TMB = require('./tmb');
+const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 
 const SocketURL = {
     [URLConstants.derivP2pProduction]: 'blue.derivws.com',
@@ -144,7 +144,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 };
 
 export const requestSingleSignOn = async () => {
-    const _requestSingleSignOn = async () => {
+    const requestSingleSignOnImpl = async () => {
         // Check if TMB is enabled first
         if (TMB.isTMBEnabled()) {
             // TMB authentication flow
@@ -271,7 +271,7 @@ export const requestSingleSignOn = async () => {
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
                 if (isLoaded) {
-                    _requestSingleSignOn();
+                    requestSingleSignOnImpl();
                     clearInterval(interval);
                 } else {
                     retryInterval += 1;
@@ -279,6 +279,6 @@ export const requestSingleSignOn = async () => {
             }
         }, 500);
     } else {
-        _requestSingleSignOn();
+        requestSingleSignOnImpl();
     }
 };
