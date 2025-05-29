@@ -176,10 +176,9 @@ const TMB = (() => {
                 }
                 
                 return true;
-            } else {
-                await TMB.handleTMBLogout();
             }
             
+            await TMB.handleTMBLogout();
             return false;
         } catch (error) {
             // Show error modal
@@ -236,7 +235,6 @@ const TMB = (() => {
         getActiveSessions,
         handleTMBLogin,
         handleTMBLogout,
-        FeatureFlags,
         // Expose internal functions for testing
         _internal: {
             transformTMBAccounts,
