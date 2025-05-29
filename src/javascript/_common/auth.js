@@ -102,8 +102,8 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
             const isEndpointPage = window.location.pathname.includes('endpoint');
 
             if (isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
-                await TMB.handleTMBLogout();
                 await onWSLogoutAndRedirect();
+                await TMB.handleTMBLogout();
             }
             return;
         }

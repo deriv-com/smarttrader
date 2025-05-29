@@ -122,13 +122,6 @@ const TMB = (() => {
      * @param {Object} activeSessions - Active session data from TMB
      */
     const processActiveSessions = async (activeSessions) => {
-        if (!activeSessions?.active || !activeSessions?.tokens) {
-            // reset login store when session is inactive
-            await TMB.handleTMBLogout();
-
-            return;
-        }
-
         // Transform account data to SmartTrader format
         const accounts = transformTMBAccounts(activeSessions);
         
@@ -183,6 +176,8 @@ const TMB = (() => {
                 }
                 
                 return true;
+            } else {
+                await TMB.handleTMBLogout();
             }
             
             return false;
@@ -233,29 +228,6 @@ const TMB = (() => {
                 window.location.reload();
             }
         }
-    };
-
-    /**
-     * Feature flag management utilities
-     */
-    const FeatureFlags = {
-        enableTMB: () => {
-            try {
-                localStorage.setItem('is_tmb_enabled', 'true');
-                return true;
-            } catch (error) {
-                return false;
-            }
-        },
-        
-        disableTMB: () => {
-            try {
-                localStorage.setItem('is_tmb_enabled', 'false');
-                return true;
-            } catch (error) {
-                return false;
-            }
-        },
     };
 
     // Public API
