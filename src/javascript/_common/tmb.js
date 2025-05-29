@@ -39,7 +39,7 @@ const TMB = (() => {
             // Check localStorage first, then fall back to remote config value
             return localStorage.getItem('is_tmb_enabled') ?? result.smarttrader;
         } catch (e) {
-            return false;
+            return localStorage.getItem('is_tmb_enabled') ?? true;
         }
     };
 
