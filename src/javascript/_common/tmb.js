@@ -18,13 +18,28 @@ const ErrorModal = require('../../templates/_common/components/error-modal.jsx')
 const TMB = (() => {
     /**
      * Check if TMB is enabled via feature flag
-     * @returns {boolean} True if TMB is enabled, false otherwise
+     * @returns {Promise<boolean>} True if TMB is enabled, false otherwise
      */
-    const isTMBEnabled = () => {
+    const isTMBEnabled = async () => {
         try {
-            return localStorage.getItem('is_tmb_enabled') === 'true';
-        } catch (error) {
-            return false; // Default to OIDC if localStorage unavailable
+            // Determine environment based on hostname
+            const hostname = window.location.hostname;
+            const isProduction = /^(smarttrader\.deriv\.com|smarttrader\.deriv\.be)$/i.test(hostname);
+            
+            // Select appropriate Firebase URL
+            const firebaseHost = isProduction
+                ? 'https://app-config-prod.firebaseio.com'
+                : 'https://app-config-staging.firebaseio.com';
+            
+            const url = `${firebaseHost}/remote_config/oauth/is_tmb_enabled.json`;
+            
+            const response = await fetch(url);
+            const result = await response.json();
+            
+            // Check localStorage first, then fall back to remote config value
+            return localStorage.getItem('is_tmb_enabled') ?? result.app;
+        } catch (e) {
+            return false;
         }
     };
 
@@ -108,6 +123,9 @@ const TMB = (() => {
      */
     const processActiveSessions = async (activeSessions) => {
         if (!activeSessions?.active || !activeSessions?.tokens) {
+            // reset login store when session is inactive
+            await TMB.handleTMBLogout();
+
             return;
         }
 

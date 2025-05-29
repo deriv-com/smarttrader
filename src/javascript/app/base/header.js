@@ -733,7 +733,7 @@ const Header = (() => {
 
         if (is_staging_or_production) {
             // Check if TMB is enabled first
-            if (TMB.isTMBEnabled()) {
+            if (await TMB.isTMBEnabled()) {
                 // TMB doesn't need explicit login redirect - sessions are managed automatically
                 // Just trigger a check for active sessions
                 try {
@@ -785,8 +785,10 @@ const Header = (() => {
         await Chat.clear();
 
         // Check if TMB is enabled first
-        if (TMB.isTMBEnabled()) {
+        if (await TMB.isTMBEnabled()) {
             await TMB.handleTMBLogout();
+            Client.sendLogoutRequest();
+            return;
         }
 
         // Original OIDC logout flow

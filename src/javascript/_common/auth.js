@@ -95,7 +95,7 @@ export const requestOauth2Logout = onWSLogoutAndRedirect => {
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     const requestSingleLogoutImpl = async () => {
         // Check if TMB is enabled first
-        if (TMB.isTMBEnabled()) {
+        if (await TMB.isTMBEnabled()) {
             const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
             const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
             const isCallbackPage = window.location.pathname.includes('callback');
@@ -103,7 +103,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 
             if (isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
                 await TMB.handleTMBLogout();
-                await requestOauth2Logout(onWSLogoutAndRedirect);
+                await onWSLogoutAndRedirect();
             }
             return;
         }
@@ -146,43 +146,13 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 export const requestSingleSignOn = async () => {
     const requestSingleSignOnImpl = async () => {
         // Check if TMB is enabled first
-        if (TMB.isTMBEnabled()) {
-            // TMB authentication flow
-            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+        if (await TMB.isTMBEnabled()) {
+            // TMB authentication flow - Always sync for data integrity
             const isCallbackPage = window.location.pathname.includes('callback');
             const isEndpointPage = window.location.pathname.includes('endpoint');
 
-            const accountParam = Url.param('account') || SessionStore.get('account');
-            const hasMissingToken = Object.values(clientAccounts).some((account) => {
-                // Check if current account is missing token
-                if (!account?.token && !(account?.is_disabled === 1)) {
-                    return true; // No linked accounts and no token
-                }
-                return false;
-            });
-
-            // Check if account parameter in URL exists in one of the account currencies
-            // or if accountParam is demo, check for accounts starting with VR
-            const isExistingCurrency = accountParam && (
-                Object.values(clientAccounts).some((account) =>
-                    account?.currency?.toUpperCase() === accountParam.toUpperCase() &&
-                    !account?.is_virtual
-                ) ||
-                (accountParam.toLowerCase() === 'demo' &&
-                    Object.keys(clientAccounts).some(account_id => account_id.startsWith('VR')))
-            );
-
-            // TMB should attempt login if:
-            // - we have previously logged-in (isLoggedInCookie)
-            // - we are not in callback/endpoint pages
-            // - accounts are not populated OR have missing tokens OR account param doesn't match existing currency
-            const shouldRequestTMBSignOn =
-                !isCallbackPage &&
-                !isEndpointPage &&
-                (!isClientAccountsPopulated || hasMissingToken || !isExistingCurrency);
-
-            if (shouldRequestTMBSignOn) {
+            // Skip TMB sync only on callback/endpoint pages
+            if (!isCallbackPage && !isEndpointPage) {
                 await TMB.handleTMBLogin();
             }
             return;
