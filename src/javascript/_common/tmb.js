@@ -22,6 +22,11 @@ const TMB = (() => {
      */
     const isTMBEnabled = async () => {
         try {
+            const localStorageValue = localStorage.getItem('is_tmb_enabled');
+            if (localStorageValue !== null) {
+                return localStorageValue === 'true';
+            }
+            
             // Determine environment based on hostname
             const hostname = window.location.hostname;
             const isProduction = /^(smarttrader\.deriv\.com|smarttrader\.deriv\.be)$/i.test(hostname);
@@ -36,10 +41,13 @@ const TMB = (() => {
             const response = await fetch(url);
             const result = await response.json();
             
-            // Check localStorage first, then fall back to remote config value
-            return localStorage.getItem('is_tmb_enabled') ?? result.smarttrader;
+            return result.smarttrader;
         } catch (e) {
-            return localStorage.getItem('is_tmb_enabled') ?? true;
+            const localStorageValue = localStorage.getItem('is_tmb_enabled');
+            if (localStorageValue !== null) {
+                return localStorageValue === 'true';
+            }
+            return true;
         }
     };
 
