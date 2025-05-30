@@ -114,7 +114,7 @@ function getAppId() {
 }
 
 function wsSend(ws, request) {
-    if (ws && request && typeof request === 'object') {
+    if (ws && request && typeof request === 'object' && ws.readyState === 1) {
         ws.send(JSON.stringify(request));
     }
 }
