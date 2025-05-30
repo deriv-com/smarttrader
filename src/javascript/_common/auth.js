@@ -14,6 +14,7 @@ const Analytics = require('./analytics');
 const Language  = require('./language');
 const localize  = require('./localize').localize;
 const Url       = require('./url');
+const TMB = require('./tmb');
 const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 
 const SocketURL = {
@@ -93,6 +94,21 @@ export const requestOauth2Logout = onWSLogoutAndRedirect => {
 
 export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     const requestSingleLogoutImpl = async () => {
+        // Check if TMB is enabled first
+        if (await TMB.isTMBEnabled()) {
+            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+            const isCallbackPage = window.location.pathname.includes('callback');
+            const isEndpointPage = window.location.pathname.includes('endpoint');
+
+            if (isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
+                await onWSLogoutAndRedirect();
+                await TMB.handleTMBLogout();
+            }
+            return;
+        }
+
+        // Original OIDC logout logic
         const isLoggedOutCookie = Cookies.get('logged_state') === 'false';
         const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
@@ -128,7 +144,21 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
 };
 
 export const requestSingleSignOn = async () => {
-    const _requestSingleSignOn = async () => {
+    const requestSingleSignOnImpl = async () => {
+        // Check if TMB is enabled first
+        if (await TMB.isTMBEnabled()) {
+            // TMB authentication flow - Always sync for data integrity
+            const isCallbackPage = window.location.pathname.includes('callback');
+            const isEndpointPage = window.location.pathname.includes('endpoint');
+
+            // Skip TMB sync only on callback/endpoint pages
+            if (!isCallbackPage && !isEndpointPage) {
+                await TMB.handleTMBLogin();
+            }
+            return;
+        }
+
+        // Original OIDC authentication flow
         // if we have previously logged in,
         // this cookie will be set by the Callback page (which is exported from @deriv-com/auth-client library) to true when we have successfully logged in from other apps
         const isLoggedInCookie = Cookies.get('logged_state') === 'true';
@@ -211,7 +241,7 @@ export const requestSingleSignOn = async () => {
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
                 if (isLoaded) {
-                    _requestSingleSignOn();
+                    requestSingleSignOnImpl();
                     clearInterval(interval);
                 } else {
                     retryInterval += 1;
@@ -219,6 +249,6 @@ export const requestSingleSignOn = async () => {
             }
         }, 500);
     } else {
-        _requestSingleSignOn();
+        requestSingleSignOnImpl();
     }
 };
