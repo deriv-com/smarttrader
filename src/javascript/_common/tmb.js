@@ -13,6 +13,12 @@ const Client = require('./base/client_base');
 const localize = require('./localize').localize;
 const LocalStore = require('./storage').LocalStore;
 const SessionStore = require('./storage').SessionStore;
+const isStorageSupported = require('./storage').isStorageSupported;
+const getLanguage = require('./language').get;
+const isMobile = require('./os_detect').isMobile;
+const urlForCurrentDomain = require('./url').urlForCurrentDomain;
+const getTopLevelDomain = require('./utility').getTopLevelDomain;
+const getAppId = require('../config').getAppId;
 const ErrorModal = require('../../templates/_common/components/error-modal.jsx').default;
 
 const TMB = (() => {
@@ -163,7 +169,68 @@ const TMB = (() => {
     };
 
     /**
-     * Handle TMB login flow
+     * Redirect to OAuth login page
+     * This is used when TMB is enabled but user has no active session
+     */
+    const redirectToTMBLogin = () => {
+        // Save current URL to return after login
+        if (isStorageSupported(sessionStorage)) {
+            sessionStorage.setItem('redirect_url', window.location.href);
+        }
+        
+        // Build OAuth URL with parameters (same pattern as Login module)
+        const language = getLanguage();
+        const signup_device = LocalStore.get('signup_device') || (isMobile() ? 'mobile' : 'desktop');
+        const date_first_contact = LocalStore.get('date_first_contact');
+        const marketing_queries = `&signup_device=${signup_device}${date_first_contact ? `&date_first_contact=${date_first_contact}` : ''}`;
+        
+        const server_url = localStorage.getItem('config.server_url');
+        const loginUrl = ((server_url && /qa/.test(server_url)) ?
+            `https://${server_url}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}` :
+            urlForCurrentDomain(`https://oauth.deriv.${getTopLevelDomain()}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}`)
+        );
+        
+        window.location.href = loginUrl;
+    };
+
+    /**
+     * Sync TMB session data without redirecting
+     * This is used for the always-sync feature on page load
+     * @returns {Promise<boolean>} True if session was synced, false otherwise
+     */
+    const syncTMBSession = async () => {
+        try {
+            const activeSessions = await getActiveSessions();
+            
+            if (activeSessions?.active) {
+                await processActiveSessions(activeSessions);
+                
+                // Handle URL redirection if needed
+                if (typeof window !== 'undefined' &&
+                    window.location.pathname === '/' &&
+                    window.location.search) {
+                    // Clear search params after successful login
+                    const url = new URL(window.location.href);
+                    url.search = '';
+                    window.history.replaceState({}, '', url.toString());
+                }
+                
+                return true;
+            }
+            
+            // No active session - just return false without redirecting
+            // This allows the page to load normally for logged out users
+            return false;
+        } catch (error) {
+            // Don't show error modal for sync operations
+            // Just return false to indicate sync failed
+            return false;
+        }
+    };
+
+    /**
+     * Handle TMB login flow with redirect
+     * This is used when user explicitly clicks the login button
      * @returns {Promise<boolean>} True if login was successful, false otherwise
      */
     const handleTMBLogin = async () => {
@@ -186,7 +253,7 @@ const TMB = (() => {
                 return true;
             }
             
-            await TMB.handleTMBLogout();
+            redirectToTMBLogin();
             return false;
         } catch (error) {
             // Show error modal
@@ -241,6 +308,7 @@ const TMB = (() => {
     return {
         isTMBEnabled,
         getActiveSessions,
+        syncTMBSession,
         handleTMBLogin,
         handleTMBLogout,
         // Expose internal functions for testing
