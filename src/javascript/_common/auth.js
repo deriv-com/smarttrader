@@ -153,7 +153,7 @@ export const requestSingleSignOn = async () => {
 
             // Skip TMB sync only on callback/endpoint pages
             if (!isCallbackPage && !isEndpointPage) {
-                await TMB.handleTMBLogin();
+                await TMB.syncTMBSession();
             }
             return;
         }
