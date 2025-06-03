@@ -201,7 +201,7 @@ const TMB = (() => {
     const syncTMBSession = async () => {
         try {
             const activeSessions = await getActiveSessions();
-            
+
             if (activeSessions?.active) {
                 await processActiveSessions(activeSessions);
                 
@@ -217,9 +217,8 @@ const TMB = (() => {
                 
                 return true;
             }
-            
-            // No active session - just return false without redirecting
-            // This allows the page to load normally for logged out users
+
+            handleTMBLogout();
             return false;
         } catch (error) {
             // Don't show error modal for sync operations
