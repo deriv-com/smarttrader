@@ -85,17 +85,27 @@ const CallbackContainer = () => {
             // redirect back
             let set_default = true;
             if (redirect_url) {
-                const do_not_redirect = [
-                    'reset_passwordws',
-                    'lost_passwordws',
-                    'change_passwordws',
-                    'home',
-                    '404',
-                ];
-                const reg = new RegExp(do_not_redirect.join('|'), 'i');
-                if (!reg.test(redirect_url) && urlFor('') !== redirect_url) {
-                    set_default = false;
-                }
+                const allowed_domains = ['example.com', 'deriv.com']; // Add trusted domains here
+                const url_object = new URL(redirect_url, window.location.origin);
+                const is_trusted_domain = allowed_domains.some(domain => url_object.hostname.endsWith(domain));
+
+                if (!is_trusted_domain) {
+                    redirect_url = null; // Invalidate the redirect URL if not trusted
+                } else {
+                    const do_not_redirect = [
+                        'reset_passwordws',
+                        'lost_passwordws',
+                        'change_passwordws',
+                        'home',
+                       '404',
+                   ];
+                   const reg = new RegExp(do_not_redirect.join('|'), 'i');
+                   if (reg.test(redirect_url) || urlFor('') === redirect_url) {
+                       redirect_url = null; // Invalidate if it matches disallowed paths
+                   } else {
+                       set_default = false;
+                   }
+               }
             }
             if (set_default) {
                 const lang_cookie = urlLang(redirect_url) || Cookies.get('language');
