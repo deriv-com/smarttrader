@@ -96,15 +96,6 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     const requestSingleLogoutImpl = async () => {
         // Check if TMB is enabled first
         if (await TMB.isTMBEnabled()) {
-            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-            const isCallbackPage = window.location.pathname.includes('callback');
-            const isEndpointPage = window.location.pathname.includes('endpoint');
-
-            if (isClientAccountsPopulated && !isCallbackPage && !isEndpointPage) {
-                await onWSLogoutAndRedirect();
-                await TMB.handleTMBLogout();
-            }
             return;
         }
 
