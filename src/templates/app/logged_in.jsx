@@ -16,21 +16,14 @@ const LoggedIn = () => (
                 // #header-binary #symbol-logo {vertical-align: middle; height: 55px;}
                 // #header-binary #type-logo {vertical-align: middle; height: 37px; margin-left: 6px;}
                 // #login_loading {text-align: center; padding-top: 90px;}
-                #logged_in_loading {
-                    position: absolute;
-                    bottom: 80px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin: 0;
-                }
-                #logged_in_loading div.barspinner__rect {
-                    background-color: #ff444f;
+                #logged_in_loading .barspinner__rect {
+                    background-color: #9ab4b6;
                 }
                 #content-holder {
-                    background-image: url(../images/common/globe-with_logo.svg);
                     height: 100vh;
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             `}
             </style>
@@ -45,13 +38,7 @@ const LoggedIn = () => (
                 </a>
             </div> */}
             <div id='content-holder'>
-                <div id='content'>
-                    <div id='login_loading'>
-                        <a href={it.url_for('/')} id='loading_link'>
-                            <Loading id='logged_in_loading' />
-                        </a>
-                    </div>
-                </div>
+                <Loading id='logged_in_loading' />
             </div>
         </body>
     </html>
