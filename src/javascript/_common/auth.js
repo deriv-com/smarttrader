@@ -144,9 +144,9 @@ export const requestSingleSignOn = async () => {
 
             // Skip TMB sync only on callback/endpoint pages
             if (!isCallbackPage && !isEndpointPage) {
-                await TMB.syncTMBSession();
+                return TMB.syncTMBSession();
             }
-            return;
+            return Promise.resolve();
         }
 
         // Original OIDC authentication flow
@@ -157,7 +157,6 @@ export const requestSingleSignOn = async () => {
         const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
         const isCallbackPage = window.location.pathname.includes('callback');
         const isEndpointPage = window.location.pathname.includes('endpoint');
-
         const accountParam = Url.param('account') || SessionStore.get('account');
         const hasMissingToken = Object.values(clientAccounts).some((account) => {
             // Check if current account is missing token
@@ -219,6 +218,7 @@ export const requestSingleSignOn = async () => {
                 });
             }
         }
+        return Promise.resolve();
     };
 
     const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
