@@ -49,32 +49,42 @@ const Header = (() => {
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
 
-    const onLoad = () => {
-        populateAccountsList();
-        populateWalletAccounts();
+    const onLoad = async () => {
         bindSvg();
-        switchHeaders();
         updateLoginButtonsDisplay();
-
-        BinarySocket.wait('authorize','landing_company').then(() => {
-            setHeaderUrls();
-            bindPlatform();
-            bindClick();
-            if (isHubEnabledCountry()) {
-                document.getElementById('header__notification').remove();
-            }
-        });
+    
+        await BinarySocket.wait('authorize', 'landing_company');
+    
+        const regular_header = getElementById('regular__header');
+        const wallet_header = getElementById('wallet__header');
+    
+        if (Client.hasWalletsAccount()) {
+            regular_header.remove();
+            populateWalletAccounts();
+        } else {
+            wallet_header.remove();
+            populateAccountsList();
+        }
+    
+        setHeaderUrls();
+        bindPlatform();
+        bindClick();
+    
+        if (isHubEnabledCountry()) {
+            document.getElementById('header__notification').remove();
+        }
+    
         if (Client.isLoggedIn()) {
             const wallet_divider = getElementById('wallet-divider');
             if (wallet_divider) wallet_divider.style.display = 'none';
             displayAccountStatus();
         }
+    
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
         
         applyFeatureFlags();
-     
     };
 
     const applyFeatureFlags = () => {
@@ -97,17 +107,6 @@ const Header = (() => {
                 // eslint-disable-next-line no-console
                 console.error('Error fetching feature flags:', error);
             });
-    };
-
-    const switchHeaders = () => {
-        const regular_header = getElementById('regular__header');
-        const wallet_header = getElementById('wallet__header');
-        if (Client.hasWalletsAccount()) {
-            regular_header.remove();
-         
-        } else {
-            wallet_header.remove();
-        }
     };
 
     const setHeaderUrls = () => {
