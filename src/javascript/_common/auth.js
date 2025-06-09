@@ -209,7 +209,10 @@ export const requestSingleSignOn = async () => {
                         account: accountParam,
                     },
                 });
+                dataManager.setContract({ sso_finished: true });
             } catch (error) {
+                // Set sso_finished even on error to prevent infinite loader
+                dataManager.setContract({ sso_finished: true });
                 ErrorModal.init({
                     message      : localize('Something went wrong while logging in. Please refresh and try again.'),
                     buttonText   : localize('Refresh'),
@@ -221,6 +224,9 @@ export const requestSingleSignOn = async () => {
                     },
                 });
             }
+        } else {
+            // OIDC flow: User is already authenticated or doesn't need SSO
+            dataManager.setContract({ sso_finished: true });
         }
         return Promise.resolve();
     };
