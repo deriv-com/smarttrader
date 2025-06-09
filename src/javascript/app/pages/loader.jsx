@@ -1,7 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import Cookies from 'js-cookie';
 import { Skeleton } from '@deriv-com/quill-ui';
 import Portal from './portal';
 import { getElementById } from '../../_common/common_functions';
