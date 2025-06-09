@@ -1,4 +1,5 @@
 import { SessionStore } from './storage.js';
+import dataManager from '../app/common/data_manager';
 
 const {
     AppIDConstants,
@@ -144,8 +145,11 @@ export const requestSingleSignOn = async () => {
 
             // Skip TMB sync only on callback/endpoint pages
             if (!isCallbackPage && !isEndpointPage) {
-                return TMB.syncTMBSession();
+                const result = await TMB.syncTMBSession();
+                dataManager.setContract({ sso_finished: true });
+                return result;
             }
+            dataManager.setContract({ sso_finished: true });
             return Promise.resolve();
         }
 

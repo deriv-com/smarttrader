@@ -39,23 +39,11 @@ const pageTypes = [
 const Loader = () => {
     const has_contract_change  = useContractChange();
 
-    const loggedState = Cookies.get('logged_state');
-    const clientAccounts = JSON.parse(
-        localStorage.getItem('client.accounts') || '{}'
-    );
-    
     const url_params = new URLSearchParams(window.location.search);
     const account = url_params.get('account');
     if (account) {
         sessionStorage.setItem('account', account);
     }
-    
-    const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
-    const willEventuallySSO =
-            loggedState === 'true' && !isClientAccountsPopulated;
-    const isSilentLoginExcluded =
-            window.location.pathname.includes('callback') ||
-            window.location.pathname.includes('endpoint');
 
     const [loading, setLoading] = useState(true);
     
@@ -65,12 +53,13 @@ const Loader = () => {
  
     useEffect(() => {
         const hide_page_loader = dataManager.getContract('hide_page_loader');
+        const sso_finished = dataManager.getContract('sso_finished');
 
-        if (hide_page_loader) {
+        if (hide_page_loader || sso_finished) {
             setLoading(false);
         }
            
-    }, [has_contract_change]);
+    }, [has_contract_change, dataManager.getContract('sso_finished')]);
 
     useEffect(() => {
         const handleLoad = () => {
@@ -85,7 +74,7 @@ const Loader = () => {
         };
     }, []);
 
-    if (loading || (willEventuallySSO && !isSilentLoginExcluded)) {
+    if (loading) {
         return (
             <Portal>
                 <div className='quill-generic-popup'>
