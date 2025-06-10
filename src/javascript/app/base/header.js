@@ -369,6 +369,7 @@ const Header = (() => {
         
         if (ssoFinished) {
             updateLoginButtonsDisplay();
+            populateHeaderAfterSSO();
             return;
         }
         
@@ -378,6 +379,7 @@ const Header = (() => {
             
             if (isFinished) {
                 updateLoginButtonsDisplay();
+                populateHeaderAfterSSO();
             }
         };
         
@@ -393,6 +395,7 @@ const Header = (() => {
         setTimeout(() => {
             clearInterval(pollInterval);
             updateLoginButtonsDisplay();
+            populateHeaderAfterSSO();
         }, 5000);
     };
 
@@ -456,6 +459,24 @@ const Header = (() => {
             if (skeleton2) {
                 skeleton2.remove();
             }
+        }
+    };
+
+    const populateHeaderAfterSSO = () => {
+        try {
+            const regular_header = getElementById('regular__header');
+            const wallet_header = getElementById('wallet__header');
+
+            if (Client.hasWalletsAccount()) {
+                if (regular_header) regular_header.remove();
+                populateWalletAccounts();
+            } else {
+                if (wallet_header) wallet_header.remove();
+                populateAccountsList();
+            }
+        } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error(error);
         }
     };
 
@@ -1660,6 +1681,7 @@ const Header = (() => {
         loginOnClick,
         updateLoginButtonsDisplay,
         listenToSSOCompletion,
+        populateHeaderAfterSSO,
     };
 })();
 
