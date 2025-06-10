@@ -416,7 +416,6 @@ const Header = (() => {
         // Get login and signup buttons
         const btn_login = getElementById('btn__login');
         const btn_signup = getElementById('btn__signup');
-        const header_btn_container = btn_login ? btn_login.parentElement : null;
         
         const should_show_skeleton = will_eventually_sso &&
                                    !is_silent_login_excluded &&
@@ -436,11 +435,11 @@ const Header = (() => {
                 // Remove skeleton squares if they exist
                 const skeleton1 = document.querySelector('.skeleton-btn-login');
                 const skeleton2 = document.querySelector('.skeleton-btn-signup');
-                if (skeleton1 && header_btn_container) {
-                    header_btn_container.removeChild(skeleton1);
+                if (skeleton1) {
+                    skeleton1.remove();
                 }
-                if (skeleton2 && header_btn_container) {
-                    header_btn_container.removeChild(skeleton2);
+                if (skeleton2) {
+                    skeleton2.remove();
                 }
             }, 3000);
         } else {
@@ -451,11 +450,11 @@ const Header = (() => {
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
-            if (skeleton1 && header_btn_container) {
-                header_btn_container.removeChild(skeleton1);
+            if (skeleton1) {
+                skeleton1.remove();
             }
-            if (skeleton2 && header_btn_container) {
-                header_btn_container.removeChild(skeleton2);
+            if (skeleton2) {
+                skeleton2.remove();
             }
         }
     };
