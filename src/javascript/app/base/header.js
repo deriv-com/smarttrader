@@ -18,6 +18,7 @@ const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepP
 const State                    = require('../../_common/storage').State;
 const Url                      = require('../../_common/url');
 const applyToAllElements       = require('../../_common/utility').applyToAllElements;
+// eslint-disable-next-line global-require
 const dataManager              = require('../common/data_manager').default || require('../common/data_manager');
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
@@ -421,18 +422,17 @@ const Header = (() => {
                                    !is_silent_login_excluded &&
                                    sso_finished === false &&
                                    !is_fresh_page;
-        
-        
+
         if (should_show_skeleton) {
             // Hide regular buttons, keep skeletons
             if (btn_login) btn_login.style.display = 'none';
             if (btn_signup) btn_signup.style.display = 'none';
             
             // SAFETY TIMEOUT: Force show real buttons after 3 seconds to prevent infinite loading
-            setTimeout(() => {                
+            setTimeout(() => {
                 if (btn_login) btn_login.style.display = 'flex';
                 if (btn_signup) btn_signup.style.display = 'flex';
-                
+
                 // Remove skeleton squares if they exist
                 const skeleton1 = document.querySelector('.skeleton-btn-login');
                 const skeleton2 = document.querySelector('.skeleton-btn-signup');
@@ -441,13 +441,13 @@ const Header = (() => {
                 }
                 if (skeleton2 && header_btn_container) {
                     header_btn_container.removeChild(skeleton2);
-                }                
+                }
             }, 3000);
         } else {
             // Show regular buttons and remove skeletons
             if (btn_login) btn_login.style.display = 'flex';
             if (btn_signup) btn_signup.style.display = 'flex';
-                
+
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
@@ -456,7 +456,7 @@ const Header = (() => {
             }
             if (skeleton2 && header_btn_container) {
                 header_btn_container.removeChild(skeleton2);
-            }            
+            }
         }
     };
 
