@@ -18,6 +18,8 @@ const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepP
 const State                    = require('../../_common/storage').State;
 const Url                      = require('../../_common/url');
 const applyToAllElements       = require('../../_common/utility').applyToAllElements;
+// eslint-disable-next-line global-require
+const dataManager              = require('../common/data_manager').default || require('../common/data_manager');
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
@@ -52,7 +54,8 @@ const Header = (() => {
     const onLoad = async () => {
         bindSvg();
         updateLoginButtonsDisplay();
-    
+        listenToSSOCompletion();
+
         await BinarySocket.wait('authorize', 'landing_company');
     
         const regular_header = getElementById('regular__header');
@@ -361,6 +364,38 @@ const Header = (() => {
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
+    const listenToSSOCompletion = () => {
+        const ssoFinished = dataManager.getContract('sso_finished');
+        
+        if (ssoFinished) {
+            updateLoginButtonsDisplay();
+            return;
+        }
+        
+        // Listen for changes to sso_finished
+        const checkSSOStatus = () => {
+            const isFinished = dataManager.getContract('sso_finished');
+            
+            if (isFinished) {
+                updateLoginButtonsDisplay();
+            }
+        };
+        
+        // Set up polling (similar to loader pattern)
+        const pollInterval = setInterval(() => {
+            checkSSOStatus();
+            if (dataManager.getContract('sso_finished')) {
+                clearInterval(pollInterval);
+            }
+        }, 100);
+        
+        // Emergency timeout fallback (following established pattern)
+        setTimeout(() => {
+            clearInterval(pollInterval);
+            updateLoginButtonsDisplay();
+        }, 5000);
+    };
+
     const updateLoginButtonsDisplay = () => {
         // Check if we should show skeleton loading state
         const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
@@ -369,26 +404,59 @@ const Header = (() => {
         const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
         const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
         
+        let sso_finished;
+        try {
+            sso_finished = dataManager.getContract('sso_finished');
+        } catch (error) {
+            sso_finished = null;
+        }
+        
+        const is_fresh_page = !logged_state || logged_state !== 'true';
+        
         // Get login and signup buttons
         const btn_login = getElementById('btn__login');
         const btn_signup = getElementById('btn__signup');
         const header_btn_container = btn_login ? btn_login.parentElement : null;
         
-        if (will_eventually_sso && !is_silent_login_excluded) {
-            // Hide regular buttons
+        const should_show_skeleton = will_eventually_sso &&
+                                   !is_silent_login_excluded &&
+                                   sso_finished === false &&
+                                   !is_fresh_page;
+
+        if (should_show_skeleton) {
+            // Hide regular buttons, keep skeletons
             if (btn_login) btn_login.style.display = 'none';
             if (btn_signup) btn_signup.style.display = 'none';
             
+            // SAFETY TIMEOUT: Force show real buttons after 3 seconds to prevent infinite loading
+            setTimeout(() => {
+                if (btn_login) btn_login.style.display = 'flex';
+                if (btn_signup) btn_signup.style.display = 'flex';
+
+                // Remove skeleton squares if they exist
+                const skeleton1 = document.querySelector('.skeleton-btn-login');
+                const skeleton2 = document.querySelector('.skeleton-btn-signup');
+                if (skeleton1 && header_btn_container) {
+                    header_btn_container.removeChild(skeleton1);
+                }
+                if (skeleton2 && header_btn_container) {
+                    header_btn_container.removeChild(skeleton2);
+                }
+            }, 3000);
         } else {
-            // Show regular buttons
+            // Show regular buttons and remove skeletons
             if (btn_login) btn_login.style.display = 'flex';
             if (btn_signup) btn_signup.style.display = 'flex';
-                
+
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
-            if (skeleton1) header_btn_container.removeChild(skeleton1);
-            if (skeleton2) header_btn_container.removeChild(skeleton2);
+            if (skeleton1 && header_btn_container) {
+                header_btn_container.removeChild(skeleton1);
+            }
+            if (skeleton2 && header_btn_container) {
+                header_btn_container.removeChild(skeleton2);
+            }
         }
     };
 
@@ -1591,6 +1659,8 @@ const Header = (() => {
         hideNotification,
         displayAccountStatus,
         loginOnClick,
+        updateLoginButtonsDisplay,
+        listenToSSOCompletion,
     };
 })();
 
