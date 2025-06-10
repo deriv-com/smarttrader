@@ -364,7 +364,7 @@ const Header = (() => {
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
-    const listenToSSOCompletion = () => {        
+    const listenToSSOCompletion = () => {
         const ssoFinished = dataManager.getContract('sso_finished');
         
         if (ssoFinished) {
