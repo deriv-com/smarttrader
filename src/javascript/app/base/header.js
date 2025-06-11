@@ -5,6 +5,7 @@ const Client                    = require('./client');
 const BinarySocket              = require('./socket');
 const AuthClient                = require('../../_common/auth');
 const TMB                       = require('../../_common/tmb');
+const dataManager               = require('../common/data_manager').default;
 const showHidePulser            = require('../common/account_opening').showHidePulser;
 const updateTotal               = require('../pages/user/update_total');
 const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -18,8 +19,6 @@ const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepP
 const State                    = require('../../_common/storage').State;
 const Url                      = require('../../_common/url');
 const applyToAllElements       = require('../../_common/utility').applyToAllElements;
-// eslint-disable-next-line global-require
-const dataManager              = require('../common/data_manager').default || require('../common/data_manager');
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
@@ -51,11 +50,23 @@ const Header = (() => {
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
 
+    const waitForTmb = () => new Promise(resolve => {
+        const check = () => {
+            if (dataManager.getContract('sso_finished')) {
+                resolve();
+            } else {
+                setTimeout(check, 50);
+            }
+        };
+        check();
+    });
+
     const onLoad = async () => {
         bindSvg();
         updateLoginButtonsDisplay();
-        listenToSSOCompletion();
-
+        
+        await waitForTmb();
+    
         await BinarySocket.wait('authorize', 'landing_company');
     
         const regular_header = getElementById('regular__header');
@@ -364,42 +375,8 @@ const Header = (() => {
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
-    const listenToSSOCompletion = () => {
-        const ssoFinished = dataManager.getContract('sso_finished');
-        
-        if (ssoFinished) {
-            updateLoginButtonsDisplay();
-            populateHeaderAfterSSO();
-            return;
-        }
-        
-        // Listen for changes to sso_finished
-        const checkSSOStatus = () => {
-            const isFinished = dataManager.getContract('sso_finished');
-            
-            if (isFinished) {
-                updateLoginButtonsDisplay();
-                populateHeaderAfterSSO();
-            }
-        };
-        
-        // Set up polling (similar to loader pattern)
-        const pollInterval = setInterval(() => {
-            checkSSOStatus();
-            if (dataManager.getContract('sso_finished')) {
-                clearInterval(pollInterval);
-            }
-        }, 100);
-        
-        // Emergency timeout fallback (following established pattern)
-        setTimeout(() => {
-            clearInterval(pollInterval);
-            updateLoginButtonsDisplay();
-            populateHeaderAfterSSO();
-        }, 5000);
-    };
-
-    const updateLoginButtonsDisplay = () => {
+    const updateLoginButtonsDisplay = async () => {
+        await waitForTmb();
         // Check if we should show skeleton loading state
         const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
         const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
@@ -407,76 +384,26 @@ const Header = (() => {
         const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
         const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
         
-        let sso_finished;
-        try {
-            sso_finished = dataManager.getContract('sso_finished');
-        } catch (error) {
-            sso_finished = null;
-        }
-        
-        const is_fresh_page = !logged_state || logged_state !== 'true';
-        
         // Get login and signup buttons
         const btn_login = getElementById('btn__login');
         const btn_signup = getElementById('btn__signup');
+        const header_btn_container = btn_login ? btn_login.parentElement : null;
         
-        const should_show_skeleton = will_eventually_sso &&
-                                   !is_silent_login_excluded &&
-                                   sso_finished === false &&
-                                   !is_fresh_page;
-
-        if (should_show_skeleton) {
-            // Hide regular buttons, keep skeletons
+        if (will_eventually_sso && !is_silent_login_excluded) {
+            // Hide regular buttons
             if (btn_login) btn_login.style.display = 'none';
             if (btn_signup) btn_signup.style.display = 'none';
             
-            // SAFETY TIMEOUT: Force show real buttons after 3 seconds to prevent infinite loading
-            setTimeout(() => {
-                if (btn_login) btn_login.style.display = 'flex';
-                if (btn_signup) btn_signup.style.display = 'flex';
-
-                // Remove skeleton squares if they exist
-                const skeleton1 = document.querySelector('.skeleton-btn-login');
-                const skeleton2 = document.querySelector('.skeleton-btn-signup');
-                if (skeleton1) {
-                    skeleton1.remove();
-                }
-                if (skeleton2) {
-                    skeleton2.remove();
-                }
-            }, 3000);
         } else {
-            // Show regular buttons and remove skeletons
+            // Show regular buttons
             if (btn_login) btn_login.style.display = 'flex';
             if (btn_signup) btn_signup.style.display = 'flex';
-
+                
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
-            if (skeleton1) {
-                skeleton1.remove();
-            }
-            if (skeleton2) {
-                skeleton2.remove();
-            }
-        }
-    };
-
-    const populateHeaderAfterSSO = () => {
-        try {
-            const regular_header = getElementById('regular__header');
-            const wallet_header = getElementById('wallet__header');
-
-            if (Client.hasWalletsAccount()) {
-                if (regular_header) regular_header.remove();
-                populateWalletAccounts();
-            } else {
-                if (wallet_header) wallet_header.remove();
-                populateAccountsList();
-            }
-        } catch (error) {
-            // eslint-disable-next-line no-console
-            console.error(error);
+            if (skeleton1 && header_btn_container) header_btn_container.removeChild(skeleton1);
+            if (skeleton2 && header_btn_container) header_btn_container.removeChild(skeleton2);
         }
     };
 
@@ -1679,9 +1606,6 @@ const Header = (() => {
         hideNotification,
         displayAccountStatus,
         loginOnClick,
-        updateLoginButtonsDisplay,
-        listenToSSOCompletion,
-        populateHeaderAfterSSO,
     };
 })();
 

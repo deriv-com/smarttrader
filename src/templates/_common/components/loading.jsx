@@ -1,27 +1,12 @@
 import React from 'react';
 
-/*
-*   TODO: Remove the extra classes when splitting the project.
-*   Binary 1.0 and Binary Nex is using different classNames
-*   to accomplish the same loader effect.
-*
-*   Classes for Binary 1.0 :
-*       <div className={barspinner dark}
-*           <div className={rect${inx+1}}
-*
-*   Classes for Binary Nex :
-*       <div className={barspinner barspinner--${ theme || 'dark'}}
-*           <div className={barspinner__rect barspinner__rect--${inx + 1}}
-*
-*   As a temporary solution, we will add both classes for 1.0 and Nex,
-*   however we should remove it in the future.
-*/
-
-const Loading = ({ is_invisible, theme, id }) => (
-    <div id={id} className={`barspinner barspinner--${ theme || 'dark'}${is_invisible ? ' invisible' : ''} dark`}>
-        { Array.from(new Array(5)).map((x, inx) => (
-            <div key={inx} className={`barspinner__rect barspinner__rect--${inx + 1} rect${inx + 1}`} />
-        ))}
+const Loading = ({ is_invisible, id }) => (
+    <div id={id} className={`initial-loader__barspinner barspinner barspinner-light${is_invisible ? ' invisible' : ''}`}>
+        <div className='initial-loader__barspinner--rect barspinner__rect barspinner__rect--1 rect1' />
+        <div className='initial-loader__barspinner--rect barspinner__rect barspinner__rect--2 rect2' />
+        <div className='initial-loader__barspinner--rect barspinner__rect barspinner__rect--3 rect3' />
+        <div className='initial-loader__barspinner--rect barspinner__rect barspinner__rect--4 rect4' />
+        <div className='initial-loader__barspinner--rect barspinner__rect barspinner__rect--5 rect5' />
     </div>
 );
 
