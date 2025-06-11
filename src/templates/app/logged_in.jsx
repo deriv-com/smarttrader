@@ -11,27 +11,6 @@ const LoggedIn = () => (
             ))}
             <style>{`
                 body {margin: 0;}
-                // #header-binary {height: 55px; background: #2a3052; border-bottom: 4px solid #e98024; text-align: center; padding: 10px 0;}
-                // #header-binary a {margin: 0 auto; vertical-align: middle; display: inline-block; min-width: 220px;}
-                // #header-binary #symbol-logo {vertical-align: middle; height: 55px;}
-                // #header-binary #type-logo {vertical-align: middle; height: 37px; margin-left: 6px;}
-                // #login_loading {text-align: center; padding-top: 90px;}
-                #logged_in_loading {
-                    position: absolute;
-                    bottom: 80px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin: 0;
-                }
-                #logged_in_loading div.barspinner__rect {
-                    background-color: #ff444f;
-                }
-                #content-holder {
-                    background-image: url(../images/common/globe-with_logo.svg);
-                    height: 100vh;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
             `}
             </style>
             <link href='https://style.binary.com/binary.css' rel='stylesheet' />
