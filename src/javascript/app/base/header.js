@@ -53,7 +53,6 @@ const Header = (() => {
     const waitForTmb = () => new Promise(resolve => {
         const check = () => {
             if (dataManager.getContract('sso_finished')) {
-                console.log('THERE: TMB is ready');
                 resolve();
             } else {
                 setTimeout(check, 50);
