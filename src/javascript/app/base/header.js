@@ -5,6 +5,7 @@ const Client                    = require('./client');
 const BinarySocket              = require('./socket');
 const AuthClient                = require('../../_common/auth');
 const TMB                       = require('../../_common/tmb');
+const dataManager               = require('../common/data_manager').default;
 const showHidePulser            = require('../common/account_opening').showHidePulser;
 const updateTotal               = require('../pages/user/update_total');
 const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -49,9 +50,23 @@ const Header = (() => {
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
 
+    const waitForTmb = () => new Promise(resolve => {
+        const check = () => {
+            if (dataManager.getContract('sso_finished')) {
+                console.log('THERE: TMB is ready');
+                resolve();
+            } else {
+                setTimeout(check, 50);
+            }
+        };
+        check();
+    });
+
     const onLoad = async () => {
         bindSvg();
         updateLoginButtonsDisplay();
+        
+        await waitForTmb();
     
         await BinarySocket.wait('authorize', 'landing_company');
     
@@ -361,7 +376,8 @@ const Header = (() => {
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
-    const updateLoginButtonsDisplay = () => {
+    const updateLoginButtonsDisplay = async () => {
+        await waitForTmb();
         // Check if we should show skeleton loading state
         const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
         const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
@@ -387,8 +403,8 @@ const Header = (() => {
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
-            if (skeleton1) header_btn_container.removeChild(skeleton1);
-            if (skeleton2) header_btn_container.removeChild(skeleton2);
+            if (skeleton1 && header_btn_container) header_btn_container.removeChild(skeleton1);
+            if (skeleton2 && header_btn_container) header_btn_container.removeChild(skeleton2);
         }
     };
 
