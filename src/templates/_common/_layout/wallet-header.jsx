@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skeleton } from '@deriv-com/quill-ui';
+// import { Skeleton } from '@deriv-com/quill-ui';
 import Notification from '../components/notification.jsx';
 import MobileMenu from '../components/mobile_menu.jsx';
 

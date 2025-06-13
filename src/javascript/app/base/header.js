@@ -1,5 +1,5 @@
 // const BinaryPjax               = require('./binary_pjax');
-const Cookies                   = require('js-cookie');
+// const Cookies                   = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const Client                    = require('./client');
 const BinarySocket              = require('./socket');
