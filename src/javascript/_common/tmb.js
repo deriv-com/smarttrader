@@ -96,7 +96,7 @@ const TMB = (() => {
                 email                    : tmbResponse.email || '',
                 is_virtual               : /^VR/.test(loginid) ? 1 : 0,
                 landing_company_shortcode: getShortcodeFromLoginId(loginid),
-                account_category         : tokenData.account_category || 'trading',
+                account_category         : loginid.includes('W') ? 'wallet' : 'trading',
                 is_disabled              : 0,
             };
         });
