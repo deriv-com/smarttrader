@@ -153,8 +153,8 @@ const Header = () => (
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
-                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-login' />
-                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-signup' />
+                    {/* <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-login' />
+                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-signup' /> */}
                             
                     <button id='btn__login' className='btn btn--tertiary header__btn-login'>{it.L('Log in')}</button>
                     <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer'>{it.L('Sign up')}</a>
