@@ -122,13 +122,13 @@ const Header = (() => {
         }
 
         applyToAllElements('.url-wallet-apps', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore-cfd', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
