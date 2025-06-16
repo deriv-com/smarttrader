@@ -1001,8 +1001,8 @@ const Header = (() => {
                     bindAccordion('#account__switcher-accordion-demo');
                 });
             });
+            bindTabs();
         });
-        bindTabs();
     };
 
     const bindTabs = () => {
