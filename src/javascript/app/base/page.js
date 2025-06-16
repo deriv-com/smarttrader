@@ -156,6 +156,7 @@ const Page = (() => {
         if (State.get('is_loaded_by_pjax')) {
             Url.reset();
             updateLinksURL('#content');
+            Header.onLoad();
         } else {
             init();
             // if the user has logged in previously, silent login
