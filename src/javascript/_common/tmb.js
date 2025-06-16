@@ -218,8 +218,14 @@ const TMB = (() => {
                 return true;
             }
 
-            handleTMBLogout();
-            return false;
+            const clientAccounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+            const isClientAccountsPopulated = Object.keys(clientAccounts).length > 0;
+
+            if (isClientAccountsPopulated) {
+                // If no active session and no accounts, redirect to login
+                handleTMBLogout();
+            }
+            return true;
         } catch (error) {
             // Don't show error modal for sync operations
             // Just return false to indicate sync failed

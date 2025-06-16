@@ -156,8 +156,17 @@ const Page = (() => {
         if (State.get('is_loaded_by_pjax')) {
             Url.reset();
             updateLinksURL('#content');
+            console.log('Page loaded by pjax');
         } else {
+            console.log('Page loaded by document ready');
             init();
+
+            // if the user has logged in previously, silent login
+            requestSingleSignOn();
+            // if the user has logged out previously, silent logout
+            requestSingleLogout(Client.sendLogoutRequest);
+
+
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
@@ -179,11 +188,6 @@ const Page = (() => {
             updateLinksURL('body');
             recordAffiliateExposure();
             endpointNotification();
-
-            // if the user has logged in previously, silent login
-            requestSingleSignOn();
-            // if the user has logged out previously, silent logout
-            requestSingleLogout(Client.sendLogoutRequest);
         }
         Contents.onLoad();
 
