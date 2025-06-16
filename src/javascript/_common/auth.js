@@ -11,7 +11,6 @@ const {
 const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
-const Analytics = require('./analytics');
 const Language  = require('./language');
 const localize  = require('./localize').localize;
 const Url       = require('./url');
