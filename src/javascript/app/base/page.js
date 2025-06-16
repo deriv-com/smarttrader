@@ -156,8 +156,10 @@ const Page = (() => {
         if (State.get('is_loaded_by_pjax')) {
             Url.reset();
             updateLinksURL('#content');
+            // eslint-disable-next-line no-console
             console.log('Page loaded by pjax');
         } else {
+            // eslint-disable-next-line no-console
             console.log('Page loaded by document ready');
             init();
 
@@ -165,7 +167,6 @@ const Page = (() => {
             requestSingleSignOn();
             // if the user has logged out previously, silent logout
             requestSingleLogout(Client.sendLogoutRequest);
-
 
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
