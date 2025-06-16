@@ -4,6 +4,7 @@ const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcA
 const Client                    = require('./client');
 const BinarySocket              = require('./socket');
 const AuthClient                = require('../../_common/auth');
+const TMB                       = require('../../_common/tmb');
 const showHidePulser            = require('../common/account_opening').showHidePulser;
 const updateTotal               = require('../pages/user/update_total');
 const isAuthenticationAllowed   = require('../../_common/base/client_base').isAuthenticationAllowed;
@@ -48,32 +49,42 @@ const Header = (() => {
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
 
-    const onLoad = () => {
-        populateAccountsList();
-        populateWalletAccounts();
+    const onLoad = async () => {
         bindSvg();
-        switchHeaders();
         updateLoginButtonsDisplay();
-
-        BinarySocket.wait('authorize','landing_company').then(() => {
-            setHeaderUrls();
-            bindPlatform();
-            bindClick();
-            if (isHubEnabledCountry()) {
-                document.getElementById('header__notification').remove();
-            }
-        });
+    
+        await BinarySocket.wait('authorize', 'landing_company');
+    
+        const regular_header = getElementById('regular__header');
+        const wallet_header = getElementById('wallet__header');
+    
+        if (Client.hasWalletsAccount()) {
+            regular_header.remove();
+            await populateWalletAccounts();
+        } else {
+            wallet_header.remove();
+            await populateAccountsList();
+        }
+    
+        setHeaderUrls();
+        bindPlatform();
+        bindClick();
+    
+        if (isHubEnabledCountry()) {
+            document.getElementById('header__notification').remove();
+        }
+    
         if (Client.isLoggedIn()) {
             const wallet_divider = getElementById('wallet-divider');
             if (wallet_divider) wallet_divider.style.display = 'none';
             displayAccountStatus();
         }
+    
         fullscreen_map.event.forEach(event => {
             document.addEventListener(event, onFullScreen, false);
         });
         
         applyFeatureFlags();
-     
     };
 
     const applyFeatureFlags = () => {
@@ -98,17 +109,6 @@ const Header = (() => {
             });
     };
 
-    const switchHeaders = () => {
-        const regular_header = getElementById('regular__header');
-        const wallet_header = getElementById('wallet__header');
-        if (Client.hasWalletsAccount()) {
-            regular_header.remove();
-         
-        } else {
-            wallet_header.remove();
-        }
-    };
-
     const setHeaderUrls = () => {
         const url_add_account_dynamic = document.getElementById('url-add-account-dynamic');
         const btn__signup = getElementById('btn__signup');
@@ -122,13 +122,13 @@ const Header = (() => {
         }
 
         applyToAllElements('.url-wallet-apps', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=home&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`) : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-appstore-cfd', (el) => {
-            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
+            el.href = isHubEnabledCountry() ? Url.urlForTradersHub('tradershub/redirect?', `action=redirect_to&redirect_to=cfds&account=${Url.param('account') || SessionStore.get('account').toUpperCase()}`)  : Url.urlForDeriv('', `ext_platform_url=${ext_platform_url}`);
         });
         applyToAllElements('.url-reports-positions', (el) => {
             el.href = Url.urlForDeriv('reports/positions', `ext_platform_url=${ext_platform_url}`);
@@ -395,11 +395,9 @@ const Header = (() => {
     const bindClick = () => {
         updateLoginButtonsDisplay();
         const btn_login = getElementById('btn__login');
-        btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
         applyToAllElements('.logout', (el) => {
-            el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
         // Mobile menu
@@ -731,6 +729,28 @@ const Header = (() => {
                                         /^smarttrader\.deriv\.com$/i.test(window.location.hostname);
 
         if (is_staging_or_production) {
+            // Check if TMB is enabled first
+            if (await TMB.isTMBEnabled()) {
+                // TMB doesn't need explicit login redirect - sessions are managed automatically
+                // Just trigger a check for active sessions
+                try {
+                    await TMB.handleTMBLogin();
+                } catch (error) {
+                    ErrorModal.init({
+                        message      : localize('Something went wrong while logging in. Please refresh and try again.'),
+                        buttonText   : localize('Refresh'),
+                        onButtonClick: () => {
+                            ErrorModal.remove();
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 0);
+                        },
+                    });
+                }
+                return;
+            }
+
+            // Original OIDC authentication flow
             const currentLanguage = Language.get();
             const redirectCallbackUri = `${window.location.origin}/${currentLanguage}/callback`;
             const postLoginRedirectUri = window.location.origin;
@@ -761,6 +781,14 @@ const Header = (() => {
     const logoutOnClick = async () => {
         await Chat.clear();
 
+        // Check if TMB is enabled first
+        if (await TMB.isTMBEnabled()) {
+            await TMB.handleTMBLogout();
+            Client.sendLogoutRequest();
+            return;
+        }
+
+        // Original OIDC logout flow
         // This will wrap the logout call Client.sendLogoutRequest with our own logout iframe, which is to inform Hydra that the user is logging out
         // and the session should be cleared on Hydra's side. Once this is done, it will call the passed-in logout handler Client.sendLogoutRequest.
         // If Hydra authentication is not enabled, the logout handler Client.sendLogoutRequest will just be called instead.
@@ -770,9 +798,9 @@ const Header = (() => {
     };
 
     const populateWalletAccounts = () => {
-        if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return;
+        if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
         const account_list      = getElementById('wallet__switcher-accounts-list');
-        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+        return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             Client.getAllLoginids().forEach((loginid) => {
                 const is_wallet_account        = Client.isWalletsAccount(loginid);
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !is_wallet_account) {
@@ -877,8 +905,8 @@ const Header = (() => {
     };
 
     const populateAccountsList = () => {
-        if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return;
-        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+        if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return Promise.resolve();
+        return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
             const loginid_non_eu_real_select   = createElement('div');
             const loginid_eu_real_select       = createElement('div');
@@ -973,8 +1001,8 @@ const Header = (() => {
                     bindAccordion('#account__switcher-accordion-demo');
                 });
             });
+            bindTabs();
         });
-        bindTabs();
     };
 
     const bindTabs = () => {
