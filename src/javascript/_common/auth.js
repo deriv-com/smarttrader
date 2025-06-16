@@ -116,9 +116,9 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
     if (!isGrowthbookLoaded) {
         let retryInterval = 0;
         // this interval is to check if Growthbook is already initialised.
-        // If not, keep checking it (max 10 times) and SSO if conditions are met
+        // If not, keep checking it (max 2 times) and SSO if conditions are met
         const interval = setInterval(() => {
-            if (retryInterval > 10) {
+            if (retryInterval > 2) {
                 clearInterval(interval);
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
@@ -129,7 +129,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
                     retryInterval += 1;
                 }
             }
-        }, 500);
+        }, 300);
     } else {
         requestSingleLogoutImpl();
     }
@@ -235,9 +235,9 @@ export const requestSingleSignOn = async () => {
     if (!isGrowthbookLoaded) {
         let retryInterval = 0;
         // this interval is to check if Growthbook is already initialised.
-        // If not, keep checking it (max 10 times) and SSO if conditions are met
+        // If not, keep checking it (max 2 times) and SSO if conditions are met
         const interval = setInterval(() => {
-            if (retryInterval > 10) {
+            if (retryInterval > 2) {
                 clearInterval(interval);
             } else {
                 const isLoaded = Analytics.isGrowthbookLoaded();
@@ -248,7 +248,7 @@ export const requestSingleSignOn = async () => {
                     retryInterval += 1;
                 }
             }
-        }, 500);
+        }, 300);
     } else {
         requestSingleSignOnImpl();
     }

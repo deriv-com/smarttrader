@@ -185,14 +185,14 @@ const Page = (() => {
             recordAffiliateExposure();
             endpointNotification();
             // eslint-disable-next-line no-console
-            console.log(`Page loaded complete`);
+            console.log('Page loaded complete');
 
             // if the user has logged in previously, silent login
             requestSingleSignOn();
             // if the user has logged out previously, silent logout
             requestSingleLogout(Client.sendLogoutRequest);
             // eslint-disable-next-line no-console
-            console.log(`Single Sign On and Single Logout requests sent`);
+            console.log('Single Sign On and Single Logout requests sent');
         }
         Contents.onLoad();
 
