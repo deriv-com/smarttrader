@@ -163,6 +163,13 @@ const Page = (() => {
             console.log('Page loaded by document ready');
             init();
 
+            // if the user has logged in previously, silent login
+            requestSingleSignOn();
+            // if the user has logged out previously, silent logout
+            requestSingleLogout(Client.sendLogoutRequest);
+            // eslint-disable-next-line no-console
+            console.log('Single Sign On and Single Logout requests sent');
+
             if (!isLoginPages()) {
                 Language.setCookie(Language.urlLang());
                 const url_query_strings = Url.paramsHash();
@@ -186,13 +193,6 @@ const Page = (() => {
             endpointNotification();
             // eslint-disable-next-line no-console
             console.log('Page loaded complete');
-
-            // if the user has logged in previously, silent login
-            requestSingleSignOn();
-            // if the user has logged out previously, silent logout
-            requestSingleLogout(Client.sendLogoutRequest);
-            // eslint-disable-next-line no-console
-            console.log('Single Sign On and Single Logout requests sent');
         }
         Contents.onLoad();
 
