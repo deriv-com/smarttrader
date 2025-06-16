@@ -373,17 +373,15 @@ const Header = (() => {
         const btn_login = getElementById('btn__login');
         const btn_signup = getElementById('btn__signup');
         const header_btn_container = btn_login ? btn_login.parentElement : null;
+
+        if (btn_login) btn_login.style.display = 'none';
+        if (btn_signup) btn_signup.style.display = 'none';
         
-        if (will_eventually_sso && !is_silent_login_excluded) {
-            // Hide regular buttons
-            if (btn_login) btn_login.style.display = 'none';
-            if (btn_signup) btn_signup.style.display = 'none';
-            
-        } else {
+        if (!will_eventually_sso || is_silent_login_excluded) {
             // Show regular buttons
             if (btn_login) btn_login.style.display = 'flex';
             if (btn_signup) btn_signup.style.display = 'flex';
-                
+
             // Remove skeleton squares if they exist
             const skeleton1 = document.querySelector('.skeleton-btn-login');
             const skeleton2 = document.querySelector('.skeleton-btn-signup');
