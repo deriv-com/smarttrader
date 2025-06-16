@@ -301,6 +301,7 @@ const TMB = (() => {
                     secure : true,
                 });
             }
+            window.location.reload();
         } catch (error) {
             // Force reload even if logout failed
             if (typeof window !== 'undefined') {
