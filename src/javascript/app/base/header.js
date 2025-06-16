@@ -60,10 +60,10 @@ const Header = (() => {
     
         if (Client.hasWalletsAccount()) {
             regular_header.remove();
-            populateWalletAccounts();
+            await populateWalletAccounts();
         } else {
             wallet_header.remove();
-            populateAccountsList();
+            await populateAccountsList();
         }
     
         setHeaderUrls();
@@ -395,11 +395,9 @@ const Header = (() => {
     const bindClick = () => {
         // updateLoginButtonsDisplay();
         const btn_login = getElementById('btn__login');
-        btn_login.removeEventListener('click', loginOnClick);
         btn_login.addEventListener('click', loginOnClick);
 
         applyToAllElements('.logout', (el) => {
-            el.removeEventListener('click', logoutOnClick);
             el.addEventListener('click', logoutOnClick);
         });
         // Mobile menu
@@ -800,9 +798,9 @@ const Header = (() => {
     };
 
     const populateWalletAccounts = () => {
-        if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return;
+        if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
         const account_list      = getElementById('wallet__switcher-accounts-list');
-        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+        return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             Client.getAllLoginids().forEach((loginid) => {
                 const is_wallet_account        = Client.isWalletsAccount(loginid);
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !is_wallet_account) {
@@ -907,8 +905,8 @@ const Header = (() => {
     };
 
     const populateAccountsList = () => {
-        if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return;
-        BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+        if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return Promise.resolve();
+        return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
             const loginid_non_eu_real_select   = createElement('div');
             const loginid_eu_real_select       = createElement('div');
@@ -1003,8 +1001,8 @@ const Header = (() => {
                     bindAccordion('#account__switcher-accordion-demo');
                 });
             });
+            bindTabs();
         });
-        bindTabs();
     };
 
     const bindTabs = () => {
