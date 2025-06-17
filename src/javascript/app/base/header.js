@@ -1,5 +1,5 @@
 // const BinaryPjax               = require('./binary_pjax');
-const Cookies                   = require('js-cookie');
+// const Cookies                   = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const Client                    = require('./client');
 const BinarySocket              = require('./socket');
@@ -51,7 +51,7 @@ const Header = (() => {
 
     const onLoad = async () => {
         bindSvg();
-        updateLoginButtonsDisplay();
+        // updateLoginButtonsDisplay();
     
         await BinarySocket.wait('authorize', 'landing_company');
     
@@ -361,39 +361,37 @@ const Header = (() => {
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
     };
 
-    const updateLoginButtonsDisplay = () => {
-        // Check if we should show skeleton loading state
-        const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
-        const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
-        const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
-        const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
-        const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+    // const updateLoginButtonsDisplay = () => {
+    //     // Check if we should show skeleton loading state
+    //     const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
+    //     const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
+    //     const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
+    //     const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
+    //     const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
         
-        // Get login and signup buttons
-        const btn_login = getElementById('btn__login');
-        const btn_signup = getElementById('btn__signup');
-        const header_btn_container = btn_login ? btn_login.parentElement : null;
+    //     // Get login and signup buttons
+    //     const btn_login = getElementById('btn__login');
+    //     const btn_signup = getElementById('btn__signup');
+    //     const header_btn_container = btn_login ? btn_login.parentElement : null;
+
+    //     if (btn_login) btn_login.style.display = 'none';
+    //     if (btn_signup) btn_signup.style.display = 'none';
         
-        if (will_eventually_sso && !is_silent_login_excluded) {
-            // Hide regular buttons
-            if (btn_login) btn_login.style.display = 'none';
-            if (btn_signup) btn_signup.style.display = 'none';
-            
-        } else {
-            // Show regular buttons
-            if (btn_login) btn_login.style.display = 'flex';
-            if (btn_signup) btn_signup.style.display = 'flex';
-                
-            // Remove skeleton squares if they exist
-            const skeleton1 = document.querySelector('.skeleton-btn-login');
-            const skeleton2 = document.querySelector('.skeleton-btn-signup');
-            if (skeleton1) header_btn_container.removeChild(skeleton1);
-            if (skeleton2) header_btn_container.removeChild(skeleton2);
-        }
-    };
+    //     if (!will_eventually_sso || is_silent_login_excluded) {
+    //         // Show regular buttons
+    //         if (btn_login) btn_login.style.display = 'flex';
+    //         if (btn_signup) btn_signup.style.display = 'flex';
+
+    //         // Remove skeleton squares if they exist
+    //         const skeleton1 = document.querySelector('.skeleton-btn-login');
+    //         const skeleton2 = document.querySelector('.skeleton-btn-signup');
+    //         if (skeleton1) header_btn_container.removeChild(skeleton1);
+    //         if (skeleton2) header_btn_container.removeChild(skeleton2);
+    //     }
+    // };
 
     const bindClick = () => {
-        updateLoginButtonsDisplay();
+        // updateLoginButtonsDisplay();
         const btn_login = getElementById('btn__login');
         btn_login.addEventListener('click', loginOnClick);
 

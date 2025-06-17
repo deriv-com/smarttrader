@@ -11,7 +11,6 @@ const {
 const Cookies = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const OAuth2Logout = require('@deriv-com/auth-client').OAuth2Logout;
-const Analytics = require('./analytics');
 const Language  = require('./language');
 const localize  = require('./localize').localize;
 const Url       = require('./url');
@@ -112,27 +111,7 @@ export const requestSingleLogout = async (onWSLogoutAndRedirect) => {
         }
     };
 
-    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
-    if (!isGrowthbookLoaded) {
-        let retryInterval = 0;
-        // this interval is to check if Growthbook is already initialised.
-        // If not, keep checking it (max 2 times) and SSO if conditions are met
-        const interval = setInterval(() => {
-            if (retryInterval > 2) {
-                clearInterval(interval);
-            } else {
-                const isLoaded = Analytics.isGrowthbookLoaded();
-                if (isLoaded) {
-                    requestSingleLogoutImpl();
-                    clearInterval(interval);
-                } else {
-                    retryInterval += 1;
-                }
-            }
-        }, 300);
-    } else {
-        requestSingleLogoutImpl();
-    }
+    requestSingleLogoutImpl();
 };
 
 export const requestSingleSignOn = async () => {
@@ -231,25 +210,5 @@ export const requestSingleSignOn = async () => {
         return Promise.resolve();
     };
 
-    const isGrowthbookLoaded = Analytics.isGrowthbookLoaded();
-    if (!isGrowthbookLoaded) {
-        let retryInterval = 0;
-        // this interval is to check if Growthbook is already initialised.
-        // If not, keep checking it (max 2 times) and SSO if conditions are met
-        const interval = setInterval(() => {
-            if (retryInterval > 2) {
-                clearInterval(interval);
-            } else {
-                const isLoaded = Analytics.isGrowthbookLoaded();
-                if (isLoaded) {
-                    requestSingleSignOnImpl();
-                    clearInterval(interval);
-                } else {
-                    retryInterval += 1;
-                }
-            }
-        }, 300);
-    } else {
-        requestSingleSignOnImpl();
-    }
+    requestSingleSignOnImpl();
 };
