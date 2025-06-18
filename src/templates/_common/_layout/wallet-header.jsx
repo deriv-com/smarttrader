@@ -61,7 +61,7 @@ const WalletHeader = () => (
                         <div id='wallet__switcher-dropdown' className='wallet__switcher-dropdown'>
                             <div className='wallet__switcher-header'>
                                 <h4 className='wallet__switcher-header--text'>
-                                    {it.L('Deriv Apps accounts')}
+                                    {it.L('Options accounts')}
                                 </h4>
                                 <img id='wallet__switcher-close' className='btn__close mobile-show' />
                             </div>
