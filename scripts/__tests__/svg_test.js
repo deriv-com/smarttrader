@@ -21,7 +21,8 @@ describe('check svg file format', () => {
         return stdout.split('\n').filter(dir => dir.length);
     };
 
-    it('should be valid svgs', async () => {
+    it('should be valid svgs', async function() {
+        this.timeout(10000);
         try {
             await exec('git fetch origin master --depth 1');
             changed_files = [
