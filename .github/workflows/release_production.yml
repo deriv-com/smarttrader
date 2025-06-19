@@ -9,10 +9,8 @@ jobs:
     environment: Production
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       actions: write
-      checks: write
-      pull-requests: write
     env:
       RELEASE_TYPE: Production
     steps:
@@ -46,10 +44,8 @@ jobs:
     name: Publish to Cloudflare Production
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      actions: write
-      checks: write
-      pull-requests: write
+      contents: read
+      actions: read
     env:
       RELEASE_TYPE: Production
     needs: [build_and_test]
@@ -93,8 +89,6 @@ jobs:
     permissions:
       contents: read
       actions: read
-      checks: write
-      pull-requests: write
     env:
       RELEASE_TYPE: Production
       APP_NAME: smarttrader-deriv-app
