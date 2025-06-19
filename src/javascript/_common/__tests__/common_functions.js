@@ -1,5 +1,5 @@
 const expect          = require('chai').expect;
-const jsdom           = require("jsdom");
+const { JSDOM }       = require("jsdom");
 const CommonFunctions = require('../common_functions');
 
 describe('CommonFunctions', () => {
@@ -8,16 +8,14 @@ describe('CommonFunctions', () => {
         invalid_element;
 
     before(() => {
-        jsdom.env({
-            html: '<!DOCTYPE html>' +
+        const dom = new JSDOM('<!DOCTYPE html>' +
             '<div></div>' +
-            '<input data-value="2017-06-21" type="date" value="2017-06-21">',
-            done: (error, window) => {
-                date_element    = window.document.querySelector('input');
-                text_element    = window.document.querySelector('div');
-                invalid_element = window.document.getElementById('invalid');
-            },
-        });
+            '<input data-value="2017-06-21" type="date" value="2017-06-21">');
+
+        const { window } = dom;
+        date_element    = window.document.querySelector('input');
+        text_element    = window.document.querySelector('div');
+        invalid_element = window.document.getElementById('invalid');
     });
 
     describe('.makeOption()', () => {
@@ -46,8 +44,8 @@ describe('CommonFunctions', () => {
     });
 
     describe('.checkInput()', () => {
-        it('detects that mochaTest does not support date type', () => {
-            expect(CommonFunctions.checkInput('date', 'not-a-date')).to.eq(false);
+        it('detects that jsdom now supports date type', () => {
+            expect(CommonFunctions.checkInput('date', 'not-a-date')).to.eq(true);
         });
     });
 
