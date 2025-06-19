@@ -38,7 +38,7 @@ jobs:
           ref: ${{github.event.pull_request.head.sha}}
 
       - name: Setup Node
-        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 18.x
 
@@ -65,7 +65,7 @@ jobs:
         run: npm run test
 
       - name: Setup Node
-        uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 20
 
