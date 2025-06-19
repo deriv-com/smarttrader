@@ -1,13 +1,13 @@
 const path           = require('path');
 const webpack        = require('webpack');
-const merge          = require('webpack-merge').merge;
+const webpackMerge          = require('webpack-merge');
 const appConfig      = require('./webpack/config_app');
 const commonConfig   = require('./webpack/config_common');
 const PATHS          = require('./webpack/paths');
 const getPlugins     = require('./webpack/plugins');
 
 module.exports = function (grunt) {
-    const section = [merge(commonConfig(grunt), appConfig(grunt))];
+    const section = [webpackMerge.smart(commonConfig(grunt), appConfig(grunt))];
 
     const watch_config = {
         watch: true,
@@ -18,6 +18,6 @@ module.exports = function (grunt) {
 
     return {
         section,
-        watch: section.map(conf => merge(conf, watch_config)),
+        watch: section.map(conf => webpackMerge(conf, watch_config)),
     };
 };
