@@ -76,10 +76,10 @@ const WalletHeader = () => (
                                 </div>
                                 <div className='wallet__switcher-footer'>
                                     <a className='url-wallet-apps'>
-                                        {it.L('Looking for CFDs? Go to Trader\'s hub')}
+                                        {it.L('Looking for CFDs? Go to Trader\'s Hub')}
                                     </a>
                                     <a className='url-wallet-apps'>
-                                        <img src='/images/pages/header/ic-chevron-right.svg' />
+                                        <img width={20} height={20} src='/images/pages/header/ic-chevron-right.svg' />
                                     </a>
                                 </div>
                             </div>
