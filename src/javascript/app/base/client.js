@@ -89,6 +89,8 @@ const Client = (() => {
         if (show_login_page) {
             sessionStorage.setItem('showLoginPage', 1);
         }
+        // Remove client_information cookie
+        removeCookies('client_information');
         try {
             BinarySocket.send({ logout: '1', passthrough: { redirect_to } }).then((response) => {
                 if (response.logout === 1) {
@@ -141,7 +143,7 @@ const Client = (() => {
 
         if (response.logout !== 1) return;
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
-        removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token','utm_data', 'gclid', 'client_information');
+        removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token','utm_data', 'gclid');
         // clear elev.io session storage
         sessionStorage.removeItem('_elevaddon-6app');
         sessionStorage.removeItem('_elevaddon-6create');
