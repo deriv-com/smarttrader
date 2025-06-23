@@ -237,7 +237,7 @@ const ClientBase = (() => {
         set('user_id', authorize.user_id);
         set('local_currency_config', local_currency_config);
         updateAccountList(authorize.account_list);
-
+        
         // Set client information cookie
         const client_information = {
             loginid                  : get('loginid'),
@@ -251,7 +251,12 @@ const ClientBase = (() => {
             landing_company_shortcode: get('landing_company_shortcode'),
         };
         
-        Cookies.set('client_information', JSON.stringify(client_information));
+        const currentDomain = `.${window.location.hostname.split('.').slice(-2).join('.')}`;
+        
+        Cookies.set('client_information', JSON.stringify(client_information), {
+            domain: currentDomain,
+            path  : '/',
+        });
     };
 
     const updateAccountList = (account_list) => {
