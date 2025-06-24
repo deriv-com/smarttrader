@@ -89,6 +89,8 @@ const Client = (() => {
         if (show_login_page) {
             sessionStorage.setItem('showLoginPage', 1);
         }
+        // Remove client_information cookie
+        removeCookies('client_information');
         try {
             BinarySocket.send({ logout: '1', passthrough: { redirect_to } }).then((response) => {
                 if (response.logout === 1) {

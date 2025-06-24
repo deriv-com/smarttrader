@@ -8,6 +8,9 @@ jobs:
     name: Build and Test
     environment: Staging
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     steps:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
@@ -44,6 +47,9 @@ jobs:
   publish_cloudflare_staging:
     name: Publish to Cloudflare Pages Staging
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     needs: [build_and_test]
     steps:
       - name: Checkout
