@@ -632,9 +632,9 @@ const Header = (() => {
 
         let languageSubmenuContext = null;
         const LANGUAGE_CONTEXT = {
-            HEADER: 'header',
-            MAIN_MENU: 'main_menu',
-            ACCOUNT_SETTINGS: 'account_settings'
+            HEADER          : 'header',
+            MAIN_MENU       : 'main_menu',
+            ACCOUNT_SETTINGS: 'account_settings',
         };
 
         const hideAccountSettingsHeaders = () => {
@@ -648,7 +648,7 @@ const Header = (() => {
                     });
                 }
             } catch (error) {
-                console.warn('Error hiding Account Settings headers:', error);
+                // Error handling - silently continue
             }
         };
 
@@ -663,7 +663,7 @@ const Header = (() => {
                     });
                 }
             } catch (error) {
-                console.warn('Error restoring Account Settings headers:', error);
+                // Error handling - silently continue
             }
         };
 
@@ -757,7 +757,6 @@ const Header = (() => {
 
         const updateMobileLanguageDisplay = () => {
             const currentLanguage = Language.get();
-            const languageData = Language.getAll()[currentLanguage];
             
             const flagImg = getElementById('mobile__menu-language-flag');
             const langText = getElementById('mobile__menu-language-text');
