@@ -225,4 +225,8 @@
 
 .url-wallet-apps {
     font-weight: normal;
+
+    &:hover, a:visited:active, a:visited:hover {
+        text-decoration: underline !important;
+    }
 }
