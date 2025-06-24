@@ -1,4 +1,5 @@
 const moment                       = require('moment');
+const Cookies                      = require('js-cookie');
 const isCryptocurrency             = require('./currency_base').isCryptocurrency;
 const SocketCache                  = require('./socket_cache');
 const localize                     = require('../localize').localize;
@@ -236,6 +237,26 @@ const ClientBase = (() => {
         set('user_id', authorize.user_id);
         set('local_currency_config', local_currency_config);
         updateAccountList(authorize.account_list);
+        
+        // Set client information cookie
+        const client_information = {
+            loginid                  : get('loginid'),
+            email                    : get('email'),
+            currency                 : get('currency'),
+            residence                : get('residence'),
+            first_name               : get('first_name'),
+            last_name                : get('last_name'),
+            preferred_language       : get('preferred_language'),
+            user_id                  : get('user_id'),
+            landing_company_shortcode: get('landing_company_shortcode'),
+        };
+        
+        const currentDomain = `.${window.location.hostname.split('.').slice(-2).join('.')}`;
+        
+        Cookies.set('client_information', JSON.stringify(client_information), {
+            domain: currentDomain,
+            path  : '/',
+        });
     };
 
     const updateAccountList = (account_list) => {

@@ -8,6 +8,9 @@ jobs:
     name: Build and Test
     environment: Production
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     env:
       RELEASE_TYPE: Production
     steps:
@@ -40,6 +43,9 @@ jobs:
   publish_cloudflare_production:
     name: Publish to Cloudflare Production
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     env:
       RELEASE_TYPE: Production
     needs: [build_and_test]
@@ -80,6 +86,9 @@ jobs:
     name: Notify on Slack
     if: always()
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     env:
       RELEASE_TYPE: Production
       APP_NAME: smarttrader-deriv-app
