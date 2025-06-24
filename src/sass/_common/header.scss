@@ -1211,65 +1211,91 @@ body #topbar {
     text-transform: none !important;
 }
 
-.mobile__menu-content-submenu-category-header {
-    display: flex;
-    align-items: center;
-    padding: 16px 16px 8px;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--text-general);
-    margin-top: 16px;
+/* ========================================
+   Mobile Menu Content Submenu Styles
+   ======================================== */
 
-    &:first-child {
-        margin-top: 0 !important;
-    }
-    .mobile__menu-content-submenu-icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 12px;
-    }
-    .mobile__menu-content-submenu-category-text {
-        font-size: 14px;
+// Mobile menu content submenu components with proper SCSS nesting
+.mobile__menu-content-submenu {
+    transition: opacity 0.2s ease-in-out;
+
+    // Category header styling
+    &-category-header {
+        display: flex;
+        align-items: center;
+        padding: 16px 16px 8px;
         font-weight: 600;
+        font-size: 14px;
         color: var(--text-general);
+        margin-top: 16px;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+        .mobile__menu-content-submenu-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 12px;
+        }
+        .mobile__menu-content-submenu-category-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-general);
+        }
     }
-}
 
-.mobile__menu-content-submenu-header {
-    padding-top: 3px !important;
-    font-size: 16px !important;
-}
+    // General header styling
+    &-header {
+        padding-top: 3px !important;
+        font-size: 16px !important;
+    }
 
-.mobile__menu-content-submenu-language-header {
-    padding-top: 20px !important;
-    padding-left: 32px !important;
-}
+    // Language specific header
+    &-language-header {
+        padding-top: 20px !important;
+        padding-left: 32px !important;
+    }
 
-.mobile__menu-content-submenu-sub-item {
-    padding: 16px 0 6px 60px !important;
-    font-size: 14px !important;
-
-    .mobile__menu-content-submenu-item-text {
+    // Sub item styling
+    &-sub-item {
+        padding: 16px 0 6px 60px !important;
         font-size: 14px !important;
-        font-weight: 400 !important;
+
+        .mobile__menu-content-submenu-item-text {
+            font-size: 14px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    // Badge component
+    &-badge {
+        display: inline-block;
+        background-color: $color-red-1;
+        color: $color-white;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 1px 3px;
+        border-radius: 50px;
+        margin-left: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        vertical-align: middle;
+    }
+
+    // Active state
+    &--active {
+        display: block;
+    }
+
+    // Account settings visibility
+    &-account-settings {
+        &:not(.mobile__menu-content-submenu--active) {
+            display: none;
+        }
     }
 }
 
-
-.mobile__menu-content-submenu-badge {
-    display: inline-block;
-    background-color: $color-red-1;
-    color: $color-white;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 1px 3px;
-    border-radius: 50px;
-    margin-left: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    vertical-align: middle;
-}
-
+// Account settings specific scrollbar styling
 #mobile__menu-content-submenu-account-settings {
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -1277,111 +1303,114 @@ body #topbar {
     
     &::-webkit-scrollbar {
         width: var(--core-size-200);
-    } 
+    }
     &::-webkit-scrollbar-track {
         background-color: transparent;
-    }   
+    }
     &::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.08);
     }
 }
 
-/* Mobile Language Switcher Styles */
-.mobile__menu-language-selector {
-    cursor: pointer !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 0 !important;
-    padding: 12px 16px !important;
-    border-radius: 4px !important;
-    transition: background-color 0.2s !important;
-    
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1) !important;
+// Language submenu specific styling
+#mobile__menu-content-submenu-language {
+    &.mobile__menu-content-submenu--active {
+        display: block;
+        padding: 8px;
+        position: relative;
+        z-index: 1001; // Higher than other submenus
+        background-color: var(--general-main-1); // Ensure solid background
     }
 }
 
-.mobile__language-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
+/* ========================================
+   Mobile Language Components
+   ======================================== */
 
-.mobile__language-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    
-    &:hover {
-        background-color: var(--general-hover);
+// Language selector with proper nesting
+.mobile__menu-language {
+    &-selector {
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+        padding: 12px 16px !important;
+        border-radius: 4px !important;
+        transition: background-color 0.2s !important;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
     }
-    &--active {
-        background-color: var(--brand-blue-1);
-        border-color: var(--brand-blue-2);
-        border: 1px solid var(--general-section-1);
+
+    // Language flag styling (inline context)
+    &-flag {
+        width: 24px;
+        height: 18px;
+        margin-right: 0.5rem;
+        object-fit: cover;
+    }
+
+    // Language text styling (inline context)
+    &-text {
+        font-size: 0.875rem;
+        font-weight: bold;
+        color: inherit;
     }
 }
 
-.mobile__language-flag {
-    width: 32px;
-    height: 24px;
-    margin-bottom: 0.5rem;
-    object-fit: cover;
+// Language grid and items
+.mobile__language {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        
+        &:hover {
+            background-color: var(--general-hover);
+        }
+        &--active {
+            background-color: var(--brand-blue-1);
+            border-color: var(--brand-blue-2);
+            border: 1px solid var(--general-section-1);
+        }
+    }
+
+    // Language flag styling (grid context)
+    &-flag {
+        width: 32px;
+        height: 24px;
+        margin-bottom: 0.5rem;
+        object-fit: cover;
+    }
+
+    // Language text styling (grid context)
+    &-text {
+        font-size: 0.875rem;
+        text-align: center;
+        font-weight: 500;
+        color: var(--text-general);
+    }
 }
 
-.mobile__language-text {
-    font-size: 0.875rem;
-    text-align: center;
-    font-weight: 500;
-    color: var(--text-general);
-}
+/* ========================================
+   Fallback and Error Handling Rules
+   ======================================== */
 
-/* Mobile language submenu visibility fix */
-.mobile__menu-content-submenu--active {
-    display: block !important;
-}
-/* Ensure language submenu shows when active with Complete Content Isolation */
-#mobile__menu-content-submenu-language.mobile__menu-content-submenu--active {
-    display: block !important;
-    padding: 8px;
-    /* Enhanced isolation for Complete Content Isolation */
-    position: relative;
-    z-index: 1001 !important; /* Higher than other submenus */
-    background-color: var(--general-main-1) !important; /* Ensure solid background */
-}
-
-/* Context-aware display enhancements */
-.mobile__menu-content-submenu {
-    transition: opacity 0.2s ease-in-out;
-}
-
-/* Ensure Account Settings content is properly hidden when language submenu is accessed from that context */
-.mobile__menu-content-submenu-account-settings:not(.mobile__menu-content-submenu--active) {
-    display: none;
-}
-
-/* Backup CSS rules to ensure headers are hidden even if JavaScript fails */
+// Backup CSS rules to ensure headers are hidden even if JavaScript fails
 .mobile__menu-content-submenu-language--active ~ .mobile__menu-content-submenu-account-settings {
     .mobile__menu-content-submenu-header,
     .mobile__menu-content-submenu-category-header {
         display: none !important;
         visibility: hidden !important;
     }
-}
-
-.mobile__menu-language-flag {
-    width: 24px;
-    height: 18px;
-    margin-right: 0.5rem;
-    object-fit: cover;
-}
-
-.mobile__menu-language-text {
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: inherit;
 }
