@@ -84,36 +84,33 @@ const CallbackContainer = () => {
 
             // redirect back
             let set_default = true;
-            if (redirect_url) {
-                const do_not_redirect = [
-                    'reset_passwordws',
-                    'lost_passwordws',
-                    'change_passwordws',
-                    'home',
-                    '404',
-                ];
-                const reg = new RegExp(do_not_redirect.join('|'), 'i');
-                if (!reg.test(redirect_url) && urlFor('') !== redirect_url) {
-                    set_default = false;
-                }
+            const trusted_urls = [
+                urlFor('user/metatrader'),
+                Client.defaultRedirectUrl(),
+                urlFor('home'),
+            ];
+
+            if (redirect_url && trusted_urls.includes(redirect_url)) {
+                set_default = false;
             }
+
             if (set_default) {
-                const lang_cookie = urlLang(redirect_url) || Cookies.get('language');
+                const lang_cookie = Cookies.get('language') || getLanguage();
                 const language = getLanguage();
-                redirect_url =
-                    Client.isAccountOfType('financial') || Client.isOptionsBlocked()
-                        ? urlFor('user/metatrader')
-                        : Client.defaultRedirectUrl();
-                if (lang_cookie && lang_cookie !== language) {
-                    redirect_url = redirect_url.replace(
-                        new RegExp(`/${language}/`, 'i'),
-                        `/${lang_cookie.toLowerCase()}/`
-                    );
-                }
-            }
-            getElementById('loading_link').setAttribute('href', redirect_url);
-            
-            window.location.replace(redirect_url); // need to redirect not using pjax
+               redirect_url =
+                   Client.isAccountOfType('financial') || Client.isOptionsBlocked()
+                       ? urlFor('user/metatrader')
+                       : Client.defaultRedirectUrl();
+               if (lang_cookie && lang_cookie !== language) {
+                   redirect_url = redirect_url.replace(
+                       new RegExp(`/${language}/`, 'i'),
+                       `/${lang_cookie.toLowerCase()}/`
+                   );
+               }
+           }
+           getElementById('loading_link').setAttribute('href', redirect_url);
+           
+           window.location.replace(redirect_url); // need to redirect not using pjax
         });
     };
 
