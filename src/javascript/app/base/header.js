@@ -1662,34 +1662,33 @@ const Header = (() => {
         const isWalletAccount = Client.hasWalletsAccount();
         
         const config = isWalletAccount ? {
-            containerIds: ['wallet__switcher-accounts-list'],
-            accountSelector: '.wallet__switcher-acc',
-            balanceSelector: '.wallet__switcher-balance',
-            populateFunction: populateWalletAccounts
+            containerIds    : ['wallet__switcher-accounts-list'],
+            accountSelector : '.wallet__switcher-acc',
+            balanceSelector : '.wallet__switcher-balance',
+            populateFunction: populateWalletAccounts,
         } : {
-            containerIds: ['account__switcher-non-eu-list', 'account__switcher-eu-list', 'account__switcher-demo-list'],
-            accountSelector: '.account__switcher-acc',
-            balanceSelector: '.account__switcher-balance',
-            populateFunction: populateAccountsList
+            containerIds    : ['account__switcher-non-eu-list', 'account__switcher-eu-list', 'account__switcher-demo-list'],
+            accountSelector : '.account__switcher-acc',
+            balanceSelector : '.account__switcher-balance',
+            populateFunction: populateAccountsList,
         };
         
         const checkAccountsExist = () => {
-            for (const containerId of config.containerIds) {
+            const hasAccountsInContainers = config.containerIds.some(containerId => {
                 const container = document.getElementById(containerId);
                 if (container) {
                     const accountElements = container.querySelectorAll(config.accountSelector);
-                    if (accountElements.length > 0) {
-                        return true;
-                    }
+                    return accountElements.length > 0;
                 }
-            }
+                return false;
+            });
             
-            const allAccountElements = document.querySelectorAll(config.accountSelector);
-            if (allAccountElements.length > 0) {
+            if (hasAccountsInContainers) {
                 return true;
             }
             
-            return false;
+            const allAccountElements = document.querySelectorAll(config.accountSelector);
+            return allAccountElements.length > 0;
         };
         
         if (isPopulating) {
@@ -1701,7 +1700,9 @@ const Header = (() => {
             
             try {
                 await config.populateFunction();
-                await new Promise(resolve => setTimeout(resolve, 100));
+                await new Promise((resolve) => {
+                    setTimeout(resolve, 100);
+                });
                 
                 if (!checkAccountsExist()) {
                     return;
@@ -1741,13 +1742,11 @@ const Header = (() => {
                     element,
                     loginid,
                     balanceText,
-                    numericBalance
+                    numericBalance,
                 };
             });
 
-            accountsWithBalance.sort((a, b) => {
-                return b.numericBalance - a.numericBalance;
-            });
+            accountsWithBalance.sort((a, b) => b.numericBalance - a.numericBalance);
 
             const firstAccount = accountsWithBalance[0];
             if (!firstAccount) return false;
@@ -1761,10 +1760,8 @@ const Header = (() => {
             return true;
         };
 
-        let sortedAny = false;
-        
         config.containerIds.forEach(containerId => {
-            sortedAny |= sortAccountContainer(containerId);
+            sortAccountContainer(containerId);
         });
     };
 
