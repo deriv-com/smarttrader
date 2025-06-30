@@ -4,6 +4,7 @@ const TopUpVirtualPopup     = require('./account/top_up_virtual/pop_up');
 const updateContractBalance = require('../trade/update_values').updateContractBalance;
 const Client                = require('../../base/client');
 const BinarySocket          = require('../../base/socket');
+const Header                = require('../../base/header');
 const formatMoney           = require('../../common/currency').formatMoney;
 const getPropertyValue      = require('../../../_common/utility').getPropertyValue;
 const createElement         = require('../../../_common/utility').createElement;
@@ -102,6 +103,17 @@ const updateBalance = (response) => {
             Client.setTotalBalance(balance, currency);
             updateContractBalance(balance);
         }
+
+        if (updateBalance.resortTimeout) {
+            clearTimeout(updateBalance.resortTimeout);
+        }
+        
+        updateBalance.resortTimeout = setTimeout(() => {
+            if (Header.resortAccountsByBalance) {
+                Header.resortAccountsByBalance();
+            }
+            updateBalance.resortTimeout = null;
+        }, 300);
     });
 };
 
