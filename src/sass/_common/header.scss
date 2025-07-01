@@ -970,6 +970,7 @@ body .mobile {
 
             &--active {
                 display: block;
+                overflow-y: auto;
             }
             &-submenu {
                 display: none;
