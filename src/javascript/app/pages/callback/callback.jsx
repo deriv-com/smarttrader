@@ -8,7 +8,7 @@ import moment from 'moment';
 import Client from '../../base/client';
 import BinarySocket from '../../base/socket';
 import GTM from '../../../_common/base/gtm';
-import { get as getLanguage, urlLang } from '../../../_common/language';
+import { get as getLanguage } from '../../../_common/language';
 import { isStorageSupported, removeCookies } from '../../../_common/storage';
 import { urlFor } from '../../../_common/url';
 import { getPropertyValue } from '../../../_common/utility';
