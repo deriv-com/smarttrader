@@ -768,7 +768,7 @@ const Header = (() => {
             
             applyToAllElements('.mobile__language-item', (el) => {
                 const itemLang = el.getAttribute('data-language');
-                if (itemLang === currentLanguage) {
+                if (itemLang === currentLanguage.toUpperCase()) {
                     el.classList.add('mobile__language-item--active');
                 } else {
                     el.classList.remove('mobile__language-item--active');
