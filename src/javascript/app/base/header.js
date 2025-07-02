@@ -668,8 +668,15 @@ const Header = (() => {
         };
 
         const showMobileLanguageSubmenu = (shouldShow, context = null) => {
+            const languageSelector = getElementById('mobile__menu-language-selector');
+            
             if (shouldShow) {
                 languageSubmenuContext = context;
+                
+                // Hide the language selector when submenu opens
+                if (languageSelector) {
+                    languageSelector.classList.add('mobile__menu-language-selector--hidden');
+                }
                 
                 language_submenu.classList.add(submenu_active);
                 menu.classList.remove(menu_active);
@@ -680,6 +687,11 @@ const Header = (() => {
                     hideAccountSettingsHeaders();
                 }
             } else {
+                // Show the language selector when submenu closes
+                if (languageSelector) {
+                    languageSelector.classList.remove('mobile__menu-language-selector--hidden');
+                }
+                
                 language_submenu.classList.remove(submenu_active);
                 
                 if (languageSubmenuContext === LANGUAGE_CONTEXT.ACCOUNT_SETTINGS) {
