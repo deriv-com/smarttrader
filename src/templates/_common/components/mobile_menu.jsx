@@ -61,13 +61,6 @@ const MobileMenu = () => (
                             <div className='mobile__platform-switcher-text'>{it.L('Help center')}</div>
                         </a>
                     </div>
-                    <div className='mobile__platform-switcher-item client_logged_in invisible'>
-                        <a href='https://app.deriv.com/account/account-limits' target='_blank' rel='noopener noreferrer'>
-                            <img className='mobile__platform-switcher-icon account-limits-icon' src='../images/pages/header/ic-account-limits.svg' alt='Account limits' />
-                            <div className='mobile__platform-switcher-text'>{it.L('Account limits')}</div>
-                            <img className='mobile__platform-switcher-icon-right' />
-                        </a>
-                    </div>
                     <div className='mobile__platform-switcher-item'>
                         <a href='https://deriv.com/responsible' target='_blank' rel='noopener noreferrer'>
                             <img className='mobile__platform-switcher-icon responsible-trading-icon' src='../images/pages/header/ic-responsible-trading.svg' alt='Responsible trading' />
@@ -193,9 +186,6 @@ const MobileMenu = () => (
                     </a>
                     <a href='https://app.deriv.com/account/self-exclusion' className='mobile__menu-content-submenu-item mobile__platform-switcher-item mobile__menu-content-submenu-sub-item'>
                         <div className='mobile__menu-content-submenu-item-text'>{it.L('Self-exclusion')}</div>
-                    </a>
-                    <a href='https://app.deriv.com/account/account-limits' className='mobile__menu-content-submenu-item mobile__platform-switcher-item mobile__menu-content-submenu-sub-item'>
-                        <div className='mobile__menu-content-submenu-item-text'>{it.L('Account limits')}</div>
                     </a>
                     <a href='https://app.deriv.com/account/login-history' className='mobile__menu-content-submenu-item mobile__platform-switcher-item mobile__menu-content-submenu-sub-item'>
                         <div className='mobile__menu-content-submenu-item-text'>{it.L('Login history')}</div>
