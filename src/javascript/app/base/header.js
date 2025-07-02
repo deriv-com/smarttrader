@@ -18,13 +18,13 @@ const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepP
 const State                    = require('../../_common/storage').State;
 const Url                      = require('../../_common/url');
 const applyToAllElements       = require('../../_common/utility').applyToAllElements;
+const Language                 = require('../../_common/language');
 const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const getTopLevelDomain        = require('../../_common/utility').getTopLevelDomain;
 const getPlatformSettings      = require('../../../templates/_common/brand.config').getPlatformSettings;
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
-const Language                 = require('../../_common/language');
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivLiveChat            = require('../pages/livechat.jsx');
@@ -264,6 +264,18 @@ const Header = (() => {
         });
 
         applyToAllElements('#mobile__menu-content-submenu-icon-back', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-cashier-icon-back', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-account-settings-icon-back', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
+        });
+
+        applyToAllElements('#mobile__menu-content-submenu-language-icon-back', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-chevron-left.svg?${process.env.BUILD_HASH}`);
         });
 
@@ -571,10 +583,22 @@ const Header = (() => {
         // Mobile reports menu
         const appstore_menu     = getElementById('mobile__platform-switcher-item-appstore');
         const report_menu       = getElementById('mobile__platform-switcher-item-reports');
+        const cashier_menu      = getElementById('mobile__platform-switcher-item-cashier');
+        const account_settings_menu = getElementById('mobile__platform-switcher-item-account-settings');
+        const language_menu     = getElementById('mobile__platform-switcher-item-language');
         const menu              = getElementById('mobile_menu-content');
         const submenu           = getElementById('mobile__menu-content-submenu');
+        const cashier_submenu   = getElementById('mobile__menu-content-submenu-cashier');
+        const account_settings_submenu = getElementById('mobile__menu-content-submenu-account-settings');
+        const language_submenu  = getElementById('mobile__menu-content-submenu-language');
         const back              = getElementById('mobile__menu-content-submenu-header');
+        const cashier_back      = getElementById('mobile__menu-content-submenu-cashier-header');
+        const account_settings_back = getElementById('mobile__menu-content-submenu-account-settings-header');
+        const language_back     = getElementById('mobile__menu-content-submenu-language-header');
+        const header_language_selector = getElementById('mobile__menu-language-selector');
         const submenu_active    = 'mobile__menu-content-submenu--active';
+        const account_settings_header = getElementById('mobile__menu-content-submenu-account-settings-header');
+        const profile_category_headers = document.querySelectorAll('#mobile__menu-content-submenu-account-settings .mobile__menu-content-submenu-category-header');
         const menu_active       = 'mobile__menu-content--active';
         const showMobileSubmenu = (shouldShow) => {
             if (shouldShow) {
@@ -583,6 +607,102 @@ const Header = (() => {
             } else {
                 submenu.classList.remove(submenu_active);
                 menu.classList.add(menu_active);
+            }
+        };
+
+        const showMobileCashierSubmenu = (shouldShow) => {
+            if (shouldShow) {
+                cashier_submenu.classList.add(submenu_active);
+                menu.classList.remove(menu_active);
+            } else {
+                cashier_submenu.classList.remove(submenu_active);
+                menu.classList.add(menu_active);
+            }
+        };
+
+        const showMobileAccountSettingsSubmenu = (shouldShow) => {
+            if (shouldShow) {
+                account_settings_submenu.classList.add(submenu_active);
+                menu.classList.remove(menu_active);
+            } else {
+                account_settings_submenu.classList.remove(submenu_active);
+                menu.classList.add(menu_active);
+            }
+        };
+
+        let languageSubmenuContext = null;
+        const LANGUAGE_CONTEXT = {
+            HEADER          : 'header',
+            MAIN_MENU       : 'main_menu',
+            ACCOUNT_SETTINGS: 'account_settings',
+        };
+
+        const hideAccountSettingsHeaders = () => {
+            try {
+                if (account_settings_header) {
+                    account_settings_header.style.display = 'none';
+                }
+                if (profile_category_headers && profile_category_headers.length > 0) {
+                    profile_category_headers.forEach(header => {
+                        if (header) header.style.display = 'none';
+                    });
+                }
+            } catch (error) {
+                // Error handling - silently continue
+            }
+        };
+
+        const restoreAccountSettingsHeaders = () => {
+            try {
+                if (account_settings_header) {
+                    account_settings_header.style.display = '';
+                }
+                if (profile_category_headers && profile_category_headers.length > 0) {
+                    profile_category_headers.forEach(header => {
+                        if (header) header.style.display = '';
+                    });
+                }
+            } catch (error) {
+                // Error handling - silently continue
+            }
+        };
+
+        const showMobileLanguageSubmenu = (shouldShow, context = null) => {
+            const languageSelector = getElementById('mobile__menu-language-selector');
+            
+            if (shouldShow) {
+                languageSubmenuContext = context;
+                
+                // Hide the language selector when submenu opens
+                if (languageSelector) {
+                    languageSelector.classList.add('mobile__menu-language-selector--hidden');
+                }
+                
+                language_submenu.classList.add(submenu_active);
+                menu.classList.remove(menu_active);
+                
+                if (context === LANGUAGE_CONTEXT.ACCOUNT_SETTINGS) {
+                    account_settings_submenu.classList.remove(submenu_active);
+                    
+                    hideAccountSettingsHeaders();
+                }
+            } else {
+                // Show the language selector when submenu closes
+                if (languageSelector) {
+                    languageSelector.classList.remove('mobile__menu-language-selector--hidden');
+                }
+                
+                language_submenu.classList.remove(submenu_active);
+                
+                if (languageSubmenuContext === LANGUAGE_CONTEXT.ACCOUNT_SETTINGS) {
+                    account_settings_submenu.classList.add(submenu_active);
+                    
+                    restoreAccountSettingsHeaders();
+                } else {
+                    menu.classList.add(menu_active);
+                }
+                
+                languageSubmenuContext = null;
             }
         };
 
@@ -598,6 +718,77 @@ const Header = (() => {
         back.addEventListener('click', () => {
             showMobileSubmenu(false);
         });
+
+        cashier_menu.addEventListener('click', () => {
+            showMobileCashierSubmenu(true);
+        });
+
+        cashier_back.addEventListener('click', () => {
+            showMobileCashierSubmenu(false);
+        });
+
+        account_settings_menu.addEventListener('click', () => {
+            showMobileAccountSettingsSubmenu(true);
+        });
+
+        account_settings_back.addEventListener('click', () => {
+            showMobileAccountSettingsSubmenu(false);
+        });
+
+        header_language_selector.addEventListener('click', () => {
+            showMobileLanguageSubmenu(true, LANGUAGE_CONTEXT.HEADER);
+        });
+
+        language_menu.addEventListener('click', () => {
+            showMobileLanguageSubmenu(true, LANGUAGE_CONTEXT.MAIN_MENU);
+        });
+
+        const account_settings_languages = getElementById('mobile__account-settings-languages');
+        if (account_settings_languages) {
+            account_settings_languages.addEventListener('click', () => {
+                showMobileLanguageSubmenu(true, LANGUAGE_CONTEXT.ACCOUNT_SETTINGS);
+            });
+        }
+
+        language_back.addEventListener('click', () => {
+            showMobileLanguageSubmenu(false);
+        });
+
+        applyToAllElements('.mobile__language-item', (el) => {
+            el.addEventListener('click', () => {
+                const selectedLanguage = el.getAttribute('data-language');
+                const currentLanguage = Language.get();
+                
+                if (selectedLanguage === currentLanguage) return;
+                
+                SocketCache.clear();
+                
+                document.location = Language.urlFor(selectedLanguage);
+            });
+        }, '', getElementById('mobile__menu-content-submenu-language'));
+
+        const updateMobileLanguageDisplay = () => {
+            const currentLanguage = Language.get();
+            
+            const flagImg = getElementById('mobile__menu-language-flag');
+            const langText = getElementById('mobile__menu-language-text');
+            
+            if (flagImg && langText) {
+                flagImg.src = Url.urlForStatic(`images/languages/ic-flag-${currentLanguage.toLowerCase()}.svg?${process.env.BUILD_HASH}`);
+                langText.textContent = currentLanguage.toUpperCase();
+            }
+            
+            applyToAllElements('.mobile__language-item', (el) => {
+                const itemLang = el.getAttribute('data-language');
+                if (itemLang === currentLanguage.toUpperCase()) {
+                    el.classList.add('mobile__language-item--active');
+                } else {
+                    el.classList.remove('mobile__language-item--active');
+                }
+            });
+        };
+
+        updateMobileLanguageDisplay();
 
         // OnClickOutisde Event Handle
         document.addEventListener('click', (event) => {
