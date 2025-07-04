@@ -75,7 +75,7 @@
                 max-height: 450px;
                 border-bottom: 1px solid var(--general-hover);
                 padding: 4px 8px;
-                overflow-y: scroll;
+                overflow-y: auto;
             }
         }
         &-balance {
@@ -220,5 +220,13 @@
                 width: stretch;
             }
         }
+    }
+}
+
+.url-wallet-apps {
+    font-weight: normal;
+
+    &:hover, a:visited:active, a:visited:hover {
+        text-decoration: underline !important;
     }
 }
