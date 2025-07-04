@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Skeleton } from '@deriv-com/quill-ui';
+import { Skeleton } from '@deriv-com/quill-ui';
 import Notification from '../components/notification.jsx';
 import MobileMenu from '../components/mobile_menu.jsx';
 
@@ -90,10 +90,10 @@ const WalletHeader = () => (
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
-                    {/* <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-login' />
-                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-signup' /> */}
-                    <button id='btn__login' className='btn btn--tertiary header__btn-login'>{it.L('Log in')}</button>
-                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer'>{it.L('Sign up')}</a>
+                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-login' />
+                    <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-signup' />
+                    <button id='btn__login' className='btn btn--tertiary header__btn-login' style={{display: 'none'}}>{it.L('Log in')}</button>
+                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' style={{display: 'none'}}>{it.L('Sign up')}</a>
                 </div>
             </div>
         </div>

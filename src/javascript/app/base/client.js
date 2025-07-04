@@ -59,6 +59,11 @@ const Client = (() => {
                 applyToAllElements('.is-logout', (el) => {
                     el.style.display = 'none';
                 });
+                
+                // Hide skeleton loaders for logged-in state (login buttons not needed)
+                applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                    el.style.display = 'none';
+                });
             });
         } else {
             // applyToAllElements('.client_logged_in', (el) => {
@@ -79,8 +84,14 @@ const Client = (() => {
             applyToAllElements('.is-login', (el) => {
                 el.style.display = 'none';
             });
-            applyToAllElements('.is-logout', (el) => {
-                el.style.display = 'inline-flex';
+            // .is-logout container is already visible by default, no need to show it again
+            
+            // Hide skeleton loaders and show login buttons for logged-out state
+            applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                el.style.display = 'none';
+            });
+            applyToAllElements('#btn__login, #btn__signup', (el) => {
+                el.style.display = '';
             });
         }
     };
