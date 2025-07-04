@@ -92,8 +92,8 @@ const WalletHeader = () => (
                 <div className='header__btn'>
                     <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-login' />
                     <Skeleton.Square width={72} height={32} className='btn header__btn-login skeleton-btn-signup' />
-                    <button id='btn__login' className='btn btn--tertiary header__btn-login' style={{display: 'none'}}>{it.L('Log in')}</button>
-                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' style={{display: 'none'}}>{it.L('Sign up')}</a>
+                    <button id='btn__login' className='btn btn--tertiary header__btn-login' style={{ display: 'none' }}>{it.L('Log in')}</button>
+                    <a id='btn__signup' className='btn btn--primary header__btn-signup' target='_blank' rel='noopener noreferrer' style={{ display: 'none' }}>{it.L('Sign up')}</a>
                 </div>
             </div>
         </div>

@@ -134,6 +134,35 @@ const Process = (() => {
         
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';
+            
+            // Synchronize header skeleton loaders with trading completion
+            try {
+                const Header = require('../base/header');
+                if (Header && Header.updateLoginButtonsDisplay) {
+                    Header.updateLoginButtonsDisplay();
+                }
+            } catch (error) {
+                // Fallback: directly update header skeleton loaders if Header module not available
+                const skeleton_login = document.querySelector('.skeleton-btn-login');
+                const skeleton_signup = document.querySelector('.skeleton-btn-signup');
+                const btn_login = document.getElementById('btn__login');
+                const btn_signup = document.getElementById('btn__signup');
+                
+                if (skeleton_login) skeleton_login.remove();
+                if (skeleton_signup) skeleton_signup.remove();
+                
+                // Show appropriate buttons based on login state
+                const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
+                const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
+                const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
+                const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+                
+                if (!will_eventually_sso) {
+                    if (btn_login) btn_login.style.display = 'flex';
+                    if (btn_signup) btn_signup.style.display = 'flex';
+                }
+            }
+            
             Defaults.update();
         }
     };

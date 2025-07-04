@@ -60,10 +60,37 @@ const Client = (() => {
                     el.style.display = 'none';
                 });
                 
-                // Hide skeleton loaders for logged-in state (login buttons not needed)
-                applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
-                    el.style.display = 'none';
-                });
+                // Only hide skeleton loaders if not on a loading trading page and header is ready
+                const trading_init_progress = getElementById('trading_init_progress');
+                const is_trading_loading = trading_init_progress && trading_init_progress.style.display !== 'none';
+                
+                // Check if header is ready via global window object to avoid circular dependency
+                let is_header_ready = false;
+                if (typeof window !== 'undefined' && window.Header && window.Header.isHeaderReady) {
+                    is_header_ready = window.Header.isHeaderReady();
+                } else {
+                    // If header readiness check not available, assume ready
+                    is_header_ready = true;
+                }
+                
+                if (!is_trading_loading && is_header_ready) {
+                    // Hide skeleton loaders for logged-in state (login buttons not needed)
+                    applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                        el.style.display = 'none';
+                    });
+                } else if (!is_header_ready) {
+                    // If header not ready, register callback via global window object
+                    if (typeof window !== 'undefined' && window.Header && window.Header.addHeaderReadyCallback) {
+                        window.Header.addHeaderReadyCallback(() => {
+                            // Re-run the skeleton loader logic when header is ready
+                            if (!is_trading_loading) {
+                                applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                                    el.style.display = 'none';
+                                });
+                            }
+                        });
+                    }
+                }
             });
         } else {
             // applyToAllElements('.client_logged_in', (el) => {
@@ -86,13 +113,55 @@ const Client = (() => {
             });
             // .is-logout container is already visible by default, no need to show it again
             
-            // Hide skeleton loaders and show login buttons for logged-out state
+            // EXPLICIT CLEANUP: Always remove skeleton loaders first for logout scenarios
             applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
                 el.style.display = 'none';
             });
-            applyToAllElements('#btn__login, #btn__signup', (el) => {
-                el.style.display = '';
-            });
+            
+            // Check if header is ready via global window object to avoid circular dependency
+            let is_header_ready = false;
+            if (typeof window !== 'undefined' && window.Header && window.Header.isHeaderReady) {
+                is_header_ready = window.Header.isHeaderReady();
+            } else {
+                // If header readiness check not available, assume ready
+                is_header_ready = true;
+            }
+            
+            if (is_header_ready) {
+                // Header is ready, coordinate with header to show login buttons
+                try {
+                    const Header = window.Header;
+                    if (Header && Header.updateLoginButtonsDisplay) {
+                        Header.updateLoginButtonsDisplay();
+                    }
+                } catch (error) {
+                    // Fallback: directly show login buttons if header module not available
+                    applyToAllElements('#btn__login, #btn__signup', (el) => {
+                        el.style.display = '';
+                    });
+                }
+            } else if (typeof window !== 'undefined' && window.Header && window.Header.addHeaderReadyCallback) {
+                // If header not ready, register callback via global window object
+                window.Header.addHeaderReadyCallback(() => {
+                    // Coordinate with header when ready
+                    try {
+                        const Header = window.Header;
+                        if (Header && Header.updateLoginButtonsDisplay) {
+                            Header.updateLoginButtonsDisplay();
+                        }
+                    } catch (error) {
+                        // Fallback: directly show login buttons
+                        applyToAllElements('#btn__login, #btn__signup', (el) => {
+                            el.style.display = '';
+                        });
+                    }
+                });
+            } else {
+                // Final fallback: directly show login buttons
+                applyToAllElements('#btn__login, #btn__signup', (el) => {
+                    el.style.display = '';
+                });
+            }
         }
     };
 
