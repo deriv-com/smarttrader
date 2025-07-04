@@ -130,9 +130,15 @@ InScriptStore.prototype = {
         let key = k;
         if (!Array.isArray(key)) key = [key];
         if (key.length > 1) {
+            if (['__proto__', 'constructor', 'prototype'].includes(key[0])) {
+                throw new Error(`Invalid key: ${key[0]}`);
+            }
             if (!(key[0] in obj) || isEmptyObject(obj[key[0]])) obj[key[0]] = {};
             this.set(key.slice(1), value, obj[key[0]]);
         } else {
+            if (['__proto__', 'constructor', 'prototype'].includes(key[0])) {
+                throw new Error(`Unsafe key detected: ${key[0]}`);
+            }
             obj[key[0]] = value;
         }
     },
