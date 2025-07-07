@@ -138,24 +138,22 @@ const Process = (() => {
             
             // Synchronize header skeleton loaders with trading completion
             // Wait for header to be ready before updating skeleton loaders
-            // Use global window object to avoid circular dependency
-            if (typeof window !== 'undefined' && window.Header && window.Header.addHeaderReadyCallback) {
-                window.Header.addHeaderReadyCallback(() => {
+            // Use SmartTrader namespace to avoid circular dependency
+            if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
+                window.SmartTrader.Header.addHeaderReadyCallback(() => {
                     try {
-                        const Header = window.Header;
-                        if (Header && Header.updateLoginButtonsDisplay) {
-                            Header.updateLoginButtonsDisplay();
+                        if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
+                            window.SmartTrader.Header.updateLoginButtonsDisplay();
                         }
                     } catch (error) {
                         // console.warn('Header module not available in callback:', error);
                     }
                 });
             } else {
-                // Fallback if callback system not available via window object
+                // Fallback if callback system not available via SmartTrader namespace
                 try {
-                    const Header = window.Header;
-                    if (Header && Header.updateLoginButtonsDisplay) {
-                        Header.updateLoginButtonsDisplay();
+                    if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
+                        window.SmartTrader.Header.updateLoginButtonsDisplay();
                     }
                 } catch (error) {
                     // console.warn('Header module not available for fallback:', error);
@@ -163,7 +161,7 @@ const Process = (() => {
             }
             
             // Additional fallback: directly update header skeleton loaders if Header module not available
-            if (typeof window === 'undefined' || !window.Header) {
+            if (typeof window === 'undefined' || !window.SmartTrader?.Header) {
                 const skeleton_login = document.querySelector('.skeleton-btn-login');
                 const skeleton_signup = document.querySelector('.skeleton-btn-signup');
                 const btn_login = document.getElementById('btn__login');

@@ -64,10 +64,10 @@ const Client = (() => {
                 const trading_init_progress = getElementById('trading_init_progress');
                 const is_trading_loading = trading_init_progress && trading_init_progress.style.display !== 'none';
                 
-                // Check if header is ready via global window object to avoid circular dependency
+                // Check if header is ready via SmartTrader namespace to avoid circular dependency
                 let is_header_ready = false;
-                if (typeof window !== 'undefined' && window.Header && window.Header.isHeaderReady) {
-                    is_header_ready = window.Header.isHeaderReady();
+                if (typeof window !== 'undefined' && window.SmartTrader?.Header?.isHeaderReady) {
+                    is_header_ready = window.SmartTrader.Header.isHeaderReady();
                 } else {
                     // If header readiness check not available, assume ready
                     is_header_ready = true;
@@ -76,12 +76,12 @@ const Client = (() => {
                 if (!is_trading_loading && is_header_ready) {
                     // Hide skeleton loaders for logged-in state (login buttons not needed)
                     applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
-                        el.style.display = 'none';
+                        el.classList.add('hidden');
                     });
                 } else if (!is_header_ready) {
-                    // If header not ready, register callback via global window object
-                    if (typeof window !== 'undefined' && window.Header && window.Header.addHeaderReadyCallback) {
-                        window.Header.addHeaderReadyCallback(() => {
+                    // If header not ready, register callback via SmartTrader namespace
+                    if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
+                        window.SmartTrader.Header.addHeaderReadyCallback(() => {
                             // Re-run the skeleton loader logic when header is ready
                             if (!is_trading_loading) {
                                 applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
@@ -118,36 +118,36 @@ const Client = (() => {
                 el.style.display = 'none';
             });
             
-            // Check if header is ready via global window object to avoid circular dependency
+            // Check if header is ready via SmartTrader namespace to avoid circular dependency
             let is_header_ready = false;
-            if (typeof window !== 'undefined' && window.Header && window.Header.isHeaderReady) {
-                is_header_ready = window.Header.isHeaderReady();
+            if (typeof window !== 'undefined' && window.SmartTrader?.Header?.isHeaderReady) {
+                is_header_ready = window.SmartTrader.Header.isHeaderReady();
             } else {
                 // If header readiness check not available, assume ready
                 is_header_ready = true;
             }
             
+            const logoutHeaderModule = window.SmartTrader?.Header;
             if (is_header_ready) {
                 // Header is ready, coordinate with header to show login buttons
                 try {
-                    const Header = window.Header;
-                    if (Header && Header.updateLoginButtonsDisplay) {
-                        Header.updateLoginButtonsDisplay();
+                    if (logoutHeaderModule && logoutHeaderModule.updateLoginButtonsDisplay) {
+                        logoutHeaderModule.updateLoginButtonsDisplay();
                     }
                 } catch (error) {
                     // Fallback: directly show login buttons if header module not available
                     applyToAllElements('#btn__login, #btn__signup', (el) => {
-                        el.style.display = '';
+                        el.classList.remove('hidden');
                     });
                 }
-            } else if (typeof window !== 'undefined' && window.Header && window.Header.addHeaderReadyCallback) {
-                // If header not ready, register callback via global window object
-                window.Header.addHeaderReadyCallback(() => {
+            } else if (typeof window !== 'undefined' && logoutHeaderModule && logoutHeaderModule.addHeaderReadyCallback) {
+                // If header not ready, register callback via SmartTrader namespace
+                logoutHeaderModule.addHeaderReadyCallback(() => {
                     // Coordinate with header when ready
                     try {
-                        const Header = window.Header;
-                        if (Header && Header.updateLoginButtonsDisplay) {
-                            Header.updateLoginButtonsDisplay();
+                        const callbackHeaderModule = window.SmartTrader?.Header;
+                        if (callbackHeaderModule && callbackHeaderModule.updateLoginButtonsDisplay) {
+                            callbackHeaderModule.updateLoginButtonsDisplay();
                         }
                     } catch (error) {
                         // Fallback: directly show login buttons

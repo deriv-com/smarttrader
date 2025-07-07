@@ -65,7 +65,8 @@ const Header = (() => {
             try {
                 callback();
             } catch (error) {
-                // console.error('Header ready callback error:', error);
+                // eslint-disable-next-line no-console
+                console.error('Header ready callback error:', error);
             }
         });
         header_ready_callbacks.length = 0; // Clear callbacks array
@@ -73,11 +74,15 @@ const Header = (() => {
 
     const isHeaderReady = () => is_header_ready;
 
-    // Expose functions via global window object to avoid circular dependencies
+    // Expose functions via SmartTrader namespace to avoid circular dependencies
     if (typeof window !== 'undefined') {
-        window.Header = window.Header || {};
-        window.Header.addHeaderReadyCallback = addHeaderReadyCallback;
-        window.Header.isHeaderReady = isHeaderReady;
+        // Initialize SmartTrader namespace
+        window.SmartTrader = window.SmartTrader || {};
+        window.SmartTrader.Header = {
+            addHeaderReadyCallback,
+            isHeaderReady,
+            updateLoginButtonsDisplay,
+        };
     }
 
     const onLoad = async () => {
