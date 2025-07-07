@@ -797,7 +797,15 @@ const Header = (() => {
 
     const populateWalletAccounts = () => {
         if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
-        const account_list      = getElementById('wallet__switcher-accounts-list');
+        
+        // Prevent concurrent population calls
+        if (isPopulatingWallets) {
+            return Promise.resolve();
+        }
+        
+        isPopulatingWallets = true;
+        const account_list = getElementById('wallet__switcher-accounts-list');
+        
         return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             const real_accounts = [];
             const demo_accounts = [];
@@ -892,6 +900,9 @@ const Header = (() => {
                 return account;
             };
 
+            // Clear existing accounts to prevent duplicates
+            account_list.innerHTML = '';
+
             real_accounts.forEach(accountData => {
                 account_list.appendChild(createWalletAccountElement(accountData));
             });
@@ -904,6 +915,8 @@ const Header = (() => {
                 el.removeEventListener('click', loginIDOnClick);
                 el.addEventListener('click', loginIDOnClick);
             });
+        }).finally(() => {
+            isPopulatingWallets = false;
         });
     };
 
@@ -1657,6 +1670,7 @@ const Header = (() => {
     };
 
     let isPopulating = false;
+    let isPopulatingWallets = false;
     
     const resortAccountsByBalance = async () => {
         const isWalletAccount = Client.hasWalletsAccount();
