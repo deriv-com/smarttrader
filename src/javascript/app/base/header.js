@@ -770,7 +770,8 @@ const Header = (() => {
                 
                 SocketCache.clear();
                 
-                document.location = Language.urlFor(selectedLanguage);
+                // Safely redirect using window.location.href to prevent XSS
+                window.location.href = Language.urlFor(selectedLanguage);
             });
         }, '', getElementById('mobile__menu-content-submenu-language'));
 
@@ -873,9 +874,19 @@ const Header = (() => {
             el.addEventListener('click', () => {
                 const item_language = el.getAttribute('id');
                 if (item_language === current_language) return;
+                
+                // Validate language before redirecting to prevent XSS
+                const allLanguages = Object.keys(Language.getAll());
+                if (!allLanguages.includes(item_language.toUpperCase())) {
+                    // eslint-disable-next-line no-console
+                    console.warn('Invalid language selected:', item_language);
+                    return;
+                }
+                
                 SocketCache.clear();
 
-                document.location = Language.urlFor(item_language);
+                // Safely redirect using window.location.href to prevent XSS
+                window.location.href = Language.urlFor(item_language);
             });
         }, '', getElementById('language-menu-list'));
 
