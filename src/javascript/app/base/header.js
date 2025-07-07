@@ -760,6 +760,12 @@ const Header = (() => {
                 const currentLanguage = Language.get();
                 
                 if (selectedLanguage === currentLanguage) return;
+
+                const allLanguages = Object.keys(Language.getAll());
+                if (!allLanguages.includes(selectedLanguage.toUpperCase())) {
+                    console.warn('Invalid language selected:', selectedLanguage);
+                    return;
+                }
                 
                 SocketCache.clear();
                 

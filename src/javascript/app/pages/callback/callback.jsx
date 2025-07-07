@@ -91,7 +91,6 @@ const CallbackContainer = () => {
             ];
             if (redirect_url && trusted_urls.includes(redirect_url)) {
                 set_default = false;
-
             }
 
             if (set_default) {
