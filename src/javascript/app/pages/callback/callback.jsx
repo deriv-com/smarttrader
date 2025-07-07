@@ -84,13 +84,23 @@ const CallbackContainer = () => {
 
             // redirect back
             let set_default = true;
-            const trusted_urls = [
-                urlFor('user/metatrader'),
-                Client.defaultRedirectUrl(),
-                urlFor('home'),
-            ];
-            if (redirect_url && trusted_urls.includes(redirect_url)) {
-                set_default = false;
+            const do_not_redirect = ['reset_passwordws', 'lost_passwordws', 'change_passwordws', 'home', '404'];
+            const reg = new RegExp(do_not_redirect.join('|'), 'i');
+            
+            // Enhanced URL validation to prevent client-side redirect attacks
+            if (redirect_url) {
+                try {
+                    const url = new URL(redirect_url, window.location.origin);
+                    // Only allow same-origin URLs and check against blocked patterns
+                    if (url.origin === window.location.origin &&
+                        !reg.test(redirect_url) &&
+                        urlFor('') !== redirect_url) {
+                        set_default = false;
+                    }
+                } catch (error) {
+                    // Invalid URL format, use default
+                    redirect_url = null;
+                }
             }
 
             if (set_default) {
