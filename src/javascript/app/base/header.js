@@ -771,7 +771,8 @@ const Header = (() => {
                 SocketCache.clear();
                 
                 // Safely redirect using window.location.href to prevent XSS
-                window.location.href = Language.urlFor(selectedLanguage);
+                const sanitizedLanguage = encodeURIComponent(selectedLanguage.trim().toLowerCase());
+                window.location.href = Language.urlFor(sanitizedLanguage);
             });
         }, '', getElementById('mobile__menu-content-submenu-language'));
 
