@@ -763,6 +763,7 @@ const Header = (() => {
 
                 const allLanguages = Object.keys(Language.getAll());
                 if (!allLanguages.includes(selectedLanguage.toUpperCase())) {
+                    // eslint-disable-next-line no-console
                     console.warn('Invalid language selected:', selectedLanguage);
                     return;
                 }
