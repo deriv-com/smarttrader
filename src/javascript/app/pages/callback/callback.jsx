@@ -94,8 +94,8 @@ const CallbackContainer = () => {
             }
 
             if (set_default) {
-                const lang_cookie = Cookies.get('language') || getLanguage();
                 const language = getLanguage();
+                const lang_cookie = Cookies.get('language') || language;
                 redirect_url =
                     Client.isAccountOfType('financial') || Client.isOptionsBlocked()
                         ? urlFor('user/metatrader')
