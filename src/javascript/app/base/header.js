@@ -1042,7 +1042,16 @@ const Header = (() => {
                             el.src = icon;
                         });
                         applyToAllElements('#header__acc-icon-mobile-currency', (el) => {
-                            el.src = combined_icon;
+                            // Validate URL to prevent DOM text reinterpretation as HTML
+                            try {
+                                const validatedUrl = new URL(combined_icon, window.location.origin);
+                                if (validatedUrl.origin === window.location.origin) {
+                                    el.src = combined_icon;
+                                }
+                            } catch (error) {
+                                // Invalid URL, use fallback
+                                el.src = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-unknown.svg?${process.env.BUILD_HASH}`);
+                            }
                         });
                     }
 
