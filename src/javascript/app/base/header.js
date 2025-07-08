@@ -1007,13 +1007,25 @@ const Header = (() => {
 
     const populateWalletAccounts = () => {
         if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
-        const account_list      = getElementById('wallet__switcher-accounts-list');
+        
+        // Prevent concurrent population calls
+        if (isPopulatingWallets) {
+            return Promise.resolve();
+        }
+        
+        isPopulatingWallets = true;
+        const account_list = getElementById('wallet__switcher-accounts-list');
+        
         return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
+            const real_accounts = [];
+            const demo_accounts = [];
+            
             Client.getAllLoginids().forEach((loginid) => {
                 const is_wallet_account        = Client.isWalletsAccount(loginid);
-                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !is_wallet_account) {
+                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && is_wallet_account) {
                     const is_real              = loginid.startsWith('CR');
                     const currency             = Client.get('currency', loginid);
+                    const balance              = Client.get('balance', loginid) || 0;
                     
                     const getIcon              = () => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
@@ -1033,51 +1045,88 @@ const Header = (() => {
                             el.src = combined_icon;
                         });
                     }
-                    // start of wallet switcher dropdown
-                    const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
-                    const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
-                    const account_content   = createElement('div', { class: 'wallet__switcher--content' });
-                    const account_text      = createElement('span', { text: localize('Options') });
-                    const account_currency  = createElement('span', { text: `${is_real ? currency : localize('Demo')} Wallet` });
-                    const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
-                    const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
-                    const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
 
-                    if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
-                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
-                        $('.account__switcher-select_currencies').css('display', 'block');
+                    const accountData = {
+                        loginid,
+                        is_real,
+                        currency,
+                        icon,
+                        combined_icon,
+                        is_current,
+                        balance: parseFloat(balance) || 0,
+                    };
 
-                        const header_deposit = $('.header__deposit');
-                        header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
+                    if (is_real) {
+                        real_accounts.push(accountData);
+                    } else {
+                        demo_accounts.push(accountData);
                     }
+                }
+            });
 
-                    if (is_current && !is_real) {
-                        $(demo_batch1).insertAfter('.header__acc-display');
-                    }
+            real_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                const result = balanceB - balanceA;
+                return result;
+            });
 
-                    // append icons
-                    icon_container.appendChild(account_icon);
-                    // append content
-                    account_content.appendChild(account_text);
-                    account_content.appendChild(account_currency);
-                    account_content.appendChild(account_balance);
-                    // append icons and content
-                    account.appendChild(icon_container);
-                    account.appendChild(account_content);
-                    
-                    if (!is_real) account.appendChild(demo_batch2);
+            const createWalletAccountElement = (accountData) => {
+                const { loginid, is_real, currency, combined_icon, is_current } = accountData;
+                
+                const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
+                const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
+                const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
+                const account_content   = createElement('div', { class: 'wallet__switcher--content' });
+                const account_text      = createElement('span', { text: localize('Options') });
+                const account_currency  = createElement('span', { text: `${is_real ? currency : localize('Demo')} Wallet` });
+                const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
+                const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
+                const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
 
-                    account_list.appendChild(account);
+                if (!currency) {
+                    $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
+                    account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
+                    $('.account__switcher-select_currencies').css('display', 'block');
+
+                    const header_deposit = $('.header__deposit');
+                    header_deposit.text('Set currency');
+                    header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                 }
 
-                applyToAllElements('.wallet__switcher-acc', (el) => {
-                    el.removeEventListener('click', loginIDOnClick);
-                    el.addEventListener('click', loginIDOnClick);
-                });
+                if (is_current && !is_real) {
+                    $(demo_batch1).insertAfter('.header__acc-display');
+                }
+
+                icon_container.appendChild(account_icon);
+                account_content.appendChild(account_text);
+                account_content.appendChild(account_currency);
+                account_content.appendChild(account_balance);
+                account.appendChild(icon_container);
+                account.appendChild(account_content);
+                
+                if (!is_real) account.appendChild(demo_batch2);
+
+                return account;
+            };
+
+            // Clear existing accounts to prevent duplicates
+            account_list.innerHTML = '';
+
+            real_accounts.forEach(accountData => {
+                account_list.appendChild(createWalletAccountElement(accountData));
             });
+
+            demo_accounts.forEach(accountData => {
+                account_list.appendChild(createWalletAccountElement(accountData));
+            });
+
+            applyToAllElements('.wallet__switcher-acc', (el) => {
+                el.removeEventListener('click', loginIDOnClick);
+                el.addEventListener('click', loginIDOnClick);
+            });
+        }).finally(() => {
+            isPopulatingWallets = false;
         });
     };
 
@@ -1116,15 +1165,22 @@ const Header = (() => {
         if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return Promise.resolve();
         return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
+            
+            const non_eu_real_accounts = [];
+            const eu_real_accounts = [];
+            const demo_accounts = [];
+            
             const loginid_non_eu_real_select   = createElement('div');
             const loginid_eu_real_select       = createElement('div');
             const loginid_demo_select          = createElement('div');
+            
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
                     const is_mf_account        = loginid.startsWith('MF');
                     const is_non_eu            = loginid.startsWith('CR');
                     const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency             = Client.get('currency', loginid);
+                    const balance              = Client.get('balance', loginid) || 0;
                     let currencyName           = mapCurrencyName(currency);
                     
                     const getIcon              = (() => {
@@ -1146,69 +1202,105 @@ const Header = (() => {
                         currencyName = localize('Multipliers');
                     }
 
-                    const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
-                    const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
-                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
-
-                    if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
-                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
-                        $('.account__switcher-select_currencies').css('display', 'block');
-
-                        const header_deposit = $('.header__deposit');
-                        header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
-                    }
-
-                    account_detail.appendChild(account_loginid);
-                    account.appendChild(account_icon);
-                    account.appendChild(account_detail);
-                    account.appendChild(account_balance);
+                    const accountData = {
+                        loginid,
+                        is_mf_account,
+                        is_non_eu,
+                        is_real,
+                        currency,
+                        currencyName,
+                        icon,
+                        is_current,
+                        balance: parseFloat(balance) || 0,
+                    };
 
                     if (is_non_eu) {
-                        loginid_non_eu_real_select.appendChild(account);
+                        non_eu_real_accounts.push(accountData);
                     } else if (is_mf_account && !isEuCountry()) {
-                        loginid_eu_real_select.appendChild(account);
+                        eu_real_accounts.push(accountData);
                     } else if (is_mf_account && isEuCountry()){
-                        loginid_non_eu_real_select.appendChild(account);
+                        non_eu_real_accounts.push(accountData);
                     } else {
-                        loginid_demo_select.appendChild(account);
+                        demo_accounts.push(accountData);
                     }
-                    // const link    = createElement('a', { 'data-value': loginid });
-                    // const li_type = createElement('li', { text: localized_type });
+                }
+            });
 
-                    // li_type.appendChild(createElement('div', { text: loginid }));
-                    // link.appendChild(li_type);
-                    // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
+            non_eu_real_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                return balanceB - balanceA;
+            });
+            eu_real_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                return balanceB - balanceA;
+            });
+
+            const createAccountElement = (accountData) => {
+                const { loginid, currency, currencyName, icon, is_current, is_real } = accountData;
+                
+                const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
+                const account_icon      = createElement('img', { src: icon });
+                const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
+                const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
+                const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
+
+                if (!currency) {
+                    $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
+                    account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
+                    $('.account__switcher-select_currencies').css('display', 'block');
+
+                    const header_deposit = $('.header__deposit');
+                    header_deposit.text('Set currency');
+                    header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                 }
 
-                applyToAllElements('#account__switcher-non-eu-list', (el) => {
-                    el.insertBefore(loginid_non_eu_real_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-non-eu');
-                });
-                applyToAllElements('#account__switcher-eu-list', (el) => {
-                    el.insertBefore(loginid_eu_real_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-eu');
-                });
-                applyToAllElements('#account__switcher-demo-list', (el) => {
-                    el.insertBefore(loginid_demo_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-demo');
-                });
+                account_detail.appendChild(account_loginid);
+                account.appendChild(account_icon);
+                account.appendChild(account_detail);
+                account.appendChild(account_balance);
+
+                return account;
+            };
+
+            non_eu_real_accounts.forEach(accountData => {
+                loginid_non_eu_real_select.appendChild(createAccountElement(accountData));
             });
+
+            eu_real_accounts.forEach(accountData => {
+                loginid_eu_real_select.appendChild(createAccountElement(accountData));
+            });
+
+            demo_accounts.forEach(accountData => {
+                loginid_demo_select.appendChild(createAccountElement(accountData));
+            });
+
+            applyToAllElements('#account__switcher-non-eu-list', (el) => {
+                el.insertBefore(loginid_non_eu_real_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-non-eu');
+            });
+            applyToAllElements('#account__switcher-eu-list', (el) => {
+                el.insertBefore(loginid_eu_real_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-eu');
+            });
+            applyToAllElements('#account__switcher-demo-list', (el) => {
+                el.insertBefore(loginid_demo_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-demo');
+            });
+            
             bindTabs();
         });
     };
@@ -1787,11 +1879,122 @@ const Header = (() => {
         });
     };
 
+    let isPopulating = false;
+    let isPopulatingWallets = false;
+    
+    const resortAccountsByBalance = async () => {
+        const isWalletAccount = Client.hasWalletsAccount();
+        
+        const config = isWalletAccount ? {
+            containerIds    : ['wallet__switcher-accounts-list'],
+            accountSelector : '.wallet__switcher-acc',
+            balanceSelector : '.wallet__switcher-balance',
+            populateFunction: populateWalletAccounts,
+        } : {
+            containerIds    : ['account__switcher-non-eu-list', 'account__switcher-eu-list', 'account__switcher-demo-list'],
+            accountSelector : '.account__switcher-acc',
+            balanceSelector : '.account__switcher-balance',
+            populateFunction: populateAccountsList,
+        };
+        
+        const checkAccountsExist = () => {
+            const hasAccountsInContainers = config.containerIds.some(containerId => {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    const accountElements = container.querySelectorAll(config.accountSelector);
+                    return accountElements.length > 0;
+                }
+                return false;
+            });
+            
+            if (hasAccountsInContainers) {
+                return true;
+            }
+            
+            const allAccountElements = document.querySelectorAll(config.accountSelector);
+            return allAccountElements.length > 0;
+        };
+        
+        if (isPopulating) {
+            return;
+        }
+        
+        if (!checkAccountsExist()) {
+            isPopulating = true;
+            
+            try {
+                await config.populateFunction();
+                await new Promise((resolve) => {
+                    setTimeout(resolve, 100);
+                });
+                
+                if (!checkAccountsExist()) {
+                    return;
+                }
+            } catch (error) {
+                return;
+            } finally {
+                isPopulating = false;
+            }
+        }
+        
+        const parseBalanceFromText = (balanceText) => {
+            if (!balanceText) return 0;
+            const numericString = balanceText.replace(/[^\d.-]/g, '');
+            const numericValue = parseFloat(numericString) || 0;
+            return numericValue;
+        };
+
+        const sortAccountContainer = (containerId) => {
+            const container = document.getElementById(containerId);
+            if (!container) {
+                return false;
+            }
+
+            const accountElements = Array.from(container.querySelectorAll(config.accountSelector));
+            if (accountElements.length === 0) {
+                return false;
+            }
+
+            const accountsWithBalance = accountElements.map(element => {
+                const loginid = element.getAttribute('data-value');
+                const balanceElement = element.querySelector(config.balanceSelector);
+                const balanceText = balanceElement ? balanceElement.textContent.trim() : '';
+                const numericBalance = parseBalanceFromText(balanceText);
+                
+                return {
+                    element,
+                    loginid,
+                    balanceText,
+                    numericBalance,
+                };
+            });
+
+            accountsWithBalance.sort((a, b) => b.numericBalance - a.numericBalance);
+
+            const firstAccount = accountsWithBalance[0];
+            if (!firstAccount) return false;
+            
+            const parentContainer = firstAccount.element.parentNode;
+
+            accountsWithBalance.forEach(accountData => {
+                parentContainer.appendChild(accountData.element);
+            });
+
+            return true;
+        };
+
+        config.containerIds.forEach(containerId => {
+            sortAccountContainer(containerId);
+        });
+    };
+
     return {
         onLoad,
         onUnload,
         populateAccountsList,
         populateWalletAccounts,
+        resortAccountsByBalance,
         upgradeMessageVisibility,
         displayNotification,
         hideNotification,
