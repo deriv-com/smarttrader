@@ -84,32 +84,18 @@ const CallbackContainer = () => {
 
             // redirect back
             let set_default = true;
-            const allowed_urls = [
-                urlFor('user/metatrader'),
-                urlFor('home'),
-                Client.defaultRedirectUrl(),
-            ];
-            // Extract pathnames from allowed URLs for comparison
-            const allowed_paths = allowed_urls.map(url => {
-                try {
-                    return new URL(url, window.location.origin).pathname;
-                } catch (e) {
-                    return url; // fallback to original if URL parsing fails
-                }
-            });
+            const do_not_redirect = ['reset_passwordws', 'lost_passwordws', 'change_passwordws', 'home', '404'];
+            const reg = new RegExp(do_not_redirect.join('|'), 'i');
             
             // Enhanced URL validation to prevent client-side redirect attacks
             if (redirect_url) {
                 try {
                     const url = new URL(redirect_url, window.location.origin);
-                    // Only allow whitelisted paths and same-origin URLs
-                    if (
-                        url.origin === window.location.origin &&
-                        allowed_paths.includes(url.pathname)
-                    ) {
+                    // Only allow same-origin URLs and check against blocked patterns
+                    if (url.origin === window.location.origin &&
+                        !reg.test(redirect_url) &&
+                        urlFor('') !== redirect_url) {
                         set_default = false;
-                    } else {
-                        redirect_url = null; // Untrusted URL, fallback to default
                     }
                 } catch (error) {
                     // Invalid URL format, use default
@@ -131,20 +117,9 @@ const CallbackContainer = () => {
                     );
                 }
             }
+            getElementById('loading_link').setAttribute('href', redirect_url);
             
-            // Validate URL before setting href and redirecting to prevent client-side URL redirect attacks
-            let safeRedirectUrl = redirect_url;
-            try {
-                const finalUrl = new URL(redirect_url, window.location.origin);
-                if (finalUrl.origin !== window.location.origin) {
-                    safeRedirectUrl = Client.defaultRedirectUrl();
-                }
-            } catch (error) {
-                safeRedirectUrl = Client.defaultRedirectUrl();
-            }
-            
-            getElementById('loading_link').setAttribute('href', safeRedirectUrl);
-            window.location.replace(safeRedirectUrl); // need to redirect not using pjax
+            window.location.replace(redirect_url); // need to redirect not using pjax
         });
     };
 
