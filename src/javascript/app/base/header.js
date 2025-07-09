@@ -329,18 +329,51 @@ const Header = (() => {
             },
         };
 
+        // Helper function to get current symbol/underlying for smarttrader sync
+        const getCurrentSymbol = () => {
+            // Try to get from URL params first
+            const url_params = new URLSearchParams(window.location.search);
+            const symbol_param = url_params.get('underlying') || url_params.get('symbol');
+            if (symbol_param) return symbol_param;
+            
+            // Try to get from session storage
+            const session_symbol = sessionStorage.getItem('underlying');
+            if (session_symbol) return session_symbol;
+            
+            // Default fallback
+            return 'frxAUDJPY';
+        };
+
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
             const url_params = new URLSearchParams(window.location.search);
             const account_param = url_params.get('account');
+            const current_symbol = getCurrentSymbol();
             let platform_link = platform.link;
             
-            if (account_param && platform.link !== '#') {
+            if (platform.link !== '#') {
                 const url = new URL(platform.link);
-                url.searchParams.set('account', account_param);
+                // Add account parameter if available
+                if (account_param) {
+                    url.searchParams.set('account', account_param);
+                }
+                // Always add symbol parameter for dtrader and dbot if available
+                if (current_symbol) {
+                    url.searchParams.set('symbol', current_symbol);
+                }
                 platform_link = url.toString();
             } else if (account_param && platform.link === '#') {
-                platform_link = `/?account=${account_param}`;
+                // For smarttrader, include both account and underlying parameters
+                const params = [`account=${account_param}`];
+                if (current_symbol) {
+                    params.push(`underlying=${current_symbol}`);
+                }
+                platform_link = `/?${params.join('&')}`;
+            } else if (platform.link === '#') {
+                // For smarttrader without account param, still include underlying if available
+                if (current_symbol) {
+                    platform_link = `/?underlying=${current_symbol}`;
+                }
             }
             
             const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform_link });
