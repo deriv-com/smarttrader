@@ -26,6 +26,7 @@ const getPlatformSettings      = require('../../../templates/_common/brand.confi
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
+const formatMoney              = require('../common/currency').formatMoney;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivLiveChat            = require('../pages/livechat.jsx');
 const { default: isHubEnabledCountry } = require('../common/isHubEnabledCountry.js');
@@ -41,6 +42,7 @@ const Header = (() => {
     const notifications = [];
     let is_language_popup_on = false;
     let is_full_screen = false;
+    let selectedWalletId = null;
     const ext_platform_url = encodeURIComponent(window.location.href);
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
@@ -1037,6 +1039,61 @@ const Header = (() => {
         );
     };
 
+    // Helper functions for wallet selection tracking
+    const getSelectedWalletId = () => selectedWalletId;
+    const setSelectedWalletId = (wallet_id) => {
+        selectedWalletId = wallet_id;
+        updateWalletHeaderBalance(wallet_id);
+    };
+
+    // Helper function to update wallet header balance and currency icons
+    const updateWalletHeaderBalance = (wallet_loginid) => {
+        if (!wallet_loginid) return;
+        
+        // Get wallet currency for icon generation
+        const wallet_currency = Client.get('currency', wallet_loginid);
+        
+        if (wallet_currency) {
+            const getIcon = () => {
+                const is_real = !Client.get('is_virtual', wallet_loginid);
+                if (is_real) return wallet_currency ? wallet_currency.toLowerCase() : 'unknown';
+                return 'virtual';
+            };
+            
+            const icon = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+            const combined_icon = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+            
+            // Update currency icons for both desktop and mobile
+            applyToAllElements('#header__acc-icon--currency', (el) => {
+                el.src = icon;
+            });
+            applyToAllElements('#header__acc-icon-mobile-currency', (el) => {
+                el.src = combined_icon;
+            });
+        }
+        
+        // Get balance from dropdown element that has correct data (same source as dropdown)
+        const balance_element = document.querySelector(`.wallet__switcher-balance.account__switcher-balance-${wallet_loginid}`);
+        if (balance_element && balance_element.innerHTML.trim()) {
+            const formatted_balance = balance_element.innerHTML;
+            
+            applyToAllElements('#header__acc-balance', (el) => {
+                el.innerHTML = formatted_balance;
+            });
+        } else {
+            // Fallback: use Client.get method if dropdown element not ready yet
+            const wallet_balance = Client.get('balance', wallet_loginid) || 0;
+            
+            if (wallet_currency) {
+                const formatted_balance = formatMoney(wallet_currency, wallet_balance, true);
+                
+                applyToAllElements('#header__acc-balance', (el) => {
+                    el.innerHTML = formatted_balance;
+                });
+            }
+        }
+    };
+
     const populateWalletAccounts = () => {
         if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
         
@@ -1052,12 +1109,19 @@ const Header = (() => {
             const real_accounts = [];
             const demo_accounts = [];
             
-            Client.getAllLoginids().forEach((loginid) => {
-                const is_wallet_account        = Client.isWalletsAccount(loginid);
-                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && is_wallet_account) {
+            const all_loginids = Client.getAllLoginids();
+            
+            // Process wallet accounts for the switcher dropdown
+            all_loginids.forEach((loginid) => {
+                const is_wallet_account = Client.isWalletsAccount(loginid);
+                const is_disabled = Client.get('is_disabled', loginid);
+                const has_token = Client.get('token', loginid);
+                
+                if (!is_disabled && has_token && !is_wallet_account) {
                     const is_real              = loginid.startsWith('CR');
                     const currency             = Client.get('currency', loginid);
                     const balance              = Client.get('balance', loginid) || 0;
+                    const is_current           = loginid === Client.get('loginid');
                     
                     const getIcon              = () => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
@@ -1066,16 +1130,25 @@ const Header = (() => {
 
                     const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
-                    const current_active_login = Client.get('loginid');
-                    const is_current           = loginid === current_active_login;
 
-                    if (is_current) { // default account
+                    if (is_current) {
+                        // Update currency icons for current wallet account
                         applyToAllElements('#header__acc-icon--currency', (el) => {
                             el.src = icon;
                         });
                         applyToAllElements('#header__acc-icon-mobile-currency', (el) => {
                             el.src = combined_icon;
                         });
+                    }
+
+                    // Set initial selected wallet (first wallet account or current account)
+                    if (selectedWalletId === null && is_wallet_account) {
+                        if (is_current) {
+                            selectedWalletId = loginid;
+                        } else if (selectedWalletId === null) {
+                            // Fallback: use first wallet account if no current account
+                            selectedWalletId = loginid;
+                        }
                     }
 
                     const accountData = {
@@ -1157,6 +1230,11 @@ const Header = (() => {
                 el.removeEventListener('click', loginIDOnClick);
                 el.addEventListener('click', loginIDOnClick);
             });
+            
+            // Update wallet header balance with selected wallet account
+            if (selectedWalletId) {
+                updateWalletHeaderBalance(selectedWalletId);
+            }
         }).finally(() => {
             isPopulatingWallets = false;
         });
@@ -1433,6 +1511,26 @@ const Header = (() => {
         const wallet_switcher_active        = el_loginid.classList.contains('wallet__switcher-acc--active');
 
         if (el_loginid && !(acc_switcher_active || wallet_switcher_active)) {
+            // For wallet accounts, update the active state and header balance before switching
+            if (Client.hasWalletsAccount() && el_loginid.classList.contains('wallet__switcher-acc')) {
+                const clicked_wallet_loginid = el_loginid.getAttribute('data-value');
+                
+                // Update active state in the UI
+                document.querySelectorAll('.wallet__switcher-acc--active').forEach(el => {
+                    el.classList.remove('wallet__switcher-acc--active');
+                });
+                el_loginid.classList.add('wallet__switcher-acc--active');
+                
+                // Track selected wallet and update header balance
+                setSelectedWalletId(clicked_wallet_loginid);
+                
+                // Close the dropdown
+                const wallet_switcher_dropdown = getElementById('wallet__switcher-dropdown');
+                wallet_switcher_dropdown.classList.remove('wallet__switcher-dropdown--show');
+                
+                return; // Don't proceed with full account switch for wallet selection
+            }
+            
             el_loginid.setAttribute('disabled', 'disabled');
             switchLoginid(el_loginid.getAttribute('data-value'));
         } else {
@@ -2032,6 +2130,7 @@ const Header = (() => {
         hideNotification,
         displayAccountStatus,
         loginOnClick,
+        getSelectedWalletId,
     };
 })();
 
