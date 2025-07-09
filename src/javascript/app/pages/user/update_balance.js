@@ -67,7 +67,8 @@ const updateBalance = (response) => {
                     PortfolioInit.updateBalance();
                 }
 
-                if (Client.hasWalletsAccount() && Header.getSelectedWalletId && Header.getSelectedWalletId() === account_id) {
+                if (Client.hasWalletsAccount() && Header.getSelectedWalletId 
+                    && Header.getSelectedWalletId() === account_id) {
                     const header_balance_el = document.getElementById('header__acc-balance');
                     if (header_balance_el) {
                         header_balance_el.innerHTML = display_balance;
