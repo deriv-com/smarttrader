@@ -657,6 +657,7 @@ const Header = (() => {
                 restoreAccountSettingsHeaders();
             } catch (error) {
                 // Silently handle any errors to prevent breaking the sidebar functionality
+                // eslint-disable-next-line no-console
                 console.warn('Error resetting mobile submenus:', error);
             }
         };
