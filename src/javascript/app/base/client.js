@@ -59,6 +59,38 @@ const Client = (() => {
                 applyToAllElements('.is-logout', (el) => {
                     el.style.display = 'none';
                 });
+                
+                // Only hide skeleton loaders if not on a loading trading page and header is ready
+                const trading_init_progress = getElementById('trading_init_progress');
+                const is_trading_loading = trading_init_progress && trading_init_progress.style.display !== 'none';
+                
+                // Check if header is ready via SmartTrader namespace to avoid circular dependency
+                let is_header_ready = false;
+                if (typeof window !== 'undefined' && window.SmartTrader?.Header?.isHeaderReady) {
+                    is_header_ready = window.SmartTrader.Header.isHeaderReady();
+                } else {
+                    // If header readiness check not available, assume ready
+                    is_header_ready = true;
+                }
+                
+                if (!is_trading_loading && is_header_ready) {
+                    // Hide skeleton loaders for logged-in state (login buttons not needed)
+                    applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                        el.classList.add('hidden');
+                    });
+                } else if (!is_header_ready) {
+                    // If header not ready, register callback via SmartTrader namespace
+                    if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
+                        window.SmartTrader.Header.addHeaderReadyCallback(() => {
+                            // Re-run the skeleton loader logic when header is ready
+                            if (!is_trading_loading) {
+                                applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                                    el.style.display = 'none';
+                                });
+                            }
+                        });
+                    }
+                }
             });
         } else {
             // applyToAllElements('.client_logged_in', (el) => {
@@ -79,9 +111,57 @@ const Client = (() => {
             applyToAllElements('.is-login', (el) => {
                 el.style.display = 'none';
             });
-            applyToAllElements('.is-logout', (el) => {
-                el.style.display = 'inline-flex';
+            // .is-logout container is already visible by default, no need to show it again
+            
+            // EXPLICIT CLEANUP: Always remove skeleton loaders first for logout scenarios
+            applyToAllElements('.skeleton-btn-login, .skeleton-btn-signup', (el) => {
+                el.style.display = 'none';
             });
+            
+            // Check if header is ready via SmartTrader namespace to avoid circular dependency
+            let is_header_ready = false;
+            if (typeof window !== 'undefined' && window.SmartTrader?.Header?.isHeaderReady) {
+                is_header_ready = window.SmartTrader.Header.isHeaderReady();
+            } else {
+                // If header readiness check not available, assume ready
+                is_header_ready = true;
+            }
+            
+            const logoutHeaderModule = window.SmartTrader?.Header;
+            if (is_header_ready) {
+                // Header is ready, coordinate with header to show login buttons
+                try {
+                    if (logoutHeaderModule && logoutHeaderModule.updateLoginButtonsDisplay) {
+                        logoutHeaderModule.updateLoginButtonsDisplay();
+                    }
+                } catch (error) {
+                    // Fallback: directly show login buttons if header module not available
+                    applyToAllElements('#btn__login, #btn__signup', (el) => {
+                        el.classList.remove('hidden');
+                    });
+                }
+            } else if (typeof window !== 'undefined' && logoutHeaderModule && logoutHeaderModule.addHeaderReadyCallback) {
+                // If header not ready, register callback via SmartTrader namespace
+                logoutHeaderModule.addHeaderReadyCallback(() => {
+                    // Coordinate with header when ready
+                    try {
+                        const callbackHeaderModule = window.SmartTrader?.Header;
+                        if (callbackHeaderModule && callbackHeaderModule.updateLoginButtonsDisplay) {
+                            callbackHeaderModule.updateLoginButtonsDisplay();
+                        }
+                    } catch (error) {
+                        // Fallback: directly show login buttons
+                        applyToAllElements('#btn__login, #btn__signup', (el) => {
+                            el.style.display = '';
+                        });
+                    }
+                });
+            } else {
+                // Final fallback: directly show login buttons
+                applyToAllElements('#btn__login, #btn__signup', (el) => {
+                    el.style.display = '';
+                });
+            }
         }
     };
 

@@ -188,8 +188,11 @@ body .header, .wallet__header {
         width: 1px;
         margin-left: 8px;
     }
-    .is-login, .is-logout {
+    .is-login {
         display: none;
+    }
+    .is-logout {
+        display: inline-flex; // Show initially to display skeleton loaders
     }
     &__btn {
         display: flex;

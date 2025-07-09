@@ -41,6 +41,11 @@ body {
         border: 1px solid var(--border-normal);
     }
 
+    /* Utility Classes */
+    .hidden {
+        display: none !important;
+    }
+
     @mixin modal-container {
         min-width: 480px;
         min-height: 176px;

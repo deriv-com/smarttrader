@@ -1,4 +1,5 @@
 const refreshDropdown   = require('@binary-com/binary-style').selectDropdown;
+const Cookies           = require('js-cookie');
 const moment            = require('moment');
 const TradingAnalysis   = require('./analysis');
 const commonTrading     = require('./common');
@@ -14,7 +15,7 @@ const StartDates        = require('./starttime').StartDates;
 const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
-const BinarySocket      = require('../../base/socket');
+const BinarySocket       = require('../../base/socket');
 const dataManager       = require('../../common/data_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
@@ -134,6 +135,53 @@ const Process = (() => {
         
         if (init_logo && init_logo.style.display !== 'none') {
             init_logo.style.display = 'none';
+            
+            // Synchronize header skeleton loaders with trading completion
+            // Wait for header to be ready before updating skeleton loaders
+            // Use SmartTrader namespace to avoid circular dependency
+            if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
+                window.SmartTrader.Header.addHeaderReadyCallback(() => {
+                    try {
+                        if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
+                            window.SmartTrader.Header.updateLoginButtonsDisplay();
+                        }
+                    } catch (error) {
+                        // console.warn('Header module not available in callback:', error);
+                    }
+                });
+            } else {
+                // Fallback if callback system not available via SmartTrader namespace
+                try {
+                    if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
+                        window.SmartTrader.Header.updateLoginButtonsDisplay();
+                    }
+                } catch (error) {
+                    // console.warn('Header module not available for fallback:', error);
+                }
+            }
+            
+            // Additional fallback: directly update header skeleton loaders if Header module not available
+            if (typeof window === 'undefined' || !window.SmartTrader?.Header) {
+                const skeleton_login = document.querySelector('.skeleton-btn-login');
+                const skeleton_signup = document.querySelector('.skeleton-btn-signup');
+                const btn_login = document.getElementById('btn__login');
+                const btn_signup = document.getElementById('btn__signup');
+                
+                if (skeleton_login) skeleton_login.remove();
+                if (skeleton_signup) skeleton_signup.remove();
+                
+                // Show appropriate buttons based on login state
+                const logged_state = Cookies.get('logged_state');
+                const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
+                const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
+                const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+                
+                if (!will_eventually_sso) {
+                    if (btn_login) btn_login.style.display = 'flex';
+                    if (btn_signup) btn_signup.style.display = 'flex';
+                }
+            }
+            
             Defaults.update();
         }
     };
