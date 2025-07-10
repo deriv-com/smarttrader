@@ -121,7 +121,7 @@ const updateBalance = (response) => {
                 Header.resortAccountsByBalance();
             }
             updateBalance.resortTimeout = null;
-        }, 300);
+        }, 100);
     });
 };
 
