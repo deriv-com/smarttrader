@@ -1169,11 +1169,12 @@ const Header = (() => {
                 }
             });
 
-            real_accounts.sort((a, b) => {
+            // Combine all accounts and sort by balance in descending order
+            const all_accounts = [...real_accounts, ...demo_accounts];
+            const sortedAccounts = all_accounts.sort((a, b) => {
                 const balanceA = Number(a.balance) || 0;
                 const balanceB = Number(b.balance) || 0;
-                const result = balanceB - balanceA;
-                return result;
+                return balanceB - balanceA; // Descending order (highest balance first)
             });
 
             const createWalletAccountElement = (accountData) => {
@@ -1218,11 +1219,8 @@ const Header = (() => {
             // Clear existing accounts to prevent duplicates
             account_list.innerHTML = '';
 
-            real_accounts.forEach(accountData => {
-                account_list.appendChild(createWalletAccountElement(accountData));
-            });
-
-            demo_accounts.forEach(accountData => {
+            // Add all accounts in sorted order (highest balance first)
+            sortedAccounts.forEach(accountData => {
                 account_list.appendChild(createWalletAccountElement(accountData));
             });
 
@@ -1235,6 +1233,12 @@ const Header = (() => {
             if (selectedWalletId) {
                 updateWalletHeaderBalance(selectedWalletId);
             }
+            
+            // Trigger a resort after initial population to ensure proper sorting
+            // Use a small delay to ensure DOM elements are fully rendered
+            setTimeout(() => {
+                resortAccountsByBalance();
+            }, 50);
         }).finally(() => {
             isPopulatingWallets = false;
         });
@@ -1387,6 +1391,8 @@ const Header = (() => {
             });
 
             applyToAllElements('#account__switcher-non-eu-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
                 el.insertBefore(loginid_non_eu_real_select, el.firstChild);
                 applyToAllElements('div.account__switcher-acc', (ele) => {
                     ele.removeEventListener('click', loginIDOnClick);
@@ -1395,6 +1401,8 @@ const Header = (() => {
                 bindAccordion('#account__switcher-accordion-non-eu');
             });
             applyToAllElements('#account__switcher-eu-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
                 el.insertBefore(loginid_eu_real_select, el.firstChild);
                 applyToAllElements('div.account__switcher-acc', (ele) => {
                     ele.removeEventListener('click', loginIDOnClick);
@@ -1403,6 +1411,8 @@ const Header = (() => {
                 bindAccordion('#account__switcher-accordion-eu');
             });
             applyToAllElements('#account__switcher-demo-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
                 el.insertBefore(loginid_demo_select, el.firstChild);
                 applyToAllElements('div.account__switcher-acc', (ele) => {
                     ele.removeEventListener('click', loginIDOnClick);
