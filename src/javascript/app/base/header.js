@@ -1505,8 +1505,6 @@ const Header = (() => {
                 // Close the dropdown
                 const wallet_switcher_dropdown = getElementById('wallet__switcher-dropdown');
                 wallet_switcher_dropdown.classList.remove('wallet__switcher-dropdown--show');
-                
-                return; // Don't proceed with full account switch for wallet selection
             }
             
             el_loginid.setAttribute('disabled', 'disabled');
