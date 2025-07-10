@@ -425,6 +425,8 @@ const Header = (() => {
                 mobile_menu_overlay.classList.add(mobile_menu_active);
                 document.body.classList.add('stop-scrolling');
             } else {
+                // Reset all submenu states before closing the sidebar
+                resetAllSubmenus();
                 mobile_menu_overlay.classList.remove(mobile_menu_active);
                 document.body.classList.remove('stop-scrolling');
             }
@@ -629,6 +631,36 @@ const Header = (() => {
             } else {
                 account_settings_submenu.classList.remove(submenu_active);
                 menu.classList.add(menu_active);
+            }
+        };
+
+        const resetAllSubmenus = () => {
+            // Reset all submenu states to show main menu when sidebar is closed
+            try {
+                // Hide all submenus by removing active classes
+                submenu.classList.remove(submenu_active);
+                cashier_submenu.classList.remove(submenu_active);
+                account_settings_submenu.classList.remove(submenu_active);
+                language_submenu.classList.remove(submenu_active);
+                
+                // Show main menu by adding active class
+                menu.classList.add(menu_active);
+                
+                // Reset language submenu context
+                languageSubmenuContext = null;
+                
+                // Show the language selector if it was hidden
+                const languageSelector = getElementById('mobile__menu-language-selector');
+                if (languageSelector) {
+                    languageSelector.classList.remove('mobile__menu-language-selector--hidden');
+                }
+                
+                // Restore account settings headers if they were hidden
+                restoreAccountSettingsHeaders();
+            } catch (error) {
+                // Silently handle any errors to prevent breaking the sidebar functionality
+                // eslint-disable-next-line no-console
+                console.warn('Error resetting mobile submenus:', error);
             }
         };
 
