@@ -18,6 +18,9 @@ body .topbar {
     display: flex;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: 36px;
     padding: 0;
     color: $COLOR_BLACK;
@@ -30,7 +33,7 @@ body .topbar {
         display: flex;
         align-items: center;
         height: 36px;
-        margin: 0 0.8em;
+        padding: 0 10px;
 
         div, span {
             display: inline-flex;
@@ -40,9 +43,10 @@ body .topbar {
             width: 42px;
             cursor: default;
         }
-        #topbar-help-centre, #topbar-fullscreen {
+        #topbar-help-centre, #topbar-fullscreen, #topbar-responsible-trading, #topbar-account-limits, #topbar-whatsapp {
             height: inherit;
             cursor: pointer;
+            padding: 0 8px;
 
             &:hover {
                 background-color: var(--general-hover);
@@ -51,7 +55,6 @@ body .topbar {
                 width: 16px;
                 height: 16px;
                 align-self: center;
-                padding: 0 0.8rem;
             }
         }
         #topbar-help-centre {
@@ -60,6 +63,27 @@ body .topbar {
             }
             &:hover img {
                 border-left-color: var(--general-hover);
+            }
+        }
+        #language-select {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            height: inherit;
+            padding: 0 8px;
+
+            &:hover {
+                background-color: var(--general-hover);
+            }
+            img {
+                width: 16px;
+                height: 12px;
+                margin-right: 4px;
+            }
+            #language-select__text {
+                font-size: 12px;
+                font-weight: bold;
+                color: $COLOR_BLACK;
             }
         }
     }
@@ -102,8 +126,11 @@ body .topbar {
     .gmt-clock {
         font-size: 0.75rem;
         font-weight: 100;
-        padding: 0 0.8em;
+        padding: 0 12px;
+        margin-right: 12px;
         width: 147px;
+        height: 16px;
+        border-left: 1px solid var(--general-section-1);
         cursor: default;
     }
     #contact-us, .upgrademessage {
@@ -144,7 +171,6 @@ body .topbar {
         height: inherit;
 
         img {
-            padding: 0 0.8rem;
             width: 24px;
             height: 16px;
             border-left: 1px solid var(--general-section-1);
@@ -161,14 +187,24 @@ body .topbar {
     height: inherit;
 
     img {
-        padding: 0 0.4rem;
         width: 16px;
         height: 16px;
-        border-left: 1px solid var(--general-section-1);
-        border-right: 1px solid var(--general-section-1);
     }
     &:hover {
         background-color: var(--general-hover);
+    }
+}
+
+#deriv_livechat {
+    padding: 0 8px;
+}
+
+#topbar-help-centre, #topbar-whatsapp {
+    padding-left: 0 !important;
+
+    img {
+        padding-left: 8px;
+        border-left: 1px solid var(--general-section-1);
     }
 }
 
