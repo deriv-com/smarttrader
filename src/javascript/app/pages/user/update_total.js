@@ -7,7 +7,7 @@ let total_currency_virtual = 'USD';
 let total_currency_real;
 
 const updateTotal = (total) => {
-    const is_demo_tab                 = $('#acc_tabs').tabs('option', 'active') === 1;
+    const is_demo_tab                 = $('#acc_tabs').data('ui-tabs') ? $('#acc_tabs').tabs('option', 'active') === 1 : false;
     const el_total_amount             = $('#account__switcher-total-balance-amount');
     const all_login_ids               = Client.getAllLoginids();
     const real_accounts               = all_login_ids.filter((loginid) => !/^VRT/.test(loginid));
