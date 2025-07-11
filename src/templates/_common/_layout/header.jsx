@@ -13,7 +13,7 @@ const Header = () => (
                 <span className='header__hamburger--container'>
                     <img id='header__hamburger' className='header__hamburger mobile-show' />
                 </span>
-                <div className='header-menu-item header-menu-links client_logged_in invisible mobile-hide'>
+                <div className='header-menu-item header-menu-links client_logged_in invisible'>
                     <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
                         <img className='deriv-com-logo' />
                     </a>
@@ -28,7 +28,21 @@ const Header = () => (
                     <a className='url-appstore header__menu-links-item'>
                         <span className='header__menu-item--label'>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
-                            {it.L('Trader\'s hub')}
+                            {it.L('Trader\'s Hub')}
+                        </span>
+                    </a>
+                </div>
+                <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
+                    <a className='url-cashier-deposit header__menu-links-item'>
+                        <span className='header__menu-item--label'>
+                            <img id='cashier-icon' className='header__icon-text' />
+                            {it.L('Cashier')}
+                        </span>
+                    </a>
+                    <a className='url-reports-positions header__menu-links-item'>
+                        <span className='header__menu-item--label'>
+                            <img className='header__icon-text reports-icon' />
+                            {it.L('Reports')}
                         </span>
                     </a>
                 </div>
@@ -36,26 +50,9 @@ const Header = () => (
                     <img className='header__logo' />
                     <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
-                <div className='header__menu-item header__menu-links client_logged_in invisible mobile-hide'>
-                    <a className='url-reports-positions header__menu-links-item'>
-                        <span className='header__menu-item--label'>
-                            <img className='header__icon-text reports-icon' />
-                            {it.L('Reports')}
-                        </span>
-                    </a>
-                    <a className='url-cashier-deposit header__menu-links-item'>
-                        <span className='header__menu-item--label'>
-                            <img id='cashier-icon' className='header__icon-text' />
-                            {it.L('Cashier')}
-                        </span>
-                    </a>
-                </div>
             </div>
             <div className='header__menu-right client_logged_in invisible'>
-                <Notification />
-                <a className='url-account-details header__account header__menu-item mobile-hide'>
-                    <img className='header__icon-button' id='header__account-settings' />
-                </a>
+                <a className='url-cashier-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Deposit')}</a>
                 <div className='header__divider mobile-hide' />
                 <div className='header__menu-item header__menu-acc' id='acc_switcher'>
                     <div className='header__acc-info'>
@@ -149,7 +146,11 @@ const Header = () => (
                         </div>
                     </div>
                 </div>
-                <a className='url-cashier-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Deposit')}</a>
+                <div className='header__divider' />
+                <Notification />
+                <a className='url-account-details header__account header__menu-item mobile-hide'>
+                    <img className='header__icon-button' id='header__account-settings' />
+                </a>
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
