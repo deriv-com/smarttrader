@@ -581,14 +581,13 @@ const Header = (() => {
                     $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
                     if (isEuCountry()) {
                         if (add_account_text_normal) {
-                            add_account_text_normal.style.display               = 'none';
+                            add_account_text_normal.style.display = 'none';
                         }
-                    } else {
-                        if (add_account_text_eu_country) {
-                            add_account_text_eu_country.style.display           = 'none';
-                        }
+                    } else if (add_account_text_eu_country) {
+                        add_account_text_eu_country.style.display = 'none';
                     }
-                    if (isEuCountry() && has_real_account && add_account_text_eu_country && add_account_text_eu_country.parentElement) {
+                    if (isEuCountry() && has_real_account && add_account_text_eu_country &&
+                        add_account_text_eu_country.parentElement) {
                         add_account_text_eu_country.parentElement.style.display = 'none';
                     }
                 }
