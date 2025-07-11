@@ -580,11 +580,15 @@ const Header = (() => {
                 if (!Client.hasWalletsAccount()) {
                     $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
                     if (isEuCountry()) {
-                        add_account_text_normal.style.display                   = 'none';
+                        if (add_account_text_normal) {
+                            add_account_text_normal.style.display               = 'none';
+                        }
                     } else {
-                        add_account_text_eu_country.style.display               = 'none';
+                        if (add_account_text_eu_country) {
+                            add_account_text_eu_country.style.display           = 'none';
+                        }
                     }
-                    if (isEuCountry() && has_real_account) {
+                    if (isEuCountry() && has_real_account && add_account_text_eu_country && add_account_text_eu_country.parentElement) {
                         add_account_text_eu_country.parentElement.style.display = 'none';
                     }
                 }
