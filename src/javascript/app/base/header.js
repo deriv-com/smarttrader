@@ -26,6 +26,7 @@ const getPlatformSettings      = require('../../../templates/_common/brand.confi
 const getHostname              = require('../../_common/utility').getHostname;
 const template                 = require('../../_common/utility').template;
 const mapCurrencyName          = require('../../_common/base/currency_base').mapCurrencyName;
+const formatMoney              = require('../common/currency').formatMoney;
 const isEuCountry              = require('../common/country_base').isEuCountry;
 const DerivLiveChat            = require('../pages/livechat.jsx');
 const { default: isHubEnabledCountry } = require('../common/isHubEnabledCountry.js');
@@ -42,6 +43,7 @@ const Header = (() => {
     let is_language_popup_on = false;
     let is_full_screen = false;
     let is_header_ready = false;
+    let selectedWalletId = null;
     const header_ready_callbacks = [];
     const ext_platform_url = encodeURIComponent(window.location.href);
     const fullscreen_map = {
@@ -368,18 +370,51 @@ const Header = (() => {
             },
         };
 
+        // Helper function to get current symbol/underlying for smarttrader sync
+        const getCurrentSymbol = () => {
+            // Try to get from URL params first
+            const url_params = new URLSearchParams(window.location.search);
+            const symbol_param = url_params.get('underlying') || url_params.get('symbol');
+            if (symbol_param) return symbol_param;
+            
+            // Try to get from session storage
+            const session_symbol = sessionStorage.getItem('underlying');
+            if (session_symbol) return session_symbol;
+            
+            // Default fallback
+            return 'frxAUDJPY';
+        };
+
         Object.keys(platforms).forEach(key => {
             const platform = platforms[key];
             const url_params = new URLSearchParams(window.location.search);
             const account_param = url_params.get('account');
+            const current_symbol = getCurrentSymbol();
             let platform_link = platform.link;
             
-            if (account_param && platform.link !== '#') {
+            if (platform.link !== '#') {
                 const url = new URL(platform.link);
-                url.searchParams.set('account', account_param);
+                // Add account parameter if available
+                if (account_param) {
+                    url.searchParams.set('account', account_param);
+                }
+                // Always add symbol parameter for dtrader and dbot if available
+                if (current_symbol) {
+                    url.searchParams.set('symbol', current_symbol);
+                }
                 platform_link = url.toString();
             } else if (account_param && platform.link === '#') {
-                platform_link = `/?account=${account_param}`;
+                // For smarttrader, include both account and underlying parameters
+                const params = [`account=${account_param}`];
+                if (current_symbol) {
+                    params.push(`underlying=${current_symbol}`);
+                }
+                platform_link = `/?${params.join('&')}`;
+            } else if (platform.link === '#') {
+                // For smarttrader without account param, still include underlying if available
+                if (current_symbol) {
+                    platform_link = `/?underlying=${current_symbol}`;
+                }
             }
             
             const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform_link });
@@ -523,6 +558,8 @@ const Header = (() => {
                 mobile_menu_overlay.classList.add(mobile_menu_active);
                 document.body.classList.add('stop-scrolling');
             } else {
+                // Reset all submenu states before closing the sidebar
+                resetAllSubmenus();
                 mobile_menu_overlay.classList.remove(mobile_menu_active);
                 document.body.classList.remove('stop-scrolling');
             }
@@ -643,11 +680,14 @@ const Header = (() => {
                 if (!Client.hasWalletsAccount()) {
                     $('#acc_tabs').tabs({ active: is_virtual ? 1 : 0 });
                     if (isEuCountry()) {
-                        add_account_text_normal.style.display                   = 'none';
-                    } else {
-                        add_account_text_eu_country.style.display               = 'none';
+                        if (add_account_text_normal) {
+                            add_account_text_normal.style.display = 'none';
+                        }
+                    } else if (add_account_text_eu_country) {
+                        add_account_text_eu_country.style.display = 'none';
                     }
-                    if (isEuCountry() && has_real_account) {
+                    if (isEuCountry() && has_real_account && add_account_text_eu_country &&
+                        add_account_text_eu_country.parentElement) {
                         add_account_text_eu_country.parentElement.style.display = 'none';
                     }
                 }
@@ -727,6 +767,36 @@ const Header = (() => {
             } else {
                 account_settings_submenu.classList.remove(submenu_active);
                 menu.classList.add(menu_active);
+            }
+        };
+
+        const resetAllSubmenus = () => {
+            // Reset all submenu states to show main menu when sidebar is closed
+            try {
+                // Hide all submenus by removing active classes
+                submenu.classList.remove(submenu_active);
+                cashier_submenu.classList.remove(submenu_active);
+                account_settings_submenu.classList.remove(submenu_active);
+                language_submenu.classList.remove(submenu_active);
+                
+                // Show main menu by adding active class
+                menu.classList.add(menu_active);
+                
+                // Reset language submenu context
+                languageSubmenuContext = null;
+                
+                // Show the language selector if it was hidden
+                const languageSelector = getElementById('mobile__menu-language-selector');
+                if (languageSelector) {
+                    languageSelector.classList.remove('mobile__menu-language-selector--hidden');
+                }
+                
+                // Restore account settings headers if they were hidden
+                restoreAccountSettingsHeaders();
+            } catch (error) {
+                // Silently handle any errors to prevent breaking the sidebar functionality
+                // eslint-disable-next-line no-console
+                console.warn('Error resetting mobile submenus:', error);
             }
         };
 
@@ -860,10 +930,19 @@ const Header = (() => {
                 const currentLanguage = Language.get();
                 
                 if (selectedLanguage === currentLanguage) return;
+
+                const allLanguages = Object.keys(Language.getAll());
+                if (!allLanguages.includes(selectedLanguage.toUpperCase())) {
+                    // eslint-disable-next-line no-console
+                    console.warn('Invalid language selected:', selectedLanguage);
+                    return;
+                }
                 
                 SocketCache.clear();
                 
-                document.location = Language.urlFor(selectedLanguage);
+                // Safely redirect using window.location.href to prevent XSS
+                const sanitizedLanguage = encodeURIComponent(selectedLanguage.trim().toLowerCase());
+                window.location.href = Language.urlFor(sanitizedLanguage);
             });
         }, '', getElementById('mobile__menu-content-submenu-language'));
 
@@ -966,9 +1045,19 @@ const Header = (() => {
             el.addEventListener('click', () => {
                 const item_language = el.getAttribute('id');
                 if (item_language === current_language) return;
+                
+                // Validate language before redirecting to prevent XSS
+                const allLanguages = Object.keys(Language.getAll());
+                if (!allLanguages.includes(item_language.toUpperCase())) {
+                    // eslint-disable-next-line no-console
+                    console.warn('Invalid language selected:', item_language);
+                    return;
+                }
+                
                 SocketCache.clear();
 
-                document.location = Language.urlFor(item_language);
+                // Safely redirect using window.location.href to prevent XSS
+                window.location.href = Language.urlFor(item_language);
             });
         }, '', getElementById('language-menu-list'));
 
@@ -1086,15 +1175,89 @@ const Header = (() => {
         );
     };
 
+    // Helper functions for wallet selection tracking
+    const getSelectedWalletId = () => selectedWalletId;
+    const setSelectedWalletId = (wallet_id) => {
+        selectedWalletId = wallet_id;
+        updateWalletHeaderBalance(wallet_id);
+    };
+
+    // Helper function to update wallet header balance and currency icons
+    const updateWalletHeaderBalance = (wallet_loginid) => {
+        if (!wallet_loginid) return;
+        
+        // Get wallet currency for icon generation
+        const wallet_currency = Client.get('currency', wallet_loginid);
+        
+        if (wallet_currency) {
+            const getIcon = () => {
+                const is_real = !Client.get('is_virtual', wallet_loginid);
+                if (is_real) return wallet_currency ? wallet_currency.toLowerCase() : 'unknown';
+                return 'virtual';
+            };
+            
+            const icon = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+            const combined_icon = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
+            
+            // Update currency icons for both desktop and mobile
+            applyToAllElements('#header__acc-icon--currency', (el) => {
+                el.src = icon;
+            });
+            applyToAllElements('#header__acc-icon-mobile-currency', (el) => {
+                el.src = combined_icon;
+            });
+        }
+        
+        // Get balance from dropdown element that has correct data (same source as dropdown)
+        const balance_element = document.querySelector(`.wallet__switcher-balance.account__switcher-balance-${wallet_loginid}`);
+        if (balance_element && balance_element.innerHTML.trim()) {
+            const formatted_balance = balance_element.innerHTML;
+            
+            applyToAllElements('#header__acc-balance', (el) => {
+                el.innerHTML = formatted_balance;
+            });
+        } else {
+            // Fallback: use Client.get method if dropdown element not ready yet
+            const wallet_balance = Client.get('balance', wallet_loginid) || 0;
+            
+            if (wallet_currency) {
+                const formatted_balance = formatMoney(wallet_currency, wallet_balance, true);
+                
+                applyToAllElements('#header__acc-balance', (el) => {
+                    el.innerHTML = formatted_balance;
+                });
+            }
+        }
+    };
+
     const populateWalletAccounts = () => {
         if (!Client.isLoggedIn() || !Client.hasWalletsAccount()) return Promise.resolve();
-        const account_list      = getElementById('wallet__switcher-accounts-list');
+        
+        // Prevent concurrent population calls
+        if (isPopulatingWallets) {
+            return Promise.resolve();
+        }
+        
+        isPopulatingWallets = true;
+        const account_list = getElementById('wallet__switcher-accounts-list');
+        
         return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
-            Client.getAllLoginids().forEach((loginid) => {
-                const is_wallet_account        = Client.isWalletsAccount(loginid);
-                if (!Client.get('is_disabled', loginid) && Client.get('token', loginid) && !is_wallet_account) {
+            const real_accounts = [];
+            const demo_accounts = [];
+            
+            const all_loginids = Client.getAllLoginids();
+            
+            // Process wallet accounts for the switcher dropdown
+            all_loginids.forEach((loginid) => {
+                const is_wallet_account = Client.isWalletsAccount(loginid);
+                const is_disabled = Client.get('is_disabled', loginid);
+                const has_token = Client.get('token', loginid);
+                
+                if (!is_disabled && has_token && !is_wallet_account) {
                     const is_real              = loginid.startsWith('CR');
                     const currency             = Client.get('currency', loginid);
+                    const balance              = Client.get('balance', loginid) || 0;
+                    const is_current           = loginid === Client.get('loginid');
                     
                     const getIcon              = () => {
                         if (is_real) return currency ? currency.toLowerCase() : 'unknown';
@@ -1103,10 +1266,9 @@ const Header = (() => {
 
                     const icon                 = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-currency-${getIcon()}.svg?${process.env.BUILD_HASH}`);
                     const combined_icon        = Url.urlForStatic(`${wallet_header_icon_base_path}ic-wallets-combined-${getIcon()}.svg?${process.env.BUILD_HASH}`);
-                    const current_active_login = Client.get('loginid');
-                    const is_current           = loginid === current_active_login;
 
-                    if (is_current) { // default account
+                    if (is_current) {
+                        // Update currency icons for current wallet account
                         applyToAllElements('#header__acc-icon--currency', (el) => {
                             el.src = icon;
                         });
@@ -1114,51 +1276,107 @@ const Header = (() => {
                             el.src = combined_icon;
                         });
                     }
-                    // start of wallet switcher dropdown
-                    const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
-                    const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
-                    const account_content   = createElement('div', { class: 'wallet__switcher--content' });
-                    const account_text      = createElement('span', { text: localize('Options') });
-                    const account_currency  = createElement('span', { text: `${is_real ? currency : localize('Demo')} Wallet` });
-                    const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
-                    const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
-                    const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
 
-                    if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
-                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
-                        $('.account__switcher-select_currencies').css('display', 'block');
-
-                        const header_deposit = $('.header__deposit');
-                        header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
+                    // Set initial selected wallet (first wallet account or current account)
+                    if (selectedWalletId === null && is_wallet_account) {
+                        if (is_current) {
+                            selectedWalletId = loginid;
+                        } else if (selectedWalletId === null) {
+                            // Fallback: use first wallet account if no current account
+                            selectedWalletId = loginid;
+                        }
                     }
 
-                    if (is_current && !is_real) {
-                        $(demo_batch1).insertAfter('.header__acc-display');
+                    const accountData = {
+                        loginid,
+                        is_real,
+                        currency,
+                        icon,
+                        combined_icon,
+                        is_current,
+                        balance: parseFloat(balance) || 0,
+                    };
+
+                    if (is_real) {
+                        real_accounts.push(accountData);
+                    } else {
+                        demo_accounts.push(accountData);
                     }
+                }
+            });
 
-                    // append icons
-                    icon_container.appendChild(account_icon);
-                    // append content
-                    account_content.appendChild(account_text);
-                    account_content.appendChild(account_currency);
-                    account_content.appendChild(account_balance);
-                    // append icons and content
-                    account.appendChild(icon_container);
-                    account.appendChild(account_content);
-                    
-                    if (!is_real) account.appendChild(demo_batch2);
+            // Combine all accounts and sort by balance in descending order
+            const all_accounts = [...real_accounts, ...demo_accounts];
+            const sortedAccounts = all_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                return balanceB - balanceA; // Descending order (highest balance first)
+            });
 
-                    account_list.appendChild(account);
+            const createWalletAccountElement = (accountData) => {
+                const { loginid, is_real, currency, combined_icon, is_current } = accountData;
+                
+                const account           = createElement('div', { class: `wallet__switcher-acc ${is_current ? 'wallet__switcher-acc--active' : ''}`, 'data-value': loginid });
+                const icon_container    = createElement('div', { class: 'wallet__switcher-icon--container' });
+                const account_icon      = createElement('img', { src: combined_icon, class: 'wallet__switcher-icon--currency' });
+                const account_content   = createElement('div', { class: 'wallet__switcher--content' });
+                const account_text      = createElement('span', { text: localize('Options') });
+                const account_currency  = createElement('span', { text: `${is_real ? currency : localize('Demo')} Wallet` });
+                const account_balance   = createElement('span', { class: `wallet__switcher-balance account__switcher-balance-${loginid}` });
+                const demo_batch1        = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
+                const demo_batch2       = createElement('span', { text: localize('Demo'), class: 'wallet__header-demo-batch' });
+
+                if (!currency) {
+                    $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
+                    account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
+                    $('.account__switcher-select_currencies').css('display', 'block');
+
+                    const header_deposit = $('.header__deposit');
+                    header_deposit.text('Set currency');
+                    header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                 }
 
-                applyToAllElements('.wallet__switcher-acc', (el) => {
-                    el.removeEventListener('click', loginIDOnClick);
-                    el.addEventListener('click', loginIDOnClick);
-                });
+                if (is_current && !is_real) {
+                    $(demo_batch1).insertAfter('.header__acc-display');
+                }
+
+                icon_container.appendChild(account_icon);
+                account_content.appendChild(account_text);
+                account_content.appendChild(account_currency);
+                account_content.appendChild(account_balance);
+                account.appendChild(icon_container);
+                account.appendChild(account_content);
+                
+                if (!is_real) account.appendChild(demo_batch2);
+
+                return account;
+            };
+
+            // Clear existing accounts to prevent duplicates
+            account_list.innerHTML = '';
+
+            // Add all accounts in sorted order (highest balance first)
+            sortedAccounts.forEach(accountData => {
+                account_list.appendChild(createWalletAccountElement(accountData));
             });
+
+            applyToAllElements('.wallet__switcher-acc', (el) => {
+                el.removeEventListener('click', loginIDOnClick);
+                el.addEventListener('click', loginIDOnClick);
+            });
+            
+            // Update wallet header balance with selected wallet account
+            if (selectedWalletId) {
+                updateWalletHeaderBalance(selectedWalletId);
+            }
+            
+            // Trigger a resort after initial population to ensure proper sorting
+            // Use a small delay to ensure DOM elements are fully rendered
+            setTimeout(() => {
+                resortAccountsByBalance();
+            }, 50);
+        }).finally(() => {
+            isPopulatingWallets = false;
         });
     };
 
@@ -1197,15 +1415,22 @@ const Header = (() => {
         if (!Client.isLoggedIn() || Client.hasWalletsAccount()) return Promise.resolve();
         return BinarySocket.wait('authorize', 'website_status', 'balance', 'landing_company', 'get_account_status').then(() => {
             bindHeaders();
+            
+            const non_eu_real_accounts = [];
+            const eu_real_accounts = [];
+            const demo_accounts = [];
+            
             const loginid_non_eu_real_select   = createElement('div');
             const loginid_eu_real_select       = createElement('div');
             const loginid_demo_select          = createElement('div');
+            
             Client.getAllLoginids().forEach((loginid) => {
                 if (!Client.get('is_disabled', loginid) && Client.get('token', loginid)) {
                     const is_mf_account        = loginid.startsWith('MF');
                     const is_non_eu            = loginid.startsWith('CR');
                     const is_real              = /undefined|gaming|financial/.test(Client.getAccountType(loginid)); // this function only returns virtual/gaming/financial types
                     const currency             = Client.get('currency', loginid);
+                    const balance              = Client.get('balance', loginid) || 0;
                     let currencyName           = mapCurrencyName(currency);
                     
                     const getIcon              = (() => {
@@ -1227,69 +1452,111 @@ const Header = (() => {
                         currencyName = localize('Multipliers');
                     }
 
-                    const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
-                    const account_icon      = createElement('img', { src: icon });
-                    const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
-                    const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
-                    const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
-
-                    if (!currency) {
-                        $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
-                        account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
-                        $('.account__switcher-select_currencies').css('display', 'block');
-
-                        const header_deposit = $('.header__deposit');
-                        header_deposit.text('Set currency');
-                        header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
-                    }
-
-                    account_detail.appendChild(account_loginid);
-                    account.appendChild(account_icon);
-                    account.appendChild(account_detail);
-                    account.appendChild(account_balance);
+                    const accountData = {
+                        loginid,
+                        is_mf_account,
+                        is_non_eu,
+                        is_real,
+                        currency,
+                        currencyName,
+                        icon,
+                        is_current,
+                        balance: parseFloat(balance) || 0,
+                    };
 
                     if (is_non_eu) {
-                        loginid_non_eu_real_select.appendChild(account);
+                        non_eu_real_accounts.push(accountData);
                     } else if (is_mf_account && !isEuCountry()) {
-                        loginid_eu_real_select.appendChild(account);
+                        eu_real_accounts.push(accountData);
                     } else if (is_mf_account && isEuCountry()){
-                        loginid_non_eu_real_select.appendChild(account);
+                        non_eu_real_accounts.push(accountData);
                     } else {
-                        loginid_demo_select.appendChild(account);
+                        demo_accounts.push(accountData);
                     }
-                    // const link    = createElement('a', { 'data-value': loginid });
-                    // const li_type = createElement('li', { text: localized_type });
+                }
+            });
 
-                    // li_type.appendChild(createElement('div', { text: loginid }));
-                    // link.appendChild(li_type);
-                    // loginid_select.appendChild(link).appendChild(createElement('div', { class: 'separator-line-thin-gray' }));
+            non_eu_real_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                return balanceB - balanceA;
+            });
+            eu_real_accounts.sort((a, b) => {
+                const balanceA = Number(a.balance) || 0;
+                const balanceB = Number(b.balance) || 0;
+                return balanceB - balanceA;
+            });
+
+            const createAccountElement = (accountData) => {
+                const { loginid, currency, currencyName, icon, is_current, is_real } = accountData;
+                
+                const account           = createElement('div', { class: `account__switcher-acc ${is_current ? 'account__switcher-acc--active' : ''}`, 'data-value': loginid });
+                const account_icon      = createElement('img', { src: icon });
+                const account_detail    = createElement('span', { text: is_real ? (currencyName || localize('Real')) : localize('Demo') });
+                const account_loginid   = createElement('div', { class: 'account__switcher-loginid', text: loginid });
+                const account_balance   = createElement('span', { class: `account__switcher-balance account__switcher-balance-${loginid}` });
+
+                if (!currency) {
+                    $('#header__acc-balance').html(createElement('p', { text: localize('No currency assigned') }));
+                    account_balance.html(createElement('span', { text: localize('No currency selected'), class: 'no-currency' }));
+                    $('.account__switcher-select_currencies').css('display', 'block');
+
+                    const header_deposit = $('.header__deposit');
+                    header_deposit.text('Set currency');
+                    header_deposit.attr('href', Url.urlForDeriv('redirect', `action=add_account&ext_platform_url=${ext_platform_url}`));
                 }
 
-                applyToAllElements('#account__switcher-non-eu-list', (el) => {
-                    el.insertBefore(loginid_non_eu_real_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-non-eu');
-                });
-                applyToAllElements('#account__switcher-eu-list', (el) => {
-                    el.insertBefore(loginid_eu_real_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-eu');
-                });
-                applyToAllElements('#account__switcher-demo-list', (el) => {
-                    el.insertBefore(loginid_demo_select, el.firstChild);
-                    applyToAllElements('div.account__switcher-acc', (ele) => {
-                        ele.removeEventListener('click', loginIDOnClick);
-                        ele.addEventListener('click', loginIDOnClick);
-                    }, '', el);
-                    bindAccordion('#account__switcher-accordion-demo');
-                });
+                account_detail.appendChild(account_loginid);
+                account.appendChild(account_icon);
+                account.appendChild(account_detail);
+                account.appendChild(account_balance);
+
+                return account;
+            };
+
+            non_eu_real_accounts.forEach(accountData => {
+                loginid_non_eu_real_select.appendChild(createAccountElement(accountData));
             });
+
+            eu_real_accounts.forEach(accountData => {
+                loginid_eu_real_select.appendChild(createAccountElement(accountData));
+            });
+
+            demo_accounts.forEach(accountData => {
+                loginid_demo_select.appendChild(createAccountElement(accountData));
+            });
+
+            applyToAllElements('#account__switcher-non-eu-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
+                el.insertBefore(loginid_non_eu_real_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-non-eu');
+            });
+            applyToAllElements('#account__switcher-eu-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
+                el.insertBefore(loginid_eu_real_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-eu');
+            });
+            applyToAllElements('#account__switcher-demo-list', (el) => {
+                // Clear existing accounts to prevent duplicates
+                el.innerHTML = '';
+                el.insertBefore(loginid_demo_select, el.firstChild);
+                applyToAllElements('div.account__switcher-acc', (ele) => {
+                    ele.removeEventListener('click', loginIDOnClick);
+                    ele.addEventListener('click', loginIDOnClick);
+                }, '', el);
+                bindAccordion('#account__switcher-accordion-demo');
+            });
+            
             bindTabs();
         });
     };
@@ -1390,6 +1657,24 @@ const Header = (() => {
         const wallet_switcher_active        = el_loginid.classList.contains('wallet__switcher-acc--active');
 
         if (el_loginid && !(acc_switcher_active || wallet_switcher_active)) {
+            // For wallet accounts, update the active state and header balance before switching
+            if (Client.hasWalletsAccount() && el_loginid.classList.contains('wallet__switcher-acc')) {
+                const clicked_wallet_loginid = el_loginid.getAttribute('data-value');
+                
+                // Update active state in the UI
+                document.querySelectorAll('.wallet__switcher-acc--active').forEach(el => {
+                    el.classList.remove('wallet__switcher-acc--active');
+                });
+                el_loginid.classList.add('wallet__switcher-acc--active');
+                
+                // Track selected wallet and update header balance
+                setSelectedWalletId(clicked_wallet_loginid);
+                
+                // Close the dropdown
+                const wallet_switcher_dropdown = getElementById('wallet__switcher-dropdown');
+                wallet_switcher_dropdown.classList.remove('wallet__switcher-dropdown--show');
+            }
+            
             el_loginid.setAttribute('disabled', 'disabled');
             switchLoginid(el_loginid.getAttribute('data-value'));
         } else {
@@ -1868,11 +2153,122 @@ const Header = (() => {
         });
     };
 
+    let isPopulating = false;
+    let isPopulatingWallets = false;
+    
+    const resortAccountsByBalance = async () => {
+        const isWalletAccount = Client.hasWalletsAccount();
+        
+        const config = isWalletAccount ? {
+            containerIds    : ['wallet__switcher-accounts-list'],
+            accountSelector : '.wallet__switcher-acc',
+            balanceSelector : '.wallet__switcher-balance',
+            populateFunction: populateWalletAccounts,
+        } : {
+            containerIds    : ['account__switcher-non-eu-list', 'account__switcher-eu-list', 'account__switcher-demo-list'],
+            accountSelector : '.account__switcher-acc',
+            balanceSelector : '.account__switcher-balance',
+            populateFunction: populateAccountsList,
+        };
+        
+        const checkAccountsExist = () => {
+            const hasAccountsInContainers = config.containerIds.some(containerId => {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    const accountElements = container.querySelectorAll(config.accountSelector);
+                    return accountElements.length > 0;
+                }
+                return false;
+            });
+            
+            if (hasAccountsInContainers) {
+                return true;
+            }
+            
+            const allAccountElements = document.querySelectorAll(config.accountSelector);
+            return allAccountElements.length > 0;
+        };
+        
+        if (isPopulating) {
+            return;
+        }
+        
+        if (!checkAccountsExist()) {
+            isPopulating = true;
+            
+            try {
+                await config.populateFunction();
+                await new Promise((resolve) => {
+                    setTimeout(resolve, 100);
+                });
+                
+                if (!checkAccountsExist()) {
+                    return;
+                }
+            } catch (error) {
+                return;
+            } finally {
+                isPopulating = false;
+            }
+        }
+        
+        const parseBalanceFromText = (balanceText) => {
+            if (!balanceText) return 0;
+            const numericString = balanceText.replace(/[^\d.-]/g, '');
+            const numericValue = parseFloat(numericString) || 0;
+            return numericValue;
+        };
+
+        const sortAccountContainer = (containerId) => {
+            const container = document.getElementById(containerId);
+            if (!container) {
+                return false;
+            }
+
+            const accountElements = Array.from(container.querySelectorAll(config.accountSelector));
+            if (accountElements.length === 0) {
+                return false;
+            }
+
+            const accountsWithBalance = accountElements.map(element => {
+                const loginid = element.getAttribute('data-value');
+                const balanceElement = element.querySelector(config.balanceSelector);
+                const balanceText = balanceElement ? balanceElement.textContent.trim() : '';
+                const numericBalance = parseBalanceFromText(balanceText);
+                
+                return {
+                    element,
+                    loginid,
+                    balanceText,
+                    numericBalance,
+                };
+            });
+
+            accountsWithBalance.sort((a, b) => b.numericBalance - a.numericBalance);
+
+            const firstAccount = accountsWithBalance[0];
+            if (!firstAccount) return false;
+            
+            const parentContainer = firstAccount.element.parentNode;
+
+            accountsWithBalance.forEach(accountData => {
+                parentContainer.appendChild(accountData.element);
+            });
+
+            return true;
+        };
+
+        config.containerIds.forEach(containerId => {
+            sortAccountContainer(containerId);
+        });
+    };
+
     return {
         onLoad,
         onUnload,
         populateAccountsList,
         populateWalletAccounts,
+        resortAccountsByBalance,
         upgradeMessageVisibility,
         displayNotification,
         hideNotification,
@@ -1881,6 +2277,7 @@ const Header = (() => {
         updateLoginButtonsDisplay,
         addHeaderReadyCallback,
         isHeaderReady,
+        getSelectedWalletId,
     };
 })();
 
