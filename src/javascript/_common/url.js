@@ -134,7 +134,7 @@ const Url = (() => {
             /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) ||
             /^staging-smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return is_traders_hub_or_wallet ? `https://staging-hub.deriv.com` : 'https://staging-app.deriv.com';
+            return is_traders_hub_or_wallet ? 'https://staging-hub.deriv.com' : 'https://staging-app.deriv.com';
         } else if (
             /^smarttrader\.deriv\.app$/i.test(window.location.hostname) ||
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
