@@ -374,7 +374,7 @@ const Header = (() => {
         const getCurrentSymbol = () => {
             // Try to get from URL params first
             const url_params = new URLSearchParams(window.location.search);
-            const symbol_param = url_params.get('underlying') || url_params.get('symbol');
+            const symbol_param = url_params.get('underlying');
             if (symbol_param) return symbol_param;
             
             // Try to get from session storage
@@ -398,8 +398,8 @@ const Header = (() => {
                 if (account_param) {
                     url.searchParams.set('account', account_param);
                 }
-                // Always add symbol parameter for dtrader and dbot if available
-                if (current_symbol) {
+                // Add symbol parameter only for dtrader and dbot
+                if (current_symbol && (key === 'dtrader' || key === 'dbot')) {
                     url.searchParams.set('symbol', current_symbol);
                 }
                 platform_link = url.toString();
