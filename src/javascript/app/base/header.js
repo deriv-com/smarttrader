@@ -1,5 +1,5 @@
 // const BinaryPjax               = require('./binary_pjax');
-// const Cookies                   = require('js-cookie');
+const Cookies                   = require('js-cookie');
 const requestOidcAuthentication = require('@deriv-com/auth-client').requestOidcAuthentication;
 const Client                    = require('./client');
 const BinarySocket              = require('./socket');
@@ -42,7 +42,9 @@ const Header = (() => {
     const notifications = [];
     let is_language_popup_on = false;
     let is_full_screen = false;
+    let is_header_ready = false;
     let selectedWalletId = null;
+    const header_ready_callbacks = [];
     const ext_platform_url = encodeURIComponent(window.location.href);
     const fullscreen_map = {
         event    : ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'],
@@ -51,9 +53,43 @@ const Header = (() => {
         fnc_exit : ['exitFullscreen', 'webkitExitFullscreen', 'mozCancelFullScreen', 'msExitFullscreen'],
     };
 
+    const addHeaderReadyCallback = (callback) => {
+        if (is_header_ready) {
+            callback();
+        } else {
+            header_ready_callbacks.push(callback);
+        }
+    };
+
+    const triggerHeaderReadyCallbacks = () => {
+        is_header_ready = true;
+        header_ready_callbacks.forEach(callback => {
+            try {
+                callback();
+            } catch (error) {
+                // eslint-disable-next-line no-console
+                console.error('Header ready callback error:', error);
+            }
+        });
+        header_ready_callbacks.length = 0; // Clear callbacks array
+    };
+
+    const isHeaderReady = () => is_header_ready;
+
+    // Expose functions via SmartTrader namespace to avoid circular dependencies
+    if (typeof window !== 'undefined') {
+        // Initialize SmartTrader namespace
+        window.SmartTrader = window.SmartTrader || {};
+        window.SmartTrader.Header = {
+            addHeaderReadyCallback,
+            isHeaderReady,
+            updateLoginButtonsDisplay,
+        };
+    }
+
     const onLoad = async () => {
         bindSvg();
-        // updateLoginButtonsDisplay();
+        updateLoginButtonsDisplay();
     
         await BinarySocket.wait('authorize', 'landing_company');
     
@@ -87,6 +123,9 @@ const Header = (() => {
         });
         
         applyFeatureFlags();
+        
+        // Mark header as ready and trigger any waiting callbacks
+        triggerHeaderReadyCallbacks();
     };
 
     const applyFeatureFlags = () => {
@@ -335,7 +374,7 @@ const Header = (() => {
         const getCurrentSymbol = () => {
             // Try to get from URL params first
             const url_params = new URLSearchParams(window.location.search);
-            const symbol_param = url_params.get('underlying') || url_params.get('symbol');
+            const symbol_param = url_params.get('underlying');
             if (symbol_param) return symbol_param;
             
             // Try to get from session storage
@@ -346,8 +385,8 @@ const Header = (() => {
             return 'frxAUDJPY';
         };
 
-        Object.keys(platforms).forEach(key => {
-            const platform = platforms[key];
+        // Dynamic URL generation function that gets called when platform switcher is clicked
+        const generatePlatformUrl = (key, platform) => {
             const url_params = new URLSearchParams(window.location.search);
             const account_param = url_params.get('account');
             const current_symbol = getCurrentSymbol();
@@ -359,8 +398,8 @@ const Header = (() => {
                 if (account_param) {
                     url.searchParams.set('account', account_param);
                 }
-                // Always add symbol parameter for dtrader and dbot if available
-                if (current_symbol) {
+                // Add symbol parameter for dtrader and dbot
+                if (current_symbol && (key === 'dtrader' || key === 'dbot')) {
                     url.searchParams.set('symbol', current_symbol);
                 }
                 platform_link = url.toString();
@@ -378,7 +417,17 @@ const Header = (() => {
                 }
             }
             
-            const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform_link });
+            return platform_link;
+        };
+
+        Object.keys(platforms).forEach(key => {
+            const platform = platforms[key];
+            
+            const platform_div = createElement('a', {
+                class              : `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`,
+                href               : '#', // Use placeholder href, will be updated dynamically
+                'data-platform-key': key, // Store platform key for dynamic URL generation
+            });
             const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}?${process.env.BUILD_HASH}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
@@ -391,8 +440,19 @@ const Header = (() => {
             platform_text_container.appendChild(platform_desc);
             platform_div.appendChild(platform_text_container);
 
+            // Add click event listener to update URL dynamically
+            const handlePlatformClick = (e) => {
+                const updated_url = generatePlatformUrl(key, platform);
+                e.currentTarget.href = updated_url;
+            };
+            
+            platform_div.addEventListener('click', handlePlatformClick);
+
             if (platform.on_mobile) {
-                mobile_platform_list.appendChild(platform_div.cloneNode(true));
+                const mobile_platform_div = platform_div.cloneNode(true);
+                // Re-add event listener for mobile clone
+                mobile_platform_div.addEventListener('click', handlePlatformClick);
+                mobile_platform_list.appendChild(mobile_platform_div);
             }
             platform_list.appendChild(platform_div);
         });
@@ -406,39 +466,129 @@ const Header = (() => {
         platform_list.appendChild(platform_dropdown_cta_container.cloneNode(true));
         // Add traders hub cta link to mobile platform switcher dropdown as well
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
+
+        // Store platform definitions and helper functions for dynamic URL updates
+        window.SmartTrader = window.SmartTrader || {};
+        window.SmartTrader.platforms = platforms;
+        window.SmartTrader.getCurrentSymbol = getCurrentSymbol;
+        window.SmartTrader.generatePlatformUrl = generatePlatformUrl;
     };
 
-    // const updateLoginButtonsDisplay = () => {
-    //     // Check if we should show skeleton loading state
-    //     const logged_state = typeof Cookies !== 'undefined' ? Cookies.get('logged_state') : null;
-    //     const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
-    //     const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
-    //     const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
-    //     const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+    // Function to update all platform URLs with current symbol
+    const updatePlatformUrls = () => {
+        if (!window.SmartTrader || !window.SmartTrader.platforms) return;
         
-    //     // Get login and signup buttons
-    //     const btn_login = getElementById('btn__login');
-    //     const btn_signup = getElementById('btn__signup');
-    //     const header_btn_container = btn_login ? btn_login.parentElement : null;
-
-    //     if (btn_login) btn_login.style.display = 'none';
-    //     if (btn_signup) btn_signup.style.display = 'none';
+        const platforms = window.SmartTrader.platforms;
+        const generatePlatformUrl = window.SmartTrader.generatePlatformUrl;
         
-    //     if (!will_eventually_sso || is_silent_login_excluded) {
-    //         // Show regular buttons
-    //         if (btn_login) btn_login.style.display = 'flex';
-    //         if (btn_signup) btn_signup.style.display = 'flex';
+        // Update both desktop and mobile platform links
+        const updatePlatformLinks = (el) => {
+            const platformKey = el.getAttribute('data-platform-key');
+            if (platformKey && platforms[platformKey]) {
+                const updatedUrl = generatePlatformUrl(platformKey, platforms[platformKey]);
+                el.href = updatedUrl;
+            }
+        };
+        
+        // Update desktop platform links
+        applyToAllElements('.platform__list-item', updatePlatformLinks);
+        
+        // Update mobile platform links
+        applyToAllElements('#mobile__platform-switcher-dropdown .platform__list-item', updatePlatformLinks);
+    };
 
-    //         // Remove skeleton squares if they exist
-    //         const skeleton1 = document.querySelector('.skeleton-btn-login');
-    //         const skeleton2 = document.querySelector('.skeleton-btn-signup');
-    //         if (skeleton1) header_btn_container.removeChild(skeleton1);
-    //         if (skeleton2) header_btn_container.removeChild(skeleton2);
-    //     }
-    // };
+    const updateLoginButtonsDisplay = () => {
+        // Check if we should show skeleton loading state
+        const logged_state = Cookies.get('logged_state');
+        const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
+        const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
+        const is_silent_login_excluded = window.location.pathname.includes('callback') || window.location.pathname.includes('endpoint');
+        const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+        
+        // Check if user is logged out - this takes priority over trading page logic
+        const is_logged_out = !Client.isLoggedIn();
+        
+        // Check if we're on a trading page and if trading is still loading
+        const is_trading_page = window.location.pathname.includes('/trading');
+        const trading_init_progress = getElementById('trading_init_progress');
+        const is_trading_loading = trading_init_progress && trading_init_progress.style.display !== 'none';
+        
+        // Get login and signup buttons
+        const btn_login = getElementById('btn__login');
+        const btn_signup = getElementById('btn__signup');
+        const header_btn_container = btn_login ? btn_login.parentElement : null;
+
+        if (!header_btn_container) return;
+
+        // Hide buttons initially
+        if (btn_login) btn_login.style.display = 'none';
+        if (btn_signup) btn_signup.style.display = 'none';
+        
+        // PRIORITY 1: If user is logged out, always show login buttons (override trading logic)
+        if (is_logged_out) {
+            removeHeaderSkeletonLoaders();
+            if (btn_login) btn_login.style.display = 'flex';
+            if (btn_signup) btn_signup.style.display = 'flex';
+            return;
+        }
+        
+        // PRIORITY 2: On trading pages, sync with purchase container loading state (only for logged-in users)
+        if (is_trading_page && is_trading_loading) {
+            // Show skeleton loaders while trading is initializing
+            showHeaderSkeletonLoaders();
+            return;
+        }
+        
+        // Remove skeleton loaders first
+        removeHeaderSkeletonLoaders();
+        
+        if (!will_eventually_sso || is_silent_login_excluded) {
+            // Show regular buttons
+            if (btn_login) btn_login.style.display = 'flex';
+            if (btn_signup) btn_signup.style.display = 'flex';
+        } else {
+            // Show skeleton loaders for silent login
+            showHeaderSkeletonLoaders();
+        }
+    };
+
+    const showHeaderSkeletonLoaders = () => {
+        const btn_login = getElementById('btn__login');
+        const btn_signup = getElementById('btn__signup');
+        const header_btn_container = btn_login ? btn_login.parentElement : null;
+        
+        if (!header_btn_container) return;
+        
+        // Remove existing skeleton loaders first
+        removeHeaderSkeletonLoaders();
+        
+        // Hide actual buttons
+        if (btn_login) btn_login.style.display = 'none';
+        if (btn_signup) btn_signup.style.display = 'none';
+        
+        // Create and add skeleton loaders
+        const skeleton_login = document.createElement('div');
+        skeleton_login.className = 'skeleton-btn-login';
+        skeleton_login.style.cssText = 'width: 60px; height: 32px; background: #f0f0f0; border-radius: 4px; margin-right: 8px; animation: skeleton-loading 1.5s infinite ease-in-out;';
+        
+        const skeleton_signup = document.createElement('div');
+        skeleton_signup.className = 'skeleton-btn-signup';
+        skeleton_signup.style.cssText = 'width: 80px; height: 32px; background: #f0f0f0; border-radius: 4px; animation: skeleton-loading 1.5s infinite ease-in-out;';
+        
+        header_btn_container.appendChild(skeleton_login);
+        header_btn_container.appendChild(skeleton_signup);
+    };
+
+    const removeHeaderSkeletonLoaders = () => {
+        const skeleton_login = document.querySelector('.skeleton-btn-login');
+        const skeleton_signup = document.querySelector('.skeleton-btn-signup');
+        
+        if (skeleton_login) skeleton_login.remove();
+        if (skeleton_signup) skeleton_signup.remove();
+    };
 
     const bindClick = () => {
-        // updateLoginButtonsDisplay();
+        updateLoginButtonsDisplay();
         const btn_login = getElementById('btn__login');
         btn_login.addEventListener('click', loginOnClick);
 
@@ -524,6 +674,8 @@ const Header = (() => {
             if (platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             } else {
+                // Update all platform URLs with current symbol before showing dropdown
+                updatePlatformUrls();
                 showPlatformSwitcher(true);
             }
         });
@@ -547,6 +699,8 @@ const Header = (() => {
             if (mobile_platform_switcher_dropdown.classList.contains(mobile_platform_switcher_active)) {
                 showMobilePlatformSwitcher(false);
             } else {
+                // Update all platform URLs with current symbol before showing dropdown
+                updatePlatformUrls();
                 showMobilePlatformSwitcher(true);
             }
         });
@@ -2174,6 +2328,9 @@ const Header = (() => {
         hideNotification,
         displayAccountStatus,
         loginOnClick,
+        updateLoginButtonsDisplay,
+        addHeaderReadyCallback,
+        isHeaderReady,
         getSelectedWalletId,
     };
 })();

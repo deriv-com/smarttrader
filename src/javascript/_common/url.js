@@ -128,6 +128,8 @@ const Url = (() => {
 
     const getAllowedLocalStorageOrigin = (is_traders_hub_or_wallet) => {
         // TODO: [app-link-refactor] - Remove backwards compatibility for `deriv.app`
+        const domain_zone = getTopLevelDomain();
+        
         if (
             /^smarttrader-staging\.deriv\.app$/i.test(window.location.hostname) ||
             /^staging-smarttrader\.deriv\.com$/i.test(window.location.hostname)
@@ -137,9 +139,9 @@ const Url = (() => {
             /^smarttrader\.deriv\.app$/i.test(window.location.hostname) ||
             /^smarttrader\.deriv\.com$/i.test(window.location.hostname)
         ) {
-            return is_traders_hub_or_wallet ? 'https://hub.deriv.com' : deriv_app_domain;
+            return is_traders_hub_or_wallet ? `https://hub.deriv.${domain_zone}` : deriv_app_domain;
         }
-        return is_traders_hub_or_wallet ? 'https://hub.deriv.com' : deriv_app_domain;
+        return is_traders_hub_or_wallet ? `https://hub.deriv.${domain_zone}` : deriv_app_domain;
     };
 
     /**

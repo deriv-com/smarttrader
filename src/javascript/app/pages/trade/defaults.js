@@ -43,7 +43,19 @@ const Defaults = (() => {
         UNDERLYING     : 'underlying',
     };
     const getDefault = (key) => {
-        const p_value = params[key] || Url.param(key);
+        let p_value = params[key] || Url.param(key);
+        
+        // Handle symbol parameter conversion for underlying
+        if (key === PARAM_NAMES.UNDERLYING && !p_value) {
+            const symbol_value = params.symbol || Url.param('symbol');
+            if (symbol_value) {
+                p_value = symbol_value;
+                // Set the underlying parameter and remove symbol parameter
+                setDefault(PARAM_NAMES.UNDERLYING, symbol_value);
+                removeDefault('symbol');
+            }
+        }
+        
         const s_value = sessionStorage.getItem(key);
         if (p_value && (!s_value || p_value !== s_value)) {
             sessionStorage.setItem(key, p_value);
