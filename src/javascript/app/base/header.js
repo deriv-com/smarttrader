@@ -385,8 +385,8 @@ const Header = (() => {
             return 'frxAUDJPY';
         };
 
-        Object.keys(platforms).forEach(key => {
-            const platform = platforms[key];
+        // Dynamic URL generation function that gets called when platform switcher is clicked
+        const generatePlatformUrl = (key, platform) => {
             const url_params = new URLSearchParams(window.location.search);
             const account_param = url_params.get('account');
             const current_symbol = getCurrentSymbol();
@@ -398,7 +398,7 @@ const Header = (() => {
                 if (account_param) {
                     url.searchParams.set('account', account_param);
                 }
-                // Add symbol parameter only for dtrader and dbot
+                // Add symbol parameter for dtrader and dbot
                 if (current_symbol && (key === 'dtrader' || key === 'dbot')) {
                     url.searchParams.set('symbol', current_symbol);
                 }
@@ -417,7 +417,17 @@ const Header = (() => {
                 }
             }
             
-            const platform_div = createElement('a', { class: `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`, href: platform_link });
+            return platform_link;
+        };
+
+        Object.keys(platforms).forEach(key => {
+            const platform = platforms[key];
+            
+            const platform_div = createElement('a', {
+                class              : `platform__list-item ${key === 'smarttrader' ? 'platform__list-item--active' : ''}`,
+                href               : '#', // Use placeholder href, will be updated dynamically
+                'data-platform-key': key, // Store platform key for dynamic URL generation
+            });
             const platform_icon = createElement('img', { src: `${Url.urlForStatic(`${header_icon_base_path}${platform.icon}?${process.env.BUILD_HASH}`)}`, class: 'platform__list-item-icon' });
             const platform_text_container = createElement('div', { class: 'platform__list-item-text ' });
             const platform_name  = createElement('div', { text: platform.name, class: 'platform__list-item-name' });
@@ -430,8 +440,19 @@ const Header = (() => {
             platform_text_container.appendChild(platform_desc);
             platform_div.appendChild(platform_text_container);
 
+            // Add click event listener to update URL dynamically
+            const handlePlatformClick = (e) => {
+                const updated_url = generatePlatformUrl(key, platform);
+                e.currentTarget.href = updated_url;
+            };
+            
+            platform_div.addEventListener('click', handlePlatformClick);
+
             if (platform.on_mobile) {
-                mobile_platform_list.appendChild(platform_div.cloneNode(true));
+                const mobile_platform_div = platform_div.cloneNode(true);
+                // Re-add event listener for mobile clone
+                mobile_platform_div.addEventListener('click', handlePlatformClick);
+                mobile_platform_list.appendChild(mobile_platform_div);
             }
             platform_list.appendChild(platform_div);
         });
@@ -445,6 +466,35 @@ const Header = (() => {
         platform_list.appendChild(platform_dropdown_cta_container.cloneNode(true));
         // Add traders hub cta link to mobile platform switcher dropdown as well
         mobile_platform_list.appendChild(platform_dropdown_cta_container);
+
+        // Store platform definitions and helper functions for dynamic URL updates
+        window.SmartTrader = window.SmartTrader || {};
+        window.SmartTrader.platforms = platforms;
+        window.SmartTrader.getCurrentSymbol = getCurrentSymbol;
+        window.SmartTrader.generatePlatformUrl = generatePlatformUrl;
+    };
+
+    // Function to update all platform URLs with current symbol
+    const updatePlatformUrls = () => {
+        if (!window.SmartTrader || !window.SmartTrader.platforms) return;
+        
+        const platforms = window.SmartTrader.platforms;
+        const generatePlatformUrl = window.SmartTrader.generatePlatformUrl;
+        
+        // Update both desktop and mobile platform links
+        const updatePlatformLinks = (el) => {
+            const platformKey = el.getAttribute('data-platform-key');
+            if (platformKey && platforms[platformKey]) {
+                const updatedUrl = generatePlatformUrl(platformKey, platforms[platformKey]);
+                el.href = updatedUrl;
+            }
+        };
+        
+        // Update desktop platform links
+        applyToAllElements('.platform__list-item', updatePlatformLinks);
+        
+        // Update mobile platform links
+        applyToAllElements('#mobile__platform-switcher-dropdown .platform__list-item', updatePlatformLinks);
     };
 
     const updateLoginButtonsDisplay = () => {
@@ -624,6 +674,8 @@ const Header = (() => {
             if (platform_dropdown.classList.contains(platform_dropdown_active)) {
                 showPlatformSwitcher(false);
             } else {
+                // Update all platform URLs with current symbol before showing dropdown
+                updatePlatformUrls();
                 showPlatformSwitcher(true);
             }
         });
@@ -647,6 +699,8 @@ const Header = (() => {
             if (mobile_platform_switcher_dropdown.classList.contains(mobile_platform_switcher_active)) {
                 showMobilePlatformSwitcher(false);
             } else {
+                // Update all platform URLs with current symbol before showing dropdown
+                updatePlatformUrls();
                 showMobilePlatformSwitcher(true);
             }
         });
