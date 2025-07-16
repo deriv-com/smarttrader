@@ -291,6 +291,9 @@ body .header, .wallet__header {
             align-items: center;
             height: 100%;
             padding: 0 16px;
+            @media (min-width: 320px) and (max-width: 767px) {
+            padding: 0;
+        }
             cursor: pointer;
             gap: 8px;
 
@@ -347,7 +350,7 @@ body .header, .wallet__header {
         }
     }
     &__deposit {
-        margin: 0 16px 0 8px;
+        margin: 0 8px;
     }
     &__divider {
         height: 32px;
@@ -370,6 +373,10 @@ body .header, .wallet__header {
         height: min-content;
         margin: 0 10px;
         position: relative;
+        
+        @media (min-width: 320px) and (max-width: 767px) {
+            margin: 0;
+        }
 
         &-icon {
             width: 25px;
