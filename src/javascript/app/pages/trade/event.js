@@ -6,7 +6,6 @@ const CommonIndependent     = require('./common_independent');
 const Defaults              = require('./defaults');
 const Durations             = require('./duration');
 const GetTicks              = require('./get_ticks');
-const Notifications         = require('./notifications');
 const Price                 = require('./price');
 const Process               = require('./process');
 const Purchase              = require('./purchase');
@@ -122,7 +121,6 @@ const TradingEvents = (() => {
 
         const getContracts = (underlying) => {
             BinarySocket.send({ contracts_for: underlying }).then((response) => {
-                Notifications.hide('CONNECTION_ERROR');
                 Process.processContract(response);
             });
         };

@@ -8,7 +8,6 @@ const Defaults          = require('./defaults');
 const Durations         = require('./duration');
 const GetTicks          = require('./get_ticks');
 const Lookback          = require('./lookback');
-const Notifications     = require('./notifications');
 const Price             = require('./price');
 const Reset             = require('./reset');
 const StartDates        = require('./starttime').StartDates;
@@ -51,11 +50,13 @@ const Process = (() => {
      * This function processes the active symbols to get markets
      * and underlying list
      */
-    const processActiveSymbols = (country) => {
-        BinarySocket.send({ active_symbols: 'brief' }).then((response) => {
-            if (!isEuCountry() && response.active_symbols && response.active_symbols.length) {
+    const processActiveSymbols = (country, response = null) => {
+        // If response is provided (from InitializationManager), use it directly
+        // Otherwise, make the API call (fallback for direct calls)
+        const processResponse = (apiResponse) => {
+            if (!isEuCountry() && apiResponse.active_symbols && apiResponse.active_symbols.length) {
                 // populate the Symbols object
-                Symbols.details(response);
+                Symbols.details(apiResponse);
 
                 const market = commonTrading.getDefaultMarket();
 
@@ -65,11 +66,27 @@ const Process = (() => {
                 commonTrading.displayMarkets();
                 processMarket();
             } else if (country === 'gb' || country === 'im') {
-                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Sorry, options trading isn’t available in the United Kingdom and the Isle of Man.') });
+                NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Sorry, options trading isn\'t available in the United Kingdom and the Isle of Man.') });
             } else {
                 NotAvailable.init({ title: localize('SmartTrader is unavailable for this account'), body: localize('Unfortunately, this trading platform is not available for EU Deriv account. Please switch to a non-EU account to continue trading.') });
             }
-        });
+        };
+
+        if (response) {
+            // Response provided by InitializationManager
+            processResponse(response);
+        } else {
+            // Fallback: make API call directly (for backward compatibility)
+            BinarySocket.send({ active_symbols: 'brief' }).then(processResponse).catch((error) => {
+                // eslint-disable-next-line no-console
+                console.error('Failed to load active symbols:', error);
+                // Show error state but don't block the page
+                NotAvailable.init({
+                    title: localize('Connection Error'),
+                    body : localize('Unable to load market data. Please refresh the page.'),
+                });
+            });
+        }
     };
 
     /*
@@ -120,69 +137,87 @@ const Process = (() => {
 
     const getContracts = (underlying) => {
         BinarySocket.send({ contracts_for: underlying }).then((response) => {
-            Notifications.hide('CONNECTION_ERROR');
             processContract(response);
+        }).catch((error) => {
+            // eslint-disable-next-line no-console
+            console.error('Failed to load contracts for', underlying, ':', error);
+            // Still call hideLoading to ensure page becomes visible
+            hideLoading();
         });
     };
 
     const hideLoading = () => {
-        getElementById('trading_socket_container').classList.add('show');
-        const init_logo = getElementById('trading_init_progress');
-
-        dataManager.setContract({
-            hide_page_loader: true,
-        });
-        
-        if (init_logo && init_logo.style.display !== 'none') {
-            init_logo.style.display = 'none';
+        try {
+            const container = getElementById('trading_socket_container');
+            if (container) {
+                container.classList.add('show');
+            }
             
-            // Synchronize header skeleton loaders with trading completion
-            // Wait for header to be ready before updating skeleton loaders
-            // Use SmartTrader namespace to avoid circular dependency
-            if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
-                window.SmartTrader.Header.addHeaderReadyCallback(() => {
+            const init_logo = getElementById('trading_init_progress');
+
+            dataManager.setContract({
+                hide_page_loader: true,
+            });
+            
+            if (init_logo && init_logo.style.display !== 'none') {
+                init_logo.style.display = 'none';
+                
+                // Synchronize header skeleton loaders with trading completion
+                // Wait for header to be ready before updating skeleton loaders
+                // Use SmartTrader namespace to avoid circular dependency
+                if (typeof window !== 'undefined' && window.SmartTrader?.Header?.addHeaderReadyCallback) {
+                    window.SmartTrader.Header.addHeaderReadyCallback(() => {
+                        try {
+                            if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
+                                window.SmartTrader.Header.updateLoginButtonsDisplay();
+                            }
+                        } catch (error) {
+                            // console.warn('Header module not available in callback:', error);
+                        }
+                    });
+                } else {
+                    // Fallback if callback system not available via SmartTrader namespace
                     try {
                         if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
                             window.SmartTrader.Header.updateLoginButtonsDisplay();
                         }
                     } catch (error) {
-                        // console.warn('Header module not available in callback:', error);
+                        // console.warn('Header module not available for fallback:', error);
                     }
-                });
-            } else {
-                // Fallback if callback system not available via SmartTrader namespace
-                try {
-                    if (window.SmartTrader?.Header?.updateLoginButtonsDisplay) {
-                        window.SmartTrader.Header.updateLoginButtonsDisplay();
+                }
+                
+                // Additional fallback: directly update header skeleton loaders if Header module not available
+                if (typeof window === 'undefined' || !window.SmartTrader?.Header) {
+                    const skeleton_login = document.querySelector('.skeleton-btn-login');
+                    const skeleton_signup = document.querySelector('.skeleton-btn-signup');
+                    const btn_login = document.getElementById('btn__login');
+                    const btn_signup = document.getElementById('btn__signup');
+                    
+                    if (skeleton_login) skeleton_login.remove();
+                    if (skeleton_signup) skeleton_signup.remove();
+                    
+                    // Show appropriate buttons based on login state
+                    const logged_state = Cookies.get('logged_state');
+                    const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
+                    const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
+                    const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
+                    
+                    if (!will_eventually_sso) {
+                        if (btn_login) btn_login.style.display = 'flex';
+                        if (btn_signup) btn_signup.style.display = 'flex';
                     }
-                } catch (error) {
-                    // console.warn('Header module not available for fallback:', error);
                 }
+                
+                Defaults.update();
             }
-            
-            // Additional fallback: directly update header skeleton loaders if Header module not available
-            if (typeof window === 'undefined' || !window.SmartTrader?.Header) {
-                const skeleton_login = document.querySelector('.skeleton-btn-login');
-                const skeleton_signup = document.querySelector('.skeleton-btn-signup');
-                const btn_login = document.getElementById('btn__login');
-                const btn_signup = document.getElementById('btn__signup');
-                
-                if (skeleton_login) skeleton_login.remove();
-                if (skeleton_signup) skeleton_signup.remove();
-                
-                // Show appropriate buttons based on login state
-                const logged_state = Cookies.get('logged_state');
-                const client_accounts = typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('client.accounts') || '{}') : {};
-                const is_client_accounts_populated = Object.keys(client_accounts).length > 0;
-                const will_eventually_sso = logged_state === 'true' && !is_client_accounts_populated;
-                
-                if (!will_eventually_sso) {
-                    if (btn_login) btn_login.style.display = 'flex';
-                    if (btn_signup) btn_signup.style.display = 'flex';
-                }
+        } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error('Error in hideLoading:', error);
+            // Ensure page becomes visible even if there are errors
+            const container = getElementById('trading_socket_container');
+            if (container) {
+                container.classList.add('show');
             }
-            
-            Defaults.update();
         }
     };
 
