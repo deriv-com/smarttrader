@@ -15,6 +15,7 @@ const DerivBanner       = require('../../common/deriv_banner');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const LoaderElement     = require('../loader.jsx');
+const InitializationManager = require('./initialization-manager');
 
 const TradePage = (() => {
     let events_initialized = 0;
@@ -38,9 +39,19 @@ const TradePage = (() => {
             events_initialized = 1;
             TradingEvents.init();
         }
+
+        // Initialize UI components that don't depend on API calls
+        if (document.getElementById('websocket_form')) {
+            commonTrading.addEventListenerForm();
+        }
+        TradingAnalysis.bindAnalysisTabEvent();
+        ViewPopup.viewButtonOnClick('#contract_confirmation_container');
+
+        // Use robust initialization manager for API-dependent initialization
         BinarySocket.wait('authorize').then(() => {
             const country = State.getResponse('authorize.country') || State.getResponse('website_status.clients_country');
 
+            // Handle virtual account setup
             if (Client.get('is_virtual')) {
                 Header.upgradeMessageVisibility(); // To handle the upgrade buttons visibility
                 // if not loaded by pjax, balance update function calls TopUpVirtualPopup
@@ -52,33 +63,31 @@ const TradePage = (() => {
             }
             Header.displayAccountStatus();
             Client.activateByClientType('trading_socket_container');
-            BinarySocket.send({ payout_currencies: 1 }, { forced: true }).then(() => {
-                displayCurrencies();
-                Dropdown('#currency', true);
-                if (document.getElementById('multiplier_currency')?.tagName === 'SELECT') {
-                    Dropdown('#multiplier_currency', true);
-                }
-                Process.processActiveSymbols(country);
 
-                const $currency = $('.currency');
+            // Start robust initialization process
+            InitializationManager.initialize({
+                onPayoutCurrenciesLoaded: () => {
+                    displayCurrencies();
+                    Dropdown('#currency', true);
+                    if (document.getElementById('multiplier_currency')?.tagName === 'SELECT') {
+                        Dropdown('#multiplier_currency', true);
+                    }
 
-                // if currency symbol is span, restore back from custom dropdown
-                if ($currency.is('span') && $currency.parent('div.select').length) {
-                    $currency.parent().replaceWith(() => {
-                        const curr_element = $currency;
-                        return curr_element;
-                    });
-                    if ($currency.next().attr('id') === $currency.attr('id')) $currency.next().eq(0).remove();
+                    const $currency = $('.currency');
+                    // if currency symbol is span, restore back from custom dropdown
+                    if ($currency.is('span') && $currency.parent('div.select').length) {
+                        $currency.parent().replaceWith(() => {
+                            const curr_element = $currency;
+                            return curr_element;
+                        });
+                        if ($currency.next().attr('id') === $currency.attr('id')) $currency.next().eq(0).remove();
+                    }
+                },
+                onActiveSymbolsLoaded: (response) => {
+                    Process.processActiveSymbols(country, response);
                 }
             });
         });
-        if (document.getElementById('websocket_form')) {
-            commonTrading.addEventListenerForm();
-        }
-     
-        TradingAnalysis.bindAnalysisTabEvent();
-
-        ViewPopup.viewButtonOnClick('#contract_confirmation_container');
     };
 
     const reload = () => {
@@ -97,6 +106,9 @@ const TradePage = (() => {
         BinarySocket.clear('active_symbols');
         TradingAnalysis.onUnload();
         DerivBanner.onUnload();
+        
+        // Reset initialization manager
+        InitializationManager.reset();
     };
 
     const onDisconnect = () => {
