@@ -8,7 +8,6 @@ const Defaults          = require('./defaults');
 const Durations         = require('./duration');
 const GetTicks          = require('./get_ticks');
 const Lookback          = require('./lookback');
-const Notifications     = require('./notifications');
 const Price             = require('./price');
 const Reset             = require('./reset');
 const StartDates        = require('./starttime').StartDates;
@@ -79,11 +78,12 @@ const Process = (() => {
         } else {
             // Fallback: make API call directly (for backward compatibility)
             BinarySocket.send({ active_symbols: 'brief' }).then(processResponse).catch((error) => {
+                // eslint-disable-next-line no-console
                 console.error('Failed to load active symbols:', error);
                 // Show error state but don't block the page
                 NotAvailable.init({
                     title: localize('Connection Error'),
-                    body: localize('Unable to load market data. Please refresh the page.')
+                    body : localize('Unable to load market data. Please refresh the page.'),
                 });
             });
         }
@@ -139,6 +139,7 @@ const Process = (() => {
         BinarySocket.send({ contracts_for: underlying }).then((response) => {
             processContract(response);
         }).catch((error) => {
+            // eslint-disable-next-line no-console
             console.error('Failed to load contracts for', underlying, ':', error);
             // Still call hideLoading to ensure page becomes visible
             hideLoading();
@@ -210,6 +211,7 @@ const Process = (() => {
                 Defaults.update();
             }
         } catch (error) {
+            // eslint-disable-next-line no-console
             console.error('Error in hideLoading:', error);
             // Ensure page becomes visible even if there are errors
             const container = getElementById('trading_socket_container');

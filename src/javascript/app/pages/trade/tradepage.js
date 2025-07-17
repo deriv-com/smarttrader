@@ -7,6 +7,7 @@ const Defaults          = require('./defaults');
 const TradingEvents     = require('./event');
 const Price             = require('./price');
 const Process           = require('./process');
+const InitializationManager = require('./initialization-manager');
 const ViewPopup         = require('../user/view_popup/view_popup');
 const Client            = require('../../base/client');
 const Header            = require('../../base/header');
@@ -15,7 +16,6 @@ const DerivBanner       = require('../../common/deriv_banner');
 const TopUpVirtualPopup = require('../user/account/top_up_virtual/pop_up');
 const State             = require('../../../_common/storage').State;
 const LoaderElement     = require('../loader.jsx');
-const InitializationManager = require('./initialization-manager');
 
 const TradePage = (() => {
     let events_initialized = 0;
@@ -85,7 +85,7 @@ const TradePage = (() => {
                 },
                 onActiveSymbolsLoaded: (response) => {
                     Process.processActiveSymbols(country, response);
-                }
+                },
             });
         });
     };
