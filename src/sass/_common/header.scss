@@ -186,7 +186,7 @@ body .header, .wallet__header {
         background: var(--general-section-2);
         height: 30px;
         width: 1px;
-        margin-left: 8px;
+        margin-left: 4px;
     }
     .is-login {
         display: none;
@@ -241,7 +241,11 @@ body .header, .wallet__header {
                 text-decoration: none;
                 letter-spacing: 0;
                 text-transform: capitalize;
-                padding: 0 8px;
+                padding: 0 16px;
+                
+                &.url-appstore {
+                    padding: 0 10px 0 16px;
+                }
                 word-wrap: break-word;
             }
             &-item {
@@ -290,6 +294,9 @@ body .header, .wallet__header {
             align-items: center;
             height: 100%;
             padding: 0 16px;
+            @media (min-width: 320px) and (max-width: 767px) {
+            padding: 0;
+        }
             cursor: pointer;
             gap: 8px;
 
@@ -346,7 +353,7 @@ body .header, .wallet__header {
         }
     }
     &__deposit {
-        margin: 0 16px 0 8px;
+        margin: 0 8px;
     }
     &__divider {
         height: 32px;
@@ -355,6 +362,7 @@ body .header, .wallet__header {
     }
     &__expand {
         transition: transform 500ms;
+        margin: 0 8px;
 
         &-light {
             transition: transform 500ms;
@@ -366,8 +374,12 @@ body .header, .wallet__header {
     }
     &__notification {
         height: min-content;
-        margin-right: 10px;
+        margin: 0 10px;
         position: relative;
+        
+        @media (min-width: 320px) and (max-width: 767px) {
+            margin: 0;
+        }
 
         &-icon {
             width: 25px;
