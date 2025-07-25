@@ -13,20 +13,24 @@ const WalletHeader = () => (
                 <span className='wallet__header__hamburger--container'>
                     <img id='header__hamburger' className='header__hamburger mobile-show' />
                 </span>
-                <div className='wallet__header-menu-item wallet__header-menu-links'>
+                <div className='wallet__header-menu-item wallet__header-menu-links is-logout'>
                     <a className='url-deriv-com' target='_blank' rel='noopener noreferrer' href='https://deriv.com'>
                         <img className='deriv-com-logo' />
                     </a>
                 </div>
                 <div id='wallet-divider' className='wallet__header-divider mobile-hide-wallet' />
-                <div className='wallet__header-divider client_logged_in invisible mobile-hide' />
                 <div className='header__menu-item header__menu-links mobile-hide'>
                     <a className='url-appstore header__menu-links-item'>
                         <span className='header__menu-item--label'>
                             <img id='appstore-icon' className='header__icon-text appstore-icon' />
-                            {it.L('Trader\'s Hub')}
+                            {it.L('Trader\'s hub')}
                         </span>
                     </a>
+                </div>
+                <div className='wallet__header-divider client_logged_in invisible mobile-hide' />
+                <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
+                    <img className='header__logo' />
+                    <img id='platform__switcher-expand' className='header__icon header__expand' />
                 </div>
                 <div className='header__menu-links client_logged_in invisible mobile-hide'>
                     <a className='url-reports-positions header__menu-links-item'>
@@ -36,13 +40,12 @@ const WalletHeader = () => (
                         </span>
                     </a>
                 </div>
-                <div id='platform__switcher' className='header__menu-item platform__switcher mobile-hide'>
-                    <img className='header__logo' />
-                    <img id='platform__switcher-expand' className='header__icon header__expand' />
-                </div>
             </div>
             <div id='wallet__header-menu-right' className='wallet__header-menu-right client_logged_in invisible'>
-                <a className='url-wallets-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Manage funds')}</a>
+                <Notification />
+                <a className='url-account-details header__account header__menu-item mobile-hide'>
+                    <img className='header__icon-button' id='header__account-settings' />
+                </a>
                 <div className='header__divider mobile-hide' />
                 <div className='header__menu-item header__menu-acc' id='wallet_switcher'>
                     <div className='header__acc-info'>
@@ -83,11 +86,7 @@ const WalletHeader = () => (
                         </div>
                     </div>
                 </div>
-                <div className='header__divider' />
-                <Notification />
-                <a className='url-account-details header__account header__menu-item mobile-hide'>
-                    <img className='header__icon-button' id='header__account-settings' />
-                </a>
+                <a className='url-wallets-deposit btn btn--primary header__deposit mobile-hide'>{it.L('Manage funds')}</a>
             </div>
             <div className='header__menu-right is-logout'>
                 <div className='header__btn'>
