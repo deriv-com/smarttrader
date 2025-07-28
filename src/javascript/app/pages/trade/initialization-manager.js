@@ -77,8 +77,7 @@ const InitializationManager = (() => {
           if (is_connected) {
               // eslint-disable-next-line no-console
               console.error(`Attempt ${attempts}/${maxAttempts} failed for ${stepId}:`, error);
-                  
-            }
+          }
 
                     if (attempts < maxAttempts) {
                     // Retry after delay
