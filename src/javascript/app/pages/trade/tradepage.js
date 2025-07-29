@@ -108,7 +108,7 @@ const TradePage = (() => {
         DerivBanner.onUnload();
         
         // Reset initialization manager
-        InitializationManager.reset();
+        InitializationManager?.reset();
     };
 
     const onDisconnect = () => {
