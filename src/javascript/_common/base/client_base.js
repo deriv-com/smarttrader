@@ -86,6 +86,7 @@ const ClientBase = (() => {
             const account_param = /^VR/.test(value) ? 'demo' : client_object[value]?.currency;
             if (account_param) {
                 url.searchParams.set('account', account_param);
+                url.searchParams.set('currency', client_object[value]?.currency);
                 window.history.replaceState({}, '', url.toString());
             }
         } else {
