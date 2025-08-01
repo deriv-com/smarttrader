@@ -69,8 +69,15 @@ const InitializationManager = (() => {
 
                     resolve(result);
                 } catch (error) {
-                // eslint-disable-next-line no-console
-                    console.error(`Attempt ${attempts}/${maxAttempts} failed for ${stepId}:`, error);
+
+                    // Only log error if WebSocket is connected
+                    const socket = BinarySocket.get();
+                    const is_connected = socket && socket.readyState === 1;
+
+                    if (is_connected) {
+                        // eslint-disable-next-line no-console
+                        console.error(`Attempt ${attempts}/${maxAttempts} failed for ${stepId}:`, error);
+                    }
 
                     if (attempts < maxAttempts) {
                     // Retry after delay
