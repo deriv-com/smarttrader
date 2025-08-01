@@ -107,8 +107,8 @@ const TradePage = (() => {
         TradingAnalysis.onUnload();
         DerivBanner.onUnload();
         
-        // Reset initialization manager
-        InitializationManager.reset();
+        // Cleanup initialization manager
+        InitializationManager?.cleanup();
     };
 
     const onDisconnect = () => {
