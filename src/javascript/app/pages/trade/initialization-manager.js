@@ -83,7 +83,9 @@ const InitializationManager = (() => {
                     // Retry after delay
                         setTimeout(attemptCall, CONFIG.RETRY_DELAY);
                     } else {
+                      if (is_connected){
                         reject(new Error(`All ${maxAttempts} attempts failed for ${stepId}: ${error.message}`));
+                      }
                     }
                 }
             };
