@@ -218,7 +218,14 @@ describe('ClientBase', () => {
             expect(Client.canTransferFunds()).to.eq(false);
         });
         it('passes if client has maltainvest and malta accounts with the same currency', () => {
+            Client.set('loginid', loginid_gaming, loginid_gaming);
+            Client.set('token', 'test', loginid_gaming);
+            Client.set('landing_company_shortcode', 'malta', loginid_gaming);
             Client.set('currency', 'USD', loginid_gaming);
+            
+            Client.set('loginid', loginid_financial, loginid_financial);
+            Client.set('token', 'test', loginid_financial);
+            Client.set('landing_company_shortcode', 'maltainvest', loginid_financial);
             Client.set('currency', 'USD', loginid_financial);
 
             expect(Client.canTransferFunds()).to.eq(true);
