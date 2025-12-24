@@ -202,18 +202,19 @@ describe('ClientBase', () => {
     });
 
     describe('.canTransferFunds()', () => {
-        before(function (done) {
-            this.timeout(5000);
-            api.send({
-                website_status: 1,
-            }).then((response) => {
-                setCurrencies(response.website_status);
-                done();
-            }).catch((error) => {
-                // Handle API error gracefully
-                console.error('API call failed in before hook:', error);
-                done(error);
-            });
+        before(() => {
+            // Mock currencies data instead of making an API call
+            const currencies_config = {
+                currencies_config: {
+                    AUD: { fractional_digits: 2, type: 'fiat' },
+                    EUR: { fractional_digits: 2, type: 'fiat' },
+                    GBP: { fractional_digits: 2, type: 'fiat' },
+                    USD: { fractional_digits: 2, type: 'fiat', transfer_between_accounts: { limits: { max: 2500, min: 1.00 } } },
+                    BTC: { fractional_digits: 8, type: 'crypto' },
+                    ETH: { fractional_digits: 8, type: 'crypto' },
+                }
+            };
+            setCurrencies(currencies_config);
         });
         it('fails if client has maltainvest and malta accounts with differing currencies', () => {
             Client.set('currency', 'USD', loginid_gaming);
