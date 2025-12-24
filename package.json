@@ -31,6 +31,7 @@
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "7.23.3",
     "@babel/register": "7.23.7",
+    "@deriv-com/shiftai-cli": "^1.0.12",
     "@svgr/webpack": "^8.1.0",
     "app-root-path": "2.0.1",
     "autoprefixer": "9.8.8",
