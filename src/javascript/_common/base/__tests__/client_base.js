@@ -209,6 +209,10 @@ describe('ClientBase', () => {
             }).then((response) => {
                 setCurrencies(response.website_status);
                 done();
+            }).catch((error) => {
+                // Handle API error gracefully
+                console.error('API call failed in before hook:', error);
+                done(error);
             });
         });
         it('fails if client has maltainvest and malta accounts with differing currencies', () => {
