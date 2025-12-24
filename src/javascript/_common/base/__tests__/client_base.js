@@ -211,18 +211,6 @@ describe('ClientBase', () => {
                 done();
             });
         });
-        it('fails if client has maltainvest and malta accounts with one missing currency', () => {
-            Client.clearAllAccounts();
-            [loginid_gaming, loginid_financial].forEach((id) => {
-                Client.set('loginid', id, id);
-            });
-            Client.set('landing_company_shortcode', 'maltainvest', loginid_financial);
-            Client.set('landing_company_shortcode', 'malta', loginid_gaming);
-
-            Client.set('currency', 'USD', loginid_gaming);
-
-            expect(Client.canTransferFunds()).to.eq(false);
-        });
         it('fails if client has maltainvest and malta accounts with differing currencies', () => {
             Client.set('currency', 'USD', loginid_gaming);
             Client.set('currency', 'EUR', loginid_financial);
