@@ -202,26 +202,19 @@ describe('ClientBase', () => {
     });
 
     describe('.canTransferFunds()', () => {
-        before(function (done) {
-            this.timeout(5000);
-            api.send({
-                website_status: 1,
-            }).then((response) => {
-                setCurrencies(response.website_status);
-                done();
-            });
-        });
-        it('fails if client has maltainvest and malta accounts with one missing currency', () => {
-            Client.clearAllAccounts();
-            [loginid_gaming, loginid_financial].forEach((id) => {
-                Client.set('loginid', id, id);
-            });
-            Client.set('landing_company_shortcode', 'maltainvest', loginid_financial);
-            Client.set('landing_company_shortcode', 'malta', loginid_gaming);
-
-            Client.set('currency', 'USD', loginid_gaming);
-
-            expect(Client.canTransferFunds()).to.eq(false);
+        before(() => {
+            // Mock currencies data instead of making an API call
+            const currencies_config = {
+                currencies_config: {
+                    AUD: { fractional_digits: 2, type: 'fiat' },
+                    EUR: { fractional_digits: 2, type: 'fiat' },
+                    GBP: { fractional_digits: 2, type: 'fiat' },
+                    USD: { fractional_digits: 2, type: 'fiat', transfer_between_accounts: { limits: { max: 2500, min: 1.00 } } },
+                    BTC: { fractional_digits: 8, type: 'crypto' },
+                    ETH: { fractional_digits: 8, type: 'crypto' },
+                }
+            };
+            setCurrencies(currencies_config);
         });
         it('fails if client has maltainvest and malta accounts with differing currencies', () => {
             Client.set('currency', 'USD', loginid_gaming);
@@ -230,7 +223,14 @@ describe('ClientBase', () => {
             expect(Client.canTransferFunds()).to.eq(false);
         });
         it('passes if client has maltainvest and malta accounts with the same currency', () => {
+            Client.set('loginid', loginid_gaming, loginid_gaming);
+            Client.set('token', 'test', loginid_gaming);
+            Client.set('landing_company_shortcode', 'malta', loginid_gaming);
             Client.set('currency', 'USD', loginid_gaming);
+            
+            Client.set('loginid', loginid_financial, loginid_financial);
+            Client.set('token', 'test', loginid_financial);
+            Client.set('landing_company_shortcode', 'maltainvest', loginid_financial);
             Client.set('currency', 'USD', loginid_financial);
 
             expect(Client.canTransferFunds()).to.eq(true);

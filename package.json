@@ -7,7 +7,8 @@
     "livereload": "grunt livereload",
     "serve": "grunt serve",
     "start": "grunt start",
-    "eslint": "eslint --fix \"src/**/*.jsx\" src/"
+    "eslint": "eslint --fix \"src/**/*.jsx\" src/",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "7.23.3",
     "@babel/register": "7.23.7",
+    "@deriv-com/shiftai-cli": "^1.0.12",
     "@svgr/webpack": "^8.1.0",
     "app-root-path": "2.0.1",
     "autoprefixer": "9.8.8",
@@ -77,6 +79,7 @@
     "grunt-shell": "2.1.0",
     "grunt-stylelint": "0.19.0",
     "grunt-webpack": "6.0.0",
+    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "jsdom-global": "^3.0.2",
     "load-grunt-config": "^4.0.1",
