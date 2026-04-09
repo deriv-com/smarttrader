@@ -1264,11 +1264,11 @@ const Header = (() => {
         
         // Get balance from dropdown element that has correct data (same source as dropdown)
         const balance_element = document.querySelector(`.wallet__switcher-balance.account__switcher-balance-${wallet_loginid}`);
-        if (balance_element && balance_element.innerHTML.trim()) {
-            const formatted_balance = balance_element.innerHTML;
-            
+        if (balance_element && balance_element.textContent.trim()) {
+            const formatted_balance = balance_element.textContent;
+
             applyToAllElements('#header__acc-balance', (el) => {
-                el.innerHTML = formatted_balance;
+                el.textContent = formatted_balance;
             });
         } else {
             // Fallback: use Client.get method if dropdown element not ready yet
@@ -1276,9 +1276,9 @@ const Header = (() => {
             
             if (wallet_currency) {
                 const formatted_balance = formatMoney(wallet_currency, wallet_balance, true);
-                
+
                 applyToAllElements('#header__acc-balance', (el) => {
-                    el.innerHTML = formatted_balance;
+                    el.textContent = formatted_balance;
                 });
             }
         }
