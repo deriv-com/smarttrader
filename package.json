@@ -83,6 +83,7 @@
     "jsdom-global": "^3.0.2",
     "load-grunt-config": "^4.0.1",
     "load-grunt-tasks": "3.5.2",
+    "micromatch": "4.0.8",
     "mocha": "10.8.2",
     "mock-local-storage": "1.1.7",
     "mock-require": "^3.0.3",
