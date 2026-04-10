@@ -1,6 +1,7 @@
 const refreshDropdown   = require('@binary-com/binary-style').selectDropdown;
 const Cookies           = require('js-cookie');
 const moment            = require('moment');
+const { triggerMarketChange } = require('../../hooks/events');
 const TradingAnalysis   = require('./analysis');
 const commonTrading     = require('./common');
 const Contract          = require('./contract');
@@ -118,6 +119,7 @@ const Process = (() => {
         const underlying = underlying_element?.value;
 
         Defaults.set(UNDERLYING, underlying);
+        triggerMarketChange();
 
         commonTrading.showFormOverlay();
 
