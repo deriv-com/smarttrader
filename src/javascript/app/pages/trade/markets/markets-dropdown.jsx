@@ -201,7 +201,6 @@ export const MarketsDropdown = () => {
 
     const handleUnderlyingClick = (underlying) => {
         Defaults.set(UNDERLYING, underlying);
-        setSelectedMarket(underlying);
         triggerMarketChange();
 
         // Trigger the old form to enable other required effects from it
