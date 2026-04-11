@@ -1,7 +1,6 @@
 const refreshDropdown   = require('@binary-com/binary-style').selectDropdown;
 const Cookies           = require('js-cookie');
 const moment            = require('moment');
-const { triggerMarketChange } = require('../../hooks/events');
 const TradingAnalysis   = require('./analysis');
 const commonTrading     = require('./common');
 const Contract          = require('./contract');
@@ -16,6 +15,7 @@ const Symbols           = require('./symbols');
 const Tick              = require('./tick');
 const NotAvailable      = require('./not-available.jsx');
 const BinarySocket       = require('../../base/socket');
+const triggerMarketChange = require('../../hooks/events').triggerMarketChange;
 const dataManager       = require('../../common/data_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
