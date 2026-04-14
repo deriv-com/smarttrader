@@ -14,7 +14,7 @@ import ActiveSymbols, {
     derived,
 } from '../../../common/active_symbols';
 import Defaults, { PARAM_NAMES } from '../defaults';
-import { triggerMarketChange } from '../../../hooks/events';
+import { triggerMarketChange, useMarketChange } from '../../../hooks/events';
 import { localize } from '../../../../_common/localize';
 import dataManager from '../../../common/data_manager';
 
@@ -75,6 +75,11 @@ export const MarketsDropdown = () => {
     const disableScrollTimer = useRef();
 
     const { close: closeMarketDropdown } = useDropdown();
+
+    const has_market_change = useMarketChange();
+    useEffect(() => {
+        setSelectedMarket(Defaults.get(UNDERLYING));
+    }, [has_market_change]);
 
     const filterMarkets = () => {
         const data = JSON.parse(JSON.stringify(defaultMarkets));
@@ -196,7 +201,6 @@ export const MarketsDropdown = () => {
 
     const handleUnderlyingClick = (underlying) => {
         Defaults.set(UNDERLYING, underlying);
-        setSelectedMarket(underlying);
         triggerMarketChange();
 
         // Trigger the old form to enable other required effects from it

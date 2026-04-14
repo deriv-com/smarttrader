@@ -19,6 +19,7 @@ const dataManager       = require('../../common/data_manager.js').default;
 const getMinPayout      = require('../../common/currency').getMinPayout;
 const isCryptocurrency  = require('../../common/currency').isCryptocurrency;
 const isEuCountry       = require('../../common/country_base').isEuCountry;
+const triggerMarketChange = require('../../hooks/events').triggerMarketChange;
 const elementInnerHtml  = require('../../../_common/common_functions').elementInnerHtml;
 const getElementById    = require('../../../_common/common_functions').getElementById;
 const getVisibleElement = require('../../../_common/common_functions').getVisibleElement;
@@ -118,6 +119,7 @@ const Process = (() => {
         const underlying = underlying_element?.value;
 
         Defaults.set(UNDERLYING, underlying);
+        triggerMarketChange();
 
         commonTrading.showFormOverlay();
 
