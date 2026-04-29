@@ -1,50 +1,41 @@
 .migration-modal {
-  &__header {
-    background-color: var(
-      --semantic-color-slate-solid-surface-normal-low,
-      #f2f3f4
-    );
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.6rem;
-    text-align: left;
-  }
-
-  &__title {
-    font-size: $FONT_SIZE_XL;
-    font-weight: bold;
-    margin: 0 0 0.4rem;
-  }
-
-  &__description {
-    font-size: $FONT_SIZE_N;
-    margin: 0 0 0.8rem;
-  }
-
-  &__cta {
-    margin-top: 1.2rem;
-    width: 100%;
-  }
-
-  &__support {
-    margin-top: 0.8rem;
-    width: 100%;
-    text-align: center;
-    font-size: $FONT_SIZE_S;
-  }
-
-  &__support-link {
-    /* stylelint-disable declaration-no-important */
-    color: $COLOR_DRIV_RED !important;
-    /* stylelint-enable declaration-no-important */
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+    &__header {
+        background-color: var(--semantic-color-slate-solid-surface-normal-low);
     }
-  }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        text-align: left;
+    }
+    &__title {
+        font-size: $FONT_SIZE_XL;
+        font-weight: bold;
+        margin: 0 0 0.4rem;
+    }
+    &__description {
+        font-size: $FONT_SIZE_N;
+        margin: 0 0 0.8rem;
+    }
+    &__cta {
+        margin-top: 1.2rem;
+        width: 100%;
+    }
+    &__support {
+        margin-top: 0.8rem;
+        width: 100%;
+        text-align: center;
+        font-size: $FONT_SIZE_S;
+    }
+    &__support-link {
+        /* stylelint-disable declaration-no-important */
+        color: $COLOR_DRIV_RED !important;
+        /* stylelint-enable declaration-no-important */
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
