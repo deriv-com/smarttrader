@@ -284,7 +284,8 @@ const AccountOpening = (() => {
         ];
 
         if (Cookies.get('affiliate_tracking')) {
-            req.push({ request_field: 'affiliate_token', value: Cookies.getJSON('affiliate_tracking').t });
+            // js-cookie 3.x removed getJSON(); parse the raw value (guarded by the get() check above).
+            req.push({ request_field: 'affiliate_token', value: JSON.parse(Cookies.get('affiliate_tracking')).t });
         }
 
         return req;

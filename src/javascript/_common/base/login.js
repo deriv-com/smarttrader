@@ -40,7 +40,14 @@ const Login = (() => {
             $(`#button_${provider}`).off('click').on('click', e => {
                 e.preventDefault();
 
-                const affiliate_tracking   = Cookies.getJSON('affiliate_tracking');
+                // js-cookie 3.x removed getJSON(); read and parse the raw value safely.
+                const affiliate_cookie     = Cookies.get('affiliate_tracking');
+                let affiliate_tracking;
+                try {
+                    affiliate_tracking     = affiliate_cookie ? JSON.parse(affiliate_cookie) : undefined;
+                } catch (err) {
+                    affiliate_tracking     = undefined;
+                }
                 const utm_data             = TrafficSource.getData();
                 const utm_source           = TrafficSource.getSource(utm_data);
                 const utm_source_link      = utm_source ? `&utm_source=${utm_source}` : '';
