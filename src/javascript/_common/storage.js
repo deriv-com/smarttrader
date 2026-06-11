@@ -175,6 +175,11 @@ State.prototype.getResponse = function(pathname) {
 };
 State.set('response', {});
 
+// js-cookie 3.x no longer auto-serializes values on set(): objects must be JSON-encoded,
+// while strings are stored as-is (e.g. the language code 'EN', which is read back raw via
+// Cookies.get() elsewhere and would break as '"EN"' if blindly JSON.stringify-ed).
+const serializeCookieValue = value => (typeof value === 'string' ? value : JSON.stringify(value));
+
 const CookieStorage = function(cookie_name, cookie_domain) {
     const hostname = window.location.hostname;
 
@@ -201,7 +206,7 @@ CookieStorage.prototype = {
         if (!this.initialized) this.read();
         this.value = val;
         if (expireDate) this.expires = expireDate;
-        Cookies.set(this.cookie_name, this.value, {
+        Cookies.set(this.cookie_name, serializeCookieValue(this.value), {
             expires : this.expires,
             path    : this.path,
             domain  : this.domain,
@@ -216,7 +221,7 @@ CookieStorage.prototype = {
     set(key, val, options) {
         if (!this.initialized) this.read();
         this.value[key] = val;
-        Cookies.set(this.cookie_name, this.value, {
+        Cookies.set(this.cookie_name, serializeCookieValue(this.value), {
             expires: new Date(this.expires),
             path   : this.path,
             domain : this.domain,

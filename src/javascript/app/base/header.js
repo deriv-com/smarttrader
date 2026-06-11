@@ -1276,9 +1276,12 @@ const Header = (() => {
             
             if (wallet_currency) {
                 const formatted_balance = formatMoney(wallet_currency, wallet_balance, true);
-                
+
+                // Security fix (CodeQL client-side XSS): formatMoney is called with
+                // exclude_currency=true, so the result is plain numeric text with no markup.
+                // Assigning via textContent (instead of innerHTML) removes the HTML-injection sink.
                 applyToAllElements('#header__acc-balance', (el) => {
-                    el.innerHTML = formatted_balance;
+                    el.textContent = formatted_balance;
                 });
             }
         }

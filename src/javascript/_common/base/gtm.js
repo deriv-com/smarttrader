@@ -52,7 +52,14 @@ const GTM = (() => {
         localStorage.removeItem('GTM_login');
         localStorage.removeItem('GTM_new_account');
 
-        const affiliate_token = Cookies.getJSON('affiliate_tracking');
+        // js-cookie 3.x removed getJSON(); read and parse the raw value safely.
+        const affiliate_cookie = Cookies.get('affiliate_tracking');
+        let affiliate_token;
+        try {
+            affiliate_token    = affiliate_cookie ? JSON.parse(affiliate_cookie) : undefined;
+        } catch (err) {
+            affiliate_token    = undefined;
+        }
         if (affiliate_token) {
             pushDataLayer({ bom_affiliate_token: affiliate_token.t });
         }
