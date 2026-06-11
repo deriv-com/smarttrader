@@ -162,7 +162,7 @@
     }
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20"
   },
   "browserslist": [
     "last 2 versions",
