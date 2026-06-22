@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/deriv-com/smarttrader",
   "devDependencies": {
-    "@babel/core": "7.24.0",
+    "@babel/core": "7.29.6",
     "@babel/eslint-parser": "7.23.10",
-    "@babel/parser": "7.25.0",
+    "@babel/parser": "7.29.7",
     "@babel/plugin-proposal-decorators": "^7.24.7",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-class-properties": "^7.24.7",
@@ -126,7 +126,7 @@
     "jquery": "3.5.1",
     "jquery.scrollto": "2.1.2",
     "js-cookie": "3.0.7",
-    "js-yaml": "4.1.1",
+    "js-yaml": "4.2.0",
     "kinetic": "5.2.0",
     "moment": "^2.29.4",
     "postcss-cachebuster": "^0.1.6",
@@ -144,9 +144,10 @@
   },
   "overrides": {
     "braces": "^3.0.3",
-    "@babel/parser": "7.25.0",
+    "@babel/parser": "7.29.7",
     "@babel/plugin-proposal-optional-chaining": "7.22.5",
     "@babel/plugin-transform-modules-systemjs": "7.29.4",
+    "dompurify": "3.4.11",
     "fast-uri": "3.1.2",
     "ip-address": "10.1.1",
     "js-cookie": "3.0.7",
@@ -156,9 +157,11 @@
     "qs": "6.15.2",
     "select2": "4.0.6",
     "serialize-javascript": "7.0.5",
+    "tar": "7.5.16",
+    "undici": "7.28.0",
     "uuid": "11.1.1",
     "load-grunt-config": {
-      "js-yaml": "4.1.1"
+      "js-yaml": "4.2.0"
     }
   },
   "engines": {
