@@ -35,19 +35,28 @@ const InnerContent = () => (
 const Topbar = () => (
     <div className='no-print primary-bg-color-dark topbar mobile-hide'>
         <div id='topbar-info'>
-            <div id='network_status_wrapper' className='no-underline' data-balloon-pos='up'>
+            <div id='network_status_wrapper' className='no-underline' data-balloon='Connection Status' data-balloon-pos='up'>
                 <div className='network_status' />
             </div>
-            <div id='language-select'><img id='language-select__logo' /></div>
-            <span className='no-underline nowrap gmt-clock' data-balloon-pos='up' />
-            <div id='topbar-whatsapp'>
+            <span className='no-underline nowrap gmt-clock' data-balloon='Server Time' data-balloon-pos='up' />
+            <div id='topbar-whatsapp' data-balloon='WhatsApp' data-balloon-pos='up'>
                 <img src={it.url_for('images/pages/footer/ic-whatsapp.svg')} />
             </div>
-            <div id='deriv_livechat' />
-            <div id='topbar-help-centre'>
+            <div id='deriv_livechat' data-balloon='Live chat' data-balloon-pos='up' />
+            <div id='topbar-responsible-trading' data-balloon='Responsible trading' data-balloon-pos='up'>
+                <img src={it.url_for('images/pages/footer/ic-responsible-trading.svg')} />
+            </div>
+            <div id='topbar-account-limits' data-balloon='Account limits' data-balloon-pos='up'>
+                <img src={it.url_for('images/pages/footer/ic-account-limits.svg')} />
+            </div>
+            <div id='topbar-help-centre' data-balloon='Help centre' data-balloon-pos='up'>
                 <img src={it.url_for('images/pages/footer/ic-help-centre.svg')} />
             </div>
-            <div id='topbar-fullscreen'>
+            <div id='language-select' data-balloon='Language' data-balloon-pos='up'>
+                <img id='language-select__logo' />
+                <span id='language-select__text'>EN</span>
+            </div>
+            <div id='topbar-fullscreen' data-balloon='Fullscreen' data-balloon-pos='up'>
                 <img src={it.url_for('images/pages/footer/ic-fullscreen.svg')} />
             </div>
         </div>

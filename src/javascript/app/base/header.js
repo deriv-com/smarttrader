@@ -260,6 +260,14 @@ const Header = (() => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-livechat.svg?${process.env.BUILD_HASH}`);
         });
 
+        applyToAllElements('.security-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-security.svg?${process.env.BUILD_HASH}`);
+        });
+
+        applyToAllElements('.speed-icon', (el) => {
+            el.src = Url.urlForStatic(`${header_icon_base_path}ic-verification.svg?${process.env.BUILD_HASH}`);
+        });
+
         applyToAllElements('.btn__close', (el) => {
             el.src = Url.urlForStatic(`${header_icon_base_path}ic-close.svg?${process.env.BUILD_HASH}`);
         });
@@ -1125,6 +1133,14 @@ const Header = (() => {
         // WhatsApp.
         const topbar_whatsapp = getElementById('topbar-whatsapp');
         topbar_whatsapp.addEventListener('click', () => window.open('https://wa.me/35699578341', '_blank'));
+
+        // Responsible Trading.
+        const topbar_responsible_trading = getElementById('topbar-responsible-trading');
+        topbar_responsible_trading.addEventListener('click', () => window.open('https://deriv.com/responsible', '_blank'));
+
+        // Account Limits.
+        const topbar_account_limits = getElementById('topbar-account-limits');
+        topbar_account_limits.addEventListener('click', () => window.open('https://app.deriv.com/account/account-limits', '_blank'));
 
         // Topbar fullscreen events.
         const topbar_fullscreen = getElementById('topbar-fullscreen');
