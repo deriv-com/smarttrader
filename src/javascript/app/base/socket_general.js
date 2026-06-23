@@ -16,6 +16,7 @@ const LocalStore             = require('../../_common/storage').LocalStore;
 const State                  = require('../../_common/storage').State;
 const getPropertyValue       = require('../../_common/utility').getPropertyValue;
 const isLoginPages           = require('../../_common/utility').isLoginPages;
+const MigrationModal         = require('../../../templates/_common/components/migration-modal.jsx').default;
 
 const BinarySocketGeneral = (() => {
     const onOpen = (is_ready) => {
@@ -38,6 +39,10 @@ const BinarySocketGeneral = (() => {
         switch (response.msg_type) {
             case 'website_status':
                 if (response.website_status) {
+                    if (response.website_status.message === 'migrated') {
+                        MigrationModal.show();
+                        return;
+                    }
                     const is_available = !BinarySocket.isSiteDown(response.website_status.site_status);
                     if (is_available && BinarySocket.getAvailability().is_down) {
                         window.location.reload();
